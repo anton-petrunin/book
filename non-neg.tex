@@ -1,0 +1,271 @@
+%%!TEX root = all.tex
+\chapter{Nonnegatively curved spaces}
+
+
+\section{Toponogov's splitting}
+
+Recall that a line in a metric space is a geodesic which is minimizing on each segment. 
+
+Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
+We will write 
+\[\spc{X}=A\oplus B\]
+If there projections $\proj_A\:\spc{X}\to A$ 
+and 
+$\proj_B\:\spc{X}\to B$
+such that 
+\[\dist[2]{x}{y}{}=\dist[2]{\proj_A(x)}{\proj_A(y)}{}+\dist[2]{\proj_B(x)}{\proj_B(y)}{}\]
+for any two points $x,y\in \spc{X}$.
+
+Note that if 
+\[\spc{X}=A\oplus B\]
+then 
+\begin{itemize}
+\item $A$ intersects $B$ at single point,
+\item both sets $A$ and $B$ are convex; i.e., any minimizing geodesic joining points in $A$ ($B$) lies in $A$ (correspondingly $B$).
+\end{itemize}
+
+
+
+
+\begin{thm}{Toponogov's splitting theorem}\label{thm:splitting} 
+Let $\spc{L}\in\CBB{}0$ 
+and $\gamma$ be a line in $\spc{L}$. 
+Then 
+\[\spc{L}=X\oplus \gamma(\RR)\]
+for some subset $X\subset \spc{L}$.
+\end{thm}
+
+For smooth $2$-dimensional surfaces, 
+this theorem was proved by Cohn-Vossen in \cite{cohn-vossen_line}.
+For the Riemannian manifolds of higher dimensions 
+it was proved by Toponogov in \cite{toponogov-globalization+splitting}.%
+\footnote{Further deep generalizations of this theorem in Riemannian and pseudo-Riemannian manifolds are due to Cheeger--Gromoll and Eshenburg, but these are are far from the scope of this book.}
+Then it was generalized by Milka in  \cite{milka-line}
+to Alexandrov's spaces, almost the same prove is given in \cite[1.5]{BBI}.
+The Milka's proof is a beautiful Euclid-like argument, but it is not short;
+here we present a short proof which use gradient flow for Busemann's functions.
+
+\begin{thm}{Corollary}\label{cor:splitting}
+Let $\spc{L}\in\CBB{}0$. 
+Then there is an isometric splitting
+\[
+\spc{L}=\spc{L}'\oplus H
+\]
+where $H\subset \spc{L}$ is a subset isometric to a Hilbert space and $\spc{L}'\subset \spc{L}$ be a convex subset which contains no lines. 
+\end{thm}
+
+\begin{thm}{Corollary}\label{cor:splitting-vectors}
+Let $\spc{K}\in\CBB{}0$ be a cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
+(i.e., $v_+ + v_-=$).
+Then there is an isometry $\iota\:K\to K'\times \RR$, where $K'\in\CBB{}0$ is a cone with vertex $o'$ such that
+$\iota:v_\pm\mapsto (o',\pm|v_\pm|)$.
+\end{thm}
+
+\begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
+Assume $\spc{L}\in\CBB{m}1$, $m\ge2$ and $\rad\spc{L}=\pi$ then 
+\[\spc{L}\iso \SS^m.\]
+ 
+\end{thm}
+
+
+
+\parit{Proof.} Consider two Busemann's functions $\bus_+$ and $\bus_-$ asociated with rays $\gamma:[0,\infty)\to \spc{L}$ and $\gamma:(-\infty,0]\to \spc{L}$, i.e.
+\[
+\bus_\pm(x)
+=
+\lim_{t\to\infty}\dist{\gamma(\pm t)}{x}{}- t.
+\]
+According to \ref{thm:busemann}, both functions $\bus_\pm$ are concave.
+
+Fix $x\in \spc{L}$.
+Note that since $\gamma$ is a line, we have 
+\[\bus_+(x)+\bus_-(x)\ge0.\]
+On the other hand, by \ref{comp-kappa} 
+$f(t)=\dist[2]{x}{}{}\circ\gamma(t)$ 
+is $2$-concave.
+ 
+In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$. 
+Passing to the limit as $t\to\pm\infty$, we get \[\bus_+(x)+\bus_-(x)\le0.\]
+
+Hence
+\[
+\bus_+(x)+\bus_-(x)= 0
+\]
+for any $x\in \spc{L}$.
+It follows that for any $x$,
+\[
+|\nabla_x \bus_\pm|
+=\sup\set{\d_x\bus_\pm(\xi)}{\xi\in\Sigma_x}
+=\sup\set{-\d_x\bus_\mp(\xi)}{\xi\in\Sigma_x}\equiv1.
+\] 
+Therefore???, $1$-Lipschitz curve $\alpha$, such that $\bus_\pm(\alpha(t))=t+\Const$ is a $\bus_\pm$-gradient curve. 
+In particular, $\alpha(t)$ is a $\bus_+$-gradient curve if and only if $\alpha(-t)$ is a $\bus_-$-gradient curve.
+It follows that for any $t>0$, $\GF_{\bus_+}^t\circ\GF_{\bus_-}^t=\id_\spc{L}$.
+Set
+\[\GF^t=\left[\begin{matrix}
+\GF_{\bus_+}^t&\hbox{if}\ t\ge0\\
+\GF_{\bus_-}^t&\hbox{if}\ t<0
+               \end{matrix}\right.\]
+it defines an $\RR$-action on $\spc{L}$.
+
+Set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)\subset \spc{L}$, it is a closed convex set, therefore it forms an Alexandrov's space.
+Consider map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
+It is easy to see that $h$ is onto.
+Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$, we get that $h$ is a short and non-contracting at the same time; i.e. $h$ is an isometry.\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Soul theorem}
+
+In Riemannian case, the following theorem was proved in \cite{cheeger-gromoll-soul}.
+The last statement was proved in \cite{sharafutdinov}.
+
+\begin{thm}{Soul theorem}
+Let $\spc{L}\in\CBB{m}0$. 
+Then there is a convex compact subset $S\subset \spc{L}$ (which is called \emph{soul}\index{soul} of $\spc{L}$), such that  $S\in\CBB{\kay}0$, $\kay\le m$,
+$S$ has no boundary,
+$S$ is a strict short deformational retuct of $\spc{L}$, i.e. there one parameter of short maps $h_t\:\spc{L}\to \spc{L}$ such that $h_0=\id$, $h_1(\spc{L})=S$, $h_t(s)=s$ for any $s\in S$ and $t\in[0,1]$.
+
+More over, $S$ is uniquely defined up to isometry.
+\end{thm}
+
+If $\spc{L}$ is a Riemannian manifold then in fact
+$\spc{L}$ is diffeomorphic to the total space of the normal bundle of $\iota(S)$ in $\spc{L}$. 
+For Alexandrov spaces a similar strengthening is false as the following example shows:
+
+\parbf{Example} Consider product space $\SS^2\times \EE^2$ equiped with isometric $\ZZ_2$-action, which acts by cental simmetry on each $\SS^2$ and $\EE^2$; thus it has exactly two fixed points $v$ and $w$ on $\SS^2\times 0$.
+
+According to ???,
+the factor-space $\spc{L}=\SS^2\times \EE^2/\ZZ_2$ is a $4$-dimensional Alexandrov space with curvature $\ge 0$.
+It has exactly two singular points, the orbits of $v$ and $w$, a neigborhood at each is homeomorphic to $\Cone\RP^3$.
+The image of $\SS^2\times 0$ in $\spc{L}$ is homeomorphic to $\SS^2$ and it forms an Alexandrov space without boundary.
+
+Thus, the soul of $\spc{L}$ is homeomorphic to $\SS^2$. 
+Since $\spc{L}$ has exactly two topological singularities it can not be presented as a fiber bunndle over $\SS^2$. 
+
+\smallskip
+
+The proof of is based on ???,
+the rest of the proof repeats the proof of classical soul theorem \cite{cheeger-gromoll-soul} and \cite{sharafutdinov}.
+
+\parit{Proof.}???
+\qeds
+
+
+
+
+
+
+
+\section{Shioya's splitting}
+
+For Riemannian case, corollary \ref{cor:shioya} was proved in \cite{mendonca:shioya}, it was conjectured in \cite{shioya} where a weaker statement had been proved.
+The followng more general theorem was obtained in \cite{perelman:collapsing} independently.
+
+Given $\spc{L}\in\CBB m0$ and $p\in \spc{L}$, set\index{$\T_\infty$} $(\T_\infty,0)=\GHlim_{\eps\to0} \eps\blow(\spc{L},p)$.
+Clearly $\T_\infty$ does not depends on the choice of $p$.
+From ??? it is clear that $\T_\infty \spc{L}\in \CBB \kay 0$ for $\kay\le m$.
+The space $\T_\infty \spc{L}$ is called \emph{cone at infinity}\index{cone at infinity}, it has natural cone structure WHy???.
+Thus, there is space $\Sigma_\infty \spc{L}\in \CBB {\kay-1} 1$\index{$\Sigma_\infty$} such that $\T_\infty \spc{L}\iso\Cone\Sigma_\infty \spc{L}$.
+The space $\Sigma_\infty \spc{L}$ is called \emph{ideal boundary}\index{ideal boundary} of $\spc{L}$.
+
+\begin{thm}{Theorem}\label{thm:shioya} 
+Let $\spc{L}\in\CBB m0$ 
+and $\dim\T_\infty=\kay$. 
+Assume $\T_\infty$ has no extremal subsets then $\spc{L}$ can be isometrically splitted into product
+\[\spc{L}=K\oplus \spc{L}'\]
+where $K,\spc{L}'\subset \spc{L}$ are closed convex subsets, $\dim \spc{L}'=\kay$ and $K$ is copmact.
+\end{thm}
+
+\begin{thm}{Corollary}\label{cor:shioya}
+Let $\spc{L}\in\CBB m0$ 
+and $\dim\Sigma_\infty \spc{L}=\kay-1$. 
+Assume $\rad\Sigma_\infty \spc{L}>\tfrac\pi2$, then 
+$\spc{L}$ can be isometrically splitted into product
+\[\spc{L}=K\oplus \spc{L}'\]
+where $K,\spc{L}'\subset \spc{L}$ are closed convex subsets, $\dim \spc{L}'=\kay$ and $K$ is copmact.
+\end{thm}
+
+Note that if $\rad\Sigma_\infty \spc{L}=\tfrac\pi2$, the conclusion of the corollary does not hold even in Riemannian category.
+In fact by taking a product of flat open M\"obius band with $\RR$ we have a counterexample.
+
+
+
+\section{Erd\H{o}s' problem rediscovered}
+
+The following theorem was proved in ???.
+
+\begin{thm}{Theorem}\label{thm:extr-point}
+Let $\spc{L}\in\CBB{m}0$.
+Then it has at most $2^m$ one-point extremal sets.
+\end{thm}
+
+
+The proof is a translation of proof of classical problem in combinatoric geometry to Alexandrov's language.
+
+\begin{thm}{Erd\H{o}s' problem}
+Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
+Then number of elements in $F$ can not exeed $2^m$.
+
+Moreover, if $|F|=2^m$ then $F$ consists of vertexes of right paralelepiped.
+\end{thm}
+
+This problem was posted in \cite{erdos} and solved in \cite{danzer-gruenbaum}.
+The question of classifing all $\spc{L}$ with the maximal number one-point extremal sets turns out to be more delicate see \cite{lebedeva}.
+Let us describe a class of examples.
+Let $\TT^m$ be standart torus 
+and $\Gamma$ be a subgroup generated by all coordinte reflections.
+Clearly, $\Gamma$ is isomorphic to $\ZZ_2^m$ and it has exactly $2^m$ fixed points in $\TT^m$.
+Let $\Gamma'\subset\Gamma$ be a subgroup which has the same fixed point set as $\Gamma$ 
+and $g$ be a flat $\Gamma'$-ivariant metric on $\TT^m$.
+Then, $(\TT^m,g)/\Gamma'\in\CBB m0$ and it has exactly $2^m$ one-point extremal subsets; it follows from ??? and ???.
+The above construction does not describes all $\CBB m0$-spaces with $2^m$ one-point extremal subsets, but it is close to the correct answer.
+
+The finding resonable estimates for maximal number of extraml one-point subsets in a $\CBB m 1$-space is completely open;
+it analogous to the follolwing problem: finding maximal number $n(m)$ such that there are points $p_1,p_2,\dots p_n$ in $\EE^m$ such that any triangle $\trig{p_i}{p_j}{p_\kay}$ is acute.
+It is expected $n(m)\ll 2^m$, but so far it is only known that 
+\begin{enumerate}
+\item $n(m)\ge 2m$ --- the configuration s slight perturbation of vertexes of $m$-octahedra.
+\item $n(m)\le ???$
+\end{enumerate}
+
+
+\parit{Proof of \ref{thm:extr-point}.}
+Let $\{p_i\}$, $i\in\{1,2,\dots,N\}$ be the one-point extreaml sets.
+For each $p_i$ consider its open Voronoi domain $V_i$; i.e. 
+\[V_i=\set{x\in \spc{L}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \t{for any}\ j\not=i}.\]
+Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
+Note that $\vol_mV_i>\frac{1}{2^m}\vol_m \spc{L}$.
+
+Indeed, fix $i$ and for given $\alpha\in(0,1)$, consider $\alpha$-homothety $\map_\alpha\:\spc{L}\to \spc{L}$ with center at $p_i$; 
+i.e. for each point $x\in \spc{L}$ choose a geodesic $[p_ix]$ and set
+$\map_\alpha x=\geod_{[p_ix]}(\alpha\dist{p_i}{x}{})$.
+From comparison we have that $\vol(\map_\alpha \spc{L})\ge\alpha^m\vol \spc{L}$.
+For any $x\in \spc{L}$ and all $\alpha<\tfrac{1}{2}$ we have $\map_\alpha x\in V_i$.
+Assume $x'=\map_\alpha x\notin V_i$,
+then threre is $p_j$ such that $\dist{p_i}{x'}{}\ge\dist{p_j}{x'}{}$.
+Then from comparison, we have $\angk0{p_j}{p_i}{x}>\tfrac\pi2$;
+i.e. $p_j$ does not form a one-point extremal set.???
+\qeds
+
+\section{Remarks and open questions}
+
+In \cite{perelman-soul}, it was proved that if $\spc{L}$ is non-negatively curved Riemannian manifold 
+and $S\subset \spc{L}$ is its soul 
+then Sharafundinov's returction $\Shar\:\spc{L}\to S$ is a submetry;
+i.e. for any $x\in \spc{L}$ and $y\in S$ there is $y'\in \Shar^{-1}(y)$ such that  $\dist{\Shar(x)}{y}{}=\dist{x}{y'}{}$. 
+
+This statement is likely remains true for non-negatively curved Alexandrov space, 
+but the proof can not be generalized directly. 
+
+
+

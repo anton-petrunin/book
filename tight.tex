@@ -1,0 +1,949 @@
+%%!TEX root = all.tex
+%array^
+\chapter{Distance maps %ready
+}\label{chap:dist-maps}
+
+This chapter provides analogous results of Chapter~\ref{chap:web+bary} for $\CBB{}{}$ spaces.
+The material is slightly harder mostly due to nonexistence of strongly convex functions in infinite dimensional $\CBB{}{}$ spaces.
+
+In Section~\ref{sec:struts+rank},
+we define $\kappa$-strutting point arrays 
+and rank of a point.
+In Section~\ref{sec:right-inverse-1},
+we consider distance maps for a strutting point arrays.
+For these maps we give a proof of a right-inverse theorem.
+This is an important technical result which is used in the very base of theory, in particular in the proof of some basic properties of dimension.
+
+After that we turn our attention to the finite dimensional case.
+In the Section~\ref{sec:dist-chart}, we define distance chart and prove its basic properties.
+In Section~\ref{sec:perelman-lemma} we prove Perelman's lemma which provides the key observation for further study of regularity questions in distance charts.
+In Section~\ref{sec:dist-embedding} we show that finite dimensional Alexandrov spaces are locally embeddable into Euclidean space of some big dimension.
+%???
+
+
+
+\section{Struts and rank}\label{sec:struts+rank}
+
+Our definitions of strut 
+and distant chart 
+(\ref{def:strut-I} and \ref{def:dist-chart}) 
+%is the same as it was originally proposed by Burago but it CHECK???
+differ from the one 
+given by 
+Burago, 
+Gromov 
+and Perelman in \cite{BGP};
+it is closer to Perelman's definitons in \cite{perelman:spaces2} %CHECK??? 
+and \cite{perelman:morse}%CHECK???
+.
+
+The term ``strut'' seems to have the closest meaning to the original Russian term ``rasporka''%???
+ used in \cite{BGP}.
+In the so called professional transaltion,
+it appears under name ``burst'' 
+and in the non-official authors translation it was ``strainer''.
+It seems that both are not good, 
+so we decided to switch to ``strut''.
+
+\begin{thm}{Definition of struts}\label{def:strut-I}
+Let $\spc{L}\in\CBB{}{}$.
+We say that a point array $(a^0,a^1,\dots,a^\kay)\in\spc{L}^{{\times}(\kay+1)}$
+ is \emph{$\kappa$-strutting}\index{strut} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
+\end{thm} 
+
+
+
+\begin{thm}{Definition}\label{def:rank}
+Let $\spc{L}\in\CBB{}{}$ 
+and $p\in \spc{L}$.
+Let us define rank of $\spc{L}$ at $p$ as 
+\[\rank_p=\rank_p\spc{L}
+\df\pack_{\pi/2}\Sigma_p-1.\]
+
+\end{thm}
+
+
+
+
+Thus $\rank$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
+
+
+\begin{thm}{Proposition}\label{prop:stutt}
+Let $\spc{L}\in\CBB{}{\kappa}$ 
+and $p\in \spc{L}$.
+Then the following conditions are equivalent:
+
+\begin{subthm}{lem:stut<=>rank:rank}$\rank_p\ge\kay$
+\end{subthm}
+
+\begin{subthm}{lem:stut<=>rank:strut}
+There is a point array $(a^0,a^1,\dots,a^\kay)\in\spc{L}^{{\times}(\kay+1)}$ which is $\kappa$-strutting for $p$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof of \ref{prop:stutt}, (\ref{SHORT.lem:stut<=>rank:strut})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:rank}).}
+For each $i$,
+choose a point $\acute a^i\in\Str(p)$ sufficiently close to $a^i$ (so $[p\acute a^i]$ exists for each $i$).
+One can choose $\acute a^i$ on such a way that we still have
+$\angk\kappa{p}{\acute a^i}{\acute a^j}>\tfrac\pi2$ for all $i\not=j$.
+
+From hinge comparison (\ref{angle}) we have 
+\[\mangle(\dir{p}{\acute a^j},\dir{p}{\acute a^j})
+\ge
+\angk\kappa{p}{\acute a^i}{\acute a^j}
+>
+\tfrac\pi2\]
+for all $i\not=j$.
+In particular $\pack_{\pi/2}\Sigma_p\ge \kay+1$.
+
+\parit{(\ref{SHORT.lem:stut<=>rank:rank})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:strut}).} 
+Assume $\xi^0,\xi^1,\dots,\xi^\kay$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\not=j$.
+
+Without loss of generality, 
+we may assume that each direction $\xi^i$ is geodesic;
+i.e. for each $i$ there is a geodesic $\gamma^i$ in $\spc{L}$ such that $\gamma^i(0)=p$ and $\xi^i=(\gamma^i)^+(0)$.
+Then the array $a^i=\gamma^i(\eps)$ for small enough $\eps>0$
+satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
+\qeds
+
+\begin{thm}{Corollary}\label{cor:rank>=k-open}
+Let $\spc{L}\in\CBB{}{}$ and $\kay\in\ZZ_{\ge0}$.
+Then the set of all points in $\spc{L}$ 
+with rank $\ge \kay$ is open.
+\end{thm}
+
+\parit{Proof.} Given an array of points $\bm{a}=(a^0,a^1,\dots,a^\kay)\in \spc{L}^{{\times}(\kay+1)}$, consider 
+the set $\Omega_{\bm{a}}$ of all points $p\in \spc{L}$ such that array $\bm{a}$
+ is $\kappa$-strutting for a point $p$.
+Cleary $\Omega_{\bm{a}}$ is open.
+
+According to Proposition~\ref{prop:stutt}, the set of points in $\spc{L}$ 
+with rank $\ge \kay$ can be presented as
+\[\bigcup_{\bm{a}\in \spc{L}^{{\times}(\kay+1)}}\Omega_{\bm{a}}.\]
+Hence the result.
+\qeds
+
+
+
+
+
+\section{Right-inverse mapping theorem}\label{sec:right-inverse-1}
+
+%\parbf{Remark of A.} We might want to call it semiinverse function theorem???
+% should we change b --> a^0???
+
+\begin{thm}{Right-inverse mapping theorem}
+\label{thm:right-inverse-function}
+Let $\spc{L}\in\CBB{}{\kappa}$,
+$p,b\in\spc{L}$ 
+and $\bm{a}=(a^1,a^2,\dots,a^\kay)\in\spc{L}^{{\times}\kay}$ be a point array.
+
+Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
+Then the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\dist{\bm{a}}{p}{}\in\RR^\kay$;
+i.e. there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \dist{\bm{a}}{p}{}$ and 
+$\dist{\bm{a}}{\map(\bm{x})}{}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
+Moreover
+
+\begin{subthm}{thm:right-inverse-function:Hoelder}
+The map $\map$ can be chosen to be $C^{\frac{1}{2}}$-continuous (i.e. H\"older continuous with exponent $\tfrac{1}{2}$) and such that 
+$\map(\dist{\bm{a}}{p}{})=p$.
+\end{subthm}
+
+\begin{subthm}{thm:right-inverse-function:open-map}
+The distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipschitz (in particular, open) in a neighborhood of $p$.
+\end{subthm}
+
+\end{thm}
+
+Part \ref{SHORT.thm:right-inverse-function:open-map} of the theorem 
+is closely related to \cite[Theorem 5.4]{BGP} by Burago, Gromov and Perelman, 
+but the proof presented here is different; 
+yet alternative proof can be build on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
+
+%\parbf{Remark for AKP.} It seems that the set $\Im \map$ is $\kay$-rectifiable;i.e. it lies in an image of a Lipschitz map from bounded domain of $\RR^\kay$ to $\spc{L}$. It seems I have a proof, but it is not yet clear we need it.???
+
+
+\parit{Proof.} 
+Fix some $\eps,r,\lambda>0$ such that the following conditions hold: 
+\begin{enumerate}[(i)]
+\item Each distance function $\dist{a^i}{}{}$ and $\dist{b}{}{}$ is $\tfrac\lambda2$-concave in $\oBall(p,r)$.
+\item For any $q\in \oBall(p,r)$, we have $\angk{\kappa}{q}{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and $\angk{\kappa}{q}{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i$.
+In addition $\eps<\tfrac{1}{10}$.
+\end{enumerate}
+
+
+Given $\bm{x}=(x^1,x^2,\dots,x^\kay)\in \RR^\kay$
+consider the function 
+$f_{\bm{x}}\:\spc{L}\to \RR$ defined as
+\[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\dist[{{}}]{b}{}{},\]
+where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
+Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
+Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve which starts at $p$.
+
+\begin{clm}{}\label{clm:|a alpha_x|=x}
+If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$, we have
+$|\dist{\bm{a}}{p}{}-\bm{x}|
+\le
+\tfrac{\eps^2}{10}\cdot t_0$
+then 
+$
+\dist{\bm{a}}{\alpha_{\bm{x}}(t_0)}{}
+= 
+\bm{x}$.
+
+\end{clm}
+
+First note that Claim \ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,r)$, we have
+\begin{enumerate}[(i)]
+\item\label{111} $(\d_q\dist{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
+\item\label{222} $(\d_q\dist{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}-x^j\}<0$.
+\end{enumerate}
+Indeed, since $t_0\le\tfrac{r}2$, $\alpha_{\bm{x}}(t)\in\oBall(p,r)$ for all $t\in[0,t_0]$.
+Consider the following real-to-real functions:
+\[\begin{aligned}
+\phi(t)
+&\df
+\max_{i}\{\dist{a^i}{\alpha_{\bm{x}}(t)}{}-x^i\},
+&
+\psi(t)
+&\df
+\min_{i}\{\dist{a^i}{\alpha_{\bm{x}}(t)}{}-x^i\}.
+\end{aligned}\eqlbl{eq:xy-def}\]
+Then from (\ref{111}), 
+we have $\phi^+<-\tfrac{1}{10}\cdot\eps^2$
+if $\phi>0$ and $t\in[0,t_0]$.
+The same way, 
+from (\ref{222}), 
+we have $\psi^+>\tfrac{1}{10}\cdot\eps^2$
+if $\psi<0$ and $t\in[0,t_0]$.
+Since $|\dist{\bm{a}}{p}{}-\bm{x}|
+\le
+\tfrac{\eps^2}{10}\cdot t_0$, it follows that $\phi(0)\le \tfrac{\eps^2}{10}\cdot t_0$ and $\psi(0)\ge -\tfrac{\eps^2}{10}\cdot t_0$.
+Thus $\phi(t_0)\le 0$ and $\psi(t_0)\ge 0$.
+On the other hand, from \ref{eq:xy-def} we have $\phi(t_0)\ge \psi(t_0)$.
+I.e., $\phi(t_0)=\psi(t_0)=0$; hence Claim~\ref{clm:|a alpha_x|=x} follows.
+
+Thus, to prove Calim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
+First let us prove it assuming that $\spc{L}$ is geodesic.
+
+Note that 
+\[(\d_q\dist{b}{}{})(\dir{q}{a^i})
+\le\cos\angk{\kappa}{q}{b}{a^j}<-\tfrac\eps2,
+\eqlbl{inq-b}\]
+for all $i$ and
+\[(\d_q\dist{a^j}{}{})(\dir{q}{a^i})
+\le
+\cos\angk{\kappa}{q}{a^i}{a^j}
+<
+-\tfrac\eps2\eqlbl{inq-a^j}\]
+for all $j\not=i$. 
+Further, \ref{inq-a^j} implies
+\[(\d_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
+for all $i\not=j$.
+The assumption in (\ref{111}), implies
+\[\d_q f_{\bm{x}}
+=
+\min_{j\not=i} \{\d_q h_{\bm{x}}^j\}+\eps\cdot(\d_q\dist{b}{}{}).\]
+Thus,
+\begin{align*}
+-(\d_q\dist{a^i}{}{})(\nabla_q f_{\bm{x}})
+&\ge
+\<\dir q{a^i},\nabla_q f_{\bm{x}}\>
+\ge
+\\
+&\ge
+(\d_qf_{\bm{x}})(\dir q{a^i})
+=
+\\
+&=
+\min_{i\not=j}\{(\d_qh_{\bm{x}}^i)(\dir q{a^i})\}+\eps\cdot(\d_q\dist{b}{}{})(\dir q{a^i}).
+\end{align*}
+Therefore (\ref{111}) follows from \ref{inq-b} and \ref{inq-h}.
+
+The assumption in (\ref{222}) implies that $f_{\bm{x}}(q)
+=
+h_{\bm{x}}^i(q)+\eps\cdot\dist[{{}}]{b}{}{}$ and 
+\[\d_q f_{\bm{x}}\le \d_q \dist{a^i}{}{}+\eps\cdot(\d_p\dist{b}{}{}).\] 
+Therefore,
+\begin{align*}
+(\d_q \dist{a^i}{}{})(\nabla_q f_{\bm{x}})
+&\ge 
+\d_qf_{\bm{x}}(\nabla_q f_{\bm{x}})
+\ge 
+\\
+&\ge
+\l[(\d_qf_{\bm{x}})(\dir qb)\r]^2
+\ge
+\\
+&\ge
+\l[\min_i\{\cos\angk\kappa qb{a^i}\}-\eps^2\r]^2.
+\end{align*}
+Thus, (\ref{222}) follows from \ref{inq-b} since $\eps<\tfrac{1}{10}$. 
+
+That finishes the proof of \ref{clm:|a alpha_x|=x} in case if $\spc{L}$ is geodesic.
+If $\spc{L}$ is not geodesic,
+perform the above estimate in $\spc{L}^\o$, the ultrapower  of $\spc{L}$. 
+(Recall that according to \ref{cor:ulara-geod}, $\spc{L}^\o$ is geodesic.)
+\claimqeds
+
+Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{x}|$; 
+so we have equality in \ref{clm:|a alpha_x|=x}.
+Define the submap
+\[\map\:{\bm{x}}\mapsto \alpha_{\bm{x}}\circ t_0(\bm{x}),\ \ 
+\Dom\map=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2\cdot r}{20} )\subset\RR^\kay.\]
+It follows from Claim~\ref{clm:|a alpha_x|=x}, that
+$\dist{\bm{a}}{\map(\bm{x})}{}=\bm{x}$ for any $\bm{x}\in\Dom\map$.
+
+Clearly $t_0(p)=0$; thus $\map(\dist{\bm{a}}{p}{})=p$.
+Further, by construction of $f_{\bm{x}}$, 
+\[|f_{\bm{x}}(q)-f_{\bm{y}}(q)|\le |\bm{x}-\bm{y}|,\]
+for any $q\in \spc{L}$.
+Therefore, according to Lemma~\ref{lem:fg-dist-est}, $\map$ is $C^{\frac{1}{2}}$-continuous.
+Thus, we  proved (\ref{SHORT.thm:right-inverse-function:Hoelder}).
+
+Further, note that 
+\[\dist{p}{\map(\bm{x})}{}
+\le (1+\eps)\cdot t_0(\bm{x})
+\le\tfrac{11}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{x}|.\eqlbl{co-lip}\]
+
+Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
+The inequlality \ref{co-lip}, for the obtained map $\map'$, implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
+there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
+\[\dist{p'}{q'}{}\le \tfrac{11}{\eps^2}\cdot|\dist{\bm{a}}{p'}{}-\bm{x}|.\]
+I.e. the distance map $\dist{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$-co-Lipschitz in $\oBall(p,\tfrac{r}{4})$.
+\qeds
+
+\section{Distance chart}\label{sec:dist-chart}
+
+Recall that given an array 
+$\bm{a}=(a^0,a^1,\dots,a^\kay)$ 
+we denote by $\bm{a}^{\ne 0}$ the subarray of $\bm{a}$ with $a^0$ removed;
+i.e.,
+\[\bm{a}^{\ne 0}=(a^1,a^2,\dots,a^\kay).\]
+
+\begin{thm}{Inverse function theorem}\label{thm:inverse-function}
+Let $\spc{L}\in\CBB{m}{\kappa}$ 
+and $p,a^0,a^1,a^2,\dots,a^m\in\spc{L}$.
+
+Assume that the point array $\bm{a}=(a^0,a^1,\dots,a^m)$ is $\kappa$-strutting for $p$.
+Then
+there are $R>0$ and $\eps>0$ such that
+
+\begin{subthm}{thm:inverse-function:strut}
+For all $i\not=j$ and any $q\in\oBall(p,R)$ we have
+\[\angk\kappa{q}{a^i}{a^j}>\tfrac{\pi}{2}+\eps.\]
+
+\end{subthm}
+
+\begin{subthm}{thm:inverse-function:chart}
+The restriction of the distance map 
+$\dist{\bm{a}^{\without 0}}{}{}$ to the ball $\oBall(p,R)$
+is an open $[\eps,\sqrt{m}]$-bi-Lipschitz embedding $\oBall(p,R)\hookrightarrow\RR^m$.
+\end{subthm}
+
+\begin{subthm}{thm:inverse-function:R}
+The value $R$ depend only on the following data:  
+\[\kappa,\  \dist{p}{a^i}{},\ \dist{a^i}{a^j}{}\]
+for all $i$ and $j$.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Definition}\label{def:dist-chart}
+Let $\spc{L}\in\CBB{m}{\kappa}$.
+If a point array $a^0,a^1,a^2,\dots,a^m$ 
+and the value $R$ satisfy the conditions in Theorem~\ref{thm:inverse-function}, 
+then the restriction 
+$\bm{x}=\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
+is called a \emph{distant chart}\index{distant chart},
+the restrictions $x^i=\dist{a^i}{}{}|\oBall(p,R)$ are called \emph{coordinates}\index{coordinate of the distant chart}
+and the restriction $y=\dist{a^0}{}{}|\oBall(p,R)$ is called \emph{strut}\index{strut of the distant chart} of the distant chart.
+\end{thm}
+
+The proof of Theorem~\ref{thm:inverse-function} will reqire the following lemma.
+
+\begin{thm}{Lemma}\label{lem:pack(S^m)+}
+Let $\spc{L}\in\CBB{m}{\kappa}$ and $p\in\spc{L}$.
+Assume for the directions $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\Sigma_p$ the following conditions hold 
+
+\begin{subthm}{}
+$\mangle(\xi,\zeta^i)>\tfrac\pi2-\eps$ for all $i$,
+\end{subthm}
+
+\begin{subthm}{}
+$\mangle(\zeta^i,\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
+\end{subthm}
+Then $\kay\le m$.
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality, we can assume that all $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay$ are geodesic directions;
+let $\xi=\dir{p}{x}$ and $\zeta^i=\dir{p}{z^i}$ for all $i$.
+Fix small $r>0$, 
+let $\bar x\in \l]px\r]$ and $\bar z^i\in\l]p z^i\r]$ be points 
+such that $\dist{p}{\bar x}{}=\dist{p}{\bar z^1}{}=\dots=\dist{p}{\bar z^\kay}{}=r$.
+From the definition of angle,
+if $r$ is small enough, we have
+\begin{itemize}
+\item $\angk\kappa{p}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$
+and $\angk\kappa{p}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+\end{itemize}
+Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficiently close to $p$,
+so that for $p'$, the above conditions still hold; i.e.,
+\begin{clm}{}
+ $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$ and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+\end{clm}
+Set $\acute\xi=\dir{p'}{\bar x}$ and $\acute\zeta^i=\dir{p'}{\bar z^i}$ for each $i$.
+By hinge comparison (\ref{angle}), 
+\begin{clm}{}
+$\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$ and $\mangle(\acute\zeta^i,\acute\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
+\end{clm}
+
+According to Corollary~\ref{cor:euclid-subcone}, all directions $\acute\xi,\acute\zeta^1,\acute\zeta^2,\dots,\acute\zeta^\kay$ lie in an isometric copy of standard $n$-sphere in $\Sigma_{p'}$ and clearly $n\le m-1$.
+Thus, it  remains to prove the following claim, which is a partial case of the lemma.
+
+\begin{clm}{}
+If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\SS^{m-1}$,
+$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all $i$ and
+$\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\not=j$,
+then $\kay\le m$.
+\end{clm}
+
+For each $i$, 
+set 
+$\bar\zeta^i$
+to be the closest point to $\zeta^i$
+in
+$\Xi=\SS^{m-1}\backslash \oBall(\xi,\tfrac\pi2)
+\iso
+\SS^{m-1}_+$ 
+(if $\zeta\in\Xi$ then $\bar\zeta^i=\zeta^i$).
+By straightforward calculations, we get
+\[\dist{\bar\zeta^i}{\bar\zeta^j}{}\ge \dist{\zeta^i}{\zeta^j}{}-\eps>\tfrac\pi2.\]
+Thus, it is enough to show the following claim.
+
+\begin{clm}{}
+$\pack_{\frac\pi2}\SS^{m-1}_+= m.$
+\end{clm}
+
+Clearly, $\pack_{\frac\pi2}\SS^{m-1}_+\ge m$.
+
+The opposite inequality is proved by  induction on $m$.
+The base case $m=1$ is obvious. 
+Assume $\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay}$ is an array of points in $\SS^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
+Without loss of generality we can also assume that $\bar\zeta^\kay\in\partial \SS^{m-1}_+$.
+For each $i<\kay$, 
+set $\check\zeta^i
+=\dir{\bar\zeta^\kay}{\bar\zeta^i}\in\Sigma_{\bar\zeta^\kay}\SS^{m-1}_+\iso\SS^{m-2}_+$.
+ By hinge comparison (\ref{angle}), $\mangle(\check\zeta^i,\check\zeta^j)>\tfrac\pi2$ 
+for all $i<j<\kay$.
+Thus, from the induction hypothesis we have that $\kay-1\le {m-1}$.
+\qeds
+
+\parit{Proof of \ref{thm:inverse-function}; (\ref{SHORT.thm:inverse-function:strut}).}  
+Fix $\eps>0$ such that 
+$\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+Choose sufficiently small $R>0$ so that 
+$\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and any $q\in\oBall(p,R)$.
+Clearly, (\ref{SHORT.thm:inverse-function:strut}) holds for $\oBall(p,R)$.
+
+\parit{(\ref{SHORT.thm:inverse-function:chart}).}
+Note that distance map $\dist{\bm{a}^{\without 0}}{}{}$ is Lipschitz
+and its restriction $\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$ is open;
+the later follows from the open map theorem (\ref{thm:right-inverse-function:open-map}).
+Thus, to prove (\ref{SHORT.thm:inverse-function:chart}), it is sufficient to show that
+\[
+\max_{i>0}\{\,|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\,\}
+>
+\tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
+\eqlbl{expend}
+\]
+for any $x,y\in {\oBall(p,R)}$.
+
+According to Lemma~\ref{lem:pack(S^m)+}, 
+\[
+\mangle\hinge{x}y{a^i}
+\le
+\tfrac\pi2-\eps
+\ \ \t{for some}\ \ i.
+\]
+Since $\dist{x}{y}{}<2\cdot R$ and $R$ is small, 
+the hinge comparison (\ref{angle}) implies 
+\[
+\dist{a^i}{x}{}-\dist{a^i}{y}{}>\tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
+\ \ \t{for some}\ \ i.
+\eqlbl{eq:y-x}\]
+Switching $x$ and $y$, we get
+\[
+\dist{a^j}{y}{}-\dist{a^j}{x}{}
+>
+\tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
+\ \ \t{for some}\ \ j.
+\eqlbl{eq:x-y}\] 
+Clearly $i\not=j$,
+therefore \ref{eq:y-x} and \ref{eq:x-y} implies \ref{expend}.
+
+Finally, part (\ref{SHORT.thm:inverse-function:R})
+follows since the angle $\angk\kappa q{a^i}{a^j}$ 
+is a continuous function from the following 4 numbers $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
+\qeds
+
+The next proposition follows directly from Proposition~\ref{prop:stutt}.
+
+\begin{thm}{Proposition} 
+Let $\spc{L}\in\CBB{m}{}$.
+A point $p\in \spc{L}$ belongs to some distance chart if and only if  if $\rank_p=m$.
+\end{thm}
+
+The following proposition follows from the definition of differential (\ref{def:differential}), Theorem~\ref{thm:tan4finite}, Theorem~\ref{thm:differential-of-dist} and Theorem~\ref{thm:inverse-function}.%???Does it really follows???
+
+\begin{thm}{Proposition}\label{thm:inverse-function:differential}
+Let $\spc{L}\in\CBB{m}{}$ and $\bm{x}\:\spc{L}\to\RR^m$ be a distance chart.
+Then for each $q\in\Dom\bm{x}$, 
+the differential $\d_q\bm{x}\:\T_q\to\RR^m$ is a bi-Lipschitz homeomorphism.
+\end{thm}
+
+\parbf{Liftings.}
+Let $\spc{L}\in \CBB{m}{\kappa}$
+and $\bm{x}\:\spc{L}\subto\RR^m$ 
+be a distance chart with strut $y\:\spc{L}\subto\RR$.
+Assume $\bm{x}=\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
+and $y\z=\dist{a^0}{}{}|\oBall(p,R)$ 
+and a point array $\bm{a}=(a^0,a^1,\dots,a^m)$ in $\spc{L}$.
+
+Assume we have a convergence $\spc{L}_n\GHto\spc{L}$ with
+$\spc{L}_n\in \CBB{m}{\kappa}$.
+Choose arbitrary liftings $a^i_n$ and $p_n$ in $\spc{L}_n$ of $a^i$ and $p$. 
+If $R>0$ as in Inverse function theorem (\ref{thm:inverse-function}) then for each large enough $n$ the restriction
+ $\bm{x}_n=\dist{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
+is a distance chart 
+with strut $y_n=\dist{a^0_n}{}{}|\oBall(p_n,R)$.
+
+
+The constructed charts $\bm{x}_n\:\spc{L}_n\subto\RR^m$ with struts $y_n\:\spc{L}_n\subto\RR$ 
+will be called 
+\emph{liftings of the distance chart}%
+\index{liftings of the distance chart}  
+$\bm{x}\:\spc{L}\subto\RR^m$ with strutt $y\:\spc{L}\subto\RR$.
+
+Note that a lifting forms a continuous submap 
+$\bm{x}\:\bm{\spc{L}}\subto\RR^m$ and $\bm{y}\:\bm{\spc{L}}\to\RR$, where the space
+$$\bm{\spc{L}}=\spc{L}\sqcup\l(\bigsqcup_{i\in\NN}\spc{L}_i\r),$$
+is equipped with the topology of the convergence $\spc{L}_n\GHto\spc{L}$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Perelman's lemma}\label{sec:perelman-lemma}
+%Should we name it Kleiner--Perelman???
+
+The following lemma is analogous to Theorem~\ref{thm:web:Up-convex}.
+
+\begin{thm}{Perelman's lemma}\label{thm:inverse-function:concave}
+Let $\spc{L}\in\CBB{m}{\kappa}$,
+$\bm{x}=(x^1,x^2,\dots,x^m)\:\spc{L}\subto \RR^m$ be a distance  chart with strut $y\:\spc{L}\subto \RR$.
+Then the subfunction 
+\[f=y\circ\bm{x}^{-1}\:\RR^m\subto \RR\] 
+is a semiconcave and locally Lipschitz.
+\end{thm}
+
+\parit{Proof of \ref{thm:inverse-function:concave}.}
+By the inverse fuction theorem (\ref{thm:inverse-function})
+(which is practically the definition of distance chart),
+it is sufficient to show, that given $z\in\Dom\bm{x}$ there is $r>0$ and $\Lambda\in\RR$,
+such that for any $p$, $q\in\oBall(z,r)$ and $t\in[0,1]$, we have
+\[f\circ\bm{\alpha}(t)
+\ge 
+t\cdot y(p)
++(1-t)\cdot y(q)
+-\Lambda\cdot\tfrac{t\cdot(1-t)}{2}\cdot\ell^2,
+\eqlbl{eq:f_is_concave}\]
+where  
+\begin{itemize}
+\item $\ell=|\bm{x}(p)-\bm{x}(q)|$,
+\item $\alpha^i(t)=(1-t)\cdot x^i(p)+t\cdot x^i(q)$ and 
+\item $\bm{\alpha}(t)=(\alpha^1(t),\alpha^2(t),\dots,\alpha^m(t))\in \RR^m$.
+\end{itemize}
+By passing to a restriction of $\bm{x}$, if nesessury, 
+we can assume that 
+\begin{itemize}
+\item $\Im\bm{x}$ is convex,
+\item for some fixed $\lambda\ge 0$, the function $y$ 
+and each $x^i$ are $\lambda$-concave in $\Dom\bm{x}$.
+\item there is $\eps>0$ such that 
+$\bm{x}$ is an open $[\eps,m]$-bi-Lipshitz embedding (this follows from \ref{thm:inverse-function:chart}). 
+Moreover $\d_p\bm{x}\:\T_p\to\RR^m$ is $[\eps,m]$-bi-Lipshitz homeomorphism for any $p\in \Dom\bm{x}$ (this follows from \ref{thm:inverse-function:differential}).
+\end{itemize}
+Fix $r>0$ so that $\oBall(z,2\cdot r)\subset\Dom\bm{x}$.
+Since $p$, $q\in\oBall(z,r)$, 
+we have $[pq]\subset\Dom\bm{x}$.
+Set 
+\[\bm{\beta}(t)
+=
+(\beta^1(t),\beta^2(t),\dots,\beta^m(t))
+=
+\bm{x}\circ\geodpath_{[pq]}(t).\]
+Then
+\[\begin{aligned}
+\beta^i(t)&= 
+x^i\circ\geodpath_{[pq]}(t)
+\ge
+\\
+&\ge
+t\cdot x^i(p)
++
+(1-t)\cdot x^i(q)
++
+\lambda\cdot\tfrac{t\cdot(1-t)}2\cdot\dist[2]{p}{q}{}
+\ge
+\\
+&
+\ge\alpha^i(t)
++
+\tfrac\lambda{\eps^2}\cdot\tfrac{t\cdot(1-t)}2\cdot\ell^2
+\end{aligned}
+\eqlbl{eq:beta>=alpha}\]
+for each $i$.
+Anaogousely,
+\[\begin{aligned}
+f\circ\bm{\beta}(t)&=y\circ\geodpath_{[pq]}(t)
+\ge
+\\
+&\ge
+t\cdot y(p)
++(1-t)\cdot y(q)
++\tfrac\lambda{\eps^2}\cdot\tfrac{t\cdot(1-t)}2\cdot\ell^2.
+\end{aligned}\eqlbl{eq:f(beta)>=}\]
+
+Using the partial order $\succcurlyeq$ on $\RR^m$ which is defined in \ref{def:ordung}, 
+all inequalities in \ref{eq:beta>=alpha} can be rewritten as 
+\[\bm{\beta}(t)
+-
+\tfrac\lambda{\eps^2}\cdot\tfrac{t\cdot(1-t)}2\cdot\ell^2\cdot\bm{1}
+\succcurlyeq 
+\bm{\alpha}(t).
+\eqlbl{beta>=alpha}\]
+where $\bm{1}\df(1,1,\dots,1)\in\RR^m$.
+
+Now let us prove the following claim.
+
+\begin{clm}{}\label{partial f} The function $f$ is decreasing in each argument; 
+i.e.
+\[\bm{v}\succcurlyeq\bm{w}\ \ \Rightarrow\ \ f(\bm{v})\le f(\bm{w})\]
+for any $\bm{v},\bm{w}\in \Im\bm{x}$.
+\end{clm}
+
+Let $b,a^1,a^2,\dots,a^m\in\spc{L}$, be as in the definition of distant chart (\ref {def:dist-chart}).
+Clearly,
+\begin{itemize}
+\item $\d_p y(u)\le-\<\dir{p}{b},u\>$ and $\d_p x^i(u)\le-\<\dir{p}{a^i},u\>$ for all $i$ and
+\item $\mangle\hinge{p}{a^i}{a^j}$, $\mangle\hinge{p}{b}{a^j}>\tfrac{\pi}{2}$ for all $i,j$.
+\end{itemize}
+It follows from Lemma~\ref{lem:pack(S^m)+},
+that
+\[\t{if}\ \ \d_p x^i(u)\ge 0\ \ \t{for each}\ \ i\  \ \t{then}\ \ \d_p y(u)\le 0.
+\eqlbl{1-st order}\]
+for any $p\in\Dom\bm{x}$ and $u\in\T_p$.
+Consider
+\begin{itemize}
+\item function $\phi\:[0,1]\to\RR$ defined as $\phi(t)=f[(1-t)\cdot\bm{v}+t\cdot\bm{w}]$ and 
+\item path $\sigma\:[0,1]\to\Dom\bm{x}$ defined as $\sigma(t)=\bm{x}^{-1}[(1-t)\cdot\bm{v}+t\cdot\bm{w}]$
+(it is defined since $\Im\bm{x}$ is convex).
+\end{itemize}
+Clearly,
+$\sigma^+(t)=(\d_{\sigma(t)}\bm{x})^{-1}(\bm{w}-\bm{v})$;
+thus
+ \[(\d_{\sigma(t)}x^i)(\sigma^+(t))=w^i-v^i\ge 0.\]
+From \ref{1-st order}, we have $(\d_{\sigma(t)}y)(\sigma^+(t))\le 0$.
+Therefore 
+\begin{align*}
+f(\bm{w})-f(\bm{v})
+&=\int\limits_0^1\phi^+(t)\cdot\d t=
+\\
+&=\int\limits_0^1(\d_{\phi(t)}y)(\sigma^+(t))\cdot\d t
+\le 0.
+\end{align*}
+\claimqedsf
+
+Note that $y$ is 1-Lipschitz.
+As it is stated above, 
+$\bm{x}$ is $[\eps,m]$-bi-Lipschitz.
+Thus, $f=y\circ\bm{x}^{-1}$ is $\tfrac1\eps$-Lipschitz.
+Applying this 
+together with \ref{beta>=alpha}, 
+\ref{eq:f(beta)>=}
+and Claim~\ref{partial f},
+we get 
+\begin{align*}
+f\circ\bm{\alpha}(t)
+&\ge 
+f
+\l[
+\bm{\beta}(t)
+-
+\tfrac\lambda{\eps^2}\cdot\tfrac{t\cdot(1-t)}2\cdot\ell^2\cdot\bm{1}
+\r]
+\ge
+\\
+&
+\ge
+f\circ\bm{\beta}(t)
++
+\tfrac{\lambda
+\cdot 
+\sqrt{m}}{\eps^3}
+\cdot
+\tfrac{t\cdot(1-t)}2
+\cdot
+\ell^2
+\ge
+\\
+&
+\ge
+t\cdot y(p)
++(1-t)\cdot y(q)+
+\lambda\cdot\l(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\r)
+\cdot 
+\tfrac{t\cdot(1-t)}2
+\cdot
+\ell^2.
+\end{align*}
+I.e. \ref{eq:f_is_concave} holds for $\Lambda=\lambda\cdot\l(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\r)$.
+\qeds
+
+\section{Distance embedding}\label{sec:dist-embedding}
+
+
+\begin{thm}{Theorem}\label{thm:dist-emb}
+Let $\spc{L}\in\CBB{m}{\kappa}$, $z\in\spc{L}$ and $R>0$.
+Then there is $\eps>0$, 
+$\kay\in\NN$ 
+and a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ in $\spc{L}$
+such that the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ gives an embedding $\oBall(z,R)\hookrightarrow\RR^\kay$, 
+which is $[\eps,\kay]$-bi-Lipschitz.
+
+Moreover, the values $\eps$, $\kay$ and the point array $\bm{a}$ can be chosen so that:
+
+\begin{subthm}{thm:dist-emb:close.to.z}
+All points $a^i$ lie arbitrary close to $z$;
+say, given $r>0$ we can assume that $a^i\in\oBall(r,z)$ for each $i$.
+\end{subthm}
+
+\begin{subthm}{thm:dist-emb:L_n-->L}
+Given a Gromov--Hausdorff convegence
+$\spc{L}_n\GHto\spc{L}$ with $\spc{L}_n\in\CBB{m}{\kappa}$,
+for all large enough $n$
+the liftings $\dist{\bm{a}_n}{}{}\:\spc{L}_n\to\RR$ of the distance map $\dist{\bm{a}}{}{}$ 
+give an $[\eps,\kay]$-bi-Lipschitz embedding of $\oBall(z_n,R)\subset \spc{L}_n$ for lifting $z_n\in\spc{L}_n$ of $z$.
+\end{subthm}
+\end{thm}
+
+As a corollary, we obtain the following usefull technical statememnt.
+The original proof of this lemma was build on volume comparison %???
+ for a map $p\mapsto \ddir{x}{p}$ with arbitrary choice of geodesic $p\mapsto [xp]$;
+compare \cite[Lemma~1.3]{grove-petersen:finiteness}.
+
+\begin{thm}{Obtuse-angle lemma} \label{lem:tuda-suda} Given $v>0$, $r>0$,
+$\kappa\in\RR$ and $m\in\NN$, there is $\eps=\eps(v,r,\kappa,m)>0$ such that if
+$\spc{L}\in\CBB{m}{\kappa}$, $p\in \spc{L}$, $\vol_m \oBall(p,r)>v$, then for any two points
+$x,y\in \oBall(p,r)$, $\dist{x}{y}{}<\eps$ there is point $z\in \oBall(p,r)$ such that 
+\[\mangle\hinge x z y>\tfrac\pi2+\eps\ \ \text{or}\ \  \mangle\hinge y z x>\tfrac\pi2+\eps.\]
+\end{thm}
+
+\parit{Proof of \ref{thm:dist-emb}.}
+Without loss of generality, we may assume that $\kappa=-1$;
+i.e. $\spc{L}\in\CBB{m}{-1}$.
+
+\begin{wrapfigure}[8]{r}{30mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/gradient-bisector-triangle(0.4)}
+\lbl[br]{21,31;$x$}
+\lbl[tl]{43,22;$y$}
+\lbl[rb]{44,63,67;{\small $\GradBis(\ $}}
+\lbl[b]{44,63,53;{\small $R$}}
+\lbl[lb]{44,63,27;{\small $\ ;x,y)$}}
+\lbl[]{55,45;$\spc{L}$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume 
+$x,y\in \spc{L}$ be a pair of distinct points.
+Let us construct a subset $\RB{}(R;x,y)\subset\spc{L}$, 
+which will be called  \emph{radial bisector of radius $R$ between $x$ and $y$}.
+To do this, first consider the function $f\z=\min\{\dist{x}{}{},\dist{y}{}{}\}$.
+We say that $p\in\RB(R;x,y)$ if for some $0<s_0\le s_1\le R$ 
+there is a point $q\in \spc{L}$ such that $s_0=\dist{x}{q}{}=\dist{y}{q}{}$ 
+and $p=\sigma(s_1)$ where $\sigma$ is an $f$-radial curve such that $\sigma(s_0)=q$.
+
+
+
+\parbf{Remark.}
+Clearly $\RB(R;x,y)$ contains all point $p$ such that $\dist{p}{x}{}\z=\dist{p}{y}{}\le R$,
+but in general this set is bigger.
+For example, assume that space $\spc{L}$ is isometric to a solid plane triangle, then,
+the set $\RB(R;x,y)$ for some $x,y\in\spc{L}$ might contain segments on the boundary of $\spc{L}$ (as on the figure).
+
+
+\begin{clm}{}\label{clm:GB}
+Given a pair of distinct points $x,y\in \spc{L}$, 
+there is a $(\sinh R)$-Lipschitz map $\map\:\SS^{m-1}\to\spc{L}$ such that 
+$\Im\map_R\supset\RB(R;x,y)$.
+\end{clm}
+
+\parit{Proof of the claim.}
+Set $f=\min\{\dist{x}{}{},\dist{y}{}{}\}$ as above.
+
+Let us denote by $\sigma_w$ the $f$-radial curve for curvature $-1$ initiated at $w\in\spc{L}\backslash\{x,y\}$.
+Given $\xi\in\Sigma_x$ consider sequence of points $w_n\to x$ such that $\dir{x}{w_n}\to\xi$.
+Applying \ref{gen-rad-comp} for $A=\{x,y\}$, we get that $\sigma_{w_n}$ convege pointwise to a radial curve $\sigma_\xi$ such that $\sigma_\xi(0)=x$ and $\sigma^+_\xi(0)=\xi$.
+Moreover, it follows that if $\xi^1,\xi^2\in\Sigma_x$ and $\mangle(\xi^1,\xi^2)=\phi$ then $\dist{\sigma_{\xi^1}(t_1)}{\sigma_{\xi^2}(t_2)}{}\le \side{-1} \{\phi,t_1,t_2\}$.
+In particular, the map $\map_R\:\xi\mapsto\sigma_\xi(R)$ is a $(\sinh R)$-Lipschitz map from $\Sigma_x$ to $\spc{L}$.
+
+Let us show that $\Im\map_R\supset \RB(R;x,y)$.
+
+First note that
+if $\dist{x}{q}{}=\dist{y}{q}{}=s_0$ then $q\in\Im\map_{s}$ for any $s\ge s_0$.
+Indeed,  $\Im\map_s$ separates %???WHY
+ $x$ and $y$ in $\spc{L}$.
+Thus, for any choice of geodesics $[q x]$ and $[q y]$, 
+the set $\Im\map_s$ contains at least one point on $[x q]\cup[q y]$.
+However, it can not contain any point except $q$.
+Indeed, assume $\map_s(\xi)= w\in]xq[$
+then according to \ref{prop:grad-like-unique-past}, $\sigma_\xi\l([0,s]\r)=[xw]$; 
+consequently $s<s_0$, a contradiction.
+
+
+Now assume $p\in \RB(R;x,y)$.
+Let $s_0\le s_1\le R$ and $q\in\spc{L}$ be as in the construction of radial bisector.
+From above, we have that for any $s\ge s_0$ there is $\xi(s)\in\Sigma_x$ such that $q=\sigma_{\xi(s)}(s)$.
+Note that the $\sigma_{\xi(s)}\l([s,\infty)\r)=\sigma_q\l([s_0,\infty)\r)$ 
+for any $s\ge s_0$.
+Further note, that the map $\tau\:s\mapsto \sigma_{\xi(s)}(R)$ is continuous%
+\footnote{Note however that the map $s\mapsto\xi(s)$ might be non-continuous.}
+for $s\in[s_0,R]$.
+Clearly, $\tau(R)=q$ and $\tau(s_0)=\sigma(R)$.
+Thus, the curve $\tau|[s_0,R]$ runs along $\sigma|_{[s_0,R]}$ in opposite direction.
+In particular, for some $s\in[s_0,R]$, we have
+$p=\sigma_{\xi(s)}(R)$ or $p\in\Im\map_R$.
+
+This finishes the proof of the claim in case $x$ is regular; i.e. $\Sigma_x\iso\SS^{m-1}$.
+
+To prove the general case,
+choose a sequence of regular points $x_n\to x$ (the existence of this sequence follows from \ref{LinDim+-f}).
+Applying the above argument, we get the existence of a sequence of $(\sinh R)$-Lipschitz maps $\map_{R;n}\:\SS^{m-1}\to\spc{L}$ such that 
+$\Im\map_{R;n}
+\supset
+\RB(R;x_n,y)$.
+The sets $\RB(R;x_n,y)$ converges 
+in the Hausdorff sense to $\RB(R;x,y)$. %???WHY???
+Thus one can take $\map_R$ to be a partial limit of $\map_{R;n}$ as $n\to\infty$.
+\claimqeds
+
+
+Note that for any choice of $\bm{a}\in\spc{L}^{{\times}\kay}$,
+the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is $\kay$-Lipschitz.
+Thus it remains to show that one can choose $\kay$, $\bm{a}$ and $\eps>0$ on such a way that 
+\[|\dist{a^i}{x}{}-\dist{a^i}{y}{}|>\eps\cdot\dist[{{}}]{x}{y}{}
+\ \ \t{for at least one}\ \ i
+\eqlbl{eq:bilip}\]
+and any $x,y\in\oBall(z,R)$.
+
+\begin{wrapfigure}{l}{22mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pp-1(0.45)}
+\lbl[rt]{10,3;$x$}
+\lbl[lt]{33,3;$y$}
+\lbl[l]{42,51;$p$}
+\lbl[r]{25,60;$\check p$}
+\lbl[b]{20,46,90;{\small $\sigma(s)$}}
+\lbl[t]{21,31;$q$}
+\lbl[l]{4,30;$\spc{L}$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume we want to choose all $a^i$ in $\oBall(z,r)$ for some $0<r\le R$;
+that is only needed to prove (\ref{SHORT.thm:dist-emb:close.to.z}).
+
+For small enough $\delta>0$,
+choose $\bm{a}$ so that the set $\{a^1,a_2,\dots,a^\kay\}$ 
+forms a \emph{maximal $\delta$-packing}\index{maximal $\eps$-packing} in $\oBall(z,r)$;
+i.e. $\kay=\pack_\delta\oBall(z,r)$ and $\dist{a^i}{a^j}{}>\delta$ for all $i\not=j$.
+Note that according to \ref{pack}, we have $\kay>\Const/\delta^m$ for some $\Const>0$.
+Thus, we can assume that
+\[\kay>\pack_{\delta_1}\SS^{m-1},
+\ \ \t{where}\ \ 
+\delta_1=\frac{\delta}{2\cdot\sinh (2\cdot R)}.
+\eqlbl{delta-def}\]
+
+
+For fixed $x,y\in\spc{L}$ and arbitrary point $p\in\spc{L}$, 
+let us describe a construction of a new point $\check p$ on gradient bisector of $x$ and $y$.
+Assume $\dist{x}{p}{}\ge\dist{y}{p}{}$; 
+if not --- switch $x$ and $y$ in all the following construction.
+Choose a point $q\in [x p]$ such that $\dist{x}{q}{}=\dist{y}{q}{}$.
+Set $s_0=\dist{x}{q}{}=\dist{y}{q}{}$ and $s_1=\dist{x}{p}{}$.
+As above, set $f=\min\{\dist{x}{}{},\dist{y}{}{}\}$.
+Let $\sigma\:[s_0,\infty)\to\spc{L}$ be an $f$-radial 
+curve which starts at $q$.
+Then set $\check p=\sigma(s_1)$.
+Clearly, $s_1\le 2\cdot R$; hence $\check p\in \RB(2\cdot R;x,y)$.
+
+\begin{wrapfigure}{r}{22mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pp-1-model(0.45)}
+\lbl[rt]{10,5;$\~x$}
+\lbl[lt]{33,5;$\~y$}
+\lbl[rb]{42,52;$\~p$}
+\lbl[lb]{3,52;$\~{\check p}$}
+\lbl[l]{24,19;$\~q$}
+\lbl[l]{40,17;$\Lob2{-1}$}
+\end{lpic}
+\end{wrapfigure}
+
+%???\~{\check p} is not a good thing!!!
+
+Now let us construct corresponding model configuration.
+Consider a model triangle $\trig{\~x}{\~y}{\~p}=\modtrig{-1}(x y p)$ in $\Lob2{-1}$.
+Let $\~{\check p}$ be the reflection of $\~p$ in the bisecting perpendicular to $[\~x\~y]$
+and $\~q$ lie on the intersection of $[\~x\~p]$ and $[\~y\~{\check p}]$.
+From ??? comparison, 
+$\dist{\~y}{\~q}{}\le s_0$
+and clearly $\dist{\~y}{\~q}{}+\dist{\~q}{\~p}{}=s_1=\dist{y}{q}{}+\dist{q}{p}{}$.
+It follows that $\mangle\hinge{\~y}{\~p}{\~q}\le\angk{-1}{y}{p}{q}$.
+Thus, from radial comparison (\ref{gen-rad-comp}) 
+we have 
+\[\dist{p}{\check p}{}\le\dist{\~p}{\~{\check p}}{}.
+\eqlbl{eq:|p p'|}\]
+
+Assume 
+$x,y\in\Omega$, 
+$p\in\oBall(z,r)$,
+and $|\dist{p}{x}{}-\dist{p}{y}{}|\le\eps\cdot\dist[{{}}]{x}{y}{}$
+for small enough $\eps>0$.
+Clearly $\dist{x}{y}{}$, $\dist{x}{p}{}$, $\dist{y}{p}{}\le 2\cdot R$;
+thus $\check p\in\RB(2\cdot R;x,y)$.
+Direct calculations show that 
+$\dist{\~p}{\~{\check p}}{}<\sqrt{\eps}$.
+Inequality \ref{eq:|p p'|} implies that we can fix $\eps=\eps(\delta,\RR)>0$ so small that 
+\[\dist{p}{\check p}{}<\sqrt{\eps}<\tfrac\delta 4.
+\eqlbl{eps-def}\]
+
+Now assume \ref{eq:bilip} does not hold; i.e.
+\[|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\le\eps\cdot\dist[{{}}]{x}{y}{}
+\ \ \t{for each}\ \ i.
+\]
+Then for each $i$ we have $\dist{a^i}{\check a^i}{}<\sqrt{\eps}$.
+Therefore $\dist{\check a^i}{\check a^j}{}>\delta-2\cdot\sqrt{\eps}>\tfrac\delta2$.
+Applying Claim~\ref{clm:GB}, we get a contradiction with \ref{delta-def}.
+
+To prove (\ref{SHORT.thm:dist-emb:L_n-->L}),
+we should notice that all the constructions above  survive under noncollapsing Gromov--Hausdorff convergence. %???
+\qeds
+
+\section{Exercises}
+
+\begin{thm}{Exercise}\label{ex:lip+dist}
+Let $\spc{L}\in\CBB{m}{}$.
+Then any Lipschitz 
+%(???DC, DMD???) 
+function $f$ with compact support in  $\spc{L}$ can be presented as a composition
+\[f=\phi\circ\dist{\bm{a}}{}{},\]
+where $\bm{a}=(a^1,a^2,\dots,a^\kay)$ is an array of points in $\spc{L}$ and $\phi$ be a Lipschitz function with compact support in $\RR^\kay$.
+\end{thm}
+

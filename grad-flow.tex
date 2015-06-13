@@ -1,0 +1,143 @@
+%%!TEX root = all.tex
+\chapter{Gradient flow}\label{chap:grad-flow}
+
+\section{Gradient flow}
+
+
+In this section 
+we define gradient flow for semiconcave subfunctions 
+and reformulate theorems obtained earlier in this chapter using this new terminology.
+
+Let $\spc{L}\in \CBB{}{}$ 
+and $f\:\spc{L}\subto \RR$ be a locally Lipschitz semiconcave subfunctions.
+For any $t\ge 0$ consider submap $\GF^t_f\:\spc{L}\subto \spc{L}$ defined as 
+$\GF^t_f(\alpha(0))=\alpha(t)$
+where $\alpha$ is an $f$-gradient curve.
+From \ref{lem:fg-dist-est} and ???, 
+it follows that for any $t\ge 0$, the domain of definition of $\GF^t_f$ is open subset of $\spc{L}$; i.e. $\GF^t_f$ is indeed a submap.
+Moreover, if $f$ is defined on whole $\spc{L}$ and $f''+\Kappa\cdot f\le \lambda$ for some $\Kappa,\lambda\in\RR$, 
+then according to \ref{thm:comp-grad-test}, $\GF^t_f(x)$ is defined for all pairs $(x,t)\in\spc{L}\times\RR_{\ge0}$.
+
+Clerarly $\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2}$;
+i.e. one can think that gradient flow is given by an action of semigroup $(\RR_{\ge0},+)$.
+
+\begin{thm}{Proposition}\label{prop:GF-is-lip}
+Let $\spc{L}\in\CBB{}{}$ 
+and $f\:\spc{L}\to \RR$ be a semiconcave functions.
+Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
+Moreover, if $f$ is $\lambda$-concave then $\GF^t_f$ is $e^{\lambda\cdot t}$-Lipschitz.
+\end{thm}
+
+Next proposition states that gradient flow is stable under Gromov--Hausdorff convergence.
+It follows directly from \ref{lem:stable-grad-curves}.
+
+\begin{thm}{Proposition}\label{grad-curve-conv}
+If $\spc{L}_n\in \CBB m\kappa$, $\spc{L}_n\xto{\GH} \spc{L}$, $f_n\:\spc{L}_n\to\RR$ is a sequence of
+$\lambda$-concave functions which converges to $f\:\spc{L}\to \RR$ then
+$\GF_{f_n}^t\:\spc{L}_n\to \spc{L}_n$ converges to $\GF_f^t\:\spc{L}\to \spc{L}$.
+\end{thm}
+
+
+
+This follows from Lemma~\ref{lem:dist-est}(\ref{two-equal-ends}).
+
+Gradient flow can be used to deform a mapping with target in $\spc{L}\in\CBB{}{}$. 
+For example, if $\spc{X}$ is a metric space, then given a Lipschitz map $\map\:\spc{X}\to \spc{L}$ and
+a positive Lipschitz function $\tau\:\spc{X}\to \RR_+$ one can consider the map $\map'$ called
+\emph{gradient deformation} of $\map$ which is defined by
+$$\map'(x)=\GF_f^{\tau(x)}\circ \map(x),\ \ \ \map'\:\spc{X}\to \spc{L}.$$
+
+From Lemma~\ref{lem:dist-est} it is easy to see that the \emph{dilation}\footnote{i.e. its optimal Lipschitz constant.}
+of $\map'$
+can be estimated in terms of $\lambda$, $\sup\set{\tau(x)}{x}$, dilation of $\map$ and the
+Lipschitz constants of $f$ and $\tau$.
+
+Here is an optimal estimate for the length element of a curve which follows from
+Lemma~\ref{lem:dist-est}:
+
+\begin{thm}{Lemma} \label{lem:grad-variation} 
+Let $\spc{L}\in\CBB{}{}$,
+$\gamma_0(s)$ be a curve in $\spc{L}$ parametrized by arc-length
+and $f\:\spc{L}\to\RR$ be a $\lambda$-concave function
+and $\tau(s)$ be a non-negative Lipschitz function. 
+Consider the curve 
+$$\gamma_1(s)=\GF^{\tau(s)}_f \circ\gamma_0(s).$$ 
+If $\sigma=\sigma(s)$ is its
+arc-length parameter then
+$$\d\sigma^2\le e^{2\cdot\lambda\cdot\tau}\cdot\l[\d
+s^2+2\d(f\circ\gamma_0)\cdot\d\tau+|\nabla_{\gamma_0(s)}f|^2\d\tau^2\r].$$
+
+\end{thm}
+
+\section{Gradient curves for a family of functions}
+
+Here we extend notion of gradient curves to a family of functions.
+
+Let $\spc{L}\in\CBB{}{}$.
+A subfunction $f\:\RR\times\spc{L}\subto\RR$, will be called \emph{family of subfunctions}\index{family of subfunctions};
+in this case we prefer the notation $f\:(t,p)\mapsto f_t(p)$.
+A family of subfuncrions $f_t$ is called 
+\emph{locally Lipschitz}%
+\index{locally Lipschitz family of subfunction} 
+if the corresponding subfunction $(t,p)\mapsto f_t(p)$ is locally Lipschitz.
+
+Let $\lambda\:\RR\subto\RR\:t\mapsto \lambda_t$ be a continuous subfunction.
+A family of subfunctions $f_t\:\spc{L}\to \RR$, will be called \emph{$\lambda_t$-concave}\index{$\lambda_t$-concave} 
+and for each fixed $t$, the subfunction $f_t\:\spc{L}\subto\RR$ is $\lambda_t$-concave.
+
+Let $\II$ be a real intrval, and $\alpha\:\II\to\spc{L}$ be locally Lipschitz??? curve.
+We will write 
+$\alpha^\pm(t)=\nabla f_t$
+if for any $t\in \II$, the right/left tangent vector $\alpha^\pm(t)$
+is defined and $\alpha^\pm(t)=\nabla_{\alpha(t)}f_t$.
+The solutions of $\alpha^+(t)=\nabla f_t$ will be also called $f_t$-gradient curves.
+
+The following is a slight generalization of ???.
+
+
+\begin{thm}{Proposition-definition}\label{prop-def}
+Let $\spc{L}\in\CBB m\kappa$,
+$\II$ be an open real interval, 
+$\lambda\:t\mapsto\lambda_t\:\II\to\RR$ be a continuous function and 
+$f_t\:\spc{L}\to \RR$, $t\in \II$ be locally Lipschitz $\lambda_t$-concave family of subfunctions.
+
+Then for any $t^0\in\II$ and any $x^0\in \Dom f_t$ there is an $f_t$-gradient curve $\alpha$ which is defined in a neighborhood of $t^0$ and such that $\alpha(t^0)=x^0$.
+
+Moreover, if $\alpha,\beta\:\II\to \spc{L}$ are $f_t$-gradient then for any $t^0,t^1\in\II$, $t^0\le t^1$,
+$$\dist{\alpha(t^1)}{\beta(t^1)}{}\le L\cdot\dist[{{}}]{\alpha(t^0)}{\beta(t^0)}{},$$
+where $L=\exp\l(\int_{t^0}^{t^1}\lambda(t)\cdot\d t\r).$
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality, we can assume that $t^0=0$.
+
+Fix $\eps>0$ 
+and consider sequence of subfunctions
+$f^n(x)\df f_{n\cdot\eps}(x)$.
+According to ???, for each $n$, we can solve differential equasion
+$$\alpha^+(t)=\nabla_{\alpha(t)}f^n.$$
+Therefore thare is a curve $\alpha_\eps$ defined on some fixed interval $[0,t_{\max})$
+such that $\alpha_\eps(0)=x^0$ and
+$$\alpha_\eps^+(t)= \nabla_{\alpha(t)}f^n$$
+it $n\cdot\eps\le t<(n+1)\cdot\eps$.
+The value of $t_{\max}$ can be estimated from belowfrom Lipschitz constant of $f_t$ arounf $0,x^0$
+
+\qeds
+
+
+\section{Exercises}
+
+
+\begin{thm}{Sharfutdinov's retruction}
+Let $K_t$ be a one parameter famity of convex sets in $\EE^m$
+which is nested; i.e. $K_{t_1}\supset K_{t_2}$ if $t_1\le t_2$.
+Show that there is a family of short maps $\phi_t\:\EE^m\to K_t$ 
+such that $\phi_t|{K_t}=\id$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ for all $t_1\le t_2$.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB{m}{}$, $\partial\spc{L}=\emptyset$ , $K\subset \spc{L}$ be a compact subset and $f\:\spc{L}\to\RR$ be semiconcave function.
+Assume that for some $t>0$ the gradient flow $\GF^t_f$ is defined everywhere in $K$,
+prove that 
+$$\Fr\GF^t_fK\subset\GF^t_f\Fr K.$$
+\end{thm}

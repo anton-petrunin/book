@@ -1,0 +1,360 @@
+%%!TEX root = the-wp.tex
+
+\chapter{Curvature bounds of warped products}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Fiber comparison for warped products.}\label{sec:fiber-comparison}
+
+
+Let $\spc{B}$ and $\spc{F}$ be  $\Cat{}{\Kappa}$) and  $\Cat{}{\Kappa_\spc{F}}$),
+respectively, and
+$f:\spc{B} \to \RR_{\ge 0}$\, be
+an $\FK$-convex function that is Lipschitz on bounded sets, where
+$\Kappa\le 0$. 
+%If $X=f^{-1}(0)$ is nonempty and $\Kappa_F>0$, suppose $f'(0^+)\ge \sqrt{\Kappa_F}$ at the footpoint of every minimizer to $X$.
+If $X=f^{-1}(0)$ is nonempty, any minimizer
+in $\spc{B}\times_f\spc{F}$ between two points not in $X$, whose projections to
+$\spc{F}$ are $\ge \pi/\sqrt{\Kappa_\spc{F}}$ apart,  intersects $X$ and consists of
+two horizontal segments
+joined by a segment in $X$.
+
+
+Let $\spc{B}$ and $\spc{F}$ be Alexandrov spaces with
+CBB by $\Kappa$ and $\Kappa_\spc{F} $ respectively. Suppose $f:\spc{B}\to \RR_{\ge 0}$
+is a locally Lipschitz $\FK$-concave function vanishing on
+$\partial \spc{B}$.  
+If $\partial \spc{B}=f^{-1}(0)$ is nonempty, any minimizer in
+$\spc{B}\times_f\spc{F}$ joining two points not in $\partial \spc{B}$,
+and intersecting $\partial \spc{B}=f^{-1}(0)$, consists of two horizontal
+segments whose
+projections to $\spc{F}$ are $\pi/\sqrt{\Kappa_\spc{F}}$ apart, joined by a
+point of $\partial \spc{B}$.
+
+
+
+
+We show that a curvature bound for
+$\spc{B}\times_f\spc{F}$ can be obtained by comparison to $\spc{B}\times_f\Lob{}{\kappa}$, where $\kappa$ is a curvature bound for the fiber space $\spc{F}$. %This method was introduced by Berestovskii in the case of cones (section \ref{cones-joins}). It was used for arbitrary positive warping function on a $1$-dimensional base by Chen \cite{C1, C2}, and extended to general base and warping function in \cite[Theorem 4.1]{AB1}.
+
+\begin{thm}{Lemma (CBA fiber comparison)}
+\label{thm:cba-fiber-comparison}
+Suppose $\spc{B}\in \Cat{}{\kappa}$, 
+%$\spc{F}\in \Cat{}{\kappa_\spc{F}}$, and  $f:\spc{B}\to\RR_{\ge 0}$, then $\spc{B}\times_f\spc{F}\in \Cat{}{\kappa}$ if and only if $\spc{B}\times_fS_{\kappa_\spc{F}}\in \Cat{}{\kappa}$.  
+$\spc{F}_i\in \Cat{}{\kappa(i)}$, and  $f_i:\spc{B}\to\RR_{\ge 0}$.  If  $\spc{B}\times_{(f_1,\ldots,f_k)}(\Lob{}{\kappa(1)}\times\ldots\times \Lob{}{\kappa(k)})\in \Cat{}{\kappa}$, then
+$\spc{B}\times_{(f_1,\ldots,f_k)}(\spc{F}_1\times\ldots\times \spc{F}_k)\in \Cat{}{\kappa}$.
+ \end{thm} 
+
+\begin{thm}{Lemma (CBB fiber comparison)}
+\label{thm:cbb-fiber-comparison}
+Suppose $\spc{B}\in \CBB{}{\kappa}$,
+%$\spc{F}\in \CBB{}{\kappa_\spc{F}}$, and  $f:\spc{B}\to\RR_{\ge 0}$. Then $\spc{B}\times_f\spc{F}\in \CBB{}{\kappa}$ if and only if $\spc{B}\times_fS_{\kappa_\spc{F}}\in \CBB{}{\kappa}$.
+$\spc{F}_i\in \CBB{}{\kappa(i)}$, and  $f_i:\spc{B}\to\RR_{\ge 0}$.   If $\spc{B}\times_{(f_1,\ldots,f_k)}(\Lob{}{\kappa(1)}\times\ldots\times \Lob{}{\kappa(k)})\in \CBB{}{\kappa}$, then
+$\spc{B}\times_{(f_1,\ldots,f_k)}(\spc{F}_1\times\ldots\times \spc{F}_k)\in \CBB{}{\kappa}$.
+ \end{thm}
+
+
+%For parts (\ref{cbb-join-curvature}), write 
+%\begin{align}\notag
+%\Join_\kappa (\spc{M},\spc{N})
+%&
+%= [0,\varpi_\kappa/2]\times_{(\sn_\kappa,cs_\kappa)}(\spc{M}\times \spc{N})
+%\\
+%&
+%\notag
+%=\bigl([0,\varpi_\kappa/2]\times_{sn_\kappa}\spc{M}\bigr)\times_{cs_\kappa} \spc{N}.
+%\end{align}
+
+
+When the warping functions are strictly positive, the fiber comparison theorems depend on Lemma \ref{lem:fiber-independence}.  In addition, generalized cone points, i.e., vanishing points of the warping function, must be addressed.  
+
+\noindent\emph{Proof of Proposition  \ref{prop:modelredA}.}
+
+Since $X=f^{-1}(0)$ is convex, any minimizer
+$\gamma$ intersects $X$ in at most an interval.  Therefore $\gamma$
+consists of two
+horizontal segments joined by a segment in $X$.
+
+\parit{Proof.}Part (1).We  may normalize so $\Kappa_\spc{F}=1$.  By way of
+contradiction, assume there
+is a minimizer $\gamma$  in $\spc{B}\times_f\spc{F}$ whose
+endpoints project to points of the fiber at distance $\ge\pi$ and
+which does not intersect $X$.  By Lemma \ref{lem:fiberindep}, there
+is such a minimizer also in $\spc{B}\times_f\RR$. Thus it suffices to assume
+$\spc{F}=\RR$.
+
+Since $\gamma$ has a subsegment whose  projection to
+$\RR$ has length $\pi$, there is a minimizer in
+$\spc{B}\times_fS^1=(\spc{B}\times_f\RR)/Z$ not intersecting $X$ and whose
+endpoints project to opposite points of $S^1$.  But then there are
+two minimizers in $\spc{B}\times_fS^1$  with those endpoints, in
+contradiction to Theorem \ref{thm:1dCBA}, which states that
+$\spc{B}\times_fS^1$ is $\Cat{}{\Kappa}$).
+\qeds
+
+[Part (2).] We show that any triangle
+$\triangle=(\triangle_\spc{B},\triangle_\spc{F})$ in
+$\spc{B}\times_f\spc{F}$ is $\Kappa$-thin:
+
+(i)  Suppose $\triangle$ does not
+intersect $X$ and satisfies $
+\triangle_\spc{F}<\pi/\sqrt{\Kappa_\spc{F}}$.  Let $\triangle_\spc{F}'$ be a comparison
+triangle in $S_{\Kappa_\spc{F}}$ for
+$\triangle_\spc{F}$ with the same parametrization of sides.  By Lemma
+\ref{lem:fiberindep}, $\triangle' =
+(\triangle_\spc{B},\triangle_\spc{F}')$ is a triangle in $\spc{B}\times_fS_{\Kappa_\spc{F}}$ with the same
+sidelengths as $\triangle$.   Let $\bar\gamma=(\bar\gamma_\spc{B},\bar\gamma_\spc{F})$ be a
+transversal minimizer for
+$\triangle'$.  Since $\triangle'$ is $\Kappa$-thin by hypothesis, it
+suffices to construct a curve  in  $\spc{B}\times_f\spc{F}$ joining the
+corresponding points
+of $\triangle$ and no longer than $\bar\gamma$.  This we do as
+follows.  If $\bar\gamma$ does not intersect $X$, then $\bar\gamma_\spc{F}$
+is a reparametrized transversal of $\triangle_\spc{F}'$, by Lemma
+\ref{lem:wpgeodesics} (a), and so is not shorter than the
+corresponding transversal $\gamma_\spc{F}$ of $\triangle_\spc{F}$.  In this case,
+pair $\bar\gamma_\spc{B}$ with a
+reparametrization of $\gamma_\spc{F}$ proportional to $\bar\gamma_\spc{F}$.
+If $\bar\gamma$ intersects $X$, pair $\bar\gamma_\spc{B}$ with the curve
+that is indeterminate on the
+same interval as $\bar\gamma_\spc{F}$ and takes as its constant values, the
+two points
+corresponding to the endpoints of $\bar\gamma_\spc{F}$.  Thus $\triangle$
+is $\Kappa$-thin.
+
+(ii)  Suppose $\triangle$ has a vertex
+in $X$. Clearly $\triangle$ is $\Kappa$-thin if it has a side in $X$,
+since then $\triangle$ lies in an isometric copy of $\spc{B}$.  Otherwise,
+a vertex pair lies outside $X$.  If the side of $\triangle$  joining
+this pair intersects $X$, then the image of $\triangle_\spc{F}$ is their
+projections to $\spc{F}$, and otherwise it is the segment joining their
+projections to $\spc{F}$.  By Lemma \ref{lem:fiberindep}, we may construct
+a triangle $\triangle' = (\triangle_\spc{B},\triangle_\spc{F}')$ in $\spc{B}\times_f\RR$
+whose sides have  the same domains, indeterminate subdomains and
+lengths as those of $\triangle$, and where the images of
+$\triangle_\spc{F}$ and $\triangle_\spc{F}'$ correspond:   either two points the
+same distance apart, or segments of the same length.  Therefore the
+distances between the projections to $\spc{F}$ and $\RR$ of any
+corresponding pairs of points on $\triangle$ and $\triangle'$,
+respectively, are equal when they are determinate.  By Lemma
+\ref{lem:fiberindep}, it follows that we can construct transversal
+minimizers for $\triangle'$ of the same length as the corresponding
+ones for $\triangle$.  Since $\spc{B}\times_f\RR$ is $\Cat{}{\Kappa}$ by Theorem
+\ref{thm:1dCBA}, $\triangle'$ is $\Kappa$-thin  and  hence so is $\triangle$.
+
+(iii) If a side of $\triangle$ meets $X$, then $\triangle$ may be
+subdivided into two triangles of type (ii), which are
+therefore thin.  Therefore $\triangle$ is $\Kappa$-thin, by the basic
+Alexandrov Lemma (see \cite[p.115]{BBI}).
+
+It remains to deal with the cases where $\triangle$ does not meet $X$ and
+$\triangle_\spc{F} \ge \pi/\sqrt{\Kappa_\spc{F}}$:
+
+(iv)  If a minimizer from a vertex of $\triangle$ to a point of
+the opposite side meets $X$, then $\triangle$ is subdivided into
+two triangles of type (iii). Since each of these is $\Kappa$-thin, so
+is $\triangle$.
+
+(v) If the minimizers joining a vertex of $\triangle$ to the
+points of its opposite side $\gamma_\spc{B}$ never meet $X$, then these
+minimizers have length $<\pi/\sqrt{\Kappa_\spc{F}}$ by part ($1$ ).  Thus by subdividing
+$\gamma_\spc{B}$, we may subdivide $\triangle$ into triangles of type
+(i). Since each of these is $\Kappa$-thin, so is $\triangle$. \qeds
+
+\noindent\emph{Proof of Proposition \ref{prop:modelredB}.}
+
+A minimizer in $\spc{B}$ either lies in $\partial \spc{B}$
+or intersects $\partial \spc{B}$ only at endpoint(s) \cite{Pm}. It follows that if
+$\gamma$ is a minimizer in $\spc{B}\times_f\spc{F}$, any subsegment of  $\gamma$
+with an endpoint in $\partial \spc{B}$ is horizontal, and either lies in
+$\partial \spc{B}$ or intersects it only at one or both endpoints.
+Therefore if $\gamma$ intersects $\partial \spc{B}$, it does so either in a
+single point or only at the two endpoints.
+
+
+Part (1) of this theorem  is the only result
+from \S \ref{sec:stripsp} - \ref{sec:mainproofs} that will be used in
+the proofs of Theorems
+\ref{thm:keyCBB} and \ref{thm:keyCBA}, and hence the only one that
+must be proved from first principles without reference to those
+theorems:
+
+
+\begin{proof}[Part (1).]
+
+Set $\Kappa_\spc{F}=1$, and hence $\diam \spc{F}\le\pi$.   By Lemma
+\ref{lem:fiberindep}, if there is a minimizer
+$\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ consisting of two horizontal segments
+whose projections to $\spc{F}$ are at distance $<\pi$, then there is a
+minimizer in $\spc{B}\times_f[-\pi/2,\pi/2]$ with the same property.
+Therefore if suffices to show there are no such minimizers when $\spc{F}=\II$.
+
+By hypothesis, if $p\in\partial \spc{B}$, then $f(p)=0$ and $Df_p\le 1$.
+Let $\sn{\kappa}$ be the
+solution of $y'' + ky = 0$ such that $\sn{\kappa}(0) = 0$, 
+${\sn{\kappa}} '(0) =
+1$. Then along any minimizer $\sigma$ in $\spc{B}$ starting from $\partial
+\spc{B}$ we have $f(\sigma(s)) \le \sn{\Kappa}(s)$, an immediate consequence
+of the $\FK$-concavity of $f$.
+
+Let $\gamma:[0,L]\to \spc{B}\times_f\II$ be a minimizer intersecting
+$\partial \spc{B}$, where  $q_1=\gamma_\spc{B}(0)$ and $q_2 = \gamma_\spc{B}(L)$ are
+not in $\partial\spc{B}$. 
+Let $\~{\spc{B}}$ be
+the double of
+$\spc{B}$ and $\~q_1, \~q_2$ the reflections of $q_1, q_2$ in the
+other half of $\~{\spc{B}}$. 
+Then a minimizer from $q_1$ to $\~q_2$
+will consist of two segments $\sigma_1$ and $\~\sigma_2$
+joined at some point $p \in \partial \spc{B}$; the reflections
+$\~\sigma_1, \sigma_2$ of $\sigma_1, \~\sigma_2$ form together
+a minimizer from $\~q_1$ to $q_2$. Clearly $\sigma_1$ and
+$\sigma_2$ make up a shortest path among those connecting $q_1$ and
+$q_2$ which pass through a point of $\partial \spc{B}$. See Figure
+\ref{fig:double}.
+
+%\marginpar{fig:double}
+%\begin{figure}[h]
+%\centering\epsfig{file=double.eps, width=1.5in}
+%\caption{}
+%\label{fig:double}
+%\end{figure}
+
+
+The direction space $\~\Sigma_p$ of $\~{\spc{B}}$ has two pairs of directions,
+$q_1', \~q_2'$ and $q_2', \~q_1'$, with distance each
+$\pi$, so that $\~\Sigma_p$ is a spherical suspension over each
+pair. Hence there are unique minimizers $q_1^{\prime\frown} q_2'$,
+$q_2^{\prime\frown} \~q_1'$, $\~q_1^{\prime\frown}
+\~ q_2'$, $\~q_2^{\prime\frown} q_1'$ which together form
+a periodic geodesic of length $2\pi$.  This geodesic has an
+involutive isometry fixing its intersections with $\partial \Sigma_p$
+(the direction space of $\partial \spc{B}$), and hence intersects $\partial
+\Sigma_p$ in an opposite pair $v_1, v_2$.
+
+An exception occurs when $q_1' = q_2'$, whereupon $p$ is the nearest
+point in $\partial \spc{B}$ to $q_1$ and $q_2$ and the longer of $\sigma_1,
+\sigma_2$ is a common minimizer $\sigma: [0, R] \to \spc{B}$ through them to
+$p$.  Define a map $\Psi : Y \to \spc{B}
+\times_f \II$, where $Y$ is a sector in $S_{\Kappa}$ with polar
+coordinates $(r, \theta),\,\,0\le r\le
+R,\,\,-\pi/2\le\theta\le\pi/2$, and $\Psi(r,\theta) =
+(\sigma(r),\theta)$. Then $\Psi$ is nonexpanding since
+$f(\sigma(r)) \le \sn{\Kappa}(r)$; but also $\Psi$
+preserves distance along radial geodesics. The image of the minimizer in $Y$
+from $(d(p,q_1), \gamma_\II(0))$ to $(d(p,q_2), \gamma_\II(L))$ is a path
+connecting $(q_1, \gamma_\II(0))$ and $(q_2, \gamma_\II(L))$ and has
+length $\le d(p,q_1) +
+d(p,q_2)$, with equality only if $\ell = \pi$. This proves the
+exceptional case.
+
+For the general case we define another nonexpanding map $\Psi$ from a
+constant-curvature half-ball $Y$ in $S^3_{\Kappa}$ to $\spc{B} \times_f \II$.
+Represent $Y$
+as $\mathbf{D} \times_\Phi \II$, where $\mathbf{D}$ is
+a half-disk with radius $R = \max\{d(p,q_1), d(p, q_2)\}$ and
+constant curvature $\Kappa$; when $\Kappa = 0$, take $\Phi = d_\Xi$, where $\Xi$
+is the diameter of $\mathbf{D}$; generally, take $\Phi =
+\sn{\Kappa}\circ d_\Xi$.  Set
+$$\Psi = \exp_p\circ\Psi_\mathbf{D} \times \id:Y=\mathbf{D}
+\times_\Phi \II \to \spc{B}\times_f\II.$$
+Here, $\Psi_\mathbf{D}:\mathbf{D}\to \spc{B}$ is
+the $\Kappa$-cone map into the $\Kappa$-cone over the geodesic in $\Sigma_p$
+from $v_1$ to $v_2$ through $q_1'$ and $q_2'$; this first composite is
+an isometric injection. (When $\Kappa =0, -1, 1$, these $\Kappa$-cones are
+the last three on the list preceding Example \ref{examp:conepts} in
+\S \ref{ss:applications}). The map $\exp_p$ is the \emph{gradient
+exponential map} defined in \cite{PP} and proved there to be
+nonexpanding and isometric along cone radii which correspond to
+minimizers to $p$ such as $\sigma_1, \sigma_2$.
+
+We show that $\Psi$ retains the nonexpanding property. It also retains the
+isometry for those horizontal minimizers from the center which are
+mapped to minimizers from $p$. Consider the functions $f\circ \exp_p
+\circ \Psi_\mathbf{D}$ and $\Phi$ on $\mathbf{D}$. For $q \in
+\mathbf{D}$ there is a minimizer $\rho$ from $q$ to the diameter of
+$\mathbf{D}$, and, since $\Psi_\mathbf{D}$ and $\exp_p$ map boundaries
+into boundaries, the image of $\rho$ in $\spc{B}$ is a curve no longer
+than $d_\Xi(q)$ from $\exp_p\circ\Psi_\mathbf{D}(q)$ to $\partial \spc{B}$. That is,
+$d_{\partial \spc{B}}(\exp_p\circ\Psi_\mathbf{D}(q)) \le d_\Xi(q)$.  Since
+$\sn{\Kappa}$ is increasing
+for all arguments under consideration,
+$f(\exp_p\circ\Psi_\mathbf{D}(q)) \le \sn{\Kappa}(d_{\partial
+\spc{B}}(\exp_p\circ\Psi_\mathbf{D}(q))\le\Phi(q).$
+So for a curve in $Y$, the base component is contracted by $\exp_p
+\circ\Psi_\mathbf{D}$, while the $\II$-component is mapped identically,
+but
+is shortened more by the warping function $f$ than it was by the
+warping function $\Phi$.  Thus there is an image of a geodesic in $Y$
+connecting
+$(q_1,\gamma_\II(0)), (q_2,\gamma_\II(L))$ and no longer than $d(p,q_1) +
+d(p,q_2)$,
+with equality only if $\ell = \pi$.
+\end{proof}
+
+\begin{proof}[Part(2).]
+Now we show that any triangle $\triangle=(\triangle_\spc{B},\triangle_\spc{F})$ in
+$\spc{B}\times_f\spc{F}$ is $\Kappa$-thick.
+
+(i) Suppose $\triangle$ does not intersect $\partial \spc{B}$, and
+$\triangle_\spc{F}<2\pi/\sqrt{\Kappa_\spc{F}}$.  Then we may proceed as in case
+(i) of Proposition
+\ref{prop:modelredA} ($2$) to show that $\triangle$ has a comparison
+triangle in $\spc{B}\times_fS_{\Kappa_\spc{F}}$ such that the
+transversals of the former are no shorter than the corresponding
+transversals of the latter. The only change is that, rather than
+starting with a transversal of the model triangle, here we start with a
+transversal of $\triangle$ and construct a curve in $\spc{B}\times_fS_{\Kappa_\spc{F}}$ that
+is no longer.  Since triangles in $\spc{B}\times_fS_{\Kappa_\spc{F}}$ are $\Kappa$-thick,
+so is $\triangle$.
+
+(ii) Suppose $\triangle$ has a vertex in $\partial \spc{B}$.  If there are
+two such vertices, then all sides of $\triangle$ are horizontal.
+Thus the projection of $\triangle$ to $\spc{B}$ is a triangle with the same
+sidelengths.  Since this triangle in $\spc{B}$ is $\Kappa$-thick, and the
+projection is nonexpanding, $\triangle$ is $\Kappa$-thick.
+
+If exactly one vertex of $\triangle$ lies in
+$\partial \spc{B}$, the two adjacent sides are horizontal, hence have
+constant projections to $\spc{F}$.  Since $\diam \spc{F} \le \pi/\sqrt{\Kappa_\spc{F}}$, we
+may choose two points in $S_{\Kappa_\spc{F}}$ the
+same distance apart.  Then, as in case (ii) of Proposition
+\ref{prop:modelredA} ($2$), we may construct a comparison triangle
+$\triangle'$  in $\spc{B}\times_fS_{\Kappa_\spc{F}}$ whose transversal distances are
+equal to those of $\triangle$.  Since $\triangle'$ is $\Kappa$-thick, so
+is $\triangle$.
+
+(iii) Suppose $\triangle$ does not intersect $\partial \spc{B}$ and
+$\triangle_\spc{F}=2\pi/\sqrt{\Kappa_\spc{F}},\, \Kappa_\spc{F}>0$. Recall that no triangle
+in $\spc{F}$ can have larger perimeter \cite{BGP}. If two vertices are
+$\pi/\sqrt{\Kappa_\spc{F}}$ apart, $\spc{F}$ is a spherical susension with poles at
+these vertices (see \cite[p.369]{BBI}).  Otherwise, $\triangle_\spc{F}$
+is spanned in $\spc{F}$ by an isometric copy of a hemisphere in $S_{\Kappa_\spc{F}}$
+(see \cite[p.836]{Pl}). Thus in either case, $\triangle_\spc{F}$ is spanned
+by an isometric copy of a sector of a hemisphere in $S_{\Kappa_\spc{F}}$.  By
+Lemma \ref{lem:fiberindep}, $\triangle$ has a comparison triangle
+$\triangle'$ in $\spc{B}\times_fS_{\Kappa_\spc{F}}$ with the same transversal
+distances. Since $\triangle'$ is $\Kappa$-thick, so is $\triangle$.
+
+(iv)  The only remaining possibility is that no vertex of $\triangle$
+lies in $\partial \spc{B}$ but some side  intersects $\partial \spc{B}$. Since
+$\partial \spc{B}\ne\emptyset$, $\Kappa_\spc{F}>0$ by hypothesis.  In this case, the
+projection to $\spc{F}$ of the side intersecting $\partial \spc{B}$ consists of
+two points at distance $\pi$, by part ($1$).  Therefore $\spc{F}$ is a
+spherical suspension with poles at these points.  The image of
+$\triangle_\spc{F}$ is either the poles or two segments whose union is  a
+minimizer of length $\pi$ joining them.  Let $\triangle_\spc{F}'$ map into
+$S_{\Kappa_\spc{F}}$ with the same domains and indeterminate subdomains of the
+sides as $\triangle_\spc{F}$, and a corresponding image.  By Lemma
+\ref{lem:fiberindep}, $\triangle'=(\triangle_\spc{B},\triangle_\spc{F}')$ is a
+model triangle in  $\spc{B}\times_fS_{\Kappa_\spc{F}}$ for $\triangle$ and has the
+same transversal distances.  Since $\triangle'$ is $\Kappa$-thick, so is
+$\triangle$.
+            
+\end{proof}
+
+\section{Warped product characterization theorem.}\label{sec:metric-min-surfaces}
+
+
+

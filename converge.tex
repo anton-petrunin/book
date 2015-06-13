@@ -1,0 +1,589 @@
+%%!TEX root = all.tex
+\chapter{Convergence of metric spaces}
+
+In this section we discuss the
+Gromov--Hausdorff convergence of metric spaces.
+
+It seems that Hausdorff convergence was first introduced by Hausdorff in \cite{hausdorff}
+and couple of years later an equivalent definition was given by Blaschke in \cite{blaschke}.
+Further a refinement of this definition was introduced by Frol\'{\i}k in \cite{frolik}
+and then rediscovered by Wijsman in \cite{wijsman},
+however this refinement was a step back to so called \emph{closed convergence} introduced by Hausdorff in in the original book. 
+By that reason we call it Hausdorff convergence
+instead of
+\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
+
+The definition of Gromov--Hausdorff convergence or metric spaces use 
+the Hausdorff convergence.
+It means that the sequence of metric spaces admit a sequence of distance preserving embedding into huge metric space so that the their
+images converge in Hausdorff sense.
+The Gromov--Hausdorff convergence is also defined in a nonstandard way.
+
+
+\section{Convergence of subsets}
+
+
+Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
+We will denote by $\dist{A}{x}{}=\dist{A}{x}{\spc{X}}$ the distance from $A$ to a point $x$ in $\spc{X}$;
+i.e.,
+$$\dist{A}{x}{}\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
+
+\begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
+Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$ 
+a closed set $A_\infty\subset \spc{X}$ is called Hausdorff limit of $(A_n)_{n=1}^\infty$,
+briefly $A_n\Hto A_\infty$ if 
+$$\dist{A_n}{x}{}\to\dist{A_\infty}{x}{}\ \ \t{as}\ \ n\to\infty$$
+for any fixed $x\in \spc{X}$.
+
+In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called \emph{converging} or \emph{converging in the sense of Hausdorff}.
+\end{thm}
+
+\begin{thm}{Selection theorem}
+Let $\spc{X}$ be a proper space
+and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in $\spc{X}$.
+Assume that for for some (and therefore any) point  $x\in\spc{X}$ 
+the sequence $\dist{A_n}{x}{}$ is bounded.
+Then  $(A_n)_{n=1}^\infty$ has a converging subsequence in the sense of Hausdorff.
+\end{thm}
+
+\parit{Proof.}
+Since $X$ is proper,
+we can choose a countable dense set $\{x_1,x_2,\dots\}$ in $\spc{X}$.
+Note that the sequence $a_n=\dist{A_n}{x_\kay}{}$ is bounded for each $\kay$. 
+Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
+we can assume that $\dist{A_n}{x_\kay}{}$ is converging as $n\to\infty$ for any fixed $\kay$.
+
+Note that for each $n$, the function $\dist{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
+Therefore the sequence $\dist{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
+
+Set $A_\infty=f^{-1}(0)$.
+Since $f$ is 1-Lipschitz, 
+$\dist{A_\infty}{y}{}\ge f(y)$ for any $y\in \spc{X}$.
+It remains to show that $\dist{A_\infty}{y}{}\le f(y)$ for any $y$.
+
+Assume contrary;
+i.e., $f(z)<R<\dist{A_\infty}{z}{}$ for some $z\in \spc{X}$ and $R>0$.
+Then for any large enough $n$ there is a point $z_n\in A_n$ such that
+$\dist{x}{z_n}{}\le R$.
+Since $\spc{X}$ is proper, we can pass to a partial limit $z_\infty$ of $z_n$ as $n\to\infty$.
+
+Clearly that $f(z_\infty)=0$, i.e., $z_\infty\in A_\infty$.
+On the other hand, 
+\[\dist{A_\infty}{y}{}\le\dist{z_\infty}{y}{}\le R<\dist{A_\infty}{y}{},\] 
+a contradiction.
+\qeds
+
+\section{Gromov--Hausdorff convergence}
+
+\begin{thm}{Definition}\label{def:comp-metr}
+Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
+A metric space $\bm{X}$
+is called \emph{common space}\index{common space} of $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ if its underlying set is formed by the disjoint union $$\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$ 
+and each inclusion $\iota_\alpha\:\spc{X}_\alpha\hookrightarrow\bm{X}$
+is distance preserving.
+\end{thm}
+
+\begin{thm}{Definition}\label{def:GH}
+Let $\bm{X}$ be a common space for proper metric spaces
+$\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$.
+Assume that $\spc{X}_n$ forms an open set in $\bm{X}$ for each $n<\infty$ and 
+$\spc{X}_n\Hto \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$.
+
+In this case the topology $\GH$ of $\bm{X}$ is called \emph{Gromov--Hausdorff convergence}\index{Gromov--Hausdorff convergence}
+and we write $\spc{X}_n\GHto \spc{X}_\infty$ or $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$;
+the later notation is used if we need to consider specific Gromov--Hausdorff convergene $\GH$.
+The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n)$ along $\GH$.
+\end{thm}
+
+Once we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of Gromov--Hausdorff convergence.
+
+Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not to be isometric to each other. 
+For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
+one may take $\spc{X}_\infty\iso\RR_{\ge0}$.
+In this case a point in the disjont space $\bm{X}$ can be thought as a pair $(x,n)\in \RR_{\ge}\times (\ZZ_>\cup \{\infty\})$ 
+and the metric on $\bm{X}$ can be defined the following way
+$$\dist{(x,n)}{(y,m)}{\bm{X}}\df|\tfrac1n-\tfrac1m|+|x-y|,$$
+where we assume that $0=\tfrac1\infty$.
+On the other hand, one can take $\spc{X}_\infty'\iso\RR$,
+and consider the metric
+\begin{align*}
+\dist{(x,n)}{(y,m)}{\bm{X}'}
+&=|\tfrac1n-\tfrac1m|+|(x-n)-(y-m)|,
+\\
+\dist{(x,n)}{(y,\infty)}{\bm{X}'}
+&=\tfrac1n+|(x-n)-y|,
+\\
+\dist{(x,\infty)}{(y,\infty)}{\bm{X}'}
+&=|x-y|.
+\end{align*}
+where $n, m<\infty$.
+
+\begin{thm}{Induced convergences}
+Assume $\spc{X}_n\xGHto{\GH}\spc{X}_\infty$,
+and $\bm{X}$ as in the definition \ref{def:GH}
+and $\iota_n\:\spc{X}_n\hookrightarrow\bm{X}$, $\iota_\infty\:\spc{X}_\infty\hookrightarrow\bm{X}$ are corresponding inclusions.
+
+\begin{subthm}{}
+A sequence of points $x_n\in\spc{X}_n$ converges to $x_\infty\in\spc{X}_\infty$ (briefly, $x_n\to x_\infty$ or $x_n\xto{\GH} x_\infty$) 
+if $\dist{x_n}{x_\infty}{\bm{X}}\to 0$.
+\end{subthm}
+
+\begin{subthm}{}
+A sequence of closed sets 
+$\mathfrak{C}_n\subset \spc{X}_n$ 
+converges to a closed  set 
+$\mathfrak{C}_\infty\subset \spc{X}_\infty$ (briefly, $\mathfrak{C}_n\to \mathfrak{C}_\infty$ or $\mathfrak{C}_n\xto{\GH} \mathfrak{C}_\infty$)
+if $\mathfrak{C}_n\Hto\mathfrak{C}_\infty$ as subsets of $\bm{X}$.
+\end{subthm}
+
+\begin{subthm}{}
+A sequence of open sets $\Omega_n\subset \spc{X}_n$ 
+converges to an open set $\Omega_\infty\subset \spc{X}_\infty$
+(briefly, $\Omega_n\to \Omega_\infty$ 
+or $\Omega_n\xto{\GH} \Omega_\infty$)
+if the complements $\spc{X}_n\backslash \Omega_n$ converge to the complement $\spc{X}_\infty\backslash \Omega_\infty$ as closed sets.
+\end{subthm}
+
+
+\begin{subthm}{} Let $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{Y}_n\xGHto{\theta} \spc{Y}_\infty$. 
+A sequence of submaps, $\map_n\:\spc{X}_n\subto \spc{Y}_n$ converges to a submap $\map_\infty\:\spc{X}_\infty\subto \spc{Y}_\infty$ if the following conditions holds
+\begin{itemize}
+\item $\Dom\map_n\to \Dom\map_\infty$ as a sequence of open sets.
+
+\item For any $x_\infty\in \Dom \map_\infty$ and any sequence $x_n\in \spc{X}_n$ such that $x_n\to x_\infty$
+\[\spc{Y}_n\ni \map _n(x_n)\xto\theta \map_\infty(x_\infty)\in\spc{Y}_\infty\] 
+as $n\to\infty$.
+\end{itemize}
+\end{subthm}
+
+\begin{subthm}{} Given a sequence of measures $\mu_n$ on $\spc{X}_n$
+denote by $\iota_n\#\mu_n$ the pushforward measures on $\bm{X}$.
+We say that $(\mu_n)$ weakly converges to a measure $\mu_\infty$ on $\spc{X}_\infty$ 
+(brefly, $\mu_n\xto
+\mu_\infty$ or $\mu_n\xto{\GH}
+\mu_\infty$) 
+if the pushforward measures $\iota_n\#\mu_n$ weakly converge to the $\iota_\infty\#\mu_\infty$.
+
+In other words, 
+if for any continuous function $\phi\:\bm{X}\to\RR$ with a compact support, we have 
+\[\int\limits_{\spc{X}_n} \phi\circ\iota_n(x)
+\cdot
+\d_x\mu_n
+\to 
+\int\limits_{\spc{X}_\infty} \phi\circ\iota_\infty(x)
+\cdot\d_x\mu_\infty\]
+as $n\to\infty$.
+\end{subthm}
+\end{thm}
+
+\parbf{Liftings.}
+Given a Gromov--Hausdorff convergence 
+$\spc{X}_n\GHto \spc{X}_\infty$
+and a point $p_\infty\in\spc{X}_\infty$ any sequence of points $p_n\in\spc{X}_n$ such that $p_n\GHto p$  will be called \emph{lifting}\index{lifting of a point} of $p_\infty$.
+In this case the point $p_n\in \spc{X}_n$ will be called a lifting of $p_\infty$ in $\spc{X}_n$.
+In this case we say that $\dist{p_n}{}{}\:\spc{X}_n\to \RR$ 
+is a  \emph{lifting}\index{lifting of a distance function} 
+of the distance function $\dist{p}{}{}\:\spc{X}\to \RR$.
+Obviousely $\dist{p_n}{}{}\GHto\dist{p}{}{}$.
+
+Note that liftings are not uniquely defined.
+We will be interested in the properties of liftings for sufficiently large $n$.
+
+The same way we can talk about liftings of a point array
+$\bm{p}_\infty=(p_\infty^1,p_\infty^2,\dots,p_\infty^\kay)$ in $\spc{X}_\infty$
+and about the corresponding distance map 
+$\dist{\bm{p}_\infty}{}{}\:\spc{X}_\infty\to\RR^\kay$
+$$\dist{\bm{p}_\infty}{}{}\:x\mapsto(\dist{p_\infty^1}{x}{},\dist{p_\infty^2}{x}{},\dots,\dist{p_\infty^k}{x}{})$$
+
+\section{Gromov's selection theorem}
+
+\begin{thm}{Gromov's selection theorem}\label{thm:gromov-selection}
+Let $\spc{X}_n$ be a sequence of proper metric spaces 
+with marked points $x_n\in \spc{X}_n$.
+Assume that for any fixed $R,\eps>0$ there is $N=N(R,\eps)\in\ZZ_>$ 
+such that for each $n$
+the ball $\cBall[x_n,R]\subset \spc{X}_n$ admits a finite $\eps$-net with at most $N$ points.
+Then there is a subsequence of $\spc{X}_n$ which admit a Gromov--Hausdorff convergence 
+such that the sequence of marked points $x_n\in\spc{X}_n$ converges.
+\end{thm}
+
+\parit{Proof.}
+Note that that there is a sequence of integers $M_1<M_2<\dots$
+such that in each space $\spc{X}_n$
+there is a sequence of points $z_{i,n}\in\spc{X}_n$ such that
+\[\dist{z_{i,n}}{x_n}{\spc{X}_n}\le \kay+1\ \ \text{if}\ \ i\le M_\kay\]
+and
+the points $z_{1,n},\dots,z_{M_\kay,n}$ form an $\tfrac1\kay$-net in $\cBall[x_n,\kay]_{\spc{X}_n}$.
+The existence of the sequence $M_1,M_2,\dots$ follows from the main assumption in the theorem.
+
+Passing to a subsequence, we can assume that the sequence \[\ell_n=\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\] 
+converges for any $i$ and $j$.
+
+Let us consider countable set of points $\spc{W}=\{w_1,w_2,\dots\}$
+equipped with the pseudometric defined as 
+\[|w_i,w_j|_{\spc{W}}
+=
+\lim_{n\to\infty}\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}.\]
+Let $\hat{\spc{W}}$ be the metric space corresponding to $\spc{W}$.
+Denote by
+$\spc{X}_\infty$ the completion of $\hat{\spc{W}}$.
+
+It remains to show that there is a Gromov--Hausdorff convergence 
+$\spc{X}_n\GHto\spc{X}_\infty$ such that the sequence $x_n\in\spc{X}_n$ converges.
+To prove it, we need to construct a metric on the disjoint union of \[\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots\] 
+satisfies definitions \ref{def:comp-metr} and \ref{def:GH}.
+
+The metric can be defined as follows.
+Fix a sequence $\eps_\kay\to0+$
+and let $N_\kay$ be the minimal integer such that
+\[\left|\dist{w_i}{w_j}{\spc{W}}
+-
+\dist{z_{i,n}}{z_{j,n}}{\spc{X}_n}\right|<\eps_\kay
+\]
+if $i,j\le N_\kay$ and $n\ge N_\kay$.
+\[\dist{x}{y}{\bm{X}}=
+\begin{cases}
+\dist{x}{y}{\spc{X}_n}& x,y\in \spc{X}_n
+\\
+\dist{x}{y}{\spc{X}_\infty}& x,y\in \spc{X}_\infty
+\end{cases}
+\]
+
+Set,
+\[
+\delta(z_{i,n},z_{i,\infty})
+=
+\sup\set{\left|\dist{z_{i,m}}{z_{j,m}}{\spc{X}_m}
+-
+\dist{z_{i,\infty}}{z_{j,\infty}}{\spc{X}_\infty}\right|}
+{j\le i,\, m\ge n}.\]
+Let us equip $\bm{X}$ with the maximal metric such that each inclusion $\iota_n\:\spc{X}_n$ 
+is short 
+and the $\dist{z_{i,n}}{z_{i,\infty}}{\bm{X}}\le \delta(z_{i,n},z_{i,\infty})$ for any $i$ and $n$.
+In othere words, let us define 
+\qeds
+
+\begin{thm}{Lemma}
+Let $\spc{X}$ and $\spc{Y}$ be two metric spaces with two sequences of points $x_1,x_2,\dots\in\spc{X}$ and $y_1,y_2,\dots\in\spc{Y}$.
+Set
+\[\eps_n
+=
+\max
+\set{\left|\dist{x_n}{x_i}{\spc{X}}-\dist{y_n}{y_i}{\spc{Y}}\right|}{i<n}.\]
+Then for any $\eps>0$,
+the function $\rho\:((\spc{X}\sqcup\spc{Y})\times (\spc{X}\sqcup\spc{Y}))$ defined below is a metric on the disjoint union $\spc{X}\sqcup\spc{Y}$.
+\begin{align*}
+\rho(x,x')&=\dist{x}{x'}{\spc{X}}&&\text{for any}\ \ x,x'\in \spc{X},
+\\
+\rho(y,y')&=\dist{y}{y'}{\spc{Y}}&&\text{for any}\ \ y,y'\in \spc{Y},
+\\
+\rho(x,y)=\rho(y,x)&=\inf_i\{\dist{x}{x_n}{\spc{X}}+\eps+\eps_n+\dist{y_n}{y}{\spc{Y}}\}&&\text{for any}\ \ x\in\spc{X}\ \text{and}\ y\in \spc{Y}.
+\end{align*}
+
+
+In particular, both inculsions $\iota_{\spc{X}}\:\spc{X}\hookrightarrow(\spc{X}\sqcup\spc{Y},\rho)$ and $\iota_{\spc{Y}}\:\spc{Y}\hookrightarrow(\spc{X}\sqcup\spc{Y},\rho)$ are distance preserving.
+
+\end{thm}
+
+
+\begin{thm}{Theorem}
+Let $\spc{X}_n$ be a sequence of metric spaces which admit 
+two Gromov--Hausdorff convergences
+$\GH$ and $\GH'$.
+Assume 
+$\spc{X}_n\xGHto{\GH}\spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'}\spc{X}_\infty'$.
+\begin{subthm}{}
+If  $\spc{X}_\infty$ is compact then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+\end{subthm}
+
+\begin{subthm}{}
+If  $\spc{X}_\infty$ is proper and there is a sequence of points $x_n\in \spc{X}_n$ 
+which converges in both
+$\GH$ and $\GH'$ then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+\end{subthm}
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+\section{Convergence of compact spaces.}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ and $\spc{Y}$ be metric space,
+a map $f\:\spc{X}\to\spc{Y}$
+is called \emph{$\eps$-isometry}\index{isometry!$\eps$-siometry}
+if the following two condition hold:
+\begin{subthm}{}
+$\Im f$ is an $\eps$-net of $\spc{Y}$
+\end{subthm}
+
+\begin{subthm}{}
+$\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\spc{X}$
+\end{subthm}
+
+\end{thm}
+
+The following theorem roughly states that isometry class of Gromov--Hausdorff limit is uniquely defined once it is compact. 
+
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ be metric spaces
+such that $\spc{X}_n\xto{\GH}\spc{X}_\infty$, 
+$\spc{X}_n\xto{\bar\GH}\bar{\spc{X}}_\infty$.
+
+Assume that $\bar{\spc{X}}_\infty$ is compact.
+Then $\spc{X}_\infty\iso \bar{\spc{X}}_\infty$.
+\end{thm}
+
+
+\parit{Proof.}
+For each $x_\infty\in\spc{X}_\infty$,
+fix its liftings $x_n\in\spc{X}_n$.
+
+Choose some ultrafilter $\o$.
+Define $\bar x_\infty\in \bar{\spc{X}}_\infty$ such that $\bar x_n\xGHto{\bar\GH}\bar x_\infty$;
+since $\bar{\spc{X}}_\infty$ is compact, the $\o$-limit is defined.
+We claim that the map $x_\infty\to \bar x_\infty$ is an isometry.
+
+Indeed, according to the definition of Gromov--Hausdorff convergence, 
+\[\dist{\bar x_\infty}{\bar y_\infty}{\bar{\spc{X}}_\infty}
+=
+\lim_{n\to\o}\dist{x_n}{y_n}{\spc{X}_n}
+=
+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}.
+\]
+Thus, the map $x_\infty\to\bar x_\infty$ gives a distance preserving map
+$\map\:\spc{X}_\infty\hookrightarrow\bar{\spc{X}}_\infty$.
+In particular,  
+$\spc{X}_\infty$ is compact.
+Switching $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ and applying the same argument, 
+we get an isometiric embedding 
+$\bar{\spc{X}}_\infty\hookrightarrow\spc{X}_\infty$.
+Thus, the result follows from Lemma~\ref{lem:>=-isometry}.
+\qeds
+
+
+
+
+\begin{thm}{Definition}
+ Given two compact spaces $\spc{X}$ and $\spc{Y}$, we will write 
+\begin{itemize}
+\item $\spc{X}\le \spc{Y}$ if there is a non-contracting map $\map\:\spc{X}\to \spc{Y}$.
+\item $\spc{X}\le \spc{Y}+\eps$ if there is a map $\map\:\spc{X}\to \spc{Y}$ such that for any $x,x'\in \spc{X}$ we have
+\[\dist{x}{x'}{}\le \dist{\map(x)}{\map(x')}{}+\eps.\]
+\end{itemize}
+
+Further, we define \emph{Gromov--Hausdorff distance}\index{Gromov--Hausdorff distance} between $\spc{X}$ and $\spc{Y}$, $\GHdist(\spc{X},\spc{Y})$ as infimum of all $\eps>0$ such that
+$\spc{X}\le \spc{Y}+\eps$ and $\spc{Y}\le \spc{X}+\eps$.
+\end{thm}
+
+\parbf{Remark for AKP.}
+This notation is a bit slang-like, maybe better to use $\succcurlyeq$ instead of $\ge$.
+Yet $\spc{Y}+\eps$ migh be needed to be changed;
+one might think that $\spc{Y}+\eps$ is a metric space $(\ushort{\spc{Y}},\dist{}{}{}+\eps \rho)$, where $\rho$ is a discreate metric on $\ushort{\spc{Y}}$ (i.e. $\rho(x,y)=1$ if $x\not=y$). 
+It will be totally correct to introduce some operator say $\op{Add}_\eps\spc{Y}$, but it is also less intuitive...
+One may also write something like 
+$\spc{X}\succcurlyeq \spc{Y}^{+\eps}$ or $\spc{X}\succcurlyeq^{\eps+} \spc{Y}$...
+
+\medskip
+
+The Gromov--Hausdorff distance turns the set of all isometry classes of compact metric spaces into a metric space.
+The following theorem shows that convergence in this space coinsides with the Gromov--Hausdorff convergence defined above.
+
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be compact metric spaces.
+Then 
+\[\spc{X}_n\xto{}\spc{X}_\infty
+\ \ \Leftrightarrow\ \ 
+\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0.\]
+
+\end{thm}
+
+\parit{Proof; $(\Leftarrow)$.}
+Let $\spc{X}_n\xto{\GH} \spc{X}_\infty$
+and $b_n\:\spc{X}_n\to \spc{X}_\infty$ be a sequence of maps such that
+\[\dist{a_n(x)}{a_n(y)}{\spc{X}_\infty}
+\ge
+\dist{x}{y}{\spc{X}_n}-\eps_n,\]
+\[\dist{b_n(v)}{b_n(w)}{\spc{X}_n}
+\ge
+\dist{v}{w}{\spc{X}_\infty}-\eps_n\]
+for any $x,y\in \spc{X}_n$ and $v,w\in\spc{X}_\infty$ and some sequence $\eps_n\to0+$.
+
+Let us show that $\spc{X}_n\xto{\GH}\spc{X}_\infty$. 
+
+Fix $\eps>0$ and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$ such that the value $\sum_{i<j}\dist{x^i}{x^j}{}$ is maximal.
+Note that 
+\[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}>\dist{x^i}{x^j}{}-2\cdot\eps_n.\]
+Thus, 
+$\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}-\dist{x^i}{x^j}{}
+\to_{n\to\infty} 
+0$ for all $i$ and $j$.
+For all large $n$,
+we have $2\cdot\eps_n<\dist{x^i}{x^j}{}-\eps$.
+Thus $\dist{b_n(x^i)}{b_n(x^j)}{\spc{X}_n}>\eps$ 
+and \[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{\spc{X}_n}>\eps\] 
+for all $i\not=j$.
+Thus, for each large $n$, 
+the set $\{a_n\circ b_n(x^i)\}$ forms a maximal $\eps$-packing and therefore an $\eps$-net in $\spc{X}_\infty$.
+Since $\eps>0$ is arbitrary, we get \ref{def:GH:appr1}.
+
+Since $\{a_n\circ b_n(x^i)\}$ is an  $\eps$-net in $\spc{X}_\infty$,
+for any $y_n\in\spc{X}_n$, there is $x^i$ such that $\dist{a_n\circ b_n(x^i)}{a_n(y_n)}{}<\eps$.
+Thus, $\dist{b_n(x^i)}{y_n}{}<\eps+\eps_n$.
+
+Further, note that the set $\{b_n(x^i)\}$ forms an $(\eps+\eps_n)$-net in $\spc{X}_n$.
+Otherwise, if for some $y_n\in \spc{X}_n$, we have $\dist{y_n}{b_n(x^i)}{}$ for all $i$,
+then $\dist{a_n\circ b_n(x^i)}{a_n(y_n)}{}>\eps$; 
+i.e. $\kay<\pack_\eps{X}_\infty$, a contradiction.
+
+\parit{$(\Rightarrow)$.}
+Assume $\spc{X}_n\xto{\GH}\spc{X}_\infty$.
+Fix $\eps>0$ and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$.
+For each $x^i$, 
+choose a sequence $x^i_n\in\spc{X}_n$ such that $a_n(x^i_n)\to x^i$.
+Note that for all large $n$, we have $\dist{x^i_n}{x^j_n}{}>\eps$.
+For each point $z\in \spc{X}_\infty$, choose $x^i$ so that $\dist{z}{x^i}{}<\eps$ and define map $b_n\:\spc{X}_\infty\to\spc{X}_n$ such that 
+$b_n(z)=x^i_n$.
+\qeds
+
+
+
+\begin{thm}{Lemma}\label{lem:>=-isometry}
+Let $\spc{X}$ and $\spc{Y}$ be two metric spaces 
+and $\spc{X}$ is compact then
+\[
+\spc{X}\ge\spc{Y}\ge\spc{X}
+\ \ \Leftrightarrow\ \ 
+\spc{X}\iso\spc{Y}.
+\]
+
+\end{thm}
+
+The following proof was suggested by Travis Morrison.
+
+\parit{Proof.}
+Let $f\: \spc{X} \to \spc{Y}$ 
+and $g\: \spc{Y} \to \spc{X}$ be non contracting mappings.
+It is sufficient to prove that $h  = g\circ f\:\spc{X}\to \spc{X}$ is an isometry. 
+
+Given any pair of points $x,y\in \spc{X}$, 
+set $x_n=h^{\circ n}(x)$ and $y_n=h^{\circ n}(y)$.
+Since $\spc{X}$ is compact, one can choose an incresing sequence of integers $n_\kay$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both of these sequences  are Cauchy;
+i.e.,
+\[
+\dist{x_{n_i}}{x_{n_j}}{},\dist{y_{n_i}}{y_{n_j}}{}\to 0
+\]
+as $\min\{i,j\}\to\infty$.
+Sinse $h$ is nonconotracting, we get
+\[
+\dist{x}{x_{|n_i-n_j|}}{}\le \dist{x_{n_i}}{x_{n_j}}{}.
+\]
+It follows that  
+there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x\ \ \text{and}\ \ y_{m_i}\to y\ \ \text{as}\ \ \kay\to\infty.
+\eqlbl{eq:x_l->x}
+\]
+
+Let $\ell_n=\dist{x_n}{y_n}{}$.
+Since $h$ is noncontracting, $(\ell_n)$ is a nondecreasing sequence.
+On the other hand, 
+from \ref{eq:x_l->x}, it follows that $\ell_{m_i}\to\dist{x}{y}{}=\ell_0$ as $m_i\to\infty$;
+i.e., $(\ell_n)$ is a constant sequece.
+In particular $\ell_0=\ell_1$ for any $x$ and $y\in \spc{X}$;
+i.e., $h$ is distance preserving map.
+
+Therefore $h(X)$ is isometric to $\spc{X}$.
+From \ref{eq:x_l->x}, we get that $h(\spc{X})$ is everywhere dense.
+Sinse $X$ is compact, we get $h(\spc{X})=\spc{X}$.
+%Let  $\{x^i\}_{i=1}^{n}$ be a maximal $\eps$-packing in $\spc{X}$ such that  $\sum_{i<j}\dist{x^i}{x^j}{}$ attends maximum value. The set $\{\map (x^i)\}$ forms a maximal $\eps$-packing in $\spc{X}$. Sinse $\sum_{i<j}\dist{x^i}{x^j}{}$ is maximal, we have \[\dist{\map (x^i)}{\map (x^j)}{}=\dist{x^i}{x^j}{}\] for all $i,j$.
+%
+%Recal that maximal $\eps$-packing is an $\eps$-net (see ???).
+%Thus, the set $\{\map(x^i)\}$ forms an $\eps$-net in $\spc{X}$.
+%Thus for any two points $p,q$ one can find points $x^i,x^j$ such that
+%\[\dist{\map (p)}{\map (x^i)}{}\le\eps\ \ \text{and}\ \ \dist{\map (q)}{\map (x^j)}{}\le\eps\]
+%Therefore, since $\map $ is non contracting,
+%\[\dist{p}{q}{}
+%\le
+%\dist{\map (p)}{\map (q)}{}
+%\le
+%\dist{\map (x^i)}{\map (x^j)}{}+2\cdot\eps
+%=
+%\dist{x^i}{x^j}{}+2\cdot\eps
+%\le
+%\dist{p}{q}{}+4\cdot\eps.\]
+%Sinse $\eps>0$ can be chousen arbitrary, we have
+%\[\dist{p}{q}{}
+%=
+%\dist{\map (p)}{\map (q)}{}.\]
+\qeds
+
+\section{Comments}
+
+One of the most remarcble revolution in geometry was made by seemingly very simple observation made by Gromov.
+He gave a transparent intuitive notion of convergence for metric spaces.
+Although some types of convergences of metric spaces
+were considered in geometry before Gromov,
+all the considered metric were designed to be used in very speacific problems.
+A very good account for different types of convergences used in metric geometry can be found in ???.
+
+The Gromov--Hausdorff convergence (under the name Hausdorff convergence)
+was introduced by Gromov in \cite{gromov-polynomial-growth}.
+It was essential step in the proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
+It is remarkable that the ultra-limits,
+an other important type of convergence,
+also appear first in the context of  groups of polynomial growth;
+they were introduced by ??? in ???, where generalization of Gromov's theorem
+Both concepts quikly sprad into all branches of geometry.
+
+
+The definition \ref{def:hausdorff-coverge} was given by Frol\'{\i}k in \cite{frolik} %CHECK
+and was rediscovered by Wijsman in \cite{wijsman}.
+
+This definition is a slight modification of the convergence for subsets of metric space,
+first introduced by Hausdorff in \cite{hausdorff}%CHECK
+, two years later the same convergence was introduced by Baschke in \cite{blaschke}%independently???
+. 
+Blaschke does not refer to Hausdorff; it might mean that his discovery was independent 
+or yet more likely that this type of convergence was used in mathematical folklore before these publications. 
+
+If in this definition, 
+you exachange the pointwise convergence to uniform convergence,
+then you get the usual Hausdorff convergence.
+These two convergences, coinside on the 
+set of bounded subsets
+and Frol\'{\i}k--Wijsman modification make it more sutable for working with unbounded sets.
+
+Originaly, the Gromov--Hausdorff convergence was defined differently, see ???.
+Instead one consider two cases: 
+\begin{enumerate}
+\item If the limit is compact, then one require existance of one GH-convergence.
+\item In the non-compact case one makes a choice of point $x_\infty\in\spc{X}_\infty$ and a sequence $x_n\in\spc{X}_n$ and then to define pointed Gromov--Hausdorff convergence $(\spc{X}_n,x_n)\to (\spc{X}_\infty, x_\infty)$ one requires existance of GH-convergence $\GH$, such that $x_n\xto{\GH}x_\infty$.
+\end{enumerate}
+The later is called \emph{pointed Gromov--Hausdorff convergence}.
+It is easy to see that if $\spc{X}_n\xto{\GH}\spc{X}_\infty$ then for any sequence $x_n\in\spc{X}_n$ 
+such that $x_n\xto{\GH} x_\infty\in\spc{X}_\infty$, 
+the seqence $(\spc{X}_n,x_n)$ 
+converges to $(\spc{X}_\infty,x_\infty)$ 
+in the sense of pointed Gromov--Hausdorff convergence.
+
+The Gromov--Hausdorff convergence is defined only for proper spaces;
+thus, once we write $\spc{X}_n\xto{}\spc{X}_\infty$, 
+we implicitly assume that all $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ are proper spaces.
+
+\section{Exercises}
+
+\begin{thm}{Exercise} Construct a Gromov--Hausdorff convergence 
+$\spc{X}_n\GHto \spc{X}_\infty$ 
+with a converging sequence of $\Lip$-Lipschitz concave functions $f_n\:\spc{X}_n\to\RR$, 
+converging to $f_\infty\:\spc{X}_\infty\to \RR$ 
+such that $f_\infty$ is not concave.
+\end{thm}

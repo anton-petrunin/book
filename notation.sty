@@ -1,0 +1,398 @@
+\usepackage[leqno]{mathtools}%\usepackage[leqno]{amsmath}%
+\usepackage{amssymb, amsfonts,  amsthm}
+\usepackage{xifthen} 
+
+%STANDARD SPACES
+\def\CC{\mathbb{C}}
+\def\DD{\mathbb{D}}
+\def\EE{\mathbb{E}}
+\def\HH{\mathbb{H}}
+\def\PP{\mathbb{P}} 
+\def\NN{\mathbb{N}}  
+\def\RR{\mathbb{R}}  
+\def\ZZ{\mathbb{Z}} 
+\def\QQ{\mathbb{Q}} 
+\def\SS{\mathbb{S}}
+\def\TT{\mathbb{T}}
+\def\WW{\mathbb{W}}
+\def\II{\mathbb{I}}
+\def\JJ{\mathbb{J}}
+\def\RP{\RR\mathbb{P}}
+\def\HP{\HH\mathbb{P}}
+\def\triangulation{\mathcal{T}}
+
+\def\noi{\noindent}%  
+\def\nospace{\hskip0mm}
+
+\def\:{\colon}
+\newcommand*{\?}{%
+\!\mathrel{\vcenter{\offinterlineskip
+\hbox{.}\vskip-0.75ex\hbox{.}\vskip-0.75ex\hbox{.}}}}
+\def\~{\tilde}
+
+
+\def\ge{\geqslant}
+\def\le{\leqslant}
+\def\lege{\lessgtr}
+\def\gele{\gtrless}
+\def\l{\hskip-0.1em\left}
+\def\r{\right}
+\def\<{\langle}
+\def\>{\rangle}
+\def\drang{\hbox{$\rangle\hskip-0.25em\rangle\hskip-0.1em$}}
+\def\dlang{\hbox{$\langle\hskip-0.25em\langle$}}
+\def\without{{\neq}}
+
+
+
+
+%RUSSIAN STYLE
+\def\emptyset{\varnothing}
+
+\def\limsup{\varlimsup}
+\def\liminf{\varliminf}
+\def\acts{\curvearrowright}
+
+%operators
+\def\op{\operatorname}
+
+%special numbers and maps
+\def\lam{\text{\sl \textctyogh}}%for something whic --> infty
+\def\Lip{{\pounds}}
+\def\proj{\mathop{\rm proj}\nolimits}
+\newcommand*\IndexSet[1][1]%
+{\ifthenelse{\equal{#1}{1}}%
+{\mathcal{A}}%
+{\mathcal{B}}}
+
+\newcommand*\map[1][1]{\ifthenelse{\equal{#1}{1}}{\Phi}{\ifthenelse{\equal{#1}{2}}{\Psi}{\Theta}}}%
+
+
+%SPECIAL CLASSES OF OBJECTS
+\def\spc#1{\mathcal{#1}}
+\def\hmy{\mathring}%that is for composite functions
+
+%Real functions
+\def\area{\mathop{\rm area}\nolimits}
+\def\bus{\mathop{\rm bus}\nolimits}
+\def\codim{\mathop{\rm codim}\nolimits}
+\def\colip{\mathop{\rm colip}\nolimits}
+\def\Const{c}
+\def\curv{\mathop{\rm curv}\nolimits}
+\def\dens{\mathop{\rm dens}\nolimits}
+\def\densinf{\underline{\mathop{\rm dens}\nolimits}}
+\def\diam{\mathop{\rm diam}\nolimits}
+\def\dim{\mathop{\rm dim}\nolimits}
+%\newcommand*\dir[2]{{\uparrow}_{\hskip-0.15em[{#1}{#2}]}^{\hspace{-0.1ex}\circ}}
+\newcommand*\dir[2]{\mathrm{dir}[{#1}{#2}]}
+%\newcommand*\Dir[2]{{\uparrow\joinrel\hskip-0.1em\uparrow\hskip-0.1em}^{\circ}_{\hskip-0.05em#1}{#2}}
+\newcommand*\Dir[2]{\mathrm{Dir}_{#1}{#2}}
+%\newcommand*\ddir[2]{{{\uparrow}}_{\hskip-0.15em[{#1}{#2}]}}
+\newcommand*\ddir[2]{\mathrm{log}[{#1}{#2}]}
+%\newcommand*\Ddir[2]{{\uparrow\joinrel\hskip-0.1em\uparrow\hskip-0.1em}_{\hskip-0.05em#1}{#2}}
+\newcommand*\Ddir[2]{\mathrm{Log}_{#1}{#2}}
+
+\def\err{\mathop{\rm err}\nolimits}
+\def\length{\mathop{\rm length}\nolimits}
+\def\lin{\mathop{\rm lin}\nolimits}
+\def\lip{\mathop{\rm lip}\nolimits}
+\def\os{\mathop{\rm os}\nolimits}
+\def\pack{\mathop{\rm pack}\nolimits}
+\def\plus{\mathrm{add}}
+\def\rad{\mathop{\rm rad}\nolimits}
+\def\rank{\mathop{\rm rank}\nolimits}
+\newcommand*{\spx}[1]{\mathfrak{S}_{#1}}
+\def\sgn{\mathop{\rm sgn}\nolimits}
+\def\speed{\mathop{\rm speed}\nolimits}
+\def\vol{\mathop{\rm vol}\nolimits}
+%EXEPTIONAL
+\def\Borel{\mathop{\rm Borel}\nolimits}
+\def\ComRad{\mathop{\rm ComRad}\nolimits}
+\def\CutLoc{\mathop{\rm CutLoc}\nolimits}
+\def\ConRad{\mathop{\rm ConRad}\nolimits}
+\def\HausDim{\mathop{\rm HausDim}\nolimits}
+\def\HausMes{\mathop{\rm HausMes}\nolimits}
+\def\InnLoc{\mathop{\rm InnLoc}\nolimits}
+\def\SphMes{\mathop{\rm SphMes}\nolimits}
+\def\ShortMes{\mathop{\rm ShortMes}\nolimits}
+\def\LongMes{\mathop{\rm LongMes}\nolimits}
+\def\FillRad{\mathop{\rm FillRad}\nolimits}
+\def\LinDim{\mathop{\rm LinDim}\nolimits}
+\def\Sc{\mathop{\rm Sc}\nolimits}
+\def\TopDim{\mathop{\rm TopDim}\nolimits}
+\def\ApD{\mathop{\rm ApD}\nolimits}
+\def\ApJac{\mathop{\rm ApJac}\nolimits}
+\def\Shar{\mathop{\rm Shar}\nolimits}
+
+%Point functions
+\def\argmax{\mathop{\rm MaxPoint}}
+\def\argmin{\mathop{\rm MinPoint}}
+\def\oneend{\mathop{\rm end}\nolimits}
+\def\ends{\mathop{\rm ends}\nolimits}
+\def\gexp{\mathop{\rm gexp}\nolimits}
+\def\GF{\t{\rm\Taurus}}
+\def\id{\mathop{\rm id}\nolimits}
+\def\kur{\mathop{\rm kur}\nolimits}
+\def\log{\mathop{\rm lg}\nolimits}
+\def\SuppVec{\mathop{\rm SuppVec}\nolimits}
+
+
+%Constructions and set-functions
+\def\oBall{\mathrm{B}{}}
+\def\cBall{\overline{\mathrm{B}}{}}
+\def\Sphere{\mathrm{S}{}}
+\def\InWeb{\mathop{\rm InWeb}\nolimits}
+\def\Bis{\mathop{\rm Bis}\nolimits}
+\def\Carath{\mathop{\rm Carath}\nolimits}
+\def\GradBis{\mathop{\rm GradBis}\nolimits}
+\def\blow{{*}}
+\def\CaP{\text{\it Ca\rm P}}
+\def\Cone{\mathop{\rm Cone}\nolimits}
+\def\Conv{\mathop{\rm Conv}\nolimits}
+\def\Cyl{\mathop{\rm Cyl}\nolimits}
+\def\Diff{\mathop{\rm Diff}\nolimits}
+\def\Dom{\mathop{\rm Dom}\nolimits}
+\newcommand*{\Doubling}[2]{\bigsqcup\nolimits_{#1}^2#2}
+\def\Ext{\mathop{\rm Ext}\nolimits}
+\def\Euk{\mathop{\rm Euk}\nolimits}
+\def\Fr{\partial}%{\mathop{\rm Fr}\nolimits}
+\def\Foot{\mathop{\rm Foot}\nolimits}
+\def\Geo{\mathop{\rm Geo}\nolimits}
+\def\Hess{\mathop{\rm Hess}\nolimits}
+\def\Id{\mathop{\rm Id}\nolimits}
+\def\Im{\mathop{\rm Im}\nolimits}
+\def\Int{\mathop{\rm Int}\nolimits}
+\def\Length{\mathop{\rm Length}\nolimits}
+\def\Link{\mathop{\rm Link}\nolimits}
+\def\Join{\mathop{\rm Join}\nolimits}
+\def\Lin{\mathop{\rm Lin}\nolimits}
+\def\Log{\mathop{\rm Log}\nolimits}
+\def\Min{\mathop{\rm Min}\nolimits}
+\def\OS{\mathop{\rm OS}\nolimits}
+\def\Reg{\mathop{\rm Reg}\nolimits}%TWO DIFFERENT USES!!!???
+\def\Sect{\mathop{\rm Sect}\nolimits}%TWO DIFFERENT USES!!!???
+\def\Sing{\mathop{\rm Sing}\nolimits}
+\def\Web{\mathop{\rm Web}\nolimits}
+\def\Shef{\mathop{\rm Shef}\nolimits}
+\def\Str{\mathop{\rm Str}\nolimits}
+\def\Star{\mathop{\rm Star}\nolimits}
+\def\supp{\mathop{\rm Supp}\nolimits}
+\def\Susp{\mathop{\SS}\nolimits}
+\def\SumSet{\mathop{\rm SumSet}\nolimits}
+\def\T{\text{\rm T}}
+\def\Tan{\mathop{\rm Tan}\nolimits}
+\def\Up{\mathop{\rm Up}\nolimits}
+
+%Classes of functions
+\def\Bnd{\mathrm{Bnd}}
+\def\BD{\mathrm{BD}}
+\def\DC{\mathrm{DC}}
+\def\L{\mathrm{L}}
+\def\MD{\mathop{\rm MD}\nolimits}
+\def\FK{\mathcal{F}K}
+
+\def\d{\bm{d}}
+%{\lefteqn{\phantom{I}}\text{\bf\textit{d}}}
+%\def\geod{\vcenter{\offinterlineskip\vskip.3ex\hbox{\rm\hskip0.05em\textgamma}}^{\circ}}
+\def\geod{\mathrm{geod}}
+%\def\geodpath{\vcenter{\offinterlineskip\vskip.3ex\hbox{\rm\hskip0.05em\textgamma}}}
+\def\geodpath{\mathrm{path}}
+
+\newcommand*{\under}[1]{\text{\it \c #1}}%for the same variable under the integral
+
+\def\subto{\mathrel{\mathrel\circ\joinrel\hskip-0.15em\to}}
+\def\t{\text}
+
+
+\def\GH{\tau}
+\def\xto{\xrightarrow}
+
+%ARROWS AND LIMITS
+\newcommand*{\oldGHto}{\mathbin{\begin{picture}(16,3.5)
+\put(-1,1){$\longrightarrow$}
+\put(11,-1.5){\llap{\text{\tiny\rm GH}}}
+\end{picture}}}
+\def\GHto{\z\oldGHto}
+
+\newcommand*{\oldHto}{\mathbin{\begin{picture}(16,3.5)
+\put(-1,1){$\longrightarrow$}
+\put(9,-1.5){\llap{\text{\sf\tiny H}}}
+\end{picture}}}
+\def\Hto{\z\oldHto}
+
+
+\newcommand*{\xGHto}[1]{\z{\buildrel {#1} \over \oldGHto}}
+\DeclareMathOperator*\GHlim{\mathop{\text{\sf\small GH-}\mathrm{lim}}}
+\def\GHdist{\text{\sc d}_{\text{\sf\tiny GH}}}
+\def\Hdist{\text{\sc d}_{\text{\sf\tiny H}}}
+
+\let\oldo\o
+\def\o{\text{\rm \textcloseomega}}
+\def\0{o}%Should be used for center of cone...
+
+
+%SIMILAR TO ``='' SIGN
+\def\ae{\buildrel \hbox{\tiny\it a.e.} \over{=\joinrel=}}
+\def\df{\buildrel \hbox{\tiny\it def} \over{=\joinrel=}}
+\def\iso{\buildrel \hbox{\tiny\it iso} \over{=\joinrel=}}
+\def\can{\buildrel \hbox{\tiny\it can} \over{=\joinrel=}}
+\def\oeq{\mathrel{\mathring{=}}}
+
+\def\|{\Arrowvert}
+
+\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r\arrowvert\,{#2}\,\r\}}
+
+
+
+%angles-hinges-trigonometry
+\def\mangle{\measuredangle}
+\def\tangle{\text{\rlap{$\~{\text{\phantom{n}}}$}{$\mangle$}}}
+%{{\~\mangle}}
+
+\newcommand*{\mc}[1]{^{#1}}%{^{\scriptscriptstyle{#1}}}
+\let\oldvarpi\varpi\newcommand*\newvarpi[1]{\oldvarpi{}^{{#1}}}\let\varpi\newvarpi
+%\def\varpi{{\scriptstyle\Pi}\mc}
+\newcommand*{\trig}[3]{[{#1}{#2}{#3}]}
+\newcommand*{\modtrig}[1]{{\~\triangle}\mc{#1}}
+\newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
+\newcommand*{\angk}[4]{\tangle\mc{#1}(#2\,{}^{#3}_{#4}\hspace{-0.2ex})}
+\newcommand*{\sdk}[4]{\~\boxdot\mc{#1}_#2({#3},{#4})}
+\newcommand*{\angkk}[4]{\tangle\mc{#1}\l(#2\,{}^{#3}_{#4}\hspace{-0.2ex}\r)}%as \angk+big()
+\newcommand*{\side}[1]{\mathop{\~\curlyvee}\nolimits\mc{#1}}
+\newcommand*{\sn}[1]{\mathrm{sn}\mc{#1}}
+\newcommand*{\cs}[1]{\mathrm{cs}\mc{#1}}
+\newcommand*{\md}[1]{\mathrm{md}\mc{#1}}
+\newcommand*{\tg}[1]{\mathrm{tg}\mc{#1}}
+\newcommand*{\itg}[1]{\mathrm{itg}\mc{#1}}
+\def\RB{\mathop{\rm RadBis}\nolimits}
+%\def\updownarrows{\mathrel{\uparrow\hskip-0.15em\downarrow}}
+\def\scal{\widetilde{\hbox{\rm sp}}}
+\def\dder{\widetilde{\hbox{\rm dd}}}
+%$\text{\rlap{$\,\widetilde{\phantom{\hbox{sca}}}$}\hbox{scal}}$
+%$\widetilde{\hbox{sp}}$
+%$\text{\rlap{$\widetilde{\phantom{\hbox{sp}}}$}\hbox{dd}}$
+
+\newcommand*{\CBB}[2]%
+%%{\text{\rm CBB}^{#1}_{#2}}
+{\ifthenelse{\equal{#2}{}}{\overline{\text{\rm CBB}}{}^{#1}}{\overline{\text{\rm CBB}}{}^{#1}\lfloor\hskip-0.1em{#2}\hskip-0.1em\rfloor}}%
+
+\newcommand*{\CBA}[2]%
+%{\text{\rm CBA}^{#1}_{#2}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CBA}^{#1}}{\text{\rm CBA}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
+\newcommand*{\CBBA}[3]{\text{\rm CB}^{#1}[#2,#3]}
+\newcommand{\Cat}[2]%
+%{\text{\rm CAT}^{#1}_{#2}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CAT}^{#1}}{\text{\rm CAT}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
+\newcommand{\cCat}[2]%
+%{\text{\rm CAT}^{#1}_{#2}}
+{\ifthenelse{\equal{#2}{}}{\overline{\text{\rm CAT}}{}^{#1}}{\overline{\text{\rm CAT}}{}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
+\newcommand*{\Lob}[3][{}]{\mathbb{M}_{#1}^{#2}[{#3}]}
+\newcommand*{\PM}[3][{}]{\mathbf{P}\mathbb{M}_{#1}^{#2}[{#3}]}
+%{\text{\rm \CYRL}^{#1}_{#2}}
+%{\ifthenelse{\equal{#1}{+}}{\ifthenelse{\equal{#2}{}}{\text{{\cyr L}}_{#1}}{\text{{\cyr L}}_{#1}[#2]}}{\ifthenelse{\equal{#2}{}}{\text{{\cyr L}}^{#1}}{\text{{\cyr L}}^{#1}[#2]}}}
+%\newcommand*{\Lobs}[2]{\ifthenelse{\equal{#1}{+}}{\ifthenelse{\equal{#2}{}}{\text{{\cyrs L}}_{#1}}{\text{{\cyrs L}}_{#1}[#2]}}{\ifthenelse{\equal{#2}{}}{\text{{\cyrs L}}^{#1}}{\text{{\cyrs L}}^{#1}[#2]}}}
+%\def\Lobm{\hbox{\cyrm L}}
+%\def\Lobs{\hbox{\cyrs L}}
+%\newcommand*{\CBB}[2]{\Alex^{#1}[#2\mbox{\rm,\raisebox{.2ex}{\scriptsize \hskip-.1ex$\infty$\hskip-.1ex}}]}
+%\newcommand*{\CBBs}[2]{\Alexs^{#1}[#2,\mbox{\raisebox{.2ex}{\tiny \hskip-1ex$\infty$\!}}]}
+%\newcommand*{\CBA}[2]{\Alex^{#1}[\mbox{\raisebox{.2ex}{\scriptsize \!-$\infty$\!}},#2]}
+
+
+%SBAdefs
+\def\ms{\par\medskip}
+%\def\dist{\mathop{\lefteqn{\phantom{I}}\ell}\nolimits}
+%\def\dis{\mathop{\lefteqn{\phantom{I}}d}\nolimits}
+\def\project{\proj}
+\def\geo{\mathop{\rm Geo}\nolimits}
+\def\inj{\mathop{\rm inj}\nolimits}
+\def\curve{\mathop{\rm Curve}\nolimits}
+\def\oTube{\mathop{\rm Tube}\nolimits}
+\def\cTube{\overline{\mathrm{Tube}}{}}
+\def\comp{\mathop{\rm Comp}\nolimits}
+\def\twotwo{\hbox{$\triangleleft\hskip-0.1em\triangleright$}}
+
+%\newcommand*\toshadist[4][{}]%
+%{\ifthenelse{\isempty{#1}}%
+%{\ifthenelse{\isempty{#4}}%
+%{{#2}{{\ddagger}}{#3}}%
+%{({#2}{{\ddagger}}{#3})_{#4}}}%
+%{({#2}{{\ddagger}}{#3})_{#4}^{#1}}}%
+
+\newcommand*\toshadist[4][{}]%
+{\ifthenelse{\isempty{#3}}
+{\ifthenelse{\isempty{#2}}%
+{|{*}\z-{*}|_{#4}^{#1}}%
+{|{#2}\z-{*}|_{#4}^{#1}}}%
+{|{#2}\z-{#3}|_{#4}^{#1}}}
+
+\newcommand*\toshayetdist[4][{}]%
+{\ifthenelse{\isempty{#3}}
+{\ifthenelse{\isempty{#2}}%
+{\|{*}\z-{*}\|_{#4}^{#1}}%
+{\|{#2}\z-{*}\|_{#4}^{#1}}}%
+{\|{#2}\z-{#3}\|_{#4}^{#1}}}
+
+%\newcommand\toshayetdist[4][{}]%
+%{\ifthenelse{\isempty{#1}}%
+%{\ifthenelse{\isempty{#4}}%
+%{{#2}{{\dagger}}{#3}}%
+%{({#2}{{\dagger}}{#3})_{#4}}}%
+%{({#2}{{\dagger}}{#3})_{#4}^{#1}}}%
+
+\newlength{\zhaba}
+\newcommand*\sbadist[4][{}]%
+{\settowidth{\zhaba}{${#1}{#2}$}%
+\ifthenelse{\lengthtest{\zhaba<1.7em}}
+{\ifthenelse{\isempty{#2}}%
+{\bm|{\scriptstyle{*}}{\scriptstyle{*}}\bm|}%
+{\ifthenelse{\isempty{#3}}%
+{\bm|{#2}\hskip.1em{\scriptstyle{*}}\bm|^{#1}_{#4}}%
+{\bm|{#2}\hskip.1em{#3}\bm|^{#1}_{#4}}}%
+}%
+{\ifthenelse{\isempty{#2}}%
+{\bm|{\scriptstyle{*}}{\scriptstyle{*}}\bm|}%
+{\ifthenelse{\isempty{#3}}%
+{\bm|{#2}\hskip.1em\scriptstyle{*}\bm|^{#1}_{#4}}%
+{\bm|{#2}\ {#3}\bm|^{#1}_{#4}}}%
+}%
+}%
+
+%\newcommand*\toshadist[4][{}]%
+%{\settowidth{\zhaba}{${#1}{#2}$}%
+%\ifthenelse{\lengthtest{\zhaba<1.7em}}
+%{\ifthenelse{\isempty{#2}}%
+%{{*}{*}}%
+%{\ifthenelse{\isempty{#3}}%
+%{({#2}{*})^{#1}_{#4}}%
+%{({#2}{#3})^{#1}_{#4}}}%
+%}%
+%{\ifthenelse{\isempty{#2}}%
+%{{*}{*}}%
+%{\ifthenelse{\isempty{#3}}%
+%{({#2}{*})^{#1}_{#4}}%
+%{({#2}\ {#3})^{#1}_{#4}}}%
+%}%
+%}%
+
+\newcommand*\sbayetdist[4][{}]%
+{\settowidth{\zhaba}{${#1}{#2}$}%
+\ifthenelse{\lengthtest{\zhaba<1.7em}}
+{\ifthenelse{\isempty{#2}}%
+{\bm\|{\scriptstyle{*}}{\scriptstyle{*}}\bm\|}%
+{\ifthenelse{\isempty{#3}}%
+{\bm\|{#2}\hskip.1em{\scriptstyle{*}}\bm\|^{#1}_{#4}}%
+{\bm\|{#2}\hskip.1em{#3}\bm\|^{#1}_{#4}}}%
+}%
+{\ifthenelse{\isempty{#2}}%
+{\bm\|{\scriptstyle{*}}{\scriptstyle{*}}\bm\|}%
+{\ifthenelse{\isempty{#3}}%
+{\bm\|{#2}\hskip.1em\scriptstyle{*}\bm\|^{#1}_{#4}}%
+{\bm\|{#2}\ {#3}\bm\|^{#1}_{#4}}}%
+}%
+}%
+
+\IfFileExists{../tosha-book-switch}%
+{\def\dist{\toshadist}%
+\def\yetdist{\toshayetdist}}%
+{\def\dist{\sbadist}%
+\def\yetdist{\sbayetdist}}%

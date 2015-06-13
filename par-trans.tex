@@ -1,0 +1,412 @@
+%%!TEX root = all.tex
+\chapter{Parallel transport and second variation}
+
+\section{Burago's conjecture}
+
+The statement of the following theorem was conjectured by Yu. Burago in the end of 80's; it was proved in \cite{petrunin:parallel}.
+Earlier, in \cite[7.16]{BGP} a weaker statement was proved.
+Yet earlier in \cite{milka-parallel-conv}, it was shown that the statement is true for convex hypersurfaces in Euclidean space.
+
+\begin{thm}{Theorem}\label{thm:parallel}
+Let $\spc{L}\in\CBB m\kappa$
+and $[pq]$ be a geodesic in $\spc{L}$. 
+Then for any two points $x,y\in \l] p q \r[$, we have
+$\T_x\iso \T_y$.
+\end{thm}
+
+In ???, we will show existance of a cone isometry $???:\T_x\to \T_y$ for which an analog of second variation formula holds.
+
+\begin{thm}{Corollary}\label{cor:reg-end}
+If $p\in \spc{L}$ is a then for any geodesic $[pq]$ and any point $\bar p\in \l[ p q \r[$ we have $\Sigma_{\bar p}\ge \Sigma_p$.
+
+In particular, if $p\in \spc{L}$ is a Euclidean point then so is $\bar p$.
+\end{thm}
+
+\begin{thm}{Corollary}\label{cor:reg-conv}
+$\spc{L}\in\CBB{m}{\kappa}$ and 
+$Q\subset \spc{L}$ is a subset of points such that $p\in Q$ 
+if $\Sigma_p\ge \Sigma_q$ for some $q\in Q$.
+Then $Q$ is convex.
+
+In particular, the set of Euclidean points in $\spc{L}$ forms a convex set.
+\end{thm}
+
+Note that according to \ref{LinDim+-f}, the set of Euclidean points 
+is dense G-delta set and according to ??? its complement has zero volume.
+
+\parit{Proof of \ref{cor:reg-conv}.} 
+It is sufficient to prove only the second part of corollary.
+
+Sinse $p$ is Euclidean, $\SS^{m-1}\iso\Sigma_p$.
+From \ref{cor:simicont-Sigma}, $\SS^{m-1}\ge\Sigma_x$ for any $x\in \spc{L}$.
+
+Let $x\in \l] p q \r[$. 
+Take a sequence of points $p_n\in \l] p q \r[$ such that $p_n\to p$ as $n\to\infty$.
+According to \ref{thm:parallel}, $\Sigma_x\iso\Sigma_{p_n}$. 
+Thus, from \ref{cor:simicont-Sigma}, $\Sigma_x\ge\Sigma_p$.
+I.e. $\SS^{m-1}\ge \Sigma_x\ge\SS^{m-1}$ and
+ acoording to \ref{lem:>=-isometry}, $\Sigma_x\iso\SS^{m-1}$.
+\qeds
+
+The proof below combains idea from \cite{BGP} with an analog of geometric interpretation of parallel transport given in \cite{nikolaev}.
+
+\parit{Proof of \ref{thm:parallel}.} 
+First let us describe plan of the proof.
+According to ???, for any $x\in \l] p q \r[$
+\[\T_{x}\iso \T_{x}^\top \oplus \T_{x}^\perp,\] 
+where $\T_{x}^\top$ and $\T_{x}^\perp$ are subcones of $\T_x$ correspondingly tangent and perependicular to $[pq]$.
+Clearly, $\T_x^\top$ is isometric to $\RR$.
+Given a vector $v\in \T_x$, let us denote by $v^\top$ and $v^\perp$ its orthogonal projection to $\T_x^\top$ and $\T_x^\perp$ correspondingly.
+
+Given two points $x,y\in \l] p q \r[$,
+we will construct a noncontracting map $\Upsilon_{x,y}:\T_x^\perp\to \T_y^\perp$
+such that $|\Upsilon_{x,y}(v)|\le|v|$ for any $v\in \T_x^\perp$. 
+Once it is done, applying \ref{lem:>=-isometry} to restrictions of $\Upsilon_{x,y}$ and $\Upsilon_{y,x}$ to unit balls, we get that $\T_x^\perp\iso \T_y^\perp$ and therefore $\T_x\iso \T_y$. 
+
+In order to construct $\Upsilon_{x,y}$ we first construct an other type of maps  $\Pi_{x,y}:\T_x^\perp\to \T_y^\perp$ and then obtain $\Upsilon_{x,y}$ as a limit of compositions of $\Pi_{x_{i-1},x_i}$ for partition $x=x_0,x_1,\dots,x_n=y$ of $[xy]$.
+
+\smallskip
+
+Now we follow the plan. 
+We will give a proof in case $\kappa=0$.
+In the general case calculations more complicated;
+we include only key formulas in the footnotes.
+
+Without loss of generality, we can assume that on the geodesic $[p q]$ the points appear in the following order $p,x,y,q$.
+
+Let us define map $\Pi_{x,y}:\T_x^\perp\to \T_y^\perp$ by\footnote{???}
+\[\Pi_{x,y}(v)
+=
+\lim_{n\to\o}n\cdot{\ddir{y}{\gexp\mc0_{x}(\eps\cdot v)}^\perp}.
+\eqlbl{eq:thm:parallel-2}\]
+In the following claim, we list properties of $\Pi_{x,y}$, which will be proved later.
+
+\begin{thm}{Claim}\label{clm:prop-of-Pi}
+
+\begin{subthm}{<Const v} There is $\Const\in\RR$ such that 
+\[\l|\ddir{y}{\gexp\mc0_{x}v}^\perp\r|\le \Const\cdot|v|.\]
+In particular, $\Pi_{x,y}(v)$ is defined for any $v\in \T_x^\perp$.
+\end{subthm}
+
+\begin{subthm}{noncontracting} $\Pi_{x,y}$ is a non contracting map%
+\footnote{For general $\kappa$, the map ???
+$v\mapsto \frac{\sn\kappa\dist[{{}}]{x}{y}{}}{\dist{x}{y}{}}\cdot\Pi_{x,y}(v)$
+is non contracting.}%
+.
+\end{subthm}
+
+\begin{subthm}{2nd-var}
+(second variation)
+For any $v\in\T_x$ and $w\in\T_y$ we have%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\footnote{For general $\kappa$,??? \vskip-6mm
+\[\dist{\gexp\mc\kappa_{x}(\eps\cdot v)}{\gexp\mc\kappa_{y}(\eps\cdot w)}{}
+\le
+\dist{x}{y}{}
++\frac{\eps^2\cdot\cs\kappa\dist[{{}}]{x}{y}{}}{2\cdot\dist[{{}}]{x}{y}{}}
+\cdot\l[|v|^2-|\Pi_{x,y}(v)|^2+\dist[2]{\Pi_{x,y}(v)}{w}{}\r]
++o(\eps^2).\]}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{multline*}
+\dist{\gexp\mc\kappa_x(\eps\cdot v)}{\gexp\mc\kappa_{y}(\eps\cdot w)}{}
+\le
+\\
+\le \dist{x}{y}{}+\frac{\eps^2}{2\cdot\dist[{{}}]{x}{y}{}}\cdot\l[|v|^2-|\Pi_{x,y}(v)|^2
++\dist[2]{\Pi_{x,y}(v)}{w}{}\r]+o(\eps^2).
+\end{multline*}
+for $\o$-almost all $\eps>0$.
+\end{subthm}
+\end{thm}
+
+Let us divide $[xy]$ into $n$ equal parts by points $x=x_0,x_1,\dots,x_n=y$.
+Set $\Pi_i=\Pi_{x_{i-1},x_i}$ and consider composition
+\[\Phi_n=\Pi_n\circ\Pi_{n-1}\circ\dots\circ\Pi_1:\T_x^\perp\to \T_y^\perp.\]
+
+\begin{thm}{Claim}\label{clm:prop-of-Phi}
+There is $\Const\in\RR$ such that for any $v\in \T_x^\perp$
+\[|\Phi_n(v)|\le\l(1+\frac{\Const}{n}\r)\cdot|v|.\]
+\end{thm}
+
+Thus passing to a partial limit $\Phi_n\to\Upsilon_{x,y}$ as $n\to\infty$, we get the required map. It only remains to prove claims \ref{clm:prop-of-Pi} and \ref{clm:prop-of-Phi}.\qeds
+
+\begin{wrapfigure}{r}{70mm}
+\begin{lpic}[t(5mm),b(15mm),r(0mm),l(0mm)]{pics/Pi-const(0.6)}
+\lbl[tr]{0,0;$p$}
+\lbl[tl]{105,0;$q$}
+\lbl[t]{31,-1;$x$}
+\lbl[t]{76,-1;$y$}
+\lbl[lb]{38,27;$x'=\gexp_{x}v$}
+\lbl[r]{30,28;$v$}
+\lbl[lb]{78,5;$\alpha$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof of \ref{clm:prop-of-Pi}.}\\
+\noi{\it (\ref{SHORT.<Const v}).}
+Set $x'=\gexp\mc\kappa_x v$.\\
+From hinge comparison,
+\[\dist{p}{x'}{}\le \dist{p}{x}{}+O(|v|^2),\]
+\[\dist{y}{x'}{}\le\dist{y}{x}{}+O(|v|^2),\]
+\[\dist{q}{x'}{}\le\dist{q}{x}{}+O(|v|^2).\]
+By triangle inequalities $\dist{q}{x'}{}\ge\dist{p}{q}{}-\dist{p}{x'}{}$ and $\dist{y}{x'}{}\ge\dist{p}{y}{}-\dist{y}{x'}{}$;
+thus,
+\[\dist{q}{x'}{}=\dist{q}{x}{}+O(|v|^2)\ \ \text{and} \ \ \dist{y}{x'}{}=\dist{y}{x}{}+O(|v|^2).\]
+Therefore
+\[\alpha
+=
+\alpha(v)
+\df
+\mangle\hinge y{x'}q
+\ge
+\angk\kappa y{x'}q\ge\pi-O(|v|).\]
+Thus 
+\[
+\l|\ddir{y}{\circ\gexp\mc\kappa_{x}v}^\perp\r|
+=
+\l|\ddir{y}{x'}^\perp\r|
+=
+\dist[{{}}]{x'}{y}{}\cdot\sin\alpha=O(|v|).\]
+
+\parit{(\ref{SHORT.noncontracting}).} 
+Note that from above we also have
+\[\l|\ddir{y}{\circ\gexp\mc\kappa_x v}^\top\r|
+=
+\dist[{{}}]{x'}{y}{}\cdot\cos\alpha
+=\dist{x}{y}{}+O(|v|^2).
+\eqlbl{eq:clm:prop-of-Pi-1}\]
+Given $v\in T^\perp_x$ and $\eps>0$, set 
+$\hat v_\eps=\ddir y{\gexp_x (\eps\cdot v)}\in \T_y$.
+It is enough to show that for any $u,v\in \T_x^\perp$, we have%
+\footnote{For general $\kappa$, 
+\[\dist{\hat u_\eps^\perp}{\hat v_\eps^\perp}{}
+\ge
+\eps\cdot\frac{\sn\kappa\dist[{{}}]{x}{y}{}}{\dist{x}{y}{}}
+\cdot 
+\dist[{{}}]{u}{v}{}+o(\eps)\leqno\t{\ref{eq:clm:prop-of-Pi-2}}\mc\kappa\]
+}%
+\[\dist{\hat u_\eps^\perp}{\hat v_\eps^\perp}{}
+\ge
+\eps\cdot\dist[{{}}]{u}{v}{}+o(\eps).\eqlbl{eq:clm:prop-of-Pi-2}\mc0\]
+
+Since $\kappa=0$, the map $\log y{???}$ is non-contracting; therefore%
+\footnote{For general $\kappa$, we have ???
+\[\l(1+O(\dist{x}{y}{})\r)\cdot\dist[{{}}]{\hat v_\eps}{\hat w_\eps}{}
+\ge
+\side\kappa \hinge{\0}{\hat v_\eps}{\hat w_\eps}
+\ge
+\dist{\gexp\mc\kappa_x(\eps\cdot v)}{\gexp\mc\kappa_x(\eps\cdot  w)}{}
+=
+\eps\cdot \dist[{{}}]{v}{w}{}+o(\eps).\]
+}%
+\[\dist{\hat v_\eps}{\hat w_\eps}{}
+\ge
+\dist{\gexp\mc0_x(\eps\cdot v)}{\gexp\mc0_x(\eps\cdot w)}{}
+=
+\eps\cdot\dist[{{}}]{v}{w}{}+o(\eps).\]
+From \ref{eq:clm:prop-of-Pi-1}, we get 
+\[\dist{\hat v_\eps^\top}{\hat w_\eps^\top}{}
+=
+O(\eps^2).\]
+We obtain \ref{eq:clm:prop-of-Pi-2}, since 
+\[\dist[2]{\hat v_\eps^\top}{\hat w_\eps^\top}{}
++
+\dist[2]{\hat v_\eps^\perp}{\hat w_\eps^\perp}{}
+=
+\dist[2]{\hat v_\eps}{\hat w_\eps}{}.\]
+
+\parit{(\ref{SHORT.2nd-var})}
+As above, for $v\in \T^\perp_x$ and $\eps>0$, 
+set $\hat v_\eps=\ddir y{\,\gexp\mc0_x (\eps\cdot v)}\in \T_y$
+\begin{center}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/2nd-var(0.4)}
+\lbl[r]{0,47;$\hat v_\eps$}
+\lbl[tl]{138,47;$\hat v_\eps^\perp$}
+\lbl[tl]{138,5;$\0$}
+\lbl[b]{162,76;$\eps\cdot w$}
+\lbl[r]{120,54;$\eps\cdot\Pi_{x,y}(v)$}
+\lbl{160,10;{\Large $\T_y$}}
+\end{lpic}
+\end{center}
+
+From comparison, we have%
+\footnote{For general $\kappa$, ???
+}%
+\[|\hat v_\eps|^2=\dist[2]{y}{\gexp\mc0_x (\eps\cdot v)}{}
+\le 
+\dist[2]{x}{y}{}+\eps^2\cdot|v|^2.\]
+Clearly, 
+$\angk0 {\hat v_\eps^\perp}{\0}{v_\eps}=\mangle\hinge{\hat v_\eps^\perp}{\0}{v_\eps}=\tfrac\pi2$
+and 
+$\angk0 {\hat v_\eps^\perp}{w}{v_\eps}=\mangle\hinge{\hat v_\eps^\perp}{w}{v_\eps}=\tfrac\pi2$.
+Thus, applying Pythegorian theorem, 
+\begin{align*}
+\dist[2]{\hat v_\eps}{\eps\cdot w}{}
+&=
+\dist[2]{\hat v_\eps}{\hat v_\eps^\perp}{}
++
+\dist[2]{\hat v_\eps^\perp}{\eps\cdot w}{}=
+\\
+&=|\hat v_\eps|^2-|\hat v_\eps^\perp|^2
++
+\dist[2]{\hat v_\eps^\perp}{\eps\cdot w}{}
+\le
+\\
+&\le 
+\dist[2]{x}{y}{}+\eps^2{|v|^2}-|\hat v_\eps^\perp|^2
++
+\dist[2]{\hat v_\eps^\perp}{\eps\cdot w}{}.
+\end{align*}
+Sinse $\frac{1}{\eps}\cdot\hat v_\eps^\perp\to \Pi_{x,y}(v)$ as $n\to\o$, we have
+\[\dist[2]{\hat v_\eps}{\eps\cdot w}{}
+\le 
+\dist[2]{x}{y}{}+\eps^2\cdot\biggl[{|v|^2}-|\Pi_{x,y}(v)|^2+
+\dist[2]{\Pi_{x,y}(v)}{w}{}\biggr]+o(\eps^2)\]
+for $\o$-almost all $\eps>0$. 
+\qeds
+
+\parit{Proof of \ref{clm:prop-of-Phi}.}
+For $v\in \T_x^\perp$, construct recurcevly a sequence vectors 
+$v_i\in \T_{x_i}^\perp$, 
+$v_0=v$ and $v_i=\Pi_i(v_{i-1})$ for all $i$.
+
+By triangle inequality, we have
+\begin{multline*}
+\dist{p}{q}{}
+\le 
+\dist{p}{\gexp_{x_0}(\eps\cdot v_0)}{}
++
+\dist{\gexp_{x_0}(\eps\cdot v_0)}{\gexp_{x_1}(\eps\cdot v_1)}{}
++\dots\\
+\dots+\dist{\gexp_{x_{n-1}}(\eps\cdot v_{n-1})}{\gexp_{x_n}(\eps\cdot v_n)}{}
++\dist{\gexp_{x_n}(\eps\cdot v_n)}{q}{}.
+\end{multline*}
+Clealrly
+\[\dist{p}{\gexp_{x_0}(\eps\cdot v_0)}{}
+\le 
+\dist{p}{x}{}+\tfrac{\eps^2}2\cdot\frac{|v_0|^2}{\dist{p}{x}{}}+o(\eps^2),\]
+\[\dist{\gexp_{x_n}(\eps\cdot v_n)}{q}{}
+\le 
+\dist{y}{q}{}+\tfrac{\eps^2}2\cdot\frac{|v_n|^2}{\dist{y}{q}{}}+o(\eps^2).\]
+Therefore, according to \ref{2nd-var}, for $\o$-almost all $\eps>0$ we have
+\begin{align*}\dist{p}{q}{}
+&\le\dist{p}{q}{}+\tfrac{\eps^2}2\cdot\biggl\{\biggr.\frac{|v_0|^2}{\dist{p}{x}{}}+\\
+&{}\ \ \ \ +
+\frac{n}{\dist{x}{y}{}}\cdot\biggl[(|v_0|^2-|v_1|^2)+(|v_1|^2-|v_2|^2)+\dots
++(|v_{n-1}|^2-|v_n|^2)\biggr]+\\
+&{}\ \ \ \ +
+\frac{|v_n|^2}{\dist{y}{q}{}}\biggl.\biggr\}+o(\eps^2)=\\
+&=
+\dist{p}{q}{}
++
+\tfrac{\eps^2}2\cdot\l\{\l(\frac{1}{\dist{p}{x}{}}+
+\frac{n}{\dist{x}{y}{}}\r)\cdot|v_0|^2
++\l(\frac{1}{\dist{y}{q}{}}-\frac{n}{\dist{x}{y}{}}\r)\cdot|v_n|^2\r\}
++o(\eps^2).
+\end{align*}
+Thus,
+\[\l(
+\frac{1}{\dist{p}{x}{}}
++\frac{n}{\dist{x}{y}{}}\r)\cdot|v_0|^2
++\l(\frac{1}{\dist{y}{q}{}}
+-\frac{n}{\dist{x}{y}{}}
+\r)\cdot|v_n|^2\ge 0.\]
+Since $v_0=v$ and $\Phi_n(v)=v_n$, the result follows.\qeds
+
+
+
+
+
+
+
+\section{Second variation}
+
+In the formulation of second variation formula,
+we will use certain tangent $\kappa$-cone as a comparison space.
+Let us first dicuss basic geometry behind it.
+
+Given a Euclidean cone $K$, let us denote by $(K)\mc\kappa$ the corresponding $\kappa$-cone;
+i.e. if $K=\Cone\Sigma$ then $(K)\mc\kappa=\Cone\mc\kappa\Sigma$.
+We will denote by $\tau\mc\kappa\:K\to(K)\mc\kappa$ the \textbf{tau}tological submap;
+i.e. the point with polar coordinates $(x,\xi)\in\RR\times\Sigma$ mapped to the point with the same polar coordinates in $(K)\mc\kappa$.
+Clearly $\Dom\tau\mc\kappa\z=\cBall[\0,\varpi\kappa]\subset K$.
+Clearly, if $K\in\CBB{}0$ then $(K)\mc\kappa\in \CBB{}\kappa$.
+It is easy to see that given cones $K$, $K_1$ and $K_2$, we have
+\[K\iso K_1\times K_2\ \ \Longleftrightarrow\ \ (K)\mc\kappa\iso(K_1)\mc\kappa\times_{\cs\kappa\circ\dist{o}{}{}} (K_2)\mc\kappa.\]
+
+Let us remind that if $x\in \l] p q \r[$ 
+then tangent space $\T_x$ at $x$ splits as $\T_x=\T_x^\perp\oplus\T_x^\top$ where $\T_p^\perp$ and $\T_x^\top$ are normal and tangent subcones to $[pq]$ (here $\T_x^\top$ is isometric to $\RR$).
+Thus, we have 
+\[(\T_x)\mc\kappa
+=
+(\T_x^\perp)\mc\kappa\times_{\cs\kappa\circ\dist{o}{}{}}(\T_x^\top)\mc\kappa.\]
+Set $\~p=\tau\mc\kappa\cdot\ddir x p$ and $\~q=\tau\mc\kappa\cdot\ddir x q$.
+Clearly $\~p$ and $\~q$ are uniquely defined, 
+both $\~p$ and $\~q$ lie in the fiber over $o\in \T_x^\perp$ 
+and $\dist{\~p}{\~q}{}=\dist{p}{q}{}$.
+
+
+\begin{thm}{???Theorem}\label{thm:2nd-var}
+Let $\o$ be a ???,
+$\spc{L}\in\CBB m\kappa$,
+$[pq]$ be a geodesic in $\spc{L}$ and $x\in \l] p q \r[$.
+Set $\~p=\tau\mc\kappa\ddir{x}p$ and $\~q=\tau\mc\kappa\ddir {x} q$, so $\~p,\~q\in(\T_x)\mc\kappa$.
+
+Then there is two norm-preserving noncontracting maps 
+$\map_p\:\T_p\to\T_{\~p}$ and $\map_q\:\T_q\to\T_{\~q}$, 
+such that for any two vectors $v\in\T_p$ and $w\in\T_q$ we have
+\[\dist{\gexp(\eps\cdot v)}{\gexp(\eps\cdot w)}{}
+\le
+\dist{\exp(\eps\cdot\map_p v)}{\exp(\eps\cdot\map_qw)}{}
++o(\eps^2)
+\eqlbl{eq:thm:2nd-var*}\]
+for $\o$-almost all $\eps$.
+\end{thm}
+
+One can the right part of \ref{eq:thm:2nd-var*} competely agebrically, but in general the formulas become bit monster-like.
+
+\begin{thm}{Corollaries} 
+In the assumtions of \ref{thm:2nd-var},
+\begin{enumerate}
+\item If in addition $\T_p\iso\T_x$ ($\T_q\iso\T_x$) then $\map_p$ (correspondingly $\map_q$) is an isometry;
+\item The restriction of $\map_p$ to $\Lin_p$ (correspondingly $\map_q$ to $\Lin_q$) is an isometric map.
+\item If $\T_p\iso \EE^m$ (correspondingly $\T_q\iso \EE^m$) then $\map_p$ (correspondingly $\map_q$) is isometry.
+\item For almost all $(p,q)\in \spc{L}\times \spc{L}$, 
+the maps $\map_p$ and $\map_q$ can be chosen independently form the $\o$.
+\end{enumerate}
+\end{thm}
+
+\parit{Proofs of corollaries.} ???
+\qeds
+
+The proof of second variation formula is build on the same ideas as parallel transportation, but it uses extra technical steps.
+The key lemma in the proof is the following, it may regarded as a partial case of corollary ???.
+
+\begin{thm}{Lemma}
+Let $\o$ be a ???,
+$\spc{L}\in\CBB m\kappa$,
+$[pq]$ be a geodesic in $\spc{L}$ and $x,y$ be two distinct points $\l] p q \r[$.
+
+???
+
+Set $\~p=???\log_{\kappa,x} p$ and $\~q=???\log_{\kappa,x} q$.
+
+Then there is two norm-preserving noncontracting maps 
+$\map_p\:\T_p\to\T_{\~p}$ and $\map_q\:\T_q\to\T_{\~q}$, 
+such that for any two vectors $v\in\T_p$ and $w\in\T_q$ we have
+\[\dist{\gexp_p\eps\cdot v}{\gexp_q\eps\cdot w}{}
+\le
+\dist{\exp_{\~p}\eps\cdot\map_p v}{\exp_{\~q}\eps\cdot\map_q w}{}
++o(\eps^2)\]
+for $\o$-almost all $\eps$.
+\end{thm}
+
+\section{Remarks and open problems}
+
+\begin{thm}{Open question}
+Let $\spc{L}\in\CBB{m}{}$, 
+$[pq]$ be a geodesics in $\spc{L}$,
+$\xi=\dir p q$ 
+and $x\in \l] p q \r[$.
+Is it true that $\T_{\xi}\T_p\iso\T_x$?
+\end{thm}
+ 

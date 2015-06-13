@@ -1,0 +1,227 @@
+%%!TEX root = all.tex
+%array^
+\chapter{Model plane}
+
+\section{Trigonometry}\label{model}
+
+Given a real number $\kappa$, the \emph{model $\kappa$-\hspace{0pt}plane}\index{plane!$\kappa$-plane} will be a simply connected 2-\hspace{0pt}dimensional Riemannian manifold of constant curvature $\kappa$.
+
+The  model $\kappa$-plane  will be denoted by $\Lob2\kappa$.
+If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; if $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane; and if $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane.
+
+Set $\varpi\kappa=\diam\Lob2\kappa$\index{$\varpi\kappa$}, so 
+$\varpi\kappa=\infty$ if $\kappa\le0$ and $\varpi\kappa=\pi/\sqrt{\kappa}$ if $\kappa>0$.
+
+The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}{}$\index{$\dist{*}{*}{}$}
+, and $[x y]$\index{$[{*}{*}]$} 
+will denote the segment connecting $x$ and $y$. 
+$[x y]$ is uniquely defined if $\kappa\le 0$ and if $\kappa>0$ we 
+require 
+that $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.%??? otherwise $[x y]$ is considered to be undefined.
+
+A triangle in $\Lob2\kappa$, with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}\footnote{Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for a triple $([y z],[z x],[x y])$.}.
+The angle of $\trig x y z$ at $x$ will be denoted by $\mangle\hinge xyz$\index{$\mangle$}.
+
+By $\modtrig\kappa\{a,b,c\}$\index{$\modtrig\kappa$!$\modtrig\kappa\{{*},{*},{*}\}$} we denote a triangle in 
+$\Lob2\kappa$ with sidelengths $a,b,c$, so 
+$\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$ such that 
+$\dist{x}{y}{}=c$, $\dist{y}{z}{}=a$, $\dist{z}{x}{}=b$.
+For $\modtrig\kappa\{a,b,c\}$ to be defined, sides $a,b,c$ must satisfy the triangle inequality.  If $\kappa>0$, we 
+require 
+in addition that $a+b+c<2\cdot\varpi\kappa$; 
+otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
+
+\parbf{Trigonometric functions.}
+We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\sn\kappa$, $\cs\kappa$ and $\md\kappa$;
+$\sn{}$ stands for sine; $\cs{}$,  for cosine; and $\md{}$, for modified distance.
+
+Here are tables which relate our trigonometric functions to the standard ones, where 
+we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
+\begin{align*}
+&\sn{\pm\kappa}=\tfrac{1}{\sqrt{\kappa}}\cdot \sn{\pm1}({x}\cdot {\sqrt{\kappa}});
+&&\cs{\pm\kappa}=\cs{\pm1}({x}\cdot {\sqrt{\kappa}});
+\\
+&\sn{-1} x=\sinh x;&&\cs{-1} x=\cosh x;\\
+&\sn{0} x=x;
+&&\cs{0} x=1;\\
+&\sn{1} x=\sin x;	&&\cs{1} x= \cos x.
+\end{align*}
+	
+\begin{align*}
+&\md{\pm\kappa}
+=
+\tfrac{1}{\kappa}\cdot \md{\pm1}({x}\cdot {\sqrt{\kappa}});
+&&\md{-1} x=\cosh x-1;\\
+&\md{0} x=\tfrac{1}{2}\cdot x^2; 
+&&\md{1} x
+=
+\left[
+\begin{aligned}
+&1-\cos x&&\t{for}&&x<\pi
+\\
+&2&&\t{for}&&x\ge\pi
+\end{aligned}
+\right.;	&
+\end{align*}
+
+
+Note that
+\[\md\kappa(0)=(\md\kappa)'(0)=0\ \ \t{and}\ \ 
+(\md\kappa)''(x)=1-\kappa\cdot\md\kappa(x)\ \ \t{for}\ \ x<\varpi\kappa.\]
+Also,
+\[
+\mdk(x)=\int\limits_0^x
+\snk(x)\cdot\d x \ \t{ for }\ \ x<\varpi\kappa
+\]
+%In other words, $\md\kappa(x)=1/\kappa$ for all $x\ge\varpi\kappa$ and otherwise
+%\[\md\kappa(x) = 
+%\tfrac{1}{2}\cdot x^2+\sum_{n>1}\tfrac{(-\kappa)^{n-1}}{(2\cdot n)!}\cdot x^{2\cdot n}
+%=
+%\left[\begin{aligned} 
+%\tfrac{1}{\kappa}&\cdot\l[1-\cos(x\cdot\sqrt{\kappa} )\r]  && {\text{if }} & \kappa &> 0 \\
+% \tfrac{1}{2}&\cdot x^2                          && {\text{if }} & \kappa&=0 \\
+%\tfrac{1}{\kappa}&\cdot\l[1-\cosh(x\cdot\sqrt{-\kappa})\r] && {\text{if }} & \kappa &< 0
+%\end{aligned}\r..\]
+%Set $\sn\kappa=(\md\kappa)'$ and $\cs\kappa=(\md\kappa)''$\index{$\sn\kappa$}\index{$\cs\kappa$}.
+The functions $\sn\kappa, \cs\kappa:\RR_{\ge}\to\RR$ satisfy the equation $y''+\kappa\cdot y=0$,  
+and have the same initial conditions as sine and cosine respectively.
+
+
+
+
+\begin{wrapfigure}{r}{35mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/treug(0.32)}
+\lbl[b]{99,50,-90;{\small $a=\side\kappa\{\phi;b,c\}$}}
+\lbl[br]{50,71;$b$}
+\lbl[tr]{50,25;$c$}
+\lbl[l]{15,49;{\small $\phi=\tangle\mc\kappa\{a;b,c\}$}}
+\end{lpic}
+\end{wrapfigure}
+\parbf{Cosine law.}
+Let $\phi$ be the angle of $\modtrig\kappa\{a,b,c\}$ which is 
+opposite to $a$.
+In this case we will write\index{$\side\kappa$!$\side\kappa \{{*};{*},{*}\}$}
+\[a
+=
+\side\kappa\{\phi;b,c\}
+\ \  \text{or}\ \ 
+\phi
+=
+\tangle\mc\kappa\{a;b,c\}.\]
+
+The functions $\side\kappa$ and $\tangle\mc\kappa$ will be called correspondingly \emph{model side} and \emph{model angle}.
+
+At bottom, these notations are abbreviations for the cosine law in $\Lob2\kappa$, which can be expressed through the trigonometric functions  just introduced:
+\[\cos\phi
+=\l[\begin{aligned}
+&\frac{b^2+c^2-a^2}{2\cdot b\cdot c}
+&\text{if}&\ \ \kappa=0
+\\
+%&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
+%&\text{if}&\ \ \kappa\not=0
+&\frac{\cs\kappa b\cdot\cs\kappa c-\cs\kappa a}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
+&\text{if}&\ \ \kappa\not=0
+\end{aligned}\r.\]
+Rather than using the explicit formulas, however, we mainly will use
+the properties of $\~\mangle\mc\kappa$ and $\side\kappa$ listed below.
+
+\begin{thm}{Properties of standard functions}
+
+\begin{subthm}{md-diff-eq}
+For fixed $a$ and $\phi$, the function 
+\[y(t)=\md\kappa\l(\side\kappa\{\phi;a,t\}\r)\]
+ satisfies the following differential equation:
+\[y''+\kappa\cdot y=1.\]
+\end{subthm}
+
+\begin{subthm}{sn-diff-eq}
+Let $\alpha\:[a,b]\to\Lob2\kappa$ be a unit-speed geodesic, and $A$ be the image of a complete geodesic.  If $f(t)$ is the distance from $\alpha(t)$ to $A$, the function 
+\[y(t)=\sn\kappa (f(t))\]
+ satisfies the following differential equation:
+\[y''+\kappa\cdot y=0.\]
+\end{subthm}
+
+\begin{subthm}{increase}
+For fixed $\kappa$, $b$ and $c$, the function 
+\[a\mapsto\tangle\mc\kappa\{a;b,c\}\]
+is increasing and defined on a convex subset of $\RR$.
+Equivalently, the function
+\[\phi\mapsto\side\kappa \{\phi;b,c\}\]
+is increasing and defined if $b,c<\varpi\kappa$ and $\phi\in[0,\pi]$\footnote{Formally speaking, if $\kappa>0$ and $b+c\ge \varpi\kappa$, it is defined only for $\phi\in[0,\pi)$, but $\side\kappa \{\phi;b,c\}$ can be extended to $[0,\pi]$ as a continuos function.}.
+\end{subthm}
+
+\begin{subthm}{k-decrease}
+For fixed $\phi,a,b,c$, the functions
+\[\kappa\mapsto \tangle\mc\kappa\{a;b,c\}\ \ \text{and}\ \ \kappa\mapsto \side\kappa \{\phi;b,c\}\]
+are respectively non-decreasing (in fact, decreasing, if $a\notin\{|b-c|, b+c\}$) and non-increasing (in fact, increasing, if $\phi\notin\{0,\pi\}$).
+\end{subthm}
+
+\begin{subthm}{lem:alex-0}(Alexandrov's lemma)
+Assume that for real numbers $a,b,a',b', x$ and $\kappa$, the following two expressions are defined
+\begin{enumerate}
+\item $\tangle\mc\kappa\{a;b,x\}+\tangle\mc\kappa\{a';b',x\}-\pi$,
+\item $\tangle\mc\kappa\{a';b+b',a\}-\tangle\mc\kappa\{x;a,b\}$,
+\end{enumerate}
+Then they have the same sign.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+All the properties except Alexandrov's lemma (\ref{SHORT.lem:alex-0}) can be shown by direct calculation.
+The Alexandrov's lemma is reformulated in \ref{lem:alex} and proved there.
+\qeds
+
+
+
+\section{Hemisphere lemma}\label{curves-in-model}
+
+%By a  \emph{rectifiable curve}  we mean the image of a closed bounded interval under some locally Lipschitz map (equivalently, a \emph{$1$-rectifiable set} on the sense of \ref{sec:rectifiable}).
+
+%\begin{thm}{Lemma}\label{lem:lenght-of-convex-curve}
+%Let $\alpha_n$ be a sequence of closed convex curves in $\Lob2{\kappa}$ wich convege to a curve $\alpha$ then $\length\alpha_n\to \length \alpha$.
+%\end{thm}
+
+%\parit{Proof.}???\qeds
+
+
+\begin{thm}{Hemisphere lemma}
+\label{lem:hemisphere}
+For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, $\le2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
+\end{thm}
+
+\parit{Proof.} By rescaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\SS^2$.
+Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
+
+Assume $\ell<\pi$.
+Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
+Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
+Let $z$ be the midpoint of  $[pq]$.  
+We claim $\alpha$ lies in the open hemisphere centered at $z$.  
+If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
+Without loss of generality we may assume that $r\in\check\alpha$. 
+Arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that passes through $r$ and its antipodal point $r'$.
+Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
+
+If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circle, 
+or $\alpha$ may be strictly shortened by substituting a geodesic arc for a subarc of $\alpha$ 
+whose endpoints $p^1,p^2$ are arbitrarily close to some point $p$ on  $\alpha$.
+In the latter case,  $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres  containing the shortened curves as $p^1,p^2$ approach $p$.
+\qeds
+
+
+
+%\begin{thm}{Lemma}\label{lem:proj-to-conv}Let $K\subset\Lob2\kappa$ be a convex closed set.Then there is a short map $\map\:\Lob2\kappa\to K$ such that $\map(x)=x$ for any $x\in K$. \end{thm}
+
+
+\section{Exercises}
+
+\begin{thm}{Exercise}
+Build a proof of Hemisphere lemma
+\ref{lem:hemisphere} base on Krofton's formula.
+\end{thm}
+
+
+
+
+
+

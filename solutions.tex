@@ -1,0 +1,174 @@
+\chapter{Solutions}
+
+\parbf{Besicovitch inequality \ref{ex:besicovitch-inq}.}
+Fix $\eps>0$ and let
+$f_1,f_2\dots\:\EE^m\subto \spc{X}$
+be the short submaps such that 
+\[\Im\Phi\subset\bigcup_n\Im f_n\]
+and 
+\[\sum_n\vol_m(\Dom f_n)
+<
+\LongMes_m(\Im\Phi)+\eps.\]
+
+Consider the functions $\psi^i=\dist{A^i}{}{}$
+and the map $\bm{\psi}=(\psi^1,\dots,\psi^n)\:\spc{X}\to\RR^n$.
+Note that for each $i$ and $n$,
+the composition $\psi^i\circ f_n$ is 1-Lipschitz.
+It follows that
+\begin{align*}
+|[\d_x(\bm\psi\circ f_n)]^{\wedge n}|
+&\le \lip(\psi^1\circ f_n)\cdots\lip(\psi^m\circ f_n)
+\le
+\\
+&
+\le 1.
+\end{align*}
+for almost all $x\in\Dom f_n$.
+
+Note that 
+\[\Im\bm\psi\circ\map
+\supset
+[0,a^1]\times\dots\times[0,a^n].\]
+
+
+Applying Federer's area formula,
+for 
+$\bm\psi\circ f_n\:\RR^m\subto\RR^m$, 
+we get 
+\begin{align*}\vol_n(\Dom f_n)
+&=
+\int\limits_{\Im \bm\psi\circ f_n}|[\d_x(\bm\psi\circ f_n)]^{\wedge n}|\cdot\d_x\vol_m\le
+\\
+&\le \vol_n(\Im \bm\psi\circ f_n)
+\end{align*}
+
+\begin{align*}
+\LongMes_m \spc{X}+\eps
+&\ge \sum_n\,\vol_n(\Dom f_n)\ge
+\\
+&\ge \sum_n\,\int\limits_{\Dom f_n}\bigl|[\d_x(\bm\psi\circ f_n)]^{\wedge n}\bigr|\cdot\d_x\vol_n=
+\\
+&=\sum_n\,\vol_n(\Im \bm\psi\circ f_n)\ge
+\\
+&\ge \vol_n[\bm\psi(\spc{X})].
+\end{align*}
+Since $\eps>0$ is arbitrary, 
+the result follows.
+\qeds
+
+\parbf{Exercise \ref{ex:ultra-unique-geod}.}
+It is sufficient to show that midpoint $z$ of $[pq]$ lies in $\spc{X}$.
+Take a sequnce of points $z_n\in \spc{X}$ such that $z_n\to z$ as $n\to\o$.
+
+Arguing by contradiction,
+assume that $z_\o\notin\spc{X}$.
+Then, according to Lemma~\ref{lem:X-X^w}, there is a subsequence $(z'_n)$ of $(z_n)$ such that $z'_n\to z'\not= z$ as $n\to\o$.
+Clearly $z'$ is a midpoint for $p$ and $q$.
+
+According to \ref{cor:ulara-geod} $\spc{X}^\o$ is geodesic.
+Choose two geodesics $[p z']$ and $[z' q]$;
+together they form a geodesic from $p$ to $q$ in $\spc{X}^\o$ which is distinct from $[p q]$, a contradiction.
+\qeds
+
+
+
+\parbf{Exercise \ref{ex:lip+dist}.}
+Applying partiiton of unity, we may assume that support of $f$ lies in the domain $\Omega$ which admits a bi-Lipschitz distance embedding $\bm{a}\:\spc{L}\to\RR^\kay$.
+Choose sufficiently big constant; $\Const\ge ???$ will do.
+Define 
+$$\phi(\bm{x})
+=
+\min\set{\Const\cdot|\dist{\bm{a}}{p}{}-\bm{x}|+f(p)}{p\in \Omega}.$$
+
+\parbf{Exercise \ref{ex:d(grad)<0}.}
+Let $\phi\can F\circ\dist{\bm{a}}{}{}$ 
+and $\psi\can G\circ\dist{\bm{b}}{}{}$; 
+clearly,
+\begin{align*}
+\d_p\phi(v)
+&=\sum_i\partial_i F\cdot (\d_p\dist{a^i}{}{})(v),
+\\
+\d_p\psi(v)
+&=\sum_i\partial_j G\cdot (\d_p\dist{b^j}{}{})(v).
+\end{align*}
+Applying the definition of gradient (\ref{def:grad}),
+Theorem \ref{thm:differential-of-dist}
+and the identities above, 
+we get that 
+for any choice of geodesics $[pa^i]$ the following holds
+\begin{align*}
+\d_p\phi(\nabla_p\psi)
+&=\sum_i\partial_i F
+\cdot
+(\d_p\dist{a^i}{}{})(\nabla_p\psi)
+\le
+\\
+&\le
+-\sum_i\partial_i F
+\cdot
+\<\dir{p}{a^i},\nabla_p\psi\>
+\le
+\\
+&\le
+-\sum_i
+\partial_i F
+\cdot
+\d_p\psi(\dir{p}{a^i})
+=
+\\
+&=
+-\sum_{i,j}
+\partial_i F
+\cdot
+\partial_j G
+\cdot
+(\d_p\dist{b^j}{}{})(\dir{p}{a^i})
+\le
+\\
+&\le
+\sum_{i,j}
+\partial_i F
+\cdot
+\partial_j G
+\cdot
+\cos\angk\kappa{p}{a^i}{b^j}=
+\\
+&=\sdk\kappa{p}{\phi}{\psi}
+\end{align*}
+\qedsf
+
+\parbf{Exercise \ref{ex:df(v)=<grad f,v>}.}
+Recall that given two vectors $v,w\in \T_p$ we write 
+$v+w=0$ if $|v|=|w|$ and $\mangle(v,w)=\pi$.
+
+
+According to ???,
+for almost all $t\in\II$,
+the right and left derivatives 
+$\alpha^+(t),\alpha^-(t)\in \T_{\alpha(t)}$
+are defined and $\alpha^+(t)+\alpha^-(t)=0$.
+In particular, 
+\[\<\nabla_pf,\alpha^+(t)\>+\<\nabla_pf,\alpha^-(t)\>
+\ae 0\]
+By ???, $f\circ\alpha$ is differentiable for almost all $t\in\II$.
+Therefore 
+\[\d_pf(\alpha^+(t))+\d_pf(\alpha^-(t))\ae
+0.\]
+Since 
+\[\<\nabla_pf,\alpha^\pm(t)\>\ge \d_pf(\alpha^\pm(t)),\]
+we get the result.
+
+
+\parbf{Exercise \ref{ex:nan-li}.}
+Consider space $\hat{\spc{L}}=\spc{L}\times\{-1,+1\}$ with involution
+$\psi\:(x,s)\mapsto (x,-s)$.
+Let $\sim$ be the minimal equivalence relation on $\hat{\spc{L}}$
+such that $(x,s)\approx (\iota(x),-s)$ for any $x\in\partial\spc{L}$. 
+
+According to the Gluing theorem (\ref{thm:gluing-cbb}),
+$\hat{\spc{L}}/\sim\in \CBB{m}{\kappa}$.
+Note that $\psi$ induce an isometry on $\hat{\spc{L}}/\sim$.
+
+Finally notice that $\spc{L}/\iota=(\hat{\spc{L}}/\sim)/\psi$ 
+and apply Theorem \ref{thm:CBB/G}.
+

@@ -1,0 +1,310 @@
+%%!TEX root = all.tex
+\chapter{Boundary}
+
+
+\section{Boundary}\label{sec:bry}
+
+The boundary of $\CBB{m}{}$ space is sirtain subset,
+which is defined using induction on $m$.
+In particular it is defined only for finite dimensional spaces.
+
+First, recall that if $\spc{L}\in\CBB 1\kappa$ then $\spc{L}$ isometric to a one dimensional Riemannian manifold possibly with boundary (see \ref{thm:dim=1.CBB}).
+In this case, we define boundary of $\spc{L}$ (denoted as $\partial \spc{L}$)\index{$\partial\spc{L}$} to be boundary of corresponding manifold.
+
+Now, assume that the notion of boundary is already defined in all dimensions less than $m$.
+Recall that if $\spc{L}\in\CBB m\kappa$ then $\Sigma_p\in\CBB{m-1}1$ for any $p\in \spc{L}$ (see \ref{thm:tan4finite});
+thus $\partial\Sigma_p$ is already defined.
+Then define 
+\[\partial \spc{L}=\set{p\in \spc{L}}{\partial\Sigma_p\not=\emptyset}.\]
+
+
+\begin{thm}{Proposition}
+Let $\spc{L}\in\CBB m\kappa$.
+Then for any $p\in\partial\spc{L}$, $\rank_p\le m-1$.its boundary $\partial \spc{L}$ forms extremal set in $\spc{L}$. 
+\end{thm}
+
+\parit{Proof.}???\qeds
+
+
+The following statement has been proven in \cite{perelman:spaces2}, then its
+formulation was made more exact in \cite{alexander-bishop:fk}. 
+Here we give a simplified proof with the use of a gradient exponent.
+
+\begin{thm}{Theorem} \label{thm:dist-to-bry} 
+Let $\spc{L}\in\CBB{m}\kappa$ and
+$\partial \spc{L}\not=\emptyset$.
+Then the function 
+\[f=\sn\kappa\circ\dist{\partial \spc{L}}{}{}\] 
+satisfies $f''+\kappa\cdot  f\le 0$.
+
+In particular,
+\begin{subthm}{} if $\kappa=0$, the function $\dist{\partial \spc{L}}{}{}$ is concave;
+\end{subthm}
+
+\begin{subthm}{} if $\kappa>0$, the level sets $L_x=\dist[-1]{\partial \spc{L}}{}{}(x)\subset \spc{L}$, $x>0$
+are strictly concave hypersurfaces.
+\end{subthm}
+
+Moreover, the same conclusions hold for $f=\sn\kappa\circ\dist{E}{}{}$, where $E$ is an $(m-1)$-dimensional extremal subset???.
+\end{thm}
+
+Note that $\dist{\partial\spc{L}}{}{}$ (as well as function $f$ defined in the theorem) is not native semiconcave function of $\spc{L}$ (see definition ???). 
+
+\begin{wrapfigure}{r}{40mm}
+\begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/dist-to-bry(0.4)}
+\lbl[b]{14,144;$\~\gamma(0)$}
+\lbl[b]{63,158;$\~\gamma(\tau)$}
+\lbl[lt]{22,134;$\alpha$}
+\lbl[b]{18,39;$\~\beta$}
+\lbl[t]{15,15;$\~ p$}
+\lbl[t]{63,15;$\~ q$}
+\lbl[lb]{75,17;$\partial\Lob[+]{2}{\kappa}$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}  
+We have to show that for any unit-speed geodesic $\gamma$, 
+\[(f\circ\gamma)''(t_0)\le -\kappa\cdot  (f\circ\gamma)(t_0).\]
+for and any $t_0$ in the interior of interval of definition.
+Without loss of generality we can assume $t_0=0$.
+
+Direct calculations show that the statement is true for $\spc{L}=\Lob[+]2\kappa$
+ --- the halfplane  of the model plane $\Lob2\kappa$.
+
+Let $p\in \partial \spc{L}$ be a closest point to $\gamma(0)$ and
+$\alpha=\mangle(\gamma^+(0),\dir{\gamma(0)}p)$.
+
+Consider the following configuration in the model halfplane $\Lob[+]2\kappa$: 
+Take a point $\~ p\in\partial\Lob[+]2{\kappa}$ and consider the geodesic $\~\gamma$ in
+$\Lob[+]2\kappa$ such that 
+\[\dist{\gamma(0)}{p}{}=\dist{\~\gamma(0)}{\~ p}{}=\dist{{\partial\Lob[+]2\kappa}}{\~\gamma(0)}{},\] 
+so $\~ p$ is the closest point to $\~\gamma(0)$ on the
+boundary%
+\footnote{In case $\kappa>0$, it is possible only if $\dist{\gamma(0)}{p}{}\le
+\frac{\pi}{2\cdot\sqrt\kappa}$. 
+But this is always the case since otherwise any small
+variation of $p$ in $\partial \spc{L}$ decreases distance $\dist{\gamma(0)}{p}{}$.
+Indeed, take $p'\in \partial \spc{L}$ near $p$. 
+Since $\partial \spc{L}$ is an extremal subset, we have $\mangle\hinge{p}{p'}{\gamma(0)}\le \tfrac\pi2$ and if 
+$\dist{\gamma(0)}{p}{}>
+\frac{\pi}{2\cdot\sqrt\kappa}$, angle comparison  implies that $\dist{\gamma(0)}{p'}{}<\dist{\gamma(0)}{p}{}$.}
+and
+\[\mangle(\~\gamma^+(0),\dir{\~\gamma(0)}{\~ p})=\alpha.\]
+Then it is enough to show that 
+\[\dist{{\partial \spc{L}}}{\gamma(\tau)}{} \le
+\dist{{\partial\Lob +{}}}{\~\gamma(\tau)}{}+o(\tau^2).\eqlbl{eq:thm:dist-to-bry*}\]
+Set 
+$\beta(\tau)=\mangle\hinge p{\gamma(0)}{\gamma(\tau)}$
+and
+$\~\beta(\tau)=\mangle\hinge{\~p}{\~\gamma(0)}{\~\gamma(\tau)}$.
+From the angle comparison,
+\[\dist{p}{\gamma(\tau)}{}
+\le
+\dist{\~ p}{\~ \gamma(\tau)}{}\]
+and
+\[\theta(\tau)=\max\l\{0,\,\~\beta(\tau)-\beta(\tau)\r\}=o(\tau).\eqlbl{eq:thm:dist-to-bry**}\]
+Note that the tangent cone at $p$ splits
+: $\T_p \spc{L}\iso\RR_{\ge0}\times \T_p\partial
+\spc{L}$;
+this follows from the fact that $p$ lies on a shortest path between
+two preimages of $\gamma(0)$ in the doubling??? $\~{\spc{L}}$ of $\spc{L}$, see
+???.
+Therefore there is a direction $\xi\in \T_p\partial
+\spc{L}$ such that $\mangle(\dir p{\gamma(\tau)},\xi)+\beta(\tau)=\tfrac\pi2$.
+
+Set $q
+=\gexp\mc\kappa_p\l(\dist[{{}}]{\~ p}{\~q}{}\cdot\xi\r)$.%
+\footnote{\label{qg-grad} 
+Alternatively, one can set $q=\gamma(\dist{\~p}{\~q}{})$, where $\gamma$ is a
+quasigeodesic in $\partial \spc{L}$ starting at $p$ in direction $\frac{w}{|w|}\in
+\Sigma_p$; 
+its existance follows from Theorem~\ref{thm:exist-qg-ext}.} 
+Since gradient curves preserve extremal subsets $q\in \partial \spc{L}$ (see
+Property~\ref{grad-in-extr} on page~\pageref{grad-in-extr}).
+Applying the comparison from Section~\ref{sph-hyp-exp}, we get
+\begin{align*}
+\dist{{\partial \spc{L}}}{\gamma(\tau)}{}
+&\le\dist{q}{\gamma(\tau)}{}
+\le
+\\
+&\le
+\side\kappa \hinge{p}{q}{\gamma(\tau)}
+\le
+\\
+&\le\dist{\~ q}{\~\gamma(\tau)}{}
++O\l(\dist[{{}}]{\~ p}{\~ q}{}\cdot\theta(\tau)\r).
+\end{align*}
+Clearly $\dist{\~ p}{\~ q}{}=O(\tau)$;
+thus, applying \ref{eq:thm:dist-to-bry**}, we get \ref{eq:thm:dist-to-bry*}.
+\qeds
+
+For a subset $A$ of metric space $\spc{X}$ 
+we will denote by $\Fr A=\Fr_\spc{X} A$\index{$\Fr$} the \emph{frontier}\index{frontier} (relative boundary) of $A$ in $\spc{X}$ 
+and by $\Int A=\Int_\spc{X} A$\index{$\Int$} the \emph{interior}\index{interior} of $A$ in $\spc{X}$ 
+
+\begin{thm}{Theorem}\label{thm:fr-bry}
+Let $\spc{L}\in\CBB m\kappa$ and $K\subset \spc{L}$ be a convex closed subset with nonempty intrior.
+Then $K\in \CBB m\kappa$, 
+moreover 
+\[\partial K=\Fr_\spc{L} K\cup(\partial \spc{L}\cap K).\]
+
+In particular, if $\partial \spc{L}=\emptyset$ then $\partial K=\Fr_\spc{L} K$.
+\end{thm}
+
+\parit{Proof.}
+We get $K\in \CBB m\kappa$ directly from the definition of $\CBB{}{}$-space (???).
+
+To prove that $\Fr_\spc{L} K\subset \partial K$ we use induction by $m$; the base $m=1$ is trivial.
+
+Let $p\in\Fr_\spc{L} K$ and $\eps>0$,
+choose a point $x\in \spc{L}\backslash K$ which is $\tfrac\eps2$-close to $p$ 
+and let $q\in K$ be a closest point in $K$ to $x$.
+Clearly $\dist{x}{q}{}\le\dist{x}{p}{}$, therefore $q$ is $\eps$-colse to $p$.
+Clearly, for any $\xi\in\Sigma_{q}K\subset \Sigma_{q}\spc{L}$ we have $\mangle(\xi,\dir {q}x)\ge \tfrac\pi2$.
+Therefore, $\Fr_{\Sigma_{q}\spc{L}}\Sigma_{q}K\not=\emptyset$.
+From the induction hypothesis, we have $\partial\Sigma_{q}\not=\emptyset$;
+i.e. $q\in\partial K$.
+Since $\partial K$ is closed (???) and $\eps$ is arbitrary positive number, 
+we get $p\in \partial K$, or $\Fr_\spc{L} K\subset\partial K$.
+
+Finally, if $p\in\Int_\spc{L} K$ then $\Sigma_pK=\Sigma_p\spc{L}$.
+Thus, in this case, $p\in\partial K\ \z\Leftrightarrow\ p\in\partial \spc{L}$ and result follows.
+\qeds
+
+\section{Boundary and rank}
+
+If in addition $\kay=m-1$ and $p\notin\partial\spc{L}$ then
+$w_p^{-1}(q)$ is  a convex set in $\Delta^\kay$ which contains at least two distinct points. 
+
+???
+It remains to prove the second part of the theorem.
+According to ???,
+$\partial\spc{L}$ is a closed set in $\spc{L}$.
+If $p\notin\partial\spc{L}$ then we can assume that $\Omega\cap\partial\spc{L}=\emptyset$.
+
+\begin{clm}{}
+Assume $w_p^{-1}(q)$ is a one point set
+for some $q\in \Omega$ then $\T_q\iso \EE^m$.
+\end{clm}
+
+\parit{Proof of the claim.}
+Let $\{\bm{x}\}=w_p^{-1}(q)$.
+Consider function 
+\[f_{\bm{x}}=\sum_ix^if^i.\]
+Note that $\d_qf_{\bm{x}}\le 0$.
+In particular the set $E=\set{v\in\T_q}{\d_qf_{\bm{x}}(v)=0}$ is convex.
+
+Let us prove that $E$ contains an isometric copy of $\EE^{m-1}$. 
+???
+
+From the Toponogov splitting theorem $\T_p\iso \EE^{m-1}\oplus \spc{R}$,
+where $\spc{R}$ is a $\CBB{1}{0}$ space with a cone structure.
+From Theorem~\ref{thm:dim=1.CBB}, $\spc{R}$ is isometric to $\RR$ or $\RR_{\ge0}$;
+in the later case $q\in\partial\spc{L}$, which is impossible.
+Threfore $\spc{R}\iso \RR$ and $\T_q\iso \EE^{m-1}$.
+
+\section{Remarks and open problems}
+
+The following is the oldest conjecure in Alexandrov geometry.
+
+\begin{thm}{Conjecture}\label{conj:bry}
+The boundary of an Alexandrov's space equipped with length-metric is an
+Alexandrov's space with the same lower curvature bound.
+\end{thm}
+
+This is equivalent to the following:
+
+\begin{thm}{Conjecture}\label{conj:bry'} 
+Let $\spc{L}$ be an Alexandrov space without boundary. 
+Then a convex hypersurface in $\spc{L}$ equipped with length-metric is an Alexandrov's space with the same lower curvature bound.
+\end{thm}
+
+This conjecture, if true, would give affirmative ansewer to Problem~\ref{open:varray}.
+???
+Indeed, according to ???,
+parabolic cone $\RR\times_{t\mapsto e^{\lambda\cdot t}}\spc{L}$
+For example if $\spc{L}$ is a non-negatively curved Alexandrov's space and $f:\spc{L}\to\RR$ is concave (so $\spc{L}$ is necessarily open) then for any $t$ the graph
+\[\spc{L}_t=\{\,(x,t\cdot f(x))\in \spc{L}\times\RR\,\}\]
+with length-metric would be an Alexandrov's space. 
+Clearly $\spc{L}_t\GHto \spc{L}$ as $t\to0$. 
+An analogous construction exists for semiconcave functions on closed manifolds, but
+one has to take a \emph{parabolic cone}\footnote{see footnote~\ref{par-cone} on page~\pageref{par-cone}} instead of the product.
+
+
+
+
+If in addition $\spc{L}$ is Riemannian manifold
+then, accoording to Buyalo's theorem (\ref{thm:buyalo}),
+the conjecture \ref{conj:bry'} is true.
+At the moment all known proofs of Buyalo's theorem using smoothing and Gauss formula.
+Thus at the moment it is problemattic to generalize such proof.
+There is yet one beautiful synthetic proof in \cite{milka-conv}, which works only for convex hypersurfaces in the Euclidian space.
+
+There is a chance of attacking this problem by proving a type of the Gauss formula for
+Alexandrov's spaces. 
+One has to start with defining a curvature tensor of Alexandrov's spaces (it
+should be a measure-valued tensor field), then prove that the constructed tensor is really responsible for the geometry of the space. 
+Such things were already done in the two-dimensional case and for spaces with bilaterly bounded curvature, see \cite{reshetnyak:curvature} and
+\cite{nikolaev:curvature} respectively.
+So far the best results in this direction are given in \cite{perelman:DC}, 
+see also Section~\ref{app-tight} for more details.
+Some further steps in this directions were also done in \cite{lebedeva-curv}. 
+
+Almost everything that is known so far about the length-metric of a boundary is also known for the length-metric of a general extremal subset.
+In \cite{perelman-petrunin:extremal}, it was conjectured  that an analog of Conjecture~\ref{conj:bry} is true for any \emph{primitive extremal subset}, but it turned out to be wrong; a simple example was constructed in \cite{petrunin:extremal}. 
+All such examples appear when codimension of extremal subset is $\ge 3$.
+So it still might be true that
+
+\begin{thm}{Conjecture}\label{conj:codim=2}
+Let $\spc{L}\in\CBB{m}{\kappa}$, $E\subset \spc{L}$ be a primitive extremal subset and $\codim
+E=2$ then $E$ equipped with length-metric belongs to  $\CBB{m}{\kappa}$
+\end{thm}
+
+
+\section{Exercises}
+
+The following gives a converse to Theorem~\ref{thm:dist-to-bry}.
+
+\begin{thm}{Exercise} 
+Let $\spc{L}\in\CBB{m}{0}$ and $\mathfrak{C}\subset  \spc{L}$ be a closed subset such that its distance function 
+$\dist{\mathfrak{C}}{}{}\:\spc{L}\to \RR$ is a concave.
+Prove that $\mathfrak{C}$ is a $(m-1)$-dimensional extremal subset in $\spc{L}$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:supporting-vector}
+Let $\spc{L}\in\CBB{m}{0}$ 
+and $f\:\spc{L}\subto\RR$ is locally Lipschitz semiconcave subfunction and $p\in\Dom f$.
+A vector $w\in\T_p$ is called \emph{supporting}\index{supporting vectore} 
+for $f$ at $p$ if 
+\[\d_pf(x)+\<w,x\>\le 0\]
+for any $x\in \T_p$.
+
+\begin{subthm}{}
+Show that if $p\notin\partial\spc{L}$ there is a supporting vector for $f$ at $p$.
+\end{subthm}
+
+\begin{subthm}{}
+Show that set of supporting vectors of $f$ at $p$
+forms a convex closed set in $\T_p$.
+\end{subthm}
+
+\begin{subthm}{}
+Assume $\partial{\spc{L}}\ne\emptyset$;
+denote by $\spc{W}$ the doubling of $\spc{L}$ 
+in its boundary and let $\proj\:\spc{W}\to\spc{L}$
+be the natural projection.
+
+Show that $f$ admits a supporting vector at any point $p\in\Dom f$ 
+if and only if $f\circ\proj\:\spc{W}\to \RR$ is a semiconcave subfunction.
+\end{subthm}
+
+\end{thm}
+
+
+
+
+
+
+
+
+

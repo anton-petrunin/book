@@ -1,0 +1,453 @@
+%%!TEX root =the-euclid.tex
+\chapter{The ghost of Euclid%ready
+}
+
+\section{Geodesics, triangles and hinges}
+\label{sec:geods}
+
+\parbf{Geodesics and their relatives.}
+Let $\spc{X}$ be a metric space 
+and $\II$\index{$\II$} be a real interval. 
+A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \emph{unit-speed geodesic}\index{unit-speed geodesic}%
+\footnote{Various authors call it differently: \emph{shortest path}, \emph{minimizing geodesic}.}; 
+in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if 
+\[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
+for any pair $s,t\in \II$.
+
+A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \emph{ray}\index{ray}.
+
+A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \emph{line}\index{line}.
+
+%geodesic between points is not defined???
+A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
+We assume $\geod_{[p q]}$ is parametrized starting at $p$; 
+i.e. $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
+The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \emph{geodesic}\index{geodesic}.
+The term \emph{geodesic}\index{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
+when a confusion is possible we call the latter a \emph{constant-speed geodesic}\index{constantspeed geodesic}.
+%???MAYBE BETTER CALL IT GEODESIC CURVE???
+%%%%%%%%???MAYBE BETTER TO KEEP CONSTANTSPEED GEODESIC. IT IS CLEAR.  A GEODESIC CURVE POSSIBLY MIGHT HAVE A DIFFERENT PARAMETER. WE SHOULD NOT EVEN RAISE THIS POSSIBILITY IN THE READER'S MIND.
+%%%%%%%%%%%S:  SORRY BUT I NEED OTHER PARAMETERS IN WARPED PRODUCTS.  SO CAN WE CALL THESE ``PREGEODESICS'''AS IN BRIDSON-HAEFLIGER.
+With slight abuse of notation, we will use $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
+
+We may write $[p q]_{\spc{X}}$ 
+to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
+Also we use the following short-cut notation:
+\begin{align*}
+\l] p q \r[&=[pq]\backslash\{p,q\},
+&
+\l] p q \r]&=[pq]\backslash\{p\},
+&
+\l[ p q \r[&=[pq]\backslash\{q\}.
+\end{align*}
+
+A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \emph{pregeodesic}.
+
+
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.  However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we made a choice of geodesic.
+
+A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \emph{geodesic path}\index{geodesic path}.
+Given a geodesic $[p q]$,
+we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
+i.e., 
+$$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
+
+
+
+A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
+
+\parbf{Triangles.}
+For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use short notation 
+$\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+Again given a triple $p,q,r\in \spc{X}$ it may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also it maybe many different triangles with these vertexes, any of which can be denoted by $\trig p q r$.
+Once we write $\trig p q r$, it means we made a choice of such a triangle, 
+i.e. a choice of each $[q r], [r p]$ and $[p q]$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triangle} $\trig p q r$;
+it obviousely coinsides with perimeter of triple $p$, $q$, $r$ defined below.
+
+\parbf{Hinges.}
+Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
+A pair geodesics $([p x],[p y])$ will be called \emph{hinge}\index{hinge} and briefly, it will be denoted by 
+$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Model triangles and angles.}\label{sec:mod-tri/angles}
+
+Let $\spc{X}$ be a metric space, 
+$p,q,r\in \spc{X}$ 
+and $\kappa\in\RR$. 
+Let us define its \emph{model triangle}\index{model triangle} $\trig{\~p}{\~q}{\~r}$ 
+(briefly, 
+$\trig{\~p}{\~q}{\~r}=\modtrig\kappa(p q r)$%
+\index{$\modtrig\kappa$!$\modtrig\kappa({*}{*}{*})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
+\[\dist{\~p}{\~q}{}=\dist{p}{q}{},
+\ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
+\ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
+
+In the notation of Section~\ref{model}, 
+$\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}\}$.
+
+If $\kappa\le 0$ model triangle allways defined, it exists and unique up to isometry of $\Lob2\kappa$.
+If $\kappa>0$, the model triangle is said to be defined if in addition
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
+In this case it also exists and unique up to isometry of $\Lob2\kappa$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triple} $p$, $q$, $r$.
+
+If for  $p,q,r\in \spc{X}$,
+$\trig{\~p}{\~q}{\~r}=\modtrig\kappa(p q r)$ is defined 
+and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
+$\trig{\~p}{\~q}{\~r}$ at $\~ p$ will be called \emph{model angle} of triple $p$, $q$, $r$ and it will be denoted by
+$\angk\kappa p q r$%
+\index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}.
+
+In the notation of Section~\ref{model}, 
+$\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}$.
+
+\begin{wrapfigure}[10]{r}{35mm}
+\begin{lpic}[t(0mm),b(-10mm),r(0mm),l(0mm)]{pics/lem_alex1(0.4)}
+\lbl[br]{17,59;$p$}
+\lbl[r]{1,2;$q$}
+\lbl[l]{86,13;$r$}
+\lbl[lb]{67,32;$z$}
+\end{lpic}
+\end{wrapfigure}
+
+\begin{thm}{Alexandrov's lemma}
+\index{Alexandrov's lemma}
+\index{lemma!Alexandrov's lemma}
+\label{lem:alex}  
+Let $p,q,r,z$ be distinct points in a metric space such that $z\in \l]p r\r[$ and 
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
+Then 
+the following expressions have the same sign:
+\begin{subthm}{lem-alex-difference}
+$\angk\kappa p q z
+-\angk\kappa p q r$,
+\end{subthm} 
+
+\begin{subthm}{lem-alex-angle}
+$\angk\kappa z q p
++\angk\kappa z q r -\pi$.
+\end{subthm}
+
+Moreover,
+\[\angk\kappa q p r \ge \angk\kappa q p z +  \angk\kappa q z r,\]
+with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}) and (\ref{SHORT.lem-alex-angle}) vanish.
+\end{thm}
+
+\parit{Proof.} By the triangle inequality, 
+\[
+\dist{p}{q}{}+\dist{q}{z}{}+\dist{z}{p}{}\le \dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.
+\]
+Therefore the model triangle $\trig{\~p}{\~q}{\~z}=\modtrig\kappa p q z$ is defined.
+Take 
+a point $\~r$ on the extension of 
+$[\~p \~z]$ beyond $\~z$ so that $\dist{\~p}{\~r}{}=\dist{p}{r}{}$ (and therefore $\dist{\~p}{\~z}{}=\dist{p}{z}{}$). 
+ 
+From monotonicity of function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\ref{increase}), 
+the following expressions have the same sign:
+\begin{enumerate}[(i)]
+\item $\mangle\hinge{\~p}{\~q}{\~r}-\angk\kappa{p}{q}{r}$;
+\item $\dist{\~p}{\~r}{}-\dist{p}{r}{}$;
+\item $\mangle\hinge{\~z}{\~q}{\~r}-\angk\kappa{z}{q}{r}$.
+\end{enumerate}
+Since 
+\[\mangle\hinge{\~p}{\~q}{\~r}=\mangle\hinge{\~p}{\~q}{\~z}=\angk\kappa{p}{q}{z}\]
+and
+\[ \mangle\hinge{\~z}{\~q}{\~r}
+=\pi-\mangle\hinge{\~z}{\~p}{\~q}
+=\pi-\angk\kappa{z}{p}{q},\]
+the first statement follows.
+
+For the second statement, construct $\trig{\~q}{\~z}{r'}=\modtrig\kappa q z r$ on the opposite side of $[\~q\~z]$ from $\trig{\~p}{\~q}{\~z}$.  
+Since
+\[\dist{\~p}{r'}{}\le \dist{\~p}{\~z}{} + \dist{\~z}{r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
+then 
+\begin{align*}
+\angk\kappa{q}{p}{z} + \angk\kappa{q}{z}{r} 
+&
+= 
+\mangle\hinge{\~q}{\~p}{\~z}+ \mangle\hinge{\~q}{\~z}{r'} 
+=
+\\
+&
+= 
+\mangle\hinge{\~q}{\~p}{r'}
+\le
+\\
+&\le  \angk\kappa q p r.
+\end{align*}
+Equality holds if and only  if $\dist{\~p}{r'}{}=\dist{p}{r}{}$, 
+as required.
+\qeds
+
+
+
+
+
+
+
+
+\section{Quadruples}\label{sec:quad}
+
+Let $\spc{X}$ be a metric space.
+Consider quadruple of points in $\spc{X}$;
+say $\{x^1,x^2,x^3,x^4\}$.
+The points $x^i$ will be called \emph{vertices}\index{vertex of the quadruple} of the quadruple.
+
+The quadruple $\{x^1,x^2,x^3,x^4\}$
+is called \emph{$\kappa$-admissible}\index{$\kappa$-admissible quadruple} if all 4 model triangles 
+$\modtrig\kappa(x^ix^jx^\kay)$ are defined;
+otherwise it is called \emph{$\kappa$-inadmissible}\index{$\kappa$-inadmissible quadruple}.
+
+A $\kappa$-admissible quadruple $\{x^1,x^2,x^3,x^4\}$
+is called \emph{$\kappa$-model}\index{$\kappa$-model quadruple}
+if it is isometric to a quadruple in $\Lob3\kappa$.
+The later is equivalent to the fact that 
+for one (and therefore any) permutation $(i,j,\kay,\ell)$
+of $(1,2,3,4)$, 
+we have that the three angles $\angk\kappa{x^i}{x^j}{x^\kay}$,
+$\angk\kappa{x^i}{x^\kay}{x^\ell}$ and $\angk\kappa{x^i}{x^j}{x^\ell}$
+satisfy all three triangle inequalities 
+and
+\[\angk\kappa{x^i}{x^j}{x^\kay}+\angk\kappa{x^i}{x^\kay}{x^\ell}+\angk\kappa{x^i}{x^j}{x^\ell}
+\le 
+2\cdot\pi.\]
+
+Assume $\{x^1,x^2,x^3,x^4\}$ is $\kappa$-admissible.
+If 
+\[\angk\kappa{x^i}{x^j}{x^\kay}+\angk\kappa{x^i}{x^\kay}{x^\ell}+\angk\kappa{x^i}{x^j}{x^\ell}
+\le 
+2\cdot\pi\]
+for any permutation $(i,j,\kay,\ell)$
+of $(1,2,3,4)$, we call 
+%it 
+$\{x^1,x^2,x^3,x^4\}$ 
+\emph{$\kappa$-supermodel}\index{$\kappa$-supermodel quadruple}.
+%Note that any $\kappa$-supermodel quadruple is $\kappa$-model.
+
+A $\kappa$-admissible quadruple $\{x^1,x^2,x^3,x^4\}$
+is called \emph{$\kappa$-submodel} if it is $\kappa$-model
+or for some permutation $(i,j,\kay,\ell)$
+of $(1,2,3,4)$ we have 
+\[\angk\kappa{x^i}{x^j}{x^\kay}+\angk\kappa{x^i}{x^\kay}{x^\ell}+\angk\kappa{x^i}{x^j}{x^\ell}
+>
+2\cdot\pi.\eqlbl{eq:>2pi}\]
+%%S
+In other words, 
+$\kappa$-submodels 
+consist of all $\kappa$-models and all $\kappa$-admissibles that are not $\kappa$-supermodels, and likewise $\kappa$-supermodels 
+consist of all $\kappa$-models and all $\kappa$-admissibles that are not $\kappa$-submodels.
+
+Since \ref{eq:>2pi} forces the three angles $\angk\kappa{x^i}{x^j}{x^\kay}$,
+$\angk\kappa{x^i}{x^\kay}{x^\ell}$ and $\angk\kappa{x^i}{x^j}{x^\ell}$ to 
+satisfy all three triangle inequalities, then $\kappa$-submodels also may be described as all $\kappa$-admissibles $\{x^1,x^2,x^3,x^4\}$ such that for some permutation $(i,j,\kay,\ell)$ of $(1,2,3,4)$, the three angles $\angk\kappa{x^i}{x^j}{x^\kay}$,
+$\angk\kappa{x^i}{x^\kay}{x^\ell}$ and $\angk\kappa{x^i}{x^j}{x^\ell}$
+satisfy all three triangle inequalities. 
+
+The following proposition gives yet another description of $\kappa$-submodel.
+
+\begin{thm}{Proposition}\label{prop:submodel}
+A $\kappa$-admissible 
+quadruple is $\kappa$-submodel 
+if and only if one of the following two equivalent conditions holds.
+
+\begin{subthm}{}
+For any labeling of the vertices 
+by $(p^1,p^2,x^1,x^2)$, at least one of the following two inequalities holds
+\begin{enumerate}[(i)]
+\item $\angk{\kappa}{p^1}{x^1}{x^2} 
+\le 
+\angk{\kappa}{p^1}{p^2}{x^1}+\angk{\kappa}{p^1}{p^2}{x^2}$
+\item $\angk{\kappa} {p^2}{x^1}{x^2}\le \angk{\kappa} {p^2}{p^1}{x^1} + \angk{\kappa} {p^2}{p^1}{x^2}$.
+\end{enumerate}
+\end{subthm}
+
+\begin{subthm}{}
+There is some labeling of the vertices by $(p,x^1,x^2,x^3)$ so that the three angles 
+$\angk\kappa p{x^1}{x^2}$,
+$\angk\kappa p{x^2}{x^3}$ and
+$\angk\kappa p{x^1}{x^3}$
+satisfy all three triangle inequalities.
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.}
+Follows from Overlap lemma (\ref{lem:extend-overlap}).
+\qeds
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Angles and the first variation.}\label{sec:angles}
+
+Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} as 
+follows:\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
+\[\mangle\hinge p x y
+\df
+\lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
+where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+
+Similarly to $\angk\kappa p{x}{y}$, 
+we will use short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
+\[\side\kappa \hinge p x y=
+\side\kappa \l\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\r\}.\]
+The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
+ of hinge $\hinge p x y$.Ð
+
+\parbf{Remark.}
+We stick to this definition since in Alexandrov's geometry angles always defined (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
+For general metric spaces, the angle need not be defined\index{$\mangle$!$\mangle^\text{up}$}
+and it is more natural to consider \emph{upper angle}\index{angle!upper angle} which is defined as
+\[\mangle^\text{up}\hinge p x y
+\df
+\limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
+where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+A good discussion of different definition of angles is given in ???.
+
+
+\begin{thm}{Lemma}\label{lem:k-K-angle}
+For any $\kappa,\Kappa\in\RR$, there exists  $\Const\in\RR$ such that
+\[|\angk\Kappa p{x}{y}-\angk\kappa p{x}{y}|
+\le 
+\Const\cdot\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
+\eqlbl{eq:k-K}\]
+whenever  the lefthand side is defined.
+\end{thm}
+
+Lemma~\ref{lem:k-K-angle} implies that 
+the definition of angle is independent of $\kappa$.
+In particular, one can take $\kappa=0$ in the definition, so that the angle can be calculated from the  cosine law:
+\[\cos\angk{0}{p}{x}{y}
+=
+\frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
+
+\parit{Proof.}
+The function $\kappa\mapsto \angk\kappa p{x}{y}$ is nondecreasing (see \ref{k-decrease}).
+Thus, for $\Kappa>\kappa$, we have
+\begin{align*}
+0\le \angk\Kappa p{x}{y}-\angk{\kappa}p{x}{y}
+\le& \angk\Kappa p{x}{y}+\angk\Kappa {x}p{y}+\angk\Kappa {y}p{x}-
+\\
+&-\angk\kappa p{x}{y}-\angk\kappa {x}p{y}-\angk\kappa {y}p{x}
+= 
+\\
+=&\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
+\end{align*}
+Thus, \ref{eq:k-K} follows since 
+%???WHY???
+\[0
+\le
+\area\modtrig\kappa(pxy)\le \area\modtrig\Kappa(pxy),
+%\le
+%O\l(\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}\r),
+\]
+%!!!
+where the latter area is at most $\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}$.
+
+%???It is true without assuming $K\le 0$??? if $K\le 0$ and hence, by central projection from a sphere to its tangent plane, is at most $\tan\dist[{{}}]{p}{x}{}\cdot\tan\dist[{{}}]{p}{y}{}$ if $K=1$.
+\qeds
+
+
+
+\begin{thm}{Triangle inequality for angles}
+\label{claim:angle-3angle-inq}
+Let  $[px^1]$, $[px^2]$ and $[px^3]$ %$\gamma^1, \gamma^2, \gamma^3$ 
+be three geodesics in a metric space.
+If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
+\[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
+
+\end{thm}
+
+\parbf{Remark.}
+The above theorem also holds for upper angles, see ???.
+
+\begin{wrapfigure}{l}{30mm}
+\begin{lpic}[t(-5mm),b(-30mm),r(0mm),l(0mm)]{pics/s-choice(0.33)}
+\lbl[rb]{45,101;$t$}
+\lbl[rt]{45,30;$\tau$}
+\lbl[W]{50,65;$s\ \ $}
+\lbl[l]{18,60,-25;$=\alpha^{12}+\eps$}
+\lbl[l]{18,69,24;$=\alpha^{23}+\eps$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} 
+Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
+Set $\gamma^i=\geod_{[px^i]}$.
+Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
+\begin{align*}
+\dist{\gamma^1(t)}{\gamma^3(\tau)}{}
+\le 
+&\dist{\gamma^1(t)}{\gamma^2(s)}{}+\dist{\gamma^2(s)}{\gamma^3(\tau)}{}<\\
+<
+&\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha^{12}+\eps)}+
+\\
+&+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha^{23}+\eps)}\le
+\\
+\intertext{(Below we define 
+$s(t,\tau)$ so that for 
+$s=s(t,\tau)$, this chain of inequalities continues the following way.)}
+\le
+&\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
+\end{align*}
+Thus for any $\eps>0$, 
+\[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
+Hence the result.
+
+To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+We parametrize each ray by length from the starting point.
+Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be %a 
+the 
+number such that 
+$\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, % i.e. if $t$ and $\tau$ are both sufficiently small then so is $s$.
+so $t,\tau,s$ may be taken sufficiently small.
+\qeds
+
+\begin{thm}{First variation inequality}\label{lem:first-var}
+Assume for hinge $\hinge q p x$ 
+the angle $\alpha=\mangle\hinge q p x$ is defined then
+\[\dist{p}{\geod_{[qx]}(t)}{}
+\le
+\dist{q}{p}{}-t\cdot \cos\alpha+o(t).\]
+
+\end{thm}
+
+\parit{Proof.} Take sufficiently small small $\eps>0$.
+For all sufficiently small $t>0$, we have that 
+\begin{align*}
+ \dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
+&\le 
+\tfrac{t}{\eps}\cdot \sqrt{1+\eps^2 -2\cdot \eps\cdot \cos\alpha}+o(t)\le
+\\
+&\le \tfrac{t}{\eps} -t\cdot \cos\alpha + t\cdot \eps.
+\end{align*}
+Applying triangle inequality, we get 
+\begin{align*}
+\dist{p}{\geod_{[qx]}(t)}{}
+&\le \dist{p}{\geod_{[qp]}(t/\eps)}{}+\dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
+\le 
+\\
+&\le
+\dist{p}{q}{} -t\cdot \cos\alpha + t\cdot \eps
+\end{align*}
+for any $\eps>0$ and all sufficiently small $t$.
+Hence the result.
+\qeds
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Exercises}
+\begin{thm}{Exercise}
+Prove that the sum of adjacent angles is at least $\pi$.
+
+More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
+If $p\in \l] x y \r[$, then 
+\[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
+whenever  each angle on the left-hand side is defined.
+\end{thm}

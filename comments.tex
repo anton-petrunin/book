@@ -1,0 +1,32 @@
+%%!TEX root = all.tex
+\chapter{Remarks and open problems}
+
+The main problem in Alexandrov's geometry is to find a way to vary Alexandrov's
+space, or simply to find a nearby Alexandrov's space to a given Alexandrov's
+space. 
+Lack of such variation procedure makes it impossible to use Alexandrov's
+geometry in the way it was designed to be used: 
+
+For example, 
+assume you want to prove the Hopf conjecture;
+i.e. you want to show that $\SS^2\times \SS^2$ does not carre a metric with positive sectional curvature. 
+Assume it is wrong, then there is a volume maximizing space $\spc{L}\in\CBB{4}{1}$ which is homeomorphic to $\SS^2\times \SS^2$.
+(There is no reason to believe
+that this metric $d$ is Riemannian, but from Gromov's compactness theorem such
+Alexandrov's metric should exist.) 
+Provided we have a procedure to vary metric on $\spc{L}$ while keeping its curvature $\ge 1$,
+we could find some special properties of $\spc{L}$  and in ideal situation show that
+$\spc{L}$ does not exist.
+
+Unfortunately, at the moment, there is no variation procedure available (except for boring rescaling). 
+Even the following question seems to be completely open:
+
+\begin{thm}{Open problem}\label{open:varray}
+Let
+$m\ge 3$, 
+$\kappa<\Kappa$ 
+and $\spc{L}\in\CBB{m}{\Kappa}$ be compact.
+Given $\eps>0$ find a space $\spc{L}'\in\CBB{m}{\kappa}$
+such that $\GHdist(\spc{L},\spc{L}')<\eps$ 
+and $\spc{L}'$ is not isometric to $\lam\blow\spc{L}$ for any $\lam>0$.
+\end{thm}

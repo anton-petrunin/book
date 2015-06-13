@@ -1,0 +1,598 @@
+%%!TEX root = all.tex
+\chapter{Extremal sets}
+\label{extremal}
+
+Imagine that you want to move a heavy box inside an empty room by pushing it around. 
+If the box is located in the middle of the room, you  can push it in any direction. 
+But once it is pushed against a wall you can not push it back to the center;
+and once it is pushed into a corner you cannot push it anywhere anymore. 
+The same happens in Alexandrov spaces
+when one tries to move a point  by pushing it along a gradient flow, 
+but the role of walls and corners is played by  extremal subsets.
+
+Extremal subsets first appeared in the study of their special case --- the boundary of
+an Alexandrov's space. 
+They were introduced in \cite{perelman-petrunin:extremal}, and
+were studied further in \cite{petrunin:extremal}, \cite{perelman:collapsing}.
+
+The presence of extremal subsets in a $\CBB{}{}$ space
+makes it behave as something new, 
+intersting and
+different from Riemannian manifolds.
+It gives an additional combinatoric structure which
+reflects geometry and topology of the space itself, as well as of nearby spaces.
+
+
+\section{The definition}
+
+\begin{thm}{Definition}
+Let $\spc{L}\in\CBB{m}{}$.
+A closed subset $E\subset \spc{L}$ 
+is called \index{extremal set}\emph{extremal}
+if for any point $p\notin E$ the following condition fulfilled.
+If $q\in E$ is a point which minimize the distance to $p$
+then $\mangle \hinge q p x\le\tfrac\pi2$ for any $x\in\spc{L}$.
+Equivalently, $q$ is a critical point of the distance function $\dist{p}{}{}$,  
+see Definition \ref{def:critical-point}.
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:extrimal+nbhd}
+Let $\spc{L}\in\CBB{m}{}$.
+Then given a point $p\in \spc{L}$ there is $\eps>0$ such that 
+if $\dist{E}{p}{}<\eps$ then $E\ni p$
+for any extremal set $E\subset \spc{L}$.
+\end{thm}
+
+\parit{Proof.}
+According to ???, there is $\eps>0$ such that all the values in $(0,\eps)$ are regular for the distance function $\dist{p}{}{}$.
+It remains to apply the definition of extremal set.
+\qeds
+
+\begin{thm}{Proposition}
+The union of arbitrary collection of extremal sets is extremal. 
+\end{thm}
+
+\parit{Proof.}
+Let $\{E_\alpha\}_{\alpha\in\IndexSet}$ be a collection of extremal sets
+and 
+$$E=\bigcup_\alpha E_\alpha.$$
+
+By Proposition \ref{prop:extrimal+nbhd}, $E$ is closed.
+
+Now assume $p\notin E$; and let $q\in E$ is a point which minimize the distance to $p$. 
+Choose $\alpha$ so that $q\in E_\alpha$.
+Since $E_\alpha$ is extremal, the point $q$ is critical for the distance function $\dist{p}{}{}$.
+Hence the result follows.
+\qeds
+
+\begin{thm}{Definition}\label{def:prim-extr-set}
+An extremal set $E$ will be called \index{primitive extremal set}\emph{primitive}
+if it can not be presented as a union of extremal sets which are proper subsets of $E$.
+\end{thm}
+
+\parbf{Examples.}
+Note that according to the definition whole space and empty set are extremal sets.
+
+Let $\spc{Q}$ be unit square in $\EE^2$.
+Note that $\spc{Q}\in\CBB{2}{0}$.
+
+The empty set, 
+whole $\spc{Q}$ as well as each vertex 
+and each side of $\spc{Q}$ forms a primitive extremal subset.
+In addition the unions of these primitive extremal sets are also extremal.
+(The total number of extremal sets of square should be 47 and 10 of them are primitive.)
+
+On the other hand, the regular pentagon $\spc{P}$ in $\EE^2$
+has only 3 extremal sets: $\emptyset$, $\partial\spc{P}$ and $\spc{P}$
+and all these sets are primitive.
+
+\section{Extremal sets of the quotient spaces}
+
+Recall that quotient spaces 
+were considered in Section~\ref{sec:quotient-CBB}.
+The following two theorems provide an important sourse of extremal subsets.
+
+\begin{thm}{Theorem}
+Let $\spc{L}\in\CBB{m}{}$
+and $G\acts\spc{L}$ is an isometric group action.
+Assume $A$ is a connected component of the fixed point set of the action.
+Then $\proj(E)$ forms an extremal subset in $\spc{L}/G$.
+\end{thm}
+
+\begin{thm}{Theorem}
+Let $\spc{L}\in\CBB{m}{}$.
+Assume $G\acts\spc{L}$ is an isometric group action;
+and $\proj\:\spc{L}\to \spc{L}/G$ is the projection to the orbit space.
+
+Then for any extremal set
+$E\subset \spc{L}$,
+its projection $\proj(E)\subset \spc{L}/G$ forms an extremal set.
+
+\end{thm}
+
+
+
+
+\section{Topology of Extremal sets}
+
+The following proposition gives yet big number of examples.
+
+\begin{thm}{Proposition}\label{prop:t-cone} 
+Let $\spc{L}\in\CBB m\kappa$.
+Given a cone $K$ 
+consider set $S_K\subset \spc{L}$ of all points 
+$p\in \spc{L}$ such that there is a homeomorphism $\T_p\to K$ which sends tip of $\T_p$ to the tip of $K$.
+Let $Z$ be a path-connected components of $S_K$.
+Then the closure of $Z$ forms an extremal subset.
+\end{thm}
+
+Note that according to ???, the set $S_K\subset \spc{L}$ can be also defined as set of all points such that its spherical neigborhood is homeomorphic to $K$.
+
+\parit{Proof.}
+Fix a path-connected component $Z$ of $S_K$ and let $E$ be the closure of $Z$.
+Choose arbitrary point $p\notin E$ and let $q\in E$ be a point which minimize the distance $\dist{p}{q}{}$.
+
+Assume $\mangle\hinge qpx>\tfrac\pi2$;
+in other words the $q$ is a regular point for the function $\dist{p}{}{}$.
+Then by Morse lemma (\ref{lem:morse}),
+there is a neighborhood $\Omega\ni q$ which splits along $\dist{p}{}{}$;
+i.e., there is a homeomorphism $h\:\II\times \Lambda\to\Omega$,
+where $\II$ is an open real inteval containing $\dist{p}{q}{}$
+such that $\dist{p}{h(t,x)}{}=t$ for any $(t,x)\in \II\times \Lambda$.
+
+Choose a point $q'=h(t_0,x_0)\in \Omega\cap Z$.
+Clearly the curve $t\mapsto h(t,x)$ belongs to $Z$.
+Choose $t_1\in \II$ such that $t_1<\dist{p}{q}{}$
+then $q''=h(t_1,x_0)\in Z$ and $\dist{p}{q''}{}<\dist{p}{q}{}$,
+a contradiction.
+\qeds
+
+
+
+
+\section{Invariance with respect to gradient flow.}
+
+Extremal subsets can be defined as ``ideals'' of the gradient flow.
+Recall that $\GF^t_f$ denotes the $f$-gradient flow for time $t$, 
+see Chapter~\ref{chap:grad-flow}.
+
+\begin{thm}{Definition}\label{def:extrim} 
+Let $\spc{L}\in \CBB{m}{\kappa}$.
+A subset $E\subseteq \spc{L}$ is an \index{extremal subset}\emph{extremal subset}, if for any native semiconcave function
+$f$ on $\spc{L}$, 
+$t\ge 0$ and $x\in E$, we have $\GF_f^t(x)\in E$.
+\end{thm}
+
+Note that according to the definition whole space and empty set are extremal subsets.
+Any other extremal subset of the space will be called \index{proper extremal subset} \emph{proper}.
+
+\begin{thm}{Proposition}\label{prop:extremal-closed-plus} 
+Extremal subsets are closed.
+
+Moreover, if $\spc{L}\in\CBB{m}{}$ then for any $p\in \spc{L}$ there is $\eps>0$
+such that if an extremal set $E\subset \spc{L}$
+intersects $\eps$-neighborhood of $p$ then $p\in E$.
+\end{thm}
+
+\begin{thm}{Proposition}
+Let $\spc{L}\in\CBB{m}{}$ and $E\subset \spc{L}$ be an extremal subset.
+Then the length-metric of $E$ is locally finite.
+More over, for any point $p\in E$ and $\eps>0$ there is $\delta>0$
+such that any point $q\in E\cap \oBall(p,\delta)$ can be joint to $p$
+by a curve which lies in $E$ and has length $<\eps$.
+
+\end{thm}
+
+Both propositions above follow from the following lemma.
+
+\begin{thm}{Lemma}
+Let $\spc{L}\in\CBB{m}{}$ and $p\in \spc{L}$.
+Then there is a native convex subfunction $f\:\spc{L}\subto\RR$
+such that $d_pf(\xi)<-1$ for any $\xi\in\Sigma_p$.
+
+\end{thm}
+
+\parit{Proof.}
+Fix small $\eps>0$ (any $\eps<\tfrac\pi2$ will do).
+
+Choose a finite set of geodesic directions 
+$\dir p {a_1},\dir p {a_2},\dots,\dir p {a_n}\in \Sigma_p$ 
+such that for any direction $\xi\in \Sigma_p$ there is a direction $\xi_i$
+such that $\mangle(\xi,\dir p {a_i})<\eps$.
+Without loss of generality, we can assume $a_i$ lie on the same distance from $p$, say $\dist{p}{a_i}{}=r$ for all $i$ and fixed $r>0$.
+
+Consider the function 
+$$f(x)=\min_i\{\dist{a_i}{x}{}\}.$$
+
+Choose $\eps>0$ so that the restriction $f|\oBall(p,\eps)$ is $\lambda$-concave
+and ...
+
+Let $x(t)=\GF_f^t x$.
+If $x(t)\ne p$ for some $t$ then 
+\begin{align*}
+f(p)-f(x(t))
+\ge 
+-\d_pf(\dir{p}{x})\cdot \dist{p}{x}{}-\lambda\cdot \dist[2]{p}{x}{}
+\ge ???
+\end{align*}
+Therefore 
+$(\d_x\dist{p}{}{})(\nabla_xf)\le ???$ 
+if $0<\dist{p}{x}{}<???$.
+
+If follows that if $x(t)=\GF^t_f$ then 
+$\tfrac{\d}{\d t}{}\dist{p}{x(t)}{}\le ???$.
+I.e., $\GF^t_f$ shrinks $\eps$-neighborhood to $p$ in time ???. 
+
+
+Note that $f$ is a native semiconcave in a neighborhood of $p$.
+Moreover for some $d_pf(\xi)\le -\delta$ for some fixed $\delta>0$ and any $\xi\in\Sigma_p$. 
+
+Let us pass to a spherical neighborhood 
+\qeds
+
+
+
+
+\begin{enumerate}[(i)]
+\item An Alexandrov's space itself, as well as the empty set, forms an extremal subsets.
+\item A point $p\in \spc{L}$ forms a one-point extremal subset if its
+space of directions $\Sigma_p$ has a diameter $\le\tfrac\pi2$
+
+\item 
+Let $\spc{L}/G$ be a factor of an Alexandrov's space by an isometry group and $S_H\subset \spc{L}$ be the set of points with stabilizer conjugate to a subgroup $H\subset G$ (or its connected component). 
+Then the closure of the projection of $S_H$ in $\spc{L}/G$ forms an extremal subset.
+
+WHy???
+
+For example: A cube can be presented as a quotient of a flat torus by a discrete isometry group, and each face of the cube forms an extremal subset.
+
+\end{enumerate}
+
+
+\noi The following theorem gives an equivalence of our definition of extremal subset and the definition given in
+\cite{perelman-petrunin:extremal}:
+
+\begin{thm}{Theorem}\label{thm:dist-extr}  A closed subset $E$ in
+an Alexandrov's space $\spc{L}$ is extremal if and only if for any $q\in \spc{L}\backslash E$,
+the following condition is fulfilled:
+
+If $\dist{q}{}{}$ has a local minimum on $E$ at a point $p$, then $p$ is a critical
+point of $\dist{q}{}{}$ on $\spc{L}$; 
+i.e., $\nabla_p\dist{q}{}{}=\0$.
+\end{thm}
+
+\parit{Proof.} For the ``only if'' part, note that if $p\in E$ is not a critical point of
+$\dist{q}{}{}$, then one can find a point $x\in \Str(p)$ (thus $\dir p x$ is
+uniquely defined) such that 
+\[(\d_p\dist{q}{}{})(\dir p x)>0.\] 
+Since $\nabla_p\dist{x}{}{}$ is polar to $\dir p x$ (see
+???) we get 
+\[(\d_p\dist{q}{}{})(\nabla_p\dist{x}{}{})<0,\] 
+see ???.
+Hence, the gradient flow $\GF_{\dist{x}{}{}}^t$ pushes the point $p$ closer to $q$, which
+contradicts the fact that $p$ is a minimum point $\dist{q}{}{}$ on $E$.
+
+To prove the ``if'' part, it is enough to show that if $F\subset \spc{L}$ satisfies the condition of the theorem,
+then for any $p\in F$, and any semiconcave function $f$, either $\nabla_p f=\0$ or 
+$\tfrac{\nabla_p f}{|\nabla_p f|}\in \Sigma_p F$.
+If so, an $f$-gradient curve
+can be obtained as a limit of broken lines with vertexes on $F$, and from
+uniqueness, any gradient curve which starts at $F$ lives in $F$.
+
+Let us use induction on $\dim \spc{L}$. 
+Note that if $F\subset \spc{L}$ satisfies the condition,
+then the same is true for $\Sigma_p F\subset\Sigma_p$, for any $p\in F$.
+Then using the inductive hypothesis we get that $\Sigma_p F\subset \Sigma_p$ is an extremal subset.
+
+If $p$ is isolated, then clearly $\diam \Sigma_p\le \tfrac\pi2$ and therefore $\nabla_p
+f=o$, so we can assume $\Sigma_p F\not=\emptyset$. 
+
+Note that $\phi=\d_p f|\Sigma_p$ satisfies $\phi''+\phi\le 0$.
+Take $\xi=\tfrac{\nabla_p f}{|\nabla_p f|}$, so 
+$\xi\in \Sigma_p$ is the maximal point of $\phi$.
+Let $\eta\in \Sigma_p F$ be a direction closest  to $\xi$. Then
+$\mangle(\xi,\eta)\le \tfrac\pi2$; 
+otherwise $F$ would not satisfy the condition in the theorem for a point $q$ with $\dir{p}{q}\approx\xi$.
+Hence, since $\Sigma_p F\subset \Sigma_p$ is an extremal subset, $\nabla_\eta\phi\in \Sigma_\eta \Sigma_p F$ and
+therefore 
+\[\d_\eta\phi(\dir\eta\xi)
+\le
+\<\nabla_\eta\phi,\dir\eta\xi\>\le0.\]
+Hence, $\phi(\eta)\ge\phi(\xi)$, and therefore $\xi=\eta$; 
+i.e. $\tfrac{\nabla_p f}{|\nabla_p f|}\in \Sigma_p F$. 
+\qeds
+
+From this theorem it follows that in the definition of extremal subset (\ref{def:extrim}),
+one has to check only squares of distance functions. 
+Namely:
+
+\begin{thm}{Corollary}
+Let $\spc{L}\in \CBB{m}{\kappa}$. 
+Then $E\subset \spc{L}$ is an extremal subset, if for any point $p\in \spc{L}$, and any $x\in E$, we
+have $\GF_{\dist[2]{p}{}{}}^t(x)\in E$ for any $t\ge 0$.
+\end{thm}
+
+In particular, applying Lemma~\ref{lem:stable-grad-curves} we get
+
+\begin{thm}{Lemma}
+\label{lem:limit-extr} The limit of extremal subsets is an extremal subset. 
+
+Namely, if $\spc{L}_n\in\CBB m\kappa$, $\spc{L}_n\GHto \spc{L}$  and $E_n\subset \spc{L}_n$ is a sequence
+of extremal subsets such that $E_n\to E\subset \spc{L}$ then $E$ is an extremal subset of
+$\spc{L}$. 
+\end{thm}
+
+The following is yet another important technical lemma:
+
+\begin{thm} {Lemma} {\rm \cite[3.1(2)]{perelman-petrunin:extremal}}
+\label{lem:dist-to-extr}
+Let $\spc{L}\in\CBB{m}{\kappa}$ be compact. 
+Then there is $\eps>0$
+such that $\dist{E}{}{}$ has no critical values in $(0,\eps)$. 
+Moreover,
+\[|\nabla_x\dist{E}{}{}|>\eps\ \ \text{if}\ \ 0<\dist{E}{x}{}<\eps.\]
+
+For a non-compact $\spc{L}$,  the same holds 
+for the restriction
+ $\dist{E}{}{}|\Omega$ to any bounded open $\Omega\subset \spc{L}$.
+\end{thm}
+
+
+
+\parit{Proof.} 
+Follows from Lemma~\ref{lem:tuda-suda} 
+and Theorem~\ref{thm:dist-extr}.\qeds
+
+\section{Tangent cone}
+
+Note that the tangent cone \label{T_pE}$\T_p E$ of an extremal subset $E\subset \spc{L}$ is defined; 
+i.e.
+for any $p\in E$, subsets $\lam E$ in $(\lam \spc{L},p)$ converge to a subcone of $\T_p E\subset \T_p \spc{L}$ as
+$\lam\to\infty$.
+Indeed, assume $E\subset \spc{L}$ is an extremal subset and $p\in E$.
+For any $\xi\in \Sigma_p E$\footnote{\label{U_pX}For a closed subset $X\subset \spc{L}$, and $p\in X$, $\Sigma_p X\subset \Sigma_p$ denotes the set of tangent directions to $X$ at $p$, i.e. the
+set of limits of $\dir p{q_n}$ for $q_n\to p$, $q_n\in X$.}, the radial curve $\gexp(t\cdot\xi)$ lies in $E$.%
+\footnote{that follows from the fact that the curves 
+$t\mapsto\gexp(t\cdot\dir p{q_n})$ starting with $q_n$ belong to $E$
+and their converge to $\gexp(t\cdot\xi)$} 
+In particular, there is a curve which goes in any tangent direction of $E$.
+Therefore, as $\lam\to\infty$,  $(\lam E\subset \lam \spc{L},p)$ converges to
+a subcone $\T_p E\subset \T_p \spc{L}$, which is simply cone over $\Sigma_p E$ (see also
+\cite[3.3]{perelman-petrunin:extremal})
+
+???The same argument shows that for any $p\in \spc{L}\backslash E$ the fuction $\inf_{\xi\in\Sigma_xE}\{\mangle(\dir x p,\xi)\}$ is locally bounded away from zero.
+
+Next we list some properties of tangent cones of extremal subsets, compare
+\cite[1.4]{perelman-petrunin:extremal}
+
+\begin{thm}{Theorem}
+\label{ext-tangent} A closed subset $E\subset \spc{L}$ is  extremal if and only if 
+at any point $p\in E$, its tangent cone $\T_p E\subset \T_p \spc{L}$ is defined,
+and it is an extremal subset of the tangent cone $\T_p \spc{L}$.
+\end{thm}
+
+Here is an equivalent formulation in terms of the space of directions: 
+
+\begin{thm}{Theorem}
+For any $p\in E$,
+either 
+(a) $\Sigma_p E=\emptyset$ and $\diam \Sigma_p\le\tfrac\pi2$ or 
+(b) $\Sigma_p E=\{\xi\}$ is one point extremal subset and $\cBall[\xi,\tfrac\pi2]=\Sigma_p$
+or
+(c) $\Sigma_p E$ is extremal subset of $\Sigma_p$ with at least two points.)
+\end{thm}
+
+\parit{Proof.}???
+$\T_p E$ is extremal as a limit of extremal subsets, see
+Lemma~\ref{lem:limit-extr}. 
+On the other hand for any semiconcave function $f$ and $p\in E$, the differential $\d_p f:\T_p\to\RR$ is concave and since $\T_p E\subset \T_p$ is extremal we have $\nabla_p f\in \T_p E$. 
+I.e. gradient curves can be approximated by broken
+geodesics with vertices on $E$, see page~\pageref{grad-constr}.
+\qeds
+
+The following theorem was prove in \cite[3.4--5]{perelman-petrunin:extremal}.
+
+\begin{thm}{Theorem} 
+If $E$ and $F$ are extremal sets 
+\begin{subthm}{E+F} The set $E\cap F$ is extremal 
+and 
+\[\T_p(E\cup F)=\T_p E\cup \T_p F\]
+for any $p\in E\cap F$.
+\end{subthm}
+
+\begin{subthm}{EF} The set $E\cup F$  is extremal
+and 
+\[\T_p(E\cap F)=\T_p E\cap \T_p F\]
+for any $p\in E\cup F$
+\end{subthm}
+
+\begin{subthm}{E-F} The set $\overline{E\backslash F}$ is extremal 
+and 
+\[\T_p(\overline{E\backslash
+F})=\overline{\T_p E\backslash \T_p F}\]
+for any $p\in \overline{E\backslash F}$.
+\end{subthm}
+
+In particular, if $\T_p E=\T_p F$ then $E$ and $F$ coincide in a neighborhood of $p$.
+\end{thm}
+
+\parit{Proof.}???
+ The properties (\ref{SHORT.E+F}) and (\ref{SHORT.EF}) are obvious. 
+The property (\ref{SHORT.E-F}) follows from
+Property~\ref{ext-tangent} and Lemma~\ref{lem:dist-to-extr}.
+\qeds
+
+\section{Branching coverings}
+
+Here is a partial converse to Theorem ???
+
+\begin{thm}{Theorem}
+Let $\spc{X}$ be a legth space with isometric action $\ZZ_2\acts\spc{X}$.
+Assume that the quotient space $\spc{L}=\spc{X}/\ZZ_2$
+is $\CBB{m}{\kappa}$; denote by $E\subset \spc{L}$ the projection of fixed point set of $\ZZ_2\acts\spc{X}$.
+
+Then $spc{X}\in \CBB{m}{\kappa}$ if and only if $E$ is an extremal set in $\spc{L}$.
+\end{thm}
+
+
+
+\section{Intrisic geometry of extremal sets}
+
+\begin{enumerate}
+\item 
+Let $\spc{L}_n\in\CBB{m}{\kappa}$, 
+$\spc{L}_n\GHto \spc{L}$ without collapse 
+(i.e. $\dim \spc{L}=m$) and $E_n\subset \spc{L}_n$ be extremal subsets. 
+Assume $E_n\to E\subset \spc{L}$ as subsets. 
+Then 
+\begin{enumerate}[(i)]
+\item\cite[9.1]{kapovitch:stability} \label{lim-dim-extr} For all large $n$, there is a homeomorphism of pairs $(\spc{L}_n,E_n)\to(\spc{L},E)$. 
+In particular, for all large $n$, $E_n$ is homeomorphic to $E$, 
+\item\cite[1.2]{petrunin:extremal}\label{lim-intr-extr} $E_n\GHto E$ as metric spaces with the
+length-metrics from $\spc{L}_n$ and $\spc{L}$.
+\end{enumerate}
+The first property is a coproduct of the proof of Perelman's stability theorem.
+The proof of the second is an application of quasigeodesics.
+\end{enumerate}
+
+
+Let us denote by $\Ext(x)$ the minimal extremal subset which contains a point
+$x\in \spc{L}$. 
+Extremal subsets which can be obtained this way will be called
+\emph{primitive}. 
+Set \[\Ext^\circ(x)=\{y\in \Ext(x)\mid\Ext(y)=\Ext(x)\};\]
+let us call $\Ext^\circ(x)$ the \emph{main part} of $\Ext(x)$.
+$\Ext^\circ(x)$ is the same as $\Ext(x)$ with its proper extremal subsets removed.
+From Property~\ref{E-F} on page~\pageref{E-F},  $\Ext^\circ(x)$ is open and everywhere
+dense in $\Ext(x)$.
+Clearly the main parts of primitive extremal subsets form a disjoint
+covering of $M$.
+
+\begin{enumerate}
+\item \cite[3.8]{perelman-petrunin:extremal} {\it Stratification.}\label{strata} The main part of a primitive extremal subset is a
+topological manifold. In particular, the main parts of primitive extremal subsets
+stratify Alexandrov's space into topological manifolds. 
+
+This follows from Theorem~\ref{thm:dist-extr} and the Morse lemma (property~\ref{morse} page~\pageref{morse}); see also example~\ref{ex:t-cone}, page~\pageref{ex:t-cone}.
+\end{enumerate}
+
+
+\begin{thm}{Lieberman's Lemma}\label{lib-lem} 
+Let $\spc{L}\in\CBB{m}{}$ and $E\subset \spc{L}$ be extremal set.
+Then any unit-speed geodesic for the
+length-metric on $E$ is a quasigeodesic in $\spc{L}$.
+\end{thm}
+
+???ADJUST THE PROOF TO THE NEW DEF OF QG???
+
+\parit{Proof.} 
+Let $\gamma:\II\to E$ be unit-speed geodesic in an extremal subset
+$E\subset \spc{L}$ and $f$ be a native $\lambda$-concave subfunction such that
+$\gamma\subset\Dom f$.
+Assume $f\circ\gamma$ is not $\lambda$-concave, then there is a non-negative
+Lipschitz function $\tau$ with support in $(a,b)$ such that
+\[\int\limits_a^b\l[(f\circ\gamma)'\cdot\tau'+\lambda\cdot\tau\r]\cdot\d s
+< 
+0\]
+Then as follows from Lemma~\ref{lem:grad-variation}, for small $t\ge 0$
+\[\gamma_t(s)=\GF^{t\cdot\tau(s)}_f \circ\gamma_0(s)\]
+gives a length-contracting homotopy of curves relative to ends 
+and according to
+Definition~\ref{def:extrim}, it stays in $E$, a contradiction.\qeds
+
+The next theorem implies that extrinsic and length-metrics on extrimal subset are bi-Lipschitz equivalent.
+
+\begin{thm}{Theorem \cite[3.2(3)]{perelman-petrunin:extremal}}
+Let $\spc{L}\in\CBB m\kappa$,
+$E\subset \spc{L}$ be an extremal set 
+and $\Omega\subset \spc{L}$ be a bounded open subset.
+
+Then there is $\eps>0$ such that for any $x,y\in E\cap\Omega$, we have
+\[\dist{x}{y}{E} \le \tfrac{1}{\eps}\cdot\dist[{{}}]{x}{y}{}.\]
+
+Moreover $\eps=\eps(m,\kappa,\diam\Omega,\vol\Omega)$.
+\end{thm}
+
+\parit{Proof.}
+???From Lemma~\ref{lem:tuda-suda}, 
+it follows that for two sufficiently close
+points $x,y\in E$ near $p$ there is a point $z$ so that
+$\<\nabla_x\dist{z}{}{},\dir xy\> >\eps$ or $\<\nabla_y\dist{z}{}{},\dir y x\>
+>\eps$. 
+Then, for the corresponding point, say $x$, the gradient curve
+$t\to\GF^t_{\dist{z}{}{}}(x)$ lies in $E$, it is $1$-Lipschitz and the distance
+$\dist{\GF^t_{\dist{z}{}{}} (x)}{y}{}$ is decreasing with the speed of at least $\eps$. 
+Hence the result.
+\qeds
+
+
+\begin{thm}{Theorem} 
+Let $\spc{L}_n\in\CBB m\kappa$ be a conerging non-collapsing sequence, $\spc{L}_n\GHto \spc{L}$ 
+and
+$E_n \subset \spc{L}_n$ be a sequence extremal subsets which converges $E_n\to E$ as subsets.
+
+Equip subsets $E_n\subset \spc{L}_n$ and $E\subset\spc{L}$ with length-metrics,
+then $E_n \GHto E$.
+\end{thm}
+
+We first prove that inner and external on extremal subsets are locally bi-Lipschtz:
+
+\parit{Proof.} 
+Assume the contrary, then, after passing to a subsequence,
+one can choose two sequences $p_n,$ $q_n \in E_n$, $p_n \to p\in E$ and $q_n \to q\in E$ such that
+\[\dist{p}{q}{F} < \lim_{n\to\infty} \dist{p_n}{q_n}{F_n}.\]
+ 
+Therefore we need to show only that
+$\dist{p}{q}{F} \ge \limsup_{n\to\infty} \dist{p_n}{q_n}{F_n}$. 
+Set $\yetdist{p}{q}{F}=\limsup_{n\to\infty}\dist{p_n}{q_n}{F_n}$; this is easily seen to be a metric. 
+From the previous paragraph, $\yetdist{p}{q}{}$ does not depend on the choice of sequences $(p_n)$ and $(q_n)$, 
+and we have $\yetdist{p}{q}{}<\tfrac{1}{\eps}\cdot\dist[{{}}]{p}{q}{}$, because from above $\eps$ can be found uniformly for all $\spc{L}_n$ in the absence of collapse.
+
+Let $\gamma\:[a,b]\to E$ be a shortest path in $E$ between $p$ and $q$ which is parametrized by arc-length. 
+Assume $\dist{p}{q}{F}<\yetdist{p}{q}{F}$. 
+Then, from \cite[5.14]{busemann}, for some
+$t_0 \in[a, b]$ and $\eps > 0$ there is a sequence $t_i \to t_0\pm$ such that
+\[\yetdist{\gamma(t_0)}{\gamma(t_i)}{} \ge (1+\eps)\cdot|t_i-t_0|.\]
+Setting $r = \gamma(t_0)$ and $s = \gamma(t_i)$, take sequences $r_n$, $s_n \in E_n$ such that $r_n \to r$ and $s_n \to s$. 
+Let $\gamma_i$ in $E$ be the limit curve to the shortest paths between $r_n$ and $s_n$ in $E_n$. 
+By \cite[2.3(3)]{perelman-petrunin:qg}??? and the generalized
+Lieberman lemma, $\gamma_i$ is a quasigeodesic between $\gamma(t_0)$ and $\gamma(t_i)$. 
+From above, $\length\gamma_i \ge (1 + \eps)\cdot|t_i - t_0 |$. 
+Now consider the limit $(\tfrac{1}{|t_0-t_i |}\blow \spc{L}, r) \to (\T_r,\0)$.
+Consider the curve in $\T_r$ given by
+$\gamma^*(t) = \lim_{i\to\infty}\gamma_i(\frac{t-t_0}{t_1-t0}),$
+where ??? denotes the image of $\gamma_i$ in $\frac{1}{|t_0-t_i |}\spc{L}$. 
+Then $\gamma^*$ is a quasigeodesic between $\0$ and the tangent vector $\gamma^+(t_0)$ which has length not less then
+$1 + \eps$. 
+This is a contradiction since $|\gamma^\pm(t_0)|=1$ by [Perelman and Petrunin 1994, 2.3(2)].
+
+
+
+\begin{thm}{The first variation formula\cite[1.4]{petrunin:extremal}}\label{1st-var}
+Assume $\spc{L}\in\CBB{m}{\kappa}$ and
+$E\subset \spc{L}$ is an extremal subset.
+Recall that $\dist{*}{*}{E}$ denotes its length-metric. 
+Let $p,q \in E$ 
+and $\alpha(t)$ be a curve in $E$ starting from $p$ in direction
+$\alpha^+(0)\in \Sigma_p E$.
+Then 
+\[\dist{\alpha(t)}{q}{E}=\dist{p}{q}{E}-\cos\phi\cdot t + o(t).\]
+where $\phi$ is the minimal length-distance in $\Sigma_p E$ between
+$\alpha^+(0)$ and a direction of a shortest path in $E$ from $p$ to $q$ (if $\phi>\pi$, we assume $\cos\phi=-1$).
+\end{thm}
+
+\parit{Proof.}???\qeds
+
+
+
+\section{Exercises}
+
+A $\CBB{}{}$ space is called \index{orientable}\emph{orientable} if its main part is an orientable manifold.
+
+\begin{thm}{Exercise}
+Show that for any $\spc{L}\in\CBB{}{}$ there is an orientable space $\bar{\spc{L}}\in\CBB{}{}$ without boundary and an involution $\iota\:\bar{\spc{L}}\to\bar{\spc{L}}$
+such that $\spc{L}$ is isometric to the quotient space $\bar{\spc{L}}/\iota$.
+\end{thm}
+
+
+

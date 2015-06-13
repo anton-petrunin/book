@@ -1,0 +1,1049 @@
+%%!TEX root = the-dim.tex
+%array^
+\chapter{Dimension %ready
+}
+
+In Section~\ref{sec:prelim:dim}, we give definitions of different type of dimension-like invariants which have sense for metric spaces and state general relations between them.
+In sections \ref{sec:dim>m} and \ref{sec:dim=m},
+we prove equivalence of all reasonable dimension-like invariants for $\CBB{}{}$ spaces.
+In Section~\ref{sec:dim-cba} we discuss the dimension of  $\cCat{}{}$ spaces.
+
+\section{Preliminaries.}\label{sec:prelim:dim}
+
+The proof of most of the statements in this section can be found in \cite{top-dim}, 
+the rest follows directly from the definitions.
+
+\begin{thm}{Hausdorff dimension}
+\label{def:HausDim}\index{dimension!Hausdorff dimension}
+Let $\spc{X}$ be a metric space. 
+Its Hausdorff dimension is defined as
+\[\HausDim\spc{X}=\sup\bigl\{\alpha\in\RR\ \mid \HausMes_\alpha(\spc{X})>0\bigr\},\]
+ where $\HausMes_\alpha$ denotes $\alpha$-dimensional Hausdorff measure;
+it is defined in Section \ref{sec:mes+balls}.
+\end{thm}
+
+Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\IndexSet[2]}$
+ be its open cover.
+Let us recall two notions in general topology:
+\begin{itemize}
+\item The \emph{order}\index{order} of $\{V_\beta\}$ is supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ which has nonempy intersection.
+\item An open cover $\{W_\alpha\}_{\alpha\in\IndexSet}$ of $\spc{X}$ is called \emph{refinement}\index{refinement} of  $\{V_\beta\}_{\beta\in\IndexSet[2]}$ if for any $\alpha\in\IndexSet$ there is $\beta\in\IndexSet[2]$ such that $W_\alpha\subset V_\beta$.
+\end{itemize}
+
+\begin{thm}{Topological dimension}
+\label{def:TopDim}
+\index{dimension!topological dimension}
+Let $\spc{X}$ be a metric space. 
+the topological dimension of $\spc{X}$ is infimum of numbers $\ZZ_{\ge}$, 
+such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order $n$.
+
+If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
+
+The topological dimension of $\spc{X}$ will be denoted by $\TopDim\spc{X}$.
+\end{thm}
+
+The following statements (\ref{dim-axiom-norm}, \ref{dim-axiom-sigma}, \ref{dim-axiom-product}) we call ``axioms'' 
+since an invariant which satisfies these conditions is commonly called ``dimension''.
+
+\begin{thm}{Normalization axiom}
+\label{dim-axiom-norm} For any $m\in\ZZ_{\ge0}$,
+\[\TopDim\EE^m=\HausDim\EE^m=m.\]
+
+\end{thm}
+
+\begin{thm}{Cover axiom}
+ \label{dim-axiom-sigma} If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$ then
+ \[\TopDim \spc{X}=\sup\nolimits_n\{\TopDim A_n\}\ \ \text{and}\ \ \HausDim \spc{X}=\sup\nolimits_n\{\HausDim A_n\}.\]
+
+\end{thm}
+
+\begin{thm}{Product axiom}\label{dim-axiom-product}
+For any metric spaces $\spc{X}$ and $\spc{Y}$,
+\[\TopDim  (\spc{X}\times\spc{Y})
+\le 
+\TopDim \spc{X}+ \TopDim\spc{Y},\]
+\[\HausDim (\spc{X}\times\spc{Y})
+\le 
+\HausDim \spc{X}+ \HausDim\spc{Y}.\]
+
+\end{thm}
+
+Note that both inequalities in \ref{dim-axiom-product} might be strict, such examples were constructed in \cite{pontyagin-surface} and \cite{marstrand-hausdim}%???CHECK???
+.
+The following theorem follows from \cite[theorems V 8 and VII 2]{top-dim}.
+
+\begin{thm}{Szpilrajn's theorem}\label{thm:szpilrajn} 
+Let $\spc{X}$ be a separable metric space.
+Assume $\TopDim\spc{X}\ge m$. Then $\HausMes_m \spc{X}>0$.
+
+In particular, 
+$\TopDim\spc{X}\le\HausDim\spc{X}$.
+\end{thm}
+
+\parbf{Remark.}
+In fact it is true that for any separable metric space $\spc{X}$ we have
+\[\TopDim\spc{X}=\inf\{\HausDim\spc{Y}\},\]
+where infimum is taken over all metric spaces $\spc{Y}$ which are homeomorphic to $\spc{X}$.
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space
+and $F\:\spc{X}\to\RR^m$ be  a continuous map.
+A point $\bm{z}\in \Im F$ is called a  \emph{stable value}\index{stable value} of $F$
+if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
+for any continuous map $F'\:\spc{X}\to\RR^m$ which is $\eps$-close to $F$;
+i.e., $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
+\end{thm}
+
+The following theorem follows from \cite[theorems VI 1$\&$2]{top-dim}.
+(This theorem also holds for non-separable metric spaces, 
+see \cite[???]{nagata} or \cite[3.2.10]{engelking}).
+
+\begin{thm}{Stable value theorem}\label{thm:stable-value}
+Let $\spc{X}$ be a separable metric space.
+Then $\TopDim\spc{X}\ge m$ if and only if there is a map $F\:\spc{X}\to\RR^{m}$ with a stable value.
+\end{thm}
+
+
+
+\begin{thm}{Proposition}\label{thm:HausDim+Lip}
+Suppose $\spc{X}$ and $\spc{Y}$ are metric spaces 
+and $\map \:\spc{X}\to \spc{Y}$ satisfies
+\[\dist{\map (x)}{\map (x')}{}\ge \eps\cdot\dist[{{}}]{x}{x'}{}\]
+for some fixed $\eps>0$ and any pair $x,x'\in \spc{X}$.
+Then
+\[\HausDim \spc{X}\le \HausDim \spc{Y}.\]
+
+In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$ then  
+\[\HausDim \spc{X}\le \HausDim \spc{Y}.\]
+
+\end{thm}
+
+In addition to $\HausDim$ and $\TopDim$, 
+we will use yet another one, which we call \emph{linear dimension}.
+
+Recal that cone map is defined in \ref{def:cone-map}.
+
+\begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!Linear dimension}
+Let $\spc{X}$ be a metric space. 
+The \emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\LinDim$}) is defined by
+\begin{multline*}
+\LinDim\spc{X}=\sup\{m\in\ZZ_{\ge0}\mid\exists\,p\in \spc{X}\ \ \text{which admits an}\\ 
+\text{isometric cone embedding}\ \  \EE^m\hookrightarrow \T_p\spc{X}\},
+\end{multline*}
+where $\EE^m$ denotes $m$-dimensional Euclidean space 
+and $\T_p\spc{X}$ denotes tangent space of $\spc{X}$ at $p$ (defined in \ref{def:tan}).
+\end{thm}
+
+Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
+ 
+For general metric spaces, $\LinDim$ has almost no  relations to $\HausDim$ and $\TopDim$.
+Also, $\LinDim$ does not satisfy the cover axiom
+ (\ref{dim-axiom-sigma}).
+For $\LinDim$, an inverse of the product axiom (\ref{dim-axiom-product}) holds; i.e.,
+\[\LinDim(\spc{X}\times \spc{Y})
+\ge
+\LinDim\spc{X}+ \LinDim\spc{Y}
+\eqlbl{eq:inverse-product-axiom}\] 
+for any two metric spaces $\spc{X}$ and $\spc{Y}$; 
+that is easy to check. 
+The inequality \ref{eq:inverse-product-axiom} might be strict for some spaces (see Exercise \ref{ex:schroeder-foetch}).
+
+The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in both cases of curvature bounded below and above).
+As we shall see, in all these cases, $\LinDim$  behaves nicely and  is easy to work with.
+
+\parbf{Remarks.}
+Linear dimension was first introduced in \cite{plaut:survey}
+under the name \emph{local dimension}\index{local dimension}\index{dimension!local dimension}. 
+\emph{Geometric dimension}\index{geometric dimension}\index{dimension!geometric dimension} introduced in \cite{kleiner} is closely related; 
+it coincides %should we explain why???
+ with the linear dimension for $\CBB{}{}$ and $\cCat{}{}$ spaces.
+
+One could modify the definition of linear dimension by taking an arbitrary $n$-dimensional Banach space instead of the Euclidean $n$-space.
+Such a definition makes more sense for general metric spaces.
+This dimension is additive with respect to the direct product (i.e. we always have equality in \ref{eq:inverse-product-axiom}). 
+
+For Alexandrov spaces (either CBB or CBA) this modification is equivalent to the definition we use in this book 
+(compare to Exercise \ref{exer:banach}).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Dimension theorem for CBB spaces}\label{sec:dim>m}
+
+As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
+see Definition~\ref{def:lin-dim}.
+We write 
+\begin{align*}
+&\spc{L}\in\CBB{m}{}\ &\text{if}\ &\spc{L}\in\CBB{}{} \ \text{and}\ \LinDim\spc{L}=m\in\ZZ_{\ge0},\\
+&\spc{L}\in\CBB{\infty}{}\ &\text{if}\ &\spc{L}\in\CBB{}{}\ \text{and}\ \LinDim\spc{L}=\infty.
+\end{align*}
+Thus, once we write $\spc{L}\in\CBB m{}$ we automatically assume $m<\infty$.\index{$\CBB{}{}$!$\CBB m{}$}
+
+
+The following theorem is the main result of this section.
+
+
+\begin{thm}{Theorem}\label{thm:dim-infty}
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$q\in \spc{L}$, 
+$R>0$ 
+and $m\in \ZZ_{\ge0}$.
+Then the following statements are equivalent:
+\begin{subthmA}{LinDim}  $\LinDim\spc{L}\ge m$.
+\end{subthmA}
+
+\begin{subthmA}{thm:dim-infty:rank}
+There is a point $p\in\spc{L}$ which admits a $\kappa$-strutting array $(b,a^1,\dots,a^m)\in\spc{L}^{m+1}$.
+\end{subthmA}
+
+\begin{subthmA}{LinDim+} The set 
+\begin{center}
+$\Euk^m=\{p\in \spc{L}\mid$ there is an isometric cone embedding $\EE^m\hookrightarrow \T_p\}$            \end{center} 
+\noi contains a dense G-delta set in $\spc{L}$.
+\end{subthmA}
+
+\begin{subthmA}{TopDim} There is a $C^{\frac{1}{2}}$-embedding, i.e. bi-H\"older with exponent $\tfrac{1}{2}$,
+\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R).\]
+\end{subthmA}.
+
+\begin{subthmA}{pack} 
+\[\pack_\eps \oBall(q,R)>\frac{\Const}{\eps^m}\]
+for some fixed $\Const>0$ and any $\eps>0$.
+\end{subthmA}
+
+\medskip
+
+In particular:
+\begin{enumerate}[(i)]
+\item If $\LinDim\spc{L}=\infty$, then all the statements (\ref{SHORT.LinDim+}), (\ref{SHORT.TopDim}) and (\ref{SHORT.pack}) are satisfied for all $m\in\ZZ_{\ge0}$. 
+\item 
+ If the statement (\ref{SHORT.TopDim}) or (\ref{SHORT.pack}) is satisfied for some choice of $q\in \spc{L}$ and $R>0$, then it also is satisfied for any other choice of $q$ and $R$.
+\end{enumerate}
+\end{thm}
+
+For finite-dimensional spaces, Theorem~\ref{thm:dim-finite} gives a stronger version 
+of the theorem above.
+
+The proof of the above theorem with exception of  statement~(\ref{SHORT.TopDim}) was given in \cite{plaut:dimension}.
+At that time, it was not known whether for any $\spc{L}\in\CBB{}{\kappa}$,
+\[\LinDim\spc{L}=\infty\ \ \Rightarrow\ \ \TopDim\spc{L}=\infty.\]
+Perelman proved this implication, by combining an idea of C.~Plaut with the technique of gradient flow (see \cite{perelman-petrunin:qg}).
+The statement \ref{TopDim} which we prove is somewhat stronger.
+
+
+To prove Theorem \ref{thm:dim-infty}  we will need the following three propositions.
+
+
+\begin{thm}{Proposition}\label{E=T}
+Let $\spc{L}\in\CBB{}{\kappa}$ and $p\in \spc{L}$.
+Assume there is an isometric cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$.  Then either
+\begin{subthm}{}
+ $\Im\iota=\T_p\spc{L}$, or
+\end{subthm}
+
+\begin{subthm}{} there is a point $p'$ arbitrarily close to $p$ such that there is an isometric cone embedding $\iota':\EE^{m+1}\hookrightarrow \T_{p'}\spc{L}$.
+\end{subthm}
+\end{thm}
+
+
+\parit{Proof.}
+Assume $\iota(\EE^{m})$ is a proper subset of $\T_p\spc{L}$.
+Equivalently, there is a direction $\xi \in \Sigma_p\backslash\iota(\SS^{m-1})$,
+where $\SS^{m-1}$ is the unit sphere in  $\EE^{m}$. 
+
+Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\SS^{m-1})$. 
+Choose a \emph{maximal $\eps$-packing} in $\iota(\SS^{m-1})$;
+i.e. an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\SS^{m-1})$ so that $n=\pack_\eps \SS^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+
+Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ so that
+$\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$;
+here write ``$\approx$'' for ``sufficiently close''.
+We can choose this arreay on such a way that 
+$\angk{\kappa}p x{z^i}>\eps$ for all $i$ 
+and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\not=j$.
+Applying Corollary \ref{cor:euclid-subcone}, we can find a point $p'$ arbitrary close to  $p$ 
+so that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
+belong to an isometric copy of $\SS^{\kay-1}$ in $\Sigma_{p'}$.
+In addition, we can assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
+From hinge comparison (\ref{angle}),
+$\mangle(\dir{p'}x,\dir{p'}{z^i})>\eps$ 
+and $\mangle(\dir{p'}{z^i},\dir{p'}{z^j})>\eps$;
+i.e. 
+\[\pack_\eps \SS^{\kay-1}\ge n+1>\pack_\eps \SS^{m-1}.\] 
+Hence $\kay>m$.
+\qeds
+
+
+\begin{thm}{Proposition}\label{pack-homogeneus}
+Let $\spc{L}\in\CBB{}{\kappa}$ then 
+ for any two poins $p,\bar p\in \spc{L}$ and any $R,\bar R>0$ there is a contsant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
+\[\pack_{\delta\cdot\eps}\oBall(\bar p,\bar R)\ge \pack_{\eps}\oBall(p,R).\]
+
+\end{thm}
+
+\begin{wrapfigure}[5]{r}{66mm}
+\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(0.50)}
+\lbl[r b]{22,26;$\bar p$}
+\lbl[r b]{109,26;$p$}
+\lbl[l t]{15,18;$\bar R$}
+\lbl[l t]{101,18;$R$}
+\lbl[l t]{110,42;$x^i$}
+\lbl[t]{33,26;$\bar x^i$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
+
+Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,x^2,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
+i.e., $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+Without loss of generality we can assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
+Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
+Choose factor $s>0$, so that $\bar r>s\cdot(\dist{p}{\bar p}{}+R)$.
+For each $i$, take $\bar x^i\in[\bar p x^i]$ so that 
+$\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
+From \ref{cor:monoton:2-sides},
+\[\angkk\kappa {\bar p}{\bar x^i}{\bar x^j}{}\ge\angk\kappa {\bar p}{x^i}{x^j}.\]
+Applying cosine rule, we get a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
+\[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
+for all $i\not=j$.
+Hence the statement follows.
+\qeds
+
+
+\begin{thm}{Proposition}\label{E-comeagre} 
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$r<\varpi\kappa$ 
+and $p\in \spc{L}$.
+Assume that 
+\[\pack_{\eps} \oBall(p,r)
+>\pack_{\eps}\cBall[r]_{\Lob{\kay}{\kappa}}
+\eqlbl{eq:pack>pack}\]
+for some $\eps>0$.
+Then there is a G-delta set $A\subset \spc{L}$,
+which is dense in a neighborhood of $p$,
+such that $\dim\Lin_q>m$ for any $q\in A$.
+\end{thm}
+
+\parit{Proof.} 
+Choose a maximal $\eps$-packing in $\oBall(p,r)$;
+i.e. an array of points $x^1,x^2,\dots, x^n\in\oBall(p,r)$ so that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
+Choose a neighborhood $\Omega\ni p$,
+such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
+Set 
+\[A= \Omega\cap\Str(x^1,x^2,\dots,x^n).\]
+According to Plaut's theorem (\ref{thm:almost.geod}),
+$A$ is a G-delta set which is dense in $\Omega$.
+
+Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
+Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
+$v^i=\ddir{q}{x^i}$.
+Clearly $|v^i|=\dist{q}{x^i}{}<r$ and from hinge comparison (\ref{angle})
+we have $\side\kappa \hinge o{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps$.
+Note that $\oBall(\0,r)\subset\Lin_q$ equipped with the metric $\rho(v,w)=\side\kappa \hinge o{v}{w}$ is isometric to 
+$\cBall[r]_{\Lob{\kay}{\kappa}}$.
+Thus,
+\[
+\pack_\eps\cBall[r]_{\Lob{\kay}{\kappa}}
+\ge
+\pack_\eps \oBall(p,r),
+\]
+which contradicts $\kay\le m$ and \ref{eq:pack>pack}.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parit{Proof of \ref{thm:dim-infty}.} 
+The proof is essentially done in \ref{E=T}, \ref{pack-homogeneus}, \ref{E-comeagre}, \ref{thm:inverse-function}, \ref{thm:right-inverse-function}; 
+here we only assemble the proof from these parts.
+
+We prove implications (\ref{SHORT.LinDim+}) $\Rightarrow$ (\ref{SHORT.LinDim}) $\Rightarrow$ (\ref{SHORT.thm:dim-infty:rank}) $\Rightarrow$ (\ref{SHORT.pack}) $\Rightarrow$ (\ref{SHORT.LinDim+}) $\Rightarrow$ (\ref{SHORT.TopDim}) $\Rightarrow$ (\ref{SHORT.pack}).
+
+The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivial.
+The proof of (\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}) is valid for general metric spaces;
+it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
+
+\parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
+Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
+Clearly one can choose an array of directions $\xi^0,\xi^1,\dots,\xi^m\in\Lin_p$ so that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ for all $i\not=j$.
+Choose an array of points $x^0,x^1,\dots,x^m\in\spc{L}$ so that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
+in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
+Choose points $a^i\in\l]p x^i\r]$ sufficiently close to $p$.
+One can do it so that each $\angk\kappa p{a^i}{a^j}$ is arbitrary close to $\mangle\hinge p{a^i}{a^j}$,
+in particular, $\angk\kappa p{a^i}{a^j}>\tfrac{\pi}{2}$.
+Finally, set $b=a^0$.
+
+
+
+
+\parit{(\ref{SHORT.thm:dim-infty:rank})$\Rightarrow$(\ref{SHORT.pack}).} 
+Let $p\in \spc{L}$ be a point which admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
+The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
+implies that the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
+\[\dist{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{})\]
+is open in a neighborhood of $p$.
+Since the distance map $\dist{\bm{a}}{}{}$ is Lipschitz, 
+for any $r>0$, there is $\Const>0$ such that
+\[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\]
+Applying \ref{pack-homogeneus}, we get similar inequality for any other ball in $\spc{L}$;
+i.e., for any point $q\in\spc{L}$, $R>0$ there is $\Const'>0$ such that 
+\[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
+
+
+\parit{(\ref{SHORT.pack})$\Rightarrow$(\ref{SHORT.LinDim+}).} 
+Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
+\begin{align*}
+\pack_\eps\oBall(q',R')
+&\ge
+\pack_\eps\oBall(q,R)
+\ge
+\\
+&\ge
+\frac{\Const}{\eps^m}
+>
+\\
+&>
+\pack_\eps\cBall[R']_{\Lob{m-1}{\kappa}}.
+\end{align*}
+for all small enough $\eps>0$.
+Applying \ref{E-comeagre}, we get that
+\begin{center}
+$\Euk^m=\{p\in \spc{L}\mid$ there is an isometric cone embedding $\iota:\EE^m\hookrightarrow \T_p\}$
+\end{center} 
+contains a G-delta set which is dense in a neighborhood of any point $q'\in\spc{L}$.
+
+\parit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim}).} 
+Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with an isometric cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
+Thus, the same way as in (\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}), 
+we can construct a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
+Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
+we obtain a $C^{\frac{1}{2}}$-submap 
+\[\map\:\RR^m\subto \oBall(q,R)\]
+which is a right inverse for $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and $\map(\dist{\bm{a}}{p}{})=p$.
+In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
+
+
+\parit{(\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}).}
+Let $W\subset\oBall(q,R)$ be the image of the embedding.
+Since $\TopDim W=m$,
+Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
+\[\HausMes_m W>0.\]
+Given $\eps>0$, consider a maximal $\eps$-packing of $W$;
+i.e. an array of points $(x^1,x^2,\dots,x^n)$ in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
+Thus, for all small $\eps>0$,
+\[\pack_\eps W
+\ge
+\frac{\Const}{\eps^m}\cdot\HausMes_m W.\]
+Thus, (\ref{SHORT.pack}) follows.
+\qedsf
+
+
+
+
+
+
+
+
+\section{Equivalence of dimensions for CBB spaces}\label{sec:dim=m}
+
+In this section we will show that all reasonable notions of dimension coinside on the class of Alexandrov spaces with curvature bounded below.
+
+First we will prove a  stronger version of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
+
+\begin{thm}{Theorem}\label{thm:dim-finite}
+Let $\spc{L}\in\CBB{}{\kappa}$, 
+$0<R\le \varpi\kappa$, 
+$q\in \spc{L}$ 
+and $m\in \ZZ_{\ge0}$.
+Then the following statements are equivalent:
+\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m<\infty$;
+\end{subthm}
+
+\begin{subthm}{thm:dim-finite:rank}
+$m$ is the maximal integer, such that there is a point $p\in\spc{L}$ which admits a $\kappa$-strutting array $b,a^1,\dots,a^m$.
+\end{subthm}
+
+\begin{subthm}{LinDim+-f} $\T_p\iso \EE^m$ for any point $p$ in a dense G-delta set of $\spc{L}$.
+\end{subthm}
+
+\begin{subthm}{TopDim-f} There is an open bi-Lipschitz embedding 
+\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R)\subset \spc{L};\]
+\end{subthm}
+
+\begin{subthm}{pack-f} For any $\eps>0$,
+\[\pack_\eps\cBall[R]_{\Lob{m}{\kappa}} \ge\pack_\eps \oBall(q,R),\]
+moreover, there is $\Const=\Const(q,R)>0$  such that 
+\[\pack_\eps \oBall(q,R)>\frac\Const{\eps^m}.\]
+\end{subthm}
+\end{thm}
+
+The above theorem was essentially proved in \cite{BGP}.
+The next two corollaries follow directly from \ref{pack-f}.
+
+\begin{thm}{Corollary}\label{cor:dim>proper}
+Any space in $\CBB{m}{\kappa}$ is proper and geodesic.
+\end{thm}
+
+
+\begin{thm}{Corollary} Let $\spc{L}_n\in\CBB m\kappa$ and $\spc{L}_n\to \spc{L}$ as $n\to\o$.
+Then $\spc{L}\in\CBB m\kappa$.
+\end{thm}
+
+\begin{thm}{Corollary}\label{dim=dim} 
+Let $\spc{L}\in\CBB{}{\kappa}$. 
+Then for any open $\Omega\subset \spc{L}$, we have
+\[
+\LinDim \spc{L}=
+\LinDim\Omega =
+\TopDim\Omega=
+\HausDim\Omega,
+\]
+where $\TopDim$ and $\HausDim$ denotes  topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) correspondingly.
+
+In particular, $\spc{L}$ is dimension homogeneous; i.e. any open set has the same linear dimension.
+\end{thm}
+
+
+
+\parbf{Remark.}
+Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
+one can show that linear dimension is equal to many different types of dimensions, such 
+as \emph{small} and \emph{big inductive dimension} 
+and \emph{upper} and \emph{lower Minkowski dimension} 
+(which is also called \emph{rough dimension} and \emph{box counting dimension}), 
+\emph{homological dimension} and so on.
+
+\parit{Proof of \ref{dim=dim}.} 
+The equality
+\[\LinDim \spc{L}= \LinDim\Omega\]
+follows from \ref{LinDim}$\&$\ref{SHORT.LinDim+}.
+
+If $\LinDim \spc{L}=\infty$ then
+applying  \ref{TopDim}, for $\oBall(q,R)\subset \Omega$, we get that there is a compact subset $K\subset \Omega$ with arbitrary large $\TopDim K$ therefore
+\[\TopDim\Omega=\infty.\] 
+From Szpilrajn's theorem (\ref{thm:szpilrajn}),
+$\HausDim K\ge \TopDim K$.
+Thus, we also have 
+\[\HausDim\Omega=\infty.\]
+
+If $\LinDim \spc{L}=m<\infty$ then first inequality in \ref{pack-f} 
+implies that \[\HausDim \oBall(q,R)\le m.\] 
+According to Corollary~\ref{cor:dim>proper}, 
+$\spc{L}$ is proper and in particular it has countable base. 
+Thus applying Szpilrajn theorem  again, we get
+\[\TopDim\Omega\le \HausDim \Omega\le m.\]
+Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
+\qeds
+
+
+\parit{Proof of Theorem~\ref{thm:dim-finite}.} Note that equivalence (\ref{SHORT.LinDim-f})$\Leftrightarrow$(\ref{SHORT.thm:dim-finite:rank}) follows from \ref{thm:dim-infty}.
+
+\parit{(\ref{SHORT.LinDim-f})$\Rightarrow$(\ref{SHORT.LinDim+-f}).}
+If $\LinDim\spc{L}=m$, then from Theorem~\ref{thm:dim-infty}, 
+we get that $\Euk^m$ contains a dense G-delta set in $\spc{L}$.
+From \ref{E=T}, it follows that $\T_p$ is isometric to $\EE^m$ for any $p\in \Euk^m$.
+
+\parit{(\ref{SHORT.LinDim+-f})$\Rightarrow$(\ref{SHORT.TopDim-f}).} It is proved exactly the same way as implication \textit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim})} of theorem \ref{thm:dim-infty}, 
+but we have to apply existence of distance chart (\ref{thm:inverse-function}) instead of the right-inverse theorem%\ref{thm:right-inverse-function}
+.
+
+\parit{(\ref{SHORT.TopDim-f})$\Rightarrow$(\ref{SHORT.pack-f}).} 
+From (\ref{SHORT.TopDim-f}), it follows that, there is a point $p\in\oBall(q,R)$ and $r>0$ such that
+$\oBall(p,r)\subset \spc{L}$ is bi-Lipschit homeomorphic to a bounded open set of $\EE^m$.
+Thus, there is $\Const>0$ such that 
+\[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\eqlbl{eq:thm:dim-finite*}\]
+Applying \ref{pack-homogeneus}, we get that inequality \ref{eq:thm:dim-finite*}, with different constants, holds for any other ball, in particular for $\oBall(q,R)$.
+
+Applying \ref{E-comeagre}, we get the first inequality.
+
+\parit{(\ref{SHORT.pack-f})$\Rightarrow$(\ref{SHORT.LinDim-f}).} 
+From theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
+Applying theorem \ref{thm:dim-infty} again, we get that if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$
+\[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}},\]
+but
+\[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R),\] 
+for any $\eps>0$,
+a contradiction.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{One-dimensional CBB spaces}
+
+\begin{thm}{Theorem}\label{thm:dim=1.CBB} 
+Let $\spc{L}\in\CBB1\kappa$.
+Then $\spc{L}$ is isometric to a connected complete Riemannian $1$-dimensional manifold with possibly non-empty boundary.
+\end{thm}
+
+
+
+\parit{Proof.}
+Clearly $\spc{L}$ is connected.
+It remains to show the following. 
+\begin{clm}{}\label{clm:1-dim-all}
+For any point $p\in\spc{L}$
+there is $\eps>0$ such that $\oBall(p,\eps)$ 
+is isometric to either $[0,\eps)$ or $(-\eps,\eps)$.
+\end{clm}
+
+First let us show that
+\begin{clm}{}\label{clm:1-dim-mid}
+If $p\in\l]x y\r[$ for some $x$, $y\in\spc{L}$ and $\eps<\min\{\dist{p}{x}{},\dist{p}{y}{}\}$
+then $\oBall(p,\eps)\subset\l]x y\r[$.
+In particular
+$\oBall(p,\eps)\iso(-\eps,\eps)$.
+\end{clm}
+\begin{wrapfigure}{r}{40mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(0.5)}
+\lbl[t]{2,0;$x$}
+\lbl[t]{73,0;$y$}
+\lbl[t]{20,0;$p$}
+\lbl[t]{29,0;$q$}
+\lbl[b]{29,12;$z$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume the contrary;
+i.e., there is 
+$$z\in \oBall(p,\eps)\backslash\l]x y\r[.$$
+Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point which maximizes the distance $\dist{p}{q}{}$.
+At  $q$, we have three distinct directions: 
+to $x$, to $y$ and to $z$.
+Moreover, $\mangle\hinge{q}{x}{y}=\pi$.
+Thus, according to Proposition~\ref{E=T}, 
+$\LinDim\spc{L}>1$, a contradiction.
+
+Now assume there is no geodesic passing though $p$. 
+Since $\LinDim\spc{L}=1$ there is a point $x\not=p$.
+Take a positive $\eps<\dist{p}{x}{}$.
+Let us show that 
+\begin{clm}{}\label{clm:1-dim-end}
+$\oBall(p,\eps)\subset [p x]$;
+in particular $\oBall(p,\eps)\iso[0,\eps)$.
+\end{clm}
+
+\begin{wrapfigure}{r}{40mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(0.5)}
+\lbl[r]{0,1;$p$}
+\lbl[l]{75,1;$y$}
+\lbl[t]{20,0;$w$}
+\lbl[t]{29,0;$q$}
+\lbl[b]{29,12;$z$}
+\end{lpic}
+\end{wrapfigure}
+
+Assume the contrary;
+let $z\in \oBall(p,\eps)\backslash[p y]$.
+Choose a point $w\in \l] p y \r[$ such that $\dist{p}{w}{}+\dist{p}{z}{}<\eps$.
+Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point which maximizes the distance $\dist{w}{q}{}$.
+Since no geodesics pass through $p$, we have $p\not=q$.
+As above, $\mangle\hinge{q}{p}{y}=\pi$ 
+and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.
+Thus, according to Proposition~\ref{E=T}, 
+$\LinDim\spc{L}>1$, a contradiction.
+
+Clearly $\t{\ref{clm:1-dim-mid}}+\t{\ref{clm:1-dim-end}}\Rightarrow\t{\ref{clm:1-dim-all}}$;
+hence the result.
+\qeds
+
+\begin{comment}
+\parit{Proof 2.}
+According to \ref{LinDim+-f}, there is a point $p\in\spc{L}$, such that $\T_p\iso\RR$;
+i.e., $\Sigma_p$ consists of two directions $\xi_+$, $\xi_-$ on angle $\pi$.
+Both of directions $\xi_+$, $\xi_-$ have to be geodesic;
+otherwise the set of geodesic directions $\Sigma_p'$ would not be dense in $\Sigma_p$.
+Let $\gamma_+$ and $\gamma_-$ be maximal geodesics in directions $\xi_+$ and $\xi_-$ correspondingly.
+
+The geodesics $\gamma_+$ and $\gamma_-$ cover $\spc{L}$ completely;
+that follows sinse $\spc{L}$ is geodesic (\ref{cor:dim>proper}) and since geodesics in $\spc{L}$ do not bifurcate (\ref{thm:g-split}).
+It is easy to see that only following cases can occur
+\begin{itemize}
+\item both $\gamma_+$ and $\gamma_-$ are defined on $[0,\infty)$.
+In this case $\spc{L}\iso\RR$.
+\item $\gamma_+$ is defined on closed interval, say $[0,a]$ and $\gamma_-$ is defined of an infinite interval $[0,\infty)$ (or vise versa).
+In this case $\spc{L}\iso\RR_{\ge0}$.
+\item both $\gamma_+$ and $\gamma_-$ are defined on closed intervals, say $[0,a]$ and $[0,b]$ and $\gamma_+(a)\not=\gamma_-(b)$.
+In this case $\spc{L}\iso[0,a+b]$.
+\item both $\gamma_+$ and $\gamma_-$ are defined on one closed interval, say $[0,a]$ and $\gamma_+(a)=\gamma_-(a)$.
+In this case, $\spc{L}\iso\tfrac{a}{\pi}\blow\SS^1$.
+\end{itemize}
+Hence the result.\qeds
+\end{comment}
+
+
+
+
+
+\section{Dimension of CBA spaces}\label{sec:dim-cba}
+
+We start with two examples.
+The first example shows that the dimension of a $\cCat{}{}$ space is not local;
+i.e. a $\cCat{}{}$ space might have open sets with different linear dimension.
+Such an example can be constructed by gluing at one point two Euclidean spaces of different dimensions.
+(According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\cCat{}{0}$ spaces.)
+
+The second example provides a $\cCat{}{}$ space 
+with topological dimension one and arbitrary large Hausdorff dimension.
+Thus, for $\cCat{}{}$ spaces, one should not expect any relations between topological and Hausdorff dimensions except for the one provided by Szpilrajn's theorem (\ref{thm:szpilrajn}).
+
+To construct the second type of examples,
+note that the completion of any metric tree has topological dimension one and is $\cCat{}\kappa$ for any $\kappa$.
+Start with a binary tree $\Gamma$, and a sequence $\eps_n>0$ such that $\sum_n\eps_n<\infty$.
+Define the metric on $\Gamma$
+by prescribing length of edge from level $n$ to the level $n+1$ to be  $\eps_n$.
+For an appropriately chosen sequence $\eps_n$, the completion of $\Gamma$ will contain a Cantor set of arbitrary large dimension.
+
+\medskip
+
+The following is a  version of the theorem proved by Kleiner in \cite{kleiner},
+which is improved using the generalized Rademacher's theorem (\ref{thm:rademacher}) proved by Lytchak in \cite{lytchak:diff}.
+
+\begin{thm}{Theorem}\label{thm:dim-infty-CBA}
+For any $\spc{U}\in\cCat{}{\kappa}$, the following statements are equivalent:
+
+\begin{subthm}{LinDim-CBA}  $\LinDim\spc{U}\ge m$;
+\end{subthm}
+
+\begin{subthm}{thm:dim-infty-CBA:bary} 
+For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$  
+such that $\bigcap_i B^i=\emptyset$,
+$\bigcap_{i\not=j} B^i\not=\emptyset$ for each $j$
+\end{subthm}
+
+
+\begin{subthm}{thm:dim-infty-CBA:mnfld} 
+There is a $C^{\frac{1}{2}}$-embedding $\map\:\cBall[1]_{\EE^m}\hookrightarrow \spc{U}$;
+i.e. $\map$ is bi-H\"older with exponent $\tfrac{1}{2}$.
+\end{subthm}
+
+\begin{subthm}{thm:dim-infty-CBA:TopDim}
+There is a closed separable set $K\subset\spc{U}$ such that $\TopDim K\ge m$.
+\end{subthm}
+
+\end{thm}
+
+\parbf{Remarks.}
+Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part (\ref{SHORT.thm:dim-infty-CBA:mnfld}) in finite dimensional case.
+Namely, a $\cCat{}{}$ space with linear dimension $m$ 
+admits a bi-Lipschitz embedding $\map$ of an open set of $\RR^m$.
+Moreover, according to ??? the Lipschitz constants of $\map$ can be made arbitrary close to $1$.
+
+\begin{thm}{Corollary}\label{cor:dim-CBA}
+For any separable $\spc{U}\in \cCat{}{}$, we have
+\[\TopDim\spc{U}=\LinDim\spc{U}.\]
+
+\end{thm}
+
+
+
+%As the main dimension-like invariant, we will use $\LinDim$, the linear dimension (see \ref{def:lin-dim}).
+%We will write 
+%\begin{align*}
+%&\spc{U}\in\cCat{m}{}\ &\text{if}\ &\spc{L}\in\cCat{}{} \ \text{and}\ \LinDim\spc{L}=m\in\ZZ_{\ge0},\\
+%&\spc{U}\in\cCat{\infty}{}\ &\text{if}\ &\spc{L}\in\cCat{}{}\ \text{and}\ \LinDim\spc{L}=\infty.
+%\end{align*}
+%Thus, once we write $\spc{U}\in\cCat m{}$ we automatically assume $m<\infty$.\index{$\cCat{}{}$!$\cCat m{}$}
+%DO WE USE IT?, IF NOT IT HAS TO BE REMOVED???
+
+To prove Theorem~\ref{thm:dim-infty-CBA} we will need the followng lemma.
+Any simplicial complex can be equiped with an length-metric
+such that each simplex $\Delta^\kay$ 
+is isometric to the standard $\kay$-simplex with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
+This metric will be called the  \emph{$\ell^1$-metric}\index{$\ell^1$-metric} on the simplicial complex.
+
+\begin{thm}{Lemma}\label{lem:approximation-cba}
+Let $\spc{U}\in\cCat{}{\kappa}$,
+$\rho$ be a continuous positive function on $\spc{U}$.
+Then there is a simplicial complex $\spc{N}$ equiped with $\ell^1$-metric,
+a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$ 
+and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that
+
+\begin{subthm}{lem:approximation-cba:displacement}
+The \emph{displacement} of composition $\map[2]\circ\map\:\spc{U}\to\spc{U}$ is bounded by $\rho$;
+i.e.,
+\[\dist{x}{\map[2]\circ\map(x)}{}<\rho(x)\] 
+for any $x\in\spc{U}$
+\end{subthm}
+
+\begin{subthm}{lem:approximation-cba:im}
+If $\LinDim\spc{U}\le m$ 
+then the $\map[2]$-image of any closed simplex $\Delta$ in $\spc{N}$ 
+coinsides with the image of its $m$-skeliton.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality, we can assume that  for any $x$ we have $\rho(x)\z<\rho_0$
+for some fixed $\rho_0<\tfrac{\varpi\kappa}{2}$.
+
+By Stone's theorem%ref???
+, any metric space is paracompact.
+Thus, we can choose a locally finite covering $\set{\Omega_\alpha}{\alpha\in\IndexSet}$ of $\spc{U}$ such that $\Omega_\alpha\subset \oBall(x,\tfrac{1}{3}\cdot\rho(x))$ for any $x\in \Omega_\alpha$. 
+
+Denote by $\spc{N}$ the nerve of the covering  $\{\Omega_\alpha\}$;
+i.e., $\spc{N}$ is an abstract simplicial complex with set of vertexes formed by $\IndexSet$ such that
+$\{\alpha^0,\alpha^1,\dots,\alpha^n\}\subset\IndexSet$ 
+are vertexes of a simplex  if and only if
+$\Omega_{\alpha^0}
+\cap
+\Omega_{\alpha^1}
+\cap\dots\cap
+\Omega_{\alpha^n}
+\not=
+\emptyset$.
+
+Further, choose a Lipschitz partition of unity 
+$\phi_\alpha\:\spc{U}\to [0,1]$,  subordinate to $\{\Omega_\alpha\}$.
+One may think of partition $\{\phi_\alpha\}$ 
+as of a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$; 
+the $\alpha$-s barycentric coordinate of $\map(p)$ is $\phi_\alpha(p)$.
+Clearly $\map$-preimage of any open simplex in $\spc{N}$ lies in $\Omega_\alpha$ for some $\alpha\in\IndexSet$.
+
+For each $\alpha\in\IndexSet$, 
+choose $x_\alpha\in\Omega_\alpha$.
+Let us extend the map $\alpha\mapsto x_\alpha$
+to a map $\map[2]\:\spc{N}\to\spc{U}$ which is $\kappa$-barycentric on each simplex;
+according to Theorem~\ref{thm:cat-bary-web:Lip}, this extension exists, 
+$\map[2]$ is Lipschtz
+and its Lipschitz constant depends only on $\rho_0$ and $\kappa$.
+
+\parit{(\ref{SHORT.lem:approximation-cba:displacement})}
+Fix $x\in\spc{U}$.
+Denote by $\Delta$ the minimal simplex which contains $\map(x)$;
+and let $(\alpha^0,\alpha^1,\dots,\alpha^n)$ be the vertexes of $\Delta$.
+Note that $\alpha$ is a vertex of $\Delta$ if and only if $\phi_{\alpha}(x)>0$.
+Thus,
+\[\dist{x}{x_{\alpha^i}}{}<\tfrac{1}{3}\cdot\rho(x)\]  
+for any $i$.
+Therefore 
+\[\diam\map[2](\Delta)
+\le
+\max_{i,j}\{\dist{x_{\alpha^i}}{x_{\alpha^j}}{}\}
+<
+\tfrac{2}{3}\cdot\rho(x).\]
+In particular 
+\[\dist{x}{\map[2]\circ\map(x)}{}\le\dist{x}{x_{\alpha^0}}{}+\diam \map[2](\Delta) <\rho(x).\]
+
+\parit{(\ref{SHORT.lem:approximation-cba:im})}
+Assume the contrary;
+i.e., $\map[2](\spc{N})$ is not inculded in the $\map[2]$-image of $m$-skeleton of $\spc{N}$.
+Then for some $\kay>m$,
+there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$,
+such that the baricentric simplex $\sigma=\map[2]|\Delta^\kay$ is nondegenrate; 
+i.e., 
+$$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\not=\emptyset.
+$$
+Applying Corollary~\ref{cor:LinDim>bary},
+we get $\LinDim\spc{U}\ge \kay$, a contradiction.
+\qeds
+
+
+
+
+
+
+\parit{Proof of Theorem~\ref{thm:dim-infty-CBA}.} 
+Note that
+\begin{itemize}
+\item The implication (\ref{SHORT.thm:dim-infty-CBA:bary})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:mnfld})
+follows directly from Lemma~\ref{lem:nondeg-test-with-balls}
+and Theorem~\ref{thm:cat-bary-web:mnfld}.
+\item The implication 
+(\ref{SHORT.thm:dim-infty-CBA:mnfld})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:TopDim}) 
+is trivial.
+\end{itemize}
+ 
+\parit{(\ref{SHORT.thm:dim-infty-CBA:TopDim})$\Rightarrow$(\ref{SHORT.LinDim-CBA}).}
+According to Theorem~\ref{thm:stable-value}, 
+there is a continuous map $f\:K\to \RR^{m}$ with a stable value.
+By Tietze extension theorem%ref???
+, it is possible to extend $f$ 
+to a continuous map $F\:\spc{U}\to \RR^{m}$.
+
+Fix $\eps>0$.
+Since $F$ is continuous, there is a continuous positive function $\rho$ defined on $\spc{U}$ such that 
+\[\dist{x}{y}{}<\rho(x)\ \ \Rightarrow\ \ | F(x)- F(y)|<\tfrac13\cdot\eps.\]
+Apply Lemma~\ref{lem:approximation-cba} for the function $\rho$.
+For the obtained simplicial complex $\spc{N}$, 
+ and maps $\map\:\spc{U}\to \spc{N}$,  $\map[2]\:\spc{N}\to \spc{U}$, we have
+\[|F\circ \map[2]\circ\map(x)-F(x)|<\tfrac13\cdot\eps\] 
+for any $x\in \spc{U}$.
+
+According to Lemma~\ref{lem:lip-approx},
+there is a locally Lipschitz map $F_\eps\:\spc{U}\to \RR^{m+1}$ 
+such that $|F_\eps(x)-F(x)|<\tfrac13\cdot\eps$ for any $x\in \spc{U}$.
+
+Note that
+$\map(K)$ is contained in a countable subcomplex of $\spc{N}$, say $\spc{N}'$.
+Indeed, since $K$ is separable, there is a countable dense collection of points $\{x_n\}$ in $K$.
+Denote by $\Delta_n$ the minimal simplex of $\spc{N}$ which contains $\map(x_n)$.
+Then $\map(K)\subset\bigcup_i\Delta_n$.
+
+Arguing by contradiction,
+assume $\LinDim\spc{U}<m$.
+By Lemma~\ref{lem:approximation-cba:im},
+the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of $(m-1)$-skeliton of $\spc{N}'$;
+in particular it can be covered 
+by countable collection of Lipschitz images of $(m-1)$-simplexes.
+Hence
+$\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|K$.
+Since $\eps>0$ is arbitrary, 
+we get that $\bm{0}\in \RR^m$ is not a stable value of $f=F|K$, a contradiction.
+
+\parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
+The following claim is almost trivial.
+
+\begin{clm}{}\label{clm:finite-config-cba}
+Let $q\in \spc{U}$ and $\dot x^1,\dot x^2,\dots,\dot x^n\in \T_q$.
+Then given $\delta>0$,
+there is a point array $x^1,x^2,\dots,x^n$ in $\spc{U}$ 
+such that 
+\[\mangle(\dot x^i,\ddir q{x^i})<\delta\]
+and for some fixed $\lam>0$ we have
+\[\tfrac1\lam\cdot\dist[{{}}]{q}{x^i}{}=|\dot x^i|\ \ 
+\t{and}\ \  |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
+for all $i$ and $j$.
+
+Moreover the value $\lam$ can be taken arbitrary small.
+\end{clm}
+
+\parit{Proof of the Claim.} For each $i$ choose a geodesic $\gamma^i$ 
+from $q$ which goes almost in the directions of $\dot x^i$.
+Then take the point $x^i$ on $\gamma^i$ on the distance $\lam\cdot|\dot x^i|$ from $q$.
+\claimqeds
+
+
+Choose $q\in \spc{U}$ such that $\T_q$ contains a subcone $E$ isometric to $m$-dimensional Euclidean space.
+Note that one can choose $\eps>0$ 
+and a point arrray $(\dot a^0,\dot a^1,\dots,\dot a^m)$ in $E\subset \T_q$ 
+such that 
+$\bigcap_i\cBall[\dot a^i,1+\eps]=\emptyset$
+and $\bigcap_{i\not=j}\cBall[\dot a^i,1\z-\eps]\z{\not=}\emptyset$ for each $j$.
+
+Applying Claim \ref{clm:finite-config-cba}, we get a point array 
+$(a^0,a^1,\dots,a^m)$ in $\spc{U}$
+such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
+and $\bigcap_{i\not=j}\cBall[a^i,\lam]\not=\emptyset$ for each $j$.
+Since $\lam>0$ can be  chousen arbitrary small, 
+it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
+\qeds
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Remarks and open problems}
+
+The following conjecture (in an equivalent form)
+appers in \cite{kleiner} (see also \cite[p.~133]{gromov:asymt-inv}) %???CHECK
+ remains open for nonseparable $\cCat{}{}$ spaces;
+for separable spaces it is true by Corollary~\ref{cor:dim-CBA}.
+
+\begin{thm}{Conjecture}
+If $\spc{U}\in\cCat{}{}$, then 
+\[\TopDim\spc{U}
+=
+\LinDim\spc{U}.\]
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+\section{Exercises}
+
+
+\begin{thm}{Exercise}\label{ex:schroeder-foetch}
+Construct two norms on $\RR^n$ such that 
+non of the corresponding metric spaces $\spc{X}$ and $\spc{Y}$
+have a isometric copy of $\EE^2$ but
+$\spc{X}\times\spc{Y}$ has isometric copy of $\EE^n$.
+(Compare with \cite{schroeder-foetch}.)
+\end{thm}
+
+\begin{thm}{Exercise}\label{exer:banach}
+Suppose $V$ is an m-dimensional Banach space.
+Then
+\begin{enumerate}[(a)]
+\item $V \in\cCat{}{}$  iff $V$ is isometric to $\EE^m$;
+\item $V \in\CBB{}{}$   iff $V$ is isometric to $\EE^m$;
+\end{enumerate}
+\end{thm}
+
+\begin{thm}{Lytchak's problem} 
+Let $\spc{L}\in \CBB{}{}$ and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
+Prove that $\spc{L}$ is finite dimensional.
+(Compare with \ref{thm:tan4finite}.)
+\end{thm}
+

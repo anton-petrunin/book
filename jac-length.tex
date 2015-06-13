@@ -1,0 +1,333 @@
+%%!TEX root = the-defs-CBA.tex
+\section{Jacobi lengths}
+\label{sec:jacobi-length}
+
+This section gives a definition of $\curv \spc{U}\le\kappa$ that captures the notion in a Riemannian manifold of lengths of normal and
+tangential Jacobi fields.  Tangential lengths, which are linear, must be discarded in order
+to identify specific curvature bounds.
+
+This material is from \cite{} and \cite{}.  It is used in \cite{} to prove a sharp Alexandrov curvature bound above for Riemannian manifolds-with-boundary (\ref{thm:example-mnflds-with-bry:CBA}), and in \cite{} to obtain sharp curvature bounds for subspaces of spaces with $\curv\le\kappa$ (\ref{sec:gauss-equation}).
+
+\begin{thm}{Definition}
+Let $[pq]$ 
+be a geodesic in an intrinsic space $\spc{X}$
+and $\ell=\dist{p}{q}{}$.
+A function $f\:[0,\ell)\to\RR_{\ge0}$ is called \emph{normal Jacobi length} along $[pq]$
+if there is a sequence of geodesics $[pq_n]$ in $\spc{X}$
+such that $q_n\to q$ as $n\to\infty$ and
+\[f(t)
+=
+\lim_{n\to\infty}\frac{\dist{\geod_{[pq_n]}(t)}{\geod_{[pq]}(t)}{}}{\dist{q_n}{q}{}}.\]
+
+The geodesic $[pq]$ 
+is said to satisfy \emph{Jacobi splitting} if 
+for any normal Jacobi length $f$ along $[pq]$, 
+the sequence of geodesics $[pq_n]$ as above we have
+\[\dist[2]{\gamma(t)}{\gamma_n(t_n)}{}=
+f_n(t)^2\cdot\dist[2]{q}{q_n}{}
++
+|t-t_n|^2
++
+o(\dist[2]{q}{q_n}{}+|t-t_n|^2).\]
+\end{thm}
+
+
+\begin{thm}{Theorem}\label{thm:jacobi-length}
+Let $\spc{U}$ be a locally geodesic metric space. 
+Then $\curv \spc{U}\le\kappa$ if and only if for any $p\in\spc{U}$
+there is a neighborhood $N\ni p$
+such that for any geodesic $[pq]$ in $N$ the following two conditions hold
+
+\begin{subthm}{jacobi-split} 
+The geodesic $[pq]$ satisfies Jacobi splitting;
+\end{subthm}
+
+\begin{subthm}{jacobi-convex}
+Any normal Jacobi length $f$ along $[pq]$ 
+satisfies the following differential inequality
+\[f''+\kappa\cdot f\ge 0\]
+in the sense deascribed in ???
+ \end{subthm}
+\end {thm}
+
+\begin{thm}{Lemma}\label{lem:model-jacobi}
+Normal Jacobi length $f$ for any geodesic with lenght $<\varpi\kappa$ in the model space $\Lob2\kappa$
+satisfies
+$$f'' +\kappa\cdot f=0.$$
+  
+\end{thm}
+
+\begin{thm}{Lemma}
+Let $\gamma_0,\gamma_1\:[a,b]\to\Lob{}\kappa$, 
+be two geodesics such that
+\[
+\dist{\gamma_0(a)}{\gamma_0(b)}{}+ \dist{\gamma_0(b)}{\gamma_1(b)}{}+ \dist{\gamma_1(b)}{\gamma_1(a)}{} +  \dist{\gamma_1(a)}{\gamma_0(a)}{} <2 \varpi\kappa.
+\]
+Set $f(t)=\dist{\gamma_0(t)}{\gamma_1(t)}{}$.
+Then 
+\[f''+K\cdot f\ge 0\]
+where
+\[
+K=\min\{0,-\kappa\cdot\bigl(\varpi\kappa/(b-a)\bigr)^2\}.
+\]
+ \end{thm} 
+
+\begin{thm}{Definition (Jacobi length)}\label{def:jac}
+Let $\spc{X}$ be an intrinsic metric space, and $\gamma:\II\to\spc{X}$ be a geodesic, where $\II$ is an interval. Then $f:\II\to [0,\infty)$  is called a \emph{Jacobi  length along $\gamma$} if there is a sequence of 
+geodesics $\gamma^i:\II\to\spc{X}$ and a sequence of positive numbers $u_i\to 0$ such that for all $s\in \II$,
+\[
+f(s) = \lim_{i\to\infty} \  \dist{\gamma(s)}{\gamma^i(s)}{}/u_i.
+\eqlbl{eq:jac-length}
+\]
+If moreover
+\[
+\dist{\gamma^i(t)}{\gamma(t)}{}= \dist{\gamma^i(t)}{\gamma(\II)}{} + o(u^i),\]
+then $f$ is called a \emph{normal Jacobi  length along $\gamma$}.
+\end{thm}
+
+Given  a point  $p$ and a curve $\alpha\:[0,1]\to \spc{X}$ of constant speed $A$, recall that a map
+\[
+[0,1]\times[0,1]\to\spc{X}\:(t,s)\mapsto\gamma_t(s)
+\] 
+is a \emph{line-of-sight map from $p$ to $\alpha$} 
+if each curve $\gamma_t$ is a geodesic from $p$ to  $\alpha(t)$ (\ref{def:sight}). 
+
+\parbf{Example.}  A sinusoidally $K$-convex function $f:[a,b]\to [0,\infty)$ must be continuous on $(a,b)$.  However, a sinusoidally $\kappa$-convex Jacobi length $f:[a,b]\to [0,\infty)$  in $\spc{U}\in\Cat{}{\kappa}$ may be discontinuous at the endpoints. Consider the complement $\spc{U}$  in  $ \EE^2$ of an open disk, and  a 
+geodesic $\gamma\: [0,1]\to\spc{U}$  which lies on the bounding circle.  A line-of-sight  map is defined by lifting the endpoint $\gamma(1)$ along an ``evolute''  curve of speed $1$ running at constant \,$\spc{U}$-distance from $\gamma(0)$. There is a  corresponding Jacobi length $f$ along $\gamma$, where   $f(s)=0$ for $0\le s <1$ \,and\,  $f(1)=1$.
+
+%\parit{Proof of Lemma \ref{lem:jac-exist}.} 
+%By assumption, 
+%$$f_i(s)\,\le\,(\,\dist{\alpha(t)}{\alpha(t_i)}{}   /\sn{K}1\,)\,\cdot\, \sn{K}s\,+\, o(t-t_i).$$
+% Therefore for fixed $s$, any limiting value
+%of $f_i(s)/(t-t_i)$  as $i\to\infty$ is  at most equal to\, 
+%$ A\cdot(\sn{K}s) /\sn{K}1).$
+%Now that infinite limits are ruled
+%out, we can use a diagonal process to pass to a subsequence of the $\gamma_i$ such that $f(s)<\infty$ is defined on a countable dense subset $S$ of $[0,1]$.
+
+%To show that $f$ exists and is continuous on $[0, 1)$, it suffices to show, for
+%fixed $s_0\in [0, 1)$, that any limiting value \,$C$\, of $f_i(s_0)/(t-t_i)$ is equal to any limiting value $D$ of $f(s_i)$, as $s_i\in S$ converges  monotonically to $s_0$.
+
+%Since the $K$-sinusoid  with values
+%$f(s_1)$ and $C$ at $s_1$ and $s_0$, respectively, dominates $f(s_i)$ for all $i$, then $D\le C$. 
+
+%When $s_0=0$, we have $D=C$ since  $C=0$.  
+%Suppose $s_0\in (0,1)$.  Take $ \bar s\in S$ on the opposite side of $s_0$ from the monotonically converging $s_i$. The $K$-sinusoid ${\bar f}_i$ with values $f(s_i)$ and $f(\bar s)$ at $s_i$ and $\bar s$, respectively, satisfies ${\bar f}_i(s_0) \ge C$ for all $i$.
+%Hence $D \ge C$.\qeds
+
+\begin{thm}{Definition}\label{def:line-of-sight}
+Let $\spc{X}$ be an intrinsic metric space.
+A line-of-sight map 
+is said to \,\emph{satisfy  Jacobi splitting}\,  if
+the following holds:
+
+For each $t\in[0,1)$ there is a sequence  $t_i\to t^+$, and   a  Jacobi length $f$  along $\gamma$ given by \ref{eq:jac-length}, 
+%and continuous on $[0,1)$, 
+where $\gamma=\gamma_t$ , $\gamma_i=\gamma_{t_i}$ and $u_i=t_i-t$. In addition, setting \,$\ell=\length\gamma$\, and\, $\ell_i=\length\gamma_i$, for $s\in (0,1)$  set
+\[
+g_i(s)= 
+\dist{\gamma(s)}{\gamma_i(
+\ell\cdot
+{\ell_i}^{-1}
+\cdot s)}{}.
+\]
+Then, passing to a subsequence, 
+the \emph{normal Jacobi length} $f_N$ and \emph{tangential Jacobi length} $f_T$  defined on $(0,1)$ by 
+\[
+f_N(s)\, = \,\lim_{i\to \infty} \bigl( g_i(s)/(t-t_i)\bigr),\ \ \ 
+f_T(s) \,= \, \lim_{i\to\infty}\bigl(|\ell - \ell_i|\cdot s\,/(t-t_i)\bigr)
+\eqlbl{eq:normal-tangent-jacobi-length}
+\]
+exist and satisfy
+\[
+f^2 = {f_N}^2 + {f_T}^2.\\
+\eqlbl{eq:jacobi-split}
+\]
+%If  there is no sequence $t_i\to t^+$ such that $\ell_i\ge\ell$, then $g_i(1)$ is undefined, and we define $f_N(1)$ by \,\ref{eq:jacobi-split}, i.e. $f_N(1)^2=f(1)^2-f_T(1)^2$.
+\end{thm}
+
+Recall that $\geodpath_{[xy]}$ denote a geodesic path from $x$ to $y$.
+
+
+
+%\begin{thm}{Lemma}\label{lem:model-jacobi}
+%For any $p\in\Lob{}\kappa$ and any triangle $\trig {\~x}{\~y}{\~z}$ in $\oBall(p,\tfrac{\varpi\kappa}{2})$, the line-of-sight map from $\~x$ to $\geodpath_{[\~y\~z]}$ satisfies Jacobi splitting.  Moreover,   for each $t\in [0,1)$ the corresponding  normal Jacobi length  is a $(\kappa\cdot\ell^2)$-sinusoid.
+%let $\gamma$ and $\sigma$ be geodesics of length $\le\varpi\kappa$ and  speed $\le 1$.  Then $\dist{\gamma(s)}{\sigma_i(s)}{}$ is sinusoidally $\hat\kappa$-convex where  $\hat\kappa=\max\{0,\kappa\}$.
+
+
+\begin{thm}{Theorem}\label{thm:jacobi-length}
+Let $\spc{U}$ be a locally geodesic metric space. Then $\curv \spc{U}\le\kappa$ if and only if for any $p\in\spc{U}$ and any triangle $\trig {x}{y}{z}$ in some open ball about $p$:
+
+%\begin{subthm}{jacobi-lip}
+%line-of-sight maps are Lipschitz; 
+%\end{subthm}
+
+%\begin{subthm}{first-var}
+%first variation equation holds from $x$ to $\geodpath_{[yz]}$;\end{subthm}
+
+\begin{subthm}{jacobi-split} 
+the line-of-sight map from $x$ to $\geodpath_{[yz]}$
+%is Lipschitz and 
+satisfies   Jacobi splitting;
+\end{subthm}
+
+\begin{subthm}{jacobi-convex}
+each corresponding normal Jacobi length is  sinusoidally $(\kappa\cdot\ell^2)$-convex,
+where $\ell$ denotes ???.
+ \end{subthm}
+%Then $\curv \spc{U} \le \kappa$.
+\end {thm}
+
+\parit{Proof of ``only if''.} 
+%\parit{($\Rightarrow$)} 
+Suppose $\curv \spc{U}\le\kappa$.  For any $p\in\spc{U}$, there is a convex ball 
+$\oBall(p,R)\in\Cat{}{\kappa}$, where $R<\tfrac{\varpi\kappa}{2}$ (\ref{thm:convex-balls}). Choose the triangle $\trig {x}{y}{z}$ to lie in $\oBall(p,R)$.
+
+%\parit{(\ref{SHORT.first-var}).}  (\ref{SHORT.first-var}) holds  by \ref{thm:1st-var=cba}. 
+ 
+\parit{(\ref{SHORT.jacobi-split}).}
+We use the notation of Definition  \ref{def:line-of-sight}. The line-of-sight map from $x$ to $\geodpath_{[yz]}$ is Lipschitz by  triangle comparison. Therefore for each $t\in[0,1]$ there is a sequence  $t_i\to t^+$, and   a  Jacobi length $f$  along $\gamma$ given by \ref{eq:jac-length}.
+
+\begin{clm}{}\label{right-angles}
+For $s\in (0,1)$
+% and also for $s=1$ in case we may choose $t_i\to t^+$ such that $\ell_i\ge\ell$
+and $i$ sufficiently large, the angles
+%set 
+%\[
+% \mangle^\gamma_i(s) =\mangle\hinge {\gamma( s) }{p}{ \gamma_i(\ell\cdot
+%{\ell_i}^{-1}\cdot s)}\,, \ \ \ 
+% \mangle_i(s) =\mangle\hinge {\gamma_i ( \ell\cdot
+%{\ell_i}^{-1}\cdot s)}{p}{ \gamma(s)}.
+%%\eqlbl{eq:jacfd2}
+%\]
+\[
+\mangle\hinge {\gamma( s) }{\gamma(1)}{ \gamma_i(\ell\cdot
+{\ell_i}^{-1}\cdot s)}\,,  \ \ \ 
+ \mangle\hinge {\gamma_i ( \ell\cdot
+{\ell_i}^{-1}\cdot s)}{\gamma_i(1)}{ \gamma(s)}.
+\eqlbl{eq:jacfd}
+\]
+converge to $\pi/2$, as do the angles 
+\[
+  \mangle\hinge {\gamma( s) }{\gamma(1)}{ \gamma_i(\ell\cdot
+{\ell_i}^{-1}\cdot s)}\,,  \ \ \ 
+ \mangle\hinge {\gamma_i ( \ell\cdot
+{\ell_i}^{-1}\cdot s)}{\gamma_i(1)}{ \gamma(s)}.
+\eqlbl{eq:jacfd1}
+\]
+%
+%\[
+%\mangle\hinge {\gamma( s) }{p}{ \gamma_i(\ell\cdot
+%{\ell_i}^{-1}\cdot s)}\,, \ \ \ 
+% \mangle\hinge {\gamma_i ( \ell\cdot
+%{\ell_i}^{-1}\cdot s)}{p}{ \gamma(s)}.
+%\eqlbl{eq:jacfd2}
+%\]
+(If $g_i$ vanishes on an
+initial interval, we set the undefined angles to be $\pi/2$.)
+
+\end{clm}
+
+By  Reshetnyak majorization (\ref{thm:major}), since $g_i$ is  sinusoidally $K$-convex for some $K$, hence  semiconvex.  Therefore $g_i$  has derivatives almost everywhere and one-sided derivatives everywhere.   Since $g_i\to 0$, it follows that $g_i^{\pm}\to 0$ 
+%converge uniformly to $0$ on $[0,1-\epsilon)$ 
+(Corollary \ref{lem:der-conv-lim}).
+
+ By the first variation equation \ref{cor:both-end-first-var-cba}, 
+ \[g_i^-
+= -\cos \mangle^{\gamma}_i - \cos \mangle_i.
+\]
+By convexity of balls, the angles  \ref{eq:jacfd} are $\le\pi/2$.  
+Hence $\mangle^{\gamma}_i (s)$ and $\mangle_i(s)$ approach $\pi/2$ as $i\to\infty$. 
+
+Similarly, since
+the angles \ref{eq:jacfd1} are $
+\ge \pi/2$ by  the triangle inequality for angles, both angles
+approach
+$\pi/2$. Hence claim \ref{right-angles}.
+
+\begin{clm}{}\label{curv-jacobi-split}
+The line-of-sight map from $x$ to  $\geodpath_{[yz]}$ 
+%is Lipschitz and 
+satisfies Jacobi splitting.\end{clm}
+  
+We continue in
+ the notation of Definition  \ref{def:line-of-sight}. 
+% Passing to a subsequence, we obtain a    Jacobi length $f_N$ along $\gamma|[0,1)$  given by \ref{eq:normal-tangent-jacobi-length}.
+Let $s\in (0,1)$.
+ 
+We must prove
+\[
+f(s)^2 = f_N(s)^2 + s^2\cdot \lim_{i\to\infty} \bigl((\ell -\ell_i)/(t-t_i)\bigr)^2,
+%= F(s)^2 + s^2\cos^2\theta,
+\]
+or equivalently, 
+\[
+g_i(s)^2 - f_i(s)^2 + s^2\cdot(\ell -\ell_i)^2 = o((t-t_i)^2).
+\]
+
+Let $\triangle_i=[{\gamma(s)}\ {\gamma_i( \ell\cdot{\ell_i}^{-1}\cdot s)} \ \gamma_i(s)]$. Then  $\triangle_i$ has sidelengths $g_i(s)$,
+$s\cdot (\ell_i -\ell)$,  $f_i(s)$. 
+Let $\triangle_i^0=\modtrig 0({\gamma(s)}\,{\gamma_i( \ell\cdot{\ell_i}^{-1}\cdot s)}\,{\gamma_i(s)})$ be the Euclidean model triangle for $\triangle_i$. Let $\mangle_i(s)$ be the angle of $\triangle_i$ at the vertex $\gamma_i( \ell\cdot{\ell_i}^{-1}\cdot s)$ and  $\mangle_i^0(s)$ be the corresponding angle of ${\triangle}_i^0$. Let $\mangle_i^\kappa(s)$ be the corresponding comparison angle in $\Lob{}\kappa$.  
+By triangle comparison,
+${\mangle}_i^\kappa(s)\ge \mangle_i(s)$. 
+
+By the law of cosines,
+\[
+g_i(s)^2 - f_i(s)^2 + s^2\cdot(\ell -\ell_i)^2=
+g_i(s)\cdot s \cdot (\ell -\ell_i)\cdot\cos\mangle_i^0(s).
+\eqlbl{eq:jacfd3}
+\]
+  
+
+Consider  the quadrilateral $\Box_i= [{\gamma(s)}\,{\gamma_i( \ell\cdot{\ell_i}^{-1}\cdot s)}\,{\gamma_i(s)} \gamma(\ell_i\cdot{\ell}^{-1}\cdot s))]$. By Reshetnyak majorization (\ref{thm:major}), $\Box_i$ is majorized by a quadrilateral ${\Box}_i^\kappa$ in $\Lob{}\kappa$.
+${\Box}_i^\kappa$ has two
+adjacent sidelengths agreeing with those of ${\triangle}_i^\kappa$,
+and the diagonal joining their endpoints  is $\ge f_i(s)$, which is the third sidelength of
+${\triangle}_i^\kappa$. Therefore the included angle $\mangle_i^{\Box^\kappa}$ satisfies 
+\[
+\mangle_i^{\Box^\kappa}\ge \mangle_i^\kappa(s) \ge \mangle_i(s).
+\eqlbl{eq:jacfd4}
+\]
+
+All four angles of $\Box_i^\kappa$
+majorize angles that become, by claim \ref{right-angles}, arbitrarily close to $\pi/2$ as $i\to\infty$.   Therefore all
+angles of $\Box_i^\kappa$, including $\mangle_i^{\Box^\kappa}$, become
+arbitrarily close to $\pi/2$ as $i\to\infty$.  By \ref{eq:jacfd4}, the same is true of  $\mangle_i^\kappa(s)$.  
+
+Thus the expression \ref{eq:jacfd3}, when divided by $(t-t_i)^2$, approaches $0$, since  
+\[
+ \lim_{i\to\infty} \cos\mangle_i^0(s)=\lim_{i\to\infty} \cos\mangle_i^\kappa(s)=0,
+\] 
+$\lim_{i\to \infty}\bigl( g_i(s)/(t-t_i)\bigr)=f_N(s)\,$ and \,$\lim_{i\to \infty}\bigl((\ell_i - \ell)\,/(t-t_i)\bigr)=\cos\mangle\hinge {\alpha(t)} {\alpha(1)} {p}$.  This completes the verification of
+claim \ref{curv-jacobi-split} and hence of (\ref{SHORT.jacobi-split}).
+
+\parit{(\ref{SHORT.jacobi-convex}).}
+As in the proof of (\ref{SHORT.jacobi-split}), the angles of the 
+quadrilateral ${\Box}_i^\kappa$ in $\Lob{}\kappa$ become arbitrarily close to $\pi/2$ as $i\to\infty$.   
+By Reshetnyak majorization and Lemma \ref{lem:model-jacobi}, it follows that
+$f_N|[0,1)$ is sinusoidally $(\kappa\cdot\ell^2)$-convex.  
+\qeds
+
+\parit{Proof of ``if''.} 
+Suppose
+% (\ref{SHORT.first-var}), 
+ (\ref{SHORT.jacobi-split}) and (\ref{SHORT.jacobi-convex}) hold for any triangle $\trig {x}{y}{z}$ in some open ball about each point of $\spc{U}$.  We must show
+ $\curv \spc{U}\le\kappa$.
+
+Let  $\~\alpha$ be  the $\kappa$-development based at $\~x$ in $\Lob2\kappa$ of $\geodpath_{[yz]}$ with respect to $x$.  We thus obtain a comparison figure in $\Lob2\kappa$, two of whose sides, $[\~x\~y]$ and $[\bar x \bar z]$, are geodesics of the same length as $[xy]$ and $[xz]$ respectively, and whose third side is $\~\alpha$. Since a model triangle for $\trig {x}{y}{z}$  may be obtained by replacing  $\~\alpha$ with a geodesic of the same length, thereby increasing the angle at $\~x$,  it suffices to show \,$\mangle\hinge {x}{y}
+{z}\le\mangle\hinge {\~x}{\~y}{\~z}$.
+
+Let $y^\prime$ and $z^\prime$ be two points  different from $x$ and lying on $[xy]$  and $[ x z]$  respectively.  Choose $y^\prime$ and $z^\prime$  sufficiently close to $x$ that a geodesic $\~\beta$ joining the corresponding points $\~ y^\prime$ and $\~ z^\prime$ on $[\~x\~y]$ and $[\bar x \bar z]$  respectively remains within the subgraph of $\~\alpha$. 
+
+Consider a Lipschitz line-of-sight map from $x$ to $\geodpath_{[yz]}$ as in (\ref{SHORT.jacobi-split}) and  (\ref{SHORT.jacobi-convex}). By  definition of development, there is a corresponding line-of-sight map from $\~x$ to $\~\alpha$, whose varying sight-geodesics we denote by $\~\gamma_t$.    Then $\~\beta$  intersects transversely each $\~\gamma_t$ at a point $\~\gamma_t(s)$, and $s=s(t)$ is $C^1$. It follows that the corresponding curve  $\beta(t)=\gamma_t(s(t))$   in $\spc{U}$ is Lipschitz. Therefore $\beta$ has speed almost everywhere  and its length is obtained by integrating its speed. 
+%Now fix a value of $t$ at which $\beta$ is differentiable. 
+
+By (\ref{SHORT.jacobi-split}), there is a Jacobi length $f$ along \,$\gamma_t$\, 
+that arises from varying $t$ in the positive direction, and satisfies Jacobi splitting $f^2 = {f_N}^2 + {f_T}^2$.  Let $\~f$ be the corresponding Jacobi length.  By Lemma \ref{lem:model-jacobi}, \,$\~f^2 = {\~f_N}^2 + {\~f_T}^2$, where $\~f_N$ is a  $(\kappa\cdot\ell^2)$-sinusoid. By (\ref{SHORT.jacobi-convex}), $f_N$ is sinusoidally $(\kappa\cdot\ell^2)$-convex. By definition of development, it follows that $f_N\le\~f_N$, and moreover $f_T=\~f_T$.  Thus the speed of $\beta$ at $t$  is no greater than the corresponding speed of $\~\beta$.   Therefore $\length \beta\le\length\~\beta$, hence $\dist{y^\prime}{z^\prime}{}\le \dist{\~y^\prime}{\~z^\prime}{}$.  By definition of angle, $\mangle\hinge {x}{y}
+{z}\le\mangle\hinge {\~x}{\~y}{\~z}$, as required.\qeds
+
+\begin{thm}{Corollary}
+Suppose  $\curv \spc{X} \le \hat\kappa$ for some $\hat\kappa$.  If in 
+some open ball about each point, normal Jacobi lengths satisfy $f''+\kappa f\ge 0$, then $\curv \spc{X} \le \kappa$.
+\end{thm}
+
+ 

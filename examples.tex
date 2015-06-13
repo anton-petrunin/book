@@ -1,0 +1,1165 @@
+%%!TEX root = the-examples.tex
+\chapter{Examples}
+
+\section{Polyhedral spaces}
+
+\begin{thm}{Definition}\label{def:poly}
+A length space $\spc{P}$ is called
+is  \emph{piecewise $\Lob{}\kappa$} (briefly $\spc{P}\in \PM{}\kappa$)
+if it admits a finite triangulation $\tau$ 
+such that arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{m}{\kappa}$, 
+where $m$ is the dimension of $\sigma$.
+
+\begin{subthm}{}
+The piecewise $\Lob{}1$ spaces or $\PM{}1$ spaces will be 
+will be also called 
+\index{spherical polyhedral space}\emph{spherical polyhedral spaces};
+\end{subthm}
+
+\begin{subthm}{}
+The piecewise $\Lob{}0$ spaces or $\PM{}0$ spaces will be 
+will be also called 
+\index{Euclidean polyhedral space}\emph{Euclidean polyhedral spaces};
+\end{subthm}
+
+\begin{subthm}{}
+The piecewise $\Lob{}{-1}$ spaces or $\PM{}{-1}$ spaces will be 
+will be also called 
+\emph{hyperbolic polyhedral space}\index{hyperbolic polyhedral space}.
+\end{subthm}
+
+If we do not want to specify $\kappa$, we can say that $\spc{P}$ is a \emph{polyhedral space}.
+
+By a \index{triangulation of a $\PM{}{\kappa}$ space}\emph{triangulation of a $\PM{}{\kappa}$ space} we will understand the triangulation as in the definition. 
+
+\end{thm}
+
+Note that according to the above definition,
+any $\PM{}{\kappa}$ space is compact. 
+
+The dimension of a $\PM{}{\kappa}$ space $\spc{P}$
+is defined as the maximal dimension of the simplex 
+in one (and therefore any) triangulation of $\spc{P}$.
+The class of $\PM{}{\kappa}$ spaces 
+with dimension $\le m$ will be denoted 
+as $\PM{m}{\kappa}$.
+
+
+\parbf{Links.}
+Let $\spc{P}\in \PM{}\kappa$
+and let $\sigma$ be a simplex of a triangulation $\tau$ of $\spc{P}$.
+
+The simplices which contain $\sigma$
+form an abstract simplicial complex called by link of $\sigma$ 
+which will be denoted as $\Link_\sigma$.
+If $m$ denotes the dimension of $\sigma$
+then the set of vertices of $\Link_\sigma$
+is formed by the $(m+1)$-simplices which contain $\sigma$;
+the set of its edges are formed by the $(m+2)$-simplices which contain $\sigma$ and so on.
+
+The link $\Link_\sigma$
+can be identified with the subcomplex of $\tau$ formed by all the simplices $\sigma'$ such that $\sigma\cap\sigma'=\emptyset$, 
+but both $\sigma$ and $\sigma'$ are faces of the same simplex.
+
+The link of any simplex 
+cares natural structure of spherical polyhedron. %???WHY???
+We will always consider the link with this metric.
+
+\parbf{Tangent space and space of directions.}
+Let $\spc{P}\in \PM{}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
+If a point $p\in \spc{P}$ 
+lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
+then the tangent space $\T_p\spc{P}$
+can be naturally isometrically identified with 
+\[\EE^\kay\times(\Cone\Link_\sigma).\]
+Equivalently, the space of directions $\Sigma_p$
+can be isometrically identified with the 
+$\kay$-th spherical suspension over $\Link_\sigma$;
+i.e., 
+\[\Sigma_p\iso\SS^{\kay}(\Link_\sigma).\]
+
+If $\spc{P}\in \PM{m}\kappa$
+then $\Sigma_p\in\PM{m-1}1$ for any $p\in \spc{P}$;
+i.e., the space of directions of $m$-dimensional polyhedral space 
+at any point is an spherical polyhedral space of dimension at most $m-1$. 
+
+In particular, the isometry class of $\Link_\sigma$ 
+completely determined by the space of directions at one point in the interior of $\sigma$ and the dimension of $\sigma$.
+
+Further a neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
+In fact it is true that any compact length space for which any point has a neighborhood 
+which isometric to a neighborhood of the tip of the $\kappa$-cone is a $\PM{}\kappa$ space;
+see \cite{lebedeva-petrunin-poly}.
+
+\begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}\in\PM{}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
+Then $\spc{P}\in\CBB{}{}$ if and only if the following conditions hold.
+
+\begin{subthm}{} $\tau$ is \emph{pure}; 
+i.e.,
+there is an integer $m\ge 0$ 
+such that is any simplex in $\tau$ is formed by a face of some simplex of dimension exactly $m$. 
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:m-1}
+The link of any simplex of dimension $m-1$ is formed by single point or two points.
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:connected}
+The link of any simplex of dimension $\le m-2$ is connected.
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:2pi}
+The link of any simplex of dimension $m-2$ is 
+isometric to a circle of length $\le 2\cdot\pi$
+or a closed real interval or length $\le \pi$.
+\end{subthm}
+
+In this case the integer value $m$ described above is the dimension of $\spc{P}$;
+i.e., $\spc{P}\in\CBB{m}{\kappa}$.
+\end{thm}
+
+Note that the condition (\ref{SHORT.thm:poly-CBB:connected})
+is equivalent to the following:
+
+\begin{itemize}
+ \item[{\it \ref{SHORT.thm:poly-CBB:connected}$'$)}] If $\spc{P}^{\circ}$ denotes $\spc{P}$ with all the simplices
+of dimension $\le m-2$ removed
+then $\spc{P}$ coincides with the completion of $\spc{P}^{\circ}$.
+
+In other words, any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
+$\gamma_n\:[0,1]\to \spc{P}$ 
+such that $\gamma_n(t)\in \spc{P}^{\circ}$ for any $n$ and $0<t<1$.
+\end{itemize}
+
+\parit{Proof.} We apply induction on $m$.
+The base case $m=1$ follows from (\ref{SHORT.thm:poly-CBB:m-1}).
+
+\parit{Step.}
+Assume that the theorem is proved if $\dim\spc{P}<m$.
+According to the Globalization theorem (\ref{thm:glob}),
+it is sufficient to show that 
+$$\curv_p\spc{P}\ge \kappa$$ 
+for any point $p\in\spc{P}$. 
+
+Fix $p\in \spc{P}$.
+Note that a spherical neighborhood of $p$
+is isometric
+to a the spherical neighborhood of the tip of the tangent $\kappa$-cone 
+$$\T_p\mc\kappa\z
+=
+\Cone\mc\kappa(\Sigma_p).$$
+Hence it is sufficient to show that 
+$$\curv\T_p\mc\kappa\ge \kappa\eqlbl{eq:curv(T_p)>=k}$$
+for any $p\in \spc{P}$.
+According to ???, the later equivalent to \begin{clm}{}\label{clm:curv+diam}
+$\diam\Sigma_p\le \pi$ and $\curv\Sigma_p\ge 1$.
+\end{clm}
+
+
+If $m=2$ then \ref{clm:curv+diam} follows from (\ref{SHORT.thm:poly-CBB:m-1}).
+
+To prove the case $m\ge 3$,
+note that $\Sigma_p$ is a polyhedral space and 
+by (\ref{SHORT.thm:poly-CBB:connected}), $\Sigma_p$ is connected
+and by induction hypothesis $\curv\Link_p\ge 1$.
+By ???, $\Link_p\in\CBB{m}{1}$.\qeds
+
+
+\begin{thm}{Theorem}\label{thm:PL-CAT}
+Let $\spc{P}\in\PM{}\kappa$ and $\tau$ be a triangulation of  $\spc{P}$.
+
+Then $\curv\spc{P}\le\kappa$ 
+if and only if any connected component of the link of any simplex $\sigma$ in $\tau$
+is $2\cdot\pi$-simply connected.
+
+Equivalently, if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
+
+\end{thm}
+
+\parit{Proof.}
+Let us apply induction on $\dim\spc{P}$.
+The base case case $\dim\spc{P}=0$ is evident.
+
+\parit{Step.}
+Assume that the theorem is proved in case $\dim\spc{P}<m$.
+
+Fix a point $p\in\spc{P}$.
+A neighborhood of $p$ 
+is isometric to the $\kappa$-cone over 
+the $\Sigma_p$.
+By ???, it is sufficent to show that 
+\[\Sigma_p\in \Cat{}1\eqlbl{eq:Sigma-in-CAT(1)}\]
+
+Note that $\Sigma_p\in \PM{m-1}1$
+and the links of $\Sigma_p$ are isometric to the links of $\spc{P}$. 
+By induction hypothesis we get $\curv\Sigma_p\ge 1$.
+
+Applying Generalized Hadamard--Cartan theorem \ref{thm:hadamard-cartan-for-k=1},
+we get \ref{eq:Sigma-in-CAT(1)}.
+\qeds
+
+\begin{thm}{Corollary}
+Let $\spc{P}\in \PM{}\kappa$.
+Then the following conditions are equivalent
+
+\begin{subthm}{}
+$\curv_p\spc{P}<\infty$ for any $p\in\spc{P}$;
+\end{subthm}
+
+\begin{subthm}{}
+$\curv\spc{P}\le\kappa$;
+\end{subthm}
+
+\begin{subthm}{}
+Any point $p\in\spc{P}$ 
+admits a neighborhood $\Omega\ni p$ 
+such that any two points $x,y\in\Omega$ 
+are joint unique geodesic $[xy]$ in $\spc{P}$. 
+\end{subthm}
+
+\end{thm}
+
+\section{Flag complexes}
+
+
+\begin{thm}{Definition}
+A simplicial complex $\mathcal{S}$ 
+is called \emph{flag complex}\index{flag complex} if whenever $\{v_0,\z\dots,v_\kay\}$
+is a set of distinct vertices of $\mathcal{S}$
+which are pairwise joined by edges, then $\{v_0,\dots,v_\kay\}$
+spans a $\kay$-simplex in $\mathcal{S}$.
+
+If the above condition satisfied only for $\kay=2$ then we say that $\mathcal{S}$ satisfies a \emph{no triangle condition}\index{no triangle condition}.
+\end{thm}
+
+Note that every flag complex is determined by its 1-skeleton.
+
+\begin{thm}{Proposition}\label{prop:no-trig}
+A simplicial complex $\mathcal{S}$ is flag if and only if 
+$\mathcal{S}$ as well as all the links of all its simplices
+satisfies the no triangle condition.
+\end{thm}
+
+\parit{Proof.}
+Clearly flag complex satisfies no triangle condition.
+
+Note that link of flag complex is a flag complex.
+Therefore no triangle condition holds for any flag complex and all its links.
+
+Now assume a complex $\tau$ and all its links satisfy no triangle condition.
+It follows that $\tau$ includes a 2-simplex for each triangle.
+Applying the same observation for each edge we get that $\tau$ includes 3-simplex for any complete graph with 4-vertices.
+Repeating this observation 
+for triangles, 
+3-simplexes,
+4-simplices
+and so on we get that $\tau$ is flag.
+\qeds
+
+
+
+Spherical polyhedral $\cCat{}{1}$ spaces glued from of right-angled simplices
+admit the following combinatorial characterization discovered by Gromov \cite[p. 122]{gromov:hyp-groups}.
+
+A triangulation of spherical polyhedral space 
+is called \emph{all-right triangulation} if each simplex of the triangulation is isometric to the spherical simplex all of which angles are right.
+
+\begin{thm}{Theorem}
+Assume that a spherical polyhedral space $\spc{P}$
+admits an all-right triangulation $\tau$.
+Then $\spc{P}\in\cCat{}{1}$
+if and only if $\tau$ is flag.
+\end{thm}
+
+\parit{Proof.} 
+Assume $\spc{P}$ be the spherical polyhedral space 
+with triangulation $\tau$
+such that each simplex in $\tau$ is isometric to a right-angled spherical simplex.
+
+Assume there are there vertices $v_1,v_2$ and $v_3$ of $\tau$
+that pairwise joined by edges, 
+but do not span a simplex.
+Note that in this case 
+$$\mangle\hinge{v_1}{v_2}{v_3}=\mangle\hinge{v_2}{v_3}{v_1}=\mangle\hinge{v_3}{v_1}{v_1}=\pi.$$
+Equivalently,
+\begin{clm}{}\label{clm:3pi/2}
+The joint of the geodesics $[v_1v_2]$, $[v_2v_3]$ and $[v_3v_1]$
+forms a locally geodesic loop $\spc{P}$. 
+\end{clm}
+
+Now assume that $\spc{P}\in\cCat{}{1}$.
+Then so is the link $\Link_\sigma\spc{P}$ of every simplex in $\tau$. 
+
+Each of these links is an all-right spherical complex
+and
+by Theorem \ref{thm:PL-CAT}, 
+none
+of these links can contain a geodesic circle of length less than $2\cdot\pi$. 
+
+Therefore Proposition~\ref{prop:no-trig} and \ref{clm:3pi/2}, 
+imply the statement.
+
+It remains to prove that if $\tau$ is a flag then $\spc{P}$ is $\cCat{}{1}$. 
+Proceeding by
+induction on the dimension of $\spc{P}$, 
+we may assume that $\Link_\sigma\in\cCat{}{1}$
+for every simplex $\sigma$ of $\tau$.
+In particular, $\curv\spc{P}\le 1$.
+
+It remains to show that any closed local geodesic $\gamma$ in $\spc{P}$ 
+has length at least $2\cdot\pi$.
+Recall that star of a simplex $\sigma$ (briefly $\Star_\sigma$)
+is formed by union of all simplexes which contain $\sigma$.
+
+Choose a simplex $\sigma$ which contains a point of $\gamma$ in its interior
+let $v$ be a vertex of $\sigma$.
+Set $f(t)=\cos\dist{v}{\gamma(t)}{}$.
+Note that $f''(t)+f(t)=0$ if $f(t)>0$.
+It follows that $\gamma$ spends 
+spends time $\pi$ in the interior of $\Star_v$.
+
+After leaving $\Star_v$,
+the local geodesic $\gamma$ has to enter in an interior of an other simplex say $\sigma'$
+which has a vertex $v'$ not joined to $v$ by an edge.
+
+Since $\tau$ is flag, we have that the stars $\Star_v$ and $\Star_{v'}$
+do not have common interior points.
+The same argument as above shows that $\gamma$ spends time $=\pi$ in interior of $\Star_{v'}$.
+Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
+\qeds
+
+
+\section{Subsets in 2-dimensional space}
+
+Let $[a_1\dots a_n]$
+be a simple closed broken geodesic in the model plane $\Lob{2}{\kappa}$.
+The closure $P$ of a bounded component of 
+$\Lob{2}{\kappa}\backslash [a_1\dots a_n]$ 
+is called \emph{polygon}.
+
+Note that if $\kappa\le 0$ then there is unique polygon which is bounded by $[a_1\dots a_n]$,
+while in the case $\kappa> 0$
+there are two such polygons,
+one on each side of $[a_1\dots a_n]$.
+
+Note that the half-spheres in $\Lob{}\kappa$ for $\kappa>0$ are included in the class of polygons.
+If a polygon is not a half-sphere then 
+we can assume that the broken geodesic $[a_1\dots a_n]$ nondegenerate, 
+i.e., all the angles 
+$\mangle \hinge{a_1}{a_n}{a_2}$,
+$\mangle \hinge{a_2}{a_1}{a_3},
+\dots,
+\mangle \hinge{a_{n}}{a_{n-1}}{a_{1}}$ are distinct from $\pi$.
+In this case $P$ is called $n$-gon;
+the points $a_1,\dots,a_n$ are called \index{vertex of polygon}\emph{vertices} of $P$;
+the geodesics $[a_na_1]$, $[a_1a_2],\dots,[a_{n-1}a_n]$ 
+\index{side of polygon}\emph{sides} of $P$
+and the remaining geodesics between the vertices are called \index{diagonal of polygon}\emph{diagonals} of $P$. 
+
+A vertex $a_i$ of $P$ 
+is called \index{convex vertex of polygon}\emph{convex} if a the intersection of $P$ with a small ball centered at $a_i$ is convex.
+A non-convex vertex is called \index{concave vertex of polygon}\emph{concave}.
+
+
+\begin{thm}{Theorem}\label{thm:2-d-cba}
+Let $P$ be a polygon in $\Lob{2}{\kappa}$ equipped with the length-metric.
+\begin{subthm}{}
+If $\kappa\le 0$ then $P\in\cCat{}{\kappa}$.
+\end{subthm}
+
+\begin{subthm}{thm:2-d-cba:k>0}
+If $\kappa>0$ then $P\in\cCat{}{\kappa}$ if  and only if $P$ does not contain half-space in its interior.
+\end{subthm}
+\end{thm}
+
+In the proof we will need the following classical result in discrete geometry.
+
+\begin{thm}{Proposition}\label{prop:diagonal}
+Assume that $n>3$ 
+and $P$ is an $n$-gon in $\Lob{2}{\kappa}$.
+If $\kappa>0$ then we assume that $P$ does not contain closed half-sphere in its interior.
+Then there is a  diagonal, say $[xy]$, of $P$ 
+such that $\l]xy\r[$ lies in the interior of $P$.
+\end{thm}
+
+\parit{Proof.}
+First note that $P$ has at least one convex vertex, say $v$.
+Indeed, otherwise its complement is convex.
+The later contradicts either
+that $P$ is bounded for $\kappa\le  0$ 
+orthat $P$ does not contains a half-sphere in its interior for $\kappa\le  0$.
+
+Let $[uv]$ and $[vw]$ be the sides of $P$ meeting at $v$.
+If the $\l]uw\r[$ lies in the interior of $P$ 
+then the proposition is proved.
+
+Otherwise let $x\in[uv]$ be the point closest to $v$
+such that $\l]xw\r[$ does not lie completely in the interior of $P$.
+It means that $\l]xw\r[$ contains a vertex of $P$, 
+say $z$.
+In this case $\l]vz\r[$ lies in the interior of $P$.
+Hence the result follows.
+\qeds
+
+
+\parit{Proof.}
+First let us show that the condition in (\ref{SHORT.thm:2-d-cba:k>0}) is necessary if $\kappa>0$. 
+Applying rescaling, we can assume that $\kappa=1$ and therefore $\Lob2\kappa=\SS^2$.
+
+Assume $D=\cBall[p,\tfrac{\pi}2]$ lies in  the interior of $P$.
+Given $\eps>0$
+consider a triangle $[x^1x^2x^3]$ 
+such that $\mangle\hinge{p}{x^i}{x^j}=\tfrac23\cdot\pi$ if $i\ne j$
+and 
+$\dist{p}{x^i}{}=\tfrac{\pi}2+\eps$ for all $i$.
+Note that for small $\eps>0$ the triangle $ [x^1x^2x^3]$ lies in $P$.
+On the other hand for some $z\in[x^2x^3]$, the geodesic $[x^1z]$ does not lie in $P$ completely.
+Hence 
+\[\dist{x^1}{z}{P}>\dist{x^1}{z}{\SS^2};\]
+i.e., the point-on-side comparison (\ref{cat-monoton}) does not hold for $[x^1x^2x^3]$
+and hence $P\z\notin \cCat{}{\kappa}{}$.
+
+If $P$ is a half-sphere then obviously $P\in\cCat{}{\kappa}$.
+
+Assume $P$ is an $n$-gon.
+To show that $P\in\cCat{}{\kappa}$,
+we apply induction $n$.
+The base cases $n=2$ and $3$ are trivial.
+
+The proof of the step of induction,
+let us apply Proposition~\ref{prop:diagonal}.
+The diagonal $[xy]$ cuts $P$ into two polygons say $Q_1$ and $Q_2$.
+By the induction hypothesis $Q_1,Q_2\in\cCat{}{\kappa}$.
+Notice that the geodesic $[xy]$ forms a convex set
+in $Q_1$ and in $Q_2$.
+
+Note that $P$ can be obtained by gluing $Q_1$ and $Q_2$ along $[xy]$.
+Therefore, by Reshetnyak's gluing theorem,
+$P\in\cCat{}{\kappa}$.
+\qeds
+
+The following theorem was proved by Bishop in \cite{bishop:jordan};
+see also the discussion after Example 9.1.6 in the book of Burago--Burago--Ivanov \cite{BBI}.
+
+\begin{thm}{Theorem}
+Let $\Omega$ be an open simply connected proper subset of $\Lob{}{\kappa}$.
+Denote by $\Lambda$ the completion of $\Omega$ equipped with the  length metric.
+Then 
+\begin{subthm}{}
+If $\kappa\le 0$ then $\Lambda\in\cCat{}{\kappa}$. 
+\end{subthm}
+
+\begin{subthm}{}
+If $\kappa> 0$ then $\Lambda\in\cCat{}{\kappa}$ if and only if $\Omega$ does not contain half-plane.
+\end{subthm}
+
+\end{thm}
+
+Note that if $\Omega$ is bounded by a simple closed rectifiable curve then $\Lambda$ coincides with the closure of $\Omega$ equipped with the length metric. 
+In general, the space $\Lambda$ admits natural length-preserving map in $\Lob{}{\kappa}$, 
+but in general 
+this map is not injective 
+and its image is proper subset of the closure of $\Omega$.
+
+%%%%%%%%+PIC???
+
+\parit{Proof.}
+Fix the points $x^1,x^2,x^3,x^4\in\Omega$.
+Note that it is sufficient to prove that 
+\begin{clm}{}\label{clm:2+2-Omega}
+(2+2)-point $\kappa$-comparison holds for any four points 
+$x^1, x^2, x^3, x^4$ in $\Omega$ 
+equipped with the length metric.
+\end{clm}
+
+Fix $\eps>0$.
+Connect $x^i$ to $x^j$ by a curve $\gamma_{ij}$ in $\Omega$;
+such that 
+\[\length\gamma_{ij}<\dist{x^i}{x^j}{\Omega}+\eps.\]
+
+Note that there is a polygon $P\subset \Omega$ 
+which contains all $\gamma_{ij}$.
+
+By Theorem~\ref{thm:2-d-cba}, $P\in \cCat{}{\kappa}$.
+In particular the points  $x^1,x^2,x^3,x^4$ satisfy (2+2)-point comparison in $P$.
+By the construction,
+\[\dist{x^i}{x^j}{P}\lege \dist{x^i}{x^j}{\Omega}\pm\eps\]
+for all $i$ and $j$.
+
+Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
+\qeds
+
+\section{Subsets in 3-dimensional space}
+
+Assume $\spc{P}\in \PM3\kappa$ be such that the space of directions at each point of $\spc{P}$  is isometric to the unit sphere or spherical polygon.
+Then 
+
+A subset $K$ of $\Lob{m}{\kappa}$ is called \index{polytope}\emph{polytope} 
+if it can be presented as a union of finite number of simplices.
+
+A point $p\in \partial K$ is called vertex if it does 
+
+Note that any polytope  admits a finite triangulation.
+
+\begin{thm}{Theorem}
+Let $K$ be a polytope in $\Lob{3}{\kappa}$.
+Assume that the interior $K^\circ$ of $K$ is connected.
+Let us equip $K^\circ$ with the length metric and denote by $\hat K$ its completion.
+
+Then $\hat K$ is $\cCat{}{\kappa}$ space if and only if the link of each vertex of $K$
+does not contain a half-sphere in its interior.
+\end{thm}
+
+
+
+\begin{thm}{Corollary}
+Let $K$ be a polytope in $\Lob{3}{\kappa}$ 
+which is homeomorphic to a connected manifold with boundary.
+Then $K$ equipped with the length metric 
+has curvature $\le\kappa$
+if and only if 
+the link of each vertex of $K$
+does not contain a half-sphere in its interior.
+\end{thm} 
+
+\parit{Proof.}
+Assume that $\spc{P}$ is not two-convex;
+i.e., there is a tetrahedron $\Delta$,
+such that three of its faces lie in $\spc{P}$,
+but the forth does not.
+
+???.
+Hence there is a vertex $p$ of $\spc{P}$ and and a plane $\Pi$
+passing through $p$ such that ???
+
+In particular there is arbotrary small flat triangle $[xyz]$ which lies completely in the interior of $\spc{P}$,
+but such that for some $w\in[yz]$ the geodesic $[xw]$ does not completely lie in $\spc{P}$.
+It follows that $\dist{x}{w}{\spc{P}}>\dist{x}{w}{\EE^3}$.
+The later contradicts ???.
+
+To prove the converse we will need the following claim.
+\begin{clm}{}
+Assume that a spherical polygon $R$ does not contain half sphere in its interior.
+Then $R$ admits a triangulation by weakly convex triangles all of which vertices are vertices of $R$.
+\end{clm}
+
+Indeed, ???\claimqeds
+
+Applying Reshetnyak gluing theorem (???) we get that $R\in\cCat{2}{1}$.
+
+\qeds
+
+
+\begin{thm}{Shefel's Theorem}\label{thm:shefel}
+Let $\Omega$ be an open
+subset of $\Lob{3}{\kappa}$.
+Then $\Shef\Omega$
+has curvature $\le\kappa$ 
+if and only if $\Omega$ is two-convex and ???.
+\end{thm}
+
+In the proof we will need the following lemmas.
+
+\begin{thm}{Lemma}
+Let $P\subset \Lob{m}{\kappa}$ be a convex closed set.
+Assume that for any 2-dimensional subspace $W\subset\Lob{m}{\kappa}$,
+the intersection $P\cap W$ is a 2-dimensional polyhedron.
+Then $P$ is a polyhedron.
+\end{thm}
+
+\parit{Proof.}
+???
+\qeds
+
+
+\begin{thm}{Exercise}\label{ex:polygon-slices}
+Let $m\ge 3$,
+$K\subset \Lob{m}{\kappa}$ be a compact subset.
+Assume that for any 2-dimensional subspace $W$ in $\Lob{m}{\kappa}$
+the set $K\cap W$ is a polytope. 
+Then $K$ is a polytope.
+\end{thm}
+
+
+\begin{thm}{Lemma}\label{lem:loc-concave}
+Let $\Omega$ be an open set in $\Lob{3}{\kappa}$
+Then $\Conv_2\Omega$ is an open set.
+ 
+Moreover, the set $\Lambda=\Lob{3}{\kappa}\backslash(\bar\Omega\cup\Conv_2\Omega)$
+ is locally convex;
+i.e., for any $x\in\Lambda$ therew is $\eps>0$ such that the intersection
+$\oBall(x,\eps)\cap(\Lambda\backslash\Omega^{(2)})$
+is convex.
+\end{thm}
+
+\begin{thm}{Lemma}
+Closed locally convex set in $\Lob{3}{\kappa}$ is convex. 
+\end{thm}
+
+
+
+
+\begin{thm}{Key lemma}
+The two-convex hull of the interior of polytope in $\Lob{3}{\kappa}$
+is an interior of a polytope.
+\end{thm}
+
+\parit{Proof.}
+Let $K$ be a polytope in $\Lob{3}{\kappa}$;
+denote by $\Omega$ the interior of $K$.
+
+Denote by $F_1,\dots,F_m$ the faces of $K$.
+
+Set $\Omega'=\Conv_2\Omega$ and let $K'$ be the closure of $\Omega'$.
+Further, 
+For each $i$, 
+set $F'_i=F_i\backslash \Omega'$.
+In other words, $F'_i$ is the subset $F_i$ which remains on the boundary of $K'$.
+
+\begin{clm}{}\label{clm:F'-convex}
+$F'_i$ is convex subset of $F_i$.
+\end{clm}
+
+Indeed, ???qeds
+
+\begin{clm}{}\label{clm:complement-of-F'-convex}
+Each connected component of the complement $F_i\backslash F'_i$ is convex.
+\end{clm}
+
+Indeed, ???\claimqeds
+
+From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we get that 
+
+\begin{clm}{}$F'_i$ is a convex polygon for each $i$.
+\end{clm}
+
+Consider the complement 
+$\Lambda=\Lob{3}{\kappa}\backslash \Omega$ equipped with the length metric.
+Note that $\Lambda'=\Lob{3}{\kappa}\backslash \Omega'$
+is convex in $\Lambda$;
+i.e., for any two points $x,y\in \Lambda'$ any geodesic
+$[xy]_\Lambda$ lies in $\Lambda'$.
+
+In particular, if $W$ is a 2-dimensional subspace of $\Lob3\kappa$ 
+then the intersection $W\cap K'$ is bounded 
+by finite number of locally concave arcs and the  intersections $F_i'\cap W$.
+Note that the locally concave arcs have their ends on the ends of $F_i'\cap W$;
+the later is formed by a line segment or it degenerates to a point.
+
+\begin{clm}{}\label{clm:intersection-is-polytope}
+For any 2-dimesional subspace $W\subset\Lob{3}{\kappa}$,
+the intersection $W\cap \Conv_2 \Omega$ is interior of a polytope.
+\end{clm}
+
+Indeed, set $L=W\cap \Conv_2 \Omega$.
+According to Lemma~\ref{lem:loc-concave}, 
+the boundary of $L$ is formed by the intersections s $F'_i\cap W$
+and locally concave arcs.
+
+Arguing by contradiction, 
+assume that $L$ is not interior of a polytope then there is a smooth extremal point on one of these arcs; i.e., there is a point $x\in\partial_W L$ such that ???.
+Without loss of generality, we can assume that $x$ does not lie on a line connecting a pair of vertices of $F_1',\dots,F_n'$.
+
+Consider the local supporting plane $\Pi$ to $\Lambda$ at $x$
+and let $Q_x\ni x$ be the connected component of $\Pi\cap\Lambda'$.
+
+\begin{clm}{}\label{clm:Q-is-interval}
+$Q_x$ is an open interval. 
+\end{clm}
+
+Indeed,???\claimqeds
+
+Let $Q_x=\l]ab\r[$.
+Clearly $a\in\partial F_i'$ and $b\in\partial F_j'$
+for some $i$ and $j$.
+Since $x$ does not lie on a line connecting the vertices,
+we can assume that $a$ is not a vertex of $F_i'$;
+denote by $[vw]$ the edge of $F_i'$ containing $a$.
+
+\begin{clm}{}\label{clm:[vw]cPi}
+$Q_x$ contains the interior of the triangle $[bvw]$.
+\end{clm}
+
+Indeed,???\claimqeds
+
+Note that the claims \ref{clm:[vw]cPi} and \ref{clm:Q-is-interval} contradict eachother.
+Therefore \ref{clm:intersection-is-polytope} is proved.
+
+
+Note that the complement $\Omega^\complement$ is a polytope.
+In particular, $\Omega^\complement$ is a union of finite number of convex polytopes,
+say 
+$\Omega^\complement=R_1\cup\dots\cup R_n$.
+For each $i$, the complement $R_i'=R_i\backslash \Conv_2\Omega$ is a convex set.
+According to 
+Exercise~\ref{ex:polygon-slices} 
+and \ref{clm:intersection-is-polytope}, 
+$R_i'$ is a convex polytope for each $i$.
+Hence $(\Conv_2\Omega)^\complement=\bigcup_i R_i'$ is a polytope.
+\qeds
+
+\parit{Proof of \ref{thm:shefel}.}
+Note that it is sufficient to show that
+(2+2)-point $\kappa$-comparison holds for any
+4 points $p^1,p^2,x^1,x^2\in\Omega$.
+
+Fix $\eps>0$.
+Choose a six broken lines connecting all the pairs of points $p^1,p^2,x^1,x^2$ such that length of each at most $\eps$ bigger than 
+the distance between its ends.
+Choose a simply connected polytope $P$ 
+in $\Omega$ which contains all these broken lines.
+Denote by $P'$ the two-convex hull of 
+$P$.
+
+According to ???, $P'$ is a polytope
+Therefore $\curv P'\le \kappa$. 
+\qeds
+
+\section {Manifolds-with-boundary}
+%Let $M$ be a connected $m$-dimensional Riemannian manifold with possibly nonempty boundary $\partial M$.
+By a \emph{Riemannian manifold-with-boundary} $M$ of a given differentiability class, we mean $M$ has possibly nonempty boundary and has an extension across the boundary to a manifold $\overline{M}$ of the same class with empty boundary, such that  each boundary point of $M$ has a neighborhood $U$ in $\overline{M}$ coordinatized by $\R^n$ and for which $M\cap U$ is coordinatized by a halfspace of $\R^n$. The Riemannian metrics of $\bar M$ and $\partial M$ are  of differentiability class one degree lower. 
+
+We equip $M$ with the length metric. 
+
+For each point $p\in\partial M$,
+let 
+\[k_1(p)\le k_2(p)\le\dots\le k_{m-1}(p)\]
+denote the principal curvatures
+of $\partial M$ at $p$;
+the sign convention is made so that
+so the closed ball in Euclidean space has positive curvatures 
+and the complement of the open ball has negative curvatures.
+
+We say that $M$ has \emph{convex boundary} 
+if $k_1(p)\ge 0$ for any $p\in\partial M$. 
+
+\begin{thm}{Proposition}\label{prop:example-mnflds-with-bry:CBB}
+Let $M$ be a Riemannian manifold with possibly nonempty boundary.
+Then
+$M\in\CBB{}{\kappa}$ 
+if and only if $M$ has convex boundary 
+and the sectional curvature of $M$ is at least $\kappa$.
+\end{thm}
+
+\parit{Proof; (\ref{thm:example-mnflds-with-bry:CBB}).}
+To prove ``if'' part, we need to present a neighborhood of any given point $p$ in $M$ where the $\kappa$-comparison holds.
+
+If $p$ lies in the interior of $M$, 
+the existence of such neighborhood 
+follows from the standard Toponogov comparison theorem.
+
+Otherwise 
+Without loss of generality, we may assume that $M$ 
+is a subset of Riemannian manifold without boundary $N$, 
+which has sectional curvature $\ge \kappa$.???
+
+Note that sufficiently small spherical neighborhood of 
+any point in $N$ is convex.???\qeds
+
+
+Let $p\in\partial M$ and $\sigma$ is a sectional direction at $p$ to $\partial M$.
+We say that $\sigma$ is a concave direction if the second fundamental form of $\partial M$ restricted to $\sigma$ is negative.
+
+\begin{thm}{Theorem}\label{thm:example-mnflds-with-bry:CBA}
+Let $M$ be a Riemannian manifold with possibly nonempty boundary.
+Then
+$\curv M\le \kappa$
+if and only if the sectional curvature of $M$ is at most $\kappa$
+and $\partial M$ has sectional curvature at most $\kappa$ 
+in all concave sectional directions of $\partial M$.
+\end{thm}
+
+We say that $M$ has \emph{two-convex boundary} 
+if $k_2(p)\ge 0$ for any $p\in\partial M$.
+
+%\begin{thm}{Corollary}
+%Let $M$ be a Riemannian manifold with possibly nonempty two-convex boundary.
+%Assume sectional curvature of $M$ and $\partial M$ are at most $\kappa$.
+%Then $\curv M\le \kappa$.
+%\end{thm}
+%
+%\parit{Proof.}
+%Follows directly from 
+%Theorem~\ref{thm:example-mnflds-with-bry:CBA}.
+%\qeds
+
+\begin{thm}{Corollary}
+Let $M$ be a Riemannian manifold with possibly nonempty two-convex boundary.
+Then $\curv M\le{\kappa}$ 
+if and only if the sectional curvature of $M$ is at most $\kappa$.
+\end{thm}
+
+\parit{Proof.}
+If $\partial M$ is two-convex, 
+it has no points with concave sectional directions.
+It remains to apply Theorem~\ref{thm:example-mnflds-with-bry:CBA}.
+\qeds
+
+\begin{thm}{Definition}\label{def:mwb-segment}A geodesic of $M$ consists of  \emph{interior
+segments}, by which we mean nonconstant open segments  that have zero acceleration in $M$ but
+may include points of $\partial M$;  \emph{boundary segments}, nonconstant geodesics of $\partial M$ whose acceleration in $M$ is nonzero (necessarily normal to $\partial M$) on a dense open subset; \emph{switch-points}, where the geodesic switches between interior and boundary segments;  and \emph{chatter-points}, namely accumulation points of switch-points. 
+\end{thm}
+
+Examples of single geodesics are easily constructed that have a Cantor set of positive measure of chatter-points.
+The existence of chatter-points makes the variational theory of geodesics
+difficult to analyze.
+
+%\begin{thm}{Theorem (Regularity of geodesics)}\label{thm:m-w-b-geodesic-''}
+%Let $M$ be a Riemannian 
+%manifold-with-boundary.
+%Let $\gamma$ be a geodesic of $M$ with unit-speed parameter $s$.  Then  after  passing to coordinates, $\gamma''(s)$ exists everywhere except at switch-points, where $\gamma''(s)$ exists one-sidedly.  At chatter-points, $\gamma''(s)$ vanishes.
+%\end{thm}
+
+\begin{thm}{Lemma}\label{lem:m-w-b-geodesic-'}
+Let $M$ be a Riemannian manifold-with-boundary, and $\gamma$ be a geodesic of $M$. Then:
+\begin{subthm}{}
+$\gamma$ is continously differentiable.
+\end{subthm}
+\begin{subthm}{}
+The $2$-plane in $T_{\gamma(t)}N$  normal to $\partial M$ and containing $\gamma'(t)$ is an osculating plane for $\gamma$ at $t$.
+\end{subthm}
+\end{thm}
+
+
+\parit{Proof.}
+Let  $\gamma$ be a unit-speed geodesic of $M$ with $\gamma(t)=p\in\partial M$.  
+At an endpoint of $\gamma$, we take $\gamma'$ to mean the corresponding one-sided derivative.
+
+\begin{clm}{}\label{clm:1-sided-geo-mwb}
+If $\gamma$ is one-sidedly differentiable at $t$, then $\gamma$ is differentiable at $t$.
+\end{clm}
+
+\begin{clm}{}\label{clm:diff-geo-mwb}
+$\gamma$ is differentiable.
+\end{clm}
+Let $N$ be a Riemannian manifold without boundary, of the same dimension as $M$, in which  a neighborhood of $p$ in $M$ is isometrically embedded. We may take  $N=\cup \,H_u$, $-\epsilon_2<u<\epsilon_2$, for a family of equidistant hypersurfaces $H_u$ with unit normal field $v$,  where each $H_u$ intersects $\partial M$ transversely with $v$ pointing out of $M$, and the 
+principal curvatures of the $H_u$ are positive toward $-v$. 
+%Letting $H_0$ pass through $p$, we may take $H_0$ to lie in the exponential image of a  neighborhood of $o$ in a sphere through $o$  in $T_p M$. 
+Set $H_+=\cup_{\,u>0} \,H_u$.
+
+Projection 
+$$\map[2]\:H_+ \to H_0$$
+ along $v$ is defined and length-nonincreasing.  Moreover, the image of $H_+\cap M$ lies in $H_0\cap M$ because $v$ points into $M$ at points of $\partial M$.
+
+Suppose $\gamma$ is not one-sidedly differentiable, say $\gamma^+(t)$ does not exist.  Then for $i=1,2$ there are distinct unit vectors $v_i \in T_p\partial M$, and points $\gamma(t_{ij})$, $t_{ij}>0$, $t_{ij}\to t$, such that the directions of the preimages of $\gamma(t_{ij})$ in a normal coordinate neighborhood in $N$ of $p$  converge to $v_i$.
+
+Now choose the family $H_u$ so that $v_1$ and $v_2$ lie on opposite sides of $H_0$ at $p$.  Then $\gamma$ may be shortened in $M$ by applying the projection $\map[2]$ to a subsegment of $\gamma$ that lies in $H_+$ and runs between two points in $H_0$.  This contradiction shows $\gamma^+(t)$ exists. By \ref{clm:1-sided-geo-mwb}, $\gamma'(t)$  exists.
+
+\begin{clm}{}\label{clm:C^1-geo-mwb}
+$\gamma$ is continuously differentiable. 
+\end{clm}
+
+ Suppose $\gamma'$ is not continuous at $t$. Then $\gamma'(t)\in T_p\partial M$. Without loss of generality, there is a sequence $t_j>0$, $t_j\to t^+$, such that  $\gamma'(t_j)\to v\ne \gamma'(0)$.  Then also $v\in T_p\partial M$. In the notation of Claim \ref{clm:diff-geo-mwb}, choose the family $H_u$ so that $\gamma'(t)$ and $v$ lie on opposite sides of $H_0$ at $p$, and $\gamma'(t))$ points into $H_+$.  Then $\gamma$ has a subsegment in $H_\epsilon^+$ that runs between two points in $H_\epsilon$ for some $\epsilon>0$.   
+ Thus $\gamma$ may be shortened in $M$ by projecting this subsegment to $H_\epsilon$.  The claim follows by contradiction.
+
+  
+\begin{clm}{}\label{clm:C^1-geo-mwb}
+ The $2$-plane in $T_{\gamma(t)}N$ that contains $\gamma'(t)$ and is normal to $\partial M$ is an osculating plane for $\gamma$ at $t$.
+\end{clm}
+
+Recall that for any differentiable curve $\alpha$ in $N$, a $2$-plane $Q\subset T_{\alpha(t)}N$ is called  an \emph{osculating plane} for $\alpha$ at $t$ if for each $u$ in a neighborhood of $t$ in the parameter interval of $\alpha$, there is a  $2$-plane $Q_u$ containing $\alpha'(t)$ and $\exp _{\alpha(t)}^{-1} (\alpha(u))$ such that $Q=\lim_{u\to t}Q_u$.  If $Q$ exists and $\alpha$ is not a geodesic on a neighborhood of $t$,  then $Q$ is uniquely determined. 
+
+Fix directions $u_1\in T_p\partial M$  orthogonal to $\gamma'(t)$, and $u_2\in  (T_p\partial M)^\perp$.  Let $R$ be the oriented $3$-plane  spanned by $\gamma'(t)$, $u_1$ and $u_2$.  Denote by $P_1(\theta,\varphi)$ and $P_2(\theta,\varphi)$, the two hyperplanes in $T_pN$ that are spanned by $R^\perp$ and  the $2$-plane in $R$ whose intersection with  the $\,\gamma'(t)\,u_1\,$-plane makes angle $\theta\in [0,\pi)$ with $\gamma'(t)$ and whose angle with $u_2$ is $\varphi\in (0,\pi/2)$.
+For $i=1,2$, let $S_i(\theta, \varphi, k)$ be the $(n-1)$-sphere of radius $k$ in $T_pN$ passing through $o$, and  tangent to $P_i(\theta,\varphi)$ on the side away from $u_2$.  Consider the exponential images $H_i(\theta, \varphi, k)$  of  neighborhoods of $o$ in $S_i(\theta, \varphi, k)$.  
+In the notation of Claim \ref{clm:diff-geo-mwb}, length-decreasing projection implies that on some open interval about $t$, $\gamma$ lies in $H_i(0, \varphi, k)\cup H_i(0, \varphi, k)^+$.  Otherwise, $\gamma(t+\epsilon)$ would enter the side with positive curvatures of $H_i(\theta, \varphi, k)$ for some $\theta<0$.  Then $\gamma|[t, t+\epsilon]$ would lie in that side, in contradiction to $\gamma'(t)$ being tangent to $H_i(0, \varphi, k)$.  It follows that on some open interval about $t$, the exponential preimage in $T_pN$ of $\gamma$  does not enter the open side with positive curvatures of $S_i(0,\varphi, k)$.
+
+Now the claim follows by letting $\varphi\to 0$ and $k\to\infty$.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:abs-cont}
+Let $M$ be a Riemannian manifold-with-boundary.  Let $\gamma$ be a geodesic of $M$ with unit-speed parameter $s$. Then   after  passing to coordinates, 
+$\gamma'$  is Lipschitz continuous in $s$.
+\end{thm}
+
+\parit{Proof.}
+By passing to coordinates, we   take $\overline{M}=\R^m$.  
+
+\begin{clm}{}\label{clm:}
+$\gamma$ has an upper bound on pointwise arc-chord curvature.
+\end{clm}
+Let $p=\gamma(t)\in\partial M$.  
+%We may suppose $\gamma$ is not a straight line segment on any neighborhood of $t$.  
+
+First suppose $\gamma(t_1)$ and $\gamma(t_2)$ lie on $\partial M$, where $t_1<t<t_2$ and the $t_i$ are  arbitrarily close to $t$. 
+Let $Q$ be the $2$-plane through $\gamma(t_1), p, \gamma(t_2)$.  Let $\tilde\alpha$ be a unit-speed curve in $Q$  whose image is the open portion of the curve $\partial M\cap Q$ 
+between $\gamma(t_1)$ and $\gamma(t_2)$,
+and  $\alpha$ be a unit-speed curve in $Q$  whose image is 
+the open geodesic of $M\cap Q$ between $\gamma(t_1)$ and $\gamma(t_2)$. 
+ 
+The osculating plane of $\gamma$ at $t$ is defined and normal to $\partial M$, i.e. as $t_1,t_2$ approach $t$, $Q$ approaches the $2$-plane that contains $\gamma'(t)$ and is normal to $\partial M$ at $p$.   It follows, assuming   $|t-t_i|$ sufficiently small for $i=1,2$, that  $\tilde\alpha$ has  \emph{geodesic} curvature ???$\le k$.  
+  
+In the plane $Q$, $\alpha$ is a $C^1$ convex curve that runs along the boundary of the convex hull of $\tilde\alpha$.  Therefore the total turn of  the tangent line of any subarc of  $\alpha$ with endpoints on $\partial M$  is not more than the total absolute turn of the tangent line of the subarc of  $\tilde\alpha$ with the same endpoints.  
+ 
+For subarcs of the same length, the total turn of the tangent line of a subarc of $\alpha$ is not more than for a subarc of a circle $\sigma$ of curvature $k$.  Therefore the angles of a sufficiently fine polygonal curve inscribed in $\alpha$  are no less than the corresponding angles of a polygonal curve with the same sidelengths inscribed in the Euclidean circle $\sigma$ of geodesic curvature $k$.
+ By Arm Lemma \ref{lem:arm}, the chord-length of $\alpha$ is not less than the chord-length of a segment of $\sigma$ of length $=\length\alpha$. Therefore $\alpha$ has arc-chord curvature $\le k$.
+ 
+Since the geodesic $\gamma|[t_1,t_2]$ has the same endpoints as $\alpha$ and is not  longer
+than $\alpha$, then  $\gamma|[t_1,t_2]$ has arc-chord curvature $\le k$.  Therefore $\gamma$ as pointwise arc-chord curvature $\le k$. 
+
+
+\begin{clm}{}\label{clm:}
+$\gamma'$ is Lipschitz continuous. 
+\end{clm}
+$\gamma'$ is Lipschitz continuous in the unit-speed parameter inherited from $\,\R^m$ . 
+
+Globalization of arcchord curvature
+\ref{subthm:local-global-base-angle}
+\qeds
+
+Now we are ready for one of our main curvature estimates. We formulate it in terms of an 
+isometric imbedding of $M$ in some Euclidean space $\EE^n$. 
+%It would be desirable
+%to have a more direct link with the natural intrinsic invariants, the sectional
+%curvature of $M$, the normal curvature of $B$ in $M$, and the injectivity radii of $M$
+%and $B$, but our method has the advantage that it gives the estimate in terms of
+%a single number. 
+
+Say a positive number $r$ is a \emph{tubular
+radius} for $M$ in $\EE^n$ if every point at distance $r$ or less from $M$ is the center of a
+closed ball meeting $M$ at a single point. Then the principal curvatures of $M$, as well as  those of $\partial M$ belonging to a normal
+vector whose $M$-component is outward from the interior of $M$, are bounded
+above by $1/r$. Conversely, if we take an upper bound $k$ of such principal
+curvatures, then
+$1/k$ will be a tubular radius for a sufficiently small region of $M$.
+
+
+\begin{thm}{Lemma}\label{lem:diff-inequality} Let $r = 1/k$ be a tubular radius for $M$, and let $\gamma$ and $\sigma$ be
+geodesics in $M$ having speed $\le 1$. Let $f(r) = |\gamma(s) - \sigma(s)|$ be the
+displacement in $\EE^n$ between corresponding points. Then except at the countably many points where $f''$ fails to exist, we have a differential inequality
+$f'' \ge -k^2f$ (with strict inequality where $f> 0$).
+\end{thm}
+
+
+%
+%\parit{Proof of \ref{thm:m-w-b-geodesic-''} (Regularity of geodesics).}
+%\begin{clm}{}\label{clm:chatter-''-0}
+%At a chatter-point $\gamma(t_0)$ of $\gamma$, the normal curvature $k_0$ of $\,\partial M$ in the direction of $\gamma'(t_0)$ vanishes.
+%\end{clm}
+%
+%If $k_0>0$, we could shorten $\gamma$ by replacing $\gamma|[t_0-\epsilon,t_0+\epsilon]$ by an interior geodesic of $M$ for $\epsilon$ sufficiently small. If $k_0<0$,  we could shorten $\gamma$ by replacing $\gamma|[t_0-\epsilon,t_0+\epsilon]$ by its normal projection to $\partial M$  for $\epsilon$ sufficiently small. Therefore $k_0=0$.
+%
+%\begin{clm}{}
+%Define $k(t)$ on open boundary segments of $\gamma$ to be the normal curvature of $\partial M$ in the direction of $\gamma'(t)$, and set $k(t)=0$ otherwise.
+%Let $x_n$ be the distance from $\partial M$, and  $x_i$, $i < n$, be coordinates on $\partial M$, extended to be
+%constant on geodesics of $M$ normal to $\partial M$. Denote the Christoffel symbols of $M$ in these coordinates  by $\Gamma_{ijl}$. Then $\gamma$ satisfies, in an integral sense, the equations
+%$$ {x_k}'' \ =\  -\sum_{i,j}x'_ix'_j\Gamma_{ijk},\,\, l< n,
+%\eqlbl{eq:geo-eq-tangent}$$
+%$$  {x_n}'' \ =\  \ -\ k\ - \sum_{i,j < n}x'_ix'_j\Gamma_{ijn}.
+%\eqlbl{eq:geo-eq-normal}$$
+%  \end{clm}
+%
+%On open segments of $\gamma$ in the interior of $M$, we have $k=0$, so  equations \ref{eq:geo-eq-tangent} and  \ref{eq:geo-eq-normal} are the geodesic equations of $\gamma$. On open boundary segments of $\gamma$, we have $x_n=0$, so equations \ref{eq:geo-eq-tangent} and \ref{eq:geo-eq-normal} again hold  since the coordinate matrix of the second fundamental form of $\partial M$ with
+%respect to $\partial / \partial x_n$ is $-\Gamma_{ijk}$ where $i, j < n$.
+%
+%Given the absolute
+%continuity of $\gamma'$ and the normality of $\gamma''$ on $B$, it follows that equations \ref{eq:geo-eq-tangent} and \ref{eq:geo-eq-normal} hold everywhere in an
+%integral sense. Then \ref{eq:geo-eq-tangent} holds everywhere since the right-hand side is continuous. At the countably many switch points, \ref{eq:geo-eq-normal}  can be
+%interpreted as being valid in the limit from either side. Except at switch-points, the right side of \ref{eq:geo-eq-normal}  is
+%continuous, and hence the acceleration of $\gamma$ exists. In
+%particular, the acceleration exists and is $0$ whenever $k = 0$. 
+
+\begin{thm}{Lemma}\label{lem:mnflds-with-bry:CBA}
+Let $M$ and $N$ be  Riemannian manifolds with possibly nonempty boundary, where $M$ is isometrically immersed in $N$.  Then the difference between distances in $M$ and in $N$ respectively is on the order of the cube of either one.
+\end{thm}
+%
+\begin{thm}{Lemma}\label{lem:mnflds-with-bry:CBA}
+Let $M$ be a Riemannian manifold with possibly nonempty boundary.
+Then every point of $M$ has a neighborhood in $\CBA{}{}$.
+\end{thm}
+
+\parit{Proof of \ref{thm:example-mnflds-with-bry:CBA}.}
+\qeds
+
+
+
+\section{Buyalo's theorem (alpha)}
+
+Here is yet a source of examples of $\CBB{}{}$-spaces.
+
+\begin{thm}{Buyalo's theorem}\label{thm:buyalo} 
+Let $M$ be an $m$-dimensional Riemannian manifold 
+with sectional curvature $\ge \kappa$ 
+and $F\subset M$ be a convex hypersurface equipped with the length-metric;
+i.e., $F$ bounds a convex set. 
+Then $F\in\CBB{m-1}\kappa$.
+\end{thm}
+
+This theorem, in a slightly weaker form was proved in \cite{buyalo:convex-surface}, and then its statement was made more exact in \cite{akp}.
+
+\begin{thm}{Lemma}\label{lem:smoothing}
+Let $M$ be a Riemannian manifold and $f\:M\subto\RR$ be a locally Lipshits $\lambda$-concave subfunction. 
+Then there is a sequence of smooth subfunctions $f_n\:M\subto\RR$ and $\lambda_n\in\RR$ such that $f_n\to f$ and $\lambda_n\to \lambda$ as $n\to\infty$ and each $f_n$ is $\lambda_n$-concave.
+\end{thm} 
+
+This lemma is a slight generalization of \cite[Theorem 2]{greene-wu}
+by Greene and Wu;
+it can be proves the same way.
+%???Should we include the proof???
+
+\parit{Proof of theorem \ref{thm:buyalo}}. 
+Without loss of generality one can assume that 
+\begin{enumerate}
+\item \label{k>=-1}$\kappa\ge -1$, 
+\item $F$ bounds a compact convex set $C$ in $M$, 
+\item there is a function $h$ defined in a neighborhood of $C$ such that $h''\le -2$ and $|h(x)|<1/10$ for any $x\in C$,
+\item \label{property:unique} there is unique geodesic between any two points in $C$. 
+\end{enumerate}
+(If not, rescale and pass to the boundary of the convex piece cut by $F$  from a small convex ball centered at $x\in F$, taking $h=-10\cdot\dist[{{}}]{x}{}{}$.)
+
+Consider the function $f=\dist{F}{}{}$.
+By Rauch comparison 
+(as it is stated in Petersen's book \cite[11.4.8]{petersen:RiemGeom}), 
+for any unit-speed geodesic $\gamma$ in the interior of $C$, $(f\circ\gamma)''$ is bounded in the barrier sense by the corresponding value in the model case --- when $M\iso\Lob2{-1}$ and $F$ is a geodesic.  
+In particular,
+\[(f\circ\gamma)''\le f\circ\gamma.\]
+
+
+Therefore $f+\eps\cdot h$ is $(-\eps)$-concave in 
+$\Omega_\eps=f^{-1}((0,\eps))\cap C$.
+Take 
+\[K_\eps\z=f^{-1}([\tfrac{1}{3}\cdot\eps,\tfrac{2}{3}\cdot\eps])\cap C.\]
+Applying Lemma~\ref{lem:smoothing}, we can find a smooth $(-\tfrac\eps2)$-concave function $f_{\eps}$ which is arbitrarily close to $f+\eps\cdot h$ on $K_\eps$ and which is defined on a neighborhood of $K_\eps$. 
+Take a regular value $\theta_\eps\approx\tfrac{1}{2}\cdot\eps$ of $f_\eps$. (In fact one can take $\theta_\eps=\tfrac{1}{2}\cdot\eps$, but it requires a little work.) 
+Since $|(h|C)|<1/10$, the level set $F_\eps=f_{\eps}^{-1}(\theta_\eps)$ will lie entirely in $K_\eps$.
+Therefore $F_\eps$ forms a smooth closed convex hypersurface.
+
+Let us denote by $\rho$ and $\rho_\eps$ the length-metrics on  correspondingly $F$ and $F_\eps$.
+By the Gauss formula, $(F_\eps,\rho_\eps)$ has curvature $\ge\kappa$.
+Further, $F_\eps$ bounds a compact convex set $C_\eps$ 
+and $F_\eps\to F$, $C_\eps\to C$ in Hausdorff sense as $\eps\to 0$. 
+By property (\ref{property:unique}), the restricted metrics from $M$ to $C$ and to $C_\eps$ are length-metrics.
+Thus, $C_\eps$ is an Alexandrov space with $F_\eps$ as boundary, that converges in Gromov--Hausdorff sense to $C$.  It follows from ???  that $(F_\eps,\rho_\eps)$  converges in Gromov--Hausdorff sense to $(F,\rho)$.
+Therefore $(F,\rho)$ is an Alexandrov space with curvature $\ge \kappa$.\qeds
+
+\noi{\bf Remark.} 
+We are not aware of any proof of theorem \ref{thm:buyalo} which is not based on the Gauss formula. 
+Finding such a proof would be interesting on its own, and also could lead to the generalization of theorem \ref{thm:buyalo} to the case when $M$ is an Alexandrov space.
+
+If $M$ is Euclidean space, there is a beautiful purely synthetic proof in \cite{milka-conv}.
+I.e., it proves the following corollary of Buyalo's theorem.
+
+\begin{thm}{Corollary} 
+Let $F\subset \EE^m$ be a convex hypersurface equipped 
+with the length-metric; 
+i.e., $F$ bounds a convex set.
+Then $F\in\CBB{m-1}0$.
+\end{thm}
+
+\parit{Sketch of Milka's proof.}
+We will assume that $F$ is smooth;
+the non-smooth case require only minor modifications. 
+
+Denote by $H$ the union of $F$ and the exterior points of $F$.
+
+Let $\alpha\:[0,a]\to F$ be a geodesic in $F$.
+Given $t_0\in [0,a]$, 
+consider the curve $\alpha_{t_0}\:[0,a]\to H$ defined the following way
+\[\alpha_{t_0}(t)
+=
+\left[
+\begin{aligned}
+&\alpha(t)&&\text{if}&t\le t_0
+\\
+&\alpha(t_0)+(t-t_0)\cdot \alpha^+(t_0)&&\text{if}&t> t_0
+\end{aligned}
+\right.
+\]
+Note that $\alpha_{t_0}$ is a geodesic in $H$ 
+and $\alpha_0$ is a straight segment of the same length as $\alpha$.
+
+Assume $\alpha\:[0,a]\to F$ and $\beta\:[0,b]\to F$
+be two geodesics in $F$ which stat at the same point;
+say $p=\alpha(0)=\beta(0)$.
+
+Set $\alpha(a)=x$,
+$\beta(b)=y$,
+$\alpha_0(a)=\hat x$ and 
+$\beta_0(b)=\hat y$.
+
+Note that $[p\hat x\hat y]=\~\triangle (pxy)_F$.
+Therefore it is sufficient to show that 
+\[\dist{\hat x}{\hat y}{H}\ge \dist{x}{y}{H}.\]
+
+Consider the function 
+$d(t,\tau)
+=
+\dist{\alpha_t(a)}{\beta_\tau(b)}{H}$.
+Note that $\partial_t h(t,\tau)\ge 0$
+and $\partial_\tau h(t,\tau)\ge 0$
+if both points $\alpha_t(a)$ and $\beta_\tau(b)$ lie on the boundary of convex hull of $F\cup\{\alpha_t(a),\beta_\tau(b)\}$.
+
+Thereofore it is sufficient to show that 
+there is a continuous nondecreasing function
+$\tau\:[0,a]\to[0,b]$
+such $\tau(0)=0$ and $\tau(a)=b$ 
+such that for any $t$ the points $\alpha_t(a)$ and $\beta_{\tau(t)}(b)$ lie on the boundary of $\Conv(F\cup\{\alpha_t(a),\beta_\tau(b)\})$.
+We leave this last statement as an exercise.
+\qeds
+
+\section{Comments and open problems}
+
+\begin{thm}{Shefel's conjecture}
+Any saddle hypersurface in $\RR^3$ equipped with the length-metric has curvature $\le 0$ at any point.
+\end{thm}
+
+A surface $S$ in a metric space.
+We say that $S$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
+the restriction $f|S$ has no local maxima. 
+
+\begin{thm}{Generalized Shefel's  conjecture}
+Any 2-dimensional saddle surface in a $\Cat{}{\kappa}$ 
+equipped with the length-metric has curvature 
+$\le \kappa$ at any point.
+\end{thm}
+
+It would be interesting to get an analog of the flag condition for other simplices 
+which (not necessary right-angled).
+Such a condition for some spherical Coxeter simplex
+could resolve the following problem; see \cite{panov-petrunin} for more details. 
+
+\begin{thm}{Braid space}
+Consider $\CC^n$ with coordinates $z_1,z_2,\dots,z_n$.
+Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
+pass to the universal caver and consider the completion $\spc{B}_n$ 
+of the obtained space.
+
+Is it true that $\spc{B}_n\in\Cat{}{0}$ for any $n$.
+\end{thm}
+
+The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$.
+
+\section{Exercises}
+
+\begin{thm}{Exercise}
+Show that completion of any flat simply connected 2-dimensional manifold is a $\cCat{}0$ space. 
+
+In particular, the set in $\EE^2$ bounded by closed simple rectifiable curve equipped with induced length metric is  a $\cCat{}0$ space. 
+\end{thm}
+
+
+
+\begin{thm}{Exercise}
+Let $S$ be a 2-dimensional saddle surface in $\EE^n$ which is homeomorphic to a disc.
+Show that any closed curve in $S$
+of length $\ell$
+bounds the area at most $c_n\cdot\ell^2$, 
+where $c_n$ is a constant which depend only on $n$.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\phi_1,\phi_2,\dots,\phi_k\:\EE^m\to \EE^m$ be commuting short retractions.
+Set $A_i=\Im \phi_i$ for all $i$;
+note that each $A_i$ is a weakly convex set.
+
+Assume $\Gamma$ is a finite graph 
+(without loops and multiple edges) 
+with edges labeled by $A_1,A_2,\dots, A_n$.
+Denote by $\spc{X}$ the space obtained by taking 
+a copy of $\EE^m$ for each vertex of $\Gamma$ and 
+gluing two such copies along $A_i$ if the corresponding vertices are joint by an edge labeled by $A_i$.
+
+Show that $\spc{X}\in\cCat{}{0}$
+\end{thm}
+
+
+

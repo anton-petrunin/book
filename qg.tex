@@ -1,0 +1,1650 @@
+%%!TEX root = all.tex
+\chapter{Quasigeodesics %ready
+}\label{chap:qg}
+
+
+
+The class of quasigeodesics%
+\footnote{It should be noted that the class of quasigeodesics described here 
+has nothing to do with the Gromov's quasigeodesics in $\delta$-hyperbolic spaces.} 
+generalizes the class of geodesics to nonsmooth metric spaces.
+This class of curves was first considered for $2$-dimensional convex hypersurfaces in the Euclidean space
+by Alexandrov in \cite{alexandrov:qg}. 
+Alexandrov defined quasigeodesics as curves which ``turn'' right and left simultaneously.
+This type of curves was studied further in \cite{pogorelov:qg}, \cite{alexandrov-burago},
+\cite{milka:qg}.
+Later, it was generalized to surfaces with bounded integral
+curvature \cite{alexandrov:int-qg} and to multidimensional polyhedral spaces \cite{milka:poly1},
+\cite{milka:poly2}.
+A. D. Milka gave a characterization of quasigeodesics using notion of development (\ref{def:devel}).
+This characterization made it possible to define quasigeodesics multi-dimensional Alexandrov's spaces;
+this was first done in Petrunin's master thesis and developed further in \cite{perelman-petrunin:qg}.
+
+In Alexandrov's spaces, quasigeodesics behave more naturally than geodesics, mainly: 
+\begin{itemize}
+\item There is a quasigeodesic starting in any direction from any point (\ref{thm:exist-qg}).
+\item The limit of quasigeodesics is a quasigeodesic (\ref{cor:lim-length:qg}).
+\end{itemize}
+
+These two property make quasigeodesics to be a useful technical tool. 
+Also due to the generalized Lieberman lemma (\ref{lib-lem}), 
+they are useful in the study of length-metric of extremal subsets, 
+in particular the boundary of Alexandrov's space. 
+There is an overlap in the applications of quasigeodesics and gradient
+exponent, defined in Section~\ref{sec:gexp}.
+A good example is the proof of
+Theorem~\ref{thm:dist-to-bry}, see footnote~\ref{qg-grad},
+page~\pageref{qg-grad}.
+In this type of argument, radial curves give a simpler tool,
+which is also
+superior since it works in infinitely dimensional Alexandrov's spaces.
+
+\section{Convex curves and quasigeodesics}
+
+In this secion we define \emph{$\kappa$-convex curves} and \emph{$\kappa$-quasigeodesics}.
+Roughly, a curve is called $\kappa$-convex if it satisfy the same comparison as geodesic in $\CBB{}\kappa$-space.
+If in addition it is a unit-speed curve, then it is called $\kappa$-quasigeodesic.
+
+\begin{thm}{Definition}\label{def:k-convex.curve}
+Let 
+$\spc{L}\in\CBB m\kappa$
+and $\beta\:\II\to \spc{L}$ be a curve.
+We say that $\beta$ is \emph{$\kappa$-convex}\index{convex!$\kappa$-convex curve} if for any $p\in \spc{L}$ the function
+\[y_p(t)=\md\kappa\dist[{{}}]{p}{\beta(t)}{}\] 
+satisfies differential inequality $y_p''+\kappa\cdot  y_p\le 1$ for all $t\in\II$ such that $\dist{p}{\beta(t)}{}\z<\varpi\kappa$.
+
+If in addition $\beta$ is a unit-speed curve  then it is called \emph{$\kappa$-quasigeodesic}\index{quasigeodesic!$\kappa$-quasigeodesic}.
+\end{thm}
+
+
+In Section~\ref{sec:qg-inv.def}, 
+we give an invariant definition of quasigeodesics; 
+once equivalence of these definitions is proved, the parameter $\kappa$ in the definition of $\kappa$-quasigeodesic can be omited. 
+In Theorem~\ref{thm:defs.of.k-convex.curve}, 
+we will give a number of reformulations of the above definition in terms of angle comparison and development.
+
+Let us list some examples of $\kappa$-convex curves and $\kappa$-quasigeodesics:
+\begin{itemize}
+\item From function comparison \ref{thm:conc}, any local geodesic in $\CBB{m}{\kappa}$-space is a $\kappa$-\nospace quasigeodesic as well as $\kappa$-convex curve.
+\item If $\diam \spc{L}\le \tfrac{\varpi\kappa}{2}$ then any constant curve in $\spc{L}$ is $\kappa$-convex.
+In particular, if $\kappa\le0$ then any constant curve is $\kappa$-convex.
+\item 
+Let $\spc{L}$ be isometric to a convex figure in a Euclidean plane.
+Then any billiard trajectory in  $\spc{L}$ as well as arc of its boundary equipped with a unit-speed parametrization forms a quasigeodesic in $\spc{L}$.
+\item A joint of two rays in a 2-dimensional cone is a quasigeodesic if they cut form the cone two angles with angle measure $\le\pi$. 
+\end{itemize}
+
+\medskip
+
+Now let us turn to differentiability of $\kappa$-convex curves, see Definition~\ref{def:diff-curv}.
+Let us remind that two vectors $v$ and $w$ in the tangent space $\T_p$ are called \emph{opposite} (briefly $v+w=0$)
+if $|v|=|w|$ and $\mangle(v,w)=\pi$, see Definition~\ref{def:opp+Lin}.
+To formulate the next theorem, we need to define the following weak analog of opposite vectors. 
+
+\begin{thm}{Definition}\label{def:polar}
+Let $\spc{L}\in \CBB{}{}$, 
+$p\in \spc{L}$ 
+and $v,w\in \T_p$.
+We say that $v$ is \emph{polar}\index{polar} to $w$ if 
+\[\<x,v\>+\<x,w\>\ge0\] 
+for any vector $x\in\T_p$.
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:k-conc=lip} 
+Let $\spc{L}\in\CBB m\kappa$ 
+and $\beta\:\II\to \spc{L}$ be a $\kappa$-convex curve,
+then 
+
+\begin{subthm}{thm:k-conc=lip-exist} $\beta$ is \emph{both-side differentiable}\index{both-side differentiable}; in particular, $\beta^+(t_0)$ and $\beta^-(t_0)$ are defined for any interior value $t_0$ of $\II$, 
+\end{subthm}
+
+\begin{subthm}{thm:k-conc=lip-diff}$\beta$ is differentiable at all but countable subset of values in $\II$; i.e., for some countable set $A\subset \II$, we have $\beta^+(t_0)+\beta^-(t_0)=0$ 
+for any $t\in \II\backslash A$.
+\end{subthm}
+
+
+\begin{subthm}{thm:k-conc=lip-polar} For each interior value $t_0$ of $\II$,
+vector $\beta^+(t_0)$ is polar to $\beta^-(t_0)$. 
+\end{subthm}
+
+\begin{subthm}{thm:k-conc=lip-lip} $\beta$ is a $1$-Lipschitz curve.
+\subitem In particular, $|\beta^\pm(t_0)|\le 1$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+Set $p=\beta(t_0)$ and $y_q(t)=\md\kappa(\dist{q}{\beta(t)}{})$ for $q\in \spc{L}$.
+
+\parit{(\ref{SHORT.thm:k-conc=lip-lip}).} If $t_0$ is an interior value of $\II$,
+from the barrier inequality (\ref{barrier}), for any $|t-t_0|<\varpi\kappa$ we have 
+$y_p(t)\le \md\kappa(t-t_0)$ or, equivalently $\dist{\beta(t_0)}{\beta(t)}{}\le |t-t_0|$.
+
+\parit{(\ref{SHORT.thm:k-conc=lip-exist})+(\ref{SHORT.thm:k-conc=lip-diff}).} Since 
+the function $y_q$ is semiconcave, it is both-side differentiable at any $t$ such that $0<\dist{q}{\beta(t)}{}<\varpi\kappa$.
+Moreover, it is differentable at all but countable subset of such values $t$.
+Clearly, the same remains true for the function $\dist{q}{}{}\circ\beta$.
+
+It remains to apply \ref{lem:count-der} for a dense countable subset $Q$ of $\oBall(p,\varpi\kappa)$; the existance of such $Q$ follows from \ref{cor:dim>proper}.
+
+\parit{(\ref{SHORT.thm:k-conc=lip-polar}).} It is sufficient to prove that for any geodesic direction $\xi$ we have
+\[\<\xi,\beta^+\>+\<\xi,\beta^+\>\ge 0.\eqlbl{eq:geod-polar}\]
+
+Choose $q\in \Str(p)$ so that $\xi=\dir p q$ is uniquely defined.
+From \ref{thm:d_q dist_p(v)=-<dri p q, v>}, we have $(\d_p\dist{q}{}{})(x)\z=-\<\xi,x\>$.
+Since $y_q$ is semiconcave, $y_q^+(t_0)+y_q^-(t_0)\le 0$.
+Further,
+\[y^\pm_q(t_0)=-\sn\kappa\dist[{{}}]{p}{q}{}\cdot\<\xi,\beta^\pm(t_0)\>\] 
+and \ref{eq:geod-polar} follows.\qeds
+
+\parbf{Arc-point model angle.}
+Let us introduce a new shortcut notation for model angle.
+Assume $\alpha\:\II\to \spc{X}$ is a $1$-Lipschitz curve $t_0, t\in \II$
+and $p$ is a point in a metric space $\spc{X}$.
+Consider a triangle in $\Lob{2}{\kappa}$ with sides 
+$|t-t_0|$, $\dist{q}{\alpha(t_0)}{}$ and $\dist{q}{\alpha(t)}{}$
+and denote by $\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$\index{$\tangle\mc\kappa$!$\tangle\mc\kappa({*}\vert_{*}^{*},{*})$} the angle at the vertex corresponding to $\alpha(t_0)$.
+It will be called \emph{arc-point model angle}\index{arc-point model angle}\index{model angle!arc-point model angle} for arc $\alpha|_{t_0}^{t}$ and point $p$.
+
+In other words,
+\[\tangle\mc\kappa(\alpha|_{t_0}^{t},p)
+\df
+\tangle\mc\kappa\{\dist{p}{\alpha(t)}{};\dist{p}{\alpha(t_0)}{},|t-t_0|\},\] 
+where $\tangle\mc\kappa\{a;b,c\}$ is defined in Section~\ref{model}.
+Note that 
+\begin{itemize}
+\item If the angle $\tangle\mc\kappa(\alpha|_{t_0}^{t_1},p)$ is defined then $\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$ is defined for any $t$ between $t_0$ and $t_1$.
+\item If one fixes $p$ and $t_0$ such that $\dist{p}{\gamma(t_0)}{}<\varpi\kappa$, then the angle $\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$ is defined once $|t-t_0|>0$ is sufficiently small.
+\item If $\phi=\lim_{t\to t_0+}\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$ is defined then
+$$\cos\phi=-(\dist{p}{}{}\circ\alpha)^+(t_0).$$
+\end{itemize}
+
+
+\begin{thm}{Theorem}\label{thm:defs.of.k-convex.curve}
+Let $\spc{L}\in \CBB m \kappa$ 
+and
+$\beta\:\II\to \spc{L}$ be a $1$-Lipschitz curve.
+Then the following conditions are equivalent:
+
+\begin{subthm}{k-convex-main} $\beta$ is $\kappa$-convex. 
+\end{subthm}
+
+
+\begin{subthm}{k-convex-mono} For any $t_0\in\II$ and $p\not=\beta(t_0)$, 
+the subfunction
+\[\tau \mapsto\tangle\mc\kappa(\beta|_{t_0}^{t_0+\tau},p)\]
+is non-increasing for $\tau>0$.
+\end{subthm}
+
+\begin{subthm}{k-convex-angle} $\beta$ is both-side differentiable, and vector $\beta^+(t_0)$ is polar to $\beta^-(t_0)$ at each interior value $t_0\in \II$.
+Moreover, for any $t_0\in\II$ and $p\not=\beta(t_0)$, inequalities
+\[\<\dir{\beta(t_0)}p,\beta^\pm(t_0)\>
+\le 
+\cos\tangle\mc\kappa(\beta|_{t_0}^{t_0\pm\tau}, p)\] 
+hold for $\tau>0$; once the right hand side is defined.
+\end{subthm}
+
+\begin{subthm}{k-convex-devel} For any subinterval $[a,b]\subset\II$ and point $p\in \spc{L}$,
+if the $\kappa$-developing of the restriction $\beta|[a,b]$
+with respect to $p$ is defined then it is locally convex.
+\end{subthm}
+
+Moreover, if in addition $\beta$ is a unit-speed curve then each of the conditions  (\ref{SHORT.k-convex-main})--(\ref{SHORT.k-convex-devel}) imply that $\beta$ is a $\kappa$-quasigeodesic.
+In this case the inequality in (\ref{SHORT.k-convex-angle}) can be also rewritten the following way:
+\begin{itemize}
+ \item[\textit{\ref{SHORT.k-convex-angle}$'$)}] $\mangle(\dir{\beta(t_0)}p,\beta^\pm(t_0))
+\ge \tangle\mc\kappa(\beta|_{t_0}^{t_0\pm\tau}, p).$
+\end{itemize}
+
+
+
+\end{thm}
+
+\parbf{Remark.}
+The inequality (\ref{SHORT.k-convex-angle}$'$) states that in a ``triangle'', one side of which is a quasigeodesic and two other sides are geodesics, one has usual comparison for the angle adjacent to the quasigeodesic.
+Note however, that it gives no controle on the angle between geodesic sides in this triangle.
+
+\parit{Proof.} Equivalence {\it (\ref{SHORT.k-convex-main})$\Leftrightarrow$(\ref{SHORT.k-convex-mono})} follows from Alexandrov's lemma (\ref{lem:alex}) and description of solution $y''+\kappa\cdot  y\le 1$ through Jensen inequality (\ref{y''-mono}).
+
+The equivalence {\it(\ref{SHORT.k-convex-main})$\Leftrightarrow$(\ref{SHORT.k-convex-angle})} is essentially description of solution $y''+\kappa\cdot  y\le 1$ trough barrier inequality (\ref{barrier}).
+
+The implementations {\it(\ref{SHORT.k-convex-angle})$\Rightarrow$(\ref{SHORT.k-convex-devel})$\Rightarrow$(\ref{SHORT.k-convex-mono})} can be proved the same way as Development comparison (\ref{thm:devel}).
+
+The last statement will follow from \ref{cor:|gamma'|=1}.%???REF TO SOMETHING LATER IN THE CHAPTER???
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Passage to the limit}
+
+The following proposition follows directly from the definition of $\kappa$-convex curve (\ref{def:k-convex.curve}) and Theorem~\ref{thm:k-conc=lip-lip}.
+
+\begin{thm}{Proposition}\label{prop:lim-length}
+Let 
+$\spc{L}_n\in\CBB m{\kappa_n}$, 
+$\spc{L}_n\GHto \spc{L}_\infty$
+and $\kappa_n\to\kappa_\infty\in\RR$.
+
+Assume $\beta_n\:\II\to \spc{L}_n$ be a sequence of $\kappa_n$-convex curves
+and $\beta_n(t)\to \beta_\infty(t)$ for all $t\in\II$.
+Then $\beta_\infty$ is a $\kappa_\infty$-convex curve in $\spc{L}_\infty$.
+\end{thm}
+
+
+Here is the main theorem in this section.
+
+\begin{thm}{Theorem}\label{thm:lim-length}
+Let 
+$\spc{L}_n\in\CBB m{\kappa_n}$, 
+$\spc{L}_n\GHto \spc{L}_\infty$ be noncollapsing (i.e., $\dim\spc{L}_\infty=m$)
+and $\kappa_n\to\kappa_\infty\in\RR$.
+
+Assume $\beta_n\:\II\to \spc{L}_n$ be a sequence of $\kappa_n$-convex curves
+and $\beta_n(t)\to \beta_\infty(t)$ for all $t\in\II$.
+Then if $\beta_\infty\:\II\to\spc{L}_\infty$ is differentiable at an interior value $t_0\in\II$
+then 
+\[|\beta^+(t_0)|=|\beta^-(t_0)|=\lim_{n\to\infty} |\beta_n^\pm(t_0)|.\]
+
+\end{thm}
+
+
+Before giving a proof, let us give couple of corollaries. 
+
+\begin{thm}{Corollaries}\label{cor:lim-length}
+Let 
+$\spc{L}_n\in\CBB m{\kappa_n}$, 
+$\spc{L}_n\GHto \spc{L}_\infty$  be noncollapsing (i.e., $\dim\spc{L}_\infty=m$)
+and $\kappa_n\to\kappa_\infty\in\RR$.
+
+Assume $\beta_n\:\II\to \spc{L}_n$ be a sequence of $\kappa_n$-convex curves
+and $\beta_n(t)\to \beta_\infty(t)$ for all $t\in\II$.
+Then
+\begin{subthm}{}
+\[|\beta_\infty^\pm(t)|
+=
+\lim_{n\to\infty}|\beta_n^\pm(t)|\]
+for all but countable set of values $t\in\II$.
+\end{subthm}
+
+\begin{subthm}{}
+$\length\beta_n\to\length\beta_\infty$ as $n\to\infty$.
+\end{subthm}
+
+\begin{subthm}{cor:lim-length:qg}
+If in addition $\beta_n\:\II\to \spc{L}_n$ be a sequence of $\kappa_n$-quasigeodesics
+then $\beta_\infty\:\II\to \spc{L}$ is a $\kappa_\infty$-quasigeodesic.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+Follows from Theorem~\ref{thm:lim-length},
+Proposition \ref{prop:lim-length} 
+and Theorem~\ref{thm:k-conc=lip-diff}.
+\qeds
+
+\begin{thm}{Corollary}\label{cor:one-side-cont}\label{cor:|gamma'|=1}
+Let  
+$\spc{L}\in \CBB m \kappa$
+and $\beta\:\II\to \spc{L}$ be a $\kappa$-convex curve.
+Then for any $t_0\in \II$, we have
+\begin{align*}
+|\beta^+(t_0)| &= \lim_{t\to t_0+}|\beta^\pm(t)|,\ \ &|\beta^-(t_0)| &= \lim_{t\to t_0-}|\beta^\pm(t)|.
+\end{align*}
+
+In particular, if $\beta\:\II\to \spc{L}$ is a $\kappa$-quasigeodesic then $|\beta^\pm(t)|\equiv1$ for all $t\in \II$ 
+with the exception for the ends of $\II$, 
+where one of derivatives is not defined.
+\end{thm}
+
+\parit{Proof.}
+We will prove the first identity.
+Without loss of generality we can assume $t_0=0$ and $\II=[0,1]$.
+Set $p=\beta(0)$.
+
+From \ref{thm:k-conc=lip-lip}, $|\beta^\pm(t)|\le 1$ for any $t$. 
+Thus, it is sufficient to show that for any sequence $t_n\to0+$ such that $|\beta^\pm(t_n)|$ converges we have 
+$$|\beta^+(0)|=\lim_{n\to\infty}|\beta^\pm(t_n)|.$$
+
+Consider sequence of blowups $\spc{L}_n=\frac{1}{t_n}\blow \spc{L}$ with sequence of 
+curves 
+$$\beta_n\:[0,\tfrac1{t_n}]\to \spc{L}_n\:s\z\mapsto\tfrac{1}{t_n}\blow \beta(t_n\cdot s).$$
+Note that $\spc{L}_n\in\CBB{m}{(t_n)^2\cdot\kappa}$ 
+and $\beta_n(s)$ is $(t_n)^2\cdot\kappa$-convex curve. 
+
+For the canonical convergence $\spc{L}_n\GHto \T_p$ defined in \ref{thm:approx4tan},
+the sequence of curves $\beta_n\:[0,\tfrac1{t_n}]\to \spc{L}_n$ converges to 
+$$\beta_\infty\:[0,\infty)\to\T_p\:s\mapsto
+s\cdot \beta^+(0).
+$$
+Note that $|\beta_\infty^\pm(1)|=|\beta^+(0)|$ and $\beta_\infty$ is differentiable at $1$.
+Thus applying Theorem~\ref{thm:lim-length}, 
+we get 
+\[|\beta^\pm(t_n)|
+=
+|\beta_n^\pm(1)|
+\xto[n\to\infty]{}
+|\beta^\pm_\infty(1)|
+=
+|\beta^+(0)|.
+\]
+
+Now if $\beta$ is a $\kappa$-quasigeodesic then it is a unit-speed curve.
+From \ref{vel-length}, $|\beta^\pm(t)|\ae 1$.
+Applying the proved identity, we get that the identity $|\beta^\pm(t)|\equiv1$ holds everywhere.
+\qeds
+
+In the proof of the theorem we will use the followng lemma.
+%The proof is left to the reader.???In fact the depends on how volume part is written, so I can not write it yet???
+
+
+\begin{thm}{Lemma}\label{lem:<x,v>=<x,w> => v=w}
+Let $K=\Cone\Sigma\in\CBB{m}{0}$ and $v,w\in K$.
+
+Assume that equality 
+\[\<v,x\>=\<w,x\>\]
+holds for $x$ in a subset $E\subset K$ of positive volume
+then $v=w$.
+\end{thm}
+
+\parit{Proof.} To be written.%???To be written???
+\qeds
+
+
+
+\parit{Proof Theorem~\ref{thm:lim-length}.}
+It is sufficient to show that 
+$|\beta_n^\pm(t_0)|\to |\beta_\infty^\pm(t_0)|$ as $n\to\o$
+for some selective utrafilter $\o$.
+
+Set 
+\begin{enumerate}[(a)]
+\item $p_\infty=\beta_\infty(t_0)$, $p_n=\beta_n(t_0)$;
+\item $(K_\o,0)=\lim_{n\to\o}(\T_{p_n},0)$;
+\item\label{beta->w} $\beta_n^\pm(t_0)\to w_\pm\in K_\o$ as $n\to\o$.
+\end{enumerate}
+
+We will construct a map $\map\:\T_{p_\infty}\to K_\o$ which satisfies the following properties:
+\begin{enumerate}[(i)]
+\item\label{map is a conic map} It is a \emph{conic map}\index{conic map}; i.e., $\map(r\cdot x)=r\cdot\map(x)$ for all $r\ge 0$ and $x\in \T_{p_\infty}$.
+\item\label{map is a norm-preserving} It is norm-preserving; 
+i.e., $|\map(x)|=|x|$ for any $x\in \T_{p_\infty}$.
+\item\label{map is a non-contracting} It is non-contracting; 
+i.e. $\dist{\map(x)}{\map(y)}{}\ge\dist{x}{y}{}$ 
+for any $x,y\in \T_{p_\infty}$.
+\item\label{the claim for map} for any $z\in\map(\T_{p_\infty})$, we have 
+\[\<z,w_\pm\>
+=\<z,\map(\beta_\infty^\pm(t_0))\>.\]
+\end{enumerate}
+
+Once $\map$ is constructed,
+Lemma~\ref{lem:<x,v>=<x,w> => v=w} 
+and properties (\ref{map is a non-contracting}) and (\ref{the claim for map}) imply $$\map(\beta_\infty^\pm(t_0))=w_\pm.$$
+By property (\ref{map is a norm-preserving}),
+\[
+|w_\pm|
+=
+|\beta_\infty^\pm(t_0)|.\]
+Further, by (\ref{beta->w}),
+\[|\beta_n^\pm(t_0)|
+\xto[n\to\o]{}
+|\beta_\infty^\pm(t_0)|;\]
+i.e., once the map $\map\:\T_{p_\infty}\to K_\o$ is constructed, 
+the theorem follows.
+
+\parit{Construction of $\map$.} 
+Set 
+$$\Sigma_\o=\lim_{n\to\o}\Sigma_{p_n};$$ 
+clearly $K_\o=\Cone\Sigma_\o$.
+According to Corollary~\ref{cor:S>Sigma}, $\Sigma_{p_n}\le \SS^{m-1}$ for each $n$;
+thereofre $\Sigma_\o\le \SS^{m-1}$.
+In particular $\Sigma_\o$ is compact.
+
+Choose $q_\infty\in \Str (p_\infty)$,
+so the geodesic $[p_\infty q_\infty]$ is uniquely defined.
+Set $\xi_\infty=\dir {p_\infty}{q_\infty}$.
+Further, choose a sequence of points $q_n\in \Str(p_n)$ so that $q_n\GHto q_\infty$ and set $\xi_n=\dir{p_n}{q_n}$.
+Finally set
+\[\map (\xi_\infty)=\lim_{n\to\o}\xi_n.\]
+
+The value $\map(\xi_\infty)\in\Sigma_\o$ depends on choice of point $q_\infty$ and the choice of sequence $(q_n)$.
+But we can fix such choices for each direction $\xi_\infty\in\Sigma'_p$;
+recal that $\Sigma'_p$ denotes the set of geodesic directions in $\Sigma_p$.
+
+Since $[p_\infty q_\infty]$ is unique, we have $[p_n q_n]\to[p_\infty q_\infty]$.
+From angle semicontinuity (\ref{lem:ang.semicont-cbb}), 
+the map $\map\:\Sigma'_{p_\infty}\to\Sigma_\o$ is non-contracting.
+
+For a non-geodesic direction $\zeta\in\Sigma_{p_\infty}$, 
+fix a sequence of geodesic directions $\zeta_n\to\zeta$ and set $\map(\zeta)$ to be a partial limit of $\map(\zeta_n)$ as $n\to\infty$.
+The pratial limit exists since $\Sigma_\o$ is compact.
+This way we extended the map $\map$ to $\Sigma_{p_\infty}$ keeping it noncontracting.
+
+Finally, let us extend $\map$ to a conic map $\map\:\T_{p_\infty}\to K_\o$ by setting
+$$\map(r\cdot\zeta)=r\cdot\map(\zeta)$$ 
+for all $r\ge0$ and $\zeta\in\Sigma_{p_\infty}$.
+
+\medskip
+
+Now let us show that the constructed map $\map$ satisfies the conditions.
+The conditions (\ref{map is a conic map})--(\ref{map is a non-contracting}) follow directly from the construction.
+To prove (\ref{the claim for map}), 
+it is sufficient to show that equality
+\[\<\map(\xi_\infty),w_\pm\>=\<\map(\xi_\infty),\map(\beta_\infty^\pm(t_0))\>\]
+holds for any geodesic directions $\xi_\infty$.
+
+Let $q_\infty$, $(q_n)$ and $(\xi_n)$ be as in the construction of $\map$ above.
+Set
+\begin{align*}
+f_\infty(t)&=\dist{q_\infty}{\beta_\infty(t)}{},
+& f_n(t)&=\dist{q_n}{\beta_n(t)}{}.\\
+\intertext{Clearly, $f_n\to f_\infty$.
+Since $q_\infty\in \Str(p_\infty)$ and $q_n\in \Str_n(p_n)$, \ref{thm:d_q dist_p(v)=-<dri p q, v>} implies}
+(\d_{p_\infty}\dist{q_\infty}{}{})(x)&\equiv-\<\xi_\infty,x\>,
+&(\d_{p_n}\dist{q_n}{}{})(x)&\equiv-\<{\xi_n},x\>.
+\intertext{Thus, the functions $f_\infty$ is differentiable at $t_0$ and}
+f_\infty'(t_0)&=\mp\<\xi_\infty,\beta_\infty^\pm(t_0)\>,
+& f^\pm_n(t_0)&=-\<\xi_n,\beta^\pm_n(t_0)\>.
+\end{align*}
+
+Set $y_\infty=\md\kappa\circ f_\infty$ and $y_n=\md\kappa\circ f_n$.
+Since $\beta_\infty$ is $\kappa_\infty$-convex and $\beta_n$ are $\kappa_n$-convex,
+we have
+\begin{align*}
+y_\infty''+\kappa_\infty\cdot  y_\infty&\le 1
+&
+y_n''+\kappa_n\cdot  y_n&\le 1
+\end{align*}
+Therefore, according to the lemma on equilibrium (\ref{lem:der-conv-lim}), $y_n^\pm(t_0)\to \pm y'(t_0)$ and hence
+$f_n^\pm(t_0)\to \pm f_\infty'(t_0)$ as $n\to\o$.
+Summarizing, all above we get
+\begin{align*}
+\<\map(\xi_\infty),w_\pm\>
+&=\lim_{n\to\o}\<\xi_n,\beta_n^\pm(t_0)\>
+=
+\\
+&=-\lim_{n\to\o} f^\pm_n(t_0)
+=
+\\
+&=\mp f_\infty'(t_0)
+=
+\\
+&=
+\<\xi_\infty,\beta_\infty^\pm(t_0)\>.
+\end{align*}
+
+Therefore it remains to show that
+\[\<\map(\xi_\infty),\map(\beta_\infty^\pm(t_0))\>
+=\<\xi_\infty,\beta_\infty^\pm(t_0)\>.\]
+Note that since $\map$ is non-contracting and norm-preserving, we have
+\[
+\begin{aligned}
+\mangle\l({\map(\xi_\infty)},\map(\beta_\infty^\pm(t_0))\r)
+&\ge
+\mangle\l({\xi_\infty},{\beta_\infty^\pm(t_0)}\r),
+\\
+\mangle\l({\map(\beta_\infty^+(t_0))},{\map(\beta_\infty^-(t_0))}\r)
+&\ge
+\mangle\l({\beta_\infty^+(t_0)},{\beta_\infty^-(t_0)}\r).
+\end{aligned}
+\eqlbl{eq:ang-non-contr}
+\]
+Since ${\beta_\infty^+(t_0)}+{\beta_\infty^-(t_0)}=0$,
+\[
+\mangle({\xi_\infty},{\beta_\infty^+(t_0)})+\mangle({\xi_\infty},{\beta_\infty^-(t_0)})=\pi,
+\ \ \ \ 
+\mangle({\beta_\infty^+(t_0)},{\beta_\infty^-(t_0)})=\pi.\]
+Therefore we have equalities in both inequalites of \ref{eq:ang-non-contr}. 
+Hence
+\[ \<\map(\xi_\infty),\map(\beta_\infty^\pm(t_0))\>
+=|\beta_\infty^\pm(t_0)|\cdot\cos\mangle({\xi_\infty},{\beta_\infty^\pm(t_0)})
+=\<\xi_\infty,\beta_\infty^\pm(t_0)\>.
+\]
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Invariant description of quasigeodesics}\label{sec:qg-inv.def}
+
+Recall that a semiconcave subfunction $f\:\spc{L}\to\RR$
+on a $\CBB{}{}$ space $\spc{L}$  is called \emph{native}
+if at each point $p\in\Dom f$
+there is a vector $w\in\T_p$
+such that
+\[d_pf(x)+\<w,x\>\le 0\]
+for any $x\in\T_p$;
+see Definition \ref{def:native}.
+Note, that according to \ref{with-no-bry}, if $\partial \spc{L}=\emptyset$ then any semiconcave function is native.
+
+
+\begin{thm}{Theorem}\label{thm:qg+concave}
+Let 
+$\spc{L}\in\CBB m\kappa$ 
+and $\gamma\:\II\to \spc{L}$ be a curve.
+Then the following conditions are equivalent:
+\begin{subthm}{qg+concave:qg} $\gamma$ is a $\kappa$-quasigeodesic;
+\end{subthm}
+\begin{subthm}{qg+concave:strong} for any $\lambda\in\RR$ and any native $\lambda$-concave locally Lipschitz subfunction $f\:\spc{L}\subto\RR$ the composition $f\circ\gamma$ is $\lambda$-concave.
+\end{subthm}
+\end{thm}
+
+Before going ito proof, let us show that the word \emph{native} is necessury in the formulation of this theorem.
+
+\parbf{Example.}
+The unit disc $\DD$ in $\EE^2$ forms a $\CBB{2}{0}$ space.
+Let $\gamma$ be an arc of boundary of $\DD$ equipped with unit-speed parametrization.
+Note that $\gamma$ is a quasigeodesic in $\DD$.
+
+On the other hand any linear function $f\:\EE^2\to\RR$ is also a concave function on $\DD$
+and
+it is easy to choose $f$ so that the composition $f\circ\gamma$ is not concave.
+
+\medskip
+
+The theorem implies that we can talk about quasigeodesics in $\CBB{}{}$-spaces without ambiguity; more presicely:
+
+\begin{thm}{Corollary}\label{qg=k-qg} 
+Let $\Kappa>\kappa$ 
+and $\spc{L}\in \CBB m\Kappa$.
+Then the classes of $\Kappa$-\nospace quasigeodesics and $\kappa$-\nospace quasigeodesics in $\spc{L}$ coincide.
+\end{thm}
+
+
+\parit{Proof of \ref{thm:qg+concave},
+(\ref{SHORT.qg+concave:qg}) $\Leftarrow$ (\ref{SHORT.qg+concave:strong}).} 
+First, let us define class of \emph{probation curves} which includes all curves satisfying condition (\ref{SHORT.qg+concave:strong}) for the functions with controlled concavity.
+Thus, it will be sufficient to show that any probation curve $\gamma$ is a $\kappa$-quasigeodesic.
+
+\begin{thm}{Definition}
+A curve $\gamma$ in $\spc{L}\in\CBB m\kappa$ is called \emph{probation curve}\index{probation curve} if for any $\lambda\in \RR$ and any subfunction $f\:\spc{L}\subto\RR$ of controlled concavity type $(\lambda,\kappa)$, we have that $f\circ\gamma$ is $\lambda$-concave.
+\end{thm}
+
+First, let us briefly discuss properties of probation curves.
+Note that for any $p,q\in \spc{L}$,
+function $f_p=\md\kappa\circ\dist{p}{}{}$ 
+has controlled concavity type $(1-\kappa\cdot  f_p(q),\kappa)$ at $q$.
+Thus, any probation curve is $\kappa$-convex. 
+
+Since lifting of functions with given controlled concavity type has the same controlled concavity type (see \ref{lem:lifting}), 
+we have that limit of probation curves is a probation curve.
+More precisely:
+
+\begin{clm}{}\label{clm:lim-prob}
+Let 
+$\kappa_n\to\kappa$, 
+$\spc{L}_n\in\CBB m{\kappa_n}$, 
+$\spc{L}_n\xGHto{\GH} \spc{L}$ 
+and $\spc{L}\in\CBB m{\kappa}$ (i.e. $\spc{L}_n$ is not a collapsing).
+
+Assume $\gamma_n\:\II\to \spc{L}$ is a sequence of probation curves 
+and $\gamma_n(t)\xto\tau\gamma(t)$ for any $t\in\II$.
+Then $\gamma$ is a probation curve.
+\end{clm}
+
+Now, let us continue the proof;
+assume $\gamma\:\II\to\spc{L}$ is a probation curve.
+Since $\gamma$ is $\kappa$-convex, it is $1$-Lipschitz (see \ref{thm:k-conc=lip}).
+Therfore, according to \ref{lem:count-der}, it is enough to show that
+\[\gamma^+(t_0)+\gamma^-(t_0)=0
+\ \ 
+\Rightarrow
+\ \ 
+|\gamma^\pm(t_0)|\ge1.
+\eqlbl{eq:|gamma+|>=1}\]
+for any $t_0\in\II$.
+
+Without loss of generality, we can assume that $t_0=0$.
+Set $p=\gamma(0)$.
+Consider curves $\gamma_n(t)\df n*\gamma(t/n)$ in the blowup $n*\spc{L}$. 
+For the canonical convergence $n*\spc{L}\xGHto{\tau_p} \T_p$ defined in \ref{thm:approx4tan}, 
+we have
+\[\gamma_n(t)\xto{\tau_p} \gamma_\infty(t)=\pm t\cdot\gamma^\pm(0).\]
+Since $\gamma^+(0)+\gamma^-(0)=0$ we can multiply $\gamma^\pm(0)$ by all real numbers --- thus the last expression has sence.
+From Claim~\ref{clm:lim-prob},
+we get that $\gamma_\infty$ is a probation curve in $\T_p$.
+
+Take $f\:\T_p\to\RR$ as in Lemma~\ref{lem:exist-CCT}.
+Then $f\circ\gamma_\infty(s)$ is $(-1)$-concave.
+On the other hand $\gamma^\pm(0)\in\Lin_p$, 
+therefore 
+\begin{align*}
+f\circ\gamma_\infty(t)
+&=
+f\l(t\cdot\gamma^+(0)\r)
+=
+\\
+&=
+-\tfrac{1}{2}{|\gamma^\pm(0)|^2}\cdot t^2+o(t^2).
+\end{align*}
+Thus, \ref{eq:|gamma+|>=1} follows.
+
+\parit{(\ref{SHORT.qg+concave:qg}) $\Rightarrow$ (\ref{SHORT.qg+concave:strong}).} 
+We rewrite the proof given in \cite[6.1]{perelman-petrunin:qg},
+it is based on the same idea as \ref{thm:cont=>lip} and \ref{thm:dist-to-bry}.
+
+In the proof we will use so called \emph{Hamilton--Jacobi shifts}\index{Hamilton--Jacobi shifts} of $f$.
+It is a function analog of equidistant for hypersurface.
+It is named this way since the family of functions $f_s$ can be also regarded as a generalized solution for the Hamilton--Jacobi equations 
+$\tfrac{\partial f_s}{\partial s}+\tfrac{1}{2}\cdot|\nabla f_s|^2=0$.
+
+\begin{clm}{Hamilton--Jacobi shifts.}
+Let $\spc{L}$ be a metric space 
+and $f\:\spc{L}\subto\RR$ be a subfunction.
+A Hamilton--Jacobi shift of $f$ for time $s>0$ is a subfunction $f_s\:\spc{L}\subto\RR$ defined as
+\[f_s(y)
+\df
+\min_{x\in\Dom f} f(x)+\tfrac{1}{2\cdot s}\cdot\dist[2]{x}{y}{};\]
+with $\Dom f_s$ to be the maximal open set such that the minimum is defined.
+\end{clm}
+
+Let us list its basic properties.
+Note first that $f_{s_1+s_2}=(f_{s_1})_{s_2}$; i.e., using a more fancy language, $f\mapsto f_s$ is an \emph{action of semigroup} $(\RR_{\ge0},+)$.
+
+Assume that $f$ is $\Lip$-Lipschitz.
+Then for any $x\in\Dom f$, we have $f_s(x)$ is defined for  all sufficiently small $s>0$ and moreover, 
+\[0\le f(x)-f_s(x)\le \tfrac{1}{2}\cdot\Lip^2\cdot s.\]
+In particular, $f_s(x)\to f(x)$ as $s\to0+$.
+
+By the definition, for any $y\in\Dom f_s$ 
+there is \emph{foot point} $x\in\Dom f$ such that 
+\[f_s(y)
+=f(x)+\tfrac{1}{2\cdot s}\cdot\dist[2]{x}{y}{};\]
+i.e.,
+the function $f+\tfrac{1}{2\cdot s}\cdot\dist[2]{y}{}{}$ has minimum at $x$.
+Clearly 
+\[\dist{x}{y}{}\le \Lip\cdot s.
+\eqlbl{eq:lamb-conc-4}\]
+
+If we assume in addition that $\spc{L}\in\CBB{m}{}$, 
+then $f_s$ is defined as a minimum of semiconcave functions. 
+Thus, $f_s$  is semiconcave for all $s>0$.
+If in addition 
+if $f$ is native, 
+then subfunction $f+\tfrac{1}{2\cdot s}\cdot\dist[2]{x}{}{}$ is native, see \ref{thm:native-operations}.
+Thus, if $x$ is a foot point of $y\in\Dom f_s$
+then, from the existence of supporting vector, we have 
+$\d_y f+\tfrac{1}{2\cdot s}\cdot\d_y\dist[2]{x}{}{}=0$.
+It follows that the geodesic $[x y]$ is uniquely defined,
+$\ddir x y\in \Lin_y$ and 
+$(\d_x f)(v)
+=
+\tfrac{1}{s}\cdot\<\ddir x y,v\>$ for any $v\in\T_x$.
+
+\smallskip
+
+Now, we ready for the proof.
+First note that without loss of generality, we can assume that $f$ is $\Lip$-Lipschitz for some $\Lip\in\RR$;
+otherwise restrict $f$ to a smaller domain.
+It is sufficient to show that for any interior value $t_0 \in \II$, $s>0$ and all sufficiently small $\tau$, we have
+\[f_s\circ\gamma(t_0+\tau)
+\le
+f_s\circ\gamma(t_0)
++ \Const\cdot\tau+\tfrac{1}{2}\cdot\l[\lambda-O(s)\r]\cdot\tau^2.
+\eqlbl{eq:lamb-conc-1}\]
+
+\begin{wrapfigure}{r}{35mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/foot-point(0.37)}
+\lbl[l]{5,90;$\gamma$}
+\lbl[rt]{11,27;$y$}
+\lbl[rt]{5,54;$y_\tau$}
+\lbl[t]{90,24;$x$}
+\lbl[b]{68,56;$x_\tau$}
+\lbl[lb]{67,86;$\xi_\tau$}
+\lbl[lb]{17,34;{\small $\alpha$}}
+\lbl[r]{74,30;{\tiny $\beta_\tau$}}
+\end{lpic}
+\end{wrapfigure}
+
+Set $y=\gamma(t_0)$ and $y_\tau=\gamma(t_0+\tau)$.
+Let $x$ be a foot point of $y$; 
+i.e. the function $f + \tfrac{1}{2\cdot s}\cdot\dist[2]{y}{}{}$ has a minimum at $x$
+(we can assume $x\not=y$, otherwise \ref{eq:lamb-conc-1} follows since $f_s\le f$, $\d_x f\equiv0$ and $\dist[2]{y}{y_\tau}{}\le\tau$).
+
+Set $\alpha=\mangle(\ddir y x,\gamma^+(0))$ and $\beta_\tau=\mangle\hinge x y {y_\tau}$.
+Since $\T_p$ splits in the direction of $\ddir x y$,
+there is direction $\xi_\tau\in\Sigma_x$ such that 
+\[\mangle(\xi_\tau,\dir x y)
+=\mangle(\xi_\tau,\dir x {y_\tau})+\beta_\tau
+=\pi-\alpha.\]
+Define $x_\tau=\gexp\mc0_x(\tau\cdot\xi_\tau)$.
+
+First note that 
+\[\dist[2]{x_\tau}{y_\tau}{}
+\le \dist[2]{x}{y}{} +[1+O(s^2)]\cdot\tau^2.
+\eqlbl{eq:lamb-conc-7}\]
+Indeed, for any $p\in \spc{L}$, the function $\tfrac{1}{2}\cdot\dist[2]{p}{}{}$ is $\l[1+O(r^2)\r]$-concave in $\oBall(p,r)$.
+Thus, from \ref{eq:lamb-conc-4} and \ref{thm:prop-gexp:func}, for all small $\tau$,  we have
+\[\begin{aligned}
+\dist[2]{x_\tau}{y_\tau}{}
+&\le \dist[2]{x}{y_\tau}{}+2\cdot\tau\cdot\dist[{{}}]{x}{y_\tau}{}\cdot\cos(\alpha+\beta_\tau)+\l[1+O(s^2)\r]\cdot\tau^2,
+\\
+\dist[2]{x}{y_\tau}{}
+&\le \dist[2]{x}{y}{}-2\cdot\tau\cdot\dist[{{}}]{x}{y}{}\cdot\cos\alpha+\l[1+O(s^2)\r]\cdot\tau^2
+\end{aligned}
+\eqlbl{eq:lamb-conc-5}\]
+Note also that $\dist{x}{y_\tau}{}
+=\dist{x}{y}{}-\tau\cdot\cos\alpha+o(\tau)$ 
+and $\dist{y}{y_\tau}{}=\tau+o(\tau)$;
+therefore 
+\[\beta_\tau
+>
+\frac{\tau\cdot\sin\alpha}{\sn\kappa\dist[{{}}]{x}{y}{}}+o(t).
+\eqlbl{eq:lamb-conc-6}\]
+From \ref{eq:lamb-conc-5} and \ref{eq:lamb-conc-6}, we get 
+\ref{eq:lamb-conc-7}.
+
+Further, from \ref{thm:prop-gexp:func},
+\[\begin{aligned}
+f(x_\tau)
+&\le
+f(x)+(\d_x f)(\xi_\tau)\cdot \tau+\tfrac\lambda2\cdot\tau^2
+=
+\\
+&=
+f(x)-\tfrac{\dist{x}{y}{}}{s}\cdot(\cos\alpha)\cdot\tau +\tfrac\lambda2\cdot\tau^2.
+\end{aligned}
+\eqlbl{eq:lamb-conc-3}\]
+Since,
+\[f_s(y_\tau)
+\le 
+f(x_\tau)+\tfrac{1}{2\cdot s}\cdot\dist[2]{x_\tau}{y_\tau}{},\]
+\ref{eq:lamb-conc-4}, 
+\ref{eq:lamb-conc-7} 
+and \ref{eq:lamb-conc-3} 
+imply \ref{eq:lamb-conc-1}.\qeds
+
+
+
+
+
+
+
+
+
+\section{Pre-quasigeodesics}
+\label{sec:pqg}
+
+Pre-quasigeodesic is an  intermediate class of curves --- it only used to construct quasigeodesics.
+It was introduced by Perelman, 
+he first proved existence of pre-quasigeodesics 
+and only few year later existence of quasigeodesics.
+
+The main result of this section is existence of pre-quasigeodesics --- theorem \ref{exist-pre-qg}.
+We also prove a number of properties of pre-quasigeodesics which will be needed the construction of quasigeodesics in the next section.
+
+\begin{thm}{Definition}\label{def:pqg}
+Let  $\spc{L}\in\CBB m \kappa$.
+A $\kappa$-convex curve $\gamma\:\II \to \spc{L}$ is called a \emph{pre-quasigeodesic}\index{pre-quasigeodesic} if for
+any $a\in \II$ such that ${|\gamma^+(a)|}>0$, the curve $\gamma^a$ defined by
+\[\gamma^a(t)
+\df
+\gamma\left(a+\tfrac{t}{|\gamma^+(a)|}\right)\]
+is $\kappa$-convex for $t\ge0$, and if ${|\gamma^+(a)|}=0$ then $\gamma(t)=\gamma(a)$ for
+all $t\ge a$.
+\end{thm}
+
+Formally speaking, this definition of depends on $\kappa$, 
+but, in this and the next section we fix some $\kappa\le 0$ such that $\spc{L}\in\CBB{}\kappa$, thus it will be no ambiguity.
+
+
+\begin{thm}{Existence of pre-quasigeodesics}\label{exist-pre-qg}
+Let $\kappa\le 0$, 
+$\spc{L}\in\CBB m \kappa$, 
+$x\in \spc{L}$,
+$v\in \T_x$ and $|v|\le 1$. 
+Then there is a pre-quasigeodesic $\gamma\:[0,\infty)\to \spc{L}$ such that
+ $\gamma^+(0)=v$.
+\end{thm}
+
+Pre-quasigeodesics will be constructed in two steps. 
+First we construct $\kappa$-convex curves out of radial curves, which are \emph{$\kappa$-monotonic} in the sense of the following definition.
+Second we construct pre-quasigeodesics out of $\kappa$-convex.
+
+\begin{thm}{Definition}\label{def:mono}
+Let $\spc{L}\in\CBB m\kappa$.
+A $1$-Lipschitz curve $\alpha\:\II\to \spc{L}$ is called \emph{$\kappa$-monotonic}\index{$\kappa$-monotonic curve} with
+respect to $t_0\in\II$ if for any $p\in \spc{L}$ the function $t\mapsto\tangle\mc\kappa(\alpha|_{t_0}^t,p)$
+is non-increasing for $t>t_0$ in the domain of definition. 
+\end{thm}
+
+
+Here is a construction which makes possible to join $\kappa$-monotonic curves as well as $\kappa$-convex curves. 
+
+
+
+
+
+
+
+
+\begin{thm}{Extention procedure I}\label{ext-mono}
+Let $\kappa\le 0$, 
+$\spc{L}\in\CBB m \kappa$ 
+and
+$\alpha_1\:[a,\infty)\to \spc{L}$,  $\alpha_2\:[b,\infty)\to \spc{L}$ be two
+$\kappa$-monotonic curves with respect to $a$ and $b$ respectively. 
+Assume 
+\[a\le b,\ \ \alpha_1(b)=\alpha_2(b)\ \ \text{and}\ \
+\alpha^+_1(b)=\alpha^+_2(b).\] Then its joint
+\[\beta\:[a,\infty)\to \spc{L},\ \ \beta(t)=\l[
+\begin{matrix}
+\alpha_1(t)&\text{if}&t< b\\
+\alpha_2(t)&\text{if}&t\ge b
+\end{matrix}\right.\]
+is $\kappa$-monotonic with respect to $a$ and $b$.
+
+Moreover, if in addition, $\alpha_1$ and $\alpha_2$ are $\kappa$-convex curves then so is $\beta$.
+\end{thm}
+
+\parit{Proof.}
+It is enough to show that for any $p\in \spc{L}$, 
+\[\t{the function}\ \ t\mapsto\tangle\mc\kappa(\beta|^t_a,p)\ \ \t{is non-increasing for}\ \  t\ge b.\eqlbl{eq:ext-mono-1}\]
+\begin{wrapfigure}[9]{l}{46mm}
+\begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/mono-alex(0.35)}
+\lbl[lt]{98,2;$p$}
+\lbl[rb]{26,35;$q$}
+\lbl[tl]{-1,1;$\alpha_1(a)$}
+\lbl[b]{69,47;$\alpha_2(t_1)$}
+\lbl[bl]{105,27;$\alpha_2(t_2)$}
+\end{lpic}
+\end{wrapfigure}
+Set $q=\beta(b)=\alpha_1(b)=\alpha_2(b)$.
+Applying Alexandrov's lemma twice, 
+the statement \ref{eq:ext-mono-1} can be reduced to the following two inequalities for $b<t_1<t_2$:
+\[\tangle\mc\kappa(\alpha_2|_{t_1}^b,p)
++
+\tangle\mc\kappa(\alpha_2|_{t_1}^{t_2},p)
+\le\pi,\eqlbl{eq:ext-mono-2}
+\]
+\[
+\tangle\mc\kappa(\alpha_1|_b^a,p)
++
+\tangle\mc\kappa(\alpha_2|_b^{t_1},p)
+\le\pi. \eqlbl{eq:ext-mono-3}\]
+
+Inequality \ref{eq:ext-mono-2} follows directly from $\kappa$-monotonicity of $\alpha_2$ ---
+again Alexandrov's lemma.
+
+To prove \ref{eq:ext-mono-3}, set
+$\phi=\sup\set{\tangle\mc\kappa(\alpha_2|_b^t,p)}{t>b}$.
+Since $\alpha_2$ is $\kappa$-monotonic w.r.t. $b$, 
+we have $\cos\phi=-(\d_q\dist{p}{}{})(v)$,
+where $v=\alpha_1^+(b)=\alpha_2^+(b)$.
+In particular,
+\[\phi=\lim_{t\to b+}\tangle\mc\kappa(\alpha_1|^t_b,p).\]
+Yet applying Alexandrov's lemma,
+from $\kappa$-monotonicity of $\alpha_1$ w.r.t. $a$, we get
+\[\tangle\mc\kappa(\alpha_1|^a_b,p)+\phi\le \pi\]
+and \ref{eq:ext-mono-3} follows.
+
+The last part follows from \ref{k-convex-mono}.\qeds
+
+\begin{thm}{Lemma}\label{lem:mono-lim}
+Let $\spc{L}\in\CBB m\kappa$.
+Assume  $\alpha_n\:[0,a]\to \spc{L}$ be a sequence of $\kappa$-monotonic curves w.r.t. $0$ 
+and
+$\alpha_n(t)\to\alpha(t)$ for each $t\in [0,a]$.
+Then $\alpha$ is $\kappa$-monotonic.
+
+Moreover, if for some $x\in \spc{L}$  we have $\alpha_n(0)=x$ and $|\alpha^+(0)|=1$ then $\alpha_n^+(0)\to\alpha^+(0)$.
+\end{thm}
+
+
+\parit{Proof of \ref{lem:mono-lim}.} 
+The first part follows directly from Definition~\ref{def:mono}.
+Note that for any $p$, 
+\[(\dist{p}{}{}\circ\alpha)^+(0)=-\cos\l(\lim_{t\to0+}\tangle\mc\kappa(\alpha|_0^t,p)\r).\]
+From monotonicity, the limit is defined.
+Hence $(\dist{p}{}{}\circ\alpha)^+(0)$ and, from \ref{lem:count-der:rl}, also $\alpha^+(0)$ are defined.
+
+Set $\xi_n=\alpha^+(0)$. 
+Passing to a subsequence if nesesurily, we can assume that $\xi_n\to\xi\in\Sigma_x$.
+For any geodesic $[x p]$, we have 
+\[\limsup_{t\to t_0+}\tangle\mc\kappa(\alpha_n|_0^t,p)
+\le
+\mangle(\xi_n,\dir x p).\]
+Since, $\alpha_n$ is $\kappa$-monotonic, we have that
+$\tangle\mc\kappa(\alpha_n|_0^t,p)\le \mangle(\xi_n,\dir x p)$
+ and hence $\tangle\mc\kappa(\alpha|_0^t,p)\le \mangle(\xi,\dir x p)$,
+ for any $t>0$.
+In other words, 
+\[\<\alpha^+(0),\dir x p\>\ge \cos\mangle(\xi,\dir x p).\eqlbl{lem:mono-lim*}\]
+Note that $|\alpha^+(0)|\le 1$ --- monotonic curves are  by definition $1$-Lipschitz.
+Thus, applying \ref{lem:mono-lim*} for $\dir x p\approx \xi$, 
+we get $\alpha^+(0)=\xi$.
+\qeds
+
+
+\begin{thm}{Existence of convex curve}\label{exist-convex}
+Let $\kappa\le 0$, 
+$\spc{L}\in\CBB m \kappa$, 
+$x\in \spc{L}$ 
+and $v\in \T_x$ be such that $|v|\le 1$. 
+Then there is a $\kappa$-convex curve $\beta_v\:[0,\infty)\to \spc{L}$ with
+ $\beta_v^+(0)=v$.
+\end{thm}
+
+\parit{Proof.}
+For $z\in \spc{L}$ and $w\in \T_z$ such that $|w|\le 1$,
+consider the curve $\alpha_w\:[0,\infty)\to \spc{L}$ defined as
+\[\alpha_w(t)=\gexp\mc\kappa_z t\cdot w.\]
+Directly from the construction of gradient exponential map (section~\ref{sec:gexp}), 
+we have $\alpha_w^+(t)$ is defined for all $t\ge 0$ and
+$\alpha_w$ is $1$-Lipschitz.
+According to Theorem~\ref{gexp-mono}, $\alpha_w$ is $\kappa$-monotonic. 
+
+Fix $\eps>0$. 
+Given $\xi\in\Sigma_x$, consider the following recursively
+defined sequence of curves $\alpha_{v_n}(t)$ such that $v_0=\xi$ and
+$v_{n}=\alpha^+_{v_{n-1}}(\eps)$.
+Then joint all $\alpha_{v_n}|[0,\eps]$ into a new curve
+\[\beta_{\xi,\eps}(t)=\alpha_{v_n}(t-n\cdot\eps),\ \ \t{where}\ \ n={\lfloor t/\eps\rfloor}.\]
+Applying extension procedure I (\ref{ext-mono}), 
+we get that $\beta_{\xi,\eps}\:[0,\infty)\to \spc{L}$ is $\kappa$-\nospace monotonic with respect to every parameter value of the form $n\eps$, $n\in\ZZ_{\ge0}$.
+Passing to a partial limit, $\beta_{\xi,\eps}\to\beta_{\xi}$ as $\eps\to 0$ we get a curve $\beta_{\xi}$ which is $\kappa$-monotonic w.r.t. any value of parameter.
+Thus, according to \ref{k-convex-mono}, $\beta_{\xi}$ is $\kappa$-convex and from \ref {lem:mono-lim}, $\beta_{\xi}^+(0)=\xi$.
+
+Finally, for $v=r\cdot\xi$, set
+$\beta_v(t)=\beta_\xi(r\cdot t)$.
+If $|v|\le 1$, the curve $\beta_v$ is $\kappa$-convex;
+ that follows directly from definition \ref{def:k-convex.curve} since $\kappa\le 0$.\qeds
+
+
+\parit{Proof of \ref{exist-pre-qg}.} 
+For each point $z\in \spc{L}$ and  $w\in \T_z$ such that $|w|\le 1$, choose a $\kappa$-convex
+curve $\beta_w\:[0,\infty)\to \spc{L}$ with
+$\beta_w^+(0)=w$;
+it exists due to \ref{exist-convex}. 
+
+Let us construct a $\kappa$-convex curve 
+$\gamma_\eps \: [0,\infty)\rightarrow \spc{L}$ 
+with $\gamma^+_\eps(0)=v$,
+such that there is a representation of $[0,\infty)$ as  a countable union of disjoint
+half-open intervals $[a_i,b_i)$, 
+such that $|a_i-b_i|\le \eps$ and for
+any $t\in [a_i,b_i)$ we have
+\[|\gamma_\eps^+(a_i)|\ge |\gamma_\eps^+(t)| \ge
+(1-\eps)|\gamma_\eps^+(a_i)|;\eqlbl{eq:exist-pre-qg-1}\]
+moreover, for each $i$, the curve
+\[\gamma_\eps^{a_i}(t)
+=
+\gamma_\eps\left(a_i+ \tfrac{t}{|\gamma_\eps^+(a_i)|}\right)\]
+is also $\kappa$-convex for $t\ge 0$.
+
+\parit{Construction of $\gamma_\eps$.}\label{transfinite-extension-page}
+Assume we already can construct $\gamma_\eps$ in the interval $[0,a)$, and cannot extend it any further. 
+Since $\gamma_\eps$ is $1$-Lipschitz, we can extend it continuously to
+$[0,a]$.
+Use \ref{cor:polar} to
+construct a vector $w$ polar to $\gamma^-_\eps(a)$ with $|w|\le
+|\gamma^-_\eps(a)|$ (in case $a=0$ take $\gamma(0)=x$ and $w=v$).
+Joint $\gamma_\eps$ with a short half-open segment of $\beta_w$.
+According to the extension procedure I (\ref{ext-mono}) the new curve is convex. 
+From \ref{cor:one-side-cont} we get that the added segment satisfies \ref{eq:exist-pre-qg-1}, a contradiction.
+
+\smallskip
+
+Choose a sequence $\eps_n\to0+$ such that $\gamma_{\eps_n}$ converges to a curve $\gamma$.
+From Corollary~\ref{cor:lim-length}???, $|\gamma^+(t)|\ae\lim|\gamma_{\eps_n}^+(t)|$.
+Combining this with inequality \ref{eq:exist-pre-qg-1} and \ref{cor:one-side-cont}, we get that
+$\gamma^{a}$
+is $\kappa$-convex for any $a\ge0$.
+Applying \ref{lem:mono-lim} for $\gamma_n^0\to \gamma^0$, we get $\gamma^+(0)=v$.
+\qeds
+
+
+
+\parbf{Entropy of pre-quasigeodesics.}
+Let us  define \emph{entropy} of pre-\nospace quasigeodesic;
+it measures ``how far''
+a pre-quasigeodesic is from being a quasigeodesic.
+
+\begin{thm}{Definition}\label{def:entropy}
+Let $\gamma$ be a pre-quasigeodesic defined on real interval $\II$.
+The \emph{entropy} of $\gamma$,  is a measure $\mu_\gamma$ defined  on the interior of $\II$
+such that
+\[ \mu_\gamma (a,b)=\ln |\gamma^+(a)|-\ln |\gamma^-(b)|.\]
+for any open subinterval $(a,b)\subset\II$.
+\end{thm}
+
+Note that since $\gamma^a$ is $\kappa$-convex, we have that for any $b>a$, $|\gamma^+(a)|\ge|\gamma^\pm(b)|$.
+In particular entropy is non-negative (i.e. it is indeed a measure).
+From \ref{cor:one-side-cont}, it follows that for any interior value $a\in\II$, we have
+\[\mu_\gamma\{a\}=\ln|\gamma^-(a)|-\ln|\gamma^+(a)|.\]
+Directly from the definition we have that if $|\gamma^+(a)|=1$ and $\mu_\gamma(a,b)=0$ then $\gamma|[a,b]$ is a quasigeodesic.
+
+
+The following proposition follows directly from 
+Corollary~\ref{thm:lim-length}???, 
+Lemma~\ref{lem:mono-lim} 
+and above discussion.
+
+
+\begin{thm}{Proposition}\label{lim-entropy}
+Let $\kappa\le 0$, 
+$\spc{L}\in\CBB m\kappa$
+and $\gamma_n\:\II\to \spc{L}$ is a sequence of pre-quasigeodesics.
+Assume $\gamma_n(t)\to\gamma(t)$ for each $t\in \II$,
+then $\gamma$ is a pre-quasigeodesic.
+Moreover, $\mu_{\gamma_n}\rightharpoonup\mu_\gamma$; 
+i.e., the entropies of $\gamma_n$ weakly converge to the entropy of $\gamma$.
+
+In particular, 
+if $\mu_{\gamma_n}(a,b)\to0$ and $|\gamma_n^+(a)|=1$ then the restriction $\gamma|[a,b]$ is a quasigeodesic.
+\end{thm}
+
+
+
+The next construction  is similar to the extension procedure I (\ref{ext-mono}) and it can be proved the same way.
+
+\begin{thm}{Extention procedure II}\label{ext-pqg}
+Let $\spc{L}\in\CBB m \kappa$, $\gamma_1\:[a,\infty)\to \spc{L}$ and $\gamma_2\:[b,\infty)\to \spc{L}$ be
+two pre-quasigeodesics. 
+Assume 
+\[a\le b,\ \ \gamma_1(b)=\gamma_2(b),\ \  \gamma^-_1(b)\ \
+\text{is polar to}\ \ \gamma^+_2(b)\ \  \text{and}\ \ |\gamma^-_1(b)|\ge|\gamma^+_2(b)|\] 
+then its joint
+\[\gamma\:[a,\infty)\to \spc{L},\ \ \gamma(t)=\l[
+\begin{matrix}
+\gamma_1(t)&\text{if}&t\le b\\
+\gamma_2(t)&\text{if}&t\ge b
+\end{matrix}\right.\]
+is a pre-quasigeodesic.
+Moreover, its entropy is defined by \[\mu_\gamma|(a,b)=\mu_{\gamma_1},\ \
+\mu_\gamma|(b,\infty)=\mu_{\gamma_2}\ \ \text{and}\ \
+\mu_\gamma(\{b\})=\ln|\gamma^-(b)|-\ln|\gamma^+(b)|.\]
+
+\end{thm}
+
+\claim{Chopping procedure}\label{chopping} 
+Let $\kappa\le 0$, 
+$\spc{L}\in\CBB m\kappa$, 
+$\gamma\:[0,\infty)\to \spc{L}$ be a pre-\nospace quasigeodesic. 
+Assume for $a\ge 0$ we have $|\gamma^+(a)|>0$, 
+then for any $\eps>0$ there is $b>a$ 
+such that 
+\[\mu_\gamma(a,b) <\eps[\mangle(\xi,\nu)+b-a],\ \ b-a<\eps,\ \ \t{and}\ \ \mangle(\xi,\nu)<\eps,\]
+where 
+$\xi=\tfrac{\gamma^+(a)}{|\gamma^+(a)|}$, 
+$\nu=\dir x y$,
+$x=\gamma(a)$ and $y=\gamma(b)$.
+\endclaim\rm
+
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-15mm),b(0mm),r(0mm),l(3mm)]{pics/rotation-B(0.3)}
+\lbl[l]{25,14;$x=\gamma(a)$}
+\lbl[l]{25,103;$y=\gamma(b)$}
+\lbl[r]{1,31;$\xi$}
+\lbl[l]{24,39;$\nu$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.} 
+Set $s=b-a$.
+Clearly, if  $s>0$ is sufficiently small, we have 
+$\mangle(\xi,\nu)<\eps$.
+Further, from $\kappa$-convexity of $\gamma^a$ it follows that 
+\[\mu_\gamma(a,a+\tfrac{s}{3}) <\Const\cdot\l[\mangle(\xi,\nu)\r]^2.\]
+The following exercise completes the proof.\qeds
+
+\claim{Exercise}
+Let $\phi,\psi\:\RR_>\to \RR_>$ be two functions such that 
+\begin{subthm}{}$\phi(s)\to 0$ as $s\to0+$;
+\end{subthm}
+
+\begin{subthm}{}for any sufficiently small $s>0$ we have
+\[\psi(\tfrac{s}{3})\le (\phi(s))^2.\]
+\end{subthm}
+Show that for any $\eps>0$ there is  $s>0$ such that
+\[\psi(s)< 10 (\phi(s)+s)^2\ \ \ \t{and}\ \ \ \phi(s)+s\le\eps.\]
+
+\endclaim\rm
+
+
+
+
+
+
+\section{Existence of quasigeodesics}\label{step3-1}
+
+Here is the main result of this section.
+It was proved by Perelman around 1992.
+
+
+\begin{thm}{Existence of quasigeodesics}\label{thm:exist-qg}
+Let $\spc{L}\in\CBB m{}$. 
+Then for any point $x\in \spc{L}$, and any direction $\xi\in \Sigma_x$
+there is a quasigeodesic $\gamma\:\RR\to \spc{L}$ such that 
+$\gamma^+(0)=\xi$.
+\end{thm}
+
+The prove relies heavily on the results in the previous section.
+
+\parit{Proof.} 
+Fix $\kappa\le0$ such that $\spc{L}\in\CBB m\kappa$.
+
+Note that base case $m=1$ is trivial.
+Thus, making an induction argument, we can assume that \ref{thm:exist-qg} holds in all dimensions smaller than $m$.
+This assumption is used just once, to prove the following lemma;
+the proof is taken from \cite{milka:poly1}.
+
+\begin{thm}{Milka's lemma}\label{lem-milka}
+\label{lem:milka}
+Let $m\ge 2$, 
+$\spc{L}\in\CBB m\kappa$, 
+$x\in \spc{L}$ 
+and $\xi\in \Sigma_x$.
+Then there is a direction $\xi^*\in\Sigma_x$ polar to $\xi$; 
+i.e. such that
+\[\<\xi,v\>+\<\xi^*,v\>\ge 0\]
+for any $v\in \T_x$.
+\end{thm}
+
+
+\parit{Proof.} Note that $\Sigma_x\in\CBB{m-1}1$ (see \ref{thm:tan4finite}). 
+Applying  existence  of quasigeodesics (\ref{thm:exist-qg}) in dimension $m-1$,
+for any 
+$\xi\in \Sigma_x$ there is a quasigeodesic%
+\footnote{Note that according to \ref{thm:qg+concave}, it is also $1$-quasigeodesic.}
+ $\gamma$ in $\Sigma_x$ with $\gamma(0)=\xi$.
+Set $\xi^*=\gamma(\pi)$;
+the quasigeodesic comparison (\ref{k-convex-angle}$'$) implies that
+\[\dist{\xi}{\eta}{}+\dist{\eta}{\xi^*}{}
+=
+\mangle(\xi,\eta)+\mangle(\eta,\xi^*)\leq\pi\] 
+for any $\eta\in \Sigma_x$.
+Thus, $\xi$ is polar to $\xi^*$.
+\qeds
+
+
+
+
+Let $\Theta\subset \spc{L}$ be a maximal open set which satisfies the following property:
+\textit{for any $x\in \Theta$ and any $\xi\in\Sigma_x$ there is a quasigeodesic $\gamma\:[0,r]\to \spc{L}$ with $\gamma^+(0)=\xi$ and $r>0$.}
+
+\begin{clm}{Definition.}
+Let $\Omega\subset \spc{L}$ be an open subset. 
+A pre-quasigeodesic $\gamma$ in $\spc{L}$ is called \emph{$\Omega$-pre-quasigeodesic}\index{pre-quasigeodesic!$\Omega$-pre-quasigeodesic} if  its
+entropy vanishes on $\Omega$; 
+i.e. $\mu_\gamma(\gamma^{-1}(\Omega))=0$.
+\end{clm}
+
+\begin{clm}{}\label{clm:loc-exist} For any $x\in \spc{L}$  and any $v\in \T_x$ such that $|v|\le 1$ there is an $\Theta$-pre-quasigeodesic $\gamma\:[0,\infty)\to \spc{L}$ with $\gamma^+(0)=v$.
+\end{clm}
+
+\begin{clm}{}\label{clm:suff-qg-exist} In order to prove \ref{thm:exist-qg}, it is sufficient to show that $\spc{L}=\Theta$
+\end{clm}
+
+\parit{Proof of claims \ref{clm:loc-exist} and \ref{clm:suff-qg-exist}.} 
+Fix $\eps>0$ and set
+$\Theta_\eps
+=
+\set{x\in\Theta}{\cBall[x,\eps]\subset\Theta}$.
+Clearly, $\Theta_\eps$ is an open set.
+
+Let us construct a $\Theta_\eps$-pre-quasigeodesic $\gamma_\eps\:[0,\infty)\to \spc{L}$ with $\gamma_\eps^+(0)=v$.
+Assume we have a $\Theta_\eps$-pre-quasigeodesic $\gamma_\eps\:[0,a)\to \spc{L}$  with $\gamma_\eps^+(0)=\xi$.
+We can extend $\gamma_\eps$ to $[0,a]$ by setting $\gamma_\eps(a)=\lim_{t\to a-}\gamma_\eps(t)$;
+this limit exists since $\kappa$-convex curves are $1$-Lipschitz, see \ref{thm:k-conc=lip-lip}
+(if $a=0$ set $\gamma_\eps(0)=x$).
+
+For $\gamma_\eps\:[0,a]\to \spc{L}$, applying Milka's lemma, we can find a vector $w$ which is polar to $\gamma_\eps^-(a)$ and such that $|w|=|\gamma_\eps^-(a)|$ (if $a=0$, set $w=v$). 
+Further:
+\begin{itemize}
+\item If $|w|=0$, set $\gamma_\eps(t)=\gamma_\eps(a)$ for all $t\ge a$. 
+\end{itemize}
+Otherwise:
+\begin{itemize}
+\item If $\gamma_\eps(a)\in\Theta$ then, from the assumption of the claim, there is a quasigeodesic $\bar\gamma\:[0,r]\to \spc{L}$ with $\bar\gamma^+(0)=w/|w|$.
+Let us extend $\gamma_\eps$ behind $a$ as $\gamma_\eps(a+t)=\bar\gamma(|w|\cdot t)$.
+\item If $\gamma_\eps(a)\notin\Theta$, according to \ref{exist-pre-qg},
+we can find a pre-quasigeodesic $\bar\gamma\:[0,\eps]\to \spc{L}$ with $\bar\gamma^+(0)=w$.
+Then extend $\gamma_\eps$ behind $a$ as $\gamma_\eps(a+t)=\bar\gamma(t)$, clearly $\gamma_\eps([a,a+\eps])\subset \spc{L}\backslash\Theta_\eps$.
+\end{itemize}
+According to extension procedure II (\ref{ext-pqg}), in all above cases, the extended $\gamma_\eps$ is still $\Theta_\eps$-pre-\nospace quasigeodesic.
+Thus, the maximal interval of definition of $\gamma_\eps$, must be open and closed in $[0,\infty)$;
+hence the desired $\gamma_\eps$ exists.
+
+Now take a converging sequence $\gamma_{\eps_n}\to\gamma$ as $\eps_n\to0+$.
+Appling Lemma~\ref{lem:mono-lim} for $\gamma_n^0\to\gamma^0$, we get $\gamma^+(0)=v$.
+From \ref{lim-entropy}, $\gamma$ is $\Theta$-pre-quasigeodesic.
+
+In case $\Theta=\spc{L}$ and $|v|=1$, the constructed pre-quasigeodesic $\gamma\:[0,\infty)\to \spc{L}$
+is also a quasigeodesic.
+It only remains to extend $\gamma$ to negative part of real line.
+To do this we can apply open-close argument as above in a backward direction.
+\claimqeds
+
+According to claim \ref{clm:suff-qg-exist}, the following claim implies the theorem.
+
+\begin{clm}{Key claim.}\label{clm:qg-main}
+If $\Theta\not=\spc{L}$ then there is $p\in \spc{L}\backslash \Theta$ and $r>0$ such that for any $x\in\oBall(p,\tfrac{r}{6})\backslash \Theta$ and $\xi\in \Sigma_x$ there is a quasigeodesic $\gamma\:[0,\tfrac{r}{6}]\to \spc{L}$ with  $\gamma^+(0)=\xi$.
+\end{clm}
+
+
+First let us list the properties of $p\in \spc{L}$ and $r>0$ which are sufficient for the key claim to hold.
+
+Set $\mathfrak C=\spc{L}\backslash \Theta$. 
+The following claim is an extract from Lemma~\ref{lem:amost=Sigma}.
+
+\begin{clm}{}\label{inq:di-inq}
+Given a nonempty closed subset $\mathfrak C\subset \spc{L}$,
+there is a point $p\in \mathfrak C$, 
+a point array $q_1,q_2,\dots,q_\kay$ in  $\spc{L}$ 
+and sufficiently small $r>0$ (say $r<\tfrac{1}{100\cdot(1+|\kappa|)}$ and $r<\tfrac{1}{100}\cdot\dist[{{}}]{p}{q_i}{}$ for each $i$)
+such that 
+
+\begin{enumerate}[a)]
+\item \label{inq:di-inq:net}
+For each $x\in\mathfrak C\cap \oBall(p,r)$, the set $\{\dir x {q_i}\}$ forms an $\tfrac\pi{10}$-net of $\Sigma_x$.
+\item \label{inq:di-inq:main} 
+For each $x\in\mathfrak C\cap \oBall(p,r)$, if
+$\xi\in \Sigma_x\mathfrak C$, 
+$\nu\in\Sigma_x$ 
+and $\mangle(\xi,\nu)<\tfrac\pi{10}$,
+then for some $i$ there is a choice of geodesic $[x q_i]$ such that
+\begin{align*}
+ \mangle(\xi,\nu)
+&\le 
+2[\mangle(\xi,\dir x {q_i})-\mangle(\nu,\dir x {q_i})],
+&
+\tfrac{3}{5}\cdot\pi&<\mangle(\xi,\dir x {q_i})<\tfrac{4}{5}\cdot \pi.
+\end{align*}
+
+\end{enumerate}
+
+\end{clm}
+
+
+
+
+\parit{Proof of claim \ref{inq:di-inq}.} 
+Fix $\eps>0$ and choose $p\in\mathfrak C$ and $r>0$ as in Lemma~\ref{lem:amost=Sigma}.
+
+Choose a point array $q_1,q_2,\dots,q_\kay$ such that directions $\dir p{q_i}$ form a $\eps$-net in $\Sigma_p$.
+We can assume that for any $x\in\oBall(p,r)$, the values $\angk\kappa x{q_i}{q_j}$, $\angk\kappa p{q_i}{q_j}$ and $\mangle\hinge p{q_i}{q_j}$ are $\eps$-close to each-other
+(otherwise move $q_i$ to $p$ along geodesics and pass to smaller $r>0$).
+Since $\mangle\hinge x{q_i}{q_j}\ge\angk\kappa x{q_i}{q_j}$ 
+and $\GHdist(\Sigma_x,\Sigma_p)<\eps$, 
+the set of directions $\dir x {q_i}$ forms a $10\cdot\eps$-net in $\Sigma_x$; 
+hence (\ref{SHORT.inq:di-inq:net}).
+
+For any $x\in\oBall(p,r)\cap\mathfrak C$ and $\xi\in \Sigma_x\mathfrak C$ we have $\GHdist(\Sigma_\xi\T_x,\Sigma_p)<\eps$.
+Thus, if $\eps>0$ is small enough,  one can choose a point $q_i$ such that
+\vskip-.7em
+\[\tfrac{3}{5}\cdot\pi
+<
+\mangle(\xi,\dir x {q_i})
+<\tfrac{4}{5}\cdot\pi
+\ \ \t{and}\ \ 
+\mangle\hinge\xi{\dir x {q_i}}{\nu}
+<\tfrac\pi{10}.\]
+Hence (\ref{SHORT.inq:di-inq:main}).  
+\claimqeds
+
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(3mm)]{pics/rotation-B(0.4)}
+\lbl[l]{25,14;$x_i=\gamma(a_i)$}
+\lbl[l]{25,103;$y_i=\gamma(b_i)$}
+\lbl[r]{1,31;$\xi_i$}
+\lbl[l]{24,39;$\nu_i$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof of key claim \ref{clm:qg-main}.}
+Given $\eps>0$, we first construct a $\Theta$-pre-quasigeodesic $\gamma_\eps\:[0,\tfrac{r}{6}]\to \spc{L}$ with $\gamma_\eps^+(0)=\xi$ and an open set $\Upsilon_\eps\subset (0,\tfrac{r}{6})$ formed by countable disjoined union of intervals $(a_i,b_i)$
+such that the enthropy $\mu_{\gamma_\eps}$ vanish on $(0,\tfrac{r}{6})\backslash \Upsilon_\eps$ and for each $i$ we have
+
+\begin{enumerate}[(i)]
+\item 
+$\xi_i=\tfrac{\gamma^+(a_i)}{|\gamma^+(a_i)|}
+\in \Sigma_{\gamma(a_i)}\mathfrak C$;
+
+\item\label{entr-estim} 
+If $x_i=\gamma(a_i)$, $y_i=\gamma(b_i)$ and $\nu_i=\dir{x_i}{y_i}$ then $\mangle(\xi_i,\nu_i)<\eps$ and
+\[\mu_\gamma(a_i,b_i)
+\le \eps\cdot\l[\mangle(\xi_i,\nu_i)+b_i-a_i\r].\]
+\end{enumerate}
+After that we will show that $\mu_{\gamma_\eps}(0,\tfrac{r}{6})\to 0$ as $\eps\to0$.
+
+Finally, we consider $\gamma$, a partial limit of $\gamma_\eps$ as $\eps\to0$.
+From \ref{lim-entropy}, $\gamma$ is a quasigeodesic 
+and according to \ref{lem:mono-lim}, $\gamma^+(0)=\xi$, which proves the claim.
+
+\parit{The construction of $\gamma_\eps$.} \label{transfinite-extension-2-page} 
+It almost repeats the construction in the proof of Claim~\ref{clm:loc-exist}.
+Assume that we have constructed
+$\gamma_\eps$ on an interval $[0,a]$, $a<\tfrac{r}{6}$ and cannot extend it
+any further. 
+Applying Milka's lemma (\ref{lem:milka}), we can find a vector $w\in\T_p$ which is polar to $\gamma^-_\eps(a)$ and such that $|w|=|\gamma^-_\eps(a)|$.
+Then extend $\gamma$ by a $\Theta$-pre-quasigeodesic
+with $\gamma^+(a)=w$; it exists according to claim \ref{clm:loc-exist}.
+Clearly, \[\mu_{\gamma_\eps}\{a\}=\ln|\gamma^-(a)|-\ln|\gamma^+(a)|=0.\]
+Further:
+\begin{itemize}
+\item If $\tfrac{\gamma^+(a)}{|\gamma^+(a)|}\in\Sigma_{\gamma(a_i)}\mathfrak C$, apply
+chopping procedure (\ref{chopping}) starting
+from $a$. In this case include the chopped interval $(a,b)$ in $\Upsilon_\eps$.
+
+\item If $\tfrac{\gamma^+(a)}{|\gamma^+(a)|}\notin\Sigma_{\gamma(a_i)}\mathfrak C$, then  for on some $b>a$ the curve interval  $\gamma|(a,b)$ lies in $\Theta$, therefore its entropy vanish.
+\end{itemize}
+In both cases, 
+we get a longer curve $\gamma\:[0,b]\to \spc{L}$ with the desired property, a contradiction
+
+\parit{Vanishing of entropy:} 
+From the condition~(\ref{entr-estim}) above, we have that 
+\[
+\mu_{\gamma_\eps}(0,\tfrac{r}{6})
+<
+\eps\cdot\l[\tfrac{r}{6}+\sum_i\mangle(\xi_i,\nu_i)\r].\]
+Therefore, to show that $\mu_{\gamma_\eps}(0,\tfrac{r}{6})\to 0$, it only remains to show
+that $\sum_i\mangle(\xi_i,\nu_i)$ is bounded above by a constant independent
+of $\eps$.
+
+Since $\xi_i\in\Sigma_{x_i}\mathfrak C$, according to claim \ref{inq:di-inq}, for each $i$ there is $q_j$ such that
+\[
+\mangle(\xi_i,\nu_i)
+<
+2\cdot\l[\mangle(\dir{x_i}{q_j},\xi_i)-\mangle(\dir{x_i}{q_j},\nu_i)\r]
+\eqlbl{eq:inq:di-inq-1}\]
+and moreover,
+\[
+\tfrac{3}{5}\cdot\pi
+<\mangle(\dir{x_i}{q_j},\xi_i)
+<\tfrac{4}{5}\cdot\pi
+\ \ \t{and}\ \ 
+\mangle(\xi_i,\nu_i)
+<
+\eps<\tfrac\pi{10}.\eqlbl{eq:inq:di-inq-2}\]
+In particular, $\mangle(\dir{x_i}{q_j},\nu_i)>\tfrac\pi2$.
+Note that, $\gamma\subset\oBall(p,\tfrac{r}3 )$ and thus, any geodesic $[x_i y_i]$ lies in $\oBall(p,r)$.
+Set $\lambda=1/r$, since $r$ is small, we have
+\begin{align*}
+\dist{q_j}{y_i}{}-\dist{q_j}{x_i}{}
+&\le-\dist[{{}}]{x_i}{y_i}{}\cdot\cos\mangle(\dir{x_i}{q_j},\nu_i)+\tfrac\lambda2\cdot\dist[2]{x_i}{y_i}{}
+\le
+\\
+&\le
+-(b_i-a_i)\cdot\cos\mangle(\dir{x_i}{q_j},\nu_i)+\tfrac\lambda2\cdot (b_i-a_i)^2.
+\\
+\intertext{Since $\gamma$ is $\kappa$-convex,}
+\dist{q_j}{x_i}{}-\dist{q_j}{y_i}{}
+&\le
+-(b_i-a_i)\cdot\<\dir{y_i}{q_j},\gamma^-(b_i)\>
++\tfrac\lambda2\cdot(b_i-a_i)^2.
+\end{align*}
+Therefore,
+\[
+\cos\mangle(\dir{x_i}{q_j},\nu_i)
+\le-\<\dir{y_i}{q_j},\gamma^-(b_i)\>
++\lambda\cdot(b_i-a_i).
+\eqlbl{eq:inq:di-inq-3}\]
+Since $\gamma^+(a_i)$ is polar to $\gamma^-(a_i)$, we have
+\[\begin{aligned}
+\cos\mangle(\dir{x_i}{q_j},\xi_i)
+&=\tfrac{1}{|\gamma^+(a_i)|}\cdot\<\dir{x_i}{q_j},\gamma^+(a_i)\>\ge
+\\
+&\ge -\tfrac{1}{|\gamma^+(a_i)|}\cdot\<\dir{x_i}{q_j},\gamma^-(a_i)\>
+\end{aligned}
+\eqlbl{eq:inq:di-inq-4}\]
+Note that $\gamma^+(a_i)\ge \tfrac{1}{2}$; it follows from $\kappa$-convexity of $\gamma$ since there is $j$ such that $\mangle(\xi,\dir x {q_j})<\tfrac\pi{10}$, see property  \ref{inq:di-inq:net}.
+Set
+\[
+\theta_{q_j}[0,b)
+=1-\<\dir{y_i}{q_j},\gamma^-(b)\>+\lambda\cdot b.\]
+Clearly, $b\mapsto-\<\dir{y_i}{q_j},\gamma^-(b)\>+\lambda\cdot b$ is non-decreasing;
+thus
+$\theta_{q_j}$ defines a positive measure on $[0,\tfrac{r}{6})$.
+Using \ref{eq:inq:di-inq-2}, \ref{eq:inq:di-inq-3} and \ref{eq:inq:di-inq-4}, we can continue \ref{eq:inq:di-inq-1}:
+\begin{align*}
+\mangle(\xi_i,\nu_i)
+&<
+2\cdot\l[\mangle(\dir{x_i}{q_j},\xi_i)-\mangle(\dir{x_i}{q_j},\nu_i)\r]
+\le
+\\
+&\le 10\cdot\l[\cos\mangle(\dir{x_i}{q_j},\nu_i)-\cos\mangle(\dir{x_i}{q_j},\xi_i)\r]
+\le
+\\
+&\le 20\cdot\l[\<\dir{x_i}{q_j},\gamma^-(a_i)\>-\<\dir{y_i}{q_j},\gamma^-(b_i)\>+\lambda (b_i-a_i)\r]
+=
+\\
+&=20\cdot\theta_{q_j}[a_i,b_i)
+\end{align*}
+In the exceptional case $a_i=0$, although $\gamma^-(0)$ might be undefined, the last inequality holds.
+Since the sistance function $\dist{q_j}{}{}$ is 1-Lipschitz, we get $\theta_{q_j}[0,\tfrac{r}{6})\le 2+\lambda r$.
+Therefore,
+\[\sum_i\mangle(\xi_i,\nu_i)
+\le 
+20\cdot\sum_{j}\theta_{q_j}[0,\tfrac{r}{6})
+\le 20\cdot \kay\cdot(2+\lambda\cdot r).\]
+\qedqedsf
+
+Informally, the following lemma says that if in any closed set $\mathfrak C$ of $\CBB{}{}$-space, one can find a special point $p$ such that any near by point $x\in\mathfrak C$ has \emph{almost the same} tangent space, and moreover, $\T_x$ \emph{almost splits} in direction of any $\xi\in\Sigma_x \mathfrak C$.
+
+\begin{thm}{Lemma} \label{lem:amost=Sigma}
+Let $\spc{L}\in\CBB m \kappa$ and $\mathfrak C\subset \spc{L}$ be a closed subset.
+Then, given $\eps>0$,
+there is a point $p\in \mathfrak C$, and $r>0$ 
+such that 
+\begin{subthm}{}for any $x\in\mathfrak C\cap \oBall(p,r)$ we have
+$\GHdist(\Sigma_x,\Sigma_p)<\eps$ and moreover,
+\end{subthm}
+\begin{subthm}{} for any $\xi\in\Sigma_x\mathfrak C$, $\GHdist(\Sigma_\xi\T_x,\Sigma_p)<\eps$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+Note that as follows from volume continuity (\ref{vol-cont}),
+for any $\eps>0$ there is $\delta=\delta(m,\eps)>0$ such that if $\Sigma_x+\delta\ge\Sigma_p$ and $\vol\Sigma_x-\delta\le\vol\Sigma_p$ then
+$\GHdist(\Sigma_p,\Sigma_x)<\eps$.
+
+Let us choose $p$ with $\delta$-maximal volume;
+i.e. such that $\vol\Sigma_x-\delta<\vol\Sigma_p$ for any $x\in \mathfrak C$.
+
+Now, let us apply semicontinuity of space of directions (\ref{cor:simicont-Sigma}) several times:
+\begin{itemize}
+\item First, there is $r>0$ such that $\Sigma_x+\delta\ge\Sigma_p$ for any $x\in\oBall(p,r)$.
+Hence $\GHdist(\Sigma_x,\Sigma_p)<\eps$.
+\item Second, $\Sigma_\xi\T_x\ge\Sigma_x$ (here we apply \ref{cor:simicont-Sigma} for $\T_x$).
+\item Third, if $\Sigma$ is a partial limit of $\Sigma_{x_i}$ for $x_i\in\mathfrak C\cap\oBall(p,r)$, then $\Sigma_\xi\T_p\le \Sigma$.
+Thus, $\GHdist(\Sigma_\xi\T_x,\Sigma_p)<\eps$.\qeds
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Quasigeodesics in extremal sets.}\label{qg-extrim}
+
+Here we give an extended version of Theorem~\ref{thm:exist-qg}.
+The proof repeats the proof of existence of quasigeodesics (\ref{thm:exist-qg-ext});
+it only require a stronger analog of Milka's lemma (\ref{lem:milka}).
+
+\begin{thm}{Quasigeodesic in extremal set}\label{thm:exist-qg-ext}
+Let $\spc{L}\in\CBB m \kappa$, 
+$E\subset \spc{L}$ be an extremal set.
+Then for any point $x\in E$, and any direction $\xi\in \Sigma_x E$
+there is a quasigeodesic $\gamma\:\RR\to E$ such that $\gamma(0)=x$ and
+$\gamma^+(0)=\xi$.
+\end{thm}
+
+\parit{Sketch of proof.} 
+Note that according to ??? as a result of construction in \ref{exist-convex} we get a $\kappa$-convex curve in $E$.
+Further, construction in \ref{exist-pre-qg} gives a pre-quasigeodesic in $E$.
+According to ???, for any $p\in E$, the tangent space $\T_p E$ is defined and it is an extremal set of $\T_p$.
+Thus if one use extended Milka's lemma \ref{lem:milka-axtemal} instead of \ref{lem:milka}, one can keep in $E$ all the constructions in the proof of \ref{thm:exist-qg}. \qeds
+
+\begin{thm}{Extremal Milka's lemma}\label{lem:milka-axtemal}
+Let $\spc{L}\in\CBB m\kappa$, 
+$p\in \spc{L}$ 
+and $E\subset \T_p$ be an extremal set of a tangent cone.
+Then for any vector $v\in E$ there is a polar vector $v^*\in E$
+such that $|v|=|v^*|$.
+\end{thm}
+
+\parit{Proof.} Set $X=E\cap \Sigma_p$. If $\Sigma_\xi X\not=\emptyset$ then the proof is the
+same as for the standard Milka's lemma; it is enough to choose a direction in
+$\Sigma_\xi X$ and shoot a quasigeodesic $\gamma$ in $X$ of length $\pi$ in this direction such that $\gamma\subset X$;
+such $\gamma$ exists from the induction hypothesis. 
+
+If $X=\{\xi\}$ then from ???, we have $\cBall[\xi,{\tfrac\pi2}]=\Sigma_p$. 
+Thus, $\xi$ is polar to itself.
+
+Otherwise, if $\Sigma_\xi X=\emptyset$ and $X$ contains at least two points, choose $\xi^*$ to be closest point in $X\backslash\xi$ from $\xi$. 
+Since $X\subset \Sigma_p$ is extremal (???), for any $\eta\in \Sigma_p$ we have $\mangle\hinge{\xi^*}\eta\xi\le\tfrac\pi2$ and since $\Sigma_\xi X=\emptyset$ we have $\mangle\hinge\xi\eta{\xi^*}\le\tfrac\pi2$.
+Therefore, in the model spherical triangle 
+$\trig{\~\xi}{\~\eta}{\~\xi^*}
+=
+\modtrig1(\xi\eta\xi^*)$, 
+we have $\mangle\~\xi\le \tfrac\pi2$ 
+and $\mangle\~\xi^*\le \tfrac\pi2$.
+Hence 
+\begin{align*}
+\mangle(\xi,\eta)+\mangle(\eta,\xi^*)
+&=\dist{\~\xi}{\~\eta}{}+\dist{\~\eta}{\~\xi^*}{}
+\le\pi.
+\end{align*}
+\qedsf
+
+
+
+
+
+
+
+\section{Remarks and open problems}
+Is there an analog of the Liouville's theorem for ``quasigeodesic flow''?
+Namely:
+\begin{thm}{Question}
+Let $\spc{L}\in\CBB m{}$ 
+and $\Gamma$ be the space of all quasigeodesics $\gamma\:\RR\to \spc{L}$.
+Is it possible to define measure $\mu$ on $\Gamma$ such that 
+\begin{subthm}{}
+$\mu$ is invariant with respect to natural group action on $\Gamma$ generated by $\gamma\mapsto\gamma\circ\sigma$, where $\sigma(t)=t+a$ or $\sigma(t)=-t$
+\end{subthm}
+
+\begin{subthm}{}
+if $e_t$ denotes evaluation map $e_t\:\gamma\mapsto\gamma(t)$ then 
+\[e_t\#\mu=\vol_m\]
+where $\#$ stays for push-forward.
+%???MAyBE DEFINE AS $e_t\:\gamma\mapsto\gamma^+(t)$???
+\end{subthm}
+\end{thm}
+
+If the answer to the following question is positive, it could give an alternative proof of existence of quasigeodesics (\ref{thm:exist-qg}).
+
+\begin{thm}{Question}
+Is it true that in a $\CBB{}{}$-space without boundary there is an infinitely long geodesic?
+\end{thm}
+
+
+As it was noted by A.~Lytchak, the these two questions can be reduced to the following:
+Assume $\spc{L}\in\CBB m{}$ and $\partial \spc{L}=\emptyset$. 
+Set
+\[V(r)=\int\limits_\spc{L}\vol_m\oBall(x,r)\cdot\d_x\vol_m,\]
+then \[V(r)=\vol_m\spc{L}\cdot\Const_m\cdot r^m+o(r^{m+1}).\]
+The technique of \emph{tight maps} makes it possible to prove only that
+\[V(r)=\vol_m\spc{L}\cdot\Const_m\cdot r^m+O(r^{m+1}).\]
+Note that if $\spc{L}$ is a Riemannian manifold with boundary then 
+\[V(r)
+=
+r^m\cdot\Const_m\cdot\vol_m \spc{L} +r^{m+1}\cdot\Const'_m\cdot\vol_{m-1}\partial \spc{L}
++o(r^{m+1}).\]
+
+\smallskip
+
+\emph{Variation of turn} of a broken geodesic $a_0 a_2\dots a_n$ can be defined as sum of angle excesses
+\[\sum_{i=1}^{n-1}\l(\pi-\mangle\hinge{a_i}{a_{i+1}}{a_{i-1}}\r).\]
+Further, variation of turn for a curve can be defined as lower limit of turns of broken geodesics which converge to a given curve (you can choose in which sense).
+
+\begin{thm}{Question}
+Let $\spc{L}\in\CBB m{}$.
+Is it true that any quasigeodesic in $\spc{L}$ defined on a bounded interval has bounded variation of turn.
+\end{thm}
+
+If the all tangent spaces of $\spc{L}$ are sufficiently close to $\EE^m$ then the answer is ``yes''.
+In this case variation of turn can be estimated though \emph{total turn to a point}\index{turn to the point $p$}, which defined as follows:
+\[\sum_{i=1}^{n-1}\max\l\{0,\pi-\angk\kappa{a_i}{a_{i-1}}{p}-\angk\kappa{a_i}{a_{i+1}}{p}\r\}.\]
+
+
+
+
+
+
+One could look at the following class of curves in general metric space.
+This class of curves should be interesting in the metric spaces, which has ``a lot'' of semiconcave functions.
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space.
+A curve $\gamma\:\II\to \spc{X}$ is called \emph{funny quasigeodesic}\index{funny quasigeodesic} if for any $\lambda\in\RR$ and any $\lambda$-concave subfunction $f\:\spc{X}\subto \RR$ the composition $f\circ\gamma$ is $\lambda$-concave.
+\end{thm}
+
+An analog of existence theorem (???) does not hold for this type of curves,
+once funny quasigeodesic comes to the boundary it terminates.
+On the other hand it has a nice property: if $\spc{X}$ is a convex closed subset of $\spc{L}\in\CBB m{}$ then any funny quasigeodesic in $\spc{X}$ is a funny quasigeodesic in $\spc{L}$.
+Also, it is easy to see that in $\cCat{}{}$-spaces, the class of funny quasigeodesics coinsides with class geodesics geodesics.
+
+
+
+
+
+
+
+
+\section{Exercises}
+
+\begin{thm}{Exercise} Show that if $\spc{L}\in\CBB m1$ and $\partial \spc{L}\not=\emptyset$ then $\rad \spc{L}\le\tfrac\pi2$.
+\end{thm}
+
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB m1$, and $p_1,p_2,\cdots,p_m\in \spc{L}$. 
+Show that there is $x\in \spc{L}$ such that $\dist{p_n}{x}{}\le\frac\pi2$ for each $n$.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB m1$.
+Assume $\rad\spc{L}>\tfrac\pi2$.
+Show that 
+\[\rad\Sigma_p>\tfrac\pi2\]
+for any $p\in \spc{L}$.
+\end{thm}
+
+\begin{thm}{Exercise} Construct $\spc{L}\in\CBB 2 0$ with $p\in \spc{L}$ and $\xi\in \Sigma_p$ such that there are two quasigeodesics $\gamma_1,\gamma_2\:[0,\infty)\to \spc{L}$ with initial data $\gamma_1^+(0)=\gamma_2^+(0)=\xi$ such that $\gamma_1(t)\not=\gamma_2(t)$ for any $t>0$.
+\end{thm}
+
+\begin{thm}{Exercise} Construct $\spc{L}\in \CBB 3 0$, 
+$\partial \spc{L}\not=\emptyset$ and a quasigeodesic $\gamma$ in $\spc{L}$ which is not a projection of any quasigeodesic in doubling of $\spc{L}$.
+
+Show that there is no such example in $\CBB20$.
+\end{thm}

@@ -1,0 +1,379 @@
+%%!TEX root = all.tex
+\chapter{Semiconcave functions}
+
+\section{Supporting vectors;\\
+native and foreign functions}
+
+Supporting vectors are defined similar to gradient.
+
+\begin{thm}{Definition}\label{def-support} Assume $\spc{L}\in\CBB m\kappa$, $f\:\spc{L}\subto\RR$ be a semiconcave locally Lipschitz subfunction 
+and $p\in\Dom f$.
+
+A vector $s\in \T_p$ is called a \emph{supporting vector} of $f$ at $p$ if and
+\[(\d_p f)(x)\le -\langle s , x\rangle\ \ \hbox{for any}\ \ x\in \T_p.\]
+\end{thm}
+
+The set of supporting vectors of $f$ at $p\in\Dom f$ will be denoted by $\partial_p f$.
+
+\begin{thm}{Lemma}
+Assume $\spc{L}\in\CBB m\kappa$, $f\:\spc{L}\subto\RR$ be a semiconcave subfunction and $p\in
+\Dom f$.
+Then $\partial_p f$ is a closed convex subset of $\T_p$. 
+\end{thm}
+
+\parit{Proof.}
+From the definition it is clear that $\partial_p f$ is a closed.
+
+Convexity of the set of $\partial_p f$ follows from concavity of the function 
+\[x\to -\<u,x\>\] 
+on $\T_p$ for any fixed $u\in\T_p$ .
+\qeds
+
+\begin{thm}{Definition}\label{def:native}
+Let $\spc{L}\in\CBB{}{}$
+and $f\:\spc{L}\subto\RR$ be a semiconcave subfunction.
+The function $f$ is called \emph{native}, 
+if for any $p\in\Dom f$ the set of supporting vectors $\partial_pf$ not empty.
+Otherwise it is called \emph{foreign}.
+\end{thm}
+
+
+Note that if $\dim \spc{L}<\infty$, for any $p\in \spc{L}$ the function $f=\tfrac{1}{2}\cdot\dist[2]{p}{}{}$ is native
+sinse $\ddir q p\in\partial_q f$.
+On the other hand, if $\partial \spc{L}\not=\emptyset$ then the distance function to the boundary 
+$f=\dist{\partial \spc{L}}{}{}$ is semiconcave by ??? but it is foreign sinse, it is eqsy to see that if $p\in\partial \spc{L}$ then $\partial_p f=\emptyset$.
+
+
+\begin{thm}{Theorem}\label{thm:native-operations}
+Let $\spc{L}\in\CBB m\kappa$ 
+and $f_1,f_2,\dots,f_n\:\spc{L}\to\RR$ be an array of native semiconcave functions.
+Assume $\Theta\:\RR^n\to\RR$ be a locally Lipschitz semiconcave function which innreasing in each argument.
+Then $f=\Theta(f_1,f_2,\dots,f_n)$ is a native semiconcave function.
+
+In particular, for any native semiconcave functions $f_1,f_2\:\spc{L}\to\RR$,
+we have that $\min\{f_1,f_2\}$ as well as $f_1+f_2$ are also native.
+\end{thm}
+
+
+
+\begin{thm}{Theorem} Let $\spc{L}_n\in\CBB m\kappa$, and $\spc{L}_n\xGHto{a_n} \spc{L}$.
+Assume $f_n\:\spc{L}_n\subto \RR$ be a sequence of native $\lambda$-concave subfunctions which converged to a subfunction $f\:\spc{L}\to\RR$.
+Then $f$ is native.
+\end{thm}
+
+\parit{Proof.}
+???
+\qeds
+
+
+
+Let $\spc{L}\in\CBB m\kappa$, 
+$\partial \spc{L}\not=\emptyset$,
+as in ???, we will denote by $\breve{\spc{L}}$ the doubling of $\spc{L}$ and by $\proj\:\breve{\spc{L}}\to \spc{L}$ the natural projection map.
+
+
+\begin{thm}{Lemma} 
+Let $\spc{L}\in\CBB m\kappa$. 
+Then
+\begin{subthm}{with-no-bry} If $\partial \spc{L}=\emptyset$ then any semiconcave subfunction $f\:\spc{L}\subto\RR$ is native.
+\end{subthm}
+
+\begin{subthm}{with-bry} If $\partial\spc{L}\not=\emptyset$ then a semiconcave subfunction on $f\:\spc{L}\subto\RR$ 
+is native if and only if the subfunction $f\circ\proj\:\breve{\spc{L}}\subto\RR$ is semiconcave.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.} First, by induction on $m$, we prove that if $p\notin\partial \spc{L}$ then $\partial_pf\not=\emptyset$.
+
+The base $m=1$ is trivial.
+
+Consider the restriction $\phi=\d_p f|\Sigma_p$.
+Note that $\phi''+\phi\le 1$ (see ???).
+Let ${\xi}\in \Sigma_p$ be a minimum point of $\phi$.
+Cleary $\d_{{\xi}}\phi\ge 0$.
+By the induction hypothesis, $\partial_{{\xi}}\phi\not=\emptyset$.
+On the other hand if $s\in\partial_\xi\phi$ then $\d_\xi\phi(s)\le -|s|^2$.
+Therefore $\partial_{\xi}\phi$ contains unique element --- the zero vector $\0$. 
+Thus $\d_{{\xi}}\phi(x)\le\<\0,x\>=0$; i.e. $\d_{{\xi}}\phi\equiv 0$.
+Applying $\phi''+\phi\le 1$, for a geodesic $[\xi\eta]$ in $\Sigma_p$, we obtain 
+\[(\d_p f)(\eta)
+\le 
+(\d_p f)({\xi})
+\cdot
+\cos\mangle({\xi},\eta).\]
+for any $\eta\in \Sigma_p$.
+Hence
+$\l[-(\d_p f)({\xi})\r]\cdot{\xi}\in\partial_p f$.
+
+In particular, we obtain (\ref{SHORT.with-no-bry}). 
+
+To prove ``if''-part of (\ref{SHORT.with-bry}) it is only nesessury to show that $\partial_p f\not=\emptyset$ for $p\in\partial \spc{L}$.
+Note that there are two natural distance preserving map $e_1,e_2\:\spc{L}\to\breve{\spc{L}}$.
+Let $\breve p=\proj^{-1}(p)$.
+Note that according to ???, $\Sigma_{\breve p}\breve{\spc{L}}$ is the doubling of $\Sigma_{p}\spc{L}$ and the asocited projection map coindede with $\d_{\breve p}\proj$.
+Let ???
+
+Now assume $\partial{\spc{L}}\not=\emptyset$ and $f\circ\proj\:\breve{\spc{L}}\subto\RR$ is concave.
+Then sinse doubeling $\breve{\spc{L}}$ has no boundary (see ???), 
+we have that $f\circ\proj$ is native.
+
+Assume $\proj(p)\in \partial \spc{L}$.
+Remind from ???, that $\T_p\breve{\spc{L}}=\breve \T_{\proj (p)}\spc{L}$.
+Let $v\in\partial_p \proj\circ f\not=\emptyset$. 
+Then clearly $\d_p\proj(v)\in \partial_{\proj(p)}  f$.
+Note that $\d_p\proj\:\T_p\breve{\spc{L}}\to\T_{\proj (p)}\spc{L}$
+
+
+\parit{``Only if''-part of (\ref{SHORT.with-bry}).}
+Let $\gamma$ be a geodesic in $\breve{\spc{L}}$.
+Note that if $\gamma$ comes at $\proj^{-1}\partial \spc{L}$ for two values $t_0<t_1$ then whole segment
+ $\gamma([t_0,t_1])$ belongs to $\proj^{-1}\partial \spc{L}$.
+Otherwise reflecting $\gamma([t_0,t_1])$ in ???
+
+Assume it intesects $\proj^{-1}\partial \spc{L}$.
+Then one can choose a value $t_0$ such that for any $t\le t_0$, 
+$\gamma(t)\in \spc{L}_1$ and for any $t\ge t_0$, 
+$\gamma(t)\in \spc{L}_2$.
+Otherwise, a reflection in 
+Assume it crosses preimage of the boundary at $t_0$.
+Then $f\circ\proj\circ\gamma$ is semiconcave at all points except maybe at $t_0$.
+
+Let $\breve\gamma$ be a geodesic in $\breve{\spc{L}}$ which starts and ends in $\breve{\spc{L}}\backslash \proj^{-1}(\partial \spc{L})$.
+Note that it might intersect $\proj^{-1}(\partial \spc{L})$ at most at one point ??? 
+
+Consider curve $\gamma=\proj\circ\breve \gamma$.
+Note that $\gamma^+(t_0)$ and $\gamma^-(t_0)$ are polar.
+Indeed for any vextor $v\in \T_p$
+\qeds
+
+
+
+In particular, it follows that if the space of dirrections $\Sigma_p$ has
+a diameter\footnote{We always consider $\Sigma_p$ with angle metric.} $\le \tfrac\pi2$ then
+$\nabla_p f=\0$ for any native $\lambda$-concave function $f$.
+
+Clearly, for any vector $s$, supporting  $f$ at $p$ we have 
+\[|s|\ge|\nabla_p f|.\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Otsu--Shioya smoothing}
+
+The following constructin was introduced in \cite[section 5]{otsu-shioya}.
+It gives a way to smooth a $\MD$-function on $\CBB{}{}$-space.
+
+Let $\spc{L}\in\CBB{m}{}$, $p\in\spc{L}$ and $\eps>0$.
+Let us define function $\os_p^\eps\:\spc{L}\to\RR$ as 
+\[\os_p^\eps(x)
+=
+\oint\limits_{\oBall(p,\eps)}
+\dist[{{}}]{y}{x}{}\cdot\d_y\vol^m.\]
+
+Further, 
+given a multidistant function $\phi\can F\circ\dist{\bm{p}}{}{}$, where
+$\bm{p}=(p_1,p_2,\dots,p_\kay)$,
+consider new function
+\[\OS^\eps\phi
+\df
+F\circ\os^\eps_{\bm{p}},
+\]
+where $\os^\eps_{\bm{p}}$ denotes an array of functions
+$(\os^\eps_{p_1},\os^\eps_{p_2},\dots,\os^\eps_{p_\kay})\:\spc{L}\to\RR^\kay$.
+
+Let $\spc{L}\in\CBB{m}{}$,
+$\phi\in\MD(\spc{L},\RR)$
+and $\phi\can F\circ\dist{\bm{p}}{}{}$.
+Given $\eps>0$ let us consider new subfunction
+$\OS_\eps\phi\:\spc{L}\subto\RR$ defined as follows 
+\[\OS_\eps\phi(q)
+=
+\int\limits_{\oBall(\bm{p},\eps)\subset\spc{L}^\kay}
+F(\dist{\bm{x}}{q}{})\cdot\d_{\bm{x}}\vol^{\kay m},\]
+we say that $\OS_\eps\phi$ is defined at $q$ if the expression under integral is defined for all $\bm{x}\in \oBall(\bm{p},\eps)$.
+
+\begin{thm}{Lemma}
+Let $\spc{L}\in\CBB m\kappa$ and $\phi\in\MD(\spc{L},\RR)$.
+Then for any $\eps>0$, the subfunction $\OS_\eps\phi\:\spc{L}\to(-\infty,+\infty]$ is semiconcave. 
+Moreover, for any $p\in \Dom \OS_\eps\phi$, 
+the restriction $\d_p\OS_\eps\phi|\Lin_p$ is linear.
+
+In particular, if $p\in \Dom \OS_\eps\phi$ is Euclidean point, i.e. $\T_p\iso\EE^m$, then $\OS_\eps\phi$ is differentiable at $p$, i.e. $\d_p\OS_\eps\phi$ is defined and linear.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Convexity and Lipschitz continuity (alpha)}
+
+\begin{thm}{Theorem}\label{thm:cont=>lip}
+Let $\spc{L}\in \CBB{m}{}$,
+$\partial \spc{L}=\emptyset$,
+$f\:\spc{L}\subto[-\infty,+\infty)$ be an upper semi-continuous semi-concave subfunction.
+Assume that $f$ finite on a dense subset of $\Dom f$,
+then $f$ is locally Lipschitz.
+\end{thm}
+
+\parbf{Examples.}
+The following examples show that the conclusion of theorem does not hold in some weaker assumptions.
+
+\begin{enumerate}
+
+\item The condition $\partial \spc{L}=\emptyset$ is essental;
+otherwise one could take space $\spc{L}=[0,1]$ and function $f(x)=\sqrt{x}$.
+
+\item The condition that $f$ is lower semicontinious is also essential.
+Otherwise, take a space $\spc{L}\in\CBB{}{}$ with a point $p\in \spc{L}$ such that no geodesic go through $p$.
+(For example, a 2-dimensional cone with vertex at $p$ and total angle less that $\pi$).
+The function $f\:\spc{L}\to\RR$ defined as $f(p)=0$ and $f(x)=1$ for any $x\not=p$ is concave but not continuous.
+
+\item The condition that $\spc{L}$ is finite dimensional is also essential. 
+Consider the Wasserstein space $\spc{W}$ over $[0,1]$.
+According to ???, $\spc{W}\in \CBB{\infty}{0}$,
+and according to ??? the entropy function $f$ on $\spc{W}$ is concave and satisfies the rest of conditions of the theorem.
+On the other hand $f$ takes value $-\infty$ at a dense set in $\spc{W}$.
+
+\end{enumerate}
+
+
+The proof of this theorem is based on the same idea 
+as the proof of Theorem~\ref{thm:dist-to-bry} 
+and the proof of part (\ref{SHORT.qg+concave:qg}$\Rightarrow$\ref{SHORT.qg+concave:strong}) 
+in Theorem~\ref{thm:qg+concave}.
+In fact, it is possible to reduce both \ref{thm:cont=>lip} and \ref{thm:qg+concave} to \ref{thm:dist-to-bry}, but we repeat the proof for each theorem with small variations.
+
+\parit{Proof.}
+Passing to a smaller domain of $f$ if necessury, we can assume that $f$ is $\lambda$-concave for some $\lambda\ge 0$.
+According to ???, for any $p\in\Dom f$,
+there is a $(-1)$-concave Lipschitz subfunction $g\:\spc{L}\subto\RR$ which is defined at $p$.
+According to ???, there is arbitrary small compact convex neigborhood $K$ of $p$.
+Thus we can assume $K\subset \Dom f\cap\Dom g$.
+Note that function function $f+\lambda g$ is concave 
+and it is locally Lipschitz in $K$ if and only if $f$ is.
+
+Thus, without loss of generality  we can assume that $f$ is concave.
+
+Consider subgraph of $ f$
+\[M=\set{(x,t)\in \spc{L}\times\RR}{x\in K\  \t{and} \  t\le  f(x)}.\]
+Clearly $M$ is convex closed subset
+ of $\spc{L}\times\RR$.
+Thus, $M\in\CBB{m+1}{}$.
+According to \ref{thm:fr-bry}, $\partial M=\Fr_{\spc{L}\times\RR} M$.
+
+Consider the level set 
+\[M_t=\set{x\in K}{(x,t)\in M}.\]
+Clearly, $M_t$ is a closed convex subset of $K$. 
+In particular, $M_t\in\CBB{m}{\kappa}$.
+Since $f$ is finite on an everywhere dense subset,
+we have that $M_t\to K$ in Hausdorff sense as $t\to-\infty$.
+Thus, according to ???, $\partial M_t\to \partial K$ in Hausdorff sense.
+Further, according to \ref{thm:fr-bry}, $\partial M_t=\Fr_\spc{L}M_t$ and $\partial K=\Fr_\spc{L}K$.
+Thus for any interior point $x\in K$, is an interior point of $M_t$ for all $t$ sufficiently close to $-\infty$. 
+In particular, one can choose real value $t_0$ near $-\infty$, 
+so that $\check z=(p,t_0)\notin\partial M$.
+
+Assume $f$ is not Lipschitz at $p$.
+It implies that there are two sequences of points 
+$\check p_n=(p_n,t_n)$, $\check q_n=(q_n,\tau_n)\in\partial M$ such that $p_n$, $q_n\to p$ and $\angk{\kappa}{\check p_n}{\check q_n}{\check z}\to0$ as $n\to\infty$.
+Passing to a subsequence if nesessury, we can assume that seqence $\dist{\check z}{\check p_n}{}$ converges, say to $\ell>0$.
+Consider sequence of radial curves $\alpha_n$ for curvature $\kappa$ in the space $M$ which start at $q_n$ withrespect to $p_n$.
+According to  ??? $\alpha_n$ lies in $\partial M$.
+From ???, we have that $\alpha_n(\ell)\to z$ as $n\to\infty$.
+Thus, $z\in\partial M$, a contradiction
+\qeds
+
+\section{Misc}
+
+\begin{thm}{Convexity of the limit function}\label{thm:convex-limit-cbb}
+Let $(\spc{L}_n)$ be a sequence of $\CBB{}{\kappa}$ spaces
+and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
+Assume $f_n\:\spc{L}_n\to\RR$ be a sequence of $\lambda$-concave $\Lip$-Lipschitz subfunctions
+and $f_n\to f_\o\:\spc{L}_\o\to\RR$.
+Then $f_\o$ is $\lambda$-concave.
+\end{thm}
+
+\parit{Proof}
+???
+\qeds
+
+\begin{thm}{Gradient of general concave function}
+Assume $\spc{L}\in\CBB{}{}$ 
+and $f\:\spc{L}\subto (-\infty,\infty)$ be an upper semi-continuous semi-concave subfunction.
+Consider the set $\Omega$ of all points $p\in \Dom f$ 
+such that $\nabla_pf$ is defined.
+Then $\Omega$ is an open locally convex set
+and for any $p\in\Dom f$ a punctured neighbourhood of $p$ belongs to $\Omega$.
+\end{thm}
+
+
+
+
+
+\section{Exercises}
+
+\begin{thm}{Problem}
+Let $\spc{L}\in\CBB{}{}$.
+A semiconcave function is called ``pseudodistance function''
+if for any point $p\in\spc{L}$ 
+there is a set of tangent vectors $V\subset \T_p$
+such that 
+\[d_p f(x)=\inf\set{-\<v,x\>}{v\in V}.\]
+\begin{enumerate}
+\item Construct a semiconcave locally Lipschitz function which is not pseudodistance.
+\item Construct a space $\spc{L}\in\CBB{m}{0}$ and concave locally Lipschitz function $f$ on $\spc{L}$ which can not be approximated by concave pseudodistance functions.
+\item Show that any concave function on $\spc{L}\in\CBB{m}{0}$ can be approximated by concave pseudodistance functions.
+\end{enumerate}
+
+\end{thm}

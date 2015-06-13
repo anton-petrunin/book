@@ -1,0 +1,527 @@
+%%!TEX root = all.tex
+\chapter{Curves and Lipschtz maps}
+
+
+
+\section{Preliminaries}
+
+Let $\spc{X}$ be a metric space.
+A \emph{curve}\index{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a \emph{real interval}\index{real interval} (i.e. an arbitrary convex subset of $\RR$);
+the curve it called \emph{Lipschitz}\index{Lipschitz curve} or \emph{locally Lipschitz}\index{locally Lipschitz curve} if the map $\alpha\:\II\to \spc{X}$ is.
+
+%??? Maybe we only need locally Lipschitz curves, A.???
+
+The following theorem follows from \cite[2.7.4]{BBI}.
+
+\begin{thm}{Theorem}\label{thm:speed}
+Let $\spc{X}$ be a metric space  
+and $\alpha\:\II \to \spc{X}$ be a locally Lipschitz
+curve. 
+Then the speed function
+\[\speed\alpha(t_0)=\lim_{t\to t_0}\frac{\dist{\alpha(t)}{\alpha(t_0)}{}}{|t-t_0|}\] 
+is defined for almost all $t_0 \in \II$ and 
+\[\length\alpha=\int\limits_\II \speed\alpha(t)\cdot\d t,\]
+where $\int$ denotes the Lebesgue integral.
+\end{thm}
+
+\parit{Proof.}
+???
+\qeds
+
+A curve $\alpha\:\II\to\spc{X}$ is called \emph{unit-speed curve}\index{unit-speed curve}, 
+if for any subinterval $[a,b]\subset\II$, we have
+$b-a=\length(\alpha|[a,b])$.
+According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
+
+Hopefully the following theorem is in \cite{kirchheim}CHECK???
+
+
+\begin{thm}{Theorem}
+Let $\spc{X}$ be a metric space 
+and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
+Then for almost all $x\in\Dom f$ there is a prenorm $\lVert*\rVert_x$ on $\RR^n$ such that
+we have
+\[\dist{f(y)}{f(z)}{}=\lVert z-y\rVert_x+o(|y-x|+|z-x|).\]
+Moreover if $s(x)=\sup_{w\not=0}\{\lVert w\rVert_x/|w|\}$ then 
+\[\HausMes_n[\Im f] \le \int\limits_{\Dom f}s(x).\]
+\end{thm}
+
+
+
+
+
+\section{Curves in CBB spaces}
+
+Let
+$\spc{L}\in\CBB{}{}$ 
+and $\alpha\:\II\to \spc{L}$ be a curve.
+We say that $v\in\T_{\alpha(t_0)}$ is a \emph{rigth} or \emph{left} \emph{derivative} of $\alpha$ at $t_0\in\II$ (briefly, $v=\alpha^+(t_0)$ or correspondingly $v=\alpha^-(t_0)$)
+if 
+for any $q\not=\alpha(t_0)$, we have
+\[(\dist{q}{}{}\circ\alpha)^\pm(t_0)=(\d_{\alpha(t_0)}\dist{q}{}{})(v).\]
+
+%???This seems to be sufficient for us, but it is kind of weak def.For example: there is $\spc{L}\in\CBB\infty{}$ and a curve $\alpha\:\RR\to \spc{L}$ such that $\alpha^+(0)=\0$ but \[\liminf_{t\to 0}\frac{\dist{\alpha(0)}{\alpha(t)}{}}{|t|}>0.\]Also this def. is good together with Kuratowski tangent cone, and it is not that good with the standard definition.A.???
+
+
+The following lemma gives an equivalent desription of rigth and left derivatives in finite dimensional case.
+
+
+\begin{thm}{Lemma}
+Let $\spc{L}\in\CBB m{}$ and $\alpha\:\II\to \spc{L}$ be a curve.
+Assume for some $t_0\in \II$ we have $v=\alpha^\pm(t_0)$ then 
+for any choice of geodesics $[\alpha(t_0)\alpha(t)]$, we have
+\[v=\lim_{t\to t_0\pm}\tfrac{1}{|t-t_0|}\cdot\ddir{\alpha(t_0)}{\alpha(t)}.\]
+
+\end{thm}
+
+\parit{Proof.}???
+\qeds
+
+Recal that right/left differentiability of curves is defined in \ref{def:diff-curv}.
+For $\CBB{}{}$-spaces, 
+
+\begin{thm}{Definition}\label{def:diff-curv-yet}
+Let
+$\spc{L}\in \CBB{}{}$  
+and $\alpha\:\II\to \spc{X}$ be a curve.
+
+We say that $\alpha$ is \emph{differentiable} at $t_0\in\II$ if 
+both $\alpha^+(t_0)$ and $\alpha^-(t_0)$ are defined and $\alpha^+(t_0)+\alpha^-(t_0)=0$; i.e.,  $|\alpha^+(t_0)|=|\alpha^-(t_0)|$ and 
+$\mangle(\alpha^+(t_0),\alpha^-(t_0))=\pi$ if $|\alpha^\pm(t_0)|\ne 0$.
+\end{thm}
+
+
+
+
+
+Let us remind that our sign convension is not standard (see also Section~\ref{sec:conv-real}). 
+In particular, for $\alpha\:\RR\to \RR$, $\alpha(t)=t$ we have $\alpha^+\equiv 1,\ \ \alpha^-\equiv -1$.
+
+If $\alpha$ right/left differentiable at $t_0$.
+Then for any point $q\not=\alpha(t_0)$
+\[(\dist{q}{}{}\circ\alpha)^\pm(t_0)
+=
+(\d_{\alpha(t_0)}\dist{q}{}{})(\alpha^\pm(t_0)).\]
+Thus, both derivatives $(\dist{q}{}{}\circ\alpha)^\pm(t_0)$ are also defined.
+The following lemma shows that converse holds for finite-dimensional Alexandrov's spaces.
+
+
+\begin{thm}{Lemma}\label{lem:count-der}
+Let $\spc{L}\in\CBB m\kappa$,
+$\II$ be a real inteval,
+$\alpha\:\II\to \spc{L}$ be a curve,
+$t_0\in\II$ 
+and $Q\subset \spc{L}$ be a subset which is dense in a neighborhood of $\alpha(t_0)$.
+For $q\in Q$, set $f_q=\dist{q}{}{}\circ\alpha$.
+Then 
+\begin{subthm}{lem:count-der:rl}
+If right (left) derivative $f^+_q(t_0)$ ($f^-_q(t_0)$) is defined for each $q\in Q\backslash \{\alpha(t_0)\}$ then $\alpha$ is right (left) differentiable at $t_0$.
+\end{subthm}
+
+\begin{subthm}{} If moreover $f'_q(t_0)$ is defined for each $q\in Q$ then $\alpha$ is differentiable at $t_0$.
+\end{subthm}
+\end{thm}
+
+
+
+\parit{Proof.}
+Without loss of generality we can assume $t_0=0$. Set $p=\alpha(0)$.
+
+Assume right derivatives $f^+_q(0)$ are defined for each $q\in Q$.
+
+Let us show that that for any sequence $t_n\to 0+$, the sequence $\frac{\dist{p}{\alpha(t_n)}{}}{t_n}$ is bounded.
+Assume the contrary;
+let us pass to a subsequence of $t_n$ so that $\dir p{\alpha(t_n)}\to\xi$.
+Take a point $q\in Q$ such that $\mangle(\xi,\dir p q)<\tfrac\pi4$.
+Then for large $n$ we have 
+\[\frac{\dist{p}{\alpha(t_n)}{}}{t_n}
+<
+2\cdot\frac{f_q(0)-f_q(t_n)}{t_n}
+<
+4\cdot|f^+_q(0)|,\] a 
+contradiction.
+
+Thus, to prove the first part of the lemma, 
+it is sufficient to show that if $v_1$ and $v_2$ are two partial limit of $\ddir{p}{\alpha(t)}$ for $t\to 0+$ then $v_1=v_2$.
+
+For both, $v_1$ and $v_2$, we have
+\[f_q^+(0)=(\d_p\dist{q}{}{})(v_1)=(\d_p\dist{q}{}{})(v_2).\]
+We can choose $q$ so that $|v_1|\cdot\d_p\dist{q}{}{}$ is arbitrary close to function $w\mapsto -\<v_1,w\>$.
+Thus $\<v_1,v_2\>=\<v_1,v_1\>$ and similarly, $\<v_1,v_2\>=\<v_2,v_2\>$. 
+Hence $v_1=v_2$.
+\qeds
+
+Acording to Rademacher's theorem, any Lipscitz real-to-real function is differentiable almost everywhere. Here its extension for Lipschitz curves in $\CBB{}{}$-spaces.
+
+\begin{thm}{Rademacher's theorem}\label{thm:velocity}
+Let $\II$ be a real inteval, $\spc{L}\in\CBB m\kappa$
+and $\alpha\:\II\to \spc{L}$ be a Lipschitz curve.
+Then 
+
+\begin{subthm}{vel-exist} the tangent vectors $\alpha$ is differentiable almost everywhere in $\II$;
+\end{subthm}
+
+\begin{subthm}{vel-length}
+$\length\alpha=\int_{\II}|\alpha^\pm(t)|\cdot\d t$.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Choose a countable everywhere dense subset $Q\subset \spc{L}$.
+Note that for any $q\in Q$, the function $f_q(t)=\dist{q}{\alpha(t)}{}$ is Lischitz.
+Thus, according to standard Rademacher's theorem for real-to-real function \cite[3.1.6]{federer}, the derivatives $f_q'(t)$ are defined for almost all $t\in\II$ and each $q\in Q$.
+Thus, (\ref{SHORT.vel-exist}) follows directly from the Lemma~\ref{lem:count-der}.
+
+Part (\ref{SHORT.vel-length}) follows from \cite[2.7.4]{BBI}
+???should we write it here???
+\qeds
+
+\section{Rademacher's theorem}
+
+The original Rademacher's theorem (see \cite[3.1.6]{federer})
+states that a Lipschitz map from Euclidean space to Euclidean space is differentiable at almost all points.
+Here we give a versions of this theorem for maps with targets
+general metric space
+and also Alexandrov spaces, both $\CBB{}{}$ and $\cCat{}{}$.
+These generalizations appear in \cite{kirchheim} and \cite{lytchak:diff}.
+
+First let us define a differentiability of map 
+with target in arbitrary metric space.
+
+\begin{thm}{Definition}
+Let $m$ be positive integer and $A\subset \RR^m$.
+
+A pseudometric $\dist{}{}{}$ on $A$ is said to be \emph{differentiable}\index{differentiable pseudometric}
+at $a\in A$ if there is a prenorm $\|{*}\|$ on $\RR^m$ such that
+\[\dist{x}{y}{}=\|x-y\|+o(|x-a|+|y-a|).
+\eqlbl{eq:met-diff}\]
+???IT SHOULD BE EUCLID METRIC IN o-SMALL.
+
+Let $\spc{X}$ be a metric space.
+A map $\map\:A\to\spc{X}$ is called \emph{metrically differentiable}\index{metrically differentiable map} at $a\in A$ if the pulled back pseudometric 
+\[\dist{x}{y}{A}
+\df
+\dist{\map(x)}{\map(y)}{\spc{X}}\]
+is differentiable at $a$.
+In this case, the norm $\|{*}\|$ which satisfies \ref{eq:met-diff} is called \emph{metric differentaial} at $a$.
+\end{thm}
+
+Note that there are maps which are metrically differentiable,
+but not differentiable at a given point,
+even if the target space is Euclidean.
+For example, consider consider map $\RR\to\RR^2$,
+defined as $t\mapsto (t\cdot\sin\alpha(t), t\cdot\cos\alpha(t))$,
+where $t\mapsto \alpha(t)$ is a smooth function such that 
+$\alpha(t)=\alpha(-t)$ for any $t$,
+$\tfrac{\alpha'(t)}t\to 0$ as $t\to 0$, 
+but $\alpha(t)\to \infty$ as $t\to 0+$.
+
+The following variation of Rademacher's theorem 
+is proved by Kirchheim in \cite{kirchheim}.
+
+\begin{thm}{Rademacher's theorem}\label{thm:rademacher}
+Let $\spc{X}$ be a metric space 
+and $\map\:\EE^m\subto\spc{X}$ be a locally Lipschitz submap.
+Then $\Phi$ is metrically differentiable almost everywhere.
+\end{thm}
+
+\parit{Proof.}
+
+\qeds
+
+\begin{thm}{Rademacher's theorem for $\CBB{}{}$ spaces}
+Let $\spc{L}\in\CBB{}{}$  
+and $\map\:\EE^m\subto\spc{L}$ be a locally Lipschitz submap.
+Let $A\subset \Dom \map$ be the set where $\map$ is differentiable;
+i.e., $a\in A$ if and only if $\d_a\map\:\EE^m\to\T_{\map(a)}$ is defined and linear.
+Then 
+\begin{subthm}{}
+Then $A$ is a subset of full measure in $\Omega$.
+\end{subthm}
+
+\begin{subthm}{}
+For any $a\in A$,
+the map $\EE^m\to\RR$ defined by $v\mapsto |\d_a(v)|$ is metric differential at $a$.
+\end{subthm}
+
+\begin{subthm}{}
+For any $a\in A$,
+the map $\EE^m\to\RR$ defined by $v\mapsto |\d_a(v)|^2$ is a quadratic form.
+\end{subthm}
+
+\begin{subthm}{}
+For any $a\in A$, the tangent space
+$\T_{\map(a)}$ admits splitting
+\[\T_{\map(a)}=L\oplus L^\bot,\]
+where $L=\Im\d_a\map$.
+\end{subthm}
+\end{thm}
+
+\begin{thm}{Rademacher's theorem for $\cCat{}{}$ spaces}\label{thm:rademacher-cba}
+Let $\spc{U}\in\cCat{}{}$  
+and $\map\:\EE^m\subto\spc{U}$ be a locally Lipschitz submap.
+Let $A\subset \Dom \map$ be the set where $\map$ is differentiable;
+i.e., $a\in A$ if and only if $\d_a\map\:\EE^m\to\T_{\map(a)}$ is defined and linear.
+Then 
+\begin{subthm}{}
+Then $A$ is a subset of full measure in $\Omega$.
+\end{subthm}
+
+\begin{subthm}{}
+For any $a\in A$,
+the map $\EE^m\to\RR$ defined by $v\mapsto |\d_a(v)|$ is metric differential at $a$.
+\end{subthm}
+
+\begin{subthm}{}
+For any $a\in A$,
+the map $\EE^m\to\RR$ defined by $v\mapsto |\d_a(v)|^2$ is a quadratic form.
+\end{subthm}
+
+\begin{subthm}{thm:rademacher-cba:splitting}
+If in addition $\spc{U}$ is separable then for almost all $a\in A$, 
+the tangent space
+$\T_{\map(a)}$ admits splitting
+\[\T_{\map(a)}=L\oplus L^\bot,\]
+where $L=\Im\d_a\map$.
+\end{subthm}
+\end{thm}
+
+Note that if $\spc{U}$ is the $\RR$-tree;
+see ??? then any isometric embedding $\RR\to \spc{U}$ violates the conclusion in (\ref{SHORT.thm:rademacher-cba:splitting}).
+In particular, the assumption that $\spc{U}$ is separable is necessary in (\ref{SHORT.thm:rademacher-cba:splitting}).
+
+
+\begin{thm}{Corollary}\label{cor:rademacher-cbb-sourse}
+Let $\spc{L}\in\CBB{m}{}$ and $\spc{N}$ be either $\cCat{}{}$ or $\CBB{}{}$ space.
+Then any locally Lipschitz submap $f\:\spc{L}\subto\spc{N}$ is linearly differentiable almost everywhere in $\Dom f$. 
+\end{thm}
+
+\parit{Proof of the corollary.}
+Consider a distance chart $\bm{x}\:\spc{L}\subto \RR^m$.
+Since $\bm{x}$ is bi-Lipschitz,
+the map $f\circ\bm{x}^{-1}\:\RR^m\subto\spc{N}$ Lipschitz.
+According to Rademacher's theorem,
+$h=f\circ\bm{x}^{-1}$ is linearly differentiable almost everywhere
+in $\Dom h=\Dom\bm{x}^{-1}\cap \bm{x}(\Dom f)$.
+
+First let us show the following.
+
+\begin{clm}{}
+$\bm{x}$ is linearly differentiable almost everywhere in $\Dom \bm{x}$.
+\end{clm}
+
+
+Indeed, by Rademacher's theorem,
+$\bm{x}^{-1}$ is differentiable almost everywhere in $\Dom\bm{x}^{-1}=\Im \bm{x}$.
+Since $\bm{x}$ is bi-Lipschitz,  
+if $\d_{\bm{x}(p)}\bm{x}^{-1}$ is defined then it has to be invertable.
+Thus the right hand side of the following expression is defined
+\[\d_p\bm{x}
+=
+(\d_{\bm{x}(p)}\bm{x}^{-1})^{-1}.\]
+Hence the claim follows. 
+\claimqeds
+
+Set $\Omega=\Dom h\circ \bm{x}=\Dom f\cap \Dom \bm{x}$.
+Note that $h\circ \bm{x}=(f|\Omega)$ is linearly differentiable almost everywhere in $\Omega$.
+
+According to ???, almost all points in $\spc{L}$ can be covered by distance charts;
+hence the result.
+\qeds
+
+
+\begin{thm}{Lemma}
+Let $\spc{X}$ be a metric space 
+and $\alpha\:[t_{\min},t_{\max}]\to\spc{X}$ be unit-speed??? curve.
+Then there is a subset $A\subset \II$ of full measure 
+such that for any $a\in A$ we have 
+\[\dist{\alpha(x)}{\alpha(y)}{}=|x-y|+o(|x-a|+|y-a|).
+\eqlbl{eq:lem:rademacher-1}\]
+\end{thm}
+
+\parit{Proof.}
+Note that
+\[\dist{\alpha(x)}{\alpha(y)}{}\le|x-y|
+\eqlbl{eq:short}
+\]
+for any $x,y\in\II$.
+Therefore, it is sufficient to prove \ref{eq:lem:rademacher-1} only for $x\le a\le y$.
+
+Given $\eps>0$, denote by $Z_{\eps}$
+the set of all $a\in\II$ for which 
+there are $x$ and $y$ arbitrary close to $a$
+such that 
+\[\dist{\alpha(x)}{\alpha(y)}{}<(1-\eps)\cdot|x-y|
+\ \t{and}\ 
+x\le a\le y
+\eqlbl{eq:vitali}.\]
+Denote by $\ell_\eps$ the Lebegues measure of $Z_\eps$.
+
+Assume $\ell_\eps>0$ for some $\eps>0$. 
+Choose $\eps_0>0$ so small that for
+any partition $t_{\min}= t_0 < y_1 <\dots <t_n = t_{\max}$ such that $t_i-t_{i-1}<\eps_0$ for any $i$, 
+we have
+\[
+\length\alpha
+-
+\sum_{i=1}^n\dist{\alpha(t_{i-1})}{\alpha(t_i)}{}
+<
+\ell_\eps???
+\]
+Consider the set $\mathfrak B$ of all intervals of
+the form $[x,y]$ such that $x$ and $y$ satisfy \ref{eq:vitali} for some $a$.
+Applying Vitali's covering theorem (see ???)
+we can extract from $\mathfrak B$ a countable collection of disjoint
+intervals $[x_i,y_i]$, $i\in\NN$ that covers $Z_\eps$ up to a set of zero measure;
+moreover we can assume that for each $i$ we have $y_i-x_i<\eps_0$. 
+Hence for a sufficiently large $n$, 
+\[\sum_{i=1}^n|y_i-x_i|>\tfrac12\cdot\ell_\eps\]
+
+Since the intervals $[x_i,y_i]$ are disjoint, 
+they can be included
+in a partition all whose intervals are shorter than $\eps_0$. 
+By the choice of $\eps_0$, we have ???
+In the left-hand sum above all terms are nonnegative and those for which for some ??? satisfy
+Therefore
+This contradiction proves the theorem.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:lytchak-diff}
+Let $\spc{X}$ be a metric space,
+$\alpha\:[t_{\min},t_{\max}]\to\spc{X}$ be unit-speed??? curve 
+and $S\subset [t_{\min},t_{\max}]$ be a countable set.
+For any $s\in S$, set $h_s(t)=\dist{\alpha(s)}{\alpha(t)}{}$.
+Then there is a subset $A\subset \II$ of full measure 
+such that 
+\begin{subthm}{lem:lytchak-diff:a}
+For any $s\in S$, the function $h_s$ is differentiable at any $a\in A$
+\end{subthm}
+
+\begin{subthm}{lem:lytchak-diff:b}
+If for some $a\in A$ there is a sequence $s_n\in S$ such that $s_n\to a\pm$ then $h'_{s_n}(a)\to\pm1$.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Note that $h_s$ is a 1-Lipschitz function, 
+Therefore part \ref{SHORT.lem:lytchak-diff:a} follows from the ordinary Rademacher's theorem.
+
+Denote by $N_\eps$ the set of all points $z\in[t_{\min},t_{\max}]$
+for which there is a sequence $s_n\to z-$ such that $h_{s_n}'(z)<1-\eps$.
+Assume for some $\eps>0$, the set $N_\eps$ has positve measure.
+let $a$ be a Lebegue point of $N$.
+
+
+To prove the second part of lemma, choose aarbitrary contable dense set $S$ in $[t_{\min},t_{\max}]$.
+Note that the function $h_s\:t\mapsto\dist{\alpha(s)}{\alpha(t)}{}$ is $1$-Lipschitz.
+Thus according to ordinary Rademacher's theorem, the functions $h_s$ is differentiable at a set of full measure in $[t_{\min},t_{\max}]$.
+Consider set 
+
+
+\qeds
+
+The proof relies on the following lemma in measure theory.
+Part (\ref{SHORT.lem:diff-1-dim:metr-diff}) is classical, ???
+
+\begin{thm}{Lemma}\label{lem:diff-1-dim}
+Let $\dist{}{}{}$ be a pseudometric on an open interval $\II$ and $T\subset\II$ be a countable subset.
+Assume that 
+\[\dist{x}{y}{}\le|x-y|\]
+for any $x,y\in\II$.
+Then there is a subset $A$ of full measure in $\II$ such that 
+
+\begin{subthm}{lem:diff-1-dim:h'}
+For any $t\in T$ the function $h_t\:x\mapsto\dist{t}{x}{}$ is differentiable at each $a\in A$.
+\end{subthm}
+
+\begin{subthm}{lem:diff-1-dim:metr-diff}
+For any $a\in A$, there is $r_a\ge0$ such that
+\[\dist{x}{y}{}=r_a\cdot|x-y|+o(|x-a|+|y-a|)\] 
+\end{subthm}
+
+\begin{subthm}{lem:diff-1-dim:semi-diff}
+For any $a\in A$ and any sequence $t_n$ in $T$, such that $t_n\to a\pm$,
+we have $h'_t(a)\to\mp r_a$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+Cearly $h_t$ is 1-Lipschitz.
+Thus part (\ref{SHORT.lem:diff-1-dim:h'}) follows from the classical Rademacher's theorem.
+
+To prove part (\ref{SHORT.lem:diff-1-dim:semi-diff}),
+assume for beggining that $\II$ is length  
+To prove part 
+\qeds
+
+\section{???}
+
+The following lemma is a baby case of the main theorem in \cite{hitzelberger-lytchak}
+
+\begin{thm}{Lemma}\label{lem:affine=>isom}
+Let $(\RR^m,\dist{}{}{})$ be a geodesic space such that 
+\begin{subthm}{lem:affine=>isom:lip}
+The metric $\dist{}{}{}$ is bi-Lipshitz equivalent to the canonical metric on $\RR^m$. 
+\end{subthm}
+\begin{subthm}{lem:affine=>isom:speed}
+Any geodesic in $(\RR^m,\dist{}{}{})$ is formed by segments of 
+staight line with constant-speed parametization.
+\end{subthm}
+Then the metric $\dist{}{}{}$ is induced by a norm on $\RR^m$.
+\end{thm}
+
+\parit{Proof.}
+From uniqueness of straight segment between given points in $\RR^m$,
+it follows that any straight line in $\RR^m$ forms a geodesic in $(\RR^m,\dist{}{}{})$.
+
+Set 
+\[\|\bm{v}\|_{\bm{x}}=\dist{\bm{x}}{(\bm{x}+\bm{v})}{}.\]
+The condition \ref{SHORT.lem:affine=>isom:speed} implies that 
+\[ \|\lam\cdot\bm{v}\|_{\bm{x}}
+=
+|\lam|\cdot\|\bm{v}\|_{\bm{x}}
+\eqlbl{eq:lem:affine=>isom:speed}\]
+for any $\bm{x},\bm{v}\in\RR^m$ and $\lam\in\RR$.
+Further, the condition \ref{SHORT.lem:affine=>isom:lip} implies that 
+\[
+\|\lam\cdot\bm{v}\|_{\bm{x}}
+-
+\|\lam\cdot\bm{v}\|_{\bm{x}'}
+\le 
+\Const\cdot \|\bm{x}-\bm{x'}\|_2
+\eqlbl{eq:lem:affine=>isom:bound}\]
+for any $\bm{x},\bm{x'},\bm{v}\in\RR^m$, 
+$\lam\in\RR$
+and some fixed $\Const\in\RR$.
+Applying \ref{eq:lem:affine=>isom:speed} and \ref{eq:lem:affine=>isom:bound},
+for $\lam\to\infty$, we get
+ that
+$\|\bm{v}\|_{\bm{x}}$ does not depend on $\bm{x}$.
+Equivalenty, there is a norm $\|{*}\|$ on $\RR^m$ such that
+\[\dist{\bm{x}}{\bm{y}}{}=\|\bm{x}-\bm{y}\|.\]
+\qedsf
+
+
+
+\section{Exercises}
+
+\begin{thm}{Exercise}
+Construct a space $\spc{L}\in\CBB\infty{}$ and a curve $\alpha\:\RR\to \spc{L}$ such that 
+$\alpha^+(0)=o$ 
+but $\liminf_{t\to 0}\dist{\alpha(0)}{\alpha(t)}{}/|t|>0$.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+

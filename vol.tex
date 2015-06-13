@@ -1,0 +1,1311 @@
+%%!TEX root = the-vol.tex
+%%array^
+
+\chapter{Volume}
+
+In this chapter we extend number of results in measure theory of Euclidean space 
+to $\CBB{}{}$ spaces.
+The necessary preliminaries are discussed in Chapter~\ref{chap:measure-theorey}.
+
+\section{Spherical density}
+
+Given a real numbers $R>0$ and $\kappa$, 
+set 
+\[
+\lambda_\kappa(R)=
+\left[
+\begin{matrix}
+&1&\text{if}&\kappa\ge 0
+\\
+&\frac{\sn\kappa R}{R}&\text{if}&\kappa< 0
+\end{matrix}
+\right.
+\]
+Note that for any $\kappa$, we have $\lambda_\kappa(R)\to 1$ as $R\to0$.
+
+\begin{thm}{Proposition}\label{prop:bishop}
+Let $\spc{L}\in \CBB{m}{\kappa}$
+and
+$p\in\spc{L}$.
+Denote by $o$ the tip of the tangent space $\T_p$.
+Then
+
+\begin{subthm}{prop:bishop:f}
+There is a map $f\:\T_p\to \spc{L}$
+such that
+\[f(\oBall(o,R)_{\T_p})=\oBall(p,R)_{\spc{L}}\]
+for any $R>0$
+and
+$f$ 
+is $\lambda_\kappa(R)$-Lipschitz in $\oBall(o,R)\subset\T_p$.
+
+(In particular, if $\kappa\ge 0$ then $f$ is a short map.)
+\end{subthm}
+
+\begin{subthm}{prop:bishop:g}
+There is a short map $g\:\EE^m\to \T_p$
+such that
+\[g[\oBall(0,R)_{\EE^m}]=\oBall(o,R)_{\T_p}\]
+for any $R>0$.
+\end{subthm}
+\end{thm}
+
+The following proof is 
+a straightforward application of properties of gradient exponent
+stated in Theorem~\ref{thm:prop-gexp}.
+
+
+\parit{Proof.}
+Take $f=\gexp_p\mc\kappa$.
+According to \ref{thm:prop-gexp:short}, it satisfy the conditions in (\ref{SHORT.prop:bishop:f}).
+
+Let us construct $g\:\EE^m\to \T_p$.
+
+By Theorem~\ref{thm:tan4finite}, 
+$\T_p\in \CBB{m}{0}$.
+Choose a sequence of points $x_n\in \T_p$
+such that $x_n\to o$ and $\T_{x_n}=\T_{x_n}\T_p\iso \EE^m$.
+According to \ref{LinDim+-f}, such sequence exists.
+
+Let us identify $\T_{x_n}$ and $\EE^m$ for each $n$.
+We get a sequence of short maps $\gexp_{x_n}\:\EE^m\to\T_p$.
+
+Note that
+\[
+\gexp_{x_n}[\oBall(0,R)_{\EE^m}]
+\supset
+\oBall(o,R-|x_n|)_{\T_p}.
+\eqlbl{eq:ball-in-ball}
+\]
+
+Set $g\:\EE^m\to \T_p$ to be a partial limit of $\gexp_{x_n}$
+as $n\to\infty$. 
+The map $g$ is short since it is a limit of short maps.
+From \ref{eq:ball-in-ball}, 
+it follows that $g$ meets the other requirement in (\ref{SHORT.prop:bishop:g})
+\qeds
+
+\begin{thm}{Corollary}\label{cor:bishop}
+Let $\spc{L}\in \CBB m{\kappa}$. 
+Then
+
+\begin{subthm}{cor:bishop:doubling} The $m$-th spherical measure $\SphMes_m$ on $\spc{L}$ is doubling.
+In particular, 
+
+\begin{enumerate}[(i)]
+\item By Proposition~\ref{prop:doubling-measure=>space}, space $\spc{L}$ is doubling. 
+\item The $m$-th spherical measure $\SphMes_m$ is a Radon measure on $\spc{L}$.
+\end{enumerate}
+ 
+\end{subthm}
+
+
+\begin{subthm}{cor:bishop:balls}
+Assume $B=\oBall(p,R)$ be a ball in $\spc{L}$
+and $B_n=\oBall(x_n,r_n)$, $n\in\IndexSet$ be a collection of disjoint balls
+such that $B_n\subset B$ for each $n$.
+Then 
+\[\sum_n r_n^{ m}
+\le
+\lambda_\kappa^{m}(R)\cdot R^{m}.\]
+
+In particular
+\[\sum_n r_n^{m}
+\le
+R^{ m}+o(R^{ m})\]
+and if $\kappa\ge 0$ then 
+\[\sum_n r_n^{ m}
+\le
+R^{m}.\]
+\end{subthm}
+
+\begin{subthm}{cor:bishop:vol} For any $p\in \spc{L}$ and any $R>0$, we have
+\[\SphMes_m\oBall(p,R)\le \lambda_\kappa^{ m}(R)\cdot R^{m}.\]
+In particular
+\[\SphMes_m\oBall(p,R)\le R^{ m}+o(R^{m})\]
+and if $\kappa\ge 0$ then
+\[\SphMes_m\oBall(p,R)\le R^{ m}.\]
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof; (\ref{SHORT.cor:bishop:doubling}).}
+Fix $p\in$???
+
+Part \ref{SHORT.cor:bishop:doubling} 
+follows from Proposition~\ref{prop:bilip-measure} and ???
+\qeds
+
+\begin{thm}{Definition}
+Let $\spc{L}\in\CBB{m}{}$.
+Given a subset $A\subset\spc{L}$, 
+the density of $A$ is defined as
+\[\dens_p A
+=
+\liminf_{\eps\to0+}
+\frac{\SphMes_m[A\cap \oBall(p,\eps)]}{\eps^{m}}.\]
+
+\end{thm}
+
+\parbf{N.B.}
+We define the density comparing 
+the measures of a ball in the space 
+and a ball of the same radius in the model space.
+Often the density is defined as 
+\[\liminf_{\eps\to0+}\frac{\SphMes_m[A\cap\oBall(p,\eps)]}{\SphMes_m[\oBall(p,\eps)]},\]
+we are NOT using this definition.
+
+In particular, note that with our convention, in general, $\dens_p \spc{L}\ne1$. It is however true for most $p\in \spc{L}$ and moreover we have
+
+
+
+
+
+
+\begin{thm}{Lebesgue's density theorem}\label{thm:dens}
+Let $\spc{L}\in\CBB m\kappa$.
+Then 
+\begin{subthm}{thm:dens:=<1}
+$\dens_p\spc{L}\le 1$ for any $p\in \spc{L}$.
+\end{subthm}
+
+\begin{subthm}{thm:dens:0or1}
+For any set $A\subset \spc{L}$,
+for 
+$\SphMes_m$-almost all points $a$ in $A$ 
+we have
+$\dens_aA=1$. In particular, $\dens_p\spc{L}= 1$ for 
+$\SphMes_m$-almost all points $p\in\spc{L}$.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Part (\ref{SHORT.thm:dens:=<1}) follows from \ref{cor:bishop:vol}.
+
+The proof of (\ref{SHORT.thm:dens:0or1}), 
+modulo Corollary~\ref{cor:bishop},
+is essentially the same as in the Euclidean case. By part  (\ref{SHORT.thm:dens:=<1})  we have that $\dens_xA\le1$ for all $x\in A$.
+
+Assume that $\SphMes_m A'>0$,
+where 
+\[A'=\set{x\in A}{\dens_xA<1}.\]
+Without loss of generality we may assume that $A$ 
+and therefore $A'$ are bounded.
+
+Given $\delta>0$ consider the set 
+\[A'_\delta=\set{x\in\spc{L}}{\dens_xA<1-2\cdot\delta}.\]
+Fix a sufficiently small $\delta$, 
+so that 
+\[\SphMes_m A'_\delta>0.\]
+
+Cover $A_\delta'$ by a countable collection of balls $B_n=B(x_n,r_n)$
+such that $r_n<\delta$ for each $n$ and
+\[\SphMes_m  A'_\delta>(1-\delta)\cdot\sum_n r_n^{m}
+.\]
+It follows that we can find an $n$ such that
+\[\SphMes_m [B_n\cap A'_\delta]
+>
+(1-\delta)\cdot r_n^{m}.\eqlbl{big-ball}\]
+
+Note that the balls $\cBall[y,\rho]$
+such that
+\[\SphMes_m(A\cap\cBall[y,\rho])<(1-2\cdot\delta)\cdot r_n^{ m}\]
+form a Vitali covering of $A'_\delta$.
+Applying Vitali covering theorem \ref{thm:vitali},
+we get a collection of disjoint closed balls 
+$W_\kay=\cBall[y_\kay,\rho_\kay]$ which cover all the spherical measure of $B_n\cap A'_\delta$
+and such that 
+\[\frac{\SphMes_m [W_\kay\cap A'_\delta]}{\rho_\kay^{m}}
+<
+(1-2\cdot\delta )\]
+for each $\kay$.
+
+Since $r_n<\delta$ and $\delta$ is sufficiently small, 
+applying \ref{cor:bishop:balls},
+we get
+\[\sum_\kay\rho_\kay^{m}\le (1+\tfrac\delta{10})\cdot r_n^{m}.\]
+Therefore, 
+\begin{align*}
+\SphMes_m [B_n\cap A'_\delta]
+&=\sum_\kay\SphMes_m [W_\kay\cap A'_\delta]<
+\\
+&<(1-2\cdot\delta)\cdot\sum_\kay\rho_\kay^{ m}<
+\\
+&<(1-2\cdot\delta)\cdot(1+\tfrac{\delta}{10})\cdot r_n^{ m}
+\end{align*}
+The later contradicts \ref{big-ball}.
+\qeds
+
+\begin{thm}{Proposition}\label{prop:dans=1=>euclid}
+Let $\spc{L}\in\CBB{m}{}$ and $p\in \spc{L}$.
+Then $\dens_p\spc{L}=1$ if and only if $\T_p\iso\EE^m$.
+\end{thm}
+
+\parit{Proof; $(\Leftarrow)$.}
+Assume $\T_p\iso\EE^m$.
+
+Fix $\eps>0$.
+According to ???, $p$ admits a neighborhood 
+which is $e^{\mp\eps}$-bi-Lipschitz to an open set in $\EE^m$.
+
+It follows that $\dens_p\ge e^{-2\cdot m\cdot\eps}$.
+By \ref{thm:dens:=<1}, $\dens_p\spc{L}\le 1$.
+Since $\eps>0$ is arbitrary, we get $\dens_p\spc{L}= 1$.
+
+\parit{$(\Rightarrow)$.}
+Assume that $\dens_p\spc{L}=1$.
+Let us show the following.
+
+\begin{clm}{}\label{SphMes-tip}
+For any $x\in \T_p$ and $r>0$ we have
+\[\SphMes_m \oBall(x,r)_{\T_p}= r^{m}.
+\]
+\end{clm}
+
+Indeed, 
+let us denote by $o$ the tip of the cone $\T_p$
+and set 
+\[s=\SphMes_m\oBall(o,1)_{\T_p};\]
+i.e., $s$ is the spherical measure of the unit ball in $\T_p$
+centered at its tip.
+By Theorem~\ref{thm:tan4finite}, 
+$\T_p\in \CBB{m}{0}$.
+Therefore by \ref{cor:bishop:vol}, we get that $s\le 1$.
+
+By \ref{prop:bishop:f},
+$$\SphMes_m(\oBall(p,R))
+\le
+s\cdot (R^{\cdot m}+o(R^{\cdot m})),$$
+in particular $\dens_p\le s$.
+It follows that $s=1$.
+
+Further, by \ref{comp-kappa} the function $f\:\T_p\to\RR$
+defined as $f=\tfrac12\cdot\dist[2]{x}{}{}$
+is $1$-concave.
+By Proposition~\ref{prop:GF-is-lip},
+given $t>0$,
+the gradient flow $x\mapsto\GF^t_f(x)$ is $e^t$-Lipschitz.
+On the other hand if $\bar z\in [xz]$ 
+such that $e^t\cdot\dist{x}{\bar z}{}=\dist{x}{z}{}$ for some $t\ge 0$ then $\GF^t_f(\bar z)=z$.
+In particular,
+\[\GF^t_f[\oBall(x,r)]=\oBall(x,e^t\cdot r)\supset\oBall(o,R),\]
+where $R=e^t\cdot r-|x|$.
+Therefore 
+\[e^{m\cdot t}\SphMes_m[\oBall(x,r)]
+\ge
+\SphMes_m[\oBall(o,R)]
+\]
+Since $s=1$, we get
+\[\SphMes_m \oBall(o,R)=R^{ m}.\]
+
+and hence
+\[\SphMes_m[\oBall(x,r)]
+\ge
+\frac{\SphMes_m[\oBall(o,R)]}{e^{m\cdot t}}\ge \frac{(e^t\cdot r-|x|)^m}{e^{m\cdot t}}
+\]
+
+
+Therefore, passing to the limit as $t\to\infty$ we get that 
+\[\SphMes_m[\oBall(x,r)] \ge r^m\]
+The opposite inequality follows by  \ref{thm:dens:=<1} which gives
+ \ref{SphMes-tip}.
+\claimqeds
+
+Since $\T_p\in \CBB{m}{0}$,
+by Proposition \ref{prop:bishop:g}
+there is a short map $g\:\EE^m\to \T_p$
+such that 
+\[g(\oBall(0,R)_{\EE^m})=\oBall(o,R)_{\T_p}\] 
+for any $R>0$.
+
+By Claim \ref{SphMes-tip}, $g$ has to preserve the spherical measure.
+
+Let $x,y\in \EE^m$.
+Set $x'=g(x)$ and $y'=g(y)$.
+Since $g$ is short,
+we have
+\[\dist{x'}{y'}{\T_p}\le \dist{x}{y}{\EE^m}.
+\eqlbl{|x'-y'|=<|x-y|}\]
+To prove that $g$ is an isometry,
+we need to show that we always have equality in \ref{|x'-y'|=<|x-y|}.
+Suppose we have a strict inequality in \ref{|x'-y'|=<|x-y|}  for some $x,y\in \EE^m$ .
+Set
+\begin{align*}
+R&\df\tfrac12\cdot\dist{x}{y}{\EE^m}
+\\
+r&\df
+\tfrac12\cdot(\dist{x}{y}{\EE^m}-\dist{x'}{y'}{\T_p}),
+\end{align*}
+Note that $0<r< R$.
+
+
+\begin{wrapfigure}{r}{48mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/xwz-balls(1)}
+\lbl[t]{14,13;$x'$}
+\lbl[t]{34,13;$y'$}
+\lbl[b]{23.6,15.7;{\small $w$}}%$\swarrow^{{}^{\hbox{$w$}}}$}
+\end{lpic}
+\end{wrapfigure}
+
+Since $g$ is short,
+\[g[\oBall(x,R)\cup\oBall(y,R)]
+\subset 
+\oBall(x',R)\cup\oBall(y',R).\eqlbl{balls-in-balls}\]
+
+Let $w$ be the midpoint of a geodesic $[x'y']$ in $\T_p$.
+Note that 
+\[\oBall(x',R)\cap\oBall(y',R)\supset \oBall(w,r).\]
+It follows that 
+\begin{align*}
+\SphMes_m[\oBall(x',R)\cup\oBall(y',R)]
+&\le \SphMes_m\oBall(x',R)+\SphMes_m\oBall(y',R)-
+\\
+& \phantom{\le \SphMes_m\oBall(x',R)\ }-\SphMes_m\oBall(w,r)<
+\\
+&<\SphMes_m[\oBall(x,R)\cup \oBall(y,R)].
+\end{align*}
+By \ref{balls-in-balls},
+the map $g$ can not preserve spherical measure,
+a contradiction.
+\qeds
+
+Combining  Lebesgue's density theorem \ref{thm:dens:0or1} and Proposition  \ref{prop:dans=1=>euclid} we immediately obtain 
+\begin{thm}{Corollary}\label{cor:ae-Euclidean-sph}
+Let $\spc{L}\in\CBB m{}$.
+Then $\T_p\iso\EE^m$ for
+$\SphMes_m$-almost all points $p\in\spc{L}$.
+
+\end{thm}
+
+As another corollary of Lebesgue's density theorem~\ref{thm:dens},
+we get the following.
+
+\begin{thm}{Lebesgue differentiation theorem}\label{thm:lebesgue-differentiation}
+\label{thm:Lebesgue-derivative}
+Let $\spc{L}\in\CBB{}{}$.
+Then for any bounded $\SphMes_m$-measurable function $f\:\spc{L}\to \RR$
+we have
+\[\lim_{\eps\to0}\frac{1}{\eps^m}\cdot\int\limits_{\cBall[x,\eps]}|f(z)-f(x)|\cdot\d_z\SphMes_m=0\]
+$\SphMes_m$-almost all $x\in\spc{L}$.
+
+In particular,
+\[f(x)
+\ae
+\lim_{\eps\to0}\frac{1}{\eps^m}\cdot\int\limits_{\cBall[x,\eps]}f(z)\cdot\d_z\SphMes_m.\]
+
+\end{thm}
+
+\parbf{Remark.}
+The same holds for any locally $\SphMes_m$-integrable function $f$;
+the same argument as in Euclidean space gives a proof;
+see for example ???.
+
+
+\parit{Proof.}
+Apply the Lebesgue density theorem for the sets 
+\[A_{v,w}=\set{x\in\spc{L}}{v\le f(x)\le w}\] 
+for all the rational numbers $v$ and $w$.
+\qeds
+
+\section{Uniqueness of volume}
+
+ 
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space.
+A measure $\mu$ on $\spc{X}$ is called 
+\emph{monotonic}\index{monotonic measure}
+if for any short submap $f\:\spc{X}\subto \spc{X}$
+and any closed set $A\subset\Dom f$
+we have 
+\[\mu A\ge \mu [f(A)].\]
+\end{thm}
+
+Note that for any integer $m\ge 0$,
+the measures $\SphMes_m$, $\HausMes_m$ and $\LongMes_m$
+defined in Section~\ref{sec:mes+balls} are monotonic.
+
+It is well known that up to a multiplicative constant,
+on the Euclidean space
+there is a unique Radon measure
+which is invariant with respect to translations.
+The following theorem provides an analog for the $\CBB{m}{}$ spaces.
+
+\begin{thm}{Theorem}\label{thm:unique-measure-cbb}
+Let $\spc{L}\in \CBB{m}{}$.
+Then up to a multiplicative constant, $\SphMes_m$
+ is the unique monotonic Radon measure on $\spc{L}$.
+\end{thm}
+
+The proof is based on the following proposition.
+
+\begin{thm}{Proposition}\label{prop:almost-const-R^m}
+Let $\nu$ be a Radon measure defined on an open subset $\Omega$ of $\EE^m$.
+Assume that there is $\lambda>1$ such that 
+\[\nu(\cBall[x,r])\le \nu(\cBall[y,\lambda\cdot r])\]
+for any two balls $\cBall[x,r], \cBall[y,\lambda\cdot r]\subset\Omega$.
+
+Then there is a constant $c\ge 0$ such that
+\[
+\Const\cdot\SphMes_m A
+\le
+\nu A
+\le
+\Const\cdot\lambda^m\cdot\SphMes_m A\]
+for any Borel set $A\subset \Omega$.
+\end{thm}
+
+\parit{Proof.}
+First note that there is a constant $M$ such that
+\[\nu(\cBall[x,r])\le M\cdot r^m
+\eqlbl{pre-mu=<SphMes}\]
+for any closed ball $\cBall[x,r]\subset \Omega$
+with sufficiently small radius $r>0$.
+In particular,
+\[\nu\le M\cdot\SphMes_m.
+\eqlbl{mu=<SphMes}\]
+
+Indeed, without loss of generality, we may assume that $\Omega$ is bounded
+and $\nu\Omega=1$.
+Note that there is a constant $M $
+such that $\Omega$ contains at least $\lfloor\tfrac{2}{M\cdot r^m}\rfloor$ disjoint closed balls of radius $\lambda\cdot r>0$.
+In particular, given sufficiently small $r>0$, there is a ball $\cBall[x,\lambda\cdot r]\subset\Omega$ such that
+\[\nu(\cBall[x,\lambda\cdot r])\le M\cdot r^m.\]
+
+Applying the assumption, we get that 
+\begin{align*}
+\nu(\cBall[y,r])
+&\le \nu(\cBall[x,\lambda\cdot r])
+\le 
+\\
+&\le 
+M\cdot r^m.
+\end{align*}
+for any ball $\cBall[y,r]\subset \Omega$.
+Hence \ref{pre-mu=<SphMes} and consequently \ref{mu=<SphMes} follow.
+\claimqeds
+
+Applying the  Radon--Nikodym theorem, we get that 
+\[\nu=\rho\cdot\SphMes_m\]
+for a bounded $\SphMes_m$-measurable function $\rho\:\Omega\to\RR_{\ge0}$.
+
+Applying Lebesgue differentiation theorem (\ref{thm:lebesgue-differentiation}), we get that 
+\[\rho(x)
+\ae
+\lim_{\eps\to0}\frac{\nu(\cBall[x,\eps])}{\eps^m}.\]
+By assumption,
+$\nu(\cBall[x,\eps])\le \nu(\cBall[y,\lambda\cdot\eps])$
+for any $x,y\in \Omega$ 
+and all sufficiently small $\eps$.
+Therefore for
+$\SphMes_m$-almost all $x$ the inequality
+\[\rho(x)\le \lambda^m\cdot\rho(y).
+\eqlbl{eq:rho(x)=<rho(y)}\] 
+holds for $\SphMes_m$-almost all $y$.
+Hence the proposition follows.
+\qeds
+
+
+\parit{Proof of Theorem~\ref{thm:unique-measure-cbb}.}
+Let $W$ denotes the subset of points of 
+$w\in \spc{L}$ such that $\T_w\iso\EE^m$.
+By Corollary~\ref{cor:ae-Euclidean-sph}
+the set $W$ has full $\SphMes_m$ measure in $\spc{L}$.
+
+
+Fix a point $q\in W$ and a sufficiently small $\eps>0$,
+say $\eps<\tfrac1{10\cdot m}$.
+According to ???,
+there 
+is an $e^{\mp\eps}$-bi-Lipschitz submap
+\[\iota\:\spc{L}\subto \EE^m\] 
+such that $q\in\Dom \iota$.
+
+Denote by $\nu$ the push-forward of $\mu$ to $\Im\iota\subset\EE^m$;
+i.e., 
+\[\nu A\df\mu [\iota^{-1} A]\]
+for any Borel set $A\subset \Im \iota$. 
+Note that the measure $\nu$ satisfies the assumptions of Proposition~\ref{prop:almost-const-R^m} for $\lambda=e^{2\cdot\eps}$ 
+and $\Omega=\Im\iota$.
+Indeed, if 
+$\cBall(x,\lambda\cdot r),\cBall(y,r)
+\subset
+\Im\iota$
+then 
+\[h\:z\mapsto y+\tfrac1\lambda\cdot(z-x)\]
+maps $\cBall[x,\lambda\cdot r]$ onto $\cBall[y,r]$ 
+and it
+induces
+a short submap 
+\[\iota^{-1}\circ h\circ\iota\:\spc{L}\subto \spc{L}.\]
+Therefore, by the assumption, 
+\begin{align*}
+\nu(\cBall[x,\lambda\cdot r])
+&=\mu [\iota^{-1}(\cBall[x,\lambda\cdot r])]
+\le 
+\\
+&\le
+\mu [\iota^{-1}(\cBall[y,r])]=
+\\
+&=\nu(\cBall[y,r]).
+\end{align*}
+By Proposition~\ref{prop:almost-const-R^m},
+there is a constant $c\ge 0$ such that
+\[
+\Const\cdot\SphMes_m Q
+\le
+\nu Q
+\le
+\Const\cdot e^{2\cdot m\cdot\eps}\cdot\SphMes_m Q\]
+for any Borel set $Q\subset \Im\iota$.
+
+Since $\iota$ is $e^{\mp\eps}$bi-Lipshcitz,
+we get
+\[
+\Const\cdot e^{- 2\cdot m\cdot\eps}\cdot\SphMes_m A
+\le
+\mu A
+\le
+\Const\cdot e^{4\cdot m\cdot\eps}\cdot\SphMes_m A
+\eqlbl{eq:almost-SphMes}\]
+for any any Borel set $A\subset \Dom \iota$.
+
+The same argument shows 
+ that \ref{eq:almost-SphMes} holds also for any sets which can be covered 
+ by the domains $\Dom\iota$ for different submaps $\iota$ as above;
+ in particular for any subset $A\subset W$.
+Since $\eps>0$ in \ref {eq:almost-SphMes} is arbitrary, we get that there is a constant $\Const\ge 0$ such that
+\[
+\mu A
+=
+\Const\cdot\SphMes_m A
+\eqlbl{eq:=SphMes}\]
+for any any Borel set $A\subset W$.
+
+It remains to show that $\mu(\spc{L}\backslash W)=0$.
+Since $\SphMes_m(\spc{L}\backslash W)=0$,
+the later will follow 
+if 
+\[\mu \le 10^m\cdot \Const\cdot\SphMes_m.\]
+In turn, the later follows if 
+\[
+\mu (\cBall[p,r])
+\le
+10^m\cdot\Const\cdot r^m\eqlbl{eq:all-the-balls}\]
+for any $p\in\spc{L}$ and all sufficiently small $r>0$.
+
+Fix $p\in\spc{L}$.
+Let the maps $f\:\T_p\to \spc{L}$ and $g\:\EE^m\to \T_p$ 
+be as in the Proposition~\ref{prop:bishop}.
+As before fix $q\in W$ and an $e^{\mp\eps}$-bi-Lipschitz submap
+\[\iota\:\spc{L}\subto \EE^m\] 
+such that $q\in\Dom \iota$.
+Without loss of generality, we may assume that $\iota(q)=0$.
+
+Note that the submap
+\[h\:z\mapsto (g\circ f)(\tfrac{\iota(z)}2)\]
+is short in a neighborhood of $q$ (provided $\eps$ was chosen sufficiently small)
+and
+$h(\cBall[q,2\cdot r])\supset \cBall[p, r]$ for all small $r>0$.
+Therefore \ref{eq:all-the-balls} follows.
+\qeds
+
+
+\begin{thm}{Definition}\label{def:volume}
+Let $\spc{L}$ be a metric space, 
+$m$ be a nonnegative integer 
+and $A\subset\spc{L}$ be a Borel subset.
+The $m$-volume of $A$ is defined as 
+\[\vol_m A\df \tfrac{\alpha_m}{2^{m}}\cdot\HausMes_m A.\]
+(Recall that  $\alpha_m$ is the Lebesgue measure of the unit ball in $\EE^m$).
+
+Further, if $\spc{L}\in \CBB{m}{}$ we will say \emph{almost everywhere}\index{almost everywhere} meaning $\vol_m$-almost everywhere. 
+\end{thm}
+Theorem~\ref{thm:unique-measure-cbb} implies the following
+\begin{thm}{Corollary}\label{cor:volume=}
+Let $\spc{L}\in \CBB{m}{}$
+then
+\begin{align*}
+\vol_m A&=\tfrac{\alpha_m}{2^{\cdot m}}\cdot\HausMes_m A=
+\\
+&=\alpha_m\cdot\SphMes_m A=
+\\
+&=\LongMes_m A.
+\end{align*}
+for any Borel set $A\subset\spc{L}$.
+\end{thm}
+
+With this in mind we can now restate Corollary~\ref{cor:ae-Euclidean-sph} as follows
+
+\begin{thm}{Corollary}\label{cor:ae-Euclidean}
+Let $\spc{L}\in\CBB m{}$.
+Then $\T_p\iso\EE^m$ for almost all points $p\in \spc{L}$.
+\end{thm}
+
+\section{Volume convergence}
+
+
+\begin{thm}{Volume Convergence Theorem}\label{thm:vol-coverge}
+Let  $\spc{L}_n, \spc{L}_\infty\in \CBB{m}{\kappa}$ and $\spc{L}_n\GHto \spc{L}_\infty$.
+Then $\vol_m$ on $\spc{L}_n$ converges weakly to $\vol_m$ on $\spc{L}_\infty$.
+
+In particular,
+if $\spc{L}_\infty$ is compact then 
+$\vol_m\spc{L}_n\to \vol_m\spc{L}_\infty$
+as $n\to\infty$.
+\end{thm}
+
+\parit{Proof.}
+Set 
+$\mu_\infty=(\vol_m)_{\spc{L}_\infty}$ 
+and 
+$\mu_n=(\vol_m)_{\spc{L}_n}$.
+
+From ~\ref{cor:bishop:vol} and ~\ref{cor:volume=} it follows that for any $p_n\in\spc{L}_n$ we have
+\[\mu_n(\oBall(p_n,r))\le \alpha_m\cdot r^m+o(r^m).\] 
+%where $\alpha_m$ denotes the volume of unit ball in $\EE^m$.
+Therefore, passing to a subsequence if necessary,
+we can assume that $\mu_n$ converges weakly to a measure,
+say $\nu$
+on $\spc{L}_\infty$
+and 
+\begin{align*}
+\nu&\le \alpha_m\cdot\SphMes_m= 
+\\
+&=\mu_\infty;
+\end{align*}
+the last identity follows from Corollary~\ref{cor:volume=}.
+
+
+Applying Radon--Nikodym theorem, 
+we get that 
+\[\nu=\rho\cdot\mu_\infty\] 
+for some $\mu_\infty$-measurable function $\rho\:\spc{L}\to[0,1]$.
+By Lebesgue differentiation theorem (\ref{thm:lebesgue-differentiation})
+we can assume that
+\[\rho(x)
+=
+\limsup_{\eps\to0} \frac{\nu(\cBall[x,\eps])}{\alpha_m\cdot\eps^m}.
+\eqlbl{eq:rho-lebesgue}\]
+
+Let us prove the following
+
+\begin{clm}{}\label{clm:euclid=>rho=1}
+If for $x_\infty\in\spc{L}_\infty$
+we have $\T_x\iso\EE^m$ 
+then $\rho(x)=1$.
+\end{clm}
+
+Fix a sequence of points $x_n\in\spc{L}_n$ such that $x_n\GHto x_\infty$.
+Fix a small $\eps>0$.
+According to ??? there is a sequence of $e^{\mp\eps}$-bi-Lipschitz submaps
+$\map_n\spc{}\:\spc{L}_n\to\EE^m$ which converges to a $e^{\mp\eps}$-bi-Lipschitz submap $\map_\infty\:\spc{}\spc{L}_\infty\to\EE^m$ 
+and such that 
+$x_\infty\in\Dom\map_\infty$.
+
+In particular, for any fixed small $r>0$, 
+we have
+$\oBall(x_n,r)\subset \Dom \map_n\subset \spc{L}_n$ for all large $n$.
+
+Since $\Phi_n$ is $e^{\mp\eps}$-bi-Lipschitz,
+we get 
+\[\mu_n[\oBall(x_n,e^{-\eps}\cdot r)]
+\ge e^{-3\cdot m\cdot\eps}\cdot \alpha_m\cdot r^m \]
+Therefore 
+\[\nu[\oBall(x_\infty,\cdot r)]\ge e^{-3\cdot m\cdot\eps}\cdot \alpha_m\cdot r^m\]
+for all sufficiently large $r$.
+
+Note that 
+\[\limsup_{n\to\infty}\mu_n[\oBall(x_n,e^{-\eps}\cdot r)]\le \nu[\oBall(x_\infty,\cdot r)].\]
+Since $\eps>0$ is arbitrary, \ref{eq:rho-lebesgue} implies Claim \ref{clm:euclid=>rho=1}.
+
+By Corollary \ref{cor:ae-Euclidean},
+Claim \ref{clm:euclid=>rho=1}
+implies $\rho\ae 1$; i.e., $\nu=\mu_\infty$
+\qeds
+
+\section{Coarea formula}
+
+In this section we will show that coarea formula holds for Lipschitz maps between $\CBB{}{}$ spaces.
+See Section~\ref{sec:coarea-prelim} for the preliminaries and definition.
+
+Recall that it defines the $m$-th Jacobian of function $f\:\EE^\kay\to\EE^m$ at $x$ as $|(\d_x f)^{\wedge m}|$ if the differential $\d_x f$ is defined and linear.
+Let $\spc{L}\in\CBB{\kay}{}$,  
+$\spc{M}\in\CBB{m}{}$
+and $f\:\spc{L}\subto\spc{M}$ be a subfunction.
+Assume $x\in\Dom f$,
+$\T_x\iso\EE^m$,
+$\T_{f(x)}=W\oplus W^\bot$,
+where $W$ is a subcone of $ \T_{f(x)}$ which is isometric to Euclidean subspace
+and $W^\bot$is its orthogonal complement,
+$\d_xf$ is defined
+and $\Im \d_xf\subset W$ and $\d_xf\:\T_x\to W$.
+In this case we say that $|(\d_x f)^{\wedge m}|$ is defined
+and 
+
+
+
+\begin{thm}{Coarea formula}\label{thm:coarea-cbb}
+Let $\kay\ge m$,
+$\spc{L}\in\CBB{\kay}{}$ and $\spc{M}\in\CBB{m}{}$
+and $f\:\spc{L}\subto\spc{M}$ be a locally Lipschitz submap
+then  $|(\d_x f)^{\wedge m}|$ is defined for almost all $x\in \Dom f$ and
+\[
+\int\limits_Q|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+=
+\int\limits_{f(Q)}\vol_{\kay-m}( f^{-1}(y)\cap Q)\cdot\d_y\vol_m;
+\eqlbl{eq:coarea-once-more}
+\] 
+for any Borel set $Q\subset \Dom f$.
+\end{thm}
+
+Before getting to the proof of the coarea formula,
+let us state and prove two of its corollaries.
+
+Let $\spc{L}$ be a metric space.
+Given $p\in \spc{L}$ denote by $S[R,p]$
+the sphere of radius $R$ centered a $p$;
+i.e.,\index{$S[p,R]$}
+\[S[p,R]=\set{x\in\spc{L}}{\dist{p}{x}{}=R};\]
+we may also write $S[p,R]_{\spc{L}}$ if we need to emphasize 
+that this is a sphere in $\spc{L}$.
+
+
+\begin{thm}{Corollary}\label{cor:coarea-for-dist-function}
+Let $\spc{L}\in\CBB{m}{}$
+and $Q\subset\spc{L}$ be a Borel subset.
+Then 
+\[\vol_m Q=\int\limits_0^\infty\vol_{m-1}(Q\cap S[p,R])\cdot\d R.\]
+
+In particular,
+\[\vol_m \cBall[R,p]=\int\limits_0^R\vol_{m-1}(S[p,R])\cdot\d R.\]
+
+
+\end{thm}
+
+\parit{Proof.}
+Note that
+$(\d_x\dist{p}{}{})(\dir xp)=-1$.
+In particular, $|\d_x(\dist{p}{}{})|\ge 1$.
+On the other hand, since $\dist{p}{}{}\:\spc{L}\to\RR$ is $1$-Lipschitz,
+we have
+$|\d_x(\dist{p}{}{})|\le 1$.
+Therefore
+\[|\d_x(\dist{p}{}{})|= 1\] 
+for any $x$.
+
+It remains to apply the coarea formula to the distance function 
+\[\dist{p}{}{}\:\spc{L}\to\RR.\]
+\qedsf
+
+\begin{thm}{Corollary}\label{cor:coarea-for-dist-map}
+Let $\spc{L}\in\CBB{m}{}$,
+$f\:\spc{L}\to\RR$ be a continuous subfunction
+and $\bm{a}=(a^1,a^2,\dots,a^m)$ be a point array in $\spc{L}$.
+Assume that the distance map $\dist{\bm{a}}{}{}$ 
+ is injective in an open set $\Omega\subset\spc{L}$.
+Then for any function $f\:\dist{\bm{a}}{}{}(\Omega)\to\RR$ 
+we have
+\[\int\limits_{\Omega} \frac{f(\dist{\bm{a}}{p}{})}{\sqrt{\det(g_{ij})}}\cdot\d_p\vol_m
+=
+\int\limits_{\dist{\bm{a}}{}{}(\Omega)} f(\bm{x})\cdot\d x^1\cdot\d x^2\cdots\d x^m,\]
+where $g_{ij}=\cos\mangle\hinge p{a^i}{a^j}$.
+\end{thm}
+
+\parit{Proof.}
+Note that $|(\d_x[\dist{\bm{a}}{}{}])^{\wedge m}|\ae \frac1{\sqrt{\det(g_{ij})}}$.
+Then apply the coarea formula.
+\qeds
+
+In the proof we will need the following two estimates of Jacobians.
+Both easily follow from the definitions in Section~\ref{sec:coarea-prelim}.
+
+\begin{thm}{Proposition}\label{prop:lin-algebra-1}
+Let $U$, $V$ and $W$ 
+be finite dimensional real vector spaces, equipped with inner products.
+Assume $L\:U\to V$ and $M\: V\to U$ be linear operators.
+Then 
+\begin{subthm}{}
+$|L^{\wedge n}|\le |L|^{ n}$ for any positive integer $n$.
+\end{subthm}
+
+\begin{subthm}{}
+$|(L\circ M)^{\wedge n}|\le |L^{\wedge n}|\cdot |M^{\wedge n}|$ for any positive integer $n$.
+\end{subthm}
+
+\end{thm}
+
+
+\begin{thm}{Proposition}\label{prop:lin-algebra-2}
+Let $m\le \kay$ 
+and 
+$L\:\EE^m\to\EE^\kay$ be a linear map.
+Denote by $\proj^1,\dots,\proj^N$ the projections of $\EE^\kay$ to all the coordinate $m$-planes%
+\footnote{so, 
+$N=\binom{k}{m}\df\tfrac{k!}{m!\cdot(\kay-m)!}$}.
+Set 
+$$M=\max\set{|(\proj^i\circ L)^{\wedge m}|}{i\in\{1,\dots,N\}}.$$
+Then
+$$M \le|L^{\wedge m}|
+\le
+N\cdot M.$$
+\end{thm}
+
+The following statement is less trivial.
+It says that the coarea formula holds if the volume of the domain vanishes.
+
+\begin{thm}{Proposition}\label{prop:coarea-rough}
+Let $\kay\ge m$,
+$\spc{L}\in\CBB{\kay}{\kappa}$, 
+$\spc{M}\in\CBB{m}{\kappa}$ 
+and $f\:\spc{L}\subto\spc{M}$ be a locally Lipschitz submap.
+
+Assume $A\subset \Dom f$ 
+is a Borel subset 
+such that $\vol_m A=0$
+then
+\[
+\int\limits_{\spc{M}}\vol_{\kay-m}( f^{-1}(y)\cap A)\cdot\d_y\vol_m=0.\]
+
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality we may assume that $f$ is (globally) Lipschitz.
+
+Fix sufficiently small $\eps>0$, say $\eps<\tfrac{\varpi\kappa}{10^\kay}$.
+
+Given $y\in \spc{M}$, 
+set $A_y= A\cap f^{-1}(y)$ and 
+\[h_\eps(y)
+\df
+\inf
+\set{\sum_{n\in\NN}(\diam W_n)^{m-\kay}}
+{\begin{aligned}
+&\text{all}\  
+W_n
+\ \text{are closed,}\ \bigcup_{n\in\NN}W_n\supset A_y,
+\\
+&\text{and}\ 
+\sup_{n\in\NN}\{\diam W_n\}<\eps
+ \end{aligned}
+}.\]
+
+By the definition of volume (\ref{def:volume}), 
+we have
+\begin{align*}
+\vol_{m-\kay}[f^{-1}(y)]
+&=
+\tfrac{\alpha_m}{2^m}\cdot\HausMes_{m-\kay}[f^{-1}(y)]
+=
+\\
+&=
+\tfrac{\alpha_m}{2^m}\cdot\lim_{\eps\to0+}h_\eps(y).
+\end{align*}
+Therefore, by the monotone convergence theorem, 
+it is sufficient to show that
+\[\int\limits_{\spc{M}}h_\eps(y)\cdot\d_y\vol_m\to 0
+\ \ 
+\text{as}
+\ \ \eps\to0{+}.
+\eqlbl{eq:lim(h_eps)}\]
+
+Let us cover $A$ by a countable collection of sets $Q_1,Q_2,\dots$
+such that 
+$$\sum_n(\diam Q_n)^{ \kay}<\eps^{\kay};$$
+in particular $\diam Q_n<\eps$ for each $n$.
+
+Clearly $\diam (A_y\cap Q_n)\le \diam Q_n$ for each $n$.
+Since $\eps$ is sufficiently small, Theorem~\ref{cor:bishop:vol} and Corollary~\ref{cor:volume=}
+imply that there is a constant $\Const$ which depends only on $m$, 
+such that
+$$\vol_m f(Q_n)<\Const\cdot(\lip f \cdot\diam Q_n)^m.$$
+Therefore
+\begin{align*}
+\int\limits_{\spc{M}}h_\eps(y)\cdot\d_y\vol_m
+&\le 
+\sum_n\int\limits_{\spc{M}}h_\eps( A_y\cap Q_n)\cdot\d_y\vol_m
+\le
+\\
+&\le \Const\cdot(\lip f)^{ m}\cdot \sum_n(\diam Q_n)^{\kay}<
+\\
+&<\Const\cdot(\lip f)^{ m}\cdot\eps^\kay
+\end{align*}
+Hence \ref{eq:lim(h_eps)} follows.
+\qeds
+ 
+
+\parit{Proof of \ref{thm:coarea-cbb}.}
+Let us subdivide $Q$ into three disjoint subsets $Q^1$, $Q^2$ and $Q^3$ in the following way
+\begin{align*}
+Q^1&=\set{x\in Q}{\T_x\iso \EE^m\ \text{and}\ \T_{f(x)}\iso \EE^\kay},
+\\
+Q^2&=\set{x\in Q\backslash Q^1}{\T_{x}\iso \EE^m},
+\\
+Q^3&=Q\backslash (Q^1\cup Q^2).
+\end{align*}
+
+It is sufficient to show that
+\[
+\int\limits_{Q^i}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+=
+\int\limits_{f(Q^i)}\vol_{\kay-m}( f^{-1}(y)\cap Q^i)\cdot\d_y\vol_m.
+\eqlbl{eq:coarea-123}^i\]
+for $i=1$, $2$ and $3$;
+each case will be proved separately.
+
+\parit{Proof of \ref{eq:coarea-123}$^1$.}
+Fix $\eps>0$.
+According to ???,
+both sets $Q^1\subset\spc{L}$ 
+and $f(Q^1)\subset\spc{M}$ can be covered by the domains of a countable collection
+of $e^{\mp\eps}$-bi-Lipschitz charts,
+say $\phi_n\:\spc{L}\subto\EE^\kay$ and $\psi_n\:\spc{M}\subto\EE^m$.
+
+Applying the Federer's coarea formula (\ref{thm:coarea-federer})
+to the maps $\psi_j\circ f\circ\phi^{-1}_i$ for all $i$ and $j$ together with Proposition~\ref{prop:lin-algebra-1},
+we get 
+\[
+\int\limits_{Q^1}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\lege
+e^{\pm 10m\cdot\eps}\cdot\int\limits_{f(Q^1)}\vol_{\kay-m}( f^{-1}(y)\cap Q^1)\cdot\d_y\vol_m.\eqlbl{eq:coarea-pm}\]
+More formally, we can subdivide $Q^1$ into a countable collection of disjoint Borel subsets $X_1$, $X_2,\dots$
+in such a way that 
+for each $n$ there are $i$ and $j$ 
+such that $X_n\subset\Dom \phi_i$ and
+$f(X_n)\subset\Dom \psi_j$.
+Applying Federer's coarea formula (\ref{thm:coarea-federer}) for the  submap $h=\psi_j\circ f\circ\phi^{-1}_i\:\EE^\kay\subto\EE^m$  and $Y_n=\phi_n(X_n)\subset \EE^\kay$
+we get
+\[
+\int\limits_{Y_n}|(\d_z h)^{\wedge m}|\cdot\d_z\vol_\kay
+=
+\int\limits_{h(Y_n)}\vol_{\kay-m}( h^{-1}(y)\cap Y_n)\cdot\d_y\vol_m.
+\]
+By Propositions~\ref{prop:lin-algebra-1} and \ref{prop:bilip-measure} we have
+\[
+\int\limits_{Y_n}|(\d_z h)^{\wedge m}|\cdot\d_z\vol_\kay
+\lege 
+e^{\pm 4\cdot m\cdot\eps}\cdot \int\limits_{X_n}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\]
+and 
+\[
+\int\limits_{h(Y_n)}\vol_{\kay-m}( h^{-1}(y)\cap Y_n)\cdot\d_y\vol_m
+\lege 
+e^{\pm 4\cdot m\cdot\eps}
+\cdot
+\int\limits_{f(X_n)}\vol_{\kay-m}( f^{-1}(y)\cap X_n)\cdot\d_y\vol_m
+\]
+Combining the above we get
+\[
+\int\limits_{X_n}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\lege
+e^{\pm 10\cdot m\cdot\eps}\cdot\int\limits_{f(X_n)}\vol_{\kay-m}( f^{-1}(y)\cap X_n)\cdot\d_y\vol_m.
+\]
+Summing up these inequalities by $n$, we get \ref{eq:coarea-pm}.
+
+Since $\eps>0$ is arbitrary, 
+\ref{eq:coarea-pm} implies \ref{eq:coarea-123}$^1$.
+
+\parit{Proof of \ref{eq:coarea-123}$^2$.}
+According to Corollary~\ref{cor:ae-Euclidean}, $\vol_\kay f(Q^2)=0$.
+In particular, the right hand side in \ref{eq:coarea-123}$^2$ vanishes,
+it remains to show that the left hands side vanishes too.
+
+Note that the set $Q^2\subset\spc{L}$ can be covered by a countable collection
+of bi-Lipschitz charts,
+say $\phi_n\:\spc{L}\subto\EE^\kay$.
+
+Without loss of generality we may assume that $f(Q^2)$ is bounded.
+Therefore, by the theorem on distance embedding (\ref{thm:dist-emb}),
+there is a  bi-Lipschitz embedding 
+$\iota\: f(Q^2)\hookrightarrow\EE^n$
+for some positive integer $n$.
+
+Thus, there is a real constant $\Lip>1$ such that
+each $\phi_i$ is $\Lip^{\mp1}$-bi-Lipschitz
+and
+\[|(\d_pf)^{\wedge m}|
+\lege
+\Lip^{\pm1}\cdot|(\d_p[\iota\circ f])^{\wedge m}|\]
+for $\vol_m$-almost all $p\in Q^2$.
+
+Since $\iota$ is bi-Lipschitz,
+$\vol_\kay [\iota\circ f(Q^2)]=0$.
+
+Consider all the orthogonal projections $\proj^1,\dots,\proj^N$ of $\EE^n$ to $m$-dimensional coordinate subspaces,
+so $N=\tfrac{n!}{m!\cdot(n-m)!}$.
+Note that if $\d_p(\iota\circ f)$ is linear then
+so are the differentials $\d_p(\proj^i\circ\iota\circ f)$
+for all $i$.
+By Propositions~\ref{prop:lin-algebra-2} and \ref{prop:lin-algebra-1},
+\[|(\d_p f)^{\wedge m}|
+\le
+N\cdot\Lip^2
+\cdot
+\sum_{i=1}^N|(\d_p[\proj^j\circ\iota\circ f\circ\phi_i^{-1}])^{\wedge m}|.
+\eqlbl{eq:jac=<LN}\]
+for $\vol_\kay$-almost all $p\in Q^2$.
+
+Let us subdivide $Q^2$ into a countable collection of disjoint Borel subsets $X_1$, $X_2,\dots$
+such that each $X_n\subset\Dom \phi_n$ for each $n$.
+Applying Federer's coarea formula to $\proj^j\circ\iota\circ f\circ\phi_n^{-1}\:\EE^\kay\subto \EE^m$,
+we get
+\[
+\int\limits_{\phi_iX_n}|(\d_x[\proj^j\circ\iota\circ f\circ\phi_n^{-1}])^{\wedge m}|\cdot\d_x\vol_\kay=0
+\]
+for all $j$ and hence
+
+\[
+\int\limits_{X_n}|(\d_x[\proj^j\circ\iota\circ f])^{\wedge m}|\cdot\d_x\vol_\kay=0
+\]
+for all $j$
+
+Together with \ref{eq:jac=<LN}, this implies 
+\[
+\int\limits_{X_n}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay=0\]
+Summing up for all $X_n$, 
+we get that the left hand side in \ref{eq:coarea-123}$^2$ vanishes.
+
+\parit{Proof of \ref{eq:coarea-123}$^3$.}
+According to Corollary~\ref{cor:ae-Euclidean}, $\vol_m Q^3=0$.
+In particular,  the left hand side in \ref{eq:coarea-123}$^3$ vanishes,
+it remains to show that the right hands side also vanishes.
+The later follows from Proposition~\ref{prop:coarea-rough}.
+\qeds
+
+\section{Bishop--Gromov inequality}
+
+\begin{thm}{Bishop--Gromov inequality}\label{thm:bishop-gromov}
+Let $m\ge 2$ and 
+$\spc{L}\in\CBB{m}{\kappa}$, 
+$p\in \spc{L}$.
+Set
+\begin{align*}
+v(R)&=\vol_m\oBall(p,R),
+&
+\~v(R)&=\vol_m\oBall(R)_{\Lob{m}{\kappa}}.
+\end{align*}
+Then the function
+\[f\:R\mapsto \frac{v(R)}{\~v(R)}\] 
+is not increasing and
+\[\lim_{R\to0+}f(R)
+=
+\frac{\vol_{m-1}\Sigma_p}{\vol_{m-1} \SS^{m-1}}.\]
+
+In particular, by Corollary~\ref{thm:simicont-Sigma},
+\[v(R)\le \~v(R)\]
+for any $R>0$.
+\end{thm}
+
+
+In the proof we will use the proposition below and 
+Corollary~\ref{cor:coarea-for-dist-function},
+which is a special case of the Coarea formula (\ref{thm:coarea-cbb}).
+
+Recall that $\Sphere[p,R]_{\spc{L}}$ denotes the sphere of radius $R$ centered a $p$ in $\spc{L}$.
+Similarly,  $S[R]_{\Lob{m}{\kappa}}$ denotes  a sphere of radius $R$ in ${\Lob{m}{\kappa}}$.
+
+\begin{thm}{Proposition}\label{prop:monotonic-spheres}
+Let $m\ge 2$ and 
+$\spc{L}\in\CBB{m}{\kappa}$, 
+$p\in \spc{L}$.
+Set
+\begin{align*}
+s(R)&=\vol_m\Sphere[p,R],
+\\
+\~s(R)&=\vol_m\Sphere(R)_{\Lob{m}{\kappa}}=(\sn\kappa R)^{m-1}\cdot\vol_{m-1}\SS^{m-1}.
+\end{align*}
+The function 
+\[
+h\: R\mapsto \frac {s(R)}{\tilde s(R)}
+\]
+is non-increasing on $(0,\varpi\kappa)$.
+%\[\frac{\vol_{m-1}S[p,R]}{\tilde s(R)}\le\frac{\vol_{m-1}S[p,r]}{\tilde s(r)}.\]
+\end{thm}
+
+\parit{Proof.}
+Let $0<r<R<\varpi\kappa$.
+
+Let $Q\subset \Sphere[p,r]$ be the set of all points 
+which lie on the geodesics from $p$ to the points on $\Sphere[p,R]$
+and $f\:Q\to \Sphere[p,R]$ be the map such that $f\:x\mapsto y$ if $x\in [py]$.
+Note that $f$ is onto.
+
+The set $Q$ is a closed
+and 
+\[\vol_{m-1}Q\le s(r).\]
+
+By Angle-sidelength  monotonicity (\ref{cor:monoton:2-sides}), 
+for any $\eps>0$ the map $f$ is 
+locally $(\tfrac{\sn\kappa R}{\sn\kappa r}+\eps)$-Lipschitz.
+Since $\eps>0$ is arbitrary, the proposition follows.
+\qeds
+
+
+\parit{Proof of \ref{thm:bishop-gromov}.}
+Set $h(R)= \frac {s(R)}{\tilde s(R)}$.
+Consider the measure $\mu=\tilde s(r)\cdot\d r$ on  $(0,\varpi\kappa)$.
+
+According to Corollary~\ref{cor:coarea-for-dist-function},
+\begin{align*}
+v(R)&=\int\limits_0^R s(r)\cdot\d r=\int\limits_0^R h(r)\cdot\d_r \mu,
+\\
+\~v(R)&=\int\limits_0^R\tilde s(r)\cdot\d r=\mu(0,R).
+\end{align*}
+Therefore
+\begin{align*}
+f(R)&=\frac{v(R)}{\~v(R)}=
+\\
+&=\frac1{\mu(0,R)}\cdot\int\limits_0^R h(r)\cdot\d_r\mu=
+\\
+&=\oint\limits_0^R h(r)\cdot\d_r\mu,
+\end{align*}
+here $\oint$ denotes the mean value.
+
+By Proposition~\ref{prop:monotonic-spheres}, 
+$h(R)= \frac {s(R)}{\tilde s(R)}$ is non-increasing.
+it follows that $\mu$-mean value of $h$ on the interval  $(0,R)$ 
+is non-increasing;
+i.e., $f(R)$ is non-increasing in $R$ in the interval $(0,\varpi\kappa)$.
+
+
+
+
+It remains to prove that 
+\[\lim_{R\to0+}f(R)
+=
+\frac{\vol_{m-1}\Sigma_p}{\vol_{m-1} \SS^{m-1}}.\]
+
+Note that
+\[\lim_{R\to0+}f(R)=\lim_{R\to0+} \frac{\vol_m\oBall(p,R)}{\alpha_m\cdot R^{ m}}.\]
+Note that 
+\[\frac{\vol_m\oBall(p,R)}{R^{m}}\]
+is the volume of unit ball in the blowup 
+$\tfrac1R\blow \spc{L}$ centered at $\tfrac1R\blow p$.
+
+Applying the Volume Convergence Theorem (\ref{thm:vol-coverge})
+for the canonical convergence $\tfrac1R\blow\spc{L}\GHto \T_p$ as $R\to 0+$,
+we get that 
+\[\frac{\vol_m[\oBall(p,R)_{\spc{L}}]}{R^m}
+\to
+\vol_m[\oBall(o,1)_{\T_p}]\ \ \text{as} \ \ R\to0+.\]
+
+Finally, applying Corollary~\ref{cor:coarea-for-dist-function}
+for the function $x\mapsto |x|$ on $\T_p$, we get
+\begin{align*}
+\vol_m[\oBall(o,1)_{\T_p}]
+&=
+\vol_{m-1}\Sigma_p\cdot\int\limits_0^1 R^{m-1}\cdot\d R=
+\\
+&=\tfrac1n\cdot\vol_{m-1}\Sigma_p
+\end{align*}
+Hence the result follows.
+\qeds
+
+\section{Exercises}
+
+
+\begin{thm}{Lytchak's problem}
+Let $\spc{L}\in\CBB{m}{}$ and $X\subset\spc{L}$ is a convex everywhere dense set.
+Show that $X$ contains almost all points  of $\spc{L}$.
+\end{thm}
+
+
+\begin{thm}{Exercise}
+Show that in case $\kappa=0$,
+the Bishop--Gromov inequality (\ref{thm:bishop-gromov})
+follows directly from ??? without using coarea formula.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB{m}{}$,
+set $f(x)=\vol_{m-1}\Sigma_x$.
+Show that $f\:\spc{L}\to\RR$ is a lower semi-continuous function;
+i.e., for any converging sequence $x_n\to x_\infty$ in $\spc{L}$,
+we have 
+\[\liminf_{n\to\infty}f(x_n)\ge f(x_\infty).\]
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{L}_n\GHto\spc{L}_\infty$,
+$\spc{L}_n,\spc{L}_\infty\in\CBB{}{\kappa}$,
+$\spc{L}_\infty$ is compact
+and $\dim\spc{L}_n=m>\kay=\dim{L}_\infty$.
+
+Consider sequence of probability measures 
+$\mu_n=\tfrac{1}{\vol_m\spc{L}_n}\cdot\vol_m$
+on $\spc{L}_n$.
+
+Show that after passing to a subsequence $\mu_n$ weakly converges to a probability measure, say $\mu_\infty$, on $\spc{L}_\infty$ and $\mu_\infty$ is absolutely continuous with respect to $\vol_\kay$;
+i.e., $\mu_\infty=\rho\cdot\vol_\kay$
+for some measurable function $\rho$.
+\end{thm}
+
+
+
+
+
+
+
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB{m}{}$ and $\partial \spc{L}\ne\emptyset$.
+Show that the $(m-1)$-density of $\partial \spc{L}$ at any poin is at most $1$;
+i.e., 
+for any point $p\in \partial \spc{L}$
+we have
+\[\limsup_{\eps\to0+}\frac{\vol_{m-1}(\partial\spc{L}\cap\cBall[p,\eps])}{\alpha_{m-1}\cdot \eps^{m-1}}\le 1,\]
+where $\alpha_{m-1}$ denotes the volume of the unit ball in $\EE^{m-1}$.
+\end{thm}
+
+
+\begin{thm}{Definition}
+Let $\spc{L}\in \CBB{}{}$ and $p\in \spc{L}$.
+The union of all semiopen geodesic segments $\l[px\r[$
+will be called \index{inner locus}\emph{inner locus} of $p$ 
+and denoted as $\InnLoc_p$.
+
+The complement of the inner locus
+is called 
+\index{cut locus}\emph{cut locus}.
+The cut locus of point $p$ will be denoted by $\CutLoc_p$;
+so $\CutLoc_p=\spc{L}\backslash\InnLoc_p$.
+In other words, $q\in \CutLoc_p$ if there is no semiopen geodesic segments $\l[px\r[$ containing $q$. 
+\end{thm}
+
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB{m}{}$.
+Show that
+\[\vol_m\CutLoc_p=0\]
+for any $p\in \spc{L}$.
+\end{thm}
+
+Note that since $\Str_p\supset \InnLoc_p$,
+we also get that $\Str_p$ contains $\vol_m$-almost all points of $\spc{L}$.
+
+\begin{thm}{Li--Rong problem}
+Let $\spc{L}\in\CBB{m}0$,
+and $\DD$ be the unit ball in $\EE^m$.
+Assume $\rad\spc{L}=1$ and $\vol_m\spc{L}=\vol_m\DD$.
+Show that $\spc{L}$ is isometric to the quotient space of  $\DD$ 
+by isometric involution on its boundary.
+\end{thm}
+
+A more general statement is proved by Li and Rong in \cite{li-rong}.
+
+The following exercise generalize Bishop--Gromov inequality.
+
+\begin{thm}{Exercise}\label{thm:bishop-gromov-gen}
+Let $m\ge 2$ and 
+$\spc{L}\in\CBB{m}{\kappa}$, 
+$S\subset \spc{L}$ be a compact subset.
+Set
+\begin{align*}
+v(R)&=\vol_m\oBall[S,R],
+&
+\~v(R)&=\vol_m\oBall[R]_{\Lob{m}{\kappa}}.
+\end{align*}
+Prove that the function
+\[f\:R\mapsto \frac{v(R)}{\~v(R)}\] 
+is non-increasing.
+\end{thm}

@@ -1,0 +1,156 @@
+% Fix latex
+\def\smallskip{\vskip\smallskipamount}
+\def\medskip{\vskip\medskipamount}
+\def\bigskip{\vskip\bigskipamount}
+
+%LIST STILES
+\renewcommand{\@listI}{%
+\leftmargin=35pt
+\rightmargin=15pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 1pt
+\partopsep=\topsep
+\parsep=\topsep
+\itemsep=\topsep}
+%ITEMIZE-first order sign
+\renewcommand{\labelitemi}{$\mathsurround=0pt \diamond$}
+\renewcommand{\labelitemii}{$\mathsurround=0pt \circ$}
+
+
+%my style
+\def\parit#1{\smallskip\noindent{\it #1}}
+\def\parbf#1{\smallskip\noindent{\bf\boldmath #1}}
+\newcommand\xqed[1]{%
+\leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
+\quad\hbox{#1}}
+\def\claimqeds{\xqed{$\vartriangle$}\par\medskip}
+\def\claimqedsf{\vskip-6mm\claimqeds}
+\def\qeds{\qed\par\medskip}
+\def\qedsf{\vskip-6mm\qeds}
+\def\qedqeds{\hfill${\vartriangle}{\Box}$\par\medskip}%CHECK IN THE END!!!
+\def\qedqedsf{\vskip-6mm\qedqeds}%CHECK IN THE END!!!
+
+%THEOREM
+\newcounter{thm}[section]
+
+\renewcommand{\thethm}{\thesection.\arabic{thm}}
+\def\claim#1{%
+\par%
+\medskip%
+\noindent%
+\refstepcounter{thm}%
+\hbox{\bf\boldmath \arabic{chapter}.\arabic{section}.\arabic{thm}. #1.}
+\it\ %\ignorespaces
+}
+\def\endclaim{
+\par
+\medskip}
+\newenvironment{thm}{\claim}{\endclaim}
+
+%SUBTHEOREM 
+\newcounter{subthm}[thm]
+\renewcommand{\thesubthm}{\thethm\textit{\hskip-0.03em \alph{subthm}}}
+\newcounter{clone}[thm]
+\renewcommand{\theclone}{\textit{\alph{subthm}}}
+\newenvironment{subthm}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthm}\begin{itemize}\item[\alph{subthm})]}{\par\refstepcounter{subthm}\label{#1}\setcounter{clone}{\value{subthm}} \addtocounter{clone}{-1}\refstepcounter{clone}\label{SHORT.#1}\begin{itemize}
+\item [\alph{subthm})]}}{\end{itemize}}
+%SUBTHEOREM A
+\newcounter{subthmA}[thm]
+\renewcommand{\thesubthmA}{\thethm\textit{\hskip-0.05em \Alph{subthmA}}}
+\newcounter{cloneA}[thm]
+\renewcommand{\thecloneA}{\textit{\Alph{subthmA}}}
+\newenvironment{subthmA}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthmA}\begin{itemize}\item[\Alph{subthmA})]}{\par\refstepcounter{subthmA}\label{#1}\setcounter{cloneA}{\value{subthmA}} \addtocounter{cloneA}{-1}\refstepcounter{cloneA}\label{SHORT.#1}\begin{itemize}
+\item [\Alph{subthmA})]}}{\end{itemize}}
+%SUBTHEOREM 1
+\newcounter{subthmN}[thm]
+\renewcommand{\thesubthmN}{\thethm-\arabic{subthmN}}
+\newcounter{cloneN}[thm]
+\renewcommand{\thecloneN}{\arabic{subthmN}}
+\newenvironment{subthmN}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subthmN}\begin{itemize}\item[\arabic{subthmN})]}{\par\refstepcounter{subthmN}\label{#1}\setcounter{cloneN}{\value{subthmN}} \addtocounter{cloneN}{-1}\refstepcounter{cloneN}\label{SHORT.#1}\begin{itemize}
+\item [\arabic{subthmN})]}}{\end{itemize}}
+
+%NUMBERONCIRC
+\newcommand*{\numform}[1]{\@numform{\@nameuse{c@#1}}}
+\newcommand*{\@numform}[1]%
+{\ifcase #1\or \ding{202}\or \ding{203}\or \ding{204}\or \ding{205}\or \ding{206}\or \ding{207}\or \ding{208}\or \ding{209}\or \ding{210}\or \ding{211}\else\@ctrerr \fi}
+%EQNUMBER
+\newcounter{eqtn}[section]
+\renewcommand{\@eqnnum}{\theeqtn}
+\renewcommand{\theeqtn}{\numform{eqtn}}
+\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\leqno{\text{\numform{eqtn}\label{#1}}}}
+%\newcommand{\eqlbl}[1]{\refstepcounter{eqtn}\tag*{\numform{eqtn}\label{#1}}}
+
+%CLAIM
+\def\clmclaim#1{\par\medskip\noindent\refstepcounter{eqtn}\hbox{\rm\numform{eqtn} #1}
+\it%\ignorespaces
+}
+\def\endclmclaim{\par
+\medskip}
+\newenvironment{clm}{\clmclaim}{\endclmclaim}
+
+
+%CLAIM
+%\newcounter{clm}[section]
+%\renewcommand{\theclm}{{\footnotesize\bf\Roman{clm}}}
+%\def\clmclaim#1{\par\medskip\noindent\refstepcounter{clm}\hbox{\bf\boldmath {\footnotesize \Roman{clm}}. #1.}
+%\it\ %\ignorespaces
+%}
+%\def\endclmclaim{
+%\par
+%\medskip}
+%\newenvironment{clm}{\clmclaim}{\endclmclaim}
+
+%SUBCLAIM
+\newcounter{subclm}[eqtn]
+\renewcommand{\thesubclm}{\theqtn\textit{\hskip-0.04em \alph{subclm}}}
+\newcounter{clmclone}[eqtn]
+\renewcommand{\theclmclone}{\textit{\alph{subclm}}}
+\newenvironment{subclm}[1]{\ifthenelse{\equal{#1}{}}
+{\par\refstepcounter{subclm}\begin{itemize}\item[\alph{subclm})]}{\par\refstepcounter{subclm}\label{#1}\setcounter{clmclone}{\value{subclm}} \addtocounter{clmclone}{-1}\refstepcounter{clmclone}\label{SHORT.#1}\begin{itemize}
+\item [\alph{subclm})]}}{\end{itemize}}
+
+%Russian formulas style
+\newcommand*{\z}[1]{#1\nobreak\discretionary{}%
+            {\hbox{$\mathsurround=0pt #1$}}{}}
+\let\oldsubto\subto
+\def\subto{\z\oldsubto}
+\let\oldto\to
+\def\to{\z\oldto}
+\let\oldsupset\supset
+\def\supset{\z\oldsupset}
+\let\oldle\le
+\def\le{\z\oldle}
+\let\oldge\ge
+\def\ge{\z\oldge}
+\let\oldin\in
+\def\in{\z\oldin}
+\let\oldsubset\subset
+\def\subset{\z\oldsubset}
+\let\oldapprox\approx
+\def\approx{\z\oldapprox}
+\let\oldiso\iso
+\def\iso{\z\oldiso}
+\let\oldhookrightarrow\hookrightarrow
+\def\hookrightarrow{\z\oldhookrightarrow}
+\let\oldcirc\circ
+\def\circ{\z\oldcirc}
+\let\oldtimes\times
+\def\times{\z\oldtimes}
+\let\oldmapsto\mapsto
+\def\mapsto{\z\oldmapsto}
+\let\oldcap\cap
+\def\cap{\z\oldcap}
+\let\oldcup\cup
+\def\cup{\z\oldcup}
+\let\olddots\dots
+\def\dots{\z\olddots}
+\let\oldcdot\cdot
+\def\cdot{{\hskip0.5pt\z\oldcdot\hskip0.5pt}}
+
+\usepackage{verbatim}
