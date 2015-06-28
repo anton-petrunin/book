@@ -7,13 +7,12 @@
 \section{Curves of bounded curvature.}\label{sec:cbc}
 
 A {\it $k$-curve}  is a curve of constant
-curvature $k$ in $\Lob2\kappa$.  A {\it complete} $k$-curve is a maximally extended $k$-curve, hence a circle, geodesic
+curvature $k$ in some $\Lob2\kappa$.  A {\it complete} $k$-curve is a maximally extended $k$-curve, hence a circle, geodesic
 line, horocycle or equidistant curve.  
 
 The \emph{chord-length} of a curve in a metric space is the distance between its endpoints.  A \emph{chord} is a geodesic joining two of its points, and an \emph{endpoint chord} is a geodesic joining its endpoints.
 
-\begin{thm}{Definition}
-\label{def:arc-chord}
+\begin{thm}{Definition}\label{def:arc-chord}
 Let $\gamma$ be a rectifiable curve in a metric space. For any subarc $\tilde\gamma$ of $\gamma$ whose length $s$ and chord-length $r$ satisfy $s+r <
 2\pi/\varpi\kappa$, let $k_{K,\gamma}( \tilde \gamma)$ denote the unique $\tilde k$
 for which there exists a $ \tilde k$-curve in $\Lob2\kappa$ having length $s$ and
@@ -27,7 +26,9 @@ $ \tilde k$-curve in $\Lob2\kappa$  having the same length and chord-length as $
 k$. 
 \end{thm}
 
-Letting  $\sigma$ be the complete $k$-curve in  $\Lob2\kappa$, it is equivalent to say that for any subarc $ \tilde \gamma$ of $\gamma$  satisfying $s+r < 2\varpi\kappa$,  and whose length $s$ is at most the length of  $\sigma$, a $k$-curve of length $s$ has chord-length $\le r$.  Another equivalent formulation:  for any subarc $ \tilde \gamma$ of $\gamma$ satisfying $s+r < 2\varpi\kappa$,  and whose chord-length $r$ is  at most equal to the diameter of $\sigma$, a chord of  $\sigma$ of length $r$ cuts $\sigma$ into arcs of lengths $s_-\le s_+$ where either $s\le s_-$ or $s\ge s_+$. 
+Letting  $\sigma$ be the complete $k$-curve in  $\Lob2\kappa$, it is equivalent to say that for any subarc $ \tilde \gamma$ of $\gamma$  satisfying $s+r < 2\varpi\kappa$,  and whose length $s$ is at most the length of  $\sigma$, a subarc of $\sigma$ of length $s$ has chord-length $\le r$.  
+
+Another equivalent formulation:  For any subarc $ \tilde \gamma$ of $\gamma$ satisfying $s+r < 2\varpi\kappa$,  and whose chord-length $r$ is  at most equal to the diameter of $\sigma$, a chord of  $\sigma$ of length $r$ cuts $\sigma$ into an arc and its complement of respective lengths $s_-\le s_+\le\infty$, where either $s\le s_-$ or $s\ge s_+$. 
 
 \begin{thm}{Definition}
 \label{ptwise-arc-chord}
@@ -63,10 +64,9 @@ the angle between $\gamma^+(a)$ (respectively $-\gamma^-(b)$)  and the endpoint 
 \parit{Proof.} 
 Let us complete $\gamma$
 to a closed curve $\hat\gamma$ by including its chord. Since $s+r<2\varpi\kappa$, by Reshetnyak
-Majorization Theorem there is a closed convex curve $\tilde\alpha$ in $S_K$ that
-majorizes $\hat\gamma$. Since the majorizing map does not increase distance and preserves arclength of $\tilde\alpha$, 
- the portion of $\tilde\alpha$ that maps to the
-chord of $\gamma$ is itself a  geodesic.  Therefore
+majorization  \ref{thm:major} there is a closed convex curve $\tilde\alpha$ in $S_K$ that
+majorizes $\hat\gamma$. The portion of $\tilde\alpha$ that maps to the
+chord of $\gamma$ is itself a  geodesic (\ref{lem:majorize-geodesic}).  Therefore
 $\tilde\alpha$ consists of a curve $\tilde\gamma$, mapped to $\gamma$, and its
 chord, mapped isometrically to the chord of $\gamma$. On subarcs of
 $\tilde\alpha$ the arclength is maintained while the chordlength is not
