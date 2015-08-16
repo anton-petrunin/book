@@ -716,9 +716,8 @@ Therefore $\curv P'\le \kappa$.
 \qeds
 
 \section {Manifolds-with-boundary}
-%Let $M$ be a connected $m$-dimensional Riemannian manifold with possibly nonempty boundary $\partial M$.
-By a \emph{Riemannian manifold-with-boundary} $M$ of a given differentiability class, we mean $M$ has possibly nonempty boundary and has an extension across the boundary to a manifold $\overline{M}$ of the same class with empty boundary, such that  each boundary point of $M$ has a neighborhood $U$ in $\overline{M}$ coordinatized by $\R^n$ and for which $M\cap U$ is coordinatized by a halfspace of $\R^n$. The Riemannian metrics of $\bar M$ and $\partial M$ are  of differentiability class one degree lower. 
-
+Let $M$ be a connected $m$-dimensional Riemannian manifold with possibly nonempty boundary $\partial M$.
+%By a \emph{Riemannian manifold-with-boundary} $M$ of a given differentiability class, we mean $M$ has possibly nonempty boundary and has an extension across the boundary to a manifold $\overline{M}$ of the same class with empty boundary, such that  each boundary point of $M$ has a neighborhood $U$ in $\overline{M}$ coordinatized by $\R^n$ and for which $M\cap U$ is coordinatized by a halfspace of $\R^n$. The Riemannian metric of $\bar M$ is of differentiability class one degree lower. 
 We equip $M$ with the length metric. 
 
 For each point $p\in\partial M$,
@@ -795,7 +794,7 @@ it has no points with concave sectional directions.
 It remains to apply Theorem~\ref{thm:example-mnflds-with-bry:CBA}.
 \qeds
 
-\begin{thm}{Definition}\label{def:mwb-segment}A geodesic of $M$ consists of  \emph{interior
+\begin{thm}{Definition}\label{def:mwb-segment}??? A geodesic of $M$ consists of  \emph{interior
 segments}, by which we mean nonconstant open segments  that have zero acceleration in $M$ but
 may include points of $\partial M$;  \emph{boundary segments}, nonconstant geodesics of $\partial M$ whose acceleration in $M$ is nonzero (necessarily normal to $\partial M$) on a dense open subset; \emph{switch-points}, where the geodesic switches between interior and boundary segments;  and \emph{chatter-points}, namely accumulation points of switch-points. 
 \end{thm}
@@ -867,43 +866,51 @@ Now the claim follows by letting $\varphi\to 0$ and $k\to\infty$.
 \qeds
 
 \begin{thm}{Lemma}\label{lem:abs-cont}
-Let $M$ be a Riemannian manifold-with-boundary.  Let $\gamma$ be a geodesic of $M$ with unit-speed parameter $s$. Then   after  passing to coordinates, 
-$\gamma'$  is Lipschitz continuous in $s$.
+Let $\gamma\:[0,1]\to M$ be a geodesic of a Riemannian manifold-with-boundary $M$. Then after passing to coordinates, 
+$\gamma'$  is  Lipschitz continuous.  
 \end{thm}
 
 \parit{Proof.}
-By passing to coordinates, we   take $\overline{M}=\R^m$.  
+Specifically, we extend a neighborhood of $p$ in $M$ to a coordinate neighborhood of $p$ in a manifold without boundary, thereby  regarding $M$ as a submanifold of $\R^m$.
 
-\begin{clm}{}\label{clm:}
-$\gamma$ has an upper bound on pointwise arc-chord curvature.
+It suffices to reparameterize $\gamma$ by Euclidean rather than Riemannian arc-length. 
+
+\begin{clm}{}\label{clm:pointwise-k-bound}
+The pointwise arc-chord curvature  of $\gamma$ (Definitions \ref{def:arc-chord}, \ref{ptwise-arc-chord}) is bounded above.
 \end{clm}
-Let $p=\gamma(t)\in\partial M$.  
-%We may suppose $\gamma$ is not a straight line segment on any neighborhood of $t$.  
 
-First suppose $\gamma(t_1)$ and $\gamma(t_2)$ lie on $\partial M$, where $t_1<t<t_2$ and the $t_i$ are  arbitrarily close to $t$. 
-Let $Q$ be the $2$-plane through $\gamma(t_1), p, \gamma(t_2)$.  Let $\tilde\alpha$ be a unit-speed curve in $Q$  whose image is the open portion of the curve $\partial M\cap Q$ 
-between $\gamma(t_1)$ and $\gamma(t_2)$,
-and  $\alpha$ be a unit-speed curve in $Q$  whose image is 
-the open geodesic of $M\cap Q$ between $\gamma(t_1)$ and $\gamma(t_2)$. 
- 
-The osculating plane of $\gamma$ at $t$ is defined and normal to $\partial M$, i.e. as $t_1,t_2$ approach $t$, $Q$ approaches the $2$-plane that contains $\gamma'(t)$ and is normal to $\partial M$ at $p$.   It follows, assuming   $|t-t_i|$ sufficiently small for $i=1,2$, that  $\tilde\alpha$ has  \emph{geodesic} curvature ???$\le k$.  
-  
-In the plane $Q$, $\alpha$ is a $C^1$ convex curve that runs along the boundary of the convex hull of $\tilde\alpha$.  Therefore the total turn of  the tangent line of any subarc of  $\alpha$ with endpoints on $\partial M$  is not more than the total absolute turn of the tangent line of the subarc of  $\tilde\alpha$ with the same endpoints.  
- 
-For subarcs of the same length, the total turn of the tangent line of a subarc of $\alpha$ is not more than for a subarc of a circle $\sigma$ of curvature $k$.  Therefore the angles of a sufficiently fine polygonal curve inscribed in $\alpha$  are no less than the corresponding angles of a polygonal curve with the same sidelengths inscribed in the Euclidean circle $\sigma$ of geodesic curvature $k$.
- By Arm Lemma \ref{lem:arm}, the chord-length of $\alpha$ is not less than the chord-length of a segment of $\sigma$ of length $=\length\alpha$. Therefore $\alpha$ has arc-chord curvature $\le k$.
- 
-Since the geodesic $\gamma|[t_1,t_2]$ has the same endpoints as $\alpha$ and is not  longer
-than $\alpha$, then  $\gamma|[t_1,t_2]$ has arc-chord curvature $\le k$.  Therefore $\gamma$ as pointwise arc-chord curvature $\le k$. 
+%For a fixed $s \le
+%\pi/\sqrt{k}$, the curvature $k$ of a $k$-curve $\sigma$ in $\Lob2\kappa$ is determined by the ratio $s/r$ of   length   to chord-length (i.e. \emph{arc/chord} ratio) of a segment of $\sigma$ of length $s$.  
+We prove the claim by showing,  given $0\le t_0\le 1$,  that for some  $\epsilon>0$, there is a uniform upper bound on the arc/chord ratio of $\gamma|[t_1,t_2]$ if  $|t-t_0|<\epsilon$, $0\le t_1\le t\le t_2\le 1$, $|t_1-t_2|<\epsilon$. 
+
+We may suppose  $\gamma(t)$  does not lie in a line segment $\gamma|[t'_1,t'_2]$,  $t_1<t'_1<t<t'_2<t_2$, since otherwise there is nothing to prove. In particular, $\gamma(t)\in\partial M$. We may also assume $\gamma(t_1)$ and $\gamma(t_2)$ lie in $\partial M$. Indeed, if one or both of $\gamma(t_1)$ and $\gamma(t_2)$ lie in $M-\partial M$, consider the maximal segment $\overline{\gamma}$ of $\gamma|[t_1,t_2]$ with endpoints on $\partial M$.  By the triangle inequality, the arc/chord ratio of $\gamma$ is at most that of $\overline{\gamma}$.
+
+% It follows that if   $|t_1-t_2|$ is sufficiently small, then  $\tilde\alpha$ has  geodesic curvature $\le k+\epsilon$, where  $k$ is an upper bound for the principal curvatures of $\partial M$  in a neighborhood of $\gamma(t_0)$.  
 
 
-\begin{clm}{}\label{clm:}
-$\gamma'$ is Lipschitz continuous. 
+By Lemma \ref{lem:m-w-b-geodesic-'}, the 
+Riemannian osculating plane of $\gamma$ at $t$ is defined and normal to $\partial M$.
+%, i.e. as $t_1,t_2$ approach $t$, $Q$ approaches the $2$-plane that contains $\gamma'(t)$ and is normal to $\partial M$ at $p$.  
+%Moreover, these osculating planes vary continuusly with $t$. 
+Then for $\delta\in (0,\pi/2)$, we may choose $\epsilon>0$  such that  the  angle  in $\R^m$ between the normal to $\partial M$ and the $2$-plane $Q$ through points $\gamma(t_1), p=\gamma(t), \gamma(t_2)$ is bounded above by $\pi/2-\delta$, uniformly in $t$ by uniform continuity. 
+Thus if $\tilde\alpha$ is the curve in $Q$  whose image is the intersection curve $\partial M\cap Q$ 
+between $\gamma(t_1)$ and $\gamma(t_2)$, then  $\tilde\alpha$ has  geodesic curvature bounded in absolute value by some uniform constant $A>0$.%$\le k+\epsilon$, where  $k$ is an upper bound for the principal curvatures of $\partial M$  in a neighborhood of $\gamma(t_0)$.  
+
+Let $\alpha$ be the geodesic of $M\cap Q$ between $\gamma(t_1)$ and $\gamma(t_2)$. 
+  In $Q$, $\alpha$ is a $C^1$ convex curve that runs along the boundary of the convex hull of $\tilde\alpha$.  Therefore the total turn of  the tangent line of any subarc of  $\alpha$ with endpoints on $\partial M$  is not more than the total absolute turn of the tangent line of the subarc of  $\tilde\alpha$ with the same endpoints (??? more explanation here and in next paragraph).  
+This total absolute turn is not more than for a subarc of the same length of a $k$-curve $\sigma$ of constant curvature $k=A$ in $\Lob2\kappa$.  
+
+Therefore the angles of a sufficiently fine polygonal curve inscribed in $\alpha$  are no less than the corresponding angles of a polygonal curve with the same chord-lengths inscribed in $\sigma$.
+ By taking progressively finer inscriptions and applying Arm Lemma \ref{lem:arm}, we find that the chord-length of $\alpha$ is not less than the chord-length of a segment of $\sigma$ of length equal to  $\length\alpha$. Therefore $\alpha$ has arc-chord curvature $\le k+\epsilon$.
+ 
+By assumption, $\gamma$ is a Riemannian-shortest curve in $M$ between $\gamma(t_1)$ and $\gamma(t_2)$. The absolute difference of the Riemannian and Euclidean lengths of $\gamma|[t_1,t_2]$ 
+ is at most a uniform constant multiple of the former. Hence the (Euclidean) length of $\gamma|[t_1,t_2]$
+  is at most a uniform constant  multiple of the length of $\alpha$.   Therefore the arc/chord ratio of $\gamma|[t_1,t_2]$ is uniformly bounded above, as required.
+
+\begin{clm}{}\label{clm:global-k-bound}$\gamma'$ is Lipschitz continuous in the unit-speed parameter inherited from $\,\R^m$ . 
 \end{clm}
-$\gamma'$ is Lipschitz continuous in the unit-speed parameter inherited from $\,\R^m$ . 
-
-Globalization of arcchord curvature
-\ref{subthm:local-global-base-angle}
+By \ref{clm:pointwise-k-bound} and globalization of arc-chord curvature, 
+\ref{subthm:local-global-base-angle}, the angle $\theta$ in $\R^n$ between $\gamma^+(a)$(respectively $-\gamma^-(b)$)  and the endpoint chord of $\gamma$ is at most equal to the angle between a circular arc of curvature $k$ and length $s$  in $\R^2$ and  its endpoint chord.  But $\theta$ is also the angle in $\R^n$ between the tangent lines to $\gamma$ at $t=a$ and $t=b$.  The claim follows.
 \qeds
 
 Now we are ready for one of our main curvature estimates. We formulate it in terms of an 
@@ -916,7 +923,7 @@ isometric imbedding of $M$ in some Euclidean space $\EE^n$.
 
 Say a positive number $r$ is a \emph{tubular
 radius} for $M$ in $\EE^n$ if every point at distance $r$ or less from $M$ is the center of a
-closed ball meeting $M$ at a single point. Then the principal curvatures of $M$, as well as  those of $\partial M$ belonging to a normal
+closed ball $\EE^n$ meeting $M$ at a single point. Then the principal curvatures of $M$, as well as  those of $\partial M$ belonging to a normal
 vector whose $M$-component is outward from the interior of $M$, are bounded
 above by $1/r$. Conversely, if we take an upper bound $k$ of such principal
 curvatures, then
@@ -925,8 +932,9 @@ $1/k$ will be a tubular radius for a sufficiently small region of $M$.
 
 \begin{thm}{Lemma}\label{lem:diff-inequality} Let $r = 1/k$ be a tubular radius for $M$, and let $\gamma$ and $\sigma$ be
 geodesics in $M$ having speed $\le 1$. Let $f(r) = |\gamma(s) - \sigma(s)|$ be the
-displacement in $\EE^n$ between corresponding points. Then except at the countably many points where $f''$ fails to exist, we have a differential inequality
-$f'' \ge -k^2f$ (with strict inequality where $f> 0$).
+displacement in $\EE^n$ between corresponding points. Then 
+%except at the countably many points where $f''$ fails to exist, we have a differential inequality
+$$f'' \ge -k^2f,$$ with strict inequality where $f> 0$.
 \end{thm}
 
 
