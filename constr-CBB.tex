@@ -39,12 +39,14 @@ Thus the limit in \ref{eq:def:busemann*} is defined.
 
 %!!! I inserted a proof.
 By the definition of Busemann function,
-\begin{eqnarray*}
-\exp \sqrt{-\kappa}\bus_\gamma &= &\exp \lim_{t\to \infty} \sqrt{-\kappa}(d_{\gamma (t)} - t) \\
-&= & \lim_{t\to \infty} \left(\exp \sqrt{-\kappa}(d_{\gamma (t)} -t) + \exp
-\sqrt{-\kappa}(-d_{\gamma (t)}-t)\right)\\
-&= & \lim_{t\to \infty} 2 \cosh \sqrt{-\kappa}d_{\gamma (t)} \exp\sqrt{-\kappa}(-t).
-\end{eqnarray*}
+\begin{align*}
+\exp(\sqrt{-\kappa}\cdot\bus_\gamma) 
+&= \exp \lim_{t\to \infty} \sqrt{-\kappa}\cdot(\dist{{\gamma (t)}}{}{} - t) 
+\\
+&= \lim_{t\to \infty} \left(\exp \sqrt{-\kappa}(d_{\gamma (t)} -t) + \exp
+\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right)\\
+&=  \lim_{t\to \infty} 2 \cosh \sqrt{-\kappa}d_{\gamma (t)} \exp\sqrt{-\kappa}\cdot(-t).
+\end{align*}
 
 By the function comparison definitions of $\Cat{}{\kappa}$ (\ref{function-comp}) or $\CBB{}{\kappa}$ (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function $f=\cosh \sqrt{-\kappa}\circ\dist{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
 \qeds
@@ -73,602 +75,405 @@ If $w\ne 0$, consider the ray $\gamma(t)=\tfrac1{|w|}\cdot t$
 Recall that map $\sigma\:\spc{L}\to\spc{M}$ between the metric spaces $\spc{L}$ and $\spc{M}$
 is called 
 \emph{submetry}\index{submetry} if 
-\[\sigma(\oBall[p,R]_\spc{L})=\oBall[\sigma(p),R]_{\spc{M}}\]
-for any $p\in \spc{L}$ and $R\ge 0$.
+\[\sigma(\oBall(p,r)_\spc{L})=\oBall(\sigma(p),r)_{\spc{M}}\]
+for any $p\in \spc{L}$ and $r\ge 0$.
 
 Equivalently, a map $\sigma\:\spc{L}\to\spc{M}$ is called sumbetry if it is 1-Lipshitz and 1-co-Lipschitz at the same time.
 
-A big sourse of examples of sumbetries provided by isometric group actions. 
+Note that any submetry is an onto map.
 
-\begin{thm}{Proposition}
-Let $\spc{X}$ be a metric space.
-Assume that group $G$ acts on $\spc{X}$ by isometries 
-and each $G$ orbit forms is proper.
-Then the projection map $\spc{X}\to \spc{X}/G$ is a sumbetry.
+The main souse of examples of submetries comes from isometric group actions.
+
+Nemely, assume $\spc{L}$ is a metric space and the group $G$ acts on $\spc{L}$.
+Denote by $\spc{L}/G$ the set of $G$-orbits;
+let us equip it with the Hausdorff metric. 
+
+In general, $\spc{L}/G$ is a premetric space,
+but if all the $G$-orbits form closed sets in $\spc{L}$
+then $\spc{L}/G$ is a metric space.
+
+\begin{thm}{Proposition}\label{prop:submet/G}
+Let $\spc{L}$ be a metric space and group $G$  acts on $\spc{L}$ by isometries  
+and in such a way that every $G$-orbit is closed.
+Then the projection map $\spc{L}\to \spc{L}/G$ is a sumbetry.
 \end{thm}
 
-\begin{thm}{Theorem}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ is a metric space.
+
+\begin{thm}{Proposition}
+\label{prop:submet-length}
+Let  $\spc{L}$ be a length space 
+and $\sigma\:\spc{L}\to \spc{M}$ is a submetry.
+Then $\spc{M}$ is a length space.
+\end{thm}
+
+\parit{Proof.}
+Fix $\eps>0$ and a pair of points $x,y\in \spc{M}$.
+
+Since $\sigma$ is $1$-co-Lipschitz, there are points $\hat x,\hat y\in \spc{L}$
+such that $\sigma(\hat x)=x$, $\sigma(\hat y)=y$ 
+and $\dist{\hat x}{\hat y}{\spc{L}}<\dist{x}{y}{\spc{M}}+\eps$.
+
+Since ${\spc{L}}$ is a length space, 
+there is a curve $\gamma$ 
+joining $\hat x$ to $\hat y$ in ${\spc{L}}$
+such that
+\[\length\gamma\le \dist{x}{y}{\spc{M}}+\eps.\]
+
+Since $\sigma$ is $1$-Lipschitz,
+there 
+\[\length\sigma\circ\gamma\le \length\gamma.\]
+
+Note that the curve $\sigma\circ\gamma$ joins $x$ to $y$
+and from above
+\[\length\sigma\circ\gamma<\dist{x}{y}{\spc{M}}+\eps.\]
+Since $\eps>0$ is arbitrary,
+we have that $\spc{M}$ is a length space.
+\qeds
+
+
+\begin{thm}{Theorem}\label{thm:submetry-CBB}
+Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ be a metric space.
 Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
 Then $\spc{M}\in \CBB{}{\kappa}$.
 \end{thm}
 
+The theorem above together with Proposition~\ref{prop:submet/G}
+imply the following.
 
-
-
-
-
-
-\section{Quotient spaces}\label{sec:quotient-CBB}
-
-Let $\spc{L}$ be a metric space.
-Assume that the group $G$ acts on $\spc{L}$ by isometries.
-The set $\spc{L}/G$ 
-of $G$-orbits in $\spc{L}$
-comes with the natural metric ??? 
-
-
-\begin{thm}{Theorem}\label{thm:CBB/G}
+\begin{thm}{Corollary}\label{thm:CBB/G}
 Let $\spc{L}\in\CBB{}{\kappa}$ and the group $G$ acts on $\spc{L}$ by isometries 
 and it has closed orbits.
 Then $\spc{L}/G\in\CBB{}{\kappa}$. 
 \end{thm}
 
 \parit{Proof.}
-Applying Proposition~\ref{prop:length-X/G},
-it is sufficient to check that (1+3)-point comparison holds in $\spc{L}/G\in\CBB{}{\kappa}$.
-
-Denote by $\proj\:\spc{L}\to \spc{L}/G$ the projection,
-$\proj(x)=G\cdot x$
-
-Choose arbitrary point $\hat p$, $\hat x^1$, $\hat x^2$ and $\hat x^3$ in the quotient space $\spc{L}/G$.
-Choose points $p$, $x^1$, $x^2$ and $x^3$ in $\spc{L}$ 
-so that $\proj(p)=\hat p$ and $\proj(x^i)=\hat x^i$ for each $i$.
-
+Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
+Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
+Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
+such that $\sigma(\hat x_i)=x_i$ and
+\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
+\lege
+\dist{p}{x^i}{\spc{M}}\pm\delta\]
+for all $i$.
 Note that 
-\begin{align*}
-\dist{p}{x^i}{\spc{X}}&\ge\dist{\hat p}{\hat x^i}{\spc{X}/G}
-&
-\dist{x^i}{x^j}{\spc{X}}&\ge\dist{\hat x^i}{\hat x^j}{\spc{X}/G}
-\end{align*}
+\[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
+>
+\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
 for all $i$ and $j$.
+Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
+\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
+<
+\angk\kappa p{x^1}{x^2}+\eps
+\eqlbl{eq:angles-M-L}\]
+holds for all $i$ and $j$.
 
-Given $\delta>0$,
-the points $x^i$ can be chosen so that 
-\[\dist{p}{x^i}{\spc{X}}<
-\dist{\hat p}{\hat x^i}{\spc{X}/G}+\delta.\]
-for each $i$.%
-\footnote{If $\spc{L}$ is proper, then we can assume 
-\[\dist{p}{x^i}{\spc{X}}=
-\dist{\hat p}{\hat x^i}{\spc{X}/G}.\]}
+By (1+3)-point comparison in $\spc{L}$,
+we have
+\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
++\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
++\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
+\le 
+2\cdot\pi\]
+assuming all the angles on the left hand side are defined.
+Applying  \ref{eq:angles-M-L}, 
+we get 
+\[\angk\kappa p{x^1}{x^2}
++\angk\kappa p{x^2}{x^3}
++\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
 
-Given $\eps>0$ we can choose the value $\delta>0$ above so that 
-\[\angk\kappa{p}{x^i}{x^j}_{\spc{L}}+\eps > \angk\kappa{\hat p}{\hat x^i}{\hat x^j}_{\spc{L}/G}\]
-for all $i$ and $j$, assuming the left hand side is defined.
-From (1+3)-point comparison in $\spc{L}$
-\[\angk\kappa{p}{x^1}{x^2}+\angk\kappa{p}{x^2}{x^3}+\angk\kappa{p}{x^3}{x^1}\le 2\cdot\pi\]
-we get
-\[\angk\kappa{\hat p}{\hat x^1}{\hat x^2}+\angk\kappa{\hat p}{\hat x^2}{\hat x^3}+\angk\kappa{\hat p}{\hat x^3}{\hat x^1}\le 2\cdot\pi-3\cdot\eps.\]
-Since $\eps>0$ is arbitrary,
-the later implies (1+3)-point comparison in $\spc{L}/G$.
+Since $\eps>0$ is arbitrary the (1+3)-point comparison holds in $\spc{M}$.
+It remains to apply Proposition~\ref{prop:submet-length}.
 \qeds
 
 
 \section{Doubling theorem}\label{sec:doubling}
 
-Let $\spc{X}$ be a metric space 
-and $A\subset \spc{X}$ be a closed subset.
-A metric space $\spc{W}$ glued from two copies of $\spc{X}$ along $A$ is called \emph{doubling of $\spc{X}$ with respect to $A$}\index{doubling} (briefly, $\spc{W}=\Doubling{A}{\spc{X}}$).
+\parbf{Doubling.} Let $\spc{V}$ be a metric space 
+and $A\subset \spc{V}$ be a closed subset.
+A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
 
-More formally,
-let us think of disjoint union of two copies of $\spc{X}$
-as of the product $\spc{X}\times\{-1,1\}$.
-Consider on $\spc{X}\times\{-1,1\}$ the equivalence realation 
-$\sim$ defined as $(a,-1)\sim (a,+1)$ for any $a\in A$.
-Now set $\spc{W}=(\spc{X}\times\{-1,1\})_\sim$ and
-define metric on $\spc{W}$ the following way:
+More formally, 
+there is an isometric involution of $\spc{W}$ which is called \index{reflection of doubling}\emph{reflection}
+denoted as $x\mapsto x'$
+and 
+$\spc{W}$ contains $\spc{V}$ as a subspace 
+in such a way that
+for any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$ and 
 \[
-\dist{(x,-1)}{(y,-1)}{\spc{W}}
-=\dist{(x,1)}{(y,1)}{\spc{W}}
-=\dist{x}{y}{\spc{X}},
+\dist{x'}{y}{\spc{W}}
+=\dist{x}{y'}{\spc{W}}
+=\inf_{a\in A}\{\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}\}.
 \]
-\[
-\dist{(x,-1)}{(y,1)}{\spc{W}}
-=\dist{(x,1)}{(y,-1)}{\spc{W}}
-=\inf_{z\in A}\{\dist{x}{z}{\spc{X}}+\dist{z}{y}{\spc{X}}\}.
-\]
-for any $x,y\in \spc{X}$.
+for any $x,y\in \spc{V}$.
 
-Let us think of $\spc{X}$ as the subset of $\spc{W}$ formed by 
-pairs $(x,1)\in \spc{W}$, $x\in \spc{X}$.
-Given $w=(x,\pm1)\in \spc{W}$ set $w'=(x,\mp1)$, so $w''=w$ for any $w\in \spc{W}$. 
+The image of $\spc{V}$ under the isometry $x\mapsto x'$ will be denoted by $\spc{V}'$;
+it is an isometric copy of $\spc{V}$ and $\spc{V}\cap\spc{V}'=A$.
+Moreover $a=a'$ $\Leftrightarrow$ $a\in A$.
 
-Note that 
+
+Note that from above it follows that
 \begin{itemize}
-\item If $\spc{X}$ is a complete length space then so is $\Doubling{A}{\spc{X}}$.
-\item If $\spc{X}$ is proper then so is $\Doubling{A}{\spc{X}}$.
-Moreover, in this case, for any $x,y\in\spc{X}$ there is $a\in A$ such that 
-\[\dist{x}{a}{}+\dist{a}{y'}{}=\dist{x}{y'}{}.\]
+\item If $\spc{V}$ is a complete length space then so is $\spc{W}$.
+\item If $\spc{V}$ is proper then so is $\spc{W}$.
+In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that 
+\[\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}=\dist{x}{y'}{\spc{W}}.\]
 \end{itemize}
+
+\parbf{Boundary strata.}
+Let $\spc{L}\in\CBB{}{}$.
+A closed subset $A\subset \spc{L}$ 
+is called a 
+\index{boundary strata}\emph{boundary strata} if the function $\dist{A}{}{}$
+is semiconcave.
+
+The meaning of the term boundary strata,
+will become clear once we define boundary of finite dimensional $\CBB{}{}$ spaces.
+
+
+\begin{thm}{Doubling theorem}\label{thm:doubling}
+Let $\spc{L}\in \CBB{}{\kappa}$ 
+and $A$ be a boundary strata in $\spc{L}$.
+Then the doubling of $\spc{L}$ in $A$ 
+is a $\CBB{}{\kappa}$ space.
+\end{thm}
+
+In the proof we will use the following statements.
+
+
+\begin{thm}{Proposition}\label{prop:A-extremal}
+Let $\spc{L}\in\CBB{}{}$ and $A\subset \spc{L}$ 
+be a boundary strata.
+Assume $\alpha(t)$ is a radial curve in $\spc{L}$ 
+and $\alpha(t_0)\in A$.
+Then $\alpha(t)\in A$ for any $t\ge t_0$. 
+\end{thm}
+
+
+\begin{thm}{Lemma}\label{lem:ultra-doubling}
+Let $\spc{V}_n$ be a sequence of metric spaces 
+and $A_n\subset \spc{V}_n$ be a closed subsets
+and $a_n\in A_n$ for each $n$.
+Denote by $(\spc{W}_n)$ the doubling of $\spc{V}_n$ in $A_n$;
+
+Then 
+\begin{subthm}{}
+$\spc{W}_\o$ is isometric to the doubling of $\spc{V}_\o$ in $A_\o$.
+\end{subthm}
+
+
+
+\begin{subthm}{}
+If $\spc{V}_n\in\CBB{}\kappa$ and $A_n$ is a boundary strata of $\spc{V}_n$
+then 
+$A_\o$ is a boundary strata of $\spc{L}_\o$.
+\end{subthm}
+
+\end{thm}
+
+
+\begin{thm}{Splitting Lemma}\label{lem:split}
+Let $\spc{L}\in\CBB{}{}$ 
+and $A\subset \spc{L}$ 
+be a closed subset such that
+$\dist{A}{}{}$ is semiconcave.
+Assume for some $x,y\in\spc{L}\backslash A$ 
+and $a\in A$ be points such that
+$\dist{a}{x}{}+\dist{a}{y}{}$ takes the minimal value for $a\in A$.
+
+Then 
+
+\begin{subthm}{lem:split:split}
+$\o\cdot\spc{L}_a$ splits with factor $\o\cdot A$ and an other factor isometric to $\RR_{\ge0}$.
+Moreover $\o\cdot A\times\RR$ splits in the directions of of $[ax]$ and $[ay]$.
+That is, assume $X$ and $Y$ are the $\o$-limits of $[ax]$ and $[ay]$ in $\o\cdot\spc{L}_a$.
+Let us identify $\o\cdot\spc{L}_a$ 
+with the subset $\o\cdot A\times \RR_{\ge0}$ in $\o\cdot A\times \RR$.
+Then  $\o\cdot A\times \RR$ admits two splitting with the factor isometric to $\RR$ containing $X$ and $Y$ correspondingly.
+\end{subthm}
+
+\begin{subthm}{lem:split:angle}
+For any $z\in \spc{L}$ there is a sequence of points $b_n\in A$ 
+such that 
+$b_n\to a$ as $n\to\o$ and
+\[\lim_{n\to\o}\left[\angk\kappa a{z}{b_n}+\angk\kappa ay{b_n}\right]\le \pi-\angk\kappa axz.\]
  
-In particular, $(p,1)$ can be connected to $(q,-1)$ by a geodesic 
-can be connected by a geodesic $[(p,1)(q,-1)]$ which passes through $(a,\pm1)$ and before $(a,\pm1)$ it lies in $\spc{X}\times 1$ and after in $\spc{X}\times(-1)$.
+\end{subthm}
 
-There is a natural projection map $\Doubling{A}{\spc{X}}\to \spc{X}$, defined by $(x,i)\mapsto x$.
-Also there is a reflection map $\Doubling{A}{\spc{X}}\to \Doubling{A}{\spc{X}}$, defined by  $(x,i)\mapsto (x,-i)$ which has $A$ as a fixed point set.
-There are two distance preserving maps $\spc{X}\to \Doubling{A}{\spc{X}}$, defined by $x\mapsto(x,i)$, $i=\pm1$. 
-
-
-\begin{thm}{Theorem}\label{thm:doubling}
-Let $\spc{L}\in \CBB{m}\kappa$, 
-$\partial \spc{L}\not=\emptyset$. 
-Then $\Doubling{\partial \spc{L}}{\spc{L}}\in \CBB{m}\kappa$ and if $\proj(p)\in\partial \spc{L}$ then $\T_p\iso\Doubling{\partial\T_{\proj(p)}}{\T_{\proj(p)}}$.
-
-Moreover, the same statement holds for $\Doubling{E}{\spc{L}}$, where $E$ is a union of primitive $(m-1)$-dimensional extremal subset.
 \end{thm}
-
-\parit{Proof.}
-From \ref{thm:dist-to-bry}, 
-we have that if for some point $x\in \l] p q \r[$ lies on the boundary of $\spc{L}$ then $[pq]\subset \partial \spc{L}$.
-
-Set $\spc{W}=\Doubling{\partial \spc{L}}{\spc{L}}$, $N=\proj^{-1}(\partial \spc{L})$ and $\spc{L}_+=e_+(\spc{L})$ $\spc{L}_-=e_-(\spc{L})$.
-From above, it follows that if $p,q\in \spc{L}_+$ then any geodesic $[pq]$ lies completely in $\spc{L}_+$, otherwise one could reflect the part of $[pq]$ which lie in $\spc{L}_-$ and obtain a geodesic in $\spc{L}_+$ which contradicts above ???
-
-Let $p\in N$, 
-$q_+\in \spc{L}_+$ 
-and $q_-\in \spc{L}_-$.
-Both subsets $\spc{L}_\pm\subset W$ with inherited metric form an $\CBB{m}{\kappa}$-space.
-Since $[pq_\pm]\in \spc{L}_\pm$, $\dir p{q_\pm}\in\Sigma_p\spc{L}_\pm$.
-Note that $\Sigma_p\spc{L}_\pm$ are isometric and they admit natuarl map.
-
-
-
-It is sufficient to show that comparison ??? is satisfied in a neigborhood of any $p\in N$.
-Note that if $p\in N$, then for any $q\in W$ the geodesic $[pq]$ lies completely in $\spc{L}_+$ or $\spc{L}_-$ (otherwise ???).
-Thus the set of geodesic directions $\Sigma'_pW$ can be identified with???
-
-
-We proceed by induction on $m$, the base $m=1$ is trivial.
-By induction hypothesis, for any $p\in\partial \spc{L}$ we have 
-$\Doubling{\partial\Sigma_p}{\Sigma_p}\in\CBB{m-1}1$.
-
-\begin{thm}{Claim}
-Assume $z\in N$ be an interior point of geodesic $[pq]$ in $W$.
-Then each of subsegments $[pz]$ and $[qz]$ of $[pq]$ lie in $\spc{L}_+$ or $\spc{L}_-$.
-Moreover $\dir z q$ and $\dir z p$
-\end{thm}
-
-Assume $???$ lies on a geodesic $[xy]$ in $\Doubling{\partial \spc{L}}{\spc{L}}$.
-Then geodesics $[px]$ and $[py]$ each lie in one of ???.
-
-
-
-
-
-Set $W=\Doubling{\partial \spc{L}}{\spc{L}}$.
-It is sufficient to show that any two points $p,q\in W$ can be connected by a geodesic $[p q]$ ??? such that for any $s\in W$ the function
-$y(t)=\md\kappa\dist[{{}}]{s}{\geod_{[pq]}}{}$ satisfies differential inequality $y''+\kappa\cdot  y\le 1$.
-\qeds
-
-\section{Gluing theorem}
-
-In the two dimensional case, the gluing theorem was proved first by Alexandrov;
-see \cite[\S 11]{pogorelov:book} for the proof. 
-Later Perelman proved
-the Doubling theorem \ref{thm:doubling}
-for multidimensional Alexandrov spaces; 
-this is a special
-case of the theorem formulated below. 
-The original Alexandrov’s theorem had
-a lot of applications to the bending of convex surfaces with boundary, which are
-currently impossible to generalize to the multidimensional case, 
-because they are
-supported by the Theorem about convex embeddings 
-\cite[\S 6--7]{pogorelov:book}%??? \S???.
-Formally speaking, the following theorem gives new examples of Alexandrov spaces,
-but we have very limited souse of examples 
-of pairs of Alexandrov spaces with
-isometric boundaries.
-
-\begin{thm}{Glueing theorem}\label{thm:gluing-cbb}
-Let $\spc{L}_1,\spc{L}_2\in\CBB m\kappa$ be two spaces with nonempty boundaries.
-Assume there is an isometry $\iota:\partial \spc{L}_1\to \partial \spc{L}_2$ and 
-\[\spc{L}=\spc{L}_1\sqcup_\iota \spc{L}_2\]
-is the space glued from $\spc{L}_1$ and $\spc{L}_2$ along $\iota$.
-Then $\spc{L}\in\CBB m\kappa$.
-\end{thm}
-
-The proof is build the following technical statement.
-
-\begin{thm}{Proposition}
-Let $\spc{L}\in\CBB m\kappa$, 
-$\partial \spc{L}\not=\emptyset$.
-
-Assume $f\:\partial \spc{L}\to\RR$ satisfies\footnote{In case $\kappa=0$ this inequality can be rewritten 
-as $(f^2)''\le 2$.}
-\[(\md\kappa\circ f)''\le 1-\kappa\cdot (\md\kappa\circ f)\]
-then the envelope function $g\:\spc{L}\to\RR$ defined by 
-\[g(x)=\inf_{y\in\partial \spc{L}} \{\dist{x}{y}{}+f(y)\}\] 
-satisfies the same inequality
-\[(\md\kappa\circ g)''\le 1-\kappa\cdot (\md\kappa\circ g)\]
-in $\spc{L}$.
-\end{thm}
-
-By Function comparison, the inequality in the proposition holds for any distance function in $\CBB{}{\kappa}$ space; see Theorem~\ref{thm:conc}.
-
-In order to prove the proposition we will need the following Lemma.
-
-\begin{thm}{Lemma}\label{lem:dir-bry}
-Let $\spc{L}\in\CBB{m}{}$ and $p\in\partial\spc{L}$.
-We will consider $\partial\spc{L}$ with the length-metric which is denoted as $\dist{}{}{\partial L}$.
-
-Then for any direction $\eta\in\partial\Sigma_p$
-there exists a geodesic $[pq]_{\partial \spc{L}}$ in $\partial \spc{L}$ which runs from $p$ in a direction arbitrarily close to $\eta$.
-\end{thm}
- 
-
-
-\parit{Proof.} 
-Recall that the boundary $\partial \spc{L}$ 
-is an extremal subset of $\spc{L}$;
-see ???.
-By Lieberman's lemma (???)
-any geodesic $[pq]_{\partial\spc{L}}$ in $\spc{L}$
-is a quasigeodesic in the ambient space $\spc{L}$.
-By ???, any such geodesic  $[pq]_{\partial\spc{L}}$ in $\spc{L}$
-has defined direction $\dir{p}{q}_{\spc{L}}\in \Sigma_p$.
-
-Consider the sequence $q_n=\gexp_p(\tfrac1n\cdot \eta)$.
-According to ???, $q_n\in \partial \spc{L}$ and according to ???
-$\dir{p}{q_n}\to \eta$ as $n\to\infty$.
-
-Pass to a subsequence of $(q_n)$ so that the sequence of directions $\xi_n=\dir{p}{q_n}_{\partial\spc{L}}$ converges;
-denote by $\xi\in\Sigma_p$ its limit.
-
-It is sufficient to show that $\xi=\eta$.
-Assume contrary, so $\eps=\mangle(\xi,\eta)>0$.
-
-Note that there is a point $z \in\spc{L}$ 
-such that $\mangle(\xi,\dir{p}{z})<\tfrac\eps3$.
-
-Since $[pq_n]_{\partial\spc{L}}$ is a quasigeodesic in $\spc{L}$,
-we get $\dist{z}{q_n}{}\le ???$
-On the other hand 
-
-\qeds
-
-
 
 
 
 \parit{Proof.}
-We have to show that for any $p\in \spc{L}$, the function $f=\dist{p}{}{}$ satisfies $f''\le\frac{\cs\kappa f}{\sn\kappa f}(1-(f')^2)$.
-Let us define a seqence of functions $f_n\:\spc{L}\to \RR$ the following way:???
+Consider the function
+\[f(z)=\dist{x'}{}{}+\dist{y}{}{}.\]
+Note that $f$ is semiconvex in the neighborhood of $a$.
+Therefore $\nabla_af$ is well defined.
 \qeds
 
-\parit{Proof of theorem \ref{thm:gluing-cbb}.}
-Fix point $p\in \spc{L}_1$.
-Denote by $f_1$ the restriction $\dist{p}{}{}|\partial \spc{L}_1$.
+\parit{Proof of Doubling theorem (\ref{thm:doubling}).}
+Denote by $\spc{W}$ the doubling of $\spc{L}$ in $A$.
+
+\parit{Reduction to geodesic case.}
+Let us pass to the $\o$-powers $A^\o\subset \spc{L}^\o\subset\spc{W}^\o$.
+By Corollary \ref{cor:ulara-geod}, $\spc{W}^\o$ is geodesic.
+By Lemma~\ref{lem:ultra-doubling},
+ $\spc{W}^\o$ is doubling of $\spc{L}^\o$ in $A^\o$ and $A^\o$ is a boundary strata in $\spc{L}^\o$.
+That is, assuming if the theorem holds if the doubling space is geodesic, we have that $\spc{W}^\o\in\CBB{}{\kappa}$ and by Proposition~\ref{prp:A^omega}, we get $\spc{W}\in\CBB{}{\kappa}$.
 
 
+\parit{Geodesic case.} From now we assume that $\spc{W}$ is geodesic.
 
-\qeds
+Let us show the adjacent angle comparison \ref{2-sum} 
+holds in $\spc{W}$.
+That is, we need to show that for any geodesic $[x y]$ and $z\in \l]x y\r[$, $z\not=p$ we have
+\[\angk\kappa z p x
++\angk\kappa z p y\le \pi.\]
 
+\parit{Case 1.}
+Assume $p,x,y\in \spc{L}$. 
 
-\begin{thm}{Lemma} 
+If $z\notin \spc{L}$ then $z'\in \spc{L}$
+and 
+$\dist{p}{z}{\spc{W}}
+\ge\dist{p}{z'}{\spc{W}}
+=\dist{p}{z'}{\spc{L}}.$
+By Alexandrov's lemma \ref{lem:alex},
+\[\angk\kappa{z'}p x+\angk\kappa{z'}py\ge\angk\kappa z p x+\angk\kappa z p y.\]
+
+Note that  $[xy]\cap\spc{L}$ 
+together with the reflection of $[xy]\backslash\spc{L}$
+forms another geodesic from $x$ to $y$ in $\spc{L}$.
+
+Therefore we can assume that $[xy]\subset \spc{L}$. 
+In this case adjacent angle comparison  
+\[\angk\kappa z p x
++\angk\kappa z p y\le \pi.\]
+follows from the comparison in $\spc{L}$. 
+
+The same way we can do the case $p,x,y\in \spc{L}'$.
+
+\parit{Case 2.} 
+The points $x$ and $y$ lie on opposite sides of $A$ and $z\in A$.
+
+Without loss of generality we can assume that $p,x\in\spc{L}$
+and $y\not\in \spc{L}$ so $y'\in\spc{L}$.
+
+Let $b_n\in A$ be the sequence of points 
+provided by Lemma~\ref{lem:split} for the quadruple $p, x, y', z\in  \spc{L}$.
+
 ???
 
-Given $\eps>0$, for any direction $\xi\in\partial \Sigma_p$ there is a geodesic $\gamma$ in $\partial \spc{L}$ such that
-$\gamma^+\approx\xi$. 
-\end{thm}
+Let $\gamma$ be a geodesic in $\oBall(p,\varpi\kappa)_{\spc{W}}$. 
 
+By function comparison (\ref{comp-kappa}),
+it is sufficient to show that
+\[\dist{p}{\gamma(t)}{\spc{W}}
+\le 
+\side\kappa\{\phi;\dist{p}{\gamma(0)}{\spc{W}},t\}
+\eqlbl{eq:doubling-comp}\]
+for fixed $\phi\in [0,\pi]$ and all $t$ sufficiently close to $0$.
 
+If $p$ and $\gamma(0)$ lie on one side from $A$ in $\spc{W}$
+then 
+he inequality follows from the point-on-side comparison (\ref{point-on-side})
+in $\spc{L}$.
+The same holds if $p\in A$.
 
+It remains to consider two cases:
 
+\parbf{Case 1.} Assume $p$ and $\gamma(0)$ lie on the opposite sides from $A$ in $\spc{W}$.
+Set $q=\gamma(0)$, consider a geodesic $[pq]_{\spc{W}}$.
+Denote by $a$ the intersection point of $[pq]_{\spc{W}}$ and $A$.
 
-\parit{Proof.}
-Let $N = \spc{L}_1 \cap \spc{L}_2 \subset ??? $.
-Definition 2.3. The m-predistance |pq|m between points p and q in X is the
-minimal length of broken geodesics with vertices p = p0 , p 1 , . . . , pk+1 = q, where
-k ≤ m, plpl±1 is a shortest path that lies completely in one of Mi for every
-l ∈ {1, 2, . . ., k}, and pl lies in N . A broken geodesic that realizes this minimum
-is called an m-shortest path.
-Remark 2.4. It is easy to see that |pq| m ≥ |pq|m+1 ≥ |pq|, limm→∞ |pq|m = |pq|,
-|pq|m + |qr|l ≥ |pr|m+l
- if q ∈ X \ N ,
-(2.1)
-|pq|m + |qr|l ≥ |pr|m+l+1
- if q ∈ N .
-For every interior vertex p = pl , l ∈ {1, 2, . . . , k}, of an m-shortest path, we can
-define directions of exit and entrance ξi as directions in Σp(M i ) of shortest paths
-in Mi.
-By Theorem 1.2 the isometry is : ∂M1 → ∂M 2 = N gives an isometry isp :
-∂Σp(M1) → ∂Σp(M2) = Σp(N ) and isp : ∂Cp(M 1 ) → ∂Cp(M 2 ) = Cp (N ). 
-Set
-Σp 
- (X) := Σp(M1) ∪isp (x)=x Σp (M2 ),
-
-Cp (X) := C(Σp (X)) = Cp(M1) ∪isp (x)=x Cp(M2).
-From the induction hypothesis, Σ
-(X) will be an Alexandrov space with curvature ≥ 1, and therefore Cp (X) will be a cone with curvature ≥ 0.
-Notation. 
-If K1 and K2 are two compact metric spaces, we say that K1 ≤ K2
-if there is a noncontracting map m : K1 → K2 . If (L1 , p1 ) and (L2 , p2 ) are two
-locally compact metric spaces with base points, we say that (L1, p1) ≤ (L2 , p2)
-if for any R > 0 there is a noncontracting map m : BR (p1 ) → BR(p2 ).
-
-Proof. Let N = ∂M . The boundary is an extremal subset and therefore we
-can use notation q ◦(= qp ◦ ) for the set of all directions of entrance in Σp(N ) of
-shortest paths between p and q in the length metric of N .
-Choose a sequence of points qn ∈ N such that qn → p and (qn , η) → 0
-(where qn = (qn )p is the direction at p of the shortest path pq). Assume that
-◦ ◦(ηq n) ≥ ε for all n. Pass to a subsequence such that limn→∞ (θ qn) → 0 for
-some direction θ.
-Find a point r ∈ M such that (r , θ) < ε/6. Let {rn } be points on the
-shortest path pr such that |prn| = |pqn|. Since the shortest path from p to qn
-in N is a quasigeodesic (see Theorem 1.1), we conclude by using [Perelman and
-Petrunin 1994, 1.4(G2), 1.5] that |rn qn | < (ε/5)|pq n | for n sufficiently large,
-hence that limn→∞ (qn , r ) < ε/3 for ε ≤ π/4. Therefore
-lim
- (qn , θ) < ε/2.
-n→∞
-We obtain a contradiction because lim n→∞ qn = η and
- (η, θ) ≥ ε.
-
-The rest of this section will be devoted to the proof of Theorem 2.1. Let N =
-M1 ∩ M2 = ∂Mi ⊂ X.
-Definition 2.3. The m-predistance |pq|m between points p and q in X is the
-minimal length of broken geodesics with vertices p = p0 , p 1 , . . . , pk+1 = q, where
-k ≤ m, plpl±1 is a shortest path that lies completely in one of Mi for every
-l ∈ {1, 2, . . ., k}, and pl lies in N . A broken geodesic that realizes this minimum
-is called an m-shortest path.
-Remark 2.4. It is easy to see that |pq| m ≥ |pq|m+1 ≥ |pq|, limm→∞ |pq|m = |pq|,
-|pq|m + |qr|l ≥ |pr|m+l
- if q ∈ X \ N ,
-(2.1)
-|pq|m + |qr|l ≥ |pr|m+l+1
- if q ∈ N .
-For every interior vertex p = pl , l ∈ {1, 2, . . . , k}, of an m-shortest path, we can
-define directions of exit and entrance ξi as directions in Σp(M i ) of shortest paths
-in Mi.
-By Theorem 1.2 the isometry is : ∂M1 → ∂M 2 = N gives an isometry isp :
-∂Σp(M1) → ∂Σp(M2) = Σp(N ) and isp : ∂Cp(M 1 ) → ∂Cp(M 2 ) = Cp (N ). Set
-Σp 
- (X) := Σp(M1) ∪isp (x)=x Σp (M2 ),
+We may assume that $[pa]\in \spc{L}'$ and $[qa]\in \spc{L}$.
+It follows since any geodesic $[vw]$ which lies completely in $\spc{L}$  
+and with ends at $A$ 
+can be reflected by the isometric involution in $\spc{L}'$
+and the other way around.
  
-Cp (X) := C(Σp (X)) = Cp(M1) ∪isp (x)=x Cp(M2).
-From the induction hypothesis, Σ
-(X) will be an Alexandrov space with curva-
-pture ≥ 1, and therefore Cp (X) will be a cone with curvature ≥ 0.
-Notation. If K1 and K2 are two compact metric spaces, we say that K1 ≤ K2
-if there is a noncontracting map m : K1 → K2 . If (L1 , p1 ) and (L2 , p2 ) are two
-locally compact metric spaces with base points, we say that (L1, p1) ≤ (L2 , p2)
-if for any R > 0 there is a noncontracting map m : BR (p1 ) → BR(p2 ).
+
+Without loss of generality we may assume that $p\notin\spc{L}$
+and therefore $p',q\in \spc{L}$. 
+Set $\phi=\mangle(\dir qa,\gamma^+(0))$.
+Fix $x=\gamma(t)$ for $t\approx0$.
+In order to prove \ref{eq:doubling-comp},
+we need to show that 
+\begin{align*}
+\dist{p}{x}{\spc{W}}
+&=
+\inf\set{\dist{p'}{z}{\spc{L}}+\dist{x}{z}{\spc{L}}}{z\in A}\le
+\\
+&\le \side\kappa\{\phi;\dist{p}{q}{\spc{W}},t\}.
+\end{align*}
 
 
-(because a shortest path expδn (x)yn completely lies in one of the Mi and because
-|yn exp δn (x∗ )| = o(δn)/δn ). Therefore |p exp δn (x∗ )| ≤ (1−ε) |x∗| for n sufficiently
-∗large, By Lemma 1.5, a limit of shortest paths in N/δn between p and expδn (x )
-(which is a quasigeodesic by the generalized Lieberman lemma, Theorem 1.1) is
-∗a shortest path ox in Cp(Mi). Because limits preserve lengths of quasigeodesics
-[Perelman and Petrunin 1994, 2.3(3)], we have
-lim |p expδn (x∗)|N/δ = |x∗|.
-n→∞
-Hence for n sufficiently large we get
-∗ ∗|p expδn (x )| ≤ (1 − ε) |p expδn (x )|N/δ .
-Therefore we can find a segment sn rn on a shortest path p expδn (x∗) that com-
-pletely lies in one of the Mi /δn , such that sn , rn ∈ N/δn and
-|s n r n |Mi ≤ (1 − ε)(|prn|N − |psn |N )
- (2.2)
-(where we use the same notation for points in N and N/δ).
-We can easily pass to a subsequence such that limn→∞ |psn |N /|prn|N = c. for
-some 0 ≤ c ≤ 1.
-Now we consider two cases, c = 1 and c = 1.
-Suppose c = 1, and consider limit (Mi /|prn|N , p) −→ GH
- Cp(Mi). Pass to a
-subsequence such that sn → s and rn → r. The boundary N is an extremal
-GH
-subset; therefore, by Theorem 1.2, (N/|prn|N , p) −→ Cp (N ) as length-metric
-spaces. Hence
-|snrn|Mi
- |ps n | N
-lim
- = |sr| ≥ |r| − |s| = |r|C(N) − |s|C(N) = 1 − lim
- ,
-n→∞
- |prn |N
- n→∞ |prn | N
-contradicting (2.2).
-Suppose instead that c = 1. Pass to a subsequence such that there exists
-a limit (Mi /|sn rn|Mi, s n ) −→ GH
- (Ms , s). (We remark that Ms need not be the
-tangent cone.) Set Ns = ∂Ms . By Theorem 1.2 we have
-(N/|snrn|M i , sn ) −→ GH
- (Ns , s).
-Let fn : N/|snrn|M i → R be functions defined by
-f n (x) = |px|N/|snrn |Mi − |psn|N/|snrn |Mi .
-Pass to a subsequence such that there exists a limit f : Ns → R, f = limn→∞ fn .
-It is easy to see that Ms can be represented as a product R × Ms such that
-f(x) ≤ prR(x), where prR is the projection Ms → R. Indeed a sequence of
-quasigeodesics that prolong shortest paths psn in N easily goes to a straight line
-in Ms , so by the Toponogov splitting theorem we have such a representation.
-Therefore Ns is split as well, Ns = R × Ns.
-Let σn be a shortest path in N between p and sn , parametrized by distance
-from sn, and let σ be a limit of {σn/|rnsn|Mi }. By the triangle inequality, for any
+Note that $q'\in \spc{L}$ 
+and $a,p,q' z'$satisfy the assumptions in Lemma \ref{lem:split}.
+Denote by $b_n$ the sequence of points provided by \ref{lem:split:angle}.
 
-T > 0 we have |xp|N − |snp| ≤ |xσn(|sn rn |T )| − |s n rn |T . As a limit we obtain
-that f(x) ≤ |xσ(T )| − T . For T → ∞ the right side goes to the Busemann
-function of σ which coincides with prR .
-Pass to a subsequence such that there is a limit as rn → r. We obtain
-1 = |rs| ≥ prR (r) ≥ f(r) = lim (|prn | N − |psn|N )/|rns n |M i ,
-n→∞
-again contradicting (2.2). This concludes the proof of the lemma.
+Set 
+\[
+\alpha=\lim_{n\to\o}\angk\kappa a{p'}{b_n}.
+\]
+Let $[\tilde x\tilde x'\tilde y]$ 
+be a triangle in the model plane $\Lob{}\kappa$
+such that 
+\begin{align*}
+\dist{\tilde x}{\tilde x'}{}&=\dist{x}{x'}{},
+\\
+\dist{\tilde x}{\tilde y}{}&=\dist{x}{a}{}+\dist{y}{a}{}
+\\
+\mangle\hinge x{x'}y&=\alpha
+\end{align*}
+Choose $\tilde a\in[\tilde x\tilde y]$ such that $\dist{\tilde a}{\tilde y}{}=\dist{a}{y}{}$.
+Assumeing $\dist{x}{x'}{}$ is small, 
+we can choose $\tilde b\in [\tilde x'\tilde y]$
+such that $\mangle \tilde y\tilde a\tilde b=\phi$.
+Set $r=\dist{\tilde a}{\tilde b}{}$.
 
-Lemma 2.6. The directions of exit and entrance (ξi ) of any m-shortest path at
-every interior vertex p = pl , for l ∈ {1, 2, . . ., k ≤ m} (see Definition 2.3), are
-opposite in Cp (X) (that is, |ξ1 ξ2 | = 2|ξ1 | = 2|ξ2|; see [Perelman and Petrunin
-1994, 2.1]).
-Proof. Let ξi ∈ Σp(Mi ) be directions of exit/entrance of the m-shortest path
-at the interior vertex p. We first prove that |ξ1 ν|0 + |ξ2 ν|0 = π for any ν ∈
-Σp(N ) ⊂ Σp 
-(X). Here the left side is the sum of two 0-distances in the glued
+%???PIC
 
-space Σp (X), each of which, by Definition 2.3, is measured in one of the Σp (Mi ).
-Assume we have proved the lemma for dim < n, and let dim Σ
- (X) = n. From
-pthe first variation formula we obtain
-f(ν) := |ξ1ν|0 + |νξ2|0 ≥ π
-for any ν ∈ Σp(N ). Assume ν  ̄ is the minimum point in Σp (N ) of the last
-function. Thus, ξ1ν  ̄ξ2 is a 1-shortest path. Let γ be a shortest path in Σp(N )
-such that γ(0) = ν  ̄ with arbitrary initial data γ +(0) = η. Assume f( ̄
- ν ) > π.
-By the induction assumption, |(ξ 1 )ν  ̄ η|0 + |η(ξ2)ν  ̄|0 = π. By the generalized
-Lieberman lemma, Theorem 1.1, γ is a quasigeodesic as a curve in Σp(M 1 ) and
-Σp(M2). By [Perelman and Petrunin 1994, 1.4(G1)], the condition f( ̄
- ν ) > π
-implies (f ◦ γ)(x) < (f ◦ γ)(0) = f( ̄
- ν ) for sufficiently small x. This contradicts
-the assumption that f has a minimum at ν  ̄.
-Therefore f( ̄
- ν ) = π. Take any shortest path γ in Σp (N ) such that γ(0) = ν  ̄.
-Then γ is a quasigeodesic for Σp (M1 ) and Σp(M2 ). Set
-g(ν) := cos |ξ1ν|0 + cos |νξ2|0
-for ν ∈ Σp(N ). By the preceding arguments, g( ̄
- ν) = g ◦ γ(0) = 0, (g ◦ γ) (0) = 0
-and g ◦ γ ≤ 0. By [Perelman and Petrunin 1994, 1.3(L2)], (g ◦ γ) + g ◦ γ ≥ 0.
-Therefore (g ◦ γ) ≥ 0 and so g ◦ γ ≡ 0; in particular for any ν, g(ν) = 0.
-Therefore f ≡ π, that is, |ξ1ν|0 + |ξ2 ν|0 = π as claimed.
-In order to prove that ξ1 and ξ2 are opposite, it is enough to show that
-2|ξ1| = 2|ξ2 | = |ξ1ξ2 holds in Cp (X), or equivalently that |ξ1 ξ2 = π holds in
-| |Σ
- p (X). If this is false, there is m such that |ξ1 ξ2 | m < π in Σp 
- (X). Let θ be the
-closest vertex to ξ1 of the m-shortest path ξ1ξ2 . By the preceding discussion,
-there is a 1-shortest path through θ of length π. Therefore we have two distinct
+For each $n$ denote by $\beta_n$ the $\kappa$-radial curve with respect to $a$ which starts at $b_n$.
+Set $c_n=\beta_n(r)$;
+it is defined for all large $n$ and
+by Proposition~\ref{prop:A-extremal}, $c_n\in A$.
+By Radial monotonicity~\ref{rad-mon},
+\begin{align*}
+\dist{x'}{y}{\spc{W}}
+&\le\lim_{n\to\o}\dist{x'}{c_n}{\spc{L}}+\dist{y}{c_n}{\spc{L}}\le
+\\
+&\le \dist{\tilde x'}{\tilde y}{\Lob2\kappa}
+\end{align*}
+Hence \ref{eq:doubling-comp} follows.
+ 
 
-directions at θ which are opposite to (ξ1 )θ , a contradiction to the fact that Σp
-is an Alexandrov space. This completes the proof of the lemma.
+\parbf{Case 2.} Assume $\gamma(0)\in A$. 
+Fix $t>0$ and set $a=\gamma(0)$, $x=\gamma(t)$, $y=\gamma(-t)$ and $p$.
 
-Corollary 2.7. Let ξi ∈ Σp(Mi) be directions of exit/entrance of an m-shortest
-path at an interior vertex . For any η ∈ Σp(Mi ) there is a unique η∗ ∈ Σp(N )
-such that
-|ξ1 η|0 + |ηη∗ |0 + |η∗ξ2|0 = π
-or
-|ξ1η ∗|0 + |η ∗η| 0 + |ηξ2|0 = π.
-Proof. Suppose η ∈ Σp(M1). Consider the 1-shortest path ηξ2 . Applying
-Lemma 2.6 to Σ
- (X) we see that the directions at the vertex are opposite;
-therefore this 1-shortest p path is a part of a 1-shortest path ξ 1 ξ2 .
+Without loss of generality we can assume that $x$ and $p$ lie on one side from $A$.
+In this case $a,p,x\in\spc{L}$; set  $\phi=\mangle{\hinge apx}_{\spc{L}}$.
 
-Lemma 2.8. Let γ : [a, b] → X be a quasigeodesic in one of the int Mi or a
-shortest path in the length metric of N . Then
-ρk (|pγ(t)|m ) + kρk (|pγ(t)|m) ≤ 1
-for any p ∈ X
-For the definition of ρk see [Perelman and Petrunin 1994, 1.4(L2)].
-Proof. We consider the case k = 0; we must show that (|pγ(t)|2 m ) ≤ 2.
-This is true for m = 0 because
-
- |pq|Mi
- if p ∈ M i , q ∈ int Mi or q ∈ Mi, p ∈ int Mi,
-|pq|0 = mini |pq| Mi if p, q ∈ N ,
-
-∞
- otherwise.
-(Recall that a shortest path in N is a quasigeodesic in both Mi by the generalized
-Lieberman Lemma).
-Suppose the claim is true for all l < m and false for m. Then the standard
-idea shows that in this case there exists t0 ∈ (a, b) and ε > 0 such that for
-|t − t0| < ε
-|pγ(t)|2 m ≥ |pγ(t0)|2 m − A(t − t0 ) + (t − t0 )2 + ε(t − t0)2 ,
-for some constant A.
-Assume t0 = 0. Set q = γ(0) and let p = p0p1 . . . pk pk+1 = q be an m-shortest
-path. Take a sequence tj → 0 such that the sequence ((γ(tj )pk )∗ (as in Corollary
-2.5) goes to some direction ν ∈ Σpk (N ). Using Lemma 2.2 we can find a shortest
-path γk in N which goes from pk in a direction arbitrarily close to ν.
-In the following proof one might get lost in calculations and lose the main
-∗idea. If we assume that all ((γ(tj )pk ) coincide with ν and there is a shortest
-path (in the length-metric of N ) that goes in this direction, one can ignore the
-residue terms below.
+In order to prove \ref{eq:doubling-comp},
+it is sufficient to show that 
+\begin{align*}
+\dist{p}{y}{\spc{W}}
+&=\inf\set{\dist{p}{z}{\spc{L}}+\dist{y'}{z}{\spc{L}}}{z\in A}\le
+\\
+&\le \side\kappa\{\phi;\dist{p}{a}{\spc{L}},-t\}
+\end{align*}
 
-Set α = ((pk )q , γ+ (0)), β = (qpk , γk +(0)), βj = (γk + (0) (γ(tj )) pk ), θj =
-+((γ(tj ))pk qpk ), and δ = (γk , ν), as in the figure below.
+Denote by $b_n\in A$ the sequence of points provided by lemma \ref{lem:split}
+for the points $a,p,x,y'$.
+Set $\alpha=\lim_{n\to \o}\angk\kappa a{y'}{b_n}$.
+Consider the
 
-It is easy to see that
-tj sin α
-θj ≥
- + o(tj ).
-|pk q|0
-We can assume that qpk ∈ Σpk (N ); otherwise our m-shortest path lies completely
-+in N . By the cosine rule applied to the triangle qpk (γ(tj ))pk γk (0), we have
-sin α
-β − βj ≥ 1 + o(δ) + o(tj )/tj θj ≥ tj
- + o(δ)
- + o(tj ).
-|pkq|0
-Hence
-t2 sin2 α
-cos(β − βj ) ≤ 1 −
- j + o(δ)t2 j + o(t2 j ).
-2 |pq|20
-From the induction assumption and Lemma 2.6 we have
-2 2 2|p γ k(τ )|m−1 ≤ |p pk | m−1 + 2τ |p p k|m−1 cos β + τ .
-Because γk is a quasigeodesic for both of the Mi, we obtain
-|γ(tj )γk (τ )|20 ≤ |γ(tj ) pk |20 − 2 cos βj τ |γ(tj ) pk|0 + τ 2 ,
-where these distances are measured in a fixed Mi .
-Therefore, using (2.1) and the previous two inequalities, we have
-2 2
-|p γ(tj )|m ≤ min (|p γk (τ )|m−1 + |γ(tj )γk (τ )|0)τ
-≤ min (|AB(τ )| + |B(τ )C|) 2
-τ
-= |AC|2 = |p pk | m−1 2 + |γ(tj ) pk |20 + 2 |p pk|m−1|γ(tj ) pk | 0 cos(β − βj ),
 
-where A, B(τ ) and C are as shown in the following diagram in the plane:
-Because γ is either a quasigeodesic in one of the Mi , or a shortest path in N
-and therefore a quasigeodesic in both of the Mi (see Theorem 1.1), we conclude
-that
-|pk γ(tj )| 20 ≤ |pk q|20 + tj 2 − 2tj |pk q| 0 cos α
-and so
-t2 sin2 α
-j 2|pk γ(tj )|0 ≤ |pkq|0 − tj cos α +
- + o(tj ).
-2|pk q|0
-Hence
-|p γ(tj)|2 m ≤ |p pk|2 m−1 + |q pk |20 + tj 2 − 2tj |q pk |0 cos α
-t2 sin2 α
-+ 2|p pk |m−1 |pk q|0 − tj cos α +
- j + o(t2 j )
-2|pkq|0
-t2 sin2 α
-j 2 2×
- 1 −
- + tj o(δ) + o(tj )
-2|pkq|20
-2 2 2 2≤ (|ppk |m−1 +|pk q|0) −2tj (|ppk|m−1 +|pk q| 0 ) cos α +tj +tj o(δ)+o(tj )
-2 2 2 2= |p q|m − 2tj|pq|m cos α + tj + tj o(δ) + o(tj ).
-+ −This inequality for two sequences tj → 0 and tj → 0 contradicts our assump-
-tion for sufficiently small δ.
+\qeds
 
-We continue the proof of Theorem 2.1, showing that every m-shortest path is
-a k-quasigeodesic. Indeed, using [Perelman and Petrunin 1994, 1.4(L2), 1.5],
-we only need to verify that ρk(|γ(t)p|) ≤ 1 − kρk (|γ(t)p|). Now |γ(t)p| =
-lim n→∞ |γ(t)p|n , and using Lemma 2.8 and [Perelman and Petrunin 1994, 1.3(4)]
-we obtain the needed inequality for all t = tl (where γ(tl ) = pl).
-Let σ be a shortest path between an arbitrary point x and γ(tl ), parametrized
-by distance from γ(tl ). By Lemmas 2.5 and 2.6 we conclude that, for fixed ε,
-|σ(T )γ(tl + T ε)| + |σ(T )γ(tl − T ε)| ≤ 2T + CT ε2 + o(T ).
-Therefore
-distx ◦ γ(tl + T ε) + distx ◦ γ(tl − T ε) ≤ 2distx ◦ γ(tl ) + CT ε2 + o(T ).
-Therefore, for T → 0,
-+ −(distx ◦ γ) (tl ) ≤ (distp ◦ γ) (tl ) + Cε.
 
-Hence, for ε → 0, we obtain (distx ◦ γ)+ (tl) ≤ (distx ◦ γ)−(tl ). From this, using
-[Perelman and Petrunin 1994, 1.3(2)], we obtain the needed inequality for any t.
-Let γm be an m-shortest path between p, q ∈ X. Then γ = limm→∞ γm is
-a shortest path between p and q. It is easy to see that γ is convex (as a limit
-of convex curves) and parametrized by the arclength (because length(γm ) →
-length(γ)); hence γ is a quasigeodesic. Therefore by [Perelman and Petrunin
-1994, 1.6] we obtain that X is an Alexandrov space of curvature ≥ k. This
-completes the proof of the Gluing Theorem.
+
+
+
 
 
 
@@ -701,6 +506,16 @@ Show that  $\spc{X}\in\cCat{}{0}$ if and only if $\ell^1$ intesect $\ell^2$ at r
 \end{thm}
 
 \begin{thm}{Exercise}
+
+\begin{subthm}{}
+Prove the converse to Doubling theorem~\ref{thm:doubling}.
+That is, 
+show that the doubling of $\spc{V}$ 
+in a closed set $A\subset \spc{V}$ 
+is a $\CBB{}{\kappa}$ space 
+then $\spc{V}\in\CBB{}{\kappa}$ and $A$ is a boundary strata in $\spc{V}$.
+\end{subthm}
+
 
 \begin{subthm}{}
 Show that any $\Cat{}{0}$ space is isometric to a convex subset in a geometrically complete $\cCat{}{0}$ space.

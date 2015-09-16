@@ -1,6 +1,42 @@
 %%!TEX root = the-examples.tex
 \chapter{Examples}
 
+
+
+\section{Cones}
+
+\begin{thm}{Theorem}\label{thm:cone-construction}
+Let $\spc{X}$ be a length space.
+Then 
+\begin{subthm}{thm:cone-construction:cone-CBB} $\Cone_\kappa\spc{X}\in \CBB{}{\kappa}$ $\Leftrightarrow$  $\spc{X}\in \CBB{}{\kappa}$.
+\end{subthm}
+
+\begin{subthm}{thm:cone-construction:cone-CAT} $\Cone_\kappa\spc{X}\in \cCat{}{\kappa}$ $\Leftrightarrow$ $\spc{X}\in \cCat{}{\kappa}$.
+\end{subthm}
+\begin{subthm}{thm:cone-construction:prod-CBB} $\spc{X}\times\spc{Y}\in \CBB{}{0}$ $\Leftrightarrow$ $\spc{X},\spc{Y}\in \CBB{}{0}$.
+\end{subthm}
+\begin{subthm}{thm:cone-construction:prod-CAT} $\RR\times\spc{X}\in \cCat{}{0}$ $\Leftrightarrow$ $\spc{X}\in \cCat{}{0}$.
+\end{subthm}
+\end{thm}
+
+The theorem above is a partial case of Theorem on warp products proved in the other volume. 
+
+\parit{Proof.}
+The $\Rightarrow$ in \ref{SHORT.thm:cone-construction:prod-CBB} and \ref{SHORT.thm:cone-construction:prod-CAT} follows since $\spc{X}$ is isometric to the convex subset $\{0\}\times\spc{X}$ in $\RR\times\spc{X}$.
+
+To prove $\Leftarrow$ in \ref{SHORT.thm:cone-construction:prod-CBB} we need to show that (1+3)-point comparison holds for any quadrapuple $p,x^1,x^2,x^3\in \spc{X}\times\spc{Y}$.
+
+Note that the later is equivlent to the following statement
+there is a quadrouple of point in $q,y^1,y^2,y^3$ in the Euclidean space such that $\dist{q}{y^i}{}=\dist{p}{x^i}{}$ for any $i$
+and $\dist{y^i}{y^j}{}\ge\dist{x^i}{x^j}{}$.
+
+Consider the quadrouples $\hat p,\hat x^1,\hat x^2,\hat x^3$ in $\spc{X}$ and $\check p,\check x^1,\check x^2,\check x^3$ in $\spc{Y}$ 
+which are projections of
+$p,x^1,x^2,x^3$ in $\spc{X}$ $\spc{Y}$.
+
+ 
+\qeds
+
 \section{Polyhedral spaces}
 
 \begin{thm}{Definition}\label{def:poly}
@@ -30,7 +66,7 @@ will be also called
 
 If we do not want to specify $\kappa$, we can say that $\spc{P}$ is a \emph{polyhedral space}.
 
-By a \index{triangulation of a $\PM{}{\kappa}$ space}\emph{triangulation of a $\PM{}{\kappa}$ space} we will understand the triangulation as in the definition. 
+By a \index{triangulation of a polyhedral space space}\emph{triangulation of a polyhedral space} we will understand the triangulation as in the definition. 
 
 \end{thm}
 
@@ -70,7 +106,7 @@ Let $\spc{P}\in \PM{}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
 If a point $p\in \spc{P}$ 
 lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
 then the tangent space $\T_p\spc{P}$
-can be naturally isometrically identified with 
+is simetric o the product space
 \[\EE^\kay\times(\Cone\Link_\sigma).\]
 Equivalently, the space of directions $\Sigma_p$
 can be isometrically identified with the 
@@ -83,8 +119,10 @@ then $\Sigma_p\in\PM{m-1}1$ for any $p\in \spc{P}$;
 i.e., the space of directions of $m$-dimensional polyhedral space 
 at any point is an spherical polyhedral space of dimension at most $m-1$. 
 
-In particular, the isometry class of $\Link_\sigma$ 
-completely determined by the space of directions at one point in the interior of $\sigma$ and the dimension of $\sigma$.
+In particular, 
+the isometry class of $\Link_\sigma$ together with $\dim\sigma$
+determines the isometry class of $\Sigma_p$ for 
+any point $p$ in the interior of $\sigma$ and the other way arround.
 
 Further a neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
 In fact it is true that any compact length space for which any point has a neighborhood 
@@ -128,7 +166,7 @@ then $\spc{P}$ coincides with the completion of $\spc{P}^{\circ}$.
 
 In other words, any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
 $\gamma_n\:[0,1]\to \spc{P}$ 
-such that $\gamma_n(t)\in \spc{P}^{\circ}$ for any $n$ and $0<t<1$.
+such that $\gamma_n(t)$ cross only simplexes of dimension $m$ and $m-1$.
 \end{itemize}
 
 \parit{Proof.} We apply induction on $m$.
@@ -192,32 +230,12 @@ By ???, it is sufficent to show that
 
 Note that $\Sigma_p\in \PM{m-1}1$
 and the links of $\Sigma_p$ are isometric to the links of $\spc{P}$. 
-By induction hypothesis we get $\curv\Sigma_p\ge 1$.
+By induction hypothesis we get $\curv\Sigma_p\le 1$.
 
-Applying Generalized Hadamard--Cartan theorem \ref{thm:hadamard-cartan-for-k=1},
+Applying Generalized Hadamard--Cartan theorem \ref{thm:hadamard-cartan-gen},
 we get \ref{eq:Sigma-in-CAT(1)}.
 \qeds
 
-\begin{thm}{Corollary}
-Let $\spc{P}\in \PM{}\kappa$.
-Then the following conditions are equivalent
-
-\begin{subthm}{}
-$\curv_p\spc{P}<\infty$ for any $p\in\spc{P}$;
-\end{subthm}
-
-\begin{subthm}{}
-$\curv\spc{P}\le\kappa$;
-\end{subthm}
-
-\begin{subthm}{}
-Any point $p\in\spc{P}$ 
-admits a neighborhood $\Omega\ni p$ 
-such that any two points $x,y\in\Omega$ 
-are joint unique geodesic $[xy]$ in $\spc{P}$. 
-\end{subthm}
-
-\end{thm}
 
 \section{Flag complexes}
 
@@ -229,7 +247,7 @@ is a set of distinct vertices of $\mathcal{S}$
 which are pairwise joined by edges, then $\{v_0,\dots,v_\kay\}$
 spans a $\kay$-simplex in $\mathcal{S}$.
 
-If the above condition satisfied only for $\kay=2$ then we say that $\mathcal{S}$ satisfies a \emph{no triangle condition}\index{no triangle condition}.
+If the above condition satisfied only for $\kay=2$ then we say that $\mathcal{S}$ satisfies the \emph{no-triangle-condition}\index{no triangle condition}.
 \end{thm}
 
 Note that every flag complex is determined by its 1-skeleton.
@@ -237,16 +255,16 @@ Note that every flag complex is determined by its 1-skeleton.
 \begin{thm}{Proposition}\label{prop:no-trig}
 A simplicial complex $\mathcal{S}$ is flag if and only if 
 $\mathcal{S}$ as well as all the links of all its simplices
-satisfies the no triangle condition.
+satisfies the no-triangle-condition.
 \end{thm}
 
 \parit{Proof.}
-Clearly flag complex satisfies no triangle condition.
+Clearly flag complex satisfies the no-triangle-condition.
 
-Note that link of flag complex is a flag complex.
-Therefore no triangle condition holds for any flag complex and all its links.
+Note that link of a flag complex is a flag complex.
+Therefore the no-triangle-condition holds for any flag complex and all its links.
 
-Now assume a complex $\tau$ and all its links satisfy no triangle condition.
+Now assume a complex $\tau$ and all its links satisfy the no-triangle-condition.
 It follows that $\tau$ includes a 2-simplex for each triangle.
 Applying the same observation for each edge we get that $\tau$ includes 3-simplex for any complete graph with 4-vertices.
 Repeating this observation 
@@ -272,10 +290,6 @@ if and only if $\tau$ is flag.
 \end{thm}
 
 \parit{Proof.} 
-Assume $\spc{P}$ be the spherical polyhedral space 
-with triangulation $\tau$
-such that each simplex in $\tau$ is isometric to a right-angled spherical simplex.
-
 Assume there are there vertices $v_1,v_2$ and $v_3$ of $\tau$
 that pairwise joined by edges, 
 but do not span a simplex.
@@ -1043,66 +1057,7 @@ Therefore $(F,\rho)$ is an Alexandrov space with curvature $\ge \kappa$.\qeds
 We are not aware of any proof of theorem \ref{thm:buyalo} which is not based on the Gauss formula. 
 Finding such a proof would be interesting on its own, and also could lead to the generalization of theorem \ref{thm:buyalo} to the case when $M$ is an Alexandrov space.
 
-If $M$ is Euclidean space, there is a beautiful purely synthetic proof in \cite{milka-conv}.
-I.e., it proves the following corollary of Buyalo's theorem.
 
-\begin{thm}{Corollary} 
-Let $F\subset \EE^m$ be a convex hypersurface equipped 
-with the length-metric; 
-i.e., $F$ bounds a convex set.
-Then $F\in\CBB{m-1}0$.
-\end{thm}
-
-\parit{Sketch of Milka's proof.}
-We will assume that $F$ is smooth;
-the non-smooth case require only minor modifications. 
-
-Denote by $H$ the union of $F$ and the exterior points of $F$.
-
-Let $\alpha\:[0,a]\to F$ be a geodesic in $F$.
-Given $t_0\in [0,a]$, 
-consider the curve $\alpha_{t_0}\:[0,a]\to H$ defined the following way
-\[\alpha_{t_0}(t)
-=
-\left[
-\begin{aligned}
-&\alpha(t)&&\text{if}&t\le t_0
-\\
-&\alpha(t_0)+(t-t_0)\cdot \alpha^+(t_0)&&\text{if}&t> t_0
-\end{aligned}
-\right.
-\]
-Note that $\alpha_{t_0}$ is a geodesic in $H$ 
-and $\alpha_0$ is a straight segment of the same length as $\alpha$.
-
-Assume $\alpha\:[0,a]\to F$ and $\beta\:[0,b]\to F$
-be two geodesics in $F$ which stat at the same point;
-say $p=\alpha(0)=\beta(0)$.
-
-Set $\alpha(a)=x$,
-$\beta(b)=y$,
-$\alpha_0(a)=\hat x$ and 
-$\beta_0(b)=\hat y$.
-
-Note that $[p\hat x\hat y]=\~\triangle (pxy)_F$.
-Therefore it is sufficient to show that 
-\[\dist{\hat x}{\hat y}{H}\ge \dist{x}{y}{H}.\]
-
-Consider the function 
-$d(t,\tau)
-=
-\dist{\alpha_t(a)}{\beta_\tau(b)}{H}$.
-Note that $\partial_t h(t,\tau)\ge 0$
-and $\partial_\tau h(t,\tau)\ge 0$
-if both points $\alpha_t(a)$ and $\beta_\tau(b)$ lie on the boundary of convex hull of $F\cup\{\alpha_t(a),\beta_\tau(b)\}$.
-
-Thereofore it is sufficient to show that 
-there is a continuous nondecreasing function
-$\tau\:[0,a]\to[0,b]$
-such $\tau(0)=0$ and $\tau(a)=b$ 
-such that for any $t$ the points $\alpha_t(a)$ and $\beta_{\tau(t)}(b)$ lie on the boundary of $\Conv(F\cup\{\alpha_t(a),\beta_\tau(b)\})$.
-We leave this last statement as an exercise.
-\qeds
 
 \section{Comments and open problems}
 
@@ -1137,6 +1092,23 @@ Is it true that $\spc{B}_n\in\Cat{}{0}$ for any $n$.
 The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$.
 
 \section{Exercises}
+
+\begin{thm}{Exercise}
+Assume  $\spc{P}\in\PM{}\kappa$ and $\dim \spc{P}\ge 2$. 
+Show that 
+\begin{enumerate}
+\item If $\spc{P}\CBB{}{\kappa'}$ then $\kappa'\le \kappa$ and $\spc{P}\CBB{}{\kappa}$
+\item If $\spc{P}\cCat{}{\kappa'}$ then $\kappa'\ge \kappa$ and $\spc{P}\cCat{}{\kappa}$
+\end{enumerate}
+
+\end{thm}
+
+
+\begin{thm}{Exercise}
+Show that if in a Euclidean polyhedral space such that
+any two points can be connected by unique geodesic then $\spc{P}\in\cCat{}{0}$.
+\end{thm}
+
 
 \begin{thm}{Exercise}
 Show that completion of any flat simply connected 2-dimensional manifold is a $\cCat{}0$ space. 

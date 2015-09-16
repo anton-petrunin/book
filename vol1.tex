@@ -1,4 +1,4 @@
-\documentclass[oneside,a4paper]{book}
+\documentclass[twoside]{book}
 \usepackage{akp1}
 \usepackage{hyper}
 \usepackage{letters}
@@ -8,31 +8,8 @@
 \usepackage{notation-vitya}
 \makeindex
 \begin{document}
-\ifdefined\xrefchapters 
-\externaldocument{%
-the-baricentric-simplex%
-,the-constr-CBA%
-,the-constr%
-,the-converge%
-,the-defs-CBA%
-,the-defs-CBB%
-,the-dim%
-,the-euclid%
-,the-func%
-,the-grad%
-,the-gexp%
-,the-subspaces-cba%
-,the-kirszbraun%
-,the-metr%
-,the-model%
-,the-qg%
-,the-riemann%
-,the-tan%
-,the-tan-CBA%
-,the-tight%
-}
-\fi
 \include{title-vol1}
+\mainmatter
 \include{intro1}
 \include{tableofcontents}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,8 +39,6 @@ the-baricentric-simplex%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{begin-part-tools}
 \include{grad}%the-grad
-\include{grad-flow}
-\include{gexp}%the-gexp
 \include{baricentric-simplex}%the-baricentric-simplex
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
