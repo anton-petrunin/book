@@ -186,74 +186,97 @@ It remains to apply Proposition~\ref{prop:submet-length}.
 \qeds
 
 
-\section{Doubling theorem}\label{sec:doubling}
+\section{Doubling}\label{sec:doubling}
 
-\parbf{Doubling.} Let $\spc{V}$ be a metric space 
+Let $\spc{V}$ be a metric space 
 and $A\subset \spc{V}$ be a closed subset.
 A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
 
-More formally, 
-there is an isometric involution of $\spc{W}$ which is called \index{reflection of doubling}\emph{reflection}
-denoted as $x\mapsto x'$
-and 
-$\spc{W}$ contains $\spc{V}$ as a subspace 
-in such a way that
-for any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$ and 
+More formally the space $\spc{W}$ can be described by the following properties.
+\begin{itemize}
+\item The space $\spc{W}$ contains $\spc{V}$ as a subspace; 
+in particular the set $A$ can be treated as a subset of $\spc{W}$.
+\item There is an isometric involution of $\spc{W}$ which is called \index{reflection}\emph{reflection in $A$};
+further it will be denoted as $x\mapsto x'$.
+\item For any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$ and 
 \[
 \dist{x'}{y}{\spc{W}}
 =\dist{x}{y'}{\spc{W}}
 =\inf_{a\in A}\{\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}\}.
 \]
 for any $x,y\in \spc{V}$.
-
-The image of $\spc{V}$ under the isometry $x\mapsto x'$ will be denoted by $\spc{V}'$;
-it is an isometric copy of $\spc{V}$ and $\spc{V}\cap\spc{V}'=A$.
-Moreover $a=a'$ $\Leftrightarrow$ $a\in A$.
-
-
-Note that from above it follows that
-\begin{itemize}
-\item If $\spc{V}$ is a complete length space then so is $\spc{W}$.
-\item If $\spc{V}$ is proper then so is $\spc{W}$.
-In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that 
-\[\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}=\dist{x}{y'}{\spc{W}}.\]
 \end{itemize}
 
-\parbf{Boundary strata.}
+
+
+
+The image of $\spc{V}$ under the reflection in $A$ will be denoted by $\spc{V}'$.
+The subspace $\spc{V}'$ is an isometric copy of $\spc{V}$.
+Clearly $\spc{V}\cup\spc{V}'=\spc{W}$ and $\spc{V}\cap\spc{V}'=A$.
+Moreover $a=a'$ $\iff$ $a\in A$.
+
+The following proposition follows directly from the definitions.
+
+\begin{thm}{Proposition}\label{prop:doubling}
+Assume $\spc{W}$ is the doubling of metric space $\spc{V}$ in its closed subset $A$.
+Then 
+
+\begin{subthm}{}
+ If $\spc{V}$ is a complete length space then so is $\spc{W}$.
+\end{subthm}
+ 
+\begin{subthm}{}
+If $\spc{V}$ is proper then so is $\spc{W}$.
+In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that 
+\[\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}=\dist{x}{y'}{\spc{W}}.\]
+\end{subthm}
+
+\begin{subthm}{prop:doubling:projection}
+Given $x\in \spc{W}$ set $\bar x=x$ if $x\in \spc{V}$
+and $\bar x=x'$ otherwise. The map $\spc{W}\to\spc{V}$ defined by $x\mapsto \bar x$ is short and length-preserving.
+In particular if $\gamma$ is a geodesic in $\spc{W}$ 
+with ends in $\spc{V}$ then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
+\end{subthm}
+\end{thm}
+
+
+
+\section{Boundary strata}
 Let $\spc{L}\in\CBB{}{}$.
 A closed subset $A\subset \spc{L}$ 
 is called a 
-\index{boundary strata}\emph{boundary strata} if the function $\dist{A}{}{}$
+\index{boundary stratum}\emph{boundary stratum} if the function $\dist{A}{}{}$
 is semiconcave.
 
-The meaning of the term boundary strata,
-will become clear once we define boundary of finite dimensional $\CBB{}{}$ spaces.
-
-
-\begin{thm}{Doubling theorem}\label{thm:doubling}
-Let $\spc{L}\in \CBB{}{\kappa}$ 
-and $A$ be a boundary strata in $\spc{L}$.
-Then the doubling of $\spc{L}$ in $A$ 
-is a $\CBB{}{\kappa}$ space.
-\end{thm}
-
-In the proof we will use the following statements.
-
+The choice of the term ``boundary stratum'',
+will be clear once we define boundary of finite dimensional $\CBB{}{}$ spaces.
 
 \begin{thm}{Proposition}\label{prop:A-extremal}
 Let $\spc{L}\in\CBB{}{}$ and $A\subset \spc{L}$ 
-be a boundary strata.
+be a boundary stratum.
 Assume $\alpha(t)$ is a radial curve in $\spc{L}$ 
 and $\alpha(t_0)\in A$.
 Then $\alpha(t)\in A$ for any $t\ge t_0$. 
 \end{thm}
 
+\section{Doubling theorem}
+
+\begin{thm}{Doubling theorem}\label{thm:doubling}
+Let $\spc{L}\in \CBB{}{\kappa}$ 
+and $A$ be a boundary stratum in $\spc{L}$.
+Then the doubling of $\spc{L}$ in $A$ 
+is a $\CBB{}{\kappa}$ space.
+\end{thm}
+
+In the proof we will use the following statements.
+Recall that $\spc{W}_\o$ denotes the $\o$-limit of the sequence of spaces $(\spc{W}_n)$;
+see Section~\ref{sec:Ultralimit of spaces}.
+
 
 \begin{thm}{Lemma}\label{lem:ultra-doubling}
 Let $\spc{V}_n$ be a sequence of metric spaces 
-and $A_n\subset \spc{V}_n$ be a closed subsets
-and $a_n\in A_n$ for each $n$.
-Denote by $(\spc{W}_n)$ the doubling of $\spc{V}_n$ in $A_n$;
+and $A_n\subset \spc{V}_n$ be a closed subset for each $n$.
+Denote by $\spc{W}_n$ the doubling of $\spc{V}_n$ in $A_n$;
 
 Then 
 \begin{subthm}{}
@@ -263,211 +286,195 @@ $\spc{W}_\o$ is isometric to the doubling of $\spc{V}_\o$ in $A_\o$.
 
 
 \begin{subthm}{}
-If $\spc{V}_n\in\CBB{}\kappa$ and $A_n$ is a boundary strata of $\spc{V}_n$
+If $\spc{V}_n\in\CBB{}\kappa$ and $A_n$ is a boundary stratum of $\spc{V}_n$
 then 
-$A_\o$ is a boundary strata of $\spc{L}_\o$.
+$A_\o$ is a boundary stratum of $\spc{V}_\o$.
 \end{subthm}
 
 \end{thm}
 
 
 \begin{thm}{Splitting Lemma}\label{lem:split}
-Let $\spc{L}\in\CBB{}{}$ 
-and $A\subset \spc{L}$ 
-be a closed subset such that
-$\dist{A}{}{}$ is semiconcave.
-Assume for some $x,y\in\spc{L}\backslash A$ 
-and $a\in A$ be points such that
-$\dist{a}{x}{}+\dist{a}{y}{}$ takes the minimal value for $a\in A$.
-
+Let $\spc{L}\in\CBB{}{0}$ and $A\subset \spc{L}$ is a closed set.
+Assume that $\dist{A}{}{}$ is concave and there is a function $f\:\spc{L}\to \RR$ which is a convex combination of Busemann functions which admits its minimum on $A$ say at $a$.
 Then 
-
-\begin{subthm}{lem:split:split}
-$\o\cdot\spc{L}_a$ splits with factor $\o\cdot A$ and an other factor isometric to $\RR_{\ge0}$.
-Moreover $\o\cdot A\times\RR$ splits in the directions of of $[ax]$ and $[ay]$.
-That is, assume $X$ and $Y$ are the $\o$-limits of $[ax]$ and $[ay]$ in $\o\cdot\spc{L}_a$.
-Let us identify $\o\cdot\spc{L}_a$ 
-with the subset $\o\cdot A\times \RR_{\ge0}$ in $\o\cdot A\times \RR$.
-Then  $\o\cdot A\times \RR$ admits two splitting with the factor isometric to $\RR$ containing $X$ and $Y$ correspondingly.
-\end{subthm}
-
-\begin{subthm}{lem:split:angle}
-For any $z\in \spc{L}$ there is a sequence of points $b_n\in A$ 
-such that 
-$b_n\to a$ as $n\to\o$ and
-\[\lim_{n\to\o}\left[\angk\kappa a{z}{b_n}+\angk\kappa ay{b_n}\right]\le \pi-\angk\kappa axz.\]
- 
-\end{subthm}
-
+there is $\lambda\ge 0$ such that 
+\[f(x)= f(a)-\lambda\cdot\dist{A}{x}{}\]
+for any $x\in \spc{L}$.
+Moreover, if $\lambda\ne0$ then $A$ is a convex in $\spc{L}$
+and there is a ray $\gamma$ starting at $A$ such that 
+\[\spc{L}=A\oplus\gamma.\]
 \end{thm}
 
+The proof of this lemma is based on the same idea as the proof of Toponogov's splitting theorem (\ref{thm:splitting}).
 
+
+\begin{thm}{Doubling Lemma}\label{lem:doubling}
+Let $\spc{L}\in\CBB{}{}$ and $\spc{W}$ is the doubling of $\spc{L}$ in its boundary stratum $A$.
+Assume that a geodesic $[xy]$ in $\spc{W}$ 
+cross $A$ at $a\in \left]xy\right[$.
+Then $\T^\o_a\spc{W}$ splits with factor $\T^\o_a A$ and an other factor isometric to $\RR$.
+
+In particular, $\T^\o_a\spc{W}\in\CBB{}{0}$.
+\end{thm}
 
 \parit{Proof.}
-Consider the function
-\[f(z)=\dist{x'}{}{}+\dist{y}{}{}.\]
-Note that $f$ is semiconvex in the neighborhood of $a$.
-Therefore $\nabla_af$ is well defined.
+Consider two functions $f,g\:\spc{L}\to\RR$ 
+defined as 
+\begin{align*}
+f(z)&\df\dist{x'}{z}{}+\dist{y}{z}{},
+\\
+g(z)&\df\dist{A}{z}{}.
+\end{align*}
+
+According to ???, $\T^\o_a\spc{L}\in\CBB{}0$.
+Note that 
+\[\d^\o_a g(w)=\dist{\T^\o_a A}{w}{\T^\o_a\spc{L}}.\]
+and $\d^\o_a f$ is a sum of Buseman's functions.
+By Splitting Lemma (\ref{lem:split}), 
+$\T^\o_a\spc{L}$ is isometic to $\T^\o_a A\oplus\RR_\ge$.
+(More precisely there is a ray $\gamma$ staring at $0\in \T^\o_a$
+such that $\T^\o_a\spc{L}=\T^\o_a A\oplus\gamma$.)
+
+In particular the doubling of $\T^\o_a\spc{L}$
+in $\T^\o_a A$ is isometric to $\T^\o_a A\times\RR$.
+Since $\T^\o_a\spc{L}$ is a geodesic $\in\CBB{}0$ space
+and $\T^\o_a A$ is convex in $\T^\o_a\spc{L}$,
+the doubling is a $\in\CBB{}0$ space.
+It remains to apply Exercise~\ref{ex:splitting}.
+
+\qeds
+
+\parit{Proof.}
+Consider two functions $f,g\:\spc{L}\to\RR$ 
+defined as 
+\begin{align*}
+f(z)&=\dist{x'}{}{}+\dist{y}{}{},
+\\
+g(z)&=\dist{A}{z}{}.
+\end{align*}
+
+Note that $\o$-differentials
+$\d^\o_a f,\d^\o_ag\:\T^\o_a\spc{L}\to\RR$ are concave.
+The minimum of $\d^\o f$ on $\T^\o_aA$ 
+is acheved at $0$. 
+Further note that 
+\[d^\o_a g(w)=\dist{\T^\o_a A}{w}{\T^\o_a\spc{L}}.\]
+
+Applying Splitteing lemma, we get that $\T^\o_a\spc{L}$ is 
+
+
+Let us show that for some $\lambda>0$ we have
+\[d^\o_a g+\lambda\cdot\d^\o_a f=0.\]
+In particular it will imply that both $\o$-differentials 
+$\d^\o_a f,\d^\o_ag$ are affine in $\T^\o_a\spc{L}$.
+
+Note that the vector $v=\nabla_ag$ 
+lies in the tangent space $\T_a$ 
+which we consider as a subset of $\T^\o_a$.
+Note that $\d^\o_a g(v)<0$,
+choose $\lambda>0$ so that
+\[\d_af(v)+\lambda\cdot\d_ag(v)=0.\]
+
+
+Consider the functions $h=\dist{A}{}{}$ and
+
+
+Set $v=\nabla_ah$
+and $s=\d_af(v)$.
+
+Note that $\d_af(w)\ge 0$ for any $w\in\T_aA$
+Since boy that $f$ is semiconvex in the neighborhood of $a$.
+Therefore the gradient $\nabla_af$ is well defined.
+
+
 \qeds
 
 \parit{Proof of Doubling theorem (\ref{thm:doubling}).}
 Denote by $\spc{W}$ the doubling of $\spc{L}$ in $A$.
+Let us assume that $\spc{W}$ is geodesic.
+
+Let us show the adjacent angle comparison \ref{2-sum} 
+holds in $\spc{W}$.
+That is, we need to show that for any geodesic $[x y]$ and $z\in \l]x y\r[$, $z\not=p$ we have
+\[\angk\kappa z p x +\angk\kappa z p y\le \pi.\eqlbl{eq:AAC-doubling}\]
+The proof divided into cases depending on the side of points $x,y,z,p$ from $A$. 
+
+\parit{Case 1.}
+Assume $p,x,y\in \spc{L}$ or $p,x,y\in \spc{L}'$.
+Without loss of generality we may assume the former.
+
+Recall that $\bar z=z$ if $z\in\spc{L}$ and $\bar z=z'$ otherwise.
+According to Proposition~\ref{prop:doubling}, the map $z\mapsto \bar z$ is short and length preserving.
+In particular $\bar z$ lies on a geodesic from $x$ to $y$ in $\spc{L}$
+and by adjacent angle comparison in $\spc{L}$,
+we get 
+\[\angk\kappa {\bar z} p x
++\angk\kappa {\bar z} p y\le \pi.\]
+
+Since $z\mapsto \bar z$ is a short map, we get
+$\dist{p}{z}{\spc{W}}\ge \dist{p}{\bar z}{\spc{L}}.$
+Applying Alexandrov's lemma \ref{lem:alex} we get \ref{eq:AAC-doubling}.
+
+
+\parit{Case 2.} 
+The points $x,p\in\spc{L}$ and $y\notin\spc{L}$ and $z\in A$. (The points $x$ and $y$ can be switched since they are equisignificant in \ref{eq:AAC-doubling}.)
+
+By 
+Doubling Lemma~\ref{lem:doubling} and
+Toponogov's splitting theorem\ref{thm:splitting}
+we get that there is $b_\o\in \T^\o_a A$ such that 
+\[\angk\kappa zp{b_\o}+\angk\kappa  z{b_\o}y\le \pi-\angk\kappa zxp.\]
+
+Recall that $\T_a^\o A$ is a $\o$ limit of $n\cdot A$.
+Choose a sequence $b_n\in A$ be the sequence of points which $\o$-converges to $b_\o\in \T_a^\o A$.
+
+Let $[\~x\~z\~p]=\modtrig\kappa xzp$.
+Extend the side $[\~x\~z]$ 
+behind $\~z$, let $\~y$ 
+be the point on the extension such that $\dist{\~x}{\~y}{\Lob2\kappa}=\dist{x}{y}{\spc{W}}$.
+If $\alpha<\mangle\hinge {\~z}{\~y}{\~p}$,
+choose a point $\~w\in [\~y\~p]$ such that $\alpha=\mangle\hinge {\~z}{\~y}{\~w}$,
+otherwise set $\~w=\~p$.
+
+Let $\beta_n$ be the $\kappa$-radial curve with respect to $z$ starting at $b_n$.
+Set $c_n=\beta_n(\dist{\~z}{\~w}{})$.
+By Radial monotonicity~\ref{rad-mon}, we get
+\begin{align*}
+\dist{p}{y}{\spc{W}}
+&\le\lim_{n\to\o}\dist{y}{c_n}{\spc{L}}+\dist{p}{c_n}{\spc{L}}\le
+\\
+&\le \dist{\~y}{\~p}{\Lob2\kappa}
+\end{align*}
+Hence \ref{eq:doubling-comp} follows.
+Whence \ref{eq:AAC-doubling} follows.
+
+\parit{Case 3.}
+Assume $[xy]\in\spc{L}$ and $p\notin\spc{L}$.
+
+Let $q$ be the point of intersection of $[pz]$ with $A$ which is closest to $z$.
+Applying adjacent angle comparison in $\spc{L}$,
+we get 
+\[\angk\kappa {\bar z} q x
++\angk\kappa {\bar z} q y\le \pi.\]
+Applying Case 2, and Alexandrov's lemma,
+we get
+\begin{align*}
+\angk\kappa {\bar z} p x&\le \angk\kappa {\bar z} q x
+\\
+\angk\kappa {\bar z} p y&\le \angk\kappa {\bar z} q y
+\end{align*}
+Hence the statement follows.
+
+\parit{Remaining cases.} By Alexandrov's lemma,
+all the remaining cases easily follow from the three cases above.
 
 \parit{Reduction to geodesic case.}
 Let us pass to the $\o$-powers $A^\o\subset \spc{L}^\o\subset\spc{W}^\o$.
 By Corollary \ref{cor:ulara-geod}, $\spc{W}^\o$ is geodesic.
 By Lemma~\ref{lem:ultra-doubling},
- $\spc{W}^\o$ is doubling of $\spc{L}^\o$ in $A^\o$ and $A^\o$ is a boundary strata in $\spc{L}^\o$.
+ $\spc{W}^\o$ is doubling of $\spc{L}^\o$ in $A^\o$ and $A^\o$ is a boundary stratum in $\spc{L}^\o$.
 That is, assuming if the theorem holds if the doubling space is geodesic, we have that $\spc{W}^\o\in\CBB{}{\kappa}$ and by Proposition~\ref{prp:A^omega}, we get $\spc{W}\in\CBB{}{\kappa}$.
-
-
-\parit{Geodesic case.} From now we assume that $\spc{W}$ is geodesic.
-
-Let us show the adjacent angle comparison \ref{2-sum} 
-holds in $\spc{W}$.
-That is, we need to show that for any geodesic $[x y]$ and $z\in \l]x y\r[$, $z\not=p$ we have
-\[\angk\kappa z p x
-+\angk\kappa z p y\le \pi.\]
-
-\parit{Case 1.}
-Assume $p,x,y\in \spc{L}$. 
-
-If $z\notin \spc{L}$ then $z'\in \spc{L}$
-and 
-$\dist{p}{z}{\spc{W}}
-\ge\dist{p}{z'}{\spc{W}}
-=\dist{p}{z'}{\spc{L}}.$
-By Alexandrov's lemma \ref{lem:alex},
-\[\angk\kappa{z'}p x+\angk\kappa{z'}py\ge\angk\kappa z p x+\angk\kappa z p y.\]
-
-Note that  $[xy]\cap\spc{L}$ 
-together with the reflection of $[xy]\backslash\spc{L}$
-forms another geodesic from $x$ to $y$ in $\spc{L}$.
-
-Therefore we can assume that $[xy]\subset \spc{L}$. 
-In this case adjacent angle comparison  
-\[\angk\kappa z p x
-+\angk\kappa z p y\le \pi.\]
-follows from the comparison in $\spc{L}$. 
-
-The same way we can do the case $p,x,y\in \spc{L}'$.
-
-\parit{Case 2.} 
-The points $x$ and $y$ lie on opposite sides of $A$ and $z\in A$.
-
-Without loss of generality we can assume that $p,x\in\spc{L}$
-and $y\not\in \spc{L}$ so $y'\in\spc{L}$.
-
-Let $b_n\in A$ be the sequence of points 
-provided by Lemma~\ref{lem:split} for the quadruple $p, x, y', z\in  \spc{L}$.
-
-???
-
-Let $\gamma$ be a geodesic in $\oBall(p,\varpi\kappa)_{\spc{W}}$. 
-
-By function comparison (\ref{comp-kappa}),
-it is sufficient to show that
-\[\dist{p}{\gamma(t)}{\spc{W}}
-\le 
-\side\kappa\{\phi;\dist{p}{\gamma(0)}{\spc{W}},t\}
-\eqlbl{eq:doubling-comp}\]
-for fixed $\phi\in [0,\pi]$ and all $t$ sufficiently close to $0$.
-
-If $p$ and $\gamma(0)$ lie on one side from $A$ in $\spc{W}$
-then 
-he inequality follows from the point-on-side comparison (\ref{point-on-side})
-in $\spc{L}$.
-The same holds if $p\in A$.
-
-It remains to consider two cases:
-
-\parbf{Case 1.} Assume $p$ and $\gamma(0)$ lie on the opposite sides from $A$ in $\spc{W}$.
-Set $q=\gamma(0)$, consider a geodesic $[pq]_{\spc{W}}$.
-Denote by $a$ the intersection point of $[pq]_{\spc{W}}$ and $A$.
-
-We may assume that $[pa]\in \spc{L}'$ and $[qa]\in \spc{L}$.
-It follows since any geodesic $[vw]$ which lies completely in $\spc{L}$  
-and with ends at $A$ 
-can be reflected by the isometric involution in $\spc{L}'$
-and the other way around.
- 
-
-Without loss of generality we may assume that $p\notin\spc{L}$
-and therefore $p',q\in \spc{L}$. 
-Set $\phi=\mangle(\dir qa,\gamma^+(0))$.
-Fix $x=\gamma(t)$ for $t\approx0$.
-In order to prove \ref{eq:doubling-comp},
-we need to show that 
-\begin{align*}
-\dist{p}{x}{\spc{W}}
-&=
-\inf\set{\dist{p'}{z}{\spc{L}}+\dist{x}{z}{\spc{L}}}{z\in A}\le
-\\
-&\le \side\kappa\{\phi;\dist{p}{q}{\spc{W}},t\}.
-\end{align*}
-
-
-Note that $q'\in \spc{L}$ 
-and $a,p,q' z'$satisfy the assumptions in Lemma \ref{lem:split}.
-Denote by $b_n$ the sequence of points provided by \ref{lem:split:angle}.
-
-Set 
-\[
-\alpha=\lim_{n\to\o}\angk\kappa a{p'}{b_n}.
-\]
-Let $[\tilde x\tilde x'\tilde y]$ 
-be a triangle in the model plane $\Lob{}\kappa$
-such that 
-\begin{align*}
-\dist{\tilde x}{\tilde x'}{}&=\dist{x}{x'}{},
-\\
-\dist{\tilde x}{\tilde y}{}&=\dist{x}{a}{}+\dist{y}{a}{}
-\\
-\mangle\hinge x{x'}y&=\alpha
-\end{align*}
-Choose $\tilde a\in[\tilde x\tilde y]$ such that $\dist{\tilde a}{\tilde y}{}=\dist{a}{y}{}$.
-Assumeing $\dist{x}{x'}{}$ is small, 
-we can choose $\tilde b\in [\tilde x'\tilde y]$
-such that $\mangle \tilde y\tilde a\tilde b=\phi$.
-Set $r=\dist{\tilde a}{\tilde b}{}$.
-
-%???PIC
-
-For each $n$ denote by $\beta_n$ the $\kappa$-radial curve with respect to $a$ which starts at $b_n$.
-Set $c_n=\beta_n(r)$;
-it is defined for all large $n$ and
-by Proposition~\ref{prop:A-extremal}, $c_n\in A$.
-By Radial monotonicity~\ref{rad-mon},
-\begin{align*}
-\dist{x'}{y}{\spc{W}}
-&\le\lim_{n\to\o}\dist{x'}{c_n}{\spc{L}}+\dist{y}{c_n}{\spc{L}}\le
-\\
-&\le \dist{\tilde x'}{\tilde y}{\Lob2\kappa}
-\end{align*}
-Hence \ref{eq:doubling-comp} follows.
- 
-
-\parbf{Case 2.} Assume $\gamma(0)\in A$. 
-Fix $t>0$ and set $a=\gamma(0)$, $x=\gamma(t)$, $y=\gamma(-t)$ and $p$.
-
-Without loss of generality we can assume that $x$ and $p$ lie on one side from $A$.
-In this case $a,p,x\in\spc{L}$; set  $\phi=\mangle{\hinge apx}_{\spc{L}}$.
-
-In order to prove \ref{eq:doubling-comp},
-it is sufficient to show that 
-\begin{align*}
-\dist{p}{y}{\spc{W}}
-&=\inf\set{\dist{p}{z}{\spc{L}}+\dist{y'}{z}{\spc{L}}}{z\in A}\le
-\\
-&\le \side\kappa\{\phi;\dist{p}{a}{\spc{L}},-t\}
-\end{align*}
-
-Denote by $b_n\in A$ the sequence of points provided by lemma \ref{lem:split}
-for the points $a,p,x,y'$.
-Set $\alpha=\lim_{n\to \o}\angk\kappa a{y'}{b_n}$.
-Consider the
-
-
 \qeds
 
 
@@ -513,7 +520,7 @@ That is,
 show that the doubling of $\spc{V}$ 
 in a closed set $A\subset \spc{V}$ 
 is a $\CBB{}{\kappa}$ space 
-then $\spc{V}\in\CBB{}{\kappa}$ and $A$ is a boundary strata in $\spc{V}$.
+then $\spc{V}\in\CBB{}{\kappa}$ and $A$ is a boundary stratum in $\spc{V}$.
 \end{subthm}
 
 

@@ -3,39 +3,33 @@
 
 
 
-\section{Cones}
+\section{Product space}
 
-\begin{thm}{Theorem}\label{thm:cone-construction}
+\begin{thm}{Theorem}\label{thm:product}
 Let $\spc{X}$ be a length space.
 Then 
-\begin{subthm}{thm:cone-construction:cone-CBB} $\Cone_\kappa\spc{X}\in \CBB{}{\kappa}$ $\Leftrightarrow$  $\spc{X}\in \CBB{}{\kappa}$.
+\begin{subthm}{thm:product:prod-CBB} 
+$\spc{X}\times\spc{Y}\in \CBB{}{0}$ $\iff$ $\spc{X},\spc{Y}\in \CBB{}{0}$.
 \end{subthm}
-
-\begin{subthm}{thm:cone-construction:cone-CAT} $\Cone_\kappa\spc{X}\in \cCat{}{\kappa}$ $\Leftrightarrow$ $\spc{X}\in \cCat{}{\kappa}$.
-\end{subthm}
-\begin{subthm}{thm:cone-construction:prod-CBB} $\spc{X}\times\spc{Y}\in \CBB{}{0}$ $\Leftrightarrow$ $\spc{X},\spc{Y}\in \CBB{}{0}$.
-\end{subthm}
-\begin{subthm}{thm:cone-construction:prod-CAT} $\RR\times\spc{X}\in \cCat{}{0}$ $\Leftrightarrow$ $\spc{X}\in \cCat{}{0}$.
+\begin{subthm}{thm:product:prod-CAT} 
+$\spc{X}\times\spc{Y}\in \cCat{}{0}$ 
+$\iff$ $\spc{X},\spc{Y}\in \cCat{}{0}$.
 \end{subthm}
 \end{thm}
 
 The theorem above is a partial case of Theorem on warp products proved in the other volume. 
 
-\parit{Proof.}
-The $\Rightarrow$ in \ref{SHORT.thm:cone-construction:prod-CBB} and \ref{SHORT.thm:cone-construction:prod-CAT} follows since $\spc{X}$ is isometric to the convex subset $\{0\}\times\spc{X}$ in $\RR\times\spc{X}$.
+\parit{Proof; ``only if'' part}
+The spaces $\spc{X}$ and $\spc{Y}$ is isometric to the vertical and horizontal subsets in $\spc{X}\times\spc{Y}$.
+Note that the product space is a length space if and only if its factors are length space (assuming non of them is empty). 
+%???DO we assume that metric space is nonempty???
+Whence the $\Rightarrow$ 
+in (\ref{SHORT.thm:product:prod-CBB}) 
+and (\ref{SHORT.thm:product:prod-CAT}) 
+follows. 
 
-To prove $\Leftarrow$ in \ref{SHORT.thm:cone-construction:prod-CBB} we need to show that (1+3)-point comparison holds for any quadrapuple $p,x^1,x^2,x^3\in \spc{X}\times\spc{Y}$.
-
-Note that the later is equivlent to the following statement
-there is a quadrouple of point in $q,y^1,y^2,y^3$ in the Euclidean space such that $\dist{q}{y^i}{}=\dist{p}{x^i}{}$ for any $i$
-and $\dist{y^i}{y^j}{}\ge\dist{x^i}{x^j}{}$.
-
-Consider the quadrouples $\hat p,\hat x^1,\hat x^2,\hat x^3$ in $\spc{X}$ and $\check p,\check x^1,\check x^2,\check x^3$ in $\spc{Y}$ 
-which are projections of
-$p,x^1,x^2,x^3$ in $\spc{X}$ $\spc{Y}$.
-
- 
-\qeds
+\parit{``If'' part in (\ref{SHORT.thm:product:prod-CBB}) and (\ref{SHORT.thm:product:prod-CAT}).} 
+Follows from function comparison (theorem \ref{thm:conc} and \ref{thm:function-comp}),
 
 \section{Polyhedral spaces}
 

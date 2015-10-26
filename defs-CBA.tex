@@ -2191,7 +2191,25 @@ so far it is not even known if any three points in a $\Cat{}{0}$-space lie in a 
 
 \section{Exercises}
 
-%!!!
+\begin{thm}{Exercise}
+Let $\spc{U}$ be a complete length space.
+
+Show that $\spc{U}\in\cCat{}{\kappa}$
+if and only if for any quadruple $p^1,p^2,x^1,x^2\in \spc{U}$ such that
+$\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$
+there is a quadruple $q^1,q^2,y^1,y^2\in\Lob m\kappa$
+such that 
+\begin{align*}
+\dist{q^1}{q^2}{}&=\dist{p^1}{p^2}{},
+\\
+\dist{y^1}{y^2}{}&=\dist{x^1}{x^2}{},
+\\
+\dist{q^i}{y^j}{}&\le \dist{p^i}{x^j}{}
+\end{align*}
+for any $i$ and $j$.
+\end{thm}
+
+
 \begin{thm}{Exercise}\label{ex:cats-cradle}
 A \emph{convex space} $ \spc{X}$ is a geodesic space such that the function
 $t\mapsto\dist{\gamma(t)}{\sigma(t)}{}$ is convex 
@@ -2215,35 +2233,34 @@ Show that $\spc{X}$ is $\Cat{}{0}$.
 
 \end{thm}
 
-%\begin{thm}{Exercise}
-%Suppose $\spc{U}$ is a complete length space with $\curv\spc{U}\le1$, and the   space of all closed curves in $\spc{U}$ with length $<2\cdot\pi$ is connected.
-%Prove that $\spc{U}\in\cCat{}{1}$.
-%\end{thm}
+\begin{thm}{Exercise}
+Suppose $\spc{U}$ is a complete length space with $\curv\spc{U}\le1$, and the   space of all closed curves in $\spc{U}$ with length $<2\cdot\pi$ is connected.
+Prove that $\spc{U}\in\cCat{}{1}$.
+\end{thm}
 
-%\begin{thm}{Exercise}
-%Let $\spc{U}\in \Cat{}{\kappa}$,
-%$\trig xyz$ is a triangle in $\spc{U}$
-%and $\trig{\~x}{\~y}{\~z}$ is its model triangle in $\Lob{2}{\kappa}$.
-%Prove that the natural map $f\:\trig{\~x}{\~y}{\~z}\to \trig xyz$ 
-%defined in \ref{def:k-thin} is distance-preserving if and ony if one of the following conditions hold.
+\begin{thm}{Exercise}
+Let $\spc{U}\in \Cat{}{\kappa}$,
+$\trig xyz$ is a triangle in $\spc{U}$
+and $\trig{\~x}{\~y}{\~z}$ is its model triangle in $\Lob{2}{\kappa}$.
+Prove that the natural map $f\:\trig{\~x}{\~y}{\~z}\to \trig xyz$ 
+defined in \ref{def:k-thin} is distance-preserving if and ony if one of the following conditions hold.
 
-%\begin{subthm}{}
-%$\mangle\hinge x y z= \angk\kappa x y z$,
-%\end{subthm}
+\begin{subthm}{}
+$\mangle\hinge x y z= \angk\kappa x y z$,
+\end{subthm}
 
-%\begin{subthm}{}
-%$\dist{x}{w}{}=\dist{\~x}{\~w}{}$ for some  $\~w\in]\~y\~z[$ and
-%$w= f(\~w)$   
-%\end{subthm}
+\begin{subthm}{}
+$\dist{x}{w}{}=\dist{\~x}{\~w}{}$ for some  $\~w\in]\~y\~z[$ and
+$w= f(\~w)$   
+\end{subthm}
 
-%\begin{subthm}{} 
-%$\dist{v}{w}{}=\dist{\~v}{\~w}{}$ for some  
-%$\~v\in \l]\~x \~y\r[$,  $\~w\in\l]\~x \~z\r[$
-%and $v=f(\~v)$, $w=f(\~w)$.
-%\end{subthm} 
+\begin{subthm}{} 
+$\dist{v}{w}{}=\dist{\~v}{\~w}{}$ for some  
+$\~v\in \l]\~x \~y\r[$,  $\~w\in\l]\~x \~z\r[$
+and $v=f(\~v)$, $w=f(\~w)$.
+\end{subthm} 
 
-%\end{thm}
-
+\end{thm}
 
 The following exercise is the rigidity case 
 of the Majorization theorem.

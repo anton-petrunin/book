@@ -1531,7 +1531,7 @@ by straightforward calculations one gets the following.
 Let $\kappa\le0$,
 $\spc{L}\in\CBB{}{\kappa}$ 
 and $p, q\in \spc{L}$.
-Assume $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$ is a $(p,\kappa)$-radial curves.
+Assume $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$ is a $(p,\kappa)$-radial curve.
 Then for any $w\ge 1$, 
 the function
 \[
@@ -1636,13 +1636,17 @@ Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}$.
 It remains to show $(*)\mc0_\phi$ and $(**)\mc0_\phi$. 
 First let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an equivalent form:
 \[
-\frac{\partial^+\ell}{\partial s}(s,r_{\min})
-\le 
+\begin{aligned}
+\frac{\partial^+}{\partial s}\ell(s,r_{\min})
+&\le 
 \cos\tangle\mc0\{r_{\min};s,\ell\},
-\ \ 
-\frac{\partial^+\ell}{\partial r}(s_{\min},r)
-\le 
-\cos\tangle\mc0\{s_{\min};r,\ell\},\leqno(*)\mc0_\ell\]
+\\
+\frac{\partial^+}{\partial r}\ell(s_{\min},r)
+&\le 
+\cos\tangle\mc0\{s_{\min};r,\ell\},
+\end{aligned}
+\leqno(*)\mc0_\ell
+\]
 
 \[
 s\cdot\frac{\partial^+\ell}{\partial s}
@@ -1680,7 +1684,12 @@ By switching places of $\rho$ and $\sigma$ we obtain the second inequality in $(
 Further, summing together $(C)\mc0$ with its mirror-inequality for $\frac{\partial^+\ell}{\partial s}$, we get
 \[r\cdot\frac{\partial^+\ell}{\partial r}
 +
-s\cdot\frac{\partial^+\ell}{\partial s}\le \frac{{\ell^2}+{R^2}-{S^2}}{2\cdot\ell }+\frac{{\ell^2}+{S^2}-{R^2}}{2\cdot\ell }= \ell\leqno(E)\mc0\]
+s\cdot\frac{\partial^+\ell}{\partial s}
+\le 
+\frac{{\ell^2}+{R^2}-{S^2}}{2\cdot\ell }+\frac{{\ell^2}+{S^2}-{R^2}}{2\cdot\ell }
+= 
+\ell
+\leqno(E)\mc0\]
 which is $(**)\mc0_\ell$.
 \qeds
 
