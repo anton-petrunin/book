@@ -257,6 +257,136 @@ Then from comparison, we have $\angk0{p_j}{p_i}{x}>\tfrac\pi2$;
 i.e. $p_j$ does not form a one-point extremal set.???
 \qeds
 
+\section{Circle actions on 4-dimensional manifolds}
+
+
+
+The following result was obtained by Hsiang and Kleiner in \cite{hsiang-kleiner}.
+The original proof used Alexandrov geometry implicitly;
+in fact at the moment 
+Alexandrov spaces with lower curvature bound were defined only in dimension $2$.
+
+\begin{thm}{Theorem}\label{thm:keliner}
+Let $M$ be a connected complete Riemannian manifold 
+and $\mathbb{S}^1\acts M$ be isometric effective circle action.
+Then
+\begin{subthm}{thm:keliner:nonneg}
+If $M$ has nonnegative sectional curvature then the action has at most $4$ isolated fixed points.
+\end{subthm}
+
+\begin{subthm}{thm:keliner:positive}
+If $M$ has positive sectional curvature then the action has at most $3$ isolated fixed points.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Consider the quotient space $\spc{L}=M/\mathbb{S}^1$.
+
+Assume $x$ is a fixed point of $\mathbb{S}^1$-action;
+denote by $y$ the projection of $x$ in $\spc{L}$.
+Note that
+
+\begin{clm}{}\label{clm:Sigma=<sphere/2}
+$\Sigma_y\le \tfrac12\cdot\SS^2$;
+that is there is a noncontracting map $\Sigma_y\to \tfrac12\cdot\SS^2$.
+In particular, 
+\[\mangle\hinge y{z^1}{z^2}+\mangle\hinge y{z^2}{z^3}+\mangle\hinge y{z^3}{z^1}\le\pi\]
+for any triple of points $z^1,z^2,z^3\in\spc{L}$.
+\end{clm}
+
+Indeed, $\Sigma_x\iso\SS^3$.
+Therefore $\Sigma_y\iso\SS^3/\SS^1$, 
+for an isometric $\SS^1$-action.
+Note that we can identify $\SS^3$ as the unit sphere in $\CC^2$
+in such a way that the $\SS^1$-action is given by diagonal matrices
+$\left(\begin{smallmatrix}
+z^p&0\\0&z^q
+\end{smallmatrix}\right)$ for some realatively prime integers $p$, $q$
+and $z\in\SS^1\subset\CC$.
+
+Consider the torus action $\TT^2\acts\SS^3$ by diagonal matrices
+$\left(\begin{smallmatrix}
+v&0\\0&w
+\end{smallmatrix}\right)$.
+Note that $[0,\tfrac\pi2]\iso\SS^3/\TT^2$
+and $\Sigma_w$ is isometric to the warped product $\SS^1\times_{f_{p,q}}[0,\tfrac\pi2]$ (compare with Exercise~\ref{ex:chohom-1=warped-product}).
+Let us compute the warping function $f_{p,q}$. 
+If $t\in [0,\tfrac\pi2]$
+is the projection of $x\in \SS^3$
+then
+\begin{align*}
+f_{p,q}(t)
+&=\frac{\area [\TT^2\cdot x]}{\length[\SS^1\cdot x]}
+\\
+&=
+\frac{\sin t\cdot\cos t}{\sqrt{(p\cdot\sin t)^2+(q\cdot\cos t)^2}}
+\end{align*}
+
+
+Note that 
+$f_{1,1}(t)\ge f_{p,q}(t)$
+for any pair $(p,q)$ of relatively prime inegers and any $t\in[0,\tfrac\pi2]$ and
+\[\tfrac12\cdot\SS^2\iso \SS^1\times_{f_{1,1}}[0,\tfrac\pi2],\]
+(In other words $\tfrac12\cdot\SS^2$ is isometric to the orbit space of Hopf fibration on $\SS^3$.)
+Applying Exercise \ref{ex:warp=<}, we get \ref{clm:Sigma=<sphere/2}.
+\claimqeds
+
+\parit{(\ref{SHORT.thm:keliner:positive}).}
+Assume the circle action has 4 isolated points.
+Denote by $y_1,y_2,y_3,y_4$ their projections in $\spc{L}$.
+
+According to ???, $\spc{L}\in\CBB{}{\kappa}$ for some $\kappa>0$.
+According to Claim~{clm:Sigma=<sphere/2},
+\[\mangle \hinge{y_i}{y_j}{y_k}\le\tfrac\pi2\]
+for any distinct $i$, $j$ and $k$.
+In particular non of 4 triangles $[y^1y^2y^3]$,
+$[y^1y^2y^4]$,
+$[y^1y^3y^4]$,
+$[y^2y^3y^4]$
+is degenerate.
+Therefore 
+The sum of the angles in each triuangle is strictly larger than $\pi$.
+Denote by $\omega$ the sum of all 12 angles of these 4 triangles.
+We get
+\[\omega>4\cdot\pi.\eqlbl{eq:omega>4pi}\]
+
+From Claim~\ref{clm:Sigma=<sphere/2}, 
+the sum of 3 angles among these 12 which share one vertex
+is at most $\pi$.
+Therefore 
+\[\omega\le 4\cdot\pi.\]
+The later contradicts \ref{eq:omega>4pi}.
+
+\parit{(\ref{SHORT.thm:keliner:nonneg}).}
+Assume there are 5 fixed points of the circle action.
+Denote by $y_1,y_2,y_3,y_4,y^5$ their projections in $\spc{L}$.
+
+\qeds
+
+The result above was used to classify positively and nonnegatively curved mainifolds which admit isometric circle action.
+This classification was improved later by Grove and Wilking in \cite{grove-wilking}.
+Namely they show the following.
+
+\begin{thm}{Theorem}
+A closed nonnegatively curved complete simply connected 4-dimensional manifold $M$
+with an isometric circle action is diffeomorphic to
+$\mathbb{S}^4$,
+$\CP^2$,
+$\mathbb{S}^2\times\mathbb{S}^2$
+or one of
+$\CP^2\#(\pm\CP^2)$
+and the action extends
+to a smooth torus
+action.
+
+In particular, if $M$ is positively curved then the circle action is equivariantly diffeomorphic to a linear action on 
+$\mathbb{S}^4$,
+$\RP^2$
+or
+$\CP^2$.
+\end{thm}
+
 \section{Remarks and open questions}
 
 In \cite{perelman-soul}, it was proved that if $\spc{L}$ is non-negatively curved Riemannian manifold 

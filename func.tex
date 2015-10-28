@@ -151,6 +151,50 @@ $y_n\to y_\infty$ as $n\to\infty$.
 Hence the result follows.
 \qeds
 
+\section{Speed of curves}
+
+Let $\spc{X}$ be a metric space.
+A \emph{curve}\index{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a \emph{real interval}\index{real interval} (i.e. an arbitrary convex subset of $\RR$);
+the curve it called \emph{Lipschitz}\index{Lipschitz curve} or \emph{locally Lipschitz}\index{locally Lipschitz curve} if the map $\alpha\:\II\to \spc{X}$ is.
+
+%??? Maybe we only need locally Lipschitz curves, A.???
+
+The following theorem follows from \cite[2.7.4]{BBI}.
+
+\begin{thm}{Theorem}\label{thm:speed}
+Let $\spc{X}$ be a metric space  
+and $\alpha\:\II \to \spc{X}$ be a locally Lipschitz
+curve. 
+Then the speed function
+\[\speed\alpha(t_0)=\lim_{t\to t_0}\frac{\dist{\alpha(t)}{\alpha(t_0)}{}}{|t-t_0|}\] 
+is defined for almost all $t_0 \in \II$ and 
+\[\length\alpha=\int\limits_\II \speed\alpha(t)\cdot\d t,\]
+where $\int$ denotes the Lebesgue integral.
+\end{thm}
+
+A curve $\alpha\:\II\to\spc{X}$ is called \emph{unit-speed curve}\index{unit-speed curve}, 
+if for any subinterval $[a,b]\subset\II$, we have
+\[b-a=\length(\alpha|[a,b]).\]
+According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
+
+The following theorem from \cite{kirchheim} %CHECK??? 
+generalize the one above.
+
+
+\begin{thm}{Theorem}
+Let $\spc{X}$ be a metric space 
+and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
+Then for almost all $x\in\Dom f$ there is a prenorm $\lVert*\rVert_x$ on $\RR^n$ such that
+we have
+\[\dist{f(y)}{f(z)}{\spc{X}}=\lVert z-y\rVert_x+o(|y-x|+|z-x|).\]
+Moreover if $s(x)=\sup_{w\not=0}\{\lVert w\rVert_x/|w|\}$ then 
+\[\HausMes_n[\Im f] \le \int\limits_{\Dom f}s(x).\]
+\end{thm}
+
+
+The norm $\lVert*\rVert_x$ in the above theorem 
+will be called \emph{differential of induced metric} at $x$.
+
 \section{Convexity of real-to-real functions}\label{sec:conv-real}
 
 We will be interested in the solutions
@@ -342,12 +386,6 @@ by adding the constant $-\lambda/\kappa$ to these solutions, we obtain the solut
 \ \ \text{and}\ \ 
 f''\le -\kappa\cdot  f,\]
 which also arise naturally.
-
-
-
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

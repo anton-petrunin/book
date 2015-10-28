@@ -3,33 +3,7 @@
 
 
 
-\section{Product space}
 
-\begin{thm}{Theorem}\label{thm:product}
-Let $\spc{X}$ be a length space.
-Then 
-\begin{subthm}{thm:product:prod-CBB} 
-$\spc{X}\times\spc{Y}\in \CBB{}{0}$ $\iff$ $\spc{X},\spc{Y}\in \CBB{}{0}$.
-\end{subthm}
-\begin{subthm}{thm:product:prod-CAT} 
-$\spc{X}\times\spc{Y}\in \cCat{}{0}$ 
-$\iff$ $\spc{X},\spc{Y}\in \cCat{}{0}$.
-\end{subthm}
-\end{thm}
-
-The theorem above is a partial case of Theorem on warp products proved in the other volume. 
-
-\parit{Proof; ``only if'' part}
-The spaces $\spc{X}$ and $\spc{Y}$ is isometric to the vertical and horizontal subsets in $\spc{X}\times\spc{Y}$.
-Note that the product space is a length space if and only if its factors are length space (assuming non of them is empty). 
-%???DO we assume that metric space is nonempty???
-Whence the $\Rightarrow$ 
-in (\ref{SHORT.thm:product:prod-CBB}) 
-and (\ref{SHORT.thm:product:prod-CAT}) 
-follows. 
-
-\parit{``If'' part in (\ref{SHORT.thm:product:prod-CBB}) and (\ref{SHORT.thm:product:prod-CAT}).} 
-Follows from function comparison (theorem \ref{thm:conc} and \ref{thm:function-comp}),
 
 \section{Polyhedral spaces}
 
@@ -337,7 +311,7 @@ Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
 
 
-\section{Subsets in 2-dimensional space}
+\section{Polygons and their limits}
 
 Let $[a_1\dots a_n]$
 be a simple closed broken geodesic in the model plane $\Lob{2}{\kappa}$.
@@ -450,17 +424,10 @@ The following theorem was proved by Bishop in \cite{bishop:jordan};
 see also the discussion after Example 9.1.6 in the book of Burago--Burago--Ivanov \cite{BBI}.
 
 \begin{thm}{Theorem}
-Let $\Omega$ be an open simply connected proper subset of $\Lob{}{\kappa}$.
-Denote by $\Lambda$ the completion of $\Omega$ equipped with the  length metric.
-Then 
-\begin{subthm}{}
-If $\kappa\le 0$ then $\Lambda\in\cCat{}{\kappa}$. 
-\end{subthm}
-
-\begin{subthm}{}
-If $\kappa> 0$ then $\Lambda\in\cCat{}{\kappa}$ if and only if $\Omega$ does not contain half-plane.
-\end{subthm}
-
+Let $\Lambda$ be a simply connected subset in $\Lob2{\kappa}$.
+If $\kappa>0$, assume in addition that $\Lambda$ does not contain a halphsphere in its interior.
+Assume that $\Lambda$ equipped with the induced length metric forms a complete metric space.
+Then $\Lambda\in \cCat{}{\kappa}$
 \end{thm}
 
 Note that if $\Omega$ is bounded by a simple closed rectifiable curve then $\Lambda$ coincides with the closure of $\Omega$ equipped with the length metric. 
