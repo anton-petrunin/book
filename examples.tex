@@ -866,24 +866,23 @@ Now the claim follows by letting $\varphi\to 0$ and $k\to\infty$.
 \qeds
 
 \begin{thm}{Lemma}\label{lem:abs-cont}
-Let $\gamma\:[0,1]\to M$ be a geodesic of a Riemannian manifold-with-boundary $M$. Then after passing to coordinates, 
-$\gamma'$  is  Lipschitz continuous.  
+Let $\gamma$ be a geodesic of a Riemannian manifold-with-boundary $M$. Then after passing to coordinates, 
+$\gamma'$  is  locally Lipschitz continuous.  
 \end{thm}
 
 \parit{Proof.}
-Specifically, we extend a neighborhood of $p$ in $M$ to a coordinate neighborhood of $p$ in a manifold without boundary, thereby  regarding $M$ as a submanifold of $\R^m$.
-
-It suffices to reparameterize $\gamma$ by Euclidean rather than Riemannian arc-length. 
+Specifically,  we extend $M$ to a manifold $N$ without boundary, and regard a  coordinate neighborhood in $N$ of $p=\gamma(t)$ as a neighborhood  in $\R^m$.
 
 \begin{clm}{}\label{clm:pointwise-k-bound}
-The pointwise arc-chord curvature  of $\gamma$ (Definitions \ref{def:arc-chord}, \ref{ptwise-arc-chord}) is bounded above.
+The pointwise arc-chord curvature  of  $\,\gamma$ (Definitions \ref{def:arc-chord}, \ref{ptwise-arc-chord}) is bounded above.
 \end{clm}
-
+It suffices to reparameterize $\gamma$ by Euclidean arc-length, say $\gamma\:[a,b]\to \R^n$, and we do so for notational convenience. 
 %For a fixed $s \le
 %\pi/\sqrt{k}$, the curvature $k$ of a $k$-curve $\sigma$ in $\Lob2\kappa$ is determined by the ratio $s/r$ of   length   to chord-length (i.e. \emph{arc/chord} ratio) of a segment of $\sigma$ of length $s$.  
-We prove the claim by showing,  given $0\le t_0\le 1$,  that for some  $\epsilon>0$, there is a uniform upper bound on the arc/chord ratio of $\gamma|[t_1,t_2]$ if  $|t-t_0|<\epsilon$, $0\le t_1\le t\le t_2\le 1$, $|t_1-t_2|<\epsilon$. 
 
-We may suppose  $\gamma(t)$  does not lie in a line segment $\gamma|[t'_1,t'_2]$,  $t_1<t'_1<t<t'_2<t_2$, since otherwise there is nothing to prove. In particular, $\gamma(t)\in\partial M$. We may also assume $\gamma(t_1)$ and $\gamma(t_2)$ lie in $\partial M$. Indeed, if one or both of $\gamma(t_1)$ and $\gamma(t_2)$ lie in $M-\partial M$, consider the maximal segment $\overline{\gamma}$ of $\gamma|[t_1,t_2]$ with endpoints on $\partial M$.  By the triangle inequality, the arc/chord ratio of $\gamma$ is at most that of $\overline{\gamma}$.
+As lengths of subarcs of $\gamma$ approach $0$ and corresponding arc/chord ratios approach $1$, an upper bound on arc/chord curvature may be deduced from a lower bound on the maximum length for which the ratio lies in a given small interval $[1,1+\delta]$.    Thus we prove the claim by showing,  given $t\in [a,b]$,  that for some  $\epsilon>0$, there is a uniform upper bound on the arc/chord ratio of $\gamma|[t_1,t_2]$ if  $a\le t_1\le t\le t_2\le b$, $|t_1-t_2|\le \epsilon$. 
+
+We may suppose  $\gamma(t)$  does not lie in a line segment $\gamma|[t'_1,t'_2]$ where  $t_1< t'_1< t< t'_2$ or $t_1=t'_1= t< t'_2$ or $ t'_1< t= t'_2=t_2$,  since otherwise there is nothing to prove. In particular, $\gamma(t)\in\partial M$. We may also assume $\gamma(t_1)$ and $\gamma(t_2)$ lie in $\partial M$. Indeed, if one or both of $\gamma(t_1)$ and $\gamma(t_2)$ lie in $M-\partial M$, consider the maximal segment $\overline{\gamma}$ of $\gamma|[t_1,t_2]$ with endpoints on $\partial M$.  Since $\gamma$ is $C^1$, then by the triangle inequality for the polygonal curve consisting of the segments that extend $\overline{\gamma}$  to $\gamma$ together with the chord of $\overline{\gamma}$,  the arc/chord ratio of $\gamma$ is at most that of $\overline{\gamma}$.
 
 % It follows that if   $|t_1-t_2|$ is sufficiently small, then  $\tilde\alpha$ has  geodesic curvature $\le k+\epsilon$, where  $k$ is an upper bound for the principal curvatures of $\partial M$  in a neighborhood of $\gamma(t_0)$.  
 
@@ -892,25 +891,23 @@ By Lemma \ref{lem:m-w-b-geodesic-'}, the
 Riemannian osculating plane of $\gamma$ at $t$ is defined and normal to $\partial M$.
 %, i.e. as $t_1,t_2$ approach $t$, $Q$ approaches the $2$-plane that contains $\gamma'(t)$ and is normal to $\partial M$ at $p$.  
 %Moreover, these osculating planes vary continuusly with $t$. 
-Then for $\delta\in (0,\pi/2)$, we may choose $\epsilon>0$  such that  the  angle  in $\R^m$ between the normal to $\partial M$ and the $2$-plane $Q$ through points $\gamma(t_1), p=\gamma(t), \gamma(t_2)$ is bounded above by $\pi/2-\delta$, uniformly in $t$ by uniform continuity. 
-Thus if $\tilde\alpha$ is the curve in $Q$  whose image is the intersection curve $\partial M\cap Q$ 
-between $\gamma(t_1)$ and $\gamma(t_2)$, then  $\tilde\alpha$ has  geodesic curvature bounded in absolute value by some uniform constant $A>0$.%$\le k+\epsilon$, where  $k$ is an upper bound for the principal curvatures of $\partial M$  in a neighborhood of $\gamma(t_0)$.  
+Then for $\delta\in (0,\pi/2)$, we may choose $\epsilon>0$  such that  the  angle  in $\R^m$ between the normal to $\partial M$ and the $2$-plane $Q$ through points $\gamma(t_1), p=\gamma(t), \gamma(t_2)$ is bounded above by $\pi/2-\delta$, uniformly in $t$. Thus if $\tilde\alpha$ is the curve in $Q$  whose image is the intersection curve $\partial M\cap Q$ 
+between $\gamma(t_1)$ and $\gamma(t_2)$, then  $\tilde\alpha$ has  geodesic curvature bounded in absolute value by some uniform constant $A>0$.
 
 Let $\alpha$ be the geodesic of $M\cap Q$ between $\gamma(t_1)$ and $\gamma(t_2)$. 
-  In $Q$, $\alpha$ is a $C^1$ convex curve that runs along the boundary of the convex hull of $\tilde\alpha$.  Therefore the total turn of  the tangent line of any subarc of  $\alpha$ with endpoints on $\partial M$  is not more than the total absolute turn of the tangent line of the subarc of  $\tilde\alpha$ with the same endpoints (??? more explanation here and in next paragraph).  
-This total absolute turn is not more than for a subarc of the same length of a $k$-curve $\sigma$ of constant curvature $k=A$ in $\Lob2\kappa$.  
+  In $Q$, $\alpha$ is a $C^1$ convex curve that runs along the boundary of the convex hull of $\tilde\alpha$.  Therefore the total turn of  the tangent line of any subarc of  $\alpha$ with endpoints on $\partial M$  is not more than the total absolute turn of the tangent line of the subarc of  $\tilde\alpha$ with the same endpoints. This total absolute turn is not more than the total turn for a subarc $\sigma'$,  of the same length as $\tilde\alpha$, of a $k$-curve $\sigma$ of constant curvature $k=A$ in $\Lob2\kappa$.  
 
-Therefore the angles of a sufficiently fine polygonal curve inscribed in $\alpha$  are no less than the corresponding angles of a polygonal curve with the same chord-lengths inscribed in $\sigma$.
- By taking progressively finer inscriptions and applying Arm Lemma \ref{lem:arm}, we find that the chord-length of $\alpha$ is not less than the chord-length of a segment of $\sigma$ of length equal to  $\length\alpha$. Therefore $\alpha$ has arc-chord curvature $\le k+\epsilon$.
- 
+Consider a hinge whose sides are tangent  at $t_1$ and $t_2$ to $\alpha|[t_1,t_2]$; and an analogous hinge whose sides are tangent  at the endpoints of $\sigma'$ to a subarc $\sigma'$ of $\sigma$ of the same length as $\alpha|[t_1,t_2]$.  We have just seen that the hinge angle is not smaller for $\alpha|[t_1,t_2]$ than for $\sigma'$.  Therefore the 
+chord-length of $\alpha|[t_i,t_2]$ is not smaller than  the chord-length of $\sigma'$.  It follows that there is a uniform upper bound on the arc/chord ratio of $\alpha|[t_1,t_2]$ if   $a\le t_1\le t\le t_2\le b$, $|t_1-t_2|\le \epsilon$.
+
 By assumption, $\gamma$ is a Riemannian-shortest curve in $M$ between $\gamma(t_1)$ and $\gamma(t_2)$. The absolute difference of the Riemannian and Euclidean lengths of $\gamma|[t_1,t_2]$ 
  is at most a uniform constant multiple of the former. Hence the (Euclidean) length of $\gamma|[t_1,t_2]$
-  is at most a uniform constant  multiple of the length of $\alpha$.   Therefore the arc/chord ratio of $\gamma|[t_1,t_2]$ is uniformly bounded above, as required.
+  is at most a uniform constant  multiple of the length of $\alpha|[t_1,t_2]$.   Therefore the arc/chord ratio of $\gamma|[t_1,t_2]$ is uniformly bounded above, as required.
 
-\begin{clm}{}\label{clm:global-k-bound}$\gamma'$ is Lipschitz continuous in the unit-speed parameter inherited from $\,\R^m$ . 
+\begin{clm}{}\label{clm:global-k-bound}$\gamma'$ is Lipschitz continuous. 
 \end{clm}
 By \ref{clm:pointwise-k-bound} and globalization of arc-chord curvature, 
-\ref{subthm:local-global-base-angle}, the angle $\theta$ in $\R^n$ between $\gamma^+(a)$(respectively $-\gamma^-(b)$)  and the endpoint chord of $\gamma$ is at most equal to the angle between a circular arc of curvature $k$ and length $s$  in $\R^2$ and  its endpoint chord.  But $\theta$ is also the angle in $\R^n$ between the tangent lines to $\gamma$ at $t=a$ and $t=b$.  The claim follows.
+\ref{subthm:local-global-base-angle}, the angle $\theta$ in $\R^n$ between $\gamma^+(t_1)$(respectively $-\gamma^-(t_2)$)  and the endpoint chord of $\gamma|[t_1,t_2]$ is at most equal to the angle between a circular arc of curvature $k$ and length $t_2-t_1$  in $\R^2$ and  its endpoint chord.  But $\theta$ is also the angle in $\R^n$ between the tangent lines to $\gamma$ at $t_1$ and $t_2$.  The claim follows.
 \qeds
 
 Now we are ready for one of our main curvature estimates. We formulate it in terms of an 
