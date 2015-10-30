@@ -1,0 +1,412 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Tangent space in the finite dimensional case}
+
+\section{Finite dimensional case}
+
+In this section we will show that in finite dimensional case the notion of tangent space behaves on a more reasonable way.
+Note however, 
+we use tangent cone in the proof of properties of dimension of Alexandrov space.
+Thus, the previous sections of this chapter are nesessury for complete understanding the finite dimensional case.
+
+\begin{thm}{Theorem}\label{thm:tan4finite} 
+Let $\spc{L}\in \CBB m\kappa$. 
+Then for any point $p\in \spc{L}$, 
+$\T_p\in\CBB m0$, $\Sigma_p\in\CBB{m-1}1$ and moreover $\T_p=\T^\o_p$.
+\end{thm}
+
+
+This theorem gives a possibility of making definitions and proving theorems by induction on the dimension of the space.
+Often a problem in Riemannian geometry is solved by 
+reducing to a problem in Eiemannian geometry 
+in a tangent space at a point.
+In Alexandrov's geometry, instead one can reduce the problem 
+to a space of directions and uses induction on dimension. 
+For instance, see the  
+definition of boundary (\ref{sec:bry}), 
+in the proof of existence of quasigeodesics, in particular the part connected with Milka's lemma (\ref{lem:milka}) ???MORE???.
+
+\begin{thm}{Technical lemma}\label{lem:tan-tech}
+Let $\spc{L}_n\in \CBB{}{\kappa}$ and $(\spc{L}_n,p_n)\GHto(\spc{L},p)$.
+Then, given $\eps>0$ for any array of diections $\xi_1,\xi_2,\dots,\xi_\kay\in\Sigma_p$
+there is a sequence of  arrays $\xi_{1,n},\xi_{2,n},\dots,\xi_{\kay,n}\in\Sigma_{p_n}$
+such that \[\mangle(\xi_{i,n},\xi_{j,n})>\mangle(\xi_i,\xi_j)-\eps\]
+for all $i$, $j$ and all large $n$.
+\end{thm}
+
+\parit{Proof.}
+For each $\xi_i$, choose $x_i\in \spc{L}$ so that $\dir{p}{x_i}$ sufficiently close to $\xi_i$ 
+(say $\mangle(\dir{p}{x_i},\xi_i)<\tfrac\eps2$).
+By the definition of angle (Section~\ref{sec:angles}), 
+one can choose $\bar x_i\in\l]px_i\r[$ such that
+$\angk{\kappa}{p}{\bar x_i}{\bar x_j}$ is sufficiently close to $\mangle\hinge{p}{\bar x_i}{\bar x_j}$.
+In particular,
+\[\angk{\kappa}{p}{\bar x_i}{\bar x_j}>\mangle(\xi_i,\xi_j)-\eps\] 
+for all $i,j$.
+
+For each $i$, choose a sequence $\Str(p_n)\ni \bar x_{i,n}\to \bar x_i\in\spc{L}$.
+Clearly, $\angk{\kappa}{p_n}{\bar x_{i,n}}{\bar x_{j,n}}\to\angk{\kappa}{p}{\bar x_i}{\bar x_j}$.
+
+Therefore, for all large $n$, we have 
+\[\mangle\hinge{p_n}{\bar x_{i,n}}{\bar x_{j,n}}\ge\angk{\kappa}{p_n}{\bar x_{i,n}}{\bar x_{j,n}}
+>
+\mangle(\xi_i,\xi_j)-\eps.\]
+Thus, one can take $\xi_{i,n}=\dir{p_n}{\bar x_{i,n}}$.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:comp-sigma}
+Let $\spc{L}\in \CBB m\kappa$ and $p\in \spc{L}$. 
+Then $\Sigma_p\spc{L}$ is compact and $\T_p\spc{L}$ is proper.
+\end{thm}
+
+The proof is very similar to the proof of \ref{E-comeagre}???.
+
+\parit{Proof.} Assume $\Sigma_p$ is not compact.
+Then for some fixed $\delta>0$ and any $\kay\in\NN$ 
+one could find an array of directions $\xi_1,\xi_2,\dots,\xi_\kay\in \Sigma_p$, 
+such that $\mangle(\xi_i,\xi_j)>\delta$ for all $i\not=j$.
+
+Applying the technical lemma (\ref{lem:tan-tech}) for $\spc{L}_n=\spc{L}$ and $p_n\to p$, 
+we get that 
+\[\pack_\delta\Sigma_q\ge\kay\] 
+for any point $q$ sufficiently close to $p$.
+According to \ref{LinDim+-f}, one can choose $q$ arbitrary close $p$ so that $\Sigma_q\iso\SS^{m-1}$.
+Thus, one arrives to a contradiction for $\kay>\pack_\delta\SS^{m-1}$.
+
+Finally, $\T_p$ is a proper space since $\T_p=\Cone\Sigma_p$ ???why???.
+\qeds
+
+\parit{Proof of \ref{thm:tan4finite}.} 
+According to theorem \ref{thm:tan-is-CBB}, 
+there is a natural distance preserving map $\iota: \T_p\hookrightarrow \T^\o_p$.
+Thus it is enough to show that  $\iota(\T_p)=\T^\o_p$.
+I.e., given $v_\o\in \T^\o_p$ we have to construct $v\in \T_p$ such that $\iota(v)=v_\o$.
+
+Fix $v_\o\in \T^\o_p$, and choose a sequence $v_n\in \Str(p)$, such that $n\cdot\dist[{{}}]{p}{v_n}{}$ is bounded 
+and $n\blow v_n\to v_\o\in\T^\o_p$ as $n\to\o$.
+Set 
+\[v=\lim_{n\to\o} n\cdot\ddir{p}{v_n}.\]
+Since $\T_p$ is proper (\ref{lem:comp-sigma}) and $n\dist[{{}}]{p}{v_n}{}$ is bounded, this limit is defined.
+
+From \ref{thm:T-in-T^w}, we get??? that $\iota(v)=v_\o$
+\qeds
+
+\begin{thm}{Corollary}\label{thm:tan-split} 
+Let $\spc{L}\in\CBB m\kappa$, $p\in \spc{L}$.
+Then
+\[\T_{p}\iso \Lin_p \oplus \Lin_p^\perp,\] 
+where $\Lin_p$ is the linear subspace of $\T_p$ (see  defininiton \ref{def:opp+Lin}) 
+and $\Lin_p^\perp$ are subcone of $\T_x$ perpendicular to $\Lin_p$.
+\end{thm}
+
+Note that in the infinite dimesional case, this question remains open, 
+see \ref{open:split-inf-dim}.
+
+\parit{Proof.}
+Follows from splitting theorem \ref{thm:splitting} and \ref{thm:tan4finite}.
+\qeds
+
+\begin{thm}{Corollary}
+Let $\spc{L}\in\CBB m\kappa$, $p\in \spc{L}$.
+Assume $\dim\Lin_p= m-1$ then $\T_p\iso\RR_{\ge0}\times\RR^{m-1}$ and in particular $p\in\partial \spc{L}$.
+\end{thm}
+
+\parit{Proof.}
+From Corollary~\ref{thm:tan-split}, 
+we get 
+\[\T_{p}\iso \Lin_p^\perp \oplus \Lin_p.\]
+Thus $\dim \Lin_p^\perp=1$ 
+and according to ???, $\Lin_p^\perp$ is isometric to a Riemannian manifold with possibly non-empty boundary.
+Since $\Lin_p^\perp$ is also a cone, it might be isometric either to $\RR$ or $\RR_{\ge0}$.
+In the first case we get that $\T_p\iso\RR^m$, i.e. $\dim\Lin_p=m$, a contradiction.
+Therefore $\T_p\iso\RR_{\ge0}\times\RR^{m-1}$, and in particular $p\in \partial\spc{L}$.
+\qeds
+
+As a corollary of above theorem and ???, we get that $\lam\blow(\spc{L},p)\GHto(\T_p,0)$ as $\lam\to\infty$,
+the following theorem says that there is an almost canonical choice Hausdorff approximations $\lam\blow L\to \T_p$.
+
+\begin{thm}{Theorem}\label{thm:approx4tan} 
+Let $\spc{L}\in\CBB{m}{}$ 
+and $p\in \spc{L}$.
+Then there is a Gromov--Hausdorff convergence $\lam\blow\spc{L}\xGHto{\tau}\T_p$ as $\lam\to\infty$
+such that 
+\begin{subthm}{}
+for any map $\alpha\:[0,\eps)\to \spc{L}$ with $\alpha(0)=p$ and $\alpha^+(0)=v\in\T_p$,
+we have $\lam\cdot\alpha(\tfrac1\lam)\xto{\tau} v$.
+\end{subthm}
+
+\begin{subthm}{}
+Assume $f\:\spc{L}\to\RR$ is a semiconcave locally Lipschitz subfintion such that $p\in\Dom f$.
+Define $w_\lam\:\lam\blow\spc{L}\to\RR\:\lam\blow x\mapsto\lam\cdot[f(x)-f(p)]$ then $w_\lam\xto\tau\d_pf$.
+\end{subthm}
+\end{thm}
+
+Further, the convergence $\tau_p$ as in this theorem will be called \emph{canonical convergence}\index{canonical convergence}.
+
+\parit{Proof.}
+???
+\qeds
+
+\begin{thm}{Semicontinuity of space of directions}\label{thm:simicont-Sigma}
+Let $\spc{L}_n\in\CBB m\kappa$ and $\spc{L}_n\xGHto{a_n} \spc{L}$ and $\spc{L}_n\ni p_n\to p\in \spc{L}$.
+Then for any $\eps>0$,
+we have $\Sigma_{p_n}>\Sigma_p-\eps$ for all large $n$.
+(In other words, 
+if $\Sigma_{p_n}\GHto\Sigma$ then $\Sigma\ge \Sigma_p$.)
+\end{thm}
+
+\parit{Proof of \ref{thm:simicont-Sigma}.}
+Accordinng to Lemma~\ref{lem:comp-sigma}, $\Sigma_p$ is compact.
+Thus, we can choose a finite $\tfrac\eps2$-net $\xi_1,\xi_2,\dots,\xi_\kay$ in $\Sigma_p$. 
+According to the technical lemma (\ref{lem:tan-tech}), there is a sequence of arrays $\xi_{1,n},\xi_{2,n},\dots,\xi_{\kay,n}$ in $\Sigma_{p_n}$ 
+such that $\mangle(\xi_{i,n},\xi_{j,n})\z>\mangle(\xi_i,\xi_j)-\tfrac\eps2$ for all $i$ and $j$ and large enough $n$.
+
+Define a sequence of maps $\map_n\:\Sigma_p\to\Sigma_{p_n}$ the following way:
+for each $\zeta\in\Sigma_p$ choose a $\xi_i$ such that $\mangle(\xi_i,\zeta)<\tfrac\eps2$ and set $\map_n(\zeta)=\xi_{i,n}\in\Sigma_{p_n}$.
+From above, for all large $n$, we have $\mangle(\map_n(\zeta),\map_n(\zeta'))>\mangle(\zeta,\zeta')-\eps$ for any $\zeta,\zeta'\in \Sigma_p$;
+i.e. $\Sigma_{p_n}>\Sigma_p-\eps$ for all large $n$.\qeds
+
+\begin{thm}{Corollary}\label{cor:simicont-Sigma}
+Let $\spc{L}\in\CBB m\kappa$ and $p_n\to p$ be a converging sequence of points in $\spc{L}$.
+Then for any $\eps>0$, $\Sigma_{p_n}>\Sigma -\eps$ for all large $n$.
+
+Moreover, if $\dir{p}{p_n}\to\xi\in \Sigma_p$ then $\Sigma_{p_n}>\Sigma_\xi \T_p-\eps$ for all large $n$.
+\end{thm}
+
+We use this corollary to get Lemma~\ref{lem:amost=Sigma}.
+Also, since the set of Euclidean points is dense (\ref{LinDim+-f})
+the above corollary implies the following.
+
+\begin{thm}{Corollary}\label{cor:S>Sigma}
+Let $L\in\CBB m\kappa$.
+Then for any $p\in \spc{L}$, 
+$\SS^{m-1}\ge \Sigma_p$.
+\end{thm}
+
+\parit{Proof of \ref{cor:simicont-Sigma}.}
+Both parts obtained by applying Theorem~\ref{thm:simicont-Sigma} to particular data.
+For the first part, use constant sequence $\spc{L}_n=\spc{L}$.
+For the second part, use $\tfrac{1}{\dist{p}{p_n}{}}\blow\spc{L}\GHto \T_p$ 
+and 
+$\tfrac{1}{\dist{p}{p_n}{}}\blow p_n\to\xi$.%???NOTATION OF GH-CONVERGENCE HAS TO BE FIXED???
+\qeds
+
+\begin{thm}{Semicontinuity of space of differential}\label{thm:simicont-differential}
+Let $\spc{L}_n\in\CBB m\kappa$ and  $a_n,a_\infty, p\in \spc{L}$.
+Assume $a_n\to a_\infty$ as $n\to\infty$.
+Then $\liminf\d_p\dist{a_n}{}{}\le \d_p\dist{a_\infty}{}{}$
+\end{thm}
+
+\begin{thm}{Sum lemma}
+Let $\spc{L}_n\in\CBB m\kappa$ and  $p\in \spc{L}$ and $v^1,v^2,\dots,v^\kay\in \T_p$.
+Then there is a vector $w\in \T_p$ such that for any semiconcave locally Lipschitz subfunction 
+$f\:\spc{L}\subto \RR$
+we have
+$\d_pf(w)\ge\sum_i\d_pf(v^i)$.
+\end{thm}
+
+
+
+
+\section{Almost parallel sets}
+
+\begin{thm}{Definition}\label{def:parallel-set}
+Let $\spc{L}\in\CBB{m}{}$.
+A nonempty set $P\subset\spc{L}$ is called $\eps$-parallel
+if there is a point array $(a^1,a^2,\dots,a^n)$ in  $\spc{L}$
+such that the following two conditions hold.
+
+\begin{subthm}{def:parallel-set:net}
+For any $p\in P$,
+the set of directions $\{\dir{p}{a^1},\dir{p}{a^2},\dots,\dots,\dir{p}{a^n}\}$
+forms an $\eps$-dense set in $\Sigma_p$.
+\end{subthm}
+
+\begin{subthm}{def:parallel-set:almost}
+For any $i,j$ and $p,q\in P$ we have 
+$$|\mangle\hinge{p}{a^i}{a^j}-\mangle\hinge{q}{a^i}{a^j}|\le\eps.$$
+\end{subthm}
+\end{thm}
+
+\parbf{Remarks.}
+\begin{itemize}
+
+\item From the definition it follows that 
+that $\Sigma_p$ is $(3\cdot\eps)$-isometric to $\Sigma_q$.
+Indeed, it is straightforward to check that 
+there is map $f\:\Sigma_p\to \Sigma_q$ which sends a direction $\xi\in \Sigma_p$
+to  $\dir{q}{a^i}\in \Sigma_q$ 
+such that $\mangle(\dir{p}{a^i},\xi)<\eps$
+and any such map $f$ is a $(3\cdot\eps)$-isometry.
+
+
+\item Note that any one-point set $\{p\}$ in $\spc{L}$
+forms an $\eps$-parallel for any $\eps>0$.
+To prove the later one has to construct a point array $(a^i)$
+which satisfies (\ref{SHORT.def:parallel-set:net}). 
+\end{itemize}
+
+
+
+
+\begin{thm}{Proposition}
+Given a positve integer $m$,
+for any $\eps>0$ there is $\delta>0$
+such that the following holds.
+If $\spc{L}\in\CBB{}{}$ and $X\subset\spc{L}$ is an $\delta$-parallel set
+then $X$ admits a $e^{\pm\eps}$-bi-Lipschitz embedding in $\EE^\kay$,
+where $\kay$ is the maximal integer such that
+$$\Sigma_x\ge\SS^{\kay-1}-\eps$$
+for some $x\in X$.
+\end{thm}
+
+\parit{Proof.}
+Choose a maximal subarray $(c,b^1\dots,b^\kay)$ of $\bm{a}$
+such that ???.
+Let us show that the restriction of distance map 
+$\dist{\bm{b}}{}{}\:\spc{L}\to\RR^\kay$ to
+$X$
+satisfies the proposition.
+
+According to ??? $\dist{\bm{b}}{}{}$ is ???-Lipschitz.
+It remains to show that 
+$$|\dist{\bm{b}}{x}{}-\dist{\bm{b}}{y}{}|>???\cdot\dist{x}{y}{\spc{L}}$$
+for any $x,y\in X$.
+
+
+
+Fix $x,y\in X$.
+Note that 
+$$\mangle\hinge{x}{a^i}{y}+\mangle\hinge{y}{a^i}{x}
+>
+\pi-???$$
+for any $a^i$.
+Let $a^{i}$ and $a^{j}$ be the elements of the array $\bm{a}$ such that
+$$\mangle\hinge{x}{a^{i}}{y},
+\ 
+\mangle\hinge{y}{a^{j}}{x}
+<
+\eps.$$
+From above it follwos that 
+$\mangle\hinge{x}{a^i}{a^j}>\pi-???$
+???
+\qeds
+
+
+
+\begin{thm}{Theorem}
+Let $\spc{L}\in\CBB{m}{}$ 
+and $\mathfrak{C}\subset\spc{L}$ be a closed set.
+Given $\eps>0$
+there is $p\in\mathfrak{C}$ and $r>0$
+such that 
+$\oBall(p,r)\cap\mathfrak{C}$
+is $\eps$-parallel.
+\end{thm}
+
+\begin{thm}{Corollary}
+Let $\spc{L}\in\CBB{m}{}$.
+Given $\eps>0$,
+there is a covering of $\spc{L}$ by countable number of closed  $\eps$-parallel sets. 
+ 
+\end{thm}
+
+
+\parit{Proof.}
+Let $n=\max\set{\pack_\eps\Sigma_x}{x\in\mathfrak{C}}$.
+Consider set 
+\[\mathfrak{C}_n=\set{x\in\mathfrak{C}}{\pack_\eps\Sigma_x=n}.\]
+According to \ref{cor:rank>=k-open}, $\mathfrak{C}_n$ is open rel $\mathfrak{C}$.
+Define a function $s\:\mathfrak{C}_n\to\RR$ as
+\[s(x)
+=
+\sup\set{\sum_{i<j}\mangle(\xi^i,\xi^j)}%
+{\begin{aligned}
+\{&\xi^i\}\ \t{is a maximal}
+\\
+&\eps\t{-packing in}\ \Sigma_x
+ \end{aligned}
+}.\]
+
+Set $s=\sup\set{s(x)}{x\in \mathfrak{C}_n}$.
+Let us choose a point 
+$p\in\mathfrak{C}_n$ such that $s(p)$ is almost maximal,
+say 
+\[s(p)>s-\tfrac{\eps}{10\cdot n^2}.\]
+Choose a maximal $\eps$-packing $(\xi^1,\xi^2,\dots,\xi^n)$ of $\Sigma_p$ 
+such that 
+\[\sum_{i<j}\mangle(\xi^i,\xi^j)>s-\tfrac{\eps}{10\cdot n^2}.\eqlbl{eq:almost-max}\]
+Without loss of genrality, we can assume that each $\xi^i$
+is a geodesic direction;
+and 
+moreover
+\begin{itemize}
+\item For each $i$ there is $a^i\in\spc{L}$
+such that $\dir p{a^i}$ is uniquely defined and $\xi^i=\dir p{a^i}$.
+\item For each $i\ne j$,  
+$$\angk\kappa p{a^i}{a^j}+\tfrac{\eps}{10\cdot n^2}>\mangle\hinge p{a^i}{a^j}\ \ 
+\text{and}
+\ \ \angk\kappa p{a^i}{a^j}>\eps.$$
+\end{itemize}
+  
+
+Fix sufficiently small $r>0$
+and arbitrary $q\in \oBall(p,r)\cap \mathfrak{C}$.
+Since $\mathfrak{C}_n$ is open rel $\mathfrak{C}$,
+we can assume that $\pack_\eps\Sigma_q=n$.
+Choose
+ geodesics $[qa^i]$ 
+and set $\xi^i_q=\dir q{a^i}$.
+(These geodesics exist according to \ref{cor:dim>proper}.)
+From above we have that
+we get that $\{\xi^1_q,\xi^2_q,\dots,\xi^n_q\}$ is a maximal $\eps$-packing, and therefore $\eps$-net in $\Sigma_q$.
+I.e., the condition \ref{def:parallel-set:net} follows.
+
+Since $r$ is small, we also have that
+\[\mangle(\xi^i_q,\xi^j_q)>\mangle(\xi^i,\xi^j)-\tfrac{\eps}{10\cdot n^2}.\] 
+\[\sum_{i<j}\mangle(\xi^i_q,\xi^j_q)\le s.\]
+These two inequalities together with \ref{eq:almost-max} imply \ref{def:parallel-set:almost}.
+\qeds
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section{Remarks and open problems}
+
+It is not known whether exist a proper space with the same property as in Halbeisen's example (section \ref{halbeisen}).
+In other words, 
+is it possible to  prove the first conclusion of Theorem~\ref{thm:tan4finite} 
+for infinite dimensional proper $\CBB{}{}$-spaces?
+Namely:
+
+\begin{thm}{Open question}\label{open:Halb-proper}
+Assume $\spc{L}\in\CBB{}{}$ is proper. 
+Is it true that the tangent cone $\T_p$ belongs to $\CBB{}{0}$ for any $p\in\spc{L}$?
+\end{thm}
+
+\begin{thm}{Open question}\label{open:split-inf-dim}
+Let $\spc{L}\in\CBB{}{\kappa}$ and $p\in \spc{L}$.
+
+Is it true that $\T_p$ spits isometrically
+\[\T_p=\Lin_p^\perp\oplus\Lin_p\]
+where 
+$\Lin_p^\perp=\set{v\in \T_p}{\<v,x\>=0\ \t{for any}\ x\in\Lin_p}$?
+\end{thm}
+
+Compare to Theorem~\ref{thm:tan-split}
+
+
+\section{Exercises}
+
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB{}{}$, assume $[pq_i]$ covrege as to $[pq]$, $p\not=q$. 
+
+Show that if $\dim\spc{L}<\infty$ then $\mangle\hinge p{q_i}{q}\to0$.
+
+Show that if $\dim\spc{L}=\infty$ that is not longer true.
+\end{thm}
+
+
+
+
