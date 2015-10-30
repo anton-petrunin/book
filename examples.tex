@@ -17,19 +17,21 @@ where $m$ is the dimension of $\sigma$.
 \begin{subthm}{}
 The piecewise $\Lob{}1$ spaces or $\PM{}1$ spaces will be 
 will be also called 
-\index{spherical polyhedral space}\emph{spherical polyhedral spaces};
+\index{spherical polyhedral space}\emph{spherical polyhedral spaces} and denoted as $\PS{}$;
 \end{subthm}
 
 \begin{subthm}{}
 The piecewise $\Lob{}0$ spaces or $\PM{}0$ spaces will be 
 will be also called 
-\index{Euclidean polyhedral space}\emph{Euclidean polyhedral spaces};
+\index{Euclidean polyhedral space}\emph{Euclidean polyhedral spaces}
+and denoted as $\PE{}$;
 \end{subthm}
 
 \begin{subthm}{}
 The piecewise $\Lob{}{-1}$ spaces or $\PM{}{-1}$ spaces will be 
 will be also called 
-\emph{hyperbolic polyhedral space}\index{hyperbolic polyhedral space}.
+\emph{hyperbolic polyhedral space}\index{hyperbolic polyhedral space}
+and denoted as $\PH{}$.
 \end{subthm}
 
 If we do not want to specify $\kappa$, we can say that $\spc{P}$ is a \emph{polyhedral space}.
@@ -39,14 +41,17 @@ By a \index{triangulation of a polyhedral space space}\emph{triangulation of a p
 \end{thm}
 
 Note that according to the above definition,
-any $\PM{}{\kappa}$ space is compact. 
+any $\PM{}{\kappa}$ space is compact,
+but most of the statements below admit straightforward generalization to complete locally $\PM{}{\kappa}$ spaces;
+the later class of spaces includes so called 
+
 
 The dimension of a $\PM{}{\kappa}$ space $\spc{P}$
 is defined as the maximal dimension of the simplex 
 in one (and therefore any) triangulation of $\spc{P}$.
 The class of $\PM{}{\kappa}$ spaces 
-with dimension $\le m$ will be denoted 
-as $\PM{m}{\kappa}$.
+with dimension $m$ and $\le m$ will be denoted 
+as $\PM{m}{\kappa}$ and $\PM{\le m}{\kappa}$.
 
 
 \parbf{Links.}
@@ -79,31 +84,30 @@ is simetric o the product space
 Equivalently, the space of directions $\Sigma_p$
 can be isometrically identified with the 
 $\kay$-th spherical suspension over $\Link_\sigma$;
-i.e., 
-\[\Sigma_p\iso\SS^{\kay}(\Link_\sigma).\]
+that is, 
+\[\Sigma_p\iso\Susp^{\kay}(\Link_\sigma).\]
 
 If $\spc{P}\in \PM{m}\kappa$
-then $\Sigma_p\in\PM{m-1}1$ for any $p\in \spc{P}$;
-i.e., the space of directions of $m$-dimensional polyhedral space 
+then $\Sigma_p\in\PS{\le m-1}{}$ for any $p\in \spc{P}$;
+that is, the space of directions of $m$-dimensional polyhedral space 
 at any point is an spherical polyhedral space of dimension at most $m-1$. 
 
 In particular, 
-the isometry class of $\Link_\sigma$ together with $\dim\sigma$
-determines the isometry class of $\Sigma_p$ for 
-any point $p$ in the interior of $\sigma$ and the other way arround.
+for any point $p$ in the interior of $\sigma$,
+the isometry class of $\Link_\sigma$ together with $\kay=\dim\sigma$
+determines the isometry class of $\Sigma_p$ 
+ and the other way around.
 
 Further a neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
 In fact it is true that any compact length space for which any point has a neighborhood 
 which isometric to a neighborhood of the tip of the $\kappa$-cone is a $\PM{}\kappa$ space;
 see \cite{lebedeva-petrunin-poly}.
 
-\begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}\in\PM{}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
-Then $\spc{P}\in\CBB{}{}$ if and only if the following conditions hold.
+\begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}\in\PM{m}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
+Then $\spc{P}\in\CBB{}{\kappa}$ if and only if the following conditions hold.
 
 \begin{subthm}{} $\tau$ is \emph{pure}; 
-i.e.,
-there is an integer $m\ge 0$ 
-such that is any simplex in $\tau$ is formed by a face of some simplex of dimension exactly $m$. 
+that is, any simplex in $\tau$ is formed by a face of some simplex of dimension exactly $m$. 
 \end{subthm}
 
 \begin{subthm}{thm:poly-CBB:m-1}
@@ -119,20 +123,14 @@ The link of any simplex of dimension $m-2$ is
 isometric to a circle of length $\le 2\cdot\pi$
 or a closed real interval or length $\le \pi$.
 \end{subthm}
-
-In this case the integer value $m$ described above is the dimension of $\spc{P}$;
-i.e., $\spc{P}\in\CBB{m}{\kappa}$.
 \end{thm}
 
 Note that the condition (\ref{SHORT.thm:poly-CBB:connected})
 is equivalent to the following:
 
 \begin{itemize}
- \item[{\it \ref{SHORT.thm:poly-CBB:connected}$'$)}] If $\spc{P}^{\circ}$ denotes $\spc{P}$ with all the simplices
-of dimension $\le m-2$ removed
-then $\spc{P}$ coincides with the completion of $\spc{P}^{\circ}$.
-
-In other words, any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
+ \item[{\it \ref{SHORT.thm:poly-CBB:connected}$'$)}] 
+Any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
 $\gamma_n\:[0,1]\to \spc{P}$ 
 such that $\gamma_n(t)$ cross only simplexes of dimension $m$ and $m-1$.
 \end{itemize}
@@ -157,7 +155,10 @@ $$\T_p\mc\kappa\z
 Hence it is sufficient to show that 
 $$\curv\T_p\mc\kappa\ge \kappa\eqlbl{eq:curv(T_p)>=k}$$
 for any $p\in \spc{P}$.
-According to ???, the later equivalent to \begin{clm}{}\label{clm:curv+diam}
+
+By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
+the later equivalent to 
+\begin{clm}{}\label{clm:curv+diam}
 $\diam\Sigma_p\le \pi$ and $\curv\Sigma_p\ge 1$.
 \end{clm}
 
@@ -165,10 +166,10 @@ $\diam\Sigma_p\le \pi$ and $\curv\Sigma_p\ge 1$.
 If $m=2$ then \ref{clm:curv+diam} follows from (\ref{SHORT.thm:poly-CBB:m-1}).
 
 To prove the case $m\ge 3$,
-note that $\Sigma_p$ is a polyhedral space and 
-by (\ref{SHORT.thm:poly-CBB:connected}), $\Sigma_p$ is connected
-and by induction hypothesis $\curv\Link_p\ge 1$.
-By ???, $\Link_p\in\CBB{m}{1}$.\qeds
+note that $\Sigma_p$ is an $(m-1)$-dimensional spherical polyhedral space and all the conditions of the theorem hold for $\Sigma_p$.
+It remains to apply the induction hypothesis.\qeds
+
+Recall that the definition of $\ell$-simply connected spaces is given in \ref{def:l-s.c.}.
 
 
 \begin{thm}{Theorem}\label{thm:PL-CAT}
@@ -193,7 +194,8 @@ Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
 is isometric to the $\kappa$-cone over 
 the $\Sigma_p$.
-By ???, it is sufficent to show that 
+By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
+it is sufficient to show that 
 \[\Sigma_p\in \Cat{}1\eqlbl{eq:Sigma-in-CAT(1)}\]
 
 Note that $\Sigma_p\in \PM{m-1}1$
@@ -311,8 +313,9 @@ Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
 
 
-\section{Polygons and their limits}
+\section{Subsets of model space}
 
+\parbf{Two-dimensional case.}
 Let $[a_1\dots a_n]$
 be a simple closed broken geodesic in the model plane $\Lob{2}{\kappa}$.
 The closure $P$ of a bounded component of 
@@ -327,7 +330,7 @@ one on each side of $[a_1\dots a_n]$.
 Note that the half-spheres in $\Lob{}\kappa$ for $\kappa>0$ are included in the class of polygons.
 If a polygon is not a half-sphere then 
 we can assume that the broken geodesic $[a_1\dots a_n]$ nondegenerate, 
-i.e., all the angles 
+that is, all the angles 
 $\mangle \hinge{a_1}{a_n}{a_2}$,
 $\mangle \hinge{a_2}{a_1}{a_3},
 \dots,
@@ -369,11 +372,13 @@ First note that $P$ has at least one convex vertex, say $v$.
 Indeed, otherwise its complement is convex.
 The later contradicts either
 that $P$ is bounded for $\kappa\le  0$ 
-orthat $P$ does not contains a half-sphere in its interior for $\kappa\le  0$.
+or that $P$ does not contains a half-sphere in its interior for $\kappa\le  0$.
 
 Let $[uv]$ and $[vw]$ be the sides of $P$ meeting at $v$.
 If the $\l]uw\r[$ lies in the interior of $P$ 
 then the proposition is proved.
+
+%???PIC
 
 Otherwise let $x\in[uv]$ be the point closest to $v$
 such that $\l]xw\r[$ does not lie completely in the interior of $P$.
@@ -384,7 +389,7 @@ Hence the result follows.
 \qeds
 
 
-\parit{Proof.}
+\parit{Proof of Theorem~\ref{thm:2-d-cba}.}
 First let us show that the condition in (\ref{SHORT.thm:2-d-cba:k>0}) is necessary if $\kappa>0$. 
 Applying rescaling, we can assume that $\kappa=1$ and therefore $\Lob2\kappa=\SS^2$.
 
@@ -398,7 +403,7 @@ Note that for small $\eps>0$ the triangle $ [x^1x^2x^3]$ lies in $P$.
 On the other hand for some $z\in[x^2x^3]$, the geodesic $[x^1z]$ does not lie in $P$ completely.
 Hence 
 \[\dist{x^1}{z}{P}>\dist{x^1}{z}{\SS^2};\]
-i.e., the point-on-side comparison (\ref{cat-monoton}) does not hold for $[x^1x^2x^3]$
+that is, the point-on-side comparison (\ref{cat-monoton}) does not hold for $[x^1x^2x^3]$
 and hence $P\z\notin \cCat{}{\kappa}{}$.
 
 If $P$ is a half-sphere then obviously $P\in\cCat{}{\kappa}$.
@@ -420,21 +425,24 @@ Therefore, by Reshetnyak's gluing theorem,
 $P\in\cCat{}{\kappa}$.
 \qeds
 
-The following theorem was proved by Bishop in \cite{bishop:jordan};
+The following theorem 
+is a partial case of a more general result proved by Bishop in \cite{bishop:jordan};
 see also the discussion after Example 9.1.6 in the book of Burago--Burago--Ivanov \cite{BBI}.
 
-\begin{thm}{Theorem}
-Let $\Lambda$ be a simply connected subset in $\Lob2{\kappa}$.
-If $\kappa>0$, assume in addition that $\Lambda$ does not contain a halphsphere in its interior.
-Assume that $\Lambda$ equipped with the induced length metric forms a complete metric space.
-Then $\Lambda\in \cCat{}{\kappa}$
+\begin{thm}{Theorem}\label{thm:2d-bishop}
+Let $\Omega$ be an open  proper simply connected subset in $\Lob2{\kappa}$.
+If $\kappa>0$, assume in addition that $\Omega$ does not contain a closed halphsphere.
+
+Consider $\Omega$ with the induced intrinsic metric.
+Then the completion $\hat{\Omega}$ of $\Omega$ is a $\cCat{}{\kappa}$ space.
 \end{thm}
 
-Note that if $\Omega$ is bounded by a simple closed rectifiable curve then $\Lambda$ coincides with the closure of $\Omega$ equipped with the length metric. 
-In general, the space $\Lambda$ admits natural length-preserving map in $\Lob{}{\kappa}$, 
-but in general 
-this map is not injective 
-and its image is proper subset of the closure of $\Omega$.
+\parbf{Remark.}
+Note that if $\Omega$ is bounded by a simple closed rectifiable curve its completion of $\hat{\Omega}$ is isometric to the closure $\bar{\Omega}$  of $\Omega$ equipped with the length metric. 
+In general, the space $\hat{\Omega}$ admits natural length-preserving map in $\bar{\Omega}$, 
+but 
+this map might be not injective 
+and its image might be proper subset of $\bar{\Omega}$.
 
 %%%%%%%%+PIC???
 
@@ -464,25 +472,48 @@ for all $i$ and $j$.
 Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
 \qeds
 
-\section{Subsets in 3-dimensional space}
+\parbf{Two-convexity.}
+Assume for a subset $A\subset \Lob{m}{\kappa}$
+the following condition holds for any open $2$-dimensional halfspace $W$ in $\Lob{m}{\kappa}$.
+If a closed curve $\gamma\:\SS^1\to A\cap W$ is hull homotopic in $A$
+then it is 
+hull homotopic $\gamma\subset A\cap W$.
+In this case we say that $S$ is \index{2-convex}\emph{2-convex}.
+This definition is closely related to the one given by Gromov in \cite[???]{gromov:SaGMC}, see also \cite{panov-petrunin:sweeping}.
 
-Assume $\spc{P}\in \PM3\kappa$ be such that the space of directions at each point of $\spc{P}$  is isometric to the unit sphere or spherical polygon.
-Then 
+Note that according to this definition, if $\kappa\le 0$ then any subset $A\subset \Lob{2}{\kappa}$ is 2-convex
+and if $\kappa>0$ it is 2-convex if it does not contain a closed halfspace in its interior.
+Therefore Theorem \ref{thm:2-d-cba} can be reformulated as any 2-convex polygon in $\Lob{2}{\kappa}$ equipped with induced intrinsic metric is $\cCat{}{\kappa}$ space.
+Similarly one can reformulate Theorem~\ref{thm:2d-bishop}.
 
+Note that intersection of arbitrary collection of  two-convex sets is two-convex.
+The later makes possible to define \emph{two-convex hull} $\Conv_2 A$ of a set $A$
+as the minimal two-convex set containing $A$.
+
+
+\parbf{Three-dimensional case.}
 A subset $K$ of $\Lob{m}{\kappa}$ is called \index{polytope}\emph{polytope} 
 if it can be presented as a union of finite number of simplices.
 
-A point $p\in \partial K$ is called vertex if it does 
+Note any polytope admits a triangulation admits a finite triangulation.
+Therefore any polytope equipped with induced intrinsic metric 
+forms a polyhedral space as defined in \ref{def:poly}.
 
-Note that any polytope  admits a finite triangulation.
+\begin{thm}{Proposition}
+Let $\Omega\subset\Lob{3}{\kappa}$ be an open.
+Assume $W_1,W_2,\dots$ is a dense sequence of 2-dimensional halphspaces $\Lob{3}{\kappa}$.
+Denote by $\Omega=\Omega_0\subset \Omega_1\subset\dots $ the sequence of open sets
+such that $\Omega_{n}$ include all the points in $\Omega_{n-1}$ and all connected components 
+of the complement of $\Omega_n\cup W_n$ which do not have point on the boundary line 
+
+\end{thm}
+
+
+
 
 \begin{thm}{Theorem}
 Let $K$ be a polytope in $\Lob{3}{\kappa}$.
-Assume that the interior $K^\circ$ of $K$ is connected.
-Let us equip $K^\circ$ with the length metric and denote by $\hat K$ its completion.
-
-Then $\hat K$ is $\cCat{}{\kappa}$ space if and only if the link of each vertex of $K$
-does not contain a half-sphere in its interior.
+Then $K$ id 2-convex if and only if $K$ equipped with intrinsic metric has curvature $\le \kappa$ at any point.
 \end{thm}
 
 
@@ -499,7 +530,7 @@ does not contain a half-sphere in its interior.
 
 \parit{Proof.}
 Assume that $\spc{P}$ is not two-convex;
-i.e., there is a tetrahedron $\Delta$,
+that is, there is a tetrahedron $\Delta$,
 such that three of its faces lie in $\spc{P}$,
 but the forth does not.
 
@@ -526,25 +557,13 @@ Applying Reshetnyak gluing theorem (???) we get that $R\in\cCat{2}{1}$.
 
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
-Let $\Omega$ be an open
+Let $\Omega$ be an open simply connected 
 subset of $\Lob{3}{\kappa}$.
-Then $\Shef\Omega$
-has curvature $\le\kappa$ 
-if and only if $\Omega$ is two-convex and ???.
+Equip $\Omega$ with the induced length metric 
+and let $\hat \Omega$ be its completion.
+Then $\hat \Omega$ has curvature $\le\kappa$ at every point 
+if and only if $\Omega$ is two-convex.
 \end{thm}
-
-In the proof we will need the following lemmas.
-
-\begin{thm}{Lemma}
-Let $P\subset \Lob{m}{\kappa}$ be a convex closed set.
-Assume that for any 2-dimensional subspace $W\subset\Lob{m}{\kappa}$,
-the intersection $P\cap W$ is a 2-dimensional polyhedron.
-Then $P$ is a polyhedron.
-\end{thm}
-
-\parit{Proof.}
-???
-\qeds
 
 
 \begin{thm}{Exercise}\label{ex:polygon-slices}
@@ -555,14 +574,13 @@ the set $K\cap W$ is a polytope.
 Then $K$ is a polytope.
 \end{thm}
 
-
 \begin{thm}{Lemma}\label{lem:loc-concave}
-Let $\Omega$ be an open set in $\Lob{3}{\kappa}$
+Let $\Omega$ be an open set in $\Lob{3}{\kappa}$.
 Then $\Conv_2\Omega$ is an open set.
  
 Moreover, the set $\Lambda=\Lob{3}{\kappa}\backslash(\bar\Omega\cup\Conv_2\Omega)$
  is locally convex;
-i.e., for any $x\in\Lambda$ therew is $\eps>0$ such that the intersection
+that is, for any $x\in\Lambda$ therew is $\eps>0$ such that the intersection
 $\oBall(x,\eps)\cap(\Lambda\backslash\Omega^{(2)})$
 is convex.
 \end{thm}
@@ -612,7 +630,7 @@ Consider the complement
 $\Lambda=\Lob{3}{\kappa}\backslash \Omega$ equipped with the length metric.
 Note that $\Lambda'=\Lob{3}{\kappa}\backslash \Omega'$
 is convex in $\Lambda$;
-i.e., for any two points $x,y\in \Lambda'$ any geodesic
+that is, for any two points $x,y\in \Lambda'$ any geodesic
 $[xy]_\Lambda$ lies in $\Lambda'$.
 
 In particular, if $W$ is a 2-dimensional subspace of $\Lob3\kappa$ 
@@ -632,7 +650,8 @@ the boundary of $L$ is formed by the intersections s $F'_i\cap W$
 and locally concave arcs.
 
 Arguing by contradiction, 
-assume that $L$ is not interior of a polytope then there is a smooth extremal point on one of these arcs; i.e., there is a point $x\in\partial_W L$ such that ???.
+assume that $L$ is not interior of a polytope then there is a smooth extremal point on one of these arcs; 
+that is, there is a point $x\in\partial_W L$ such that ???.
 Without loss of generality, we can assume that $x$ does not lie on a line connecting a pair of vertices of $F_1',\dots,F_n'$.
 
 Consider the local supporting plane $\Pi$ to $\Lambda$ at $x$
@@ -855,7 +874,7 @@ The pointwise arc-chord curvature  of $\gamma$ (Definitions \ref{def:arc-chord},
 \end{clm}
 
 %For a fixed $s \le
-%\pi/\sqrt{k}$, the curvature $k$ of a $k$-curve $\sigma$ in $\Lob2\kappa$ is determined by the ratio $s/r$ of   length   to chord-length (i.e. \emph{arc/chord} ratio) of a segment of $\sigma$ of length $s$.  
+%\pi/\sqrt{k}$, the curvature $k$ of a $k$-curve $\sigma$ in $\Lob2\kappa$ is determined by the ratio $s/r$ of   length   to chord-length (that is \emph{arc/chord} ratio) of a segment of $\sigma$ of length $s$.  
 We prove the claim by showing,  given $0\le t_0\le 1$,  that for some  $\epsilon>0$, there is a uniform upper bound on the arc/chord ratio of $\gamma|[t_1,t_2]$ if  $|t-t_0|<\epsilon$, $0\le t_1\le t\le t_2\le 1$, $|t_1-t_2|<\epsilon$. 
 
 We may suppose  $\gamma(t)$  does not lie in a line segment $\gamma|[t'_1,t'_2]$,  $t_1<t'_1<t<t'_2<t_2$, since otherwise there is nothing to prove. In particular, $\gamma(t)\in\partial M$. We may also assume $\gamma(t_1)$ and $\gamma(t_2)$ lie in $\partial M$. Indeed, if one or both of $\gamma(t_1)$ and $\gamma(t_2)$ lie in $M-\partial M$, consider the maximal segment $\overline{\gamma}$ of $\gamma|[t_1,t_2]$ with endpoints on $\partial M$.  By the triangle inequality, the arc/chord ratio of $\gamma$ is at most that of $\overline{\gamma}$.
@@ -865,7 +884,7 @@ We may suppose  $\gamma(t)$  does not lie in a line segment $\gamma|[t'_1,t'_2]$
 
 By Lemma \ref{lem:m-w-b-geodesic-'}, the 
 Riemannian osculating plane of $\gamma$ at $t$ is defined and normal to $\partial M$.
-%, i.e. as $t_1,t_2$ approach $t$, $Q$ approaches the $2$-plane that contains $\gamma'(t)$ and is normal to $\partial M$ at $p$.  
+%, that is as $t_1,t_2$ approach $t$, $Q$ approaches the $2$-plane that contains $\gamma'(t)$ and is normal to $\partial M$ at $p$.  
 %Moreover, these osculating planes vary continuusly with $t$. 
 Then for $\delta\in (0,\pi/2)$, we may choose $\epsilon>0$  such that  the  angle  in $\R^m$ between the normal to $\partial M$ and the $2$-plane $Q$ through points $\gamma(t_1), p=\gamma(t), \gamma(t_2)$ is bounded above by $\pi/2-\delta$, uniformly in $t$ by uniform continuity. 
 Thus if $\tilde\alpha$ is the curve in $Q$  whose image is the intersection curve $\partial M\cap Q$ 
@@ -963,7 +982,7 @@ Here is yet a source of examples of $\CBB{}{}$-spaces.
 Let $M$ be an $m$-dimensional Riemannian manifold 
 with sectional curvature $\ge \kappa$ 
 and $F\subset M$ be a convex hypersurface equipped with the length-metric;
-i.e., $F$ bounds a convex set. 
+that is, $F$ bounds a convex set. 
 Then $F\in\CBB{m-1}\kappa$.
 \end{thm}
 

@@ -8,6 +8,7 @@
 \def\EE{\mathbb{E}}
 \def\HH{\mathbb{H}}
 \def\PP{\mathbb{P}} 
+\def\LL{\mathbb{L}}
 \def\NN{\mathbb{N}}  
 \def\RR{\mathbb{R}}  
 \def\ZZ{\mathbb{Z}} 
@@ -289,6 +290,9 @@
 {\ifthenelse{\equal{#2}{}}{\overline{\text{\rm CAT}}{}^{#1}}{\overline{\text{\rm CAT}}{}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
 \newcommand*{\Lob}[3][{}]{\mathbb{M}_{#1}^{#2}[{#3}]}
 \newcommand*{\PM}[3][{}]{\mathbf{P}\mathbb{M}_{#1}^{#2}[{#3}]}
+\newcommand*{\PS}[2][{}]{\mathbf{P}\mathbb{S}_{#1}^{#2}}
+\newcommand*{\PE}[2][{}]{\mathbf{P}\mathbb{E}_{#1}^{#2}}
+\newcommand*{\PH}[2][{}]{\mathbf{P}\mathbb{H}_{#1}^{#2}}
 %{\text{\rm \CYRL}^{#1}_{#2}}
 %{\ifthenelse{\equal{#1}{+}}{\ifthenelse{\equal{#2}{}}{\text{{\cyr L}}_{#1}}{\text{{\cyr L}}_{#1}[#2]}}{\ifthenelse{\equal{#2}{}}{\text{{\cyr L}}^{#1}}{\text{{\cyr L}}^{#1}[#2]}}}
 %\newcommand*{\Lobs}[2]{\ifthenelse{\equal{#1}{+}}{\ifthenelse{\equal{#2}{}}{\text{{\cyrs L}}_{#1}}{\text{{\cyrs L}}_{#1}[#2]}}{\ifthenelse{\equal{#2}{}}{\text{{\cyrs L}}^{#1}}{\text{{\cyrs L}}^{#1}[#2]}}}
