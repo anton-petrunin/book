@@ -197,7 +197,6 @@ it is sufficient to show that
 Note that $\Sigma_p\in \PM{m-1}1$
 and the links of $\Sigma_p$ are isometric to the links of $\spc{P}$. 
 By induction hypothesis we get $\curv\Sigma_p\le 1$.
-
 Applying Generalized Hadamard--Cartan theorem \ref{thm:hadamard-cartan-gen},
 we get \ref{eq:Sigma-in-CAT(1)}.
 \qeds
@@ -217,6 +216,7 @@ If the above condition satisfied only for $\kay=2$ then we say that $\mathcal{S}
 \end{thm}
 
 Note that every flag complex is determined by its 1-skeleton.
+
 
 \begin{thm}{Proposition}\label{prop:no-trig}
 A simplicial complex $\mathcal{S}$ is flag if and only if 
@@ -311,6 +311,11 @@ do not have common interior points.
 The same argument as above shows that $\gamma$ spends time $=\pi$ in interior of $\Star_{v'}$.
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
+
+\begin{thm}{Exercise}
+Show that the barycentric subdivision of any simplicial complex is a flag complex.
+Conclude that any simplicial complex is homeomorphic to a $\cCat{}{1}$ space.
+\end{thm}
 
 
 \section{Subsets of model space}
@@ -473,23 +478,56 @@ Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
 \qeds
 
 \parbf{Two-convexity.}
-Assume for a subset $A\subset \Lob{m}{\kappa}$
-the following condition holds for any open $2$-dimensional halfspace $W$ in $\Lob{m}{\kappa}$.
+Assume for a subset $A\subset \EE^m$
+the following condition holds for any affine $2$-dimensional subspace $W\subset\EE^m$.
 If a closed curve $\gamma\:\SS^1\to A\cap W$ is hull homotopic in $A$
-then it is 
+then $\gamma$ 
 hull homotopic $\gamma\subset A\cap W$.
 In this case we say that $S$ is \index{2-convex}\emph{2-convex}.
-This definition is closely related to the one given by Gromov in \cite[???]{gromov:SaGMC}, see also \cite{panov-petrunin:sweeping}.
+This definition is closely related to the one given by Gromov in \cite[\S\textonehalf]{gromov:SaGMC}, see also \cite{panov-petrunin:sweeping}.
 
-Note that according to this definition, if $\kappa\le 0$ then any subset $A\subset \Lob{2}{\kappa}$ is 2-convex
-and if $\kappa>0$ it is 2-convex if it does not contain a closed halfspace in its interior.
-Therefore Theorem \ref{thm:2-d-cba} can be reformulated as any 2-convex polygon in $\Lob{2}{\kappa}$ equipped with induced intrinsic metric is $\cCat{}{\kappa}$ space.
-Similarly one can reformulate Theorem~\ref{thm:2d-bishop}.
+Note that according to this definition any simply connected subset in $\EE^2$ is 2-convex.
 
 Note that intersection of arbitrary collection of  two-convex sets is two-convex.
 The later makes possible to define \emph{two-convex hull} $\Conv_2 A$ of a set $A$
 as the minimal two-convex set containing $A$.
 
+The following proposition describes a construction producing $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+
+\begin{thm}{Proposition}
+Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
+sequence of planes in $\EE^3$.
+Given an open set $\Omega$ consider 
+the recucevly defined sequence of open sets 
+$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
+such that 
+$\Omega_n$ is the union of $\Omega_{n-1}$ 
+and all the bounded compontnets of 
+$\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
+Then 
+\[\Conv_2\Omega=\bigcup_n\Omega_n.\]
+
+In particular the two-hull of open set is open.
+\end{thm}
+
+\parit{Proof.}
+Set 
+\[\Omega'=\bigcup_n\Omega_n.\]
+Note that $\Omega'$ is a union of open set, in particular it is open.
+
+The inclusion $\Conv_2\Omega\supset\Omega'$
+is evident.
+
+It remains to show that $\Omega'$ is two-convex.
+Assume contrary; 
+that for a plane $\Pi$ 
+there is a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
+which is null-homotopic in $\Omega'$,
+but not null-homotopic in $\Pi\cap\Omega'$.
+
+By approximation we can assume that $\Pi=\Pi_n$ and $n$ is large enogh so that $\gamma$ lies in $\Omega_{n-1}$.
+The latter contradicts the $n$-th step in the construction. 
+\qeds
 
 \parbf{Three-dimensional case.}
 A subset $K$ of $\Lob{m}{\kappa}$ is called \index{polytope}\emph{polytope} 
@@ -499,34 +537,17 @@ Note any polytope admits a triangulation admits a finite triangulation.
 Therefore any polytope equipped with induced intrinsic metric 
 forms a polyhedral space as defined in \ref{def:poly}.
 
-\begin{thm}{Proposition}
-Let $\Omega\subset\Lob{3}{\kappa}$ be an open.
-Assume $W_1,W_2,\dots$ is a dense sequence of 2-dimensional halphspaces $\Lob{3}{\kappa}$.
-Denote by $\Omega=\Omega_0\subset \Omega_1\subset\dots $ the sequence of open sets
-such that $\Omega_{n}$ include all the points in $\Omega_{n-1}$ and all connected components 
-of the complement of $\Omega_n\cup W_n$ which do not have point on the boundary line 
-
-\end{thm}
-
-
-
 
 \begin{thm}{Theorem}
-Let $K$ be a polytope in $\Lob{3}{\kappa}$.
-Then $K$ id 2-convex if and only if $K$ equipped with intrinsic metric has curvature $\le \kappa$ at any point.
+Let $\Omega$ be the interior of a polytope $K$ in $\EE^3$.
+Denote by $\hat \Omega$ the completion of $\Omega$ equipped with the induced length metric,
+Then $\hat\Omega$ has nonpositive curvature 
+if and only if $\Omega$ is two-convex.
 \end{thm}
 
-
-
-\begin{thm}{Corollary}
-Let $K$ be a polytope in $\Lob{3}{\kappa}$ 
-which is homeomorphic to a connected manifold with boundary.
-Then $K$ equipped with the length metric 
-has curvature $\le\kappa$
-if and only if 
-the link of each vertex of $K$
-does not contain a half-sphere in its interior.
-\end{thm} 
+\parbf{Remark.}
+In the most cases, $\hat\Omega$ is isometric to $K$ with induced intrinsic metric,
+but in general we only have locally distance preserving map $\hat\Omega\toK$ which is onto but in general may be not injective. Say consider a polytope with a 
 
 \parit{Proof.}
 Assume that $\spc{P}$ is not two-convex;
@@ -1034,66 +1055,7 @@ Therefore $(F,\rho)$ is an Alexandrov space with curvature $\ge \kappa$.\qeds
 We are not aware of any proof of theorem \ref{thm:buyalo} which is not based on the Gauss formula. 
 Finding such a proof would be interesting on its own, and also could lead to the generalization of theorem \ref{thm:buyalo} to the case when $M$ is an Alexandrov space.
 
-If $M$ is Euclidean space, there is a beautiful purely synthetic proof in \cite{milka-conv}.
-I.e., it proves the following corollary of Buyalo's theorem.
 
-\begin{thm}{Corollary} 
-Let $F\subset \EE^m$ be a convex hypersurface equipped 
-with the length-metric; 
-i.e., $F$ bounds a convex set.
-Then $F\in\CBB{m-1}0$.
-\end{thm}
-
-\parit{Sketch of Milka's proof.}
-We will assume that $F$ is smooth;
-the non-smooth case require only minor modifications. 
-
-Denote by $H$ the union of $F$ and the exterior points of $F$.
-
-Let $\alpha\:[0,a]\to F$ be a geodesic in $F$.
-Given $t_0\in [0,a]$, 
-consider the curve $\alpha_{t_0}\:[0,a]\to H$ defined the following way
-\[\alpha_{t_0}(t)
-=
-\left[
-\begin{aligned}
-&\alpha(t)&&\text{if}&t\le t_0
-\\
-&\alpha(t_0)+(t-t_0)\cdot \alpha^+(t_0)&&\text{if}&t> t_0
-\end{aligned}
-\right.
-\]
-Note that $\alpha_{t_0}$ is a geodesic in $H$ 
-and $\alpha_0$ is a straight segment of the same length as $\alpha$.
-
-Assume $\alpha\:[0,a]\to F$ and $\beta\:[0,b]\to F$
-be two geodesics in $F$ which stat at the same point;
-say $p=\alpha(0)=\beta(0)$.
-
-Set $\alpha(a)=x$,
-$\beta(b)=y$,
-$\alpha_0(a)=\hat x$ and 
-$\beta_0(b)=\hat y$.
-
-Note that $[p\hat x\hat y]=\~\triangle (pxy)_F$.
-Therefore it is sufficient to show that 
-\[\dist{\hat x}{\hat y}{H}\ge \dist{x}{y}{H}.\]
-
-Consider the function 
-$d(t,\tau)
-=
-\dist{\alpha_t(a)}{\beta_\tau(b)}{H}$.
-Note that $\partial_t h(t,\tau)\ge 0$
-and $\partial_\tau h(t,\tau)\ge 0$
-if both points $\alpha_t(a)$ and $\beta_\tau(b)$ lie on the boundary of convex hull of $F\cup\{\alpha_t(a),\beta_\tau(b)\}$.
-
-Thereofore it is sufficient to show that 
-there is a continuous nondecreasing function
-$\tau\:[0,a]\to[0,b]$
-such $\tau(0)=0$ and $\tau(a)=b$ 
-such that for any $t$ the points $\alpha_t(a)$ and $\beta_{\tau(t)}(b)$ lie on the boundary of $\Conv(F\cup\{\alpha_t(a),\beta_\tau(b)\})$.
-We leave this last statement as an exercise.
-\qeds
 
 \section{Comments and open problems}
 
