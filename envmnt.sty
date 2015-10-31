@@ -52,7 +52,7 @@
 
 %SUBTHEOREM 
 \newcounter{subthm}[thm]
-\renewcommand{\thesubthm}{\thethm\textit{\hskip-0.03em \alph{subthm}}}
+\renewcommand{\thesubthm}{\hbox{\thethm\textit{\hskip-0.03em \alph{subthm}}}}
 \newcounter{clone}[thm]
 \renewcommand{\theclone}{\textit{\alph{subthm}}}
 \newenvironment{subthm}[1]{\ifthenelse{\equal{#1}{}}

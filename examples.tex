@@ -439,12 +439,12 @@ Let $\Omega$ be an open  proper simply connected subset in $\Lob2{\kappa}$.
 If $\kappa>0$, assume in addition that $\Omega$ does not contain a closed halphsphere.
 
 Consider $\Omega$ with the induced intrinsic metric.
-Then the completion $\hat{\Omega}$ of $\Omega$ is a $\cCat{}{\kappa}$ space.
+Then the completion $\Omega^*$ of $\Omega$ is a $\cCat{}{\kappa}$ space.
 \end{thm}
 
 \parbf{Remark.}
-Note that if $\Omega$ is bounded by a simple closed rectifiable curve its completion of $\hat{\Omega}$ is isometric to the closure $\bar{\Omega}$  of $\Omega$ equipped with the length metric. 
-In general, the space $\hat{\Omega}$ admits natural length-preserving map in $\bar{\Omega}$, 
+Note that if $\Omega$ is bounded by a simple closed rectifiable curve its completion of $\Omega^*$ is isometric to the closure $\bar{\Omega}$  of $\Omega$ equipped with the length metric. 
+In general, the space $\Omega^*$ admits natural length-preserving map in $\bar{\Omega}$, 
 but 
 this map might be not injective 
 and its image might be proper subset of $\bar{\Omega}$.
@@ -494,7 +494,7 @@ as the minimal two-convex set containing $A$.
 
 The following proposition describes a construction producing $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:2-conv-construction}
 Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
 sequence of planes in $\EE^3$.
 Given an open set $\Omega$ consider 
@@ -530,39 +530,45 @@ The latter contradicts the $n$-th step in the construction.
 \qeds
 
 \parbf{Three-dimensional case.}
-A subset $K$ of $\Lob{m}{\kappa}$ is called \index{polytope}\emph{polytope} 
+A subset $K$ of $\EE^m$ is called \index{polytope}\emph{polytope} 
 if it can be presented as a union of finite number of simplices.
 
 Note any polytope admits a triangulation admits a finite triangulation.
 Therefore any polytope equipped with induced intrinsic metric 
-forms a polyhedral space as defined in \ref{def:poly}.
+forms a Euclidean polyhedral space as defined in \ref{def:poly}.
 
 
-\begin{thm}{Theorem}
+\begin{thm}{Theorem}\label{thm:3d-subset}
 Let $\Omega$ be the interior of a polytope $K$ in $\EE^3$.
-Denote by $\hat \Omega$ the completion of $\Omega$ equipped with the induced length metric,
-Then $\hat\Omega$ has nonpositive curvature 
+Equip $\Omega$ with the induced length metric
+and denote by $\Omega^*$ its completion. 
+Then $\curv\Omega^*\le 0$ 
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
+\begin{wrapfigure}{r}{20mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/polytope(1)}
+\end{lpic}
+\end{wrapfigure}
+
 \parbf{Remark.}
-In the most cases, $\hat\Omega$ is isometric to $K$ with induced intrinsic metric,
-but in general we only have locally distance preserving map $\hat\Omega\toK$ which is onto but in general may be not injective. Say consider a polytope with a 
+In the most cases, $\Omega^*$ is isometric to $K$ with induced intrinsic metric,
+but in general we only have locally distance preserving map $\Omega^*\to K$ which is onto but in general may be not injective. 
+An example can be seen on the picture.
 
 \parit{Proof.}
-Assume that $\spc{P}$ is not two-convex;
-that is, there is a tetrahedron $\Delta$,
-such that three of its faces lie in $\spc{P}$,
-but the forth does not.
+If $\Omega$ is not two-convex then 
+there is a plane $\Pi$ in $\EE^3$ 
+which pass through a vertex $v$ of $K$ 
+such that punctured neightborhood of $v$ in $\Pi$ lies in $\Omega$.
+Choose a plane $\Pi'$ parallel and very close to to $\Pi$ which cuts from the complement of $\Omega$ a little piramid $S$ with vertex $v$.
+Consider a small triangle $\triangle$ in $\Pi'$ wich surrounds the base of $S$.
+Note that $\triangle$ is a geodesic triangle in $\Omega^*$
+for which the point-on-side comparison \ref{cat-monoton}
+fails to be true.
+That is, $\curv_v\Omega^*\nleqslant0$.
 
-???.
-Hence there is a vertex $p$ of $\spc{P}$ and and a plane $\Pi$
-passing through $p$ such that ???
-
-In particular there is arbotrary small flat triangle $[xyz]$ which lies completely in the interior of $\spc{P}$,
-but such that for some $w\in[yz]$ the geodesic $[xw]$ does not completely lie in $\spc{P}$.
-It follows that $\dist{x}{w}{\spc{P}}>\dist{x}{w}{\EE^3}$.
-The later contradicts ???.
+The converse follows from 
 
 To prove the converse we will need the following claim.
 \begin{clm}{}
@@ -579,10 +585,10 @@ Applying Reshetnyak gluing theorem (???) we get that $R\in\cCat{2}{1}$.
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
 Let $\Omega$ be an open simply connected 
-subset of $\Lob{3}{\kappa}$.
+subset of $\EE^3$.
 Equip $\Omega$ with the induced length metric 
-and let $\hat \Omega$ be its completion.
-Then $\hat \Omega$ has curvature $\le\kappa$ at every point 
+and let $\Omega^*$ be its completion.
+Then $\Omega^*$ has curvature $\le\kappa$ at every point 
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
@@ -626,21 +632,32 @@ Denote by $F_1,\dots,F_m$ the faces of $K$.
 
 Set $\Omega'=\Conv_2\Omega$ and let $K'$ be the closure of $\Omega'$.
 Further, 
-For each $i$, 
+for each $i$, 
 set $F'_i=F_i\backslash \Omega'$.
-In other words, $F'_i$ is the subset $F_i$ which remains on the boundary of $K'$.
+In other words, 
+$F'_i$ is the subset $F_i$ 
+which remains on the boundary of $K'$.
+
+From the construction of two-convex hull (\ref{prop:2-conv-construction})
+we get that.
 
 \begin{clm}{}\label{clm:F'-convex}
 $F'_i$ is convex subset of $F_i$.
 \end{clm}
 
-Indeed, ???qeds
+Further, since $\Omega'$ is two-convex,
+we get the following.
 
 \begin{clm}{}\label{clm:complement-of-F'-convex}
 Each connected component of the complement $F_i\backslash F'_i$ is convex.
 \end{clm}
 
-Indeed, ???\claimqeds
+Indeed, assume a connected component $A$ of $F_i\backslash F'_i$ fails to be convex.
+Then there is a suppoiting line $\ell$ to $A$ touching $A$ at a single point in the interior of $F_i$.
+Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it paralleley to cut a hat from the complement of $\Omega$.
+The latter means that $\Omega$ is not two-convex, 
+a contradiction.
+\claimqeds
 
 From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we get that 
 
@@ -648,11 +665,11 @@ From \ref{clm:F'-convex} and \ref{clm:complement-of-F'-convex}, we get that
 \end{clm}
 
 Consider the complement 
-$\Lambda=\Lob{3}{\kappa}\backslash \Omega$ equipped with the length metric.
-Note that $\Lambda'=\Lob{3}{\kappa}\backslash \Omega'$
-is convex in $\Lambda$;
-that is, for any two points $x,y\in \Lambda'$ any geodesic
-$[xy]_\Lambda$ lies in $\Lambda'$.
+$\EE^3\backslash \Omega$ 
+equipped with the length metric.
+Note that the complement $L=\EE^3\backslash (\Omega'\cup K)$
+is locally convex;
+that is, any points of $L$ admits a convex neighborhood.
 
 In particular, if $W$ is a 2-dimensional subspace of $\Lob3\kappa$ 
 then the intersection $W\cap K'$ is bounded 
@@ -730,7 +747,27 @@ According to ???, $P'$ is a polytope
 Therefore $\curv P'\le \kappa$. 
 \qeds
 
-\section {Manifolds-with-boundary}
+\parbf{Variations and generalization.}
+A theorem analogous to ??? holds also in $\HH^3$, 
+and a local version holds also in $\SS^3$.
+
+As it will be shown in Section \ref{sec:with-bry},
+an analog of Theorem~\ref{thm:shefel}
+holds in higher dimensions assuming $\Omega$ has smooth boundary.
+If the boundary is not smooth this is not longer true already in $\EE^4$;
+an example can be found among intersections of two two-convex domains with smooth boundaries.
+The following exercise is closely related.
+
+\begin{thm}{Exercise}
+Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
+Consider the complement $\Omega=\EE^4\backslash(\Pi_1\cup\Pi_2)$
+equipped with induced length metric.
+Denote by $\tilde\Omega^*$ the completion of universla cover of $\Omega$.
+Show that $\Pi_1\perp\Pi_2$ if and only if $\tilde\Omega^*\in\cCat{}{0}$.
+\end{thm}
+
+
+\section {Manifolds-with-boundary}\label{sec:with-bry}
 Let $M$ be a connected $m$-dimensional Riemannian manifold with possibly nonempty boundary $\partial M$.
 %By a \emph{Riemannian manifold-with-boundary} $M$ of a given differentiability class, we mean $M$ has possibly nonempty boundary and has an extension across the boundary to a manifold $\overline{M}$ of the same class with empty boundary, such that  each boundary point of $M$ has a neighborhood $U$ in $\overline{M}$ coordinatized by $\R^n$ and for which $M\cap U$ is coordinatized by a halfspace of $\R^n$. The Riemannian metric of $\bar M$ is of differentiability class one degree lower. 
 We equip $M$ with the length metric. 
@@ -992,11 +1029,11 @@ Then every point of $M$ has a neighborhood in $\CBA{}{}$.
 
 
 
-\section{Buyalo's theorem (alpha)}
+\section{Convex hypersurfaces in Riemannian manifolds}
 
-Here is yet a source of examples of $\CBB{}{}$-spaces.
+The following theorem provides an other source of examples of $\CBB{}{}$-spaces.
 
-\begin{thm}{Buyalo's theorem}\label{thm:buyalo} 
+\begin{thm}{Theorem}\label{thm:buyalo} 
 Let $M$ be an $m$-dimensional Riemannian manifold 
 with sectional curvature $\ge \kappa$ 
 and $F\subset M$ be a convex hypersurface equipped with the length-metric;
@@ -1004,7 +1041,8 @@ that is, $F$ bounds a convex set.
 Then $F\in\CBB{m-1}\kappa$.
 \end{thm}
 
-This theorem, in a slightly weaker form was proved in \cite{buyalo:convex-surface}, and then its statement was made more exact in \cite{akp}.
+This theorem, in a slightly weaker form was proved in by Buyalo in \cite{buyalo:convex-surface}, 
+and then its statement was made more exact in \cite{akp}.
 
 \begin{thm}{Lemma}\label{lem:smoothing}
 Let $M$ be a Riemannian manifold and $f\:M\subto\RR$ be a locally Lipshits $\lambda$-concave subfunction. 
