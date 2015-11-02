@@ -30,6 +30,11 @@ Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions 
 Show that condition (\ref{A-angle}) is also satisfied.
 \end{thm}
 
+\begin{thm}{Exercise}
+Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, each $A_i$ is centrally symmetric; that is $x\in A_i\iff -x\in A_i$.
+Show that condition (\ref{A-angle}) is also satisfied.
+\end{thm}
+
 A billiard trajectory on such table is a unit-speed broken line 
 with the break points at walls (that is, at $\partial A_i$),
 such that at every break
@@ -48,6 +53,61 @@ Then the number of collisions of any trajectory in  $T$  is bounded
 by a number $N$ which depends only on $n$ and $\alpha$.
 
 \end{thm}
+
+\begin{thm}{Corollary}\label{cor:balls}
+Consider $n$ homogeneous hard balls
+moving freely and colliding
+elastically in empty space $\RR^3$. 
+Every ball moves
+along a straight line with constant speed until two balls collide, and then
+the new velocities of the two balls are determined by the
+laws of classical mechanics.
+
+Then the total number of collisions cannot exceed some number $N$ which depend on the radiuses and masses of the balls.
+In particular if the balls are identical then $N$ depends only on $n$.
+\end{thm}
+
+\parit{Proof.}
+A position of a collection of $n$ balls can be represented by a point in $\RR^{3\cdot n}$.
+If $a_i=(x_i,y_i,z_i) \in \RR^3$ is the center of the $i$-th ball
+then
+the corresponding point in $\RR^{3\cdot N}$ is
+$$(a_1, a_2 , \dots , a_n ) = (x_1, y_1 , z_1 , x_2 , y_2 , z_2 , \dots , x_n , y_n , z_n).$$
+Not every point in $\RR^{3\cdot n}$ represents a valid configuration of balls. 
+We have to exclude positions where some of the balls overlap. 
+The $i$-th and $j$-th ball intersect if 
+$$|a_i - a_j | < r_i+r_j,$$
+where $r_i$ denoted the radius of the ball number $i$.
+
+This inequality defines a cylinder $C_{ij} \subset \RR^{3\cdot n}$. 
+The complement
+$$\RR^{3\cdot n}\backslash \bigcup_{i\ne j} C_{ij}$$ is the configuration space of our system. 
+Its points correspond
+to valid positions of the system of balls.
+
+The evolution of the system
+of balls traces a path in the configuration space. 
+It is easy to verify that
+the point representing the configuration of balls moves straight and at a
+constant speed until it hits one of the cylinders $C_{ij}$ (this event corresponds
+to a collision in the system of balls).
+
+Consider the norm of $x=(a_1,\dots,a_n)\in \RR^{3\cdot n}$ defined by
+\[\lVert x\rVert=M_1\cdot|a_1|^2+\dots+M_n\cdot |a_n|,\]
+where $M_i$ denotes the mass of the ball number $i$.
+In the metric defined by $\lVert {*}\rVert$,
+the collisions follow the
+standard law of billiard: 
+the angle of reflection is equal to the angle
+of incidence. 
+
+Note that each cylinder $C_{ij}$ is an open convex set with smooth boundaries which contains a unit ball around the origin.
+It is easy to check that the sets $C_{ij}$ satisfy the conditions (\ref{A-convex})--(\ref{A-angle}) on page \pageref{A-convex}.
+(In fact if all balls are identical then we can take $\alpha=\tfrac\pi3$ in (\ref{A-angle}).)
+It remains to apply Theorem~\ref{thm:baby-collision}.
+\qeds
+
+\section{Reshetnyak's puff pastry}
 
 In the proof we will need the following lemma in convex geometry.
 
@@ -178,50 +238,3 @@ and glue to it $n$ copies of $\RR^m$, along each $B_i$.
 Further glue to each copy $n-1$ copies of $\RR^m$... 
 
 Now we will show how to apply the above theorem to prove the following. 
-
-\section{On number of collisions of balls}
-
-\begin{thm}{Theorem}\label{thm:balls}
-Consider $n$ identical homogeneus hard balls
-moving freely and colliding
-elastically in empty space $\RR^3$. 
-Every ball moves
-along a straight line with constant speed until two balls collide, and then
-the new velocities of the two balls are determined by the
-laws of classical mechanics.
-
-Then the total number of collisions cannot exceed some number $N$ which depends only on $n$.
-\end{thm}
-
-\parit{Proof.}
-A position of a collection of $n$ balls can be represented by a point in $\RR^{3\cdot n}$.
-If $a_i=(x_i,y_i,z_i) \in \RR^3$ is the center of the $i$-th ball
-then
-the corresponding point in $\RR^{3\cdot N}$ is
-$$(a_1, a_2 , \dots , a_n ) = (x_1, y_1 , z_1 , x_2 , y_2 , z_2 , \dots , x_n , y_n , z_n).$$
-Not every point in $\RR^{3\cdot n}$ represents a valid configuration of balls. 
-We have to exclude positions where some of the balls overlap. 
-The $i$-th and $j$-th ball intersect if 
-$$|a_i - a_j | < 2.$$ 
-This inequality defines a cylinder $C_{ij} \subset \RR^{3\cdot n}$. 
-The complement
-$$\RR^{3\cdot n}\backslash \bigcup_{i\ne j} C_{ij}$$ is the configuration space of our system. 
-Its points correspond
-to valid positions of the system of balls.
-
-The evolution of the system
-of balls traces a path in the configuration space. 
-It is easy to verify that
-the point representing the configuration of balls moves straight and at a
-constant speed until it hits one of the cylinders $C_{ij}$ (this event corresponds
-to a collision in the system of balls), and then it continues following the
-standard law of billiard collision: 
-the angle of reflection is equal to the angle
-of incidence. 
-
-Note that each cylinder $C_{ij}$ is an open convex set with smooth boundaries which contains a unit ball around the origin.
-It is easy to check that the sets $C_{ij}$ satisfy the conditions (\ref{A-convex})--(\ref{A-angle}) on page \pageref{A-convex};
-we can take $\alpha=\tfrac\pi3$ in (\ref{A-angle}).
-Therefore our theorem follows 
-from Theorem~\ref{thm:baby-collision}.
-\qeds
