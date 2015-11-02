@@ -1,0 +1,227 @@
+\chapter{Billiards}
+\section{Piecewise concave table}
+
+\begin{wrapfigure}[7]{r}{37mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/table(.5)}
+\end{lpic}
+\end{wrapfigure}
+
+In this section, we shall consider a billiard table 
+formed by Euclidean space with a finite collection of convex sets removed.
+
+Let $\{A_1,A_2,\dots,A_n\}$ be a finite collection of sets in $\RR^m$.
+Consider the table
+$$T=\Closure\left(\RR^m\backslash \bigcup_{i=1}^n A_i\right).$$
+Assume in addition that
+\begin{enumerate}[(a)]
+\item\label{A-convex} Each $A_i$ is closed and convex.
+\item\label{A-intersection} All $A_i$ have nonempty intersection;
+that is, 
+$$\bigcap_{i=1}^n A_i\not=\emptyset.$$
+\item\label{A-bry} The boundaries $\partial A_1,\partial A_2,\dots,\partial A_n$ are \emph{smooth hypersurfaces}%%%???DEFINE???
+.
+\item\label{A-angle} There is $\alpha<\pi$,
+such that for any $i$ and $j$,
+the angle between outer normals to $\partial A_i$ and $\partial A_j$ at any common point $p\in \partial A_i\cap\partial A_j$ is at most $\alpha$.
+\end{enumerate}
+
+\begin{thm}{Exercise}
+Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, all $A_i$ are bounded.
+Show that condition (\ref{A-angle}) is also satisfied.
+\end{thm}
+
+A billiard trajectory on such table is a unit-speed broken line 
+with the break points at walls (that is, at $\partial A_i$),
+such that at every break
+point the left and right velocities have equal projections onto the tangent
+plane to the wall.
+We assume that trajectory meets one $A_i$ at the time.
+
+The number of break
+points of the trajectory will be called \emph{number of collisions} of the trajectory.
+
+\begin{thm}{Collision theorem}\label{thm:baby-collision}
+Assume 
+$$T=\Closure\left(\RR^m\backslash \bigcup_{i=1}^n A_i\right)$$
+is a billiard table which satisfies conditions (\ref{A-convex})--(\ref{A-angle}) above.
+Then the number of collisions of any trajectory in  $T$  is bounded
+by a number $N$ which depends only on $n$ and $\alpha$.
+
+\end{thm}
+
+In the proof we will need the following lemma in convex geometry.
+
+\begin{thm}{Lemma}\label{lem:sina}
+Let $\{A_1,A_2,\dots,A_n\}$ be a collection of sets in $\RR^m$
+which satisfies conditions (\ref{A-convex})--(\ref{A-angle}).
+Set $K=\bigcap_{i=1}^n A_i$, then
+$$\dist{K}{}{}\ge \sin\alpha \cdot \max_i\{\dist{A_i}{}{}\}.$$
+
+Moreover, assume 
+\[e_i(x,y)=\min_{a\in A_i}\{|x-a|+|a-y|-|x-y|\}\] 
+\[E(x,y)=\min_{a\in K}\{|x-a|+|a-y|-|x-y|\}\]
+for the given two points $x,y\in \RR^m$, 
+then
+$$E(x,y)\ge \sin\alpha 
+\cdot \max_i\{e_i(x,y)\}.$$
+
+\end{thm}
+
+\parit{Proof.}
+???
+\qeds
+
+
+\parit{Proof of Collision theorem.}
+The proof is by induction on $n$.
+
+The base case $n=1$ is evident; the number of collisions cannot exceed $1$.  
+It follows from the convexity of $A_1$ that
+if the trajectory is reflected once in $\partial A_1$, 
+then it cannot return to $A_1$.
+
+The proof of the first step $n=2$ is slightly simpler than the remaining steps.
+To simplify the presentation, we prove the case $n=2$, 
+and then describe the necessary modifications to prove the $n=3$ case.
+Once this is done, the proof of the general case should be evident.
+
+\parit{First step; $n=2$.} To reduce number of indices, set $A=A_1$ and $B=A_2$. 
+
+Note that any trajectory hits $A$ and $B$ in turn;
+that is, the trajectory can not hit $A$ (as well as $B$)
+twice in a raw.
+
+Fix a large number $N$ and assume a trajectory has at least $2\cdot N$ collisuion.
+Then it should hit $A$,
+then $B$,
+then $A$
+and so on $2\cdot N$ times
+and then finally $B$.
+Denote by 
+$a_1\in \partial A$, 
+$b_1\in \partial B,
+\dots
+b_N\in \partial B$
+the brake points of this trajectory.
+
+Prepare $2\cdot N$ copies of $\RR^m$,
+say $\mathcal{R}_1$, $\mathcal{R}_2,\dots,\mathcal{R}_{2\cdot N}$.
+Each $\mathcal{R}_i$ contains a copy of $A$ and $B$, which will be denoted as $A_i$ and $B_i$.
+
+Let us glue a new space say $\mathcal{R}$ out of $\mathcal{R}_i$'s
+by gluing 
+\begin{enumerate}
+\item $\mathcal{R}_1$ to $\mathcal{R}_2$ by identifying $A_1$ and $A_2$;
+\item $\mathcal{R}_2$ to $\mathcal{R}_3$  by identifying $B_2$ and $B_3$;
+\item $\mathcal{R}_3$ to $\mathcal{R}_4$  by identifying $A_3$ and $A_4$;
+\item and so on;
+\item $\mathcal{R}_{2\cdot N-1}$ to $\mathcal{R}_{2\cdot N}$ by identifying $A_{2\cdot N-1}$ and $A_{2\cdot N}$.
+\end{enumerate}
+According to Reshetnyak's gluing theorem (\ref{thm:reshetnyak}), $\mathcal{R}\in\cCat{}{0}$.
+Further we will view $\mathcal{R}_i$ as subsets of $\mathcal{R}$.
+
+Denote by $f_i\:\RR^m\to\mathcal{R}$ the distance preserving map which identifies $\RR^m$ and $\mathcal{R}_i$
+and let $F\:\mathcal{R} \to \RR^m$ be the natural projection which identifies all $\mathcal{R}_i$ with $\RR^m$.
+
+Consider the broken geodesic $\gamma$ connecting points $f_1(a_1),f_2(b_2),f_3(a_3),\dots,f_{2\cdot N}$ in $\mathcal{R}$.
+Note that $\gamma$ forms a local geodesic in $\mathcal{R}$.
+Therefore, according to ??? $\gamma$ is a geodesic with end points in $A_1\cup A_{2\cdot N}$,
+but all interior points of $\gamma$ do not belong to $A_1\cup A_{2\cdot N}$.
+
+Hence in order to arrive to a contradiction, 
+it is sufficient to prove the following claim.
+ 
+\begin{clm}{}
+The union $A_1\cup A_{2\cdot N}$ is a convex set in $\mathcal{R}$.
+\end{clm}
+
+Due to the convexity of $A_1$ and $A_{2\cdot N}$,
+it is sufficient to show that for any points $p\in A_1\backslash A_{2\cdot N}$ and $q\in A_{2\cdot N}\backslash A_1$,
+the geodesic $[pq]$ contain a point $x\in K\z=A_1\cap A_{2\cdot N}$.
+
+Assume contrary.
+Mark points $p=p_1,q_2,p_3,\dots,p_{2\cdot N}=q$ of $[pq]$ such that $p_i\in A_i$ and $q_j\in B_j$.
+Note that $[p_{2\cdot i-1}q_{2\cdot i}]\in \mathcal{R}_{2\cdot i-1}$ 
+and 
+$[q_{2\cdot i}p_{2\cdot i+1}]\in \mathcal{R}_{2\cdot i}$ for each $i$.
+We will construct a curve passing throug $K$ and connecting $p$ to $q$ which is shorter than $[pq]$;
+this way we arrive to a contradiction. 
+
+
+
+
+\parit{Second step; $n=3$.}
+
+
+
+\qeds
+
+The Baby collision theorem (\ref{thm:baby-collision}) admits a straightforward generalization to higher dimensions and to an arbitrary finite number of sets $B_i$.
+Namely, the following result holds:
+
+\begin{thm}{Adult collision theorem}\label{thm:adult-collision}
+Let $B_1,B_2,\dots,B_n$ be a finite collection of open convex sets in $\RR^m$.
+Assume each $B_i$ contains the origin $0\in\RR^m$
+and for each $i$, the boundary $W_i=\partial B_i$ is a smooth hypersurface.
+Further, assume there is $\eps>0$ such that for any point $p\in W_i\cap W_j$ the angle between the tangent 
+hyperplane of $W_i$ and $W_j$ at $p$ is at least $\eps$.
+
+Then 
+there is a natural number $N$ which depends only on $\eps$
+such that the number of collisions of any trajectory in $T$ is at most $N$.
+\end{thm}
+
+The proof of the Collision theorem can be given along the same lines as its baby case.
+We glue the space in a similar way:
+Take a copy of $\RR^m$
+and glue to it $n$ copies of $\RR^m$, along each $B_i$.
+Further glue to each copy $n-1$ copies of $\RR^m$... 
+
+Now we will show how to apply the above theorem to prove the following. 
+
+\section{On number of collisions of balls}
+
+\begin{thm}{Theorem}\label{thm:balls}
+Consider $n$ identical homogeneus hard balls
+moving freely and colliding
+elastically in empty space $\RR^3$. 
+Every ball moves
+along a straight line with constant speed until two balls collide, and then
+the new velocities of the two balls are determined by the
+laws of classical mechanics.
+
+Then the total number of collisions cannot exceed some number $N$ which depends only on $n$.
+\end{thm}
+
+\parit{Proof.}
+A position of a collection of $n$ balls can be represented by a point in $\RR^{3\cdot n}$.
+If $a_i=(x_i,y_i,z_i) \in \RR^3$ is the center of the $i$-th ball
+then
+the corresponding point in $\RR^{3\cdot N}$ is
+$$(a_1, a_2 , \dots , a_n ) = (x_1, y_1 , z_1 , x_2 , y_2 , z_2 , \dots , x_n , y_n , z_n).$$
+Not every point in $\RR^{3\cdot n}$ represents a valid configuration of balls. 
+We have to exclude positions where some of the balls overlap. 
+The $i$-th and $j$-th ball intersect if 
+$$|a_i - a_j | < 2.$$ 
+This inequality defines a cylinder $C_{ij} \subset \RR^{3\cdot n}$. 
+The complement
+$$\RR^{3\cdot n}\backslash \bigcup_{i\ne j} C_{ij}$$ is the configuration space of our system. 
+Its points correspond
+to valid positions of the system of balls.
+
+The evolution of the system
+of balls traces a path in the configuration space. 
+It is easy to verify that
+the point representing the configuration of balls moves straight and at a
+constant speed until it hits one of the cylinders $C_{ij}$ (this event corresponds
+to a collision in the system of balls), and then it continues following the
+standard law of billiard collision: 
+the angle of reflection is equal to the angle
+of incidence. 
+
+Note that each cylinder $C_{ij}$ is an open convex set with smooth boundaries which contains a unit ball around the origin.
+It is easy to check that the sets $C_{ij}$ satisfy the conditions (\ref{A-convex})--(\ref{A-angle}) on page \pageref{A-convex};
+we can take $\alpha=\tfrac\pi3$ in (\ref{A-angle}).
+Therefore our theorem follows 
+from Theorem~\ref{thm:baby-collision}.
+\qeds
