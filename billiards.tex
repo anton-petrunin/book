@@ -18,21 +18,23 @@ Assume in addition that
 \item\label{A-intersection} All $A_i$ have nonempty intersection;
 that is, 
 $$\bigcap_{i=1}^n A_i\not=\emptyset.$$
-\item\label{A-bry} The boundaries $\partial A_1,\partial A_2,\dots,\partial A_n$ are \emph{smooth hypersurfaces}%%%???DEFINE???
-.
-\item\label{A-angle} There is $\alpha<\pi$,
-such that for any $i$ and $j$,
-the angle between outer normals to $\partial A_i$ and $\partial A_j$ at any common point $p\in \partial A_i\cap\partial A_j$ is at most $\alpha$.
+\item\label{A-bry} The boundaries $\partial A_1,\partial A_2,\dots,\partial A_n$ are \emph{smooth hypersurfaces}.
+\item\label{A-angle} For any $p\in\RR^m$ there is a vector $\nu$
+such that if $p\in\partial A_i$ for some $i$ and $\nu_i$ is the outer normal vector to $\partial A_i$ at $p$ then $\mangle(\nu,\nu_i)<\tfrac\pi2-\eps$. 
 \end{enumerate}
+
+Note that condition (\ref{A-angle}) is nontrivial 
+only if holds if $p$ lies on the intersection of at least two boundaries $\partial A_i$.
 
 \begin{thm}{Exercise}
 Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, all $A_i$ are bounded.
-Show that condition (\ref{A-angle}) is also satisfied.
+Show that condition (\ref{A-angle}) is also satisfied for some $\eps>0$.
 \end{thm}
 
 \begin{thm}{Exercise}
-Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, each $A_i$ is centrally symmetric; that is $x\in A_i\iff -x\in A_i$.
-Show that condition (\ref{A-angle}) is also satisfied.
+Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, each $A_i$ is centrally symmetric; that is 
+\[x\in A_i\iff -x\in A_i.\]
+Show that condition (\ref{A-angle}) is also satisfied for some $\eps>0$.
 \end{thm}
 
 A billiard trajectory on such table is a unit-speed broken line 
@@ -108,6 +110,69 @@ It remains to apply Theorem~\ref{thm:baby-collision}.
 \qeds
 
 \section{Reshetnyak's puff pastry}
+
+\begin{thm}{Proposition}
+Let $(A^1,\dots,A^n)$ be an array of convex closed sets in $\RR^m$.
+Assume that $\spc{R}$ is the space
+obtained by
+gluing successive spaces in the array of $n+1$ copies of $\RR^m$ 
+along $A^1,\dots,A^n$.
+Then $\spc{R}\in\cCat{}{0}$
+and moreover the induced map from each copy of $\RR^m$ to  $\spc{R}$ is distance preserving.
+\end{thm}
+
+The statement follows from Reshetnyak's gluing theorem.
+The space $\spc{R}$ described in the proposition will be called \emph{Reshetnyak's puff pastry} for the array $(A^1,\dots,A^n)$.
+The copies of $\RR^m$ in the Reshetnyak's puff pastry $\spc{R}$
+will be called \emph{levels};
+they will denoted by $\spc{R}^0,\dots,\spc{R}^n$.
+The point in the $\kay$-th level $\spc{R}^\kay$
+corresponding to $x\in \RR^m$
+will be denoted by $x^\kay$.
+
+\parit{Proof.}
+Let us use indunction on $n$
+the induction on $n$.
+In the base case $n=0$, we have $\spc{R}\iso\RR^m\in\cCat{}{0}$.
+
+\parit{Step.}
+By induction hypothesis, we can assume that 
+$\spc{R}'\in\cCat{}{0}$ where $\spc{R}'$ is the Reshetnyak's puff pastry for $(A^1,\dots,A^{n-1})$.
+
+Note that $\spc{R}$ can be glued from $\spc{R}'$
+and $\RR^m$ along $A_n$.
+By Reshetnyak's gluing theorem we get $\spc{R}_{\bm{A}}\in\cCat{}{0}$.
+\qeds
+
+The goal of this section is to find sufficient condition on the two convex sets $A$, $B$
+so that the union of the lowest and highest levels form a convex set in the Reshetnyak's puff pastry $\spc{R}$ for the alteraniting array $(A,B,A,...,B)$.
+In other words given two points $(x,0)$ and $(y,n)$ in $\spc{R}$
+we can find a point $z\in A\cup B$ for which the sum $\dist{x}{z}{}+\dist{y}{z}{}$ takes minimal value.
+Since $z\in A\cap B$, $z^0=z^n$.
+Therefore the joint $\gamma_{xy}$ of $[xz]^0$ and $[zy]^n$ is defined in $\spc{R}$;
+it connects $x$ to $y$.
+It remains to show that prove that $\gamma_{xy}$ is a geodesic for any $x$ and  $y$.
+The later will follow from the claims below.
+
+\begin{clm}{} 
+Let $A$ and $B$ be two halfspaces in $\RR^m$ and $\alpha$ is the angle between their outer normals.
+Assume $n\cdot(\pi-\alpha)\ge \pi$ and $\spc{R}$ is the Reshetnyak's puff pastry
+for the alternating array of $A$ and $B$ then the union of top and botom levels in $\spc{R}$ forms a convex set.
+\end{clm}
+
+\begin{clm}{} 
+Let $A$ and $B$ be two colsed sets in $\RR^m$and $\alpha$ is fixed number such that 
+\[\mangle(\nu_A,\nu_B)<\alpha\]
+for any $p\in\partial A\cap\partial B$
+and any outer supnormal vectors $\nu_A$ and $\nu_B$
+to $A$ and $B$ at $p$.
+Assume $n\cdot(\pi-\alpha)\ge \pi$ and $\spc{R}$ is the Reshetnyak's puff pastry
+for the alternating array of $A$ and $B$ then the union of top and botom levels in $\spc{R}$ forms a convex set. 
+\end{clm}
+
+
+
+
 
 In the proof we will need the following lemma in convex geometry.
 
