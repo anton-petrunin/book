@@ -10,50 +10,71 @@ In this section, we shall consider a billiard table
 formed by Euclidean space with a finite collection of convex sets removed.
 
 Let $\{A_1,A_2,\dots,A_n\}$ be a finite collection of sets in $\RR^m$.
-Consider the table
+We will consider billiard table $T$ formed by the complement
 $$T=\Closure\left(\RR^m\backslash \bigcup_{i=1}^n A_i\right).$$
-Assume in addition that
-\begin{enumerate}[(a)]
-\item\label{A-convex} Each $A_i$ is closed and convex.
-\item\label{A-intersection} All $A_i$ have nonempty intersection;
-that is, 
-$$\bigcap_{i=1}^n A_i\not=\emptyset.$$
-\item\label{A-bry} The boundaries $\partial A_1,\partial A_2,\dots,\partial A_n$ are \emph{smooth hypersurfaces}.
-\item\label{A-angle} For any $p\in\RR^m$ there is a vector $\nu$
-such that if $p\in\partial A_i$ for some $i$ and $\nu_i$ is the outer normal vector to $\partial A_i$ at $p$ then $\mangle(\nu,\nu_i)<\tfrac\pi2-\eps$. 
-\end{enumerate}
+We will make the following assumption on $A_i$.
 
-Note that condition (\ref{A-angle}) is nontrivial 
-only if holds if $p$ lies on the intersection of at least two boundaries $\partial A_i$.
+\begin{thm}{Table condition}\label{condition:A}
+We say that a billiard table $T\subset\RR^m$ is dispersing if 
+$$T=\RR^m\backslash \bigcup_{i=1}^n A_i$$
+for a finite collection of sets $\{A_1,A_2,\dots,A_n\}$ in $\RR^m$ 
+such that
+\begin{subthm}{A-convex} Each $A_i$ is open and convex.
+\end{subthm}
+
+\begin{subthm}{A-bry} The boundaries $\partial A_1,\partial A_2,\dots,\partial A_n$ are \emph{smooth hypersurfaces}.
+\end{subthm}
+
+The surfaces $\partial A_i$ will be called \emph{walls} of $T$.
+
+We say that $T$ is has central point 
+if 
+
+\begin{subthm}{A-intersection} All $A_i$ have nonempty intersection.
+\end{subthm}
+
+We say that $T$ has $\eps$-opened  corner if
+
+\begin{subthm}{A-angle} For any $p\in\RR^m$ there is a vector $\nu$
+such that if $p\in\partial A_i$ for some $i$ and $\nu_i$ is the outer normal vector to $\partial A_i$ at $p$ then $\mangle(\nu,\nu_i)<\tfrac\pi2-\eps$.
+\end{subthm}
+\end{thm}
+
+Note that condition (\ref{SHORT.A-angle}) is nontrivial 
+only for the points $p$ which lie 
+on the intersection 
+of two or more boundaries $\partial A_i$.
 
 \begin{thm}{Exercise}
-Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, all $A_i$ are bounded.
-Show that condition (\ref{A-angle}) is also satisfied for some $\eps>0$.
+Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{SHORT.A-convex})--(\ref{SHORT.A-intersection}) above and in addition, all $A_i$ are bounded.
+Show that condition (\ref{SHORT.A-angle}) is also satisfied for some $\eps>0$.
 \end{thm}
 
 \begin{thm}{Exercise}
-Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{A-intersection}) and (\ref{A-bry}) above and in addition, each $A_i$ is centrally symmetric; that is 
+Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{SHORT.A-convex})--(\ref{SHORT.A-intersection}) above and in addition, each $A_i$ is centrally symmetric; that is 
 \[x\in A_i\iff -x\in A_i.\]
-Show that condition (\ref{A-angle}) is also satisfied for some $\eps>0$.
+Show that condition (\ref{SHORT.A-angle}) is also satisfied for some $\eps>0$.
 \end{thm}
 
-A billiard trajectory on such table is a unit-speed broken line 
-with the break points at walls (that is, at $\partial A_i$),
-such that at every break
-point the left and right velocities have equal projections onto the tangent
-plane to the wall.
+A \emph{billiard trajectory} 
+on this table is a unit-speed broken line $\gamma$
+with the \emph{regular reflection} at the points on $\partial A_i$ the angle of reflection is equal to the angle
+of incidence.
+(More precisely,  if $\gamma(t_0)\in\partial A_i$ then the vector
+$\gamma^+(t_0)+\gamma^-(t_0)$  is normal to the tangent
+plane of $\partial A_i$ at $\gamma(t_0)$.
+Recall that according to our convention  $\tfrac{\gamma(t_0-\eps)}{\eps}\to\gamma^-(t_0)$ as $\eps\to0+$.)
 We assume that trajectory meets one $A_i$ at the time.
 
 The number of break
 points of the trajectory will be called \emph{number of collisions} of the trajectory.
 
 \begin{thm}{Collision theorem}\label{thm:baby-collision}
-Assume 
-$$T=\Closure\left(\RR^m\backslash \bigcup_{i=1}^n A_i\right)$$
-is a billiard table which satisfies conditions (\ref{A-convex})--(\ref{A-angle}) above.
+Assume $T\subset\RR^m$
+is a centered dispersing table 
+with $n$ walls and $\eps$-opened corners.
 Then the number of collisions of any trajectory in  $T$  is bounded
-by a number $N$ which depends only on $n$ and $\alpha$.
-
+by a number $N$ which depends only on $n$ and $\eps$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:balls}
@@ -66,7 +87,7 @@ the new velocities of the two balls are determined by the
 laws of classical mechanics.
 
 Then the total number of collisions cannot exceed some number $N$ which depend on the radiuses and masses of the balls.
-In particular if the balls are identical then $N$ depends only on $n$.
+If the balls are identical then $N$ depends only on $n$.
 \end{thm}
 
 \parit{Proof.}
@@ -74,16 +95,21 @@ A position of a collection of $n$ balls can be represented by a point in $\RR^{3
 If $a_i=(x_i,y_i,z_i) \in \RR^3$ is the center of the $i$-th ball
 then
 the corresponding point in $\RR^{3\cdot N}$ is
-$$(a_1, a_2 , \dots , a_n ) = (x_1, y_1 , z_1 , x_2 , y_2 , z_2 , \dots , x_n , y_n , z_n).$$
+\begin{align*}
+\bm{a}&=(a_1, a_2 , \dots , a_n ) =
+\\
+&=(x_1, y_1 , z_1 , x_2 , y_2 , z_2 , \dots , x_n , y_n , z_n).
+\end{align*}
 Not every point in $\RR^{3\cdot n}$ represents a valid configuration of balls. 
 We have to exclude positions where some of the balls overlap. 
 The $i$-th and $j$-th ball intersect if 
-$$|a_i - a_j | < r_i+r_j,$$
-where $r_i$ denoted the radius of the ball number $i$.
-
-This inequality defines a cylinder $C_{ij} \subset \RR^{3\cdot n}$. 
+$$|a_i - a_j | < R_i+R_j,$$
+where $R_i$ denoted the radius of the ball number $i$.
+These inequality defines $\tfrac{n\cdot(n-1)}{2}$ cylinders 
+\[C_{i,j}=\set{(a_1, a_2 , \dots , a_n )\in\RR^{3\cdot n}} {|a_i - a_j | < R_i+R_j}.\] 
 The complement
-$$\RR^{3\cdot n}\backslash \bigcup_{i\ne j} C_{ij}$$ is the configuration space of our system. 
+\[\RR^{3\cdot n}\backslash \bigcup_{i\ne j} C_{i,j}\] 
+is the configuration space of our system. 
 Its points correspond
 to valid positions of the system of balls.
 
@@ -94,9 +120,10 @@ the point representing the configuration of balls moves straight and at a
 constant speed until it hits one of the cylinders $C_{ij}$ (this event corresponds
 to a collision in the system of balls).
 
-Consider the norm of $x=(a_1,\dots,a_n)\in \RR^{3\cdot n}$ defined by
+Consider the norm of $\bm{a}=(a_1,\dots,a_n)\in \RR^{3\cdot n}$ defined by
 \[\lVert x\rVert=M_1\cdot|a_1|^2+\dots+M_n\cdot |a_n|,\]
-where $M_i$ denotes the mass of the ball number $i$.
+where $|a_i|=\sqrt{x_i^2+y_i^2+z_i^2}$ 
+and $M_i$ denotes the mass of the ball number $i$.
 In the metric defined by $\lVert {*}\rVert$,
 the collisions follow the
 standard law of billiard: 
@@ -144,61 +171,80 @@ and $\RR^m$ along $A_n$.
 By Reshetnyak's gluing theorem we get $\spc{R}_{\bm{A}}\in\cCat{}{0}$.
 \qeds
 
-The goal of this section is to find sufficient condition on the two convex sets $A$, $B$
-so that the union of the lowest and highest levels form a convex set in the Reshetnyak's puff pastry $\spc{R}$ for the alteraniting array $(A,B,A,...,B)$.
-In other words given two points $(x,0)$ and $(y,n)$ in $\spc{R}$
-we can find a point $z\in A\cup B$ for which the sum $\dist{x}{z}{}+\dist{y}{z}{}$ takes minimal value.
-Since $z\in A\cap B$, $z^0=z^n$.
-Therefore the joint $\gamma_{xy}$ of $[xz]^0$ and $[zy]^n$ is defined in $\spc{R}$;
-it connects $x$ to $y$.
-It remains to show that prove that $\gamma_{xy}$ is a geodesic for any $x$ and  $y$.
-The later will follow from the claims below.
+\begin{thm}{Definition}
+A Reshetnyak's puff pastry $\spc{R}$ is called \emph{end-to-end convex} if the lower and upper levels of $\spc{R}$ form a convex subset.
+\end{thm}
 
-\begin{clm}{} 
-Let $A$ and $B$ be two halfspaces in $\RR^m$ and $\alpha$ is the angle between their outer normals.
-Assume $n\cdot(\pi-\alpha)\ge \pi$ and $\spc{R}$ is the Reshetnyak's puff pastry
-for the alternating array of $A$ and $B$ then the union of top and botom levels in $\spc{R}$ forms a convex set.
-\end{clm}
-
-\begin{clm}{} 
-Let $A$ and $B$ be two colsed sets in $\RR^m$and $\alpha$ is fixed number such that 
-\[\mangle(\nu_A,\nu_B)<\alpha\]
-for any $p\in\partial A\cap\partial B$
-and any outer supnormal vectors $\nu_A$ and $\nu_B$
-to $A$ and $B$ at $p$.
-Assume $n\cdot(\pi-\alpha)\ge \pi$ and $\spc{R}$ is the Reshetnyak's puff pastry
-for the alternating array of $A$ and $B$ then the union of top and botom levels in $\spc{R}$ forms a convex set. 
-\end{clm}
-
-
-
-
-
-In the proof we will need the following lemma in convex geometry.
-
-\begin{thm}{Lemma}\label{lem:sina}
-Let $\{A_1,A_2,\dots,A_n\}$ be a collection of sets in $\RR^m$
-which satisfies conditions (\ref{A-convex})--(\ref{A-angle}).
-Set $K=\bigcap_{i=1}^n A_i$, then
-$$\dist{K}{}{}\ge \sin\alpha \cdot \max_i\{\dist{A_i}{}{}\}.$$
-
-Moreover, assume 
-\[e_i(x,y)=\min_{a\in A_i}\{|x-a|+|a-y|-|x-y|\}\] 
-\[E(x,y)=\min_{a\in K}\{|x-a|+|a-y|-|x-y|\}\]
-for the given two points $x,y\in \RR^m$, 
-then
-$$E(x,y)\ge \sin\alpha 
-\cdot \max_i\{e_i(x,y)\}.$$
-
+\begin{thm}{Lemma}\label{lem:end-to-end-convex}
+Let $A$ and $B$ two convex sets in $\RR^m$.
+Assume that $A\cup B\ne\emptyset$ and 
+for for some positive integer $n$
+and any $p\in \partial A\cap \partial B$ 
+and 
+any outer subnormal vectors $u$ and $v$ to $A$ and $B$
+at $p$,
+we have $\mangle(u,v)\le\pi\cdot(1-\tfrac1n)$.
+Then the Reshetnyak's puff pastry for the $n$-array alternating $A$ and $B$ is end-to-end convex. 
 \end{thm}
 
 \parit{Proof.}
-???
-\qeds
+First we construct a map 
+between general Reshetnyak's puff pastries 
+which will be used later in the proof.
+
+Assume $(A^1,\dots, A^n)$ and $(\check A^1,\dots,\check A^n)$ be two arrays of convex convex sets in $\RR^m$
+and $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak's  puff pastries.
+
+Recall that for any $x$ in $\RR^m$ we can consider the point $x^i\in \spc{R}$
+which corresponds to $x$ and lies on $i$-th level of $\spc{R}$.
+Analogously denote by $\check x^i$ the point on $i$-th level of $\check{\spc{R}}$
+which corresponds to $x$.
+
+Assume $A_i\subset \check A_i$ for each $i$.
+In this case the map $\spc{R}\to\check{\spc{R}}$
+defined as $x^i\mapsto \check x^i$ is a short map.
+In particular we get the following.
+
+\begin{clm}{}
+If  $\spc{R}$ and $\check{\spc{R}}$ as above and
+\[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\]
+for some $x,y\in \RR$ and $i,j\in \{0,\dots,n\}$
+then the geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
+is the image of geodesic $[x^i y^j]_{\spc{R}}$
+under the map $x^i\mapsto \check x^i$.
+\end{clm}
 
 
-\parit{Proof of Collision theorem.}
-The proof is by induction on $n$.
+Let us come back to the proof.
+We need to show that $\spc{R}^0\cup\spc{R}^n$ forms a convex set in $\spc{R}$.
+In other words, we need to show that $\spc{R}^0\cup\spc{R}^n$
+is isometric to the doubling of $\RR^m$ in $A\cap B$. 
+
+Fix $x,y\in \RR^m$.
+Choose a point $z\in A\cap B$
+for which the sum $\dist{x}{z}{}+\dist{y}{z}{}$ takes minimal value.
+Since $\spc{R}\in\cCat{}{0}$, it is sufficient to show that the geodesic $[x^0y^n]_\spc{R}$ pass though $z^0=z^n$.
+
+Assume contrary.
+Then there are half spaces or whole space
+$A'\supset A$ and $B'\supset B$
+such that $\dist{x}{z}{}+\dist{y}{z}{}$ takes minimal value
+for all $z\in A'\cap B'$.
+
+In the array ???, 
+exchange each $A$ to $A'$ and each $B$ to $B'$.
+The corresponding Reshetnyak's puff pastry $\spc{R}'$
+splits as a product or $\RR^{m-2}$ and a puff pastry
+glued from the copies of the palne $\RR^2$.
+Then $z\in\partial A\cap\partial B$.
+By Proposition~\ref{prop:warp-examples},
+it is sufficient to show that ???
+and the latter is evident.
+
+
+
+\section{Proof of Collision theorem.}
+
 
 The base case $n=1$ is evident; the number of collisions cannot exceed $1$.  
 It follows from the convexity of $A_1$ that
@@ -216,7 +262,27 @@ Note that any trajectory hits $A$ and $B$ in turn;
 that is, the trajectory can not hit $A$ (as well as $B$)
 twice in a raw.
 
-Fix a large number $N$ and assume a trajectory has at least $2\cdot N$ collisuion.
+Fix a large number $N$ and assume a trajectory $\gamma$ has at least $N$ collisuion.
+We may assume that the trajectory meets the bodies in order \[\bm{A}_N=(\underbrace{A,B,A, B,\dots}_{N\ \text{times}}).\]
+
+Consider the Reshetnyak's  puff pastry $\spc{R}$
+for the array $\bm{A}_N$.
+The trajectory $\gamma$ can be lifted to the puff pastry as a geodesic.
+It follows that $\spc{R}$ is not end-to-end convex;
+the later contradicts Lemma~\ref{lem:end-to-end-convex}.
+
+\parit{Other steps; $n>2$.}
+Denote by $N_{n-1}$ a number which is bigger than the number of  collisions of any billiard trajectory on the table with $n-1$ walls.
+
+Fix a large number $N=N_{n-1}^3$ and assume a trajectory $\gamma$ has at least $N$ collisions.
+Let us write the $N$ bodies in the order our trajectory meets them; denote by $\bm{A}_N$ the obtained array.  
+If one takes any $N_{n-1}$ bodies in the raw from $\bm{A}_N$
+then it will have all $n$ bodies in it;
+otherwise we would get a contradiction with the induction hypothesis.
+
+It follows that one can remove some bodies from the $\bm{A}_N$.
+
+
 Then it should hit $A$,
 then $B$,
 then $A$
