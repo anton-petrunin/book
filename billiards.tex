@@ -1,80 +1,56 @@
 \chapter{Billiards}
-\section{Piecewise concave table}
+\section{Dispersing billiard}
 
-\begin{wrapfigure}[7]{r}{37mm}
+\begin{wrapfigure}{r}{37mm}
 \begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/table(.5)}
 \end{lpic}
 \end{wrapfigure}
 
-In this section, we shall consider a billiard table 
-formed by Euclidean space with a finite collection of convex sets removed.
+In this section, 
+we shall consider a billiard table 
+formed by complement of a finite collection of convex sets removed in the
+Euclidean space.
 
-Let $\{A_1,A_2,\dots,A_n\}$ be a finite collection of sets in $\RR^m$.
-We will consider billiard table $T$ formed by the complement
-$$T=\Closure\left(\RR^m\backslash \bigcup_{i=1}^n A_i\right).$$
-We will make the following assumption on $A_i$.
+Assume $A^1,A_2,\dots A^n$ be a finite collection of closed convex sets in $\EE^m$.
+Consider the billiard table formed by the closure of the complement 
+$$T=\overline{\EE^m\backslash \bigcup_{i=1}^n A^i}.$$
+The sets $A^i$ will be called \emph{walls} of the table.
 
-\begin{thm}{Table condition}\label{condition:A}
-We say that a billiard table $T\subset\RR^m$ is dispersing if 
-$$T=\RR^m\backslash \bigcup_{i=1}^n A_i$$
-for a finite collection of sets $\{A_1,A_2,\dots,A_n\}$ in $\RR^m$ 
-such that
-\begin{subthm}{A-convex} Each $A_i$ is open and convex.
-\end{subthm}
-
-\begin{subthm}{A-bry} The boundaries $\partial A_1,\partial A_2,\dots,\partial A_n$ are \emph{smooth hypersurfaces}.
-\end{subthm}
-
-The surfaces $\partial A_i$ will be called \emph{walls} of $T$.
-
-We say that $T$ is has central point 
-if 
-
-\begin{subthm}{A-intersection} All $A_i$ have nonempty intersection.
-\end{subthm}
-
-We say that $T$ has $\eps$-opened  corner if
-
-\begin{subthm}{A-angle} For any $p\in\RR^m$ there is a vector $\nu$
-such that if $p\in\partial A_i$ for some $i$ and $\nu_i$ is the outer normal vector to $\partial A_i$ at $p$ then $\mangle(\nu,\nu_i)<\tfrac\pi2-\eps$.
-\end{subthm}
-\end{thm}
-
-Note that condition (\ref{SHORT.A-angle}) is nontrivial 
-only for the points $p$ which lie 
-on the intersection 
-of two or more boundaries $\partial A_i$.
-
-\begin{thm}{Exercise}
-Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{SHORT.A-convex})--(\ref{SHORT.A-intersection}) above and in addition, all $A_i$ are bounded.
-Show that condition (\ref{SHORT.A-angle}) is also satisfied for some $\eps>0$.
-\end{thm}
-
-\begin{thm}{Exercise}
-Assume that the collection of convex sets $A_i$ in $\RR^m$ satisfies conditions (\ref{SHORT.A-convex})--(\ref{SHORT.A-intersection}) above and in addition, each $A_i$ is centrally symmetric; that is 
-\[x\in A_i\iff -x\in A_i.\]
-Show that condition (\ref{SHORT.A-angle}) is also satisfied for some $\eps>0$.
-\end{thm}
+We will always assume that the boundary $\partial A_i$ is a smooth hypersurface.
 
 A \emph{billiard trajectory} 
-on this table is a unit-speed broken line $\gamma$
-with the \emph{regular reflection} at the points on $\partial A_i$ the angle of reflection is equal to the angle
-of incidence.
-(More precisely,  if $\gamma(t_0)\in\partial A_i$ then the vector
-$\gamma^+(t_0)+\gamma^-(t_0)$  is normal to the tangent
-plane of $\partial A_i$ at $\gamma(t_0)$.
-Recall that according to our convention  $\tfrac{\gamma(t_0-\eps)}{\eps}\to\gamma^-(t_0)$ as $\eps\to0+$.)
+on the table $T$ is a unit-speed broken line $\gamma$
+with the \emph{regular reflection} at the break points on $\partial A_i$ --- the angle of reflection is equal to the angle.
+The break points of the trajectory will be called \emph{collisions}.
 We assume that trajectory meets one $A_i$ at the time.
 
-The number of break
-points of the trajectory will be called \emph{number of collisions} of the trajectory.
+The billiard described above will be called \emph{dispersing} since after each collision, the nearby spreading trajectories will spread more rapidly.
+
+We say that walls $A_i$ of $T$ have $\eps$-wide corners if
+at each point $p\in T$ there is a right circular cone in $T$ with tip $p$ and aperture $\eps$. 
+
+\begin{thm}{Exercise}
+Assume that the walls
+of a dispersing billiard table $T$ 
+are compact and have common interior point.
+Show that the walls of $T$ have $\eps$-wide corners
+for some $\eps>0$.
+\end{thm}
+
+\begin{thm}{Exercise}
+Assume that a dispersing billiard table $T$ has
+are centrally symmetric walls with center 
+at their common interior point.
+Show that the walls of $T$  have $\eps$-wide corners
+for some $\eps>0$.
+\end{thm}
 
 \begin{thm}{Collision theorem}\label{thm:baby-collision}
 Assume $T\subset\RR^m$
-is a centered dispersing table 
-with $n$ walls and $\eps$-opened corners.
+is a dispersing billiard table,
+its walls have common interor point and $\eps$-wide corners.
 Then the number of collisions of any trajectory in  $T$  is bounded
-by a number $N$ which depends only on $n$ and $\eps$.
+by a number $N$ which depends only on the number of walls $n$ and $\eps$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:balls}
@@ -158,8 +134,7 @@ corresponding to $x\in \RR^m$
 will be denoted by $x^\kay$.
 
 \parit{Proof.}
-Let us use indunction on $n$
-the induction on $n$.
+Let us apply induction on $n$.
 In the base case $n=0$, we have $\spc{R}\iso\RR^m\in\cCat{}{0}$.
 
 \parit{Step.}
@@ -175,9 +150,24 @@ By Reshetnyak's gluing theorem we get $\spc{R}_{\bm{A}}\in\cCat{}{0}$.
 A Reshetnyak's puff pastry $\spc{R}$ is called \emph{end-to-end convex} if the lower and upper levels of $\spc{R}$ form a convex subset.
 \end{thm}
 
+\begin{thm}{Proposition}\label{prop:end-to-end-convex}
+Let  $A^1,\dots,A^n$ be a collection of convex sets in $\RR^m$
+with nonempty intersection 
+and
+$\eps$-wide corners.
+Then for any positive integer $\kay$ there is a positive integer $K$
+such that if 
+\[\bm{A}=(A^{i_1},\dots, A^{i_K})\]
+is an array such that any $\kay$ elements in the raw from $\bm{A}$ 
+each $A^i$ appears at least once
+then the  Reshetnyak's puff pastry for $\bm{A}$ is end-to-end convex.
+\end{thm}
+
+The proof of proposition is based on the following lemma.
+
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
 Let $A$ and $B$ two convex sets in $\RR^m$.
-Assume that $A\cup B\ne\emptyset$ and 
+Assume that $A\cap B\ne\emptyset$ and 
 for for some positive integer $n$
 and any $p\in \partial A\cap \partial B$ 
 and 
@@ -240,6 +230,44 @@ Then $z\in\partial A\cap\partial B$.
 By Proposition~\ref{prop:warp-examples},
 it is sufficient to show that ???
 and the latter is evident.
+\qeds
+ 
+
+\begin{thm}{Observation}
+Asume $A^1,A_2,\dots,A^n$ be a collection of convex bodies in $\RR^m$
+with $\eps$-wide corners.
+Then the collection 
+$A_1\cap A_2,A_3,\dots,A_n$ has also $\eps$-wide corners.
+\end{thm}
+
+\parit{Proof.}
+\qeds
+
+
+\parit{Proof of Proposition~\ref{prop:end-to-end-convex}.}
+Assume an array $\bm{A}'$ is obtained from $\bm{A}$ by inserting few labels which were already in $\bm{A}$.
+Note denote by $\spc{R}$ and $\spc{R}'$
+the  Reshetnyak's puff pastry for $\bm{A}$ and $\bm{A}'$ correspondingly.
+
+Assume that 
+$\bm{A}=(A^{i_1},\dots,A^{i_L})$ is an array which use each $A^i$
+and the Reshetnyak's puff pastry for $\bm{A}$ is end-to-end convex.
+Then from above it follows that any array
+$\bm{A}=(A^{i_1},\dots,A^{i_{\kay\cdot L}})$
+such that from any $\kay$ elements in the raq each $A^i$ appears at least once then 
+$\bm{A}\succeq\bm{A}$.
+Therefore the Reshetnyak's puff pastry for $\bm{A}$ is also end-to-end convex.
+
+Let us introduce new label $X$ for the set $A_{n-1}\cap A_n$.
+By induction hypothesis there is an array
+from the alphabet $A_1,\dots,A_{n-2},X$ such that corresponding 
+Reshetnyak's puff pastry for $\bm{A}$ is also end-to-end convex.
+
+Now let us exachange each $X$ in this alphabet by 
+\[\underbrace{A_{n-1},A_n,A_{n-1},...}_{N\ \text{times}},\]
+where $N$ provided by Lemma~\ref{lem:end-to-end-convex}.
+Applying lemma we get that the obtained array has end-to-end convex puff pastry
+\qeds
 
 
 
@@ -251,10 +279,8 @@ It follows from the convexity of $A_1$ that
 if the trajectory is reflected once in $\partial A_1$, 
 then it cannot return to $A_1$.
 
-The proof of the first step $n=2$ is slightly simpler than the remaining steps.
-To simplify the presentation, we prove the case $n=2$, 
-and then describe the necessary modifications to prove the $n=3$ case.
-Once this is done, the proof of the general case should be evident.
+The proof of the first step $n=2$ is slightly simpler than the remaining steps $n\ge 3$.
+To simplify the presentation we prove these steps separately. 
 
 \parit{First step; $n=2$.} To reduce number of indices, set $A=A_1$ and $B=A_2$. 
 
@@ -262,7 +288,7 @@ Note that any trajectory hits $A$ and $B$ in turn;
 that is, the trajectory can not hit $A$ (as well as $B$)
 twice in a raw.
 
-Fix a large number $N$ and assume a trajectory $\gamma$ has at least $N$ collisuion.
+Fix a large number $N$ and assume a trajectory $\gamma$ has at least $N$ collisions.
 We may assume that the trajectory meets the bodies in order \[\bm{A}_N=(\underbrace{A,B,A, B,\dots}_{N\ \text{times}}).\]
 
 Consider the Reshetnyak's  puff pastry $\spc{R}$
@@ -271,7 +297,25 @@ The trajectory $\gamma$ can be lifted to the puff pastry as a geodesic.
 It follows that $\spc{R}$ is not end-to-end convex;
 the later contradicts Lemma~\ref{lem:end-to-end-convex}.
 
-\parit{Other steps; $n>2$.}
+\parit{Second step; $n=3$.} 
+To reduce number of indices, set $A=A_1$, $B=A_2$ and $C=A_3$.
+
+Fix a large number $N$ and assume a trajectory $\gamma$ has at least $N$ collisions.
+Write the labels $A$, $B$ and $C$ in the order $\gamma$ meets them; denote by $\bm{A}$ the obtained array.
+
+Let $N_2$ be the number from the previous step.
+Note that if one takes $N_2$ elements in the raw from $\bm{A}$
+then each label $A$, $B$ and $C$ will appear at least once;
+otherwise we get a contradiction with the induction hypothesis.
+
+Set 
+\[\bm{X}=(\underbrace{A,B,A\dots}_{N_2\ \text{times}})
+\eqlbl{eq:X}\]
+It follows that if $N>N_2^3$ then we can remove some elements from $\bm{A}$ to obtain the array
+\[(\underbrace{\bm{X},C,\bm{X},\dots}_{N_2\ \text{times}}),\]
+here each $\bm{X}$ as in \ref{eq:X}.
+
+\parit{Other steps; $n\ge3$.}
 Denote by $N_{n-1}$ a number which is bigger than the number of  collisions of any billiard trajectory on the table with $n-1$ walls.
 
 Fix a large number $N=N_{n-1}^3$ and assume a trajectory $\gamma$ has at least $N$ collisions.
@@ -346,26 +390,3 @@ this way we arrive to a contradiction.
 
 
 \qeds
-
-The Baby collision theorem (\ref{thm:baby-collision}) admits a straightforward generalization to higher dimensions and to an arbitrary finite number of sets $B_i$.
-Namely, the following result holds:
-
-\begin{thm}{Adult collision theorem}\label{thm:adult-collision}
-Let $B_1,B_2,\dots,B_n$ be a finite collection of open convex sets in $\RR^m$.
-Assume each $B_i$ contains the origin $0\in\RR^m$
-and for each $i$, the boundary $W_i=\partial B_i$ is a smooth hypersurface.
-Further, assume there is $\eps>0$ such that for any point $p\in W_i\cap W_j$ the angle between the tangent 
-hyperplane of $W_i$ and $W_j$ at $p$ is at least $\eps$.
-
-Then 
-there is a natural number $N$ which depends only on $\eps$
-such that the number of collisions of any trajectory in $T$ is at most $N$.
-\end{thm}
-
-The proof of the Collision theorem can be given along the same lines as its baby case.
-We glue the space in a similar way:
-Take a copy of $\RR^m$
-and glue to it $n$ copies of $\RR^m$, along each $B_i$.
-Further glue to each copy $n-1$ copies of $\RR^m$... 
-
-Now we will show how to apply the above theorem to prove the following. 
