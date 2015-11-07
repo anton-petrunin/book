@@ -1,10 +1,5 @@
 \chapter{Billiards}
-\section{Dispersing billiard}
-
-\begin{wrapfigure}{r}{37mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/table(.5)}
-\end{lpic}
-\end{wrapfigure}
+\section{Semi-dispersing billiard}
 
 Assume $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in $\EE^m$.
 Consider the billiard table formed by the closure of the complement 
@@ -129,10 +124,9 @@ It remains to apply Theorem~\ref{thm:baby-collision}.
 
 In this section we discuss a construction which will be used in the next section to prove Collision Theorem~\ref{thm:collision}.
 
-\begin{thm}{Definition}
 Let $(A^1,\dots,A^N)$ be an array of convex closed sets in $\RR^m$.
-Consider an array of $N+1$ copies of $\RR^m$;
-assume that space $\spc{R}$ is 
+Consider an array of $N+1$ copies of $\RR^m$.
+Assume that space $\spc{R}$ is 
 obtained by
 gluing successive spaces in the array  
 along $A^1,\dots,A^N$ correspondingly.
@@ -144,7 +138,16 @@ they will denoted by $\spc{R}^0,\dots,\spc{R}^N$.
 The point in the $\kay$-th level $\spc{R}^\kay$
 corresponding to $x\in \RR^m$
 will be denoted by $x^\kay$.
-\end{thm}
+
+The puff pastry $\spc{R}$ admits natural projection
+$\spc{R}\to\RR^m$ defined as $x^\kay\mapsto x$.
+Note that the restriction of this projection to each level $\spc{R}^\kay$ is an isometry.
+
+Given $x\in \RR^m$, any point $x^\kay\in\spc{R}$ is called lifting of $x$.
+Note that 
+$x^i=x^j$ for some $i<j$
+if and only if $x\in A^{i+1}\cap\dots\cap A^j$.
+
 
 Applying Reshetnyak's gluing theorem \ref{thm:gluing}
 to the above definition, we get the following.
@@ -177,13 +180,14 @@ the array $(A^1,\dots,A^N)$ with removed $A^\kay$.
 \begin{thm}{Definition}
 A Reshetnyak's puff pastry $\spc{R}$ 
 is called \emph{end-to-end convex} 
-if the lower and upper levels of $\spc{R}$ form a convex subset.
+if the union of lower and upper levels in $\spc{R}$ 
+forms a convex set.
 \end{thm}
 
 Let $A^1,\dots,A^n$ be convex bodies in $\RR^m$.
-Assume an array $\bm{X}=(A^{i_1},\dots, A^{i_N})$
+Assume an array $\bm{A}=(A^{i_1},\dots, A^{i_N})$
 has each $A^i$ at least once. 
-Let $\spc{R}$ be the Reshetnyak's puff pastry for $\bm{X}$.
+Let $\spc{R}$ be the Reshetnyak's puff pastry for $\bm{A}$.
 Note that $\spc{R}$ is end-to-end convex
 if and only if the union lower and upper levels
 $\spc{R}_0\cup\spc{R}_N$ is isometric to the doubling of $\RR^m$ in the intersection $A^1\cap\dots\cap A^n$.
@@ -191,36 +195,31 @@ $\spc{R}_0\cup\spc{R}_N$ is isometric to the doubling of $\RR^m$ in the intersec
 From the discussion above we get the following.
 
 \begin{thm}{Observation}
-Let an array convex bodies $\bm{X}$
-consists of $n$ different bodies $A^1,\dots,A^n$
-in $\RR^m$.
-Assume that an other array $\bm{X}'$
-obtained form $\bm{X}$ by inserting one or more bodies from the list $A^1,\dots,A^n$ in arbitrary places.
-Denote by $\spc{R}$ and $\spc{R}'$ 
-the Reshetnyak's puff pastries for $\bm{X}$ and $\bm{X}'$.
+Let $\bm{A}$ be an array of convex bodies in $\RR^m$.
+Assume that an other array $\bm{A}'$
+obtained by inserting in $\bm{A}$
+copies of the bodies which were already listed in $\bm{A}$.
 
-If $\spc{R}$ is end-to-end convex then so is $\spc{R}'$
+For example we can take $\bm{A}=(A,C,B,C,A)$ 
+and insert $B$ to the second place and $A$ to the 4-th place to obtain $\bm{A}'=(A,B,C,A,B,C,A)$.
+
+Denote by $\spc{R}$ and $\spc{R}'$ 
+the Reshetnyak's puff pastries for $\bm{A}$ and $\bm{A}'$.
+If $\spc{R}$ is end-to-end convex then so is $\spc{R}'$.
 \end{thm}
 
 
-
-Now assume an other array $\bm{X}'$
-obtained form $\bm{X}$ by insetring one or more bodies from the list $A^1,\dot,A^n$ in arbitrary place.
-
-$\spc{R}$
-
-
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
-Let  $A^1,\dots,A^n$ be a collection of convex sets in $\RR^m$
-with nonempty intersection 
-and
-$\eps$-wide corners.
-Then for any positive integer $\kay$ there is a positive integer $K$
-such that if 
-\[\bm{A}=(A^{i_1},\dots, A^{i_K})\]
-is an array such that any $\kay$ elements in the raw from $\bm{A}$ 
-each $A^i$ appears at least once
-then the  Reshetnyak's puff pastry for $\bm{A}$ is end-to-end convex.
+Given $\eps>0$ and integer $n$
+there is an array of integers $(i_1,\dots,i_N)$ 
+such that $i\kay\in\{1,\dots,n\}$ for any $\kay$ 
+and each number $1,\dots,n$ appear in the array at least one
+such that the following holds.
+
+If $A^1,\dots,A^n$ is a collection of convex sets in $\RR^m$ with common point 
+and $\eps$-wide corners 
+then the puff pastry for the array
+$(A^{i_1},\dots,A^i_N)$ is end-to-end convex.
 \end{thm}
 
 The proof of proposition is based on the following lemma.
@@ -264,163 +263,70 @@ By Proposition~\ref{prop:warp-examples},
 it is sufficient to show that ???
 and the latter is evident.
 \qeds
- 
-
-\begin{thm}{Observation}
-Asume $A^1,A^2,\dots,A^n$ be a collection of convex bodies in $\RR^m$
-with $\eps$-wide corners.
-Then the collection 
-$A^1\cap A^2,A^3,\dots,A^n$ has also $\eps$-wide corners.
-\end{thm}
-
-\parit{Proof.}
-
-\qeds
-
 
 \parit{Proof of Proposition~\ref{prop:end-to-end-convex}.}
-Assume an array $\bm{A}'$ is obtained from $\bm{A}$ by inserting few labels which were already in $\bm{A}$.
-Note denote by $\spc{R}$ and $\spc{R}'$
-the  Reshetnyak's puff pastry for $\bm{A}$ and $\bm{A}'$ correspondingly.
+The array $(i_1,\dots,i_N)$ is constructed recursively.
+For $n=1$, one can take the array from one element $(1)$.
 
-Assume that 
-$\bm{A}=(A^{i_1},\dots,A^{i_L})$ is an array which use each $A^i$
-and the Reshetnyak's puff pastry for $\bm{A}$ is end-to-end convex.
-Then from above it follows that any array
-$\bm{A}=(A^{i_1},\dots,A^{i_{\kay\cdot L}})$
-such that from any $\kay$ elements in the raq each $A^i$ appears at least once then 
-$\bm{A}\succeq\bm{A}$.
-Therefore the Reshetnyak's puff pastry for $\bm{A}$ is also end-to-end convex.
+Now assume an array for $n$ is alrady constructed.
+let us exchange each occurrence of $n$
+to the string 
+\[\underbrace{n,n+1,n,\dots}_{\text{$N$ times}}\]
+where $N=\lceil\tfrac\pi\eps\rceil$.
 
-Let us introduce new label $X$ for the set $A^{n-1}\cap A^n$.
-By induction hypothesis there is an array
-from the alphabet $A^1,\dots,A^{n-2},X$ such that corresponding 
-Reshetnyak's puff pastry for $\bm{A}$ is also end-to-end convex.
+Applying Lemma \ref{lem:end-to-end-convex}
+and the following observation we get that the obtained array meets the conditions of the proposition.
 
-Now let us exachange each $X$ in this alphabet by 
-\[\underbrace{A^{n-1},A^n,A^{n-1},...}_{N\ \text{times}},\]
-where $N$ provided by Lemma~\ref{lem:end-to-end-convex}.
-Applying lemma we get that the obtained array has end-to-end convex puff pastry
+\begin{clm}{}
+Asume $A^1,A^2,\dots,A^n$ be a collection of convex bodies in $\RR^m$
+with $\eps$-wide corners and $B=A^{n-1}\cap A^n$
+Then the collection 
+$A^1,\dots,A^{n-2},B$ has also $\eps$-wide corners.
 \qeds
+\end{clm}
 
 
 
 \section{Proof of Collision theorem.}
 
+We present the proof of Collision Theorem (\ref{thm:collision})
+based on the results developed in the previous section.
 
-The base case $n=1$ is evident; the number of collisions cannot exceed $1$.  
+\parit{Proof of Collision Theorem (\ref{thm:collision}).}
+We will apply induction on $n$.
+
+\parit{Base.}The base case $n=1$ is evident; the number of collisions cannot exceed $1$.  
 It follows from the convexity of $A^1$ that
 if the trajectory is reflected once in $\partial A^1$, 
-then it cannot return to $A^1$.
+then it cannot return to $A^1$. 
 
-The proof of the first step $n=2$ is slightly simpler than the remaining steps $n\ge 3$.
-To simplify the presentation we prove these steps separately. 
+\parit{Step.}
+Assume $\gamma$ is a trajectory which meets the walls in the order $A^{i_1},\dots,A^{i_N}$ for a large integer $N$.
 
-\parit{First step; $n=2$.} To reduce number of indices, set $A=A^1$ and $B=A^2$. 
+Consider the array 
+\[\bm{A}_\gamma=(A^{i_1},\dots,A^{i_N}).\]
+By induction hypothesis, there is a positive integer $M$ such any $M$ elements in the raw from  $\bm{A}_\gamma$ contain each $A^i$ at least once.
 
-Note that any trajectory hits $A$ and $B$ in turn;
-that is, the trajectory can not hit $A$ (as well as $B$)
-twice in a raw.
+Let $\spc{R}_\gamma$ be  the  Reshetnyak's puff pastry for  $\bm{A}_\gamma$.
 
-Fix a large number $N$ and assume a trajectory $\gamma$ has at least $N$ collisions.
-We may assume that the trajectory meets the bodies in order \[\bm{A}_N=(\underbrace{A,B,A, B,\dots}_{N\ \text{times}}).\]
+Let us lift $\gamma(t)$ to $\gamma^\kay(t)$ 
+for any moment of time $t$ between $\kay$ and $(\kay+1)$-th collisions.
+Note that this way we lift $\gamma$ to a minimizing geodesic in $\spc{R}$.
 
-Consider the Reshetnyak's  puff pastry $\spc{R}$
-for the array $\bm{A}_N$.
-The trajectory $\gamma$ can be lifted to the puff pastry as a geodesic.
-It follows that $\spc{R}$ is not end-to-end convex;
-the later contradicts Lemma~\ref{lem:end-to-end-convex}.
+Since $\gamma$ does not pass through $A_1\cap\dots\cap A_n$
+the lift of $\gamma$ goes away form $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
+It follows that $\spc{R}_\gamma$ is not end-to-end convex.
 
-\parit{Second step; $n=3$.} 
-To reduce number of indices, set $A=A^1$, $B=A^2$ and $C=A^3$.
+Let 
+\[\bm{B}=(A^{j_1},\dots,A^{j_K})\] 
+be the array provided by ???;
+so $\bm{B}$ contains each $A^i$ at least once
+and the puff pastry $\spc{R}_{\bm{B}}$ for $\bm{B}$ is end-to-end convex.
 
-Fix a large number $N$ and assume a trajectory $\gamma$ has at least $N$ collisions.
-Write the labels $A$, $B$ and $C$ in the order $\gamma$ meets them; denote by $\bm{A}$ the obtained array.
-
-Let $N_2$ be the number from the previous step.
-Note that if one takes $N_2$ elements in the raw from $\bm{A}$
-then each label $A$, $B$ and $C$ will appear at least once;
-otherwise we get a contradiction with the induction hypothesis.
-
-Set 
-\[\bm{X}=(\underbrace{A,B,A\dots}_{N_2\ \text{times}})
-\eqlbl{eq:X}\]
-It follows that if $N>N_2^3$ then we can remove some elements from $\bm{A}$ to obtain the array
-\[(\underbrace{\bm{X},C,\bm{X},\dots}_{N_2\ \text{times}}),\]
-here each $\bm{X}$ as in \ref{eq:X}.
-
-\parit{Other steps; $n\ge3$.}
-Denote by $N_{n-1}$ a number which is bigger than the number of  collisions of any billiard trajectory on the table with $n-1$ walls.
-
-Fix a large number $N=N_{n-1}^3$ and assume a trajectory $\gamma$ has at least $N$ collisions.
-Let us write the $N$ bodies in the order our trajectory meets them; denote by $\bm{A}_N$ the obtained array.  
-If one takes any $N_{n-1}$ bodies in the raw from $\bm{A}_N$
-then it will have all $n$ bodies in it;
-otherwise we would get a contradiction with the induction hypothesis.
-
-It follows that one can remove some bodies from the $\bm{A}_N$.
-
-
-Then it should hit $A$,
-then $B$,
-then $A$
-and so on $2\cdot N$ times
-and then finally $B$.
-Denote by 
-$a_1\in \partial A$, 
-$b_1\in \partial B,
-\dots
-b_N\in \partial B$
-the brake points of this trajectory.
-
-Prepare $2\cdot N$ copies of $\RR^m$,
-say $\mathcal{R}_1$, $\mathcal{R}_2,\dots,\mathcal{R}_{2\cdot N}$.
-Each $\mathcal{R}_i$ contains a copy of $A$ and $B$, which will be denoted as $A^i$ and $B^i$.
-
-Let us glue a new space say $\mathcal{R}$ out of $\mathcal{R}_i$'s
-by gluing 
-\begin{enumerate}
-\item $\mathcal{R}_1$ to $\mathcal{R}_2$ by identifying $A^1$ and $A^2$;
-\item $\mathcal{R}_2$ to $\mathcal{R}_3$  by identifying $B^2$ and $B^3$;
-\item $\mathcal{R}_3$ to $\mathcal{R}_4$  by identifying $A^3$ and $A^4$;
-\item and so on;
-\item $\mathcal{R}_{2\cdot N-1}$ to $\mathcal{R}_{2\cdot N}$ by identifying $A^{2\cdot N-1}$ and $A^{2\cdot N}$.
-\end{enumerate}
-According to Reshetnyak's gluing theorem (\ref{thm:reshetnyak}), $\mathcal{R}\in\cCat{}{0}$.
-Further we will view $\mathcal{R}_i$ as subsets of $\mathcal{R}$.
-
-Denote by $f_i\:\RR^m\to\mathcal{R}$ the distance preserving map which identifies $\RR^m$ and $\mathcal{R}_i$
-and let $F\:\mathcal{R} \to \RR^m$ be the natural projection which identifies all $\mathcal{R}_i$ with $\RR^m$.
-
-Consider the broken geodesic $\gamma$ connecting points $f_1(a_1),f_2(b_2),f_3(a_3),\dots,f_{2\cdot N}$ in $\mathcal{R}$.
-Note that $\gamma$ forms a local geodesic in $\mathcal{R}$.
-Therefore, according to ??? $\gamma$ is a geodesic with end points in $A^1\cup A^{2\cdot N}$,
-but all interior points of $\gamma$ do not belong to $A^1\cup A^{2\cdot N}$.
-
-Hence in order to arrive to a contradiction, 
-it is sufficient to prove the following claim.
- 
-\begin{clm}{}
-The union $A^1\cup A^{2\cdot N}$ is a convex set in $\mathcal{R}$.
-\end{clm}
-
-Due to the convexity of $A^1$ and $A^{2\cdot N}$,
-it is sufficient to show that for any points $p\in A^1\backslash A^{2\cdot N}$ and $q\in A^{2\cdot N}\backslash A^1$,
-the geodesic $[pq]$ contain a point $x\in K\z=A^1\cap A^{2\cdot N}$.
-
-Assume contrary.
-Mark points $p=p_1,q_2,p_3,\dots,p_{2\cdot N}=q$ of $[pq]$ such that $p_i\in A^i$ and $q_j\in B^j$.
-Note that $[p_{2\cdot i-1}q_{2\cdot i}]\in \mathcal{R}_{2\cdot i-1}$ 
-and 
-$[q_{2\cdot i}p_{2\cdot i+1}]\in \mathcal{R}_{2\cdot i}$ for each $i$.
-We will construct a curve passing throug $K$ and connecting $p$ to $q$ which is shorter than $[pq]$;
-this way we arrive to a contradiction. 
-
-
-
-
-\parit{Second step; $n=3$.}
-
-
-
+Assuming $N\ge K\cdot M$,
+we can obtain $\bm{A}_\gamma$  
+by inserting elements $A^i$ in $\bm{B}$.
+By Proposition ???, 
+$\spc{R}_\gamma$ is end-to-end convex,
+a contradiction.
 \qeds
