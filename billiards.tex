@@ -1,12 +1,11 @@
-\chapter{Billiards}
 \section{Semi-dispersing billiard}
 
-Assume $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in $\EE^m$.
+Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in $\EE^m$.
+Assume that the boundary $\partial A^i$ is a smooth hypersurface.
+
 Consider the billiard table formed by the closure of the complement 
 $$T=\overline{\EE^m\backslash \bigcup_{i=1}^n A^i}.$$
-The sets $A^i$ will be called \emph{walls} of the table.
-
-We will always assume that the boundary $\partial A^i$ is a smooth hypersurface.
+The sets $A^i$ will be called \emph{walls} of the table $T$.
 
 A \emph{billiard trajectory} 
 on the table $T$ is a unit-speed broken line $\gamma$
@@ -15,14 +14,21 @@ with the \emph{regular reflection} at the break points on $\partial A^i$
 The break points of the trajectory will be called \emph{collisions}.
 We assume that trajectory meets one $A^i$ at the time.
 
-The billiard described above will be called \emph{semi-dispersing} since after each collision, the nearby spreading trajectories will spread at least as rapidly.
+The billiard described above will be called \emph{semi-dispersing} since after each collision, the nearby spreading trajectories will spread at least as rapidly. %???general def of semi-dispersing billiard???
 
-We say that the walls $A^1,\dots,A^n$ have \emph{$\eps$-wide corners} 
-if at each point $p\in R^m$ 
-there is a right circular cone $C_p$ with the tip $p$ and aperture $\eps$
-such that 
-\[p\notin A^i\iff C_p\cap A^i=\emptyset.\]
-for any $i$. 
+We say that the closed sets $A^1,\dots,A^n$ have \emph{$\eps$-wide corners} 
+if at each point $p\in \RR^m$ 
+and any positive $\eps'<\eps$ 
+there is a ball $B_p$ with center $q$ and radius $\sin\tfrac{\eps'}2\cdot\dist{p}{q}{}$ such that
+\[p\in A^i\iff B_p\subset A^i.\]
+for any $i$.
+
+For example, 
+two plane figures $A$ and $B$ 
+have $\eps$-wide corners
+if the figures $A$,  $B$  and $A\cap B$ 
+have all angles at least $\eps$.
+
 
 \begin{thm}{Exercise}
 Assume that the walls
@@ -64,10 +70,9 @@ Then the total number of collisions cannot exceed some number $N$ which depend o
 If the balls are identical then $N$ depends only on $n$.
 \end{thm}
 
-The 1 and 2-dimensional cases admit simpler proofs.
-The proof below works in all dimensions.
-
-
+The 1 and 2-dimensional versions of this corollary 
+admit simpler proofs.
+The proof below admits a straightforward generalization to all dimensions.
 
 \parit{Proof.}
 A position of a collection of $n$ balls can be represented by a point in $\RR^{3\cdot n}$.
@@ -81,6 +86,7 @@ the corresponding point in $\RR^{3\cdot N}$ is
 \end{align*}
 Not every point in $\RR^{3\cdot n}$ represents a valid configuration of balls. 
 We have to exclude positions where some of the balls overlap. 
+
 The $i$-th and $j$-th ball intersect if 
 $$|a_i - a_j | \le R_i+R_j,$$
 where $R_i$ denoted the radius of the ball number $i$.
@@ -94,13 +100,13 @@ to valid positions of the system of balls.
 
 The evolution of the system
 of balls traces a path in the configuration space. 
-It is easy to verify that
-the point representing the configuration of balls moves straight and at a
-constant speed until it hits one of the cylinders $C_{ij}$ (this event corresponds
-to a collision in the system of balls).
+Clearly
+the point $\bm{a}\in\RR^{3\cdot n}$ moves straight and at a
+constant speed until it hits one of the cylinders $C_{i,j}$; this event corresponds
+to a collision in the system of balls.
 
 Consider the norm of $\bm{a}=(a_1,\dots,a_n)\in \RR^{3\cdot n}$ defined by
-\[\lVert x\rVert=M_1\cdot|a_1|^2+\dots+M_n\cdot |a_n|,\]
+\[\lVert x\rVert=\sqrt{M_1\cdot|a_1|^2+\dots+M_n\cdot |a_n|},\]
 where $|a_i|=\sqrt{x_i^2+y_i^2+z_i^2}$ 
 and $M_i$ denotes the mass of the ball number $i$.
 In the metric defined by $\lVert {*}\rVert$,
@@ -116,13 +122,14 @@ Note that each cylinder $C_{i,j}$ are convex sets
 with smooth boundaries which 
 are centrally symmetric around the origin.
 By Exercise~\ref{ex:centrally-simmetric-walls} the walls have $\eps$-wide corners for some $\eps>0$ which depends on radiuses $R_i$ and the masses $M_i$.
-(In fact if all balls are identical then we can take $\eps=\tfrac\pi3$.)
-It remains to apply Theorem~\ref{thm:baby-collision}.
+(If all balls are identical then we can take $\eps=\tfrac\pi3$.)
+It remains to apply Collision Theorem~\ref{thm:collision}.
 \qeds
 
 \section{Reshetnyak's puff pastry}
 
-In this section we discuss a construction which will be used in the next section to prove Collision Theorem~\ref{thm:collision}.
+In this section we introduce \emph{Reshetnyak's puff pastry}, 
+a construction which will be used in the next section to prove Collision Theorem~\ref{thm:collision}.
 
 Let $(A^1,\dots,A^N)$ be an array of convex closed sets in $\RR^m$.
 Consider an array of $N+1$ copies of $\RR^m$.
@@ -139,43 +146,49 @@ The point in the $\kay$-th level $\spc{R}^\kay$
 corresponding to $x\in \RR^m$
 will be denoted by $x^\kay$.
 
-The puff pastry $\spc{R}$ admits natural projection
-$\spc{R}\to\RR^m$ defined as $x^\kay\mapsto x$.
-Note that the restriction of this projection to each level $\spc{R}^\kay$ is an isometry.
-
-Given $x\in \RR^m$, any point $x^\kay\in\spc{R}$ is called lifting of $x$.
-Note that 
-$x^i=x^j$ for some $i<j$
+Given $x\in \RR^m$, any point $x^\kay\in\spc{R}$ is called \emph{lifting} of $x$;
+we also can consider the liftings of the maps to $\RR^m$ 
+in particular the liftings of subsets in $\RR^m$.
+Note that the intersection $A^1\cap\dots\cap A^N$ admits unique lifting in $\spc{R}$.
+Further $x^i=x^j$ for some $i<j$
 if and only if $x\in A^{i+1}\cap\dots\cap A^j$.
 
+Note that the space $\spc{R}$ admits natural projection
+$\spc{R}\to\RR^m$ defined as $x^\kay\mapsto x$.
+Further the restriction of this projection to each level $\spc{R}^\kay$ is an isometry.
 
-Applying Reshetnyak's gluing theorem \ref{thm:gluing}
-to the above definition, we get the following.
+\begin{thm}{Observation}
+Any Reshetnyak's puff pastry is a $\cCat{}{0}$ space.
+\end{thm}
 
-\begin{thm}{Proposition}
-Let $(A^1,\dots,A^N)$ be an array of convex closed sets in $\RR^m$.
-Then the corresponding Reshetnyak's puff pastry $\spc{R}$
-is a $\cCat{}{0}$ space.
+The above observation follows from Reshetnyak's gluing theorem \ref{thm:gluing}.
 
-Assume $(\check A^1,\dots,\check A^N)$ is an other array of convex bodies in $\RR^m$ such that $\check A^\kay\supset A^\kay$ for each $\kay$.
-Let $\check{\spc{R}}$ be the corresponding Reshetnyak's  puff pastries.
+\begin{thm}{Proposition}\label{prop:A-check-A}
+Assume $(A^1,\dots,A^N)$ and $(\check A^1,\dots,\check A^N)$ are two arrays of convex closed sets in $\RR^m$ 
+such that $ A^\kay\subset \check A^\kay$ for each $\kay$.
+Let $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak's  puff pastries.
 Then the map $\spc{R}\to\check{\spc{R}}$
 defined as $x^\kay\mapsto\check x^\kay$ is short.
 
 In particular 
-if  $\spc{R}$ and $\check{\spc{R}}$ as above and
+if  
 \[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\]
-for some $x,y\in \RR$ and $i,j\in \{0,\dots,n\}$
+for some $x,y\in \RR^m$ and $i,j\in \{0,\dots,n\}$
 then the geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
 is the image of geodesic $[x^i y^j]_{\spc{R}}$
 under the map $x^i\mapsto \check x^i$.
 \end{thm}
 
-Note that in the proposition above one could assume that $\check A^\kay=\RR^m$ for some $\kay$
-and $\check A^i=A^i$ for $i\ne \kay$.
-In this case $\check{\spc{R}}$ 
-is the Reshetnyak's  puff pastry for the 
-the array $(A^1,\dots,A^N)$ with removed $A^\kay$. 
+\parit{Proof.}
+The first statement in the proposition 
+follows from the construction of Reshetnyak's  puff pastries.
+
+Since the map is short, the image of $[x^i y^j]_{\spc{R}}$
+is a geodesic joining $\check x^i$ to $\check y^j$ $\check{\spc{R}}$.
+Since $\check{\spc{R}}\in\cCat{}{0}$, 
+such geodesic is unique.
+Hence the second statement follows.
+\qeds
 
 \begin{thm}{Definition}
 A Reshetnyak's puff pastry $\spc{R}$ 
@@ -185,8 +198,8 @@ forms a convex set.
 \end{thm}
 
 Let $A^1,\dots,A^n$ be convex bodies in $\RR^m$.
-Assume an array $\bm{A}=(A^{i_1},\dots, A^{i_N})$
-has each $A^i$ at least once. 
+Consider an array \[\bm{A}=(A^{i_1},\dots, A^{i_N})\]
+where each $A^i$ at least once. 
 Let $\spc{R}$ be the Reshetnyak's puff pastry for $\bm{A}$.
 Note that $\spc{R}$ is end-to-end convex
 if and only if the union lower and upper levels
@@ -194,74 +207,144 @@ $\spc{R}_0\cup\spc{R}_N$ is isometric to the doubling of $\RR^m$ in the intersec
 
 From the discussion above we get the following.
 
-\begin{thm}{Observation}
-Let $\bm{A}$ be an array of convex bodies in $\RR^m$.
-Assume that an other array $\bm{A}'$
-obtained by inserting in $\bm{A}$
-copies of the bodies which were already listed in $\bm{A}$.
+\begin{thm}{Observation}\label{obs:end-to-end-convex}
+Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in $\RR^m$.
+Assume that 
+the  array $\bm{A}$ 
+obtained by inserting in $\check{\bm{A}}$
+copies of the bodies which were already listed in $\check{\bm{A}}$.
 
-For example we can take $\bm{A}=(A,C,B,C,A)$ 
-and insert $B$ to the second place and $A$ to the 4-th place to obtain $\bm{A}'=(A,B,C,A,B,C,A)$.
+For example we can take $\check{\bm{A}}=(A,C,B,C,A)$ 
+and insert $B$ to the second place and $A$ to the 4-th place to obtain $\bm{A}=(A,B,C,A,B,C,A)$.
 
-Denote by $\spc{R}$ and $\spc{R}'$ 
-the Reshetnyak's puff pastries for $\bm{A}$ and $\bm{A}'$.
-If $\spc{R}$ is end-to-end convex then so is $\spc{R}'$.
+Denote by $\check{\spc{R}}$ and $\spc{R}$ 
+the Reshetnyak's puff pastries for $\check{\bm{A}}$ and $\bm{A}$ correspondingly.
+If $\check{\spc{R}}$ is end-to-end convex then so is $\spc{R}$.
 \end{thm}
+
+\parit{Proof.}
+Without loss of generality we can assume that $\bm{A}$ 
+obtained by inserting one element in $\check{\bm{A}}$,
+say at the place number $\kay$.
+
+Note that $\check{\spc{R}}$ is isometric to the puff pastry 
+for $\bm{A}$ with $A^\kay$ exchanged to $\RR^m$.
+It remains to apply Proposition~\ref{prop:A-check-A}.
+\qeds
 
 
 \begin{thm}{Proposition}\label{prop:end-to-end-convex}
-Given $\eps>0$ and integer $n$
-there is an array of integers $(i_1,\dots,i_N)$ 
-such that $i\kay\in\{1,\dots,n\}$ for any $\kay$ 
-and each number $1,\dots,n$ appear in the array at least one
-such that the following holds.
+Given $\eps>0$ and a positive integer $n$
+there is an array of integers $\bm{i}_\eps=(i_1,\dots,i_N)$ 
+such that 
 
-If $A^1,\dots,A^n$ is a collection of convex sets in $\RR^m$ with common point 
+\begin{subthm}{} For each $\kay$ we have $1\le i_\kay\le n$
+and each number $1,\dots,n$ appear in $\bm{i}_\eps$ at least one.
+\end{subthm}
+
+\begin{subthm}{}
+If $A^1,\dots,A^n$ is a collection of closed convex sets in $\RR^m$ with common point 
 and $\eps$-wide corners 
 then the puff pastry for the array
-$(A^{i_1},\dots,A^i_N)$ is end-to-end convex.
+$(A^{i_1},\dots,A^{i_N})$ is end-to-end convex.
+\end{subthm}
 \end{thm}
 
 The proof of proposition is based on the following lemma.
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
 Let $A$ and $B$ two convex sets in $\RR^m$ with $\eps$-wide.
-Consider the alternating array
-\[\bm{X}_n=(\underbrace{A,B,A,\dots}_{\text{$n$ times}}).\]
-If $n\cdot\eps\ge\pi$
-then the Reshetnyak's puff pastry for $\bm{X}_n$ is end-to-end convex. 
+Then the Reshetnyak's puff pastry for the array
+\[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}).\]
+is end-to-end convex. 
 \end{thm}
 
-\parit{Proof.}
-Let us come back to the proof.
-We need to show that $\spc{R}^0\cup\spc{R}^n$ forms a convex set in $\spc{R}$.
-In other words, we need to show that $\spc{R}^0\cup\spc{R}^n$
-is isometric to the doubling of $\RR^m$ in $A\cap B$. 
+\begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
+Let $A$ and $B$ two  
+half-planes in $\RR^2$ 
+and $A\cap B$ is an angle with angle measure $\alpha$.
+Then the Reshetnyak's puff pastry for the array \[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}})\]
+is end-to-end convex. 
+\end{thm}
 
-Fix $x,y\in \RR^m$.
+\begin{wrapfigure}{r}{52mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
+%\lbl[t]{4,58;$a$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof.}
+Note that the puff pastry $\spc{R}$ is isometric to the cone over space glued from the unit circles as shown on the diagram.
+
+All the short arcs on the diagram have length $\alpha$;
+the long arcs have length $\pi-\alpha$,
+so going around along any path will take $2\cdot\pi$.
+
+The statement reduces to the $\pi$-convexity of inner and outer circles marked by fat lines on the diagram.
+The latter hols if the zigzag curve has length at least $\pi$,
+which is exactly the condition.
+\qeds
+
+
+\parit{Proof of Lemma~\ref{lem:end-to-end-convex}.}
+Fix arbitrary $x,y\in \RR^m$.
 Choose a point $z\in A\cap B$
 for which the sum 
 \[\dist{x}{z}{}+\dist{y}{z}{}\] 
-takes minimal value.
-Since $\spc{R}\in\cCat{}{0}$, it is sufficient to show that the geodesic $[x^0y^n]_\spc{R}$ pass though $z^0=z^n$.
+takes the minimal value.
+To show the end-to-end convexity of  $\spc{R}$,
+it is sufficient to show the following claim
 
-Assume contrary.
-Then there are half spaces (or whole spaces) $A'$ and $B'$ such that
-$A'\supset A$ and $B'\supset B$
+\begin{clm}{}\label{clm:z in xy}
+The geodesic $[x^0y^n]_\spc{R}$ pass though $z^0=z^n$.
+\end{clm}
+
+The latter is evident if $z$ lies in the interior of $A$ or $B$; see Observation~\ref{obs:end-to-end-convex}.
+Therefore we can assume that $z\in\partial A\cap\partial B$.
+
+The following claim is an exercise in convex geometry, we leave its proof to the reader.
+
+\begin{clm}{}
+There are half-spaces $\dot A$ and $\dot B$ such that
+$\dot A\supset A$ and $\dot B\supset B$
 and 
 \[\dist{x}{z}{}+\dist{y}{z}{}\] 
 takes minimal value
-for all $z\in A'\cap B'$.
+for all $z\in \dot A\cap \dot B$.
+\end{clm}
 
-In the array ???, 
-exchange each $A$ to $A'$ and each $B$ to $B'$.
-The corresponding Reshetnyak's puff pastry $\spc{R}'$
-splits as a product or $\RR^{m-2}$ and a puff pastry
-glued from the copies of the palne $\RR^2$.
-Then $z\in\partial A\cap\partial B$.
-By Proposition~\ref{prop:warp-examples},
-it is sufficient to show that ???
-and the latter is evident.
+Since $A$ and $B$ had $\eps$-wide corners,
+the angle measure of  $\dot A\cap \dot B$ is at least $\eps$.
+In other words $\RR^{m}$ admits isometric splitting $\RR^{m-1}\times \RR^2$ 
+such that 
+\begin{align*}
+\dot A&=\RR^{m-1}\times \ddot A
+\\
+\dot B&=\RR^{m-1}\times \ddot B
+\end{align*}
+where $\ddot A$ and $\ddot B$ are half-planes in $\RR^2$.
+
+Let us exchange each $A$ to $\dot A$ and each $B$ to $\dot B$
+in the array, we get the array
+\[(\underbrace{\dot A,\dot B,\dot A,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}).\]
+The corresponding Reshetnyak's puff pastry $\dot{\spc{R}}$
+splits as a product or $\RR^{m-2}$ and a puff pastry, 
+say $\ddot{\spc{R}}$,
+glued from the copies of the plane $\RR^2$ for the array
+\[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}).\]
+
+
+According to Sublemma~\ref{sublem:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
+Since $\dot{\spc{R}}\iso\RR^{m-2}\times\ddot{\spc{R}}$,
+by Proposition~\ref{prop:warp-examples}
+$\dot{\spc{R}}$is also end-to-end convex.
+
+It follows that the geodeisc $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ pass through $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
+By Proposition~\ref{prop:A-check-A}, 
+the image of $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ 
+under the map $\dot x^\kay\mapsto x^\kay$
+is the geodesic $[x^0 y^N]_{\spc{R}}$.
+Hence Claim~\ref{clm:z in xy} follows.
 \qeds
 
 \parit{Proof of Proposition~\ref{prop:end-to-end-convex}.}
@@ -295,7 +378,8 @@ based on the results developed in the previous section.
 \parit{Proof of Collision Theorem (\ref{thm:collision}).}
 We will apply induction on $n$.
 
-\parit{Base.}The base case $n=1$ is evident; the number of collisions cannot exceed $1$.  
+\parit{Base; $n=1$.}
+The number of collisions cannot exceed $1$.  
 It follows from the convexity of $A^1$ that
 if the trajectory is reflected once in $\partial A^1$, 
 then it cannot return to $A^1$. 
@@ -305,7 +389,9 @@ Assume $\gamma$ is a trajectory which meets the walls in the order $A^{i_1},\dot
 
 Consider the array 
 \[\bm{A}_\gamma=(A^{i_1},\dots,A^{i_N}).\]
-By induction hypothesis, there is a positive integer $M$ such any $M$ elements in the raw from  $\bm{A}_\gamma$ contain each $A^i$ at least once.
+By induction hypothesis, 
+there is a positive integer $M$ 
+such that any $M$ elements in the raw from  $\bm{A}_\gamma$ contain each $A^i$ at least once.
 
 Let $\spc{R}_\gamma$ be  the  Reshetnyak's puff pastry for  $\bm{A}_\gamma$.
 
@@ -319,14 +405,14 @@ It follows that $\spc{R}_\gamma$ is not end-to-end convex.
 
 Let 
 \[\bm{B}=(A^{j_1},\dots,A^{j_K})\] 
-be the array provided by ???;
+be the array provided by Proposition~\ref{prop:end-to-end-convex};
 so $\bm{B}$ contains each $A^i$ at least once
 and the puff pastry $\spc{R}_{\bm{B}}$ for $\bm{B}$ is end-to-end convex.
 
 Assuming $N\ge K\cdot M$,
 we can obtain $\bm{A}_\gamma$  
-by inserting elements $A^i$ in $\bm{B}$.
-By Proposition ???, 
+by inserting a finite number of $A^i$'s in $\bm{B}$.
+By Observation~\ref{obs:end-to-end-convex}, 
 $\spc{R}_\gamma$ is end-to-end convex,
 a contradiction.
 \qeds
