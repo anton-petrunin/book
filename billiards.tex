@@ -1,7 +1,7 @@
 \section{Semi-dispersing billiard}
 
 Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in $\EE^m$.
-Assume that the boundary $\partial A^i$ is a smooth hypersurface.
+Assume that the boundary $\partial A^i$ is a smooth hypersurface for each $i$.
 
 Consider the billiard table formed by the closure of the complement 
 $$T=\overline{\EE^m\backslash \bigcup_{i} A^i}.$$
@@ -12,12 +12,12 @@ on the table $T$ is a unit-speed broken line $\gamma$
 with the \emph{regular reflection} at the break points on $\partial A^i$ 
 --- the angle of reflection is equal to the angle of incidence.
 The break points of the trajectory will be called \emph{collisions}.
-We assume that trajectory meets one $A^i$ at the time.
+We assume that trajectory meets only one wall at the time.
 
 The billiard described above will be called \emph{semi-dispersing} since after each collision, the nearby spreading trajectories will spread at least as rapidly.
 (The canonical definition of  \emph{semi-dispersing billiard} is more general.)
 
-We say that the closed set $A$ has  \emph{$\eps$-wide corners} 
+We say that the closed convex set $A\subset \RR^m$ has  \emph{$\eps$-wide corners} 
 if together with each point $p$
 the set $A$ contains a small right circular cone
 with tip at $p$ and
@@ -34,7 +34,7 @@ such that for any subset $F\subset\{1,\dots,n\}$
 the intersection
 $\bigcap_{i\in F}A^i$ 
 has $\eps$-wide corners.
-In this case we say that all intesections of $A^i$ have $\eps$-wide corners.
+In this case we may say briefly \emph{all intesections of $A^i$ have $\eps$-wide corners}.
 
 \begin{thm}{Exercise}
 Assume that the walls
@@ -57,6 +57,11 @@ and all their intersections have $\eps$-wide corners.
 Then the number of collisions of any trajectory in  $T$  is bounded
 by a number $N$ which depends only on the number of walls $n$ and $\eps$.
 \end{thm}
+
+As you will see from the proof,
+the value $N$ can be found explicitly,
+say one can take 
+\[N=(\lceil\tfrac\pi\eps\rceil+1)^{n^2}.\]
 
 The Collision Theorem was proved by Burago, Ferleger and Kononenko in \cite{BFK};
 we present their proof with minor improvements.
@@ -120,14 +125,13 @@ standard law of billiard:
 the angle of reflection is equal to the angle
 of incidence. 
 
-In particular, the number of collisions of hard balls which we need to estimate 
+By construction, the number of collisions of hard balls which we need to estimate 
 is the same as the number of collisions of corresponding billiard trajectory on the table $T$.
 
 Note that each cylinder $C_{i,j}$ is a convex set;
 it has smooth boundary 
 and it is centrally symmetric around the origin.
 By Exercise~\ref{ex:centrally-simmetric-walls} all the intersections of the walls have $\eps$-wide corners for some $\eps>0$ which depends on radiuses $R_i$ and the masses $M_i$.
-(If all balls are identical then we can take $\eps=\tfrac\pi3$.)
 It remains to apply Collision Theorem~\ref{thm:collision}.
 \qeds
 
@@ -136,7 +140,7 @@ It remains to apply Collision Theorem~\ref{thm:collision}.
 In this section we introduce \emph{Reshetnyak's puff pastry}, 
 a construction which will be used in the next section to prove Collision Theorem~\ref{thm:collision}.
 
-Let $(A^1,\dots,A^N)$ be an array of convex closed sets in $\RR^m$.
+Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in $\RR^m$.
 Consider an array of $N+1$ copies of $\RR^m$.
 Assume that the space $\spc{R}$ is 
 obtained by
@@ -155,10 +159,8 @@ along $A^1,\dots,A^N$ correspondingly.
 \end{lpic}
 \end{wrapfigure}
 
-%???PIC???puff-pastry-example
-
-The obtained space $\spc{R}$  will be called \emph{Reshetnyak's puff pastry} for the array $(A^1,\dots,A^N)$.
-The copies of $\RR^m$ in the Reshetnyak's puff pastry $\spc{R}$
+The obtained space $\spc{R}$  will be called \emph{Reshetnyak's puff pastry} for the array $\bm{A}$.
+The copies of $\RR^m$ in the puff pastry $\spc{R}$
 will be called \emph{levels};
 they will denoted by $\spc{R}^0,\dots,\spc{R}^N$.
 The point in the $\kay$-th level $\spc{R}^\kay$
@@ -178,7 +180,8 @@ Note also that the restriction of the natural projection $x^\kay\mapsto x$ to ea
 Any Reshetnyak's puff pastry is a $\cCat{}{0}$ space.
 \end{thm}
 
-The above observation is proved by applying Reshetnyak's gluing theorem \ref{thm:gluing} few times.
+\parit{Proof.} Apply Reshetnyak's gluing theorem \ref{thm:gluing} recursively for the the convex sets in the array.
+\qeds
 
 \begin{thm}{Proposition}\label{prop:A-check-A}
 Assume $(A^1,\dots,A^N)$ and $(\check A^1,\dots,\check A^N)$ are two arrays of convex closed sets in $\RR^m$ 
@@ -187,8 +190,7 @@ Let $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak's  puff past
 Then the map $\spc{R}\to\check{\spc{R}}$
 defined as $x^\kay\mapsto\check x^\kay$ is short.
 
-In particular 
-if  
+Moreover, if  
 \[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\]
 for some $x,y\in \RR^m$ and $i,j\in \{0,\dots,n\}$
 then the geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
@@ -215,8 +217,7 @@ forms a convex set.
 \end{thm}
 
 \parbf{Remark.}
-Let $\spc{R}$ be the Reshetnyak's puff pastry for an array of convex sets 
-\[\bm{A}=(A^{1},\dots, A^{N}).\]
+Let $\spc{R}$ be the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$.
 Note that $\spc{R}$ is end-to-end convex
 if and only if the union lower and upper levels
 $\spc{R}_0\cup\spc{R}_N$ is isometric to the doubling of $\RR^m$ in the intersection $A^1\cap\dots\cap A^N$.
@@ -267,7 +268,8 @@ $(A^{j_1},\dots,A^{j_N})$ is end-to-end convex.
 Moreover we can assume that $N\le (\lceil\tfrac\pi\eps\rceil+1)^n$.
 \end{thm}
 
-The proof of proposition is based on the following lemma.
+The proof of proposition is based on the following lemma
+which is essentially the case $n=2$ of the proposition.
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
 Let $A$ and $B$ two convex sets in $\RR^m$ and $A\cap B$ has $\eps$-wide corners.
@@ -276,7 +278,8 @@ Then the Reshetnyak's puff pastry for the array
 is end-to-end convex. 
 \end{thm}
 
-In turn, the proof of lemma is based on its partial case.
+In turn, the proof of lemma is based on sublemms,
+which is a partial case of the lemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
 Let $\ddot A$ and $\ddot B$ two  
@@ -288,7 +291,11 @@ is end-to-end convex.
 
 \begin{wrapfigure}{r}{52mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
-%\lbl[t]{4,58;$a$}
+\lbl[t]{24,33,6;$\alpha$}
+\lbl[b]{21,47,6;$\alpha$}
+\lbl[b]{31,3,6;$\alpha$}
+\lbl[b]{13,13,-71;$\pi-\alpha$}
+\lbl[t]{42,23,-71;$\pi-\alpha$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -354,12 +361,12 @@ for all $z\in \dot A\cap \dot B$.
 Since $A\cap B$ have $\eps$-wide corners,
 the angle measure of  $\dot A\cap \dot B$ is at least $\eps$.
 
-Note that $\RR^{m}$ admits isometric splitting $\RR^{m-1}\times \RR^2$ 
+Note that $\RR^{m}$ admits isometric splitting $\RR^{m-2}\times \RR^2$ 
 such that 
 \begin{align*}
-\dot A&=\RR^{m-1}\times \ddot A
+\dot A&=\RR^{m-2}\times \ddot A
 \\
-\dot B&=\RR^{m-1}\times \ddot B
+\dot B&=\RR^{m-2}\times \ddot B
 \end{align*}
 where $\ddot A$ and $\ddot B$ are half-planes in $\RR^2$.
 
@@ -376,8 +383,8 @@ glued from the copies of the plane $\RR^2$ for the array
 According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
 
 Since $\dot{\spc{R}}\iso\RR^{m-2}\times\ddot{\spc{R}}$,
-by Proposition~\ref{prop:warp-examples}
-$\dot{\spc{R}}$ is also end-to-end convex.
+by Proposition~\ref{prop:warp-examples} 
+the puff pastry $\dot{\spc{R}}$ is also end-to-end convex.
 
 It follows that the geodeisc $[\dot x^0\dot y^N]_{\dot{\spc{R}}}$ pass through $\dot z^0=\dot z^N\in\dot{\spc{R}}$.
 By Proposition~\ref{prop:A-check-A}, 
@@ -391,14 +398,15 @@ Hence Claim~\ref{clm:z in xy} follows.
 The array $(j_1,\dots,j_N)$ is constructed recursively.
 For $n=1$, one can take the array from one element $(1)$.
 
-Now assume an array for $n$ is alrady constructed.
-let us exchange each occurrence of $n$ by the alternating string 
+Now assume an array for $n$ is already constructed.
+Let us exchange each occurrence of $n$ by the alternating string 
 \[\underbrace{n,n+1,n,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}.\]
 
 Applying Lemma \ref{lem:end-to-end-convex}, 
 we get that the obtained array meets the conditions of the proposition.
 
-The upper bound on $N$ follows directly from the construction.
+The upper bound on $N$ follows directly from the construction
+and it can be improved easily.
 \qeds
 
 
@@ -431,14 +439,16 @@ such that any $M$ elements in the raw from  $\bm{A}_\gamma$ contain each $A^i$ a
 
 Let $\spc{R}_\gamma$ be  the  Reshetnyak's puff pastry for  $\bm{A}_\gamma$.
 
-Let us lift $\gamma(t)$ to $\gamma^\kay(t)$ 
+Set consider the lift of $\gamma$ to $\spc{R}$
+defined as 
+$\bar\gamma(t)=\gamma^\kay(t)\in \spc{R}$ 
 for any moment of time $t$ between $\kay$ and $(\kay+1)$-th collisions.
 Since $\spc{R}\in\cCat{}{0}$ (see Observation~\ref{obs:puff pastry is CAT}),
-this way we lift $\gamma$ to a geodesic in $\spc{R}$.
+the lift $\bar\gamma$ is a geodesic in $\spc{R}$.
 
 Since $\gamma$ does not pass through $A_1\cap\dots\cap A_n$
-the lift of $\gamma$ goes away form $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
-It follows that $\spc{R}_\gamma$ is not end-to-end convex.
+the lift $\bar\gamma$ goes away form $\spc{R}_\gamma^0\cup \spc{R}_\gamma^N$.
+In particular, $\spc{R}_\gamma$ is not end-to-end convex.
 
 Let 
 \[\bm{B}=(A^{j_1},\dots,A^{j_K})\] 
