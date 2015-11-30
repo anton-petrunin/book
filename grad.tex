@@ -117,7 +117,7 @@ then
 \end{align*}
 Therefore,
 \[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>=0;\] 
-i.e., $g=g'$.
+that is, $g=g'$.
 
 \parit{(Existence).} 
 Note first that if $\d_p f\le 0$ then one can take $\nabla_p f=\0$.
@@ -132,7 +132,7 @@ Indeed, if $\overline{\xi}$ exists, then applying Lemma~\ref{lem:ohta} for $u=\o
 we get
 \[(\d_p f)(w)\le \<w,s\cdot\overline{\xi}\>\] 
 for any $w\in\T_p$;
-i.e., $s\cdot\overline{\xi}$ is the gradient at $p$.
+that is, $s\cdot\overline{\xi}$ is the gradient at $p$.
 
 Take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\d_p f)(\xi_n)\to s$.
 Yet once applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
@@ -140,7 +140,7 @@ Yet once applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
 \ge
 \frac{(\d_p f)(\xi_n)+(\d_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
 Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
-i.e., $(\xi_n)$ is a Cauchy sequence.
+that is, $(\xi_n)$ is a Cauchy sequence.
 Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
 \qeds
 
@@ -365,6 +365,8 @@ Therefore,
 \end{align*}
 \qedsf
 
+\section{Polar vectors}
+
 The next is a corollary of the above lemma.
 It will be used to prove basic properties of tangent space.
 Note that the notion of gradient does not appear 
@@ -389,7 +391,7 @@ Let $\spc{L}\in\CBB{}{}$
 and $p\in \spc{L}$. 
 Given a vector $u\in \T_p$ there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
 $u^*$ is \emph{polar}\index{polar vector} to $u$;
-i.e.,
+that is,
  $\<u^*,x\>+\<u,x\>\ge 0$ for any $x\in \T_p$.
 
 In particular, for any vector $u\in \T_p$ there is a polar vector $u^*\in\T_p$ such that
@@ -542,7 +544,7 @@ In particular, we have lower-semicontinuity of the function $x\mapsto |\nabla_x 
 Let $\spc{L}\in\CBB{}{}$ 
 and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction. 
 Then the function $x\mapsto|\nabla_x f|$  is lower-continuous;
-i.e. for any sequence $x_n\to x\in \Dom f$, we have 
+that is for any sequence $x_n\to x\in \Dom f$, we have 
 \[|\nabla_x f|\le \liminf_{n\to \infty} |\nabla_{x_n} f|.\]
 \end{thm}
 
@@ -585,7 +587,7 @@ and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction.
 
 A Lipschitz curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ will be called \emph{$f$-gradient-like curve} if
 \[\hat\alpha^+=\tfrac{1}{|\nabla_{\hat\alpha} f|}\cdot\nabla_{\hat\alpha} f;\]
-i.e., for any $s\in[s_{\min},s_{\max})$, $\hat\alpha^+(s)$ is defined and
+that is, for any $s\in[s_{\min},s_{\max})$, $\hat\alpha^+(s)$ is defined and
 $\hat\alpha^+(s)=\tfrac{1}{|\nabla_{\hat\alpha(s)} f|}\cdot\nabla_{\hat\alpha(s)} f$.
 \end{thm}
 
@@ -647,7 +649,8 @@ Let $\spc{L}\in\CBB{}{}$,
 $f\:\spc{L}\subto \RR$ be a locally Lipschitz and semiconcave function 
 and $\hat\alpha\:[0,s_{\max})\to\Dom f$ be an $f$-gradient-like curve.
 Then function $s\mapsto |\nabla_{\hat\alpha(s)}f|$
-is right-continuous, i.e. for any $s_0\in [0,s_{\max})$ we have
+is right-continuous; 
+that is, for any $s_0\in [0,s_{\max})$ we have
 \[|\nabla_{\hat\alpha(s_0)}f|=\lim_{s\to s_0+} |\nabla_{\hat\alpha(s)}f|.\]
 
 \end{thm}
@@ -749,7 +752,7 @@ and $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \emph{$f$-gradient curve} if
 \[\alpha^+=\nabla_{\alpha} f;\]
-i.e. for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and 
+that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and 
 $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 \end{thm}
 
@@ -783,7 +786,8 @@ Note that
 \[(f\circ\alpha)'(t)\ae (f\circ\alpha)^+(t)=|\nabla_{\alpha(t)} f|^2.\]
 Setting $s=\varsigma(t)$, we have
 \[(f\circ\hat\alpha)'(s)\ae\frac{(f\circ\alpha)'(t)}{\varsigma'(t)} \ae|\nabla_{\alpha(t)}f|=|\nabla_{\hat\alpha(s)}f|.\]
-From \ref{thm:grad-like-2nd-def}, it follows that $\hat\alpha(t)$ is an $f$-gradient-like curve, i.e.
+From \ref{thm:grad-like-2nd-def}, it follows that $\hat\alpha(t)$ is an $f$-gradient-like curve; 
+that is,
 \[\hat\alpha^+=\frac{1}{|\nabla_{\hat\alpha} f|}\cdot\nabla_{\hat\alpha} f.\]
 In particular, $(f\circ\hat\alpha)^+(s)=|\nabla_{\hat\alpha^+(s)} f|$ and from \ref{eq:lem:grad--grad-like-1},
 \[\varsigma^{-1}(s)=\int\limits_0^{s}\frac{1}{|\nabla_{\hat\alpha(\under s)} f|}\cdot\d\under s
@@ -939,10 +943,10 @@ and $f\:\spc{L}\subto \RR$ be locally Lipschitz $\lambda$-concave subfunction.
 Then for any $p\in \Dom f$
 \begin{subthm}{}
 if $|\nabla_pf|>0$ then for some $\eps>0$, 
-there is an $f$-gradient-like curve $\hat\alpha\:[0,\eps)\to\spc{L}$ which starts at $p$ (i.e. $\hat\alpha(0)=p$);
+there is an $f$-gradient-like curve $\hat\alpha\:[0,\eps)\to\spc{L}$ which starts at $p$ (that is $\hat\alpha(0)=p$);
 \end{subthm}
 
-\begin{subthm}{}for some $\delta>0$, there is an $f$-gradient curve $\alpha\:[0,\delta)\to \spc{L}$ which starts at $p$ (i.e. $\alpha(0)=p$).
+\begin{subthm}{}for some $\delta>0$, there is an $f$-gradient curve $\alpha\:[0,\delta)\to \spc{L}$ which starts at $p$ (that is $\alpha(0)=p$).
 \end{subthm}
 \end{thm}
 
@@ -1855,7 +1859,7 @@ Assume that for some function $\psi$, the curves defined by equation
 \[\sigma^+(s)=\psi(s,\dist{p}{\sigma(s)}{})\cdot\nabla_{\sigma(s)}\dist{p}{}{}\]
 satisfy radial comparison \ref{rad-comp}.
 Then in fact $\sigma(s)$ are radial curves; 
-i.e. 
+that is, 
 \[\psi(s,\dist{p}{\sigma(s)}{})= \frac{\tg\Kappa\dist[{{}}]{p}{\sigma(s)}{})}{\tg\Kappa s},\]
 see exercise \ref{ex:gexp}.
 
@@ -2213,7 +2217,8 @@ for any $t_1>t_0$ and $x\in\spc{L}$. %???CHECK???
 
 \begin{thm}{Sharfutdinov's retruction}
 Let $K_t$ be a one parameter famity of convex sets in $\EE^m$
-which is nested; i.e. $K_{t_1}\supset K_{t_2}$ if $t_1\le t_2$.
+which is nested; 
+that is, $K_{t_1}\supset K_{t_2}$ if $t_1\le t_2$.
 Show that there is a family of short maps $\phi_t\:\EE^m\to K_t$ 
 such that $\phi_t|{K_t}=\id$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ for all $t_1\le t_2$.
 \end{thm}
