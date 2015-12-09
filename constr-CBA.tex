@@ -35,7 +35,7 @@ For $u=s\cdot x,v=t\cdot y$, and  $\alpha=\mangle\hinge{o}u v$ (taken to be $0$ 
 
 
 \parit{Proof.}
-If $\dist{x}{y}{}<\pi$, apply  Lemma \ref{lem:fiber-independence} to $\Cone_\kappa \spc{X}$ and $\Lob{}\kappa= \Cone_\kappa(\Lob11)$, where $\Lob11$ is the circle of length $2\pi$. Since $\dist{x}{y}{}=\angk{\kappa}{o}{u}{v} = \alpha$, the formula follows from the cosine law of $\Lob{}\kappa$. If $\dist{x}{y}{}\ge\pi$, apply  Lemma \ref{lem:fiber-independence} to $\Cone_\kappa \spc{X}$ and $ \Cone_\kappa(\RR-)$.  
+If $\dist{x}{y}{}<\pi$, apply  Lemma \ref{geo-fiber-indep} to $\Cone_\kappa \spc{X}$ and $\Lob{}\kappa= \Cone_\kappa(\Lob11)$, where $\Lob11$ is the circle of length $2\pi$. Since $\dist{x}{y}{}=\angk{\kappa}{o}{u}{v} = \alpha$, the formula follows from the cosine law of $\Lob{}\kappa$. If $\dist{x}{y}{}\ge\pi$, apply  Lemma \ref{geo-fiber-indep} to $\Cone_\kappa \spc{X}$ and $ \Cone_\kappa(\RR)$.  
 Then $\alpha=\pi$ and 
 \[\dist{u}{v}{}=\min\{s+t,2\varpi\kappa-s-t\},\] 
 so the formula holds.
@@ -98,9 +98,9 @@ and
 
 
 \begin{thm}{Lemma}\label{lem:cone-of-join}
-The spherical join, $\Join_1 \l(\spc{X},\spc{Y}\r)$,
- of metric spaces $\spc{X}$ and $\spc{Y}$  satisfies 
-\[ \Cone \Join_1 \l(\spc{X},\spc{Y}\r)
+The \emph{spherical join}, $\Join_1 (\spc{X},\spc{Y})$, of metric spaces 
+$\spc{X}$ and $\spc{Y}$ satisfies 
+\[\Join_1 (\spc{X},\spc{Y})
 =\Cone \spc{X}\times\Cone \spc{Y}.\]
 \end{thm}
 \parit{Proof.} By definition, 
@@ -155,13 +155,18 @@ Suppose
 $\spc{U}_1$ and  $\spc{U}_2$ are two $\varpi\kappa$-geodesic spaces 
 with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
 Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
-i.e., $\spc{W}$ is gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$;see Section~\ref{sec:quotient}.
+i.e., $\spc{W}$ is the result of gluing $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$; see Section~\ref{sec:quotient}.
 
 Then 
 \begin{subthm}{gluing0}
 Both canonical mappings $\jmath_i\:\spc{U}_i\to\spc{W}$ are isometric 
 and the images $\jmath_i(\spc{U}_i)$ are $\varpi\kappa$-convex subsets in $\spc{W}$.
 \end{subthm}
+
+\begin{subthm}{gluing1}
+If $\spc{U}_1, \spc{U}_2\in\Cat{}{\kappa}$  
+then $\spc{W}\in\Cat{}{\kappa}$.
+\end{subthm} 
 
 \begin{subthm}{gluing2}
 If $\spc{U}_1, \spc{U}_2\in\cCat{}{\kappa}$  
@@ -173,30 +178,34 @@ then $\spc{W}\in\cCat{}{\kappa}$.
 Part (\ref{SHORT.gluing0})
 follows directly from $\varpi\kappa$-convexity of $A_i$.
 
-\parit{(\ref{SHORT.gluing2}).} 
+\parit{(\ref{SHORT.gluing1}).} 
 According to (\ref{SHORT.gluing0}),
 we can identify $\spc{U}_i$ with its image $\jmath_i(\spc{U}_i)$ in $\spc{W}$;
-this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
+this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted in what follows by $A$.
 Note that $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
-therefore $A$ is also $\varpi\kappa$-convex set in $\spc{W}$.
+therefore $A$ is also $\varpi\kappa$-convex in $\spc{W}$.
 
-Further note that completeness of $\spc{U}_1$ and $\spc{U}_2$ implies completeness of $\spc{W}$.
-Thus part (\ref{SHORT.gluing2}) can be reformulated the following way:
+%Further note that completeness of $\spc{U}_1$ and $\spc{U}_2$ implies completeness of $\spc{W}$.
+Thus part (\ref{SHORT.gluing1}) can be reformulated the following way:
 
-\begin{thm}{Reformulation of \ref{gluing2}}
-Let $\spc{W}$ be a complete length space which has two closed $\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
-$\spc{U}_1\cup\spc{U}_1=\spc{W}$ and $\spc{U}_1,\spc{U}_2\in\cCat{}{\kappa}$.
-Then $\spc{W}\in\cCat{}{\kappa}$.
+\begin{thm}{Reformulation of \ref{gluing1}}
+Let $\spc{W}$ be a 
+%complete 
+length space which has two closed $\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+$\spc{U}_1\cup\spc{U}_1=\spc{W}$ and $\spc{U}_1,\spc{U}_2\in
+%\cCat{}{\kappa}$.
+\Cat{}{\kappa}$.
+Then $\spc{W}\in\Cat{}{\kappa}$.
+%\cCat{}{\kappa}$.
 \end{thm}
 
 Set $A=\spc{U}_1\cap\spc{U}_1$.
 First we prove the following:
 
 \begin{clm}{}\label{clm:geod-gluing}
-If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic then $\spc{W}\in\cCat{}{\kappa}$
+If our space $\spc{W}$ happens to be $\varpi\kappa$-geodesic, then %$\spc{W}\in\cCat{}{\kappa}$
+$\spc{W}\in\Cat{}{\kappa}$.
 \end{clm}
-
-
 
 \begin{wrapfigure}{r}{20mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]
@@ -213,7 +222,7 @@ If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic then $\spc{W}\in\c
 According to \ref{prop:k-thin},
 it is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
 in $\spc{W}$ is $\kappa$-thin.
-This is obviousely true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}_i$.
+This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}_i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}_1$ and $x^1,x^2\in\spc{U}_2$.
 
 Choose points $z^1,z^2\in A$ 
@@ -232,8 +241,47 @@ we get that $\trig {x^0}{x^1}{z^2}$
 and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \claimqeds
 
-Now we come back to the general case;
-i.e., $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
+Now we come back to the general case, where $\spc{W}$ is not assumed to be $\varpi\kappa$-geodesic.
+
+\begin{clm}{}\label{clm:npc-gluing}
+If $K\le 0$, then $\spc{W}$ is a geodesic space.
+\end{clm}
+
+For $x^1\in\spc{U}_1$, $x^2\in\spc{U}_2$, we may choose a sequence $z_i\in A$ such that $\dist{x^1}{z_i}{} + \dist{z_i}{x^2}{}$ converges to $\dist{x^1}{x^2}{}$. Since $A$ is complete, it suffices to show $x^i$ is a Cauchy sequence.  
+In that case,  the limit point $p$ of $z^i$ satisfies  $\dist{x^1}{p}{} + \dist{p}{x^2}{}=\dist{x^1}{x^2}{}$, so the geodesics $[x^ 1p]$ in $\spc{U}_1$ and $[x^ 2p]$ in $\spc{U}_2$ together yield a geodesic $[x^1x^2]$ in $\spc{W}$.
+
+If $z$ is the midpoint of $[z^i z^j]$ then
+\[
+{\dist{z_i}{z_j}{}}^2 \le 2 {\dist{x^1}{z_i}{}}
+^2 +2 {\dist{x^1}{z_j}{}}^2 - 4{ \dist{x^1}{z}{}}^2.
+\eqlbl{eq:bruhat-tits}
+\]
+\ref{eq:bruhat-tits} is known as  the ``Bruhat-Tits inequality'', which holds for a triangle $[x^1 z_i z_j]$ in a $\Cat{}{0}$ space.  
+\ref{eq:bruhat-tits} holds as an equality in the Euclidean plane by the law of cosines, and 
+hence in $\Cat{}{0}$ spaces by point-on-side triangle comparison.  Here it is applied  to $[x^1 z^i z^j]$ in $\spc{U}_1$.
+
+ Since $\dist{x^1}{z_i}{}$ is bounded, we may assume $\dist{x^1}{z_i}{}$ converges, say to $\ell$. 
+Now consider 
+$[x^2 z_i z_j]$ in $\spc{U}_2$.  By triangle comparison, we have  $\dist{x^2}{z}{} \le \max\{\dist{x^2}{z_i}{}, \dist{x^2}{z_j}{}\}.$
+Thus for any $\epsilon >0$, if $i,j$ are sufficiently large 
+\[
+\dist{x^1}{z}{}\ge \ell -\epsilon,\ \ 
+\dist{x^1}{z^i}{}\le\ell +\epsilon, \ \ \dist{x^1}{z^j}{}\le\ell +\epsilon. 
+\]
+It follows from \ref{eq:bruhat-tits} that ${\dist{z^i}{z^j}{}}^2\le 16\epsilon\ell$.  Therefore $x^i$ is a Cauchy sequence.  \ref{clm:npc-gluing} follows.
+By \ref{clm:geod-gluing},  the proof of part (\ref{SHORT.gluing1}) is complete 
+for the case $K\le 0$. 
+
+Finally consider the case $K>0$; by scaling, take $K=1$.  Then by Theorem \ref{thm:cone-curvature}, $\Cone\spc{U}_i\in\Cat{}{0}$ for $i=1,2$.  Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex correspond under projection from the vertex  to pregeodesics of $\spc{U}_i$ of length $<\pi$, by \ref{fiber-proj}.  It follows that $\Cone A$ is convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$.  Gluing on $\Cone A $ and applying part (\ref{SHORT.gluing1}) for $K= 0$, we obtain  $\Cone\spc{W}\in\Cat{}{0}$. By Theorem \ref{thm:cone-curvature}, $\spc{W}\in\Cat{}{1}$.
+
+${\text{CAT}}^\tilde$
+
+Part (\ref{SHORT.gluing2}) is immediate from part (\ref{SHORT.gluing1}).
+\qeds
+
+
+\parbf{Remark.}
+If $\spc{U}_1, \spc{U}_2$ are assumed to be complete, so $\spc{U}_1, \spc{U}_2\in\cCat{}{\kappa}$, then the proof of the general case, in which $\spc{W}$ is not assumed $\varpi\kappa$-geodesic, may instead be carried out as follows:
 Note that the ultrapower $\spc{W}^\o$ is geodesic, see \ref{cor:ulara-geod}.
 It is easy to see that 
 \begin{itemize}
@@ -251,6 +299,7 @@ we get $\spc{W}^\o\in\cCat{}{\kappa}$.
 Applying the Proposition~\ref{prop:CAT^omega} once more, 
 we get $\spc{W}\in\cCat{}{\kappa}$.
 \qeds 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -849,7 +898,7 @@ $\gamma |[t_0,1]$ is a geodesic.
 %Claims (\ref{SHORT.f=0-base-proj}), (\ref{SHORT.f=0-fiber-proj}) and (\ref{SHORT.f=0-fiber-choice}) follow directly from (\ref{SHORT.f=0-dist}) and the length formula (\ref{wp-length}).
 \qeds
 
-The following theorem is from \cite{AB3} and \cite{BP}.
+The following theorem is from \cite{} and \cite{}.
 
 \begin{thm}{Clairaut's Theorem}
 \label{thm:clairaut} 
@@ -1039,30 +1088,29 @@ It is natural to ask if the length induced by the warped product metric of Defin
 
 \section{Curvature bounds of cones and joins.}\label{sec:cones-joins}
 
+Part (\ref{SHORT.cba-cone-curvature}) of Theorem \ref{thm:cone-curvature} is found in \cite{BGP}, and part (\ref{SHORT.cbb-cone-curvature}), in \cite{nikolaev-cone}.
 
-We begin with important examples, for which the proofs are almost immediate.
+\begin{thm}{Theorem (Curvature of cones)}
+\label{thm:cone-curvature} Let $\spc{X}$  be a metric space, and  $\spc{M}=\Cone_\kappa \spc{X}$, $\Cone^\circ_\kappa \spc{X}$, or $\Cyl_\kappa \spc{X}$. Then
+\begin{subthm}{cba-cone-curvature}
+$\spc{M}\in \Cat{}{\kappa}$ 
+if and only if $\spc{X}\in \Cat{}{1}$.
+\end{subthm}
 
-\begin{thm}{Lemma on curvature of cones}
-\label{cor:cone-curvature} Let $\spc{X}$  be a metric space, and  $X=\Cone_\kappa \spc{X}$, $\Cone^\circ_\kappa \spc{X}$, or $\Cyl_\kappa \spc{X}$. Then
-\begin{enumerate}[(a)]
-\item\label{cba-cone-curvature}
-$X\in \Cat{}{\kappa}$ 
-if and only if $\spc{M}\in \Cat{}{1}$.
-
-\item\label{cbb-cone-curvature}
-$X\in \CBB{}{\kappa}$ 
-if and only if $\spc{M}\in \CBB{}{1}$.
-\end{enumerate}
+\begin{subthm}{cbb-cone-curvature}
+$\spc{M}\in \CBB{}{\kappa}$ 
+if and only if $\spc{X}\in \CBB{}{1}$.
+\end{subthm}
 \end{thm}
 \parit{Proof.}\qeds
 
-\begin{thm}{Lemma on curvature of $\kappa$-joins}
-\label{cor:join-curvature} Let $\spc{M}$ and $\spc{N}$ be metric spaces, and $X=\Join_\kappa (\spc{M},\spc{N})$. Then
+\begin{thm}{Corollary (Curvature of $\kappa$-joins)}
+\label{cor:join-curvature} Let $\spc{X}$ and $\spc{Y}$ be metric spaces, and $\spc{M}=\Join_\kappa (\spc{X},\spc{Y})$. Then
 \begin{enumerate}[(a)]
 \item\label{cba-join-curvature}
-$X \in \Cat{}{\kappa}$ if and only if $\spc{M}\in \Cat{}{1}$ and $\spc{N}\in \Cat{}{\sgn\kappa}$ for $\sgn\kappa\in\{\pm 1,0\}$.  In particular, for spherical joins, $\spc{M}\star \spc{N}\in\Cat{}{1}$ if and only if $\spc{M},\spc{N}\in \Cat{}{1}$.
+$\spc{M} \in \Cat{}{\kappa}$ if and only if $\spc{X}\in \Cat{}{1}$ and $\spc{Y}\in \Cat{}{\sgn\kappa}$ (or the reverse)  for $\sgn\kappa\in\{\pm 1,0\}$.  In particular, for spherical joins, $\Join_1(\spc{X}, \spc{Y})\in\Cat{}{1}$ if and only if $\spc{X},\spc{Y}\in \Cat{}{1}$.
 \item\label{cbb-join-curvature}
-$X \in \CBB{}{\kappa}$ if and only if $\spc{M}\in \CBB{}{1}$ and $\spc{N}\in \CBB{}{\sgn\kappa}$ for $\sgn\kappa\in\{\pm 1,0\}$.  In particular, for spherical joins, $\spc{M}\star \spc{N}\in \CBB{}{1}$ if and only if $\spc{M},\spc{N}\in \CBB{}{1}$.
+$\spc{M} \in \CBB{}{\kappa}$ if and only if $\spc{X}\in \CBB{}{1}$ and $\spc{Y}\in \CBB{}{\sgn\kappa}$ (or the reverse) for $\sgn\kappa\in\{\pm 1,0\}$.  In particular, for spherical joins, $\Join_1(\spc{X},\spc{Y})\in \CBB{}{1}$ if and only if $\spc{X},\spc{Y}\in \CBB{}{1}$.
 \end{enumerate}
 \end{thm}
 \parit{Proof.} %For $\kappa>0$, the claim also follows from Corollary \ref{cor:cone-curvature}, since $\Cone_{\,0} (\spc{M}\star \spc{N})=\Cone_{\,0}  \spc{M}\times\Cone_{\,0}  \spc{N}$ by \ref{cone-join} in section \ref{sec:cones}. 
