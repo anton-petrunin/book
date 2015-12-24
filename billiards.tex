@@ -2,27 +2,26 @@
 \section{Semi-dispersing billiards}
 
 Let $A^1,A^2,\dots A^n$ be a finite collection of closed convex sets in $\EE^m$.
-Assume that the boundary $\partial A^i$ is a smooth hypersurface for each $i$.
+Assume that for each $i$
+the boundary $\partial A^i$ is a smooth hypersurface.
 
 Consider the billiard table formed by the closure of the complement 
 $$T=\overline{\EE^m\backslash \bigcup_{i} A^i}.$$
 The sets $A^i$ will be called \emph{walls} of the table $T$.
 
 A \emph{billiard trajectory} 
-on the table $T$ is a unit-speed broken line $\gamma$
-%with \emph{regular reflection} 
-%(??? this terminology is not used, but ``standard law of billiards'' is used) 
+on the table $T$ is a unit-speed broken line $\gamma$ 
 which follows  the
 standard law of billiards 
 at the break points on $\partial A^i$ 
---- namely, the angle of reflection is equal to the angle of incidence.
+--- in particular, the angle of reflection is equal to the angle of incidence.
 The break points of the trajectory will be called \emph{collisions}.
 We assume the trajectory meets only one wall at a time.
 
 The billiards described above will be called \emph{semi-dispersing} since after each collision, the nearby spreading trajectories will spread at least as rapidly as before.
 (The canonical definition of  \emph{semi-dispersing billiards} is more general.)
 
-We say that a closed convex set $A\subset \RR^m$ has  \emph{$\eps$-wide corners} for given $\epsilon >0$ 
+We say that a closed convex set $A\subset \EE^m$ has  \emph{$\eps$-wide corners} for given $\epsilon >0$ 
 if together with each point $p$
 the set $A$ contains a small right circular cone
 with tip at $p$ and aperture 
@@ -35,7 +34,7 @@ has $\eps$-wide corners
 if all its interior angles are at least $\eps$.
 
 We will consider finite collections of closed convex sets 
-$A^1,\dots,A^n\subset\RR^m$ 
+$A^1,\dots,A^n\subset\EE^m$ 
 such that for any subset $F\subset\{1,\dots,n\}$
 the intersection
 $\bigcap_{i\in F}A^i$ 
@@ -56,7 +55,7 @@ Show that all the intersections of the walls of $T$  have $\eps$-wide corners fo
 \end{thm}
 
 \begin{thm}{Collision Theorem}\label{thm:collision}
-Assume $T\subset\RR^m$
+Assume $T\subset\EE^m$
 is a semi-dispersing billiard table.
 Assume that the walls of $T$ have common interior point 
 and all their intersections have $\eps$-wide corners.
@@ -146,8 +145,8 @@ It remains to apply Collision Theorem~\ref{thm:collision}.
 In this section we introduce \emph{Reshetnyak's puff pastry}, 
 a construction which will be used in the next section to prove Collision Theorem~\ref{thm:collision}.
 
-Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in $\RR^m$.
-Consider an array of $N+1$ copies of $\RR^m$.
+Let $\bm{A}=(A^1,\dots,A^N)$ be an array of convex closed sets in $\EE^m$.
+Consider an array of $N+1$ copies of $\EE^m$.
 Assume that the space $\spc{R}$ is 
 obtained by
 gluing successive pairs of spaces in the array  
@@ -166,21 +165,23 @@ along $A^1,\dots,A^N$ respectively.
 \end{wrapfigure}
 
 The obtained space $\spc{R}$  will be called \emph{Reshetnyak's puff pastry} for the array $\bm{A}$.
-The copies of $\RR^m$ in the puff pastry $\spc{R}$
+The copies of $\EE^m$ in the puff pastry $\spc{R}$
 will be called \emph{levels};
 they will be denoted by $\spc{R}^0,\dots,\spc{R}^N$.
 The point in the $\kay$-th level $\spc{R}^\kay$
-which corresponds to $x\in \RR^m$
+which corresponds to $x\in \EE^m$
 will be denoted by $x^\kay$.
 
-Given $x\in \RR^m$, any point $x^\kay\in\spc{R}$ is called a \emph{lifting} of $x$;
-we also can consider the  liftings of maps to $\RR^m$, 
-in particular the liftings of subsets in $\RR^m$.
+Given $x\in \EE^m$, any point $x^\kay\in\spc{R}$ is called a \emph{lifting} of $x$;
+we also can consider the  liftings of maps to $\EE^m$, 
+in particular the liftings of subsets in $\EE^m$.
 
 Note that the intersection $A^1\cap\dots\cap A^N$ admits a unique lifting in $\spc{R}$.
 Moreover, $x^i=x^j$ for some $i<j$
 if and only if $x\in A^{i+1}\cap\dots\cap A^j$.
-Note also that the restriction of the natural projection $x^\kay\mapsto x$ of each level $\spc{R}^\kay$ to $ \RR^m$ is an isometry.
+Note also that 
+the restriction $\spc{R}^\kay\to \EE^m$
+of the natural projection $x^\kay\mapsto x$ is an isometry.
 
 \begin{thm}{Observation}\label{obs:puff pastry is CAT}
 Any Reshetnyak's puff pastry is a $\cCat{}{0}$ space.
@@ -190,7 +191,7 @@ Any Reshetnyak's puff pastry is a $\cCat{}{0}$ space.
 \qeds
 
 \begin{thm}{Proposition}\label{prop:A-check-A}
-Assume $(A^1,\dots,A^N)$ and $(\check A^1,\dots,\check A^N)$ are two arrays of convex closed sets in $\RR^m$ 
+Assume $(A^1,\dots,A^N)$ and $(\check A^1,\dots,\check A^N)$ are two arrays of convex closed sets in $\EE^m$ 
 such that $ A^\kay\subset \check A^\kay$ for each $\kay$.
 Let $\spc{R}$ and $\check{\spc{R}}$ be the corresponding Reshetnyak's  puff pastries.
 Then the map $\spc{R}\to\check{\spc{R}}$
@@ -198,7 +199,7 @@ defined as $x^\kay\mapsto\check x^\kay$ is short.
 
 Moreover, if  
 \[\dist{x^i}{y^j}{\spc{R}}=\dist{\check x^i}{\check y^j}{\check{\spc{R}}}\]
-for some $x,y\in \RR^m$ and $i,j\in \{0,\dots,n\}$,
+for some $x,y\in \EE^m$ and $i,j\in \{0,\dots,n\}$,
 then the geodesic $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
 is the image of geodesic $[x^i y^j]_{\spc{R}}$
 under the map $x^i\mapsto \check x^i$.
@@ -208,10 +209,13 @@ under the map $x^i\mapsto \check x^i$.
 The first statement in the proposition 
 follows from the construction of Reshetnyak's  puff pastries.
 
-	By Observation~\ref{obs:puff pastry is CAT}, $\spc{R}\in\cCat{}{0}$ and  $\check{\spc{R}}\in\cCat{}{0}$, hence $[x^i y^j]_{\spc{R}}$ and $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
+By Observation~\ref{obs:puff pastry is CAT}, 
+$\spc{R}\in\cCat{}{0}$ and  $\check{\spc{R}}\in\cCat{}{0}$, 
+hence $[x^i y^j]_{\spc{R}}$ 
+and $[\check x^i \check y^j]_{\check{\spc{R}}}$ 
  are unique.  Since the map $\spc{R}\to\check{\spc{R}}$ is short, the image of $[x^i y^j]_{\spc{R}}$
 is a geodesic of $\check{\spc{R}}$ joining $\check x^i$ to $\check y^j$.
-Hence the second statement.
+Hence the second statement follows.
 \qeds
 
 \begin{thm}{Definition}
@@ -225,11 +229,11 @@ forms a convex set in $\spc{R}$.
 Let $\spc{R}$ be the Reshetnyak's puff pastry for an array of convex sets $\bm{A}=(A^{1},\dots, A^{N})$.
 Note that $\spc{R}$ is end-to-end convex
 if and only if the union of lower and upper levels
-$\spc{R}_0\cup\spc{R}_N$ is isometric to the doubling of $\RR^m$ in the nonempty intersection $A^1\cap\dots\cap A^N$.
+$\spc{R}_0\cup\spc{R}_N$ is isometric to the doubling of $\EE^m$ in the nonempty intersection $A^1\cap\dots\cap A^N$.
 
 
 \begin{thm}{Observation}\label{obs:end-to-end-convex}
-Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in $\RR^m$.
+Let $\check{\bm{A}}$ and $\bm{A}$ be arrays of convex bodies in $\EE^m$.
 Assume 
 the  array $\bm{A}$ is
 obtained by inserting in $\check{\bm{A}}$, 
@@ -249,7 +253,7 @@ obtained by inserting one element in $\check{\bm{A}}$,
 say at the place number $\kay$.
 
 Note that $\check{\spc{R}}$ is isometric to the puff pastry 
-for $\bm{A}$ with $A^\kay$ replaced by $\RR^m$.
+for $\bm{A}$ with $A^\kay$ replaced by $\EE^m$.
 It remains to apply Proposition~\ref{prop:A-check-A}.
 \qeds
 
@@ -264,7 +268,7 @@ It remains to apply Proposition~\ref{prop:A-check-A}.
 %\end{subthm}
 %
 %\begin{subthm}{}
-%If $A^1,\dots,A^n$ is a collection of closed convex sets in $\RR^m$ with common point 
+%If $A^1,\dots,A^n$ is a collection of closed convex sets in $\EE^m$ with common point 
 %and all their intersections have $\eps$-wide corners 
 %then the puff pastry for the array
 %$(A^{j_1},\dots,A^{j_N})$ is end-to-end convex.
@@ -277,30 +281,30 @@ It remains to apply Proposition~\ref{prop:A-check-A}.
 %which is essentially the case $n=2$ of the proposition.
 
 \begin{thm}{Lemma}\label{lem:end-to-end-convex}
-Let $A$ and $B$ two convex sets in $\RR^m$ such that $A\cap B$ has $\eps$-wide corners.
+Let $A$ and $B$ two convex sets in $\EE^m$ such that $A\cap B$ has $\eps$-wide corners.
 Then the Reshetnyak's puff pastry for the array
 \[(\underbrace{A,B,A,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}).\]
 is end-to-end convex. 
 \end{thm}
 
-%In turn, the 
-The proof of the lemma is based on a sublemma
-which is a partial case of the lemma.
+
+The proof of the lemma is based its partial case
+which we formulate as a sublemma.
 
 \begin{thm}{Sublemma}\label{sublem:end-to-end-convex}
 Let $\ddot A$ and $\ddot B$ be two  
-half-planes in $\RR^2$, where $\ddot A\cap \ddot B$ is an angle with angle measure $\alpha$.
+half-planes in $\EE^2$, where $\ddot A\cap \ddot B$ is an angle with angle measure $\alpha$.
 Then the Reshetnyak's puff pastry for the array \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\alpha\rceil+1$ times}})\]
 is end-to-end convex. 
 \end{thm}
 
 \begin{wrapfigure}{r}{52mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
-\lbl[t]{24,33,6;$\alpha$}
-\lbl[b]{21,47,6;$\alpha$}
-\lbl[b]{31,3,6;$\alpha$}
-\lbl[b]{13,13,-71;$\pi-\alpha$}
-\lbl[t]{42,23,-71;$\pi-\alpha$}
+\begin{lpic}[t(-9mm),b(0mm),r(0mm),l(0mm)]{pics/puff-pastry(1)}
+\lbl[t]{23,33,6;$\alpha$}
+\lbl[b]{20,47,6;$\alpha$}
+\lbl[b]{30,3,6;$\alpha$}
+\lbl[b]{12.5,13,-71;$\pi-\alpha$}
+\lbl[t]{41,23,-71;$\pi-\alpha$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -322,7 +326,7 @@ Hence the sublemma follows.
 
 
 \parit{Proof of Lemma~\ref{lem:end-to-end-convex}.}
-Fix arbitrary $x,y\in \RR^m$.
+Fix arbitrary $x,y\in \EE^m$.
 Choose a point $z\in A\cap B$
 for which the sum 
 \[\dist{x}{z}{}+\dist{y}{z}{}\] 
@@ -366,28 +370,28 @@ for all $z\in \dot A\cap \dot B$.
 Since $A\cap B$ have $\eps$-wide corners,
 the angle measure of  $\dot A\cap \dot B$ is at least $\eps$.
 
-Note that $\RR^{m}$ admits isometric splitting $\RR^{m-2}\times \RR^2$ 
+Note that $\EE^{m}$ admits isometric splitting $\EE^{m-2}\times \EE^2$ 
 such that 
 \begin{align*}
-\dot A&=\RR^{m-2}\times \ddot A
+\dot A&=\EE^{m-2}\times \ddot A
 \\
-\dot B&=\RR^{m-2}\times \ddot B
+\dot B&=\EE^{m-2}\times \ddot B
 \end{align*}
-where $\ddot A$ and $\ddot B$ are half-planes in $\RR^2$.
+where $\ddot A$ and $\ddot B$ are half-planes in $\EE^2$.
 
 Let us replace each $A$ by $\dot A$ and each $B$ by $\dot B$
 in the array, to get the array
 \[(\underbrace{\dot A,\dot B,\dot A,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}).\]
 The corresponding puff pastry $\dot{\spc{R}}$
-splits as a product of $\RR^{m-2}$ and a puff pastry, 
+splits as a product of $\EE^{m-2}$ and a puff pastry, 
 say $\ddot{\spc{R}}$,
-glued from the copies of the plane $\RR^2$ for the array
+glued from the copies of the plane $\EE^2$ for the array
 \[(\underbrace{\ddot A,\ddot B,\ddot A,\dots}_{\text{$\lceil\tfrac\pi\eps\rceil+1$ times}}).\]
 
 
 According to Sublemma~\ref{sublem:end-to-end-convex} and Observation~\ref{obs:end-to-end-convex}, $\ddot{\spc{R}}$ is end-to-end convex.
 
-Since $\dot{\spc{R}}\iso\RR^{m-2}\times\ddot{\spc{R}}$,
+Since $\dot{\spc{R}}\iso\EE^{m-2}\times\ddot{\spc{R}}$,
 by Proposition~\ref{prop:warp-examples} 
 the puff pastry $\dot{\spc{R}}$ is also end-to-end convex.
 
@@ -412,7 +416,7 @@ and each number $1,\dots,n$ appears in $\bm{j}_\eps$ at least once.
 \end{subthm}
 
 \begin{subthm}{}
-If $A^1,\dots,A^n$ is a collection of closed convex sets in $\RR^m$ with common point 
+If $A^1,\dots,A^n$ is a collection of closed convex sets in $\EE^m$ with common point 
 and all their intersections have $\eps$-wide corners 
 then the puff pastry for the array
 $(A^{j_1},\dots,A^{j_N})$ is end-to-end convex.
@@ -477,7 +481,8 @@ for any moment of time $t$ between $\kay$ and $(\kay+1)$-th collisions.
 Since $\gamma$ follows  the
 standard law of billiards 
 at break points 
---- namely, the angle of reflection is equal to the angle of incidence --- 
+--- in particular, 
+the angle of reflection is equal to the angle of incidence --- 
 the lift $\bar\gamma$ is locally a geodesic in $\spc{R}_\gamma$.
 Since $\spc{R}_\gamma\in\cCat{}{0}$ (see Observation~\ref{obs:puff pastry is CAT}),
 $\bar\gamma$ is a geodesic.

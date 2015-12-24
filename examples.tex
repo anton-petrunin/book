@@ -249,6 +249,10 @@ admit the following combinatorial characterization discovered by Gromov \cite[p.
 
 A triangulation of spherical polyhedral space 
 is called \emph{all-right triangulation} if each simplex of the triangulation is isometric to the spherical simplex all of which angles are right.
+Similarly we say that a simplicial complex 
+is equipped with \emph{all-right spherical metric}
+if it is a length metric and each simplex is isometric 
+to the spherical simplex all of which angles are right.
 
 \begin{thm}{Theorem}
 Assume that a spherical polyhedral space $\spc{P}$
@@ -321,14 +325,20 @@ Conclude that any simplicial complex is homeomorphic to a $\cCat{}{1}$ space.
 
 \section{Cubical complexes}
 
-A cubical complex can be defined 
-as a subset of faces of a cube $[0,1]^{\times n}\subset \RR^n$
-such that together with each face it contains all its sub-faces.
+The definition of cubical complex,
+mostly repeats the definition of simplicial complex
+but simplices have to be changed to the cubes.
 
-Note that according to this definition cubical complex is finite.
+A cubical complex can be defined as a subcomplex of unit cube in the Euclidean space;
+that is, as a subset of faces of a cube $[0,1]^{\times n}\subset \RR^n$
+such that together with each face it contains all its sub-faces.
+Each cube face in this collection will be called \emph{cube} in the cubical complex.
+
+Note that according to this definition cubical complex is finite;
+that is it contains a finite number of cubes.
 
 The union of all cubes in a cubical complex $\spc{K}$ will be called it underlying space and denoted as $|\spc{K}|$.
-A homeomorphism from $|\spc{K}|$ to a topological space is called \emph{cubulation}.
+A homeomorphism from $|\spc{K}|$ to a topological space $\spc{X}$ is called \emph{cubulation of} $\spc{X}$.
 
 Let us equip $|\spc{K}|$ with the length metric
 induced from $\RR^n$.
@@ -337,32 +347,128 @@ so that each simplex is isometric to a Euclidean simplex.
 In particular $|\spc{K}|$ is a polyhedral space.
 
 Moreover, in this metric, 
-each cube of $K$ is isometric to the unit cube of the same dimension
-and the link of each vertex admits a triangulation 
+each cube of $\spc{K}$ is isometric to the unit cube of the same dimension.
+Further, the link of each vertex admits a triangulation 
 such that each simplex is isometric to the right-angled spherical simplex of the same dimension.
 
-Given a simplicial complex $L$,
-let us construct a cubical complex $K_L$ 
-such that the links of all the vertices are isomorphic to $L$.
+\parbf{Construction of cubical complex from the given simplicial complex.}
+Let $\{v_1,\dots,v_N\}$ be the set of vertexes of $\spc{S}$.
+Let $\{e_1,\dots,e_N\}$ be the standard basis in $\RR^N$.
+For each $k$-dimesional simplex $\<v_{i_0},\dots,v_{i_k}\>$ of $\spc{S}$,
+mark the all the $(k+1)$-dimensional faces 
+of the unit cube $[0,1]^{\times n}$ 
+which are parallel to the coordinate $(k+1)$-plane 
+spanned by $e_{i_0},\dots,e_{i_k}$.
 
-Recall that any simplicial complex $\spc{S}$ can be realized as subcomplex of a simplex, say $\triangle$.
-We can assume that the basis in $\RR^n$ 
-forms the set of vertices of simplex of $\triangle$.
+Note that the set of all marked faces of $[0,1]^{\times n}$
+form a cubical complex; denote it by $\spc{K}_{\spc{S}}$.
 
-For each simplex $\sigma$ of $\spc{S}$
-consider all the coordinate subspace $L_\sigma$ of $\RR^n$
-spanned by vertices of $\sigma$.
-Choose all the faces of the cube which are parallel to $L_\sigma$.
-All such faces in the cube form a subcomplex which we denote by   $P_L$.
+The following proposition follows from the construction above.
 
-The link of one vertex of the $n$-dimensional cube is isometric to right-angled 
-spherical simplex $\triangle^{n-1}$. 
-Let us realize the simplex $L$ as a sub-complex of $\triangle^{n-1}$.
-Consider all faces of the cube which have
+\begin{thm}{Proposition}
+Let $\spc{S}$ be a simplicial complex
+and $\spc{K}_{\spc{S}}$ be the asociated cubical complex.
+Assume that $\spc{K}_{\spc{S}}$ equipped with the length metric induced from ambient Euclidean space.
+Then link of any vertex of $\spc{K}_{\spc{S}}$
+is isometric to the simplicial complex ${\spc{S}}$
+equipped with right-angled metric.
+\end{thm}
+
+\begin{thm}{Corollary}
+If the underlying space of $\spc{S}$ 
+is a homology sphere then $\spc{K}_{\spc{S}}$ is a homology manifold.
+\end{thm}
+
+\begin{thm}{Corollary}
+If  $\spc{S}$ is flag then the universal cover of $\spc{K}_{\spc{S}}$ is a $\cCat{}{0}$ space.
+\end{thm}
+
+These two corollaries lead to the following statement.
+
+\begin{thm}{Proposition}\label{prop:example-pi_infty}
+There is a polyhedral homological manifold $\spc{K}$
+such that the universal cover $\tilde{\spc{K}}$ 
+is a $\cCat{}{0}$ space which is not simply connected at infinity.
+\end{thm}
+
+By ??? any polyhedral homological manifold is homotopically equivalent to a smooth manifold.
+Therefore we get the following topological corollary.
+
+\begin{thm}{Corollary}
+There is a smooth??? compact aspherical manifold which universal cover is not homeomorphic to the Euclidean space. 
+\end{thm}
+
+\parbf{Comments.} The Proposition \ref{prop:example-pi_infty}
+has number of variations
+
+\parbf{$\cCat{}{0}$ homology manifold.}
+
+Assume that $\spc{S}$ is a flag simplicial complex 
+with underlying space homeomorphic to a homolody sphere.
+Then the universal cover of $\spc{K}_{\spc{S}}$ 
+is a $\cCat{}{0}$ space.
+
+that if the ${\spc{S}}$ is a triangulation of homology sphere then the obtained space is homological manifold;
+that is 
+If ${\spc{S}}$ is flag,
+the fundamental group of at infinity of 
+$\tilde{\spc{K}}_{\spc{S}}$
+admits an onto-homomorphism to the fundamental group of ${\spc{S}}$.
+Consider a flag triangulation of homology sphere.
+
+\begin{thm}{Lemma}
+Assume $\spc{U}\in \cCat{}{1}$ is a homology sphere.
+Then for any point $x\in \spc{U}$ the complement
+$\spc{U}\backslash\oBall(x,\pi)$ is connected.
+\end{thm}
+
+\parit{Proof.}
+Since $\spc{U}\in \cCat{}{1}$,
+the closed ball $\cBall[x,\rho]$ is contactable
+for any $\rho<\pi$.
+
+By Alexander's duality, 
+the complement $\spc{U}\backslash\cBall[x,\rho]$
+is connected for any $\rho<\pi$.
+
+Passing to the intersection of $\spc{U}\backslash\cBall[x,\rho]$
+for $\rho<\pi$, we get the statement.
+\qeds
+
+Recall that a noncompact topological space $\spc{X}$ is called \emph{connected at infinity}
+If for any compact subset $K\subset \spc{X}$
+there is a compact set $K'\supset K$
+such that the complement $\spc{X}\backslash K'$
+is connected.
+A $\spc{X}$ is called \emph{simply connected at infinity}
+is compact subset $K\subset \spc{X}$
+there is a compact set $K'\supset K$
+such that the complement $\spc{X}\backslash K'$
+is simply connected.
+
+\begin{thm}{Lemma}
+Any contactable homological manifold of dimension $m\ge 2$ is connected at infinity.
+\end{thm}
+
+\begin{thm}{Propostion}
+Assume $\spc{U}\in\cCat{}{0}$ is a homological manifold
+which is simply connected at infinity then 
+everypoint has a simply connected punctured 
+\end{thm}
+
+\parit{Proof.}
+Assume contrary.
+Let $p\in \spc{U}$ be a point 
+with spce of directions $\Sigma_p$ which is not simply connected.
+Let $\tilde\Sigma_p\to \Sigma_p$ be its universal covering.
+Consider the induced covering of $\spc{U}$ which is branching at $p$...
 
 
 
 
+
+
+\parbf{Fundamental group at infinity.}
 
 
 
