@@ -775,6 +775,8 @@ Let $p,q\in \spc{B}$, $\phi,\psi\in \spc{F}$, and $\phi^*,\psi^*\in \spc{F}^*$.
 .\]
 \end{subthm}
 
+Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F})\:J\to \spc{W}$ be a geodesic such that $f\circ\gamma_\spc{B}>0$.
+
 \begin{subthm}{fiber-proj}
 \cite{C}
 $\gamma_\spc{F}$ is a pregeodesic in $\spc{F}$.
@@ -874,6 +876,13 @@ $\gamma_\spc{B}$ consists of two geodesics of $\spc{B}$ that intersect on the ma
 \end{thm}
 
 \parit{Proof.}
+
+*****
+
+One can define \,$B\times_fF$\, equivalently by taking distance to be the infimum of $f$-lengths (that is,   lengths calculated by (\ref{eq:length})) of Lipschitz curves $\sigma=(\sigma_B,\sigma_F):J\to B\times F$ (as in the  $f>0$ case). Equivalence follows  by showing that the length of an admissible curve $\gamma$ from $(p,\phi)$ to $(q,\psi)$ with $J_0\ne\emptyset$ is not less than  the  $f$-length of a Lipschitz curve $\sigma:J\to B\times F$.  Here (assuming  $J_0\ne J$) we  take a Lipschitz reparametrization $\tilde\gamma:J\to B\times_fF$ of $\gamma$ for which $(f\circ\tilde\gamma_B)^{-1}(0)$ contains a nontrivial interval $\tilde J_0$.  We may take $\sigma=(\tilde\gamma_B,\sigma_F)$ where  $\sigma_F$ takes values $\phi$ and $\psi$ at the  endpoints of $J$,  and is nonconstant only on $\tilde J_0$, where it moves from $\phi$ to $\psi$.  
+
+*****
+
 By the length formula \ref{eq:length}, any curve in $\spc{B}$ joining $p$ and  $q$ and passing through $Z=f^{-1}(0)$ is the projection of a curve in $\spc{B}\times_f\spc{F}$ of the same length joining $(p,\phi)$ and $(q,\psi)$, and such that the projection to $\spc{F}$ on each interval $\JJ_i$ is constant.  
 Claims \ref{SHORT.f=0-fiber-projection}) and \ref{SHORT.f=0-distance}) follow.  
 
@@ -1136,68 +1145,76 @@ For example, take $K= \cBall[x,R]  \subset \Lob{m}0$ and $K' = \cBall(x',\sinh R
 
 \chapter{Warped products}
 
-Warped products is a construction which produce 
+Warped product is a construction which produces 
 a new metric space denoted as $\spc{B}\times_f \spc{F}$
 from two metric spaces 
-provide $\spc{B}$, $\spc{F}$ which are called base and fiber of the warped product and a function $f\:\spc{B}\to\RR_{\ge0}$.
+$\spc{B}$, $\spc{F}$, which are called base and fiber of the warped product, and a function $f\:\spc{B}\to\RR_{\ge0}$.
 
-Many important construction, as direct product, cone, spherical suspension and joints
+Many important construction, such as direct product, cone, spherical suspension and joins
 will be defined using warped products.
 
 \section{Definitions}\label{sec:wp-def}
-
 Consider length spaces $\spc{B}$ and  $\spc{F}$,  
-and a continuous  function
+and a locally uniformly continuous  function
 $f:\spc{B}\to\RR_{\ge 0}$. 
+%Given a path $\gamma$ in $\spc{B}\times \spc{F}$,
+%denote by $\gamma_\spc{B}$ and  $\gamma_\spc{F}$ its projections to $\spc{B}$ and $\spc{F}$; 
+%so $\gamma(t)=(\gamma_\spc{B}(t),\gamma_\spc{F}(t))\in \spc{B}\times \spc{F}$ for any $t\in[0,1]$.
 
-Given a path $\gamma$ in $\spc{B}\times \spc{F}$,
-denote by $\gamma_\spc{B}$ and  $\gamma_\spc{F}$ its projections to $\spc{B}$ and $\spc{F}$; 
-so $\gamma(t)=(\gamma_\spc{B}(t),\gamma_\spc{F}(t))\in \spc{B}\times \spc{F}$ for any $t\in[0,1]$.
+Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ be a path in $\spc{B}\times \spc{F}$, where 
+$\gamma_\spc{B}$ and  $\gamma_\spc{F}$ are Lipschitz paths defined for $t\in[0,1]$.
+
 
 According to Rademacher's theorem~\ref{thm:rademacher}, 
 speed of any Lipschitz curve is defined almost everywhere.
 
-For a Lipschitz path $\gamma$, let us
-define its $f$-speed as
+Let us
+define the $f$-speed of $\gamma$  as
 \[
 \speed_f\gamma(t)
 \df 
-\sqrt{[\speed\gamma_\spc{B}(t)]^2 + [f(\gamma_\spc{B}(t))\cdot \speed\gamma_\spc{F}(t)]^2}.
+\sqrt{[\speed\gamma_\spc{B}(t)]^2 + [f(\gamma_\spc{B}(t))\cdot \speed\gamma_\spc{F}(t)]^2},
 \] 
 and set 
-\[\length_f\gamma\df\int\limits_0^1\speed_f\gamma(t)\cdot\d t
+\[\length_f\gamma\df\int\limits_0^1\speed_f\gamma(t)\cdot\d t\,.
 \eqlbl{wp-length}\]
 
 Consider the $f$-pseudometric on $\spc{B}\times \spc{F}$ 
-defined as the  infimum of $f$-lengths of Lipschitz curves connecting the points.
+defined as the  infimum of $f$-lengths of such curves $\gamma$ that connect the points.
 That is
 \[\dist{x}{y}{f}
 \df
 \inf
-\set{\length\gamma}{\gamma(0)=x,\gamma(1)=y}
+\set{\length_f\gamma}{\gamma(0)=x,\gamma(1)=y}.
 \]
 
 
 Note that $\dist{x}{y}{f}=0$ 
-if and only if $x=y$ or both $x,y\in b\times \spc{F}$ for some $b\in\spc{B}$ such that $f(b)=0$.
+if and only if $x=y$ or both $x,y\in p\times \spc{F}$ for some $p\in\spc{B}$ such that $f(p)=0$.
 Set $x\sim y$ iff $\dist{x}{y}{f}=0$.
 The pseudometric $\dist{}{}{f}$
 becomes a metric on the equivalence classes of ``$\sim$''.
-The obtained metric space will be called warped product of $\spc{B}$ and $\spc{F}$ with the warping function $f$;
-it will be denoted by $\spc{B}\times_f \spc{F}$.
+The obtained metric space will be called the warped product of $\spc{B}$ and $\spc{F}$ with the warping function $f$;
+it will be denoted by $\spc{B}\times_f \spc{F}$.  An equivalence class $p\times \spc{F}$ will be denoted by any of its representatives.
 
-From Fiber-independence theorem (\ref{thm:fiber-independence})
-follows that if $\iota\:A\to \check A$ is an isometry between two subsets
+Given a path $\gamma$ in $ \spc{B}\times_f\spc{F}$ defined on $[0,1]$, we write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where $\gamma_B$ is defined on $[0,1]$ and  $\gamma_\spc{F}$ is defined for all $t\in [0,1]$ such that $f(\gamma_B(t))> 0$. There may be no continuous extension of $\gamma_\spc{F}$ to $[0,1]$.
+
+If a path $\gamma$ in $ \spc{B}\times_f\spc{F}$ is Lipschitz and $f\circ\gamma_B> 0$, then $\length\gamma$ as defined by the metric of $\spc{B}\times_f \spc{F}$  is equal to   ${\length}_f\gamma$.  Indeed, the definition of distance in $\spc{B}\times_f \spc{F}$ implies that projection to $\spc{B}$ is distance nonincreasing, and projection to $\spc{F}$ is locally Lipschitz where defined.  Therefore 
+$\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz; equivalently,   $(\gamma_\spc{B},\gamma_\spc{F})$ belongs to the class of curves in $\spc{B}\times\spc{F}$ for which $\length_f$ is defined.  Call these curves  \emph{admissible} for $\length_f$. Admissible curves are closed under restriction, concatenation and linear reparametrization.
+Moreover, local uniform continuity of $f$ implies that $\length_f$  is a lower semi-continuous functional on admissible curves with respect to pointwise convergence, that is,  if \,$\gamma_i\to\gamma$\, then \,$\liminf\,(\length\gamma_i) \ge\length\gamma$. 
+It follows as in \cite{BBI} that the two lengths agree. 
+
+The Fiber-independence theorem (\ref{thm:fiber-independence}) below 
+implies that if $\iota\:A\to \check A$ is an isometry between two subsets
 $A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
-in the length spaces than for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
+in  length spaces $\spc{F}$ and $\check{\spc{F}}$, then for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
 the map $\iota$ induces an isometry between sets 
-$A\times_f \spc{B}\subset \spc{F}\times_f \spc{B}$ and $\check A\times_f \spc{B}\subset \check{\spc{F}}\times_f \spc{B}$.
+$\spc{B}\times_f A\subset \spc{B}\times_f \spc{F}$ and $\spc{B}\times_f\check A \subset \spc{B}\times_f \check{\spc{F}} $.
 
-The later observation makes possible to define warped product $\spc{F}\times_f \spc{B}$ where the fiber $\spc{F}$ does not have length metric.
-Ideed according to ???, any metric space is a subspace $\spc{F}$ of a length space say $\spc{F}'$.
-Therefore we can take the warped product $\spc{F}'\times_f \spc{B}$
-and identify $\spc{F}\times_f \spc{B}$ with its subspace formed all pairs $(\phi,b)$ such that $\phi\in \spc{F}$.
-According to Fiber-independence theorem (\ref{thm:fiber-independence}) the resultig space does not depend on the chaice of $\spc{F}'$.
+This observation makes it possible to define the warped product $\spc{B}\times_f \spc{F}$ when the metric space $\spc{F}$ is not a length space.  Indeed according to ???, any metric space is a subspace $\spc{F}$ of a length space say $\spc{F}'$.
+Therefore we can take the warped product $\spc{B}\times_f \spc{F}'$
+and identify $\spc{B}\times_f \spc{F}$ with its subspace formed by all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
+According to Fiber-independence theorem (\ref{thm:fiber-independence}), the resulting space does not depend on the choice of $\spc{F}'$.
 
 
 
@@ -1232,7 +1249,9 @@ Each horizontal leaf $\spc{B}\times\{\phi_0\}$ is isometrically embedded in $\sp
 
 
 \parit{Proof.} 
-Claims  (\ref{SHORT.horiz-leaf-proj}), (\ref{SHORT.vert-leaf-proj}) and (\ref{SHORT.Df>0})  are immediate from the 
+Claims  (\ref{SHORT.horiz-leaf-proj}) and (\ref{SHORT.vert-leaf-proj}) 
+%and (\ref{SHORT.Df>0})  
+are immediate from the 
 length formula \ref{wp-length}.
 
 Also by (\ref{wp-length}), the projection of
@@ -1240,15 +1259,12 @@ $\spc{B}\times_f\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\maps
 Hence (\ref{SHORT.horiz-leaf-isometry}) and (\ref{SHORT.Df>0}).
 \qeds
 
+A horizontal leaf need not be convex even if $\spc{B}\times_f\spc{F}$ is a geodesic space, since vanishing of the warping function$\,f$ allows geodesics to bifurcate into distinct horizontal leaves (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  For instance, suppose $\beta:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\beta^{-1}(Z)\neq[0,1]$ where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \times_f\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
 
-
-A horizontal leaf need not be convex even if $\spc{B}\times_f\spc{F}$ is a geodesic space, since vanishing of the warping function$\,f$ allows geodesics to bifurcate into distinct horizontal leaves (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  For instance, suppose $\alpha:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \times_f\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
-
-\begin{thm}{Exersice}\label{ex:chohom-1=warped-product}
+\begin{thm}{Exercise}\label{ex:chohom-1=warped-product}
 Show that orbits of isometric cohomogenity 1 group action on Riemannian manifold
 form a vertical fiber of a warped product.
 \end{thm}
-
 
 Distance in a warped product is fiber-independent, in the sense that distances may be calculated by substituting for $\spc{F}$ a different length space:
 
@@ -1270,7 +1286,6 @@ Then
 \end{aligned}
 \eqlbl{eq:dist-fiber-indep}
 \]
-	
 \end{thm}
 
 \parit{Proof.} 
@@ -1286,7 +1301,7 @@ from $\check\phi$ to $\check\psi$ in $\check{\spc{F}}$ such that
 (\speed\gamma_{\check{\spc{F}}})(t)\]
 for almost all $t\in[0,1]$.
 
-Consider the path $\check\gamma=(\gamma_{\spc{B}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\times_f\check{\spc{F}}$.
+Consider the path $\check\gamma=(\gamma_{\check{\spc{B}}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\times_f\check{\spc{F}}$.
 Clearly
 \[\length_f\gamma\ge \length_f\check\gamma.\]
 Hence the statement follows.
@@ -1296,11 +1311,43 @@ Hence the statement follows.
 Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\;\spc{B}\to \RR_\ge$ be two continuous nonnegative  function.
 Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
 Show that 
-$\spc{B}\times_f\spc{F}\le \spc{B}\times_g\spc{F}$;
-that is there is a distance noncontructing map $\spc{B}\times_f\spc{F}\to \spc{B}\times_g\spc{F}$.
+$\spc{B}\times_f\spc{F}\le \spc{B}\times_g\spc{F}$, namely, there is a distance noncontracting map $\spc{B}\times_f\spc{F}\to \spc{B}\times_g\spc{F}$.
 \end{thm}
 
+\begin{thm}{Proposition}
+\label{prop:f=0}  
+Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F})\:[0,1]\to \spc{B}\times_f\spc{F}$ be a geodesic joining $x=(p,\phi)$ and $y=(q,\psi)$.  
 
+\begin{subthm}{F-proj}
+If $f\circ\gamma_\spc{B}>0$, then $\gamma_\spc{F}$ is a pregeodesic of $\spc{F}$.
+\end{subthm}
+
+\begin{subthm}{f=0-geo}
+Suppose $\gamma_\spc{B}$ intersects the zero set $Z$of $f$. Then $\gamma_F$ is constant on any maximal subinterval $\JJ$ of $[0,1]$ such that  $(f\circ\gamma_B)|\JJ>0$. 
+ If $\JJ\cap\{0,1\}=\emptyset$, then this  constant  may be chosen arbitrarily and the resulting curve will still be a geodesic of $\spc{B}\times_f\spc{F}$  joining $x$ and $y$.
+ \end{subthm}
+ 
+\begin{subthm}{f=0-fiber-projection} 
+Suppose $\gamma_\spc{B}$ intersects $Z$.  Then $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ joining $p$ and $q$ that intersect $Z$, and either is a geodesic of $\spc{B}$, or intersects $Z$ at a single point $p_0$ and consists of two geodesics of $\spc{B}$ joined at $p_0$.
+\end{subthm}
+\end{thm}
+\parit{Proof.}
+\ref{SHORT.F-proj}) Suppose $\length\gamma_\spc{F}>|\varphi\,\psi|$.  
+Let $\beta:[0,1]\to \spc{F}$ be a Lipschitz curve with endpoints $\varphi$, $\psi$ and  $\length\beta <\length\gamma_\spc{F}$. By the length formula  \ref{wp-length}, a shorter join than  $\gamma$ of $x$ and $y$ may be obtained by replacing $\gamma_\spc{F}$ with a reparametrization of $\beta$  with speed proportional to and less than $\speed\gamma_{\spc{F}}$.  This contradiction gives (\ref{SHORT.F-proj}).
+
+\ref{SHORT.f=0-geo}) Suppose $\gamma_\spc{B}(t_0)\in Z$.
+By \ref{wp-length}, the curve $\gamma_1$ in $\spc{B}\times\spc{F}$ defined on $[0,t_0]$, whose projection to $\spc{B}$ is $\gamma_\spc{B }|[0,t_0]$ and projection to $\spc{F}$  takes constant value $\phi$, has image in $\spc{B}\times_f\spc{F}$ of length equal to   $\length\gamma_\spc{B }|[0,t_0]$. Similarly, there is
+$\gamma_2$  defined on $[t_0,1]$, whose projection to $\spc{F}$ takes constant value  $\psi$ and  whose image in $\spc{B}\times_f\spc{F}$ has length equal to  $\length\gamma_\spc{B}|[t_0,1]$.
+
+ If $t_0>0$, then there is a Lipschitz curve in $\spc{B}\times\spc{F}$ defined on $[0,1]$, 
+joining $(p,\phi)$ and $(q,\psi)$ and of the same length as $\gamma_\spc{B}$.  Indeed by \ref{wp-length} it suffices to reparametrize $\gamma_1$ so that its projection to $\spc{B}$ is constant on $[t_0-\epsilon, t_0]$, on which interval the projection to $\spc{F}$ moves from $\phi$ to $\psi$, followed by $\gamma_2$.  (Similarly on $[0,\epsilon]$ if $t_0=0$.) Claim
+(\ref{SHORT.f=0-distance}) follows by \ref{wp-length}.  
+
+\ref{SHORT.f=0-fiber-projection}) It follows also that  $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ from $p$ to $q$ that intersect $Z$. 
+Let $[t_0,t_1]$ be the maximal subinterval of $[0,1]$ having endpoints in $\gamma_\spc{B}^{-1}(Z)$. 
+If $t_0=t_1$, then $\gamma_\spc{B} |[0,t_0]$ and $\gamma_\spc{B} |[t_0,1]$ are geodesics and the claim holds. Suppose $t_0<t_1$.  Then $\gamma_\spc{B} |[0,t_1]$ is  a geodesic, since otherwise  by the triangle inequality there is a curve from $p$ to $q$ passing through $\gamma_\spc{B}(t_1)\in Z$ that is shorter than $\gamma$.  Similarly,  
+$\gamma_\spc{B} |[t_0,1]$ is a geodesic.
+\qeds
 
 \section{Examples}
 
