@@ -1,3 +1,256 @@
+
+
+
+
+Recall that homology sphere is a $n$-dimensional manifold having the homology groups of an $\SS^n$. 
+
+\begin{thm}{Corollary}\label{cor:flag-hom}
+If the underlying space of $\spc{S}$ 
+is a homology sphere then its cubical analog $\square_{\spc{S}}$ is a homology manifold.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\parbf{Fundamental group at infinity.}
+Let $\spc X$ be a proper topological space
+and $K_0, K_1, \dots$
+be its \index{exhaustion}\emph{exhaustion} by compact sets;
+that is $K_0\subset K_1\subset \dots$ and $\spc X$ is the union of the interiors of $K_n$.
+
+An \index{end}\emph{end} of $\spc X$
+is defined as a decreasing sequence 
+\[\Omega_0\supset \Omega_1\supset \dots\]
+of connected components $\Omega_n$ 
+of the complement 
+$\spc X\backslash K_n$.
+The inclusions 
+$\Omega_{n-1}\leftarrow \Omega_{n}$
+form an inverse system on $(\Omega_n)$ .
+
+Assume in addition that $\spc{X}$
+is locally simply conneted.
+Then the inclusions above induce 
+homomorphisms of its fundamental groups 
+$\pi_1\Omega_{n-1}\leftarrow\pi_1\Omega_n$ 
+which also forms an invese system
+\[\pi_1\Omega_0\leftarrow \pi_1\Omega_1\leftarrow\dots.\]
+
+More precisely, for each $n$ we have to fix a point $x_n\in \Omega_n$.
+Each $\Omega_n$ is path connected 
+since it is connected locally path connected.
+Therefore we can fix a path in $\Omega_{n-1}$
+connecting $x_{n}$ to $x_{n-1}$.
+This path defines the needed homomorphism 
+\[\pi_1(\Omega_{n-1},x_{n-1})\leftarrow\pi_1(\Omega_n,x_n).\]
+This homomorphism is unique up to inner automorphism of $\pi_1(\Omega_{n-1},x_{n-1})$.
+
+The inverse limit $\Gamma=\varprojlim \pi_1\Omega_n$ is called fundamental group of the end.
+If the group $\Gamma$ is trivial,
+we say that the end is \index{simply connected end}\emph{simply connected}.
+
+Assume
+\[\Omega_0'\supset \Omega_1'\supset \dots\]
+is a decreasing sequence 
+of connected components of the complement 
+$\spc{X}\backslash K_n'$ for an other exhaustion $K_n'$ of $\spc{X}$.
+We say that the sequence $(\Omega_n)$ defines the same end as $(\Omega'_n)$
+if for any $i$ there is $j$ such that 
+$\Omega'_i\supset \Omega_j$ and $\Omega_i\supset \Omega_j'$.
+
+Note that the fundamenal group of end is uniquely defined up to isomorphism.
+
+If $\spc{X}$ has one end which is simply connected,
+we say that $\spc{X}$ is \index{simply connected at infinity}\emph{simply connected at infinity}.
+
+
+\begin{thm}{Proposition}\label{prop:example-pi_infty}
+Let $\spc{S}$ be a flag complex homeomorphic to a homological manifold
+and $\spc{K}=\square_{\spc{S}}$ be its cubical analog.
+Assume the universl covering $\tilde{\spc{K}}$ of $\spc{K}$ is simply connected at infinity.
+Then $\spc{S}$ is simply connected.
+\end{thm}
+
+
+In the proof we will need the following lemmas.
+
+\begin{thm}{Lemma}\label{lem:deg=1=>epi-pi1}
+Let $\spc{M}$ and $\spc{N}$ be compact connected homological manifolds of the same dimension
+and $f\:\spc{M}\to \spc{N}$ is a continuous map of degree 1.
+Then the induced homomorphism $\pi_1\spc{M}\to \pi_1\spc{N}$
+is onto.
+\end{thm}
+
+\parit{Proof.}
+Assume contrary.
+Consider the covering $\phi\:\tilde{\spc{N}}\to \spc{N}$
+which corresponds to the image of $\pi_1\spc{M}$
+in $\pi_1\spc{N}$.
+
+Note that $f$ factors through $\phi$;
+that is there is a map $\tilde f\:\spc{M} \to \tilde{\spc{N}}$
+such that $f=\phi\circ f$.
+
+
+
+If $\phi$ is an infinite-fold covering then $H_m(\tilde{\spc{N}})=0$.
+Therefore $\tilde f([\spc{M}])=0$ 
+and hence $f([\spc{M}])=0$;
+that is $\deg f=0$, a contradiction.
+
+If $\phi$ is a $\kay$-fold coveing for a finite $\kay>1$
+then 
+\begin{align*}
+\deg f
+&=\deg\phi\cdot\deg \tilde f=
+\\
+&=\kay \cdot \deg \tilde f;
+\end{align*}
+That is $\deg f$ is devisible by $\kay$,
+a contradiction.\qeds
+
+\parit{Proof of Proposition~\ref{prop:example-pi_infty}.}
+By Corollary~\ref{cor:flag-cube}, the universal cover $\tilde{\spc{K}}$ is a $\cCat{}{0}$ space.
+
+It remains to show that $\tilde{\spc{K}}$ is not simply connected at the infinity.
+
+Fix a vertex $v\in \tilde{\spc{K}}$;
+more precisely, $v$ is a point 
+in the inverse image of a vertex of $\spc{K}$.
+
+The space of directions at $v$
+is isometric to $\spc{S}$
+with the right-angled spherical metric.
+
+Let us denote by $\Sphere[v,r]$ the sphere with center $v$ and  radius $r$ in $\tilde{\spc{K}}$.
+
+Note that 
+\begin{itemize}
+\item For small $r_0$,
+the sphere $\Sphere[v,r_0]$
+is homeomorphic to $\spc{S}$.
+\item For all values of $r$ except countable set 
+$\Sphere[v,r]$ is a manifold.
+\item
+The map
+$\map_r\:\tilde{\spc{K}}\backslash \oBall(v,r)\to \Sphere[v,r]$ 
+is given by the map defined as $x\mapsto y$ if $y\in [vx]$
+is a deformation retract.
+\end{itemize}
+
+Assume $\tilde{\spc{K}}$ is simply connected at infinity.
+Choose a sequence of radii $r_n\to\infty$
+such that $S_n=\Sphere[v,r_n]$ is a manifold for each $n$.
+From above $S_n$ is homotopically equivalent to $\Omega_n=\tilde{\spc{K}}\backslash \cBall[v,r_n]$.
+Moreover the restriction of $\map_n=\map_{r_n}$ to $\Omega_n$
+is the homotopy equivalence $\Omega_n\to S_n$. 
+Therefore $S_n$ is connected for all $n$.
+
+The following diagram commutes 
+\[
+\begin{tikzcd}
+\Omega_{n-1} 
+\arrow[r, hookleftarrow] \arrow[d, "\map_{n-1}"] 
+& \Omega_n \arrow[d, "\map_n"] 
+\\
+S_{n-1}\arrow[r, leftarrow, "\map_{n-1}"]& S_n
+\end{tikzcd}
+\]
+Note that the restriction $\map_{n-1}\:S_n\leftarrow S_{n-1}$
+has degree 1.
+By Lemma \ref{lem:deg=1=>epi-pi1} the induced homomorphism 
+$\pi_1S_{n-1}\leftarrow \pi_1S_{n}$ is onto.
+Therefore the homomorphism 
+$\pi_1\Omega_{n-1}\leftarrow \pi_1\Omega_{n}$ is also onto.
+It follows that fundamental group at infinity of 
+$\tilde{\spc{K}}$ admits a homomorphism onto $\pi_1\spc{S}=\pi_1 S_0$.
+Hence the result follows.
+\qeds
+
+\begin{thm}{Corollary}
+There is a polyhedral homological manifold $\spc{K}$
+such that the universal cover $\tilde{\spc{K}}$ 
+is a $\cCat{}{0}$ space which is not simply connected at infinity.
+\end{thm}
+
+Recall that \emph{binary icosahedral group} can be defined as the preimage of the icosahedral group under the 2:1 covering homomorphism
+$\operatorname{Spin}(3) \to \operatorname{SO}(3)$.
+The group $I_2$ has order 120.
+The group $I_2$ is perfect; that is $I_2$ coincides with its commutator $[I_2,I_2]$.
+
+The following Lemma follows from the main result in \cite{kervaire}.
+
+\begin{thm}{Lemma}\label{lem:homology-sphere}
+Given $m\ge 3$ there is a nonsimply connected $m$-dimensional homology sphere which forms the boundary of a contactable $(m+1)$-dimensional manifold $W$.
+
+Moreover, if $m\ge 4$ then we can assume that $W$ is smooth.
+\end{thm}
+
+\parit{New Proof.}
+Let $\spc{S}$ be a simplicial complex 
+with undelying space formed by homotopy $m$-sphere provided by Lemma \ref{lem:homology-sphere}.
+
+We can assume that $\spc{S}$ is a flag complex;
+otherwise pass to its baricentrical subdivision and apply Exercise \ref{ex:baricenric-flag}.
+
+Consider the cubical analog $\spc{K}=\square_{\spc{S}}$ of $\spc{S}$.
+By Corollary~\ref{cor:flag-hom}, $\spc{K}$ is homological manifold.
+
+The sphere $\Sphere[v,r]$ bounds a contractible ball 
+and its interior is a homological manifold.
+Therefore the homology groups of $\Sphere[v,r]$
+coincide with the homology groups of $\mathbb{S}^m$.
+In particular $\Sphere[v,r]$ has to be connected.
+\qeds
+
+In fact one can show that fundamental group at infinity
+of the obtained homological manifold is isomorphic to 
+star product of countable number of copies of $\pi_1\spc{S}$.
+
+Applying the second statement in Lemma \ref{lem:homology-sphere},
+we can smooth singularites of $\spc{K}$ while keeping it aspherical.
+This way we get the following.
+
+\begin{thm}{Corollary}
+Given $m\ge 4$,
+there is a compact aspherical $m$-dimensional manifold 
+which universal cover is not homeomorphic to the Euclidean space.
+Moreover if $m\ge 5$, we can assume that the manifold is smooth.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newcommand*{\Lob}{\hbox{
 \vcenter{\offinterlineskip
 \hbox{\CYRL}%
