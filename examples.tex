@@ -45,9 +45,9 @@ the later class of spaces includes so called
 The dimension of a $\PM{}{\kappa}$ space $\spc{P}$
 is defined as the maximal dimension of the simplex 
 in one (and therefore any) triangulation of $\spc{P}$.
-The class of $\PM{}{\kappa}$ spaces 
-with dimension $m$ and $\le m$ will be denoted 
-as $\PM{m}{\kappa}$ and $\PM{\le m}{\kappa}$.
+The classes of $\PM{}{\kappa}$ spaces 
+of dimension $m$ and $\le m$ will be denoted 
+$\PM{m}{\kappa}$ and $\PM{\le m}{\kappa}$ respectively.
 
 
 \parbf{Links.}
@@ -55,8 +55,8 @@ Let $\spc{P}\in \PM{}\kappa$
 and let $\sigma$ be a simplex of a triangulation $\tau$ of $\spc{P}$.
 
 The simplices which contain $\sigma$
-form an abstract simplicial complex called by link of $\sigma$ 
-which will be denoted as $\Link_\sigma$.
+form an abstract simplicial complex called the link of $\sigma$ 
+which will be denoted  $\Link_\sigma$.
 If $m$ denotes the dimension of $\sigma$
 then the set of vertices of $\Link_\sigma$
 is formed by the $(m+1)$-simplices which contain $\sigma$;
@@ -67,7 +67,7 @@ can be identified with the subcomplex of $\tau$ formed by all the simplices $\si
 but both $\sigma$ and $\sigma'$ are faces of the same simplex.
 
 The link of any simplex 
-cares natural structure of spherical polyhedron. %???WHY???
+carries a natural structure of a spherical polyhedron. %???WHY???
 We will always consider the link with this metric.
 
 \parbf{Tangent space and space of directions.}
@@ -135,7 +135,9 @@ such that $\gamma_n(t)$ cross only simplexes of dimension $m$ and $m-1$.
 The base case $m=1$ follows from (\ref{SHORT.thm:poly-CBB:m-1}).
 
 \parit{Step.}
-Assume that the theorem is proved if $\dim\spc{P}<m$.
+Assume that the theorem is proved if $\dim<m$ and let $\dim\spc{P}=m$.
+We will prove the if direction. The proof of the only if direction is similar and left to the reader.
+
 According to the Globalization theorem (\ref{thm:glob}),
 it is sufficient to show that 
 $$\curv_p\spc{P}\ge \kappa$$ 
@@ -144,7 +146,7 @@ for any point $p\in\spc{P}$.
 Fix $p\in \spc{P}$.
 Note that a spherical neighborhood of $p$
 is isometric
-to a the spherical neighborhood of the tip of the tangent $\kappa$-cone 
+to a  spherical neighborhood of the tip of the tangent $\kappa$-cone 
 $$\T_p\mc\kappa\z
 =
 \Cone\mc\kappa(\Sigma_p).$$
@@ -175,7 +177,7 @@ Then $\curv\spc{P}\le\kappa$
 if and only if any connected component of the link of any simplex $\sigma$ in $\tau$
 is $2\cdot\pi$-simply connected.
 
-Equivalently, if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
+Equivalently, $\curv\spc{P}\le\kappa$ if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
 
 \end{thm}
 
@@ -184,7 +186,8 @@ Let us apply induction on $\dim\spc{P}$.
 The base case case $\dim\spc{P}=0$ is evident.
 
 \parit{Step.}
-Assume that the theorem is proved in case $\dim\spc{P}<m$.
+Assume that the theorem is proved for spaces of $\dim\spc{P}<m$. Let  $\dim\spc{P}=m$.
+As before we will only give a proof of the ``if" direction.
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
