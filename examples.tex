@@ -597,7 +597,7 @@ it was proved by Ancel, Davis and Guilbault in \cite{ADG}. %???first names
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
-Given $m\ge 6$ there is a compact locally $\cCat{}{0}$ polyhedral space which is homeomorphic to a closed $m$-dimensional manifold and
+Given $m\ge 5$ there is a compact locally $\cCat{}{0}$ polyhedral space which is homeomorphic to a closed $m$-dimensional manifold and
 its universal cover is not simply connected at infinity.
 
 \end{thm}
@@ -607,7 +607,7 @@ Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of t
 \qeds
 
 \begin{thm}{Lemma}\label{lem:funny-S}
-Given a positive integer $m\ge 6$
+Given a positive integer $m\ge 5$
 there is an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
 and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}
@@ -650,21 +650,21 @@ we get
 \[\Cone \spc{S}\simeq\EE^m.\]
 
 Let us construct $\spc{S}$.
-Fix an $(m-3)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
+Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
 According to \cite{kervaire} %it is a good readable paper, but I am sure the existance follows from sometheng written before
-an example of that type exists for any $m\ge 6$.
+an example of that type exists for any $m\ge 5$.
 
-Remove from $\Sigma$ one $(m-3)$-simplex.
+Remove from $\Sigma$ one $(m-2)$-simplex.
 Denote the obtained complex by $\Sigma'$.
-Since $m\ge 6$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
+Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
 
 Consider the product $\Sigma'\times [0,1]$. 
 Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
 Denote by $\spc{S}$ the obtained simplicial complex
 and by $v$ the tip of the attached cone.
 
-Note that $\spc{S}$ is homotopy equivalent to the double spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
- (In fact, it is homeomorphic to $\mathbb{S}^{m-1}$ by the Double Suspension Theorem but we do not need it here).  Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
+Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
+  Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
 
 The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to $\Sigma'$.
 Therefore 
