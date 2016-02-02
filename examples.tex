@@ -10,7 +10,7 @@ if it admits a finite triangulation $\tau$
 such that arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{m}{\kappa}$, 
 where $m$ is the dimension of $\sigma$.
 
-If we do not want to specify $\kappa$, we can say that $\spc{P}$ is a \emph{polyhedral space}.
+If we do not wish to specify $\kappa$, we will say that $\spc{P}$ is a \emph{polyhedral space}.
 
 By a 
 \index{triangulation of a polyhedral space space}\emph{triangulation of a polyhedral space} 
@@ -36,17 +36,17 @@ will be also called
 \end{thm}
 
 Note that according to the above definition,
-any polyhedral spaces are compact.
+all polyhedral spaces are compact.
 However, 
-most of the statements below admit straightforward generalization to locally polyhedral spaces;
-that is complete length spaces which any point of which admits a closed neighborhood isometeric to a polyhedral space.
+most of the statements below admit straightforward generalizations to locally polyhedral spaces;
+that is complete length spaces  any point of which admits a closed neighborhood isometric to a polyhedral space.
 The later class of spaces includes in particular the covers of polyhedral  spaces.
 
 The dimension of a polyhedral space $\spc{P}$
 is defined as the maximal dimension of the simplex 
 in one (and therefore any) triangulation of $\spc{P}$.
 The class of $\PM{}{\kappa}$ spaces 
-with dimension $m$ will be denoted 
+of dimension $m$ will be denoted 
 as $\PM{m}{\kappa}$.
 
 
@@ -55,9 +55,9 @@ Let $\spc{P}$ be a polyhedral space
 and $\sigma$ be a simplex in a triangulation $\tau$ of $\spc{P}$.
 
 The simplices which contain $\sigma$
-form an abstract simplicial complex called by link of $\sigma$ 
-which will be denoted as $\Link_\sigma$.
-If $m$ denotes the dimension of $\sigma$
+form an abstract simplicial complex called the \emph{link} of $\sigma$ 
+which will be denoted by $\Link_\sigma$.
+If $m$ is  the dimension of $\sigma$
 then the set of vertices of $\Link_\sigma$
 is formed by the $(m+1)$-simplices which contain $\sigma$;
 the set of its edges are formed by the $(m+2)$-simplices which contain $\sigma$ and so on.
@@ -66,16 +66,16 @@ The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ formed by all the simplices $\sigma'$ such that $\sigma\cap\sigma'=\emptyset$, 
 but both $\sigma$ and $\sigma'$ are faces of the same simplex.
 
-The points $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in $\sigma$.
+The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in $\sigma$.
 The angle metric between directions makes  $\Link_\sigma$ into a spherical polyhedral space.
 We will always consider the link with this metric.
 
 \parbf{Tangent space and space of directions.}
-Let $\spc{P}$ be a polyhedral space and $\tau$ be a triangulation of $\spc{P}$.
+Let $\spc{P}$ be a polyhedral space and let  $\tau$ be a triangulation of $\spc{P}$.
 If a point $p\in \spc{P}$ 
-lies in a $\kay$-simplex $\sigma$ of $\tau$ 
+lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
 then the tangent space $\T_p\spc{P}$
-admits a natural isometry to
+is  naturally isometric to
 \[\EE^\kay\times(\Cone\Link_\sigma).\]
 Equivalently, the space of directions $\Sigma_p$
 can be isometrically identified with the 
@@ -103,7 +103,7 @@ see \cite{lebedeva-petrunin-poly}.
 Then $\spc{P}\in\CBB{}{\kappa}$ if and only if the following conditions hold.
 
 \begin{subthm}{} $\tau$ is \emph{pure}; 
-that is, any simplex in $\tau$ is formed by a face of some simplex of dimension exactly $m$. 
+that is, any simplex in $\tau$ is  a face of some simplex of dimension exactly $m$. 
 \end{subthm}
 
 \begin{subthm}{thm:poly-CBB:m-1}
@@ -121,13 +121,13 @@ has diameter at most $\pi$.
 \end{thm}
 
 The condition (\ref{SHORT.thm:poly-CBB:connected})
-can be reformulated the following way:
+can be reformulated in the following way:
 
 \begin{itemize}
  \item[{\it \ref{SHORT.thm:poly-CBB:connected}$\,'\!$)}] 
 Any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
 $\gamma_n\:[0,1]\to \spc{P}$ 
-such that $\gamma_n(t)$ cross only simplexes of dimension $m$ and $m-1$.
+which  cross only simplexes of dimension $m$ and $m-1$.
 \end{itemize}
 
 Further, modulo the other conditions,
@@ -145,8 +145,12 @@ or a closed real interval or length $\le \pi$.
 \parit{Proof.} We apply induction on $m$.
 The base case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
 
-\parit{Step.}
-Assume that the theorem is proved if $\dim\spc{P}<m$.
+\parit{ Induction Step.}
+Assume that the theorem is proved for polyhedral spaces  of $\dim <m$. Suppose  $\dim\spc{P}=m$.
+
+We will only give a proof of the ``if" direction. The ``only if" direction is similar and is left to the reader.
+
+
 According to the Globalization theorem (\ref{thm:glob}),
 it is sufficient to show that 
 $$\curv_p\spc{P}\ge \kappa$$ 
@@ -155,7 +159,7 @@ for any point $p\in\spc{P}$.
 Fix $p\in \spc{P}$.
 Note that a spherical neighborhood of $p$
 is isometric
-to a the spherical neighborhood of the tip of the tangent $\kappa$-cone 
+to a  spherical neighborhood of the tip of the tangent $\kappa$-cone 
 $$\T_p\mc\kappa\z
 =
 \Cone\mc\kappa(\Sigma_p).$$
@@ -200,7 +204,9 @@ Let us apply induction on $\dim\spc{P}$.
 The base case $\dim\spc{P}=0$ is evident.
 
 \parit{Step.}
-Assume that the theorem is proved in the case $\dim\spc{P}<m$.
+Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
+
+We will only give a proof of the ``if" direction.
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
@@ -210,7 +216,7 @@ By Theorem~\ref{thm:warp-curv-bound:cbb:a},
 it is sufficient to show that 
 \[\Sigma_p\in \Cat{}1\eqlbl{eq:Sigma-in-CAT(1)}\]
 
-Note that $\Sigma_p$ is a spherical polyhedral space
+Note that $\Sigma_p$ is a spherical polyhedral space 
 and its  links of are isometric to the links of $\spc{P}$. 
 By induction hypothesis we get $\curv\Sigma_p\le 1$.
 Applying Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}),
@@ -218,7 +224,7 @@ we get \ref{eq:Sigma-in-CAT(1)}.
 \qeds
 
 \begin{thm}{Exercise}
-Show that if in a Euclidean polyhedral space such that
+Show that if in a Euclidean polyhedral space $\spc{P}$
 any two points can be connected by unique geodesic then $\spc{P}\in\cCat{}{0}$.
 \end{thm}
 
@@ -260,7 +266,7 @@ From the definition of flag complex
 we get the following.
 
 \begin{thm}{Lemma}\label{lem:link-of-flag}
-Any link of flag complex is flag.
+Any link of a flag complex is flag.
 \end{thm}
 
 
@@ -278,12 +284,12 @@ and so on we get that $\spc{S}$ is flag.
 \qeds
 
 
-A triangulation of spherical polyhedral space 
-is called \emph{all-right triangulation} if each simplex of the triangulation is isometric to the spherical simplex all of which angles are right.
-Similarly we say that a simplicial complex 
-is equipped with \emph{all-right spherical metric}
+A triangulation of a spherical polyhedral space 
+is called \emph{all-right triangulation} if each simplex of the triangulation is isometric to a spherical simplex all of which angles are right.
+Similarly, we say that a simplicial complex 
+is equipped with an  \emph{all-right spherical metric}
 if it is a length metric and each simplex is isometric 
-to the spherical simplex all of which angles are right.
+to a spherical simplex all of which angles are right.
 
 Spherical polyhedral $\cCat{}{1}$ spaces glued from of right-angled simplices
 admit the following combinatorial characterization discovered by Gromov \cite[p. 122]{gromov:hyp-groups}.
@@ -324,9 +330,9 @@ imply the ``only-if'' part.
 By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed geodesic $\gamma$ in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
 
-Fix flag complex $\spc{S}$.
-Recall that \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\Star_v$)
-is formed by all the simplexes which containing $v$.
+Fix a flag complex $\spc{S}$.
+Recall that the  \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\overline \Star_v$)
+is formed by all the simplexes  containing $v$. Similarly, $\Star_v$,   an open star of $v$ is the union of all simplices containing $v$ with faces opposite $v$ removed.
 
 Choose a simplex $\sigma$ which contains a point of $\gamma$.
 Let $v$ be a vertex of $\sigma$.
@@ -337,7 +343,7 @@ It follows that $\gamma$
 spends time $\pi$ on every visit to $\Star_v$.
 
 After leaving $\Star_v$,
-the local geodesic $\gamma$ has to enter an other simplex say $\sigma'$
+the local geodesic $\gamma$ has to enter another simplex, say, $\sigma'$
 which has a vertex $v'$ not joined to $v$ by an edge.
 
 Since $\tau$ is flag, we have that the stars $\Star_v$ and $\Star_{v'}$
@@ -358,9 +364,9 @@ if $\tau$ is flag.
 
 \section{Cubical complexes}
 
-The definition of cubical complex,
-mostly repeats the definition of simplicial complex
-but simplices have to be changed to the cubes.
+The definition of a cubical complex,
+mostly repeats the definition of a simplicial complex
+but simplices have to be changed to  cubes.
 
 Formally, a \index{cubical complex}\emph{cubical complex} is defined as a subcomplex 
 of the unit cube in the Euclidean space of large dimension
@@ -374,9 +380,9 @@ any cubical complex is finite;
 that is, it contains a finite number of cubes.
 
 The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \emph{underlying space};
-it will be denoted as $\spc{Q}$ or as $\ushort{\spc{Q}}$ if we need to emphasize that we are talking about set, 
+it will be denoted as $\spc{Q}$ or as $\ushort{\spc{Q}}$ if we need to emphasize that we are talking about a set, 
 not a complex.
-A homeomorphism from $\ushort{\spc{Q}}$ to a topological space $\spc{X}$ is called \index{cubulation}\emph{cubulation of} $\spc{X}$.
+A homeomorphism from $\ushort{\spc{Q}}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of} $\spc{X}$.
 
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
 induced from $\RR^N$.
@@ -389,9 +395,9 @@ In particular $\ushort{\spc{Q}}$ is a Euclidean polyhedral space.
 
 The link of each cube in a cubical complex admits natural 
 all-right triangulation; 
-each simplex corresponds to adjusted cube.
+each simplex corresponds to an adjusted cube.
 
-\parbf{Cubical analog of simplicial complex.}
+\parbf{Cubical analog of a simplicial complex.}
 Let $\spc{S}$ be a simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its vertexes.
 
 Consider $\RR^N$ with the standard basis $\{e_1,\dots,e_N\}$.
@@ -437,7 +443,7 @@ It remains to apply Hadamard--Cartan theorem
 
 Note that from proposition above it follows that cubical analog
 of any flag complex is aspherical.
-The following exercise states that the  contrary also holds, see \cite[5.4]{davis-survey}.
+The following exercise states that the  converse also holds, see \cite[5.4]{davis-survey}.
 
 \begin{thm}{Exercise}
 A simplicial complex is flag 
@@ -453,18 +459,19 @@ Therefore any locally $\cCat{}{0}$ space is aspherical.
 This observation can be used to construct examples of aspherical spaces. 
 
 Let $\spc X$ be a proper topological space.
-Recall that $\spc X$ is called |index{simply connected space at infinity}\emph{simply connected at infinity} 
-if for any compact set $K\subset\spc X$
+Recall that $\spc X$ is called \index{simply connected space at infinity}\emph{simply connected at infinity} 
+if $X$ has one end and for any compact set $K\subset\spc X$
 there is a bigger compact set $K'\supset K$
-such that the complement $\spc X\backslash K'$
-is simply connected.
+such that  $\spc X\backslash K'$ is path connected and  the map $\pi_1( \spc X\backslash K')\to \pi_1( \spc X\backslash K)$ is trivial.
+
+% complement $\spc X\backslash K'$ is simply connected.
 
 The following statement was proved by Michael Davis in \cite{davis-noneuclidean}; 
 his survey \cite{davis-survey} discusses number of related constructions.
 
 \begin{thm}{Proposition}\label{prop:aspherical}
-Given $m\ge 4$ there is a compact aspherical $m$-dimensional manifold
-which universal cover is not simply connected at infinity.
+For any  $m\ge 4$ there is a closed aspherical  $PL$ $m$-dimensional manifold
+whose universal cover is not simply connected at infinity.
 
 In particular, the universal cover of this manifold in not homeomorphic to the $m$-dimensional Euclidean space.
 \end{thm}
@@ -488,9 +495,9 @@ the complement $\spc{S}\backslash\{v\}$ is simply connected.
 \end{thm}
 
 
-\parit{Proof.}
+\parit{Proof of Lemma ~\ref{lem:example-pi_infty}.}
 Assume $\spc{S}$ is not simply connected.
-Choose the shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
+Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
 
 Note that $\gamma$ forms a 1-dimensional subcompelex of $\spc{S}$ which is a closed local geodesic.
 Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to $\gamma$.
@@ -502,7 +509,7 @@ of $G$ in $\tilde{\spc{Q}}$
 for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
 Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$. 
 Note that 
-\begin{clm}{}
+\begin{clm}{}\label{tilde-G-convex}
 $\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
 \end{clm}
 
@@ -521,8 +528,8 @@ or equivalently $G$ is locally convex in $\spc{Q}$.
 \end{lpic}
 \end{wrapfigure}
 
-The later can only fail if $\gamma$ pass through two vertices, say $\xi$ to $\zeta$ in $\spc{S}$,
-which are joint by an edge not in $\gamma$; 
+The latter can only fail if $\gamma$ passes through two vertices, say $\xi$ to $\zeta$ in $\spc{S}$,
+which are joined by an edge not in $\gamma$; 
 denote this edge by $e$.
 
 Each edge of $\spc{S}$ has length $\tfrac\pi2$.
@@ -532,11 +539,11 @@ Moreover,
 at least one of them is noncontractable 
 since $\gamma$ is not.
 That is, 
-$\gamma$ is not a shortest noncontractible circle  a contradiction.
+$\gamma$ is not a shortest noncontractible circle -  a contradiction.
 \claimqeds
 
-Further note that 
-$\tilde G$ is homeomorphic to the plane.
+Further, note that 
+$\tilde G$ is homeomorphic to the plane since it's a 2-dimensional manifold without boundary which by above is $\cCat{}{0}$ and hence is contractible.
 
 Denote by $C_R$ the circle of radius $R$ in $\tilde G$ centered at $\tilde v$.
 All $C_R$ are homotopic to each other in $\tilde G\backslash\{\tilde v\}$ and therefore in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
@@ -554,12 +561,11 @@ It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contrad
 \qeds
 
 \parit{Proof of Proposition~\ref{prop:aspherical}.}
-Fix a simplicial complex $\spc{S}$ such that
-\begin{itemize}
-\item the underlying space of $\spc{S}$ is not simply connected $(m-1)$-dimensional homology sphere.
-\item $\spc{S}$ triangulates the boundary of a contactable $m$-dimensional manifold $\spc{W}$. 
-\end{itemize}
-The existence of such simplicial complex $\spc{S}$ follows from \cite{kervaire}.
+
+Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact manifold $\spc{W}^m$. For $m\ge 5$ the existence of such $(W, \Sigma)$ follows from \cite{kervaire}. For $m=4$ it well-known that there are many $3$-dimensional homology spheres (e.g. the Brieskorn sphere $\Sigma (2,3,13)$) which bound contractible smooth $4$-manifolds. best ref???
+
+Pick any smooth triangulation $\spc L$ of $W$ and let $\spc{S}$ be the resulting subcomplex which triangulates $\Sigma$.
+
 
 We can assume that $\spc{S}$ is flag; 
 otherwise pass to the barycentric subdivision of $\spc{S}$ and apply Exercise~\ref{ex:baricenric-flag}.
@@ -569,20 +575,21 @@ Let $\spc{Q}=\square_{\spc{S}}$ be the cubical analog of $\spc{S}$.
 
 By Proposition~\ref{prob:cubical-analog},
 $\spc{Q}$ is a homology manifold.
-It follows that $\spc{Q}$ is a manifold with finite number topological singularities at its vertices.
+It follows that $\spc{Q}$ is a $PL$-manifold with a finite number of topological singularities at its vertices.
 
 
-Let us remove a spherical neighborhood of each vertex.
-We obtain a manifold with boundary formed by few homeomorphic copies of $\spc{S}$.
-To each copy of $\spc{S}$, 
-glue a copy $\spc{W}$ along its boundary.
-This way we obtain a topological manifold $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
+Let us remove a small spherical neighborhood of each vertex.
+We obtain a $PL$-manifold with boundary formed by several  copies of $\Sigma$.
+To each copy of $\Sigma$, 
+glue a copy of  $\spc{W}$ along its boundary.
+This results in a  closed $PL$-manifold $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
-Finally by the Lemma~\ref{lem:example-pi_infty},  
+Finally, by the Lemma~\ref{lem:example-pi_infty},  
 the universal cover $\tilde{\spc{Q}}$ of $\spc{Q}$
 is not simply connected at infinity.
-Therefore the same holds for 
-the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
+The same holds for 
+the universal cover $\tilde{\spc{M}}$ of $\spc{M}$ since a homotopy equivalence $f\co \spc Q\to \spc M$ lifts to 
+a surjective homotopy equivalence $\tilde f \co \tilde{\spc{Q}}\to \tilde{\spc{M}}$ which is a quasi-isometry and hence maps any compact exhaustion of $ \tilde{\spc{Q}}$ to a compact exhaustion of  $\tilde{\spc{M}}$.
 \qeds
 
 The following is a geometric analog of the proposition above;
@@ -590,7 +597,7 @@ it was proved by Ancel, Davis and Guilbault in \cite{ADG}. %???first names
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
-Given $m\ge 5$ there is a compact locally $\cCat{}{0}$ polyhedral space which is homeomorphic to an $m$-dimensional manifold and
+Given $m\ge 6$ there is a compact locally $\cCat{}{0}$ polyhedral space which is homeomorphic to a closed $m$-dimensional manifold and
 its universal cover is not simply connected at infinity.
 
 \end{thm}
@@ -600,28 +607,29 @@ Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of t
 \qeds
 
 \begin{thm}{Lemma}\label{lem:funny-S}
-Given a positive integer $m\ge 5$
+Given a positive integer $m\ge 6$
 there is an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
 and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}
 
-In the proof we apply the following Lemma, which follows from the disjoint discs property.
-%??? a ref to disjoint discs property is needed
+In the proof we apply the following Lemma, which follows from the disjoint discs property by a theorem of Edwards
+??? a ref to disjoint discs property is needed
 
 \begin{thm}{Lemma}\label{lem:homomanifold-characterization}
 Let $\spc{S}$ be a simplicial complex which 
-is $m$-dimensional homology manifold for some $m\ge 5$.
+is an $m$-dimensional homology manifold for some $m\ge 5$.
 Assume all the vertices of
 $\spc{S}$ have simply connected links.
 Then $\spc{S}$ is a topological manifold.
 \end{thm}
 
 
-\parit{Proof.} 
+\parit{Proof of Lemma~\ref{lem:funny-S}.} 
 It is sufficient to construct a simplicial complex $\spc{S}$
 such that 
 \begin{itemize}
-\item $\spc{S}$ is an $(m-1)$-dimensional homology manifold 
+\item $\spc{S}$ is a closed $(m-1)$-dimensional homology manifold;
+\item $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$;
 \item $\spc{S}\sim \mathbb{S}^{m-1}$; that is, $\spc{S}$ is homotopy equivalent to $\mathbb{S}^{m-1}$.
 \end{itemize}
 
@@ -642,21 +650,21 @@ we get
 \[\Cone \spc{S}\simeq\EE^m.\]
 
 Let us construct $\spc{S}$.
-Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
+Fix an $(m-3)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
 According to \cite{kervaire} %it is a good readable paper, but I am sure the existance follows from sometheng written before
-an example of that type exists.
+an example of that type exists for any $m\ge 6$.
 
-Remove from $\Sigma$ one $(m-2)$-simplex.
+Remove from $\Sigma$ one $(m-3)$-simplex.
 Denote the obtained complex by $\Sigma'$.
-Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
+Since $m\ge 6$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
 
 Consider the product $\Sigma'\times [0,1]$. 
-Attach to it cone over its boundary $\partial (\Sigma'\times [0,1])$.
+Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
 Denote by $\spc{S}$ the obtained simplicial complex
 and by $v$ the tip of the attached cone.
 
-Note that $\spc{S}$ is homotopy equivalent to the double spherical suspension over $\Sigma$.
-By Double suspension theorem  $\spc{S}\sim\mathbb{S}^{m-1}$.
+Note that $\spc{S}$ is homotopy equivalent to the double spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
+ (In fact, it is homeomorphic to $\mathbb{S}^{m-1}$ by the Double Suspension Theorem but we do not need it here).  Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
 
 The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to $\Sigma'$.
 Therefore 
