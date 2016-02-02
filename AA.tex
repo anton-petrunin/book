@@ -2,6 +2,134 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+\begin{wrapfigure}{r}{20mm}
+\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/polytope(1)}
+\end{lpic}
+\end{wrapfigure}
+
+\parbf{Remark.}
+In the most cases, $\Omega^*$ is isometric to $K$ with induced intrinsic metric,
+but in general we only have locally distance preserving map $\Omega^*\to K$ which is onto but in general may be not injective. 
+An example can be seen on the picture.
+
+
+
+
+In the proof we will need the following classical result in discrete geometry.
+
+\begin{thm}{Proposition}\label{prop:diagonal}
+Assume that $n>3$ 
+and $P$ is an $n$-gon in $\Lob{2}{\kappa}$.
+If $\kappa>0$ then we assume that $P$ does not contain closed half-sphere in its interior.
+Then there is a  diagonal, say $[xy]$, of $P$ 
+such that $\l]xy\r[$ lies in the interior of $P$.
+\end{thm}
+
+\parit{Proof.}
+First note that $P$ has at least one convex vertex, say $v$.
+Indeed, otherwise its complement is convex.
+The later contradicts either
+that $P$ is bounded for $\kappa\le  0$ 
+or that $P$ does not contains a half-sphere in its interior for $\kappa\le  0$.
+
+Let $[uv]$ and $[vw]$ be the sides of $P$ meeting at $v$.
+If the $\l]uw\r[$ lies in the interior of $P$ 
+then the proposition is proved.
+
+%???PIC
+
+Otherwise let $x\in[uv]$ be the point closest to $v$
+such that $\l]xw\r[$ does not lie completely in the interior of $P$.
+It means that $\l]xw\r[$ contains a vertex of $P$, 
+say $z$.
+In this case $\l]vz\r[$ lies in the interior of $P$.
+Hence the result follows.
+\qeds
+
+
+\parit{Proof of Theorem~\ref{thm:2-d-cba}.}
+First let us show that the condition in (\ref{SHORT.thm:2-d-cba:k>0}) is necessary if $\kappa>0$. 
+Applying rescaling, we can assume that $\kappa=1$ and therefore $\Lob2\kappa=\SS^2$.
+
+Assume $D=\cBall[p,\tfrac{\pi}2]$ lies in  the interior of $P$.
+Given $\eps>0$
+consider a triangle $[x^1x^2x^3]$ 
+such that $\mangle\hinge{p}{x^i}{x^j}=\tfrac23\cdot\pi$ if $i\ne j$
+and 
+$\dist{p}{x^i}{}=\tfrac{\pi}2+\eps$ for all $i$.
+Note that for small $\eps>0$ the triangle $ [x^1x^2x^3]$ lies in $P$.
+On the other hand for some $z\in[x^2x^3]$, the geodesic $[x^1z]$ does not lie in $P$ completely.
+Hence 
+\[\dist{x^1}{z}{P}>\dist{x^1}{z}{\SS^2};\]
+that is, the point-on-side comparison (\ref{cat-monoton}) does not hold for $[x^1x^2x^3]$
+and hence $P\z\notin \cCat{}{\kappa}{}$.
+
+If $P$ is a half-sphere then obviously $P\in\cCat{}{\kappa}$.
+
+Assume $P$ is an $n$-gon.
+To show that $P\in\cCat{}{\kappa}$,
+we apply induction $n$.
+The base cases $n=2$ and $3$ are trivial.
+
+The proof of the step of induction,
+let us apply Proposition~\ref{prop:diagonal}.
+The diagonal $[xy]$ cuts $P$ into two polygons say $Q_1$ and $Q_2$.
+By the induction hypothesis $Q_1,Q_2\in\cCat{}{\kappa}$.
+Notice that the geodesic $[xy]$ forms a convex set
+in $Q_1$ and in $Q_2$.
+
+Note that $P$ can be obtained by gluing $Q_1$ and $Q_2$ along $[xy]$.
+Therefore, by Reshetnyak's gluing theorem,
+$P\in\cCat{}{\kappa}$.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+The points $a_1,\dots,a_n$ 
+are called \index{vertex of polygon}\emph{vertices} of $P$;
+the geodesics $[a_na_1]$, $[a_1a_2],\dots,[a_{n-1}a_n]$ 
+\index{side of polygon}\emph{sides} of $P$
+and the remaining geodesics between the vertices are called \index{diagonal of polygon}\emph{diagonals} of $P$.
+
+A vertex $a_i$ of $P$ 
+is called \index{convex vertex of polygon}\emph{convex} if a the intersection of $P$ with a small ball centered at $a_i$ is convex.
+A non-convex vertex is called \index{concave vertex of polygon}\emph{concave}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Recall that homology sphere is a $n$-dimensional manifold having the homology groups of an $\SS^n$. 
 
 \begin{thm}{Corollary}\label{cor:flag-hom}
