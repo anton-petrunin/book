@@ -38,9 +38,9 @@ will be also called
 Note that according to the above definition,
 all polyhedral spaces are compact.
 However, 
-most of the statements below admit straightforward generalizations to locally polyhedral spaces;
+most of the statements below admit straightforward generalizations to \index{polyhedral spaces!locally polyhedral spaces}\emph{locally polyhedral spaces};
 that is complete length spaces  any point of which admits a closed neighborhood isometric to a polyhedral space.
-The later class of spaces includes in particular the covers of polyhedral  spaces.
+The later class of spaces includes in particular the infinite covers of polyhedral spaces.
 
 The dimension of a polyhedral space $\spc{P}$
 is defined as the maximal dimension of the simplex 
@@ -98,6 +98,9 @@ A small neighborhood of $p$ is isometric to a neighborhood of the tip of the $\k
 In fact, if this propery holds at any point of compact length space $\spc{P}$
 then  $\spc{P}\in \PM{}\kappa$;
 see \cite{lebedeva-petrunin-poly}.
+
+\parbf{Curvature bounded below.}
+The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded below.
 
 \begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}\in\PM{m}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
 Then $\spc{P}\in\CBB{}{\kappa}$ if and only if the following conditions hold.
@@ -186,18 +189,30 @@ Show that
 if $\spc{P}\in\CBB{}{\kappa'}$ then $\kappa'\le \kappa$ and $\spc{P}\in \CBB{}{\kappa}$.
 \end{thm}
 
+\parbf{Curvature bounded above.}
 Recall that the definition of $\ell$-simply connected spaces is given in \ref{def:l-s.c.}.
+
+The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded above.
 
 
 \begin{thm}{Theorem}\label{thm:PL-CAT}
-Let $\spc{P}\in\PM{}\kappa$ and $\tau$ be a triangulation of  $\spc{P}$.
+Let $\spc{P}\in\PM{}\kappa$ and $\tau$ be a triangulation of  $\spc{P}$. Then 
 
-Then $\curv\spc{P}\le\kappa$ 
+\begin{subthm}{thm:PL-CAT:curc>=k}
+$\curv\spc{P}\le\kappa$ 
 if and only if any connected component of the link of any simplex $\sigma$ in $\tau$
 is $(2\cdot\pi)$-simply connected.
 Equivalently, if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
+\end{subthm}
+
+\begin{subthm}{thm:PL-CAT:CAT}
+$\spc{P}\in\cCat{}{\kappa}$ 
+if and only if $\spc{P}$ is $(2\cdot\varpi\kappa)$-simply connected and any connected component of the link of any simplex $\sigma$ in $\tau$
+is $(2\cdot\pi)$-simply connected.
+\end{subthm}
 
 \end{thm}
+
 
 \parit{Proof.}
 Let us apply induction on $\dim\spc{P}$.
@@ -221,6 +236,8 @@ and its  links of are isometric to the links of $\spc{P}$.
 By induction hypothesis we get $\curv\Sigma_p\le 1$.
 Applying Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}),
 we get \ref{eq:Sigma-in-CAT(1)}.
+
+To prove (\ref{SHORT.thm:PL-CAT:CAT}) apply Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}) to $\spc{P}$.
 \qeds
 
 \begin{thm}{Exercise}
@@ -284,6 +301,7 @@ and so on we get that $\spc{S}$ is flag.
 \qeds
 
 
+\parbf{All-right triangulation.}
 A triangulation of a spherical polyhedral space 
 is called \emph{all-right triangulation} if each simplex of the triangulation is isometric to a spherical simplex all of which angles are right.
 Similarly, we say that a simplicial complex 
@@ -292,7 +310,7 @@ if it is a length metric and each simplex is isometric
 to a spherical simplex all of which angles are right.
 
 Spherical polyhedral $\cCat{}{1}$ spaces glued from of right-angled simplices
-admit the following combinatorial characterization discovered by Gromov \cite[p. 122]{gromov:hyp-groups}.
+admit the following characterization discovered by Gromov \cite[p. 122]{gromov:hyp-groups}.
 
 \begin{thm}{Flag condition}\label{thm:flag}
 Assume that a spherical polyhedral space $\spc{P}$
@@ -352,8 +370,6 @@ The same argument as above shows that $\gamma$ spends time $\pi$ on every visit 
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
 
-The proof above can be modified to show the following.
-
 \begin{thm}{Exercise}
 Assume that a spherical polyhedral space $\spc{P}$
 admits a triangulation $\tau$ such that all dihedral angles of all simplexes are at least $\tfrac\pi2$.
@@ -369,11 +385,11 @@ mostly repeats the definition of a simplicial complex
 but simplices have to be changed to  cubes.
 
 Formally, a \index{cubical complex}\emph{cubical complex} is defined as a subcomplex 
-of the unit cube in the Euclidean space of large dimension
+of the unit cube in the Euclidean space of large dimension;
+that is, a collection of faces of cube
 such that together with each face it contains all its sub-faces.
 Each cube face in this collection 
 will be called \emph{cube} of the cubical complex.
-Further we will assume that the edges of unit cube are parallel to coordinate axises.
 
 Note that according to this definition, 
 any cubical complex is finite;
@@ -421,7 +437,8 @@ Note that if a simplicial complex is connected then so is its cubical analog.
 \begin{thm}{Proposition}\label{prob:cubical-analog}
 Let $\spc{S}$ be a connected simplicial complex
 and $\spc{Q}=\square_{\spc{S}}$ be its cubical analog.
-Then link of any vertex of $\spc{Q}$
+Then $\ushort{\spc{Q}}$ is connected 
+and the link of any vertex of $\spc{Q}$
 is isometric to  ${\spc{S}}$
 equipped with the spherical right-angled metric.
 
@@ -441,7 +458,8 @@ It remains to apply Hadamard--Cartan theorem
 \ref{thm:hadamard-cartan}.
 \qeds
 
-Note that from proposition above it follows that cubical analog
+From Proposition \ref{prob:cubical-analog}, 
+it follows that cubical analog
 of any flag complex is aspherical.
 The following exercise states that the  converse also holds, see \cite[5.4]{davis-survey}.
 
@@ -455,22 +473,27 @@ if and only if its cubical analog is aspherical.
 
 By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
 any $\cCat{}{0}$ space is contractible.
-Therefore any locally $\cCat{}{0}$ space is aspherical.
+Therefore complete locally $\cCat{}{0}$ spaces are \emph{aspherical};
+that is, they have contractible universal covers.
 This observation can be used to construct examples of aspherical spaces. 
 
 Let $\spc X$ be a proper topological space.
 Recall that $\spc X$ is called \index{simply connected space at infinity}\emph{simply connected at infinity} 
-if $X$ has one end and for any compact set $K\subset\spc X$
+if $X$ if for any compact set $K\subset\spc X$
 there is a bigger compact set $K'\supset K$
-such that  $\spc X\backslash K'$ is path connected and  the map $\pi_1( \spc X\backslash K')\to \pi_1( \spc X\backslash K)$ is trivial.
+such that  $\spc X\backslash K'$ is path connected 
+and any loop which lies in $\spc X\backslash K'$
+is null-homotopic in  $\spc X\backslash K$.
 
-% complement $\spc X\backslash K'$ is simply connected.
+Recall that path connected spaces are not empty by definition.
+Therefore compact spaces are not simply connected at infinity.
 
 The following statement was proved by Michael Davis in \cite{davis-noneuclidean}; 
 his survey \cite{davis-survey} discusses number of related constructions.
 
 \begin{thm}{Proposition}\label{prop:aspherical}
-For any  $m\ge 4$ there is a closed aspherical  $PL$ $m$-dimensional manifold
+For any  $m\ge 4$ there is a closed aspherical 
+$m$-dimensional piecewise linear manifold
 whose universal cover is not simply connected at infinity.
 
 In particular, the universal cover of this manifold in not homeomorphic to the $m$-dimensional Euclidean space.
@@ -487,7 +510,7 @@ Assume  $\tilde{\spc{Q}}$ is simply connected at infinity.
 Then $\spc{S}$ is simply connected.
 \end{thm}
 
-The proof below can be modified to prove the following extended version of the proposition. 
+The proof below can be modified to prove the following extension. 
 
 \begin{thm}{Exercise}\label{ex:example-pi_infty-new}
 In the assumptions of the Lemma~\ref{lem:example-pi_infty}, for any vertex $v$ in $\spc{S}$,
@@ -495,19 +518,21 @@ the complement $\spc{S}\backslash\{v\}$ is simply connected.
 \end{thm}
 
 
-\parit{Proof of Lemma ~\ref{lem:example-pi_infty}.}
+\parit{Proof of Lemma~\ref{lem:example-pi_infty}.}
 Assume $\spc{S}$ is not simply connected.
 Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
 
 Note that $\gamma$ forms a 1-dimensional subcompelex of $\spc{S}$ which is a closed local geodesic.
 Denote by $G$ the subcomplex of $\spc{Q}$ which corresponds to $\gamma$.
-Fix a vertex $v\in G$.
 
-Denote by $\tilde G$
-a connected component of the inverse image 
-of $G$ in $\tilde{\spc{Q}}$ 
+Fix a vertex $v\in G$;
+let $G_v$ be the connected component of $G$ containing $v$.
+Let $\tilde G$ be 
+the inverse image 
+of $G_v$ in $\tilde{\spc{Q}}$
 for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
-Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$. 
+Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$.
+ 
 Note that 
 \begin{clm}{}\label{tilde-G-convex}
 $\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
@@ -539,7 +564,7 @@ Moreover,
 at least one of them is noncontractable 
 since $\gamma$ is not.
 That is, 
-$\gamma$ is not a shortest noncontractible circle -  a contradiction.
+$\gamma$ is not a shortest noncontractible circle --- a contradiction.
 \claimqeds
 
 Further, note that 
@@ -552,48 +577,58 @@ Note that the map $\tilde{\spc{Q}}\backslash \{\tilde v\}\to \spc{S}$
 defined by $x\mapsto\dir{\tilde v}{x}$ maps $C_R$ to a circle homotopic to $\gamma$.
 Therefore $C_R$ is not contactable in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
 
-
+In particular, 
+$C_R$ is not contactable in $\tilde{\spc{Q}}\backslash K$
+if $K\supset \tilde v$.
 If $R$ is large, 
 the circle $C_R$  
-lies outside of any compact set $K$ in $\tilde{\spc{Q}}$.
-If $K\supset \tilde v$ then $C_R$ is not contactable in $\tilde{\spc{Q}}\backslash K$.
+lies outside of any compact set $K'$ in $\tilde{\spc{Q}}$.
 It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
 \qeds
 
 \parit{Proof of Proposition~\ref{prop:aspherical}.}
+Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
 
-Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere which is not simply connected and bounds a contractible smooth compact manifold $\spc{W}^m$. For $m\ge 5$ the existence of such $(W, \Sigma)$ follows from \cite{kervaire}. For $m=4$ it well-known that there are many $3$-dimensional homology spheres (e.g. the Brieskorn sphere $\Sigma (2,3,13)$) which bound contractible smooth $4$-manifolds. best ref???
+For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
+For $m=4$ it follows from the construction in \cite{mazur}.
 
-Pick any smooth triangulation $\spc L$ of $W$ and let $\spc{S}$ be the resulting subcomplex which triangulates $\Sigma$.
+Pick any smooth triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex which triangulates $\Sigma$.
 
 
 We can assume that $\spc{S}$ is flag; 
-otherwise pass to the barycentric subdivision of $\spc{S}$ and apply Exercise~\ref{ex:baricenric-flag}.
+otherwise pass to the barycentric subdivision of $\tau$ and apply Exercise~\ref{ex:baricenric-flag}.
 
 
 Let $\spc{Q}=\square_{\spc{S}}$ be the cubical analog of $\spc{S}$.
 
 By Proposition~\ref{prob:cubical-analog},
 $\spc{Q}$ is a homology manifold.
-It follows that $\spc{Q}$ is a $PL$-manifold with a finite number of topological singularities at its vertices.
+It follows that $\spc{Q}$ is a piecewise linear manifold with a finite number of singularities at its vertices.
 
 
-Let us remove a small spherical neighborhood of each vertex.
-We obtain a $PL$-manifold with boundary formed by several  copies of $\Sigma$.
+Removing a small neighborhood of each vertex in $\spc{Q}$,
+we can obtain a piecewise linear manifold 
+which boundary is formed by several copies of $\Sigma$.
 To each copy of $\Sigma$, 
 glue a copy of  $\spc{W}$ along its boundary.
-This results in a  closed $PL$-manifold $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
+This results in a  closed piecewise linear manifold $\spc{M}$ which is homotopically equivalent to $\spc{Q}$.
 
 Finally, by the Lemma~\ref{lem:example-pi_infty},  
 the universal cover $\tilde{\spc{Q}}$ of $\spc{Q}$
 is not simply connected at infinity.
+
 The same holds for 
-the universal cover $\tilde{\spc{M}}$ of $\spc{M}$ since a homotopy equivalence $f\co \spc Q\to \spc M$ lifts to 
-a surjective homotopy equivalence $\tilde f \co \tilde{\spc{Q}}\to \tilde{\spc{M}}$ which is a quasi-isometry and hence maps any compact exhaustion of $ \tilde{\spc{Q}}$ to a compact exhaustion of  $\tilde{\spc{M}}$.
+the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
+The later follows since homotopy equivalences 
+$f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ 
+lift to proper maps 
+$\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
+and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$. 
 \qeds
 
 The following is a geometric analog of the proposition above;
-it was proved by Ancel, Davis and Guilbault in \cite{ADG}. %???first names
+it was proved by Ancel, Davis and Guilbault in \cite{ADG}. %???first names 
+%??? I plan to make exercise form this proposition and move the proof of lemma to the end
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
@@ -905,9 +940,9 @@ That is, $\curv_v\Omega^*\nleqslant0$.
 
 To prove the converse note that since $\Omega$ and twoconvex,
 any vertex $v$ of $K$ admits a neighborhood $U$ such that the intersection $U\cap \Omega$ is formed by a finite collection of simply connected components.
-If it would not be the case, there would be a spheroid in $K$ which lies in the interiour of $K$ expept for the point $v$.
-The part of $\prtial K$ 
-which lieas inside of the spheroid can not be two-convex.
+If it would not be the case, there would be a spheroid in $K$ which lies in the interior of $K$ except for the point $v$.
+The part of $\partial K$ 
+which lies inside of the spheroid can not be two-convex.
 
 \begin{clm}{}
 Assume that a spherical polygon $R$ does not contain half sphere in its interior.
