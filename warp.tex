@@ -210,6 +210,19 @@ Show that $\Cone\mc\kappa A$ is convex in $\Cone\mc\kappa\spc{F}$
 if and only if $A$ is $\pi$ convex in $\spc{F}$.
 \end{thm}
 
+The elements of the Euclidean cone $\spc{K}=\Cone\spc{F}$
+will be ofter refered as \index{vector}\emph{vector}.
+The tip of the cone $\spc{K}$ usually denoted as $o$ or $o_{\spc{K}}$ %??? MAYBE $0$ is better???
+The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defiened as $\dist{o}{w}{\spc{K}}$;
+that is the distance from $w$ to the origin.
+The \index{scalar product}\emph{scalar product} $\<v,w\>$
+of two vectors $v,w\in\spc{K}$
+are defined as 
+\[\<v,w\>
+\df
+\dist[2]{v}{w}{\spc{K}}-|v|^2-|w|^2.
+\]
+%??? continue
 
 \parbf{Doubling.}
 The Doubling space $\spc{W}$ of space $\spc{V}$ is a closed subset $A\subset\spc{V}$
@@ -263,10 +276,11 @@ Moreover the converse also holds.
 \end{subthm}
 \end{thm}
 
+%%%%DOWN
 
 \begin{thm}{Theorem}\label{thm:warp-curv-bound:cbb}
 Let $\spc{L}$ be a length space.
-\begin{subthm}{thm:warp-curv-bound:cbb:a}
+\begin{subthm}{thm:warp-curv-bound:cbb:S}
 If $\spc{L}\in\cCat{}{1}$
 then 
 \begin{align*}
@@ -279,7 +293,7 @@ then
 Moreover, the converse also holds in each of three cases.
 \end{subthm}
 
-\begin{subthm}{}
+\begin{subthm}{thm:warp-curv-bound:cbb:E}
 If $\spc{L}\in\cCat{}{0}$
 then 
 \begin{align*}
@@ -290,7 +304,7 @@ then
 Moreover the converse also holds in each of two cases.
 \end{subthm}
 
-\begin{subthm}{}
+\begin{subthm}{thm:warp-curv-bound:cbb:H}
 If $\spc{L}\in\cCat{}{-1}$
 then 
 \begin{align*}
@@ -300,12 +314,14 @@ Moreover the converse also holds.
 \end{subthm}
 \end{thm}
 
-In the proof of the above two theorems
+%%%%UP
+
+In the proof of the above two theorems %%%ONE THEOREM
 we will use the following proposition.
 
 \begin{thm}{Proposition}\label{prop:warp-examples}
 
-\begin{subthm}{}
+\begin{subthm}{prop:warp-examples:S}
 \begin{align*}
 \Susp\mathbb S^{m-1}&=\mathbb S^{m-1}\times_{\sin}[0,\pi]\iso\SS^m,
 \\
@@ -334,7 +350,7 @@ we will use the following proposition.
 To prove is left to the reader.
 
 \parit{Proof of \ref{thm:warp-curv-bound:cbb}.}
-Let us prove (\ref{SHORT.prop:warp-curv-bound:c}); the rest of the statements are similar;
+Let us prove the last statement in (\ref{SHORT.thm:warp-curv-bound:cbb:S}); the rest of the statements are similar;
 each proof is based on Fiber-independence theorem~\ref{thm:fiber-independence} 
 and 
 the correspondg statement in the Proposition~\ref{prop:warp-examples}.
@@ -350,8 +366,8 @@ and
 for all $i$ and $j$.
 
 
-According to Proposition~\ref{prop:warp-examples:c}, 
-$\SS^2\times_{\sinh}[0,\infty)\iso\Lob{3}{-1}$.
+According to Proposition~\ref{prop:warp-examples:S}, 
+\[\Cone\mc{-1}\SS^2=\SS^2\times_{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
 
 Consider the quadruple points 
 \[(q,s),(y^1,t^1),(y^2,t^2),(y^3,t^3)\in \SS^2\times_{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]

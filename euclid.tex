@@ -52,9 +52,22 @@ we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 i.e., 
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-
-
 A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
+
+\begin{thm}{Proposition}\label{prop:busemann}
+Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
+Then the \index{Busemann function}\emph{Busemann function} $\bus_\gamma\:\spc{X}\to \RR$ 
+\[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
+is defined
+and $1$-Lipschitz.
+\end{thm}
+
+\parit{Proof.}
+As  follows from the triangle inequality, the function \[t\mapsto\dist{\gamma(t)}{x}{}- t\] is nonincreasing in $t$.  
+Clearly $\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}$.
+Thus the limit in \ref{eq:def:busemann*} is defined.
+\qeds
+
 
 \parbf{Triangles.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle} and we will use short notation 
@@ -71,8 +84,18 @@ Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ 
 A pair geodesics $([p x],[p y])$ will be called \emph{hinge}\index{hinge} and briefly, it will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
 \section{Model triangles and angles.}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space, 

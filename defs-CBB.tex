@@ -185,6 +185,68 @@ From (1+3)-point comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we 
 i.e. $\{z_n\}$ is a Cauchy sequence, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
 \qeds
 
+\begin{thm}{Exercise}
+Construct a space $\spc{L}\in\CBB{}{}$
+which contains an everywhere dense G-delta set $A$
+such that 
+$A\cap\l]xy\r[=\emptyset$
+for any geodesic $[xy]$ in $\spc{L}$. 
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:submetry-CBB}
+Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ be a metric space.
+Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
+Then $\spc{M}\in \CBB{}{\kappa}$.
+\end{thm}
+
+The theorem above together with Proposition~\ref{prop:submet/G}
+imply the following.
+
+\begin{thm}{Corollary}\label{thm:CBB/G}
+Let $\spc{L}\in\CBB{}{\kappa}$ and the group $G$ acts on $\spc{L}$ by isometries 
+and it has closed orbits.
+Then $\spc{L}/G\in\CBB{}{\kappa}$. 
+\end{thm}
+
+\parit{Proof.}
+Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
+Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
+Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
+such that $\sigma(\hat x_i)=x_i$ and
+\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
+\lege
+\dist{p}{x^i}{\spc{M}}\pm\delta\]
+for all $i$.
+Note that 
+\[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
+>
+\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
+for all $i$ and $j$.
+Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
+\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
+<
+\angk\kappa p{x^1}{x^2}+\eps
+\eqlbl{eq:angles-M-L}\]
+holds for all $i$ and $j$.
+
+By (1+3)-point comparison in $\spc{L}$,
+we have
+\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
++\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
++\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
+\le 
+2\cdot\pi\]
+assuming all the angles on the left hand side are defined.
+Applying  \ref{eq:angles-M-L}, 
+we get 
+\[\angk\kappa p{x^1}{x^2}
++\angk\kappa p{x^2}{x^3}
++\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
+
+Since $\eps>0$ is arbitrary the (1+3)-point comparison holds in $\spc{M}$.
+It remains to apply Proposition~\ref{prop:submet-length}.
+\qeds
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{More comparisons.}\label{sec:more-angles}
@@ -371,6 +433,27 @@ $\~r\le r$ is equivalent to $\~f\le f$, which is Jensen's inequality (\ref{y''-m
 $t\mapsto\md\kappa\dist[{{}}]{p}{\geod_{[x y]}(t)}{}$ on interval $[0,\ell]$. 
 Hence the result.
 \qeds
+
+Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
+The following exercise is analogous to Exercise~\ref{ex:busemann-CBA}.
+
+\begin{thm}{Exercise}\label{ex:busemann-CBB}
+Let $\spc{L}\in\CBB{}{\kappa}$
+and $\bus_\gamma\:\spc{L}\to \RR$ is the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
+
+\begin{subthm}{}
+If $\kappa=0$ then the Busemann function $\bus_\gamma$ is  concave.
+\end{subthm}
+
+\begin{subthm}{}
+If $\kappa<0$ then the function 
+\[f(x)=\exp(\sqrt{-\kappa}\cdot\bus_\gamma(x))\] 
+satisfies
+\[f''+\kappa\cdot f\le 0\]
+\end{subthm}
+
+\end{thm}
+
 
 We will translate the above comparison into more geometric language, using the following definition of $\kappa$-\nospace development, introduced in \cite{alexandrov:devel}.
 The definition is somewhat lengthy, but it defines a useful comparison object for a curve. 
@@ -1525,6 +1608,13 @@ Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$
 of the model angle function $\angk\kappa{{*}}{{*}}{{*}}$.
 Some authors define camparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$ but
 that leads to two different definition of model angles --- one for $\cCat{}{}$ spaces and an other for $\CBA{}{}$ spaces.
+
+\begin{thm}{Exercise}\label{ex:fixed-point}
+Let $m\ge 2$,
+$\spc{L}\in\CBB{m}{1}$ and the group $G$ acts on  $\spc{L}$ by isometries and has closed orbits.
+Assume $\diam(\spc{L}/G)>\tfrac\pi2$.
+Show that the action of $G$ has a fixed point on $\spc{L}$.
+\end{thm}
 
 \begin{thm}{Definition of extended angle}
 Let $p,q,r$ be points in a metric space such that  $p\not=q$, $p\not=r$ then

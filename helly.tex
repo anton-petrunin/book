@@ -31,14 +31,15 @@ Then the result above implies for $\spc{U}\in\cCat{}0$, any closed bounded conve
 
 We present the proof from \cite{lang-schroeder}.
 
-\begin{thm}{Hilbert projection theorem}\label{lem:closest point}
+\begin{thm}{Closest-point projection lemma}\label{lem:closest point}
 Let $\spc{U}\in\cCat{}0$.
 Given a closed convex set $K\subset \spc{U}$ and a point $p\in \spc{U}\backslash K$, 
 there is unique point $p^*\in K$ such that $\dist{p^*}{p}{}=\dist{K}{p}{}$. 
 \end{thm}
 
 \parit{Proof.} 
-According to ???, the function $f=\dist[2]{p}{}{}$ is strongly convex.
+By function comparison (\ref{thm:function-comp}) 
+the function $f=\dist[2]{p}{}{}$ is strongly convex.
 The theorem follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K\subset \spc{U}$ and the restriction $f|K$. 
 \qeds
 
@@ -76,7 +77,7 @@ Thus we will arrive to contradiction since
 
 Choose a point $p\in \spc{U}$ and set $r=\sup\dist{K_{F}}{p}{}$ where $F$ runs all finite subsets of $\IndexSet$.
 Set $p^*_F$ to be the closest point on $K_{F}$ from $p$; 
-according to Hilbert projection theorem (\ref{lem:closest point}), $p^*_F$ 
+according to closest-point projection lemma (\ref{lem:closest point}), $p^*_F$ 
 exits and is unique.
 
 Take a nested sequence of finite subsets 

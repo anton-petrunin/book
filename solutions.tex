@@ -172,3 +172,16 @@ Note that $\psi$ induce an isometry on $\hat{\spc{L}}/\sim$.
 Finally notice that $\spc{L}/\iota=(\hat{\spc{L}}/\sim)/\psi$ 
 and apply Theorem \ref{thm:CBB/G}.
 
+\parbf{Exercises \ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}}
+By the definition of Busemann function,
+\begin{align*}
+\exp(\sqrt{-\kappa}\cdot\bus_\gamma) 
+&= \exp \lim_{t\to \infty} \sqrt{-\kappa}\cdot(\dist{{\gamma (t)}}{}{} - t) 
+\\
+&= \lim_{t\to \infty} \left(\exp \sqrt{-\kappa}(d_{\gamma (t)} -t) + \exp
+\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right)\\
+&=  \lim_{t\to \infty} 2 \cosh \sqrt{-\kappa}d_{\gamma (t)} \exp\sqrt{-\kappa}\cdot(-t).
+\end{align*}
+
+By the function comparison definitions of $\Cat{}{\kappa}$ (\ref{function-comp}) or $\CBB{}{\kappa}$ (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function $f=\cosh \sqrt{-\kappa}\circ\dist{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
+

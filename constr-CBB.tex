@@ -1,55 +1,7 @@
 %%!TEX root = the-constr-CBB.tex
 \chapter{Constructions}
 
-
-\section{Busemann functions}\label{sec:busemann}
-
-Let $\spc{X}$ be a metric space 
-and $\gamma:[0,\infty)\to \spc{X}$ be a \emph{ray} (i.e. a distance preserving map of $[0,\infty)$ in $\spc{X}$).
-The function 
-\[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
-is called the  \emph{Busemann function}\index{Busemann function} of $\gamma$. 
-
-If $\spc{X}=\Cone\Sigma$, 
-then for each element $\xi\in\Sigma$,
-$\gamma(t)=t\cdot\xi$ forms a ray.
-In this case, 
-$\bus_\gamma(x)=-\<x,\xi\>$,
-where $\<{*},{*}\>$ denotes scalar product (\ref{def:scalar-product}). 
-
-
-\begin{thm}{Theorem}\label{thm:busemann}
-Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
-Then the Buseman function $\bus_\gamma\:\spc{X}\to \RR$ is defined
-and $1$-Lipschitz.
-
-Moreover:
-\begin{subthm}{}
- If  $\spc{X}\in \Cat{}{\kappa}$ (respectively $\spc{X}\in \CBB{}{\kappa}$) for some $\kappa<0$, then the function  $f=\exp(\sqrt{-\kappa}\cdot\bus_\gamma)$ satisfies
-\[f''+\kappa\cdot f\ge 0\ \ \ (\t{respectively}\ \ f''+\kappa\cdot f\le 0).\eqlbl{eq:sec:busemann*}\]
-\end{subthm}
-
-\begin{subthm}{} If $\spc{X}\in \Cat{}{0}$ (respectively $\spc{X}\in \CBB{}{0}$), then $\bus_\gamma$ is convex (respectively concave).
-\end{subthm}
-\end{thm}
-
-\parit{Proof.}
-As  follows from the triangle inequality, the function $t\mapsto\dist{\gamma(t)}{x}{}- t$ is decreasing in $t$.  Clearly $\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}$.
-Thus the limit in \ref{eq:def:busemann*} is defined.
-
-%!!! I inserted a proof.
-By the definition of Busemann function,
-\begin{align*}
-\exp(\sqrt{-\kappa}\cdot\bus_\gamma) 
-&= \exp \lim_{t\to \infty} \sqrt{-\kappa}\cdot(\dist{{\gamma (t)}}{}{} - t) 
-\\
-&= \lim_{t\to \infty} \left(\exp \sqrt{-\kappa}(d_{\gamma (t)} -t) + \exp
-\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right)\\
-&=  \lim_{t\to \infty} 2 \cosh \sqrt{-\kappa}d_{\gamma (t)} \exp\sqrt{-\kappa}\cdot(-t).
-\end{align*}
-
-By the function comparison definitions of $\Cat{}{\kappa}$ (\ref{function-comp}) or $\CBB{}{\kappa}$ (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function $f=\cosh \sqrt{-\kappa}\circ\dist{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
-\qeds
+%%%???MOVE THINGS TO DIFFERENT PLACES???
 
 \begin{thm}{Corollary}
 Assume $\spc{K}$ be a cone.
@@ -70,174 +22,11 @@ In both cases, the statement are trivial if $w=0$.
 
 If $w\ne 0$, consider the ray $\gamma(t)=\tfrac1{|w|}\cdot t$
 
-\section{Sumbetry}\label{sec:quotient-CBB}
-
-Recall that map $\sigma\:\spc{L}\to\spc{M}$ between the metric spaces $\spc{L}$ and $\spc{M}$
-is called 
-\emph{submetry}\index{submetry} if 
-\[\sigma(\oBall(p,r)_\spc{L})=\oBall(\sigma(p),r)_{\spc{M}}\]
-for any $p\in \spc{L}$ and $r\ge 0$.
-
-Equivalently, a map $\sigma\:\spc{L}\to\spc{M}$ is called sumbetry if it is 1-Lipshitz and 1-co-Lipschitz at the same time.
-
-Note that any submetry is an onto map.
-
-The main souse of examples of submetries comes from isometric group actions.
-
-Nemely, assume $\spc{L}$ is a metric space and the group $G$ acts on $\spc{L}$.
-Denote by $\spc{L}/G$ the set of $G$-orbits;
-let us equip it with the Hausdorff metric. 
-
-In general, $\spc{L}/G$ is a premetric space,
-but if all the $G$-orbits form closed sets in $\spc{L}$
-then $\spc{L}/G$ is a metric space.
-
-\begin{thm}{Proposition}\label{prop:submet/G}
-Let $\spc{L}$ be a metric space and group $G$  acts on $\spc{L}$ by isometries  
-and in such a way that every $G$-orbit is closed.
-Then the projection map $\spc{L}\to \spc{L}/G$ is a sumbetry.
-\end{thm}
-
-
-\begin{thm}{Proposition}
-\label{prop:submet-length}
-Let  $\spc{L}$ be a length space 
-and $\sigma\:\spc{L}\to \spc{M}$ is a submetry.
-Then $\spc{M}$ is a length space.
-\end{thm}
-
-\parit{Proof.}
-Fix $\eps>0$ and a pair of points $x,y\in \spc{M}$.
-
-Since $\sigma$ is $1$-co-Lipschitz, there are points $\hat x,\hat y\in \spc{L}$
-such that $\sigma(\hat x)=x$, $\sigma(\hat y)=y$ 
-and $\dist{\hat x}{\hat y}{\spc{L}}<\dist{x}{y}{\spc{M}}+\eps$.
-
-Since ${\spc{L}}$ is a length space, 
-there is a curve $\gamma$ 
-joining $\hat x$ to $\hat y$ in ${\spc{L}}$
-such that
-\[\length\gamma\le \dist{x}{y}{\spc{M}}+\eps.\]
-
-Since $\sigma$ is $1$-Lipschitz,
-there 
-\[\length\sigma\circ\gamma\le \length\gamma.\]
-
-Note that the curve $\sigma\circ\gamma$ joins $x$ to $y$
-and from above
-\[\length\sigma\circ\gamma<\dist{x}{y}{\spc{M}}+\eps.\]
-Since $\eps>0$ is arbitrary,
-we have that $\spc{M}$ is a length space.
-\qeds
-
-
-\begin{thm}{Theorem}\label{thm:submetry-CBB}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ be a metric space.
-Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
-Then $\spc{M}\in \CBB{}{\kappa}$.
-\end{thm}
-
-The theorem above together with Proposition~\ref{prop:submet/G}
-imply the following.
-
-\begin{thm}{Corollary}\label{thm:CBB/G}
-Let $\spc{L}\in\CBB{}{\kappa}$ and the group $G$ acts on $\spc{L}$ by isometries 
-and it has closed orbits.
-Then $\spc{L}/G\in\CBB{}{\kappa}$. 
-\end{thm}
-
-\parit{Proof.}
-Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
-Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
-Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
-such that $\sigma(\hat x_i)=x_i$ and
-\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
-\lege
-\dist{p}{x^i}{\spc{M}}\pm\delta\]
-for all $i$.
-Note that 
-\[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
->
-\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
-for all $i$ and $j$.
-Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
-<
-\angk\kappa p{x^1}{x^2}+\eps
-\eqlbl{eq:angles-M-L}\]
-holds for all $i$ and $j$.
-
-By (1+3)-point comparison in $\spc{L}$,
-we have
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
-+\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
-+\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
-\le 
-2\cdot\pi\]
-assuming all the angles on the left hand side are defined.
-Applying  \ref{eq:angles-M-L}, 
-we get 
-\[\angk\kappa p{x^1}{x^2}
-+\angk\kappa p{x^2}{x^3}
-+\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
-
-Since $\eps>0$ is arbitrary the (1+3)-point comparison holds in $\spc{M}$.
-It remains to apply Proposition~\ref{prop:submet-length}.
-\qeds
-
-
-\section{Doubling}\label{sec:doubling}
-
-Let $\spc{V}$ be a metric space 
-and $A\subset \spc{V}$ be a closed subset.
-A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
-
-More formally the space $\spc{W}$ can be described by the following properties.
-\begin{itemize}
-\item The space $\spc{W}$ contains $\spc{V}$ as a subspace; 
-in particular the set $A$ can be treated as a subset of $\spc{W}$.
-\item There is an isometric involution of $\spc{W}$ which is called \index{reflection}\emph{reflection in $A$};
-further it will be denoted as $x\mapsto x'$.
-\item For any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$ and 
-\[
-\dist{x'}{y}{\spc{W}}
-=\dist{x}{y'}{\spc{W}}
-=\inf_{a\in A}\{\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}\}.
-\]
-for any $x,y\in \spc{V}$.
-\end{itemize}
 
 
 
 
-The image of $\spc{V}$ under the reflection in $A$ will be denoted by $\spc{V}'$.
-The subspace $\spc{V}'$ is an isometric copy of $\spc{V}$.
-Clearly $\spc{V}\cup\spc{V}'=\spc{W}$ and $\spc{V}\cap\spc{V}'=A$.
-Moreover $a=a'$ $\iff$ $a\in A$.
 
-The following proposition follows directly from the definitions.
-
-\begin{thm}{Proposition}\label{prop:doubling}
-Assume $\spc{W}$ is the doubling of metric space $\spc{V}$ in its closed subset $A$.
-Then 
-
-\begin{subthm}{}
- If $\spc{V}$ is a complete length space then so is $\spc{W}$.
-\end{subthm}
- 
-\begin{subthm}{}
-If $\spc{V}$ is proper then so is $\spc{W}$.
-In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that 
-\[\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}=\dist{x}{y'}{\spc{W}}.\]
-\end{subthm}
-
-\begin{subthm}{prop:doubling:projection}
-Given $x\in \spc{W}$ set $\bar x=x$ if $x\in \spc{V}$
-and $\bar x=x'$ otherwise. The map $\spc{W}\to\spc{V}$ defined by $x\mapsto \bar x$ is short and length-preserving.
-In particular if $\gamma$ is a geodesic in $\spc{W}$ 
-with ends in $\spc{V}$ then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
-\end{subthm}
-\end{thm}
 
 
 
@@ -487,11 +276,7 @@ That is, assuming if the theorem holds if the doubling space is geodesic, we hav
 
 \section{Exercises}
 
-\begin{thm}{Exercise}
- Assume $\spc{X}\in\cCat{}{0}$ and $A\subset \spc{X}$ is a closed subset.
-Assume that  $\Doubling{A}{\spc{X}}\in\cCat{}{0}$. 
-Show that $A$ is a totally convex set of $\spc{X}$.
-\end{thm}
+
 
 \begin{thm}{Exercise}
 Assume $\spc{X}\in\CBB{m}{0}$ and $A\subset \spc{X}$ is a closed subset.
@@ -507,10 +292,6 @@ Define the length-metric on $\~U$ by setting
 Prove that $\~U\in\cCat30$ if and only if $\gamma$ is a line.
 \end{thm}
 
-\begin{thm}{Exercise}
-Let $\spc{X}$ be a double cover of $\EE^3$ which is branching along two distinct lines $\ell^1$ and $\ell^2$.
-Show that  $\spc{X}\in\cCat{}{0}$ if and only if $\ell^1$ intesect $\ell^2$ at right angle.
-\end{thm}
 
 \begin{thm}{Exercise}
 
@@ -540,15 +321,6 @@ Construct a $\spc{L}\in \CBB{2}{-1}$,
 such that $\curv_p \spc{L}\ge 1$ for all $p$ in an open everywhere dense set of $\spc{L}$, but $\spc{L}\notin \CBB{2}{1}$.
 \end{thm}
 
-\begin{thm}{Exercise}
-Construct a space $\spc{L}\in\CBB{}{}$
-which contains an everywhere dense G-delta set $A$
-such that 
-$A\cap\l]xy\r[=\emptyset$
-for any geodesic $[xy]$ in $\spc{L}$. 
-
-Compare with Plaut's theorem (\ref{thm:almost.geod}).
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:no-convex-nbhd-CBB}
 Construct a space $\spc{L}\in\CBB{}{0}$
@@ -562,12 +334,7 @@ and $\iota\: \partial \spc{L}\to \partial \spc{L}$ is length preserving involuti
 Show that $\spc{L}/\iota\in \CBB{m}{\kappa}$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:fixed-point}
-Let $m\ge 2$,
-$\spc{L}\in\CBB{1}{m}$ and the group $G$ acts on  $\spc{L}$ by isometries.
-Assume $\diam(\spc{L}/G)>\tfrac\pi2$.
-Show that the action of $G$ has a fixed point on $\spc{L}$.
-\end{thm}
+
 
 
 

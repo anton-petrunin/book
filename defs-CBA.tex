@@ -3,13 +3,8 @@
 \chapter{Definitions of curvature bounded above}
 We begin by defining $\Cat{}{\kappa}$ spaces and spaces of curvature $\le\kappa$ via a (2+2)-point comparison that concerns only distances and makes no assumptions on the presence of geodesics (Section~\ref{sec:cba-def}).  
 Section~\ref{sec:cat-angles} gives definitions in terms of angle and distance comparisons for triangles.  
-Useful definitions in terms of convexity of distance functions and developments are formulated in Section~\ref{sec:func-comp}, and Section \ref{sec:jacobi-length} contains a definition in terms of ``Jacobi lengths''. 
-???
-In Section \ref{sec:dual-1+3}, we give a 4-point comparison definition (Theorem \ref{thm:alternate-cat-def}) that is dual to the (1+3)-point definition of curvature bounded below (Definition \ref{df:1+3}), 
-and is related to Wald's original curvature condition. 
-A definition using the Kirszbraun short-map extension property may be found in Section~\ref{sec:4pt}.   % ???   Berg-Nikolaev.
-
 Section~\ref{sec:thin-triangle} looks at thin triangles and their inheritance lemma. 
+Useful definitions in terms of convexity of distance functions and developments are formulated in Section~\ref{sec:func-comp}.
 
 The major globalization theorems are treated in Sections~\ref{sec:patchwork}, \ref{sec:geod-space}
 and \ref{sec:cat-globalize}: Alexandrov's patchwork theorem, and the no-conjugate-point, Hadamard--Cartan and lifting theorems. 
@@ -602,7 +597,7 @@ The part (\ref{SHORT.thm:convex-balls:=<r<pi/2}) follows since for any $R<\varpi
 \[\cBall[p,R]=\bigcap_{R<\bar R\le\varpi\kappa/2}\oBall(p,\bar R).\]
 
 Finally, since $\spc{U}$ is a locally length space,
-$\cBall[p,\varpi\kappa/2]$ is the Hausdorff limit of $\cBall[p,R]$ for $R\to\varpi\kappa/2-$.
+$\cBall[p,\varpi\kappa/2]$ is the Hausdorff limit of $\cBall[p,R]$ for $R\to(\tfrac{\varpi\kappa}2)-$.
 Hence (\ref{SHORT.thm:convex-balls:=<pi/2}) follows from \ref{prop:weak-convex-stable}.
 \qeds
  
@@ -616,6 +611,26 @@ Geometrically,   the development construction (\ref{def:devel}) translates dista
 %\end{thm}
 
 %discuss with sba???!!!
+
+Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
+The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
+
+\begin{thm}{Exercise}\label{ex:busemann-CBA}
+Let $\spc{U}\in\cCat{}{\kappa}$
+and $\bus_\gamma\:\spc{U}\to \RR$ is the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
+
+\begin{subthm}{}
+If $\kappa=0$ then the Busemann function $\bus_\gamma$ is  convex.
+\end{subthm}
+
+\begin{subthm}{}
+If $\kappa<0$ then the function 
+\[f(x)=\exp(\sqrt{-\kappa}\cdot\bus_\gamma(x))\] 
+satisfies
+\[f''+\kappa\cdot f\ge 0\]
+\end{subthm}
+
+\end{thm}
 
 \begin{thm}{Development criterion\index{comparison!development comparison}}\label{thm:concave-devel} 
 For a $\varpi\kappa$-geodesic space $\spc{U}$,  the following statements hold:
@@ -1077,7 +1092,28 @@ Moreover, we can assume that $\rho_p<\tfrac{\varpi\kappa}2$
 for any $p$ and the function $p\mapsto\rho_p$ is 1-Lipschitz.
 \end{thm}
 
-\parit{Proof} ???\qeds
+\parit{Proof.} 
+Assume $\map\:\spc{B}\to \spc{U}$ 
+and $\hat p\in \spc{B}$
+are provided by Lifting globalization theorem
+(\ref{thm:globalization-lift}).
+
+Since $\map$ is local isometry,
+we can choose $r>0$ so that the restriction of $\map$ to $\oBall(\hat p,r)$ is distance preserving.
+By Lifting globalization, the image  $\Phi(\oBall(\hat p,r))$ coincides with the ball
+$\cBall(p,r)$.
+This proves the first part of theorem.
+
+To prove the second part, lat us choose $\rho_p$ to be maximal value $\le\tfrac{\varpi\kappa}2$ such that $\cBall(p,\rho_p)\in\Cat{}{\kappa}$.
+By Corollary~\ref{thm:convex-balls}, the ball
+\[\oBall(q,\rho_p-\dist{p}{q}{})\] 
+is convex in $\oBall(p,\rho_p)$.
+Therefore  
+\[\oBall(q,\rho_p-\dist{p}{q}{})\in\Cat{}{\kappa}\]
+for any $q\in \oBall(p,\rho_p)$.
+In particular $\rho_q\ge \rho_p-\dist{p}{q}{}$ for any $p,q\in\spc{U}$.
+Hence the second statement follows.
+\qeds
 
 
 
@@ -1251,7 +1287,9 @@ In particular, $\curv G_p\le\kappa$.
 Let $\alpha\:[0,1]\to\spc{U}$ be a path with $\length\alpha<\varpi\kappa$ and $\alpha(0)=p$.
 The homotopy constructed in Corollary~\ref{cor:homotopy-from-p} 
 can be regarded as a path in $G_p$, say $\hat\alpha\:[0,1]\to G_p$,
-such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha(1)=\alpha$. From Claim~\ref{clm:loc-iso}, $\length\hat\alpha=\length\alpha$;
+such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha(1)=\alpha$. 
+By \ref{clm:loc-iso}, 
+\[\length\hat\alpha=\length\alpha;\]
 moreover, it follows that $\alpha$ is a local geodesic path of $\spc{U}$  if and only if $\hat\alpha$ is a local geodesic path of $G_p$.
 
 Further, from Corollary~\ref{cor:homotopy-from-p},
@@ -1593,7 +1631,7 @@ Then
 \end{subthm}
 
 \begin{subthm}{subthm:arm-eq}
-Equality holds in \ref{SHORT.thm:arm-ineq}) if and only if the map $\~x^i\mapsto x^i$ can be extended 
+Equality holds in (\ref{SHORT.subthm:arm-ineq}) if and only if the map $\~x^i\mapsto x^i$ can be extended 
 to a distance-preserving map of $\Conv(\~x^0,\~x^1\dots \~x^{n+1})$ onto $\Conv(x^0,x^1\dots x^{n+1})$.
 \end{subthm}
 \end{thm}
@@ -1886,6 +1924,11 @@ In particular $\hat\gamma_t$ is rectifiable for all $t$.
 
 Joining the obtained homotopies for all $i$ we get a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
 \qeds
+
+\begin{thm}{Exercise}
+Let $\spc{X}$ be a double cover of $\EE^3$ which is branching along two distinct lines $\ell^1$ and $\ell^2$.
+Show that  $\spc{X}\in\cCat{}{0}$ if and only if $\ell^1$ intersect $\ell^2$ at right angle.
+\end{thm}
 
 
 
@@ -2198,9 +2241,10 @@ so far it is not even known if any three points in a $\Cat{}{0}$-space lie in a 
 Let $\spc{U}$ be a complete length space.
 
 Show that $\spc{U}\in\cCat{}{\kappa}$
-if and only if for any quadruple $p^1,p^2,x^1,x^2\in \spc{U}$ such that
+if and only if for any quadruple of points 
+$p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
 $\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$
-there is a quadruple $q^1,q^2,y^1,y^2\in\Lob m\kappa$
+there is a quadruple $q^1,q^2,y^1,y^2$ in $\Lob m\kappa$
 such that 
 \begin{align*}
 \dist{q^1}{q^2}{}&=\dist{p^1}{p^2}{},
@@ -2336,7 +2380,7 @@ Moreover the same holds for any $\spc{U}\in\Cat{}{}$ with nontrivial local homol
 in particular if $\spc{U}$ is a homological manifold.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:square}
 Let $\spc{U}\in\cCat{}{0}$.
 Assume that for 4 points $x_1,x_2,x_3,x_4\in \spc{U}$
 there is a convex quadrilateral

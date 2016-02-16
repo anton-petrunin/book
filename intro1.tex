@@ -1,6 +1,6 @@
 %%!TEX root = all.tex
 %array^
-\chapter{Introduction}
+\chapter*{Introduction}
 
 In this book, the term Alexandrov space will refer to one of the following types of %complete 
 metric spaces:
@@ -14,8 +14,28 @@ All these classes of spaces are defined using metric comparison to a model space
 The goal of this book is to give a comprehensive description of theory of Alexandrov spaces with curvature bounded below (CBB);  and in the theory of Alexandrov spaces with curvature bounded above (CBA), about which more is currently available in book form, to cover all the basic material as well as selected topics inspired by considering the two contexts simultaneously.  Although the two fields developed quite independently, they have many similar guiding intuitions and technical tools.  Our approach is novel in its attention to the interrelatedness of the two fields, and its emphasis on the way each illuminates the other.  We only consider inner theory, leaving most applications aside.
 
 
-\section{Books and surveys in Alexandrov's geometry}
-Here is a list of available introductions to CBB: 
+\section*{History}
+
+The first synthetic description of curvature is due to Abraham Wald; 
+it was given in a lonely publication on a ``coordinateless description of Gauss surfaces'' published in 1936, see \cite{wald}.
+In 1941, similar definitions were rediscovered independently by Aleksandr Danilovich Aleksandrov,
+see \cite{alexandrov:def}.
+In Alexandrov's work the first fruitful applications of this approach were given.
+Mainly:
+\begin{itemize}
+\item Alexandrov's embedding theorem  --- 
+\textit{metrics of non-negative curvature on the sphere, and only they, are isometric to closed convex surfaces in Euclidean 3-space}. This theorem appears first in \cite{alexandrov:def} and latter in the book \cite{alexandrov-embedding}.
+\item Gluing theorem, which gave a flexible tool to modify non-negativly curved metrics on a sphere, see \cite{alexandrov-glueing}.
+\end{itemize}
+These two results together gave  a very intuitive geometric tool to study embeddings and bending of surfaces in Euclidean space, and changed this subject dramatically.
+
+In 
+
+These theorems formed the foundation of branch of geometry called Alexandrov geometry.
+One could use ``back to Euclid'' as a slogan for this new brach of geometry;
+first it develops in Soviet Union but soon spreads to the rest of the world.
+
+Here is a list of available introductions to the Alexandrov spaces with curvature bounded below: 
 \begin{itemize}
 \item \cite{BGP} and its extension \cite{perelman:spaces2} is the first introduction to Alexandrov's geometry. 
 Some parts of it are not easy to read. 
@@ -27,284 +47,100 @@ The first 8 sections can be used as an introduction, but it is  a bit brief.
 \item \cite[Chapter 10]{BBI} is yet another reader-friendly introduction.
 \end{itemize}
 
-\section{Brief history}
 
-The first synthetic description of curvature is due to A.~Wald; 
-it was given in a lonely publication \cite{wald} on a ``coordinateless description of Gauss surfaces''.
-This paper was left without attention until the 80-s.
-(???I heard that Nikolaev was the first who found this paper, but it would be nice to know where he gave the first reference to it)
-In 40-s and 50-s, similar definitions were given independently by A.~D.~Alexandrov ???.
-Like Wald, Alexandrov was primarily interested in an axiomatic approach to differential geometry,
-but in Alexandrov's work the first fruitful applications of this approach were given.
-Mainly:
+\parbf{Curvature bounded above.}
+Big attention was given to 
+the two-dimensional spaces with curvature bounded below.
+Here one should mention the work of Iosif Liberman,
+a student of Alexandrov who died in the war soon after defense of his doctoral thesis in 1941.
+In his thesis he first used the notion of development, 
+a construction influenced the development of Alexandrov geometry, both with curvature bounded below and above.
+We should also mention the new proof of Alexandrov embedding theorem which is due to ??? Volkov.
+An outstanding work was done later by Aleksey Vasilyevich Pogorelov 
+among other thing he proved uniqueness of convex surface with given length metric up to motion of the Euclidean space.
+
+Untill 80's,
+Alexandrov geometry with curvature bounded above
+was developing in the 2-dimensional case only.
+We see only two exceptions:
 \begin{itemize}
-\item Alexandrov's embedding theorem \cite{alexandrov-embedding} --- 
-\textit{metrics of non-negative curvature on the sphere, and only they, are isometric to closed convex surfaces in Euclidean 3-space}.
-\item Glueng theorem \cite{alexandrov-glueing}, which gave a flexible tool to modify non-negativly curved metrics on a sphere.
+\item The work of Anatoliy Dmitrievich Milka, 
+who started to consider multidimensional Alexandrov's spaces with lower curvature bound in 60's;
+Milka used the global definition similarly to what we do in this book.
+In particular he proved the splitting theorem for such spaces.
+\item The work of Bruce Kleiner on non-negatively curved manifolds with infinite group of symmetries.
+Although
+formally speaking he did not used Alexandrov geometry, these
+give the first application of Alexandrov geometry in dimension grater than 2.
 \end{itemize}
-These two results together gave  a very intuitive geometric tool to study embeddings and bending surfaces in Euclidean space, and changed this subject dramatically.
-
-Many variational problems automatically have a solution in the class of Alexandrov spaces, 
-although the existence of extremal Riemannian space is problematic.
-A class of problems is created connected with the regularity of such generalized solutions, smoothing in  an approximate class of Riemannian manifolds, and so on.
-A similar problematic appeared in the  theory of differential equations much later.
-Roughly one might charactarize this direction of research as trying to show that Alexandrov's world is just as good as Riemann's.
-
-Another direction finds certain new structures in Alexandrov spaces  which are not at all present
- in Riemannian manifolds???
-
-Spaces with upper curvature bound were studied by Alexandrov, Reshetnyak and others, mostly by assuming, a priori,
-that the geodesic between any two points in the domain being considered was unique.
-The Reshetnyak majoration theorem provided a powerful tool, as did the 
-Reshetnyak glueing theorem, which states that if two non-positively curved spaces have isometric convex sets, then the space obtained by gluing these sets along the isometry is also non-positively curved.
-
-One of the most beautiful recent applications of the latter theorem was given in \cite{BFK},
-where among other things an estimate is given for the number of collisions of a billiard without walls.   
-A similar application provided the key to upper curvature bounds of warped products.
-
-This approach was developed further by Gromov, who gave an analogous definition for discrete metric spaces, so called $\delta$-hyperbolic spaces. 
-It provided an intuitive geometric tool for studying small cancelation groups.
-
-The case of two-sided bounded curvature was studied mainly by Berestovskii and Nikolaev.
-In particular, they proved that if such a space has no boundary then it is a Riemannian manifold of reduced smoothness ($C^{2-\eps}$ for any $\eps>0$).
-
-For curvature bounded below, 
-most of the work of Alexandrov's school was done for the 2-dimensional case.
-There were two exceptions,
-first it was the work of A.~D.~Milka, 
-who was already in 60's started to consider multidimensional Alexandrov's spaces with lower curvature bound;
-Milka used the global definition similarly to what we do in this book;
-he proved splitting theorem and ???.
-The second exception is the work of B.~Kleiner on non-negatively curved mainifolds with infinite group of symmetries;
-it might be the first application of Alexandrov geometry in dimension grater than 2
-(although
-formally he did not used Alexandrov geometry).
-
-
 
 In the 80's the interest in convergence of Riemannian manifolds created by Gromov's compactness theorem (\cite{gomov-precompactness}) turned attention toward the singular spaces that can occur as limits of Riemannian manifolds. 
 Immediately it was recognized that if the manifolds have a uniform lower sectional curvature bound, then the limit spaces have a lower curvature bound in the sense of Alexandrov. 
-There followed throughout the 90's an explosion of work starting with \cite{BGP}.
---- Perelman???Petrunin???Grove???Petersen???
-
-A number of technical tools were developed that subsequently influenced the theory of spaces with curvature bounded above --- Kleiner Lytchak Nagano
+There followed throughout the 90's an explosion of work starting with papers of Yurij Dmitrievich Burago, Grigori Yakovlevich Perelman and Mikhail Leonidovich Gromov  \cite{BGP} and \cite{perelman:spaces2}.
 
 The above activity was very much related to comparison geometry.
-This approach is not that maximalistic, it is classical differential geometry, 
+This approach is not that maximalistic --- it is classical differential geometry, 
 mostly using comparison  to spaces of constant curvature.
 In addition to the already-mentioned Gromov's compactness theorem,
 the following results had a big influence on the development of Alexandrov's geometry:
-Toponogov comparison and splitting theorems
-these are generalizations of Cohn-Vossen's theorem, 
-finiteness theorems of
+\begin{itemize}
+\item Toponogov comparison and splitting theorems
+these are generalizations of Cohn-Vossen's theorem,
+\item finiteness theorems of
 Cheeger and
-Grove--Petersen--Wu, 
-Yamaguchi fibration theorem,
-what else???
+Grove--Petersen--Wu,
+\item Yamaguchi fibration theorem.
+\end{itemize}
+
+\parbf{Curvature bounded above.}
+The first use of this method for the spaces with lower curvature bound appear only in 1951, see \cite{alexandrov:strong-angle}.
+Yet earlier a weaker definition was considered by Busemann in \cite{busemann-CBA}.
+
+The fundamental results in this direction were obtained by Yurii Grigorievich Reshetnyak.
+It includes his majorization theorem and gluing theorem.
+The gluing theorem states that if two non-positively curved spaces have isometric convex sets, then the space obtained by gluing these sets along the isometry is also non-positively curved.
+
+One of the most beautiful applications of the gluing theorem was given  recently by Dmitry Burago, Sergei Ferleger and Alexey Kanonenko in \cite{BFK};
+in particular it gives an estimate for the number of collisions of a billiard without walls.
+
+A spin off of the idea of synthetic definition of upper curvature bound 
+was given by Gromov. 
+He gave an analogous definition for discrete metric spaces, so called $\delta$-hyperbolic spaces. 
+It provided an intuitive geometric tool for studying small cancellation groups.
+
+Here is a list of available introductions to the Alexandrov spaces with curvature bounded above: 
+\begin{itemize}
+\item \cite{BH}
+\item \cite{ballmann:lectures} Lecture notes of Werner Ballmann
+\item \cite[Chapter 9]{BBI} a reader-friendly introduction.
+\end{itemize}
+ 
 
 
+\section*{Acknowledgment}
+We want to thank 
+R. Bishop, 
+Yu. Burago, 
+S. Ivanov,
+B. Kirchheim, 
+B. Kleiner, 
+J. Lott
+A. Lytchak, 
+G. Kuperberg, 
+N. Kosovsky, 
+N. Lebedeva, 
+W. Tuschmann,
+who else?
 
-%???Thanks: 
-%R. Bishop, 
-%Yu. Burago, 
-%S. Ivanov,
-%B. Kirchheim, 
-%B. Kleiner, 
-%J. Lott
-%A. Lytchak, 
-%G. Kuperberg, 
-%N. Kosovsky, 
-%N. Lebedeva, 
-%W. Tuschmann. 
 %Yet special thanks to our non-mathematicician friends and relatives M.~Prelovskaya, J.~Tuschamnn, F.~Champong???; they made for us food, provide place to stay and did not ask stupid questions while this book was written.
-% Institutes: BIRS, MFO, University of Colone, 
-% Arenal
 
+We want to thank the mathematical institutions where we worked on this book
+BIRS, 
+MFO, 
+Henri Poincar\'{e} Institute,
+University of Colone, 
+Max Planck Institute for Mathematics,
+what else?
 
-\section{Remarks for AKP}
 
-\begin{enumerate}
-\item Eventially, everywhere lower index in the arrays of points (and other things) will be changed to upper index.
-The reasons 
-(1) coordinates in Riemannian geometry usually come with upper idexes and it is more natural to write $x^i=\dist{a^i}{}{}$ 
-(2) some times we need sequences of arrays, then it is better to write $a^i_n$ than $a_{i,n}$.
-There is a little problem once you want to use prime --- I would suggest to use $\acute{a}$ instead of $a'$ in such cases.
-
-\item I plan to change the notation of GH-convergence from $X_n\GHto X$ to $X_n\xto{\GH} X$;
-here $\GH$ stays for the topology on $\bigsqcup X_i$ which defines Gromov--Hausdorff convergence. 
-The main reason is that for induced convergences we use $\to$, or $\rightrightarrows$ $\rightharpoonup$ and it looks very unnatural. 
-
-\item I removed $\backslash$olim and $\backslash$oto everywhere. Instead we write $\lim_{n\to\o}$ or $x_n\to x_\o$ as $n\to\o$.
-
-\item DONE: $\backslash$underline $\to$ $\backslash$ushort
-
-\item DONE: change ``induced'' to ``inherited/intrinsic''
-
-\item $T$ to $\ell$.
-
-\item Fix exercise numbering
-
-\item At the moment $\proj$ ($\backslash$proj) and $\varpi{}$ ($\backslash$varpi) are nearly identical...
-
-\item $\sup_{x\in X}\{f(x)\}$ to $\sup\set{f(x)}{x\in X}$;
-the same for $\inf$, $\max$, $\min$ and so on.
-
-\item We use $\partial$ for the set of supporting vectors, for the boundary, and S. wants to use it for frontier(=rel. boundary). We also use $\Int$ for interior --- it seems more natural to use some letters for frontier...
-
-\item extremal subset $\to$ extremal set
-
-\item remove ``native''
-
-\item mid-points OR midpoints?  
-
-S: midpoints.
-
-\item About geodesics. At he moment ``geodesic'' has 3 meanings (see below) I think it is OK to have meaning 2 annd 3, but for the first one I propose name geodesic curve...
-\subitem 1. minimizing geodesic with constant speed
-\subitem 2. the image of minimizing geodesic
-\subitem 3. the class of all constant speed reparametrizations of a geodesic 
-
-\item I think it is better to change everywhere $\ZZ_{\ge0}$ to $\ZZ_+$ and $\RR_{\ge0}$ to $\RR_+$ it suits better with $\SS_+$ (and $\SS_{\ge0}$ does not have sense)
-
-\item Should we change to Bourbaki-notation of real intervals? As $\l]a,b\r[$ instead of $(a,b)$?
-
-\item Stephanie suggests to change $\Fr$ to $\partial$; in positve curvature might be  a bit of confusion between rel. boundary and boundary. We might use $\partial_\spc{X}A$ for rel boundary of $A\subset \spc{X}$ and $\partial\spc{X}$ for boundary. I also use $\partial_p f$ for subgradient...
-
-\item in the end we need to change $\l]x^1x^2\r[$ to something closer to 
-$\,{]}x^1x^2{[}\,$.
-
-\item DONE: $G_\delta$ $\to$ G-delta
-
-\item DONE: Some people write $\oBall(p,R)$ and $\cBall[p,R]$. 
-Maybe it is better this way --- ``$)$'' reminds open interval and ``$]$'' closed...
-
-\item in the end check usage of CBA and CBB...
-
-\item me might write $(1{+}3)\mc\kappa$-point comparison or point-on-side${}\mc\kappa$ comparison???
-
-S: I think we need   ``$\kappa$-comparison''.
-
-\item (2+2)-comparison $\to$ (2+2)-point comparison.
-
-\item We might want to rename ultratangent cone to ultrablowup
-
-\item The notation for subfunction will be changed from $f\: X\subto Y$ to $f\? X \to Y$,
-and the name will be also changed from subfunction to function...
-
-\item I want to rename the general construction 
-in baricentric simplexex to something else
-and use the name "$\kappa$-barycentric simplex"
-for only for arays modified distance functions
-($\md\kappa\circ\dist{x^i}{}{}$).
-
-I think of a good name for general construction,
-but can not come up with anything better than
-"argmin map".
-
-Any suggestions?
-
-S: "minpoint map".
-
-\item $\not\in$ and others split wrong at the end of the line...
-
-\item I think to change expressions like $|x-y|<\eps$ to $x\approx y\pm \eps$.
-(I noticed that the notation $x=y\pm \eps$ is used for $x=y$ with absolute error $\eps$,
-but we use ``$\pm$'' for ``$+$'' ar ``$-$'', so ``$\approx$'' instead of ``$=$'' will remind that meaning is different).
-\subitem I would also use $\approx$ with little $o$ notation.
-
-\subitem I always needed a notation for $o(x)/x$. One candidate is $\eps(x)$ (it nicely goes with $\eps$-$\delta$ definitions). 
-Perelman use $\varkappa(x)$, so I use it now.
-Can you suggest anything better?
-
-\subitem A possible solution is to use $\lessgtr$ or $\leftrightharpoons$for example
-\[x\lessgtr y\pm \eps(t)\]
-\[x\leftrightharpoons y\pm \eps(t)\]
-\item use term ``linearly differentiable'' if differential is defined and linear.
-
-\item I was trying to meet Einstein notation if possible, but write $\sum$ anyway.
-After a while I do not see anymore reason to do it. (BTW I  hate Einstein notation.)
-
-\item $\vol^m$ or $\vol_m$?
-
-\item $\imath$ $\to$ $\iota$?
-
-\item change supporting vector to maybe subnormal?
-
-\item subergraph $\to$ epigraph; subgraph $\to$ hypograph? 
-
-\item in line use either $\tfrac{\varpi\kappa}{2}$ $\to$ $\varpi\kappa/2$
-
-\item what is better?
-\[\mangle\hinge p q x
-=
-\lim_{
-\substack{
-\bar x\to p
-\\
-\bar x\in\,\l]px\r]}}\angk\kappa p q{\bar x}\]
-or 
-\[\mangle\hinge p q x
-=
-\lim_{\bar x\to p}
-\set{\angk\kappa p q{\bar x}}{\bar x\in\,\l]px\r]}\]
-
-\item polygon line OR broken geodesic
-
-\item $\eps$-Hausdorff approximation OR $\eps$-isometry --- BBI use  $\eps$-isometry.
-
-\item metion authors around  cites 
-
-\item unitspeed $\to$ unit-speed and constantspeed $\to$ constant-speed?
-
-\item do we need pregeodesic?
-
-\item better name for $\Str$?
-
-\item Fix pagebrake before $\backslash$qedsf and $\backslash$claimqedsf
-
-\item Define distance maps and their liftings
-
-\item What if we change Gromov--Hausdorff to Hausdorff?
-By the way, Hausdorff defined so called closed and open convergences.
-They are better than Hausdorff convergence, but the later became mor popular by stupid reason.
-It also made Gromov define convergence wrong way.
-
-\item vertexes $\to$ verteces
-
-\item subnormal $\to$ normal to supporting hyperplane
-
-\item sequence is a ``lifting'' or ``liftings''?
-
-\item CHECK Lipschitz/locally Lipschitz and co-Lipschitz/ locally co-Lipschitz.
-
-\item Find a better way to say ``noncollapsing'', $\spc{L}_n\GHto \spc{L}$ such that $\spc{L}_n,\spc{L}\in \CBB{m}{\kappa}$ does not emphasize sufficiently that $\dim\spc{L}_n=\dim\spc{L}$.
-
-\item unify ``if'' and ``only if'' parts.
-
-\item good name for radial curves --- base point, curvature, and starting point???
-
-\item Remove new par after claim
-
-\item $A\times_f B$ to $A\mathrel{{\times}_f} B$.
-
-\item Tangent space to tangent cone --- we use tangent $\kappa$-cone sometimes.
-
-\item semi-continuous semi-concave OR semicontinuous semiconcave.
-
-\item N.B. or Pay attention?
-
-\item i.e. or that is it?
-
-\end{enumerate}
-
-Notations:
-\begin{enumerate}
-\item $p'$ usually denotes $p'\approx p$; 
-and $\acute{p}^i\approx p^i$
-\item $\bar x$ denotes a point on  $]p x]$ (for an evident choice of $p$)
-\item The origin of tangent cone $\T_p$ is denoted by $o$ or $o_p$. BUT it would be more intuiteve to denote it by something like $\vec p$ or $\dot p$ --- you may also write $\ddir pp$, but that is really stupid.
-It would be also good  to use the same modifier for shortcut like $\dot q=\log p q$
-\item $\backslash$map and $\backslash$map[1] gives $\map$, $\backslash$map[2] gives $\map[2]$, $\backslash$map[3] gives $\map[3]$.
-\item $\oBall(S,R)$  to denote an $R$-neighborhood of a set $S$.
-\end{enumerate}
 

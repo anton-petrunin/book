@@ -204,14 +204,6 @@ be the closed annulus around $A$.
 i.e. a pseudometric space with the pseudometric defined as restriction of the pseudometric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
 \end{itemize}
 
-\parbf{Remarks.}
-
-
-
-
-
-
-
 \parbf{Types of metric spaces.}
 \begin{itemize}
 \item ???A metric space is called \emph{finite}\index{finite metric space},
@@ -481,6 +473,7 @@ Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact;
 a contradiction.
 \qeds
 
+\section{Convex sets}
 
 \begin{thm}{Definition} 
 \label{def:convex-set}
@@ -490,12 +483,12 @@ A set $A\subset\spc{X}$ is called
 \index{convex set!weakly convex set}\index{weakly convex set}
 if for every two points $p,q\in A$ there is a geodesic $[pq]$ of $\spc{X}$ 
 which lies in $A$.
-If in addition every geodesic from $p$ to $q$ lies in $A$, then $A$ is called \emph{convex}\index{convex set}
+If in addition every geodesic from $p$ to $q$ lies in $A$, then $A$ is called \emph{totally convex}\index{totally convex set}
 
 If this definition is applied only when  $\dist{p}{q}{}<R$, $R\in (0,\infty]$, 
-then $A$ is called  \emph{(weakly) $R$-convex}%
+then $A$ is called correspondingly \emph{weakly or totally $R$-convex}%
 \index{weakly convex set!weakly $R$-convex set}
-\index{convex set!weakly $R$-convex set}.
+\index{convex set!$R$-convex set}.
 \end{thm}
 
 Note that \emph{(weakly) convex sets} can be also regarded as \emph{(weakly) $\infty$-convex sets}.
@@ -650,6 +643,59 @@ Then the projection $\spc{X}\to\spc{X}/G$ is a submetry.
 We need to show that the quotient map is short ans 1-co-Lipschitz.
 Both statements follow from the definition of quotient space.
 \qeds
+
+\section{Doubling}\label{sec:doubling}
+
+Let $\spc{V}$ be a metric space 
+and $A\subset \spc{V}$ be a closed subset.
+A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
+
+More formally the space $\spc{W}$ can be described by the following properties.
+\begin{itemize}
+\item The space $\spc{W}$ contains $\spc{V}$ as a subspace; 
+in particular the set $A$ can be treated as a subset of $\spc{W}$.
+\item There is an isometric involution of $\spc{W}$ which is called \index{reflection}\emph{reflection in $A$};
+further it will be denoted as $x\mapsto x'$.
+\item For any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$ and 
+\[
+\dist{x'}{y}{\spc{W}}
+=\dist{x}{y'}{\spc{W}}
+=\inf_{a\in A}\{\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}\}.
+\]
+for any $x,y\in \spc{V}$.
+\end{itemize}
+
+
+
+
+The image of $\spc{V}$ under the reflection in $A$ will be denoted by $\spc{V}'$.
+The subspace $\spc{V}'$ is an isometric copy of $\spc{V}$.
+Clearly $\spc{V}\cup\spc{V}'=\spc{W}$ and $\spc{V}\cap\spc{V}'=A$.
+Moreover $a=a'$ $\iff$ $a\in A$.
+
+The following proposition follows directly from the definitions.
+
+\begin{thm}{Proposition}\label{prop:doubling}
+Assume $\spc{W}$ is the doubling of metric space $\spc{V}$ in its closed subset $A$.
+Then 
+
+\begin{subthm}{}
+ If $\spc{V}$ is a complete length space then so is $\spc{W}$.
+\end{subthm}
+ 
+\begin{subthm}{}
+If $\spc{V}$ is proper then so is $\spc{W}$.
+In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that 
+\[\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}=\dist{x}{y'}{\spc{W}}.\]
+\end{subthm}
+
+\begin{subthm}{prop:doubling:projection}
+Given $x\in \spc{W}$ set $\bar x=x$ if $x\in \spc{V}$
+and $\bar x=x'$ otherwise. The map $\spc{W}\to\spc{V}$ defined by $x\mapsto \bar x$ is short and length-preserving.
+In particular if $\gamma$ is a geodesic in $\spc{W}$ 
+with ends in $\spc{V}$ then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
+\end{subthm}
+\end{thm}
 
 
 

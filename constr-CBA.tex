@@ -1,152 +1,85 @@
 ­%%!TEX root = the-constr-CBA.tex
-\chapter{Constructions in CBA spaces}
+\chapter{Convexity}
 
+\section{Local convexity implies global}
 
-\section{Cones} 
-\label{sec:cones}
+Assume $\spc{U}\in\Cat{}{\kappa}$. 
+Recall that by Corollary \ref{cor:loc-geod-are-min} any two points in  $\spc{U}$ on the distance smaller that $\varpi\kappa$ are joined by unique minimizing geodesic.
+It follows that any weakly $\varpi\kappa$-convex set in $\spc{U}$ is convex.
 
-Now we consider warped products (as defined  \ref{sec:wp-def}) for which the base $\spc{B}$ is an interval   and the warping function $f$ satisfies $f''=-\kappa\cdot f$.  We write  $\II_\kappa= [0,\varpi\kappa]$ if $\kappa > 0$, $\II_\kappa= [0,\infty)$ if $\kappa\le 0$.
-
-\begin{thm}{Definition}
-\label{def:cones}
-The  \emph{$\kappa$-cone} $\Cone_\kappa \spc{X}$ over a metric space $\spc{X}$ is defined by
-\[\Cone_\kappa \spc{X}= \II_\kappa\times_{\sn{\kappa} } \spc{X}.\]  
-$\Cone_{\,0}  \spc{X}$ is called the  \emph{Euclidean cone} over $\spc{X}$, and written $\Cone \spc{X}$. $\Cone_{\,1} \spc{X}$ is called the
- \emph{spherical suspension} of $\spc{X}$. 
- 
- For $\kappa <0$, we  also define  \emph{$\kappa$-cylinders} (respectively, \emph{ideal $\kappa$-cones}) over $\spc{X}$ as 
- \[\RR\times_{\cs{\kappa}} \spc{X} 
-\quad (\text{respectively }\RR\times_{\exp (t\cdot\sqrt{-\kappa})} \spc{X}).\]
-
-For $\kappa\le 0$, the \emph{vertex} of $\Cone_\kappa \spc{X}$ is the equivalence class $\{0\}\times \spc{X}$. If $\kappa>0$, there are two vertices, $\{0\}\times \spc{X}$ and $\{\varpi\kappa\}\times \spc{X}$.  We denote a vertex by  $o$.                             \end{thm} 
-
-\parbf{Remark.} In these constructions, the leaves $\II_\kappa\times\{x\}$ or $\RR\times\{x\}$ in the restricted  metric are isometric copies of $\II_\kappa$ or $\RR$,  and are clearly uniquely minimizing on proper subintervals.
-The leaf $\{t\}\times \spc{X}$ is length-isometric to $\spc{X}$ rescaled by the value of the warping function at $t$.  In a $\kappa$-cone, this leaf is the sphere of radius $t$ about $o$.
-\ms
-
-$\Cone_\kappa \spc{X}$ inherits the cosine law of the model space $\Lob{}\kappa$, as follows.  
-We denote the points of $\Cone_\kappa \spc{X}$ by $t\cdot x\df (t,x)$ where $ t\in \II_\kappa, x\in \spc{X}$, and $t\cdot x = o$ if $t=0$. 
-
-\begin{thm}{Lemma}\label{lem:cos-law}
-For $u=s\cdot x,v=t\cdot y$, and  $\alpha=\mangle\hinge{o}u v$ (taken to be $0$ if $u$ or $v$ is a cone point), distance in $\Cone_\kappa \spc{X}$ is given by:
-\[\dist{u}{v}{}=\side\kappa\{\alpha;t,s\}.\]
-
+\begin{thm}{Lemma}
+Let $\spc{U}\in \cCat{}{\kappa}$ 
+and $A\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
+Then for the function 
+\[f=\sn\kappa\circ\dist{A}{}{}\]
+we have
+\[f''+\kappa f\ge 0\]
+in $\oBall(A,\tfrac{\varpi\kappa}2)$.
 \end{thm}
-
 
 \parit{Proof.}
-If $\dist{x}{y}{}<\pi$, apply  Lemma \ref{lem:fiber-independence} to $\Cone_\kappa \spc{X}$ and $\Lob{}\kappa= \Cone_\kappa(\Lob11)$, where $\Lob11$ is the circle of length $2\pi$. Since $\dist{x}{y}{}=\angk{\kappa}{o}{u}{v} = \alpha$, the formula follows from the cosine law of $\Lob{}\kappa$. If $\dist{x}{y}{}\ge\pi$, apply  Lemma \ref{lem:fiber-independence} to $\Cone_\kappa \spc{X}$ and $ \Cone_\kappa(\RR-)$.  
-Then $\alpha=\pi$ and 
-\[\dist{u}{v}{}=\min\{s+t,2\varpi\kappa-s-t\},\] 
-so the formula holds.
+???
+\qeds
+
+\begin{thm}{Corollary}
+Let $\spc{U}\in \cCat{}{\kappa}$ 
+and $A\subset \spc{U}$ be a closed  locally convex set.
+Then there is an open set $\Omega\supset A$
+such that the function 
+\[f=\sn\kappa\circ\dist{A}{}{}\]
+sutisfies 
+\[f''+\kappa f\ge 0\]
+in $\Omega$.
+\end{thm}
+
+\parit{Proof.}
+???
 \qeds
 
 
-We sometimes refer to the elements of $\Cone \spc{X}$ as \emph{vectors}.  The vertex $o$ plays the role of a ``zero vector''. 
-\begin{thm}{Definition}
-\label{def:scalar-product}
-The \emph{absolute value}\index{absolute value} $|v|$ of $v=t\cdot x\in \Cone \spc{X}$ is defined by
-\[|v|= t =\dist{o}{v}{}.\]
-\index{$\vert{*}\vert$}
-The \emph{scalar product}\index{scalar product} $\langle u, v\rangle$ of $u,v\in \Cone \spc{X}$ is defined by
-\[\langle u, v\rangle
-=
-(|u|^2+|v|^2-\dist[2]{u}{v}{})/2=|u|\cdot |v|\cos\alpha,\] 
-\index{$\<*,*\>$}where $\alpha=\mangle\hinge o u v=\angk{0}{o}{u}{v}$ will be also denoted as $\mangle(u,v)$.
-\end{thm}
-Note that in general, the sum of ``tangent vectors'' is undefined, so we do abuse the term ``vector'' here.
 
-When it is convenient, we treat $\spc{X}$ as a ``unit sphere'' in $\Cone \spc{X}$, 
-i.e., the set of unit vectors. 
-Thus, $x\in \spc{X}$ might also refer to the corresponding unit vector in $\Cone \spc{X}$.
-In this case for $x,y\in \spc{X}$ we will use mostly $\mangle(x,y)$ for $\dist{x}{y}{\spc{X}}$ 
-and $\dist{x}{y}{}$ for $\dist{x}{y}{\Cone \spc{X}}$.
-
-\ms
-
-\begin{thm}{Definition}
-\label{def:kappa-join}
-The \emph{$\kappa$-join} of metric spaces $\spc{X}$ and $\spc{Y}$ is defined by
-\[ \Join_\kappa \l(\spc{X},\spc{Y}\r) 
-= 
-[0,\varpi\kappa/2]\times_{(\sn{\kappa},\,\cs{\kappa})}\spc{X}\times \spc{Y}).\]
-We call $\Join_1 \l(\spc{X},\spc{Y}\r)$
- the \emph{spherical join} of $\spc{X}$ and $\spc{Y}$, and $\Join_{-1} \l(\spc{X},\spc{Y}\r)$  the \emph{hyperbolic join} of $\spc{X}$ and $\spc{Y}$.
+\begin{thm}{Theorem}
+Assume $\spc{U}\in \cCat{}{\kappa}$ and $A\subset \spc{U}$ is a closed connected locally convex set.
+Assume $\dist{x}{y}{}<\varpi\kappa$ for any $x,y\in A$.
+Then $A$ is $\varpi\kappa$-convex.
 \end{thm}
 
-We may express the  model spaces $\Lob{n}\kappa$ as $\kappa$-cones ands $\kappa$-joins. 
+The following proof is given by Sergei Ivanov, see \cite{ivanov:local-global-convexity}
 
-\begin{thm}{Lemma}\label{lem:model-as-join}
- Let $\Lob{0}\kappa$ be a point if $\kappa \le 0$ , and two points at distance  $\pi/\sqrt{\kappa}$ apart if $\kappa >0$. Then for $n\ge 1$,
- \begin{align*}
-\Lob{n}\kappa &= 
-\Cone_\kappa \Lob{n-1}1\\
-&=
-\RR\times_{\cs{\kappa}} \Lob{n-1}1 \\
-&= \RR\times_{\exp \sqrt{-\kappa}\,t} \Lob{n-1}1,
-\end{align*}
+\parit{Proof.}
+Note that $A$ is path connected.
+Indeed, local convexity implies that $A$ is locally path connected.
+Since $A$ is connected, the later implies that $A$ is path connected.
 
-and
+Fix two points $x,y\in A$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to A$.
+Denote by $\gamma_t$ the geodesic path from $x$ to $\alpha(t)$.
+By ??? it depends continuosly from ...
 
- \begin{align*}
-\Lob{m+n+1}\kappa=\Join_\kappa\l(\Lob{m}1,\Lob{n}{\sgn\kappa}\r).
-\end{align*}
-\end{thm}
-
-\parit{Proof.} Immediate from the definitions.
-\qedsf
-
-
-\begin{thm}{Lemma}\label{lem:cone-of-join}
-The spherical join, $\Join_1 \l(\spc{X},\spc{Y}\r)$,
- of metric spaces $\spc{X}$ and $\spc{Y}$  satisfies 
-\[ \Cone \Join_1 \l(\spc{X},\spc{Y}\r)
-=\Cone \spc{X}\times\Cone \spc{Y}.\]
-\end{thm}
-\parit{Proof.} By definition, 
-\begin{align*}
-\Cone\Join_1 \l(\spc{X},\spc{Y}\r)
-&= \RR_{\ge 0}\times_r\l(([0,\tfrac\pi2]\times_{\sin t}\spc{X})\times_{\cos t}\spc{Y}\r)
-\\&= \l(( \RR_{\ge 0}\times_r[0,\tfrac\pi2])\times_{r\sin t}\spc{X}\r)\times_{r\cos t}\spc{Y}
-\\&=\l((\RR_{\ge 0}\times\RR_{\ge 0})\times_x\spc{X}\r)\times_y\spc{Y}
-\\&=\Cone \spc{X}\times\Cone \spc{Y}.
-\end{align*}
-\qedsf
+According to ??? there is an open set $\Omega\supset A$
+such that for the function $f(x)=\sn\kappa\dist{A}{x}{}$ 
+we have
+\[f''+\kappa f\ge 0\]
+everywhere in $\Omega$.
+It follows that if $\gamma$ is a geodesic in $\Omega$ 
+of length $\ell<\varpi\kappa$ 
+has its ends in $A$ then it lies in $A$ completely.
 
 
 
-For a function $f:\spc{X}\to\RR$ on a metric space $\spc{X}$, let $\Cone f:\Cone \spc{X}\to\RR$ be the linear homogeneous extension of $f$,
-defined by 
-\[(\Cone f)(t\cdot x)=tf(x).\]
+Connect them by a broken geodesic in $A$;
+let $x=x^0,x^1,\dots,x^\kay=y$ be its vertices.
+Choose consecutive geodesics $[x^0x^1]$ and $[x^1x^2]$ and move $x^1=x^1(t)$ to $x^2$ along $[x^1x^2]$. 
+Since distance between any pair of points in $A$ is less than $\varpi\kappa$,
+the geodesic $[x^0,x^1(t)]$ uniquely defined fro any $t$.
+Let $t_0$ be the moment  touches the boundary at some moment $t$, observe a contradiction. If not, then the final segment $[a,c]$ is also contained in the interior, so we get a polygonal line with fewer edges. Repeat this procedure until it becomes a single segment.
 
-\begin{thm}{Lemma}\label{lem:cone_f}  Let $f:\spc{X}\to\RR$ be a function on a geodesic space $\spc{X}$.  Then $\Cone f$ is convex  if and only if $f''\ge -f$ on $\spc{X}$ and $f(x)+f(y)\ge 0$ whenever
-$\dist{x}{y}{}\ge\pi$.
-\end{thm}
 
-\parit{Proof.} 
-Let $[xy]$ be a geodesic in $\spc{X}$, and $m$ be its midpoint.  
-By lemma \ref{lem:cos-law}, if $\dist{x}{y}{}\le\pi$ then $\Cone [xy]$ in both its length-metric and external metric is isometric to the sector of $\Lob{}0$ whose angle at the origin is $\dist{x}{y}{}$;  
-if $\dist{x}{y}{}\ge\pi$,  the geodesic $[s\cdot x\,\,t\cdot y]$ is the union of two segments from the vertex $o$ of lengths $s$ and $t$ respectively.
-
-The inequality  $f''\ge -f$ on $\spc{X}$ is equivalent to the following midpoint inequality for all geodesics $[xy]$ with $\dist{x}{y}{}\le\pi$:
-\[f(m)
-\le 
-\bigl(f(y)+f(x)\bigr)\bigl/\bigl(2\cos\frac{\dist{x}{y}{}}{2}\bigr),\]
-since the solutions of $f''(t)=-f(t)$ satisfy the corresponding equation on any interval of length $<\pi$.  The convexity
-inequality for $\Cone f$ on a geodesic $[s\cdot x\,\,t\cdot y]$ with $\dist{x}{y}{}\le\pi$, evaluated at the point that divides this geodesic in the
-ratio $s:t$, is 
-\[2st(s+t)^{-1} f(m)\cos\frac{\dist{x}{y}{}}{2} 
-\le 
-s(s+t)^{-1}tf(y)+t(s+t)^{-1}sf(x),\]
-since linear functions satisfy the corresponding equation.  By sequential application of this process, $f''\ge-f$ holds on $\spc{X}$ if and only if $\Cone f$ is convex on any geodesic whose projection to $\spc{X}$ has length $\le\pi$.
-
-When $\dist{x}{y}{}\ge\pi$, $\Cone f$ on $[s\cdot x\,\,t\cdot y]$ is linear on each segment from $o$, and hence is convex if and only if $f(x)+f(y)\ge 0$.
+Take $x,y\in A$, there is a polygonal path from $a$ to $b$ in $A$. Suppose this path has $N$ edges. Then there is a shortest polygonal path of at most $N$ edges in the closure of $A$. If it is not a straight segment, the first edge must touch the boundary of $A$ (otherwise one can shorten the path). The first point where it meets the boundary has obvious problems with local supporting hyperplane.
 \qeds
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\section{Gluing.}\label{sec:cba-gluing}
+\section{Reshetnyak's gluing theorem.}\label{sec:cba-gluing}
 
 The following theorem was proved by Reshetnyak \cite{reshetnyak:glue},  assuming $\spc{U}_1, \spc{U}_2$ are proper.
 
@@ -262,6 +195,12 @@ starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\cCat{}{0}$ space.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
+Assume $\spc{U}\in\cCat{}{0}$ and $A\subset \spc{U}$ is a closed subset.
+Assume that the doubling of $\spc{U}$ in $A$ is $\cCat{}{0}$. 
+Show that $A$ is a totally convex set of $\spc{U}$.
+\end{thm}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -282,17 +221,6 @@ distance to the image of a complete geodesic, or distance to an endpoint of
 $A$, or a join of these two. The first  satisfies $f''+\kappa\cdot f =  0$ by \ref{sn-diff-eq}.  The second satisfies $f''+\kappa\cdot f \ge 0$ by direct calculation from \ref{md-diff-eq}. This suffices, since the derivative at the
 join is two-sided, by the first variation formula.
 \qeds
-
-\begin{thm}{Definition} 
-\label{def:convex-set}
-Let $\spc{X}$ be a metric space. 
-A set $A\subset\spc{X}$ is called 
-\emph{totally $R$-convex}%
-\index{convex set!totally convex set}\index{totally convex set}
-if for every two points $p,q\in A$, every local geodesic with endpoints $p$ and $q$ and length $< R$  lies in $A$.
-\end{thm}
-
-Note that if $\spc{X}\in\Cat{}{\kappa}$, then by Corollary \ref{cor:loc-geod-are-min},  $A\subset\spc{X}$ is totally $\varpi\kappa$-convex if and only if $A$ is $\varpi\kappa$-convex.
 
 
 Part (\ref{SHORT.distance-to-convex}) of  the next theorem should be compared to the theorem on distance to the boundary of a $\CBB{}{}$-space (\ref{thm:dist-to-bry}).
@@ -390,7 +318,7 @@ Since  $\map_p\circ\hat\gamma_{p,x}$ is a reparametrization of $\gamma_x$,
 \]
  
 Since geodesics of  $\spc{W}$ vary continuously with their endpoints (\ref{lem:cat-unique}), then $\hat\gamma_{p,x}$ varies continuously with $x$.
-Hence (\ref{SHORT.footpoint}).\qeds
+Hence (\ref{SHORT.footpoint}).
 
 %Suppose there are two closest points $z_1,z_2$ of $\hat A_x$ to $\hat x$.  By point-on-side comparison (\ref{cat-monoton}), the distance from $\hat x$  to an interior point of $[z_1z_2]$ is $<\dist{\hat x}{z_i}{}$. This contradiction shows there is a unique closest point of $\hat A_x$ to $\hat x$.  It follows that there is a unique closest point of $A$ to $x$. 
 
@@ -418,7 +346,7 @@ By construction, these inequalities are equalities  at
 $t=0$ and $\eps$. 
 Since $\dist{\tilde\alpha (t)}{ \tilde\sigma}{\Lob2\kappa}$, $0\le t\le \eps$, satisfies the desired convexity condition by Lemma \ref{lem:model-d-seg},
 then
-(\ref{SHORT.distance-to-convex}) follows.\qeds
+(\ref{SHORT.distance-to-convex}) follows.
 
 \parit{(\ref{SHORT.short-retract}).}
 For any $x\in \spc{U}=\oBall[A,\tfrac{\varpi\kappa}{2}]$, set  $x^*=f_A( x )$. 
@@ -579,9 +507,11 @@ hence the inequality~\ref{eq:cos=<cos} is strict.
 \qeds
 
 We fail to find a transparent geometric proof of the statement above.
-Below you will find a geometric way to think about the construction;
+Below you will find a geometric way to think about the construction; 
+%%%DOWN
 compare to the construction 
 in the proof of Kirszbraun's theorem (\ref{thm:kirsz+}).
+%%%UP
 
 \parit{Geometric interpretation of the map $\map[2]$.}
 Set $\mathring{\spc{U}}=\Cone \spc{U}$;
@@ -614,20 +544,6 @@ Consider the map $\map[2]\:\spc{U}\to A$
 defined as 
 \[\map[2](x)=\alpha_{\hat x}(t_x).\]
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\input{jac-length.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{tmp-13.tex}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
- 
 \section{Exercises}
 
 \begin{thm}{Exercise} 

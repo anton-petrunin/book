@@ -331,7 +331,7 @@ thus
 
 
 
-
+\input{helly.tex}
 
 
 
@@ -976,15 +976,28 @@ from \cite[2.2]{vilms};
 it is sufficient to take a sufficiently dense finite subset 
 in a ball in a generic Hadamard space.
 
-The (2$n$+2)-point comparison (\ref{CBA-n-point}) gives a necessary condition for \ref{open:n-point-CBA} and it is not known whether it is sufficient.
+The (2$n$+2)-point comparison (\ref{CBA-n-point}) gives a necessary condition for \ref{open:n-point-CBA} 
+which is not sufficient.
+One can see this in the following example constructed by Nina Lebedava:
 
-\begin{thm}{Open problem}
-Let $\spc{F}$ be a finite metric space which satisfies (2$n$+2)-point comparison (\ref{CBA-n-point}) 
-for some fixed for $\kappa$
-and any choice of the point array.
+Consider a square $[\~x^1\~y^1\~x^2\~y^2]$ in $\EE^3$
+with yet two points in general position $\~z^1$, $\~z^2$ so that the convex hull of $\~x^1,\~x^2,\~y^1,\~y^2,\~z^1,\~z^2$ forms a nonregular octahedron with the faces formed by triangles $[\~x^i \~y^j \~z^\kay]$.
+Consider the induced metric on the 6-point set $\~x^1,\~x^2,\~y^1,\~y^2,\~z^1,\~z^2$.
+Note that if we increase the $\dist{\~z^1}{\~z^2}{}$ slightly 
+then in the obtained 6-point metric $\spc{F}_6$ space all the (2+2) and (4+2)-point comparisons continue to hold.
 
-Is it true that $\spc{F}$ admits a distance preserving map into a $\cCat{}{\kappa}$ space?
-\end{thm} 
+Now assume we embed the points $x^1,x^2,y^1,y^2,z^1,z^2$ lie in a $\cCat{}{0}$ space $\spc{U}$ in such a way that all the distances except $\dist{z^1}{z^2}{}$ are the same as between corresponding points in $\spc{F}_6$.
+Since $[\~x^1\~y^1\~x^2\~y^2]$ is a square,
+by Exercise~\ref{ex:square}, 
+we get that $\spc{U}$ contains an isometric copy of a square $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}\iso\Conv(\~x^1,\~y^1,\~x^2,\~y^2)_{\EE^3}$.
+Let \[\~w\in  \Conv(\~x^1,\~y^1,\~x^2,\~y^2)_{\EE^3}\]
+and $w$ be corresponding point in $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}$.
+By 
+point-on-side comparison (\ref{cat-monoton}) we have $\dist{z^i}{w}{\spc{U}}\le \dist{\~z^i}{\~w}{\EE^3}$.
+It follows that 
+\[\dist{z^1}{z^2}{\spc{U}}\le \dist{\~z^1}{\~z^2}{\EE^3},\] 
+a contradiction.%???
+
 
 The next conjecture (if true) would give the  right generality for  Kirszbraun's theorem (\ref{thm:kirsz+}).
 Roughly it states that the example \ref{example:SS_+}, 
