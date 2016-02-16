@@ -277,18 +277,19 @@
 
 \newcommand*{\CBB}[2]%
 %%{\text{\rm CBB}^{#1}_{#2}}
-{\ifthenelse{\equal{#2}{}}{\overline{\text{\rm CBB}}{}^{#1}}{\overline{\text{\rm CBB}}{}^{#1}\lfloor\hskip-0.1em{#2}\hskip-0.1em\rfloor}}%
+{\ifthenelse{\equal{#2}{}}{\text{\rm CBB}{}^{#1}}{\text{\rm CBB}{}^{#1}[\hskip-0.1em{#2}\hskip-0.1em]}}%
 
 \newcommand*{\CBA}[2]%
 %{\text{\rm CBA}^{#1}_{#2}}
-{\ifthenelse{\equal{#2}{}}{\text{\rm CBA}^{#1}}{\text{\rm CBA}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CBA???}^{#1}}{\text{\rm CBA???}^{#1}[\hskip-0.1em{#2}\hskip-0.1em]}}
 \newcommand*{\CBBA}[3]{\text{\rm CB}^{#1}[#2,#3]}
 \newcommand{\Cat}[2]%
 %{\text{\rm CAT}^{#1}_{#2}}
-{\ifthenelse{\equal{#2}{}}{\text{\rm CAT}^{#1}}{\text{\rm CAT}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CAT}^{#1}}{\text{\rm CAT}^{#1}[\hskip-0.1em{#2}\hskip-0.1em]}}
 \newcommand{\cCat}[2]%
 %{\text{\rm CAT}^{#1}_{#2}}
-{\ifthenelse{\equal{#2}{}}{\overline{\text{\rm CAT}}{}^{#1}}{\overline{\text{\rm CAT}}{}^{#1}\lceil\hskip-0.1em{#2}\hskip-0.1em\rceil}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CBA}{}^{#1}}{\text{\rm CBA}{}^{#1}[\hskip-0.1em{#2}\hskip-0.1em]}}
+
 \newcommand*{\Lob}[3][{}]{\mathbb{M}_{#1}^{#2}[{#3}]}
 \newcommand*{\PM}[3][{}]{\mathbf{P}\mathbb{M}_{#1}^{#2}[{#3}]}
 \newcommand*{\PS}[2][{}]{\mathbf{P}\mathbb{S}_{#1}^{#2}}
