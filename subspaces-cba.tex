@@ -7,7 +7,7 @@
 \section{Curves of bounded curvature.}\label{sec:cbc}
 
 By a {\it $k$-curve}   we mean a unit-speed curve $\sigma:\II\to\Lob2\kappa$ of constant
-curvature $k$, where $\II$ is a closed, possibly infinite, interval.  A {\it complete} $k$-curve is a $k$-curve maximally extended so as to self-intersect at most at its endpoints: that is, a circle traversed once, or a  geodesic, horocycle, or equidistant curve.
+curvature $k$, where $\II$ is a closed, possibly infinite, interval.  A {\it complete} $k$-curve is a $k$-curve, maximally extended so as to self-intersect at most at its endpoints: that is, a circle traversed once, or a  geodesic, horocycle, or equidistant curve.
 
 The \emph{chord-length} of a curve $\gamma\:\II\to\spc{X}$ in a metric space $\spc{X}$ is the distance between the endpoints of $\gamma$.  A \emph{chord} is a geodesic joining two of its points, and an \emph{endpoint chord} is a geodesic joining its endpoints.
 
@@ -49,7 +49,7 @@ Note that by the triangle inequality, the length $\bar s$ and chord-length $\bar
  the upper limit 
  $$ \limsup \,k_{\kappa}( \bar\gamma)$$
   of arc-chord curvatures taken over 
-subarcs $ \bar\gamma=\gamma|(t_0-\epsilon,t_0+\epsilon)$ as $\epsilon\to 0$. (If $t_0$ is the left or right endpoint of $\gamma$, use $[t_0,t_0+\epsilon)$ or $  (t_0-\epsilon,t_0]$ instead.) 
+subarcs $ \bar\gamma=\gamma|(t_0-\epsilon,t_0+\epsilon)$ as $\epsilon\to 0$. (If $t_0$ is the left or right endpoint of $\gamma$, use $[t_0,t_0+\epsilon)$ or $  (t_0-\epsilon,t_0]$ accordingly.) 
 %$$ \limsup \,k_{\kappa}( \tilde \gamma)\le k.$$  
 \end{thm}
 
@@ -70,11 +70,11 @@ Then
 $$k_{\kappa}( \gamma)\le k.$$
 \end{thm}
 
-The next corollary follows directly from  and spells out the significance of Theorem \ref{thm:global-arc-chord}:
+The next corollary  spells out the significance of, and follows directly from, Theorem \ref{thm:global-arc-chord}:
 
 \begin{thm}{Corollary}\label{cor:arc/chord-glob}    Suppose $\spc{X}\in\Cat{}{\kappa}$.  Let $\gamma\:[a,b]\to\spc{X}$ be a rectifiable curve having pointwise arc-chord curvature
 $ \le k$, and whose length $s$ and chord-length $r$ satisfy $s+r<2\varpi\kappa$.    Let $\sigma$ be the complete $k$-curve in
-$\Lob2\kappa$. Then 
+$\Lob2\kappa$. 
 
 \begin{subthm}{}  If $\gamma$ is
 closed and nonconstant, then $s \ge s_\sigma$.\end{subthm}
@@ -95,10 +95,14 @@ The former holds if $\diam\gamma \le \diam\sigma$.
 
 \begin{thm}{Theorem (Rigidity)}\label{thm:arc-chord-rigidity}
 Under the hypotheses of Theorem \ref{thm:global-arc-chord}, if 
-$\kappa_{K}(\gamma) = k$ then $\gamma$ and its chord bound a totally
+\[
+\kappa_{K}(\gamma) = k
+\] 
+then $\gamma$ and its chord bound a totally
 geodesic surface in $\spc{X}$ that is isometric to a domain  in $\Lob2\kappa$
-bounded by a $k$-curve and its chord.
+bounded by a $k$-curve of length $s$ and its chord.
 \end{thm}
+
 
 The proof of  Theorem \ref{thm:global-arc-chord} leads as well to the following useful lemma:
 
