@@ -206,103 +206,6 @@ Equality holds if and only  if $\dist{\~p}{r'}{}=\dist{p}{r}{}$,
 as required.
 \qeds
 
-
-
-
-
-
-
-
-\section{Quadruples}\label{sec:quad}
-
-Let $\spc{X}$ be a metric space.
-Consider quadruple of points in $\spc{X}$;
-say $\{x^1,x^2,x^3,x^4\}$.
-The points $x^i$ will be called \emph{vertices}\index{vertex of the quadruple} of the quadruple.
-
-The quadruple $\{x^1,x^2,x^3,x^4\}$
-is called \emph{$\kappa$-admissible}\index{$\kappa$-admissible quadruple} if all 4 model triangles 
-$\modtrig\kappa(x^ix^jx^\kay)$ are defined;
-otherwise it is called \emph{$\kappa$-inadmissible}\index{$\kappa$-inadmissible quadruple}.
-
-A $\kappa$-admissible quadruple $\{x^1,x^2,x^3,x^4\}$
-is called \emph{$\kappa$-model}\index{$\kappa$-model quadruple}
-if it is isometric to a quadruple in $\Lob3\kappa$.
-The later is equivalent to the fact that 
-for one (and therefore any) permutation $(i,j,\kay,\ell)$
-of $(1,2,3,4)$, 
-we have that the three angles $\angk\kappa{x^i}{x^j}{x^\kay}$,
-$\angk\kappa{x^i}{x^\kay}{x^\ell}$ and $\angk\kappa{x^i}{x^j}{x^\ell}$
-satisfy all three triangle inequalities 
-and
-\[\angk\kappa{x^i}{x^j}{x^\kay}+\angk\kappa{x^i}{x^\kay}{x^\ell}+\angk\kappa{x^i}{x^j}{x^\ell}
-\le 
-2\cdot\pi.\]
-
-Assume $\{x^1,x^2,x^3,x^4\}$ is $\kappa$-admissible.
-If 
-\[\angk\kappa{x^i}{x^j}{x^\kay}+\angk\kappa{x^i}{x^\kay}{x^\ell}+\angk\kappa{x^i}{x^j}{x^\ell}
-\le 
-2\cdot\pi\]
-for any permutation $(i,j,\kay,\ell)$
-of $(1,2,3,4)$, we call 
-%it 
-$\{x^1,x^2,x^3,x^4\}$ 
-\emph{$\kappa$-supermodel}\index{$\kappa$-supermodel quadruple}.
-%Note that any $\kappa$-supermodel quadruple is $\kappa$-model.
-
-A $\kappa$-admissible quadruple $\{x^1,x^2,x^3,x^4\}$
-is called \emph{$\kappa$-submodel} if it is $\kappa$-model
-or for some permutation $(i,j,\kay,\ell)$
-of $(1,2,3,4)$ we have 
-\[\angk\kappa{x^i}{x^j}{x^\kay}+\angk\kappa{x^i}{x^\kay}{x^\ell}+\angk\kappa{x^i}{x^j}{x^\ell}
->
-2\cdot\pi.\eqlbl{eq:>2pi}\]
-%%S
-In other words, 
-$\kappa$-submodels 
-consist of all $\kappa$-models and all $\kappa$-admissibles that are not $\kappa$-supermodels, and likewise $\kappa$-supermodels 
-consist of all $\kappa$-models and all $\kappa$-admissibles that are not $\kappa$-submodels.
-
-Since \ref{eq:>2pi} forces the three angles $\angk\kappa{x^i}{x^j}{x^\kay}$,
-$\angk\kappa{x^i}{x^\kay}{x^\ell}$ and $\angk\kappa{x^i}{x^j}{x^\ell}$ to 
-satisfy all three triangle inequalities, then $\kappa$-submodels also may be described as all $\kappa$-admissibles $\{x^1,x^2,x^3,x^4\}$ such that for some permutation $(i,j,\kay,\ell)$ of $(1,2,3,4)$, the three angles $\angk\kappa{x^i}{x^j}{x^\kay}$,
-$\angk\kappa{x^i}{x^\kay}{x^\ell}$ and $\angk\kappa{x^i}{x^j}{x^\ell}$
-satisfy all three triangle inequalities. 
-
-The following proposition gives yet another description of $\kappa$-submodel.
-
-\begin{thm}{Proposition}\label{prop:submodel}
-A $\kappa$-admissible 
-quadruple is $\kappa$-submodel 
-if and only if one of the following two equivalent conditions holds.
-
-\begin{subthm}{}
-For any labeling of the vertices 
-by $(p^1,p^2,x^1,x^2)$, at least one of the following two inequalities holds
-\begin{enumerate}[(i)]
-\item $\angk{\kappa}{p^1}{x^1}{x^2} 
-\le 
-\angk{\kappa}{p^1}{p^2}{x^1}+\angk{\kappa}{p^1}{p^2}{x^2}$
-\item $\angk{\kappa} {p^2}{x^1}{x^2}\le \angk{\kappa} {p^2}{p^1}{x^1} + \angk{\kappa} {p^2}{p^1}{x^2}$.
-\end{enumerate}
-\end{subthm}
-
-\begin{subthm}{}
-There is some labeling of the vertices by $(p,x^1,x^2,x^3)$ so that the three angles 
-$\angk\kappa p{x^1}{x^2}$,
-$\angk\kappa p{x^2}{x^3}$ and
-$\angk\kappa p{x^1}{x^3}$
-satisfy all three triangle inequalities.
-\end{subthm}
-
-\end{thm}
-
-
-\parit{Proof.}
-Follows from Overlap lemma (\ref{lem:extend-overlap}).
-\qeds
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Angles and the first variation.}\label{sec:angles}
@@ -388,15 +291,7 @@ If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then 
 \parbf{Remark.}
 The above theorem also holds for upper angles, see ???.
 
-\begin{wrapfigure}{l}{30mm}
-\begin{lpic}[t(-5mm),b(-30mm),r(0mm),l(0mm)]{pics/s-choice(0.33)}
-\lbl[rb]{45,101;$t$}
-\lbl[rt]{45,30;$\tau$}
-\lbl[W]{50,65;$s\ \ $}
-\lbl[l]{18,60,-25;$=\alpha^{12}+\eps$}
-\lbl[l]{18,69,24;$=\alpha^{23}+\eps$}
-\end{lpic}
-\end{wrapfigure}
+
 
 \parit{Proof.} 
 Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
@@ -421,6 +316,16 @@ Thus for any $\eps>0$,
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result.
 
+\begin{wrapfigure}{l}{30mm}
+\begin{lpic}[t(-5mm),b(-30mm),r(0mm),l(0mm)]{pics/s-choice(0.33)}
+\lbl[rb]{45,101;$t$}
+\lbl[rt]{45,30;$\tau$}
+\lbl[W]{50,65;$s\ \ $}
+\lbl[l]{18,60,-25;$=\alpha^{12}+\eps$}
+\lbl[l]{18,69,24;$=\alpha^{23}+\eps$}
+\end{lpic}
+\end{wrapfigure}
+
 To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
 We parametrize each ray by length from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be %a 
@@ -429,6 +334,26 @@ number such that
 $\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, % i.e. if $t$ and $\tau$ are both sufficiently small then so is $s$.
 so $t,\tau,s$ may be taken sufficiently small.
 \qeds
+
+\parbf{Space of directions}
+Assume $\spc{X}$ is a metric space with  \emph{defined angles};
+that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in $\spc{X}$.
+
+Fix a point $p\in \spc{X}$ and consider the set $\Gamma_p$ 
+of all geodesics  which start at $p$.
+By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\Gamma_p$;
+that is $\mangle$ defines a pseudometric on $\Gamma_p$.
+The metric space corresponding to the pseudometric space $(\Gamma_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+and denoted as $\Sigma'_p$.
+
+The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$;
+it formed by the equivalence class of geodesics starting from $p$ 
+for the equivalence realtion 
+\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
+
+
+The completion of $\Sigma'_p$ is called space of directions at $p$ and  is is denoted as $\Sigma_p$.
+The elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
 Assume for hinge $\hinge q p x$ 

@@ -1,15 +1,24 @@
 %%!TEX root = the-defs-CBA.tex
 
 \chapter{Definitions of curvature bounded above}
-We begin by defining $\Cat{}{\kappa}$ spaces and spaces of curvature $\le\kappa$ via a (2+2)-point comparison that concerns only distances and makes no assumptions on the presence of geodesics (Section~\ref{sec:cba-def}).  
+Section~\ref{sec:cba-def} defines $\cCat{}{\kappa}$ spaces via a (2+2)-point comparison; it concerns only distances 
+and makes no assumptions on the presence of geodesics.  
 Section~\ref{sec:cat-angles} gives definitions in terms of angle and distance comparisons for triangles.  
 Section~\ref{sec:thin-triangle} looks at thin triangles and their inheritance lemma. 
-Useful definitions in terms of convexity of distance functions and developments are formulated in Section~\ref{sec:func-comp}.
+Section~\ref{sec:func-comp} gives a useful definitions in terms of convexity of distance functions.
 
-The major globalization theorems are treated in Sections~\ref{sec:patchwork}, \ref{sec:geod-space}
-and \ref{sec:cat-globalize}: Alexandrov's patchwork theorem, and the no-conjugate-point, Hadamard--Cartan and lifting theorems. 
+Section~\ref{sec:convex-CBA} discusses convexity in the $\cCat{}{\kappa}$ spaces.
+Section~\ref{sec:development-CBA} we discuss a definition via developments of the curves.
 
-Reshetnyak's majorization theorem, a strong generalization of the thin-triangles definition of $\Cat{}{\kappa}$ spaces, is proved in Section \ref{sec:resh-kirz}.
+We give three types of globalization theorems:
+Patchwork globalization in \ref{sec:patchwork},
+Lifting globalization in \ref{sec:cat-globalize}
+and Hadamard--Cartan theorem in \ref{sec:Hadamard--Cartan}.
+
+The necesury technique to prove these theorems include 
+Reshetnyak's gluing theorem discussed in \ref{sec:cba-gluing},
+the structure of the space of geodesics discussed in \ref{sec:geod-space}
+and Reshetnyak Majorization theorem in \ref{sec:resh-kirz}.
 
 Section \ref{sec:angles-cba} discusses angles and the first variation formula.   
 
@@ -58,36 +67,62 @@ $\Cat{}{}$ stands for Cartan--Alexandrov--Toponogov,
 although Toponogov did not work with curvature bounded above.
 Previously, these spaces were called \emph{$\mathfrak{R}_\kappa$ domains}, which was Alexandrov's terminology.
 
+\begin{thm}{Definition}
+\label{def:ccat}
+A complete length space $\spc{U}$ 
+is called a \emph{$\cCat{}{\kappa}$ space} (also written $\spc{U}\in \cCat{}{\kappa}$) if every quadruple $p^1,p^2,x^1,x^2$ satisfies the (2+2)-point $\kappa$-comparison (\ref{def:2+2}).  
 
+We write $\spc{U}\in\cCat{}{}$ to mean: $\spc{U}\in\cCat{}{\kappa}$ for some $\kappa$.  
+\end{thm}
 
 \begin{thm}{Definition}
 \label{def:ccat}
-%A complete $\varpi\kappa$-length space $\spc{U}$ 
 A  $\varpi\kappa$-geodesic space $\spc{U}$
 is called a \emph{$\Cat{}{\kappa}$ space} (also written $\spc{U}\in \Cat{}{\kappa}$) if every quadruple $p^1,p^2,x^1,x^2$ satisfies the (2+2)-point $\kappa$-comparison (\ref{def:2+2}).  
 
-We denote the complete  $\Cat{}{\kappa}$ spaces by $\cCat{}{\kappa}$.
-
-
 We write $\spc{U}\in\Cat{}{}$ to mean: $\spc{U}\in\Cat{}{\kappa}$ for some $\kappa$.  
-
 \end{thm}
 
-Note that according to Proposition~\ref{prop:submodel},
-the $\Cat{}\kappa$ spaces can be defined as $\varpi\kappa$-geodesic spaces 
-all of which $\kappa$-admissible quadruples are $\kappa$-submodel;
-see the definitions in Section~\ref{sec:quad}.
-Proposition~\ref{prop:submodel} also provides the following equivalent way to define $\Cat{}\kappa$ spaces.
+Note that by definition completion of a $\Cat{}{\kappa}$ space is a $\cCat{}{\kappa}$.
+From Lemma on uniqueness of geodesics, see \ref{lem:cat-unique} below,
+it follows that any $\cCat{}{\kappa}$ space is $\varpi\kappa$-geodesic,
+in particular $\cCat{}{\kappa}\subset \Cat{}{\kappa}$.
+It often convinient to think of $\Cat{}{\kappa}$ spaces as $\varpi\kappa$-convex (not necesary closed) subset of a $\cCat{}{\kappa}$ space.
 
-\begin{thm}{Definition}
-\label{def:ccat-(3+1)}
-%A complete $\varpi\kappa$-length space $\spc{U}$ 
-A  $\varpi\kappa$-geodesic space $\spc{U}$
-is called a \emph{$\Cat{}{\kappa}$ space} if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
+%Note that according to Proposition~\ref{prop:submodel},
+%the $\Cat{}\kappa$ spaces can be defined as $\varpi\kappa$-geodesic spaces 
+%all of which $\kappa$-admissible quadruples are $\kappa$-submodel;
+%see the definitions in Section~\ref{sec:quad}.
+%Proposition~\ref{prop:submodel} also provides the following equivalent way to define $\Cat{}\kappa$ spaces.
+
+\begin{thm}{Exercise}
+\label{ex:ccat-(3+1)}
+A complete $\varpi\kappa$-length space $\spc{U}$ 
+is a $\cCat{}{\kappa}$ space 
+if and only if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
 $\angk\kappa p{x^1}{x^2}$,
 $\angk\kappa p{x^2}{x^3}$ and
 $\angk\kappa p{x^1}{x^3}$
 satisfy all three triangle inequalities.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{U}$ be a complete length space.
+
+Show that $\spc{U}\in\cCat{}{\kappa}$
+if and only if for any quadruple of points 
+$p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
+$\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$
+there is a quadruple $q^1,q^2,y^1,y^2$ in $\Lob m\kappa$
+such that 
+\begin{align*}
+\dist{q^1}{q^2}{}&=\dist{p^1}{p^2}{},
+\\
+\dist{y^1}{y^2}{}&=\dist{x^1}{x^2}{},
+\\
+\dist{q^i}{y^j}{}&\le \dist{p^i}{x^j}{}
+\end{align*}
+for any $i$ and $j$.
 \end{thm}
 
 Theorem~\ref{thm:cat-complete} gives an alternative definition of $\cCat{}{\kappa}$ spaces.
@@ -98,7 +133,7 @@ in particular, if $\kappa\le\Kappa$ then
  $$\Cat{}{\kappa}\subset\Cat{}{\Kappa}.$$ 
 The following definition gives an infinitesimal 
  notion of upper curvature bound at a point of a space.
-Initially we shall investigate $\Cat{}{\kappa}$ spaces, turning only in Section~\ref{sec:patchwork} to spaces with curvature bounded above. 
+ 
 
 \begin{thm}{Definition}\label{def:cba}
 Let $\spc{U}$ be a metric space and $p\in\spc{U}$.
@@ -107,10 +142,7 @@ We say that \emph{$\spc{U}$ has curvature $\le\kappa$ at $p$}
 if for any $\Kappa>\kappa$ there is $r>0$ such that $\oBall[p,r]\in\Cat{}{\Kappa}$.
 
 We say that a space $\spc{U}$ has curvature $\le\kappa$ (briefly,  $\curv\spc{U}\le\kappa$) 
-if $\curv_p \spc{U}\le\kappa$ for any $p\in\spc{U}$.
-
-We write $\spc{U}\in\CBA{}{}$ to mean: $\spc{U}$ has curvature $\le\kappa$ for some $\kappa$.  
-We also refer to $\spc{U}$ as a $\CBA{}{}$ space.   
+if $\curv_p \spc{U}\le\kappa$ for any $p\in\spc{U}$.   
 \end{thm}
 
 If $\spc{U}\in\Cat{}{\kappa}$ then $\curv\spc{U}\le\kappa$; this fact follows from Proposition~\ref{prop:inherit-bound}.
@@ -123,7 +155,7 @@ However, it is true that an infinitesimal bound always implies a local bound; th
 $\curv\spc{U}\le\kappa$, then for any $p$ there is $r>0$ such that $\oBall[p,r]\in\Cat{}{\kappa}$ (Corollary \ref{cor:k-for-k}).
 
 
-The next lemma follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower (see Section~\ref{ultralimits}).
+The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower (see Section~\ref{ultralimits}).
 
 
 \begin{thm}{Proposition}
@@ -137,8 +169,8 @@ Moreover, for a complete metric space $\spc{U}$,
 
 \end{thm} 
 
-\begin{thm}{Unique geodesics}\label{lem:cat-unique} 
-In a $\Cat{}{\kappa}$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+\begin{thm}{Lemma on uniqueness of geodesics}\label{lem:cat-unique} 
+In a $\cCat{}{\kappa}$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 \parit{Proof.} 
@@ -157,6 +189,16 @@ Apply (2+2)-point comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z$.
 For $p=p^1$ or $p=p^2$, we see that $\angk{\kappa} {p}{z_n}{z}$ is arbitrarily small when $n$ is sufficiently large.  
 By the law of cosines, \ref{eq:z_n->z} follows.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:CAT-mnfld=>ext.geod}
+Let $\spc{U}\in\cCat{}{}$.
+Assume $\spc{U}$ is a topological manifold.
+Show that any geodesic in $\spc{U}$ can be extended 
+as a two-side infinite local geodesic.
+
+Moreover the same holds for any $\spc{U}\in\Cat{}{}$ with nontrivial local homology groups at any point;
+in particular if $\spc{U}$ is a homological manifold.
+\end{thm}
 
 The following theorem is dual to Plaut's theorem (\ref{thm:almost.geod}).
 
@@ -194,7 +236,7 @@ The completion $\spc{U}^c$ of $\spc{U}\in\Cat{}{\kappa}$ satisfies $\spc{U}^c\in
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{More comparisons.}\label{sec:cat-angles}
+\section{More comparisons}\label{sec:cat-angles}
 
 Here we give a few reformulations of Definition~\ref{def:ccat}.
 
@@ -338,6 +380,17 @@ In particular, if $\bar p\in \l]x p\r]$ then
 \end{subthm}
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:cats-cradle}
+Assume $\spc{U}\in \Cat{}{0}$.
+Show that for any two geodesic paths 
+$\gamma,\sigma\:[0,1]\to \spc{U}$
+the function 
+\[t\mapsto\dist{\gamma(t)}{\sigma(t)}{}\] 
+is convex.
+\end{thm}
+
+
+
 \begin{thm}{Proposition}
 \label{prop:inherit-bound}
 If $\kappa<\Kappa$, then 
@@ -358,7 +411,10 @@ The second statement follows since the function $\kappa\mapsto\angk\kappa x y z$
 
 In this section we introduce the notion of thin triangles,
 use it to give another definition of $\Cat{}{}$ spaces,
-and prove inheritance for thin triangles with respect to decomposition. The inheritance lemma will lead to two fundamental constructions:  Alexandrov's patchwork globalization  (\ref{thm:alex-patch}) and Reshetnyak gluing (\ref{thm:gluing}).
+and prove inheritance for thin triangles with respect to decomposition. 
+The inheritance lemma will lead to two fundamental constructions:  
+Alexandrov's patchwork globalization  (\ref{thm:alex-patch}) 
+and Reshetnyak gluing (\ref{thm:gluing}).
  
 \begin{thm}{Definition of $\kappa$-thin triangles%make kappa bold???
 }\label{def:k-thin}
@@ -370,6 +426,30 @@ that sends a point $\~z\in[\~x^i\~x^j]$ to the corresponding point $z\in[x^ix^j]
 (i.e. such that $\dist{\~x^i}{\~z}{}=\dist{x^i}{z}{}$ and therefore $\dist{\~x^j}{\~z}{}=\dist{x^j}{z}{}$).
 
 We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-thin}\index{$\kappa$-thin} if the natural map $\trig{\~x^1}{\~x^2}{\~x^3}\to \trig{x^1}{x^2}{x^3}$ is short.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{U}\in \Cat{}{\kappa}$,
+$\trig xyz$ is a triangle in $\spc{U}$
+and $\trig{\~x}{\~y}{\~z}$ is its model triangle in $\Lob{2}{\kappa}$.
+Prove that the natural map $f\:\trig{\~x}{\~y}{\~z}\to \trig xyz$ 
+ is distance-preserving if and ony if one of the following conditions hold.
+
+\begin{subthm}{}
+$\mangle\hinge x y z= \angk\kappa x y z$,
+\end{subthm}
+
+\begin{subthm}{}
+$\dist{x}{w}{}=\dist{\~x}{\~w}{}$ for some  $\~w\in]\~y\~z[$ and
+$w= f(\~w)$   
+\end{subthm}
+
+\begin{subthm}{} 
+$\dist{v}{w}{}=\dist{\~v}{\~w}{}$ for some  
+$\~v\in \l]\~x \~y\r[$,  $\~w\in\l]\~x \~z\r[$
+and $v=f(\~v)$, $w=f(\~w)$.
+\end{subthm} 
+
 \end{thm}
 
 
@@ -568,39 +648,209 @@ By Property~\ref{md-diff-eq}, we have $\~f''=1-\kappa\cdot  \~f$. Clearly $\~f(t
 The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\~r(t)$  for all $t\in[0,\dist{x}{y}{}]$.  Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, $r\le \~r$ and $f\le \~f$ are equivalent.  Thus the claim follows by Jensen's inequality 
 (\ref{y''-mono}). \qeds
 
-\begin{thm}{Corollary}\label{thm:convex-balls}
+\section{Convex sets}\label{sec:convex-CBA}
+
+The following is a corollary of Theorem \ref{thm:function-comp}.
+
+\begin{thm}{Corollary}\label{cor:convex-balls}
 Suppose $\spc{U}\in\Cat{}{\kappa}$.
-Then:
-
-\begin{subthm}{thm:convex-balls:<r<pi/2}
-Any open ball of radius $R\le\varpi\kappa/2$ in $\spc{U}$ is convex.
-\end{subthm}
-
-\begin{subthm}{thm:convex-balls:=<r<pi/2}
-Any closed ball of radius $R<\varpi\kappa/2$ in $\spc{U}$ is convex.
-\end{subthm}
-
-
-
-\begin{subthm}{thm:convex-balls:=<pi/2}
-If $\spc{U}\in\cCat{}{\kappa}$, any closed ball of radius $R=\varpi\kappa/2$ in $\spc{U}$ is weakly convex.
-\end{subthm}
-
+Then any ball (close or open) of radius $R\le\tfrac{\varpi\kappa}2$ in $\spc{U}$ is $\varpi\kappa$-convex.
 \end{thm}
 
 \parit{Proof.}
-Suppose $p\in\spc{U}$, $ R\le\varpi\kappa/2$ and $x,y\in\oBall(p, R)$.
-By the triangle inequality, $\dist{x}{y}{}<\varpi\kappa$ and so any 
+Suppose $p\in\spc{U}$, $ R\le\varpi\kappa/2$ and two points 
+$x$ and $y$ lie in $\cBall[p, R]$ or $\oBall(p, R)$.
+By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$ then any
  geodesic $[x y]$ lies in $\oBall(p, \varpi\kappa)$.
-The function comparison (\ref{thm:function-comp}) gives $[x y]\subset \oBall(p,R)$. Hence (\ref{SHORT.thm:convex-balls:<r<pi/2}).
-
-The part (\ref{SHORT.thm:convex-balls:=<r<pi/2}) follows since for any $R<\varpi\kappa/2$, 
-\[\cBall[p,R]=\bigcap_{R<\bar R\le\varpi\kappa/2}\oBall(p,\bar R).\]
-
-Finally, since $\spc{U}$ is a locally length space,
-$\cBall[p,\varpi\kappa/2]$ is the Hausdorff limit of $\cBall[p,R]$ for $R\to(\tfrac{\varpi\kappa}2)-$.
-Hence (\ref{SHORT.thm:convex-balls:=<pi/2}) follows from \ref{prop:weak-convex-stable}.
+ 
+By function comparison (\ref{thm:function-comp})
+the geodesic $[x y]$ lies in $\cBall[p,R]$ and $\oBall(p,R)$ correspondingly.
 \qeds
+
+\begin{thm}{Proposition}
+Any weakly $\varpi\kappa$-convex set 
+in a $\cCat{}{\kappa}$ space is $\varpi\kappa$-convex.
+\end{thm}
+
+\parit{Proof.}
+Follows from the uniqueness of geodesics in $\cCat{}{\kappa}$ spaces (\ref{lem:cat-unique}).
+\qeds
+
+
+\begin{thm}{Closest-point projection lemma}\label{lem:closest point}
+Let $\spc{U}\in\cCat{}\kappa$ and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+Assume that $\dist{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
+Then  
+there is unique point $p^*\in K$ which minimze the distance to $p$;
+that is $\dist{p^*}{p}{}=\dist{K}{p}{}$. 
+
+
+
+\end{thm}
+
+\parit{Proof.} 
+Fix $r$ between $\dist{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
+By function comparison (\ref{thm:function-comp}) 
+the function $f=\md\kappa\circ\dist{p}{}{}$ is strongly convex in $\cBall[p,r]$.
+
+The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'=K\cap\cBall[p,r]$ 
+and the restriction $f|K'$. 
+\qeds
+
+\begin{thm}{Exercise}
+Let  $\spc{U}\in\cCat{}0$ and $K\subset \spc{U}$ be a closed convex set.
+Show that the closest-point projection $\spc{U}\to K$ is short. 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:short-retraction-CBA(1)}
+Let  $\spc{U}\in\cCat{}1$ and $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Assume $K\subset \cBall(p,\tfrac\pi2)$ for some point $p\in \spc{U}$.
+Show that there is a short retractionof $\spc{U}$ on $K$. 
+\end{thm}
+
+
+
+\begin{thm}{Lemma}\label{lem:dist-to-convex}
+Let $\spc{U}\in \cCat{}{\kappa}$ 
+and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
+Set
+\[f=\sn\kappa\circ\dist{K}{}{}.\]
+Then
+\[f''+\kappa \cdot f\ge 0\]
+holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
+\end{thm}
+
+\parit{Proof.}
+It is sufficient to show that Jensen's inequality (\ref{y''-mono})
+holds on a sufficiently short 
+geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
+Namely, since 
+\[\dist{K}{p}{},\dist{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
+we can assume that 
+\[\dist{p}{q}{}+\dist{K}{p}{}+\dist{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
+
+Namely, for each $x\in[pq]$,
+we need to find a value $h(x)\in \RR$
+such that for any $x$ we have
+\begin{align*}
+h(x)&\le f(x),&
+h(p)&=f(p),& 
+h(q)&=f(q),
+\end{align*}
+and
+\[h''+\kappa\cdot h\ge 0\eqlbl{h''+kh=<0}\]
+along $[pq]$.
+
+Denote by $p^{*}$ and $q^{*}$ the closest-point projections of $p$ and $q$ on $K$; 
+they are provided by lemma \ref{lem:closest point}.
+From \ref{eq:sum=<varpi} and triangle inequality,
+we get 
+\[\dist{p^*}{q^*}{}<\varpi\kappa.\]
+Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
+in particular
+\[\dist{K}{x}{}\le \dist{[p^*q^*]}{x}{}\]
+for any $x\in \spc{U}$.
+
+Consider a majorization $F$ for quadraliteral $[pp^{*}q^{*}q]$.
+By Majoriztion theorem \ref{thm:major} and Proposition \ref{prop:majorize-geodesic}, 
+the figure $F$ is a solid convex model quadraliteral $[\~p\~p^*\~q^*\~q]$ in $\Lob2\kappa$ such that 
+\begin{align*}
+\dist{\~p}{\~p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}}
+&
+\dist{\~p}{\~q}{\Lob2\kappa}&=\dist{p}{q}{\spc{U}}
+\\
+\dist{\~q}{\~q^*}{\Lob2\kappa}&=\dist{q}{q^*}{\spc{U}}
+&
+\dist{\~p^*}{\~q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}
+\end{align*}
+Given $x\in [pq]$, denote by $\~x$ the corresponding point on $[\~p\~q]$.
+According to Majorization theorem, 
+\[\dist{[pq]}{x}{\spc{U}}
+\le
+\dist{[\~p\~q]}{\~x}{\Lob2\kappa}\]
+for any $x$.
+Set 
+\[h(x)
+=
+\sn\kappa
+\dist{[\~p\~q]}{\~x}{\Lob2\kappa}.\]
+By straghtforward calculations \ref{h''+kh=<0} hods
+and hence the staement follows.
+\qeds
+
+\begin{thm}{Corollary}\label{cor::dist-to-convex}
+Let $\spc{U}\in \cCat{}{\kappa}$ 
+and $K\subset \spc{U}$ be a closed  locally convex set.
+Then there is an open set $\Omega\supset K$
+such that the function 
+\[f=\sn\kappa\circ\dist{K}{}{}\]
+sutisfies 
+\[f''+\kappa\cdot f\ge 0\]
+in $\Omega$.
+\end{thm}
+
+\parit{Proof.}
+Fix $p\in K$.
+By Corollary~\ref{cor:convex-balls},
+all $\cBall[p,r]$ is convex for all small $r>0$.
+
+Since $K$ is locally convex there is $r_p>0$ such that 
+the intesection 
+$K'=K\cap \oBall(p,r_p)$ is convex. 
+
+Note that 
+\[\dist{K}{x}{}=\dist{K'}{x}{}\]
+for any $x\in \oBall(p,\tfrac{r_p}2)$.
+Therefore the statement holds for 
+\[\Omega=\bigcup_{p\in K}\oBall(p,\tfrac{r_p}2).\]
+\qedsf
+
+
+
+\begin{thm}{Theorem}
+Assume $\spc{U}\in \cCat{}{\kappa}$ and $K\subset \spc{U}$ is a closed connected locally convex set.
+Assume $\dist{x}{y}{}<\varpi\kappa$ for any $x,y\in K$.
+Then $K$ is convex.
+
+In particular, if $\kappa\le 0$ then any closed connected locally convex set in a $\cCat{}{\kappa}$ space is convex.
+\end{thm}
+
+The following proof is inspired by the answer of Sergei Ivanov to the question of Nathan Reading, see \cite{ivanov:local-global-convexity}.
+
+\parit{Proof.}
+Since $K$ is locally convex,
+it is locally path connected.
+Since $K$ is connected and locally path connected it is path connected.
+
+Fix two points $x,y\in K$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
+Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
+Lemma \ref{lem:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
+uniquely defined and depends continuously on $s$.
+
+Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
+If $[xy]=[x\alpha(1)]$ does not completely lie in $K$ then 
+there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
+lies in $\Omega$,
+but does not completely lie in $K$.
+By Corollary~\ref{cor::dist-to-convex},
+the finction $f=\sn\kappa\circ\dist{K}{}{\spc{U}}$ 
+satisfies differential inequality
+\[f''+\kappa\cdot f\ge 0\eqlbl{f''+kappa f=<0}\]
+along $[x\alpha(s)]$.
+
+Since 
+\begin{align*}
+\dist{x}{\alpha(s)}{}&<\varpi\kappa,
+&
+f(x)&=f(\alpha(s))=0,
+\end{align*}
+the barrier inequality (\ref{barrier}) 
+implies that $f(z)\le 0$ for $z\in [x\alpha(s)]$;
+that is $[x\alpha(s)]\subset K$, a contradiction.
+\qeds
+
+\section{Development}\label{sec:development-CBA}
  
 Geometrically,   the development construction (\ref{def:devel}) translates distance comparison into a local convexity statement for subsets of $\Lob2\kappa$.  Recall that a curve in $\Lob2\kappa$ is \emph{(locally) concave with respect to $p$} if (locally) its supergraph with respect to $p$ is a convex subset of $\Lob2\kappa$ (\ref{def:convex-devel}).
 
@@ -693,7 +943,7 @@ Hence the result.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Alexandrov's patchwork globalization}\label{sec:patchwork}
+\section{Patchwork globalization}\label{sec:patchwork}
 
 The following theorem, 
 which essentially is  \cite[Satz 9]{alexandrov:devel}, 
@@ -717,16 +967,6 @@ $\curv\spc{U}\le\kappa$; moreover,  pairs of points in $\spc{U}$ at distance $<\
 Note that the implication (\ref{SHORT.thm:alex-patch:ccat})$\Rightarrow$(\ref{SHORT.thm:alex-patch:geo-uni})
 is immediate, being the statement of Lemma \ref{lem:cat-unique}.
 
-
-The following corollary is immediate.
-(Recall that convex and weakly convex sets are defined in Section~\ref{sec:convex-set}.)
-
-\begin{thm}{Corollary}\label{cor:weak>convex}
-In a $\Cat{}{\kappa}$ space,
-any weakly $\varpi\kappa$-convex set is $\varpi\kappa$-convex.
-
-\end{thm}
-
 The next corollary states that an infinitesimal curvature bound in a neighborhood of a point implies a local curvature bound.
 
 \begin{thm}{Corollary}\label{cor:k-for-k}
@@ -741,7 +981,7 @@ Fix $\Kappa>\kappa$.
 According to Definition~\ref{def:cba},
 there is $R>0$ such that $\oBall(p,R)\in\Cat{}{\Kappa}$.
 We may assume that $\oBall(p,R)\subset\Omega$ and $R<\varpi\Kappa/2$.
-According to Corollary~\ref{thm:convex-balls}, we may assume that
+According to Corollary~\ref{cor:convex-balls}, we may assume that
 \begin{itemize}
 \item $R<\varpi\Kappa/2$,
 \item $\oBall(p,R)$ is convex,
@@ -812,6 +1052,128 @@ Applying the lemma again shows that the  triangles $\trig{x}{x^{0,N}}{x^{2,N}}$,
 \end{itemize}
 In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\Kappa$-thin.
 \qeds
+
+\section{Reshetnyak's gluing theorem.}\label{sec:cba-gluing}
+
+The following theorem was proved by Reshetnyak \cite{reshetnyak:glue},  assuming $\spc{U}_1$, $\spc{U}_2$ are proper.
+
+\begin{thm}{Reshetnyak gluing}\label{thm:gluing}
+Suppose 
+$\spc{U}_1$ and $\spc{U}_2$ are $\varpi\kappa$-geodesic spaces 
+with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
+Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
+i.e., $\spc{W}$ is gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$;see Section~\ref{sec:quotient}.
+
+Then 
+\begin{subthm}{gluing0}
+Both canonical mappings $\jmath_i\:\spc{U}_i\to\spc{W}$ are isometric 
+and the images $\jmath_i(\spc{U}_i)$ are $\varpi\kappa$-convex subsets in $\spc{W}$.
+\end{subthm}
+
+\begin{subthm}{gluing2}
+If $\spc{U}_1, \spc{U}_2\in\cCat{}{\kappa}$  
+then $\spc{W}\in\cCat{}{\kappa}$.
+\end{subthm} 
+\end{thm}
+
+\parit{Proof.} 
+Part (\ref{SHORT.gluing0})
+follows directly from $\varpi\kappa$-convexity of $A_i$.
+
+\parit{(\ref{SHORT.gluing2}).} 
+According to (\ref{SHORT.gluing0}),
+we can identify $\spc{U}_i$ with its image $\jmath_i(\spc{U}_i)$ in $\spc{W}$;
+this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
+Note that $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
+therefore $A$ is also $\varpi\kappa$-convex set in $\spc{W}$.
+
+Further note that completeness of $\spc{U}_1$ and $\spc{U}_2$ implies completeness of $\spc{W}$.
+Thus part (\ref{SHORT.gluing2}) can be reformulated the following way:
+
+\begin{thm}{Reformulation of \ref{gluing2}}
+Let $\spc{W}$ be a complete length space which has two closed $\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+$\spc{U}_1\cup\spc{U}_1=\spc{W}$ and $\spc{U}_1,\spc{U}_2\in\cCat{}{\kappa}$.
+Then $\spc{W}\in\cCat{}{\kappa}$.
+\end{thm}
+
+Set $A=\spc{U}_1\cap\spc{U}_1$.
+First we prove the following:
+
+\begin{clm}{}\label{clm:geod-gluing}
+If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic then $\spc{W}\in\cCat{}{\kappa}$
+\end{clm}
+
+
+
+\begin{wrapfigure}{r}{20mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]
+{pics/resh-glue(1)}
+\lbl[l]{6.5,21;$x^0$}
+\lbl[r]{1.5,1.5;$x^1$}
+\lbl[tl]{16,0.5;$x^2$}
+\lbl[rb]{4,11;$z^1$}
+\lbl[lb]{13,8;$z^2$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{Proof of the claim.}
+According to \ref{prop:k-thin},
+it is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
+in $\spc{W}$ is $\kappa$-thin.
+This is obviousely true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}_i$.
+Thus, without loss of generality, we may assume that $x^0\in\spc{U}_1$ and $x^1,x^2\in\spc{U}_2$.
+
+Choose points $z^1,z^2\in A$ 
+which lie correspondingly on the sides $[x^0x^1], [x^0x^2]$.
+Note that all distances between any pair of points from $x^0$, $x^1$, $x^2$, $z^1$, $z^2$ are less than $\varpi\kappa$.
+Therefore
+\begin{itemize}
+\item triangle $\trig{x^0}{z^1}{z^2}$ lies in $\spc{U}_1$,
+\item both triangles $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ lie in $\spc{U}_2$.
+\end{itemize}
+In particular each triangle $\trig{x^0}{z^1}{z^2}$,
+$\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
+
+Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice 
+we get that $\trig {x^0}{x^1}{z^2}$ 
+and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
+\claimqeds
+
+Now we come back to the general case;
+i.e., $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
+Note that the ultrapower $\spc{W}^\o$ is geodesic, see \ref{cor:ulara-geod}.
+It is easy to see that 
+\begin{itemize}
+\item $\spc{U}_i^\o$ form weak $\varpi\kappa$-convex sets of $\spc{W}^\o$,
+\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
+\end{itemize}
+%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
+From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o\in \cCat{}{\kappa}$.
+According to Corollary~\ref{cor:weak>convex}, 
+we get that $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
+concequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
+
+From Claim~\ref{clm:geod-gluing}, 
+we get $\spc{W}^\o\in\cCat{}{\kappa}$.
+Applying the Proposition~\ref{prop:CAT^omega} once more, 
+we get $\spc{W}\in\cCat{}{\kappa}$.
+\qeds 
+
+\begin{thm}{Exercise}
+Let $Q$ be the nonconvex subset of the plane 
+bounded by two rays $\gamma_1$ and $\gamma_2$
+with common starting point and angle $\alpha$ between them.
+Assume $\spc{U}\in\cCat{}{0}$
+and $\gamma_1',\gamma_2'$ be two rays in $\spc{U}$
+starting point and angle $\alpha$ between them.
+Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\cCat{}{0}$ space.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
+Assume $\spc{U}\in\cCat{}{0}$ and $A\subset \spc{U}$ is a closed subset.
+Assume that the doubling of $\spc{U}$ in $A$ is $\cCat{}{0}$. 
+Show that $A$ is a totally convex set of $\spc{U}$.
+\end{thm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1106,7 +1468,7 @@ $\cBall(p,r)$.
 This proves the first part of theorem.
 
 To prove the second part, lat us choose $\rho_p$ to be maximal value $\le\tfrac{\varpi\kappa}2$ such that $\cBall(p,\rho_p)\in\Cat{}{\kappa}$.
-By Corollary~\ref{thm:convex-balls}, the ball
+By Corollary~\ref{cor:convex-balls}, the ball
 \[\oBall(q,\rho_p-\dist{p}{q}{})\] 
 is convex in $\oBall(p,\rho_p)$.
 Therefore  
@@ -1340,7 +1702,7 @@ In this case, we say that $D$ \emph{majorizes} the curve $\alpha=F\circ\~\alpha$
 The following proposition is an immediate consequence of the definition.
 
 \begin{thm}{Proposition}
-\label{lem:majorize-geodesic} 
+\label{prop:majorize-geodesic} 
 Let  $\alpha$  be a closed curve in a metric space $\spc{X}$.
 Suppose $D\subset\Lob2{\kappa}$ majorizes $\alpha$ under $F\: D \to \spc{X}$.  
 Then any geodesic subarc of $\alpha$ is the image under $F$ of a subarc of $\Fr D$ that is geodesic in the length-metric of $D$.
@@ -1360,11 +1722,11 @@ Then $D=\Conv\trig{\~p}{\~x}{\~y}$ for a model triangle $\trig{\~p}{\~x}{\~y}=\m
 
 Now we come to the main theorem of this section.
 
-\begin{thm}{Reshetnyak majorization theorem}
+\begin{thm}{Majorization theorem}
 \label{thm:major}
 Any closed curve $\alpha$ of length $<2\cdot \varpi\kappa$ in $\spc{U}\in\Cat{}{\kappa}$ is majorized by a convex region in $\Lob2\kappa$. \end{thm}
 
-This theorem is proved in \cite{reshetnyak:major};
+This theorem is proved by Reshetnyak in \cite{reshetnyak:major};
 our proof also uses a trick from \cite{ballmann:notes}.
 
 %One can build another proof based on Kirszbraun's theorem (\ref{thm:kirsz+}).%, but it works only for complete spaces
@@ -1509,7 +1871,7 @@ where the lefthand side converges to $\dist{H(x)}{H(y)}{}$  and the righthand si
 
 
 
-\parit{Proof of Reshetnyak majorization theorem (\ref{thm:major}).}
+\parit{Proof of majorization theorem (\ref{thm:major}).}
 We begin by proving the theorem in case $\alpha$ is polygonal.
 
 First suppose $\alpha$ is a triangle, say $\trig p x y$.
@@ -1608,6 +1970,33 @@ For $n=1$, the following lemma states that in a $\Cat{}{\kappa}$ space,
 a sharp triangle comparison implies the
 presence  of an isometric copy of the convex hull of the model triangle. This rigidity statement was proved in \cite{alexandrov:devel}.
 The analogue for $\CBB{}{\kappa}$-spaces fails (see Exercise \ref{ex:not-flat}).
+
+The following exercise is the rigidity case 
+of the Majorization theorem.
+
+\begin{thm}{Exercise}\label{ex:isometric-majorization}
+Let $\spc{U}\in \Cat{}{\kappa}$
+and $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
+Assume that $\ell<2\cdot \varpi\kappa$
+and there is a closed convex curve $\~\alpha\:[0,\ell]\to\Lob{2}{\kappa}$ such that 
+\[\dist{\alpha(t_0)}{\alpha(t_1)}{\spc{U}}=\dist{\~\alpha(t_0)}{\~\alpha(t_1)}{\Lob{2}{\kappa}}\]
+for any $t_0$ and $t_1$.
+Then there is a distance preserving map $F\:\Conv\~\alpha\to \spc{U}$
+such that $F\:\~\alpha(t)\mapsto \alpha(t)$ for any $t$.
+\end{thm}
+
+\begin{thm}{Exercise}
+In $\spc{U}\in\Cat{}{\kappa}$, show that if a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$  is not a triangle, then exactly one of these statements holds:
+
+\begin{subthm}{}
+$\alpha$ is majorized by two non-isometric convex regions in $\Lob2\kappa$;
+\end{subthm}
+
+\begin{subthm}{}
+the majorizing map for $\alpha$ is distance preserving.
+\end{subthm}
+
+\end{thm}
   
 \begin{thm}{Arm lemma}\label{lem:arm}
 Let $\spc{U}\in\Cat{}{\kappa}$, 
@@ -1638,8 +2027,8 @@ to a distance-preserving map of $\Conv(\~x^0,\~x^1\dots \~x^{n+1})$ onto $\Conv(
 \end{thm}
 
 \parit{Proof. \ref{SHORT.subthm:arm-ineq}).}
-By Reshetnyak majorization (\ref{thm:major}), $P$ is majorized by a convex region $\~D$ in $\Lob{2}{\kappa}$.
-By Proposition \ref{lem:majorize-geodesic} and the definition of angle,
+By majorization (\ref{thm:major}), $P$ is majorized by a convex region $\~D$ in $\Lob{2}{\kappa}$.
+By Proposition \ref{prop:majorize-geodesic} and the definition of angle,
 $\~D$ is bounded by a convex polygon $\~P_R=[~y^0\~y^1\dots \~y^{n+1}]$ that satisfies
 \begin{align*}
 \dist{\~y^i}{\~y^{i\pm1}}{\Lob{2}{\kappa}}
@@ -1728,10 +2117,23 @@ Then (ii) follows from \ref{eq:angle-arm-eq} and \ref{clm:arm-triangle}.  Since 
 
 Let $\~\gamma$ be a geodesic of $\Conv(\~x^{n+1},\~x^0,\~x^1\dots \~x^{k+1})$.  Then $\length \~\gamma < \varpi\kappa$.  If $\~\gamma$ does not pass through the point $[\~x^{k-1}\~x^{k+1}] \cap [\~x^{k}\~x^{n+1}]$, it  follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\~\gamma$  is a local geodesic of length $< \varpi\kappa$.  By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.  By continuity, $F\circ\~\gamma$ is a geodesic for all $\~\gamma$. \ref{clm:arm-induction} follows and hence the lemma.
  \qeds
+ 
+\begin{thm}{Exercise}\label{ex:square}
+Let $\spc{U}\in\cCat{}{0}$ and for 4 points $x_1,x_2,x_3,x_4\in \spc{U}$
+there is a convex quadrilateral
+$[\~x_1\~x_2\~x_3\~x_4]$
+in $\EE^2$
+such that 
+\[\dist{x_i}{x_j}{\spc{U}}=\dist{\~x_i}{\~x_j}{\EE^2}\]
+for all $i$ and $j$.
+Show that $\spc{U}$ contains an isometric copy of the 
+\emph{solid quadrilateral}
+$[\~x_1\~x_2\~x_3\~x_4]$; that is the convex hull of $\~x_1,\~x_2,\~x_3,\~x_4$ in $\EE^2$
+\end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Hadamard--Cartan theorem}
+\section{Hadamard--Cartan theorem}\label{sec:Hadamard--Cartan}
 
 The Hadamard--Cartan theorem was first stated for geodesic spaces by Gromov  \cite[p.119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given in \cite{ballmann:cartan-hadamard}, using Birkhoff curve-shortening.  
@@ -1832,7 +2234,7 @@ Applying the lifting property for $\alpha_x$,
 we get existence of curve $\hat\gamma_2\:\SS^1\to \spc{B}$ such that
 $$\gamma_2=\map\circ\hat\gamma_2.$$
 
-Since $\spc{B}\in\Cat{}{\kappa}$, we can apply Reshetnyak majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
+Since $\spc{B}\in\Cat{}{\kappa}$, we can apply majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
 The composition of the obtained majorization with $\map$ is a majorization of $\gamma_2$.
 \qeds
 
@@ -1929,6 +2331,26 @@ Joining the obtained homotopies for all $i$ we get a homotoply from $\gamma_0$ t
 \begin{thm}{Exercise}
 Let $\spc{X}$ be a double cover of $\EE^3$ which is branching along two distinct lines $\ell^1$ and $\ell^2$.
 Show that  $\spc{X}\in\cCat{}{0}$ if and only if $\ell^1$ intersect $\ell^2$ at right angle.
+\end{thm}
+
+\parbf{About convex spaces.}
+A \emph{convex space} $\spc{X}$ is a geodesic space such that the function
+$t\mapsto\dist{\gamma(t)}{\sigma(t)}{}$ is convex 
+for any two  geodesic paths $\gamma,\sigma:[0,1]\to \spc{X}$.  
+A \emph{locally convex space} is a length space in which every point has a neighborhood that is a convex space in the restricted metric.
+
+
+\begin{thm}{Exercise}\label{ex:cats-cradle}
+Assume $\spc{X}$ is a convex space 
+such that angle of any hinge is defined.
+Show that $\spc{X}$ is $\Cat{}{0}$.
+\end{thm}
+
+The following exercise gives an analog of Hadamard--Cartan theorem for locally convex spaces;
+see also \cite{a-b:h-c}.
+
+\begin{thm}{Exercise}\label{ex:cats-cradle}
+Show that a complete, simply connected, locally convex space is a convex space.
 \end{thm}
 
 
@@ -2120,11 +2542,9 @@ Then for any hinge  $\hinge  p q x$ in $\spc{U}$,
 we have
 \[\mangle\hinge p q x
 =
-\lim_{
-\substack{
-\bar x\to p
-\\
-\bar x\in\l]px\r]}}\angk\kappa p q{\bar x}\eqlbl{eq:cba-1st-var+***}\]
+\lim_{\bar x\to p}
+\set{\angk\kappa p q{\bar x}}{\bar x\in\l]px\r]}
+\eqlbl{eq:cba-1st-var+***}\]
 for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
 \end{thm}
 
@@ -2183,14 +2603,6 @@ Here the final equality follows from
 \]
 \qeds
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\input{jac-length.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{tmp-13.tex}
-
 \section{Remarks and open problems}
 
 %One may consider the following alternative to definition of $\cCat{}{}$ space which is apparently more standard in the literature. 
@@ -2236,164 +2648,15 @@ Is it true that $K$ lies in a convex compact set $\bar K\subset\spc{U}$?
 The question can  easily be reduced to the case when $K$ is finite;
 so far it is not even known if any three points in a $\Cat{}{0}$-space lie in a compact convex set.
 
-\section{Exercises}
-
-\begin{thm}{Exercise}
-Let $\spc{U}$ be a complete length space.
-
-Show that $\spc{U}\in\cCat{}{\kappa}$
-if and only if for any quadruple of points 
-$p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
-$\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$
-there is a quadruple $q^1,q^2,y^1,y^2$ in $\Lob m\kappa$
-such that 
-\begin{align*}
-\dist{q^1}{q^2}{}&=\dist{p^1}{p^2}{},
-\\
-\dist{y^1}{y^2}{}&=\dist{x^1}{x^2}{},
-\\
-\dist{q^i}{y^j}{}&\le \dist{p^i}{x^j}{}
-\end{align*}
-for any $i$ and $j$.
-\end{thm}
 
 
-\begin{thm}{Exercise}\label{ex:cats-cradle}
-A \emph{convex space} $ \spc{X}$ is a geodesic space such that the function
-$t\mapsto\dist{\gamma(t)}{\sigma(t)}{}$ is convex 
-for any two  geodesics $\gamma,\sigma:[0,a)\to \spc{X}$.  
-A \emph{locally convex space} is an length space in which every point has a neighborhood that is a convex space in the restricted metric.  
-
-\begin{subthm}{}
-Show that any $\Cat{}{0}$ is convex.
-\end{subthm}
-
-\begin{subthm}{}
-Assume $\spc{X}$ is a convex space 
-such that angle of any hinge is defined.
-Show that $\spc{X}$ is $\Cat{}{0}$.
-\end{subthm}
-
-\begin{subthm}{}
-(Hadamard--Cartan Theorem for locally convex spaces.)  A complete, simply connected, locally convex  space is a convex space.
-\end{subthm}
 
 
-\end{thm}
-
-\begin{thm}{Exercise}
-Suppose $\spc{U}$ is a complete length space with $\curv\spc{U}\le1$, and the   space of all closed curves in $\spc{U}$ with length $<2\cdot\pi$ is connected.
-Prove that $\spc{U}\in\cCat{}{1}$.
-\end{thm}
-
-\begin{thm}{Exercise}
-Let $\spc{U}\in \Cat{}{\kappa}$,
-$\trig xyz$ is a triangle in $\spc{U}$
-and $\trig{\~x}{\~y}{\~z}$ is its model triangle in $\Lob{2}{\kappa}$.
-Prove that the natural map $f\:\trig{\~x}{\~y}{\~z}\to \trig xyz$ 
-defined in \ref{def:k-thin} is distance-preserving if and ony if one of the following conditions hold.
-
-\begin{subthm}{}
-$\mangle\hinge x y z= \angk\kappa x y z$,
-\end{subthm}
-
-\begin{subthm}{}
-$\dist{x}{w}{}=\dist{\~x}{\~w}{}$ for some  $\~w\in]\~y\~z[$ and
-$w= f(\~w)$   
-\end{subthm}
-
-\begin{subthm}{} 
-$\dist{v}{w}{}=\dist{\~v}{\~w}{}$ for some  
-$\~v\in \l]\~x \~y\r[$,  $\~w\in\l]\~x \~z\r[$
-and $v=f(\~v)$, $w=f(\~w)$.
-\end{subthm} 
-
-\end{thm}
-
-The following exercise is the rigidity case 
-of the Majorization theorem.
-
-\begin{thm}{Exercise}
-Let $\spc{U}\in \Cat{}{\kappa}$
-and $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
-Assume that $\ell<2\cdot \varpi\kappa$
-and there is a closed convex curve $\~\alpha\:[0,\ell]\to\Lob{2}{\kappa}$ such that 
-\[\dist{\alpha(t_0)}{\alpha(t_1)}{\spc{U}}=\dist{\~\alpha(t_0)}{\~\alpha(t_1)}{\Lob{2}{\kappa}}\]
-for any $t_0$ and $t_1$.
-Then there is a distance preserving map $F\:\Conv\~\alpha\to \spc{U}$
-such that $F\:\~\alpha(t)\mapsto \alpha(t)$ for any $t$.
-\end{thm}
-
-\parbf{Hints.} \textit{(Easier way.)} 
-Let 
-$(t,s)\mapsto \gamma_t(s)$ be the line-of-sight map 
-for $\alpha$ from $\alpha(0)$,
-and 
-$(t,s)\mapsto \~\gamma_t(s)$ be the line-of-sight map 
-for $\~\alpha$ from $\~\alpha(0)$.
-Consider the map  $F\:\Conv\~\alpha\to \spc{U}$ such that 
-$F\:\~\gamma_t(s)\mapsto \gamma_t(s)$.
-
-Show that $F$ majorizes $\alpha$
-and conclude that $F$ is distance-preserving.
-
-\parit{(Harder way.)}
-Prove and apply the following lemma together with the Majorization theorem.
-\begin{thm}{Lemma}\label{lem:short+convex}
-Let $\alpha$ and $\beta$ be two convex curves in $\Lob2\kappa$.
-Assume 
-\[\length \alpha=\length\beta<2\cdot\varpi\kappa\]
-and there is a short bijecction $f\:\alpha\to\beta$.
-Then $f$ is an isometry.
-\end{thm}
-
-%\begin{thm}{Exercise} 
-%Let $\spc{U}\in\Cat{}{\kappa}$.
-%Assume 
-%\[\angk\kappa xyp=\angk\kappa xzp\]
-%for some $p,x,y\in \spc{L}$ and $z\in\l]xy\r[$.
-%Prove that 
-%\[\mangle\hinge xyp=\angk\kappa xyp.\]
-%\end{thm}
-
-\begin{thm}{Exercise}
-In $\spc{U}\in\Cat{}{\kappa}$, show that if a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$  is not a triangle, then exactly one of these statements holds:
-
-%!!!
-\begin{subthm}{}
-$\alpha$ is majorized by two non-isometric convex regions in $\Lob2\kappa$;
-\end{subthm}
-
-\begin{subthm}{}
-the majorizing map for $\alpha$ is distance preserving.
-\end{subthm}
-
-\end{thm}
 
 
-\begin{thm}{Exercise}\label{ex:CAT-mnfld=>ext.geod}
-Let $\spc{U}\in\cCat{}{}$.
-Assume $\spc{U}$ is a topological manifold.
-Show that any geodesic in $\spc{U}$ can be extended 
-as a two-side infinite local geodesic.
 
-Moreover the same holds for any $\spc{U}\in\Cat{}{}$ with nontrivial local homology groups at any point;
-in particular if $\spc{U}$ is a homological manifold.
-\end{thm}
 
-\begin{thm}{Exercise}\label{ex:square}
-Let $\spc{U}\in\cCat{}{0}$.
-Assume that for 4 points $x_1,x_2,x_3,x_4\in \spc{U}$
-there is a convex quadrilateral
-$\~x_1\~x_2\~x_3\~x_4$
-in the Euclidean plane $\EE^2$
-such that 
-$\dist{x_i}{x_j}{\spc{U}}=\dist{\~x_i}{\~x_j}{\EE^2}$
-for all $i$ and $j$.
-Show that $\spc{U}$ contains an isometric copy of the 
-\emph{solid quadrilateral}
-$\~x_1\~x_2\~x_3\~x_4$; that is the convex hull of $\~x_1,\~x_2,\~x_3,\~x_4$ in $\EE^2$
-\end{thm}
+
 
 
 

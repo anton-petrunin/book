@@ -1,6 +1,20 @@
 %%!TEX root = all.tex
 \chapter{First order differentiation}\label{chap:tan}
 
+\section{Tangent cone}
+
+Recall that according to 
+the corollaries \ref{cor:monoton:sup} 
+and \ref{cor:monoton-cba:angle=inf},
+the $\CBB{}{}$ spaces as well as $\cCat{}{}$ spaces have defined angles.
+In particular, in both cases the space of directions as well as space of geodesic directions are defined at each point.
+(See Section~\ref{sec:angles} for the related definitions.)
+
+The Euclidean cone $\T_p=\Cone\Sigma_p$
+over the space of directions $\Sigma_p$ at the point $p$ 
+will be called \emph{tangent space} at $p$.
+ 
+
 \section{Tangent cone}\label{sec:tan}
 
 \parbf{Tangent cones and vectors.}
@@ -35,7 +49,8 @@ the element in $\T_p$ that corresponds to $\geod_{[p q]}$
 will be called the \emph{direction}\index{direction} of $[p q]$, denoted by $\dir{p}{q}$\index{$\dir{*}{*}$}.
 The element in $\T_p$ that corresponds to the geodesic path $\gamma(t)=\geod_{[p q]}(\tfrac{t}{\dist{p}{q}{}})$ 
 will be called \emph{logarithm}\index{logarithm} of $[p q]$ and denoted as $\ddir{p}{q}$\index{$\dir{*}{*}$};
-clearly $\ddir{p}{q}=\dist[{{}}]{p}{q}{}\cdot\dir{p}{q}$.
+clearly 
+\[\ddir{p}{q}=\dist[{{}}]{p}{q}{}\cdot\dir{p}{q}.\]
 
 The set of directions of all geodesics from $p$ to $q$ will be denoted by $\Dir{p}{q}$\index{$\Dir{{*}}{{*}}$}.
 In general, the set $\Dir{p}{q}\subset\T_p$ might be empty.
@@ -49,7 +64,7 @@ we first define it for geodesics and then extend it to general curves.
 
 \begin{thm}{Definition}\label{def:curv^+}
 Given $\gamma\in\Gamma_p$, we say that $v\in \T_p$ is the right derivative of $\gamma$ at $0$ (briefly, $v=\gamma^+(0)$)
-if $\gamma\mapsto v$ under 
+if $\gamma$ maps to $v$ under 
 the natural map $\Gamma_p\to \T_p'\subset\T_p$.
 
 Further, let $\II$ be a real interval containing $[0,\eps)$ for some $\eps>0$.
@@ -58,10 +73,10 @@ $\alpha(0)=p$ and $v\in\T_p$.
 We write
 $v=\alpha^+(0)$
 if there is a sequence $\gamma_n\in\Gamma_p$
-such that $\gamma^+_n(0)\to v$ and 
+such that $\gamma^+_n(0)\to v$ as $n\to\infty$ and 
 \[\lim_{n\to\infty}(\limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t})\to 0.\]
 
-Finally, we define right/left derivatives of $\alpha$ at $t_0\in\II$ as $\alpha^\pm(t_0)=\check\alpha^+(0)$, where $\check\alpha(t)=\alpha(t_0\pm t)$.
+Naturally, we define right/left derivatives of $\alpha$ at $t_0\in\II$ as $\alpha^\pm(t_0)=\check\alpha^+(0)$, where $\check\alpha(t)=\alpha(t_0\pm t)$.
 \end{thm}
 
 \parbf{Remarks.} 
@@ -69,7 +84,7 @@ Although the above definition will be mostly used for curves,
 we do not require $\alpha$ to be continous.
 
 Note that our sign convention is not standard. 
-In particular, for  a smooth curve $\alpha$ in Riemannian manifold we have $\alpha^+ =- \alpha^-$.
+In particular, for  a smooth curve $\alpha$ in the Euclidean space we have $\alpha'=\alpha^+ =- \alpha^-$.
 
 \begin{thm}{Proposition}\label{prop:unique-right-der}
 Let $\spc{X}$ be a metric space,
@@ -95,7 +110,7 @@ In particular, left part is defined if and only if the right part is defined.
 \end{subthm}
 \end{thm}
 
-\parit{Proof.} Parts \ref{prop:unique-right-der:unique} and \ref{prop:unique-right-der:chain} follow directly from definitons \ref{def:curv^+} and \ref{def:tan}.
+\parit{Proof.} Parts \ref{SHORT.prop:unique-right-der:unique} and \ref{SHORT.prop:unique-right-der:chain} follow directly from definitons \ref{def:curv^+} and \ref{def:tan}.
 
 Let $\gamma^+_n(0)\to v$ be as in the definition \ref{def:curv^+} and $t_n\to0+$ be a monotonic sequence.
 Define $\alpha(t)=\gamma_n(t)$ for $t\in (t_{n+1},t_n]$.
@@ -612,8 +627,14 @@ $\angk\kappa{v_t}p{w_t}
 and thus 
 \[\dist{p}{w_t}{}=t\dist{\~p}{\~w}{}+o(t).\]
 
-Since $f$ is $\lambda$-concave we have \[2\cdot f(w_t)\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=2\cdot f(p)
-+t\cdot [(\d_p f)(u)+(\d_p f)(v)]+o(t).\] 
+Since $f$ is $\lambda$-concave we have 
+\begin{align*}
+2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
+\\
+&=2\cdot f(p)
++t\cdot [(\d_p f)(u)+(\d_p f)(v)]+o(t).
+\end{align*}
+ 
 Applying $\lambda$-concavity of $f$, we get
 \[(\d_p f)(\dir p{w_t})
 \ge 

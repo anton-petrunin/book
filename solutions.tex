@@ -185,3 +185,192 @@ By the definition of Busemann function,
 
 By the function comparison definitions of $\Cat{}{\kappa}$ (\ref{function-comp}) or $\CBB{}{\kappa}$ (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function $f=\cosh \sqrt{-\kappa}\circ\dist{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
 
+
+
+
+
+
+
+
+
+
+\parbf{Exercise~\ref{ex:short-retraction-CBA(1)}.}
+Without loss of generality, we may assume that $p\in K$.
+
+If $\dist{K}{x}{}\ge\pi$ then set $\map[2](x)=p$.
+
+Otherwise, if $\dist{K}{x}{}<\pi$, by Closest-point projection lemma~\ref{lem:closest point}, 
+there is unique point $x^*\in K$ that minimizes distance to $x$;
+that is, $\dist{x^*}{x}{}=\dist{K}{x}{}$.
+Let us define $\ell_x$, $\phi_x$ and $\psi_x$ using the floowing identities:
+\begin{align*}
+\ell_x&=\dist{p}{x^*}{},
+\\
+\phi_x&=\tfrac\pi2-\dist[{{}}]{x^*}{x}{},
+\\
+\sin\psi_x&=\sin\phi_x\cdot\sin\ell_x, 
+\ \ 0\le \psi_x\le \tfrac\pi2.
+\intertext{Set}
+\map[2](x)&=\geod_{[px^*]}(\psi_x).
+\end{align*}
+
+Note that $\map[2]$ is a retraction to $K$; 
+that is,
+$\map[2](x)\in K$ for any $x\in \spc{U}$
+and 
+$\map[2](a)=a$ for any $a\in K$.
+
+Let us show that $\map[2]$ is short.
+Given $x,y\in\oBall(K,\tfrac\pi2)$, set
+\begin{align*}
+x'&=\map[2](x)
+&
+y'&=\map[2](y)
+\\
+r&=\dist{x}{y}{}
+&
+r'&=\dist{x'}{y'}{}
+\\
+d&=\dist{x^*}{y^*}{}
+&
+\alpha&=\angk1{p}{x^*}{y^*}
+\end{align*}
+
+Note that 
+\[\cos r\le 
+\cos\phi_x\cdot\cos\phi_y
+-
+\cos d\cdot\sin\phi_x\cdot\sin\phi_y.\eqlbl{eq:cos(r)}\]
+
+Indeed, if $x,y\notin K$,
+then 
+$\mangle\hinge{x^*}{x}{y*}, 
+\mangle\hinge{y^*}{y}{x*}
+\ge 
+\tfrac\pi2$
+and
+the inequality~\ref{eq:cos(r)} follows from the Arm lemma (\ref{lem:arm}).
+If $x\in K$ and $y\notin K$, we get \ref{eq:cos(r)}, by angle comparison (\ref{cat-hinge}) 
+since $\mangle\hinge{y^*}{y}{x*}\ge \tfrac\pi2$.
+The same way \ref{eq:cos(r)} is proved 
+in case $x\notin K$ and $y\in K$.
+Finally, if $x,y\in K$, $\phi_x=\phi_y=\tfrac\pi2$ and $r=d$;
+i.e., the inequality trivially holds.
+
+Further note that
+\[\cos\alpha
+=
+\frac{\cos d-\cos \ell_x\cdot\cos\ell_y}{\sin\ell_x\cdot\sin\ell_y}.\]
+Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) we get
+\begin{align*}
+\cos r'&\ge
+\cos\psi_x\cdot\cos\psi_y
+-
+\cos \alpha \cdot\sin\psi_x\cdot\sin\psi_y=
+\\
+&=
+\cos\psi_x\cdot\cos\psi_y
+-(\cos d-\cos \ell_x\cdot\cos\ell_y)\cdot\sin\phi_x\cdot\sin\phi_y\ge
+\\
+&\ge \cos\psi_x\cdot\cos\psi_y
+-\cos d\cdot\sin\phi_x\cdot\sin\phi_y
+\end{align*}
+
+
+Note that 
+$\psi_x\le \phi_x$
+and
+$\psi_y\le \phi_y$;
+in particular,
+\[
+\cos\phi_x\cdot\cos\phi_y\le \cos\psi_x\cdot\cos\psi_y.
+\]
+Hence 
+\[\cos r'\ge \cos r;\]
+i.e., the restriction $\map[2]|\oBall(K,\tfrac\pi2)$ is short.
+Clearly $\map[2]$ is continuous,
+since the complement of $\oBall(K,\tfrac\pi2)$ is mapped to $p$,
+we get that $\map[2]$ is short; i.e.,
+\[r'\le r \eqlbl{eq:cos=<cos}\]
+for any $x,y\in\spc{U}$.
+
+If we have equality in \ref{eq:cos=<cos}
+then 
+\[\cos\ell_x\cdot\cos\ell_y\cdot\sin\phi_x\cdot\sin\phi_y=0.\]
+If $K\subset \oBall(p,\tfrac\pi2)$ then $\ell_x,\ell_y<\tfrac\pi2$;
+which implies that $x\in K$ or $y\in K$.
+Without loss of generality we may assume that $x\in K$.
+
+It remains to show that if $y\notin K$ 
+then the inequality~\ref{eq:cos=<cos}
+is strict.
+If $\dist{K}{y}{}\ge\tfrac\pi2$ then \ref{eq:cos=<cos} holds since 
+the left hand side is $<\tfrac\pi2$,
+while right hand side is $\ge \tfrac\pi2$.
+If $\dist{K}{y}{}<\tfrac\pi2$ then $\phi_y>0$ and clearly $\psi_y<\phi_y$,
+hence the inequality~\ref{eq:cos=<cos} is strict.
+\qeds
+
+We fail to find a transparent geometric proof of the statement above.
+Below you will find a geometric way to think about the construction; 
+%%%DOWN
+compare to the construction 
+in the proof of Kirszbraun's theorem (\ref{thm:kirsz+}).
+%%%UP
+
+\parit{Geometric interpretation of the map $\map[2]$.}
+Set $\mathring{\spc{U}}=\Cone \spc{U}$;
+denote by $\mathring{K}$ the subcone of $\mathring{\spc{U}}$ spanned by $K$.
+The space $\spc{U}$ can be naturally identified with the unit sphere in $\mathring{\spc{U}}$;
+i.e., the set 
+\[\set{z\in \mathring{\spc{U}}}{|z|=1}.\]
+
+According to ??? $\mathring{\spc{U}}\in\cCat{}{0}$.
+Note that $\mathring{K}$ forms a convex closed subset of $\mathring{\spc{U}}$.
+According to ???, for any point $x$ there is unique point $\hat x\in \mathring{K}$
+which minimize the distance to $x$;
+i.e., $\dist{\hat x}{x}{}=\dist{K}{x}{}$.
+(If $|\hat x|\ne0$ then in the notations above we have
+$x^*=\tfrac1{|\hat x|}\cdot\hat x$.)
+
+Consider the ray $t\mapsto t\cdot p$ in  $\mathring{\spc{U}}$.
+According to ???, %ASK Stephanie???
+for given $s\in \mathring{\spc{U}}$
+the geodesics $\geod_{[s\ t\cdot p]}$ converge as $t\to\infty$ to a ray, 
+say $\alpha_s\:[0,\infty)\to \mathring{\spc{U}}$.
+
+
+
+Note that if $|x|=1$ then $|\hat x|\le 1$.
+By assumption for any $a\in K$ the function $t\mapsto |\alpha_a(t)|$ is monotonicity increasing.
+Therefore there is unique value $t_x\ge 0$ such that
+$|\alpha_{\hat x}(t_x)|=1$.
+Consider the map $\map[2]\:\spc{U}\to K$
+defined as 
+\[\map[2](x)=\alpha_{\hat x}(t_x).\]
+
+
+\parbf{Exercise~\ref{ex:isometric-majorization}.}
+\textit{(Easier way.)} 
+Let 
+$(t,s)\mapsto \gamma_t(s)$ be the line-of-sight map 
+for $\alpha$ from $\alpha(0)$,
+and 
+$(t,s)\mapsto \~\gamma_t(s)$ be the line-of-sight map 
+for $\~\alpha$ from $\~\alpha(0)$.
+Consider the map  $F\:\Conv\~\alpha\to \spc{U}$ such that 
+$F\:\~\gamma_t(s)\mapsto \gamma_t(s)$.
+
+Show that $F$ majorizes $\alpha$
+and conclude that $F$ is distance-preserving.
+
+\parit{(Harder way.)}
+Prove and apply the following lemma together with the Majorization theorem.
+\begin{thm}{Lemma}\label{lem:short+convex}
+Let $\alpha$ and $\beta$ be two convex curves in $\Lob2\kappa$.
+Assume 
+\[\length \alpha=\length\beta<2\cdot\varpi\kappa\]
+and there is a short bijecction $f\:\alpha\to\beta$.
+Then $f$ is an isometry.
+\end{thm}
+

@@ -479,21 +479,38 @@ a contradiction.
 \label{def:convex-set}
 Let $\spc{X}$ be a metric space. 
 A set $A\subset\spc{X}$ is called 
+\emph{convex}%
+\index{convex set}
+if for every two points $p,q\in A$ there every geodesic $[pq]$ of $\spc{X}$ 
+lies in $A$.
+It is called 
 \emph{weakly convex}%
 \index{convex set!weakly convex set}\index{weakly convex set}
 if for every two points $p,q\in A$ there is a geodesic $[pq]$ of $\spc{X}$ 
 which lies in $A$.
-If in addition every geodesic from $p$ to $q$ lies in $A$, then $A$ is called \emph{totally convex}\index{totally convex set}
+If in addition every local geodesic from $p$ to $q$ lies in $A$, then $A$ is called \emph{totally convex}\index{totally convex set}
 
-If this definition is applied only when  $\dist{p}{q}{}<R$, $R\in (0,\infty]$, 
-then $A$ is called correspondingly \emph{weakly or totally $R$-convex}%
-\index{weakly convex set!weakly $R$-convex set}
-\index{convex set!$R$-convex set}.
+If these definition is applied only when  $\dist{p}{q}{}<R$, $R\in (0,\infty]$ and only for the geodesics of length $<R$
+then $A$ is called correspondingly 
+\emph{$R$-convex},
+\emph{weakly  $R$-convex}%
+\index{weakly convex set!weakly $R$-convex set} 
+and \emph{totally  $R$-convex}
+\index{totally convex set!totally $R$-convex set}.
+
+A set $A\subset\spc{X}$ is called 
+\emph{locally convex}
+if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
+suc that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
+Similarly one defines  locally weakly convex and locally totally convex sets. %???DO we neeed all of them???
 \end{thm}
 
-Note that \emph{(weakly) convex sets} can be also regarded as \emph{(weakly) $\infty$-convex sets}.
-
-Note that inherited metric on a weakly convex set coinsides with its length-metric.
+\parbf{Remarks.}
+\begin{itemize}
+\item Note that \emph{(weakly) convex sets} can be also regarded as \emph{(weakly) $\infty$-convex sets}.
+\item Note that inherited metric on a weakly convex set coinsides with its length-metric.
+\item Note that any open set is locally convex by definition.
+\end{itemize}
 
 The following proposition states that weak convexity survive under ulralimit.
 An analogus statement about convexity does not hold;

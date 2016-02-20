@@ -1,205 +1,10 @@
-Â­%%!TEX root = the-constr-CBA.tex
-\chapter{Convexity}
-
-\section{Local convexity implies global}
-
-Assume $\spc{U}\in\Cat{}{\kappa}$. 
-Recall that by Corollary \ref{cor:loc-geod-are-min} any two points in  $\spc{U}$ on the distance smaller that $\varpi\kappa$ are joined by unique minimizing geodesic.
-It follows that any weakly $\varpi\kappa$-convex set in $\spc{U}$ is convex.
-
-\begin{thm}{Lemma}
-Let $\spc{U}\in \cCat{}{\kappa}$ 
-and $A\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
-Then for the function 
-\[f=\sn\kappa\circ\dist{A}{}{}\]
-we have
-\[f''+\kappa f\ge 0\]
-in $\oBall(A,\tfrac{\varpi\kappa}2)$.
-\end{thm}
-
-\parit{Proof.}
-???
-\qeds
-
-\begin{thm}{Corollary}
-Let $\spc{U}\in \cCat{}{\kappa}$ 
-and $A\subset \spc{U}$ be a closed  locally convex set.
-Then there is an open set $\Omega\supset A$
-such that the function 
-\[f=\sn\kappa\circ\dist{A}{}{}\]
-sutisfies 
-\[f''+\kappa f\ge 0\]
-in $\Omega$.
-\end{thm}
-
-\parit{Proof.}
-???
-\qeds
+­%%!TEX root = the-constr-CBA.tex
+\chapter{Convexity, curvature bounde above}
 
 
 
-\begin{thm}{Theorem}
-Assume $\spc{U}\in \cCat{}{\kappa}$ and $A\subset \spc{U}$ is a closed connected locally convex set.
-Assume $\dist{x}{y}{}<\varpi\kappa$ for any $x,y\in A$.
-Then $A$ is $\varpi\kappa$-convex.
-\end{thm}
-
-The following proof is given by Sergei Ivanov, see \cite{ivanov:local-global-convexity}
-
-\parit{Proof.}
-Note that $A$ is path connected.
-Indeed, local convexity implies that $A$ is locally path connected.
-Since $A$ is connected, the later implies that $A$ is path connected.
-
-Fix two points $x,y\in A$. 
-Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to A$.
-Denote by $\gamma_t$ the geodesic path from $x$ to $\alpha(t)$.
-By ??? it depends continuosly from ...
-
-According to ??? there is an open set $\Omega\supset A$
-such that for the function $f(x)=\sn\kappa\dist{A}{x}{}$ 
-we have
-\[f''+\kappa f\ge 0\]
-everywhere in $\Omega$.
-It follows that if $\gamma$ is a geodesic in $\Omega$ 
-of length $\ell<\varpi\kappa$ 
-has its ends in $A$ then it lies in $A$ completely.
 
 
-
-Connect them by a broken geodesic in $A$;
-let $x=x^0,x^1,\dots,x^\kay=y$ be its vertices.
-Choose consecutive geodesics $[x^0x^1]$ and $[x^1x^2]$ and move $x^1=x^1(t)$ to $x^2$ along $[x^1x^2]$. 
-Since distance between any pair of points in $A$ is less than $\varpi\kappa$,
-the geodesic $[x^0,x^1(t)]$ uniquely defined fro any $t$.
-Let $t_0$ be the moment  touches the boundary at some moment $t$, observe a contradiction. If not, then the final segment $[a,c]$ is also contained in the interior, so we get a polygonal line with fewer edges. Repeat this procedure until it becomes a single segment.
-
-
-Take $x,y\in A$, there is a polygonal path from $a$ to $b$ in $A$. Suppose this path has $N$ edges. Then there is a shortest polygonal path of at most $N$ edges in the closure of $A$. If it is not a straight segment, the first edge must touch the boundary of $A$ (otherwise one can shorten the path). The first point where it meets the boundary has obvious problems with local supporting hyperplane.
-\qeds
-
-
-\section{Reshetnyak's gluing theorem.}\label{sec:cba-gluing}
-
-The following theorem was proved by Reshetnyak \cite{reshetnyak:glue},  assuming $\spc{U}_1, \spc{U}_2$ are proper.
-
-\begin{thm}{Reshetnyak gluing}\label{thm:gluing}
-Suppose 
-$\spc{U}_1$ and  $\spc{U}_2$ are two $\varpi\kappa$-geodesic spaces 
-with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
-Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
-i.e., $\spc{W}$ is gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$;see Section~\ref{sec:quotient}.
-
-Then 
-\begin{subthm}{gluing0}
-Both canonical mappings $\jmath_i\:\spc{U}_i\to\spc{W}$ are isometric 
-and the images $\jmath_i(\spc{U}_i)$ are $\varpi\kappa$-convex subsets in $\spc{W}$.
-\end{subthm}
-
-\begin{subthm}{gluing2}
-If $\spc{U}_1, \spc{U}_2\in\cCat{}{\kappa}$  
-then $\spc{W}\in\cCat{}{\kappa}$.
-\end{subthm} 
-\end{thm}
-
-\parit{Proof.} 
-Part (\ref{SHORT.gluing0})
-follows directly from $\varpi\kappa$-convexity of $A_i$.
-
-\parit{(\ref{SHORT.gluing2}).} 
-According to (\ref{SHORT.gluing0}),
-we can identify $\spc{U}_i$ with its image $\jmath_i(\spc{U}_i)$ in $\spc{W}$;
-this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
-Note that $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
-therefore $A$ is also $\varpi\kappa$-convex set in $\spc{W}$.
-
-Further note that completeness of $\spc{U}_1$ and $\spc{U}_2$ implies completeness of $\spc{W}$.
-Thus part (\ref{SHORT.gluing2}) can be reformulated the following way:
-
-\begin{thm}{Reformulation of \ref{gluing2}}
-Let $\spc{W}$ be a complete length space which has two closed $\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
-$\spc{U}_1\cup\spc{U}_1=\spc{W}$ and $\spc{U}_1,\spc{U}_2\in\cCat{}{\kappa}$.
-Then $\spc{W}\in\cCat{}{\kappa}$.
-\end{thm}
-
-Set $A=\spc{U}_1\cap\spc{U}_1$.
-First we prove the following:
-
-\begin{clm}{}\label{clm:geod-gluing}
-If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic then $\spc{W}\in\cCat{}{\kappa}$
-\end{clm}
-
-
-
-\begin{wrapfigure}{r}{20mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]
-{pics/resh-glue(1)}
-\lbl[l]{6.5,21;$x^0$}
-\lbl[r]{1.5,1.5;$x^1$}
-\lbl[tl]{16,0.5;$x^2$}
-\lbl[rb]{4,11;$z^1$}
-\lbl[lb]{13,8;$z^2$}
-\end{lpic}
-\end{wrapfigure}
-
-\parit{Proof of the claim.}
-According to \ref{prop:k-thin},
-it is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
-in $\spc{W}$ is $\kappa$-thin.
-This is obviousely true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}_i$.
-Thus, without loss of generality, we may assume that $x^0\in\spc{U}_1$ and $x^1,x^2\in\spc{U}_2$.
-
-Choose points $z^1,z^2\in A$ 
-which lie correspondingly on the sides $[x^0x^1], [x^0x^2]$.
-Note that all distances between any pair of points from $x^0$, $x^1$, $x^2$, $z^1$, $z^2$ are less than $\varpi\kappa$.
-Therefore
-\begin{itemize}
-\item triangle $\trig{x^0}{z^1}{z^2}$ lies in $\spc{U}_1$,
-\item both triangles $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ lie in $\spc{U}_2$.
-\end{itemize}
-In particular each triangle $\trig{x^0}{z^1}{z^2}$,
-$\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
-
-Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice 
-we get that $\trig {x^0}{x^1}{z^2}$ 
-and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
-\claimqeds
-
-Now we come back to the general case;
-i.e., $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
-Note that the ultrapower $\spc{W}^\o$ is geodesic, see \ref{cor:ulara-geod}.
-It is easy to see that 
-\begin{itemize}
-\item $\spc{U}_i^\o$ form weak $\varpi\kappa$-convex sets of $\spc{W}^\o$,
-\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
-\end{itemize}
-%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
-From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o\in \cCat{}{\kappa}$.
-According to Corollary~\ref{cor:weak>convex}, 
-we get that $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
-concequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
-
-From Claim~\ref{clm:geod-gluing}, 
-we get $\spc{W}^\o\in\cCat{}{\kappa}$.
-Applying the Proposition~\ref{prop:CAT^omega} once more, 
-we get $\spc{W}\in\cCat{}{\kappa}$.
-\qeds 
-
-\begin{thm}{Exercise}
-Let $Q$ be the nonconvex subset of the plane 
-bounded by two rays $\gamma_1$ and $\gamma_2$
-with common starting point and angle $\alpha$ between them.
-Assume $\spc{U}\in\cCat{}{0}$
-and $\gamma_1',\gamma_2'$ be two rays in $\spc{U}$
-starting point and angle $\alpha$ between them.
-Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\cCat{}{0}$ space.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
-Assume $\spc{U}\in\cCat{}{0}$ and $A\subset \spc{U}$ is a closed subset.
-Assume that the doubling of $\spc{U}$ in $A$ is $\cCat{}{0}$. 
-Show that $A$ is a totally convex set of $\spc{U}$.
-\end{thm}
 
 
 
@@ -208,19 +13,6 @@ Show that $A$ is a totally convex set of $\spc{U}$.
 
 \section{Convex sets and projection}
 
-\begin{thm}{Lemma}\label{lem:model-d-seg}
-Let $A\subset \Lob2\kappa$ 
-be a geodesic segment. 
-Then 
-$f=\sn{\kappa}\circ\dist{A}{}{}.$
- satisfies \[f''+\kappa\cdot f \ge  0.\]
-\end{thm}
-\parit{Proof.} The restriction of
-$\dist{A}{}{}$ to a sufficiently short geodesic coincides either with
-distance to the image of a complete geodesic, or distance to an endpoint of
-$A$, or a join of these two. The first  satisfies $f''+\kappa\cdot f =  0$ by \ref{sn-diff-eq}.  The second satisfies $f''+\kappa\cdot f \ge 0$ by direct calculation from \ref{md-diff-eq}. This suffices, since the derivative at the
-join is two-sided, by the first variation formula.
-\qeds
 
 
 Part (\ref{SHORT.distance-to-convex}) of  the next theorem should be compared to the theorem on distance to the boundary of a $\CBB{}{}$-space (\ref{thm:dist-to-bry}).
@@ -333,7 +125,7 @@ By \ref{eq:d-realizer}, we may assume $\spc{U}\in\Cat{}{\kappa}.$
 
 Extend $\beta$ to $\alpha\:[0,a]\to\spc{U}$, so that $\alpha[0,\eps]=\beta$  and $\alpha$  is a closed unit-speed curve that parametrizes 
 the  quadrilateral $Q$ with sides   $\alpha([0,\eps]) =[px]$, $[xx^*]$, $[x^* p^*]$, $[p^*p]$.
- For $\eps$ sufficiently small, $\length Q < 2\varpi\kappa$ by continuity of $f_A$, and we may  apply Reshetnyak majorization (\ref{thm:major}) to  $\alpha$.  
+ For $\eps$ sufficiently small, $\length Q < 2\varpi\kappa$ by continuity of $f_A$, and we may  apply majorization (\ref{thm:major}) to  $\alpha$.  
 
 Thus $\alpha$ is majorized by a closed convex region $D$  lying in a hemisphere $\Lob2\kappa$, where $D$ is bounded by a simple closed unit-speed curve $\tilde\alpha\:[0,a]\to\Lob2\kappa$.  By definition the majorizing map $F\:D\to \spc{U}$ is length-nonincreasing and  we may take $F\circ\tilde\alpha=\alpha$. It follows that  $\tilde\alpha$ parametrizes a convex quadrilateral $\tilde Q$ having  the same sidelengths as $Q$.  Let $\tilde\sigma$ denote the side of $\tilde Q$ opposite $\tilde\alpha([0,\eps])$.
 
@@ -388,168 +180,15 @@ then the map $\map[2]$ can be chousen so that in addition
 \end{thm}
 
 
-\parit{Proof.} 
-Applying rescaling, we can assume  $\kappa=1$.
-Without loss of generality, we may assume that $p\in A$.
 
-If $\dist{A}{x}{}\ge\tfrac\pi2$ then set $\map[2](x)=p$.
-
-Otherwise, if $\dist{A}{x}{}<\tfrac\pi2$, by ???, 
-there is unique point $x^*\in A$ that minimizes distance to $x$;
-i.e. $\dist{x^*}{x}{}=\dist{A}{x}{}$.
-In this case set 
-\begin{align*}
-\ell_x&=\dist{p}{x^*}{},
-\\
-\phi_x&=\tfrac\pi2-\dist[{{}}]{x^*}{x}{},
-\\
-\sin\psi_x&=\sin\phi_x\cdot\sin\ell_x, 
-\ \ 0\le \psi_x\le \tfrac\pi2
-\intertext{and define}
-\map[2](x)&=\geod_{[px^*]}(\psi_x).
-\end{align*}
-
-Note that $\map[2]$ is a retraction to $A$; 
-i.e.,
-$\map[2](x)\in A$ for any $x\in \spc{U}$
-and 
-$\map[2](a)=a$ for any $a\in A$.
-
-Let us show that $\map[2]$ is short.
-Assume $x,y\in\oBall(A,\tfrac\pi2)$,
-\begin{align*}
-x'&=\map[2](x)
-&
-y'&=\map[2](y)
-\\
-r&=\dist{x}{y}{}
-&
-r'&=\dist{x'}{y'}{}
-\\
-d&=\dist{x^*}{y^*}{}
-&
-\alpha&=\angk1{p}{x^*}{y^*}
-\end{align*}
-
-Note that 
-\[\cos r\le 
-\cos\phi_x\cdot\cos\phi_y
--
-\cos d\cdot\sin\phi_x\cdot\sin\phi_y.\eqlbl{eq:cos(r)}\]
-
-Indeed, if $x,y\notin A$,
-then 
-$\mangle\hinge{x^*}{x}{y*}, 
-\mangle\hinge{y^*}{y}{x*}
-\ge 
-\tfrac\pi2$
-and
-the inequality~\ref{eq:cos(r)} follows from the Arm lemma (\ref{lem:arm}).
-If $x\in A$ and $y\notin A$, we get \ref{eq:cos(r)}, by angle comparison (\ref{cat-hinge}) 
-since $\mangle\hinge{y^*}{y}{x*}\ge \tfrac\pi2$.
-The same way \ref{eq:cos(r)} is proved 
-in case $x\notin A$ and $y\in A$.
-Finally, if $x,y\in A$, $\phi_x=\phi_y=\tfrac\pi2$ and $r=d$;
-i.e., the inequality trivially holds.
-
-Further note that
-\[\cos\alpha
-=
-\frac{\cos d-\cos \ell_x\cdot\cos\ell_y}{\sin\ell_x\cdot\sin\ell_y}.\]
-Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) we get
-\begin{align*}
-\cos r'&\ge
-\cos\psi_x\cdot\cos\psi_y
--
-\cos \alpha \cdot\sin\psi_x\cdot\sin\psi_y=
-\\
-&=
-\cos\psi_x\cdot\cos\psi_y
--(\cos d-\cos \ell_x\cdot\cos\ell_y)\cdot\sin\phi_x\cdot\sin\phi_y\ge
-\\
-&\ge \cos\psi_x\cdot\cos\psi_y
--\cos d\cdot\sin\phi_x\cdot\sin\phi_y
-\end{align*}
-
-
-Note that 
-$\psi_x\le \phi_x$
-and
-$\psi_y\le \phi_y$;
-in particular,
-\[
-\cos\phi_x\cdot\cos\phi_y\le \cos\psi_x\cdot\cos\psi_y.
-\]
-Hence 
-\[\cos r'\ge \cos r;\]
-i.e., the restriction $\map[2]|\oBall(A,\tfrac\pi2)$ is short.
-Clearly $\map[2]$ is continuous,
-since the complement of $\oBall(A,\tfrac\pi2)$ is mapped to $p$,
-we get that $\map[2]$ is short; i.e.,
-\[r'\le r \eqlbl{eq:cos=<cos}\]
-for any $x,y\in\spc{U}$.
-
-If we have equality in \ref{eq:cos=<cos}
-then 
-\[\cos\ell_x\cdot\cos\ell_y\cdot\sin\phi_x\cdot\sin\phi_y=0.\]
-If $A\subset \oBall(p,\tfrac\pi2)$ then $\ell_x,\ell_y<\tfrac\pi2$;
-which implies that $x\in A$ or $y\in A$.
-Without loss of generality we may assume that $x\in A$.
-
-It remains to show that if $y\notin A$ 
-then the inequality~\ref{eq:cos=<cos}
-is strict.
-If $\dist{A}{y}{}\ge\tfrac\pi2$ then \ref{eq:cos=<cos} holds since 
-the left hand side is $<\tfrac\pi2$,
-while right hand side is $\ge \tfrac\pi2$.
-If $\dist{A}{y}{}<\tfrac\pi2$ then $\phi_y>0$ and clearly $\psi_y<\phi_y$,
-hence the inequality~\ref{eq:cos=<cos} is strict.
-\qeds
-
-We fail to find a transparent geometric proof of the statement above.
-Below you will find a geometric way to think about the construction; 
-%%%DOWN
-compare to the construction 
-in the proof of Kirszbraun's theorem (\ref{thm:kirsz+}).
-%%%UP
-
-\parit{Geometric interpretation of the map $\map[2]$.}
-Set $\mathring{\spc{U}}=\Cone \spc{U}$;
-denote by $\mathring{A}$ the subcone of $\mathring{\spc{U}}$ spanned by $A$.
-The space $\spc{U}$ can be naturally identified with the unit sphere in $\mathring{\spc{U}}$;
-i.e., the set 
-\[\set{z\in \mathring{\spc{U}}}{|z|=1}.\]
-
-According to ??? $\mathring{\spc{U}}\in\cCat{}{0}$.
-Note that $\mathring{A}$ forms a convex closed subset of $\mathring{\spc{U}}$.
-According to ???, for any point $x$ there is unique point $\hat x\in \mathring{A}$
-which minimize the distance to $x$;
-i.e., $\dist{\hat x}{x}{}=\dist{A}{x}{}$.
-(If $|\hat x|\ne0$ then in the notations above we have
-$x^*=\tfrac1{|\hat x|}\cdot\hat x$.)
-
-Consider the ray $t\mapsto t\cdot p$ in  $\mathring{\spc{U}}$.
-According to ???, %ASK Stephanie???
-for given $s\in \mathring{\spc{U}}$
-the geodesics $\geod_{[s\ t\cdot p]}$ converge as $t\to\infty$ to a ray, 
-say $\alpha_s\:[0,\infty)\to \mathring{\spc{U}}$.
-
-
-
-Note that if $|x|=1$ then $|\hat x|\le 1$.
-By assumption for any $a\in A$ the function $t\mapsto |\alpha_a(t)|$ is monotonicity increasing.
-Therefore there is unique value $t_x\ge 0$ such that
-$|\alpha_{\hat x}(t_x)|=1$.
-Consider the map $\map[2]\:\spc{U}\to A$
-defined as 
-\[\map[2](x)=\alpha_{\hat x}(t_x).\]
 
 \section{Exercises}
 
 \begin{thm}{Exercise} 
 (Gluing with short maps)
  Let $X,X' \in\Cat{}{0}$, $K \subset X, K' \subset X'$ be closed convex subsets, 
-and suppose the length-metrics on $\Fr_X K$ and $\Fr_{X'} K'$ are finite (???). 
+and suppose the length-distance between any two points
+on $\Fr_X K$ and $\Fr_{X'} K'$ are finite.
 Suppose $\phi\: \Fr_X K \to \Fr_{X'} K'$ is length-preserving and 
 short with respect to the inherited
 metrics. 
@@ -557,7 +196,7 @@ To $X'\backslash\Int K'$ in its length metric,
 glue $K$ along $\phi$, to obtain the space $Y$. 
 Show $Y \in \Cat{}{0}$.
 
-For example, take $K= \cBall[x,R]  \subset \Lob{m}0$ and $K' = \cBall(x',\sinh R)  \subset \Lob{m}{-1}$.
+For example, take $K= \cBall[x,\sinh R]  \subset \Lob{m}0$ and $K' = \cBall(x',R)  \subset \Lob{m}{-1}$.
 \end{thm}
 
 

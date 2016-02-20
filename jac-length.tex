@@ -179,8 +179,10 @@ where $\ell$ denotes ???.
 
 \parit{Proof of ``only if''.} 
 %\parit{($\Rightarrow$)} 
-Suppose $\curv \spc{U}\le\kappa$.  For any $p\in\spc{U}$, there is a convex ball 
-$\oBall(p,R)\in\Cat{}{\kappa}$, where $R<\tfrac{\varpi\kappa}{2}$ (\ref{thm:convex-balls}). Choose the triangle $\trig {x}{y}{z}$ to lie in $\oBall(p,R)$.
+Suppose $\curv \spc{U}\le\kappa$. 
+For any $p\in\spc{U}$, there is a convex ball 
+$\oBall(p,R)\in\Cat{}{\kappa}$, where $R<\tfrac{\varpi\kappa}{2}$ (\ref{cor:convex-balls}). 
+Choose the triangle $\trig {x}{y}{z}$ to lie in $\oBall(p,R)$.
 
 %\parit{(\ref{SHORT.first-var}).}  (\ref{SHORT.first-var}) holds  by \ref{thm:1st-var=cba}. 
  
@@ -227,7 +229,7 @@ initial interval, we set the undefined angles to be $\pi/2$.)
 
 \end{clm}
 
-By  Reshetnyak majorization (\ref{thm:major}), since $g_i$ is  sinusoidally $K$-convex for some $K$, hence  semiconvex.  Therefore $g_i$  has derivatives almost everywhere and one-sided derivatives everywhere.   Since $g_i\to 0$, it follows that $g_i^{\pm}\to 0$ 
+By majorization (\ref{thm:major}), since $g_i$ is  sinusoidally $K$-convex for some $K$, hence  semiconvex.  Therefore $g_i$  has derivatives almost everywhere and one-sided derivatives everywhere.   Since $g_i\to 0$, it follows that $g_i^{\pm}\to 0$ 
 %converge uniformly to $0$ on $[0,1-\epsilon)$ 
 (Corollary \ref{lem:der-conv-lim}).
 
@@ -278,7 +280,8 @@ g_i(s)\cdot s \cdot (\ell -\ell_i)\cdot\cos\mangle_i^0(s).
 \]
   
 
-Consider  the quadrilateral $\Box_i= [{\gamma(s)}\,{\gamma_i( \ell\cdot{\ell_i}^{-1}\cdot s)}\,{\gamma_i(s)} \gamma(\ell_i\cdot{\ell}^{-1}\cdot s))]$. By Reshetnyak majorization (\ref{thm:major}), $\Box_i$ is majorized by a quadrilateral ${\Box}_i^\kappa$ in $\Lob{}\kappa$.
+Consider  the quadrilateral $\Box_i= [{\gamma(s)}\,{\gamma_i( \ell\cdot{\ell_i}^{-1}\cdot s)}\,{\gamma_i(s)} \gamma(\ell_i\cdot{\ell}^{-1}\cdot s))]$. 
+By majorization (\ref{thm:major}), $\Box_i$ is majorized by a quadrilateral ${\Box}_i^\kappa$ in $\Lob{}\kappa$.
 ${\Box}_i^\kappa$ has two
 adjacent sidelengths agreeing with those of ${\triangle}_i^\kappa$,
 and the diagonal joining their endpoints  is $\ge f_i(s)$, which is the third sidelength of
