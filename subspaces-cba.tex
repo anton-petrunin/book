@@ -7,7 +7,7 @@
 \section{Curves of bounded curvature.}\label{sec:cbc}
 
 By a {\it $k$-curve}   we mean a unit-speed curve $\sigma:\II\to\Lob2\kappa$ of constant
-curvature $k$, where $\II$ is a closed, possibly infinite, interval.  A {\it complete} $k$-curve is a $k$-curve, maximally extended so as to self-intersect at most at its endpoints: that is, a circle traversed once, or a  geodesic, horocycle, or equidistant curve.
+curvature $k$, where $\II$ is a closed, possibly infinite, interval.  A {\it complete} $k$-curve is a $k$-curve that is maximally extended so as to self-intersect at most at its endpoints: that is, a circle traversed once, or a  geodesic, horocycle, or equidistant curve.
 
 The \emph{chord-length} of a curve $\gamma\:\II\to\spc{X}$ in a metric space $\spc{X}$ is the distance between the endpoints of $\gamma$.  A \emph{chord} is a geodesic joining two of its points, and an \emph{endpoint chord} is a geodesic joining its endpoints.
 
@@ -49,7 +49,7 @@ Note that by the triangle inequality, the length $\bar s$ and chord-length $\bar
  the upper limit 
  $$ \limsup \,k_{\kappa}( \bar\gamma)$$
   of arc-chord curvatures taken over 
-subarcs $ \bar\gamma=\gamma|(t_0-\epsilon,t_0+\epsilon)$ as $\epsilon\to 0$. (If $t_0$ is the left or right endpoint of $\gamma$, use $[t_0,t_0+\epsilon)$ or $  (t_0-\epsilon,t_0]$ accordingly.) 
+subarcs $ \bar\gamma=\gamma|(t_0-\epsilon,t_0+\epsilon)$ as $\epsilon\to 0$. (If $t_0$ is the left or right endpoint of $\II$, use $[t_0,t_0+\epsilon)$ or $  (t_0-\epsilon,t_0]$ accordingly.) 
 %$$ \limsup \,k_{\kappa}( \tilde \gamma)\le k.$$  
 \end{thm}
 
@@ -70,7 +70,7 @@ Then
 $$k_{\kappa}( \gamma)\le k.$$
 \end{thm}
 
-The next corollary  spells out the significance of, and follows directly from, Theorem \ref{thm:global-arc-chord}:
+The next corollary  spells out the significance of Theorem \ref{thm:global-arc-chord}, and follows directly from it:
 
 \begin{thm}{Corollary}\label{cor:arc/chord-glob}    Suppose $\spc{X}\in\Cat{}{\kappa}$.  Let $\gamma\:[a,b]\to\spc{X}$ be a rectifiable curve having pointwise arc-chord curvature
 $ \le k$, and whose length $s$ and chord-length $r$ satisfy $s+r<2\varpi\kappa$.    Let $\sigma$ be the complete $k$-curve in
@@ -83,7 +83,7 @@ closed and nonconstant, then $s \ge s_\sigma$.\end{subthm}
  If $s \le\length \sigma$ and $\bar\sigma$ is an arc of $\sigma$ of length $s$, then $r \ge r_{\bar\sigma}$. 
 \end{subthm}
 
-\begin{subthm}{}  Suppose  $r \le\diam\sigma$ (the diameter of $\sigma$  in $\Lob2\kappa$); thus a chord of length $r$ 
+\begin{subthm}{}  Suppose $r<\infty$ and  $r \le\diam\sigma$ (the diameter of $\sigma$  in $\Lob2\kappa$); thus a chord of length $r$ 
 cuts $\sigma$ into  two arcs of lengths  $s_-\le s_+$ if $\sigma$ is a circle, and three arcs of which only one has finite length $s_-$ otherwise.  
 Then 
 either $s\le s_-$ or $s\ge s_+$.
@@ -92,17 +92,6 @@ The former holds if $\diam\gamma \le \diam\sigma$.
 %$\gamma$ is less than the diameter of $\sigma$. 
 \end{subthm}
 \end{thm}
-
-\begin{thm}{Theorem (Rigidity)}\label{thm:arc-chord-rigidity}
-Under the hypotheses of Theorem \ref{thm:global-arc-chord}, if 
-\[
-\kappa_{K}(\gamma) = k
-\] 
-then $\gamma$ and its chord bound a totally
-geodesic surface in $\spc{X}$ that is isometric to a domain  in $\Lob2\kappa$
-bounded by a $k$-curve of length $s$ and its chord.
-\end{thm}
-
 
 The proof of  Theorem \ref{thm:global-arc-chord} leads as well to the following useful lemma:
 
@@ -145,7 +134,7 @@ $\dist{x}{p}{}=
 %\dist{\tilde x}{\tilde  p}{}$ and $\dist{p}{y}{}=
 %\dist{\tilde p}{\tilde  y}{}$, then $\mangle\hinge{p}{x}{y}\ge \mangle\hinge{\tilde p}{\tilde x}{\tilde y}$. 
 Indeed, suppose this condition failed for some $\tilde k$. Then we may choose $x$ and $y$ arbitrarily close to $p$, such that $p$ is on the negative side of one of the small $\tilde k$-curves, say $\tilde \sigma$, with $x$ and $y$ as endpoints. 
-Now move $\tilde\sigma$  along the bisector of $[xy]$. Sufficiently close to the last point of contact with the small arc of $\gamma$ that joins $x$ and $y$,  the translates of $\tilde\sigma$ cut off subarcs  of $\gamma$ that are longer than a $ \tilde k$-curve with the same endpoints.  But then $\gamma$ has pointwise arc-chord curvature $\ge \tilde k$ at $p$, contradicting our assumed bound $k$.
+Now move $\tilde\sigma$  toward $p$ along the bisector of $[xy]$. Sufficiently close to the last point of contact with $\gamma([t_0,t_1])$,  the translates of $\tilde\sigma$ cut off subarcs  of $\gamma$ that are longer than a $ \tilde k$-curve with the same endpoints.  But then $\gamma$ has pointwise arc-chord curvature $\ge \tilde k$ at $p$,  a contradiction.
 
 Now approximate $\gamma$ by an inscribed equilateral broken geodesic $x^0x^1\dots x^{n+1}$  with the same endpoints as $\gamma$ and length $s- \epsilon_n$, 
 so that for $i = 1,\ldots,n$, the subarc of $\gamma$ from
@@ -161,7 +150,7 @@ is a convex polygon.
 By Arm Lemma \ref{lem:arm}, $$\tilde r =\dist{\tilde x^0}{\tilde  x^{n+1}}{}\le  \dist{x^0}{x^{n+1}}{}=r. $$ 
 As $n \to\infty$, $\tilde\sigma$ converges to a $k$-arc 
  of length $s$ and
-chordlength $\le r$, proving \ref{SHORT.local-global-arc-chord}).
+chordlength $\le r$, proving Theorem \ref{thm:global-arc-chord}.
 
 \parit{Proposition \ref{prop:base-angle}:} 
 Now suppose $\gamma$ has length less than half of a complete $k$-curve.  Since  $\~x^0\~x^1\dots \~x^{n+1}$ is inscribed in a $k$-curve of the same length as $\gamma$ , the angles at $\~x^0$ and $ \~x^{n+1}$ of the convex polygon $[\~x^0\~x^1\dots \~x^{n+1}]$ are acute.
@@ -172,6 +161,15 @@ Applying this procedure to each vertex in turn yields a convex polygon isometric
 
 As before, the claim follows by taking $n\to\infty$.
 \qeds
+
+\begin{thm}{Exercise}(Arc-chord rigidity)
+\label{thm:arc-chord-rigidity}
+Under the hypotheses of Theorem \ref{thm:global-arc-chord}, if $
+\kappa_{K}(\gamma) = k$ 
+then $\gamma$ and its chord bound a totally
+geodesic surface in $\spc{X}$ that is isometric to a domain  in $\Lob2\kappa$
+bounded by a $k$-curve of length $s$ and its chord.
+\end{thm}
 
 \section{Alexandrov's ruled surface theorem}\label{sec:ruled-surf}
 
