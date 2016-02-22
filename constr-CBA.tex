@@ -1,4 +1,4 @@
-­%%!TEX root = the-constr-CBA.tex
+%%!TEX root = the-constr-CBA.tex
 \chapter{Constructions in CBA spaces}
 
 
@@ -666,54 +666,27 @@ defined as
 First we define  $\spc{B}\times_f\spc{F}$ for length spaces $\spc{B}$ and $\spc{F}$.  Then we expand the definition to allow arbitrary metric spaces $\spc{F}$.
 
 In this paper, 
-$\JJ$ always denotes some finite closed  interval.
+$\II$ always denotes some finite closed  interval.
 
-%Let $\II=[0,1]$, and $\JJ$ be an arbitrary interval.
-
-%Suppose $\spc{B}$ and $\spc{F}$ are length spaces, and
-%$f:\spc{B}\to\RR_{\ge 0}$ is Lipschitz.  
-%For a  map $\alpha\:\II\to  \spc{B}\times \spc{F}$,  with Lipschitz projections $\alpha_\spc{B}$ and  $\alpha_\spc{F}$  to $\spc{B}$ and $\spc{F}$, define 
-%\begin{equation*}
-%\length\alpha = \int \sqrt{v_\spc{B}^2(t) + f^2(\alpha_\spc{B}(t))v_\spc{F}^2(t)}\cdot \d t.
-%\eqlbl{wp-length}
-%\end{equation*}
-%Here $v_\spc{B}$ and $v_\spc{F}$ are the speeds, defined almost everywhere, of $\alpha_\spc{B}$ and  $\alpha_\spc{F}$, and $\int$ is the Lebesgue integral. 
-%Define a pseudometric $d$ on  $\spc{B}\times \spc{F}$ by infimum of path-lengths, taken over all $\alpha$.
-%\begin{thm}{Definition}\label{def:wp1} % If $\spc{B}$ and  $\spc{F}$ are length spaces, the  \emph{warped product} $\spc{B}\times_f\spc{F}$ is the metric space corresponding to $d$, i.e. the quotient under the equivalence relation of zero distance between points. The equivalence classes containing more than one point have the form  $\{p\}\times \spc{F}$ where $f(p)=0$; we continue to denote this class by $(p,x)$, for any $ x\in \spc{F}$.
 \begin{thm}{Definition}\label{def:wp1}
 Consider the topological space  $(\spc{B}\times \spc{F})/\!\sim$, where the elements of $\{p\}\times \spc{F}$ are identified if $f( p )=0$.  We denote this class by $\overline p$, or by  any of its representatives $(p,\varphi)$, $\phi\in \spc{F}$.
 
-%Consider length spaces $\spc{B}$ and  $\spc{F}$,  and a continuous  function
-%$f:\spc{B}\to\RR_{\ge 0}$. 
-%An \emph{admissible curve} is a  map $\gamma=(\gamma_{\spc{B}},\gamma_{\spc{F}}):
-%\II\to  \spc{B}\times \spc{F}$,  with  projections $\gamma_\spc{B}$ and  $\gamma_\spc{F}$  to $\spc{B}$ and $\spc{F}$,
-% together with its associated \emph{length}.
-% We assume $\gamma_\spc{B}$ is Lipschitz, and the restriction of $\gamma_\spc{F}$ to the closure of each maximal subinterval of $\,I -(f\circ\gamma_\spc{B})^{-1}(0)$ is  Lipschitz.  We define   
-%\[
-%\length\gamma 
-%= 
-%\int\limits_\II \sqrt{v_\spc{B}^2(t) + f^2(\gamma_\spc{B}(t))\cdot v_\spc{F}^2(t)}  \cdot\d t.
-%\eqlbl{wp-length}
-%\]
-%Here $v_\spc{B}$ is the speed of  of $\gamma_\spc{B}$, defined almost everywhere;  $v_\spc{F}$ is the speed of  $\gamma_\spc{F}$, defined almost everywhere on $\II -(f\circ\gamma_\spc{B}^{-1}(0)$; and $\int$ is the Lebesgue integral. 
-%The class of admissible curves, being cl  osed under restriction, concatenation and linear reparameterization, forms a \emph{length structure} \cite[\S 2.1.1]{BBI}.
-
-An \emph{admissible curve} for the triple $(\spc{B},f,\spc{F})$ is a curve $\gamma:\JJ\to (\spc{B}\times \spc{F})/\!\sim$.  We write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ for $\gamma_\spc{B}:\JJ\to \spc{B}$   
-and $\gamma_\spc{F}:\JJ^+\to \spc{F}$, where  $\JJ^0=(f\circ\gamma_\spc{B})^{-1}(0)$, $\JJ^+=\JJ-\JJ^0$.  
-Set  $\JJ^+=\sqcup_{i=1,2,\ldots} \,\JJ^i$, where the $\JJ^i$ are maximal open subintervals of $\JJ^+$. 
-We further assume $\gamma_\spc{B}$ and   $\gamma_\spc{F}|\JJ^i$ to be Lipschitz, where   $\gamma_\spc{F}|\JJ^i$, $i=1,\ldots$, have a uniform Lipschitz constant. 
+An \emph{admissible curve} for the triple $(\spc{B},f,\spc{F})$ is a curve $\gamma:\II\to (\spc{B}\times \spc{F})/\!\sim$.  We write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ for $\gamma_\spc{B}:\II\to \spc{B}$   
+and $\gamma_\spc{F}:\II^+\to \spc{F}$, where  $\II^0=(f\circ\gamma_\spc{B})^{-1}(0)$, $\II^+=\II-\II^0$.  
+Set  $\II^+=\sqcup_{i=1,2,\ldots} \,\II^i$, where the $\II^i$ are maximal open subintervals of $\II^+$. 
+We further assume $\gamma_\spc{B}$ and   $\gamma_\spc{F}|\II^i$ to be Lipschitz, where   $\gamma_\spc{F}|\II^i$, $i=1,\ldots$, have a uniform Lipschitz constant. 
 (Our class of admissible curves does not satisfy the concatenation property of  length structures in the sense of \cite{BBI}.) 
 Set
-\[\length\gamma\  \ =\ \ \int _{\JJ}\,\sqrt{
+\[\length\gamma\  \ =\ \ \int _{\II}\,\sqrt{
 v_B^2+ (f\circ\gamma_\spc{B})^2\cdot v_F^2}\,,
 \eqlbl{eq:length}\]
-where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_B$, $v_\spc{F}|\JJ_+$ is  the speed of $\gamma_\spc{F}|\JJ_+$ and $v_\spc{F}|\JJ_0=0$.   
-Then the integrand is defined  almost everywhere on $\JJ$  and bounded.  
+where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_B$, $v_\spc{F}|\II_+$ is  the speed of $\gamma_\spc{F}|\II_+$ and $v_\spc{F}|\II_0=0$.   
+Then the integrand is defined  almost everywhere on $\II$  and bounded.  
 
 Equivalently,  
 \[
-\length\gamma\  \ =\ \  \sum_i \int _{\JJ_i}\sqrt{
-v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}  \ \ +\ \  \length\, (\gamma_\spc{B}|\JJ_0).
+\length\gamma\  \ =\ \  \sum_i \int _{\II_i}\sqrt{
+v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}  \ \ +\ \  \length\, (\gamma_\spc{B}|\II_0).
 \]
    Here the first term
  is defined, 
@@ -783,15 +756,15 @@ $\gamma_\spc{F}$ is a pregeodesic in $\spc{F}$.
 \end{subthm}
 
 \begin{subthm}{geo-fiber-indep}
-Suppose $\beta^*:\JJ\to \spc{F}^*$ is a pregeodesic in $\spc{F}^*$ such that  $\beta^*$ and $\gamma_\spc{F}$ have the same  speed, i.e. $v_{\spc{F}^*}=v_\spc{F}$ where $v_{\spc{F}}^*$ is the speed of $\beta^*$.  Then $(\gamma_\spc{B},\beta^*)$ is a geodesic in $\spc{B}\times_f\spc{F}^*$.
+Suppose $\beta^*:\II\to \spc{F}^*$ is a pregeodesic in $\spc{F}^*$ such that  $\beta^*$ and $\gamma_\spc{F}$ have the same  speed, i.e. $v_{\spc{F}^*}=v_\spc{F}$ where $v_{\spc{F}}^*$ is the speed of $\beta^*$.  Then $(\gamma_\spc{B},\beta^*)$ is a geodesic in $\spc{B}\times_f\spc{F}^*$.
 \end{subthm}
 \end{thm}
 
 \parit{Proof.} 
 \ref{SHORT.dist-fiber-indep})
-Let $\gamma_i:\JJ\to \spc{W}$ be admissible curves with endpoints $(p,\varphi)$, $(q,\psi)$,  where $\length\gamma_i\to |(p,\varphi)\, (q,\psi) |$.
+Let $\gamma_i:\II\to \spc{W}$ be admissible curves with endpoints $(p,\varphi)$, $(q,\psi)$,  where $\length\gamma_i\to |(p,\varphi)\, (q,\psi) |$.
 
-Suppose $f\circ(\gamma_i)_{\spc{B}}>0$.  Set $L_i=\length\, (\gamma_i)_\spc{F}$ and $v_i=\speed\,(\gamma_i)_\spc{F}$. Let $\beta^*_i$ be curves in $\spc{F}^*$  with endpoints $\varphi^*$, $\psi^*$ and lengths $L_i^*\to |\varphi^*\,\psi^*|=|\varphi\,\psi |$. Without loss of generality, $L_i^*\le L_i+\epsilon_i$, $\epsilon_i\to 0$.  Define $\gamma_i^*:\JJ\to \spc{W}^*$ by setting $(\gamma_i^*)_\spc{B}=(\gamma_i)_\spc{B}$, and  letting \,$(\gamma_i^*)_{\spc{F}^*}$\,  be \,$\beta_i^*$\, reparametrized with speed $(L_i^*/L_i)\cdot v_i$. By the length formula  \ref{eq:length},  $|(p,\varphi)\, (q,\psi) |=\lim\length(\gamma_i )\ge \limsup(\length\gamma_i^*)$. Hence  $|(p,\varphi)\, (q,\psi) |\ge |(p,\varphi^*)\, (q,\psi^*)|$.  
+Suppose $f\circ(\gamma_i)_{\spc{B}}>0$.  Set $L_i=\length\, (\gamma_i)_\spc{F}$ and $v_i=\speed\,(\gamma_i)_\spc{F}$. Let $\beta^*_i$ be curves in $\spc{F}^*$  with endpoints $\varphi^*$, $\psi^*$ and lengths $L_i^*\to |\varphi^*\,\psi^*|=|\varphi\,\psi |$. Without loss of generality, $L_i^*\le L_i+\epsilon_i$, $\epsilon_i\to 0$.  Define $\gamma_i^*:\II\to \spc{W}^*$ by setting $(\gamma_i^*)_\spc{B}=(\gamma_i)_\spc{B}$, and  letting \,$(\gamma_i^*)_{\spc{F}^*}$\,  be \,$\beta_i^*$\, reparametrized with speed $(L_i^*/L_i)\cdot v_i$. By the length formula  \ref{eq:length},  $|(p,\varphi)\, (q,\psi) |=\lim\length(\gamma_i )\ge \limsup(\length\gamma_i^*)$. Hence  $|(p,\varphi)\, (q,\psi) |\ge |(p,\varphi^*)\, (q,\psi^*)|$.  
 
 
 Suppose $(f\circ(\gamma_i)_\spc{B})^{-1}(0)\ne\emptyset$. By the length formula,  there is an admissible curve $\check\gamma_i$ with endpoints  $(p,\varphi)$, $(q,\psi)$ that is not longer than $\gamma_i$, such that $(\check\gamma_i)_\spc{B}=(\gamma_i)_\spc{B}$ and $(\check\gamma_i)_\spc{F}$  is constant on each maximal subinterval on which  $f\circ(\gamma_i)_\spc{B}>0$. Thus we may assume  $(\gamma_i)_\spc{F}$ has this form, hence $\length\gamma_i=\length(\gamma_i)_\spc{B}$. There are  curves $\gamma_i^*$ of the same form  in $\spc{W}^*$ with endpoints  
@@ -801,7 +774,7 @@ Therefore in all cases, $|(p,\varphi)\, (q,\psi) |\ge |(p,\varphi^*)\, (q,\psi^*
 Reversing the roles of $\spc{W}$ and $\spc{W}^*$ proves \ref{SHORT.dist-fiber-indep}).
 
 \ref{SHORT.fiber-proj}) Suppose $\gamma_\spc{F}$ has length $L>|\varphi\,\psi|$. Set $v=\speed\gamma_\spc{F}$. 
-Let $\beta:\JJ\to \spc{F}$ be a curve with endpoints $\varphi$, $\psi$ and  length $L'<L$. Then the length of $\gamma$ is reduced  by replacing $\gamma_\spc{F}$ with the reparametrization of $\beta$  with speed $(L'/L)\cdot v$.  This contradiction gives \ref{SHORT.fiber-proj}).
+Let $\beta:\II\to \spc{F}$ be a curve with endpoints $\varphi$, $\psi$ and  length $L'<L$. Then the length of $\gamma$ is reduced  by replacing $\gamma_\spc{F}$ with the reparametrization of $\beta$  with speed $(L'/L)\cdot v$.  This contradiction gives \ref{SHORT.fiber-proj}).
 
 \ref{SHORT.geo-fiber-indep}) Immediate from \ref{SHORT.dist-fiber-indep}) and the length formula  \ref{eq:length}.
 \qeds
@@ -858,11 +831,11 @@ If $\spc{B}$ is a length space and $\spc{F}$ is an arbitrary metric space, we  d
 \label{prop:f=0} 
 %Consider the warped product $B\times_fF$, where $B$ and  $F$ are length  spaces and
 %$f:B\to\R_{\ge 0}$ is a continuous function.  
-Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F}):\JJ\to \spc{W}=\spc{B}\times_f \RR$ be a geodesic  joining $(p,\phi)$ and $(q,\psi)$.  Suppose $\JJ_0\ne\emptyset$ where $\JJ_0=(f\circ\gamma_\spc{B})^{-1}(0)$.  
+Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F}):\II\to \spc{W}=\spc{B}\times_f \RR$ be a geodesic  joining $(p,\phi)$ and $(q,\psi)$.  Suppose $\II_0\ne\emptyset$ where $\II_0=(f\circ\gamma_\spc{B})^{-1}(0)$.  
 
 
-\begin{subthm}{f=0-fiber-projection} The  restriction of $\gamma_F$ to any maximal subinterval $\JJ_i$ of $\JJ-\JJ_0$   is constant. 
- If $\JJ_i$ Êhas no common endpoint with $\JJ$, the constant can be changed to any other
+\begin{subthm}{f=0-fiber-projection} The  restriction of $\gamma_F$ to any maximal subinterval $\II_i$ of $\II-\II_0$   is constant. 
+ If $\II_i$ Êhas no common endpoint with $\II$, the constant can be changed to any other
 Êpoint in $\spc{F}$ and the resulting curve will still be a geodesic in $\spc{B}\times_f\spc{F}$ with the same endpoints.
 \end{subthm}
 
@@ -871,7 +844,7 @@ $|(p,\varphi)\,(q,\psi)| = \length \gamma_\spc{B}$.
 \end{subthm}
 
 \begin{subthm}{f=0-base-projection}{\rm (Two-piece property)}
-$\gamma_\spc{B}$ consists of two geodesics of $\spc{B}$ that intersect on the maximal subinterval $[t_0,t_1]$ of $\JJ$ having endpoints in $\JJ_0$. 
+$\gamma_\spc{B}$ consists of two geodesics of $\spc{B}$ that intersect on the maximal subinterval $[t_0,t_1]$ of $\II$ having endpoints in $\II_0$. 
 \end{subthm}
 \end{thm}
 
@@ -883,18 +856,18 @@ One can define \,$B\times_fF$\, equivalently by taking distance to be the infimu
 
 *****
 
-By the length formula \ref{eq:length}, any curve in $\spc{B}$ joining $p$ and  $q$ and passing through $Z=f^{-1}(0)$ is the projection of a curve in $\spc{B}\times_f\spc{F}$ of the same length joining $(p,\phi)$ and $(q,\psi)$, and such that the projection to $\spc{F}$ on each interval $\JJ_i$ is constant.  
+By the length formula \ref{eq:length}, any curve in $\spc{B}$ joining $p$ and  $q$ and passing through $Z=f^{-1}(0)$ is the projection of a curve in $\spc{B}\times_f\spc{F}$ of the same length joining $(p,\phi)$ and $(q,\psi)$, and such that the projection to $\spc{F}$ on each interval $\II_i$ is constant.  
 Claims \ref{SHORT.f=0-fiber-projection}) and \ref{SHORT.f=0-distance}) follow.  
 
 It follows also that  $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ from $p$ to $q$ that intersect $Z$.  If $t_0=t_1$ in claim \ref{SHORT.f=0-base-projection}), it follows that $\gamma |[0,t_0]$ and $\gamma |[t_0,1]$ are geodesics and the claim holds. Suppose $t_0<t_1$.  Then $\gamma |[0,t_1]$ is  a geodesic, since otherwise  by the triangle inequality there is a curve from $p$ to $q$ passing through $\gamma(t_1)\in Z$ that is shorter than $\gamma$.  Similarly,  
 $\gamma |[t_0,1]$ is a geodesic.
-%Let  $a\in (f\circ\gamma_\spc{B})^{-1}(0)$. For a nontrivial closed subinterval $\,\JJ$ of $\,\II$ with endpoint $a$, we may choose  $v_\spc{F}$ satisfying (ii*) to have constant value $L/|\JJ|$ on $\,\JJ$,  and to vanish on the interior of $\,\II-\JJ$.   Then  %%% notation for length??
+%Let  $a\in (f\circ\gamma_\spc{B})^{-1}(0)$. For a nontrivial closed subinterval $\,\II$ of $\,\II$ with endpoint $a$, we may choose  $v_\spc{F}$ satisfying (ii*) to have constant value $L/|\II|$ on $\,\II$,  and to vanish on the interior of $\,\II-\II$.   Then  %%% notation for length??
 %
 %\begin{align*}
 %\int\limits_\II \sqrt{v_\spc{B}^2(t) + f^2(\gamma_\spc{B}(t))\cdot v_\spc{F}^2(t)} \cdot \d t 
 %&
 %\le \int\limits_\II v_\spc{B}(t) \cdot \d t + 
-%\int\limits_\JJ f(\gamma_\spc{B}(t))\cdot v_\spc{F}(t)\cdot \d t\\
+%\int\limits_\II f(\gamma_\spc{B}(t))\cdot v_\spc{F}(t)\cdot \d t\\
 %&
 %\le  \int\limits_\II v_\spc{B}(t) \cdot \d t +\left( \max f|\gamma_\spc{B}^{-1}(J)\right)(L/|J|)|J| \\
 %&
@@ -902,7 +875,7 @@ $\gamma |[t_0,1]$ is a geodesic.
 %\int\limits_\II v_\spc{B}(t) \cdot\d t 
 %+\left( \max f|\gamma_\spc{B}^{-1}(J)\right)L.
 %\end{align*}
-%By continuity of $f$, the second term approaches $0$ as $|\JJ|\to 0$. Therefore claim (\ref{SHORT.f=0-dist}) follows from (\ref{wp-distance}).
+%By continuity of $f$, the second term approaches $0$ as $|\II|\to 0$. Therefore claim (\ref{SHORT.f=0-dist}) follows from (\ref{wp-distance}).
 %
 %Claims (\ref{SHORT.f=0-base-proj}), (\ref{SHORT.f=0-fiber-proj}) and (\ref{SHORT.f=0-fiber-choice}) follow directly from (\ref{SHORT.f=0-dist}) and the length formula (\ref{wp-length}).
 \qeds
@@ -914,10 +887,10 @@ The following theorem is from \cite{} and \cite{}.
 %Suppose $B$ and  $F$ are length  spaces and
 %$f:B\to\R_{\ge 0}$ is a continuous function.  
 
-Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F}):\JJ\to B\times_f\spc{F}$ be a geodesic with speed $v$.  Then $v_\spc{B}$ and an extension $\overline{v}_\spc{F}$
+Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F}):\II\to B\times_f\spc{F}$ be a geodesic with speed $v$.  Then $v_\spc{B}$ and an extension $\overline{v}_\spc{F}$
 of $v_\spc{F}$ are defined and
 Lipschitz
- continuous for all $t\in \JJ$, and 
+ continuous for all $t\in \II$, and 
  there is a constant $c(\gamma)$ such that\[
 (f\circ \gamma_\spc{B})^{2}\cdot \overline{v}_\spc{F}=c(\gamma);
 \eqlbl{eq:clairaut-fiber}
@@ -929,8 +902,8 @@ Lipschitz
 \end{thm}
 
 \parit{Proof.} 
-Suppose $\JJ_0\ne\emptyset$ where $\JJ_0=(f\circ\gamma_\spc{B})^{-1}(0)$.  
-By Proposition \ref{f=0-fiber-projection},  $v_\spc{F}:\JJ-\JJ_0\to \spc{F}$ satisfies $v_\spc{F}=0$. In this case, $v_F$ may be extended to all of $\JJ$ by setting 
+Suppose $\II_0\ne\emptyset$ where $\II_0=(f\circ\gamma_\spc{B})^{-1}(0)$.  
+By Proposition \ref{f=0-fiber-projection},  $v_\spc{F}:\II-\II_0\to \spc{F}$ satisfies $v_\spc{F}=0$. In this case, $v_F$ may be extended to all of $\II$ by setting 
 $\overline{v}_\spc{F} \equiv 0$, and
 \ref{eq:clairaut-fiber} holds with $c(\gamma)=0$. Moreover, from the two-piece property we conclude that $\gamma_\spc{B}$ is a geodesic, with the only exception
 possible being a single break point  when $t_0 = t_1$;  in this case, $v_\spc{B}$ still exists   with constant value $v$.
@@ -942,22 +915,22 @@ So suppose $f\circ \gamma_
 \end{clm}
 
 We know that $v_\spc{B},v_\spc{F}$ exist almost everywhere and
-$v_\spc{B}^2 + f^2v_\spc{F}^2 =v^2$ almost everywhere. Thus it suffices to verify \ref{eq:clairaut-fiber} almost everywhere, namely, to show that for any closed subintervals $\JJ_1,\JJ_2$ of $\JJ$ of the same length,
-$$\int\limits_{\JJ_1 }f^2\cdot v_\spc{F} = \int_{\JJ_2 } f^2\cdot v_\spc{F}.$$
+$v_\spc{B}^2 + f^2v_\spc{F}^2 =v^2$ almost everywhere. Thus it suffices to verify \ref{eq:clairaut-fiber} almost everywhere, namely, to show that for any closed subintervals $\II_1,\II_2$ of $\II$ of the same length,
+$$\int\limits_{\II_1 }f^2\cdot v_\spc{F} = \int_{\II_2 } f^2\cdot v_\spc{F}.$$
 
 By Schwarz's inequality, the energy of $\gamma$, 
-$$\int\limits_\JJ({v_\spc{B}}^2+f^2\cdot {v_\spc{F}}^2),$$ is a minimum among all curves
+$$\int\limits_\II({v_\spc{B}}^2+f^2\cdot {v_\spc{F}}^2),$$ is a minimum among all curves
 $\~\gamma$ connecting the endpoints of $\gamma$. Without loss of
-generality we may assume $\JJ_1$ and $\JJ_2$ do not overlap. For $|u|$
+generality we may assume $\II_1$ and $\II_2$ do not overlap. For $|u|$
 sufficiently small we define a new curve $\gamma_u = (\gamma_\spc{B},
 \beta_u)$ such that $\beta_u$ is a reparametrization of $\gamma_\spc{F}$ with
 speed
 
 $$w_u =
 \begin{cases}
-v_\spc{F} \quad &\text{\ on\ } \JJ- (\JJ_1\cup \JJ_2)\\
-v_\spc{F}+u \quad &\text{\ on\ } \JJ_1\\
-v_\spc{F}-u \quad &\text{\ on\ } \JJ_2.
+v_\spc{F} \quad &\text{\ on\ } \II- (\II_1\cup \II_2)\\
+v_\spc{F}+u \quad &\text{\ on\ } \II_1\\
+v_\spc{F}-u \quad &\text{\ on\ } \II_2.
 \end{cases}
 $$
 
@@ -965,27 +938,27 @@ If  $s$ is the arclength parametrization of $\gamma_\spc{F}$ starting at
 $s(0) = $ lefthand endpoint $\gamma_\spc{F}(a)$ of $\gamma_\spc{F}$, then specifically $\beta_u(s) = s(\int_a^s
 w_u)$. Hence the energy of $\gamma_u$ is
 \begin{align*}
-\int\limits_\JJ(v&^2+f^2\cdot w_u^2) 
-= \int\limits_{\JJ -J_1\cup \JJ_2} (v^2+f^2\cdot w^2) +\\
-&+\int\limits_{\JJ_1}(v^2+f^2\cdot w_u^2 + 2\cdot u\cdot f^2\cdot w + u^2\cdot f^2) +\int_{\JJ_2}v^2+f^2\cdot w_u^2 - 2\cdot u\cdot f^2\cdot w
+\int\limits_\II(v&^2+f^2\cdot w_u^2) 
+= \int\limits_{\II -J_1\cup \II_2} (v^2+f^2\cdot w^2) +\\
+&+\int\limits_{\II_1}(v^2+f^2\cdot w_u^2 + 2\cdot u\cdot f^2\cdot w + u^2\cdot f^2) +\int_{\II_2}v^2+f^2\cdot w_u^2 - 2\cdot u\cdot f^2\cdot w
 + u^2\cdot f^2).
 \end{align*}
 At $u=0$,  the minimum occurs and calculating the
 derivative gives
-$$\int\limits_{\JJ_1} 2\cdot f^2\cdot w - \int\limits_{\JJ_2} 2\cdot f^2\cdot w = 0.$$ 
+$$\int\limits_{\II_1} 2\cdot f^2\cdot w - \int\limits_{\II_2} 2\cdot f^2\cdot w = 0.$$ 
 The claim follows.  
 
-\begin{clm}{}\label{clm:clairaut} $v_\spc{F}$ is defined and continuous on $\JJ$ and satisfies \ref{eq:clairaut-fiber}.
+\begin{clm}{}\label{clm:clairaut} $v_\spc{F}$ is defined and continuous on $\II$ and satisfies \ref{eq:clairaut-fiber}.
 \end{clm}
 
 Set $c=c(\gamma)$.
-Since $c/(f\circ \gamma_\spc{B})^{2}$ is defined and continuous on $\JJ$, then $v_ \spc{F}$ has a continuous extension $\overline{v}_\spc{F}$ to all of $\JJ$ by claim \ref{clairaut-ae}. It follows that the arclength function  $s(t)$ of   $\gamma_\spc{F}$ is obtained by integrating the continuous function $\overline{v}_\spc{F}$, and so $ds/dt=\overline{v}_\spc{F}$. Since $\gamma_\spc{F}$ is a pregeodesic, $ds/dt$ is the speed of $\gamma_\spc{F}$, i.e. $v_\spc{F}=ds/dt=\overline{v}_\spc{F}$.  The claim follows.
+Since $c/(f\circ \gamma_\spc{B})^{2}$ is defined and continuous on $\II$, then $v_ \spc{F}$ has a continuous extension $\overline{v}_\spc{F}$ to all of $\II$ by claim \ref{clairaut-ae}. It follows that the arclength function  $s(t)$ of   $\gamma_\spc{F}$ is obtained by integrating the continuous function $\overline{v}_\spc{F}$, and so $ds/dt=\overline{v}_\spc{F}$. Since $\gamma_\spc{F}$ is a pregeodesic, $ds/dt$ is the speed of $\gamma_\spc{F}$, i.e. $v_\spc{F}=ds/dt=\overline{v}_\spc{F}$.  The claim follows.
 
-\begin{clm}{}\label{clm:v_B} $v_\spc{B}$ is defined and continuous on $\JJ$ and satisfies \ref{eq:clairaut-base}.
+\begin{clm}{}\label{clm:v_B} $v_\spc{B}$ is defined and continuous on $\II$ and satisfies \ref{eq:clairaut-base}.
 \end{clm}
 
 
-It suffices to assume $0$ is in interior $\JJ$, and show that $v_\spc{B}$ is defined and continuous at $t=0$. 
+It suffices to assume $0$ is in interior $\II$, and show that $v_\spc{B}$ is defined and continuous at $t=0$. 
 
 Suppose $\speed\gamma=1$.  Let  $f(\gamma_\spc{B}(0))=b>0$. For 
  $\eps>0$, consider a ball B $=\oBall[\gamma_\spc{B}(0),2R]\subset f^{-1}(b+\eps,b-\eps)$.  If $0<s_1,s_2< R$, then $\gamma_\spc{B}|[-s_1,s_2]\subset$ B.
@@ -1077,7 +1050,7 @@ Let $L$ denote  \,$\length\gamma$\, as defined by \ref{eq:length}.  Then \,$L=L_
 \[
 L_{\,\Sigma}\,\,=\,\sup_{t_0<\ldots<t_n}\,\sum_{i=1}^n \,d_{\,i}\,,
 \eqlbl{eq:length}\]
-where the supremum is taken over all partitions  \,$t_0<\ldots<t_n$\, of $\JJ$.  Here, letting $\overline t_i$ be a minimum point of $(f\circ\gamma_\spc{B})|[t_{i-1}\,t_i]$\,, 
+where the supremum is taken over all partitions  \,$t_0<\ldots<t_n$\, of $\II$.  Here, letting $\overline t_i$ be a minimum point of $(f\circ\gamma_\spc{B})|[t_{i-1}\,t_i]$\,, 
 \[
 d_i=
 \begin{cases}
@@ -1153,7 +1126,7 @@ $\spc{B}$, $\spc{F}$, which are called base and fiber of the warped product, and
 Many important constructions, such as direct product, cone, spherical suspension and joins
 will be defined using warped products.
 
-\section{Definitions}\label{sec:wp-def}
+\section{Definitions I}\label{sec:wp-def}
 Consider length spaces $\spc{B}$ and  $\spc{F}$,  
 and a 
 %locally uniformly 
@@ -1198,8 +1171,7 @@ The pseudometric $\dist{}{}{f}$
 becomes a metric on the equivalence classes of ``$\sim$''.
 The resulting metric space will be called the warped product of $\spc{B}$ and $\spc{F}$ with the warping function $f$;  it will be denoted by $\spc{B}\times_f \spc{F}$.  An equivalence class $p\times \spc{F}$ will be denoted by any of its representatives.
 
-Given a path $\gamma$ in $ \spc{B}\times_f\spc{F}$ defined on $[0,1]$, we write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where $\gamma_\spc{B}$ is defined on $[0,1]$ and  $\gamma_\spc{F}$ is defined for all $t\in [0,1]$ such that $f(\gamma_\spc{B}(t))> 0$. There may be no continuous extension of $\gamma_\spc{F}$ to $[0,1]$.
-
+Given a path $\gamma$ in $ \spc{B}\times_f\spc{F}$ defined on $[0,1]$, we write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where $\gamma_\spc{B}$ is defined on $[0,1]$ and  $\gamma_\spc{F}$ is defined for all $t\in [0,1]$ such that $f(\gamma_\spc{B}(t))> 0$. There may be no continuous extension of $\gamma_\spc{F}$ to $[0,1]$. 
 
 The Fiber-independence theorem (\ref{thm:fiber-independence}) below 
 implies that if $\iota\:A\to \check A$ is an isometry between two subsets
@@ -1213,7 +1185,10 @@ Therefore we can take the warped product $\spc{B}\times_f \spc{F}'$
 and identify $\spc{B}\times_f \spc{F}$ with its subspace formed by all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
 By Fiber-independence  (\ref{thm:fiber-independence}), the resulting space does not depend on the choice of $\spc{F}'$.
 
-\section{Basic propetries}
+\section{Basic properties I}
+
+[AKP: In this version, 
+we need Lemma \ref{lem:induced-length1}.  Also we don't have a length formula for general Lipschitz curves in the warped product.]
 
 We will refer to $\spc{B}$ and $\spc{F}$ as \emph{base} and \emph{fiber} respectively; 
 and to $\spc{B}\times\{\phi_0\}$ for $\phi_0\in  \spc{F}$ and $\{p_0\}\times \spc{F}$ for $p_0\in \spc{B}-f^{-1}(0)$ as \emph{horizontal} and \emph{vertical leaves}.
@@ -1303,55 +1278,211 @@ Hence the statement follows.
 \begin{thm}{Exercise}\label{ex:warp=<}
 Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\;\spc{B}\to \RR_\ge$ be two continuous nonnegative  function.
 Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
-Show that 
+Show that    
 $\spc{B}\times_f\spc{F}\le \spc{B}\times_g\spc{F}$, namely, there is a distance noncontracting map $\spc{B}\times_f\spc{F}\to \spc{B}\times_g\spc{F}$.
 \end{thm}
 
 \begin{thm}{Lemma}
-\label{lem:induced-length}
-Let $\gamma=(\gamma_ \spc{B},\gamma_ \spc{F})$ be a Lipschitz curve in $ \spc{B}\times_f\spc{F}$ such that  $f\circ\gamma_ \spc{B}> 0$.  Then $\length\gamma$ as defined by the metric of $\spc{B}\times_f \spc{F}$ is equal to ${\length}_f\gamma$.
+\label{lem:induced-length1}
+Let $\gamma=(\gamma_ \spc{B},\gamma_ \spc{F})$ be a Lipschitz curve in $ \spc{B}\times_f\spc{F}$ such that  $f\circ\gamma_ \spc{B}> 0$;  so $\gamma_F$ is defined for all $t\in [0,1]$ and $\length_f\gamma$ is defined.  Then ${\length}_f\gamma$  is   equal to $\length\gamma$ as defined by the metric of $\spc{B}\times_f \spc{F}$.
 \end{thm}
 \parit{Proof.}
-Since distance in $\spc{B}\times_f \spc{F}$ is given by infimum of $\length_f$, it follow that projection of $\spc{B}\times_f \spc{F}$  to $\spc{B}$ is distance nonincreasing, and projection to $\spc{F}$ is locally Lipschitz on $\{p\in\spc{B}\:f(p)>0\}\times_f\spc{F}$.  Therefore 
-$\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz; equivalently,   $(\gamma_\spc{B},\gamma_\spc{F})$ belongs to the class of curves in $\spc{B}\times\spc{F}$ for which $\length_f$ is defined.  Call these curves  \emph{admissible} for $\length_f$; they are closed under restriction, concatenation and linear reparametrization.
+By \ref{horiz-leaf-proj} and \ref{vert-leaf-proj}, 
+$\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz; equivalently,   $(\gamma_\spc{B},\gamma_\spc{F})$ belongs to the class of curves in $\spc{B}\times\spc{F}$ for which $\length_f$ is defined. Let us call these curves \emph{admissible}.  Admissible curves are closed under restriction, concatenation and linear reparametrization.
 Moreover, 
-%local uniform continuity of $f$ implies that 
-$\length_f$  is a lower semi-continuous functional on admissible curves with respect to pointwise convergence, that is,  if \,$\gamma_i\to\gamma$\, then \,$\liminf\,(\length_f\gamma_i) \ge\length_f\gamma$. 
- In this case the two lengths agree, as is shown  in \cite{BBI}. 
+%??? local uniform continuity of $f$ implies that 
+$\length_f$  is a lower semi-continuous functional on admissible curves with respect to pointwise converge (???), that is,  if \,$\gamma_i\to\gamma$\, then \,$\liminf\,(\length_f\gamma_i) \ge\length_f\gamma$. 
+ In this case the two lengths agree, as is shown  in \cite{BBI}. \qeds
 
 \begin{thm}{Proposition}
 \label{prop:f=0}  
 Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F})\:[0,1]\to \spc{B}\times_f\spc{F}$ be a geodesic joining $x=(p,\phi)$ and $y=(q,\psi)$.  
 
 \begin{subthm}{F-proj}
-If $f\circ\gamma_\spc{B}>0$, then $\gamma_\spc{F}$ is a pregeodesic of $\spc{F}$.
+If $f\circ\gamma_\spc{B}>0$, then $\gamma_\spc{F}$ is a reparametrized geodesic of $\spc{F}$.
 \end{subthm}
 
-\begin{subthm}{f=0-geo}
-Suppose $\gamma_\spc{B}$ intersects the zero set $Z$of $f$. Then $\gamma_F$ is constant on any maximal subinterval $\JJ$ of $[0,1]$ such that  $(f\circ\gamma_B)|\JJ>0$. 
- If $\JJ$ contains neither $0$ nor $1$, then this  constant  may be chosen arbitrarily and the resulting curve will still be a geodesic of $\spc{B}\times_f\spc{F}$  joining $x$ and $y$.
+\begin{subthm}{f=0-F-proj}Suppose $\gamma_\spc{B}$ intersects the zero set $Z$of $f$. Then $\gamma_F$ is constant on any maximal subinterval $\II$ of $[0,1]$ such that  $(f\circ\gamma_B)|\II>0$. 
+ If $\II$ contains neither $0$ nor $1$, then this  constant  may be chosen arbitrarily and the resulting curve will still be a geodesic of $\spc{B}\times_f\spc{F}$  joining $x$ and $y$.
  \end{subthm}
  
-\begin{subthm}{f=0-fiber-projection} 
+\begin{subthm}{f=0-geo}
 Suppose $\gamma_\spc{B}$ intersects $Z$.  Then $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ joining $p$ and $q$ that intersect $Z$, and either is a geodesic of $\spc{B}$, or intersects $Z$ at a single point $p_0$ and consists of two geodesics of $\spc{B}$ joined at $p_0$.
 \end{subthm}
 \end{thm}
 \parit{Proof.}
 \ref{SHORT.F-proj}) Suppose $\length\gamma_\spc{F}>|\varphi\,\psi|$.  
-Let $\beta:[0,1]\to \spc{F}$ be a Lipschitz curve with endpoints $\varphi$, $\psi$ and  $\length\beta <\length\gamma_\spc{F}$. By Lemma \ref{lem:induced-length} and formula  \ref{wp-length} for $\length_f$, a shorter join than  $\gamma$ of $x$ and $y$ may be obtained by replacing $\gamma_\spc{F}$ with a reparametrization of $\beta$  having speed proportional to and less than $\speed\gamma_{\spc{F}}$.  This contradiction gives (\ref{SHORT.F-proj}).
+Let $\beta:[0,1]\to \spc{F}$ be a Lipschitz curve with endpoints $\varphi$, $\psi$ and  $\length\beta <\length\gamma_\spc{F}$. By Lemma \ref{lem:induced-length1} and formula  \ref{wp-length} for $\length_f$, a shorter join than  $\gamma$ of $x$ and $y$ may be obtained by replacing $\gamma_\spc{F}$ with a reparametrization of $\beta$  having speed proportional to and less than $\speed\gamma_{\spc{F}}$.  This contradiction gives (\ref{SHORT.F-proj}).
 
-\ref{SHORT.f=0-geo}) Suppose $\gamma_\spc{B}(t_0)\in Z$.
-By \ref{wp-length}, the curve $\gamma_1$ in $\spc{B}\times\spc{F}$ defined on $[0,t_0]$, whose projection to $\spc{B}$ is $\gamma_\spc{B }|[0,t_0]$ and whose projection to $\spc{F}$  takes constant value $\phi$, has image in $\spc{B}\times_f\spc{F}$ of length equal to   $\length\gamma_\spc{B }|[0,t_0]$. Similarly, there is
+\ref{SHORT.f=0-F-proj}) Suppose $\gamma_\spc{B}(t_0)\in Z$.
+Let $\gamma_1$  be the curve in $\spc{B}\times\spc{F}$ defined on $[0,t_0]$, whose projection to $\spc{B}$ is $\gamma_\spc{B }|[0,t_0]$ and whose projection to $\spc{F}$  takes constant value $\phi$.  By  \ref{wp-length}, $\gamma_1$ has image in $\spc{B}\times_f\spc{F}$ of length equal to   $\length\gamma_\spc{B }|[0,t_0]$. Similarly, there is
 $\gamma_2$  defined on $[t_0,1]$, whose projection to $\spc{F}$ takes constant value  $\psi$ and  whose image in $\spc{B}\times_f\spc{F}$ has length equal to  $\length\gamma_\spc{B}|[t_0,1]$.
 
-There is a Lipschitz curve in $\spc{B}\times\spc{F}$ defined on $[0,1]$ that joins $(p,\phi)$ and $(q,\psi)$ and has  the same length as $\gamma_\spc{B}$.  Indeed  if $t_0>0$, then by \ref{wp-length} it suffices to take a  reparametrization of $\gamma_1$ whose projection to $\spc{B}$ is  constant on $[t_0-\epsilon, t_0]$, on which interval the projection to $\spc{F}$ moves from constantly $\phi$ to constantly $\psi$ followed by $\gamma_2$.  (Similarly for  $[0,\epsilon]$ if $t_0=0$.) Claim
-(\ref{SHORT.f=0-distance}) follows by \ref{wp-length}.  
+Then there is a Lipschitz curve in $\spc{B}\times\spc{F}$ defined on $[0,1]$ that joins $(p,\phi)$ and $(q,\psi)$ and has  the same length as $\gamma_\spc{B}$.  Indeed  if $t_0>0$, then by \ref{wp-length} it suffices to take a  reparametrization of $\gamma_1$ whose projection to $\spc{B}$ is  constant on $[t_0-\epsilon, t_0]$, on which interval the projection to $\spc{F}$ moves from constantly $\phi$, to constantly $\psi$, followed by $\gamma_2$.  If $t_0=0$, we make a similar adjustment on $[0,\epsilon]$. Claim
+(\ref{SHORT.f=0-distance}) follows.
 
-\ref{SHORT.f=0-fiber-projection}) It follows also that  $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ from $p$ to $q$ that intersect $Z$. 
+\ref{SHORT.f=0-geo}) It follows also that  $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ from $p$ to $q$ that intersect $Z$. 
 Let $[t_0,t_1]$ be the maximal subinterval of $[0,1]$ having endpoints in $\gamma_\spc{B}^{-1}(Z)$. 
 If $t_0=t_1$, then $\gamma_\spc{B} |[0,t_0]$ and $\gamma_\spc{B} |[t_0,1]$ are geodesics and the claim holds. Suppose $t_0<t_1$.  Then $\gamma_\spc{B} |[0,t_1]$ is  a geodesic, since otherwise  by the triangle inequality there is a curve from $p$ to $q$ passing through $\gamma_\spc{B}(t_1)\in Z$ that is shorter than $\gamma$.  Similarly,  
 $\gamma_\spc{B} |[t_0,1]$ is a geodesic.
 \qeds
+
+\section{Definitions II}\label{sec:wp-def}
+
+First we define  $\spc{B}\times_f\spc{F}$ for length spaces $\spc{B}$ and $\spc{F}$.  Then we expand the definition to allow arbitrary metric spaces $\spc{F}$.
+
+Consider the topological space  $(\spc{B}\times \spc{F})/\!\sim$, where the elements of $\{p\}\times \spc{F}$ are identified if $f( p )=0$.  We denote this class by $\overline p$, or by  any of its representatives $(p,\varphi)$, $\phi\in \spc{F}$.
+
+An \emph{admissible curve} for the triple $(\spc{B},f,\spc{F})$ is a curve $\gamma:\II\to (\spc{B}\times \spc{F})/\!\sim$.  We write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where $\gamma_\spc{B}:\II\to \spc{B}$, $\gamma_\spc{F}:\II^+\to \spc{F}$,   $\II^0=(f\circ\gamma_\spc{B})^{-1}(0)$, $\II^+=\II-\II^0$.  
+Setting $\II^+=\sqcup_{i=1,2,\ldots} \,\II^i$, where the $\II^i$ are maximal open subintervals of $\II^+$, we assume $\gamma_\spc{B}$ and   $\gamma_\spc{F}|\II^i$ to be Lipschitz, where   $\gamma_\spc{F}|\II^i$, $i=1,\ldots$, have a uniform Lipschitz constant. 
+Set
+\[\length_f\gamma\  \ =\ \ \int _{\II}\,\sqrt{
+v_B^2+ (f\circ\gamma_\spc{B})^2\cdot v_F^2}\,,
+\eqlbl{eq:length}\]
+where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_B$, $v_\spc{F}|\II_+$ is  the speed of $\gamma_\spc{F}|\II_+$ and $v_\spc{F}|\II_0=0$.   
+Then the integrand is defined  almost everywhere on $\II$  and bounded.  
+Equivalently,  
+\[
+\length\gamma\  \ =\ \  \sum_i \int _{\II_i}\sqrt{
+v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}  \ \ +\ \  \length\, (\gamma_\spc{B}|\II_0).
+\]
+%The first term
+% is independent of enumeration  because the summands are positive.  
+ 
+  
+Then the   \emph{warped product} \,$\spc{B}\times_f\spc{F}$\, is the corresponding intrinsic  space, where distance is given by infimum of lengths of admissible curves joining two given points.  Since $\length_f$ on admissible curves gives a lower semi-continuous (???) length structure in the sense of  \cite{BBI}, then $\length_f\gamma$ equals $\length\gamma$ as defined by the warped product metric.
+
+We refer to $\spc{B}$ and $\spc{F}$ as \emph{base} and \emph{fiber} respectively.
+$\spc{B}\times\{\phi_0\}$  is called a \emph{horizontal leaf};  and $\{p_0\}\times \spc{F}$ when $f( p_0 )>0$,   a \emph{vertical leaf}.
+
+The vanishing set $f^{-1}(0)$ of $f$ represents the set on which the horizontal leaves $\spc{B}\times\{\phi_0\}$ are glued together.  At these points there is no well-defined projection $\gamma_\spc{F}$ to $\spc{F}$. 
+
+[Same as Definitions I after this.]
+
+\section{Basic properties II}
+
+[AKP:  In this version, Lemma \ref{lem:induced-length1} from version 1 is deleted,  and Proposition \ref{f=0-F-proj:2} from version 1 is obvious. The rest is the same as version 1.]
+
+We will refer to $\spc{B}$ and $\spc{F}$ as \emph{base} and \emph{fiber} respectively; 
+and to $\spc{B}\times\{\phi_0\}$ for $\phi_0\in  \spc{F}$ and $\{p_0\}\times \spc{F}$ for $p_0\in \spc{B}-f^{-1}(0)$ as \emph{horizontal} and \emph{vertical leaves}.
+
+\begin{thm}{Proposition}
+The warped product $\spc{\spc{B}}\times_f\spc{F}$ satisfies:
+
+\begin{subthm}{horiz-leaf-proj}
+The projection $(p,\phi_0)\mapsto p$  of any  horizontal leaf $\spc{B}\times\{\phi_0\}$, with its length-metric,  is an isometry onto $\spc{B}$.
+\end{subthm}
+
+\begin{subthm}{vert-leaf-proj}
+The projection $(p_0,\phi)\mapsto \phi$ of any  vertical leaf $\{p_0\}\times \spc{F}$, with its length-metric,  is a homothety onto $\spc{F}$ with multiplier $1/f(p_0)$.
+\end{subthm}
+
+
+\begin{subthm}{horiz-leaf-isometry}
+Each horizontal leaf $\spc{B}\times\{\phi_0\}$ is isometrically embedded in $\spc{B}\times_f\spc{F}$.
+\end{subthm}
+
+
+\begin{subthm}{Df>0}If  $f$ achieves its minimum at $p_0$, then the vertical leaf $\{p_0\} \times \spc{F}$ is isometrically embedded in $\spc{B}\times_f\spc{F}$.
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.} 
+Claims  (\ref{SHORT.horiz-leaf-proj}) and (\ref{SHORT.vert-leaf-proj}) 
+%and (\ref{SHORT.Df>0})  
+are immediate from the 
+length formula \ref{wp-length}.
+
+Also by (\ref{wp-length}), the projection of
+$\spc{B}\times_f\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$   is length-nonincreasing, as is the projection onto $\{p_0\} \times \spc{F}$ given by  $(p,\phi)\mapsto (p_o,\phi)$  if $p_0$ is a local minimum point of $f$.  
+Hence (\ref{SHORT.horiz-leaf-isometry}) and (\ref{SHORT.Df>0}).
+\qeds
+
+A horizontal leaf need not be convex even if $\spc{B}\times_f\spc{F}$ is a geodesic space, since vanishing of the warping function$\,f$ allows geodesics to bifurcate into distinct horizontal leaves (see Proposition \ref{f=0-geo}).  For instance, suppose $\beta:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\beta^{-1}(Z)\neq[0,1]$ where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \times_f\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
+
+\begin{thm}{Exercise}\label{ex:chohom-1=warped-product}
+Show that orbits of isometric cohomogenity 1 group action on Riemannian manifold
+form a vertical fiber of a warped product.
+\end{thm}
+
+Distance in a warped product is fiber-independent, in the sense that distances may be calculated by substituting for $\spc{F}$ a different length space:
+
+\begin{thm}{Fiber-independence theorem}\label{thm:fiber-independence}
+Consider length spaces $\spc{B}$, $\spc{F}$ and  $\check{\spc{F}}$,  and a continuous function
+$f:\spc{B}\to\R_{\ge 0}$.  
+Assume $p,q\in \spc{B}$, $\phi,\psi\in \spc{F}$ and $\check{\phi},\check{\psi}\in \check{\spc{F}}$:
+Then 
+\[
+\begin{aligned}
+\dist{\phi}{\psi}{\spc{F}}
+&
+\ge\dist{\check{\phi}}{\check{\psi}}{\check{\spc{F}}}
+\\
+&\Downarrow
+\\
+\dist{(p,\phi)}{(q,\psi)}{\spc{B}\times_f\spc{F}}
+&\ge\dist{(p,\check{\phi})}{(q,\check{\psi})}{\spc{B}\times_f\check{\spc{F}}}
+\end{aligned}
+\eqlbl{eq:dist-fiber-indep}
+\]
+\end{thm}
+
+\parit{Proof.} 
+Fix a path $\gamma=(\gamma_{\spc{B}},\gamma_{\spc{F}})$ 
+from $(p,\phi)$ to $(q,\psi)$.
+
+Since $\dist{\phi}{\psi}{\spc{F}}
+\ge\dist{\check{\phi}}{\check{\psi}}{\check{\spc{F}}}$,
+there is a Lipschitz path $\gamma_{\check{\spc{F}}}$ 
+from $\check\phi$ to $\check\psi$ in $\check{\spc{F}}$ such that
+\[(\speed\gamma_{\spc{F}})(t)
+\ge
+(\speed\gamma_{\check{\spc{F}}})(t)\]
+for almost all $t\in[0,1]$.
+
+Consider the path $\check\gamma=(\gamma_{\check{\spc{B}}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\times_f\check{\spc{F}}$.
+Clearly
+\[\length_f\gamma\ge \length_f\check\gamma.\]
+Hence the statement follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:warp=<}
+Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\;\spc{B}\to \RR_\ge$ be two continuous nonnegative  function.
+Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
+Show that    
+$\spc{B}\times_f\spc{F}\le \spc{B}\times_g\spc{F}$, namely, there is a distance noncontracting map $\spc{B}\times_f\spc{F}\to \spc{B}\times_g\spc{F}$.
+\end{thm}
+
+\begin{thm}{Proposition}
+\label{prop:f=0:2}  
+Let $\gamma=(\gamma_\spc{B},\gamma_\spc{F})\:[0,1]\to \spc{B}\times_f\spc{F}$ be a geodesic joining $x=(p,\phi)$ and $y=(q,\psi)$.  
+
+\begin{subthm}{F-proj:2}
+If $f\circ\gamma_\spc{B}>0$, then $\gamma_\spc{F}$ is a reparametrized geodesic of $\spc{F}$.
+\end{subthm}
+
+\begin{subthm}{f=0-F-proj:2}Suppose $\gamma_\spc{B}$ intersects the zero set $Z$of $f$. Then $\gamma_F$ is constant on any maximal subinterval $\II$ of $[0,1]$ such that  $(f\circ\gamma_B)|\II>0$. 
+ If $\II$ contains neither $0$ nor $1$, then this  constant  may be chosen arbitrarily and the resulting curve will still be a geodesic of $\spc{B}\times_f\spc{F}$  joining $x$ and $y$.
+ \end{subthm}
+ 
+\begin{subthm}{f=0-geo:2}
+Suppose $\gamma_\spc{B}$ intersects $Z$.  Then $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ joining $p$ and $q$ that intersect $Z$, and either is a geodesic of $\spc{B}$, or intersects $Z$ at a single point $p_0$ and consists of two geodesics of $\spc{B}$ joined at $p_0$.
+\end{subthm}
+\end{thm}
+\parit{Proof.}
+\ref{SHORT.F-proj:2}) Suppose $\length\gamma_\spc{F}>|\varphi\,\psi|$.  
+Let $\beta:[0,1]\to \spc{F}$ be a Lipschitz curve with endpoints $\varphi$, $\psi$ and  $\length\beta <\length\gamma_\spc{F}$. By Lemma \ref{lem:induced-length1} and formula  \ref{wp-length} for $\length_f$, a shorter join than  $\gamma$ of $x$ and $y$ may be obtained by replacing $\gamma_\spc{F}$ with a reparametrization of $\beta$  having speed proportional to and less than $\speed\gamma_{\spc{F}}$.  This contradiction gives (\ref{SHORT.F-proj}).
+
+\ref{SHORT.f=0-F-proj:2}) By the length formula \ref{eq:length}, any curve in $\spc{B}$ joining $p$ and  $q$ and passing through $Z=f^{-1}(0)$ is the projection of a curve in $\spc{B}\times_f\spc{F}$ of the same length joining $(p,\phi)$ and $(q,\psi)$, and such that the projection to $\spc{F}$ on each subinterval $\II_i$ of $\II$ is constant.  
+ Hence (\ref{SHORT.f=0-F-proj:2}).  
+
+\ref{SHORT.f=0-geo:2})
+It follows also that  $\gamma_\spc{B}$ minimizes length of curves in $\spc{B}$ from $p$ to $q$ that intersect $Z$.  If $t_0=t_1$ in  (\ref{SHORT.f=0-base-projection}), it follows that $\gamma |[0,t_0]$ and $\gamma |[t_0,1]$ are geodesics and the claim holds. Suppose $t_0<t_1$.  Then $\gamma |[0,t_1]$ is  a geodesic, since otherwise  by the triangle inequality there is a curve from $p$ to $q$ passing through $\gamma(t_1)\in Z$ that is shorter than $\gamma$.  Similarly,  
+$\gamma |[t_0,1]$ is a geodesic.
+\qeds
+
 
 \section{Examples}
 
@@ -1367,7 +1498,7 @@ This is taken as the defining formula for the direct product of two arbitrary me
 The \emph{Euclidean cone} $\Cone\spc{F}$ over space $\spc{F}$
 can be defined as a warped product $[0,\infty)\times_{\id} \spc{F}$.
 For $s,t\in [0,\infty)$ and $x,y\in \spc{F}$, 
-the cone metric is given by cosine rule
+the cone metric is given by the cosine rule
 \[
 \dist{(p,x)}{(q,y)}{} 
 =
@@ -1375,18 +1506,18 @@ the cone metric is given by cosine rule
 \]
 where $\alpha= \max\{\pi, \dist{x}{y}{}\}$.
 
-Instead Euclidean cosine rule, 
-one use the cosine rule in $\Lob2\kappa$
+Instead of the Euclidean cosine rule, 
+one can use the cosine rule in $\Lob2\kappa$:
 \[
 \dist{(p,x)}{(q,y)}{} 
 =
 \side\kappa\{\alpha;s,t\}.
 \]
-This way we get so called $\kappa$-cones over $\spc{F}$ denoted by $\Cone\mc\kappa\spc{F}=[0,\infty)\times_{\sn\kappa} \spc{F}$ for $\kappa\le 0$
+This way we get so-called $\kappa$-cones over $\spc{F}$, denoted by $\Cone\mc\kappa\spc{F}=[0,\infty)\times_{\sn\kappa} \spc{F}$ for $\kappa\le 0$
 and $\Cone\mc\kappa\spc{F}=[0,\varpi\kappa]\times_{\sn\kappa} \spc{F}$ for $\kappa>0$.
 
-For $1$-cone $\Cone\mc1\spc{F}$ is also called \emph{spherical suspension} over $\spc{F}$ and it is also denoted $\Susp\spc{F}$.
-That is
+The $1$-cone $\Cone\mc1\spc{F}$ is also called the \emph{spherical suspension} over $\spc{F}$,  denoted by $\Susp\spc{F}$.
+That is,
 \[
 \Susp\spc{F}=[0,\pi]\times_{\sin}\spc{F}.
 \]
@@ -1394,7 +1525,7 @@ That is
 \begin{thm}{Exercise}\label{ex:convexity-in-cone}
 Let $\spc{F}$ be a length space and $A\subset  \spc{F}$.
 Show that $\Cone\mc\kappa A$ is convex in $\Cone\mc\kappa\spc{F}$ 
-if and only if $A$ is $\pi$ convex in $\spc{F}$.
+if and only if $A$ is $\varpi\kappa$-convex in $\spc{F}$.
 \end{thm}
 
 
