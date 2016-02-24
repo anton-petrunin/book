@@ -1,7 +1,8 @@
-%%!TEX root = the-defs-CBA.tex
+% %%!TEX root = the-defs-CBA.te
 
 \chapter{Definitions of curvature bounded above}
-Section~\ref{sec:cba-def} defines $\cCat{}{\kappa}$ spaces via a (2+2)-point comparison; it concerns only distances 
+Section~\ref{sec:cba-def} defines $\cCat{}{\kappa}$ spaces via a (2+2)-point comparison; 
+it is an analog of $\Cat{}{\kappa}$ spaces but the definition use only distances 
 and makes no assumptions on the presence of geodesics.  
 Section~\ref{sec:cat-angles} gives definitions in terms of angle and distance comparisons for triangles.  
 Section~\ref{sec:thin-triangle} looks at thin triangles and their inheritance lemma. 
@@ -61,12 +62,6 @@ is undefined.
 \end{lpic}
 \end{wrapfigure}
 
-Spaces in which any two points at distance $<\varpi\kappa$ are joined by a geodesic and which  satisfy (2+2)-point comparisons globally will be called \emph{$\Cat{}{\kappa}$ spaces}.
-This terminology was introduced by Gromov;  
-$\Cat{}{}$ stands for Cartan--Alexandrov--Toponogov, 
-although Toponogov did not work with curvature bounded above.
-Previously, these spaces were called \emph{$\mathfrak{R}_\kappa$ domains}, which was Alexandrov's terminology.
-
 \begin{thm}{Definition}
 \label{def:ccat}
 A complete length space $\spc{U}$ 
@@ -75,35 +70,20 @@ is called a \emph{$\cCat{}{\kappa}$ space} (also written $\spc{U}\in \cCat{}{\ka
 We write $\spc{U}\in\cCat{}{}$ to mean: $\spc{U}\in\cCat{}{\kappa}$ for some $\kappa$.  
 \end{thm}
 
-\begin{thm}{Definition}
-\label{def:ccat}
-A  $\varpi\kappa$-geodesic space $\spc{U}$
-is called a \emph{$\Cat{}{\kappa}$ space} (also written $\spc{U}\in \Cat{}{\kappa}$) if every quadruple $p^1,p^2,x^1,x^2$ satisfies the (2+2)-point $\kappa$-comparison (\ref{def:2+2}).  
-
-We write $\spc{U}\in\Cat{}{}$ to mean: $\spc{U}\in\Cat{}{\kappa}$ for some $\kappa$.  
-\end{thm}
-
-Note that by definition completion of a $\Cat{}{\kappa}$ space is a $\cCat{}{\kappa}$.
-From Lemma on uniqueness of geodesics, see \ref{lem:cat-unique} below,
-it follows that any $\cCat{}{\kappa}$ space is $\varpi\kappa$-geodesic,
-in particular $\cCat{}{\kappa}\subset \Cat{}{\kappa}$.
-It often convinient to think of $\Cat{}{\kappa}$ spaces as $\varpi\kappa$-convex (not necesary closed) subset of a $\cCat{}{\kappa}$ space.
-
-%Note that according to Proposition~\ref{prop:submodel},
-%the $\Cat{}\kappa$ spaces can be defined as $\varpi\kappa$-geodesic spaces 
-%all of which $\kappa$-admissible quadruples are $\kappa$-submodel;
-%see the definitions in Section~\ref{sec:quad}.
-%Proposition~\ref{prop:submodel} also provides the following equivalent way to define $\Cat{}\kappa$ spaces.
+The condition $\spc{U}\in\Cat{}{\kappa}$ should be thought of as ``$\spc{U}$ has global curvature $\le\kappa$''.
+In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
+in particular, if $\kappa\le\Kappa$ then
+ $$\cCat{}{\kappa}\subset\cCat{}{\Kappa}.$$
 
 \begin{thm}{Exercise}
 \label{ex:ccat-(3+1)}
-A complete $\varpi\kappa$-length space $\spc{U}$ 
+A complete length space $\spc{U}$ 
 is a $\cCat{}{\kappa}$ space 
 if and only if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
 $\angk\kappa p{x^1}{x^2}$,
 $\angk\kappa p{x^2}{x^3}$ and
 $\angk\kappa p{x^1}{x^3}$
-satisfy all three triangle inequalities.
+satisfy all three triangle inequalities or one of these angels is undefined.
 \end{thm}
 
 \begin{thm}{Exercise}
@@ -125,43 +105,14 @@ such that
 for any $i$ and $j$.
 \end{thm}
 
-Theorem~\ref{thm:cat-complete} gives an alternative definition of $\cCat{}{\kappa}$ spaces.
-
-The condition $\spc{U}\in\Cat{}{\kappa}$ should be thought of as ``$\spc{U}$ has global curvature $\le\kappa$''.
-In Proposition~\ref{prop:inherit-bound}, we shown that this formulation makes sense; 
-in particular, if $\kappa\le\Kappa$ then
- $$\Cat{}{\kappa}\subset\Cat{}{\Kappa}.$$ 
-The following definition gives an infinitesimal 
- notion of upper curvature bound at a point of a space.
- 
-
-\begin{thm}{Definition}\label{def:cba}
-Let $\spc{U}$ be a metric space and $p\in\spc{U}$.
-We say that \emph{$\spc{U}$ has curvature $\le\kappa$ at $p$} 
-(briefly, $\curv_p \spc{U}\le\kappa$) 
-if for any $\Kappa>\kappa$ there is $r>0$ such that $\oBall[p,r]\in\Cat{}{\Kappa}$.
-
-We say that a space $\spc{U}$ has curvature $\le\kappa$ (briefly,  $\curv\spc{U}\le\kappa$) 
-if $\curv_p \spc{U}\le\kappa$ for any $p\in\spc{U}$.   
-\end{thm}
-
-If $\spc{U}\in\Cat{}{\kappa}$ then $\curv\spc{U}\le\kappa$; this fact follows from Proposition~\ref{prop:inherit-bound}.
-
-The converse, namely that an infinitesimal curvature bound implies a global curvature bound, does not hold in general.  This failure of the converse  for spaces of curvature bounded above is one of the major differences with spaces of  curvature bounded below.
-For example, $\SS^1$ is locally isometric to $\RR$, and so
-$\curv\SS^1\le 0$, but it is easy to find a quadruple of points in $\SS^1$ which violates (2+2)-point comparison.  
-
-However, it is true that an infinitesimal bound always implies a local bound; that is, if
-$\curv\spc{U}\le\kappa$, then for any $p$ there is $r>0$ such that $\oBall[p,r]\in\Cat{}{\kappa}$ (Corollary \ref{cor:k-for-k}).
-
-
-The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower (see Section~\ref{ultralimits}).
+The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower;
+see Section~\ref{ultralimits} for the related definitions.
 
 
 \begin{thm}{Proposition}
 \label{prop:CAT^omega}
 If $(\spc{U}_n,\star_n)\to (\spc{U}_\o,\star_\o)$ and $\kappa_n\to\kappa_\o$ as $n\to\o$, then 
-\[\spc{U}_n\in\Cat{}{\kappa_n}\  \Longrightarrow\  \spc{U}_\o\in\cCat{}{\kappa_\o}.\]
+\[\spc{U}_n\in\cCat{}{\kappa_n}\  \Longrightarrow\  \spc{U}_\o\in\cCat{}{\kappa_\o}.\]
 Moreover, for a complete metric space $\spc{U}$, 
 \[\spc{U}\in\cCat{}{\kappa}\  
 \Longleftrightarrow\  
@@ -169,13 +120,32 @@ Moreover, for a complete metric space $\spc{U}$,
 
 \end{thm} 
 
-\begin{thm}{Lemma on uniqueness of geodesics}\label{lem:cat-unique} 
+\begin{thm}{Theorem on uniqueness of geodesics}\label{thm:cat-unique}\label{thm:cat-complete} 
 In a $\cCat{}{\kappa}$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 \parit{Proof.} 
-Let $\spc{U} \in \Cat{}{\kappa}$, $p^1,p^2\in \spc{U}$ and $\dist{p^1}{p^2}{}<\varpi\kappa$.
-Suppose $p^1_n\to p^1$, $p^2_n\to p^2$ as $n\to\infty$.
+Let $\spc{U}\in \cCat{}{\kappa}$.
+Fix two points $p^1,p^2\in \spc{U}$  such that 
+\[\dist{p^1}{p^2}{\spc{U}}<\varpi\kappa.\]
+
+Choose a sequence of approximate midpoints $z_n$ for $p^1$ and $p^2$;
+i.e.  
+\[\dist{p^1}{z_n}{},\dist{p^2}{z_n}{}
+\to\tfrac12\cdot\dist[{{}}]{p^1}{p^2}{}
+\ \text{as}\ n\to\infty.
+\eqlbl{eq:to|p1p2|/2}\]
+
+By the law of cosines, $\angk{\kappa} {p^1}{z_n}{p^2}$ and $\angk{\kappa} {p^2}{z_n}{p^1}$ are arbitrarily small when $n$ is sufficiently large.
+
+Let us apply (2+2)-point comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z_\kay$ with large $n$ and $\kay$.
+We conclude that  $\angk{\kappa} {p}{z_n}{z_\kay}$ is arbitrarily small when $n,\kay$ are sufficiently large and $p$ is either $p^1$ or $p^2$.  
+By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ is a Cauchy sequence.  
+
+Since $\spc{U}$ is complete, the sequence $(z_n)$ converges to a midpoint of $p^1$ and $p^2$. 
+By Lemma~\ref{lem:mid>geod} the existence of a geodesic $[p^1p^2]$.
+
+Now suppose $p^1_n\to p^1$, $p^2_n\to p^2$ as $n\to\infty$.
 Let $z_n$ be the midpoint of a geodesic $[p^1_n p^2_n]$ and $z$ be the midpoint of a geodesic $[p^1p^2]$.  
 
 It suffices to show that 
@@ -200,38 +170,62 @@ Moreover the same holds for any $\spc{U}\in\Cat{}{}$ with nontrivial local homol
 in particular if $\spc{U}$ is a homological manifold.
 \end{thm}
 
-The following theorem is dual to Plaut's theorem (\ref{thm:almost.geod}).
+The following definition is analogous to the definition of $\cCat{}{}$ spaces,
+but more standard in the literature.
 
-\begin{thm}{Theorem}\label{thm:cat-complete} 
-Let $\spc{U}$ be a complete $\varpi\kappa$-length space in which every quadruple $p^1,p^2,x^1,x^2$ satisfies the (2+2)-point comparison (\ref{def:2+2}). Then $\spc{U}\in\cCat{}{\kappa}$ (that is, any two points at distance $<\varpi\kappa$ are joined by a geodesic).
+\begin{thm}{Definition}\label{def:cat}
+$\varpi\kappa$-geodesic lenght spaces which  satisfy (2+2)-point $\kappa$comparison for any quadrouple of points are called \emph{$\Cat{}{\kappa}$ spaces}.
+ 
+We write $\spc{U}\in\Cat{}{}$ to mean: $\spc{U}\in\Cat{}{\kappa}$ for some $\kappa$.  
+\end{thm}
+
+This terminology was introduced by Gromov;  
+$\Cat{}{}$ stands for Cartan--Alexandrov--Toponogov, 
+although Toponogov did not work with curvature bounded above.
+Previously, these spaces were called \emph{$\mathfrak{R}_\kappa$ domains}, which was Alexandrov's terminology.
+
+Unlike $\cCat{}{\kappa}$ spaces the $\Cat{}{\kappa}$ spaces maybe not complete.
+
+From Theorem on uniqueness of geodesics~\ref{thm:cat-unique}
+we get the following.
+
+\begin{thm}{Corollary}\label{cor:cat-ccat}
+Any $\cCat{}{\kappa}$ space is $\varpi\kappa$-geodesic.
+In particular
+\[\cCat{}{\kappa}\subset\Cat{}{\kappa}.\]
+\end{thm}
+
+In other words the Definition~\ref{def:cat} is more general than Definition~\ref{def:ccat}.
+On the other hand we have the following.
+
+\begin{thm}{Proposition}\label{cor:cat-completion} 
+The completion of any $\Cat{}{\kappa}$ space is a $\cCat{}{\kappa}$ space.
+
+Moreover, $\spc{U}\in \Cat{}{\kappa}$
+if and only if there is a space $\bar{\spc{U}}\in \cCat{}{\kappa}$ which contains a $\varpi\kappa$-convex set isometric to $\spc{U}$.
 \end{thm}
 
 \parit{Proof.} 
-Choose a sequence of approximate midpoints $z_n$ for $p^1$ and $p^2$;
-i.e.  
-\[\dist{p^1}{z_n}{},\dist{p^2}{z_n}{}
-\to\tfrac12\cdot\dist[{{}}]{p^1}{p^2}{}
-\ \text{as}\ n\to\infty.
-\eqlbl{eq:to|p1p2|/2}\]
+By Theorem \ref{thm:cat-complete},
+in order to show that completion $\bar{\spc{U}}$ of any space $\spc{U}\in\Cat{}{\kappa}$ is a $\cCat{}{\kappa}$ space,
+it is sufficient to verify that the completion a length space is a length space; 
+this is straightforward.
 
-By the law of cosines, $\angk{\kappa} {p^1}{z_n}{p^2}$ and $\angk{\kappa} {p^2}{z_n}{p^1}$ are arbitrarily small when $n$ is sufficiently large.
-
-Let us apply (2+2)-point comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z_\kay$ with large $n$ and $\kay$.
-We conclude that  $\angk{\kappa} {p}{z_n}{z_\kay}$ is arbitrarily small when $n,\kay$ are sufficiently large and $p$ is either $p^1$ or $p^2$.  
-By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ is a Cauchy sequence.  
-Since $\spc{U}$ is complete, then $(z_n)$ converges to a midpoint for $p^1$ and $p^2$. 
-Thus the existence of a geodesic $[p^1p^2]$ follows from Lemma~\ref{lem:mid>geod}.
+For the second part of proposition note that the completion $\bar{\spc{U}}$
+contains the original space $\spc{U}$ as a $\varpi\kappa$-convex subset.
 \qeds
 
-\begin{thm}{Corollary}\label{cor:cat-completion} 
-The completion $\spc{U}^c$ of $\spc{U}\in\Cat{}{\kappa}$ satisfies $\spc{U}^c\in\cCat{}{\kappa}$.
+Here is a corollary from Proposition~\ref{cor:cat-completion}
+and Theorem~\ref{thm:cat-unique}.
+
+\begin{thm}{Corollary}\label{cor:cat-unique}
+In a $\Cat{}{\kappa}$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
-\parit{Proof.} By Theorem \ref{thm:cat-complete}, it is only necessary to verify that $\spc{U}^c$ is a $\varpi\kappa$-length space; this is straightforward.
+\parit{Proof.}
+By Proposition~\ref{cor:cat-completion} any $\Cat{}{\kappa}$ space is isometric to a convex dense subset of a $\cCat{}{\kappa}$ space.
+It remains to apply  Theorem~\ref{thm:cat-unique}.
 \qeds
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -241,7 +235,7 @@ The completion $\spc{U}^c$ of $\spc{U}\in\Cat{}{\kappa}$ satisfies $\spc{U}^c\in
 Here we give a few reformulations of Definition~\ref{def:ccat}.
 
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/lem_alex1(0.3)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/lem_alex1(0.3)}
 \lbl[br]{17,59;$y$}
 \lbl[r]{1,2;$p$}
 \lbl[l]{86,13;$x$}
@@ -251,7 +245,8 @@ Here we give a few reformulations of Definition~\ref{def:ccat}.
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_cat} 
-Let  $\spc{U}$ be a $\varpi\kappa$-geodesic space.  Then
+Let  $\spc{U}$ be a $\varpi\kappa$-geodesic length space.  
+Then
 \begin{subthm}{cat-ineq} 
 $\spc{U}\in\Cat{}{\kappa}$
 \end{subthm}
@@ -394,10 +389,14 @@ is convex.
 \begin{thm}{Proposition}
 \label{prop:inherit-bound}
 If $\kappa<\Kappa$, then 
-\[\Cat{}{\kappa}\subset\Cat{}{\Kappa}.\]
+\[\cCat{}{\kappa}\subset\cCat{}{\Kappa}
+\ \ \text{and}\ \ 
+\Cat{}{\kappa}\subset\Cat{}{\Kappa}.\]
 
 Moreover
-\[\Cat{}{\kappa}=\bigcap_{\Kappa>\kappa}\Cat{}{\Kappa}.\]
+\[\cCat{}{\kappa}=\bigcap_{\Kappa>\kappa}\cCat{}{\Kappa}
+\ \ \text{and}\ \ 
+\Cat{}{\kappa}=\bigcap_{\Kappa>\kappa}\Cat{}{\Kappa}.\]
 \end{thm}
 
 \parit{Proof.} The first statement follows from the adjacent-angles comparison (\ref{cat-2-sum}) and the monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
@@ -455,7 +454,7 @@ and $v=f(\~v)$, $w=f(\~w)$.
 
 
 \begin{thm}{Proposition}\label{prop:k-thin}
-Let $\spc{U}$ be a $\varpi\kappa$-geodesic space. 
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic length space. 
 Then $\spc{U}\in\Cat{}{\kappa}$
 if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  is $\kappa$-thin.
 \end{thm}
@@ -465,7 +464,8 @@ if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  
 
 
 \begin{thm}{Corollary}\label{cor:loc-geod-are-min}
-Suppose $\spc{U}\in\Cat{}{\kappa}$.  Then any local geodesic in $\spc{U}$ of length $<\varpi\kappa$ is a minimizing geodesic.
+Suppose $\spc{U}\in\Cat{}{\kappa}$.  
+Then any local geodesic in $\spc{U}$ of length $<\varpi\kappa$ is a minimizing geodesic.
 \end{thm}
 
 \parit{Proof.}
@@ -630,13 +630,15 @@ First we obtain a corresponding differential  inequality for the distance functi
 see Section~\ref{sec:conv-fun} for definition.
  
 \begin{thm}{Theorem}\label{thm:function-comp} 
-Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic space. 
+Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic length space. 
 Then the following are equivalent:
 \begin{subthm}{function-comp-cat} 
 $\spc{U}\in\Cat{}{\kappa}$,
 \end{subthm}
 \begin{subthm}{function-comp}
-for any $p\in \spc{U}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 1$ in $\oBall(p,\varpi\kappa)$.
+for any $p\in \spc{U}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies 
+\[f''+\kappa \cdot f\ge 1\] 
+in $\oBall(p,\varpi\kappa)$.
 \end{subthm}\end{thm}
 
 \parit{Proof.} For a geodesic $[x y]$ in $\oBall(p,\varpi\kappa)$, consider the model triangle $\trig{\~p}{\~x}{\~y}\z=\modtrig\kappa(p x y)$, and set \begin{align*} 
@@ -648,13 +650,36 @@ By Property~\ref{md-diff-eq}, we have $\~f''=1-\kappa\cdot  \~f$. Clearly $\~f(t
 The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\~r(t)$  for all $t\in[0,\dist{x}{y}{}]$.  Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, $r\le \~r$ and $f\le \~f$ are equivalent.  Thus the claim follows by Jensen's inequality 
 (\ref{y''-mono}). \qeds
 
+Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
+The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
+
+\begin{thm}{Exercise}\label{ex:busemann-CBA}
+Let $\spc{U}\in\cCat{}{\kappa}$
+and $\bus_\gamma\:\spc{U}\to \RR$ is the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
+
+\begin{subthm}{}
+If $\kappa=0$ then the Busemann function $\bus_\gamma$ is  convex.
+\end{subthm}
+
+\begin{subthm}{}
+If $\kappa=-1$ then the function 
+\[f=\exp\circ\bus_\gamma\] 
+satisfies
+\[f''- f\ge 0\]
+\end{subthm}
+
+\end{thm}
+
 \section{Convex sets}\label{sec:convex-CBA}
 
 The following is a corollary of Theorem \ref{thm:function-comp}.
 
 \begin{thm}{Corollary}\label{cor:convex-balls}
 Suppose $\spc{U}\in\Cat{}{\kappa}$.
-Then any ball (close or open) of radius $R\le\tfrac{\varpi\kappa}2$ in $\spc{U}$ is $\varpi\kappa$-convex.
+Then any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ in $\spc{U}$ is convex.
+
+Moreover, any open ball of radius $\tfrac{\varpi\kappa}2$ is convex
+and any closed ball of radius $\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
 \end{thm}
 
 \parit{Proof.}
@@ -665,6 +690,11 @@ By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$ then any
  
 By function comparison (\ref{thm:function-comp})
 the geodesic $[x y]$ lies in $\cBall[p,R]$ and $\oBall(p,R)$ correspondingly.
+
+We proved that any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
+This implies convexity unless there is a pair of points in the ball on
+the distance at least $\varpi\kappa$.
+By triangle inequality, the later is possible only for the closed ball of radius $\tfrac{\varpi\kappa}2$.
 \qeds
 
 \begin{thm}{Proposition}
@@ -673,7 +703,7 @@ in a $\cCat{}{\kappa}$ space is $\varpi\kappa$-convex.
 \end{thm}
 
 \parit{Proof.}
-Follows from the uniqueness of geodesics in $\cCat{}{\kappa}$ spaces (\ref{lem:cat-unique}).
+Follows from the uniqueness of geodesics in $\cCat{}{\kappa}$ spaces (\ref{thm:cat-unique}).
 \qeds
 
 
@@ -702,7 +732,7 @@ Let  $\spc{U}\in\cCat{}0$ and $K\subset \spc{U}$ be a closed convex set.
 Show that the closest-point projection $\spc{U}\to K$ is short. 
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:short-retraction-CBA(1)}
+\begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
 Let  $\spc{U}\in\cCat{}1$ and $K\subset \spc{U}$ be a closed $\pi$-convex set.
 Assume $K\subset \cBall(p,\tfrac\pi2)$ for some point $p\in \spc{U}$.
 Show that there is a short retractionof $\spc{U}$ on $K$. 
@@ -825,7 +855,7 @@ Since $K$ is connected and locally path connected it is path connected.
 Fix two points $x,y\in K$. 
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
 Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
-Lemma \ref{lem:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
+Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
 uniquely defined and depends continuously on $s$.
 
 Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
@@ -863,28 +893,9 @@ Geometrically,   the development construction (\ref{def:devel}) translates dista
 
 %discuss with sba???!!!
 
-Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
-The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
-
-\begin{thm}{Exercise}\label{ex:busemann-CBA}
-Let $\spc{U}\in\cCat{}{\kappa}$
-and $\bus_\gamma\:\spc{U}\to \RR$ is the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
-
-\begin{subthm}{}
-If $\kappa=0$ then the Busemann function $\bus_\gamma$ is  convex.
-\end{subthm}
-
-\begin{subthm}{}
-If $\kappa<0$ then the function 
-\[f(x)=\exp(\sqrt{-\kappa}\cdot\bus_\gamma(x))\] 
-satisfies
-\[f''+\kappa\cdot f\ge 0\]
-\end{subthm}
-
-\end{thm}
-
 \begin{thm}{Development criterion\index{comparison!development comparison}}\label{thm:concave-devel} 
-For a $\varpi\kappa$-geodesic space $\spc{U}$,  the following statements hold:
+For a $\varpi\kappa$-geodesic length space $\spc{U}$,
+the following statements hold:
 
 \begin{subthm}{locally-concave-dev}
 For any $p\in \spc{U}$ and any geodesic $\gamma\:[0,T]\to\oBall(p,\varpi\kappa)$, suppose the $\kappa$-development $\~\gamma$ in $\Lob2\kappa$ of $\gamma$ with respect to $p$ is locally concave. Then $\spc{U}\in\Cat{}{\kappa}$.
@@ -945,6 +956,30 @@ Hence the result.
 
 \section{Patchwork globalization}\label{sec:patchwork}
 
+The following definition gives an infinitesimal 
+ notion of upper curvature bound at a point of a space.
+ 
+
+\begin{thm}{Definition}\label{def:cba}
+Let $\spc{U}$ be a metric space and $p\in\spc{U}$.
+We say that \emph{$\spc{U}$ has curvature $\le\kappa$ at $p$} 
+(briefly, $\curv_p \spc{U}\le\kappa$) 
+if for any $\Kappa>\kappa$ there is $r>0$ such that (2+2)-point $\kappa$-comparison holds for any quadruple in $\oBall[p,r]$.
+
+We say that a space $\spc{U}$ has curvature $\le\kappa$ (briefly,  $\curv\spc{U}\le\kappa$) 
+if $\curv_p \spc{U}\le\kappa$ for any $p\in\spc{U}$.   
+\end{thm}
+
+If $\spc{U}\in\cCat{}{\kappa}$ then $\curv\spc{U}\le\kappa$; this fact follows from Proposition~\ref{prop:inherit-bound}.
+The converse, does not hold for general complete length space.
+
+For example, $\SS^1$ is locally isometric to $\RR$, and so
+$\curv\SS^1\le 0$, but it is easy to find a quadruple of points in $\SS^1$ which violates (2+2)-point comparison.  
+
+Nevertheless, an infinitesimal bound implies a local bound.
+That is, if $\spc{U}$ is a complete length space and
+$\curv\spc{U}\le\kappa$, then for any $p$ there is $r>0$ such that $\oBall[p,r]\in\cCat{}{\kappa}$ (Corollary \ref{cor:k-for-k}).
+
 The following theorem, 
 which essentially is  \cite[Satz 9]{alexandrov:devel}, 
 gives a global condition on geodesics that is  necessary and sufficient for a space $\spc{U}$ with $\curv\spc{U}\le\kappa$ to satisfy $\spc{U}\in\Cat{}{\kappa}$. 
@@ -965,18 +1000,17 @@ $\curv\spc{U}\le\kappa$; moreover,  pairs of points in $\spc{U}$ at distance $<\
 \end{thm}
 
 Note that the implication (\ref{SHORT.thm:alex-patch:ccat})$\Rightarrow$(\ref{SHORT.thm:alex-patch:geo-uni})
-is immediate, being the statement of Lemma \ref{lem:cat-unique}.
-
-The next corollary states that an infinitesimal curvature bound in a neighborhood of a point implies a local curvature bound.
+is immediate, being the statement of Theorem~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:k-for-k}
-Let $\spc{U}$ be a metric space 
+Let $\spc{U}$ be a complete length space 
 and $\Omega\subset\spc{U}$ be an open subset. 
 Assume $\curv_p\spc{U}\le\kappa$ for any $p\in\Omega$.
-Then for any point $p\in \Omega$ there is $R>0$ such that $\oBall(p,R)$ is a convex subset of $\spc{U}$ and $\oBall(p,R)\in\Cat{}{\kappa}$.
+Then for any point $p\in \Omega$ there is $R>0$ such that $\cBall[p,R]$ is a convex subset of $\spc{U}$ 
+and $\cBall[p,R]\in\cCat{}{\kappa}$.
 \end{thm}
 
-\parit{Proof.}
+\parit{Proof.}???
 Fix $\Kappa>\kappa$.
 According to Definition~\ref{def:cba},
 there is $R>0$ such that $\oBall(p,R)\in\Cat{}{\Kappa}$.
@@ -1059,7 +1093,7 @@ The following theorem was proved by Reshetnyak \cite{reshetnyak:glue},  assuming
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
-$\spc{U}_1$ and $\spc{U}_2$ are $\varpi\kappa$-geodesic spaces 
+$\spc{U}_1$ and $\spc{U}_2$ are $\varpi\kappa$-geodesic length spaces 
 with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
 Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
 i.e., $\spc{W}$ is gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$;see Section~\ref{sec:quotient}.
@@ -1205,7 +1239,7 @@ the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ an
 A local geodesic segment  with length $<R/2$, and intersecting $\oBall(\gamma_\infty(t),R/2)$, cannot leave $\spc{B}$ and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
 
 
-Since $\spc{B}$ is a $\Cat{}{\kappa}$ space, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Lemma \ref{lem:cat-unique}.  
+Since $\spc{B}$ is a $\Cat{}{\kappa}$ space, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 which contains a neighborhood of $t$ in $[0,1]$
 and such that $\gamma_n|\II$ is minimizing for all large $n$.
@@ -1724,7 +1758,7 @@ Now we come to the main theorem of this section.
 
 \begin{thm}{Majorization theorem}
 \label{thm:major}
-Any closed curve $\alpha$ of length $<2\cdot \varpi\kappa$ in $\spc{U}\in\Cat{}{\kappa}$ is majorized by a convex region in $\Lob2\kappa$. \end{thm}
+Any closed curve $\alpha$ with length smaller than $2\cdot \varpi\kappa$ in $\spc{U}\in\Cat{}{\kappa}$ is majorized by a convex region in $\Lob2\kappa$. \end{thm}
 
 This theorem is proved by Reshetnyak in \cite{reshetnyak:major};
 our proof also uses a trick from \cite{ballmann:notes}.
@@ -2135,9 +2169,25 @@ $[\~x_1\~x_2\~x_3\~x_4]$; that is the convex hull of $\~x_1,\~x_2,\~x_3,\~x_4$ i
 
 \section{Hadamard--Cartan theorem}\label{sec:Hadamard--Cartan}
 
-The Hadamard--Cartan theorem was first stated for geodesic spaces by Gromov  \cite[p.119]{gromov:hyp-groups}. 
+The development of Alexandrov geomtry was largely influenced by Hadamard--Cartan theorem.
+Its original formulation states that if $M$ is a complete Riemannian manifold with sectional curvature $\le 0$ 
+then
+exponential map at any point $p\in M$ is a covering;
+in particular it implies that universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
+
+In this generality, theorem appeared in the lectures of Cartan, see \cite{cartan}.
+For surfaces in the Euclidean plane, 
+this theroem was proved by
+Hans von Mangoldt see \cite{mangoldt} 
+and few years later independently by Hadamard \cite{hadamard}.
+
+Formulations for metric spaces of different generality were proved by 
+Busemann see \cite{busemann-CBA},
+Rinow see \cite{rinow},
+Gromov  \cite[p.119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given in \cite{ballmann:cartan-hadamard}, using Birkhoff curve-shortening.  
-The statement in the non-proper  case was proved in \cite{a-b:h-c}.  This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
+The statement in the non-proper  case was proved in \cite{a-b:h-c}.  
+This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 It was pointed out by %Bruce 
 Kleiner (see \cite{ballmann:notes,ballmann:lectures}) 
 and independently by %Martin 
@@ -2605,30 +2655,7 @@ Here the final equality follows from
 
 \section{Remarks and open problems}
 
-%One may consider the following alternative to definition of $\cCat{}{}$ space which is apparently more standard in the literature. 
 
-%\begin{thm}{Definition}
-%\label{def:cat}
-%A space $\spc{U}$ 
-%is called a \emph{$\Cat{}{\kappa}$ space} (also written $\spc{U}\in \Cat{}{\kappa}$) 
-%if every quadruple $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ satisfies the (2+2)-point comparison (\ref{def:2+2}).  
-%\end{thm}
-
-%According to \ref{lem:cat-complete},  $\cCat{}{\kappa}$ space is a $\Cat{}{\kappa}$ space.
-%Thus the above definition may be considered as a generalization of definition \ref{def:2+2}.
-
-%On the other hand it is straightforward to check that for any $\spc{U}\in \Cat{}{\kappa}$ we have $\spc{U}^c\in\cCat{}{\kappa}$, 
-%where $\spc{U}^c$ denotes completion of space $\spc{U}$.
-%Therefore any $\Cat{}{\kappa}$ space can be uniquely presented as a convex everywhere dense subset of a $\cCat{}{\kappa}$ space.
-
-%This observation makes possible to extend directly 
-%many results for $\cCat{}{\kappa}$ space to all $\Cat{}{\kappa}$ spaces;
-%it includes ???.
-%Such a direct generalization does not work if the theorems
-%which imply existence some objects in the space.
-%One example is Majorazing theorem (\ref{thm:major}).
-%However, the proof which we give works for $\Cat{}{\kappa}$ spaces just as well; one only has to check that limit map in the very end has image in the  space (formally it lies in the completion).%???SAY MORE 
-%For many theorems as ???, it is not known whether it 
 
 
 

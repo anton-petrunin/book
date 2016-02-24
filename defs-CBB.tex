@@ -7,13 +7,13 @@ In Section~\ref{sec:angle},
 we will start with a global definition of Alexandrov spaces via (1+3)-point comparison.
 In Section~\ref{sec:more-angles}, 
 we give a number of equivalent angle comparison definitions. 
-These definitions give the easiest way to adapt your Euclidean intuition to Alexandrov's world.
+These definitions maek it easy to adapt the Euclidean intuition to the Alexandrov's world.
 Later we  give a few equivalent global definitions 
 via concavity of distance functions and development (Section~\ref{sec:func-comp-CBB}).
 
-Yet another definition via extension of short maps on 4-point subsets (Section~\ref{sec:4pt}). 
-Thes definition give a uniform approach to definitions of spaces with lower and upper curvature bound.
-It gives nice philosiphical point of view,
+In Section~\ref{sec:4pt} gives yet another definition via extension of short maps on 4-point subsets. 
+This definition give a uniform approach to definitions of spaces with lower and upper curvature bound.
+It gives a conceptional point of view,
 but it almost not used in the proofs.
 
 In Section~\ref{sec:loc}, 
@@ -22,7 +22,7 @@ we give local versions of each definition and prove the globalization theorem.
 Further, we discuss some basic corollaries of the definition:
 Section~\ref{sec:prop.geod}
 contains first variation formula 
-and non-splitting property of geodesics are found in Section~\ref{sec:prop.geod};
+and non-splitting property of geodesics;
 Section~\ref{sec:positive.bound}
 discusses specific properties of spaces with positive curvature bound are given.
 
@@ -33,8 +33,8 @@ discusses specific properties of spaces with positive curvature bound are given.
 \begin{thm}{Definition}
 \label{df:1+3}
 A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies 
-\emph{(1+3)-point comparison}%
-\index{(1+3)-point comparison} 
+\emph{(1+3)-point $\kappa$-comparison}%
+\index{(1+3)-point $\kappa$-comparison} 
 if 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
@@ -48,11 +48,13 @@ A complete length space $\spc{L}$
 is called an Alexandrov space with curvature $\ge \kappa$ 
 (briefly, $\spc{L}\in\CBB{}{\kappa}$\index{$\CBB{}{}$}) 
 if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies (1+3)-point comparison.
+
+We say that $\spc{L}$ an Alexandrov space with curvature bounded below 
+(briefly, $\spc{L}$ is a  $\CBB{}{}$ space or $\spc{L}\in\CBB{}{}$) if there is $\kappa\in\RR$ such that $\spc{L}\in \CBB{}{\kappa}$.
 \end{thm}
 
 \parbf{Remarks} 
 \begin{itemize}
-\item We say that $\spc{L}$ has curvature bounded below (briefly, $\spc{L}$ is a  $\CBB{}{}$-space or $\spc{L}\in\CBB{}{}$) if there is $\kappa\in\RR$ such that $\spc{L}\in \CBB{}{\kappa}$.
 \item Alexandrov spaces with curvature bounded below usually will be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
 \item In the definition of spaces with curvature $\ge\kappa$, when $\kappa>0$ most authors assume in addition that $\diam \spc{L}\le \varpi\kappa$, or equivalently, that $\spc{L}$ is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
 \item If $\kappa<\Kappa$, the following inclusion holds:
@@ -60,7 +62,41 @@ if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies (1+3)-point comparison.
 However, in the case $\Kappa>0$ it is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
-\medskip
+\begin{thm}{Exercise}\label{ex:(3+1)-expanding}
+Let $\spc{L}$ be a complete length space.
+Show that $\spc{L}\in\CBB{}\kappa$
+if for any quadrouple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
+\[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa\]
+there is a quadrouple of points $q,y^1,y^2,y^3\in\Lob3\kappa$
+such that 
+\[\dist{p}{x^i}{}=\dist{q}{y^i}{} 
+\ \ \text{and}\ \ \dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}\] 
+for all $i$ and $j$.
+\end{thm}
+
+The exercise above is a partial case of (1+\textit{n})-point comparison (\ref{thm:pos-config}).
+
+\begin{thm}{Exercise}
+Let $\spc{L}$ be a length space.
+Show that $\spc{L}\in\CBB{}0$
+if and only if 
+\[
+\area\modtrig0(xyz)
+\le
+\area\modtrig0(pxy)+\area\modtrig0(pyz)+\area\modtrig0(pzx)
+\]
+for any 4 distinct points $p,x,y,z\in\spc{L}$.
+\end{thm}
+
+The following exercise decribes the first known definition of spaces with curvature bounded below;
+it was given by Abraham Wald in \cite{wald}. 
+
+\begin{thm}{Exercise}
+Let $\spc{L}$ be a complete length space and $\kappa\le 0$.
+Prove that $\spc{L}\in\CBB{}\kappa$ if and only if for any quadruple of points $p,q,r,s\in \spc{L}$ can be isometrically embedded into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
+
+Is the same true for $\kappa>0$, what is the difference?
+\end{thm}
 
 It is straightforward to check the following claim (for definitions of $\o$-limit and $\o$-power, 
 see Section~\ref{ultralimits}).
@@ -75,10 +111,75 @@ Moreover, for any complete metric space $\spc{L}$,
 where $\spc{L}^\o$ denotes ultrapower of $\spc{L}$.
 \end{thm}
 
-General complete length spaces might have no geodesics;
+\begin{thm}{Theorem}\label{thm:submetry-CBB}
+Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ be a metric space.
+Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
+Then $\spc{M}\in \CBB{}{\kappa}$.
+\end{thm}
+
+The theorem above together with Proposition~\ref{prop:submet/G}
+imply the following.
+
+\begin{thm}{Corollary}\label{thm:CBB/G}
+Let $\spc{L}\in\CBB{}{\kappa}$ and the group $G$ acts on $\spc{L}$ by isometries 
+and it has closed orbits.
+Then $\spc{L}/G\in\CBB{}{\kappa}$. 
+\end{thm}
+
+\parit{Proof of \ref{thm:submetry-CBB}.}
+Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
+Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
+Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
+such that $\sigma(\hat x_i)=x_i$ and
+\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
+\lege
+\dist{p}{x^i}{\spc{M}}\pm\delta\]
+for all $i$.
+Note that 
+\[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
+>
+\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
+for all $i$ and $j$.
+Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
+\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
+<
+\angk\kappa p{x^1}{x^2}+\eps
+\eqlbl{eq:angles-M-L}\]
+holds for all $i$ and $j$.
+
+By (1+3)-point comparison in $\spc{L}$,
+we have
+\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
++\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
++\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
+\le 
+2\cdot\pi\]
+assuming all the angles on the left hand side are defined.
+Applying  \ref{eq:angles-M-L}, 
+we get 
+\[\angk\kappa p{x^1}{x^2}
++\angk\kappa p{x^2}{x^3}
++\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
+
+Since $\eps>0$ is arbitrary we have 
+\[\angk\kappa p{x^1}{x^2}
++\angk\kappa p{x^2}{x^3}
++\angk\kappa p{x^3}{x^1}\le 2\cdot\pi;\]
+that is,
+the (1+3)-point $\kappa$-comparison holds in $\spc{M}$.
+It remains to apply Proposition~\ref{prop:submet-length}.
+\qeds
+
+\section{Geodesics}
+
+Recall that general complete length spaces might have no geodesics;
 see Exercise~\ref{ex:no-geod}.
-For Alexandrov spaces the situation is different; 
-all Alexandrov's spaces are G-delta geodesic in the sense of the following definition:
+
+\begin{thm}{Exercise}
+Construct a space $\spc{L}\in \CBB{}{0}$ which is not geodesic.
+\end{thm}
+
+We are goinfg to show that all $\CBB{}{}$ spaces are G-delta geodesic in the following sense.
 
 \begin{thm}{Definition}\label{def:alm-geod}
 A complete length space $\spc{X}$ is called \emph{G-delta geodesic}\index{geodesic!G-delta geodesic space}\index{G-delta geodesic space} 
@@ -88,7 +189,7 @@ if for any point $p\in \spc{X}$ there is a dense G-delta set $W_p\subset\spc{X}$
 \begin{thm}{Definition}\label{def:straight}
 Let $\spc{X}$ be a metric space 
 and $p\in \spc{X}$.
-Let us call $q\in \spc{X}$ \emph{$p$-straight}\index{straight!$*$-straight point} (briefly, $q\in \Str(p)$\index{$\Str(p)$}) if
+A point $q\in \spc{X}$ is called \emph{$p$-straight}\index{straight!$*$-straight point} (briefly, $q\in \Str(p)$\index{$\Str(p)$}) if
 \[\limsup_{r\to q}\frac{\dist{p}{r}{}-\dist{p}{q}{}}{\dist{q}{r}{}}=1.\]
 
 For an array of points $x^1,x^2,\dots,x^\kay$, 
@@ -96,7 +197,7 @@ we use the notation
 \[\Str(x^1,x^2,\dots,x^\kay)=\bigcap_{i=1}^\kay\Str(x^i).\]
 \end{thm}
 
-\begin{thm}{Plaut's theorem}\label{thm:almost.geod}
+\begin{thm}{Theorem}\label{thm:almost.geod}
 Let $\spc{L}\in\CBB{}{}$ and $p\in \spc{L}$.
 Then the set $\Str(p)$ is a dense G-delta set, 
 and for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
@@ -104,8 +205,8 @@ and for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
 In particular, $\spc{L}$ is G-delta geodesic.
 \end{thm}
 
-We repeat the proof from \cite[Th. 27]{plaut:survey}.
-First let us prove a lemma in metric geometry.
+The theorem above was proved by Plaut \cite[Th. 27]{plaut:survey}.
+His proof requires the following lemma in metric geometry.
 
 \begin{thm}{Lemma}\label{lem:straight}
 Let $\spc{X}$ be a complete length space. 
@@ -134,14 +235,8 @@ a contradiction.
 Since $\Str(p)=\bigcap_{n\in \NN}\Omega_n$, the result follows.
 \qeds
 
-\parbf{Remark.}
-An alternative proof can be built on the fact that geodesics do not split (\ref{thm:g-split}),
-and the following corollary of Lemma~\ref{lem:X-X^w}: 
-\textit{Assume $\spc{X}$ is a complete length space 
-and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  Then there are at least two distinct geodesics between $p$ and $q$ 
-in the ultrapower $\spc{X}^\o$}. 
 
-\parit{Proof of theorem \ref{thm:almost.geod}.}
+\parit{Proof of Theorem \ref{thm:almost.geod}.}
 Let $\spc{L}\in\CBB{}{\kappa}$.
 We show that if $q\in \Str(p)$, then there is a unique geodesic connecting $p$ and $q$.
 Thus the theorem will follow from Lemma~\ref{lem:straight}.
@@ -186,6 +281,12 @@ i.e. $\{z_n\}$ is a Cauchy sequence, and $z=\lim_n z_n$ satisfies \ref{eq:thm:co
 \qeds
 
 \begin{thm}{Exercise}
+Give an alternative proof of Theorem \ref{thm:almost.geod} 
+built on the fact that geodesics do not split (\ref{thm:g-split})
+and Corollary \ref{cor:two-geodesics-in-ultrapower}.
+\end{thm}
+
+\begin{thm}{Exercise}
 Construct a space $\spc{L}\in\CBB{}{}$
 which contains an everywhere dense G-delta set $A$
 such that 
@@ -193,59 +294,12 @@ $A\cap\l]xy\r[=\emptyset$
 for any geodesic $[xy]$ in $\spc{L}$. 
 \end{thm}
 
-\begin{thm}{Theorem}\label{thm:submetry-CBB}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ be a metric space.
-Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
-Then $\spc{M}\in \CBB{}{\kappa}$.
+\begin{thm}{Exercise}
+Let $\spc{L}\in\CBB{}{}$ and $A\subset\spc{L}$ be a closed subset.
+Show that there is a dense G-delta set $W\subset\spc{L}$ such that
+for any $q\in W$ there is unique geodesic $[pq]$ with
+$p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
 \end{thm}
-
-The theorem above together with Proposition~\ref{prop:submet/G}
-imply the following.
-
-\begin{thm}{Corollary}\label{thm:CBB/G}
-Let $\spc{L}\in\CBB{}{\kappa}$ and the group $G$ acts on $\spc{L}$ by isometries 
-and it has closed orbits.
-Then $\spc{L}/G\in\CBB{}{\kappa}$. 
-\end{thm}
-
-\parit{Proof.}
-Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
-Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
-Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
-such that $\sigma(\hat x_i)=x_i$ and
-\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
-\lege
-\dist{p}{x^i}{\spc{M}}\pm\delta\]
-for all $i$.
-Note that 
-\[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
->
-\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
-for all $i$ and $j$.
-Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
-<
-\angk\kappa p{x^1}{x^2}+\eps
-\eqlbl{eq:angles-M-L}\]
-holds for all $i$ and $j$.
-
-By (1+3)-point comparison in $\spc{L}$,
-we have
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
-+\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
-+\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
-\le 
-2\cdot\pi\]
-assuming all the angles on the left hand side are defined.
-Applying  \ref{eq:angles-M-L}, 
-we get 
-\[\angk\kappa p{x^1}{x^2}
-+\angk\kappa p{x^2}{x^3}
-+\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
-
-Since $\eps>0$ is arbitrary the (1+3)-point comparison holds in $\spc{M}$.
-It remains to apply Proposition~\ref{prop:submet-length}.
-\qeds
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -291,7 +345,10 @@ for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
 \end{thm}
 
 \parbf{Remarks.} 
-A bit weaker form of \ref{SHORT.angle} 
+The monotonicity of model angle with respect to adjacent sidelengths (\ref{SHORT.two-mono-cba}) was named the \emph{convexity property} by Alexandrov.
+%???REF???
+
+A bit weaker form of (\ref{SHORT.angle}) 
 is given in \ref{lem:devel-glob}.
 See also Problem~\ref{open:hinge-}.
 
@@ -356,12 +413,6 @@ Passing to the limits  $w\to p$, we obtain
 Finally, if $\spc{L}$ is not geodesic, we can apply above arguments for sequences of points $p_n,w_n\to p$, $p_n\in \Str(z)$, $w_n\in\l]z p_n\r[$ and $x_n\to x$, $y_n\to y$, $x_n,y_n\in \Str(w_n)$.
 \qeds
 
-\parit{Proof.}
-See the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) in the proof of \ref{thm:defs_of_alex}.\qeds
-
-The following corollary restates the part 
-(\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) in the proof of \ref{thm:defs_of_alex}. 
-The monotonicity of  model angle with respect to adjacent sidelengths (\ref{two-mono-cba}) was named the \emph{convexity property} by Alexandrov.
 
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton} 
 Let $\spc{L}\in\CBB{}{\kappa}$,
@@ -389,6 +440,72 @@ The angle $\mangle\hinge{x}{p}{y}$ is defined and
 \end{subthm}
 \end{thm}
 
+\parit{Proof.}
+See the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) in the proof of \ref{thm:defs_of_alex}.\qeds
+
+\begin{thm}{Exercise} 
+Let $\spc{L}\in\CBB{}{\kappa}$,
+$p,x,y\in \spc{L}$
+and $v,w\in \l]xy\r[$.
+Prove that  
+\[
+\angk\kappa xyp=\angk\kappa xvp
+\ \ \Leftrightarrow\ \ 
+\angk\kappa xyp=\angk\kappa xwp.
+\]
+
+\end{thm}
+
+\begin{thm}{Advanced Exercise} \label{ex:urysohn}
+Construct a geodesic space $\spc{X}\notin\CBB{}0$, 
+but which meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \l]x y\r[$
+\[\angk{0}{z}{p}{x}+\angk{0}{z}{p}{y}
+\le
+\pi.\]
+\end{thm}
+
+\begin{thm}{Advanced Exercise}\label{ex:lebedeva-petrunin}
+Assume $\spc{L}$ be a complete length space such that for any quadrouple $p,x,y,z\in\spc{L}$ 
+the following inequality holds
+\[\dist[2]{p}{x}{}+\dist[2]{p}{y}{}+\dist[2]{p}{z}{}
+\ge
+\tfrac13\cdot
+\l[
+\dist[2]{x}{y}{}+\dist[2]{y}{z}{}+\dist[2]{z}{x}{}
+\r].\eqlbl{eq:berg-nikolaev}\]
+Prove that $\spc{L}\in\CBB{}{0}$.
+
+Construct a metric on a 4-point set which satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but which does not admit a distance preserving map into a $\CBB{}{0}$ space.
+\end{thm}
+
+Assume that for a trianglle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
+$\trig{\~x^1}{\~x^2}{\~x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ is defined.
+We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-fat}\index{$\kappa$-fat} if the natural map (see definition \ref{def:k-thin}) 
+$\trig{\~x^1}{\~x^2}{\~x^3}\to \trig{x^1}{x^2}{x^3}$ is distance non contracting.
+
+\begin{thm}{Exercise}
+Prove that any triangle with perimeter $<\varpi\kappa$ 
+in a $\CBB{}{\kappa}$-space is $\kappa$-fat.
+\end{thm}
+
+The following exercise is inspired by Busemann's definition given in \cite{busemann-CBA}. 
+
+\begin{thm}{Exercise}
+
+\begin{subthm}{}
+Show that any space $\spc{L}\in\CBB{}0$ satisfies the following condition:
+
+\begin{itemize}
+\item For any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
+\end{itemize}
+\end{subthm}
+
+\begin{subthm}{} Show that $\RR^2$ admits a metric defined by a norm
+such that it satisfies above condition, but which is not an Alexandrov space.
+\end{subthm}
+
+\end{thm}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Function comparison and development} \label{sec:func-comp-CBB}
@@ -414,7 +531,8 @@ in $\oBall(p,\varpi\kappa)$.
 \end{subthm}
 \end{thm}
 
-In particular, $\spc{L}\in\CBB{}{0}$ if and only if for any $p\in \spc{L}$, the function $\dist[2]{p}{}{}\:\spc{L}\to\RR$ is $2$-concave (see Section~\ref{sec:conv-fun}).
+In particular, $\spc{L}\in\CBB{}{0}$ if and only if for any $p\in \spc{L}$, the function $\dist[2]{p}{}{}\:\spc{L}\to\RR$ 
+is $2$-concave as defined in Section~\ref{sec:conv-fun}.
 
 \parit{Proof.} 
 Given a geodesic $[x y]$  in $\oBall(p,\varpi\kappa)$,
@@ -446,19 +564,21 @@ If $\kappa=0$ then the Busemann function $\bus_\gamma$ is  concave.
 \end{subthm}
 
 \begin{subthm}{}
-If $\kappa<0$ then the function 
-\[f(x)=\exp(\sqrt{-\kappa}\cdot\bus_\gamma(x))\] 
+If $\kappa=-1$ then the function 
+\[f=\exp\circ\bus_\gamma\] 
 satisfies
-\[f''+\kappa\cdot f\le 0\]
+\[f''- f\le 0\]
 \end{subthm}
 
 \end{thm}
 
 
-We will translate the above comparison into more geometric language, using the following definition of $\kappa$-\nospace development, introduced in \cite{alexandrov:devel}.
+We will translate the above comparison into more geometric language, using the following definition of $\kappa$-\nospace development.
+This definition appears in in \cite{alexandrov:devel}
+and an earlier fom of it can be found in \cite{liberman}.
 The definition is somewhat lengthy, but it defines a useful comparison object for a curve. 
-It is usually easier to write proofs in terms of function comparison,
-but geometrically it is  often easier to think in terms of $\kappa$-\nospace developments.
+Often it is easier to write proofs in terms of function comparison,
+but think in terms of $\kappa$-developments.
 
 \begin{thm}{Lemma}\label{lem:devel}
 Let $\kappa\in \RR$, 
@@ -473,7 +593,7 @@ $\~\gamma\: \II\to \Lob2\kappa$, parameterized by the arc-length
 such that
 $\dist{\~p}{\~\gamma(t)}{}=\dist{p}{\gamma(t)}{}$ for all $t$
 and the direction of
-$[\~p\~\gamma(t)]$ monotonically turns conterclockwise as $t$ increases.
+$[\~p\~\gamma(t)]$ monotonically turns around $\~p$ conterclockwise, as $t$ increases.
 \end{thm}
 
 \begin{thm}{Definition of development}\label{def:devel}
@@ -508,8 +628,8 @@ We need the following analogues of sub- and super-graphs%??? change to epi- hypo
 
 \begin{wrapfigure}{r}{40mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/subgraph(0.45)}
-\lbl{35,20,-5;subgraph}
-\lbl{70,30,-45;supergraph}
+\lbl{35,20,-8;subgraph}
+\lbl{70,30,-50;supergraph}
 \lbl[b r]{3,14;$\~p$}
 \lbl[lb]{53,27;$\~\gamma$}
 \end{lpic}
@@ -526,7 +646,7 @@ The curve $\~\gamma$ is called \emph{convex (concave) with respect to}\index{con
 
 The curve $\~\gamma$ is called 
 \emph{locally convex (concave) with respect to}\index{convex!locally convex development with respect to a point} $\~p$ 
-if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\ni t_0$, such that the restriction $\~\gamma|(a,b)$ is convex (concave) with respect to $\~p$.
+if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\~\gamma|(a,b)$ is convex (concave) with respect to $\~p$.
 
 %???THERE IS LITTLE PROBLEM IN CASE IF CURVE GOES AROUND BASE FEW TIMES!!!
 \end{thm}
@@ -535,9 +655,7 @@ Note that if $\kappa>0$ then the supergraph of a curve is a subgraph with respec
 
 For developments,
 all the notions above will be considered with respect to their basepoints.
-
-
-In case $\~\gamma$ is a development, we will say it is \emph{(locally) convex} if it is (locally) convex with respect to its basepoint.
+In particular, if $\~\gamma$ is a development, we will say it is \emph{(locally) convex} if it is (locally) convex with respect to its basepoint.
 
 
 
@@ -644,10 +762,10 @@ Thus, point-on-side comparison (\ref{point-on-side}) follows.
 \section{Local definitions and globalization}\label{sec:loc}
 
 
-The aim of this section is to give 
-local analogs of the definitions given above 
-and to prove the equivalence to the global definitions 
---- the globalization theorem.
+The aim of this section is giving 
+local analogs of $\CBB{}{\kappa}$ spaces 
+and proving the equivalence to the global definitions 
+--- so called globalization theorem.
 
 First we need a local analog of the notion of a G-delta geodesic space (definition \ref{def:alm-geod}):
 
@@ -735,7 +853,7 @@ Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that $R_i>\tfrac{
 Now, let us give a local definition of lower curvature bound (\ref{df:cbb1+3}).
 
 \begin{thm}{Definition}
-Let $\spc{X}$ be a complete length space and $p\in \spc{X}$, 
+Let $\spc{X}$ be a metric space and $p\in \spc{X}$, 
 we say that \emph{$\spc{X}$ has curvature $\ge\Kappa$ at $p$} 
 (briefly, $\curv_p \spc{X}\ge\Kappa$) 
 if $p$ satisfies any of the equivalent condition of Theorem~\ref{thm:=def-loc} for any $\kappa<\Kappa$.
@@ -751,7 +869,7 @@ In the two-dimensional case this theorem was proved in \cite{alexandrov:devel}, 
 In the above generality, the theorem first appears in \cite{BGP}; simplifications and modifications were given in \cite{plaut:dimension}, \cite{shiohama}, \cite{BBI}.
 Our proof, is based on presentations in  \cite{plaut:dimension} and \cite{BBI}.
 
-Applying this theorem, we are finally able to show that the expression ``space with curvature $\ge \kappa$'' makes sense:
+The following corollary says that the expression ``space with curvature $\ge \kappa$'' makes sense.
 
 \begin{thm}{Corollary}\label{cor:CAT>k-sence}
 $\spc{L}\in\CBB{}{\Kappa}$ if and only if $\spc{L}\in\CBB{}{\kappa}$ for any $\kappa<\Kappa$.
@@ -866,7 +984,7 @@ From \ref{eq:angles=<pi} and \ref{clm:T>2sides}, it follows that the spherical p
 Taking finer and finer partitions and passing to the limit $p'\to p$, the broken line $\~x_0\~x_1\dots \~x_n$ approaches development of $\gamma$ with respect to $p$ and the statement follows.
 \qeds
 
-The following lemma plays the key role in the proof of the globalization theorem
+The following lemma says that if comparison holds for all small hinges then it holds for slightly bigger hinges near the given point.
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
 Let $\kappa\in \RR$, 
@@ -1012,11 +1130,11 @@ this yields
 Applying monotonicity of sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
-We will also need the following general result on almost minima of functions on a metric space.
+The following lemma is analogous to the existence of minimum point on a compact.
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
-Let $\spc{X}$ be a complete space,
+Let $\spc{X}$ be a complete metric space,
 $p\in \spc{X}$
 and $r\:\spc{X}\to \RR$ be a function.
 Assume that for some $\eps>0$,
@@ -1057,7 +1175,7 @@ $\lim_{n}r(x_n)=0$, a contradiction.
 
 
 
-\parit{Proof of the globalization theorem.} 
+\parit{Proof of the globalization theorem (\ref{thm:glob}).} 
 Note that since for fixed points $x,y,z\in \spc{L}$, 
 the function $\kappa\mapsto\angk\kappa x y z$ is continuous, 
 it is enough to show that $\spc{L}\in\CBB{}{\kappa}$ 
@@ -1145,6 +1263,11 @@ $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p
 Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
+\begin{thm}{Advanced Exercise}
+Assume $\spc{X}$ is a non-complete geodesic space for which the (1+3)-point $\kappa$-comparison holds in a neighborhood of every point. 
+Prove that completion of $\spc{X}$ is an Alexandrov's space with curvature $\ge\kappa$.
+\end{thm}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1172,7 +1295,7 @@ Then restriction of any geodesic in $\spc{L}$ to a proper segment is the unique 
 \end{thm}
 
 In case $\kappa\le 0$, the proof is easier, since the model triangles are always defined.
-To deal with $\kappa>0$ we have to do everything locally.
+To deal with $\kappa>0$ we have to argue locally.
 
 \begin{wrapfigure}{r}{27mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/split(0.4)}
@@ -1397,8 +1520,8 @@ where $\phi$ is the infimum of angles between $[px]$ and all geodesics from $p$ 
 \end{thm}
 
 \parbf{Remark.}
-If $\spc{L}$ is proper space then $\spc{L}^\o=\spc{L}$ and $\phi$ is achieved on some particular geodesic from $p$ to $q$ 
-(see Section~\ref{ultralimits}).
+If $\spc{L}$ is proper space then $\spc{L}^\o=\spc{L}$, see Section~\ref{ultralimits}.
+Therefore the infimum $\phi$ is achieved on some particular geodesic from $p$ to $q$.
 
 \medskip
 
@@ -1424,7 +1547,7 @@ In partiqular \ref{eq:1st-var+***} holds if $p\in \Str(q)$ as well as if $q\in \
 \begin{itemize}
 \item The above lemma is essentially due to Alexandrov.
 The right hand side in \ref{eq:1st-var+***} is called \emph{strong angle}\index{angle!strong angle}\index{strong angle} of hinge $\hinge p q x$. 
-Note that in general metric space angle might differ from strong angle for a hinge.
+Note that in general metric space angle and strong angle of the same hinge might differ.
 
 \item As it follows from Exercise~\ref{ex:ultra-unique-geod}, 
 if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$ then $[p q]$ lies in $\spc{L}$.
@@ -1432,7 +1555,7 @@ if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$ then $[p q]
 
 
 
-\parit{Proof lemma about strong angle.}
+\parit{Proof lemma about strong angle (\ref{lem:strong-angle}).}
 The first statement follows directly from the first variation formula (\ref{1st-var+}) 
 and definition of model angle (see Section~\ref{sec:angles}).
 The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) applyied to $\spc{L}^\o$.
@@ -1480,41 +1603,36 @@ Then the same argument as above shows that $[x_n q_n]$ $\o$-converges to a geode
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{On positive lower bound}\label{sec:positive.bound}
-The following lemma is a simple but useful property of positively curved spaces.
 
-\begin{thm}{Lemma}\label{concave-pi/2}
-Let $\spc{L}\in\CBB{}{\kappa}$ with $\kappa>0$. Let $p\in \spc{L}$ then $\dist{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\varpi\kappa)\backslash \oBall(p,\tfrac{\varpi\kappa}{2})$.
-\end{thm}
-\parit{Proof.}
-This is an immediate consequence of \ref{comp-kappa}. \qeds
+In this section we consider $\CBB{}{\kappa}$ spaces for $\kappa>0$.
+Appying rescaling we can assume that $\kappa=1$.
 
 The following theorem states that if one ignores a few exceptional spaces, then the diameter of a space with positive lower curvature bound is bounded.
 Note that many authors (but not us) exclude these spaces in the definition of Alexandrov space with positive lower curvature bound.
 
 \begin{thm}{On diameter of space}\label{diam-k>0}
-Let $\kappa>0$ 
-and $\spc{L}\in\CBB{}{\kappa}$. 
+Let $\spc{L}\in\CBB{}{1}$. 
 Then either 
-\begin{subthm}{} $\diam \spc{L}\le \varpi\kappa$; 
+\begin{subthm}{} $\diam \spc{L}\le \pi$; 
 \end{subthm}
 
 \begin{subthm}{} or $\spc{L}$ is isometric to one of the following exceptional spaces: 
 \begin{enumerate}
 \item real line $\RR$,
 \item a ray $\RR_{\ge0}$,
-\item a closed interval $[0,a]\in \RR$, $a>\varpi\kappa$,
-\item a circle $\SS^1_a$ of length $a>2\cdot\varpi\kappa$.
+\item a closed interval $[0,a]\in \RR$, $a>\pi$,
+\item a circle $\SS^1_a$ of length $a>2\cdot\pi$.
 \end{enumerate}
 \end{subthm}
 \end{thm}
 
 
-\parit{Proof.} Using rescaling, we can assume that $\kappa=1$ and thus $\varpi\kappa=\pi$.
-
+\parit{Proof.} 
 Assume that $\spc{L}$ is a geodesic space and $\diam \spc{L}>\pi$. 
 Choose $x, y\in \spc{L}$ so that $\dist{x}{y}{}=\pi+\eps$, $0<\eps<\tfrac{\pi}{4}$. 
 By moving $y$ slightly, we can also assume that geodesic $[x y]$ is unique;
-to prove it, use either Plaut's theorem (\ref{thm:almost.geod}) or that  geodesics do not split (\ref{thm:g-split}).
+to prove it, use either Plaut's theorem (\ref{thm:almost.geod}) 
+or that  geodesics do not split (\ref{thm:g-split}).
 Let $z$ be the midpoint of a geodesic $[x y]$.
 
 Consider the function $f=\dist{x}{}{}+\dist{y}{}{}$.
@@ -1542,26 +1660,43 @@ Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$ then the above argu
 As all of those spaces are proper it means that $\spc{L}=\spc{L}^\o$.
 \qeds
 
-\begin{thm}{On perimeter of triple}\label{perim-k>0}
-Let $\kappa>0$, 
-$\spc{L}\in\CBB{}{\kappa}$ 
-and $\diam \spc{L}\le \varpi\kappa$.
-Then perimeter of any triple of points $p,q,r\in \spc{L}$ is at most $2\cdot\varpi\kappa$.
+\begin{thm}{Lemma}\label{concave-pi/2}
+Let $\spc{L}\in\CBB{}{1}$ and $p\in \spc{L}$.
+Then $\dist{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\pi)\backslash \oBall(p,\tfrac\pi2)$.
+
+In particular, if $\diam\spc{L}\le\pi$ 
+then the complements $\spc{L}\backslash \oBall(p,r)$ and $\spc{L}\backslash \cBall[p,r]$ are convex for any $r>\tfrac\pi2$.
+
+\end{thm}
+\parit{Proof.}
+This is an immediate consequence of \ref{comp-kappa}. 
+\qeds
+
+\begin{thm}{Exercise}\label{ex:fixed-point}
+Let $\spc{L}\in\CBB{m}{1}$ and $\diam\spc{L}\le\pi$.
+Assume that the group $G$ acts on  $\spc{L}$ by isometries and has closed orbits and 
+\[\diam(\spc{L}/G)>\tfrac\pi2.\]
+Show that the action of $G$ has a fixed point in $\spc{L}$.
 \end{thm}
 
-\parit{Proof.} 
-We argue by contradiction. Suppose $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}> 2\cdot\varpi\kappa$ for some $p,q,r\in \spc{L}$. 
-Since $\spc{L}\in\CBB{}{\Kappa}$ for any $0<\Kappa<\kappa$ (\ref{cor:CAT>k-sence}),  by making $\kappa$ slightly smaller we can assume that $\diam \spc{L}<\varpi\kappa$.
+\begin{thm}{On perimeter of triple}\label{perim-k>0}
+Let  
+$\spc{L}\in\CBB{}{1}$ 
+and $\diam \spc{L}\le \pi$.
+Then perimeter of any triple of points $p,q,r\in \spc{L}$ is at most $2\cdot\pi$.
+\end{thm}
 
-Further, by rescaling can assume that $\kappa=1$, 
-so $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\SS^2$.
+\parit{Proof.}  
+Arguing by contradiction, suppose 
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}> 2\cdot\pi\eqlbl{eq:perimeter-of-triange<2pi}\] 
+for some $p,q,r\in \spc{L}$. 
+Rescaling the space slightly, we can assume that $\diam\spc{L}<\pi$,
+but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
+
+By Corollary \ref{cor:CAT>k-sence},
+after rescaling we still have $\spc{L}\in\CBB{}{1}$.
 
 Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider case when there is a geodesic $[q r]$. 
-
-First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} we have that 
-$y(t)=\md1\dist[{{}}]{p}{\geod_{[q r]}(t)}{}$ 
-satisfies the differential inequality $y''\le 1- y$.
-
 
 \begin{wrapfigure}{r}{33mm}
 \begin{lpic}[t(0mm),b(5mm),r(0mm),l(0mm)]{pics/spher-trig(0.4)}
@@ -1572,14 +1707,23 @@ satisfies the differential inequality $y''\le 1- y$.
 \end{lpic}
 \end{wrapfigure}
 
+First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} we have that the function
+\[y(t)=\md1\dist[{{}}]{p}{\geod_{[q r]}(t)}{}\]
+satisfies the differential inequality $y''\le 1- y$.
+
 
 Take $z_0\in [q r]$ so that restriction $\dist{p}{}{}|[q r]$ attains its maximum at $z_0$, 
 set $t_0=\dist{q}{z_0}{}$ so $z_0=\geod_{[q r]}(t_0)$.
 Consider the following model configuration: two geodesics $[\~p\~z_0]$, $[\~q\~r]$ in $\SS^2$ such that 
-\[\dist{\~p}{\~z_0}{}=\dist{p}{z_0}{},\ \  
-\dist{\~q}{\~r}{}=\dist{q}{r}{},\ \ 
-\dist{\~z_0}{\~q}{}=\dist{z_0}{q}{},\ \  
-\dist{\~z_0}{\~r}{}=\dist{z_0}{q}{}\]
+\begin{align*}
+\dist{\~p}{\~z_0}{}&=\dist{p}{z_0}{},
+&  
+\dist{\~q}{\~r}{}&=\dist{q}{r}{},
+\\ 
+\dist{\~z_0}{\~q}{}&=\dist{z_0}{q}{},
+&  
+\dist{\~z_0}{\~r}{}&=\dist{z_0}{q}{}
+\end{align*}
 and 
 \[\mangle\hinge{\~z_0}{\~q}{\~p}
 =\mangle\hinge{\~z_0}{\~r}{\~p}
@@ -1598,18 +1742,14 @@ From barrier inequality (\ref{barrier'}), we get
 \ge 
 \dist{p}{\geod_{[q r]}(t)}{},\]
 thus, $\dist{\~p}{\~q}{}\ge\dist{p}{q}{}$ and $\dist{\~p}{\~r}{}\ge\dist{p}{r}{}$.
-Thus, 
-$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ can not exceed the perimeter of the  spherical triangle $\trig{\~p}{\~q}{\~r}$, therefore 
-\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\le 2\cdot\pi.\]
-\qedsf
 
+Therefore, 
+$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ can not exceed the perimeter of the  spherical triangle $\trig{\~p}{\~q}{\~r}$; 
+that is,
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\le 2\cdot\pi,\]
+a contradiction.
+\qeds
 
-\begin{thm}{Exercise}\label{ex:fixed-point}
-Let $m\ge 2$,
-$\spc{L}\in\CBB{m}{1}$ and the group $G$ acts on  $\spc{L}$ by isometries and has closed orbits.
-Assume $\diam(\spc{L}/G)>\tfrac\pi2$.
-Show that the action of $G$ has a fixed point on $\spc{L}$.
-\end{thm}
 
 Let $\kappa>0$.
 Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$ 
@@ -1671,84 +1811,10 @@ Is it true that $\spc{L}\in\CBB{}{0}$?
 
 \section{Exercises}
 
-\begin{thm}{Exercise}\label{ex:(3+1)-expanding}
-Let $\spc{L}$ be a length space.
-Show that $\spc{L}\in\CBB{}\kappa$
-if for any quadrouple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
-$\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa$
-there is a quadrouple of points $q,y^1,y^2,y^3\in\Lob3\kappa$
-such that $\dist{p}{x^i}{}=\dist{q}{y^i}{}$ 
-and $\dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}$ for all $i$ and $j$.
-
-Compare with (1+\textit{n})-point comparison (\ref{thm:pos-config}).
-\end{thm}
-
-
-\begin{thm}{Exercise}
-Let $\spc{L}$ be a length space.
-Show that $\spc{L}\in\CBB{}0$
-if and only if 
-\[
-\area\modtrig0(xyz)
-\le
-\area\modtrig0(pxy)+\area\modtrig0(pyz)+\area\modtrig0(pzx)
-\]
-for any 4 distinct points $p,x,y,z\in\spc{L}$.
-\end{thm}
-
-
-\begin{thm}{Exercise}
-(Wald's definition) 
-Let $\spc{L}$ be a complete length space and $\kappa\le 0$.
-Prove that $\spc{L}\in\CBB{}\kappa$ if and only if for any quadruple of points $p,q,r,s\in \spc{L}$ can be isometrically embedded into some $\Lob2{\Kappa}$ for $\Kappa\ge\kappa$.
-
-Is the same true for $\kappa>0$, what is the difference?
-\end{thm}
-
-\begin{thm}{Exercise}
-
-\begin{subthm}{}
-Show that any space $\spc{L}\in\CBB{}0$ satisfies the following condition:
-
-\begin{itemize}
-\item For any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
-\end{itemize}
-\end{subthm}
-
-
-\begin{subthm}{} Construct a geodesic space, which satisfies above condition, but which is not an Alexandrov space.
-\end{subthm}
-
-\end{thm}
-
 \begin{thm}{Exercise}
 Assume $\spc{X}$ is a complete length space which satisfy the following condition: any 4-point subset can be isometrically embedded in Euclidean 3-space.
 
 Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
-\end{thm}
-
-\begin{thm}{Exercise} 
-\begin{subthm}{}
- Construct a geodesic space $\spc{X}$ which is not an Alexandrov space, but which meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \l]x y\r[$
-\[\angk{0}{z}{p}{x}+\angk{0}{z}{p}{y}
-\le
-\pi.\]
-(Compare with the construction of Urysohn's space 
-{\rm \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}}.)
-\end{subthm}
-
-\begin{subthm}{} Let us change condition a bit: 
-for any 2 points $x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $p\in \spc{X}$ and $z\in \l]x y\r[$
-\[\angk{0}{z}{p}{x}+\angk{0}{z}{p}{y}\le \pi.\]
-Show that $\spc{X}\in\CBB{}0$
-\end{subthm}
-%\item \textbf{Schroeder's globalization.} Assume $\spc{X}$ is a non-complete geodesic space for which the $\kappa$-comparison is satisfied in a neighborhood of every point. 
-%Prove that completeion of $\spc{X}$ is an Alexandrov's space with curvature $\ge\kappa$.
-\end{thm}
-
-\begin{thm}{Exercise}
-Construct a space $\spc{L}\in \CBB{}{0}$ which is not geodesic.
-%??? maybe this should be moved to constructions???
 \end{thm}
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
@@ -1756,52 +1822,7 @@ Let $\spc{L}$ be a Minkowski space (i.e. a metric space with underlying set $\RR
 Show that $\spc{L}\in\CBB{}{}$ if and only if $\spc{L}\iso\EE^m$.
 \end{thm}
 
-\begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{}{}$ and $A\subset\spc{L}$ be a closed subset.
-Show that there is a dense G-delta set $W\subset\spc{L}$ such that
-for any $q\in W$ there is unique geodesic $[pq]$ such that
-$p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
-\end{thm}
-
-\begin{thm}{Exercise}
-Assume that for a trianglle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
-$\trig{\~x^1}{\~x^2}{\~x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ is defined.
-We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-fat}\index{$\kappa$-fat} if the natural map (see definition \ref{def:k-thin}) 
-$\trig{\~x^1}{\~x^2}{\~x^3}\to \trig{x^1}{x^2}{x^3}$ is distance non contracting.
-
-Prove that any triangle with perimeter $<\varpi\kappa$ 
-in a $\CBB{}{\kappa}$-space is $\kappa$-fat.
-\end{thm}
-
-\begin{thm}{Exercise} 
-Assume $\spc{L}$ be a complete length space such that for any quadrouple $p,x,y,z\in\spc{L}$ 
-the following inequality holds
-\[\dist[2]{p}{x}{}+\dist[2]{p}{y}{}+\dist[2]{p}{z}{}
-\ge
-\tfrac13\cdot
-\l[
-\dist[2]{x}{y}{}+\dist[2]{y}{z}{}+\dist[2]{z}{x}{}
-\r].\eqlbl{eq:berg-nikolaev}\]
-Prove that $\spc{L}\in\CBB{}{0}$.
-
-Construct a metric on a 4-point set which satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but which does not admit a distance preserving map into a $\CBB{}{0}$ space.
-
-Hint: Read \cite{lebedeva-petrunin}.
-\end{thm}
-
-\begin{thm}{Exercise} 
-Let $\spc{L}\in\CBB{}{\kappa}$,
-$p,x,y\in \spc{L}$
-and $v,w\in \l]xy\r[$.
-Prove that  
-\[
-\angk\kappa xyp=\angk\kappa xvp
-\ \ \Leftrightarrow\ \ 
-\angk\kappa xyp=\angk\kappa xwp.
-\]
-
-\end{thm}
-
+%???MOVE FROM HERE
 \begin{thm}{Exercise} 
 Let $\spc{L}\in\CBB{}{1}$.
 Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\SS^n$.

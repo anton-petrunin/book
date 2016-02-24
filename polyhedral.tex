@@ -721,76 +721,13 @@ Moreover, according to a theorem of Stone, see \cite{stone, davis-januszkiewicz}
 that is the homeomorphism to a manifold in the proposition can not be made piecewise linear. 
 
 \parit{Proof.}
-Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Lemma~\ref{lem:funny-S}.
+Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Exercise~\ref{ex:funny-S}.
 \qeds
 
-\begin{thm}{Lemma}\label{lem:funny-S}
+\begin{thm}{Exercise}\label{ex:funny-S}
 Given a positive integer $m\ge 5$
 there is an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
 and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}
 
-In the proof we apply the following lemma from \cite{edwards}; 
-it follows from the disjoint discs property.
 
-
-\begin{thm}{Lemma}\label{lem:homomanifold-characterization}
-Let $\spc{S}$ be a simplicial complex which 
-is an $m$-dimensional homology manifold for some $m\ge 5$.
-Assume all the vertices of
-$\spc{S}$ have simply connected links.
-Then $\spc{S}$ is a topological manifold.
-\end{thm}
-
-
-\parit{Proof of Lemma~\ref{lem:funny-S}.} 
-It is sufficient to construct a simplicial complex $\spc{S}$
-such that 
-\begin{itemize}
-\item $\spc{S}$ is a closed $(m-1)$-dimensional homology manifold;
-\item $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$;
-\item $\spc{S}\sim \mathbb{S}^{m-1}$; that is, $\spc{S}$ is homotopy equivalent to $\mathbb{S}^{m-1}$.
-\end{itemize}
-
-Indeed, assume such $\spc{S}$ is constructed.
-Then the suspension
-$\spc{R}\z=\Susp\spc{S}$
-is an $m$-dimensional homology manifold with a natural triangulation coming from $\spc{S}$.
-By Lemma~\ref{lem:homomanifold-characterization},
-$\spc{R}$ is a topological manifold.
-According to generalized Poincar\'{e} conjecture,
-$\spc{R}\simeq\mathbb{S}^m$;
-that is
-$\spc{R}$ is homeomorphic to $\mathbb{S}^m$.
-Since $\Cone \spc{S}\simeq \spc{R}\backslash\{s\}$ where $s$ denotes a south pole of the suspension 
-and $\EE^m\simeq \mathbb{S}^m\backslash\{p\}$
-for any point $p\in \mathbb{S}^m$
-we get 
-\[\Cone \spc{S}\simeq\EE^m.\]
-
-Let us construct $\spc{S}$.
-Fix an $(m-2)$-dimensional homology sphere $\Sigma$ with a triangulation such that $\pi_1\Sigma\ne0$.
-According to \cite{kervaire} %it is a good readable paper, but I am sure the existance follows from sometheng written before
-an example of that type exists for any $m\ge 5$.
-
-Remove from $\Sigma$ one $(m-2)$-simplex.
-Denote the obtained complex by $\Sigma'$.
-Since $m\ge 5$, we have $\pi_1\Sigma=\pi_1\Sigma'$.
-
-Consider the product $\Sigma'\times [0,1]$. 
-Attach to it the cone over its boundary $\partial (\Sigma'\times [0,1])$.
-Denote by $\spc{S}$ the obtained simplicial complex
-and by $v$ the tip of the attached cone.
-
-Note that $\spc{S}$ is homotopy equivalent to the spherical suspension over $\Sigma$ which is a simply connected homology sphere and hence is homotopy equivalent to $\mathbb{S}^{m-1}$.
-  Hence  $\spc{S}\sim\mathbb{S}^{m-1}$.
-
-The complement $\spc{S}\backslash\{v\}$ is homotopy equivalent to $\Sigma'$.
-Therefore 
-\[
-\pi_1(\spc{S}\backslash\{v\})
-=\pi_1\Sigma'
-=\pi_1\Sigma\ne 0.
-\]
-That is, $\spc{S}$ satisfies the conditions above.
-\qeds
