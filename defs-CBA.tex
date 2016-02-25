@@ -1,4 +1,4 @@
-% %%!TEX root = the-defs-CBA.te
+%%%!TEX root = the-defs-CBA.tex
 
 \chapter{Definitions of curvature bounded above}
 Section~\ref{sec:cba-def} defines $\cCat{}{\kappa}$ spaces via a (2+2)-point comparison; 
@@ -77,8 +77,8 @@ in particular, if $\kappa\le\Kappa$ then
 
 \begin{thm}{Exercise}
 \label{ex:ccat-(3+1)}
-A complete length space $\spc{U}$ 
-is a $\cCat{}{\kappa}$ space 
+Let $\spc{U}$ be a complete length space.
+Show that $\spc{U}\in\cCat{}{\kappa}$ 
 if and only if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
 $\angk\kappa p{x^1}{x^2}$,
 $\angk\kappa p{x^2}{x^3}$ and
@@ -119,6 +119,8 @@ Moreover, for a complete metric space $\spc{U}$,
 \spc{U}^\o\in\cCat{}{\kappa}.\]
 
 \end{thm} 
+
+\section{Geodesics}
 
 \begin{thm}{Theorem on uniqueness of geodesics}\label{thm:cat-unique}\label{thm:cat-complete} 
 In a $\cCat{}{\kappa}$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
@@ -195,14 +197,14 @@ In particular
 \[\cCat{}{\kappa}\subset\Cat{}{\kappa}.\]
 \end{thm}
 
-In other words the Definition~\ref{def:cat} is more general than Definition~\ref{def:ccat}.
+In other words the Definition~\ref{def:cat} is weaker than \ref{def:ccat}.
 On the other hand we have the following.
 
 \begin{thm}{Proposition}\label{cor:cat-completion} 
 The completion of any $\Cat{}{\kappa}$ space is a $\cCat{}{\kappa}$ space.
 
 Moreover, $\spc{U}\in \Cat{}{\kappa}$
-if and only if there is a space $\bar{\spc{U}}\in \cCat{}{\kappa}$ which contains a $\varpi\kappa$-convex set isometric to $\spc{U}$.
+if and only if there is a space $\bar{\spc{U}}\in \cCat{}{\kappa}$ which contains a $\varpi\kappa$-convex dense set isometric to $\spc{U}$.
 \end{thm}
 
 \parit{Proof.} 
@@ -212,7 +214,7 @@ it is sufficient to verify that the completion a length space is a length space;
 this is straightforward.
 
 For the second part of proposition note that the completion $\bar{\spc{U}}$
-contains the original space $\spc{U}$ as a $\varpi\kappa$-convex subset.
+contains the original space $\spc{U}$ as a dense $\varpi\kappa$-convex subset and the metric on $\spc{U}$ coinsides with induced length metric from $\bar{\spc{U}}$.
 \qeds
 
 Here is a corollary from Proposition~\ref{cor:cat-completion}
@@ -415,8 +417,7 @@ The inheritance lemma will lead to two fundamental constructions:
 Alexandrov's patchwork globalization  (\ref{thm:alex-patch}) 
 and Reshetnyak gluing (\ref{thm:gluing}).
  
-\begin{thm}{Definition of $\kappa$-thin triangles%make kappa bold???
-}\label{def:k-thin}
+\begin{thm}{Definition of $\bm\kappa$-thin triangles}\label{def:k-thin}
 Let $\trig{x^1}{x^2}{x^3}$ be a triangle of perimeter $<2\cdot \varpi\kappa$ in a metric space.
 Consider its model triangle
 $\trig{\~x^1}{\~x^2}{\~x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ 
@@ -884,15 +885,6 @@ that is $[x\alpha(s)]\subset K$, a contradiction.
  
 Geometrically,   the development construction (\ref{def:devel}) translates distance comparison into a local convexity statement for subsets of $\Lob2\kappa$.  Recall that a curve in $\Lob2\kappa$ is \emph{(locally) concave with respect to $p$} if (locally) its supergraph with respect to $p$ is a convex subset of $\Lob2\kappa$ (\ref{def:convex-devel}).
 
-%\begin{thm}{Theorem (Development criterion)\index{comparison!development comparison}}\label{thm:concave-devel} 
-%Suppose $\spc{U}$ is a metric space in which any two points at distance $<\varpi\kappa$ are joined by a geodesic.
-%Then  $\spc{U}\in\Cat{}{\kappa}$ if and only if for any $p\in \spc{U}$, and any geodesic $\gamma:[0,T]\to\spc{U}$ 
-%for which the triangle $\trig{p}{\gamma(0)}{\gamma(T)}$ has perimeter $<2\cdot\varpi\kappa$,
-%the $\kappa$-development $\~\gamma$ in $\Lob2\kappa$ of $\gamma$ with respect to $p$ is locally concave. 
-%\end{thm}
-
-%discuss with sba???!!!
-
 \begin{thm}{Development criterion\index{comparison!development comparison}}\label{thm:concave-devel} 
 For a $\varpi\kappa$-geodesic length space $\spc{U}$,
 the following statements hold:
@@ -964,7 +956,7 @@ The following definition gives an infinitesimal
 Let $\spc{U}$ be a metric space and $p\in\spc{U}$.
 We say that \emph{$\spc{U}$ has curvature $\le\kappa$ at $p$} 
 (briefly, $\curv_p \spc{U}\le\kappa$) 
-if for any $\Kappa>\kappa$ there is $r>0$ such that (2+2)-point $\kappa$-comparison holds for any quadruple in $\oBall[p,r]$.
+if for any $\Kappa>\kappa$ there is $r>0$ such that (2+2)-point $\kappa$-comparison holds for any quadruple in $\oBall(p,r)$.
 
 We say that a space $\spc{U}$ has curvature $\le\kappa$ (briefly,  $\curv\spc{U}\le\kappa$) 
 if $\curv_p \spc{U}\le\kappa$ for any $p\in\spc{U}$.   
@@ -987,7 +979,7 @@ The proof use a thin-triangle decompositions,
 and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
-For a metric space $\spc{U}$, the following two statements are equivalent:
+For a length space $\spc{U}$, the following two statements are equivalent:
 
 \begin{subthm}{thm:alex-patch:ccat}
 $\spc{U}\in\Cat{}{\kappa}$.
@@ -1010,23 +1002,16 @@ Then for any point $p\in \Omega$ there is $R>0$ such that $\cBall[p,R]$ is a con
 and $\cBall[p,R]\in\cCat{}{\kappa}$.
 \end{thm}
 
-\parit{Proof.}???
+\parit{Proof.}
 Fix $\Kappa>\kappa$.
 According to Definition~\ref{def:cba},
-there is $R>0$ such that $\oBall(p,R)\in\Cat{}{\Kappa}$.
-We may assume that $\oBall(p,R)\subset\Omega$ and $R<\varpi\Kappa/2$.
-According to Corollary~\ref{cor:convex-balls}, we may assume that
-\begin{itemize}
-\item $R<\varpi\Kappa/2$,
-\item $\oBall(p,R)$ is convex,
-\item $\oBall(p,R)\subset\Omega$.
-\end{itemize}
-In particular $\curv\oBall(p,R)\le \kappa$.
+there is $R>0$ such that (2+2)-point $\kappa$-comparison holds in $\oBall(p,R)$.
 
-According to  (\ref{SHORT.thm:alex-patch:ccat})$\Rightarrow$(\ref{SHORT.thm:alex-patch:geo-uni}) of Patchwork globalization  (\ref{thm:alex-patch}), 
-any two points in $\oBall(p,R)$ can be joined by a unique geodesic, which depends continuously on its endpoints.
-%!!!??? here we have a double redirect --- we refer to part of theorem, which is actually lemma about uniqueness of geodesics.
+We may assume that $\oBall(p,R)\subset\Omega$ and $R<\varpi\Kappa$.
+The same argument as in the proof of theorem on uniqueness of geodesics (\ref{thm:cat-unique}) 
+shows that any two points in $\cBall(p,\tfrac R2)$ can be joint by unique geodesic which depends continuously on the end points.
 
+The same argument as in the proof of Corollary \ref{cor:convex-balls} shows that $\cBall[p,\tfrac R2]$ is a convex set.
 Then(\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat})  of Patchwork globalization implies $\oBall(p,R)\in \Cat{}{\kappa}$.
 \qeds
 
@@ -1087,7 +1072,7 @@ Applying the lemma again shows that the  triangles $\trig{x}{x^{0,N}}{x^{2,N}}$,
 In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\Kappa$-thin.
 \qeds
 
-\section{Reshetnyak's gluing theorem.}\label{sec:cba-gluing}
+\section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
 The following theorem was proved by Reshetnyak \cite{reshetnyak:glue},  assuming $\spc{U}_1$, $\spc{U}_2$ are proper.
 
@@ -1174,8 +1159,9 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \claimqeds
 
 Now we come back to the general case;
-i.e., $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
-Note that the ultrapower $\spc{W}^\o$ is geodesic, see \ref{cor:ulara-geod}.
+that is, $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
+According to Corollary \ref{cor:ulara-geod},
+the ultrapower $\spc{W}^\o$ is geodesic.
 It is easy to see that 
 \begin{itemize}
 \item $\spc{U}_i^\o$ form weak $\varpi\kappa$-convex sets of $\spc{W}^\o$,
@@ -1206,7 +1192,7 @@ Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
 Assume $\spc{U}\in\cCat{}{0}$ and $A\subset \spc{U}$ is a closed subset.
 Assume that the doubling of $\spc{U}$ in $A$ is $\cCat{}{0}$. 
-Show that $A$ is a totally convex set of $\spc{U}$.
+Show that $A$ is a convex set of $\spc{U}$.
 \end{thm}
 
 
@@ -1224,7 +1210,8 @@ $\curv\spc{U}\le\kappa$.
  Let $\gamma_n\:[0,1]\to\spc{U}$ be a sequence of local geodesic paths converging to a path $\gamma_\infty\:[0,1]\to\spc{U}$.
 Then $\gamma_\infty$ is a local geodesic path.
 Moreover 
-\[\length\gamma_n\to\length\gamma_\infty.\]
+\[\length\gamma_n\to\length\gamma_\infty\]
+as $n\to\infty$.
 \end{thm}
 
 \parit{Proof.} 
@@ -1262,8 +1249,8 @@ The following theorem was proved in \cite{a-b:h-c}.
 Suppose $\spc{U}$ is a locally complete metric space with
 $\curv\spc{U}\le\kappa$.  Let $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path with length $<\varpi\kappa$.
 Then for some neighborhoods $\Omega^0\ni \gamma(0)$ and $\Omega^1\ni\gamma(1)$ 
-there is a unique continuous map
-\[(x,y,t)\mapsto\gamma_{x y}(t)\:\Omega^0\times \Omega^1\times[0,1]\to\spc{U}\]
+there is a unique continuous map $\Omega^0\times \Omega^1\times[0,1]\to\spc{U}$
+\[(x,y,t)\mapsto\gamma_{x y}(t)\]
 such that 
 $\gamma_{x y}\:[0,1]\to\spc{U}$ is a local geodesic path with 
 $\gamma_{x y}(0)=x$ and 
@@ -1283,21 +1270,12 @@ $\Lip=\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 There is a space $\spc{N}\in\cCat{}{\kappa}$, an open set $\hat\Omega\subset \spc{N}$,
 and a locally isometric immersion 
 \[\map\:\hat\Omega\looparrowright\spc{U},\]
- such that $\Omega^0$ and $\Omega^1$ are isometric images under $\map$ of open sets $\hat\Omega^0$ and $\hat\Omega^1$ in $\hat\Omega$, and for $\hat x\in\hat\Omega^0$, $\hat y\in\hat\Omega^1$, the geodesic $\hat\gamma_{\hat x \hat y}$ in $\spc{N}$ satisfies $\map\circ\hat\gamma_{\hat x \hat y}=\gamma_{xy}$.
-%There is a space $\spc{N}\in\cCat{}{\kappa}$ 
-%and two distance preserving maps
-%$\iota_0\:\Omega^0\to \spc{N}$ 
-%and 
-%$\iota_1\:\Omega^1\to\spc{N}$ 
-%such that 
-%$\dist{\iota_0(x)}{\iota_1(y)}{\spc{N}}=\length\gamma_{x y}$
-%for any  pair $x,y\in \Omega^0\times \Omega^1$.
+such that $\Omega^0$ and $\Omega^1$ are isometric images under $\map$ of open sets $\hat\Omega^0$ and $\hat\Omega^1$ in $\hat\Omega$, and for $\hat x\in\hat\Omega^0$, $\hat y\in\hat\Omega^1$, the geodesic $\hat\gamma_{\hat x \hat y}$ in $\spc{N}$ satisfies $\map\circ\hat\gamma_{\hat x \hat y}=\gamma_{xy}$.
 \end{subthm}
 \end{thm}
 
-
-
-The No-conjugate-point theorem will be proved here by using the next lemma, which was suggested to us by Alexander Lytchak.  The proof proceeds by piecing together $\Cat{}{\kappa}$  neighborhoods of points on a curve to construct a new $\cCat{}{\kappa}$ space.  For the original proof of Theorem~\ref{thm:no-conj-pt},   see Exercise \ref{ex:cats-cradle}.
+The following lemma was suggested to us by Alexander Lytchak.  The proof proceeds by piecing together $\Cat{}{\kappa}$  neighborhoods of points on a curve to construct a new $\cCat{}{\kappa}$ space.  
+Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of No-conjugate-point theorem~\ref{thm:no-conj-pt} given in \cite{a-b:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -1333,8 +1311,7 @@ Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}\in\cCat{}{\kappa}$.
-%WE MAY NEED TO STATE THIS CONSTRUCTION AS A COROLLARY FROM Reshetnyak gluing theorem --- I'M SURE WE WILL NEED IT ONCE MORE...
-
+%???WE MAY NEED TO STATE THIS CONSTRUCTION AS A COROLLARY FROM Reshetnyak gluing theorem --- I'M SURE WE WILL NEED IT ONCE MORE...
 %OK LET'S MOVE IT TO GLUING  WHEN WE NEED IT AGAIN
 
 For $t\in[t^{i-1},t^i]$, let $\hat\alpha(t)$  be the equivalence class of $(i,\alpha(t))$ in $\spc{N}$.
@@ -1355,7 +1332,7 @@ Apply patchwork along $\gamma$ (\ref{lem:patch}).
 
 
 
-The No-conjugate-point theorem  allows us to move a local geodesic path 
+The No-conjugate-point theorem (\ref{thm:no-conj-pt}) allows us to move a local geodesic path 
 so that its endpoints follow given trajectories.
 This process might terminate in two cases:
 when the length of the local geodesic path approaches  $\varpi\kappa$,
@@ -1374,23 +1351,12 @@ $\gamma_0=\gamma$, $\gamma_t(0)=\alpha^0(t)$, $\gamma_t(1)=\alpha^1(t)$, and $\g
 
 \begin{subthm}{cor:geo-hom-cauchy}
 if $\II\ne [0,1]$, then $\II=[0, a)$, where either $\gamma_t$ converges uniformly to a local geodesic $\gamma_a$ of length $\varpi\kappa$, or 
-for some fixed $s\in [0,1]$ the curve $\gamma_t(s):[0,a)\to\spc{U}$ is a Lipschitz curve with no limit as $t\to a^-$.
+for some fixed $s\in [0,1]$ the curve $\gamma_t(s):[0,a)\to\spc{U}$ is a Lipschitz curve with no limit as $t\to a-$.
+%???DO WE REALLY NEED SUCH GENERALITY
 \end{subthm}
 
 \end{thm}
 
-
-
-
-%Let $\spc{U}$ be complete space with $\curv\spc{U}\le\kappa$.
-
-%Assume all local geodesics in $\spc{U}$ have length at most $\ell<\varpi\kappa$.
-%Then for any path $\alpha\:[0,1]\to \spc{U}$
-%and any local geodesic path $\gamma\:[0,1]\to \spc{U}$ 
-%such that $\gamma(1)=\alpha(0)$
-%there is unique continuous family of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$
-%such that $\gamma_0=\gamma$, $\gamma_t(0)=x$ and $\gamma_t(1)=\alpha(t)$ for all $t$.
-%\end{thm}
 
 \parit{Proof.} Uniqueness follows from  Theorem \ref{thm:no-conj-pt}.
 
@@ -1406,16 +1372,10 @@ If $\alpha_s$  for some value of $s$ does not converge as $t\to a-$, then condii
 By  Proposition~\ref{prop:geo-complete}, $\gamma_a$ is a local geodesic path and\[\length\gamma_t\to\length\gamma_a\le \varpi\kappa.\]
 By maximality of $\II$, $\length\gamma_a=\varpi\kappa$ and so condition (\ref{SHORT.cor:geo-hom-cauchy}) again holds.
 \qeds
- 
-  \begin{thm}{Corollary}\label{cor:homotopy-from-p}
-Suppose $\spc{U}$ is a complete space with $\curv\spc{U}\le\kappa$,
-%$p\in\spc{U}$, $R>0$,
-%and $\curv_x\spc{U}\le\kappa$ for any $x\in\oBall(p,R)$
-%and $\cBall[p,\bar R]$ is complete for any $\bar r<r$.
-%Assume 
+
+\begin{thm}{Corollary}\label{cor:homotopy-from-p}
+Suppose $\spc{U}$ is a complete length space with $\curv\spc{U}\le\kappa$ 
 and $\alpha\:[0,1]\to \spc{U}$ is a path of length $\ell<\varpi\kappa$.
-%such that
-%\[\dist{p}{\alpha(0)}{}+\dist{p}{\alpha(1)}{}+\ell<2\cdot r.\]
 Then  for all $t\in[0,1]$,
 
 \begin{subthm}{cor:homotopy-from-p-exist}
@@ -1469,21 +1429,22 @@ The following Lifting globalization theorem gives an appropriate generalization 
 
 \begin{thm}{Lifting globalization theorem}
 \label{thm:globalization-lift}
-Suppose $\spc{U}$ is a complete space 
+Suppose $\spc{U}$ is a complete length space 
 with $\curv\spc{U}\le\kappa$ and  $p\in\spc{U}$.
-Then there is a space $\spc{B}\in\Cat{}{\kappa}$, where $\spc{B}=\oBall[\hat p,\varpi\kappa/2]$ for some $\hat p \in \spc{B}$,
+Then there is a space $\spc{B}\in\cCat{}{\kappa}$, where $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$ for some $\hat p \in \spc{B}$,
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ and the following lifting property: 
-for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\varpi\kappa/2$, %???Maybe we want $\length\alpha\le\varpi\kappa/2$???
+for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\varpi\kappa/2$, 
+%???Maybe we want $\length\alpha\le\varpi\kappa/2$???
 there is a unique path $\hat\alpha \:[0,1]\to \spc{B}$ such that $\hat\alpha(0)=\hat p$ 
 and $\map\circ\hat\alpha\equiv\alpha$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:loc-CAT(k)}
-Suppose $\spc{U}$ is a complete space 
+Suppose $\spc{U}$ is a complete length space 
 with $\curv\spc{U}\le\kappa$.
 Then for any $p\in\spc{U}$ there is $\rho_p>0$
-such that $\oBall(p,\rho_p)\in\Cat{}{\kappa}$.
+such that $\cBall[p,\rho_p]\in\cCat{}{\kappa}$.
 
 Moreover, we can assume that $\rho_p<\tfrac{\varpi\kappa}2$
 for any $p$ and the function $p\mapsto\rho_p$ is 1-Lipschitz.
@@ -1496,17 +1457,17 @@ are provided by Lifting globalization theorem
 (\ref{thm:globalization-lift}).
 
 Since $\map$ is local isometry,
-we can choose $r>0$ so that the restriction of $\map$ to $\oBall(\hat p,r)$ is distance preserving.
-By Lifting globalization, the image  $\Phi(\oBall(\hat p,r))$ coincides with the ball
-$\cBall(p,r)$.
+we can choose $r>0$ so that the restriction of $\map$ to $\cBall[\hat p,r]$ is distance preserving.
+By Lifting globalization, the image  $\Phi(\cBall[\hat p,r])$ coincides with the ball
+$\cBall[p,r]$.
 This proves the first part of theorem.
 
-To prove the second part, lat us choose $\rho_p$ to be maximal value $\le\tfrac{\varpi\kappa}2$ such that $\cBall(p,\rho_p)\in\Cat{}{\kappa}$.
+To prove the second part, lat us choose $\rho_p$ to be maximal value $\le\tfrac{\varpi\kappa}2$ such that $\cBall[p,\rho_p]\in\cCat{}{\kappa}$.
 By Corollary~\ref{cor:convex-balls}, the ball
-\[\oBall(q,\rho_p-\dist{p}{q}{})\] 
-is convex in $\oBall(p,\rho_p)$.
+\[\cBall[q,\rho_p-\dist{p}{q}{}]\] 
+is convex in $\cBall[p,\rho_p]$.
 Therefore  
-\[\oBall(q,\rho_p-\dist{p}{q}{})\in\Cat{}{\kappa}\]
+\[\cBall[q,\rho_p-\dist{p}{q}{}]\in\cCat{}{\kappa}\]
 for any $q\in \oBall(p,\rho_p)$.
 In particular $\rho_q\ge \rho_p-\dist{p}{q}{}$ for any $p,q\in\spc{U}$.
 Hence the second statement follows.
@@ -1520,14 +1481,11 @@ The following lemma from \cite{a-b:cbc}
 is a key step in the proof.
 
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
-Let $\spc{U}$ be an length-space 
+Let $\spc{U}$ be an length space 
 with $\curv\spc{U}\le\kappa$,
 and suppose $p\in\spc{U}$, $R\le\varpi\kappa/2$.  Assume the ball  $\cBall[p,\bar{R}]$ is complete
-for all $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$,  for any $x\in\oBall(p,R)$, 
-where  $\geodpath_{[p x]}$ depends continuously on $x$.
-%that is, $\geodpath_{[p z]}\rightrightarrows
-%\geodpath_{[p x]}$ as $z\to x$. 
-%???where defined?
+for all $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$, 
+which depends continuously on $x$.
 Then $\oBall(p,R) \in\Cat{}{\kappa}$.
 \end{thm}
  
