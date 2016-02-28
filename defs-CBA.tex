@@ -1,7 +1,7 @@
 %%!TEX root = the-defs-CBA.tex
 
 \chapter{Definitions of curvature bounded above}
-We begin by defining $\Cat{}{\kappa}$ spaces and spaces of curvature $\le\kappa$ via a (2+2)-point comparison that concerns only distances and makes no assumptions on the presence of geodesics (Section~\ref{sec:cba-def}).  
+We begin by defining $\Cat{}{\kappa}$ spaces and spaces of curvature $\le\kappa$ via a (2+2)-point comparison that concerns only distances and makes no assumptions on the presence of geodesics (Sectf{sec:cba-def}).  
 Section~\ref{sec:cat-angles} gives definitions in terms of angle and distance comparisons for triangles.  
 Useful definitions in terms of convexity of distance functions and developments are formulated in Section~\ref{sec:func-comp}, and Section \ref{sec:jacobi-length} contains a definition in terms of ``Jacobi lengths''. 
 ???
@@ -2319,6 +2319,64 @@ the majorizing map for $\alpha$ is distance preserving.
 \end{subthm}
 
 \end{thm}
+
+%%%%%%%%%%%%
+%%%%%%%%%%%%
+
+\chapter{spaces}
+
+\section{ Metric trees}
+\begin{thm}{Definition}
+\label{def:R-tree}
+A \emph{metric tree} is a metric space in which:
+\begin{subthm}{}
+ any two points are joined by a unique geodesic, 
+\end{subthm}
+\begin{subthm}{}
+if $[p x]\cap [x q] = \{x\}$ then $[p x]\cup [x q] = [p q]$.
+\end{subthm}
+\end{thm}
+
+\begin{thm}{Proposition}
+\label{prop:R-tree}
+A metric space $\spc{U}$ is a  metric tree if and only if 
+$\spc{U}\in\Cat{}{\kappa}$ for every $\kappa\in\RR$.
+\end{thm}
+
+\parit{Proof.} Both conditions are equivalent to the condition that angles of  triangles take values in $\{0,\pi\}$. 
+\qeds 
+
+\section{Asymptotic cones}
+\begin{thm}{Definition}
+\label{def:asymptotic-cone} Let $\spc{X}$ be a metric space and $\o$ be a non-principal ultrafilter.
+The \emph{asymptotic cone} $\Cone_\o\spc{X}$ of $\spc{X}$  is defined by
+\[
+\Cone_\o\spc{X}= \spc{X}_\o \text{\ \ \ \ where \  }
+(\frac{1}{n}\cdot\spc{X}\,, x)\to (\spc{X}_\o,x_\o).
+\]
+\end{thm}
+Tbe limit $\spc{X}_\o$ does not depend on the choice of basepoint $x$.
+
+\begin{thm}{Proposition}
+Suppose $\spc{U}\in \Cat{}{\kappa}$ where $\kappa <0$. Then the asymptotic cone $\Cone_\o\spc{X}$ is a metric tree.
+\end{thm}
+
+\parit{Proof.} 
+Immediate from Proposition  \ref{prop:R-tree}, since  $\Cone_\o\spc{X}\in\Cat{}{\kappa}$ for every $\kappa$ (\ref{prop:CAT^omega}). 
+\qeds 
+
+
+Gromov's theory of $\delta$-hyperbolic spaces captures many global features of negative curvature. 
+
+\begin{thm}{Definition}
+\label{def:delta-hyperbolic} Let $\spc{X}$ be a geodesic metric space.  Then $\spc{X}$ is a \emph{$\delta$-hyperbolic space} if for any triangle in $\spc{X}$, any point of any side is within distance $\delta$ from one of the other two sides.
+\end{thm}
+
+$\delta$-hyperbolic spaces are only interesting when unbounded.  The canonical example is hyperbolic space.  Triangle comparison immediately implies that any $\Cat{}{\kappa}$ space with $\kappa<0$ is  $\delta$-hyperbolic for some $\delta>0$ that depends only on $\kappa$.
+
+
+
+
 
 
 
