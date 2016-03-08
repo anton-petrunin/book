@@ -96,7 +96,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
 
-\section{Model triangles and angles.}\label{sec:mod-tri/angles}
+\section{Model angles and triangles.}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space, 
 $p,q,r\in \spc{X}$ 
@@ -224,7 +224,7 @@ we will use short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}
 The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
  of hinge $\hinge p x y$.Ð
 
-\parbf{Remark.}
+\parbf{Remark.}\label{page:upper-angle}
 We stick to this definition since in Alexandrov's geometry angles always defined (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
 For general metric spaces, the angle need not be defined\index{$\mangle$!$\mangle^\text{up}$}
 and it is more natural to consider \emph{upper angle}\index{angle!upper angle} which is defined as
@@ -289,8 +289,7 @@ If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then 
 \end{thm}
 
 \parbf{Remark.}
-The above theorem also holds for upper angles, see ???.
-
+The above theorem also holds for upper angles, see the remark on page \pageref{page:upper-angle}.
 
 
 \parit{Proof.} 
@@ -316,8 +315,8 @@ Thus for any $\eps>0$,
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result.
 
-\begin{wrapfigure}{l}{30mm}
-\begin{lpic}[t(-5mm),b(-30mm),r(0mm),l(0mm)]{pics/s-choice(0.33)}
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/s-choice(0.33)}
 \lbl[rb]{45,101;$t$}
 \lbl[rt]{45,30;$\tau$}
 \lbl[W]{50,65;$s\ \ $}
@@ -333,27 +332,17 @@ the
 number such that 
 $\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, % i.e. if $t$ and $\tau$ are both sufficiently small then so is $s$.
 so $t,\tau,s$ may be taken sufficiently small.
-\qeds
+\qeds 
 
-\parbf{Space of directions}
-Assume $\spc{X}$ is a metric space with  \emph{defined angles};
-that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in $\spc{X}$.
+\begin{thm}{Exercise}
+Prove that the sum of adjacent angles is at least $\pi$.
 
-Fix a point $p\in \spc{X}$ and consider the set $\Gamma_p$ 
-of all geodesics  which start at $p$.
-By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\Gamma_p$;
-that is $\mangle$ defines a pseudometric on $\Gamma_p$.
-The metric space corresponding to the pseudometric space $(\Gamma_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
-and denoted as $\Sigma'_p$.
+More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
+If $p\in \l] x y \r[$, then 
+\[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
+whenever  each angle on the left-hand side is defined.
+\end{thm}
 
-The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$;
-it formed by the equivalence class of geodesics starting from $p$ 
-for the equivalence realtion 
-\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
-
-
-The completion of $\Sigma'_p$ is called space of directions at $p$ and  is is denoted as $\Sigma_p$.
-The elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
 Assume for hinge $\hinge q p x$ 
@@ -386,16 +375,158 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
+\section{Space of directions and tangent space.}\label{sec:tangent-space+directions}
+Fix a metric space  $\spc{X}$ is a with  \emph{defined angles};
+that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in $\spc{X}$.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Fix a point $p\in \spc{X}$. 
+Consider the set $\mathfrak{S}_p$ 
+of all geodesics  which start at $p$.
+By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
+that is, $(\mathfrak{S}_p,\mangle)$ is a 
+is a pseudometric space.
+
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
+for the equivalence realtion 
+\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
 
-\section{Exercises}
-\begin{thm}{Exercise}
-Prove that the sum of adjacent angles is at least $\pi$.
+The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
-More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \l] x y \r[$, then 
-\[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
-whenever  each angle on the left-hand side is defined.
+The Euclidean cone $\Cone\Sigma_p$ is called tangent space at  $p$ and is denoted as $\T_p$ or $\T_p\spc{X}$.
+
+The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
+To do this consider the set $\mathfrak{T}_p$ of all constant speed geodesics starting at $p$.
+Since the angles in $\spc{X}$ are defined the following
+\[\dist{\alpha}{\beta}{\mathfrak{T}_p}
+=
+\lim_{\eps\to0} 
+\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps\]
+defines a pseudometric on $\mathfrak{T}_p$.
+
+
+The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+\[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
+
+The elements of $\T_p$ will be called tangent vector at $p$ (despite that $\T_p$ is only cone, not a vector space).
+The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
+
+Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessary continuous, such that $\alpha(0)=p$.
+We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
+breifly $\alpha^+(0)=v$ if there is a squence of vectors $v_n\in\T'_p$
+with corresponding constant speed geodesics $\gamma_n$, 
+such that $v_n\to v$ as $n\to\infty$ and 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
+If this condition holds for one choice of the sequences $(v_n)$ and $(\gamma_n)$ then it holds for any other.
+
+We define right/left derivatives of $\alpha$ at $t_0\in\II$ as $\alpha^\pm(t_0)=\check\alpha^+(0)$, where $\check\alpha(t)=\alpha(t_0\pm t)$.
+
+Note that if $\gamma$ is a constant speed geodesic starting at $p$ 
+and the tangent vector $v\in\T_p'$ corresponds to $\gamma$ 
+then $\gamma^+(0)=v$.
+
+\begin{thm}{Proposition}
+Let $\spc{X}$ be a metric space with defined angles and $p\in \spc{X}$.
+Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\to \spc{X}$ such that $\alpha^+(0)=v$.
 \end{thm}
+
+\parit{Proof.}
+If $v\in \T_p'$ then for the corresponding constantspeed geodesic $\alpha$ we have $\alpha^+=v$.
+
+Given $v\in \T_p$ construct a sequence $v_n\in\T'_p$ 
+such that $v_n\to v$ and let $\gamma_n$ be the sequence of corresponding constantspeed geodesic.
+
+The needed map $\alpha$ can be found among the maps such that $\alpha(0)=p$ and
+\[\alpha(t)=\gamma_n(t)\ \ \text{if}\ \ \eps_{n+1}\le t<\eps_n,\]
+where $(\eps_n)$
+is a decreasing sequence converging to $0$ as $n\to\infty$.
+In order to satify the condition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
+Assume $\spc{X}$ is a metric space with defined angles
+and $\alpha,\beta\:[0,a)\to\spc{X}$ be two maps such that right derivative at $0$ are defined equal to each other.
+Show that
+\[\dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+\end{thm}
+
+\begin{thm}{Definition}\label{def:diff-curv}
+Let 
+$\spc{X}$ be a metric space 
+and $\alpha\:\II\to \spc{X}$ be a curve.
+
+For $t_0\in\II$, 
+if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
+we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
+In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
+Assume $\spc{X}$ is a metric space with defined angles
+Show that any constant-speed geodesic $\gamma\:\II\to\spc{X}$ is both-sided differentiable everywhere.
+\end{thm}
+
+
+
+
+\section{Differential}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space with defined angles and
+$f\:\spc{X}\subto\RR$ be a subfunction, 
+$p\in\Dom f$ and $\II$ be a real interval.
+A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
+(briefly $\phi=\d_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:differential}
+Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
+\begin{subthm}{prop:differential:lip}
+$\d_pf\:\T_p\to\RR$ is Lipschitz and its Lipschitz constant does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+\end{subthm}
+
+\begin{subthm}{prop:differential:homo}
+$\d_pf\:\T_p\to\RR$ is a positive homogenius function;
+i.e. for any $\lam\ge 0$ and $v\in\T_p$ we have 
+\[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.}
+Passing to a subdomain of $f$ if nesessary,
+we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
+
+Take a geodessic $\gamma$ starting at $p$ which lies in $\Dom f$.
+Since $f\circ\gamma$ is semiconcave,
+the rigth derivative $(f\circ\gamma)^+(0)$ is defined.
+Since $f$ is  $\Lip$-Lipschitz, we have
+\[|(f\circ\gamma)^+(0)-(f\circ\bar\gamma)^+(0)|
+\le
+\Lip\cdot\dist[{{}}]{\gamma^+(0)}{\bar\gamma^+(0)}{}\eqlbl{gam-bargam}\]
+for any other geodesic $\bar\gamma$ starting at $p$.
+
+Define $\phi\:\T'_p\to\RR\:\gamma^+(0)\mapsto(f\circ\gamma)^+(0)$.
+From \ref{gam-bargam}, $\phi$ is a $\Lip$-Lipschtz function defined on $\T_p'$.
+Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function. 
+
+It remains to show that $\phi$ is differential of $f$ at $p$.
+Let  $\alpha$ be a curve in $\spc{X}$ and $\alpha^+(0)=v\in \T_p$.
+Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definiton \ref{def:curv^+};
+i.e. if 
+\[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
+Then 
+\[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 
+\[|f\circ\alpha(t)-f\circ\gamma_n(t)|\le\Lip\cdot\dist[{{}}]{\alpha(t)}{\gamma_n(t)}{}.\]
+Hence 
+\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
+\qedsf

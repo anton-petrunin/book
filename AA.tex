@@ -1,3 +1,132 @@
+\section{Tangent cone}\label{sec:tan}
+
+\parbf{Tangent cones and vectors.}
+Here we give a definition of tangent cone which works for general metric space.
+It should be noted however that the definition below defines a reasonable object only for reasonable spaces, which include $\CBB{}{}$ and $\cCat{}{}$ spaces.
+
+\begin{thm}{Definition}\label{def:tan}
+Let $\spc{X}$ be a metric space and $p\in\spc{X}$.
+Consider the set $\Gamma_p$ of all constant-speed geodesics which start at $p$;
+i.e. $\gamma\in\Gamma_p$ iff $\gamma(t)=\geod_{[pq]}(\lam\cdot t)$ for some $\lam\ge0$.
+($\Gamma_p$ includes the constant geoesic $\gamma(t)\equiv p$.)
+Let us define a pseudometric on $\Gamma_p$ as
+\[\dist{\gamma}{\gamma'}{\Gamma_p}
+=
+\limsup_{t\to0+}\frac{\dist{\gamma(t)}{\gamma'(t)}{\spc{X}}}{t}\]
+for $\gamma,\gamma'\in\Gamma_p$.
+
+The corresponding metric space  for $\Gamma_p$ will be called the \emph{geodesic tangent cone} of $\spc{X}$ at $p$; 
+it will be denoted as $\T_p'=\T_p'\spc{X}$.
+The completion of $\T_p'$ will be called the tangent cone at $p$, and denoted by $\T_p=\T_p\spc{X}$.
+The elements of the  tangent cone will be called \emph{tangent vectors}
+(despite in general $\T_p$ is not a vector space).
+\end{thm}
+
+Given $\lam\ge0$, there is a natural map $\Gamma_p\to\Gamma_p\:\gamma(t)\mapsto\gamma(\lam\cdot t)$.
+For the induced map $\T_p\to\T_p$, we use the notation $v\mapsto \lam\cdot v$.
+Clearly, 
+\[\dist[{{}}]{\lam\cdot v}{\lam\cdot w}{}=\lam\cdot\dist[{{}}]{v}{w}{}.\]
+
+Given a geodesic $[p q]$, 
+the element in $\T_p$ that corresponds to $\geod_{[p q]}$ 
+will be called the \emph{direction}\index{direction} of $[p q]$, denoted by $\dir{p}{q}$\index{$\dir{*}{*}$}.
+The element in $\T_p$ that corresponds to the geodesic path $\gamma(t)=\geod_{[p q]}(\tfrac{t}{\dist{p}{q}{}})$ 
+will be called \emph{logarithm}\index{logarithm} of $[p q]$ and denoted as $\ddir{p}{q}$\index{$\dir{*}{*}$};
+clearly 
+\[\ddir{p}{q}=\dist[{{}}]{p}{q}{}\cdot\dir{p}{q}.\]
+
+The set of directions of all geodesics from $p$ to $q$ will be denoted by $\Dir{p}{q}$\index{$\Dir{{*}}{{*}}$}.
+In general, the set $\Dir{p}{q}\subset\T_p$ might be empty.
+
+%???Showld we call a metric space with a chousen one-parameter family of such maps a cone?
+
+
+\parbf{Right/left derivatives.}
+The definitions of right and left derivatives of curves is given in a few steps;
+we first define it for geodesics and then extend it to general curves.
+
+\begin{thm}{Definition}\label{def:curv^+}
+Given $\gamma\in\Gamma_p$, we say that $v\in \T_p$ is the right derivative of $\gamma$ at $0$ (briefly, $v=\gamma^+(0)$)
+if $\gamma$ maps to $v$ under 
+the natural map $\Gamma_p\to \T_p'\subset\T_p$.
+
+Further, let $\II$ be a real interval containing $[0,\eps)$ for some $\eps>0$.
+Let  $\alpha\:\II\to\spc{X}$ be a map, 
+$\alpha(0)=p$ and $v\in\T_p$.
+We write
+$v=\alpha^+(0)$
+if there is a sequence $\gamma_n\in\Gamma_p$
+such that $\gamma^+_n(0)\to v$ as $n\to\infty$ and 
+\[\lim_{n\to\infty}(\limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t})\to 0.\]
+
+Naturally, we define right/left derivatives of $\alpha$ at $t_0\in\II$ as $\alpha^\pm(t_0)=\check\alpha^+(0)$, where $\check\alpha(t)=\alpha(t_0\pm t)$.
+\end{thm}
+
+\parbf{Remarks.} 
+Although the above definition will be mostly used for curves, 
+we do not require $\alpha$ to be continous.
+
+Note that our sign convention is not standard. 
+In particular, for  a smooth curve $\alpha$ in the Euclidean space we have $\alpha'=\alpha^+ =- \alpha^-$.
+
+\begin{thm}{Proposition}\label{prop:unique-right-der}
+Let $\spc{X}$ be a metric space,
+$p\in \spc{X}$,
+$\eps>0$.
+
+\begin{subthm}{prop:unique-right-der:unique}
+Given a map $\alpha\:[0,\eps)\to\spc{X}$ such that $\alpha(0)=p$,
+there is at most one tangent vector $v\in\T_p$ 
+such that $v=\alpha^+(0)$.
+\end{subthm}
+
+\begin{subthm}{prop:unique-right-der:exist}
+ For any tangent vector $v\in \T_p$ there is a map $\alpha\:[0,\eps)\to\spc{X}$ such that $\alpha^+(0)=v$.
+\end{subthm}
+
+\begin{subthm}{prop:unique-right-der:chain}
+Given a map $\alpha\:[0,\eps)\to\spc{X}$ such that $\alpha(0)=p$,
+and $\theta(t)=\lam\cdot t+o(t)$, $\lam>0$,
+we have 
+\[(\alpha\circ\theta)^+(0)=\lam\cdot\alpha^+(0).\]
+In particular, left part is defined if and only if the right part is defined.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.} Parts \ref{SHORT.prop:unique-right-der:unique} and \ref{SHORT.prop:unique-right-der:chain} follow directly from definitons \ref{def:curv^+} and \ref{def:tan}.
+
+Let $\gamma^+_n(0)\to v$ be as in the definition \ref{def:curv^+} and $t_n\to0+$ be a monotonic sequence.
+Define $\alpha(t)=\gamma_n(t)$ for $t\in (t_{n+1},t_n]$.
+For appropriately chousen sequence $(t_n)$, the map $\alpha$ satisfies (\ref{prop:unique-right-der:exist}).
+\qeds
+
+
+
+\begin{thm}{Definition}\label{def:diff-curv}
+Let 
+$\spc{X}$ be a metric space 
+and $\alpha\:\II\to \spc{X}$ be a curve.
+
+For $t_0\in\II$, 
+if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
+we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
+In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

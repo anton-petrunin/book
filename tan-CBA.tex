@@ -207,6 +207,30 @@ Hence $v_1=v_2$.
 
 \begin{thm}{Proposition} 
 Let $\spc{U}\in\cCat{}{}$.
+Then for any point $p\in\spc{U}$, 
+the tangent space $\T_p$ is a length space.
+\end{thm}
+
+\parit{Proof.}
+Since $\T'_p$ is dense in $\T_p$,
+it is sufficent to show that $\T'_p$ is a length space.
+
+Fix two tangent vectors $a,b\in \T'_p$;
+let $\alpha$ and $\beta$ be the corresponding constant speed geodesics starting at $p$.
+
+Given $\eps>0$ we can choose $\delta>0$ such that 
+\[\tfrac1\delta\cdot\dist{a_\delta}{b_\delta}{\spc{U}}<\dist{a}{b}{\T_p}+\eps,\]
+where $a_\delta=\alpha(\delta)$ and $b_\delta=\beta(\delta)$.
+
+The path $\gamma_\delta=\tfrac1\delta\cdot\log_p\circ\geodpath_{[a_\delta b_\delta]}$
+in $\T_p$ connects $a$ to $b$.
+According to ???
+\[\length\gamma\le\dist{a}{b}{\T_p}+\eps.\]
+The statement follows since $\eps>0$ is arbitrary. 
+\qeds
+
+\begin{thm}{Proposition} 
+Let $\spc{U}\in\cCat{}{}$.
 Then for any point $p\in\spc{U}$,
 we have $\Sigma_p\in\cCat{}{1}$ and $\T_p\in\cCat{}{0}$.
 \end{thm}
