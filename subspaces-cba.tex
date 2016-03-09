@@ -6,8 +6,10 @@
 
 \section{Curves of bounded curvature.}\label{sec:cbc}
 
+Using the Arm Lemma, we prove a curvature globalization theorem for curves.
+
 By a {\it $k$-curve}   we mean a unit-speed curve $\sigma:\II\to\Lob2\kappa$ of constant
-curvature $k$, where $\II$ is a closed, possibly infinite, interval.  A {\it complete} $k$-curve is a $k$-curve that is maximally extended so as to self-intersect at most at its endpoints: that is, a circle traversed once, or a  geodesic, horocycle, or equidistant curve.
+curvature $k$ in a model space, where $\II$ is a closed, possibly infinite, interval.  A {\it complete} $k$-curve is a $k$-curve that is maximally extended so as to self-intersect at most at its endpoints: a circle traversed once, or a  geodesic, horocycle, or equidistant curve.
 
 The \emph{chord-length} of a curve $\gamma\:\II\to\spc{X}$ in a metric space $\spc{X}$ is the distance between the endpoints of $\gamma$.  A \emph{chord} is a geodesic joining two of its points, and an \emph{endpoint chord} is a geodesic joining its endpoints.
 
@@ -16,30 +18,7 @@ Let $\gamma$ be a rectifiable curve in a metric space $\spc{X}$. Suppose the len
 2\pi/\varpi\kappa$.  The \emph{(global) arc-chord $\kappa$-curvature }$k_{\kappa}( \gamma)$ of $\gamma$ is the unique $ K\in\R$
 for which there exists a $ K$-curve $\sigma$ in $\Lob2\kappa$ of length $s_\sigma=s$ and
 chord-length $r_\sigma=r$. 
-% We say $\gamma$ has \emph{(global) arc-chord $\kappa$-curvature $\le k$} if 
-% $$k_{\kappa}(\gamma) \le k.$$
-%for every
-%subarc $\tilde\gamma$ of $\gamma$ that satisfies $s+r < 2\varpi\kappa$. 
-
-%Let $\gamma$ be a rectifiable curve in a metric space. For any subarc $\tilde\gamma$ of $\gamma$ whose length $s$ and chord-length $r$ satisfy $s+r <
-%2\pi/\varpi\kappa$, let $k_{\kappa,\gamma}( \tilde \gamma)$ denote the unique $\tilde k\in\R$
-%for which there exists a $ \tilde k$-curve in $\Lob2\kappa$ having length $s$ and
-%chord-length $r$. 
-% 
-% We say $\gamma$ has \emph{(global) arc-chord $\kappa$-curvature $\le k$} if 
-% $$k_{\kappa,\gamma} \le k;$$
-%that is, if for every
-%subarc $\tilde\gamma$ of $\gamma$ that satisfies $s+r < 2\varpi\kappa$, there is a
-%$ \tilde k$-curve in $\Lob2\kappa$  having the same length and chord-length as $ \tilde \gamma$ and satisfying $ \tilde k \le
-%k$. 
 \end{thm}
-
-%Let $\sigma$ be the complete $k$-curve in  $\Lob2\kappa$.  It is equivalent to say that %for any subarc $ \tilde \gamma$ of $\gamma$  that satisfies $s+r < 2\varpi\kappa$,  and whose length 
-%if $s$ is at most the length of  $\sigma$, then a subarc of $\sigma$ of length $s$ has chord-length $\le r$.  
-%
-%Another equivalent formulation:  
-%%For any subarc $ \tilde \gamma$ of $\gamma$ that satisfies $s+r < 2\varpi\kappa$,  and whose chord-length 
-%If $r$ is  at most equal to the diameter of $\sigma$, then a chord of  $\sigma$ of length $r$ cuts $\sigma$ into an arc and its complement of respective lengths $s_-\le s_+\le\infty$, where either $s\le s_-$ or $s\ge s_+$. 
 
 Note that by the triangle inequality, the length $\bar s$ and chord-length $\bar r$ of any subarc $\bar\gamma$ of $\gamma$ satisfy $\bar s + \bar r \le s+r < 2\varpi\kappa$.
 
@@ -49,17 +28,8 @@ Note that by the triangle inequality, the length $\bar s$ and chord-length $\bar
  the upper limit 
  $$ \limsup \,k_{\kappa}( \bar\gamma)$$
   of arc-chord curvatures taken over 
-subarcs $ \bar\gamma=\gamma|(t_0-\epsilon,t_0+\epsilon)$ as $\epsilon\to 0$. (If $t_0$ is the left or right endpoint of $\II$, use $[t_0,t_0+\epsilon)$ or $  (t_0-\epsilon,t_0]$ accordingly.) 
-%$$ \limsup \,k_{\kappa}( \tilde \gamma)\le k.$$  
+subarcs $ \bar\gamma=\gamma|(t_0-\epsilon,t_0+\epsilon)$ as $\epsilon\to 0$. (If $t_0$ is the left or right endpoint of $\II$, use $[t_0,t_0+\epsilon)$ or $  (t_0-\epsilon,t_0]$ accordingly.)   
 \end{thm}
-
-%The {\it pointwise upper and lower arc-chord curvatures} of $\gamma$ at a
-%parameter value $t$ are defined by taking upper and lower limits over 
-%subarcs $ \tilde \gamma$ defined on parameter segments including and
-%approaching $t$: 
-%$$\bar k_{\gamma}(t) = \limsup k_{K,\gamma}( \tilde \gamma),
-%\quad  \underline k_{\gamma}(t) = \liminf k_{K,\gamma}( \tilde \gamma).$$  
-%If $\bar k_{\gamma}(t) =  \underline k_{\gamma}(t)$, the common value  $k_{\gamma}(t)$ is the \emph{pointwise arc/chord curvature} of $\gamma$.  
 
 Definition \ref{ptwise-arc-chord} is independent of $\kappa$, as may be seen from the power series expressions of length $s$ in terms of chord-length $r$ for a subarc of a $k$-curve in $\Lob2{\kappa}$.
 
@@ -88,19 +58,19 @@ cuts $\sigma$ into  two arcs of lengths  $s_-\le s_+$ if $\sigma$ is a circle, a
 Then 
 either $s\le s_-$ or $s\ge s_+$.
 The former holds if $\diam\gamma \le \diam\sigma$.
-%the diameter of
-%$\gamma$ is less than the diameter of $\sigma$. 
 \end{subthm}
 \end{thm}
-
-The proof of  Theorem \ref{thm:global-arc-chord} leads as well to the following useful lemma:
-
-\begin{thm}{Lemma}\label{prop:base-angle}
-If \,$s\le$ half the length of a complete $k$-curve in $\Lob2{\kappa}$, then  
-the angle between $\gamma^+(a)$ (respectively $-\gamma^-(b)$)  and the endpoint chord of $\gamma$ is at most equal to the angle between a $k$-curve of length $s$ and  its endpoint chord in $\Lob2{\kappa}$.
-\end{thm}
-
-\parit{Proofs of Theorem \ref{thm:global-arc-chord} and Lemma \ref{prop:base-angle}.} 
+%
+%The proof of  Theorem \ref{thm:global-arc-chord} leads as well to the following useful lemma:
+%
+%\begin{thm}{Lemma}\label{prop:base-angle}
+%If \,$s\le$ half the length of a complete $k$-curve in $\Lob2{\kappa}$, then  
+%the angle between $\gamma^+(a)$ (respectively $-\gamma^-(b)$)  and the endpoint chord of $\gamma$ is at most equal to the angle between a $k$-curve of length $s$ and  its endpoint chord in $\Lob2{\kappa}$.
+%\end{thm}
+%
+\parit{Proof 
+%of Theorem \ref{thm:global-arc-chord} and Lemma \ref{prop:base-angle}.
+} 
 Let us complete $\gamma$
 to a closed curve $\hat\gamma$ by including its chord. Since $s+r<2\varpi\kappa$, then by Reshetnyak
 majorization  \ref{thm:major} there is a closed convex curve $\tilde\alpha$ in $S_K$ that
@@ -111,11 +81,10 @@ chord, mapped isometrically to the chord of $\gamma$. On subarcs of
 $\tilde\alpha$, the majorizing map preserves arclength and does not increase chordlength, so does not decrease arc-chord
 curvatures. Hence pointwise arc-chord curvature  of $\tilde\gamma$  is $\le k$  and  $k_{\kappa}(\tilde\gamma)= k_{\kappa}(\gamma)$. The same argument can be applied to every subarc of $\gamma$.
 It follows that it suffices to prove Theorem \ref{thm:global-arc-chord} for convex curves in $\Lob2\kappa$.  
-By definition of angle, it similarly suffices to prove  Proposition \ref{prop:base-angle} for convex curves in $\Lob2\kappa$.  
+%By definition of angle, it similarly suffices to prove  Proposition \ref{prop:base-angle} for convex curves in $\Lob2\kappa$.  
 
 Accordingly, we take $\spc{X}=\Lob2\kappa$, and suppose  $\gamma$ is convex. Let $\sigma$ be the complete $k$-curve  in $\Lob2\kappa$
-
-\parit{Theorem \ref{thm:global-arc-chord}:} 
+%\parit{Theorem \ref{thm:global-arc-chord}:} 
 We must show that if $s\le s_\sigma$, then a subarc of $\sigma$ of length $s$ has chord-length $\le r$. 
 
 First we verify that $\gamma$ satisifies  the following \emph{local angle condition}: 
@@ -125,14 +94,6 @@ points $x=\gamma (t_1)$, $p=\gamma (t)$, $y=\gamma(t_2)$, $t_1<t<t_2$,  and poin
 $\dist{x}{p}{}=
 \dist{\tilde x}{\tilde  p}{}$ and $\dist{p}{y}{}=
 \dist{\tilde p}{\tilde  y}{}$, we have $\mangle\hinge{p}{x}{y}\ge \mangle\hinge{\tilde p}{\tilde x}{\tilde y}$. 
-%
-%*****
-%
-%for three sufficiently close
-%points $x=\gamma (t_1)$, $p=\gamma (t)$, $y=\gamma(t_2)$, $t_1<t<t_2$,   if we take points $\tilde x, \tilde p, \tilde y$ on a $\tilde k$-curve satisfying 
-%$\dist{x}{p}{}=
-%\dist{\tilde x}{\tilde  p}{}$ and $\dist{p}{y}{}=
-%\dist{\tilde p}{\tilde  y}{}$, then $\mangle\hinge{p}{x}{y}\ge \mangle\hinge{\tilde p}{\tilde x}{\tilde y}$. 
 Indeed, suppose this condition failed for some $\tilde k$. Then we may choose $x$ and $y$ arbitrarily close to $p$, such that $p$ is on the negative side of one of the small $\tilde k$-curves, say $\tilde \sigma$, with $x$ and $y$ as endpoints. 
 Now move $\tilde\sigma$  toward $p$ along the bisector of $[xy]$. Sufficiently close to the last point of contact with $\gamma([t_0,t_1])$,  the translates of $\tilde\sigma$ cut off subarcs  of $\gamma$ that are longer than a $ \tilde k$-curve with the same endpoints.  But then $\gamma$ has pointwise arc-chord curvature $\ge \tilde k$ at $p$,  a contradiction.
 
@@ -151,25 +112,24 @@ By Arm Lemma \ref{lem:arm}, $$\tilde r =\dist{\tilde x^0}{\tilde  x^{n+1}}{}\le 
 As $n \to\infty$, $\tilde\sigma$ converges to a $k$-arc 
  of length $s$ and
 chordlength $\le r$, proving Theorem \ref{thm:global-arc-chord}.
-
-\parit{Proposition \ref{prop:base-angle}:} 
-Now suppose $\gamma$ has length less than half of a complete $k$-curve.  Since  $\~x^0\~x^1\dots \~x^{n+1}$ is inscribed in a $k$-curve of the same length as $\gamma$ , the angles at $\~x^0$ and $ \~x^{n+1}$ of the convex polygon $[\~x^0\~x^1\dots \~x^{n+1}]$ are acute.
-
-We may  increase the angle at $\~x_i$ of the broken geodesic $\~x^0\~x^1\dots \~x^{n+1}$ to the angle at $x^i$ of $x^0x^1\dots x^{n+1}$, either by moving $\~x^0\~x^1\dots \~x^i$ rigidly while fixing $\~x^i\~x^{i+1}\dots \~x^{n+1}$, or by moving the latter and fixing the former,  respectively. We obtain a new convex polygon that lies, by first variation, in the same halfspace bounded by the complete geodesic through $\~x^0$ and $ \~x^{n+1}$ as does $[\~x^0\~x^1\dots \~x^{n+1}]$.  Therefore the angle at $ \~x^{n+1}$ and at $\~x^0$ respectively is no greater in the new polygon than in $[\~x^0\~x^1\dots \~x^{n+1}]$.
-
-Applying this procedure to each vertex in turn yields a convex polygon isometric to $[x^0x^1\dots x^{n+1}]$ and having angles at $x^0$ and $ x^{n+1}$ respectively no greater then the angles of $[\~x^0\~x^1\dots \~x^{n+1}]$ at $\~x^0$ and $ \~x^{n+1}$.
-
-As before, the claim follows by taking $n\to\infty$.
+%\parit{Proposition \ref{prop:base-angle}:} 
+%Now suppose $\gamma$ has length less than half of a complete $k$-curve.  Since  $\~x^0\~x^1\dots \~x^{n+1}$ is inscribed in a $k$-curve of the same length as $\gamma$ , the angles at $\~x^0$ and $ \~x^{n+1}$ of the convex polygon $[\~x^0\~x^1\dots \~x^{n+1}]$ are acute.
+%
+%We may  increase the angle at $\~x_i$ of the broken geodesic $\~x^0\~x^1\dots \~x^{n+1}$ to the angle at $x^i$ of $x^0x^1\dots x^{n+1}$, either by moving $\~x^0\~x^1\dots \~x^i$ rigidly while fixing $\~x^i\~x^{i+1}\dots \~x^{n+1}$, or by moving the latter and fixing the former,  respectively. We obtain a new convex polygon that lies, by first variation, in the same halfspace bounded by the complete geodesic through $\~x^0$ and $ \~x^{n+1}$ as does $[\~x^0\~x^1\dots \~x^{n+1}]$.  Therefore the angle at $ \~x^{n+1}$ and at $\~x^0$ respectively is no greater in the new polygon than in $[\~x^0\~x^1\dots \~x^{n+1}]$.
+%
+%Applying this procedure to each vertex in turn yields a convex polygon isometric to $[x^0x^1\dots x^{n+1}]$ and having angles at $x^0$ and $ x^{n+1}$ respectively no greater then the angles of $[\~x^0\~x^1\dots \~x^{n+1}]$ at $\~x^0$ and $ \~x^{n+1}$.
+%
+%As before, the claim follows by taking $n\to\infty$.
 \qeds
 
-\begin{thm}{Exercise}(Arc-chord rigidity)
-\label{thm:arc-chord-rigidity}
-Under the hypotheses of Theorem \ref{thm:global-arc-chord}, if $
-\kappa_{K}(\gamma) = k$ 
-then $\gamma$ and its chord bound a totally
-geodesic surface in $\spc{X}$ that is isometric to a domain  in $\Lob2\kappa$
-bounded by a $k$-curve of length $s$ and its chord.
-\end{thm}
+%\begin{thm}{Exercise}(Arc-chord rigidity)
+%\label{thm:arc-chord-rigidity}
+%Under the hypotheses of Theorem \ref{thm:global-arc-chord}, if $
+%\kappa_{K}(\gamma) = k$ 
+%then $\gamma$ and its chord bound a totally
+%geodesic surface in $\spc{X}$ that is isometric to a domain  in $\Lob2\kappa$
+%bounded by a $k$-curve of length $s$ and its chord.
+%\end{thm}
 
 \section{Alexandrov's ruled surface theorem}\label{sec:ruled-surf}
 
