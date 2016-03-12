@@ -1,142 +1,284 @@
 %%!TEX root = all.tex
 \chapter{First order differentiation}\label{chap:tan}
 
-\section{Tangent cone}
+
+
+\section{Space of directions and tangent space}
+\label{sec:tangent-space+directions}
 
 Recall that according to 
 the corollaries \ref{cor:monoton:sup} 
 and \ref{cor:monoton-cba:angle=inf},
-the $\CBB{}{}$ spaces as well as $\cCat{}{}$ spaces have defined angles.
-In particular, in both cases the space of directions as well as space of geodesic directions are defined at each point.
-(See Section~\ref{sec:tangent-space+directions} for the related definitions.)
+the $\CBB{}{}$ and $\cCat{}{}$ spaces have \index{space with defined angles}\emph{defined angles};
+that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in the space.
 
- 
+Fix a metric space  $\spc{X}$ is a with defined angles and a point $p\in \spc{X}$. 
+
+Consider the set $\mathfrak{S}_p$ 
+of all unit-speed geodesics  which start at $p$.
+By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
+that is, $(\mathfrak{S}_p,\mangle)$ 
+is a pseudometric space.
+
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
+for the equivalence realtion 
+\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
+
+\begin{thm}{Exercise}
+Assume $\spc{L}\in\CBB{}{}$,  and $[px]$, $[py]$ be two geodesics starting at the point $p\in\spc{L}$ which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+Show that 
+\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
+
+\end{thm}
+
+The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+
+\begin{thm}{Exercise} 
+Let $\spc{L}\in\CBB{}{1}$.
+Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\SS^n$.
+\end{thm}
+
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
+
+\begin{thm}{Exercise}
+Assume $\spc{U}\in\cCat{}{}$
+be a space with extandable geodesics;
+that is for any geodesic in $\spc{U}$
+is an arc in a both-side infinite local geodesic.
+
+Show that $\Sigma_p'$ is complete for any $p\in \spc{U}$.
+\end{thm}
 
 
-
-\section{Tangent space in CBB spaces}\label{sec:tan-cbb}
-
-
-\parbf{Space of directions.}
-Let $\spc{L}\in \CBB{}{}$ and $p\in \spc{L}$.
-Consider set of all unit-speed geodesics $\Gamma_p$ starting at $p$.
-According to \ref{claim:angle-3angle-inq}, the angle measure $\mangle$ gives a pre-metric on $\Gamma_p$.
-The factor-space $\Sigma_p'=\Gamma_p'/\sim$ by the equivalence relation 
-\[\gamma_1\sim\gamma_2\ \ \text{iff}\ \ \mangle(\gamma_1,\gamma_2)=0\] 
-will be called \emph{space of geodesic directions}\index{space of directions!space of geodesic directions} of $\spc{L}$ at $p$.
-The completion of $\Sigma'_p$\index{$\Sigma'_{*}$}, will be called \emph{space of directions}\index{space of directions} of $\spc{L}$ at $p$ and denoted by $\Sigma_p=\Sigma_p \spc{L}$\index{$\Sigma_{*}$}.
-The angle $\mangle$ defines metric on $\Sigma_p'$ and it extends to a metric on $\Sigma_p$; further we allways denote by $\Sigma_p$, the metric space $(\Sigma_p,\mangle)$.
-
-Given a geodesic $[p q]$, the corresponding direction in $\Sigma_p$ will be denoted by $\dir{p}{q}$\index{$\dir{*}{*}$}.
-The set of all directions of geodesics from $p$ to $q$ will be denoted by $\Dir{p}{q}$\index{$\Dir{{*}}{{*}}$}.
-In general, the set $\Dir{p}{q}\subset\Sigma_p$ might be empty.
-
-\parbf{Tangent cone.} $\Cone\Sigma_p$ --- the Euclidean cone over $\Sigma_p$ (see \ref{cones}) will be called \emph{tangent space}\index{tangent space} of $\spc{L}$ at $p$ and we denote it by $\T_p=\T_p \spc{L}$\index{$\T_{*}$}.
-As well as space of directions, tangent cone is a complete space.
-Set \index{$\ddir{*}{*}$}\index{$\ddir{*}{*}$}
-\[\ddir p q\,
-\df
-\dist[{{}}]{p}{q}{}\cdot\dir p q
-\ \ \hbox{and} \ \ 
-\Ddir{p}{q}
+The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
+To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
+Given $\alpha,\beta\in \mathfrak{T}_p$,
+set 
+\[\dist{\alpha}{\beta}{\mathfrak{T}_p}
 =
-\set{\dist[{{}}]{p}{q}{}\cdot\xi}{\xi\in\Dir{p}{q}}
-.\]
-Note that $\ddir p q=\ddir p{q'}$ implies $q=q'$; see ???.
-The relation $v=\ddir p q$, will be also written as $q=\exp_p v$.
-The map $\exp_p$ is defined on a starshaped subset of $\T_p$; 
-i.e. if $\exp_pv$ is defined then so is $\exp_p(t\cdot v)$ for any $t\in[0,1]$. 
+\lim_{\eps\to0} 
+\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps
+\eqlbl{eq:dist-in-T_p}\]
+Since the angles in $\spc{X}$ are defined, 
+\ref{eq:dist-in-T_p}
+defines a pseudometric on $\mathfrak{T}_p$.
 
-The subcone $\T_p'=\Cone\Sigma_p'\subset \T_p$ will be called subcone of \emph{geodesic vectors}\index{geodesic tangent vector}.
-Clearly, $\T_p'$ is dense in $\T_p$ and $v\in \T_p'$ iff $\exp_p(\eps\cdot v)$ is defined for small $\eps$.
 
-\section{Differentiability of curves.}
+The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+\[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
 
-Let 
-$\spc{L}\in\CBB{}{}$,
-$\alpha\:\II\to \spc{L}$ be a curve
-$t_0\in \II$
-and $p=\alpha(t_0)$.
-We say that $v\in\T_p$ is a \emph{right} (\emph{left}) \emph{derivative} of $\alpha$ at $t_0\in\II$, 
-briefly, $v=\alpha^+(t_0)$ (correspondingly $v=\alpha^-(t_0)$)
-if there is a sequence $v_n\in\T_p'$ such that $v_n\to v$
-and $s_n\to 0$ as $n\to\infty$, where
-\[s_n=\limsup\frac{\dist{\alpha(t)}{\exp_p(|t-t_0|\cdot v_n)}{}}{|t-t_0|}\]
-and the limit is taken for $t\to t_0+$ (correspondingly $t\to t_0-$).
+The elements of $\T_p$ will be called tangent vector at $p$,
+despite that $\T_p$ is only cone --- not a vector space.
+The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
 
-\begin{thm}{Lemma}
-Let
-$\spc{L}\in\CBB{}{}$,
-$\alpha\:\II\to \spc{L}$ be a curve
-$t_0\in \II$
-and $p=\alpha(t_0)$.
-if for any $w\in\T_p'$ we have
-\[\lim\frac{\dist{\alpha(t)}{\exp_p(|t-t_0|\cdot w)}{}}{|t-t_0|}
-=
-\dist{v}{w}{\T_p}.\]
-where the limit is taken for $t\to t_0+$ (correspondingly $t\to t_0-$).
+\begin{thm}{Definition}\label{def:right-derivative}
+Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessary continuous, such that $\alpha(0)=p$.
+We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
+breifly $\alpha^+(0)=v$ if there is a squence of vectors $v_n\in\T'_p$
+with corresponding geodesics $\gamma_n$, 
+such that $v_n\to v$ as $n\to\infty$ and 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
 \end{thm}
 
+Note that if this condition in the Definition~\ref{def:right-derivative} holds for one choice of the sequences $(v_n)$ and $(\gamma_n)$ then it holds for any other choice of that type.
 
-For an interior value $t_0$ of $\II$, 
-if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
-we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
-In the exceptional cases, when $t_0$ is the left (correspondingly right) end of $\II$, $\alpha$ is by definition left (correspondingly right) differentiable at $t_0$.
+Note that if $\gamma$ is a geodesic starting at $p$ 
+and the tangent vector $v\in\T_p'$ corresponds to $\gamma$ 
+then $\gamma^+(0)=v$.
 
-For an interior value $t_0$ of $\II$,
-in case if $\alpha$ is both-sided differentiable at $t_0$ and $\alpha^+(t_0)+\alpha^-(t_0)=0$, we say that $\alpha$ is \emph{differentiable}\index{differentiable} at $t_0$.
-In the exceptional cases, when $t_0$ is the left (correspondingly right)
-we say that $\alpha$ is both-sided differentiable at $t_0$ if $\alpha$ is right (correspondingly left) differentiable at $t_0$.
-
-\begin{thm}{Lemma}
-Let $\spc{L}\in\CBB{}{}$ and $\gamma\:\II\to\spc{L}$ be a geodesic then $\gamma$ is both-side differentiable.
+\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
+Assume $\spc{X}$ is a metric space with defined angles
+and $\alpha,\beta\:[0,a)\to\spc{X}$ 
+be two maps such that the right derivatives $\alpha^+(0)$, $\beta^+(0)$ are defined and $\alpha^+(0)=\beta^+(0)$.
+Show that
+\[\dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 \end{thm}
 
-\begin{thm}{Lemma}
-Let $\spc{L}\in\CBB{}{}$ and $\alpha\:\II\to\spc{L}$ be a Lipschitz curve then $\alpha$ is almost everywhere both-side differentiable.
-\end{thm}
-
-
-
-
-
-
-
-
-
-
-\section{Tangent and ultratangent space} 
-
-For a space $\spc{L}\in\CBB{}{}$,
-we already defined two types of tangent cones at a given point $p$:
-\begin{enumerate}
-\item the tangent space, $\T_p=\T_p\spc{L}$, defined in section \ref{sec:tan}
-\item maybe add $\T_p\spc{L}^\o$???
-\item ultratangent space for an ultrafilter $\o$,
-$\T_p^\o=\T_p^\o\spc{L}$
-which is defined in Section~\ref{ultralimits}.
-\end{enumerate}
-Both of these notions are analogous to tangent space of Riemannian manifold.
-If the dimension is finite, then these two notions coincide, see \ref{thm:tan4finite}.
-In infinite-dimensional case, they are different and both useful; 
-often lack of a property in one is compensated by the other.
-
-\medskip
-
-It is clear from the definition that tangent space has cone structure.
-On the other hand, in general, ultratangent space does not have a cone structure; a Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]\in\CBB{}0$ gives an example.
-
-In general, the metric on $\T_p$ might be not a length-metric;
-see Halbeisen's example (Section~\ref{halbeisen}).
-In this case, by definition $\T_p\notin\CBB{}{0}$; for $\T^\o_p$ the situation is better:
-
-\begin{thm}{Theorem}\label{thm:tan-is-CBB}
-If $\spc{L}\in\CBB{}\kappa$ and $p\in \spc{L}$ then $\T^\o_p\in\CBB{}{0}$.
+\begin{thm}{Proposition}
+Let $\spc{X}$ be a metric space with defined angles and $p\in \spc{X}$.
+Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\to \spc{X}$ such that $\alpha^+(0)=v$.
 \end{thm}
 
 \parit{Proof.}
-Since $\spc{L}\in\CBB{}\kappa$, then for its blowup $n\blow\spc{L}$, we have $n\blow\spc{L}\in\CBB{}{\kappa/{n^{2}}}$.
-Sinse $n\blow(\spc{L},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prp:A^omega} implies ${\T^\o_p}\in\CBB{}{0}$.
+If $v\in \T_p'$ then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
+
+Given $v\in \T_p$ construct a sequence $v_n\in\T'_p$ 
+such that $v_n\to v$ and let $\gamma_n$ be the sequence of corresponding geodesic.
+
+The needed map $\alpha$ can be found among the maps such that $\alpha(0)=p$ and
+\[\alpha(t)=\gamma_n(t)\ \ \text{if}\ \ \eps_{n+1}\le t<\eps_n,\]
+where $(\eps_n)$
+is a decreasing sequence converging to $0$ as $n\to\infty$.
+In order to satify the condition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
+\qeds
+
+We define right and left derivatives $\alpha^+(t_0)$ and $\alpha^-(t_0)$
+of $\alpha$ at $t_0\in\II$ as 
+\[\alpha^\pm(t_0)=\check\alpha^+(0),\] where $\check\alpha(t)=\alpha(t_0\pm t)$.
+The sign conversion is not quite standard, 
+say if $\alpha$ is a smooth curve in a Riemannian manifold then we have
+\[\alpha^+(t)=-\alpha^-(t).\]
+
+
+\begin{thm}{Definition}\label{def:diff-curv}
+Let 
+$\spc{X}$ be a metric space 
+and $\alpha\:\II\to \spc{X}$ be a curve.
+
+For $t_0\in\II$, 
+if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
+we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
+In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
+Assume $\spc{X}$ is a metric space with defined angles
+Show that any geodesic $\gamma\:\II\to\spc{X}$ is both-sided differentiable everywhere.
+\end{thm}
+
+\section{Differential}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space with defined angles and
+$f\:\spc{X}\subto\RR$ be a subfunction, 
+$p\in\Dom f$ and $\II$ be a real interval.
+A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
+(briefly $\phi=\d_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:differential}
+Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
+\begin{subthm}{prop:differential:lip}
+The differential $\d_pf\:\T_p\to\RR$ is Lipschitz.
+Moreover, the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+\end{subthm}
+
+\begin{subthm}{prop:differential:homo}
+$\d_pf\:\T_p\to\RR$ is a positive homogenius function;
+i.e. for any $\lam\ge 0$ and $v\in\T_p$ we have 
+\[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.}
+Passing to a subdomain of $f$ if nesessary,
+we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
+
+Take a geodessic $\gamma$ starting at $p$ which lies in $\Dom f$.
+Since $f\circ\gamma$ is semiconcave,
+the rigth derivative $(f\circ\gamma)^+(0)$ is defined.
+Since $f$ is  $\Lip$-Lipschitz, we have
+\[|(f\circ\gamma)^+(0)-(f\circ\gamma_1)^+(0)|
+\le
+\Lip\cdot\dist[{{}}]{\gamma^+(0)}{\gamma_1^+(0)}{}\eqlbl{gam-bargam}\]
+for any other geodesic $\gamma_1$ starting at $p$.
+
+Define $\phi\:\T'_p\to\RR\:\gamma^+(0)\mapsto(f\circ\gamma)^+(0)$.
+From \ref{gam-bargam}, $\phi$ is a $\Lip$-Lipschtz function defined on $\T_p'$.
+Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function. 
+
+It remains to show that $\phi$ is differential of $f$ at $p$.
+Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
+Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
+i.e. if 
+\[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
+Then 
+\[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 
+\[|f\circ\alpha(t)-f\circ\gamma_n(t)|\le\Lip\cdot\dist[{{}}]{\alpha(t)}{\gamma_n(t)}{}.\]
+Hence 
+\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Ultratangent space} 
+
+Recall that we assume that $\o$ is a once for all fixed choice of selective ultrafilter.
+
+For a metric space $\spc{X}$ and a positive real number $\lam$,
+we will denote by $\lam\cdot\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
+which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
+The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted as $x\mapsto x^\lam$, 
+so 
+\[\dist{x^\lam}{y^\lam}{}
+=
+\lam\cdot\dist[{{}}]{x}{y}{}\] 
+for any $x,y\in \spc{X}$.
+
+The $\o$-blowup $\o\cdot\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
+of $n\cdot\spc{X}$; i.e.,
+\[\o\cdot\spc{X}
+\df
+\lim_{n\to\o} n\cdot\spc{X}.\]
+
+Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
+it corresponds to a point $x^n\in \o\cdot\spc{X}$.
+Note that if $x\ne y$ then 
+\[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
+i.e., 
+$x^\o$ and $y^\o$ 
+belong to different metric components of $\o\cdot\spc{X}$.
+
+The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
+
+Equivalently, ultratangent space $\T^\o_x\spc{X}$ can be defined the following way.
+Consider all the sequences of points $x_n\in \spc{X}$ such that
+the sequence $\ell_n=n\cdot\dist{x}{x_n}{\spc{X}}$ is bounded.
+Define the pseudistance between two such sequences as 
+\[\dist{(x_n)}{(y_n)}{}
+=
+\lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
+Then $\T^\o_x\spc{X}$ is the corresponding metric space.
+
+Both, tangent space and ultratangent space, 
+generalize the notion of tangent space of Riemannian manifold.
+In the simplest cases these two notions define the same space.
+In general, they are different and both useful ---
+often lack of a property in one is compensated by the other.
+
+It is clear from the definition that tangent space has cone structure.
+On the other hand, in general, ultratangent space does not have a cone structure; a Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ which is $\CBB{}{0}$ as well as $\cCat{}{0}$ gives an example.
+
+\begin{thm}{Theorem}\label{thm:tan-is}
+\begin{subthm}{thm:tan-is-CBB}
+If $\spc{L}\in\CBB{}\kappa$ and $p\in \spc{L}$ then $\T^\o_p\in\CBB{}{0}$.
+\end{subthm}
+
+\begin{subthm}{thm:tan-is-CBA}
+If $\spc{U}\in\cCat{}\kappa$ and $p\in \spc{U}$ then $\T^\o_p\in\cCat{}{0}$.
+\end{subthm}
+
+\end{thm}
+
+The proofs of both parts are nearly identical.
+
+\parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
+Since $\spc{L}\in\CBB{}\kappa$, then for its blowup $n\cdot\spc{L}$, we have $n\cdot\spc{L}\in\CBB{}{\kappa/{n^{2}}}$.
+Since $n\cdot(\spc{L},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prp:A^omega} implies ${\T^\o_p}\in\CBB{}{0}$.
+
+\parit{(\ref{SHORT.thm:tan-is-CBA}).}
+Since $\spc{U}\in\cCat{}\kappa$, then for its blowup $n\cdot\spc{U}$, we have $n\cdot\spc{L}\in\cCat{}{\kappa/{n^{2}}}$.
+Since $n\cdot(\spc{U},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prop:CAT^omega} implies ${\T^\o_p}\in\cCat{}{0}$.
 \qeds
 
 The next theorem shows that $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
@@ -144,48 +286,41 @@ That also implies that (1+3)-point comparison (\ref{df:cbb1+3}) as well as $n$-p
 
 \begin{thm}{Theorem}
 \label{thm:T-in-T^w} 
-Let $L\in\CBB{}\kappa$.
-For any $p\in \spc{L}$, there is an distance preserving map $\iota:\T_p\hookrightarrow \T^\o_p$ such that 
- if $n\cdot\ddir p {q_n}\to v$ as $n\to\infty$ 
-then $n\blow q_n\to\iota(v)$ as $n\to\o$.
+Let $\spc{X}$ be a metric space with defined angles.
+Then for any $p\in \spc{L}$, there is an distance preserving map 
+\[\iota:\T_p\hookrightarrow \T^\o_p\] 
+such that for any geodesic $\gamma$ starting at $p$
+we have $\gamma^+(0)\mapsto \lim_{n\to\o}[\gamma(\tfrac1n)]^n$.
 \end{thm}
 
 \parit{Proof.}
-Let us first define $\iota\:\T_p'\to\T^\o_p$, where $\T_p'=\Cone\Sigma_p'\subset \T_p$ the subcone of geodesic vectors (see Section~\ref{sec:tan}).
-Given $v\in \T_p'$ the exponent $v_n=\exp_p(\tfrac{1}{n}\cdot v)$ is defined for all large $n$.
-Set $\iota(v)=v_\o$.
+Given $v\in \T'_p$ 
+choose a geodesic $\gamma$ which starts at $p$ and $\gamma^+(0)=v$.
+Set 
+\[v^\o=\lim_{n\to\o}[\gamma(\tfrac1n)]^n.\]
 
-Since angles between geodesics in $\spc{L}$ are defined (see \ref{angle}), for any $v,w\in \T_p'$ we have
+Note that the value $v^\o\in\T^\o_p$ does not depend on choice of $\gamma$.
+Indeed, if $\gamma_1$ is an other geodesic starting at $p$ such that $\gamma_1^+(0)=v$
+then 
+\[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t).\]
+Therefore 
+\[\lim_{n\to\o}[\gamma(\tfrac1n)]^n=\lim_{n\to\o}[\gamma_1(\tfrac1n)]^n.\]
+
+Set $\iota(v)=v^\o$.
+Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
 $n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
 Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$, i.e. $\iota$ is a global isometry of $\T_p'$.
+
 Since $\T_p'$ is dense in $\T_p$,
 we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
 \qeds
-
-
-\begin{thm}{Theorem}\label{thm:sect}
-Let $\spc{L}\in\CBB{}\kappa$ and $p\in \spc{L}$.
-Given two tangent vectors $u,v\in \T_p$, consider model triangle $\trig{\~\0}{\~u}{\~v}=\modtrig0(\0 u v)$ 
-and denote by $\Sect(u v)$ the region in $\EE^2$ bounded by rays $\~\0\~u$ and $\~\0\~v$.
-
-Then for any geodesic $[u v]$ in $\T^\o_p$ there is a distance preserving map $\iota\:\Sect(u v)\to\T^\o_p$ such that $\iota(\~\0)=\0$, $\iota([\~u\~v])=[u v]$.
-\end{thm}
-
-\parit{Proof.}
-Follows directly from the lemma on flat triangle (\ref{lem:flat-trig}).
-\qeds
-
-
-
-
-
 
 
 \section{Linear subspace of tangent space}
 
 \begin{thm}{Definition}\label{def:opp+Lin}
 Let $\spc{L}\in\CBB m\kappa$, $p\in \spc{L}$ and $u,v\in\T_p$.
-We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|$ and $\mangle(u,v)=\pi$ or $|u|=|v|=0$.
+We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
 
 The subcone
 \[\Lin_p=\{v\in\T_p\mid\exists\ w\in\T_p\ \ \t{such that}\ \ w+v=0\}\]
@@ -293,27 +428,33 @@ Note that for any $v\in\Lin_p$ there is a line $\ell$ passing trough $v$ and $\0
 
 
 
+??? DO WE NEED THIS THEOREM???
 
+
+\begin{thm}{Theorem}\label{thm:differentiability-of-curves}
+Let $\spc{X}$ be a $\CBB{}{}$ or $\cCat{}{}$ space
+and $\alpha\:\II\to\spc{X}$ be a Lipschitz curve. 
+Then $\alpha$ is almost everywhere both-side differentiable.
+Moreover,
+for almost all $t\in\II$,
+the inequality 
+\[\<\alpha^+(t),x\>+\<\alpha^-(t),x\>\le 0\]
+holds for any $x\in \T_{\alpha(t)}$.
+
+In particular
+\[\speed_t\alpha
+\ae
+|\alpha^\pm(t)|.\]
+\end{thm}
 
 
 
 
 \section{Differential and ultradifferential}\index{differential}
 
-\begin{thm}{Definition}\label{def:differential}
-Let $\spc{L}\in\CBB{}{}$, 
-$f\:\spc{L}\subto \RR$ be a locally Lipschitz subfunction
-and $p\in\Dom f$.
-A function $\phi\:\T_p\spc{L}\to\RR$ is called differential of $f$ at $p$ (briefly, $\phi=\d_p f$)
-if for any curve $\alpha\:[0,\eps)\to\spc{L}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined w have
-\[(\d_pf)(\alpha^+(0))=(f\circ\alpha)^+(0).\]
- 
-\end{thm}
-
-
 
 \begin{thm}{Proposition}
-Let $\spc{L}$ be a metric space with defined angles between geodesics, 
+Let $\spc{L}$ be a metric space with defined angles, 
 $f\:\spc{L}\subto \RR$ be a locally Lipschitz semiconcave subfunction.
 Then for any $p\in\Dom f$, its differential $\d_p f$ is defined.
 \end{thm}
@@ -406,7 +547,8 @@ Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ a
 \lbl[lb]{11,8;$\alpha$}
 \end{lpic}
 \end{wrapfigure}
-Let us prepare a model configuration of five points: $\~p,\~u,\~v,\~v',\~w\in\EE^2$ such that
+
+Prepare a model configuration of five points: $\~p,\~u,\~v,\~v',\~w\in\EE^2$ such that
 \begin{itemize}
 \item $\mangle\hinge{\~p}{\~u}{\~v}=\alpha$, 
 \item $\dist{\~p}{\~u}{}=|u|$, 
@@ -417,14 +559,14 @@ Let us prepare a model configuration of five points: $\~p,\~u,\~v,\~v',\~w\in\EE
 Note that 
 \[\dist{\~p}{\~w}{}=\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
 
-First, let us assume that $\spc{L}$ is geodesic.
+Assume that $\spc{L}$ is geodesic.
 
 For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{L}$ the following way:
-\begin{itemize}
+\begin{enumerate}[(a)]
 \item $v_t=\exp_p(t\cdot v)$,\ \  $v_t'=\exp_p(t\cdot v')$
 \item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
 \item $w_t$ is the midpoint of $[u_t v_t]$.
-\end{itemize}
+\end{enumerate}
 Clearly $\dist{p}{u_t}{}=t|u|$, $\dist{p}{v_t}{}=t|v|$, $\dist{p}{v_t'}{}=t|v'|$. 
 Since $\mangle(u,v)$ is defined, 
 we have $\dist{u_t}{v_t}{}=t\dist{\~u}{\~v}{}+o(t)$ 
@@ -472,22 +614,24 @@ and the lemma follows.
 
 \medskip
 
-Finally, in case $\spc{L}$ is not geodesic one needs to make two adjustments in the above constructions.
+Finally, if $\spc{L}$ is not geodesic one needs to make two adjustments in the above constructions.
 Namely: 
 \begin{enumerate}[(i)]
 \item For geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
-More precicely, $\dist{u_t}{\exp_p(t\cdot u)}{}=o(t)$. 
-Thus instead of $\dist{p}{u_t}{}=t|u|$ we only have $\dist{p}{u_t}{}=t|u|+o(t)$, but it is enough for the rest of proof.
-\item the direction $\dir p{w_t}$ might be undefined.
-Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some $w_t'\in \Str(p)$, $w_t'\approx w_t$ (i.e. $\dist{w_t}{w_t'}{}=o(t)$)\qeds
+More precicely, 
+\[\dist{u_t}{\exp_p(t\cdot u)}{}=o(t).\] 
+Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
+\[\dist{p}{u_t}{}=t|u|+o(t),\] but it is enough for the rest of proof.
+\item The direction $\dir p{w_t}$ might be undefined.
+Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (i.e. $\dist{w_t}{w_t'}{}=o(t)$)
 \end{enumerate}
-
+\qedsf
 
 \parbf{Ultradifferential.}
-Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\blow\spc{L}\to\RR$, defined by 
-\[f_n(n\blow x)=n\cdot(f(x)-f(p)),\]
+Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
+\[f_n(n\cdot x)=n\cdot(f(x)-f(p)),\]
 here $x$ and $p$  are considered as elements of the underling set $\ushort{\spc{L}}$.
-While $n\blow(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
+While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
 functions $f_n$ converge to $\o$-differential of $f$ at $p$.
 It will be denoted by $\d_p^\o f$, so
 \[\d_p^\o f\:\T_p^\o\to\RR,\ \ \d_p^\o f=\lim_{n\to\o} f_n.\] 
@@ -617,6 +761,10 @@ Take $E$ to be the affine hull of all the vertexes in all $\beta_{i j}$.
 Thus,
 \[\dist{x_i}{x_j}{S\cap E}\le \length \beta_{i j}\] 
 and \ref{eq:claim:hil-con*} follows.\qeds
+
+\begin{thm}{Exercise}
+Construct a non-compact space $\spc{L}\in\CBB{}0$ which contains no rays.
+\end{thm}
 
 
 

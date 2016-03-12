@@ -159,11 +159,12 @@ It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
 
 \begin{thm}{Corollary}\label{cor:two-geodesics-in-ultrapower}
 Assume $\spc{X}$ is a complete length space 
-and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  Then there are at least two distinct geodesics between $p$ and $q$ 
+and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  
+Then there are at least two distinct geodesics between $p$ and $q$ 
 in the ultrapower $\spc{X}^\o$.
 \end{thm}
 
-\section{Ultralimit of spaces}\label{sec:Ultralimit of spaces}
+\section{Ultralimits of spaces}\label{sec:Ultralimit of spaces}
 
 
 Let $\spc{X}_n$ be a sequence of metric spaces
@@ -312,33 +313,6 @@ Let $\spc{X}$ be a complete metric space.
 Then $\spc{X}^\o$ is geodesic space if and only if $\spc{X}$ is an length space.
 \end{thm}
 
-\parbf{Blowups and ultrablowup.}
-For a metric space $\spc{X}$ and a positive real number $\lam$,
-we will denote by $\lam\blow\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
-which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
-The tautological bijection $\spc{X}\to \lam\blow\spc{X}$ will be denoted as $x\mapsto \lam\blow x$, 
-so 
-\[\dist{(\lam\blow x)}{(\lam\blow y)}{}
-=
-\lam\cdot\dist[{{}}]{x}{y}{}\] 
-for any $x,y\in \spc{X}$.
-
-The $\o$-blowup $\o\blow\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
-of $n\blow\spc{X}$; i.e.,
-\[\o\blow\spc{X}
-\df
-\lim_{n\to\o} n\blow\spc{X}.\]
-
-Given a point $x\in \spc{X}$ we can consider the sequence $n\blow x\in n\blow\spc{X}$;
-it corresponds to a point $\o\blow x\in \o\blow\spc{X}$.
-Note that if $x\ne y$ then $\dist{\o\blow x}{\o\blow y}{\o\blow\spc{X}}=\infty$;
-i.e., 
-$\o\blow x$ and $\o\blow y$ 
-belong to different metric components of $\o\blow\spc{X}$.
-
-
-
-
 \section{Ultralimits of functions}
 
 Let $\spc{X}_n$ be a sequence of metric spaces with marked points $\star_n\in \spc{X}_n$.
@@ -395,26 +369,15 @@ Recall that we treat $\spc{X}$ as a subset of its $\o$-power $\spc{X}^\o$.
 Note that $\Dom f=\spc{X}\cap \Dom f^\o$.
 Moreover, 
 if $\oBall(x,\eps)_{\spc{X}}\subset \Dom f$
-then $\oBall(x,\eps)_{\spc{X}^\o}\subset \Dom f^\o$
+then $\oBall(x,\eps)_{\spc{X}^\o}\subset \Dom f^\o$.
 
 
-
-\section{Exercises}
-
-The following exercise provides a partial converse for Theorem \ref{thm:ultra-GH}.
-
-\begin{thm}{Exercise}
-Let $(\spc{X}_n,\star_n)$ be a sequence of metric spaces with marked points.
-Assume
-$(\spc{X}_n,\star_n)\to(\spc{X}_\o,\star_\o)$
-as $n\to \o$ and the space $\spc{X}_\o$ is a proper;
-moreover the isometry class of $(\spc{X}_\o,\star_\o)$ does not depend on choice of ultrafilter $\o$.
-Prove that $(\spc{X}_n,\star_n)\xto{}(\spc{X}_\o,\star_\o)$.
+\begin{thm}{Exercise} 
+Construct a sequence of compact length spaces 
+$\spc{X}_n$  
+with a converging sequence of $\Lip$-Lipschitz concave functions $f_n\:\spc{X}_n\to\RR$ such that
+the $\o$-limit $\spc{X}_\o$ of $\spc{X}_n$ is compact
+and the $\o$-limit $f_\o\:\spc{X}_\o\to\RR$ of $f_n$ is not concave.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:ultra-unique-geod}
-Let $\spc{X}$ be a complete length space.
-Assume that for points $p,q\in \spc{X}$ there is unique geodesic $[p q]$ in $\spc{X}^\o$.
-Then $[p q]$ lies in $\spc{X}$.
-\end{thm}
 

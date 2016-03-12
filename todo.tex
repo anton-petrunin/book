@@ -36,10 +36,12 @@ the same for $\inf$, $\max$, $\min$ and so on.
 
 S: midpoints.
 
-\item About geodesics. At he moment ``geodesic'' has 3 meanings (see below) I think it is OK to have meaning 2 annd 3, but for the first one I propose name geodesic curve...
-\subitem 1. minimizing geodesic with constant speed
-\subitem 2. the image of minimizing geodesic
-\subitem 3. the class of all constant speed reparametrizations of a geodesic 
+\item We seem to agree to use terms
+``geodesic'' mean minimizing geodesic;
+``local geodesic'' means geodesic;
+``unit-speed geodesic'' and the term geodesic can be also used for
+ the image of minimizing geodesic
+the class of all constant speed reparametrizations of a geodesic 
 
 \item I think it is better to change everywhere $\ZZ_{\ge0}$ to $\ZZ_+$ and $\RR_{\ge0}$ to $\RR_+$ it suits better with $\SS_+$ (and $\SS_{\ge0}$ does not have sense)
 
@@ -89,9 +91,12 @@ S: "minpoint map".
 but we use ``$\pm$'' for ``$+$'' ar ``$-$'', so ``$\approx$'' instead of ``$=$'' will remind that meaning is different).
 \subitem I would also use $\approx$ with little $o$ notation.
 
-\subitem I always needed a notation for $o(x)/x$. One candidate is $\eps(x)$ (it nicely goes with $\eps$-$\delta$ definitions). 
-Perelman use $\varkappa(x)$, so I use it now.
+\subitem A. hates $o(x)$ notation.
+We need a notation for $o(x)/x$. 
+One candidate is $\dot o_x$, so for $o(x\cdot\ln x)$ we could write $\dot o_x\cdot x\cdot\ln x$ 
+Perelman use $\varkappa(x)$.
 Can you suggest anything better?
+
 
 \subitem A possible solution is to use $\lessgtr$ or $\leftrightharpoons$for example
 \[x\lessgtr y\pm \eps(t)\]
@@ -181,6 +186,23 @@ It also made Gromov define convergence wrong way.
 \item What about $\cCat{}{-\infty}$ spaces?
 
 \item Do we need $R$-length spaces?
+
+\item Eventually we will need to change notation for the subfunctions.
+They are essentially continous partially defined functions
+
+I propose the following system of notations:
+
+$f\:X\to Y$ for partially defined function
+
+$f\:X\shortmid\to Y$ for function       
+
+$f\:X\shortmid\to\shortmid Y$     for onto functon
+
+$f\:X\leftrightarrow Y$      for injective partially defined function
+
+$f\:X\shortmid\leftrightarrow\shortmid Y$     for bijection
+
+and so on.
 
 \end{enumerate}
 

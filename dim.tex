@@ -146,7 +146,14 @@ For $\LinDim$, an inverse of the product axiom (\ref{dim-axiom-product}) holds; 
 \eqlbl{eq:inverse-product-axiom}\] 
 for any two metric spaces $\spc{X}$ and $\spc{Y}$; 
 that is easy to check. 
-The inequality \ref{eq:inverse-product-axiom} might be strict for some spaces (see Exercise \ref{ex:schroeder-foetch}).
+According to the following exercise, he inequality \ref{eq:inverse-product-axiom} might be strict for some spaces, see also \cite{schroeder-foetch}.
+
+\begin{thm}{Exercise}\label{ex:schroeder-foetch}
+Construct two norms on $\RR^n$ such that 
+non of the corresponding metric spaces $\spc{X}$ and $\spc{Y}$
+have a isometric copy of $\EE^2$ but
+$\spc{X}\times\spc{Y}$ has isometric copy of $\EE^{10}$.
+\end{thm}
 
 The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in both cases of curvature bounded below and above).
 As we shall see, in all these cases, $\LinDim$  behaves nicely and  is easy to work with.
@@ -164,7 +171,6 @@ This dimension is additive with respect to the direct product (i.e. we always ha
 
 For Alexandrov spaces (either CBB or CBA) this modification is equivalent to the definition we use in this book 
 (compare to Exercise \ref{exer:banach}).
-
 
 
 
@@ -292,8 +298,8 @@ Let $\spc{L}\in\CBB{}{\kappa}$ then
 
 \end{thm}
 
-\begin{wrapfigure}[5]{r}{66mm}
-\begin{lpic}[t(-10mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(0.50)}
+\begin{wrapfigure}{r}{66mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(0.50)}
 \lbl[r b]{22,26;$\bar p$}
 \lbl[r b]{109,26;$p$}
 \lbl[l t]{15,18;$\bar R$}
@@ -592,10 +598,13 @@ for any $\eps>0$,
 a contradiction.
 \qeds
 
+The following exercise was suggested by Alexander Lytchak.
 
-
-
-
+\begin{thm}{Exercise} 
+Let $\spc{L}\in \CBB{}{}$ and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
+Prove that $\spc{L}$ is finite dimensional.
+(Compare with \ref{thm:tan4finite}.)
+\end{thm}
 
 
 
@@ -1017,34 +1026,4 @@ If $\spc{U}\in\cCat{}{}$, then
 
 
 
-
-
-
-
-
-\section{Exercises}
-
-
-\begin{thm}{Exercise}\label{ex:schroeder-foetch}
-Construct two norms on $\RR^n$ such that 
-non of the corresponding metric spaces $\spc{X}$ and $\spc{Y}$
-have a isometric copy of $\EE^2$ but
-$\spc{X}\times\spc{Y}$ has isometric copy of $\EE^n$.
-(Compare with \cite{schroeder-foetch}.)
-\end{thm}
-
-\begin{thm}{Exercise}\label{exer:banach}
-Suppose $V$ is an m-dimensional Banach space.
-Then
-\begin{enumerate}[(a)]
-\item $V \in\cCat{}{}$  iff $V$ is isometric to $\EE^m$;
-\item $V \in\CBB{}{}$   iff $V$ is isometric to $\EE^m$;
-\end{enumerate}
-\end{thm}
-
-\begin{thm}{Lytchak's problem} 
-Let $\spc{L}\in \CBB{}{}$ and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
-Prove that $\spc{L}$ is finite dimensional.
-(Compare with \ref{thm:tan4finite}.)
-\end{thm}
 
