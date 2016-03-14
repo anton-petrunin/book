@@ -1,10 +1,10 @@
-%%!TEX root = all.tex
+%%!TEX root = the-model.tex
 %array^
 \chapter{Model plane}
 
 \section{Trigonometry}\label{model}
 
-Given a real number $\kappa$, the \emph{model $\kappa$-\hspace{0pt}plane}\index{plane!$\kappa$-plane} will be a simply connected 2-\hspace{0pt}dimensional Riemannian manifold of constant curvature $\kappa$.
+Given a real number $\kappa$, the \emph{model $\kappa$-\hspace{0pt}plane}\index{plane!$\kappa$-plane} will be a complete simply connected 2-\hspace{0pt}dimensional Riemannian manifold of constant curvature $\kappa$.
 
 The  model $\kappa$-plane  will be denoted by $\Lob2\kappa$.
 If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; if $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane; and if $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane.
@@ -12,10 +12,9 @@ If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of ra
 Set $\varpi\kappa=\diam\Lob2\kappa$\index{$\varpi\kappa$}, so 
 $\varpi\kappa=\infty$ if $\kappa\le0$ and $\varpi\kappa=\pi/\sqrt{\kappa}$ if $\kappa>0$.
 
-The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}{}$\index{$\dist{*}{*}{}$}
-, and $[x y]$\index{$[{*}{*}]$} 
+The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}{}$\index{$\dist{*}{*}{}$}, and $[x y]$\index{$[{*}{*}]$} 
 will denote the segment connecting $x$ and $y$. 
-$[x y]$ is uniquely defined if $\kappa\le 0$ and if $\kappa>0$ we 
+The segment $[x y]$ is uniquely defined if $\kappa\le 0$ and if $\kappa>0$ we 
 require 
 that $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.%??? otherwise $[x y]$ is considered to be undefined.
 
@@ -24,18 +23,48 @@ The angle of $\trig x y z$ at $x$ will be denoted by $\mangle\hinge xyz$\index{$
 
 By $\modtrig\kappa\{a,b,c\}$\index{$\modtrig\kappa$!$\modtrig\kappa\{{*},{*},{*}\}$} we denote a triangle in 
 $\Lob2\kappa$ with sidelengths $a,b,c$, so 
-$\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$ such that 
+$\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$  are such that 
 $\dist{x}{y}{}=c$, $\dist{y}{z}{}=a$, $\dist{z}{x}{}=b$.
-For $\modtrig\kappa\{a,b,c\}$ to be defined, sides $a,b,c$ must satisfy the triangle inequality.  If $\kappa>0$, we 
+For $\modtrig\kappa\{a,b,c\}$ to be defined, the sides $a,b,c$ must satisfy the triangle inequality.  If $\kappa>0$, we 
 require 
 in addition that $a+b+c<2\cdot\varpi\kappa$; 
 otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
 
 \parbf{Trigonometric functions.}
-We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\sn\kappa$, $\cs\kappa$ and $\md\kappa$;
-$\sn{}$ stands for sine; $\cs{}$,  for cosine; and $\md{}$, for modified distance.
+We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\sn\kappa$, $\cs\kappa$ and $\md\kappa $;
+$\sn{}$ stands for sine; $\cs{}$,  for cosine; and $\md{}$, for modified distance. They are defined as follows:
+  Let $\sn\kappa$, $\cs\kappa$, $\overline {\md\kappa}\co \RR_{\ge}\to\RR$  be   the solutions of the following IVPs respectively
+ 
+ \[
+ \begin{cases}
+ x''+kx=0\\
+ x(0)=0\\
+ x''(0)=1
+ \end{cases} \qquad 
+  \begin{cases}
+ y''+ky=0\\
+ y(0)=1\\
+ y'(0)=0
+ \end{cases} 
+\quad
+ \begin{cases}
+ z''+kz=1\\
+ z(0)=0\\
+ z'(0)=0
+ \end{cases} 
+\]
 
-Here are tables which relate our trigonometric functions to the standard ones, where 
+Then set 
+
+\[
+\md\kappa(t)=
+\begin{cases} 
+\overline {\md\kappa} \textrm{ if } 0\le t\le \varpi\kappa \\
+\frac{2}{k} \textrm{ if  } t> \varpi\kappa
+\end{cases}
+\]
+
+Here are the tables which relate our trigonometric functions to the standard ones, where 
 we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 \begin{align*}
 &\sn{\pm\kappa}=\tfrac{1}{\sqrt{\kappa}}\cdot \sn{\pm1}({x}\cdot {\sqrt{\kappa}});
@@ -57,21 +86,21 @@ we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 =
 \left[
 \begin{aligned}
-&1-\cos x&&\t{for}&&x<\pi
+&1-\cos x&&\t{for}&&x\le \pi
 \\
-&2&&\t{for}&&x\ge\pi
+&2&&\t{for}&&x >\pi
 \end{aligned}
 \right.;	&
 \end{align*}
 
 
 Note that
-\[\md\kappa(0)=(\md\kappa)'(0)=0\ \ \t{and}\ \ 
-(\md\kappa)''(x)=1-\kappa\cdot\md\kappa(x)\ \ \t{for}\ \ x<\varpi\kappa.\]
-Also,
+%\[\md\kappa(0)=(\md\kappa)'(0)=0\ \ \t{and}\ \ 
+%(\md\kappa)''(x)=1-\kappa\cdot\md\kappa(x)\ \ \t{for}\ \ x<\varpi\kappa.\]
+%Also,
 \[
 \mdk(x)=\int\limits_0^x
-\snk(x)\cdot\d x \ \t{ for }\ \ x<\varpi\kappa
+\snk(x)\cdot\d x \ \t{ for }\ \ x\le \varpi\kappa
 \]
 %In other words, $\md\kappa(x)=1/\kappa$ for all $x\ge\varpi\kappa$ and otherwise
 %\[\md\kappa(x) = 
@@ -83,8 +112,8 @@ Also,
 %\tfrac{1}{\kappa}&\cdot\l[1-\cosh(x\cdot\sqrt{-\kappa})\r] && {\text{if }} & \kappa &< 0
 %\end{aligned}\r..\]
 %Set $\sn\kappa=(\md\kappa)'$ and $\cs\kappa=(\md\kappa)''$\index{$\sn\kappa$}\index{$\cs\kappa$}.
-The functions $\sn\kappa, \cs\kappa:\RR_{\ge}\to\RR$ satisfy the equation $y''+\kappa\cdot y=0$,  
-and have the same initial conditions as sine and cosine respectively.
+%The functions $\sn\kappa, \cs\kappa:\RR_{\ge}\to\RR$ satisfy the equation $y''+\kappa\cdot y=0$,  
+%and have the same initial conditions as sine and cosine respectively.
 
 
 
@@ -98,7 +127,6 @@ and have the same initial conditions as sine and cosine respectively.
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{Cosine law.}
 Let $\phi$ be the angle of $\modtrig\kappa\{a,b,c\}$ which is 
 opposite to $a$.
 In this case we will write\index{$\side\kappa$!$\side\kappa \{{*};{*},{*}\}$}
@@ -110,7 +138,7 @@ In this case we will write\index{$\side\kappa$!$\side\kappa \{{*};{*},{*}\}$}
 =
 \tangle\mc\kappa\{a;b,c\}.\]
 
-The functions $\side\kappa$ and $\tangle\mc\kappa$ will be called correspondingly \emph{model side} and \emph{model angle}.
+The functions $\side\kappa$ and $\tangle\mc\kappa$ will be called correspondingly the \emph{model side} and the \emph{model angle}.
 Set 
 \[
 \side\kappa\{\phi;b,-c\}
@@ -118,21 +146,8 @@ Set
 \df\side\kappa\{\pi-\phi;b,c\},\]
 this way we define $\side\kappa\{\phi;b,c\}$ for some negative values of $b$ and $c$.
 
-At bottom, these notations are abbreviations for the cosine law in $\Lob2\kappa$, which can be expressed through the trigonometric functions  just introduced:
-\[\cos\phi
-=\l[\begin{aligned}
-&\frac{b^2+c^2-a^2}{2\cdot b\cdot c}
-&\text{if}&\ \ \kappa=0
-\\
-%&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
-%&\text{if}&\ \ \kappa\not=0
-&\frac{\cs\kappa b\cdot\cs\kappa c-\cs\kappa a}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
-&\text{if}&\ \ \kappa\not=0
-\end{aligned}\r.\]
-Rather than using the explicit formulas, however, we mainly will use
-the properties of $\~\mangle\mc\kappa$ and $\side\kappa$ listed below.
 
-\begin{thm}{Properties of standard functions}
+\begin{thm}{Properties of standard functions}\label{md-equalities}
 
 \begin{subthm}{md-diff-eq}
 For fixed $a$ and $\phi$, the function 
@@ -174,11 +189,26 @@ Then they have the same sign.
 \end{thm}
 
 \parit{Proof.}
-All the properties except Alexandrov's lemma (\ref{SHORT.lem:alex-0}) can be shown by direct calculation.
-The Alexandrov's lemma is reformulated in \ref{lem:alex} and proved there.
+All the properties except Alexandrov's lemma (\ref{SHORT.lem:alex-0}) can be shown by direct calculation. Alexandrov's lemma is reformulated in \ref{lem:alex} and is proved there.
 \qeds
 
 
+\parbf{Cosine law.}
+
+The above formulas easily imply  the cosine law in $\Lob2\kappa$, which can be expressed as follows
+\[\cos\phi
+=\l[\begin{aligned}
+&\frac{b^2+c^2-a^2}{2\cdot b\cdot c}
+&\text{if}&\ \ \kappa=0
+\\
+%&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
+%&\text{if}&\ \ \kappa\not=0
+&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
+&\text{if}&\ \ \kappa\not=0
+\end{aligned}\r.\]
+
+However, rather than using these explicit formulas,  we mainly will use
+the properties of $\~\mangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equalities}.
 
 \section{Hemisphere lemma}\label{curves-in-model}
 
@@ -203,10 +233,10 @@ Assume $\ell<\pi$.
 Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
 Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
 Let $z$ be the midpoint of  $[pq]$.  
-We claim $\alpha$ lies in the open hemisphere centered at $z$.  
+We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
 If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
 Without loss of generality we may assume that $r\in\check\alpha$. 
-Arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that passes through $r$ and its antipodal point $r'$.
+The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ which passes through $r$ and its antipodal point $r'$.
 Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
 
 If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circle, 
@@ -221,7 +251,7 @@ In the latter case,  $\alpha$ lies in a closed hemisphere obtained as a limit of
 
 \begin{thm}{Exercise}
 Build a proof of Hemisphere lemma
-\ref{lem:hemisphere} base on Krofton's formula.
+\ref{lem:hemisphere} based on Crofton's formula.
 \end{thm}
 
 
