@@ -819,6 +819,20 @@ Thus, we have
 \qedsf
 
 
+\begin{thm}{Exercise}\label{ex:grad-curve-condition}
+Let $\spc{L}\in\CBB{}{}$, 
+$f\:\spc{L}\to \RR$ be a locally Lipschitz 
+semiconcave function.
+Assume $\alpha\:\II\to \spc{L}$ is a Lipschitz curve such that 
+\begin{align*}
+\alpha^+(t)&\le|\nabla_{\alpha(t)}f|,
+\\
+(f\circ\alpha)^+(t)&\ge |\nabla_{\alpha(t)}f|
+\end{align*}
+for almost all $t$.
+Show that $\alpha$ is an $f$-gradient curve.
+\end{thm}
+
 
 
 
@@ -1135,6 +1149,142 @@ for some real values $\kappa$ and $\lambda$.
 Then $f$ has \index{complete gradient}\emph{complete gradient};
 that is for any $x\in\spc{L}$ there is a $f$-gradient curve $\alpha\:[0,\infty)\to\spc{L}$ which starts at $x$.
 \end{thm}
+
+
+\section{Line splitting theorem}
+ 
+
+Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
+We will write 
+\[\spc{X}=A\oplus B\]
+If there projections $\proj_A\:\spc{X}\to A$ 
+and 
+$\proj_B\:\spc{X}\to B$
+such that 
+\[\dist[2]{x}{y}{}=\dist[2]{\proj_A(x)}{\proj_A(y)}{}+\dist[2]{\proj_B(x)}{\proj_B(y)}{}\]
+for any two points $x,y\in \spc{X}$.
+
+Note that if 
+\[\spc{X}=A\oplus B\]
+then 
+\begin{itemize}
+\item $A$ intersects $B$ at single point,
+\item both sets $A$ and $B$ are convex sets in $\spc{X}$.
+\end{itemize}
+
+
+Recall that a line in a metric space is a geodesic which is minimizing on each segment.
+
+\begin{thm}{Line splitting theorem}\label{thm:splitting} 
+Let $\spc{L}\in\CBB{}0$ 
+and $\gamma$ be a line in $\spc{L}$. 
+Then 
+\[\spc{L}=X\oplus \gamma(\RR)\]
+for some subset $X\subset \spc{L}$.
+\end{thm}
+
+For smooth $2$-dimensional surfaces, 
+this theorem was proved by Cohn-Vossen in \cite{cohn-vossen_line}.
+For the Riemannian manifolds of higher dimensions 
+it was proved by Toponogov in \cite{toponogov-globalization+splitting}.
+Then it was generalized by Milka in  \cite{milka-line}
+to Alexandrov's spaces, almost the same prove is given in \cite[1.5]{BBI}.
+
+Further generalizations of Splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Cheeger and Gromoll in \cite{cheeger-gromoll-split}.
+Eshenburg in \cite{eshenburg-split} obtained an analogous result for the Lorentzian manifolds, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
+
+We present a proof which use gradient flow for Busemann's functions, it is close in the spirit to the proof in \cite{cheeger-gromoll-split}.
+
+\begin{thm}{Corollary}\label{cor:splitting}
+Let $\spc{L}\in\CBB{}0$. 
+Then there is an isometric splitting
+\[
+\spc{L}=\spc{L}'\oplus H
+\]
+where $H\subset \spc{L}$ is a subset isometric to a Hilbert space and $\spc{L}'\subset \spc{L}$ be a convex subset which contains no lines. 
+\end{thm}
+
+\begin{thm}{Corollary}\label{cor:splitting-vectors}
+Let $\spc{K}\in\CBB{}0$ be a cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
+(i.e., $v_+ + v_-=0$).
+Then there is an isometry $\iota\:K\to K'\times \RR$, where $K'\in\CBB{}0$ is a cone with vertex $o'$ such that
+$\iota:v_\pm\mapsto (o',\pm|v_\pm|)$.
+\end{thm}
+
+\begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
+Assume $\spc{L}\in\CBB{m}1$, $m\ge2$ and $\rad\spc{L}=\pi$ then 
+\[\spc{L}\iso \SS^m.\]
+ 
+\end{thm}
+
+
+
+\parit{Proof.} Consider two Busemann's functions $\bus_+$ and $\bus_-$ asociated with rays $\gamma:[0,\infty)\to \spc{L}$ and $\gamma:(-\infty,0]\to \spc{L}$, i.e.
+\[
+\bus_\pm(x)
+=
+\lim_{t\to\infty}\dist{\gamma(\pm t)}{x}{}- t.
+\]
+According to Exercise~\ref{ex:busemann-CBB}, 
+both functions $\bus_\pm$ are concave.
+
+Fix $x\in \spc{L}$.
+Note that since $\gamma$ is a line, we have 
+\[\bus_+(x)+\bus_-(x)\ge0.\]
+
+On the other hand, by \ref{comp-kappa} 
+$f(t)=\dist[2]{x}{}{}\circ\gamma(t)$ 
+is $2$-concave.
+In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$. 
+Passing to the limit as $t\to\pm\infty$, we get \[\bus_+(x)+\bus_-(x)\le0.\]
+
+Hence
+\[
+\bus_+(x)+\bus_-(x)= 0
+\]
+for any $x\in \spc{L}$.
+In particular the functions $\bus_\pm$ are affine;
+that is they are convex and concave at the same time.
+
+It follows that for any $x$,
+\begin{align*}
+|\nabla_x \bus_\pm|
+&=\sup\set{\d_x\bus_\pm(\xi)}{\xi\in\Sigma_x}=
+\\
+&=\sup\set{-\d_x\bus_\mp(\xi)}{\xi\in\Sigma_x}\equiv
+\\
+&\equiv1.
+\end{align*}
+By Exercise~\ref{ex:grad-curve-condition}, 
+$1$-Lipschitz curve $\alpha$, such that $\bus_\pm(\alpha(t))=t+\Const$ is a $\bus_\pm$-gradient curve. 
+In particular, $\alpha(t)$ is a $\bus_+$-gradient curve if and only if $\alpha(-t)$ is a $\bus_-$-gradient curve.
+It follows that for any $t>0$, the $\bus_\pm$-gradient flows commute;
+that is 
+\[\GF_{\bus_+}^t\circ\GF_{\bus_-}^t=\id_\spc{L}.\]
+Set
+\[\GF^t=\left[\begin{matrix}
+\GF_{\bus_+}^t&\hbox{if}\ t\ge0\\
+\GF_{\bus_-}^t&\hbox{if}\ t<0
+               \end{matrix}\right.\]
+it defines an $\RR$-action on $\spc{L}$.
+
+Set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)\subset \spc{L}$, it is a closed convex set, therefore it forms an Alexandrov's space.
+Consider map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
+It is easy to see that $h$ is onto.
+Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$, we get that $h$ is a short and non-contracting at the same time; i.e. $h$ is an isometry.\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section[Family of functions]{Gradient curves of a family of functions}
 
