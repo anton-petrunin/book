@@ -1,5 +1,19 @@
+%%!TEX root = the-solutions.tex
 \chapter{Solutions}
 
+\parbf{ Exercise ~\ref{exr-crofton}.}
+%By rescaling we can assume that $\kappa=1$. 
+Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
+By approximation it's clearly enough to prove this for  smooth curves of length $< 2\pi$ with transverse self-intersections. Furthermore, by changing such  a curve near its self-intersection points  it can be approximated with respect to the Hausdorff distance by simple closed curves. 
+Thus, without loss of generality we can assume that $\alpha$ is a simple closed curve of length $<2\pi$.
+By Crofton's formula we have that
+\[
+L(\alpha)=\frac 1 4 \int _{\SS^2}\#(\alpha\cap v^\perp) \d_v\vol_2
+\]
+
+Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. By the intermediate value theorem the same holds true if $\#(\alpha\cap v^\perp) =1$.
+Suppose  $\#(\alpha\cap v^\perp) \ge 2$ for all $v\in\SS^2$. Then Crofton's formula implies that
+$L(\alpha)\ge \frac 1 4 \int_{\SS^2}2=2\pi$. 
 \parbf{Besicovitch inequality \ref{ex:besicovitch-inq}.}
 Fix $\eps>0$ and let
 $f_1,f_2\dots\:\EE^m\subto \spc{X}$
