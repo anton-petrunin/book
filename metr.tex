@@ -1,7 +1,7 @@
-%%!TEX root = all.tex
+%%!TEX root = the-metr.tex
 %array^
 \chapter{Metric spaces}
-In this chapter we fix some conventions assuming that the reader is familiar with basic notion in metric geometry.
+In this chapter we fix some conventions assuming that the reader is familiar with basic notions in metric geometry.
 
 \section{Definitions}
 \label{sec:metric spaces}
@@ -29,55 +29,53 @@ $\dist{x}{y}{}=\dist{y}{x}{}$ for any $x,y\in \ushort{\spc{X}}$;
 Then 
 \begin{itemize}
 \item The pair $\spc{X}=(\ushort{\spc{X}},\dist{}{}{})$ 
-is called \emph{$[0,\infty]$-metric space}.
-\item The set $\ushort{\spc{X}}$ is called \emph{underling set}\index{underling set} of $\spc{X}$. 
+is called a \emph{$[0,\infty]$-metric space}.
+\item The set $\ushort{\spc{X}}$ is called \emph{underlying set}\index{underlying set} of $\spc{X}$. 
 The elements of $\ushort{\spc{X}}$ are called \emph{points}\index{point} of the metric space $\spc{X}$.
 \item The function $\dist{}{}{}$ is called 
 \emph{$[0,\infty]$-metric}\index{$[0,\infty]$-metric} of $\spc{X}$,
 \end{itemize}
 \end{thm}
 
-With slight abuse of notations we may write $x\in\spc{X}$ meaning that $x$ is a point of $\spc{X}$.
+With a slight abuse of notations we will write $x\in\spc{X}$ meaning that $x$ is a point of $\spc{X}$.
 
-The value $\dist{x}{y}{}$ is called \emph{distance}\index{distance} from $x$ to $y$.
+The value $\dist{x}{y}{}$ is called the \emph{distance}\index{distance} from $x$ to $y$.
 If we need to emphasize 
 that the distance is taken in the space ${\spc{X}}$, 
-we write $\dist{x}{y}{\spc{X}}$;
+we will write $\dist{x}{y}{\spc{X}}$;
 
-The function $\dist{x}{}{}\:\ushort{\spc{X}}\to\RR$ defined as $\dist{x}{}{}\:y\mapsto\dist{x}{y}{}$ will be called \emph{distance function}\index{distance function} from $x$. 
+The function $\dist{x}{}{}\:\ushort{\spc{X}}\to\RR$ defined as $\dist{x}{}{}\:y\mapsto\dist{x}{y}{}$ will be called the \emph{distance function}\index{distance function} from $x$. 
 
 We will need three variations of the above definition, which we denote by $(0,\infty]$-metric, $[0,\infty)$-metric and $(0,\infty)$-metric,
 the intervals $(0,\infty]$, $[0,\infty)$, $(0,\infty)$ describe possible values for the distance between distinct points in the space.
 
 \begin{thm}{Definition}
-A $[0,\infty]$-metric space is called \emph{$(0,\infty]$-metric space}\index{$(0,\infty]$-metric space}
+A $[0,\infty]$-metric space is called a \emph{$(0,\infty]$-metric space}\index{$(0,\infty]$-metric space}
 if $\dist{x}{y}{}=0$ if and only if $x=y$.
-In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called \emph{$(0,\infty]$-metric}\index{$(0,\infty]$-metric}.
+In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called a \emph{$(0,\infty]$-metric}\index{$(0,\infty]$-metric}.
 \end{thm}
 
 \begin{thm}{Definition}
-A $[0,\infty]$-metric space is called \emph{$[0,\infty)$-metric space}\index{$[0,\infty)$-metric space}
+A $[0,\infty]$-metric space is called a \emph{$[0,\infty)$-metric space}\index{$[0,\infty)$-metric space}
 if $\dist{x}{y}{}<\infty$ for any two points $x, y$.
-In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called \emph{$[0,\infty)$-metric}\index{$[0,\infty)$-metric}.
+In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called a \emph{$[0,\infty)$-metric}\index{$[0,\infty)$-metric}.
 \end{thm}
 
 \begin{thm}{Definition}
-A $[0,\infty]$-metric space is called \emph{$(0,\infty)$-metric space}\index{$(0,\infty)$-metric space}
+A $[0,\infty]$-metric space is called a \emph{$(0,\infty)$-metric space}\index{$(0,\infty)$-metric space}
 if $0<\dist{x}{y}{}<\infty$ for any two points $x\ne y$.
-In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called \emph{$(0,\infty)$-metric}\index{$[0,\infty)$-metric}.
+In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called a \emph{$(0,\infty)$-metric}\index{$[0,\infty)$-metric}.
 \end{thm}
 
-The $(0,\infty)$-metric spaces will be also called \emph{metric spaces}
-this is the main object of study in this book.
+The main object of study in this book are $(0,\infty)$-metric spaces which will be also called  \emph{metric spaces}.
+However, the notion of $[0,\infty]$-metric spaces which allow for infinite distances between  points is useful
+in  various definitions and constructions such as the following one
 
-The notion of $[0,\infty]$-metric spaces is useful
-in the various definitions and constructions.
-First let us give one construction which forced us to allow infinite value for the distance.
 \begin{itemize}
-\item Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ be a set of $[0,\infty]$-metric spaces.
+\item Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ be a collection of $[0,\infty]$-metric spaces.
 The disjoint union 
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$$ 
-has natural $[0,\infty]$-metric on it defined the following way:
+has a natural $[0,\infty]$-metric on it defined as follows:
 given two points $x\in\spc{X}_\alpha$ and $y\in\spc{X}_\beta$
 set 
 \[
@@ -87,61 +85,53 @@ set
 \dist{x}{y}{\bm{X}}=\dist{x}{y}{\spc{X}_\alpha}&\text{if}\ \ \alpha=\beta.
 \end{matrix}
 \]
-The obtained metric space $\bm{X}$ will be called \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ denoted as $\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$.
+The obtained metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as $\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$.
 
-\item An other example is the construction of length-metric given in Section~\ref{sec:intrinsic}.
+\item Another example is the construction of length-metric given in Section~\ref{sec:intrinsic}.
 \end{itemize}
 
-Now let us give a constructions which show that allowing distance between distinct point might vanish is useful.
-
+Now let us give some constructions which show that allowing distances between distinct point might to vanish can also be useful.
 \begin{itemize}
 
-\item Assume a set comes with a set of $[0,\infty]$-metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
-Then 
-\[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}\]
-is a $[0,\infty]$-metric.
+\item Suppose a set ${\spc{X}}$ comes with a set of $[0,\infty]$-metrics $\dist{}{}{}_{\alpha}$ for $\alpha\in\IndexSet$.
+Then set
+\[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
+ Clearly, $\dist{}{}{}$ is a $[0,\infty]$-metric. But it need not be a $(0,\infty]$-metric  even if all $\dist{}{}{}_{\alpha}$ are $(0,\infty)$-metrics.
 
-This construction is possible since the distance between distinct point might vanish;
-even if each $\dist{}{}{\alpha}$ is a $(0,\infty)$-metric,
-the $\spc{X}_\alpha$ has $(0,\infty)$-metric,
-$\dist{x}{y}{}$ might be only $[0,\infty)$-metric.
-
-\item Assume $\spc{X}$ is a set,
-$\spc{Y}$ is metric spaces 
-and $\map\:\spc{X}\to\spc{Y}$ be a map.
-Then one can consider \emph{pulled back metric} on $\spc{X}$
+\item Let $\spc{X}$ be a set,
+$\spc{Y}$ be a metric space and let 
+ $\map\:\spc{X}\to\spc{Y}$ be a map.
+Then one can consider the \emph{pullback metric} on $\spc{X}$
 defined as 
 \[\dist{x}{y}{\spc{X}}=\dist{\map(x)}{\map(y)}{\spc{Y}}\]
 for any $x,y\in\spc{X}$.
-Even if  $\spc{Y}$ has $(0,\infty)$-metric,
-the pulled back metric on $\spc{X}$ is only $[0,\infty)$
-since $\dist{x}{y}{\spc{X}}=0$ if $\Phi(x)=\Phi(y)$;
-i.e., 
-The distance between distinct points in $\spc{X}$ 
-the pulled back metric  
+
+Note that the pullback metric $\dist{}{}{}_{\spc{X}}$ is only  $[0,\infty)$ even if the metric on 
+$\spc{Y}$ is $(0,\infty)$, since $\map$ need not be injective.
+
 \end{itemize}
 
 On the other hand, 
-as you will see below,
-nearly any question about the other 3 types of metric spaces can be reduced to the question about $(0,\infty)$-metric spaces.
+as we will see below,
+nearly any question about the other 3 types of metric spaces can be reduced to a question about $(0,\infty)$-metric spaces.
 
 
 \begin{itemize}
 \item 
 If $\spc{X}$ is a $[0,\infty]$-metric space 
 and $x,x'\in\spc{X}$ are such that $\dist{x}{x'}{}=0$ then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
-Thus, $\dist{}{}{}$ defines the metric on the
-quotient set $\ushort{\spc{X}}/{\sim}$ with equivalence relation 
-where $x\sim y$ iff $\dist{x}{y}{}=0$.
-This way we obtain a $(0,\infty]$-metric space, say $\spc{X}'$.
-Often we will not distinguish between $(0,\infty]$-metric space $\spc{X}'$
-and $[0,\infty]$-metric space $\spc{X}$. 
+Thus, $\dist{}{}{}$ defines a metric on the
+quotient set $\ushort{\spc{X}}/{\sim}$ with the equivalence relation 
+$x\sim y$ iff $\dist{x}{y}{}=0$.
+This way we obtain a $(0,\infty]$-metric space $\spc{X}'$.
+Often we will not distinguish between the $(0,\infty]$-metric space $\spc{X}'$
+and the $[0,\infty]$-metric space $\spc{X}$. 
 
 
 \item The relation $x\sim y$ iff $\dist{x}{y}{}<\infty$ is an equivalence relation.
-The equivalence class of point $x\in\spc{X}$ will be called \emph{metric component}\index{metric component} %???Is it OK???
+The equivalence class of a point $x\in\spc{X}$ will be called the \emph{metric component}\index{metric component} %???Is it OK???
  of $x$; it will be denoted as $\spc{X}_x=\oBall(x,\infty)$.
-Thus any metric space is a disjoint union of its metric component in the sense defined above.
+Thus, any metric space is a disjoint union of its metric components in the sense defined above.
 \end{itemize}
 
 \parbf{Related definitions.}
@@ -155,7 +145,7 @@ For a metric space as above,
 \end{align*}
 
 
-are called respectively the  \emph{open}\index{open ball} and \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
+are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
 \begin{itemize}
 \item If we need to emphasize that these balls are taken in the metric space $\spc{X}$,
 we write $\oBall(x,R)_{\spc{X}}$
@@ -168,11 +158,13 @@ and $\cBall[R]_{\Lob{m}{\kappa}}$ correspondingly.
 \end{itemize}
 \item A set $A\subset\spc{X}$ is called \emph{bounded}\index{bounded set} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
 \item
-For subsets $A, B\subset \spc{X}$, let us define distance from $A$ to a point $x$ in $\spc{X}$ as 
-\[\dist{A}{x}{}
-\df
-\inf\set{\dist{a}{x}{}}{a\in A},\] 
-and the distance between $A$ and $B$  as 
+For subsets $A, B\subset \spc{X}$, 
+%let us define the distance from $A$ to a point $x$ in $\spc{X}$ as 
+%\[\dist{A}{x}{}
+%\df
+%\inf\set{\dist{a}{x}{}}{a\in A},\] 
+%and  ??? seems redundant as this is a special case of distances between sets. V.
+we define the distance between $A$ and $B$  as 
 \[\dist{A}{B}{}
 \df
 \inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]
@@ -200,14 +192,14 @@ For $0<r<R$, let
 \]
 
 be the closed annulus around $A$.
-\item Any  subset $A$ in a pseudometric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
-i.e. a pseudometric space with the pseudometric defined as restriction of the pseudometric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
+\item Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
+i.e. a metric space with the metric defined as restriction of the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
 \end{itemize}
 
 \parbf{Types of metric spaces.}
 \begin{itemize}
-\item ???A metric space is called \emph{finite}\index{finite metric space},
-if its underlying set is finite.
+%\item ???A metric space is called \emph{finite}\index{finite metric space},
+%if its underlying set is finite. ??? I don't think there is any need to define this. V.
 
 \item
 A metric space $\spc{X}$ is called \emph{complete}\index{complete space} if any \emph{Cauchy sequence}\index{Cauchy sequence} in $\spc{X}$  converges.
