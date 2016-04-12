@@ -235,14 +235,17 @@ the closed ball $\cBall[p,R]\subset\spc{X}$ is compact.
 \begin{thm}{Proposition}
 Proper metric spaces are separable/second countable.
 \end{thm}
+\parit{Proof.}
+Let $\spc{X}$ be  proper metric space and let $p\in \spc{X}$. Since $\spc{X}=\cup_{n=1}^\infty\cBall[p,n]$, to see that $X$ is separable it's clearly enough to construct a countable dense subset in  each $\cBall[p,n]$. For every $m\ge 1$  take  an open cover of $\cBall[p,n]$ by open $1/m$-balls. By compactness of $\cBall[p,n]$ it admits a finite subcover $\oBall(q^m_1,1/m),\ldots, \oBall(q^m_{N_m},1/m)$. Then $\cup_{m, j} \{q^m_j\}$ is a countable dense subset of $\cBall[p,n]$.
+Lastly, to see that $\spc{X}$ is second countable, let $\{p_i\}_{i=1}^\infty$ be a countable dense subset in $\spc{X}$. \\ Then $\cup_{i,j\ge 1} \oBall(p_i,\frac 1 j)$ is a countable basis of topology of $\spc{X}$.
+\qeds
 
-\begin{thm}{Proposition}
-A locally compact length space is proper.
-\end{thm}
+%\parbf{Types of metric spaces.}
+%\begin{thm}{Proposition}
+%A locally compact length space is proper. !!! this is false., e.g. $(0,1)$.
+%\end{thm}
 
-\begin{thm}{Proposition}
-A proper length space is geodesic.
-\end{thm}
+
 
 A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset.
 
@@ -252,22 +255,24 @@ and $\{\Omega_n\}$, $n\in \NN$ be a collection of open dense subsets of $\spc{X}
 Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
 \end{thm}
 
+\parit{Proof.}
+Let $U\subset\spc{X}$ be open. We need to show that $U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset$. Since $\Omega_1$ is open and dense, there is $p_1\in\spc{X}$ and $r_1>0$ such that $\cBall[p_1,r_1]\subset  U\cap \Omega_1$. Since $\Omega_2$ is open and dense there is $p_2\in\spc{X},0<r_2<r_1/2$ such that $\cBall[p_2,r_2]\subset \oBall(p_1,r_1)\cap \Omega_2\subset U\cap\Omega_1\cap\Omega_2$. Proceeding by induction we can construct a sequence of balls $\cBall(p_i,r_i)$ such that $0<r_i<\frac {r_{i-1}}{2}$ satisfying  $\cBall[p_i,r_i]\subset \oBall(p_{i-1},r_{i-1})\cap \Omega_i\subset U\cap \bigl(\bigcap_{k=1}^i\Omega_k
+ \bigr)$. Then the sequence $\{p_i\}$ is Cauchy and hence, by completeness of $\spc{X}$ we have that $p_i\to p$. By construction, $p_i\in \cBall[p_j,r_j]$ for all $i\ge j$ and hence the same is true for $p$. Thus, $p\in U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset $. \qeds
 
 
-
-\section{Characteristics of metric spaces}
+\section{Invariants of metric spaces}
 
 Let $\spc{X}$ be a metric space.
 Then
 \begin{itemize}
 \item 
-\emph{Diameter}\index{Diameter} of $\spc{X}$ is  defined as
+The \emph{diameter}\index{Diameter} of $\spc{X}$ is  defined as
 \[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
 
-\item\emph{Radius}\index{Radius} of $\spc{X}$ is  defined as
+\item The \emph{radius}\index{Radius} of $\spc{X}$ is  defined as
 \[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \t{for some}\ x\in\spc{X}}.\]
 
-\item\emph{$\eps$-pack}\index{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
+\item The packing number \emph{$\eps$-pack}\index{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
 If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$ 
 such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\index{maximal $\eps$-packing} in $\spc{X}$.
 
@@ -295,16 +300,26 @@ such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\ind
 
 \section{Length spaces}\label{sec:intrinsic}
 
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space.  Given $[a,b]\subset [-\infty,\infty]$ and a continuous curve $\alpha\co [a,b]\to \spc{X}$ we define its {\emph length} as 
+\[
+\length \alpha \df \sup_{a\le t_0\le t_1\le\ldots\le t_n\le b}\Sigma_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
+\]
+\end{thm}
+It is easy to see that if $\tau\co [c,d]\to [a,b]$ is a homeomorphism then $\length \alpha=\length(\alpha\circ\tau)$.
+
+
 Given two points $x$ and $y$ in a metric space $\spc{X}$
 consider the value
 \[\yetdist{x}{y}{}=\inf_{\alpha}\{\length\alpha\},\]
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 
 It is easy to see that $\yetdist{}{}{}$ defines a metric on  $\spc{X}$;
-it will be called \emph{length-metric}\index{length-metric} on $\spc{X}$.
+it will be called the \emph{length-metric}\index{length-metric} on $\spc{X}$.
+\begin{thm}{Definition}
 If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$  then $\spc{X}$ is called \emph{length space}\index{length space}.
-
-In other words, a metric space $\spc{X}$ is called 
+\end{thm}
+In other words, a metric space $\spc{X}$ is a
 \emph{length space}
 if for any $\eps>0$ and any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\infty$ there is a path $\alpha\:[0,1]\to\spc{X}$ connecting%
 \footnote{I.e., such that $\alpha(0)=x$ and $\alpha(1)=y$.}
@@ -312,13 +327,13 @@ if for any $\eps>0$ and any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\inf
 such that 
 \[\length\alpha<\dist{x}{y}{}+\eps.\]
 
-Let us define few more variations of definitions of length spaces.
+Let us give a few more variations of  the notion of length spaces.
 
 \begin{itemize}
 \item Assume $R>0$.
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$ then the space $\spc{X}$ is called \emph{$R$-length space}\index{$R$-length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$ then $\spc{X}$ is called an \emph{$R$-length space}\index{$R$-length space}.
 \item If any point in $\spc{X}$ admits a neighborhood  $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$
-then the space $\spc{X}$ is called \emph{locally length space}\index{locally length space}.
+then  $\spc{X}$ is called a \emph{locally length space}\index{locally length space}.
 \item A metric space $\spc{X}$ is called 
 \emph{geodesic}%
 \index{geodesic space}
@@ -329,8 +344,8 @@ if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\infty$ there is a ge
 if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<R$ there is a geodesic $[x y]$ in $\spc{X}$.
 \end{itemize}
 
-Note that $\infty$-length space is the same as length space.
-Clearly any geodesic space is a length space 
+Note that the notions of $\infty$-length spaces and length spaces are the same.
+Clearly, any geodesic space is a length space 
 and any $R$-geodesic space is $R$-length space.
 
 \begin{thm}{Exercise}\label{ex:no-geod}
@@ -422,7 +437,11 @@ taking midpoints instead of $\eps_n$-midpoints.
 In this case \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
 \qeds
 
+Since in a compact space a sequence of $1/n$-midpoints $z_n$ contains a convergent subsequence, Lemma  \ref{lem:mid>geod} immediately implies
 
+\begin{thm}{Proposition}
+A proper length space is geodesic.
+\end{thm}
 
 \begin{thm}{Hopf--Rinow theorem}\label{thm:Hopf-Rinow}
 Any complete, locally compact length space is proper.
