@@ -1,4 +1,5 @@
 %%!TEX root = the-solutions.tex
+
 \chapter{Solutions}
 
 \parbf{ Exercise ~\ref{exr-crofton}.}
@@ -13,7 +14,26 @@ L(\alpha)=\frac 1 4 \int _{\SS^2}\#(\alpha\cap v^\perp) \d_v\vol_2
 
 Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. By the intermediate value theorem the same holds true if $\#(\alpha\cap v^\perp) =1$.
 Suppose  $\#(\alpha\cap v^\perp) \ge 2$ for all $v\in\SS^2$. Then Crofton's formula implies that
-$L(\alpha)\ge \frac 1 4 \int_{\SS^2}2=2\pi$. 
+$L(\alpha)\ge \frac 1 4 \int_{\SS^2}2=2\pi$. \qeds
+
+\parbf{ Exercise ~\ref{ex:no-geod}.}
+Given a  metric graph $\Gamma$ let $\Mid(\Gamma)$ be the set of vertices of $\Gamma$ together with the baricenters of all edges in $\Gamma$ with the induced metric from $\Gamma$.
+
+
+Let $\spc{X}_0=[0,1]$ and $\spc{Y}_0=\Mid(\spc{X}_0)=\{0,1/2,1\}$.
+
+Given a metric space $(\spc{Z},d)$ define  new metric space $P_k(\spc{Z})$ as follows. For every pair of distinct  points
+$p,q\in \spc{Z}$ attach to $Z$ a countable collection of intervals of $\{I_i\}_{i\ge 1}$ of length $\frac{\dist{p}{q}{}}{2^ki}$ where one end of each $I_i$ is glued to $p$ and the other to $q$.
+Then  $P_k(\spc{Z})$ carries a naturally defined   inner metric which is complete if $(\spc{Z},d)$ is complete.
+
+Let $\spc{X}_1=P_1(\spc{Y}_0)$ and $\spc{Y}_1=\Mid(\spc{X}_1)$. Proceeding by induction we define $\spc{X}_k=P_k(\spc{Y}_{k-1})$ and $\spc{Y}_k=\Mid(\spc{X}_k)$. %The metric on each $\spc{Y}_k$ is taken to be restriction of the natural inner metric on $\spc{X}_k$.
+Note that by construction the inclusion $\spc{Y}_k\subset \spc{Y}_{k+1}$ is distance preserving. Let $\spc{Y}_\infty=\cup_{k\ge 1}\spc{Y}_k$ with the obvious metric and let $\spc{Y}=\bar {\spc{Y}}_\infty$ be its metric completion. Then $\spc{Y}$ is a length space since it satisfies the almost midpoint property. But it is not hard to see that no two distinct points in $\spc{Y}$ can be connected by a shortest geodesic. \qeds
+
+
+
+
+
+
 \parbf{Besicovitch inequality \ref{ex:besicovitch-inq}.}
 Fix $\eps>0$ and let
 $f_1,f_2\dots\:\EE^m\subto \spc{X}$
