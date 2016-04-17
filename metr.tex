@@ -240,6 +240,24 @@ Let $\spc{X}$ be  proper metric space and let $p\in \spc{X}$. Since $\spc{X}=\cu
 Lastly, to see that $\spc{X}$ is second countable, let $\{p_i\}_{i=1}^\infty$ be a countable dense subset in $\spc{X}$. \\ Then $\cup_{i,j\ge 1} \oBall(p_i,\frac 1 j)$ is a countable basis of topology of $\spc{X}$.
 \qeds
 
+
+\begin{thm}{Proposition}\label{compact=seq-compact}
+Let $\spc{X}$ be a metric space. Then the following are equivalent
+\begin{enumerate}[i)]
+\item $\spc{X}$ is compact;
+\item $\spc{X}$ is \emph{sequentially compact}, i.e. any sequence of points in $\spc{X}$ contains a convergent subsequence;
+\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$, i.e. there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\cup_i\oBall(p_i,\eps)=\spc{X}$.
+\end{enumerate}
+\end{thm}
+\parit{Proof.}
+i) $\Rightarrow$ ii)  and ii) $\Rightarrow$  iii) are  obvious. We will leave iii) $\Rightarrow$  ii) as an exercise.
+
+Let us prove that ii) implies i). Let $\{U_\alpha\}_{\alpha\in\mathcal A}$ be an open cover of $\spc{X}$. 
+We claim that there is an $\eps>0$ such that for any $p\in \spc{X}$ there is $\alpha\in\mathcal A$ such that $\oBall(p_i,\eps)\subset U_\alpha$. Such $\eps$ is called the \emph{ Lebesgue number} \index{ Lebesgue number} of the cover  $\{U_\alpha\}_{\alpha\in\mathcal A}$.
+
+Suppose no such $\eps$ exists. Then there exists a sequence of points $p_i\in\spc{X}$ such that $\oBall(p_i,1/i)$ is not contained in any $U_\alpha$. By sequential compactness by passing to a subsequence we can assume that $p_i\to p$. Then $p\in U_{\alpha_0}$ for some $\alpha_0$ and since $U_{\alpha_0}$ is open it follows that $\oBall(p_i,1/i)\subset U_{\alpha_0}$ for all large $i$. This is a contradiction and hence the cover $\{U_\alpha\}_{\alpha\in\mathcal A}$ admits  a positive Lebesgue number $\eps$. Then by iii) there is a finite $\eps$ net $p_1,\ldots,p_{N}$ in $\spc{X}$. By the choice of $\eps$ for each $i$ there is $\alpha_i$ such that
+$\oBall(p_i,\eps)\subset U_{\alpha_i}$. Then $\cup_{i=1}^NU_{\alpha_i}=\spc{X}$.
+\qeds 
 %\parbf{Types of metric spaces.}
 %\begin{thm}{Proposition}
 %A locally compact length space is proper. !!! this is false., e.g. $(0,1)$.
@@ -258,7 +276,14 @@ Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
 \parit{Proof.}
 Let $U\subset\spc{X}$ be open. We need to show that $U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset$. Since $\Omega_1$ is open and dense, there is $p_1\in\spc{X}$ and $r_1>0$ such that $\cBall[p_1,r_1]\subset  U\cap \Omega_1$. Since $\Omega_2$ is open and dense there is $p_2\in\spc{X},0<r_2<r_1/2$ such that $\cBall[p_2,r_2]\subset \oBall(p_1,r_1)\cap \Omega_2\subset U\cap\Omega_1\cap\Omega_2$. Proceeding by induction we can construct a sequence of balls $\cBall(p_i,r_i)$ such that $0<r_i<\frac {r_{i-1}}{2}$ satisfying  $\cBall[p_i,r_i]\subset \oBall(p_{i-1},r_{i-1})\cap \Omega_i\subset U\cap \bigl(\bigcap_{k=1}^i\Omega_k
  \bigr)$. Then the sequence $\{p_i\}$ is Cauchy and hence, by completeness of $\spc{X}$ we have that $p_i\to p$. By construction, $p_i\in \cBall[p_j,r_j]$ for all $i\ge j$ and hence the same is true for $p$. Thus, $p\in U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset $. \qeds
+ 
+ Recall that a family of maps between metric spaces $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
+\begin{thm}{Arzel\`a-Ascoli theorem}\cite[Lemma 3.10]{BH}
 
+Let  $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$  be an equicontinuous family  of maps where $\spc{Y}$ is compact and $\spc{X}$ is separable. 
+
+Then $\{f_\alpha\}$ contains a uniformly convergent subsequence $f_{\alpha_i}\to f\co\spc{X}\to\spc{Y}$.
+\end{thm}
 
 \section{Invariants of metric spaces}
 
@@ -317,7 +342,7 @@ where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 It is easy to see that $\yetdist{}{}{}$ defines a metric on  $\spc{X}$;
 it will be called the \emph{length-metric}\index{length-metric} on $\spc{X}$.
 \begin{thm}{Definition}
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$  then $\spc{X}$ is called \emph{length space}\index{length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$  then $\spc{X}$ is called a \emph{length space}\index{length space}.
 \end{thm}
 In other words, a metric space $\spc{X}$ is a
 \emph{length space}
@@ -346,7 +371,12 @@ if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<R$ there is a geodesi
 
 Note that the notions of $\infty$-length spaces and length spaces are the same.
 Clearly, any geodesic space is a length space 
-and any $R$-geodesic space is $R$-length space.
+and any $R$-geodesic space is an $R$-length space.
+\parbf{Example.} 
+Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $I_i$ of length $1+1/i$ where for each $I_i$ one end is glued to $p=\{0\}$ and the other to $q=\{1\}$.
+Then $\spc{X}$ carries a natural complete length metric  with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+
+
 
 \begin{thm}{Exercise}\label{ex:no-geod}
 Give an example of a complete length space for which no pair of distinct points can be joined by a geodesic.
@@ -358,12 +388,13 @@ and $A\subset \spc{X}$.
 The set $A$ comes with the inherited metric from $\spc{X}$ 
 which might be not a length-metric.
 The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
+{\color{red}!!!  the subscript A is not displaying for some reason when the arguments for points are empty.}
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called \emph{midpoint} of $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \emph{midpoint} of $x$ and $y$
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
@@ -374,7 +405,7 @@ if
 
 \end{thm}
 
-Note that $0$-midpoint is the same as midpoint.
+Note that a $0$-midpoint is the same as a midpoint.
 
 
 \begin{thm}{Lemma}\label{lem:mid>geod}
@@ -395,7 +426,7 @@ Then the space $\spc{X}$ is an $R$-geodesic space.
 \end{thm}
 
 \parit{Proof.}
-Assume $x,y\in \spc{X}$ be a pair of points such that $\dist{x}{y}{}<R$.
+Let $x,y\in \spc{X}$ be a pair of points such that $\dist{x}{y}{}<R$.
 
 Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
 
@@ -405,16 +436,16 @@ Set $\alpha(\tfrac12)$ to be an $\eps_1$-midpoint of $\alpha(0)$ and $\alpha(1)$
 Further, set $\alpha(\frac14)$ 
 and $\alpha(\frac34)$ to be $\eps_2$-midpoints 
 for the pairs $(\alpha(0),\alpha(\tfrac12)$ 
-and $(\alpha(\tfrac12),\alpha(1)$.
-Apply the above procedure recurcevely,
+and $(\alpha(\tfrac12),\alpha(1)$ respectively.
+Applying the above procedure recursively,
 on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$
 for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, 
-as $\eps_{n}$-midpoint of the already defined
+as an $\eps_{n}$-midpoint of the already defined
 $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 
-This way we define $\alpha(t)$ for $t\in W$,
-whre $W$ denotes the set of dyadic rationals in $[0,1]$.
+In this way we define $\alpha(t)$ for $t\in W$,
+where $W$ denotes the set of dyadic rationals in $[0,1]$.
 For any $t\in[0,1]$ consider a sequence of $t_n\in W$ such that $t_n\to t$ as $n\to\infty$.
 Note that the sequence $\alpha(t_n)$ converges;
 define $\alpha(t)$ as its limit.
@@ -463,7 +494,7 @@ Assume the contrary; i.e. $\rho(x)<\infty$.
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
 the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in $B$.
-Since $B$ is closed, it has to be compact.
+Since $B$ is closed and hence complete, it has to be compact by Proposition~\ref{compact=seq-compact}.
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -474,7 +505,7 @@ Indeed,
 assume the contrary; i.e., $\rho(x)+|x-y|<\rho(y)$ for some $x,y\in \spc{X}$. 
 Then 
 $\cBall[x,\rho(x)+\eps]$ is a closed subset of $\cBall[y,\rho(y)]$ for some $\eps>0$.
-In this case compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$, a contradiction.\claimqeds
+Then  compactness of $\cBall[y,\rho(y)]$ implies compactness of $\cBall[x,\rho(x)+\eps]$, a contradiction.\claimqeds
 
 Set $\eps=\min_{y\in B}\{\rho(y)\}$; 
 the minimum is defined since $B$ is compact.
@@ -488,7 +519,7 @@ Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact;
 a contradiction.
 \qeds
 
-\begin{thm}{Exercise}(from \cite{BH})
+\begin{thm}{Exercise}(from \cite{BH})\label{exercise from BH}
 Construct a geodesic space which is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
