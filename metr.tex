@@ -93,10 +93,10 @@ The obtained metric space $\bm{X}$ will be called the \emph{disjoint union}\inde
 Now let us give some constructions which show that allowing distances between distinct point might to vanish can also be useful.
 \begin{itemize}
 
-\item Suppose a set ${\spc{X}}$ comes with a set of $[0,\infty]$-metrics $\dist{}{}{}_{\alpha}$ for $\alpha\in\IndexSet$.
+\item Suppose a set ${\spc{X}}$ comes with a set of $[0,\infty]$-metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then set
 \[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
- Clearly, $\dist{}{}{}$ is a $[0,\infty]$-metric. But it need not be a $(0,\infty]$-metric  even if all $\dist{}{}{}_{\alpha}$ are $(0,\infty)$-metrics.
+ Clearly, $\dist{}{}{}$ is a $[0,\infty]$-metric. But it need not be a $(0,\infty]$-metric  even if all $\dist{}{}{\alpha}$ are $(0,\infty)$-metrics.
 
 \item Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and let 
@@ -106,7 +106,7 @@ defined as
 \[\dist{x}{y}{\spc{X}}=\dist{\map(x)}{\map(y)}{\spc{Y}}\]
 for any $x,y\in\spc{X}$.
 
-Note that the pullback metric $\dist{}{}{}_{\spc{X}}$ is only  $[0,\infty)$ even if the metric on 
+Note that the pullback metric $\dist{}{}{\spc{X}}$ is only  $[0,\infty)$ even if the metric on 
 $\spc{Y}$ is $(0,\infty)$, since $\map$ need not be injective.
 
 \end{itemize}
@@ -388,7 +388,6 @@ and $A\subset \spc{X}$.
 The set $A$ comes with the inherited metric from $\spc{X}$ 
 which might be not a length-metric.
 The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
-{\color{red}!!!  the subscript A is not displaying for some reason when the arguments for points are empty.}
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.

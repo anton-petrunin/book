@@ -348,7 +348,7 @@
 {\settowidth{\zhaba}{${#1}{#2}$}%
 \ifthenelse{\lengthtest{\zhaba<1.7em}}
 {\ifthenelse{\isempty{#2}}%
-{\bm|{\scriptstyle{*}}{\scriptstyle{*}}\bm|}%
+{\bm|{\scriptstyle{*}}{\scriptstyle{*}}\bm|_{#4}}%
 {\ifthenelse{\isempty{#3}}%
 {\bm|{#2}\hskip.1em{\scriptstyle{*}}\bm|^{#1}_{#4}}%
 {\bm|{#2}\hskip.1em{#3}\bm|^{#1}_{#4}}}%
