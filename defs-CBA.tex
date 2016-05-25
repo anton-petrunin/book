@@ -2330,7 +2330,7 @@ An $\RR$-tree is a metric space $\spc{U}$ such that
 $\spc{U}\in\Cat{}{\kappa}$ for every $\kappa\in\RR$.
 \end{thm}
 
-The following characterization is immediate:
+The following characterization follows from point-on-side triangle comparison (\ref{cat-monoton}):
 
 \begin{thm}{Proposition}
 \label{prop:R-tree}
@@ -2348,17 +2348,17 @@ if $[p x]\cap [x q] = \{x\}$ then $[p x]\cup [x q] = [p q]$.
 \end{thm}
 
 \begin{thm}{Definition}
-\label{def:asymptotic-cone} Let $\spc{X}$ be a metric space and $\o$ be a non-principal ultrafilter.
-
-The \emph{asymptotic cone} $\frac{1}{\o}\blow\spc{X}$ 
-%$\Cone^\o\spc{X}$ 
-of $\spc{X}$  is defined by
+\label{def:asymptotic-cone} Let $\spc{X}$ be a metric space and $\o$ be a non-principal ultrafilter.  Consider the $\o$-limit  
 \[
-%\frac{1}{\o}\blow\spc{X}= \spc{X}_\o \text{\ \ \ \ where \  }
-(\frac{1}{n}\blow\spc{X}\,, x)\to (\frac{1}{\o}\blow\spc{X},x_\o).
-\]
+\frac{1}{\o}\blow\spc{X}
+\df
+\lim_{n\to\o} \frac{1}{n}\blow\spc{X}.\]
+Given a basepoint $x\in \spc{X}$, the sequence $\frac{1}{n}\blow x\in \frac{1}{n}\blow\spc{X}$ corresponds to a point $\frac{1}{\o}\blow x\in \frac{1}{\o}\blow\spc{X}$.
+The \emph{asymptotic cone} 
+of $\spc{X}$  is the metric component of $\frac{1}{\o}\blow\spc{X}$ containing $\frac{1}{\o}\blow x$.
 \end{thm}
-%The asymptotic cone is independent of the choice of basepoint $x$.
+
+Since $\dist{(\frac{1}{\o}\blow x)}{(\frac{1}{\o}\blow y)}{} = 0$ for any $y\in \spc{X}$, the asymptotic cone is independent of the choice of basepoint $x$.
 
 %\begin{thm}{Proposition}
 %Suppose $\spc{U}\in \Cat{}{\kappa}$ where $\kappa <0$. Then the asymptotic cone $\Cone_\o\spc{U}$ is an $\RR$-tree.
@@ -2368,18 +2368,19 @@ of $\spc{X}$  is defined by
 %Immediate from Proposition  \ref{prop:R-tree}, since  $\Cone_\o\spc{X}\in\Cat{}{\kappa}$ for every $\kappa$ (\ref{prop:CAT^omega}). 
 %\qeds 
 
-$\Cat{}{0}$ spaces $\spc{U}$ that are cocompact (namely, the union of images of  a compact subset under isometries of $\spc{U}$) and proper have two contrasting alternative behaviors:  if the  asymptotic cone  of $\spc{U}$ is not an $\RR$-tree (hence $\spc{U}$ is not hyperbolic; see Definition \ref{def:delta-hyperbolic} and Exercise \ref{prop:hyp-tree}), then $\spc{U}$ contains an isometric copy of the Euclidean plane.   
-  This theorem was first stated by Gromov 
- \cite{gromov:hyp-groups}. In its original version for visibility Riemannian manifolds, the theorem was  proved by  Eberlein \cite{eberlein}.   As a brief but informative glance at the field, we give a related proof following \cite{bridson}. For a detailed discussion of ideas that appear  in the proof, in particular, visibility and the boundary at infinity of $\Cat{}{0}$ spaces, see \cite{BH}. 
+$\Cat{}{0}$ spaces $\spc{U}$ that are cocompact (namely, the union of images of  a compact subset under isometries of $\spc{U}$) and proper have two contrasting behaviors:  if the  asymptotic cone  of $\spc{U}$ is not an $\RR$-tree, 
+%(hence $\spc{U}$ is not hyperbolic; see Definition \ref{def:delta-hyperbolic} and Exercise \ref{prop:hyp-tree})
+then $\spc{U}$ contains an isometric copy of the Euclidean plane.  This theorem was first stated by Gromov 
+ \cite{gromov:hyp-groups}.  We give a proof following \cite{bridson}.  In its original version for Riemannian manifolds with the visibility property, the theorem was  proved by  Eberlein \cite{eberlein}.   For a detailed discussion of ideas that appear  in the proof, particularly visibility and the boundary at infinity of $\Cat{}{0}$ spaces, see \cite{BH}. 
  Kleiner has examined the supremum of $r$ such that $\spc{U}$ contains an isometric copy of Euclidean $r$-space; in particular, $\sup\{r\}=\LinDim\frac{1}{\o}\blow\spc{X}$ \cite{kleiner}.  
 
-Gromov's theory of hyperbolic spaces \cite{{gromov:hyp-groups}} captures many global features of negative curvature. The study of these spaces is a broad field associated with hyperbolic groups. For fundamental references, see \cite{ghys-dlHarpe, BH}. 
+Gromov's theory of hyperbolic spaces \cite{{gromov:hyp-groups}} captures many global features of negative curvature. The study of hyperbolic spaces is a large field associated with hyperbolic groups. For fundamental references, see \cite{ghys-dlHarpe, BH}. 
 
 \begin{thm}{Definition}
 \label{def:delta-hyperbolic} Let $\spc{X}$ be a geodesic metric space.  Then $\spc{X}$ is a \emph{$\delta$-hyperbolic space} if for any triangle in $\spc{X}$, any point of any side has distance $\le\delta$ from the union of the other two sides.  $\spc{X}$ is \emph{hyperbolic} if $\spc{X}$ is $\delta$-hyperbolic for some $\delta$.
 \end{thm}
 
-Triangle comparison immediately implies that any $\Cat{}{\kappa}$ space with $\kappa<0$ is  $\delta$-hyperbolic for some $\delta>0$ that depends only on $\kappa$.
+Triangle comparison implies that any $\Cat{}{\kappa}$ space with $\kappa<0$ is  $\delta$-hyperbolic for some $\delta>0$ that depends only on $\kappa$.
 
 \begin{thm}{Exercise}
 \label{prop:hyp-tree}
@@ -2389,46 +2390,49 @@ The asymptotic cone of a hyperbolic space is an $\RR$-tree.
 \begin{thm}{Flat planes theorem}\label{thm:flat-planes}
 Let $\spc{U}$ be a proper, cocompact $\Cat{}{0}$ space.  Then  $\spc{U}$ is hyperbolic if and only if $\spc{U}$ does not contain a subspace isometric to the Euclidean plane.\end{thm}
 
-In a complete $\Cat{}{0}$ space $\spc{U}$, two unit-speed geodesic rays are called equivalent (asymptotic) if the Hausdorff distance between their images is finite.  Given $x,y\in\spc{U}$ and a unit-speed geodesic ray $\gamma_x$ with  $\gamma_x(0)=x$,  there is a unique unit-speed geodesic ray $\gamma_y$ with  $\gamma_y(0)=y$ that is equivalent to $\gamma_x$.  Uniqueness is immediate from convexity of  $\spc{U}$, namely,  the distance between geodesics with the same parameter interval is a convex function of the parameter (see Exercise \ref{CAT-is-convex}).  If $\spc{U}$ is proper,  the selection theorem \ref{thm:selection}  provides a sequence of geodesics $\gamma_n$  from $y$   to $\gamma_x(n)$ that converges pointwise to $\gamma_y$.  (Properness is not required here;  see Exercise \ref{}.) 
+In a complete $\Cat{}{0}$ space $\spc{U}$, two geodesic rays $\gamma,\bar\gamma$ are called equivalent (asymptotic) if $\dist{\gamma(t)}{\bar \gamma(t)}{}<c$ for some $c$ and all $t$.  
+Given $x,y\in\spc{U}$ and a geodesic ray $\gamma_x$ with  $\gamma_x(0)=x$,  there is a unique geodesic ray $\gamma_y$ with  $\gamma_y(0)=y$ that is equivalent to $\gamma_x$ 
+(Exercise \ref{exercise:CAT(0)-infinity}). 
+Here uniqueness of $\gamma_y$ is immediate from convexity of  $\spc{U}$, according to which the distance between geodesics with the same parameter interval is a convex function of the parameter (see Exercise \ref{CAT-is-convex}).    In Theorem \ref{thm:flat-planes}, since 
+$\spc{U}$ is assumed to be proper, existence of $\gamma_y$ follows directly by applying the selection theorem \ref{thm:selection}, together with  uniqueness and continuity of geodesics (\ref{lem:cat-unique}), to  a sequence of geodesics $\gamma_n$  from $y$   to $\gamma_x(n)$. 
+
 We denote the set of equivalence classes of geodesic rays by $\partial\spc{U}$.  
    
 For $c,\bar c\in\partial\spc{U}$,  write $\angle\hinge x {c} {\bar c}$ for the angle at $x$ between the representatives of $c$ and $\bar c$ with initial point $x$.  We endow $\partial\spc{U}$ with the  \emph{angular metric} $\dist{*}{*}{\angle}$, where
 	\[\dist{c}{\bar c}{\angle}=\sup_{x\in\spc{U}}\angle\hinge x {c} {\bar c}.\]
 	
-A $\Cat{}{0}$ space $\spc{U}$ is \emph{uniformly visible}	if far-away geodesics subtend small angles in the following sense:  for any $\eps>0$  there exists $R(\eps)>0$ such that if a geodesic $]pq[$  lies outside a ball $\oBall(x,R(\eps))$, then $\angle\hinge x pq< \eps$.  
+A $\Cat{}{0}$ space $\spc{U}$ is \emph{uniformly visible}	if distant geodesics subtend small angles in the following sense:  for any $\eps>0$  there exists $R(\eps)>0$ such that whenever a geodesic $]pq[$  lies outside a ball $\oBall(x,R(\eps))$, then $\angle\hinge x pq< \eps$.  
 
-If  $\spc{U}$ is uniformly visible, then $\spc{U}$ is $R(\pi/2)$-hyperbolic, since for any triangle $[pqr]$ and $x\in ]pr[$ we have without loss of generality
- $\mangle\hinge xpq \ge \pi/2$.  Thus  the distance from $x$ to  $]pq[$ is $\le R(\pi/2)$.
+If  $\spc{U}$ is uniformly visible, then $\spc{U}$ is $R(\pi/2)$-hyperbolic, since for any nonlinear triangle $[pqr]$ and any $x\in ]pr[$, we have  $\mangle\hinge xpq \ge \pi/2$ by adjacent angle comparison \ref{cat-2-sum}.  Thus  the distance from $x$ to  $]pq[$ is $\le R(\pi/2)$.
  
 \parit{Proof of Flat Planes Theorem \ref{thm:flat-planes}.}
 Clearly if $\spc{U}$ contains  a flat plane then $\spc{U}$ is not hyperbolic. Thus it suffices to prove that if $\spc{U}$ is not hyperbolic, and  hence not uniformly visible, then $\spc{U}$ contains  a flat plane.
 
 \begin{clm}{}\label{clm:realize-angle}
 %Let $G$ be the isometry group of $\spc{U}$.
- If $\spc{U}$ is not uniformly visible, then there exist $x\in\spc{U}$ and $c\ne \bar c\in\partial\spc{U}$ such that 
-\[\dist{c}{\bar c}{\angle}=\angle\hinge x {c} {\bar c} \le\pi/2.\]  
+ If $\spc{U}$ is not uniformly visible, then there exist $z\in\spc{U}$ and $c\ne \bar c\in\partial\spc{U}$ such that 
+\[\dist{c}{\bar c}{\angle}=\angle\hinge z {c} {\bar c} \le\pi/2.\]  
 %\[
 %\angle\hinge p {c^1} {c^2}=\sup_{g\in G} \dist{g(c^1)}{g(c^2)}{\angle}\le\pi/2.
 %\]
 \end{clm}
 
-There exists $\eps>0$ such that for any positive integer $n$, we may take segments $[p_nq_n]$ that lie outside some ball $\oBall(x_n,n)$ and satisfy  $\angle\hinge {x_n} {p_n} {q_n}\ge\eps$.  By cocompactness, we may assume the $x_n$ lie in a compact set.  For a limit point $x$, the segments $[p_nq_n]$  lie outside $\oBall(x,n)$, and by angle semicontinuity \ref{lem:ang.semicont}, satisfy $\angle\hinge {x} {p_n} {q_n}\ge\eps$.  Let $r_n$ be the  nearest point of $[p_nq_n]$ to $x$.  Then $\angle\hinge {r_n}{p_n} {x}\ge\pi/2$ by the first variation formula \ref{cor:both-end-first-var-cba}; an exception may occur if $r_n=p_n$, in which case we relabel $p_n$ and $q_n$.  Since the angle sum of triangle $[x p_n r_n]$ is $\le \pi$, then  by relabeling if necessary when $r_n$ is not an endpoint, we have $\eps/2\le \angle\hinge {x}{p_n} {r_n}\le\pi/2$.  Since $\spc{U}$ is proper, by  the 
-selection theorem \ref{thm:selection} and \ref{lem:cat-unique}, we may assume $[xp_n]$ and $[xr_n]$ respectively converge pointwise to geodesic rays in $c$, $\bar c$ $\in$ $\partial \spc{U}$.
+There exists $\eps>0$ such that for any positive integer $n$, we may take segments $[p_nq_n]$ that lie outside some ball $\oBall(x_n,n)$ and satisfy  $\angle\hinge {x_n} {p_n} {q_n}\ge\eps$.  By cocompactness, we may assume the $x_n$ lie in a compact set.  For a limit point $x$ of $(x_n)_{n=1}^\infty$, the segments $[p_nq_n]$  lie outside $\oBall(x,n)$, and by angle semicontinuity \ref{lem:ang.semicont}, satisfy $\angle\hinge {x} {p_n} {q_n}\ge\eps$.  Let $r_n$ be the nearest point of $[p_nq_n]$ to $x$.  Then $\angle\hinge {r_n}{p_n} {x}\ge\pi/2$ by the first variation formula \ref{cor:both-end-first-var-cba}; here if $r_n=p_n$, we relabel $p_n$ and $q_n$.  Since the angle sum of triangle $[x p_n r_n]$ is $\le \pi$, then  by relabeling if necessary when $r_n$ is not an endpoint, we have $\eps/2\le \angle\hinge {x}{p_n} {r_n}\le\pi/2$.  Since $\spc{U}$ is proper, we may assume $[xp_n]$ and $[xr_n]$ respectively  converge pointwise to geodesic rays in $c$, $\bar c$ $\in$ $\partial \spc{U}$.
 
-For any $y\in\spc{U}$, we have $\angle\hinge {r_n}{x} {y}\to 0$ by angle comparison \ref{cat-hinge}.  Given $\delta>0$, the triangle inequality for angles based at $r_n$ gives $\angle\hinge {r_n}{p_n} {y}\ge\pi/2-\delta$ for $n$ sufficiently large.  Then $\angle\hinge {y}{p_n} {r_n}\le\pi/2+\delta$ by angle comparison for triangle $[yp_nr_n]$.   It follows that $\angle\hinge {y}{c} {\bar c}\le\pi/2$.  Since $y$ was chosen arbitrarily,  $\dist{c}{\bar c}{\angle}\le\pi/2$. 
+For any $y\in\spc{U}$, we have $\angle\hinge {r_n}{x} {y}\to 0$ by angle comparison \ref{cat-hinge}.  Given $\delta>0$, since $\angle\hinge {r_n}{p_n} {x}\ge\pi/2$ then  the triangle inequality for angles based at $r_n$  implies $\angle\hinge {r_n}{p_n} {y}\ge\pi/2-\delta$ for $n$ sufficiently large.  Then $\angle\hinge {y}{p_n} {r_n}\le\pi/2+\delta$ by angle comparison for triangle $[yp_nr_n]$.   It follows that $\angle\hinge {y}{c} {\bar c}\le\pi/2$.  Since $y$ was chosen arbitrarily,  $\dist{c}{\bar c}{\angle}\le\pi/2$. 
 
-Now choose $x^n, c^n,\bar c^n$ so that 
+Now choose $z^n\in\spc{U}$ and $c^n,\bar c^n\in\partial\spc{U}$ so that 
 \[
-\angle\hinge{x^n} {c^n} {\bar c^n}  \to 
-\sup \bigl\{\angle\hinge{x^n} {g(c^n)} {g(\bar c^n)} \:g\in G\}
+\angle\hinge{z^n} {c^n} {\bar c^n}  \to 
+\sup \bigl\{\angle\hinge{z^n} {g(c^n)} {g(\bar c^n)} \:g\in G\}
 \]
-where $G$ is the isometry group of $\spc{U}$.  By cocompactness, we may assume $x^n$ lies in a compact subset of $\spc{U}$.  But then, by properness, the supremum is realized by $\angle\hinge p c {\bar c}$ for some choice of $p, c, {\bar c}$.  The claim follows.
+where $G$ is the isometry group of $\spc{U}$.  By cocompactness, we may assume $z^n$ lies in a compact subset of $\spc{U}$.  But then, by properness, the supremum is realized by $\angle\hinge z c {\bar c}$ for some choice of $z, c, {\bar c}$.  The claim follows.
 
-Consider $x\in\spc{U}$ and $c\ne \bar c\in\partial\spc{U}$ as in \ref{clm:realize-angle}. Let $\gamma^1\in c$, $\gamma^2\in\bar c$ be  based at $x$, and $\gamma^3 \in \bar c$  be based at $\gamma_1(t)$.  By adjacent angle comparison \ref{cat-2-sum}, 
+Let $z\in\spc{U}$ and $c\ne \bar c\in\partial\spc{U}$ satisfy claim \ref{clm:realize-angle}. Let $\gamma^1\in c$, $\gamma^2\in\bar c$ satisfy $\gamma^1(0)=\gamma^2(0)=z$, and $\gamma^3 \in \bar c$  satisfy $\gamma^3(0)=\gamma_1(t)$.  By adjacent angle comparison \ref{cat-2-sum}, 
 \[
-\angle\hinge {\gamma^1(t)} {\gamma^1(0)} {\gamma^3(1)} \ge \pi - \angle\hinge {\gamma^1(t)} {c^1} {c^3} \ge \pi -  \angle\hinge x {c} {\bar c}. \eqlbl{arm-flat-plane}
+\angle\hinge {\gamma^1(t)} {\gamma^1(0)} {\gamma^3(1)} \ge \pi - \angle\hinge {\gamma^1(t)} {c} {\bar c} \ge \pi -  \angle\hinge z {c} {\bar c}. \eqlbl{arm-flat-plane}
 \]
-Therefore $\cos\angle\hinge {\gamma^1(t)} {\gamma^1(0)} {\gamma^3(1)} + \cos\angle\hinge {\gamma^1(t)} {\gamma^1(0)} {\gamma^3(1)} \le 0$, and the function $f(t)=\dist{\gamma^1(t)}{\gamma^3(t)}{}$ satisfies  $f^+(0)\ge0$ by the first variation formula \ref{cor:both-end-first-var-cba}. Since $f$ is convex and bounded, $f$ is  constant and the inequalites in \ref{arm-flat-plane} are equalities. It follows from the Arm Lemma \ref{lem:arm} that the convex hull of  $\gamma^1$ and $\gamma^2$ is isometric to a sector in the Euclidean plane.
+Therefore $\cos\angle\hinge {\gamma^1(t)} {\gamma^1(0)} {\gamma^3(1)} + \cos\angle\hinge {z} {c} {\bar c} \le 0$, and the function $f(t)=\dist{\gamma^2(t)}{\gamma^3(t)}{}$ satisfies  $f^+(0)\ge0$ by the first variation formula \ref{cor:both-end-first-var-cba}. Since $f$ is convex and bounded, $f$ is  constant and the  inequalities in \ref{arm-flat-plane} are equalities. It follows from  Arm Lemma \ref{subthm:arm-eq} applied to  the polygon $[\gamma^2(t) \,x \,\gamma^1(t)\, \gamma^3(t)]$  as $t\to\infty$, that the convex hull of  $\gamma^1$ and $\gamma^2$ is isometric to a sector in the Euclidean plane.
 %the nested regions 
 %$$\Conv(\gamma^1(t),x,\gamma^2(t),\gamma^3(t))$$ 
 %is the  image under a distance-preserving map of the region  bounded by a parallelogram with  adjacent sides of length $t$ lying along the sides of a fixed planar sector.  
@@ -2436,5 +2440,12 @@ Therefore $\cos\angle\hinge {\gamma^1(t)} {\gamma^1(0)} {\gamma^3(1)} + \cos\ang
 
 Therefore $\spc{U}$ contains, for any positive integer $i$, the isometric image $\Phi_i(\oBall(0,i))$ of a ball of radius $i$ in the Euclidean plane. Since $\spc{U}$ is cocompact, we may assume  the sequence $\Phi_i(0)$ lies in a compact set. Let $\Phi_{0,i}$ be a  subsequence such that  $\Phi_{0,i}(0)\to x_0\in\spc{U}$.
 Consider a dense sequence $y_n$, $n\ge 0$, $y_0=0$, in the plane.  Since $\spc{U}$ is proper, 
-there is a subsequence $\Phi_{1,i}$ of $\Phi_{0,i}$ such that  $\Phi_{1,i}(y_1)\to x_1\in \spc{U}$. Proceeding recursively, we obtain a sequence of  successive subsequences $\Phi_{n ,i}$ such that $\Phi_{i,i}(y_n)\to x_n$ for each $n$.  Since $\dist{y_n}{y_m}{}= \dist{\Phi_{i,i}(y_n)}{\Phi_{i,i}(y_m)}{\spc{U}}=\dist{x_n}{y_n}{\spc{U}}$, an isometric embedding of the plane into $\spc{U}$ is given by continuous extension of the map $y_n\mapsto x_n$.
+there is a subsequence $\Phi_{1,i}$ of $\Phi_{0,i}$ such that  $\Phi_{1,i}(y_1)$ converges to some $x_1\in \spc{U}$. Proceeding recursively, we obtain  
+successive subsequences $\Phi_{n ,i}$ such that $\Phi_{i,i}(y_n)\to x_n$ for each $n$.  Then $\dist{y_n}{y_m}{}= \dist{\Phi_{i,i}(y_n)}{\Phi_{i,i}(y_m)}{\spc{U}}=\dist{x_n}{x_m}{\spc{U}}$.  Since the $y_n$ are dense in the plane, an isometric embedding of the plane into $\spc{U}$ is given by continuous extension of the map $y_n\mapsto x_n$.
 \qeds
+
+\begin{thm}{Exercise}
+\label{exercise:CAT(0)-infinity}
+Let $\spc{U}$ be a complete  $\Cat{}{0}$ space.
+Given $x,y\in\spc{U}$ and a geodesic ray $\gamma_x$ with  $\gamma_x(0)=x$, show that there is a unique geodesic ray $\gamma_y$ with  $\gamma_y(0)=y$ that is equivalent to $\gamma_x$.  
+\end{thm}  
