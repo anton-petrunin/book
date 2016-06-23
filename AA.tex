@@ -1,3 +1,85 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In particular, if $W$ is a 2-dimensional subspace of $\Lob3\kappa$ 
+then the intersection $W\cap K'$ is bounded 
+by finite number of locally concave arcs and the  intersections $F_i'\cap W$.
+Note that the locally concave arcs have their ends on the ends of $F_i'\cap W$;
+the later is formed by a line segment or it degenerates to a point.
+
+\begin{clm}{}\label{clm:intersection-is-polytope}
+For any 2-dimesional subspace $W\subset\Lob{3}{\kappa}$,
+the intersection $W\cap \Conv_2 \Omega$ is interior of a polytope.
+\end{clm}
+
+Indeed, set $L=W\cap \Conv_2 \Omega$.
+According to Lemma~\ref{lem:loc-concave}, 
+the boundary of $L$ is formed by the intersections s $F'_i\cap W$
+and locally concave arcs.
+
+Arguing by contradiction, 
+assume that $L$ is not interior of a polytope then there is a smooth extremal point on one of these arcs; 
+that is, there is a point $x\in\partial_W L$ such that ???.
+Without loss of generality, we can assume that $x$ does not lie on a line connecting a pair of vertices of $F_1',\dots,F_n'$.
+
+Consider the local supporting plane $\Pi$ to $\Lambda$ at $x$
+and let $Q_x\ni x$ be the connected component of $\Pi\cap\Lambda'$.
+
+\begin{clm}{}\label{clm:Q-is-interval}
+$Q_x$ is an open interval. 
+\end{clm}
+
+Indeed,???\claimqeds
+
+Let $Q_x=\l]ab\r[$.
+Clearly $a\in\partial F_i'$ and $b\in\partial F_j'$
+for some $i$ and $j$.
+Since $x$ does not lie on a line connecting the vertices,
+we can assume that $a$ is not a vertex of $F_i'$;
+denote by $[vw]$ the edge of $F_i'$ containing $a$.
+
+\begin{clm}{}\label{clm:[vw]cPi}
+$Q_x$ contains the interior of the triangle $[bvw]$.
+\end{clm}
+
+Indeed,???\claimqeds
+
+Note that the claims \ref{clm:[vw]cPi} and \ref{clm:Q-is-interval} contradict eachother.
+Therefore \ref{clm:intersection-is-polytope} is proved.
+
+
+Note that the complement $\Omega^\complement$ is a polytope.
+In particular, $\Omega^\complement$ is a union of finite number of convex polytopes,
+say 
+$\Omega^\complement=R_1\cup\dots\cup R_n$.
+For each $i$, the complement $R_i'=R_i\backslash \Conv_2\Omega$ is a convex set.
+According to 
+Exercise~\ref{ex:polygon-slices} 
+and \ref{clm:intersection-is-polytope}, 
+$R_i'$ is a convex polytope for each $i$.
+Hence $(\Conv_2\Omega)^\complement=\bigcup_i R_i'$ is a polytope.
+
+
+
+
+
+
+
+
+
+
+
 \begin{thm}{Theorem}\label{thm:sect}
 Let $\spc{L}\in\CBB{}\kappa$ and $p\in \spc{L}$.
 Given two tangent vectors $u,v\in \T_p$, consider model triangle $\trig{\~\0}{\~u}{\~v}=\modtrig0(\0 u v)$ 

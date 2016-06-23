@@ -4,8 +4,8 @@
 \section{Subsets of model space}
 
 In this section we characterize the subsets of model space which have upper curvature bound.
-We do two and three-dimensional cases;
-the descriprion in higher dimensions is not as simple.
+We give a description for two and three-dimensional cases
+and show that the description in higher dimensions is not as simple.
 
 \parbf{Two-dimensional case.}
 A finite union of triangles in $\Lob{2}{\kappa}$ will be also called \index{polygonal set}\emph{polygonal set}.
@@ -63,7 +63,8 @@ Therefore part (\ref{SHORT.thm:2-d-cba:k=<0})
 follows from Theorem \ref{thm:polygon-CAT}.
 
 \parit{(\ref{SHORT.thm:2-d-cba:k>0}).}
-Applying rescaling, we can assume that $\kappa=1$ and therefore $\Lob2\kappa=\mathbb{S}^2$.
+Since $\kappa>0$,
+applying rescaling, we can assume that $\kappa=1$ and therefore $\Lob2\kappa=\mathbb{S}^2$.
 
 Note that if $P$ contains a closed hemisphere it is not $(2\cdot\pi)$-simply connected;
 in fact the $\partial_{\mathbb{S}^2}[\Conv(\partial_{\mathbb{S}^2} P)]$ forms a closed geodesic in $P$ with length smaller that $2\cdot\pi$.
@@ -246,8 +247,7 @@ Then $\Omega^*\in\cCat{}0$
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
-Before commenig to the proof of the theorem, 
-let us formulate and prove a couple of its corollaries.
+Let us first formulate and prove a couple of its corollaries of Shefel's theorem.
 
 \begin{thm}{Corollary}
 Let $\mathfrak{C}$ be a subset in $\EE^3$ 
@@ -274,12 +274,12 @@ Passing to any metric component of $\mathfrak{C}^*$ we get a $\cCat{}{0}$ space.
 The following subcorollary is the main statement in Shefel's original paper \cite{shefel-graph}.
 
 Let $U$ be an open set in $\RR^2$.
-Recall, that function $f\:U\to\RR$ is called \index{saddle function}\emph{saddle} if for any linear function $\ell\:\RR^2\to\RR$ the difference 
+Recall, that a continuous function $f\:U\to\RR$ is called \index{saddle function}\emph{saddle} if for any linear function $\ell\:\RR^2\to\RR$ the difference 
 $f-\ell$
 does not have local maxima and minima in $U$.
 
 \begin{thm}{Subcorollary}
-In particular, if $U\subset\EE^2$ is a topological disc and $f\:U\to \RR$ is a saddle locally Lipschitz function then the graph
+Assume $U\subset\EE^2$ is a topological disc and $f\:U\to \RR$ is a saddle locally Lipschitz function then the graph
 $z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\cCat{}{0}$ space
 \end{thm}
 
@@ -299,17 +299,16 @@ of open two-convex sets
 \set{(x,y,z)\in \EE^3}{z\lg f(x,y)\pm\tfrac1n,\ (x,y)\in U}.\]
 \qedsf
 
-
-First we will prove a partial case of the theorem.
-
-A subset $K$ of $\EE^m$ is called \index{polytope}\emph{polytope} 
+The proof of Shefel's theorem goes in a few steps.
+First we will prove it for the interiors of polytopes.
+Recall, that a subset $K$ of $\EE^m$ is called \index{polytope}\emph{polytope} 
 if it can be presented as a union of finite number of simplices.
 
-Note any polytope admits a triangulation admits a finite triangulation.
+Note any polytope admits a finite triangulation.
 Therefore any polytope equipped with induced intrinsic metric 
 forms a Euclidean polyhedral space as defined in \ref{def:poly}.
 
-\begin{thm}{Lemma}
+\begin{thm}{Lemma}\label{lem:poly-shefel}
 Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is formed by interior of a polytope.
 \end{thm}
 
@@ -320,14 +319,14 @@ Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is formed by interio
 
 \parbf{Remark.}
 Let $K$ be a polytope and $\Omega$ its interior,
-both considered with induced intrinsic metric..
-Then typically the completion $\Omega^*$ 
+both considered with induced intrinsic metric.
+Typically the completion $\Omega^*$ 
 is isometric to $K$.
 However in general
 we only have locally distance preserving map $\Omega^*\to K$;
 it has to be onto, 
 but in may be not injective. 
-An example can be seen on the picture.
+An example can be guessed from the picture.
 
 \parit{Proof.}
 If $\Omega$ is not two-convex then 
@@ -338,12 +337,12 @@ Choose a plane $\Pi'$ parallel and very close to $\Pi$ which cuts from the compl
 Consider a small triangle $\triangle$ in $\Pi'$ wich surrounds the base of $S$.
 Note that $\triangle$ is a geodesic triangle in $\Omega^*$
 for which the point-on-side comparison \ref{cat-monoton}
-fails to be true.
+fails.
 That is, $\curv_v\Omega^*\nleqslant0$. %???+PIC
 
 Now let us prove the converse.
 Since $\Omega$ is two-convex,
-by Proposition~\ref{prop:stong-two-convex} that 
+by Proposition~\ref{prop:stong-two-convex}, 
 any point $v$ on the boundary of $K$ 
 admits a conic neighborhood $U$ in $K$ 
 such that the intersection $U\cap\Omega$ 
@@ -385,7 +384,7 @@ Closed locally convex set in $\Lob{3}{\kappa}$ is convex.
 
 
 
-\begin{thm}{Key lemma}
+\begin{thm}{Key lemma}\label{lem:key-shefel}
 The two-convex hull of the interior of polytope in $\Lob{3}{\kappa}$
 is an interior of a polytope.
 \end{thm}
@@ -401,11 +400,10 @@ Further,
 for each $i$, 
 set $F'_i=F_i\backslash \Omega'$.
 In other words, 
-$F'_i$ is the subset $F_i$ 
+$F'_i$ is the subset of facet $F_i$ 
 which remains on the boundary of $K'$.
 
 From the construction of two-convex hull (\ref{prop:2-conv-construction})
-we get that.
 
 \begin{clm}{}\label{clm:F'-convex}
 $F'_i$ is convex subset of $F_i$.
@@ -420,7 +418,7 @@ Each connected component of the complement $F_i\backslash F'_i$ is convex.
 
 Indeed, assume a connected component $A$ of $F_i\backslash F'_i$ fails to be convex.
 Then there is a suppoiting line $\ell$ to $A$ touching $A$ at a single point in the interior of $F_i$.
-Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it paralleley to cut a hat from the complement of $\Omega$.
+Then one could rotate the plane of $F_i$ slightly arounf $\ell$ and move it parallel to cut a hat from the complement of $\Omega$.
 The latter means that $\Omega$ is not two-convex, 
 a contradiction.
 \claimqeds
@@ -445,88 +443,42 @@ contains a finite number of polygons $F_i'$
 and the remaing part is locally concave.
 It remains to show that (1) and (2) imply that $\partial\Omega'$
 is piecewise linear.
-The latter is left to the reader.
 
-Assume this does not hols. 
-According to ??? there is a section of $\Omega'$ by a plane such that ???.
-Note that the point $p$ does not belong to $F_i'$.
-
-
-
-In particular, if $W$ is a 2-dimensional subspace of $\Lob3\kappa$ 
-then the intersection $W\cap K'$ is bounded 
-by finite number of locally concave arcs and the  intersections $F_i'\cap W$.
-Note that the locally concave arcs have their ends on the ends of $F_i'\cap W$;
-the later is formed by a line segment or it degenerates to a point.
-
-\begin{clm}{}\label{clm:intersection-is-polytope}
-For any 2-dimesional subspace $W\subset\Lob{3}{\kappa}$,
-the intersection $W\cap \Conv_2 \Omega$ is interior of a polytope.
-\end{clm}
-
-Indeed, set $L=W\cap \Conv_2 \Omega$.
-According to Lemma~\ref{lem:loc-concave}, 
-the boundary of $L$ is formed by the intersections s $F'_i\cap W$
-and locally concave arcs.
-
-Arguing by contradiction, 
-assume that $L$ is not interior of a polytope then there is a smooth extremal point on one of these arcs; 
-that is, there is a point $x\in\partial_W L$ such that ???.
-Without loss of generality, we can assume that $x$ does not lie on a line connecting a pair of vertices of $F_1',\dots,F_n'$.
-
-Consider the local supporting plane $\Pi$ to $\Lambda$ at $x$
-and let $Q_x\ni x$ be the connected component of $\Pi\cap\Lambda'$.
-
-\begin{clm}{}\label{clm:Q-is-interval}
-$Q_x$ is an open interval. 
-\end{clm}
-
-Indeed,???\claimqeds
-
-Let $Q_x=\l]ab\r[$.
-Clearly $a\in\partial F_i'$ and $b\in\partial F_j'$
-for some $i$ and $j$.
-Since $x$ does not lie on a line connecting the vertices,
-we can assume that $a$ is not a vertex of $F_i'$;
-denote by $[vw]$ the edge of $F_i'$ containing $a$.
-
-\begin{clm}{}\label{clm:[vw]cPi}
-$Q_x$ contains the interior of the triangle $[bvw]$.
-\end{clm}
-
-Indeed,???\claimqeds
-
-Note that the claims \ref{clm:[vw]cPi} and \ref{clm:Q-is-interval} contradict eachother.
-Therefore \ref{clm:intersection-is-polytope} is proved.
-
-
-Note that the complement $\Omega^\complement$ is a polytope.
-In particular, $\Omega^\complement$ is a union of finite number of convex polytopes,
-say 
-$\Omega^\complement=R_1\cup\dots\cup R_n$.
-For each $i$, the complement $R_i'=R_i\backslash \Conv_2\Omega$ is a convex set.
-According to 
-Exercise~\ref{ex:polygon-slices} 
-and \ref{clm:intersection-is-polytope}, 
-$R_i'$ is a convex polytope for each $i$.
-Hence $(\Conv_2\Omega)^\complement=\bigcup_i R_i'$ is a polytope.
+The proof of the last statement is left to the reader, 
+Exercise~\ref{ex:polygon-slices} should help.
 \qeds
 
 \parit{Proof of \ref{thm:shefel}.}
 Note that it is sufficient to show that
 (2+2)-point $\kappa$-comparison holds for any
-4 points $p^1,p^2,x^1,x^2\in\Omega$.
+4 points $x^1,x^2,x^3,x^4\in\Omega$.
 
 Fix $\eps>0$.
-Choose a six broken lines connecting all the pairs of points $p^1,p^2,x^1,x^2$ such that length of each at most $\eps$ bigger than 
+Choose a six broken lines connecting all the pairs of points $x^1,x^2,x^3,x^4$ such that length of each at most $\eps$ bigger than 
 the distance between its ends.
-Choose a simply connected polytope $P$ 
-in $\Omega$ which contains all these broken lines.
-Denote by $P'$ the two-convex hull of 
-$P$.
+Choose a polytope $P$ 
+in $\Omega$ such that the interior $\Int P$ is simply connected 
+and  it contains all these six broken.
 
-According to ???, $P'$ is a polytope
-Therefore $\curv P'\le \kappa$. 
+Denote by $\Theta$ the two-convex hull of the interior of $P$.
+According to Key Lemma (\ref{lem:key-shefel}) $\Theta$ is an interior of a polytope.
+Therefore, by Lemma \ref{lem:poly-shefel}, $\curv \Theta^*\le \kappa$.
+By Hadamard--Cartan theorem, the universal cover $\~\Theta^*$ of $\Theta^*$ is a $\cCat{}{0}$ space.
+(Despit that $P$ is simply connected, the convex hull of 
+
+Since $\Int P$ is simply connected, the embedding $\Int P\hookrightarrow \Theta^*$
+admits a lifting $\iota\:\Int P\hookrightarrow \~\Theta^*$.
+
+By construction $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
+namely 
+\begin{align*}
+\dist{\iota(x^i)}{\iota(x^j)}{\~\Theta^*}\gele \dist{x^i}{x^j}{\Int P}\pm\eps.
+\end{align*}
+
+Since $\eps>0$ is arbitrary and (2+2)-comparison holds in $\~\Theta^*$,
+we get that (2+2)-comparison holds in $\Omega$ for $x^1,x^2,x^3,x^4$.
+
+The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\Omega$ is arbitrary.
 \qeds
 
 \parbf{Variations and generalization.}
