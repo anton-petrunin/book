@@ -1,13 +1,158 @@
 %%!TEX root = the-examples.tex
 \chapter{Subsets}
 
-\section{Subsets of model space}
-
-In this section we characterize the subsets of model space which have upper curvature bound.
-We give a description for two and three-dimensional cases
+In this chapter we consider the subsets of the Euclidean space which inherit a curvature bounds.
+We give a characterization for two and three-dimensional cases
 and show that the description in higher dimensions is not as simple.
 
-\parbf{Two-dimensional case.}
+\section{Sets with smooth boundary}
+
+Let $S$ be an hypersurface in the Euclidean space $\EE^m$.
+Assume that the orientation on $S$ is given by a choice of orthonormal vector field $n$ at each point. 
+Denote by $k_1\le \dots\le k_{m-1}$ the scalar field of principal curvatures at each point of $S$
+with respect to $n$.
+
+We say that $S$ is convex if $k_1\ge 0$ at any point and two-convex if $k_2\ge 0$ at any point.
+
+\begin{thm}{Theorem}\label{thm:set-with-smooth-bry}
+Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
+Assume $K$ is bounded by a smooth hypersurface $S$ 
+equipped the the orthonormal vector field $n$ which points outside of $K$.
+\begin{subthm}{thm:set-with-smooth-bry:CBB}
+$K\in \CBB{}{0}$ if and only if $S$ is convex.
+\end{subthm}
+\begin{subthm}{thm:set-with-smooth-bry:CBA}
+$K\in \cCat{}{0}$ if and only $K$ is simply connected and $S$ is two-convex.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+Denote by $\Omega$ the interior of $K$; that is $\Omega=K\backslash S$.
+Since $K$ is connected and its boundary is smooth then so is $\Omega$.
+
+\parit{(\ref{SHORT.thm:set-with-smooth-bry:CBB}).} 
+If $S$ is convex then $K$ is locally convex.
+Since $K$ is connected, by Theorem~\ref{thm:local-global-convexity}, $K$ is convex.
+It follows that induced length metric on $K$ is equal to the Euclidean metric. 
+In particular (3+1)-point comparison holds for any quadruple of points in $K$.
+Hence ``if''-part follows.
+
+If $S$ is not convex then there is a triangle $[pxy]$ in $\EE^m$ such that two sides $[px]$ and $[py]$ lie in $\Omega$, but the side $[xy]$ does not completely lie in $K$.
+Such a triangle can be found in the plane spanned by normal and the first principle directions at the point of $S$ where the first principle curvature  is below zero.
+
+It follows that 
+\[\dist{x}{y}{K}>\dist{x}{y}{\EE^m}.
+\eqlbl{eq:xy_K>xy}\]
+
+On the other hand $[px]$ and $[py]$ form geodesics in $K$ and $\EE^m$
+and the $\eps$-neighborhoods of $p$ in $K$ and $\EE^m$ coincide for small $\eps>0$. 
+In particular, $\mangle\hinge pxy_K=\mangle\hinge pxy_{\EE^m}$
+and by hinge comparison (\ref{angle}) we have
+\[\dist{x}{y}{K}\le\dist{x}{y}{\EE^m}.\]
+The latter contradicts \ref{eq:xy_K>xy}.
+
+\parit{(\ref{SHORT.thm:set-with-smooth-bry:CBA}).}
+Assume $S$ is not two-convex.
+Note that in this case there is a triangle $[xyz]$ in $\EE^m$ such that its sides lie in $\Omega$ completely but its convex hull stick out of $K$.
+
+Indeed, choose a point $p\in S$ such that the first two principle curvatures  $k_1$ and $k_2$ are below zero.
+Let $\Pi$ be the plane through $x$ spanned by the first two principle directions.
+Choose a solid triangle in $\Pi$ which contains $p$ it its interior; we can assume that the sides of this triangle lie in $\Omega$.
+Moving this triangle slightly in the direction normal to $S$ provides the needed triangle.
+
+If $K\in\cCat{}{0}$,
+then by Reshetnyak majorization theorem,
+there is a short map $f$ from the convex hull $\triangle=\Conv(x,y,z)$ in $\EE^m$ to $K$ which preserves the sides of the triangle.
+Note that $f$ is the identity map, a contradiction.
+
+It remains to prove ``if''-part.
+Since $K$ is simply connected we only need to show that $\curv_p K\le 0$ at any point $p\in K$.
+
+If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$, therefore $\curv_p K\le 0$.
+
+Assume $p\in S=\partial_{\EE^m} K$ and $k_2(p)>0$.
+Fix sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
+
+Consider the cooredinate system with the origin at $p$
+and the principle directions and $n(p)$ as the coordinate directions.
+For small $\eps>0$, the set $K'$ 
+can be described as a subgraph
+\[K'
+=
+\set
+{(x_1,\dots,x_m)\in \cBall[p,\eps]}
+{x_m\le f(x_1,\dots,x_{m-1}}.\]
+Moreover, if $\eps$ is small, then for any fixed $x_1\in[-\eps,\eps]$ the function 
+\[(x_2,\dots,x_{m-1})\mapsto f(x_1,\dots,x_{m-1})\]
+is convex.
+
+Fix a negative real value $\lambda<k_1$.
+Given $s\in (-\eps,\eps)$,
+consider the subgraphs 
+\[K_s'
+=
+\set
+{(x_1,\dots,x_m)\in \cBall[p,\eps]}
+{x_m\le f(x_1,\dots,x_{m-1}}+\lambda\cdot (x_1-s)^2}.\]
+Note that $K_s'$ is forms a convex set, 
+\[K'=\bigcup_{s\in[-\eps,\eps]}K_s'\]
+and for any choice $a<b<c$ we have
+\[K'_b\supset K'_a\cap K'_c.\]
+
+Note that each $K'_s$ forms a convex set in $\EE^m$ for any $s$.
+The given a finite set of values $s_1<\dots<s_n$ consider the unions 
+\[Q_i=K'_{s_1}\cup\dots\cup K'_{s_i}\]
+equipped with the induced intrinsic metric.
+Note that $Q_1=K'_{s_1}$ is a $\cCat{}{0}$ space as a convex subset in $\EE^m$.
+Assuming that $Q_i\in \cCat{}{0}$, Reshetnyak's gluing theorem implies that $Q_{i+1}\in \cCat{}{0}$ 
+
+
+\qeds
+
+
+
+\section{Sturdy sets}
+
+The following technical assumption on $K$ will help to say away from pathological examples.
+
+\begin{thm}{Definition}
+Let $K$ be a closed set in a metric space.
+Denote by $\Omega$ the interior of $K$, equip both with the induced length metrics.
+We say that the set $K$ is \emph{sturdy} if the induced lenght metric takes finite values and 
+if the inclusion $\Omega\hookrightarrow K$ extends to an isometry
+from the completion $\overline \Omega$ to $K$.
+\end{thm}
+
+As an example of sturdy set one can take a region of plane bounded by rectifiable closed simple curve.
+A nonsturdy sets could be found among sets homeomorphic to closed disc 
+which a spiraling piece of boundary, so that the intrinsic distance to from the end of the spiral to some (and therefor any) interior point is infinite. 
+
+We are interested in the following general question.
+
+\begin{clm}{}
+For which sets $K$ in the Euclidean space 
+the constructed space $\overline\Omega$ is $\cCat{}{0}$? 
+\end{clm}
+
+Note that if $K$ is strudy, the question can be reformulated in terms of its interior $\Omega$.
+
+\begin{clm}{}
+For which open connected open sets $\Omega$ in the Euclidean space 
+the (2+2)-point comparison holds?
+\end{clm}
+
+Indeed, if the (2+2)-point comparison holds holds it $\Omega$ then the same is true for its completion. 
+It remains to note that completion of length space is a length space.
+
+For the inclusions $\phi\:\Omega\hookrightarrow\overline\Omega$ and $\psi\:\Omega\hookrightarrow\Closure\Omega$ there is unique continuous map 
+$\theta\:\overline\Omega\to\Closure\Omega$ such that $\psi=\theta\circ\phi$,
+but the map $\map$, in general is not onto and not injective.
+
+The map $\theta$ is always length-preserving, and if $K=\Closure\Omega$ is study then it is an isometry.
+
+
+\section{Model plane}
+
 A finite union of triangles in $\Lob{2}{\kappa}$ will be also called \index{polygonal set}\emph{polygonal set}.
 
 
@@ -17,8 +162,9 @@ Then $P\in\cCat{}{\kappa}$ if and ony if $P$ is $(2\cdot\varpi\kappa)$-simply co
 \end{thm}
 
 \parit{Proof.} According to  generalized Hadamard--Cartan theorem~\ref{thm:hadamard-cartan-gen},
-itis sufficient to check that 
-\[\curv P\le \kappa.\eqlbl{eq:curv(P)>=k}\]
+it is sufficient to check that 
+\[\curv P\le \kappa.
+\eqlbl{eq:curv(P)>=k}\]
 
 By \ref{thm:warp-curv-bound:cbb:a}, a $\kappa$-cone over
 a closed interval is $\cCat{}{\kappa}$.
@@ -91,7 +237,7 @@ Let $\Omega$ be an open  proper simply connected subset in $\Lob2{\kappa}$.
 If $\kappa>0$, assume in addition that $\Omega$ does not contain a closed halphsphere.
 
 Consider $\Omega$ with the induced intrinsic metric.
-Then the completion $\Omega^*$ of $\Omega$ is a $\cCat{}{\kappa}$ space.
+Then the completion $\Omega^*$ of $\Omega$ is a $\Cat{}{\kappa}$ space.
 \end{thm}
 
 \parbf{Remark.}
@@ -129,6 +275,8 @@ for all $i$ and $j$.
 Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
 \qeds
 
+\section{Three-dimensional Euclidean space}
+
 \parbf{Two-convexity.}
 Assume for a subset $A\subset \EE^3$
 the following condition holds for any plane $W\subset\EE^3$.
@@ -141,7 +289,12 @@ This definition is closely related to the one given by Gromov in \cite[\S\texton
 
 Note that according to this definition any simply connected subset in $\EE^2$ is 2-convex.
 
-Note that intersection of arbitrary collection of  two-convex sets is two-convex.
+Note that 
+\begin{itemize}
+\item Intersection of arbitrary collection of  two-convex sets is two-convex.
+\item Interior of two convex set is two-convex.
+\end{itemize}
+
 The later makes possible to define \emph{two-convex hull} $\Conv_2 A$ of a set $A$
 as the minimal two-convex set containing $A$.
 
@@ -164,33 +317,9 @@ a contradiction.
 \qeds
 
 
-
-\begin{thm}{Proposition}\label{prop:stong-two-convex}
-Assume $A$ is a  two-convex subset in $\EE^3$.
-Then for any convex set $K$ the restriction homomorphism of first \v{C}ech cohomology
-\[\check{H}^1(A,\ZZ_2)\to \check{H}^1(A\cap K,\ZZ_2)\]
-is onto.
-\end{thm}
-
-\parit{Proof.}
-Let $\Omega\subset \EE^3$ be open and two-convex.
-
-Arguing by contradiction, assume $\Omega$ is not strongly two-convex;
-that is there is a closed curve $\gamma$
-in $\Omega$ 
-which is contractable in $\Omega$ but not contractable in the intersection $\Conv\gamma\cap \Omega$.
-
-Denote by ???
-
-Since $\Omega$ is open, 
-we can assume that $\gamma$ is smooth
-and it is contracted by a smooth map from disc $\DD$ to $\Omega$.
-
- 
-\qeds
-
-
-The following proposition describes a construction producing $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+The following proposition 
+describes a construction which was essentially given by Shefel in \cite{shefel}.
+It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
 
 \begin{thm}{Proposition}\label{prop:2-conv-construction}
 Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
@@ -217,12 +346,13 @@ is evident.
 
 It remains to show that $\Omega'$ is two-convex.
 Assume contrary; 
-that for a plane $\Pi$ 
-there is a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
+that is, there is a plane $\Pi$ 
+and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
 which is null-homotopic in $\Omega'$,
 but not null-homotopic in $\Pi\cap\Omega'$.
 
-By approximation we can assume that $\Pi=\Pi_n$ and $n$ is large enogh so that $\gamma$ lies in $\Omega_{n-1}$.
+By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
+and that $\gamma$ lies in $\Omega_{n-1}$.
 The latter contradicts the $n$-th step in the construction. 
 \qeds
 
@@ -247,7 +377,7 @@ Then $\Omega^*\in\cCat{}0$
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
-Let us first formulate and prove a couple of its corollaries of Shefel's theorem.
+Let us first formulate and prove a couple of corollaries of Shefel's theorem.
 
 \begin{thm}{Corollary}
 Let $\mathfrak{C}$ be a subset in $\EE^3$ 
@@ -258,8 +388,8 @@ Then any metric component of $\mathfrak{C}^*$ forms a $\cCat{}{0}$ space.
 \end{thm}
 
 \parit{Proof.}
-The open two convex sets containing $\mathfrak{C}^*$
-form a ??? with respect to intersection.
+Since the intersection of two-convex sets is two-convex,
+we may assume that $\mathfrak{C}$ is formed by intersection of a decreasing sequence of open tow-convex sets $\Omega_1\supset\Omega_2\supset\dots$.
 
 Note that if $\Omega_1\subset \Omega_2$ then there the inclusion
 $\Omega_1\to \Omega_2$ induce a short map $\Omega_1^*\to \Omega_2^*$.
@@ -490,6 +620,27 @@ an analog of Theorem~\ref{thm:shefel}
 holds in higher dimensions assuming $\Omega$ has smooth boundary.
 If the boundary is not smooth this is not longer true already in $\EE^4$;
 an example can be found among intersections of two two-convex domains with smooth boundaries.
+
+
+
+\section {Higher dimensional case}
+
+Let $K$ be a strudy set in $\EE^m$ equipped with the induced length metric.
+If $K\in \cCat{}{0}$ then it is easy to see that $K$ has to have two-convex interior.
+Indeed ???.
+
+However the following example shows that two-convexity is not a sufficient condition.
+
+\begin{thm}{Example}
+There are example of strudy two-convex set $K$ in $\EE^4$
+which is not a $\cCat{}{0}$ space, if considered with the induced length metric. 
+
+
+Moreover, an example can be found among the intersections $K=W\cap W'$, where 
+\[W={(x,y,z,t)\in \EE^4}{z\ge -x^2-y^2}\]
+and $W'$ is a rotaition of $W$.
+\end{thm}
+
 The following exercise is closely related.
 
 \begin{thm}{Exercise}
@@ -499,6 +650,8 @@ equipped with induced length metric.
 Denote by $\tilde\Omega^*$ the completion of universla cover of $\Omega$.
 Show that $\Pi_1\perp\Pi_2$ if and only if $\tilde\Omega^*\in\cCat{}{0}$.
 \end{thm}
+
+
 
 
 \section {Manifolds-with-boundary}\label{sec:with-bry}
