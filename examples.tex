@@ -8,16 +8,16 @@ and show that the description in higher dimensions is not as simple.
 \section{Sets with smooth boundary}
 
 Let $S$ be an hypersurface in the Euclidean space $\EE^m$.
-Assume that the orientation on $S$ is given by a choice of orthonormal vector field $n$ at each point. 
+Assume that the orientation on $S$ is given by a choice of orthonormal vector field $\nu$ at each point. 
 Denote by $k_1\le \dots\le k_{m-1}$ the scalar field of principal curvatures at each point of $S$
-with respect to $n$.
+with respect to $\nu$.
 
-We say that $S$ is convex if $k_1\ge 0$ at any point and two-convex if $k_2\ge 0$ at any point.
+We say that $S$ is \index{convex hypersurface}\emph{convex} if $k_1\ge 0$ at any point and \emph{two-convex} if $k_2\ge 0$ at any point.
 
 \begin{thm}{Theorem}\label{thm:set-with-smooth-bry}
 Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
 Assume $K$ is bounded by a smooth hypersurface $S$ 
-equipped the the orthonormal vector field $n$ which points outside of $K$.
+equipped the the orthonormal vector field $\nu$ which points outside of $K$.
 \begin{subthm}{thm:set-with-smooth-bry:CBB}
 $K\in \CBB{}{0}$ if and only if $S$ is convex.
 \end{subthm}
@@ -25,6 +25,15 @@ $K\in \CBB{}{0}$ if and only if $S$ is convex.
 $K\in \cCat{}{0}$ if and only $K$ is simply connected and $S$ is two-convex.
 \end{subthm}
 \end{thm}
+
+\parbf{Remark.}
+Note that two-convexity survives under affine transformations of Euclidean space.
+Therefore as a consequence of above theorem we obtain the following:
+\begin{itemize}
+ \item Assume a closed connected subset $K$ of Euclidean space bounded by a smooth hypersurface forms $\cCat{}{0}$ space if
+equipped with the induced length metric. Then so is any affine transformation of $K$.
+\end{itemize}
+As you will see in the next section the same holds for sets bounded by arbitrary surface in 3-dimensional Euclidean space, but fails to hold in higher dimensions.
 
 \parit{Proof.}
 Denote by $\Omega$ the interior of $K$; that is $\Omega=K\backslash S$.
@@ -38,43 +47,47 @@ In particular (3+1)-point comparison holds for any quadruple of points in $K$.
 Hence ``if''-part follows.
 
 If $S$ is not convex then there is a triangle $[pxy]$ in $\EE^m$ such that two sides $[px]$ and $[py]$ lie in $\Omega$, but the side $[xy]$ does not completely lie in $K$.
-Such a triangle can be found in the plane spanned by normal and the first principle directions at the point of $S$ where the first principle curvature  is below zero.
+Such a triangle can be found in the plane spanned by the normal vector $\nu(p)$ and the first principle direction at a point $p\in S$ where the first principle curvature  is below zero.
 
-It follows that 
+Clearly
 \[\dist{x}{y}{K}>\dist{x}{y}{\EE^m}.
 \eqlbl{eq:xy_K>xy}\]
 
-On the other hand $[px]$ and $[py]$ form geodesics in $K$ and $\EE^m$
-and the $\eps$-neighborhoods of $p$ in $K$ and $\EE^m$ coincide for small $\eps>0$. 
-In particular, $\mangle\hinge pxy_K=\mangle\hinge pxy_{\EE^m}$
-and by hinge comparison (\ref{angle}) we have
+On the other hand $[px]$ and $[py]$ form geodesics in $K$ and $\EE^m$.
+Since $p$ lies in the interior of $K$, 
+\[\mangle\hinge pxy_K=\mangle\hinge pxy_{\EE^m}.\]
+By hinge comparison (\ref{angle}) we have
 \[\dist{x}{y}{K}\le\dist{x}{y}{\EE^m}.\]
 The latter contradicts \ref{eq:xy_K>xy}.
 
-\parit{(\ref{SHORT.thm:set-with-smooth-bry:CBA}).}
+\parit{(\ref{SHORT.thm:set-with-smooth-bry:CBA}) ``only-if'' part.}
 Assume $S$ is not two-convex.
 Note that in this case there is a triangle $[xyz]$ in $\EE^m$ such that its sides lie in $\Omega$ completely but its convex hull stick out of $K$.
 
 Indeed, choose a point $p\in S$ such that the first two principle curvatures  $k_1$ and $k_2$ are below zero.
-Let $\Pi$ be the plane through $x$ spanned by the first two principle directions.
-Choose a solid triangle in $\Pi$ which contains $p$ it its interior; we can assume that the sides of this triangle lie in $\Omega$.
-Moving this triangle slightly in the direction normal to $S$ provides the needed triangle.
+Let $\Pi$ be the plane through $p$ spanned by the first two principle directions.
+Choose a small solid triangle in $\Pi$ which contains $p$ it its interior; 
+we can assume that the sides of this triangle lie in $\Omega$.
+Moving this triangle slightly in the direction $\nu(p)$ provides the needed triangle.
 
 If $K\in\cCat{}{0}$,
 then by Reshetnyak majorization theorem,
 there is a short map $f$ from the convex hull $\triangle=\Conv(x,y,z)$ in $\EE^m$ to $K$ which preserves the sides of the triangle.
-Note that $f$ is the identity map, a contradiction.
+Note that $f$ has to be the identity map.
+In particular $\triangle \subset K$, a contradiction.
 
-It remains to prove ``if''-part.
-Since $K$ is simply connected we only need to show that $\curv_p K\le 0$ at any point $p\in K$.
+\parit{``If'' part.}
+Since $K$ is simply connected,
+by Cartan--Hadamard theorem \ref{thm:hadamard-cartan}, we only need to show that $\curv_p K\le 0$ at any point $p\in K$.
 
 If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$, therefore $\curv_p K\le 0$.
 
 Assume $p\in S=\partial_{\EE^m} K$ and $k_2(p)>0$.
 Fix sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
+Let us show that $K'\in\cCat{}{0}$.
 
-Consider the cooredinate system with the origin at $p$
-and the principle directions and $n(p)$ as the coordinate directions.
+Consider the coordinate system with the origin at $p$
+and the principle directions and $\nu(p)$ as the coordinate directions.
 For small $\eps>0$, the set $K'$ 
 can be described as a subgraph
 \[K'
@@ -82,34 +95,56 @@ can be described as a subgraph
 \set
 {(x_1,\dots,x_m)\in \cBall[p,\eps]}
 {x_m\le f(x_1,\dots,x_{m-1}}.\]
-Moreover, if $\eps$ is small, then for any fixed $x_1\in[-\eps,\eps]$ the function 
+Moreover, since $\eps$ is small,  for any fixed $x_1\in[-\eps,\eps]$ the function 
 \[(x_2,\dots,x_{m-1})\mapsto f(x_1,\dots,x_{m-1})\]
 is convex.
 
 Fix a negative real value $\lambda<k_1$.
 Given $s\in (-\eps,\eps)$,
-consider the subgraphs 
+consider the set 
 \[K_s'
 =
 \set
-{(x_1,\dots,x_m)\in \cBall[p,\eps]}
-{x_m\le f(x_1,\dots,x_{m-1}}+\lambda\cdot (x_1-s)^2}.\]
-Note that $K_s'$ is forms a convex set, 
-\[K'=\bigcup_{s\in[-\eps,\eps]}K_s'\]
-and for any choice $a<b<c$ we have
-\[K'_b\supset K'_a\cap K'_c.\]
+{(x_1,\dots,x_m)\in K'}
+{x_m\le f(x_1,\dots,x_{m-1})+\lambda\cdot (x_1-s)^2}.\]
+Note that $K_s'$ forms a convex set in $\EE^m$ and
+\[K'=\bigcup_{s\in[-\eps,\eps]}K_s'.\]
+Further note that 
+\[K'_b\supset K'_a\cap K'_c\]
+for any choice $a<b<c$.
 
-Note that each $K'_s$ forms a convex set in $\EE^m$ for any $s$.
-The given a finite set of values $s_1<\dots<s_n$ consider the unions 
+Given a finite set of values $s_1<\dots<s_\kay$ in $[-\eps,\eps]$,
+consider the unions 
 \[Q_i=K'_{s_1}\cup\dots\cup K'_{s_i}\]
 equipped with the induced intrinsic metric.
-Note that $Q_1=K'_{s_1}$ is a $\cCat{}{0}$ space as a convex subset in $\EE^m$.
-Assuming that $Q_i\in \cCat{}{0}$, Reshetnyak's gluing theorem implies that $Q_{i+1}\in \cCat{}{0}$ 
+
+Note that the sequence $(s_n)$ can be chosen in such a way that 
+$Q_\kay$ is arbitrary close to $K'$.
+Therefore it is sufficient to show the following claim.
+\begin{clm}{}
+$Q_\kay$ is a $\cCat{}{0}$ space for any sequence $(s_n)$.
+\end{clm}
+
+The later shown by induction.
+First note that $Q_1=K'_{s_1}$ is a $\cCat{}{0}$ space as a convex subset in $\EE^m$.
+
+Further, assume that $Q_i\in \cCat{}{0}$.
+Note that 
+\[K'_{s_{i+1}}\cap Q_i=K'_{s_{i+1}}\cap K'_{s_{i}}\] 
+is a convex set in $\EE^m$ and therefore in $Q_i$ and in $K'_{s_{i+1}}$.
+Therefore Reshetnyak's gluing theorem implies that $Q_{i+1}\in \cCat{}{0}$.
+Hence the claim follows.
+\claimqeds
+
+It remains to consider the case $k_2(p)=0$.
+Choose a coordinate system as before and consider the graph $S_\delta$ of 
+\[x_m= f(x_1,\dots,x_{m-1})-\delta\cdot(x_1^2+\dots+x_{m-1}^2).\]
+Note that for $\delta>0$, $S_\delta$ the $k_2(x)>0$ at any point of $x\in S$ which is $\eps$-close to $p$. 
+In particular if $K_\delta$ is the closed domain bounded by $S_\delta$ then from  
+Note that $K'_\delta$ converges to $K'$ as $\delta\to 0$.
 
 
 \qeds
-
-
 
 \section{Sturdy sets}
 
