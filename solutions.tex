@@ -479,3 +479,42 @@ Therefore
 That is, $\spc{S}$ satisfies the conditions above.
 
 \parbf{Exercise~\ref{ex:urysohn}.} See the construction of Urysohn's space \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}.
+
+\parbf{Exercise~\ref{ex:set-with-smooth-bry:CBB}.}
+Denote by $\Omega$ the interior of $K$; that is $\Omega=K\backslash S$.
+Since $K$ is connected and its boundary is smooth then so is $\Omega$.
+
+Recall that $k_1(p),\dots, k_{m-1}(p)$ denote the principle curvatures taken in the nondecreasing order of the surface $S$ at the point $p$. 
+
+\parit{``if''-part.} 
+Note that if $S$ is convex then $K$ is locally convex;
+that is any point $p\in K$ admits a neighborhood $U\ni p$ such that $U\cap K$ is convex.
+
+Since $K$ is connected, by Theorem~\ref{thm:local-global-convexity}, $K$ is convex.
+It follows that induced length metric on $K$ coincides with the Euclidean metric. 
+In particular (3+1)-point comparison holds for any quadruple of points in $K$.
+
+\begin{wrapfigure}{r}{20mm}
+\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/pxy-nonconvex(1)}
+\lbl[r]{1.75,11;$q$}
+\lbl[r]{11,21;$x$}
+\lbl[r]{9.5,1;$y$}
+\end{lpic}
+\end{wrapfigure}
+
+\parit{``Only-if''-part.} 
+If $S$ is not convex then there is a triangle $[qxy]$ in $\EE^m$ such that two sides $[qx]$ and $[qy]$ lie in $\Omega$, but the side $[xy]$ does not completely lie in $K$.
+Such a triangle can be found in the plane spanned by the normal vector $\nu(p)$ and the first principle direction at a point $p\in S$ where $k_1(p)<0$.
+
+Clearly
+\[\dist{x}{y}{K}>\dist{x}{y}{\EE^m}.
+\eqlbl{eq:xy_K>xy}\]
+
+On the other hand $[qx]$ and $[qy]$ form geodesics in $K$ and $\EE^m$.
+Since $q$ lies in the interior of $K$, 
+\[\mangle\hinge qxy_K=\mangle\hinge qxy_{\EE^m}.\]
+
+If $K$ forms a $\CBB{}{0}$ space then by hinge comparison (\ref{angle}) we have
+\[\dist{x}{y}{K}\le\dist{x}{y}{\EE^m}.\]
+The latter contradicts \ref{eq:xy_K>xy}.
+\qeds

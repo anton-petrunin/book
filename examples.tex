@@ -5,61 +5,151 @@ In this chapter we consider the subsets of the Euclidean space which inherit a c
 We give a characterization for two and three-dimensional cases
 and show that the description in higher dimensions is not as simple.
 
-\section{Domains with smooth boundary}\label{sec:smooth-bry}
+\section{Two-convexity}
 
-Let $S$ be an orientated hypersurface in the Euclidean space $\EE^m$.
-The orientation can be given by a choice of orthonormal vector field $\nu$ at each point is given. 
-Denote by $k_1\le \dots\le k_{m-1}$ the scalar field of principal curvatures at each point of $S$
-with respect to $\nu$.
+The following definition is closely related to the one given by Gromov in \cite[\S\textonehalf]{gromov:SaGMC}, see also \cite{panov-petrunin:sweeping}.
 
-We say that $S$ is \index{convex hypersurface}\emph{convex with respect to $\nu$} if $k_1(p)\ge 0$ at any point and \index{two-convex hypersurface}\emph{two-convex with respect to $\nu$} if $k_2(p)\ge 0$ at any point $p\in S$.
-
-\begin{thm}{Theorem}\label{thm:set-with-smooth-bry:CBB}
-Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
-Assume $K$ is bounded by a smooth hypersurface $S$ 
-and $\nu$ is the the orthonormal vector field on $S$ which points outside of $K$.
-Then 
-$K\in \CBB{}{0}$ if and only if $S$ is convex with respect to $\nu$.
+\begin{thm}{Definition}\label{def:two-convex}
+Assume $K\subset \EE^m$ is a subset
+such that the following condition holds for any plane $W\subset\EE^m$.
+If the boundary of a plane disc $D$ in $W$ lies in $K$ and null-homotopic in $K$
+then $D\subset K$.
+In this case we say that $K$ is \index{two-convex set}\emph{two-convex set}.
 \end{thm}
 
+The following proposition follows immidetealy from the definition.
+
+\begin{thm}{Proposition}
+Any subset in $\EE^2$ is 2-convex.
+\end{thm}
+
+The following proposition describes two-convex sets with smooth boundary.
+
+\begin{thm}{Proposition}
+Let $K\subset \EE^m$ be a closed subset.
+
+Assume that the boundary of $K$ is formed by a smooth hypersurface $S$.
+Consider the orthonormal vector field $\nu$ on $S$ which points outside of $K$.
+Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$.
+
+Then $K$ is two convex if and only if $k_2\ge 0$ at any point.
+\end{thm}
+
+\parit{Proof; ``if'' part.}
+If $k_2(p)<0$ for some $p\in S$,
+consider the plane $W$ through $p$ which spanned by the first two principle directions.
+Choose a small circle in $W$ around $p$ and move it slightly in the direction of $\nu(p)$.
+We get a circle which is null-homotopic in $K$,
+but the plane disc which it bounds does not lie in $K$ completely;
+that is $K$ is not two-convex.
+
+\parit{``Only-if'' part.}
+Consider a generic smooth strongly convex function $f\:\EE^m\to\RR$.
+We can assume that the restriction $f|_S$ is a Morse function.
+
+Note that for a critical point $p$ of $f|_S$ the outer normal vector $\nu(p)$ is parallel to the gradient $\nabla_pf$;
+we say that $p$ is \index{positive critical point}\emph{positive critical point}
+if $\nu(p)$ and $\nabla f$ point in the same direction 
+and \index{negative critical point}\emph{negative} otherwise.
+
+Since $S$ is two-convex and $f$ is convex, 
+the negative critical points of $f|_S$
+have index at most $1$.
+
+Given a real value $s$, set 
+\[K_s=\set{x\in K}{f(x)<s}.\]
+
+Assume  $\phi_0\:\DD\to K$ is a continuous map of the disc $\DD$
+such that $\phi(\partial \DD)\subset K_s$.
+By Morse Lemma, 
+there is a homotopy $\phi_t\:\DD\to K$ such that 
+$\phi_1(\DD)\subset K_s$.
+
+Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
+Note that the distance function $f_0=\dist{\Conv\gamma}{}{}$ is convex.
+Therefore $f_0$ can be approximated by smooth convex function $f$ such that the restriction $f|_S$ is a Morse function.
+From above the there is a disc in $K$ with boundary $\gamma$
+which lies arbitrary close to $\Conv\gamma$.
+Since $K$ is closed, the statement follows.
+\qeds
+
+The following two propositions also follow directly from the Definition~\ref{def:two-convex}.
+
+\begin{thm}{Proposition}
+Intersection of arbitrary collection of two-convex sets in $\EE^m$ is two-convex.
+\end{thm}
+
+\begin{thm}{Proposition}
+Interior of any two-convex set in $\EE^m$ is a two-convex set.
+\end{thm}
+
+In particular one can define \emph{two-convex hull} $\Conv_2 K$ of a subset $K\subset\EE^m$
+as the intersection of all two-convex set containing $K$.
+According to the last proposition above, 
+two-convex hull of open set is open.
+
+The following proposition states that two-convex hull of set is $A$ in the 3-dimensiona Euclidean space
+is \emph{locally concave} in the complement to the closure of $A$. 
+
+\begin{thm}{Proposition}
+Let $A$ be a subset in $\EE^3$
+and $B=\Conv_2 A$ is its two-convex hull.
+Assume $K\subset \EE^3$ be a convex set which does not intersect $A$.
+Then $K\backslash B$ is convex.
+\end{thm}
 
 \parit{Proof.}
-Denote by $\Omega$ the interior of $K$; that is $\Omega=K\backslash S$.
-Since $K$ is connected and its boundary is smooth then so is $\Omega$.
+Assume contrary; 
+that is the intersection $K\backslash B$ is a proper subset of $Z=\Conv(K\backslash B)$.
 
-Recall that $k_1(p),\dots, k_{m-1}(p)$ denote the principle curvatures of $S$ at $p\in S$ taken in the nondecreasing order. 
-
-\parit{``if''-part.} 
-Note that is $S$ is convex then $K$ is locally convex;
-that is any point $p\in K$ admits a neighborhood $U\ni p$ such that $U\cap K$ is convex.
-
-Since $K$ is connected, by Theorem~\ref{thm:local-global-convexity}, $K$ is convex.
-It follows that induced length metric on $K$ coincides with the Euclidean metric. 
-In particular (3+1)-point comparison holds for any quadruple of points in $K$.
-
-\begin{wrapfigure}{r}{20mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/pxy-nonconvex(1)}
-\lbl[r]{1.75,11;$q$}
-\lbl[r]{11,21;$x$}
-\lbl[r]{9.5,1;$y$}
-\end{lpic}
-\end{wrapfigure}
-
-\parit{``Only-if''-part.} 
-If $S$ is not convex then there is a triangle $[qxy]$ in $\EE^m$ such that two sides $[qx]$ and $[qy]$ lie in $\Omega$, but the side $[xy]$ does not completely lie in $K$.
-Such a triangle can be found in the plane spanned by the normal vector $\nu(p)$ and the first principle direction at a point $p\in S$ where $k_1(p)<0$.
-
-Clearly
-\[\dist{x}{y}{K}>\dist{x}{y}{\EE^m}.
-\eqlbl{eq:xy_K>xy}\]
-
-On the other hand $[qx]$ and $[qy]$ form geodesics in $K$ and $\EE^m$.
-Since $q$ lies in the interior of $K$, 
-\[\mangle\hinge qxy_K=\mangle\hinge qxy_{\EE^m}.\]
-By hinge comparison (\ref{angle}) we have
-\[\dist{x}{y}{K}\le\dist{x}{y}{\EE^m}.\]
-The latter contradicts \ref{eq:xy_K>xy}.
+Consider the set $B'=B\backslash Z$. 
+Note that $B'$ is a proper subset of $B$,
+$B'\supset A$ and $B'$ is two convex.
+that is $B$ is not the minimal two-convex subset containing $A$,
+a contradiction.
 \qeds
+
+
+The following proposition 
+describes a construction which was essentially given by Shefel in \cite{shefel}.
+It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+
+\begin{thm}{Proposition}\label{prop:2-conv-construction}
+Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
+sequence of planes in $\EE^3$.
+Given an open set $\Omega$ consider 
+the recucevly defined sequence of open sets 
+$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
+such that 
+$\Omega_n$ is the union of $\Omega_{n-1}$ 
+and all the bounded compontnets of 
+$\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
+Then 
+\[\Conv_2\Omega=\bigcup_n\Omega_n.\]
+
+\end{thm}
+
+\parit{Proof.}
+Set 
+\[\Omega'=\bigcup_n\Omega_n.\]
+Note that $\Omega'$ is a union of open set, in particular it is open.
+
+The inclusion $\Conv_2\Omega\supset\Omega'$
+is evident.
+
+It remains to show that $\Omega'$ is two-convex.
+Assume contrary; 
+that is, there is a plane $\Pi$ 
+and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
+which is null-homotopic in $\Omega'$,
+but not null-homotopic in $\Pi\cap\Omega'$.
+
+By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
+and that $\gamma$ lies in $\Omega_{n-1}$.
+The latter contradicts the $n$-th step in the construction. 
+\qeds
+
+\section{Sets with smooth boundary}\label{sec:smooth-bry}
 
 \begin{thm}{Theorem}\label{thm:set-with-smooth-bry:CBA}
 Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
@@ -85,21 +175,18 @@ Recall that $k_1(p),\dots, k_{m-1}(p)$ denote the principle curvatures of $S$ at
 
 \parit{``Only-if'' part.}
 Assume $S$ is not two-convex.
-Note that in this case there is a triangle $[xyz]$ in $\EE^m$ such that its sides lie in $\Omega$ completely but the solid triangle (that is, convex hull $\triangle=\Conv(x,y,z)$) sticks out of $K$.
+Note that in this case there is a triangle $[xyz]$ in $\EE^m$ such that its sides lie in $\Omega$ completely but the solid triangle $\triangle=\Conv(x,y,z)$ sticks out of $K$.
 
 Indeed, choose a point $p\in S$ such that $k_1(p),k_2(p)<0$.
 Let $\Pi$ be the plane through $p$ spanned by the first two principle directions.
 Choose a small solid triangle in $\Pi$ which contains $p$ in its interior; 
 we can assume that the sides of this triangle lie in $\Omega$.
-Moving this triangle slightly in the direction $\nu(p)$ provides the needed triangle.
+Moving this triangle slightly in the direction $\nu(p)$ provides the needed triangle $[xyz]$.
 
 If $K\in\cCat{}{0}$,
 then by Reshetnyak majorization theorem,
-there is a short map $f$ from  $\triangle$ in $\EE^m$ to $K$ which preserves the sides of the triangle.
-
-Note that the identity map is the only map 
-\[f\:\triangle\to\EE^m\]
-which satisfies the above property.
+there is a short map $f\:\triangle\to K$ which preserves the sides of the triangle.
+Note that $f$ has to be the identity map.
 In particular $\triangle \subset K$, a contradiction.
 
 \parit{``If'' part.}
@@ -133,60 +220,69 @@ is concave.
 Fix a negative real value $\lambda<k_1(p)$.
 Given $s\in (-\eps,\eps)$,
 consider the set 
-\[K_s'
+\[V_s
 =
 \set
 {(x_1,\dots,x_m)\in K'}
 {x_m\le f(x_1,\dots,x_{m-1})+\lambda\cdot (x_1-s)^2}.\]
-Note that $K_s'$ forms a convex set in $\EE^m$ and
-\[K'=\bigcup_{s\in[-\eps,\eps]}K_s'.\]
+Note that the function 
+\[(x_1,\dots, x_{m-1})\mapsto f(x_1,\dots,x_{m-1})+\lambda\cdot (x_1-s)^2\]
+is concave near the origin.
+Since $\eps$ is small, we can assume that $V_s$ forms a convex set in $\EE^m$ for any $s$.
+
 Further note that 
-\[K'_b\supset K'_a\cap K'_c\]
+\[K'=\bigcup_{s\in[-\eps,\eps]}V_s\]
+and
+\[V_b\supset V_a\cap V_c\eqlbl{eq:VcVnV}\]
 for any choice $a<b<c$.
 
-Given a finite set of values $s_1<\dots<s_\kay$ in $[-\eps,\eps]$,
+Given an array of values $s^1<\dots<s^\kay$ in $[-\eps,\eps]$,
+set $V^i=V_{s^i}$ and
 consider the unions 
-\[Q_i=K'_{s_1}\cup\dots\cup K'_{s_i}\]
+\[W^i=V^1\cup\dots\cup V^i\]
 equipped with the induced intrinsic metric.
 
 \begin{center}
 \begin{lpic}[t(1mm),b(1mm),r(0mm),l(0mm)]{pics/K_s(1)}
-\lbl{6,18;$K'_{s_1}$}
-\lbl{26,17;$\dots$}
-\lbl{48,18;$K'_{s_\kay}$}
+\lbl{6,18;{\color{white}$V^1$}}
+\lbl{26,17;{\color{white}$\dots$}}
+\lbl{48,18;{\color{white}$V^\kay$}}
 \end{lpic}
 \end{center}
 
-Note that the sequence $(s_n)$ can be chosen in such a way that 
-$Q_\kay$ is arbitrary close to $K'$.
+Note that the array $(s^n)$ can be chosen in such a way that 
+$W^\kay$ is arbitrary close to $K'$.
 
 Therefore, in order to prove \ref{K'-is-CAT}, 
 it is sufficient to show the following claim.
 \begin{clm}{}
-$Q_\kay$ is a $\cCat{}{0}$ space for any sequence $(s_n)$ as above.
+All $W^i$ form $\cCat{}{0}$ spaces.
 \end{clm}
 
 This claim is proved by induction.
-The base case, $Q_1=K'_{s_1}$ is a $\cCat{}{0}$ space as a convex subset in $\EE^m$.
+The base case, $W^1=V^1$ is a $\cCat{}{0}$ space as a convex subset in $\EE^m$.
 
-Further, assume that $Q_i\in \cCat{}{0}$.
-Note that 
-\[K'_{s_{i+1}}\cap Q_i=K'_{s_{i+1}}\cap K'_{s_{i}}\] 
-is a convex set in $\EE^m$ and therefore it forms a convex set in $Q_i$ and in $K'_{s_{i+1}}$.
-By Reshetnyak's gluing theorem, $Q_{i+1}\in \cCat{}{0}$.
+Further, assume that $W^i\in \cCat{}{0}$.
+According to \ref{eq:VcVnV}
+\[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
+Moreover, this set forms a convex set in $\EE^m$ 
+and therefore it forms a convex set in $W^i$ and in $V^{i+1}$.
+By Reshetnyak's gluing theorem, $W^{i+1}\in \cCat{}{0}$.
 Hence the claim follows.
 \claimqeds
 
 It remains to consider the case $k_2(p)=0$.
-Choose a coordinate system $(x_1,\dots,x_n)$ as above 
-and fix $\eps>0$ so that a neighborhood of $p$ in $S$ 
+Choose a coordinate system $(x_1,\dots,x_n)$ as above,
+so $(x_1,\dots,x_{m-1})$-coordinate hyperplane forms the tangent subspace to $S$ at $p$.
+
+Fix $\eps>0$ so that a neighborhood of $p$ in $S$ 
 forms a graph
 \[x_m= f(x_1,\dots,x_{m-1})\]
-for some function defined at the open disk $\DD$ of radius $\eps$ in the $(x_1,\dots,x_{m-1})$-coordinate hyperplane centered at the origin.
-Fix a smooth strongly convex function $\phi\:\DD\to \RR_+$
-such that $\phi(x)\to\infty$ as $x$ approaches the boundary $\DD$.
+for some function defined at the open ball $B$ of radius $\eps$  centered at the origin in the $(x_1,\dots,x_{m-1})$-hyperplane.
+Fix a smooth positive strongly convex function $\phi\:B\to \RR_+$
+such that $\phi(x)\to\infty$ as $x$ approaches the boundary $B$.
 Note that for $\delta>0$, the graph $S_\delta$
-\[x_m= f(x_1,\dots,x_{m-1})-\delta\cdot(x_1^1+\dots+x_{m-1}^2)\]
+\[x_m= f(x_1,\dots,x_{m-1})-\delta\cdot\phi(x_1,\dots,x_{m-1})\]
 is two-convex and its second principle curvature is strictly positive at each point.
 
 From above the subgraph $K_\delta$ of $S_\delta$ forms a $\cCat{}{0}$ space.
@@ -195,6 +291,18 @@ Finally as $\delta\to0$, the closed $\eps$-neighborhoods of $p$ in $K_\delta$
 converges to the closed $\eps$-neighborhood of $p$ in $K$.
 Therefore $\curv_pK\le 0$.
 \qeds
+
+The following $\CBB{}{}$-analog of the above theorem; it is much simpler.
+
+\begin{thm}{Exercise}\label{ex:set-with-smooth-bry:CBB}
+Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
+Assume $K$ is bounded by a smooth hypersurface $S$ 
+and $\nu$ is the the orthonormal vector field on $S$ which points outside of $K$.
+Show that 
+$K\in \CBB{}{0}$ if and only if $S$ is convex with respect to $\nu$. 
+\end{thm}
+
+In fact if $K\subset \EE^m$ is a closed subset with dense interior then $K$ is convex if and only if $K\in \CBB{}{0}$. 
 
 
 \section{Model plane}
@@ -323,87 +431,10 @@ Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
 
 \section{Three-dimensional Euclidean space}
 
-Let us define two-convex open sets in Euclidean space.
-In order to generalize Theorem \ref{thm:set-with-smooth-bry:CBA} to nonsmoth hypersurfaces
-
-\parbf{Two-convexity.}
-Assume $K\subset \EE^m$ is an subset
-such that the following condition holds for any plane $W\subset\EE^m$.
-If the boundary of a plane disc $D$ in $W$ lies in $K$ and null-homotopic in $K$
-then $D\subset K$.
-In this case we say that $K$ is \index{two-convex set}\emph{two-convex set}.
-
-This definition is closely related to the one given by Gromov in \cite[\S\textonehalf]{gromov:SaGMC}, see also \cite{panov-petrunin:sweeping}.
-
-Note that 
-\begin{itemize}
-\item Any connected subset in $\EE^2$ is 2-convex.
-\item If $K$ has smooth boundary $S$ then it is two-convex if and only if $S$ is two-convex in the sense of definition in Section \ref{sec:smooth-bry}.
-\item Intersection of arbitrary collection of two-convex sets $\EE^3$ is two-convex.
-\item Interior of two-convex set is a convex two-set.
-\end{itemize}
-
-In particular one can define \emph{two-convex hull} $\Conv_2 K$ of a set $K$
-as the intersection of all two-convex set containing $K$.
-By the last property, two-convex hull of open set is open.
-
-\begin{thm}{Proposition}
-Let $A$ be a subset in $\EE^3$
-and $B=\Conv_2 A$ is its two-convex hull.
-Assume $K\subset \EE^3$ be a convex set which does not intersect $A$.
-Then $K\backslash B$ is convex.
-\end{thm}
-
-\parit{Proof.}
-Assume contrary; 
-that is the intersection $K\backslash B$ is a proper subset of $Z=\Conv(K\backslash B)$.
-
-Consider the set $B'=B\backslash Z$. 
-Note that $B'$ is a proper subset of $B$,
-$B'\supset A$ and $B'$ is two convex.
-that is $B$ is not the minimal two-convex subset containing $A$,
-a contradiction.
-\qeds
+In this section we give a generalization of Theorem \ref{thm:set-with-smooth-bry:CBA} to nonsmoth surfaces in 3-dimensional Euclidean space.
+In order to state the result we need to define two-convex sets.
 
 
-The following proposition 
-describes a construction which was essentially given by Shefel in \cite{shefel}.
-It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
-
-\begin{thm}{Proposition}\label{prop:2-conv-construction}
-Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
-sequence of planes in $\EE^3$.
-Given an open set $\Omega$ consider 
-the recucevly defined sequence of open sets 
-$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
-such that 
-$\Omega_n$ is the union of $\Omega_{n-1}$ 
-and all the bounded compontnets of 
-$\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
-Then 
-\[\Conv_2\Omega=\bigcup_n\Omega_n.\]
-
-\end{thm}
-
-\parit{Proof.}
-Set 
-\[\Omega'=\bigcup_n\Omega_n.\]
-Note that $\Omega'$ is a union of open set, in particular it is open.
-
-The inclusion $\Conv_2\Omega\supset\Omega'$
-is evident.
-
-It remains to show that $\Omega'$ is two-convex.
-Assume contrary; 
-that is, there is a plane $\Pi$ 
-and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
-which is null-homotopic in $\Omega'$,
-but not null-homotopic in $\Pi\cap\Omega'$.
-
-By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
-and that $\gamma$ lies in $\Omega_{n-1}$.
-The latter contradicts the $n$-th step in the construction. 
-\qeds
 
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
@@ -462,7 +493,7 @@ It remains to note that $\mathfrak{C}$ can be presented as intersection
 of open two-convex sets 
 \[\Omega_n
 =
-\set{(x,y,z)\in \EE^3}{z\lg f(x,y)\pm\tfrac1n,\ (x,y)\in U}.\]
+\set{(x,y,z)\in \EE^3}{z\lege f(x,y)\pm\tfrac1n,\ (x,y)\in U}.\]
 \qedsf
 
 The proof of Shefel's theorem goes in a few steps.
@@ -661,6 +692,12 @@ an example can be found among intersections of two two-convex domains with smoot
 
 \section {Higher dimensional case}
 
+\begin{thm}{Exercise}
+Assume $K\subset\EE^m$ is a closed set bounded by a Lipschitz hypersurface.
+Equip $K$ with the induced length metric.
+Show that if $K\in \cCat{}{0}$ then $K$ is two-convex.
+\end{thm}
+
 Let $K$ be a strudy set in $\EE^m$ equipped with the induced length metric.
 If $K\in \cCat{}{0}$ then it is easy to see that $K$ has to have two-convex interior.
 Indeed ???.
@@ -673,7 +710,7 @@ which is not a $\cCat{}{0}$ space, if considered with the induced length metric.
 
 
 Moreover, an example can be found among the intersections $K=W\cap W'$, where 
-\[W={(x,y,z,t)\in \EE^4}{z\ge -x^2-y^2}\]
+\[W=\set{(x,y,z,t)\in \EE^4}{z\ge -x^2-y^2}\]
 and $W'$ is a rotaition of $W$.
 \end{thm}
 
@@ -1034,10 +1071,18 @@ equipped with the length-metric has curvature
 $\le \kappa$ at any point.
 \end{thm}
 
-It would be esting to get an analog of the flag condition for other simplices 
+A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
+
+\begin{thm}{Question}
+Is it true that any closed two-convex set bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\cCat{}{0}$ space? 
+\end{thm}
+
+
+It would be interesting to get an analog of the flag condition for other simplices 
 which (not necessary right-angled).
 Such a condition for some spherical Coxeter simplex
-could resolve the following problem; see \cite{panov-petrunin} for more details. 
+could resolve the following problem; 
+see \cite{panov-petrunin} for more details. 
 
 \begin{thm}{Braid space}
 Consider $\CC^n$ with coordinates $z_1,z_2,\dots,z_n$.
