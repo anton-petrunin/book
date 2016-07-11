@@ -1,3 +1,200 @@
+\section{Model plane}
+
+A finite union of triangles in $\Lob{2}{\kappa}$ will be also called \index{polygonal set}\emph{polygonal set}.
+
+
+\begin{thm}{Theorem}\label{thm:polygon-CAT}
+Let $P$ be a polygonal set in $\Lob2\kappa$ equipped with induced length metric.
+Then $P\in\cCat{}{\kappa}$ if and ony if $P$ is $(2\cdot\varpi\kappa)$-simply connected. 
+\end{thm}
+
+\parit{Proof.} According to  generalized Hadamard--Cartan theorem~\ref{thm:hadamard-cartan-gen},
+it is sufficient to check that 
+\[\curv P\le \kappa.
+\eqlbl{eq:curv(P)>=k}\]
+
+By \ref{thm:warp-curv-bound:cbb:a}, a $\kappa$-cone over
+a closed interval is $\cCat{}{\kappa}$.
+By Reshetnyak's gluing theorem, 
+the same holds for a $\kappa$-cone over
+a collection of closed intervals.
+
+The inequality \ref{eq:curv(P)>=k} follows 
+since a neighborhood of any point in $P$
+is isometric to a neighborhood of the tip of a $\kappa$-cone over
+a collection of closed intervals.
+\qeds
+
+
+Let $[a_1\dots a_n]$
+be a simple closed broken geodesic in the model plane $\Lob{2}{\kappa}$.
+A closure  
+of a bounded component of 
+$\Lob{2}{\kappa}\backslash [a_1\dots a_n]$ 
+is called \index{solid polygon}\emph{solid polygon}.
+
+If $\kappa\le 0$ then there is unique polygon which is bounded by $[a_1\dots a_n]$,
+while in the case $\kappa>0$
+there are two such polygons,
+one on each side of $[a_1\dots a_n]$.
+Note that the half-spheres in $\Lob{}\kappa$ for $\kappa>0$ are included in the class of polygons.
+
+
+\begin{thm}{Corollary}\label{thm:2-d-cba}
+Let $P$ be a polygon in $\Lob{2}{\kappa}$ equipped with the length-metric. 
+\begin{subthm}{thm:2-d-cba:k=<0} 
+If $\kappa\le 0$ then $P\in\cCat{}{\kappa}$ 
+\end{subthm}
+\begin{subthm}{thm:2-d-cba:k>0}
+If $\kappa> 0$ and then $P\in\cCat{}{\kappa}$ if and only if $P$ does not contain a hemisphere in its interior. 
+\end{subthm}
+\end{thm}
+
+\parit{Proof; (\ref{SHORT.thm:2-d-cba:k=<0})}
+Note that by construction $P$ is simply connected.
+Therefore part (\ref{SHORT.thm:2-d-cba:k=<0})
+follows from Theorem \ref{thm:polygon-CAT}.
+
+\parit{(\ref{SHORT.thm:2-d-cba:k>0}).}
+Since $\kappa>0$,
+applying rescaling, we can assume that $\kappa=1$ and therefore $\Lob2\kappa=\mathbb{S}^2$.
+
+Note that if $P$ contains a closed hemisphere it is not $(2\cdot\pi)$-simply connected;
+in fact the $\partial_{\mathbb{S}^2}[\Conv(\partial_{\mathbb{S}^2} P)]$ forms a closed geodesic in $P$ with length smaller that $2\cdot\pi$.
+
+If $P$ is not $(2\cdot\pi)$-simply connected
+then it contains a closed geodesic $\gamma$ 
+of length smaller than $2\cdot\pi$.
+Note that $\gamma$ bounds a convex set $K$ in $\mathbb{S}^2$ 
+and  $K\supset \partial_{\mathbb{S}^2} P$.
+According to Hemisphere lemma (\ref{lem:hemisphere})
+$\gamma$ lies outside of a closed hemisphere.
+This hemisphere have to lie in the interior of $P$,
+a contradiction.
+\qeds
+
+
+
+The following theorem 
+is a partial case of a more general result proved by Bishop in \cite{bishop:jordan};
+see also the discussion after Example 9.1.6 in the book of Burago--Burago--Ivanov \cite{BBI}.
+
+\begin{thm}{Theorem}\label{thm:2d-bishop}
+Let $\Omega$ be an open  proper simply connected subset in $\Lob2{\kappa}$.
+If $\kappa>0$, assume in addition that $\Omega$ does not contain a closed halphsphere.
+
+Consider $\Omega$ with the induced intrinsic metric.
+Then the completion $\Omega^*$ of $\Omega$ is a $\Cat{}{\kappa}$ space.
+\end{thm}
+
+\parbf{Remark.}
+Note that if $\Omega$ is bounded by a simple closed rectifiable curve its completion of $\Omega^*$ is isometric to the closure $\bar{\Omega}$  of $\Omega$ equipped with the length metric. 
+In general, the space $\Omega^*$ admits natural length-preserving map in $\bar{\Omega}$, 
+but 
+this map might be not injective 
+and its image might be proper subset of $\bar{\Omega}$.
+
+%%%%%%%%+PIC???
+
+\parit{Proof.}
+Fix the points $x^1,x^2,x^3,x^4\in\Omega$.
+Note that it is sufficient to prove that 
+\begin{clm}{}\label{clm:2+2-Omega}
+(2+2)-point $\kappa$-comparison holds for any four points 
+$x^1, x^2, x^3, x^4$ in $\Omega$ 
+equipped with the length metric.
+\end{clm}
+
+Fix $\eps>0$.
+Connect $x^i$ to $x^j$ by a curve $\gamma_{ij}$ in $\Omega$;
+such that 
+\[\length\gamma_{ij}<\dist{x^i}{x^j}{\Omega}+\eps.\]
+
+Note that there is a polygon $P\subset \Omega$ 
+which contains all $\gamma_{ij}$.
+
+By Theorem~\ref{thm:2-d-cba}, $P\in \cCat{}{\kappa}$.
+In particular the points  $x^1,x^2,x^3,x^4$ satisfy (2+2)-point comparison in $P$.
+By the construction,
+\[\dist{x^i}{x^j}{P}\lege \dist{x^i}{x^j}{\Omega}\pm\eps\]
+for all $i$ and $j$.
+
+Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The following proposition 
+describes a construction which was essentially given by Shefel in \cite{shefel}.
+It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+
+\begin{thm}{Proposition}\label{prop:2-conv-construction}
+Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
+sequence of planes in $\EE^3$.
+Given an open set $\Omega$ consider 
+the recucevly defined sequence of open sets 
+$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
+such that 
+$\Omega_n$ is the union of $\Omega_{n-1}$ 
+and all the bounded compontnets of 
+$\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
+Then 
+\[\Conv_2\Omega=\bigcup_n\Omega_n.\]
+
+\end{thm}
+
+\parit{Proof.}
+Set 
+\[\Omega'=\bigcup_n\Omega_n.\]
+Note that $\Omega'$ is a union of open set, in particular it is open.
+
+The inclusion $\Conv_2\Omega\supset\Omega'$
+is evident.
+
+It remains to show that $\Omega'$ is two-convex.
+Assume contrary; 
+that is, there is a plane $\Pi$ 
+and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
+which is null-homotopic in $\Omega'$,
+but not null-homotopic in $\Pi\cap\Omega'$.
+
+By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
+and that $\gamma$ lies in $\Omega_{n-1}$.
+The latter contradicts the $n$-th step in the construction. 
+\qeds
+
+
+
+
+
+
+
+
+
+
 
 
 
