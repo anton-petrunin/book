@@ -1,3 +1,39 @@
+
+
+
+
+\begin{thm}{Corollary}
+Let $\mathfrak{C}$ be a simply connected subset in $\EE^3$ 
+which can be presented as intersection of some collection 
+of open two-convex set.
+Equip $\mathfrak{C}$ with induced length metric and denote by $\mathfrak{C}^*$ its completion.
+Then any metric component of $\mathfrak{C}^*$ forms a $\cCat{}{0}$ space.
+\end{thm}
+
+\parit{Proof.}
+Since the intersection of two-convex sets is two-convex,
+we may assume that $\mathfrak{C}$ is formed by intersection of a decreasing sequence of open tow-convex sets $\Omega_1\supset\Omega_2\supset\dots$.
+
+Note that if $\Omega_1\subset \Omega_2$ then there the inclusion
+$\Omega_1\to \Omega_2$ induce a short map $\Omega_1^*\to \Omega_2^*$.
+Therefore the completions of open two-convex sets containing $\mathfrak{C}$ form an inverse system.
+The completion $\mathfrak{C}$ is isometric to the inverse limit of this system.
+
+Since every $\Omega^*$ is $\cCat{}{0}$ we obtain that (2+2)-comparison holds for all quadrouple of points in $\mathfrak{C}$.
+Hence the same holds for the completion $\mathfrak{C}^*$.
+Passing to any metric component of $\mathfrak{C}^*$ we get a $\cCat{}{0}$ space.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
 \section{Model plane}
 
 A finite union of triangles in $\Lob{2}{\kappa}$ will be also called \index{polygonal set}\emph{polygonal set}.
@@ -147,44 +183,7 @@ Since $\eps>0$ is arbitrary, \ref{clm:2+2-Omega} follows.
 
 
 
-The following proposition 
-describes a construction which was essentially given by Shefel in \cite{shefel}.
-It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
 
-\begin{thm}{Proposition}\label{prop:2-conv-construction}
-Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
-sequence of planes in $\EE^3$.
-Given an open set $\Omega$ consider 
-the recucevly defined sequence of open sets 
-$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
-such that 
-$\Omega_n$ is the union of $\Omega_{n-1}$ 
-and all the bounded compontnets of 
-$\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
-Then 
-\[\Conv_2\Omega=\bigcup_n\Omega_n.\]
-
-\end{thm}
-
-\parit{Proof.}
-Set 
-\[\Omega'=\bigcup_n\Omega_n.\]
-Note that $\Omega'$ is a union of open set, in particular it is open.
-
-The inclusion $\Conv_2\Omega\supset\Omega'$
-is evident.
-
-It remains to show that $\Omega'$ is two-convex.
-Assume contrary; 
-that is, there is a plane $\Pi$ 
-and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
-which is null-homotopic in $\Omega'$,
-but not null-homotopic in $\Pi\cap\Omega'$.
-
-By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
-and that $\gamma$ lies in $\Omega_{n-1}$.
-The latter contradicts the $n$-th step in the construction. 
-\qeds
 
 
 

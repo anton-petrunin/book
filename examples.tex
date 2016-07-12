@@ -265,17 +265,7 @@ In fact if $K\subset \EE^m$ is a closed subset with dense interior then $K$ is c
 
 \section{Nonsmooth sets of Euclidean space}
 
-
-Note that two-convexity survives under affine transformations of Euclidean space.
-Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, we obtain the following.
-
-\begin{thm}{Corollary}Assume a closed connected subset $K$ of Euclidean space bounded by a smooth hypersurface forms $\cCat{}{0}$ space if
-equipped with the induced length metric. Then so is any affine transformation of $K$.
-\end{thm}
-
-By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in three-dimensional Euclidean space, in higher dimensions this is not longer true.
-The material of this section inspired by work of Samuil Shefel who seems to be very intrigued by survival of metric properties under affine transformation.
-
+In this section we will consider inheritance of upper curvature bound by subsets of Euclidean spaces.
 As a worm up, we suggest to solve the following exercise;
 see Bishop's note \cite{bishop:jordan} for the solution.
 
@@ -286,6 +276,21 @@ Show that the completion of $K$ with induced length metric forms a $\cCat{}{0}$.
 \end{thm}
 
 
+The material below is inspired by work of Samuel Shefel who seems to be very intrigued by survival of metric properties under affine transformation.
+
+Let us describe one instance of such phenomena.
+Note that two-convexity survives under affine transformations of Euclidean space.
+Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, we obtain the following.
+
+\begin{thm}{Corollary}
+Let $K$ be closed connected subset of Euclidean space 
+equipped with the induced length metric.
+Assume $K$ is bounded by a smooth hypersurface and it forms $\cCat{}{0}$ space. 
+Then the same holds for any affine transformation of $K$.
+\end{thm}
+
+By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in three-dimensional Euclidean space, in higher dimensions this is not longer true.
+
 Here is the main theorem of the section.
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
@@ -294,6 +299,25 @@ Equipp $\Omega$ with the induced length metric,
 and denote by $K$ the completion of universal metric cover of $\Omega$.
 Then $K$ is a $\cCat{}0$ space  
 if and only if $\Omega$ is two-convex.
+\end{thm}
+
+The following exercise shows that analogous statement does not hold in higher dimensions.
+
+\begin{thm}{Exercise}
+Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
+
+Consider the complement $\Omega=\EE^4\backslash(\Pi_1\cup\Pi_2)$
+equipped with induced length metric
+denote by $K$ the completion of universal metric cover of $\Omega$.
+Show that 
+
+\begin{subthm}{}
+$\Omega$ is two-convex.
+\end{subthm}
+
+\begin{subthm}{}
+$K\in\cCat{}0$ if and only if $\Pi_1\perp\Pi_2$.
+\end{subthm}
 \end{thm}
 
 Before coming to the proof, let us formulate few corollaries.
@@ -317,29 +341,7 @@ is isometric to $K$ with induced intrinsic metric.
 Hence the result follows.
 \qeds
 
-\begin{thm}{Corollary}
-Let $\mathfrak{C}$ be a simply connected subset in $\EE^3$ 
-which can be presented as intersection of some collection 
-of open two-convex set.
-Equip $\mathfrak{C}$ with induced length metric and denote by $\mathfrak{C}^*$ its completion.
-Then any metric component of $\mathfrak{C}^*$ forms a $\cCat{}{0}$ space.
-\end{thm}
-
-\parit{Proof.}
-Since the intersection of two-convex sets is two-convex,
-we may assume that $\mathfrak{C}$ is formed by intersection of a decreasing sequence of open tow-convex sets $\Omega_1\supset\Omega_2\supset\dots$.
-
-Note that if $\Omega_1\subset \Omega_2$ then there the inclusion
-$\Omega_1\to \Omega_2$ induce a short map $\Omega_1^*\to \Omega_2^*$.
-Therefore the completions of open two-convex sets containing $\mathfrak{C}$ form an inverse system.
-The completion $\mathfrak{C}$ is isometric to the inverse limit of this system.
-
-Since every $\Omega^*$ is $\cCat{}{0}$ we obtain that (2+2)-comparison holds for all quadrouple of points in $\mathfrak{C}$.
-Hence the same holds for the completion $\mathfrak{C}^*$.
-Passing to any metric component of $\mathfrak{C}^*$ we get a $\cCat{}{0}$ space.
-\qeds
-
-The following subcorollary is the main statement in Shefel's original paper \cite{shefel-graph}.
+The following subcorollary is the main statement in Shefel's original paper \cite{shefel-3D}.
 
 Let $U$ be an open set in $\RR^2$.
 Recall, that a continuous function $f\:U\to\RR$ is called \index{saddle function}\emph{saddle} if for any linear function $\ell\:\RR^2\to\RR$ the difference 
@@ -347,25 +349,25 @@ $f-\ell$
 does not have local maxima and minima in $U$.
 
 \begin{thm}{Corollary}
-Assume $f\:\DD\to \RR$ is a saddle locally Lipschitz function then the graph
+Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed disc $\DD$. 
+Then the graph
 $z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\cCat{}{0}$ space.
 \end{thm}
 
 \parit{Proof.}
 Since the function $f$ is Lipschitz, the metric on its graph $\Gamma$
-is locally bi-Lipschitz to the euclidean metric on $\Delta$.
+is locally bi-Lipschitz to the euclidean metric on $\DD$.
 
-Set $\Delta^\circ=\Int\Delta$.
 Consider the sequence of sets 
 \[\Omega_n
 =
-\set{(x,y,z)\in \EE^3}{|z- f(x,y)|<\tfrac1n,\ (x,y)\in \Delta^\circ}.\]
-Note open that each $\Omega_n$ is open, simply connected and two-convex.
+\set{(x,y,z)\in \EE^3}{|z- f(x,y)|<\tfrac1n,\ (x,y)\in \Int\DD}.\]
+Note that each $\Omega_n$ is open, simply connected and two-convex.
 
 Equip $\Omega_n$ with induced length metric 
 and denote by $K_n$ its completion.
 By Shefel's Theorem~\ref{thm:shefel},
-$K_n$ is $\cCat{}{0}$ space.
+$K_n\in\cCat{}{0}$.
 It remains to note that as $n\to\infty$ the sequence of space $K_n$ converges to $\Gamma$ in the sence of Gromov--Hausdorff. %%%???MORE???
 \qeds
 
@@ -378,16 +380,11 @@ Note any polytope admits a finite triangulation.
 Therefore any polytope equipped with induced intrinsic metric 
 forms a Euclidean polyhedral space as defined in \ref{def:poly}.
 
-\begin{thm}{Lemma}\label{lem:poly-shefel}
-Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is formed by interior of a polytope.
-\end{thm}
-
 \begin{wrapfigure}{r}{20mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/polytope(1)}
 \end{lpic}
 \end{wrapfigure}
 
-\parbf{Remark.}
 Let $P$ be a polytope and $\Omega$ its interior,
 both considered with induced intrinsic metric.
 Typically the completion $K$ of $\Omega$ 
@@ -398,59 +395,64 @@ it has to be onto,
 but it may be not injective. 
 An example can be guessed from the picture.
 
-\parit{Proof; ``only-if'' part.}
-If $\Omega$ is not two-convex then 
-there is a plane $\Pi$ in $\EE^3$ 
-which pass through a vertex $v$ of $K$ 
-such that punctured neightborhood of $v$ in $\Pi$ lies in $\Omega$.
-Choose a plane $\Pi'$ parallel and very close to $\Pi$ which cuts from the complement of $\Omega$ a little piramid $S$ with vertex $v$.
-Consider a small triangle $\triangle$ in $\Pi'$ wich surrounds the base of $S$.
-Note that $\triangle$ is a geodesic triangle in $\Omega^*$
-for which the point-on-side comparison \ref{cat-monoton}
-fails.
-That is, $\curv_v\Omega^*\nleqslant0$. %???+PIC
+One the other hand, it is easy to see that  $K$ are polyhedral spaces.
+From the latter statement and the characterization of $\cCat{}{0}$ polyhedral space given in \ref{thm:PL-CAT} one gets the following.
 
-\parit{``if'' part.}
-Since $\Omega$ is two-convex,
-by Proposition~\ref{prop:stong-two-convex}, 
-any point $v$ on the boundary of $K$ 
-admits a conic neighborhood $U$ in $K$ 
-such that the intersection $U\cap\Omega$ 
-is formed by a finite collection of simply connected components.
+\begin{thm}{Exercise}\label{ex:poly-shefel}
+Shefel's Theorem~\ref{thm:shefel} holds if the set $\Omega$ is formed by interior of a polytope.
+\end{thm}
 
-It follows that any point $\Omega^*\backslash \Omega$ 
-is locally isometric to a cone over spherical polygons.
-Moreover since $\Omega$ is two-convex, 
-each polygon does not contain a closed hemisphere in its interior. 
-By Lemma ??? each of these spherical polygon is $\cCat{}{1}$. 
-Therefore, by cone construction (\ref{thm:warp-curv-bound:cbb:a}) we get that $\Omega^*$ is locally $\cCat{}0$.
-\qeds
+
 
 
 
 \begin{thm}{Exercise}\label{ex:polygon-slices}
 Let $m\ge 3$,
 $P\subset \EE^m$ be a compact subset.
-Assume that for any 2-dimensional subspace $W$ in $\EE^m$
+Assume that for any plane $W$ in $\EE^m$
 the set $P\cap W$ is a polytope. 
 Show that $P$ is a polytope.
 \end{thm}
 
-\begin{thm}{Lemma}\label{lem:loc-concave}
-Let $\Omega$ be an open set in $\Lob{3}{\kappa}$.
-Then $\Conv_2\Omega$ is an open set.
- 
-Moreover, the set $\Lambda=\Lob{3}{\kappa}\backslash(\bar\Omega\cup\Conv_2\Omega)$
- is locally convex;
-that is, for any $x\in\Lambda$ therew is $\eps>0$ such that the intersection
-$\oBall(x,\eps)\cap(\Lambda\backslash\Omega^{(2)})$
-is convex.
+
+The following proposition 
+describes a construction which was essentially given by Shefel in \cite{shefel-3D}.
+It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
+
+\begin{thm}{Proposition}\label{prop:2-conv-construction}
+Let $\Pi_1,\Pi_2\dots$ be an everywhere dense
+sequence of planes in $\EE^3$.
+Given an open set $\Omega$ consider 
+the recucevly defined sequence of open sets 
+$\Omega=\Omega_0\subset\Omega_1\subset\dots$ 
+such that 
+$\Omega_n$ is the union of $\Omega_{n-1}$ 
+and all the bounded compontnets of 
+$\EE^3\backslash(\Pi_n\cup \Omega_{n-1})$.
+Then 
+\[\Conv_2\Omega=\bigcup_n\Omega_n.\]
+
 \end{thm}
 
-\begin{thm}{Lemma}
-Closed locally convex set in $\Lob{3}{\kappa}$ is convex. 
-\end{thm}
+\parit{Proof.}
+Set 
+\[\Omega'=\bigcup_n\Omega_n.\]
+Note that $\Omega'$ is a union of open set, in particular it is open.
 
+The inclusion $\Conv_2\Omega\supset\Omega'$
+is evident.
+
+It remains to show that $\Omega'$ is two-convex.
+Assume contrary; 
+that is, there is a plane $\Pi$ 
+and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
+which is null-homotopic in $\Omega'$,
+but not null-homotopic in $\Pi\cap\Omega'$.
+
+By approximation we can assume that $\Pi=\Pi_n$ for a large enough  $n$ 
+and that $\gamma$ lies in $\Omega_{n-1}$.
+The latter contradicts the $n$-th step in the construction. 
+\qeds
 
 
 
@@ -525,24 +527,24 @@ Note that it is sufficient to show that
 
 Fix $\eps>0$.
 Choose a six broken lines connecting all the pairs of points $x^1,x^2,x^3,x^4$ such that length of each at most $\eps$ bigger than 
-the distance between its ends.
+the distance between its ends in the length metric on $\Omega$.
 Choose a polytope $P$ 
 in $\Omega$ such that the interior $\Int P$ is simply connected 
 and  it contains all these six broken.
 
 Denote by $\Theta$ the two-convex hull of the interior of $P$.
 According to Key Lemma (\ref{lem:key-shefel}) $\Theta$ is an interior of a polytope.
-Therefore, by Lemma \ref{lem:poly-shefel}, $\curv \Theta^*\le \kappa$.
-By Hadamard--Cartan theorem, the universal cover $\~\Theta^*$ of $\Theta^*$ is a $\cCat{}{0}$ space.
-(Despit that $P$ is simply connected, the convex hull of 
 
-Since $\Int P$ is simply connected, the embedding $\Int P\hookrightarrow \Theta^*$
-admits a lifting $\iota\:\Int P\hookrightarrow \~\Theta^*$.
+Equip $\Theta$ with the induced length metric and denote by $L$ the completion of the universal metric cover of $\Theta$.
+(Despite that $\Int P$ is simply connected, its two-convex hull of might be not simply connected.)
+By Exercise \ref{ex:poly-shefel}, $L\le \cCat{}0$.
 
+Since $\Int P$ is simply connected, the embedding $\Int P\hookrightarrow \Theta$
+admits a lifting $\iota\:\Int P\hookrightarrow L$.
 By construction $\iota$ almost preserves the distances between the points $x^1,x^2,x^3,x^4$;
 namely 
 \begin{align*}
-\dist{\iota(x^i)}{\iota(x^j)}{\~\Theta^*}\gele \dist{x^i}{x^j}{\Int P}\pm\eps.
+\dist{\iota(x^i)}{\iota(x^j)}{L}\gele \dist{x^i}{x^j}{\Int P}\pm\eps.
 \end{align*}
 
 Since $\eps>0$ is arbitrary and (2+2)-comparison holds in $\~\Theta^*$,
@@ -550,18 +552,6 @@ we get that (2+2)-comparison holds in $\Omega$ for $x^1,x^2,x^3,x^4$.
 
 The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\Omega$ is arbitrary.
 \qeds
-
-\parbf{Variations and generalization.}
-A theorem analogous to ??? holds also in $\HH^3$, 
-and a local version holds also in $\SS^3$.
-
-As it will be shown in Section \ref{sec:with-bry},
-an analog of Theorem~\ref{thm:shefel}
-holds in higher dimensions assuming $\Omega$ has smooth boundary.
-If the boundary is not smooth this is not longer true already in $\EE^4$;
-an example can be found among intersections of two two-convex domains with smooth boundaries.
-
-
 
 \section {Higher dimensional case}
 
@@ -587,15 +577,7 @@ Moreover, an example can be found among the intersections $K=W\cap W'$, where
 and $W'$ is a rotation of $W$.
 \end{thm}
 
-The following exercise is closely related.
 
-\begin{thm}{Exercise}
-Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
-Consider the complement $\Omega=\EE^4\backslash(\Pi_1\cup\Pi_2)$
-equipped with induced length metric.
-Denote by $\tilde\Omega^*$ the completion of universla cover of $\Omega$.
-Show that $\Pi_1\perp\Pi_2$ if and only if $\tilde\Omega^*\in\cCat{}{0}$.
-\end{thm}
 
 
 

@@ -518,3 +518,35 @@ If $K$ forms a $\CBB{}{0}$ space then by hinge comparison (\ref{angle}) we have
 \[\dist{x}{y}{K}\le\dist{x}{y}{\EE^m}.\]
 The latter contradicts \ref{eq:xy_K>xy}.
 \qeds
+
+
+
+
+
+\parbf{Exercise~\ref{ex:poly-shefel}.}
+If $\Omega$ is not two-convex then 
+there is a plane $\Pi$ in $\EE^3$ 
+which pass through a vertex $v$ of $K$ 
+such that punctured neightborhood of $v$ in $\Pi$ lies in $\Omega$.
+Choose a plane $\Pi'$ parallel and very close to $\Pi$ which cuts from the complement of $\Omega$ a little piramid $S$ with vertex $v$.
+Consider a small triangle $\triangle$ in $\Pi'$ wich surrounds the base of $S$.
+Note that $\triangle$ is a geodesic triangle in $\Omega^*$
+for which the point-on-side comparison \ref{cat-monoton}
+fails.
+That is, $\curv_v\Omega^*\nleqslant0$. %???+PIC
+
+\parit{``if'' part.}
+Since $\Omega$ is two-convex,
+by Proposition~\ref{prop:stong-two-convex}, 
+any point $v$ on the boundary of $K$ 
+admits a conic neighborhood $U$ in $K$ 
+such that the intersection $U\cap\Omega$ 
+is formed by a finite collection of simply connected components.
+
+It follows that any point $\Omega^*\backslash \Omega$ 
+is locally isometric to a cone over spherical polygons.
+Moreover since $\Omega$ is two-convex, 
+each polygon does not contain a closed hemisphere in its interior. 
+By Lemma ??? each of these spherical polygon is $\cCat{}{1}$. 
+Therefore, by cone construction (\ref{thm:warp-curv-bound:cbb:a}) we get that $\Omega^*$ is locally $\cCat{}0$.
+\qeds
