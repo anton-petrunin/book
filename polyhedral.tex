@@ -560,9 +560,7 @@ is null-homotopic in  $\spc X\backslash K$.
 Recall that path connected spaces are not empty by definition.
 Therefore compact spaces are not simply connected at infinity.
 
-The following statement was proved by Michael Davis in \cite{davis-noneuclidean}; 
-his survey \cite{davis-survey} discusses 
-a number of related constructions.
+The following statement was proved by Michael Davis in \cite{davis-noneuclidean}.
 
 \begin{thm}{Proposition}\label{prop:aspherical}
 For any  $m\ge 4$ there is a closed aspherical 
@@ -708,10 +706,33 @@ $\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
 and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$. 
 \qeds
 
-The following is a geometric analog of the proposition above;
-it was proved by Ancel, Davis and Guilbault in \cite{ADG}. 
-%???first names 
-%??? I plan to make exercise form this proposition and move the proof of lemma to the end
+
+\section{Comments}
+
+\parbf{Generalized flag condition.}
+It would be interesting to get an analog of the flag condition for other simplices 
+which (not necessary right-angled).
+Such a condition for some spherical Coxeter simplex
+could resolve the following problem; 
+see \cite{panov-petrunin} for more details. 
+
+\begin{thm}{Braid space problem}
+Consider $\CC^n$ with coordinates $z_1,z_2,\dots,z_n$.
+Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
+pass to the universal caver and consider the completion $\spc{B}_n$ 
+of the obtained space.
+
+Is it true that $\spc{B}_n\in\Cat{}{0}$ for any $n$.
+\end{thm}
+
+The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$.
+This and number of related questions are discussed in \cite{panov-petrunin:ramification}
+
+\parbf{More exotic constructions.}
+The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting thins; 
+some of them discussed in the survey \cite{davis-survey} by Michael Davis.
+
+The following Proposition was proved by Fredric Ancel, Michael Davis and Craig Guilbault in \cite{ADG}. 
 
 
 \begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
@@ -729,22 +750,28 @@ The universal cover of $\spc{P}$ is not simply connected at infinity.
 \end{subthm}
 \end{thm}
 
-It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphich to the Euclidean space of the same dimension.
-In fact by Hadamard--Cartan theorem
-(\ref{thm:hadamard-cartan}), 
-the exponential map at one point of such manifold is a homeomorphism.
-In particular there is no Riemannian analog of the proposition.
-Moreover, according to a theorem of Stone, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the propositon; 
-that is the homeomorphism to a manifold in the proposition can not be made piecewise linear. 
-
 \parit{Proof.}
 Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Exercise~\ref{ex:funny-S}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:funny-S}
 Given a positive integer $m\ge 5$
-there is an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
+construct an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
 and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
 \end{thm}
+
+
+It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
+In fact by Hadamard--Cartan theorem
+(\ref{thm:hadamard-cartan}), 
+the exponential map at one point of such manifold is a homeomorphism.
+In particular there is no Riemannian analog of the proposition.
+Moreover, according to a theorem of Stone, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; 
+that is the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
+can not be made piecewise linear. 
+
+A similar construction was used by Michael Davis, Tadeusz Janu\-szkie\-wicz and Jean-Fran\c{c}ois Lafont \cite{davis-januszkiewicz-lafont}
+to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that (1) $M$ admits a polyhedral metric which is locally $\cCat{}{0}$ but it does not admit a Riemannian metric with nonpositive sectional curvature.
+
 
 

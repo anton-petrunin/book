@@ -12,26 +12,36 @@ and \ref{cor:monoton-cba:angle=inf},
 the $\CBB{}{}$ and $\cCat{}{}$ spaces have \index{space with defined angles}\emph{defined angles};
 that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in the space.
 
-Fix a metric space  $\spc{X}$ is a with defined angles and a point $p\in \spc{X}$. 
+Let $\spc{X}$ be a metric space with defined angles.
+Fix a point $p\in \spc{X}$. 
 
 Consider the set $\mathfrak{S}_p$ 
-of all unit-speed geodesics  which start at $p$.
+of all nontrivial unit-speed geodesics  which start at $p$.
 By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
 that is, $(\mathfrak{S}_p,\mangle)$ 
-is a pseudometric space.
+forms a pseudometric space.
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
 and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
 The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
-for the equivalence realtion 
+for the equivalence relation 
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
 \begin{thm}{Exercise}
-Assume $\spc{L}\in\CBB{}{}$,  and $[px]$, $[py]$ be two geodesics starting at the point $p\in\spc{L}$ which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+Assume $\spc{L}\in\CBB{}{}$,  and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
 Show that 
 \[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
 
+\end{thm}
+
+\begin{thm}{Exercise}
+Assume $\spc{U}\in\cCat{}{}$
+be a space with extandable geodesics;
+that is for any geodesic in $\spc{U}$
+is an arc in a both-side infinite local geodesic.
+
+Show that $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
 
 The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
@@ -43,16 +53,6 @@ Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfra
 \end{thm}
 
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
-
-\begin{thm}{Exercise}
-Assume $\spc{U}\in\cCat{}{}$
-be a space with extandable geodesics;
-that is for any geodesic in $\spc{U}$
-is an arc in a both-side infinite local geodesic.
-
-Show that $\Sigma_p'$ is complete for any $p\in \spc{U}$.
-\end{thm}
-
 
 The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
 To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
@@ -77,6 +77,8 @@ The elements of $\T_p$ will be called tangent vector at $p$,
 despite that $\T_p$ is only cone --- not a vector space.
 The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
 
+\section{Velocity of curves}
+
 \begin{thm}{Definition}\label{def:right-derivative}
 Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessary continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
@@ -86,7 +88,7 @@ such that $v_n\to v$ as $n\to\infty$ and
 \[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
 \end{thm}
 
-Note that if this condition in the Definition~\ref{def:right-derivative} holds for one choice of the sequences $(v_n)$ and $(\gamma_n)$ then it holds for any other choice of that type.
+Note that if the condition in the Definition~\ref{def:right-derivative} holds for one choice of the sequences $(v_n)$ and $(\gamma_n)$ then it holds for any other choice of that type.
 
 Note that if $\gamma$ is a geodesic starting at $p$ 
 and the tangent vector $v\in\T_p'$ corresponds to $\gamma$ 
@@ -156,13 +158,12 @@ A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
 Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
 Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
 \begin{subthm}{prop:differential:lip}
-The differential $\d_pf\:\T_p\to\RR$ is Lipschitz.
-Moreover, the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+The differential $\d_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
 \end{subthm}
 
 \begin{subthm}{prop:differential:homo}
 $\d_pf\:\T_p\to\RR$ is a positive homogenius function;
-i.e. for any $\lam\ge 0$ and $v\in\T_p$ we have 
+that is, for any $\lam\ge 0$ and $v\in\T_p$ we have 
 \[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
 \end{subthm}
 
@@ -189,7 +190,7 @@ Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function.
 It remains to show that $\phi$ is differential of $f$ at $p$.
 Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
 Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
-i.e. if 
+that is, if 
 \[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
 then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
 Then 
@@ -213,7 +214,7 @@ Hence
 
 \section{Ultratangent space} 
 
-Recall that we assume that $\o$ is a once for all fixed choice of selective ultrafilter.
+Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter.
 
 For a metric space $\spc{X}$ and a positive real number $\lam$,
 we will denote by $\lam\cdot\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
@@ -226,16 +227,16 @@ so
 for any $x,y\in \spc{X}$.
 
 The $\o$-blowup $\o\cdot\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
-of $n\cdot\spc{X}$; i.e.,
+of $n\cdot\spc{X}$; that is,
 \[\o\cdot\spc{X}
 \df
 \lim_{n\to\o} n\cdot\spc{X}.\]
 
 Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
-it corresponds to a point $x^n\in \o\cdot\spc{X}$.
+it corresponds to a point $x^\o\in \o\cdot\spc{X}$.
 Note that if $x\ne y$ then 
 \[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
-i.e., 
+that is, 
 $x^\o$ and $y^\o$ 
 belong to different metric components of $\o\cdot\spc{X}$.
 
@@ -309,7 +310,7 @@ Therefore
 Set $\iota(v)=v^\o$.
 Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
 $n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
-Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$, i.e. $\iota$ is a global isometry of $\T_p'$.
+Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry of $\T_p'$.
 
 Since $\T_p'$ is dense in $\T_p$,
 we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
@@ -329,8 +330,8 @@ will be called \emph{linear subcone}\index{linear subspace} of $\T_p$.
 
 The reason for choosing the name ``linear subcone'' will be evident after proving Theorem~\ref{thm:lin-subcone}.
 
-Let $u\in \Lin_p$, $u+v=0$ and $s<0$.
-Set $s\cdot u=(-s)\cdot v$.
+Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
+Given $s<0$, set $s\cdot u=(-s)\cdot v$.
 This way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
 Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
 
@@ -369,6 +370,9 @@ Let $\spc{L}\in\CBB{}{\kappa}$ and $p\in \spc{L}$.
 Then $\Lin_p$ forms a subcone of $\T_p$ isometric to a Hilbert space.
 \end{thm}
 
+Before comming to the proof of the theorem, 
+let us give its corollary.
+
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
 Let $\spc{L}\in\CBB{}{\kappa}$ 
 and $p\in \Str(x_1,x_2,\dots,x_n)$.
@@ -398,11 +402,16 @@ First we show that $\Lin_p\in \CBB{}{0}$.
 Note that $\T^\o_p\in \CBB{}{0}$ (see \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
 Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
 
-Given two vectors $x,y\in\Lin_p$,
-let us apply Lemma~\ref{lem:minus-sum} 
-for vectors $u$ and $v$ such that $u+\tfrac{1}{2}\cdot x=0$ 
-and $v+\tfrac{1}{2}\cdot y=0$ in order to show that  $w\in \T_p$ is a midpoint of $[x y]$.
-First note that 
+Fix two vectors $x,y\in\Lin_p$.
+Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$ 
+and $v+\tfrac{1}{2}\cdot y=0$.
+Let us apply Lemma~\ref{lem:minus-sum} 
+for vectors $u$ and $v$ to obtain vector $w\in \T_p$.
+\begin{clm}{}\label{clm:w-mid(xy)}
+$w$ is a midpoint of $[x y]$.
+\end{clm}
+
+Indeed, according to Lemma~\ref{lem:minus-sum}, 
 \begin{align*}
 |w|^2
 &=
@@ -420,74 +429,13 @@ First note that
 &=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=\\
 &=\tfrac{1}{2}\cdot\dist[2]{x}{y}{}.
 \end{align*}
-Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$; 
-i.e. $w$ is a midpoint for $x$ and $y$.
+Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
+\claimqeds
 
 Note that for any $v\in\Lin_p$ there is a line $\ell$ passing trough $v$ and $\0$, thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
 \qeds
 
-
-
-??? DO WE NEED THIS THEOREM???
-
-
-\begin{thm}{Theorem}\label{thm:differentiability-of-curves}
-Let $\spc{X}$ be a $\CBB{}{}$ or $\cCat{}{}$ space
-and $\alpha\:\II\to\spc{X}$ be a Lipschitz curve. 
-Then $\alpha$ is almost everywhere both-side differentiable.
-Moreover,
-for almost all $t\in\II$,
-the inequality 
-\[\<\alpha^+(t),x\>+\<\alpha^-(t),x\>\le 0\]
-holds for any $x\in \T_{\alpha(t)}$.
-
-In particular
-\[\speed_t\alpha
-\ae
-|\alpha^\pm(t)|.\]
-\end{thm}
-
-
-
-
 \section{Differential and ultradifferential}\index{differential}
-
-
-\begin{thm}{Proposition}
-Let $\spc{L}$ be a metric space with defined angles, 
-$f\:\spc{L}\subto \RR$ be a locally Lipschitz semiconcave subfunction.
-Then for any $p\in\Dom f$, its differential $\d_p f$ is defined.
-\end{thm}
-
-
-Let $\spc{L}$ be a metric space, 
-$f\subto \RR$
-and $p\in\Dom f$.
-A function $\phi\:\T_p\spc{L}\to\RR???$ is called differential of $f$ at $p$ (briefly, $\phi=\d_p f$)
-if for any curve $\gamma(t)$ in $\spc{L}$ such that $\gamma(0)=p$ and $\gamma^+(0)$ is defined we have
-\[\phi(\gamma^+(0))=(f\circ\gamma)^+(0).\]
-
-???
-
-Let $\spc{L}\in\CBB{}\kappa$ and $f\:\spc{L}\subto\RR$ be semiconcave. 
-Let us construct differential $\d_p f\:\T_p\to \RR$ of $f$ at $p\in\Dom f$.
-
-Given a unit-speed geodesic $\gamma$ starting at $p$ (i.e. $\gamma(0)=p$), let us set
-\[(\d_p f)\l(\gamma^+(0)\r)
-=(f\circ{\gamma})^+(0).\]
-Since $f$ is semiconcave, $(f\circ{\gamma})^+$ is defined. 
-
-That defines differential $\d_p f$ on $\Sigma'_p$.
-It is easy to see that $\d_p|\Sigma'_p$ is upper semicontinuous;
-thus, one can extend $\d_p$ to an upper semicontinuous function on $\Sigma_p$.
-
-Further, extend $\d_p$ to a homogenous function of degree $1$ on $\T_p$; i.e. define 
-\[(\d_p f)(\0)=0
-\ \ \hbox{and}\ \ 
-(\d_p f)(r\cdot\xi)
-\df
-r\cdot (\d_p f)(\xi)\] 
-for any $\xi\in\Sigma_p$ and $r\ge 0$.
 
 Note that $\dist{p}{}{}\:\spc{L}\to\RR$ is semiconcave in $\spc{L}\backslash\{p\}$.
 Thus for any $q\not=p$ one can define differential.
@@ -515,7 +463,7 @@ In particular, the above identity holds if $q\in \Str(p)$ and if $p\in \Str(q)$.
 
 
 In general, as it shown in Halbeisen's example (see section \ref{halbeisen}),  
-$\T_p$  might be not an length space; 
+$\T_p$  might be not a length space; 
 thus concavity of $\d_p f$ is meaningless. 
 Nevertheless, as the following lemma shows, differential $\d_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
 Note that in finite dimensional case $\d_p f$ is concave (see ???), 
@@ -534,7 +482,7 @@ for any $u,v\in \T_p$.
 
 \parit{Proof of \ref{lem:ohta}.}
 We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
-Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\d_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$, i.e. $\exp_p(t\cdot u)$
+Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\d_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
  and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
 
 \begin{wrapfigure}{r}{50mm}
@@ -623,22 +571,42 @@ More precicely,
 Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
 \[\dist{p}{u_t}{}=t|u|+o(t),\] but it is enough for the rest of proof.
 \item The direction $\dir p{w_t}$ might be undefined.
-Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (i.e. $\dist{w_t}{w_t'}{}=o(t)$)
+Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$)
 \end{enumerate}
-\qeds
+\qedsf
 
 \parbf{Ultradifferential.}
 Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
-\[f_n(n\cdot x)=n\cdot(f(x)-f(p)),\]
-here $x$ and $p$  are considered as elements of the underling set $\ushort{\spc{L}}$.
+\[f_n(x^n)=n\cdot(f(x)-f(p)),\]
+here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
 While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
 functions $f_n$ converge to $\o$-differential of $f$ at $p$.
-It will be denoted by $\d_p^\o f$, so
+It will be denoted by $\d_p^\o f$;
 \[\d_p^\o f\:\T_p^\o\to\RR,\ \ \d_p^\o f=\lim_{n\to\o} f_n.\] 
 
-Clearly, the $\o$-differential of locally Lipschitz subfunction is defined at each point of definition.
-From \ref{lem:convex-olim}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, 
-then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
+Clearly, the $\o$-differential of a locally Lipschitz subfunction is defined at each point of definition.
+%By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
+
+\begin{thm}{Proposition}
+Assume $\spc{X}$ is a $\CBB{}{}$ or $\cCat{}{}$ space
+and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
+Then for any $p\in\Dom f$, the ultradifferential $\d^\o_p\:\T^\o_p\to\RR$ is a concave function.
+\end{thm}
+
+\parit{Proof.}
+Fix a geodesic $[x^\o y^\o]$ in $\T^\o_p$.
+It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y^\o]$
+which does not contains the ends
+there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{X}$ which converges to $[\bar x^\o\bar y^\o]$.
+
+Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{X}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
+Note taht $[\bar x^n \bar y^n]$ 
+converges to $[\bar x^\o \bar y^\o]$
+as $n\to\o$.
+The latter holds tivially in case $\cCat{}{}$
+and in $\CBB{}{}$ case follows from ???.
+\qeds
+
 
 
 \section{Halbeisen's example}\label{halbeisen}
@@ -700,7 +668,7 @@ They form unit-speed geodesics in both, $\spc{L}$ and $\check{\spc{L}}$.
 Let $\xi_\pm$ be the directions of $\gamma_\pm$ at $p$.
 Denote by $\sigma_n$ the half-planes in $\HH$ 
 spanned by $\bm{e}_0$ and $\bm{e}_n$;
-i.e. $\sigma_n\z=\set{x\cdot\bm{e}_0+y\cdot\bm{e}_n}{y\ge 0}$.
+that is, $\sigma_n\z=\set{x\cdot\bm{e}_0+y\cdot\bm{e}_n}{y\ge 0}$.
 Consider sequence of $2$-dimensional sectors $Q_n=\check{\spc{L}}\cap (\sigma_n\times \RR)$. 
 For each $n$, the sector $Q_n$ passes through $\Omega_n$ and it is bounded by two geodesic rays $\gamma_\pm$.
 Note that $Q_n\GHto Q$, where  $Q$ is a solid Euclidean angle
@@ -755,7 +723,7 @@ thus it is enough to show that for given $\eps>0$ one can choose $E$, so that
 \dist{x_i}{x_j}{S}+\eps
 \eqlbl{eq:claim:hil-con*}\]
 
-For each pair $(x_i,x_j)$ choose a broken line $\beta_{i j}$ connecting $x_i,x_j$, which lies under $S$ (i.e. outside of $\Conv S$) in $\HH\times \RR$ 
+For each pair $(x_i,x_j)$ choose a broken line $\beta_{i j}$ connecting $x_i,x_j$, which lies under $S$ (that is, outside of $\Conv S$) in $\HH\times \RR$ 
 and has length at most $\dist{x_i}{x_j}{S}+\eps$.
 Take $E$ to be the affine hull of all the vertexes in all $\beta_{i j}$.
 Thus,
