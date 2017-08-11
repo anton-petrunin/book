@@ -331,7 +331,7 @@ Then
 \le 
 (|\nabla_p f|+|\nabla_p g|)
 \cdot
-\sup\set{|(\d_p f)(\xi)-(\d_p f)(\xi)|}{\xi\in\Sigma_p}.\]
+\sup\set{|(\d_p f)(\xi)-(\d_p g)(\xi)|}{\xi\in\Sigma_p}.\]
 
 In particular, if $f_n\:\spc{L}\subto\RR$ is a sequence of locally Lipschitz and semiconcave subfunctions,
 $p\in \Dom f_n$ for each $n$ 
@@ -361,7 +361,9 @@ Therefore,
 &=\<\nabla_p f,\nabla_p f\>+\<\nabla_p g,\nabla_p g\>-2\cdot\<\nabla_p f,\nabla_p g\>
 \le
 \\
-&\le (\d_p f)(\nabla_p f)+(\d_p g)(\nabla_p g)-(\d_p f)(\nabla_p g)-(\d_p g)(\nabla_p f)
+&\le (\d_p f)(\nabla_p f)+(\d_p g)(\nabla_p g)-
+\\
+&\quad-(\d_p f)(\nabla_p g)-(\d_p g)(\nabla_p f)
 \le
 \\
 &\le s\cdot(|\nabla_p f|+|\nabla_p g|).
@@ -386,8 +388,11 @@ for any $x\in \T_p$ and
 
 \end{thm}
 
+If $\T_p$ would be a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
+However, tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
+
 To obtain the following corollary, applying the above lemma for $u=v$.
-In finite-dimensional case, a stronger statement holds, see Milka's lemma (\ref{lem:milka}).
+In the finite-dimensional case, a stronger statement holds, see Milka's lemma (\ref{lem:milka}).
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
 Let $\spc{L}\in\CBB{}{}$ 
