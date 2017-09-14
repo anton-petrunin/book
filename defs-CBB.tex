@@ -230,7 +230,7 @@ let us show that it is dense in $\spc{X}$.
 Assuming the contrary, there is a point $x\in \spc{X}$ such that $\oBall(x,\eps)\cap \Omega_n=\emptyset$ for some $\eps>0$.
 Since $\spc{L}$ is a length space, 
 for any $\delta>0$, there exists a point $y\in \spc{L}$ such that $\dist{x}{y}{}<\tfrac\eps2+\delta$ and $\dist{p}{y}{}<\dist{p}{x}{}-\tfrac\eps2+\delta$. 
-For small enough $\eps$ and $\delta$, 
+For sufficiently small $\eps$ and $\delta$, 
 it follows that $(1-\tfrac{1}{n})\cdot\dist[{{}}]{y}{x}{}
 <
 \dist{p}{x}{}-\dist{p}{y}{}<\tfrac{1}{n}$, 
@@ -246,7 +246,7 @@ Let $\spc{L}\in\CBB{}{\kappa}$.
 We show that if $q\in \Str(p)$, then there is a unique geodesic connecting $p$ and $q$.
 Thus the theorem will follow from Lemma~\ref{lem:straight}.
 
-Note that it is enough to show that for all sufficiently small
+Note that it is sufficient to show that for all sufficiently small
 $t>0$ there is unique point $z$ such that 
 \[t
 =
@@ -279,7 +279,7 @@ Then
 \lim_{\kay\to\infty}
 \angk\kappa q{z_\kay}{r_n}
 =\pi.\] 
-Thus, for any $\eps>0$ and large enough $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}>\pi-\eps$.
+Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}>\pi-\eps$.
 From (1+3)-point comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}<2\cdot\eps$ and thus 
 \[\dist{z_\kay}{z_j}{}<\eps\cdot\Const(\kappa,t);\]
 i.e. $\{z_n\}$ is a Cauchy sequence, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
@@ -520,7 +520,7 @@ to a concavity-like property of the distance functions as defined in Section~\re
 Conceptually, this is quite important step;
 we reformulate a global geometric condition into an infinitesimal condition on distance functions.
 We will give two formulation of this comparison:
-analytical, through function concavity, and geometrical, using development.
+analytical, using function concavity, and geometrical, using development.
 
 \begin{thm}{Theorem}\label{thm:conc} 
 Let $\spc{L}$ be a complete length space. 
@@ -918,7 +918,7 @@ For $\kappa>0$ the proof is very similar to the proof of equivalence of developm
 Applying rescaling, we can assume that $\kappa=1$, 
 therefore $\Lob{2}\kappa=\SS^2$ and $\varpi\kappa=\pi$.
 
-According to \ref{thm:devel}, it is enough to show that  for any point $p\in \spc{L}$ and any geodesic $\gamma\:[0,T]\to \oBall(p,\pi)\backslash \{p\}$, its $\kappa$-development with respect to $p$ is convex.
+According to \ref{thm:devel}, it is sufficient to show that  for any point $p\in \spc{L}$ and any geodesic $\gamma\:[0,T]\to \oBall(p,\pi)\backslash \{p\}$, its $\kappa$-development with respect to $p$ is convex.
 
 \begin{wrapfigure}{r}{31mm}
 \begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/development(0.4)}
@@ -1183,7 +1183,7 @@ $\lim_{n}r(x_n)=0$, a contradiction.
 \parit{Proof of the globalization theorem (\ref{thm:glob}).} 
 Note that since for fixed points $x,y,z\in \spc{L}$, 
 the function $\kappa\mapsto\angk\kappa x y z$ is continuous, 
-it is enough to show that $\spc{L}\in\CBB{}{\kappa}$ 
+it is sufficient to show that $\spc{L}\in\CBB{}{\kappa}$ 
 for any $\kappa<\Kappa$.
 For the rest of the proof we fix some $\kappa<\Kappa$.
 
@@ -1206,7 +1206,7 @@ $$\liminf_{n\to\infty}\ComRad(p_n,\spc{L})>0$$
 for any converging sequence of points $p_n\to p$.
 That makes it possible to apply the lemma on almost minimum (\ref{lem:alm-min}) to the function $p\mapsto \ComRad(p,\spc{L})$.
 
-According to Short hinge lemma (\ref{lem:devel-glob}), it is enough to show that 
+According to Short hinge lemma (\ref{lem:devel-glob}), it is sufficient  to show that 
 \[s_0=\inf_{p\in\spc{L}}\ComRad(p,\spc{L})
 \ge \varpi\kappa\ \ 
 \text{for any}\ \ 
@@ -1575,7 +1575,7 @@ The inequality
 \[\dist{q}{\geod_{[p x]}(t)}{}
 \le\dist{q}{p}{}-t\cdot\cos\phi+o(t)\]
 is an immediate consequence of the first variation inequality (\ref{lem:first-var}).
-Thus, it is enough to show that
+Thus, it is sufficient to show that
 \[\dist{q}{\geod_{[p x]}(t)}{}
 \ge\dist{q}{p}{}-t\cdot\cos\phi+o(t).\]
 Assume the contrary, then there is $\eps>0$, such that  $\phi+\eps<\pi$

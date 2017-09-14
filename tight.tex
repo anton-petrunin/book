@@ -102,7 +102,7 @@ Assume $\xi^0,\xi^1,\dots,\xi^\kay$ is an array of directions in $\Sigma_p$, suc
 Without loss of generality, 
 we may assume that each direction $\xi^i$ is geodesic;
 i.e. for each $i$ there is a geodesic $\gamma^i$ in $\spc{L}$ such that $\gamma^i(0)=p$ and $\xi^i=(\gamma^i)^+(0)$.
-Then the array $a^i=\gamma^i(\eps)$ for small enough $\eps>0$
+Then the array $a^i=\gamma^i(\eps)$ for sufficiently small $\eps>0$
 satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
 \qeds
 
@@ -383,7 +383,7 @@ Fix small $r>0$,
 let $\bar x\in \l]px\r]$ and $\bar z^i\in\l]p z^i\r]$ be points 
 such that $\dist{p}{\bar x}{}=\dist{p}{\bar z^1}{}=\dots=\dist{p}{\bar z^\kay}{}=r$.
 From the definition of angle,
-if $r$ is small enough, we have
+if $r$ is sufficiently small, we have
 \begin{itemize}
 \item $\angk\kappa{p}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$
 and $\angk\kappa{p}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
@@ -420,7 +420,7 @@ $\Xi=\SS^{m-1}\backslash \oBall(\xi,\tfrac\pi2)
 (if $\zeta\in\Xi$ then $\bar\zeta^i=\zeta^i$).
 By straightforward calculations, we get
 \[\dist{\bar\zeta^i}{\bar\zeta^j}{}\ge \dist{\zeta^i}{\zeta^j}{}-\eps>\tfrac\pi2.\]
-Thus, it is enough to show the following claim.
+Thus, it is sufficient to show the following claim.
 
 \begin{clm}{}
 $\pack_{\frac\pi2}\SS^{m-1}_+= m.$
@@ -514,7 +514,7 @@ and a point array $\bm{a}=(a^0,a^1,\dots,a^m)$ in $\spc{L}$.
 Assume we have a convergence $\spc{L}_n\GHto\spc{L}$ with
 $\spc{L}_n\in \CBB{m}{\kappa}$.
 Choose arbitrary liftings $a^i_n$ and $p_n$ in $\spc{L}_n$ of $a^i$ and $p$. 
-If $R>0$ as in Inverse function theorem (\ref{thm:inverse-function}) then for each large enough $n$ the restriction
+If $R>0$ as in Inverse function theorem (\ref{thm:inverse-function}) then for each sufficiently large $n$ the restriction
  $\bm{x}_n=\dist{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
 is a distance chart 
 with strut $y_n=\dist{a^0_n}{}{}|\oBall(p_n,R)$.
@@ -731,7 +731,7 @@ say, given $r>0$ we can assume that $a^i\in\oBall(r,z)$ for each $i$.
 \begin{subthm}{thm:dist-emb:L_n-->L}
 Given a Gromov--Hausdorff convegence
 $\spc{L}_n\GHto\spc{L}$ with $\spc{L}_n\in\CBB{m}{\kappa}$,
-for all large enough $n$
+for all sufficiently large $n$
 the liftings $\dist{\bm{a}_n}{}{}\:\spc{L}_n\to\RR$ of the distance map $\dist{\bm{a}}{}{}$ 
 give an $[\eps,\kay]$-bi-Lipschitz embedding of $\oBall(z_n,R)\subset \spc{L}_n$ for lifting $z_n\in\spc{L}_n$ of $z$.
 \end{subthm}
@@ -861,7 +861,7 @@ and any $x,y\in\oBall(z,R)$.
 Assume we want to choose all $a^i$ in $\oBall(z,r)$ for some $0<r\le R$;
 that is only needed to prove (\ref{SHORT.thm:dist-emb:close.to.z}).
 
-For small enough $\delta>0$,
+For sufficiently small $\delta>0$,
 choose $\bm{a}$ so that the set $\{a^1,a_2,\dots,a^\kay\}$ 
 forms a \emph{maximal $\delta$-packing}\index{maximal $\eps$-packing} in $\oBall(z,r)$;
 i.e. $\kay=\pack_\delta\oBall(z,r)$ and $\dist{a^i}{a^j}{}>\delta$ for all $i\not=j$.
@@ -915,7 +915,7 @@ Assume
 $x,y\in\Omega$, 
 $p\in\oBall(z,r)$,
 and $|\dist{p}{x}{}-\dist{p}{y}{}|\le\eps\cdot\dist[{{}}]{x}{y}{}$
-for small enough $\eps>0$.
+for sufficiently small $\eps>0$.
 Clearly $\dist{x}{y}{}$, $\dist{x}{p}{}$, $\dist{y}{p}{}\le 2\cdot R$;
 thus $\check p\in\RB(2\cdot R;x,y)$.
 Direct calculations show that 

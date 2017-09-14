@@ -204,8 +204,8 @@ i.e. a metric space with the metric defined as restriction of the metric of $\sp
 \item
 A metric space $\spc{X}$ is called \emph{complete}\index{complete space} if any \emph{Cauchy sequence}\index{Cauchy sequence} in $\spc{X}$  converges.
 Namely, a sequence of points $x_n\in\spc{X}$ is called a \emph{Cauchy sequence}\index{Cauchy sequence} if for any $\eps>0$, we have
-$\dist{x_n}{x_m}{}<\eps$ for all large enough $n$ and $m$.
-A sequence of points $x_n\in\spc{X}$ is called \emph{convergent}\index{convergent sequence} if there is $x\in \spc{X}$ such that for any $\eps>0$ we have $\dist{x_n}{x}{}<\eps$ for all large enough $n$.
+$\dist{x_n}{x_m}{}<\eps$ for all sufficiently large $n$ and $m$.
+A sequence of points $x_n\in\spc{X}$ is called \emph{convergent}\index{convergent sequence} if there is $x\in \spc{X}$ such that for any $\eps>0$ we have $\dist{x_n}{x}{}<\eps$ for all sufficiently large $n$.
 
 Let $\spc{X}$ be arbitrary metric space.
 Given two Cauchy sequences $(x_n)$ and $(x'_n)$ in $\spc{X}$,
@@ -236,7 +236,10 @@ the closed ball $\cBall[p,R]\subset\spc{X}$ is compact.
 Proper metric spaces are separable/second countable.
 \end{thm}
 \parit{Proof.}
-Let $\spc{X}$ be  proper metric space and let $p\in \spc{X}$. Since $\spc{X}=\cup_{n=1}^\infty\cBall[p,n]$, to see that $X$ is separable it's clearly enough to construct a countable dense subset in  each $\cBall[p,n]$. For every $m\ge 1$  take  an open cover of $\cBall[p,n]$ by open $1/m$-balls. By compactness of $\cBall[p,n]$ it admits a finite subcover $\oBall(q^m_1,1/m),\ldots, \oBall(q^m_{N_m},1/m)$. Then $\cup_{m, j} \{q^m_j\}$ is a countable dense subset of $\cBall[p,n]$.
+Let $\spc{X}$ be  proper metric space and let $p\in \spc{X}$.
+Since $\spc{X}=\cup_{n=1}^\infty\cBall[p,n]$, to see that $X$ is separable it is sufficient to construct a countable dense subset in  each $\cBall[p,n]$. 
+For every $m\ge 1$  take  an open cover of $\cBall[p,n]$ by open $1/m$-balls.
+By compactness of $\cBall[p,n]$ it admits a finite subcover $\oBall(q^m_1,1/m),\ldots, \oBall(q^m_{N_m},1/m)$. Then $\cup_{m, j} \{q^m_j\}$ is a countable dense subset of $\cBall[p,n]$.
 Lastly, to see that $\spc{X}$ is second countable, let $\{p_i\}_{i=1}^\infty$ be a countable dense subset in $\spc{X}$. \\ Then $\cup_{i,j\ge 1} \oBall(p_i,\frac 1 j)$ is a countable basis of topology of $\spc{X}$.
 \qeds
 

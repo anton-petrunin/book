@@ -182,7 +182,7 @@ Suppose $U_{\a_1}\cap U_{\a_2}\ne \emptyset$. Let $U_1^4\Subset U_1^3\Subset U_1
 $U_2^4\Subset U_2^3\Subset U_2^2\Subset U_2^1\Subset U_{\a_2}$ be open subsets such that $U_1^4, U_2^4$ still cover
 $X\backslash \cup_{\a\in \frak A\backslash\{\a_1,\a_2\}}U_\a$.
 
-By Lemma~\ref{ontolem},  we have $\phi_{\a_1}(U_1^1\cap U_2^1)\subset \phi_{\a_2}(U_{\a_2})$ provided $\delta$ is small enough.
+By Lemma~\ref{ontolem},  we have $\phi_{\a_1}(U_1^1\cap U_2^1)\subset \phi_{\a_2}(U_{\a_2})$ provided $\delta$ is sufficiently small.
 
 Therefore we can consider the open embedding $\phi_{\a_2}^{-1}\circ \phi_{\a_1}\co U_1^1\cap U_2^1\to U_{\a_2}$. Clearly, it is $2\delta$-close to the inclusion $i$. By Lemma~\ref{deflem}, there exists an open embedding $\psi\co U_1^1\cap U_2^1\to U_{\a_2}$, $\varkappa(\delta)$-close to $i$ and such that $\psi\equiv \phi_{\a_2}^{-1}\circ \phi_{\a_1}$ on $U_1^3\cap U_2^3$ and $\psi\equiv i$ on $U_1^1\cap U_2^1\backslash U_1^2\cap U_2^2$. We can extend $\psi$ to $U_2^1$ by setting $\psi\equiv i$ on $U_2^1 \backslash  U_1^2\cap U_2^2$ and define $\phi_{\a_2}'=\phi_{\a_2}\circ\psi$.
 
@@ -195,7 +195,7 @@ Now we define $\phi'\co U_1^4\cup U_2^4\to\tilde{X}$ by the formula
 \end{cases}
 \]
 
-It's clear that $\phi'$ is an open immersion and it's is actually an embedding provided $\delta$ is small enough.
+It is clear that $\phi'$ is an open immersion and it's is actually an embedding provided $\delta$ is sufficiently small.
 
 Moreover, by Lemma~\ref{ontolem} we have 
 \[\tilde{X}\backslash \underset{\a\in \frak A\backslash\{\a_1,\a_2\}}  { \cup}\tilde{U}_\a\subset \phi'(U_1^4\cup U_2^4).\]
@@ -339,7 +339,7 @@ for the unit vectors $h,g,p$ in $\mathbb R^n$ we have that $\langle P(h),P(g)\ra
   \[\d_ph=\sum_\a -a_\a\sin \angle A_\a p \langle \cdot, \Dir{p}{A_\a}\rangle\]
 and therefore $d_ph\in DER(\Sigma_p\Sigma)$.
 
-To prove (\ref{der-der-ineq}) observe that  by linearity of expressions involved it's enough to consider the case $h= \langle \cdot, {A}\rangle, g= \langle \cdot, {B}\rangle$for some $A,B\in\Sigma$. For such $h$ and $g$   (\ref{der-der-ineq})  is a direct consequence of Toponogov and the equality case on the sphere for linear functions.
+To prove (\ref{der-der-ineq}) observe that  by linearity of expressions involved it is sufficient to consider the case $h= \langle \cdot, {A}\rangle, g= \langle \cdot, {B}\rangle$for some $A,B\in\Sigma$. For such $h$ and $g$   (\ref{der-der-ineq})  is a direct consequence of Toponogov and the equality case on the sphere for linear functions.
 
 (\ref{der-single-vector}) is an immediate consequence of the  Sum lemma (\ref{lem:sum}) applied to $h$.
 
@@ -832,7 +832,7 @@ h(r)\le h(p)-c\cdot \dist{p}{r}{}+c\cdot \max_j\{0,f_j(p)-f_j(r)\}
 
 
 \begin{proof}
-Since $h$ is $1$-Lipschitz and $f$  is $\e$-co-Lipschitz, by using Lemma~\ref{lem-tight-diff} it is enough to prove the Sublemma for $r\in B(p,\delta)$ satisfying $f_j(r)\ge f_j(p)+\lambda{\dist{p}{r}{}}^2$ for all $j=1,\ldots,k$. Since $f_j$ is $\lambda$-concave for all $j$ this guaranties  that  $\Dir{p}{r}\subset \Sigma_p^0$. By \eqref{eq:growth} we also have that $\Dir{p}{q_\a}\subset \Sigma_p^0$ which by assumption of the sublemma implies that 
+Since $h$ is $1$-Lipschitz and $f$  is $\e$-co-Lipschitz, by using Lemma~\ref{lem-tight-diff} it is sufficient to prove the Sublemma for $r\in B(p,\delta)$ satisfying $f_j(r)\ge f_j(p)+\lambda{\dist{p}{r}{}}^2$ for all $j=1,\ldots,k$. Since $f_j$ is $\lambda$-concave for all $j$ this guaranties  that  $\Dir{p}{r}\subset \Sigma_p^0$. By \eqref{eq:growth} we also have that $\Dir{p}{q_\a}\subset \Sigma_p^0$ which by assumption of the sublemma implies that 
  that $\angle \Dir{p}{r} \Dir{p}{q_\a} \le \pi/2$ for all $\a$.  (This is the only place in the proof where we use that  $\diam (\Sigma_p^0)\le \pi/2$ i.e that $f$ is incomplementable at $p$). This means that the derivative of $h_\a$ at $p$ in the direction of $r$ is $\le 0$. By semi-concavity of $h_\a$ this implies
 \begin{equation}\label{e:1}
 h_\a(r)\le h_\a(p)+\frac{\lambda}{2} \cdot  {\dist{p}{r}{}}^2
@@ -1143,7 +1143,7 @@ A point $p\in\Omega$ is called regular point of $f$ if there is a representaion 
 In case if there is no such representation, the point $p$ is called critical point of $f$.
 
 The set of regular points of $f$ forms an open set (why???).
-Moreover if $f_n\:\spc{L}_n\to \RR$ DC-converges to a $f\:\spc{L}\to\RR$ and $p\in \spc{L}$ is a regular point of $f$ then all points in a seqence $A_n\ni p_n\to p$ for large enough $n$ are regular points of $f_n$ (why???)
+Moreover if $f_n\:\spc{L}_n\to \RR$ DC-converges to a $f\:\spc{L}\to\RR$ and $p\in \spc{L}$ is a regular point of $f$ then all points in a seqence $A_n\ni p_n\to p$ for sufficiently large $n$ are regular points of $f_n$ (why???)
 
 Let $\spc{L}_n\to \spc{L}_\o$ 
 and $\spc{L}_n\ni p_n\to p_\o\in \spc{L}_\o$ as $n\to\o$.
