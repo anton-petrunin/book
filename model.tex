@@ -4,7 +4,7 @@
 
 \section{Trigonometry}\label{model}
 
-Given a real number $\kappa$, the \emph{model $\kappa$-\hspace{0pt}plane}\index{plane!$\kappa$-plane} will be a complete simply connected 2-\hspace{0pt}dimensional Riemannian manifold of constant curvature $\kappa$.
+Given a real number $\kappa$, the \emph{model $\kappa$-\hspace{0pt}plane}\index{plane!$\kappa$-plane} will be a complete simply connected 2-\hspace{0pt}dimensional Riemannian manifold of constant curvature~$\kappa$.
 
 The  model $\kappa$-plane  will be denoted by $\Lob2\kappa$.
 If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; if $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane; and if $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane.
@@ -18,50 +18,55 @@ The segment $[x y]$ is uniquely defined if $\kappa\le 0$ and if $\kappa>0$ we
 require 
 that $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.%??? otherwise $[x y]$ is considered to be undefined.
 
-A triangle in $\Lob2\kappa$, with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}\footnote{Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for a triple $([y z],[z x],[x y])$.}.
+A triangle in $\Lob2\kappa$, with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}.
+Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for a triple $([y z],[z x],[x y])$.
+
 The angle of $\trig x y z$ at $x$ will be denoted by $\mangle\hinge xyz$\index{$\mangle$}.
 
 By $\modtrig\kappa\{a,b,c\}$\index{$\modtrig\kappa$!$\modtrig\kappa\{{*},{*},{*}\}$} we denote a triangle in 
 $\Lob2\kappa$ with sidelengths $a,b,c$, so 
 $\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$  are such that 
-$\dist{x}{y}{}=c$, $\dist{y}{z}{}=a$, $\dist{z}{x}{}=b$.
+\[\dist{x}{y}{}=c,\quad \dist{y}{z}{}=a,\quad \dist{z}{x}{}=b.\]
 For $\modtrig\kappa\{a,b,c\}$ to be defined, the sides $a,b,c$ must satisfy the triangle inequality.  If $\kappa>0$, we 
 require 
 in addition that $a+b+c<2\cdot\varpi\kappa$; 
 otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
 
 \parbf{Trigonometric functions.}
-We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\sn\kappa$, $\cs\kappa$ and $\md\kappa $;
-$\sn{}$ stands for sine; $\cs{}$,  for cosine; and $\md{}$, for modified distance. They are defined as follows:
-  Let $\sn\kappa$, $\cs\kappa$, $\overline {\md\kappa}\co \RR_{\ge}\to\RR$  be   the solutions of the following IVPs respectively
- 
- \[
+We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\cs\kappa$, $\sn\kappa$ and $\md\kappa$;
+$\cs{}$ stands for \emph{cosine}, $\sn{}$ stands for \emph{sine} and $\md{}$, for \emph{modified distance}. 
+
+They are defined using the solutions of the following initial value problems respectively:
+\[
+\begin{cases}
+ x''+\kappa\cdot x=0,\\
+ x(0)=1,\\
+ x'(0)=0.
+ \end{cases} 
+  \quad 
  \begin{cases}
- x''+kx=0\\
- x(0)=0\\
- x''(0)=1
- \end{cases} \qquad 
-  \begin{cases}
- y''+ky=0\\
- y(0)=1\\
- y'(0)=0
+ y''+\kappa\cdot y=0,\\
+ y(0)=0,\\
+ y'(0)=1.
  \end{cases} 
 \quad
  \begin{cases}
- z''+kz=1\\
- z(0)=0\\
- z'(0)=0
- \end{cases} 
+ z''+\kappa\cdot z=1,\\
+ z(0)=0,\\
+ z'(0)=0.
+ \end{cases}  
 \]
 
-Then set 
-
+We set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$ and 
 \[
 \md\kappa(t)=
-\begin{cases} 
-\overline {\md\kappa} \textrm{ if } 0\le t\le \varpi\kappa \\
-\frac{2}{k} \textrm{ if  } t> \varpi\kappa
-\end{cases}
+\left[
+\begin{aligned}
+z(t)&& \textrm{ if } 0\le t\le \varpi\kappa,
+\\
+\frac{2}{\kappa}&& \textrm{ if  } t> \varpi\kappa.
+\end{aligned}
+\right.
 \]
 
 Here are the tables which relate our trigonometric functions to the standard ones, where 
@@ -77,20 +82,23 @@ we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 \end{align*}
 	
 \begin{align*}
-&\md{\pm\kappa}
-=
+\md{\pm\kappa}
+&=
 \tfrac{1}{\kappa}\cdot \md{\pm1}({x}\cdot {\sqrt{\kappa}});
-&&\md{-1} x=\cosh x-1;\\
-&\md{0} x=\tfrac{1}{2}\cdot x^2; 
-&&\md{1} x
-=
+\\
+\md{-1} x&=\cosh x-1;
+\\
+\md{0} x&=\tfrac{1}{2}\cdot x^2; 
+\\
+\md{1} x
+&=
 \left[
 \begin{aligned}
-&1-\cos x&&\t{for}&&x\le \pi
+&1-\cos x&&\t{for}&&x\le \pi,
 \\
-&2&&\t{for}&&x >\pi
+&2&&\t{for}&&x >\pi.
 \end{aligned}
-\right.;	&
+\right.	&
 \end{align*}
 
 
@@ -188,9 +196,9 @@ Then they have the same sign.
 \end{subthm}
 \end{thm}
 
-\parit{Proof.}
+
 All the properties except Alexandrov's lemma (\ref{SHORT.lem:alex-0}) can be shown by direct calculation. Alexandrov's lemma is reformulated in \ref{lem:alex} and is proved there.
-\qeds
+
 
 
 \parbf{Cosine law.}
