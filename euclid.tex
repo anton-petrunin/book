@@ -1,5 +1,6 @@
 %%!TEX root =the-euclid.tex
-\chapter{The ghost of Euclid%ready
+%arXiv
+\chapter{The ghost of Euclid
 }
 
 \section{Geodesics, triangles and hinges}
@@ -10,9 +11,9 @@ Let $\spc{X}$ be a metric space
 and $\II$\index{$\II$} be a real interval. 
 A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \emph{unit-speed geodesic}\index{unit-speed geodesic}%
 \footnote{Various authors call it differently: \emph{shortest path}, \emph{minimizing geodesic}.}; 
-in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if 
+in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equality
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
-for any pair $s,t\in \II$.
+holds for any pair $s,t\in \II$.
 
 A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \emph{ray}\index{ray}.
 
@@ -20,8 +21,8 @@ A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \emph{line}\index{li
 
 %geodesic between points is not defined???
 A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
-We assume $\geod_{[p q]}$ is parametrized starting at $p$; 
-i.e. $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
+We will always assume $\geod_{[p q]}$ is parametrized starting at $p$; 
+that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
 The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \emph{geodesic}\index{geodesic}.
 The term \emph{geodesic}\index{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
 when a confusion is possible we call the latter a \emph{constant-speed geodesic}\index{constantspeed geodesic}.
@@ -41,15 +42,16 @@ Also we use the following short-cut notation:
 \l[ p q \r[&=[pq]\backslash\{q\}.
 \end{align*}
 
-A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \emph{pregeodesic}.
+%A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \emph{pregeodesic}.
 
 
-In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.  However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we made a choice of geodesic.
+In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.
+However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we fixed a choice of geodesic.
 
 A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \emph{geodesic path}\index{geodesic path}.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
-i.e., 
+that is, 
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
 A curve $\gamma\:\II\to \spc{X}$  is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.  If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
@@ -74,9 +76,12 @@ For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again given a triple $p,q,r\in \spc{X}$ it may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points can not be joined by a geodesic, and also it maybe many different triangles with these vertexes, any of which can be denoted by $\trig p q r$.
-Once we write $\trig p q r$, it means we made a choice of such a triangle, 
-i.e. a choice of each $[q r], [r p]$ and $[p q]$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called \emph{perimeter of triangle} $\trig p q r$;
+Once we write $\trig p q r$, it means we made a choice of such a triangle; 
+that is, a choice of each $[q r], [r p]$ and $[p q]$.
+
+The value 
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\] 
+will be called \emph{perimeter of triangle} $\trig p q r$;
 it obviousely coinsides with perimeter of triple $p$, $q$, $r$ defined below.
 
 \parbf{Hinges.}
@@ -126,14 +131,14 @@ $\angk\kappa p q r$%
 \index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}.
 
 In the notation of Section~\ref{model}, 
-$\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}$.
+\[\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}.\]
 
-\begin{wrapfigure}[10]{r}{35mm}
-\begin{lpic}[t(0mm),b(-10mm),r(0mm),l(0mm)]{pics/lem_alex1(0.4)}
-\lbl[br]{17,59;$p$}
-\lbl[r]{1,2;$q$}
-\lbl[l]{86,13;$r$}
-\lbl[lb]{67,32;$z$}
+\begin{wrapfigure}[6]{r}{28mm}
+\begin{lpic}[t(-0mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
+\lbl[lb]{10,23;$x$}
+\lbl[rt]{1.5,.5;$p$}
+\lbl[bl]{25,7.5;$y$}
+\lbl[lb]{17,15;$z$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -214,26 +219,16 @@ Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} as
 follows:\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
-\lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
+\lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\eqlbl{eq:angle-def}\]
 where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
 
 Similarly to $\angk\kappa p{x}{y}$, 
 we will use short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
 \[\side\kappa \hinge p x y=
-\side\kappa \l\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\r\}.\]
+\side\kappa \l\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\r\},\]
+where the right hand side is defined on page~\pageref{page:model-side}.
 The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
- of hinge $\hinge p x y$.Ð
-
-\parbf{Remark.}\label{page:upper-angle}
-We stick to this definition since in Alexandrov's geometry angles always defined (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
-For general metric spaces, the angle need not be defined\index{$\mangle$!$\mangle^\text{up}$}
-and it is more natural to consider \emph{upper angle}\index{angle!upper angle} which is defined as
-\[\mangle^\text{up}\hinge p x y
-\df
-\limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
-where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
-A good discussion of different definition of angles is given in ???.
-
+ of hinge $\hinge p x y$.
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
 For any $\kappa,\Kappa\in\RR$, there exists  $\Const\in\RR$ such that
@@ -246,7 +241,8 @@ whenever  the lefthand side is defined.
 
 Lemma~\ref{lem:k-K-angle} implies that 
 the definition of angle is independent of $\kappa$.
-In particular, one can take $\kappa=0$ in the definition, so that the angle can be calculated from the  cosine law:
+In particular, one can take $\kappa=0$ in \ref{eq:angle-def};
+in particular the angle can be calculated from the  cosine law:
 \[\cos\angk{0}{p}{x}{y}
 =
 \frac{\dist[2]{p}{x}{}+\dist[2]{p}{y}{}-\dist[2]{x}{y}{}}{2\cdot \dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}}.\]
@@ -273,7 +269,6 @@ Thus, \ref{eq:k-K} follows since
 \]
 %!!!
 where the latter area is at most $\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}$.
-
 %???It is true without assuming $K\le 0$??? if $K\le 0$ and hence, by central projection from a sphere to its tangent plane, is at most $\tan\dist[{{}}]{p}{x}{}\cdot\tan\dist[{{}}]{p}{y}{}$ if $K=1$.
 \qeds
 
@@ -288,50 +283,47 @@ If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then 
 
 \end{thm}
 
-\parbf{Remark.}
-The above theorem also holds for upper angles, see the remark on page \pageref{page:upper-angle}.
 
-
-\parit{Proof.} 
+\parit{Proof.}
 Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
-Set $\gamma^i=\geod_{[px^i]}$.
+Set $\gamma^i\z=\geod_{[px^i]}$.
 Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \begin{align*}
 \dist{\gamma^1(t)}{\gamma^3(\tau)}{}
 \le 
-&\dist{\gamma^1(t)}{\gamma^2(s)}{}+\dist{\gamma^2(s)}{\gamma^3(\tau)}{}<\\
+\ &\dist{\gamma^1(t)}{\gamma^2(s)}{}+\dist{\gamma^2(s)}{\gamma^3(\tau)}{}<\\
 <
-&\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha^{12}+\eps)}+
+\ &\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha^{12}+\eps)}\ +
 \\
 &+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha^{23}+\eps)}\le
 \\
-\intertext{(Below we define 
+\intertext{Below we define 
 $s(t,\tau)$ so that for 
-$s=s(t,\tau)$, this chain of inequalities continues the following way.)}
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:}
 \le
-&\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
+\ &\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
 \end{align*}
-Thus for any $\eps>0$, 
-\[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
-Hence the result.
 
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-0mm),b(-0mm),r(0mm),l(0mm)]{pics/s-choice(0.33)}
-\lbl[rb]{45,101;$t$}
-\lbl[rt]{45,30;$\tau$}
-\lbl[W]{50,65;$s\ \ $}
-\lbl[l]{18,60,-25;$=\alpha^{12}+\eps$}
-\lbl[l]{18,69,24;$=\alpha^{23}+\eps$}
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/s-choice(1)}
+\lbl[w]{12,35,50;$\,t\,$}
+\lbl[w]{12,12,-50;$\,\tau\,$}
+\lbl[w]{14,22.5,4;$\,s\,$}
+\lbl[lw]{9,20,-25;{$=\alpha^{12}+\eps$}}
+\lbl[lw]{9,26,28;{$=\alpha^{23}+\eps$}}
 \end{lpic}
 \end{wrapfigure}
 
+Thus for any $\eps>0$, 
+\[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
+Hence the result follows.
+
 To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
-We parametrize each ray by length from the starting point.
-Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be %a 
-the 
-number such that 
-$\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. Clearly $s\le\max\{t,\tau\}$, % i.e. if $t$ and $\tau$ are both sufficiently small then so is $s$.
-so $t,\tau,s$ may be taken sufficiently small.
+We parametrize each ray by the distance from the starting point.
+Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
+the number such that 
+$\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. 
+Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
 
 \begin{thm}{Exercise}
@@ -375,4 +367,15 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
+\section{Remarks}
+\label{page:upper-angle}
+We use our definition of angle since in Alexandrov's geometry angles always defined (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
 
+For general metric spaces, the angle need not be defined\index{$\mangle$!$\mangle^\text{up}$}
+and it is more natural to consider \emph{upper angle}\index{angle!upper angle} which is defined as
+\[\mangle^\text{up}\hinge p x y
+\df
+\limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
+where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+
+The triangle inequality (\ref{claim:angle-3angle-inq}) holds upper angles as well.

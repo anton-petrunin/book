@@ -91,7 +91,7 @@ and $F\:\spc{X}\to\RR^m$ be  a continuous map.
 A point $\bm{z}\in \Im F$ is called a  \emph{stable value}\index{stable value} of $F$
 if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
 for any continuous map $F'\:\spc{X}\to\RR^m$ which is $\eps$-close to $F$;
-i.e., $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
+that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
 \end{thm}
 
 The following theorem follows from \cite[theorems VI 1$\&$2]{top-dim}.
@@ -139,7 +139,7 @@ Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
 For general metric spaces, $\LinDim$ has almost no  relations to $\HausDim$ and $\TopDim$.
 Also, $\LinDim$ does not satisfy the cover axiom
  (\ref{dim-axiom-sigma}).
-For $\LinDim$, an inverse of the product axiom (\ref{dim-axiom-product}) holds; i.e.,
+For $\LinDim$, an inverse of the product axiom (\ref{dim-axiom-product}) holds; that is,
 \[\LinDim(\spc{X}\times \spc{Y})
 \ge
 \LinDim\spc{X}+ \LinDim\spc{Y}
@@ -167,7 +167,7 @@ it coincides %should we explain why???
 
 One could modify the definition of linear dimension by taking an arbitrary $n$-dimensional Banach space instead of the Euclidean $n$-space.
 Such a definition makes more sense for general metric spaces.
-This dimension is additive with respect to the direct product (i.e. we always have equality in \ref{eq:inverse-product-axiom}). 
+This dimension is additive with respect to the direct product (that is, we always have equality in \ref{eq:inverse-product-axiom}). 
 
 For Alexandrov spaces (either CBB or CBA) this modification is equivalent to the definition we use in this book 
 (compare to Exercise \ref{exer:banach}).
@@ -218,7 +218,7 @@ $\Euk^m=\{p\in \spc{L}\mid$ there is an isometric cone embedding $\EE^m\hookrigh
 \noi contains a dense G-delta set in $\spc{L}$.
 \end{subthmA}
 
-\begin{subthmA}{TopDim} There is a $C^{\frac{1}{2}}$-embedding, i.e. bi-H\"older with exponent $\tfrac{1}{2}$,
+\begin{subthmA}{TopDim} There is a $C^{\frac{1}{2}}$-embedding; that is, an embedding which is bi-H\"older with exponent $\tfrac{1}{2}$,
 \[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R).\]
 \end{subthmA}.
 
@@ -270,7 +270,7 @@ where $\SS^{m-1}$ is the unit sphere in  $\EE^{m}$.
 
 Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\SS^{m-1})$. 
 Choose a \emph{maximal $\eps$-packing} in $\iota(\SS^{m-1})$;
-i.e. an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\SS^{m-1})$ so that $n=\pack_\eps \SS^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+that is, an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\SS^{m-1})$ so that $n=\pack_\eps \SS^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
 
 Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ so that
 $\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$;
@@ -285,7 +285,7 @@ In addition, we can assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa
 From hinge comparison (\ref{angle}),
 $\mangle(\dir{p'}x,\dir{p'}{z^i})>\eps$ 
 and $\mangle(\dir{p'}{z^i},\dir{p'}{z^j})>\eps$;
-i.e. 
+that is, 
 \[\pack_\eps \SS^{\kay-1}\ge n+1>\pack_\eps \SS^{m-1}.\] 
 Hence $\kay>m$.
 \qeds
@@ -312,7 +312,7 @@ Let $\spc{L}\in\CBB{}{\kappa}$ then
 \parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
 
 Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,x^2,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
-i.e., $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Without loss of generality we can assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
 Choose factor $s>0$, so that $\bar r>s\cdot(\dist{p}{\bar p}{}+R)$.
@@ -343,7 +343,7 @@ such that $\dim\Lin_q>m$ for any $q\in A$.
 
 \parit{Proof.} 
 Choose a maximal $\eps$-packing in $\oBall(p,r)$;
-i.e. an array of points $x^1,x^2,\dots, x^n\in\oBall(p,r)$ so that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
+that is, an array of points $x^1,x^2,\dots, x^n\in\oBall(p,r)$ so that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
 Choose a neighborhood $\Omega\ni p$,
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
 Set 
@@ -418,7 +418,7 @@ Since the distance map $\dist{\bm{a}}{}{}$ is Lipschitz,
 for any $r>0$, there is $\Const>0$ such that
 \[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\]
 Applying \ref{pack-homogeneus}, we get similar inequality for any other ball in $\spc{L}$;
-i.e., for any point $q\in\spc{L}$, $R>0$ there is $\Const'>0$ such that 
+that is, for any point $q\in\spc{L}$, $R>0$ there is $\Const'>0$ such that 
 \[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
 
 
@@ -461,7 +461,7 @@ Since $\TopDim W=m$,
 Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
 \[\HausMes_m W>0.\]
 Given $\eps>0$, consider a maximal $\eps$-packing of $W$;
-i.e. an array of points $(x^1,x^2,\dots,x^n)$ in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+that is, an array of points $(x^1,x^2,\dots,x^n)$ in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
 Thus, for all small $\eps>0$,
 \[\pack_\eps W
@@ -533,7 +533,7 @@ Then for any open $\Omega\subset \spc{L}$, we have
 \]
 where $\TopDim$ and $\HausDim$ denotes  topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) correspondingly.
 
-In particular, $\spc{L}$ is dimension homogeneous; i.e. any open set has the same linear dimension.
+In particular, $\spc{L}$ is dimension homogeneous; that is, any open set has the same linear dimension.
 \end{thm}
 
 
@@ -661,7 +661,7 @@ $\oBall(p,\eps)\iso(-\eps,\eps)$.
 \end{wrapfigure}
 
 Assume the contrary;
-i.e., there is 
+that is, there is 
 $$z\in \oBall(p,\eps)\backslash\l]x y\r[.$$
 Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point which maximizes the distance $\dist{p}{q}{}$.
 At  $q$, we have three distinct directions: 
@@ -670,7 +670,7 @@ Moreover, $\mangle\hinge{q}{x}{y}=\pi$.
 Thus, according to Proposition~\ref{E=T}, 
 $\LinDim\spc{L}>1$, a contradiction.
 
-Now assume there is no geodesic passing though $p$. 
+Now assume there is no geodesic passing $p$. 
 Since $\LinDim\spc{L}=1$ there is a point $x\not=p$.
 Take a positive $\eps<\dist{p}{x}{}$.
 Let us show that 
@@ -706,7 +706,7 @@ hence the result.
 \begin{comment}
 \parit{Proof 2.}
 According to \ref{LinDim+-f}, there is a point $p\in\spc{L}$, such that $\T_p\iso\RR$;
-i.e., $\Sigma_p$ consists of two directions $\xi_+$, $\xi_-$ on angle $\pi$.
+that is, $\Sigma_p$ consists of two directions $\xi_+$, $\xi_-$ on angle $\pi$.
 Both of directions $\xi_+$, $\xi_-$ have to be geodesic;
 otherwise the set of geodesic directions $\Sigma_p'$ would not be dense in $\Sigma_p$.
 Let $\gamma_+$ and $\gamma_-$ be maximal geodesics in directions $\xi_+$ and $\xi_-$ correspondingly.
@@ -735,7 +735,7 @@ Hence the result.\qeds
 
 We start with two examples.
 The first example shows that the dimension of a $\cCat{}{}$ space is not local;
-i.e. a $\cCat{}{}$ space might have open sets with different linear dimension.
+that is, a $\cCat{}{}$ space might have open sets with different linear dimension.
 Such an example can be constructed by gluing at one point two Euclidean spaces of different dimensions.
 (According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\cCat{}{0}$ spaces.)
 
@@ -770,7 +770,7 @@ $\bigcap_{i\not=j} B^i\not=\emptyset$ for each $j$
 
 \begin{subthm}{thm:dim-infty-CBA:mnfld} 
 There is a $C^{\frac{1}{2}}$-embedding $\map\:\cBall[1]_{\EE^m}\hookrightarrow \spc{U}$;
-i.e. $\map$ is bi-H\"older with exponent $\tfrac{1}{2}$.
+that is, $\map$ is bi-H\"older with exponent $\tfrac{1}{2}$.
 \end{subthm}
 
 \begin{subthm}{thm:dim-infty-CBA:TopDim}
@@ -817,7 +817,7 @@ and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that
 
 \begin{subthm}{lem:approximation-cba:displacement}
 The \emph{displacement} of composition $\map[2]\circ\map\:\spc{U}\to\spc{U}$ is bounded by $\rho$;
-i.e.,
+that is,
 \[\dist{x}{\map[2]\circ\map(x)}{}<\rho(x)\] 
 for any $x\in\spc{U}$
 \end{subthm}
@@ -839,7 +839,7 @@ By Stone's theorem%ref???
 Thus, we can choose a locally finite covering $\set{\Omega_\alpha}{\alpha\in\IndexSet}$ of $\spc{U}$ such that $\Omega_\alpha\subset \oBall(x,\tfrac{1}{3}\cdot\rho(x))$ for any $x\in \Omega_\alpha$. 
 
 Denote by $\spc{N}$ the nerve of the covering  $\{\Omega_\alpha\}$;
-i.e., $\spc{N}$ is an abstract simplicial complex with set of vertexes formed by $\IndexSet$ such that
+that is, $\spc{N}$ is an abstract simplicial complex with set of vertexes formed by $\IndexSet$ such that
 $\{\alpha^0,\alpha^1,\dots,\alpha^n\}\subset\IndexSet$ 
 are vertexes of a simplex  if and only if
 $\Omega_{\alpha^0}
@@ -884,11 +884,11 @@ In particular
 
 \parit{(\ref{SHORT.lem:approximation-cba:im})}
 Assume the contrary;
-i.e., $\map[2](\spc{N})$ is not inculded in the $\map[2]$-image of $m$-skeleton of $\spc{N}$.
+that is, $\map[2](\spc{N})$ is not inculded in the $\map[2]$-image of $m$-skeleton of $\spc{N}$.
 Then for some $\kay>m$,
 there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$,
 such that the baricentric simplex $\sigma=\map[2]|\Delta^\kay$ is nondegenrate; 
-i.e., 
+that is, 
 $$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\not=\emptyset.
 $$
 Applying Corollary~\ref{cor:LinDim>bary},

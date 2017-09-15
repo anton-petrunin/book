@@ -30,7 +30,7 @@ denote by $\Up Q$,\label{PAGE.def:Up}
 the smallest upper set containing $Q$ 
 and 
 $\Min Q$, the set of minimal elements of $Q$ with respect to $\succcurlyeq$;
-i.e.,
+that is,
 \begin{align*}
 \Up Q 
 &=
@@ -56,7 +56,7 @@ will be called the \emph{web}\index{web} on $\bm{f}$.
 
 Given an array $\bm{f}=(f^0,f^1,\dots,f^\kay)$,
 we denote by $\bm{f}^{\without i}$ the subarray of $\bm{f}$ with $f^i$ removed;
-i.e., 
+that is, 
 \[\bm{f}^{\without i\,}\df(f^0,\dots,f^{i-1},f^{i+1},\dots,f^\kay).\]
 Clearly 
 $\Web\bm{f}^{\without i}\subset \Web\bm{f}$.
@@ -78,7 +78,7 @@ $\InWeb(\dist{x}{}{},\dist{y}{}{})=\Web(\dist{x}{}{},\dist{y}{}{})\backslash\{x,
 \parbf{Barycenters.}
 Let us denote by $\Delta^\kay\subset \RR^{\kay+1}$\index{$\Delta^m$} 
 the \emph{standard $\kay$-simplex}\index{standard simplex}; 
-i.e. $\bm{x}=(x^0,x^1,\dots,x^\kay)\in\Delta^\kay$ if $\sum_{i=0}^\kay x^i=1$ and $x^i\ge0$ for all $i$.
+that is, $\bm{x}=(x^0,x^1,\dots,x^\kay)\in\Delta^\kay$ if $\sum_{i=0}^\kay x^i=1$ and $x^i\ge0$ for all $i$.
 
 Let $\spc{X}$ be a metric space 
 and $\bm{f}=(f^0,f^1,\dots,f^\kay)\:\spc{X}\to \RR^{\kay+1}$ be a function array.
@@ -255,7 +255,7 @@ $\<\bm{x},\bm{y}\>
 \ge
 0$ 
 for any $\bm{y}\succcurlyeq\bm{0}$;
-i.e. $\bm{x}\succcurlyeq\bm{0}$.
+that is, $\bm{x}\succcurlyeq\bm{0}$.
 
 Further, according to Lemma~\ref{lem:argmin(convex)}, 
 the function  
@@ -267,7 +267,7 @@ Note that for any $\bm{u}\in \bar W$ there is $\bm{v}\in S$ such that $\bm{u}\su
 Therefore \ref{eq:v>f(p)} implies that
 \[\bar W\subset\Up[\Min  W]\subset W.\]
 Hence
-$\bar W=W$; i.e. $W$ is closed.
+$\bar W=W$; that is, $W$ is closed.
 \qeds
 
 
@@ -292,7 +292,7 @@ According to Lemma~\ref{lem:argmin(convex)}, $\map(\bm{v})$ is uniquely defined.
 From the definition of web (\ref{def:web}) 
 we have
 $\map\circ\bm{f}(p)=p$ for any $p\in \Web\bm{f}$;
-i.e.,  $\map$ is a left inverse to the restriction $\bm{f}|\Web\bm{f}$.
+that is,  $\map$ is a left inverse to the restriction $\bm{f}|\Web\bm{f}$.
 In particular, 
 \[\Web\bm{f}=\Im\map.
 \eqlbl{eq:Web=Im}\]
@@ -403,7 +403,7 @@ Thus, the same argument as above implies
 \[\dist{\spx{\bm{f}}(\bm{y})}{\spx{\bm{f}}(\bm{z})}{}
 =
 \ell\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
-for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$, i.e., $\spx{\bm{f}}$ is locally Lipschitz.
+for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
 Since  $\Delta^\kay$ is compact,  $\spx{\bm{f}}$ is Lipschitz.
 
 Clearly $\spx{\bm{f}}(\Delta^\kay)\subset \Web \bm{f}$;
@@ -416,10 +416,10 @@ Let $\bm{x}$ be a subnormal vector to $W$ at $\bm{f}(p)$.
 According to Lemma~\ref{lem:Up-convex}, 
 $\bm{x} \succcurlyeq\bm{0}$.
 Without loss of generality we may assume that $\sum_i x^i=1$;
-i.e. $\bm{x}\in \Delta^\kay$.
+that is, $\bm{x}\in \Delta^\kay$.
 By Lemma~\ref{lem:argmin(convex)},
 $p$ is the unique minimum point of $\sum_i x^i\cdot f^i$;
-i.e., $p=\spx{\bm{f}}(\bm{x})$.
+that is, $p=\spx{\bm{f}}(\bm{x})$.
 \qeds
 
 
@@ -437,7 +437,7 @@ $\dist{\bm{a}}{}{}$
 denotes the distance map $(\dist{a^0}{}{},\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1}$
 which can be also regarded as a function array.
 The \emph{radius of the point array}\index{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
-i.e.,
+that is,
 \[\rad\bm{a}=\inf\set{r>0}{a^i\in \oBall(z,r)\ \t{for all}\ i \ \t{and some}\ z\in\spc{U}}.\]%!!!
 
 Fix $\kappa\in\RR$.
@@ -645,7 +645,7 @@ Now let us show the following claim.
 \end{clm}
 
 Indeed, 
-assume the contrary, i.e., 
+assume the contrary; that is, 
 \[
 p\in B^j
 \eqlbl{eq:p-in-Bj}
@@ -668,7 +668,7 @@ From the definition of web, it also follows that
 \[\Web\dist{\bm{a}^{\without j}}{}{}\subset \bigcup_{i\not=j}B^i.\]
 Therefore, the claim implies that
 $p\notin\Web\dist{\bm{a}^{\without j}}{}{}$ for each $j$;
-i.e., $p\in\InWeb\dist{\bm{a}}{}{}$.
+that is, $p\in\InWeb\dist{\bm{a}}{}{}$.
 \qeds
 
 
@@ -691,7 +691,7 @@ the $\dist{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\di
 \end{thm}
 
 Note that if $\bm{a}$ is degenerate,
-i.e., if $\InWeb\dist{\bm{a}}{}{}=\emptyset$, 
+that is, if $\InWeb\dist{\bm{a}}{}{}=\emptyset$, 
 then
 the domain of web embedding $\map$ above is empty and hence the conclusion of the theorem trivially holds.
 
@@ -788,7 +788,7 @@ Lemma~\ref{lem:nondeg-test-with-balls} finishes the proof.
 \parit{Proof of \ref{thm:loc-lip-inverse}.}
 From \ref{prop-def:web-embedding}, it is sufficient to show that 
 the $\map$ is Lipshitz.
-Assume the contrary; i.e., there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
+Assume the contrary; that is, there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
 \[\frac{\dist{\map(\bm{y}_n)}{\map(\bm{z}_n}{})}{|\bm{y}_n-\bm{z}_n|}
 \to\infty
 \ \ 
