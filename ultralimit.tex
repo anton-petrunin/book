@@ -1,7 +1,8 @@
+%arXiv
 \chapter{Ultralimits}
 
 Here we introduce ultralimits of sequence of points, metric spaces and functions.
-The ultralimits of metric spaces can be considered as an extension of Gromov--Hausdorff convergence since the ultralimit is isometric to the Gromov--Hausdorff limit once the later is defined.
+The ultralimits of metric spaces can be considered as a variation of Gromov--Hausdorff convergence.
 Our presentation is based on \cite{kleiner-leeb}.
 
 In this book, the use of ultralimits is very limited; 
@@ -37,6 +38,11 @@ there is a set $S\subset \NN$ such that $\o(S)=1$ and $S\cap C_\alpha$ is a one-
 \end{subthm}
 \end{thm}
 
+If $\o(S)=0$ for some subset $S\subset \NN$,
+we say that $S$ is \emph{$\o$-small}. 
+If $\o(S)=1$, we say that $S$ contains \emph{$\o$-almost all} elements of $\NN$.
+
+\parbf{Classical definition.}
 More commonly nonprinciple ultrafilter is defined as a collection, say $\mathfrak{F}$ of sets in $\NN$ such that
 \begin{enumerate}
 \item\label{filter:supset} if $P\in \mathfrak{F}$ and $Q\supset P$ then $Q\in \mathfrak{F}$,
@@ -54,17 +60,18 @@ Thus there is an ultrafilter $\mathfrak{F}$ which contained in the filter of all
 The existence of selective ultrafilter follows from continuum hypothesis;
 it was proved by  Rudin in \cite{rudin}.
 
+\parbf{Stone--\v{C}ech compactification.}
 Given a set $S\subset \NN$, consider subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
 It is straightforward to check that the sets $\Omega_S$ for all $S\subset \NN$ form a topology on the set of ultrafilters on $\NN$. 
 The obtained space is called \emph{Stone--\v{C}ech compactification} of $\NN$;
 it is usually denoted as $\beta\NN$.
-There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined as following
-$n\mapsto\o_n$, $\o_n(S)=1$ if and only if $n\in S$. 
-(The image of $\NN$ is formed by the principle ultrafilters.)
-Thus we can (and will) consider $\NN$ as a subset of $\beta\NN$.
 
-The space $\beta\NN$ is the maximal compact Hausdorff space which contains $\NN$  as an everywhere dense subset;
-more precisely, for any compact Hausdorff space $\spc{X}$ 
+There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined as
+$n\mapsto\o_n$, where $\o_n$ is the principle ultrafilter such that $\o_n(S)=1$ if and only if $n\in S$. 
+Using the described embedding, we can (and will) consider $\NN$ as a subset of $\beta\NN$.
+
+The space $\beta\NN$ is the maximal compact Hausdorff space which contains $\NN$  as an everywhere dense subset.
+More precisely, for any compact Hausdorff space $\spc{X}$ 
 and a map $f\:\NN\to \spc{X}$ there is unique continuous map $\bar f\:\beta\NN\to X$ such that the restriction $\bar f|\NN$ coincides with $f$. 
 
 \section{Ultralimits of points}
@@ -84,7 +91,8 @@ x_n\to x_\o\ \t{as}\ n\to\o.\]
 For example if $\o$ is the principle ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$ then
 $x_\o=x_n$.
 
-Note that $\o$-limits of a sequence and its subsequence may differ, say in general
+Note that $\o$-limits of a sequence and its subsequence may differ.
+For example, in general
 \[\lim_{n\to\o}x_n
 \ne
 \lim_{n\to\o}x_{2\cdot n}.\]
@@ -125,7 +133,7 @@ If $\o(C_\infty)=1$, we can take the sequence $(x_n)_{n\in C_\infty}$.
 Otherwise discarding all empty sets among $C_\kay$ and $C_\infty$ gives a partition of $\NN$ into countable collection of $\o$-small sets.
 Since $\o$ is selective, we can choose a set $S\subset\NN$ such that
 $S$ meets each set of the partition at one point and $\o(S)=1$.
-Clearly the sequence $(x_n)_{n\in S}$ converges to $x_o$ in the usual sense.
+Clearly the sequence $(x_n)_{n\in S}$ converges to $x_\o$ in the usual sense.
 \qeds
 
 The following proposition 
@@ -152,20 +160,15 @@ is defined and does not depend on the choice of subsequence,
 then the sequence $(x_n)$ converges in the usual sense.
 \end{thm}
 
-\parit{Proof.} Assume that $(x_n)$ is not a Cauchy sequence. 
+\parit{Proof.} Assume that $(x_n)$ does not converge in itself. 
 Then for some $\eps>0$, there is a subsequence $(y_n)$ of $(x_n)$ such that $\dist{x_n}{y_n}{}\ge\eps$ for all $n$.
 
 It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
 
-\begin{thm}{Corollary}\label{cor:two-geodesics-in-ultrapower}
-Assume $\spc{X}$ is a complete length space 
-and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  
-Then there are at least two distinct geodesics between $p$ and $q$ 
-in the ultrapower $\spc{X}^\o$.
-\end{thm}
 
 \section{Ultralimits of spaces}\label{sec:Ultralimit of spaces}
 
+From now on, $\o$ denotes a selective ultrafilter on the set of natural numbers.
 
 Let $\spc{X}_n$ be a sequence of metric spaces
 $\spc{X}_n$ .
@@ -198,8 +201,88 @@ we will denote by $x_\o$ its equivalence class which is a point in $\spc{X}_\o$;
 equivalently we will write
 \[x_n\to x_\o \ \ \text{as}\ \  n\to\o\ \ \text{or}\ \ x_\o=\lim_{n\to\o} x_n.\]
 
+\begin{thm}{Observation}\label{obs:ultralimit-is-complete}
+The $\o$-limit of any sequence of metric spaces is complete. 
+\end{thm}
 
-\parbf{Gromov--Hausdorff convergence versus ultralimits.}  
+\parit{Proof.}
+Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
+
+Fix a Cauchy sequence $x_m\in \spc{X}_\o$.
+Passing to a subsequence we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$.
+
+Let us choose double sequence $x_{n,m}\in \spc{X}_n$ such that $x_{n,m}\to x_m$ for each $m$ as $n\to\o$.
+
+Set 
+\[S_{m}=\set{n\in\NN}{\dist{x_{n,m}}{x_{n,m-1}}{}<\tfrac1{2^m}}.\]
+Note that for each $m$ the set $S_{m}$ contains $\o$-almost all elements of $\NN$.
+We assume that $S_1=\NN$.
+
+For each $n$ consider the largest value $m(n)$ such that $m(n)\le n$
+and $m(n)\in S_{m}$.
+Consider the sequence $y_n=x_{n,m(n)}$;
+denote by $y\in \spc{X}^\o$ its $\o$-limit.
+By construction $x_n\to y$ as $n\to \infty$.
+Hence the statement follows.  
+\qeds
+
+
+\parbf{Ultrapower.} If all the metric spaces in the sequence are identical $\spc{X}_n=\spc{X}$, 
+its $\o$-limit 
+$\lim_{n\to\o}\spc{X}_n$
+is denoted by $\spc{X}^\o$
+and called $\o$-power of $\spc{X}$.
+ 
+According to Theorem~\ref{thm:ultra-GH},
+there is a distance preserving map
+$\iota:\spc{X}\hookrightarrow \spc{X}^\o$, here $\iota(y)$ is the equivalence class of constant sequence $y_n=y$. 
+
+The image $\iota(\spc{X})$ might be proper subset of $\spc{X}^\o$.
+For example $\RR^\o$ has pairs of points on distance $\infty$ from each other although each metric component of $\RR^\o$ is isometric to $\RR$.
+
+According to Theorem~\ref{thm:ultra-GH}, 
+if $\spc{X}$ is compact then $\iota(\spc{X})=\spc{X}^\o$;
+in particular, $\spc{X}^\o$ is isometric to $\spc{X}$.
+If $\spc{X}$ is proper then $\iota(\spc{X})$ forms a metric component of $\spc{X}^\o$.
+
+The embedding $\iota$ gives us right to treat $\spc{X}$ as a subset of its ultrapower $\spc{X}^\o$. 
+
+\begin{thm}{Observation}
+Let $\spc{X}$ be a complete metric space. 
+Then $\spc{X}^\o$ is geodesic space if and only if $\spc{X}$ is a length space.
+\end{thm}
+
+\parit{Proof.}
+Assume $\spc{X}^\o$ is geodesic space.
+Then any pair of points $x,y\in \spc{X}$ has a midpoint $z_\o\in\spc{X}^\o$.
+Fix a sequence of points $z_n\in  \spc{X}$ such that $z_n\to z_\o$ as $n\to \o$.
+
+Note that 
+$\dist{x}{z_n}{\spc{X}}\to \tfrac12\cdot \dist{x}{}{\spc{X}}$
+and 
+$\dist{y}{z_n}{\spc{X}}\to \tfrac12\cdot \dist{x}{}{\spc{X}}$
+as 
+$n\to\o$.
+In particular, for any $\eps>0$, the point $z_n$ is an $\eps$-midpoint of $x$ and $y$ for $\o$-almost all $n$.
+It remains to apply Lemma~\ref{lem:mid>geod}.
+
+If $\spc{X}$ is a length space then for any pair of points $x$ and $y$ there is a sequence of $\tfrac1n$-midpoints $z_n$;
+its $\o$-limit $z_\o$ is a midpoint of $x$ and $y$ in $\spc{X}^\o$.
+
+By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}^\o$ is complete.
+Applying Lemma~\ref{lem:mid>geod} we get the statement.
+\qeds
+
+\begin{thm}{Corollary}\label{cor:two-geodesics-in-ultrapower}
+Assume $\spc{X}$ is a complete length space 
+and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  
+Then there are at least two distinct geodesics between $p$ and $q$ 
+in the ultrapower $\spc{X}^\o$.
+\end{thm}
+
+
+
+\section{Gromov--Hausdorff convergence and ultralimits}  
 
 \begin{thm}{Theorem}\label{thm:ultra-GH}
 Assume $\spc{X}_n$ is a sequence of complete spaces. 
@@ -287,78 +370,62 @@ Apply Theorem~\ref{thm:ultra-GH}
 for the images $\spc{Y}_n=\gamma_n([0,1])\subset \spc{X}_n$.
 \qeds
 
+\section{Ultralimits of sets}
 
-\parbf{Ultrapower.} If all the metric spaces in the sequence are identical $\spc{X}_n=\spc{X}$, 
-its $\o$-limit 
-$\lim_{n\to\o}\spc{X}_n$
-is denoted by $\spc{X}^\o$
-and called $\o$-power of $\spc{X}$.
- 
-According to Theorem~\ref{thm:ultra-GH},
-there is a distance preserving map
-$\iota:\spc{X}\hookrightarrow \spc{X}^\o$, here $\iota(y)$ is the equivalence class of constant sequence $y_n=y$. 
+Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to \spc{X}_\o$
+as $n\to \o$.
 
-The image $\iota(\spc{X})$ might be proper subset of $\spc{X}^\o$.
-For example $\RR^\o$ has pairs of points on distance $\infty$ from each other although each metric component of $\RR^\o$ is isometric to $\RR$.
+For a sequence of sets $\Omega_n\subset \spc{X}_n$,
+consider the maximal set $\Omega_\o\subset \spc{X}_\o$ such that 
+for any $x_\o\in\Omega_\o$ and any sequence $x_n\in\spc{X}_n$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
 
-According to Theorem~\ref{thm:ultra-GH}, 
-if $\spc{X}$ is compact then $\iota(\spc{X})=\spc{X}^\o$;
-in particular, $\spc{X}^\o$ is isometric to $\spc{X}$.
-If $\spc{X}$ is proper then $\iota(\spc{X})$ forms a metric component of $\spc{X}^\o$.
+The set $\Omega_\o$ is called \emph{open $\o$-limit} of $\Omega_n$;
+we could also write it as $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
 
-The embedding $\iota$ gives us right to treat $\spc{X}$ as a subset of its ultrapower $\spc{X}^\o$. 
-
-\begin{thm}{Lemma}
-Let $\spc{X}$ be a complete metric space. 
-Then $\spc{X}^\o$ is geodesic space if and only if $\spc{X}$ is an length space.
-\end{thm}
+Applying Observation~\ref{obs:ultralimit-is-complete} to the sequence of complements $\spc{X}_n\backslash \Omega_n$, we get that $\Omega_\o$ is open for any sequence $\Omega_n$.
+Despite that the definition can be applied for arbitrary sequences of sets,
+the open $\o$-convergence will be applied only for sequences of open sets.
 
 \section{Ultralimits of functions}
 
-Let $\spc{X}_n$ be a sequence of metric spaces with marked points $\star_n\in \spc{X}_n$.
-Assume $(\spc{X}_n,\star_n)\to (\spc{X}_\o,\star_\o)$
-as $n\to \o$.
-
 Let $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
-Consider the set $\Omega$ of all points $x_\o\in \spc{X}_\o$ 
-such that if $x_n\to x_\o$
-as $n\to\o$ 
-for a sequence $x_n\in \spc{X}_n$
-then $x_n\in \Dom f_n$ for $\o$-almost all $n$.
-Note that $\Omega$ is open.
 
-Assume there is a function $f_\o\:\Omega\to\RR$
-which satisfies the following condition.
-For any $x_\o\in \Omega$
-and any sequence of points $x_n\in\spc{X}_n$
-if $x_n\to x_\o$ as $n\to\o$ then $f_n(x_n)\to f_\o(x_o)$ as $n\to\o$.
+Set $\Omega_n=\Dom f_n$.
+Consider the open $\o$-limit set $\Omega_\o\subset \spc{X}_\o$ of $\Omega_n$.
+
+Assume there is a subfunction $f_\o\:\spc{X}_\o\subto\RR$
+which satisfies the following conditions: 
+(1) $\Dom f_\o=\Omega_\o$ and (2) if $x_n\to x_\o\in \Omega_\o$ for a sequence of points $x_n\in\spc{X}_n$, then $f_n(x_n)\to f_\o(x_\o)$ as $n\to\o$.
 In this case 
-the subfunction $f_\o\:\spc{L}_\o\to\RR$ 
+the subfunction $f_\o\:\spc{X}_\o\to\RR$ 
 is said to be 
-$\o$-limit of $f_n\:\spc{L}_n\to\RR$.
+$\o$-limit of $f_n\:\spc{X}_n\to\RR$.
 
 The following lemma gives a mild condition on a sequence of functions $f_n$
-which guarantee the existence of $\o$-limit.
+which guarantee the existence of its $\o$-limit.
 
 \begin{thm}{Lemma}
-Let $\spc{X}_n$ be a sequence of metric spaces with marked points $\star_n\in \spc{X}_n$.
-Assume $(\spc{X}_n,\star_n)\to (\spc{X}_\o,\star_\o)$
-as $n\to \o$
+Let $\spc{X}_n$ be a sequence of metric spaces.
 and $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 
-Given $\eps>0$, 
-consider open set
-\[\Omega_n^\eps=\set{x_n\in\spc{X}_n}{\dist{(\spc{L}\backslash\Dom f_n)}{x_n}{}>\eps, \dist{\star_n}{x_n}{}<\tfrac1\eps
-}.\]
-
-Then if for any $\eps>0$ the restrictions $f_n|\Omega_n^\eps$ are uniformly bounded and uniformly continuous then $\o$-limit $f_\o\:\spc{L}_\o\to\RR$
-of $f_n$ is defined.
+Assume for any positive integer $\kay$, there is an open set $\Omega_n(\kay)\subset \Dom f_n$
+such that the restrictions $f_n|\Omega_n(\kay)$ are uniformly bounded and continuous
+and the open $\o$-limit of $\Omega_n(n)$ coincides with the open $\o$-limit of $\Dom f_n$.
+Then $\o$-limit of $f_n$ is defined.
 
 In particular if $f_n$ are uniformly bounded and continuous then 
 the $\o$-limit is defined.
 \end{thm}
 
 The proof is straightforward.
+
+\begin{thm}{Exercise}\label{ex:nonconvex-limit}
+Construct a sequence of compact length spaces 
+$\spc{X}_n$  
+with a converging sequence of $\Lip$-Lipschitz concave functions $f_n\:\spc{X}_n\to\RR$ such that
+the $\o$-limit $\spc{X}_\o$ of $\spc{X}_n$ is compact
+and the $\o$-limit $f_\o\:\spc{X}_\o\to\RR$ of $f_n$ is not concave.
+\end{thm}
 
 If $f\:\spc{X}\subto\RR$ be a subfunction.
 The $\o$-limit of constant sequence $f_n=f$ is called $\o$-power of $f$ and denoted by $f^\o$.
@@ -372,12 +439,5 @@ if $\oBall(x,\eps)_{\spc{X}}\subset \Dom f$
 then $\oBall(x,\eps)_{\spc{X}^\o}\subset \Dom f^\o$.
 
 
-\begin{thm}{Exercise}\label{ex:nonconvex-limit}
-Construct a sequence of compact length spaces 
-$\spc{X}_n$  
-with a converging sequence of $\Lip$-Lipschitz concave functions $f_n\:\spc{X}_n\to\RR$ such that
-the $\o$-limit $\spc{X}_\o$ of $\spc{X}_n$ is compact
-and the $\o$-limit $f_\o\:\spc{X}_\o\to\RR$ of $f_n$ is not concave.
-\end{thm}
 
 

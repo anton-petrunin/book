@@ -202,18 +202,18 @@ that is, a metric space with the metric defined as restriction of the metric of 
 %if its underlying set is finite. ??? I don't think there is any need to define this. V.
 
 \item
-A metric space $\spc{X}$ is called \emph{complete}\index{complete space} if any \emph{Cauchy sequence}\index{Cauchy sequence} in $\spc{X}$  converges.
-Namely, a sequence of points $x_n\in\spc{X}$ is called a \emph{Cauchy sequence}\index{Cauchy sequence} if for any $\eps>0$, we have
+A metric space $\spc{X}$ is called \emph{complete}\index{complete space} if any converging in itself sequence converges.
+Namely, a sequence of points $x_n\in\spc{X}$ \emph{convergence in itself}\index{converges in itself} or \index{Cauchy sequence}\emph{Cauchy} if for any $\eps>0$, we have
 $\dist{x_n}{x_m}{}<\eps$ for all sufficiently large $n$ and $m$.
 A sequence of points $x_n\in\spc{X}$ is called \emph{convergent}\index{convergent sequence} if there is $x\in \spc{X}$ such that for any $\eps>0$ we have $\dist{x_n}{x}{}<\eps$ for all sufficiently large $n$.
 
 Let $\spc{X}$ be arbitrary metric space.
-Given two Cauchy sequences $(x_n)$ and $(x'_n)$ in $\spc{X}$,
+Given two converging in itself sequences $(x_n)$ and $(x'_n)$ in $\spc{X}$,
 the following limit is always defined:
 \[\rho((x_n),(x'_n))
 =
 \lim_{n\to\infty}\dist{x_n}{x_n'}{\spc{X}}\]
-and $\rho$ gives a pseudometric on the set of all Cauchy sequences in $\spc{X}$.
+and $\rho$ gives a pseudometric on the set of all senseless in $\spc{X}$ which are converging in itself.
 The corresponding metric space $\spc{Z}$ is called the \emph{completion} of $\spc{X}$,  briefly, $\spc{Z}=\overline{\spc{X}}$.
 
 Note that there is a natural embedding $\spc{X}\hookrightarrow\overline{\spc{X}}$; 
@@ -278,7 +278,7 @@ Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
 
 \parit{Proof.}
 Let $U\subset\spc{X}$ be open. We need to show that $U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset$. Since $\Omega_1$ is open and dense, there is $p_1\in\spc{X}$ and $r_1>0$ such that $\cBall[p_1,r_1]\subset  U\cap \Omega_1$. Since $\Omega_2$ is open and dense there is $p_2\in\spc{X},0<r_2<r_1/2$ such that $\cBall[p_2,r_2]\subset \oBall(p_1,r_1)\cap \Omega_2\subset U\cap\Omega_1\cap\Omega_2$. Proceeding by induction we can construct a sequence of balls $\cBall(p_i,r_i)$ such that $0<r_i<\frac {r_{i-1}}{2}$ satisfying  $\cBall[p_i,r_i]\subset \oBall(p_{i-1},r_{i-1})\cap \Omega_i\subset U\cap \bigl(\bigcap_{k=1}^i\Omega_k
- \bigr)$. Then the sequence $\{p_i\}$ is Cauchy and hence, by completeness of $\spc{X}$ we have that $p_i\to p$. By construction, $p_i\in \cBall[p_j,r_j]$ for all $i\ge j$ and hence the same is true for $p$. Thus, $p\in U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset $. \qeds
+ \bigr)$. Then the sequence $\{p_i\}$ converges in itself and hence, by completeness of $\spc{X}$ we have that $p_i\to p$. By construction, $p_i\in \cBall[p_j,r_j]$ for all $i\ge j$ and hence the same is true for $p$. Thus, $p\in U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset $. \qeds
  
  Recall that a family of maps between metric spaces $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
 \begin{thm}{Arzel\`a-Ascoli theorem}\cite[Lemma 3.10]{BH}
@@ -635,7 +635,7 @@ the set of equivalence classes will coincide with the set of points in the metri
 \begin{thm}{Proposition}\label{prop:length-X}
 Let $\spc{X}$ be a length space and 
 $\sim$ be an equivalence relation on $\spc{X}$ then $\spc{X}/{\sim}$
-is an length space.
+is a length space.
 \end{thm}
 
 \parit{Proof.}

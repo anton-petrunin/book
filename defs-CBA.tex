@@ -142,7 +142,7 @@ By the law of cosines, $\angk{\kappa} {p^1}{z_n}{p^2}$ and $\angk{\kappa} {p^2}{
 
 Let us apply (2+2)-point comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z_\kay$ with large $n$ and $\kay$.
 We conclude that  $\angk{\kappa} {p}{z_n}{z_\kay}$ is arbitrarily small when $n,\kay$ are sufficiently large and $p$ is either $p^1$ or $p^2$.  
-By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ is a Cauchy sequence.  
+By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ converges in itself.  
 
 Since $\spc{U}$ is complete, the sequence $(z_n)$ converges to a midpoint of $p^1$ and $p^2$. 
 By Lemma~\ref{lem:mid>geod} the existence of a geodesic $[p^1p^2]$.
@@ -1019,7 +1019,7 @@ The proof of Patchwork globalization uses the following construction:
 
 \begin{thm}{Definition (Line-of-sight map)} \label{def:sight}
 %Let $\spc{U}$ be a metric space in which pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs. 
-Let  $p$ be a point and $\alpha$ be a curve of finite length in  an length space $\spc{X}$. 
+Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
 Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic from $p$ to $\bar\alpha(t)$, we say 
 \[[
 0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
@@ -1493,7 +1493,7 @@ The following lemma from \cite{a-b:cbc}
 is a key step in the proof.
 
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
-Let $\spc{U}$ be an length space 
+Let $\spc{U}$ be a length space 
 with $\curv\spc{U}\le\kappa$,
 and suppose $p\in\spc{U}$, $R\le\varpi\kappa/2$.  Assume the ball  $\cBall[p,\bar{R}]$ is complete
 for all $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$, 
