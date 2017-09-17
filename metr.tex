@@ -258,15 +258,16 @@ i) $\Rightarrow$ ii)  and ii) $\Rightarrow$  iii) are  obvious. We will leave ii
 Let us prove that ii) implies i). Let $\{U_\alpha\}_{\alpha\in\mathcal A}$ be an open cover of $\spc{X}$. 
 We claim that there is an $\eps>0$ such that for any $p\in \spc{X}$ there is $\alpha\in\mathcal A$ such that $\oBall(p_i,\eps)\subset U_\alpha$. Such $\eps$ is called the \emph{ Lebesgue number} \index{ Lebesgue number} of the cover  $\{U_\alpha\}_{\alpha\in\mathcal A}$.
 
-Suppose no such $\eps$ exists. Then there exists a sequence of points $p_i\in\spc{X}$ such that $\oBall(p_i,1/i)$ is not contained in any $U_\alpha$. By sequential compactness by passing to a subsequence we can assume that $p_i\to p$. Then $p\in U_{\alpha_0}$ for some $\alpha_0$ and since $U_{\alpha_0}$ is open it follows that $\oBall(p_i,1/i)\subset U_{\alpha_0}$ for all large $i$. This is a contradiction and hence the cover $\{U_\alpha\}_{\alpha\in\mathcal A}$ admits  a positive Lebesgue number $\eps$. Then by iii) there is a finite $\eps$ net $p_1,\ldots,p_{N}$ in $\spc{X}$. By the choice of $\eps$ for each $i$ there is $\alpha_i$ such that
-$\oBall(p_i,\eps)\subset U_{\alpha_i}$. Then $\cup_{i=1}^NU_{\alpha_i}=\spc{X}$.
+Suppose no such $\eps$ exists.
+Then there exists a sequence of points $p_i\in\spc{X}$ such that $\oBall(p_i,1/i)$ is not contained in any $U_\alpha$.
+By sequential compactness by passing to a subsequence we can assume that $p_i\to p$.
+Then $p\in U_{\alpha_0}$ for some $\alpha_0$ and since $U_{\alpha_0}$ is open it follows that $\oBall(p_i,1/i)\subset U_{\alpha_0}$ for all large $i$.
+This is a contradiction and hence the cover $\{U_\alpha\}_{\alpha\in\mathcal A}$ admits  a positive Lebesgue number $\eps$.
+Then by iii) there is a finite $\eps$ net $p_1,\ldots,p_{N}$ in $\spc{X}$. 
+By the choice of $\eps$ for each $i$ there is $\alpha_i$ such that
+$\oBall(p_i,\eps)\subset U_{\alpha_i}$. 
+Then $\cup_{i=1}^NU_{\alpha_i}=\spc{X}$.
 \qeds 
-%\parbf{Types of metric spaces.}
-%\begin{thm}{Proposition}
-%A locally compact length space is proper. !!! this is false., e.g. $(0,1)$.
-%\end{thm}
-
-
 
 A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset.
 
