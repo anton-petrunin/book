@@ -7,9 +7,9 @@
 
 The technique of gradient flow takes it roots in Sharafutdinov's retraction, 
 which was introduced in \cite{sharafutdinov} and used  widely in comparison geometry since then.
-In $\CBB{}{}$-spaces, it was first used by in  \cite{perelman-petrunin:qg}.
+In $\Alex{}$ spaces, it was first used by in  \cite{perelman-petrunin:qg}.
 Bit later, independently Jost and Mayer in \cite{jost} and \cite{mayer} 
-used the gradient flow in $\cCat{}{}$-spaces; 
+used the gradient flow in $\cCat{}{}$ spaces; 
 this approach has been refined in \cite{grad-flow-book}.
 Later, Lytchak in \cite{lytchak:open-map}, 
 unified and generalized these two approaches
@@ -26,7 +26,7 @@ describes ``gradient vector field'' and its properties.
 \item Sections \ref{sec:gradient-like}--\ref{sec:Gradient flow} describe gradient curves and gradient flow;
 gradient-like curves are needed to introduce gradient curves.
 \item Sections \ref{sec:Radial curves: definition}--\ref{sec:gexp} describe radial curves and gradient exponent. 
-It is analog of exponential map which is defined for $\CBB{}{}$-spaces; it has many important properties of the ordinary exponential map
+It is analog of exponential map which is defined for $\Alex{}$ spaces; it has many important properties of the ordinary exponential map
 and in certain respects it is ``better'',
 even in Riemannian case.
 \end{itemize}
@@ -38,7 +38,7 @@ not necessary locally Lipschitz.
 
 One of the technical difficulties in Alexandrov's geometry comes from
 nonextendability of geodesics. 
-In particular, for $\spc{L}\in\CBB{}{}$ and a point $p\in \spc{L}$, 
+In particular, for $\spc{L}$ is a complete length $\Alex{}$ space and a point $p\in \spc{L}$, 
 the exponential map, $\exp_p\:\T_p\to \spc{L}$, if defined the usual way, can
 be undefined in an arbitrary small neighborhood of the origin in $\T_p$. 
 Here we construct its analog --- the \emph{gradient exponential map},
@@ -82,7 +82,7 @@ even in Riemannian case.
 \section{Gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition of gradient}\label{def:grad} 
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $f\:\spc{L}\subto\RR$ be a subfunction
 and for a point
 $p\in\Dom f$ the differential $\d_p f\:\T_p\to\RR$ is defined.
@@ -222,7 +222,7 @@ Statements (\ref{SHORT.conv-to-grad}) and (\ref{SHORT.alm-max}) follow directly 
 As a corollary of the above lemma and Proposition~\ref{prop:conv-comp} we get the following: 
 
 \begin{thm}{Chain rule} %???DO WE NEED IT???
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $f\:\spc{L}\subto \RR$ be a semiconcave function
 and $\phi\:\RR\to\RR$ be a non-decreasing semiconcave function.
 Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\nabla_x f$ for any $x\in\Dom f$.
@@ -234,7 +234,7 @@ vector field''.
 
 \begin{thm}{Lemma} 
 \label{lem:grad-lip}
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $f\:\spc{L}\subto\RR$ satisfies $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
 $[p q]\subset \Dom f$ 
 and $\ell=\dist{p}{q}{}$.
@@ -379,7 +379,7 @@ in the formulation.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
-Let $\spc{L}\in\CBB{}{}$ and $p\in \spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
 
 Given two vectors $u,v\in \T_p$ there is unique vector $w\in \T_p$ such that
 \[\<u,x\>+\<v,x\>+\<w,x\>\ge 0\]
@@ -395,7 +395,7 @@ To obtain the following corollary, applying the above lemma for $u=v$.
 In the finite-dimensional case, a stronger statement holds, see Milka's lemma (\ref{lem:milka}).
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
-Let $\spc{L}\in\CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $p\in \spc{L}$. 
 Given a vector $u\in \T_p$ there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
 $u^*$ is \emph{polar}\index{polar vector} to $u$;
@@ -514,7 +514,7 @@ Note that the distance preserving map $\iota\:\spc{L}\hookrightarrow \spc{L}^\o$
 Thus, we can (and will) consider $\T_p \spc{L}$ as a subcone of $\T_p \spc{L}^\o$.
 
 \begin{thm}{Corollary}\label{nablaf=mablaf^o}
-Let $\spc{L}\in\CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction.
 Then for any point $p\in\Dom f$ we have
 \[\nabla_p f=\nabla_p f^\o.\]
@@ -549,7 +549,7 @@ Together with \ref{gradfgradultraf}, this implies $\mangle(\nabla_x f^\o,\nabla_
 In particular, we have lower-semicontinuity of the function $x\mapsto |\nabla_x f|$:
 
 \begin{thm}{Semicontinuity of \textbar gradient\textbar}\label{cor:gradlim} 
-Let $\spc{L}\in\CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction. 
 Then the function $x\mapsto|\nabla_x f|$  is lower-continuous;
 that is for any sequence $x_n\to x\in \Dom f$, we have 
@@ -590,7 +590,7 @@ Gradient-like curves provide a technical tool which will be used later in the co
 The later appear to be a special reparametrization of gradient-like curves.
 
 \begin{thm}{Definition}\label{def:grad-like-curve}
-Let $\spc{L}\in \CBB{}{}$
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction.
 
 A Lipschitz curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ will be called \emph{$f$-gradient-like curve} if
@@ -603,7 +603,7 @@ Note that in particular this definition implies that $|\nabla_p f|>0$ for any po
 The next theorem shows that a weaker condition gives an equivalent definition.
 
 \begin{thm}{Theorem}\label{thm:grad-like-2nd-def}
-Let $\spc{L}\in \CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction
 and 
 $|\nabla_p f|>0$ for any $p\in\Dom f$.
@@ -640,7 +640,7 @@ hence the result.
 The following theorem is similar to \cite[2.36]{mayer} and \cite[5.7]{ohta}.
 
 \begin{thm}{Theorem} \label{thm:concave}
-Let $\spc{L}\in\CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and
 $f\:\spc{L}\subto \RR$ be
 locally Lipschitz and $\lambda$-concave. 
@@ -653,7 +653,7 @@ everywhere on $[0,s_{\max})$.
 
 
 \begin{thm}{Corollary}\label{cor:right-cont}
-Let $\spc{L}\in\CBB{}{}$,
+Let $\spc{L}$ be a complete length $\Alex{}$ space,
 $f\:\spc{L}\subto \RR$ be a locally Lipschitz and semiconcave function 
 and $\hat\alpha\:[0,s_{\max})\to\Dom f$ be an $f$-gradient-like curve.
 Then function $s\mapsto |\nabla_{\hat\alpha(s)}f|$
@@ -755,7 +755,7 @@ which were introduced in Section~\ref{sec:gradient-like}.
 
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $\spc{L}\in \CBB{}{}$
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \emph{$f$-gradient curve} if
@@ -828,7 +828,7 @@ Thus, we have
 
 
 \begin{thm}{Exercise}\label{ex:grad-curve-condition}
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $f\:\spc{L}\to \RR$ be a locally Lipschitz 
 semiconcave function.
 Assume $\alpha\:\II\to \spc{L}$ is a Lipschitz curve such that 
@@ -950,7 +950,7 @@ however $\alpha(t)\not=\beta(t)$ for all $t<0$.
 The next theorem shows that ``future'' gradient curve is unique.
 
 \begin{thm}{Picard's theorem}\label{thm:picard}
-Let $\spc{L}\in\CBB{}{}$
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 and
 $f\:\spc{L}\subto \RR$ be semiconcave subfunction.
 Assume $\alpha,\beta\:[0,t_{\max})\to\Dom f$ be two $f$-gradient curves 
@@ -1150,7 +1150,7 @@ It follows from \ref{thm:glob-exist-grad-curv},
 \ref{thm:concave} and \ref{lem:grad--grad-like}.
 
 \begin{thm}{Theorem}\label{thm:comp-grad-test}
-Let $\spc{L}\in\CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $f\:\spc{L}\to\RR$ satisfies 
 \[f''+\kappa\cdot f\le \lambda\] 
 for some real values $\kappa$ and $\lambda$.
@@ -1298,7 +1298,7 @@ Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bu
 
 Here we extend notion of gradient curves to a family of functions.
 
-Let $\spc{L}\in\CBB{}{}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space.
 A subfunction $f\:\RR\times\spc{L}\subto\RR$, will be called \emph{family of subfunctions}\index{family of subfunctions};
 in this case we prefer the notation $f\:(t,p)\mapsto f_t(p)$.
 A family of subfuncrions $f_t$ is called 
@@ -1382,7 +1382,7 @@ it is more natural to consider upper semi-continuous semi-concave functions
 with target in $[-\infty,\infty)$
 and to assume in addition that 
 the function take finite values at a dense set in the domain of definition.
-The set of such subfunctions on a $\CBB{}{}$ space $\spc{L}$ will be denoted as 
+The set of such subfunctions on a $\Alex{}$ space $\spc{L}$ will be denoted as 
 $\LSCSC(\spc{L})$ for \textbf{l}ower semi-\textbf{c}ontinous and semi-\textbf{c}oncave.
 
 In this section we describe the adjustments needed
@@ -1396,7 +1396,7 @@ The gradient flow for these function play an important role in the theory of opt
 \parbf{Differential.} 
 First we need to extend the definition of differential (\ref{def:differential}) to $\LSCSC$ subfunctions.
 
-Let $\spc{L}\in\CBB{}{}$ and $f\in\LSCSC(\spc{L})$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $f\in\LSCSC(\spc{L})$.
 Given a point $p\in \Dom f$, and a geodesic direction $\xi=\dir pq$, 
 set 
 $\hat \d_pf(\xi)=(f\circ\geod_{[pq]})^+(0)$.
@@ -1461,7 +1461,7 @@ Further in the Definition \ref{def:grad-curve}, should be changed to the followi
 \medskip
 
 \parbf{\ref{def:grad-curve}$'$. Definition.}
-{\it Let $\spc{L}\in \CBB{}{}$
+{\it Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $f\in\LSCSC(\spc{L})$.
 
 A curve 
@@ -1500,7 +1500,7 @@ In this section
 we define gradient flow for semiconcave subfunctions 
 and reformulate theorems obtained earlier in this chapter using this new terminology.
 
-Let $\spc{L}\in \CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $f\:\spc{L}\subto \RR$ be a locally Lipschitz semiconcave subfunctions.
 For any $t\ge 0$ write $\GF^t_f(x)=y$ if there is a $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$.
 The defined map $\GF^t_f\:\spc{L}\to\spc{L}$
@@ -1519,7 +1519,7 @@ From the first distance estimate~\ref{thm:dist-est},
 we get the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
-Let $\spc{L}\in\CBB{}{}$ 
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $f\:\spc{L}\to \RR$ be a semiconcave functions.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
@@ -1559,7 +1559,7 @@ The radial curves are specially reparametrized gradient curves for distance func
 This parametrization makes them to behave as unit-speed geodesics in a natural comparison sense.
 
 \begin{thm}{Definition}\label{def:rad-curv}
-Assume $\spc{L}\in\CBB{}{}$, 
+Assume $\spc{L}$ is a complete length $\Alex{}$ space, 
 $\kappa\in\RR$, 
 and $p\in \spc{L}$.
 A curve 
@@ -1590,7 +1590,7 @@ work best for $\CBB{}{\kappa}$-spaces.
 
 
 \begin{thm}{Definition}\label{def:rad-geod}
-Let $\spc{L}\in\CBB{}{}$
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $p\in\spc{L}$.
 A unit-speed geodesic  $\gamma\:\II\to \spc{L}$  is called 
 \emph{$p$-radial geodesic}\index{radial geodesic} if 
@@ -1600,7 +1600,7 @@ $\dist{p}{\gamma(s)}{}\equiv s$.
 The proof of the following two propositions follows directly from the definitions: 
 
 \begin{thm}{Proposition}\label{prop:rad-geod}
-Let $\spc{L}\in\CBB{}{}$
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $p\in\spc{L}$.
 Assume $\tfrac{\varpi\kappa}{2}
 \ge 
@@ -1613,7 +1613,7 @@ is a $(p,\kappa)$-radial curve.
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:dist<s}
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $p\in\spc{L}$ 
 and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ be a $(p,\kappa)$-radial curve.
 Then for any $s\in [s_{\min},s_{\max})$, 
@@ -1625,7 +1625,7 @@ then the restriction $\sigma|[s_{\min},s_0]$ is a $p$-radial geodesic.
 \end{thm}
 
 \begin{thm}{Existence and uniqueness}\label{rad-curv-exist}
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $\kappa\in\RR$, 
 $p\in\spc{L}$, 
 and $x\in \spc{L}$.
@@ -2151,7 +2151,7 @@ the proofs are straightforward generalization of corresponding one-point-set ver
 First we give a more general form of the definition of radial curves (\ref{def:rad-curv}) and the definition of radial geodesic (\ref{def:rad-geod}):
 
 \begin{thm}{Definition}
-Assume $\spc{L}\in\CBB{}{}$, 
+Assume $\spc{L}$ is a complete length $\Alex{}$ space, 
 $\kappa\in\RR$, 
 and $A\subset \spc{L}$ be a closed subset.
 A curve $\sigma\:[s_{\min},s_{\max})\to \spc{L}$  is called 
@@ -2172,7 +2172,7 @@ If $x=\sigma(s_{\min})$, we say that $\sigma$ \emph{starts in}  $x$.
 \end{thm}
 
 \begin{thm}{Definition}
-Let $\spc{L}\in\CBB{}{}$
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $A\subset \spc{L}$ be a closed subset.
 A unit-speed geodesic  $\gamma\:\II\to \spc{L}$  is called 
 \emph{$A$-radial geodesic}\index{radial geodesic} if 
@@ -2183,7 +2183,7 @@ The following propositions are analogous to the propositions \ref{prop:rad-geod}
 Their proofs follow directly from the definitions: 
 
 \begin{thm}{Proposition}
-Let $\spc{L}\in\CBB{}{}$,
+Let $\spc{L}$ be a complete length $\Alex{}$ space,
 $A\subset\spc{L}$ be a closed subset.
 Assume that 
 $\tfrac{\varpi\kappa}{2}
@@ -2197,7 +2197,7 @@ is an $(A,\kappa)$-radial curve.
 \end{thm}
 
 \begin{thm}{Proposition}
-Let $\spc{L}\in\CBB{}{}$,
+Let $\spc{L}$ be a complete length $\Alex{}$ space,
 $A\subset\spc{L}$ be a closed subset 
 and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ be a $(A,\kappa)$-radial curve.
 Then for any $s\in [s_{\min},s_{\max})$, 
@@ -2212,7 +2212,7 @@ for $(A,\kappa)$-radial curves;
 it can be proved the same way as \ref{rad-curv-exist}
 
 \begin{thm}{Existence and uniqueness}
-Let $\spc{L}\in\CBB{}{}$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
 $\kappa\in\RR$, 
 $A\subset\spc{L}$ be a closed subset, 
 and $x\in \spc{L}$.
@@ -2285,7 +2285,7 @@ we have
 \end{thm}
 
 Finally, 
-assume $p$ be an isolated point of a closed set $A$ in $\spc{L}\in\CBB{}{}{}$.
+assume $p$ be an isolated point of a closed set $A$ in  a complete length $\Alex{}$ space $\spc{L}$.
 Applying the same limiting procedure as in Section \ref{sec:gexp},
 for any $\xi\in\Sigma_p$
 one can construct an $(A,\kappa)$-radial curve $\sigma_\xi$
@@ -2365,7 +2365,7 @@ for almost all $t\in\II$.
 
 \begin{thm}{Exercise}
 Let 
-$\spc{L}\in\CBB{}{}$ and $f\:\spc{L}\to\RR$ be a concave locally Lipschitz function.
+$\spc{L}$ be a complete length $\Alex{}$ space and $f\:\spc{L}\to\RR$ be a concave locally Lipschitz function.
 Show that $\alpha\:\RR\to\spc{L}$ is an $f$-gradient curve if and only if
 \[\dist[2]{x}{\alpha(t_1)}{\spc{L}}-\dist[2]{x}{\alpha(t_0)}{\spc{L}}
 \le 

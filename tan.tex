@@ -9,7 +9,7 @@
 Recall that according to 
 the corollaries \ref{cor:monoton:sup} 
 and \ref{cor:monoton-cba:angle=inf},
-the $\CBB{}{}$ and $\cCat{}{}$ spaces have \index{space with defined angles}\emph{defined angles};
+the  $\Alex{}$ and $\cCat{}{}$ spaces have \index{space with defined angles}\emph{defined angles};
 that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in the space.
 
 Let $\spc{X}$ be a metric space with defined angles.
@@ -29,7 +29,7 @@ for the equivalence relation
 \[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
 
 \begin{thm}{Exercise}
-Assume $\spc{L}\in\CBB{}{}$,  and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
 Show that 
 \[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
 
@@ -48,7 +48,7 @@ The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is
 The elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
 \begin{thm}{Exercise} 
-Let $\spc{L}\in\CBB{}{1}$.
+Let $\spc{L}$ be a complete length $\Alex{1}$ space.
 Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\SS^n$.
 \end{thm}
 
@@ -262,7 +262,7 @@ On the other hand, in general, ultratangent space does not have a cone structure
 
 \begin{thm}{Theorem}\label{thm:tan-is}
 \begin{subthm}{thm:tan-is-CBB}
-If $\spc{L}\in\CBB{}\kappa$ and $p\in \spc{L}$ then $\T^\o_p\in\CBB{}{0}$.
+If $\spc{L}$ is a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$ then $\T^\o_p$ is a complete length $\Alex{0}$ space.
 \end{subthm}
 
 \begin{subthm}{thm:tan-is-CBA}
@@ -274,8 +274,8 @@ If $\spc{U}\in\cCat{}\kappa$ and $p\in \spc{U}$ then $\T^\o_p\in\cCat{}{0}$.
 The proofs of both parts are nearly identical.
 
 \parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
-Since $\spc{L}\in\CBB{}\kappa$, then for its blowup $n\cdot\spc{L}$, we have $n\cdot\spc{L}\in\CBB{}{\kappa/{n^{2}}}$.
-Since $n\cdot(\spc{L},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prp:A^omega} implies ${\T^\o_p}\in\CBB{}{0}$.
+Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then for its blowup $n\cdot\spc{L}$ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
+Since $n\cdot(\spc{L},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prp:A^omega} implies ${\T^\o_p}$ is a complete length $\Alex{0}$ space.
 
 \parit{(\ref{SHORT.thm:tan-is-CBA}).}
 Since $\spc{U}\in\cCat{}\kappa$, then for its blowup $n\cdot\spc{U}$, we have $n\cdot\spc{L}\in\cCat{}{\kappa/{n^{2}}}$.
@@ -320,7 +320,7 @@ we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
 \section{Linear subspace of tangent space}
 
 \begin{thm}{Definition}\label{def:opp+Lin}
-Let $\spc{L}\in\CBB m\kappa$, $p\in \spc{L}$ and $u,v\in\T_p$.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,v\in\T_p$.
 We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
 
 The subcone
@@ -336,7 +336,7 @@ This way we define multiplication of any vector in $\Lin_p$ by any real number (
 Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
 
 \begin{thm}{Proposition}\label{prop:opposite}
-Let $\spc{L}\in\CBB{}{}$ and $p\in \spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
 Given two vectors $u,v\in\T_p$, the following statements are equivalent:
 \begin{subthm}{opposite} $u+v=0$;
 \end{subthm}
@@ -357,7 +357,7 @@ The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is tri
 \qeds
 
 \begin{thm}{Proposition}\label{prop:two-opp}
-Let $\spc{L}\in\CBB{}{}$ and $p\in \spc{L}$.
+Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
 Then for any three vectors $u,v,w\in\T_p$, $u+v=0$ and $u+ w=0$ implies $v=w$.
 \end{thm}
 
@@ -366,7 +366,7 @@ Hence the result.\qeds
 
 
 \begin{thm}{Theorem}\label{thm:lin-subcone}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $p\in \spc{L}$. 
+Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$. 
 Then $\Lin_p$ forms a subcone of $\T_p$ isometric to a Hilbert space.
 \end{thm}
 
@@ -374,7 +374,7 @@ Before comming to the proof of the theorem,
 let us give its corollary.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
-Let $\spc{L}\in\CBB{}{\kappa}$ 
+Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
 and $p\in \Str(x_1,x_2,\dots,x_n)$.
 Then there is a subcone $E\subset \T_p$ which isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
 \end{thm}
@@ -442,7 +442,7 @@ Thus for any $q\not=p$ one can define differential.
 The following claim follows directly from first variation formula (\ref{1st-var+}).
 
 \begin{thm}{Theorem???}\label{thm:differential-of-dist}
-Let $\spc{L}\in\CBB{}\kappa$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
 and $p,q\in \spc{L}$ be distinct points. 
 Let $\Dir{p}{q}$ denotes the set of all directions of geodesics from $p$ to $q$ in $\spc{L}^\o$.
 Then 
@@ -454,7 +454,7 @@ if the right hand side is defined.
 
 
 \begin{thm}{Theorem}\label{thm:d_q dist_p(v)=-<dri p q, v>}
-Let $\spc{L}\in\CBB{}\kappa$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
 and $p,q\in \spc{L}$ be to distinct points such that there is unique geodesic $[p q]$ in $\spc{L}^\o$.
 Then for any $v\in\T_q$, we have
 \[(\d_q\dist{p}{}{})(v)=-\<\dir q p,v\>.\]
@@ -470,7 +470,7 @@ Note that in finite dimensional case $\d_p f$ is concave (see ???),
 but again, we use gradient to prove some basic properties of dimension.
 
 \begin{thm}{Lemma}\label{lem:ohta} 
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{}$ space
 $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
 and $p\in \Dom f$.
 Then
@@ -588,7 +588,7 @@ Clearly, the $\o$-differential of a locally Lipschitz subfunction is defined at 
 %By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
 
 \begin{thm}{Proposition}
-Assume $\spc{X}$ is a $\CBB{}{}$ or $\cCat{}{}$ space
+Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\cCat{}{}$ space
 and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
 Then for any $p\in\Dom f$, the ultradifferential $\d^\o_p\:\T^\o_p\to\RR$ is a concave function.
 \end{thm}
@@ -604,7 +604,7 @@ Note taht $[\bar x^n \bar y^n]$
 converges to $[\bar x^\o \bar y^\o]$
 as $n\to\o$.
 The latter holds tivially in case $\cCat{}{}$
-and in $\CBB{}{}$ case follows from ???.
+and in $\Alex{}$ case follows from ???.
 \qeds
 
 
@@ -614,7 +614,7 @@ and in $\CBB{}{}$ case follows from ???.
 Here we give a construction of the following
 
 \begin{thm}{Halbeisen's example}\label{Halbeisen's example}
-There is a space $\check{\spc{L}}\in\CBB\infty{}$
+There is a complete length $\Alex{}$ space $\check{\spc{L}}$
 with a point $p\in\check{\spc{L}}$ such that the space of directions $\Sigma_p\check{\spc{L}}$ and therefore the tangent space $\T_p\check{\spc{L}}$ is not a length space. 
 \end{thm}
 
@@ -704,7 +704,7 @@ Let $\HH$ be a Hilbert space,
 $f\:\HH\to \RR$ be a convex Lipschitz function 
 and $S\subset \HH\times \RR$ be the graph of $f$ 
 equipped with length-metric.
-Then $S\subset\CBB{}0$.
+Then $S$ is $\Alex{0}$.
 \end{thm}
 
 \parit{Proof.} Recall that a subset $X\subset \HH\times \RR$, 
@@ -731,7 +731,7 @@ Thus,
 and \ref{eq:claim:hil-con*} follows.\qeds
 
 \begin{thm}{Exercise}
-Construct a non-compact space $\spc{L}\in\CBB{}0$ which contains no rays.
+Construct a non-compact complete geodesic $\Alex{0}$ space which contains no rays.
 \end{thm}
 
 
