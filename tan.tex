@@ -258,7 +258,7 @@ In general, they are different and both useful ---
 often lack of a property in one is compensated by the other.
 
 It is clear from the definition that tangent space has cone structure.
-On the other hand, in general, ultratangent space does not have a cone structure; a Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ which is $\CBB{}{0}$ as well as $\cCat{}{0}$ gives an example.
+On the other hand, in general, ultratangent space does not have a cone structure; a Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ which is $\Alex{0}$ as well as $\cCat{}{0}$ gives an example.
 
 \begin{thm}{Theorem}\label{thm:tan-is}
 \begin{subthm}{thm:tan-is-CBB}
@@ -384,7 +384,7 @@ By the definition of $\Str$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for 
 It remains to apply Theorem~\ref{thm:lin-subcone}.
 \qeds
 
-The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p\notin\CBB{}{0}$;
+The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p$ is not a length space;
 see Habeisen's example (Section~\ref{halbeisen}).
 Otherwise the statement would follow directly from the Splitting theorem (\ref{thm:splitting}).
 In fact the proof of this theorem is a far walk around, in the proof we use construction of gradient, as well as Splitting theorem, proof of which use gradient flow.
@@ -397,9 +397,9 @@ If the tangent space is Euclidean, then  $w=-u-v$.
 
 
 \parit{Proof of \ref{thm:lin-subcone}.}
-First we show that $\Lin_p\in \CBB{}{0}$.
+First we show that $\Lin_p$ is a complete geodesic $\Alex0$ space.
 
-Note that $\T^\o_p\in \CBB{}{0}$ (see \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
+Recall that $\T^\o_p$ is a complete geodesic $\Alex0$ space (see \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
 Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
 
 Fix two vectors $x,y\in\Lin_p$.

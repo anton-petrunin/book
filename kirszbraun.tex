@@ -170,8 +170,9 @@ You obtain point-on-side comparison (\ref{point-on-side}).
 In case $\spc{L}$ is not geodesic, pass to its ultrapower $\spc{L}^\o$.
 Note that the short map extension property survives
 for $\spc{L}^\o$ and recall that $\spc{L}^\o$ is geodesic (see \ref{cor:ulara-geod}).
-Thus, from above, ${\spc{L}^\o}\in\CBB{}{\kappa}$. 
-By Proposition~\ref{prp:A^omega}, we get ${\spc{L}}\in\CBB{}{\kappa}$.
+Thus, from above, $\spc{L}^\o\in\CBB{}{\kappa}$. 
+By Proposition~\ref{prp:A^omega}, we get $\spc{L}\in\CBB{}{\kappa}$.
+
 \parit{``Only if'' part.}
 Assume the contrary;
 that is,  $x^1,x^2,x^3,p\in \spc{L}$, and 
@@ -286,7 +287,7 @@ In a bit more analytic form it appears in \cite{sturm}.
 
 \begin{thm}{(1+\textit{n})-point comparison}
 \label{thm:pos-config} 
-Let $\spc{L}\in\CBB{}{\kappa}$.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
 Then for any array of points $p,x^1,\dots,x^n\in \spc{L}$  
 there is a model array $\~p,\~x^1,\dots,\~x^n\in\Lob{n}\kappa$ such that
 \begin{subthm}{}
@@ -352,7 +353,7 @@ roughly it states that example \ref{example:SS_+} is the only obstacle.
 \begin{thm}{Kirszbraun's theorem}
 \label{thm:kirsz+}
 Let
-$\spc{L}\in\CBB{}{\kappa}$, 
+$\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $\spc{U}\in\cCat{}{\kappa}$, 
 $Q\subset \spc{L}$ be arbitrary subset
 and $f\: Q\to\spc{U}$ be a short map.
@@ -379,7 +380,7 @@ The following lemma is the main ingredient in the proof.
 
 \begin{thm}{Finite$\bm{+}$one lemma}\label{lem:kirsz-neg:new}
 Let $\kappa\le 0$,
-$\spc{L}\in\CBB{}{\kappa}$, and 
+$\spc{L}$ be a complete length $\Alex{\kappa}$ space, and 
 $\spc{U}\in\cCat{}{\kappa}$.  Let  
 $x^1,x^2,\dots,x^n\in\spc{L}$ 
 and $y^1,y^2,\dots,y^n\in\spc{U}$
@@ -587,7 +588,7 @@ Thus, $(D)$ and $(E)$ imply the claim.
 \label{thm:kirsz}
 Let
 $\kappa\le0$,
-$\spc{L}\in\CBB{}{\kappa}$, 
+$\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $\spc{U}\in\cCat{}{\kappa}$, 
 $Q\subset \spc{L}$ be arbitrary subset
 and $f\: Q\to\spc{U}$ be a short map.
@@ -837,7 +838,7 @@ we have
 To prove (2\textit{n}+2)-point comparison, we need the following lemma, which is an easy corollary from Kirszbraun's theorem (\ref{thm:kirsz+}).
 
 \begin{thm}{Lemma}\label{cor:kir-from-hemisphere}%Cor>Lem
-Let $\spc{L}\in\CBB{}{\kappa}$, 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $\spc{U}\in\cCat{}{\kappa}$,
 and $Q\subset \oBall(p,\tfrac{\varpi\kappa}2)\subset \spc{L}$.
 Then any short map $f\:Q\to \spc{U}$ can be extended to a short map 
@@ -910,8 +911,8 @@ can be described by the matrix with components
 =
 \dist[2]{a^i}{a^j}{},\]
 which we will call the  \emph{decrypting matrix}\index{decrypting matrix}.
-The set of decrypting matrices of all metrics that admit a distance preserving map into a $\CBB{}{0}$-space 
-form a convex cone, as follows from the fact that the  product of $\CBB{}{0}$-spaces is a $\CBB{}{0}$-space.
+The set of decrypting matrices of all metrics that admit a distance preserving map into a $\Alex{0}$ space 
+form a convex cone, as follows from the fact that the  product of $\Alex{0}$ spaces is a $\Alex{0}$ space.
 This convexity gives hope that the cone admits an explicit description.
 
 The set of metrics on $\{a^1,a^2,\dots,a^n\}$ that can be embedded into a product of spheres with different radii admits a simple description.
@@ -953,7 +954,7 @@ Note that if one removes from $\spc{F}$ the point $q$ then the remaining part ca
 On the other hand, if one removes the  point $a$ from the space and changes the distance $\dist{z}{b}{}$ then it can be isometrically embedded into  the plane.
 
 It is straightforward to check that this finite set satisfies the conclusion of Theorem \ref{thm:pos-config} for $\kappa=0$.
-However, if such a metric appeared as an inherited metric on a subset $\{a,b,x,y,z,q\}\subset \spc{L}\in\CBB{}{0}$
+However, if such a metric appeared as an inherited metric on a subset $\{a,b,x,y,z,q\}$ in  be a complete length $\Alex{0}$ space $\spc{L}$
 then clearly  
 \[
 \mangle\hinge x a y\z
@@ -1012,7 +1013,7 @@ Consider a metric space $\spc{F}_s$
 on 5 point set $p,q,x,y,z$ such that $\dist{p}{q}{}=s$
 and all the remaining distances are equal $1$.
 Assume $\spc{F}_s$ admits a distance preserving map into a $\cCat{}{0}$ space.
-Show that $\spc{F}_s$ admits a distance preserving map into a $\CBB{}{0}$ space.
+Show that $\spc{F}_s$ admits a distance preserving map into a $\Alex{0}$ space.
 \end{thm}
 
 
@@ -1049,7 +1050,7 @@ Prove that there is a subset $Q\subset\spc{L}$ which is isometric to a convex se
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:flat-in-CBB}
-Let $\spc{L}\in\CBB{}{0}$,
+Let $\spc{L}$ be a complete length $\Alex{0}$ space,
 $x^0,x^1,\dots,x^\kay\in\spc{L}$ and $\~x^0,\~x^1,\dots,\~x^\kay\in\EE^m$
 be two point arrays such that 
 $\dist{x^i}{x^j}{\spc{L}}=\dist{\~x^i}{\~x^j}{\EE^m}$ for each $i,j$.
@@ -1066,7 +1067,7 @@ $\trig x y z$ in $\spc{L}$ with all angles equal to the corresponding angles of 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:strut+embedding}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $p, a^0,a^1,\dots,a^m\in\spc{L}$. 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p, a^0,a^1,\dots,a^m\in\spc{L}$. 
 Assume that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \emph{$\kappa$-strutting} for a point $p\in\spc{L}$.
 Show that there are point 

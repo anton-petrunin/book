@@ -111,7 +111,7 @@ where $\spc{L}^\o$ denotes ultrapower of $\spc{L}$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $\spc{M}$ be a metric space.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $\spc{M}$ be a metric space.
 Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
 Then $\spc{M}\in \CBB{}{\kappa}$.
 \end{thm}
@@ -120,7 +120,7 @@ The theorem above together with Proposition~\ref{prop:submet/G}
 imply the following.
 
 \begin{thm}{Corollary}\label{thm:CBB/G}
-Let $\spc{L}\in\CBB{}{\kappa}$ and the group $G$ acts on $\spc{L}$ by isometries 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and the group $G$ acts on $\spc{L}$ by isometries 
 and it has closed orbits.
 Then $\spc{L}/G\in\CBB{}{\kappa}$. 
 \end{thm}
@@ -175,7 +175,7 @@ Recall that general complete length spaces might have no geodesics;
 see Exercise~\ref{ex:no-geod}.
 
 \begin{thm}{Exercise}
-Construct a space $\spc{L}\in \CBB{}{0}$ which is not geodesic.
+Construct a complete length $\Alex0$ space which is not geodesic.
 \end{thm}
 
 We are going to show that all $\Alex{}$ spaces are G-delta geodesic in the following sense.
@@ -236,7 +236,7 @@ Since $\Str(p)=\bigcap_{n\in \NN}\Omega_n$, the result follows.
 
 
 \parit{Proof of Theorem \ref{thm:almost.geod}.}
-Let $\spc{L}\in\CBB{}{\kappa}$.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
 We show that if $q\in \Str(p)$, then there is a unique geodesic connecting $p$ and $q$.
 Thus the theorem will follow from Lemma~\ref{lem:straight}.
 
@@ -377,13 +377,13 @@ at least $\angk\kappa x p y$.
 
 From above and (\ref{SHORT.2-sum}), it follows that $\mangle\hinge z p y + \mangle\hinge z p x\le\pi$.
 
-\begin{wrapfigure}[10]{r}{30mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/angle-comp(0.30)}
-\lbl[r]{0,35;$z$}
-\lbl[l]{65,41;$p$}
-\lbl[tr]{48,38;$w$}
-\lbl[lb]{77,96;$x$}
-\lbl[lt]{85,4;$y$}
+\begin{wrapfigure}[10]{r}{27mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/angle-comp(1)}
+\lbl[r]{1,11;$z$}
+\lbl[l]{19,12;$p$}
+\lbl[tr]{13,11;$w$}
+\lbl[lb]{21,26;$x$}
+\lbl[lt]{24,1;$y$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -414,7 +414,7 @@ Finally, if $\spc{L}$ is not geodesic, we can apply above arguments for sequence
 
 
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton} 
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p,x,y\in \spc{L}$,
 $\modtrig\kappa(p x y)$ is defined
 and there is a geodesic $[xy]$.
@@ -443,7 +443,7 @@ The angle $\mangle\hinge{x}{p}{y}$ is defined and
 See the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) in the proof of \ref{thm:defs_of_alex}.\qeds
 
 \begin{thm}{Exercise} 
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p,x,y\in \spc{L}$
 and $v,w\in \l]xy\r[$.
 Prove that  
@@ -472,9 +472,9 @@ the following inequality holds
 \l[
 \dist[2]{x}{y}{}+\dist[2]{y}{z}{}+\dist[2]{z}{x}{}
 \r].\eqlbl{eq:berg-nikolaev}\]
-Prove that $\spc{L}\in\CBB{}{0}$.
+Prove that $\spc{L}$ is $\Alex0$.
 
-Construct a metric on a 4-point set which satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but which does not admit a distance preserving map into a $\CBB{}{0}$ space.
+Construct a metric on a 4-point set which satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but which does not admit a distance preserving map into a $\Alex{0}$ space.
 \end{thm}
 
 Assume that for a trianglle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
@@ -530,7 +530,7 @@ in $\oBall(p,\varpi\kappa)$.
 \end{subthm}
 \end{thm}
 
-In particular, $\spc{L}\in\CBB{}{0}$ if and only if for any $p\in \spc{L}$, the function $\dist[2]{p}{}{}\:\spc{L}\to\RR$ 
+In particular, a complete G-delta geodesic space $\spc{L}$ is $\Alex{0}$ if and only if for any $p\in \spc{L}$, the function $\dist[2]{p}{}{}\:\spc{L}\to\RR$ 
 is $2$-concave as defined in Section~\ref{sec:conv-fun}.
 
 \parit{Proof.} 
@@ -555,7 +555,7 @@ Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
 The following exercise is analogous to Exercise~\ref{ex:busemann-CBA}.
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
-Let $\spc{L}\in\CBB{}{\kappa}$
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
 and $\bus_\gamma\:\spc{L}\to \RR$ is the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
 
 \begin{subthm}{}
@@ -625,12 +625,12 @@ It is straightforward to check that $(\rho,\theta)$ describe $\~\gamma$ in polar
 We need the following analogues of sub- and super-graphs%??? change to epi- hypo???
  and convex/concave functions, adapted to polar coordiantes in $\Lob2{\kappa}$.
 
-\begin{wrapfigure}{r}{40mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/subgraph(0.45)}
-\lbl{35,20,-8;subgraph}
-\lbl{70,30,-50;supergraph}
-\lbl[b r]{3,14;$\~p$}
-\lbl[lb]{53,27;$\~\gamma$}
+\begin{wrapfigure}{r}{36mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/subgraph(1)}
+\lbl{16,8,-8;{\emph{subgraph}}}
+\lbl{30,13,-70;{\emph{supergraph}}}
+\lbl[r]{1.5,6;$\~p$}
+\lbl[lb]{23,12;$\~\gamma$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -663,15 +663,15 @@ In particular, if $\~\gamma$ is a development, we will say it is \emph{(locally)
 $\spc{L}\in\CBB{}{\kappa}$ if and only if $\spc{L}$ is G-delta geodesic and for any point $p\in \spc{L}$ and any geodesic $\gamma$ in $\oBall(p,\varpi\kappa)\backslash\{p\}$, its $\kappa$-development with respect to $p$ is convex.
 \end{thm}
 
-\begin{wrapfigure}{r}{31mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/development(0.4)}
-\lbl[r]{21,3;$\~p$}
-\lbl[l]{70,23;$\~x_0$}
-\lbl[l]{68,43;$\~x_1$}
-{\Large\lbl[lb]{57,58;$.$}
-\lbl[lb]{39,69;$.$}
-\lbl[b]{20,72;$.$}}
-\lbl[b]{2,65;$\~x_n$}
+\begin{wrapfigure}{r}{26mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/development(1)}
+\lbl[rt]{8,0;$\~p$}
+\lbl[l]{25,7.5;$\~x_0$}
+\lbl[l]{25.5,16;$\~x_1$}
+{\Large\lbl[lb]{20.3,23;$.$}
+\lbl[lb]{13.5,25;$.$}
+\lbl[b]{8,24.5;$.$}}
+\lbl[rt]{2,18.5;$\~x_n$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -914,15 +914,15 @@ therefore $\Lob{2}\kappa=\SS^2$ and $\varpi\kappa=\pi$.
 
 According to \ref{thm:devel}, it is sufficient to show that  for any point $p\in \spc{L}$ and any geodesic $\gamma\:[0,T]\to \oBall(p,\pi)\backslash \{p\}$, its $\kappa$-development with respect to $p$ is convex.
 
-\begin{wrapfigure}{r}{31mm}
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/development(0.4)}
-\lbl[r]{21,3;$\~p'$}
-\lbl[l]{70,23;$\~x_0$}
-\lbl[l]{68,43;$\~x_1$}
-{\Large\lbl[lb]{57,58;$.$}
-\lbl[lb]{39,69;$.$}
-\lbl[b]{20,72;$.$}}
-\lbl[b]{2,65;$\~x_n$}
+\begin{wrapfigure}{r}{26mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/development(1)}
+\lbl[rt]{8,0;$\~p'$}
+\lbl[l]{25,7.5;$\~x_0$}
+\lbl[l]{25.5,16;$\~x_1$}
+{\Large\lbl[lb]{20.3,23;$.$}
+\lbl[lb]{13.5,25;$.$}
+\lbl[b]{8,24.5;$.$}}
+\lbl[rt]{2,18.5;$\~x_n$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1006,14 +1006,14 @@ Then comparison
 holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
 \end{thm}
 
-\begin{wrapfigure}{r}{36mm}
-\begin{lpic}[t(0mm),b(5mm),r(0mm),l(3mm)]{pics/globalization(0.3)}
-\lbl[l t]{64,4;$\~ p$}
-\lbl[l]{65,165;$\~ q$}
-\lbl[r]{1,65;$\~ x$}
-\lbl[r b]{38,121;$\~ x'$}
-\lbl[l]{45,116;$\ge \mangle\hinge{x'}p q$}
-\lbl[lw]{15,63;$\le \mangle\hinge x p q$}
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(0mm),b(0mm),r(10mm),l(0mm)]{pics/globalization(1)}
+\lbl[l t]{17,2;$\~ p$}
+\lbl[l]{16.5,54;$\~ q$}
+\lbl[r]{0.3,22;$\~ x$}
+\lbl[r b]{8,35;$\~ x'$}
+\lbl[l]{15,34;$\ge \mangle\hinge{x'}p q$}
+\lbl[lw]{9,22;$\le \mangle\hinge x p q$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1024,8 +1024,9 @@ We will prove an equivalent inequality:
 for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
 
 Fix $q$.
-Given a hinge $\hinge x p q$ such that 
-$\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell$, let us construct a new hinge $\hinge{x'}p q$ which is smaller; that is,
+Consider a hinge $\hinge x p q$ such that 
+\[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell.\]
+Let us construct a new hinge $\hinge{x'}p q$ which is smaller; that is,
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{}
 \eqlbl{eq:thm:=def-loc-fourstar}\]
@@ -1080,15 +1081,15 @@ $\dist{\~p}{\~q}{}\ge\side\kappa \hinge{x'}q p$ and \ref{eq:thm:=def-loc-fivesta
 \medskip
 
 \begin{center}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(3mm)]{pics/px_nq(0.6)}
-\lbl[r]{1,30;$x_0$}
-\lbl[rt]{30,0;$p$}
-\lbl[tl]{143,0;$q$}
-\lbl[l b]{49,20;$x_1$}
-\lbl[l b]{102,10;$x_2$}
-\lbl[b]{68,6;$x_3$}
-\lbl[tw]{103,2;$x_4$}
-\lbl[t]{70,1;$x_5$}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/px_nq(1)}
+\lbl[rb]{1,16;$x_0$}
+\lbl[rt]{12,1;$p$}
+\lbl[tl]{70,1;$q$}
+\lbl[l b]{22,12;$x_1$}
+\lbl[l b]{38,9;$x_2$}
+\lbl[br]{25,6;$x_3$}
+\lbl[t]{47,1.5;$x_4$}
+\lbl[t]{30,1;$x_5$}
 \end{lpic}
 \end{center}
 
@@ -1296,12 +1297,12 @@ Then restriction of any geodesic in $\spc{L}$ to a proper segment is the unique 
 In case $\kappa\le 0$, the proof is easier, since the model triangles are always defined.
 To deal with $\kappa>0$ we have to argue locally.
 
-\begin{wrapfigure}{r}{27mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/split(0.4)}
-\lbl[b]{2,22;$z_\eps$}
-\lbl[b]{32,22;$q$}
-\lbl[b]{60,37;$x_\eps$}
-\lbl[t]{60,2;$y_\eps$}
+\begin{wrapfigure}{r}{22mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/split(1)}
+\lbl[t]{3,4;$z_\eps$}
+\lbl[t]{11,4;$q$}
+\lbl[b]{19.5,12.5;$x_\eps$}
+\lbl[t]{19.5,-.5;$y_\eps$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1359,13 +1360,13 @@ Then
 
 \end{thm}
 
-\begin{wrapfigure}[6]{r}{23mm}
-\begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/ang.semicont(0.12)}
-\lbl[rt]{7,18;$p_n$}
-\lbl[r]{30,94;$\bar x_n$}
-\lbl[b]{116,160;$x_n$}
-\lbl[t]{59,2;$\bar y_n$}
-\lbl[t]{174,20;$y_n$}
+\begin{wrapfigure}{r}{23mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/ang-semicont(1)}
+\lbl[rt]{2.5,3;$p_n$}
+\lbl[b]{14.5,29;$x_n$}
+\lbl[rb]{4.5,14.5;$\bar x_n$}
+\lbl[t]{9.5,1;$\bar y_n$}
+\lbl[t]{20,0;$y_n$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1562,7 +1563,7 @@ The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) ap
 
 
 \parit{Proof of the first variation formula (\ref{1st-var+}).}
-Let $\spc{L}\in\CBB{}{\kappa}$. 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
 Without loss of generality we can assume that $\kappa\le 0$.
 The inequality 
 
@@ -1697,12 +1698,12 @@ after rescaling we still have $\spc{L}\in\CBB{}{1}$.
 
 Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider case when there is a geodesic $[q r]$. 
 
-\begin{wrapfigure}{r}{33mm}
-\begin{lpic}[t(0mm),b(5mm),r(0mm),l(0mm)]{pics/spher-trig(0.4)}
-\lbl[lt]{69,16;$\~p$}
-\lbl[rb]{12,66;$\~z_0$}
-\lbl[t]{40,85;$\~q$}
-\lbl[lb]{8,8;$\~r$}
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/spher-trig(1)}
+\lbl[lt]{28,1;$\~p$}
+\lbl[rb]{7,24;$\~z_0$}
+\lbl[lb]{25.5,28;$\~q$}
+\lbl[rt]{0.5,9;$\~r$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -1765,7 +1766,7 @@ The vlaue $\angk{\kappa+} p q r$ is called \emph{extended model angle}\index{ang
 
 \begin{thm}{Extended angle comparison}
 Let $\kappa>0$ 
-and $\spc{L}\in\CBB{}{\kappa}$. 
+and $\spc{L}$ be a complete length $\Alex{}$ space. 
 Then for any hinge 
 $\hinge p q r$ we have 
 $\mangle\hinge p q r
@@ -1803,7 +1804,7 @@ Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ i
 such that for any hinge $\hinge x p y$ in $\spc{L}$, 
 the angle $\mangle\hinge x p y$ is defined and 
 \[\mangle\hinge x p y\ge\angk0 x p y.\]
-Is it true that $\spc{L}\in\CBB{}{0}$?
+Is it true that $\spc{L}$ is $\Alex{0}$?
 \end{thm}
 
 

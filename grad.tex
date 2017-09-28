@@ -169,7 +169,7 @@ in the direction of maximal slope;
 moreover if the slope in the given direction is almost maximal then it is almost direction of the gradient.
 
 \begin{thm}{Lemma}\label{lem:alm-grad}
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $f\:\spc{L}\subto\RR$ be locally Lipschitz and semiconcave 
 and $p\in \Dom f$.
 
@@ -304,7 +304,7 @@ The following corollary states that gradient vector field is monotonic in the se
 
 \begin{thm}{Monotonicity of gradient} 
 \label{cor:grad-lip}
-Let $\spc{L}\in\CBB{}{\kappa}$, 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $f\:\spc{L}\subto\RR$ be locally Lipschitz and $\lambda$-concave 
 and $[p q]\subset \Dom f$.
 Then
@@ -322,7 +322,7 @@ Then
 \qeds
 
 \begin{thm}{Lemma}\label{lem:close-grad}
-Let $\spc{L}\in\CBB{}{\kappa}$, 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $f,g\:\spc{L}\subto\RR$ 
 and $p\in\Dom f\cap\Dom g$.
 
@@ -709,7 +709,7 @@ Together, \ref{eq:thm:concave-1} and \ref{eq:thm:concave-2} imply that $f\circ\h
 
 \begin{thm}{Proposition}
 \label{prop:grad-like-unique-past}
-Let $\spc{L}\in\CBB{}{\kappa}$, $p,q\in\spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p,q\in\spc{L}$.
 Assume $\hat\alpha\:[s_{\min},s_{\max})\to\spc{L}$ be a $\dist{p}{}{}$-gradient-like curve such that $\hat\alpha(s)\to z\in\l]p q\r[$ as $s\to s_{\max}+$
 then $\alpha$ is a unit-speed geodesic
 which lies in $[p q]$.
@@ -767,7 +767,7 @@ $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 The next lemma states that gradient and gradient-like curves are special reparametrizations of each-other.
 
 \begin{thm}{Lemma}\label{lem:grad--grad-like}
-Let $\spc{L}\in\CBB{}{\kappa}$
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
 and
 $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
 such that $|\nabla_p f|>0$ for any $p\in\Dom f$.
@@ -866,7 +866,7 @@ distance estimates}\label{sec:grad-curv:dist-est}
 %??? ADD ONE MORE ESTIMATE
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
-Let $\spc{L}\in\CBB{}{\kappa}$, 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $f\:\spc{L}\to \RR$ be a locally Lipschitz 
 and $\lambda$-concave function.
 Assume $\alpha,\beta\:[0,t_{\max})\to \spc{L}$ be two $f$-gradient then for any $t\in[0,t_{\max})$
@@ -891,7 +891,7 @@ The following result will not be needed in this chapter,
 it just goes naturally with the previous one.
 
 \begin{thm}{Second distance estimate}\label{lem:fg-dist-est}
-Let $\spc{L}\in\CBB{}{\kappa}$, 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $\eps>0$ 
 and $f,g\:\spc{L}\to \RR$ be two $\lambda$-concave locally Lipschitz function such that $|f-g|<\eps$.
 Assume
@@ -960,7 +960,7 @@ such that $\alpha(0)=\beta(0)$ then $\alpha(t)=\beta(t)$ for any $t\in[0,t_{\max
 \parit{Proof.} Follows directly from the first distance estimate (\ref{thm:dist-est}).\qeds
 
 \begin{thm}{Local existence}\label{thm:exist-grad-curv}
-Let $\spc{L}\in\CBB{}{\kappa}$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
 and $f\:\spc{L}\subto \RR$ be locally Lipschitz $\lambda$-concave subfunction.
 Then for any $p\in \Dom f$
 \begin{subthm}{}
@@ -1137,7 +1137,7 @@ Applying Lemma~\ref{lem:grad--grad-like}, we get ``only if''-part of (\ref{SHORT
 Directly form local existence (\ref{thm:exist-grad-curv}) and distance estimates (\ref{thm:dist-est}), we get the following:
 
 \begin{thm}{Global existence}\label{thm:glob-exist-grad-curv}
-Let $\spc{L}\in\CBB{}{\kappa}$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
 and $f\:\spc{L}\subto \RR$ be locally Lipschitz and $\lambda$-concave subfunction.
 Then for any $p\in \Dom f$, there is $t_{\max}\in(0,\infty]$ such that
 there is an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ with $\alpha(0)=p$.
@@ -1389,7 +1389,7 @@ In this section we describe the adjustments needed
 to construct gradient curves in for the subfunctions in $\LSCSC(\spc{L})$.
 
 There is one place where this type of functions appears;
-it is the entropy and some other closely related functionals on the Wasserstein space over a $\CBB{}{0}$ space.
+it is the entropy and some other closely related functionals on the Wasserstein space over a  $\Alex0$ space.
 The gradient flow for these function play an important role in the theory of optimal transport, see \cite{villani} and references there in. 
 
 
@@ -1672,7 +1672,7 @@ for any $s\ge r$ such that both sides are defined.
 In this section we show that radial curves in some comparison sense behave as unit-speed geodesics.
 
 \begin{thm}{Radial monotonicity}\label{rad-mon}
-Let $\spc{L}\in\CBB{}{\kappa}$ and
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and
 $p, q$ be distinct points in $\spc{L}$.
 Assume $\sigma\:  [s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
 is a $(p,\kappa)$-radial curve.
@@ -1704,7 +1704,7 @@ is non-increasing in whole domain of definition.
 
 
 \begin{thm}{Radial comparison}\label{rad-comp}
-Let $\spc{L}\in\CBB{}{\kappa}$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
 and $p\in \spc{L}$.
 Assume $\rho\:  [r_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
 and    $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
@@ -2057,7 +2057,7 @@ as defined in \ref{def:rad-curv} maximize the growth of $\dist{p}{\sigma(s)}{}$.
 
 \section{Gradient exponent}\label{sec:gexp}
 
-Let $\spc{L}\in\CBB{}{\kappa}$, 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $p\in \spc{L}$ 
 and $\xi\in \Sigma_p$.
 Consider a sequence of points $x_n\in \spc{L}$ so that $\dir p{x_n}\to \xi$.
@@ -2081,7 +2081,7 @@ Let us define \emph{gradient exponent} as
 Here are properties of radial curves reformulated in terms of gradient exponent:
 
 \begin{thm}{Theorem}\label{thm:prop-gexp}
-Let $\spc{L}\in\CBB{}{\kappa}$. 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
 Then
 \begin{subthm}{}
  If $p,q\in \spc{L}$ be points such that $\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$ then for any geodesic $[pq]$ in $\spc{L}$, we have
@@ -2101,7 +2101,7 @@ is a short map.
 \end{subthm}
 
 \begin{subthm}{gexp-mono} 
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p, q\in \spc{L}$ 
 and $\dist{p}{q}{}\le \tfrac{\varpi\kappa}2$.
 If $v\in\T_p$, $|v|\le 1$ and 
@@ -2230,7 +2230,7 @@ Next we formulate radial monotonicity and radial comparison for $(A,\kappa)$-rad
 The proof of these two statements are almost exactly the same as the proof of \ref{rad-mon} and \ref{rad-comp}.
 
 \begin{thm}{Radial monotonicity}\label{gen-rad-mon}
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $A\subset \spc{L}$ be a closed subset
 and $q\in\spc{L}\backslash A$.
 Assume $\sigma\:  [s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
@@ -2264,7 +2264,7 @@ Therefore the model angle
 $\angkk\kappa A{x}{y}$ might be undefined even for $\kappa\le0$.
 
 \begin{thm}{Radial comparison}\label{gen-rad-comp}
-Let $\spc{L}\in\CBB{}{\kappa}$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
 and $A\subset \spc{L}$ be a closed set.
 Assume $\rho\:  [r_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
 and    $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
@@ -2296,7 +2296,7 @@ For the constructed map, the following analog of \ref{thm:prop-gexp} holds;
 the proof is straightforward.
 
 \begin{thm}{Theorem}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $A\subset\spc{L}$ is a closed subset with an isolated point $p\in A$.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $A\subset\spc{L}$ is a closed subset with an isolated point $p\in A$.
 Then
 \begin{subthm}{}
 Assume $\dist{A}{q}{}=\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$ be 
@@ -2317,7 +2317,7 @@ is a short map.
 \end{subthm}
 
 \begin{subthm}{gexp-mono-1} 
-Let $\spc{L}\in\CBB{}{\kappa}$,
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p, q\in \spc{L}$ 
 and $\dist{p}{q}{}\le \tfrac{\varpi\kappa}2$.
 If $v\in\T_p$, $|v|\le 1$ and 
