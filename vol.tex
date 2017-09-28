@@ -137,7 +137,7 @@ follows from Proposition~\ref{prop:bilip-measure} and ???
 \qeds
 
 \begin{thm}{Definition}
-Let $\spc{L}\in\CBB{m}{}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Given a subset $A\subset\spc{L}$, 
 the density of $A$ is defined as
 \[\dens_p A
@@ -238,7 +238,7 @@ The later contradicts \ref{big-ball}.
 \qeds
 
 \begin{thm}{Proposition}\label{prop:dans=1=>euclid}
-Let $\spc{L}\in\CBB{m}{}$ and $p\in \spc{L}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $p\in \spc{L}$.
 Then $\dens_p\spc{L}=1$ if and only if $\T_p\iso\EE^m$.
 \end{thm}
 
@@ -429,10 +429,10 @@ It is well known that up to a multiplicative constant,
 on the Euclidean space
 there is a unique Radon measure
 which is invariant with respect to translations.
-The following theorem provides an analog for the $\CBB{m}{}$ spaces.
+The following theorem provides an analog for the $\Alex{}$ spaces.
 
 \begin{thm}{Theorem}\label{thm:unique-measure-cbb}
-Let $\spc{L}\in \CBB{m}{}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Then up to a multiplicative constant, $\SphMes_m$
  is the unique monotonic Radon measure on $\spc{L}$.
 \end{thm}
@@ -619,11 +619,11 @@ The $m$-volume of $A$ is defined as
 \[\vol_m A\df \tfrac{\alpha_m}{2^{m}}\cdot\HausMes_m A.\]
 (Recall that  $\alpha_m$ is the Lebesgue measure of the unit ball in $\EE^m$).
 
-Further, if $\spc{L}\in \CBB{m}{}$ we will say \emph{almost everywhere}\index{almost everywhere} meaning $\vol_m$-almost everywhere. 
+Further, if $\spc{L}$ is an $m$-dimensional complete length $\Alex{}$ space, we will say \emph{almost everywhere}\index{almost everywhere} meaning $\vol_m$-almost everywhere. 
 \end{thm}
 Theorem~\ref{thm:unique-measure-cbb} implies the following
 \begin{thm}{Corollary}\label{cor:volume=}
-Let $\spc{L}\in \CBB{m}{}$
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space,
 then
 \begin{align*}
 \vol_m A&=\tfrac{\alpha_m}{2^{\cdot m}}\cdot\HausMes_m A=
@@ -730,8 +730,8 @@ In this section we will show that coarea formula holds for Lipschitz maps betwee
 See Section~\ref{sec:coarea-prelim} for the preliminaries and definition.
 
 Recall that it defines the $m$-th Jacobian of function $f\:\EE^\kay\to\EE^m$ at $x$ as $|(\d_x f)^{\wedge m}|$ if the differential $\d_x f$ is defined and linear.
-Let $\spc{L}\in\CBB{\kay}{}$,  
-$\spc{M}\in\CBB{m}{}$
+Let $\spc{L}$ and $\spc{M}$ be complete length $\Alex{}$ spaces,
+$\dim \spc{L}=\kay$, $\dim\spc{M}=m$ 
 and $f\:\spc{L}\subto\spc{M}$ be a subfunction.
 Assume $x\in\Dom f$,
 $\T_x\iso\EE^m$,
@@ -746,8 +746,9 @@ and
 
 
 \begin{thm}{Coarea formula}\label{thm:coarea-cbb}
-Let $\kay\ge m$,
-$\spc{L}\in\CBB{\kay}{}$ and $\spc{M}\in\CBB{m}{}$
+Let
+$\spc{L}$ and $\spc{M}$ be complete length $\Alex{}$ spaces,
+$\infty>\dim \spc{L}=\kay>\dim\spc{M}=m$ 
 and $f\:\spc{L}\subto\spc{M}$ be a locally Lipschitz submap
 then  $|(\d_x f)^{\wedge m}|$ is defined for almost all $x\in \Dom f$ and
 \[
@@ -772,7 +773,7 @@ that this is a sphere in $\spc{L}$.
 
 
 \begin{thm}{Corollary}\label{cor:coarea-for-dist-function}
-Let $\spc{L}\in\CBB{m}{}$
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space
 and $Q\subset\spc{L}$ be a Borel subset.
 Then 
 \[\vol_m Q=\int\limits_0^\infty\vol_{m-1}(Q\cap S[p,R])\cdot\d R.\]
@@ -799,7 +800,7 @@ It remains to apply the coarea formula to the distance function
 \qedsf
 
 \begin{thm}{Corollary}\label{cor:coarea-for-dist-map}
-Let $\spc{L}\in\CBB{m}{}$,
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space,
 $f\:\spc{L}\to\RR$ be a continuous subfunction
 and $\bm{a}=(a^1,a^2,\dots,a^m)$ be a point array in $\spc{L}$.
 Assume that the distance map $\dist{\bm{a}}{}{}$ 
@@ -1205,7 +1206,7 @@ Hence the result follows.
 
 
 \begin{thm}{Lytchak's problem}
-Let $\spc{L}\in\CBB{m}{}$ and $X\subset\spc{L}$ is a convex everywhere dense set.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $X\subset\spc{L}$ is a convex everywhere dense set.
 Show that $X$ contains almost all points  of $\spc{L}$.
 \end{thm}
 
@@ -1217,7 +1218,7 @@ follows directly from ??? without using coarea formula.
 \end{thm}
 
 \begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{m}{}$,
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space,
 set $f(x)=\vol_{m-1}\Sigma_x$.
 Show that $f\:\spc{L}\to\RR$ is a lower semi-continuous function;
 that is, for any converging sequence $x_n\to x_\infty$ in $\spc{L}$,
@@ -1227,7 +1228,7 @@ we have
 
 \begin{thm}{Exercise}
 Let $\spc{L}_n\GHto\spc{L}_\infty$,
-$\spc{L}_n,\spc{L}_\infty\in\CBB{}{\kappa}$,
+$\spc{L}_n,\spc{L}_\infty$ are complete $\Alex\kappa$ spaces,
 $\spc{L}_\infty$ is compact
 and $\dim\spc{L}_n=m>\kay=\dim{L}_\infty$.
 
@@ -1248,7 +1249,7 @@ for some measurable function $\rho$.
 
 
 \begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{m}{}$ and $\partial \spc{L}\ne\emptyset$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $\partial \spc{L}\ne\emptyset$.
 Show that the $(m-1)$-density of $\partial \spc{L}$ at any poin is at most $1$;
 that is, 
 for any point $p\in \partial \spc{L}$
@@ -1274,7 +1275,7 @@ In other words, $q\in \CutLoc_p$ if there is no semiopen geodesic segments $\l[p
 
 
 \begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{m}{}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Show that
 \[\vol_m\CutLoc_p=0\]
 for any $p\in \spc{L}$.

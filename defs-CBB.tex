@@ -51,8 +51,7 @@ We say that $\spc{L}$ an Alexandrov space with curvature bounded below
 \begin{itemize}
 \item Alexandrov spaces with curvature bounded below usually will be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
 \item In the definition of spaces with curvature $\ge\kappa$, when $\kappa>0$ most authors assume in addition that $\diam \spc{L}\le \varpi\kappa$, or equivalently, that $\spc{L}$ is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
-\item If $\kappa<\Kappa$, the following inclusion holds:
-\[\CBB{}{\kappa}\supset\CBB{}{\Kappa}.\]
+\item If $\kappa<\Kappa$, then any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$.
 However, in the case $\Kappa>0$ it is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
@@ -105,15 +104,15 @@ Let $\o$ be a selective ultrafilter on $\NN$, $(\spc{L}_n,\star_n)\to (\spc{L}_\
 and $\kappa_n\to\kappa_\o$ as $n\to\o$.
 Then 
 \[\spc{L}_n\in\CBB{}{\kappa_n}\ \ \Longrightarrow\ \ \spc{L}_\o\in\CBB{}{\kappa_\o}.\]
+
 Moreover, for any complete metric space $\spc{L}$,
-\[\spc{L}\in\CBB{}{\kappa}\ \ \Longleftrightarrow\ \ {\spc{L}^\o}\in\CBB{}{\kappa},\]
-where $\spc{L}^\o$ denotes ultrapower of $\spc{L}$.
+its ultrapower $\spc{L}^\o$ is $\Alex\kappa$ if and only if so is $\spc{L}$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $\spc{M}$ be a metric space.
 Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
-Then $\spc{M}\in \CBB{}{\kappa}$.
+Then $\spc{M}$ is $\Alex{\kappa}$.
 \end{thm}
 
 The theorem above together with Proposition~\ref{prop:submet/G}
@@ -122,7 +121,7 @@ imply the following.
 \begin{thm}{Corollary}\label{thm:CBB/G}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and the group $G$ acts on $\spc{L}$ by isometries 
 and it has closed orbits.
-Then $\spc{L}/G\in\CBB{}{\kappa}$. 
+Then the quotient space $\spc{L}/G$ is $\Alex\kappa$. 
 \end{thm}
 
 \parit{Proof of \ref{thm:submetry-CBB}.}
@@ -311,7 +310,7 @@ Now we are ready to give a number of equivalent definitions of Alexandrov space:
 Let $\spc{L}$ be a complete length space. 
 Then
 
-\begin{subthm}{3-sum} $\spc{L}\in\CBB{}{\kappa}$
+\begin{subthm}{3-sum} $\spc{L}$ is $\Alex\kappa$
 \end{subthm}
 if and only if $\spc{L}$ is G-delta geodesic and one of the following conditions holds for all $p,x,y\in \spc{L}$, once $\modtrig\kappa(p x y)$ is defined:
 
@@ -484,7 +483,7 @@ $\trig{\~x^1}{\~x^2}{\~x^3}\to \trig{x^1}{x^2}{x^3}$ is distance non contracting
 
 \begin{thm}{Exercise}
 Prove that any triangle with perimeter $<\varpi\kappa$ 
-in a $\CBB{}{\kappa}$-space is $\kappa$-fat.
+in a $\Alex{\kappa}$ space is $\kappa$-fat.
 \end{thm}
 
 The following exercise is inspired by Busemann's definition given in \cite{busemann-CBA}. 
@@ -521,7 +520,7 @@ Let $\spc{L}$ be a complete length space.
 Then the following 
 statements are equivalent:
 
-\begin{subthm}{main-def'} $\spc{L}\in\CBB{}{\kappa}$.
+\begin{subthm}{main-def'} $\spc{L}$ is $\Alex\kappa$.
 \end{subthm}
 
 \begin{subthm}{comp-kappa}(function comparison\index{comparison!function comparison}) $\spc{L}$ is  G-delta geodesic and for any $p\in \spc{L}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies the differential inequality
@@ -660,7 +659,7 @@ In particular, if $\~\gamma$ is a development, we will say it is \emph{(locally)
 
 
 \begin{thm}{Development comparison\index{comparison!development comparison}}\label{thm:devel} 
-$\spc{L}\in\CBB{}{\kappa}$ if and only if $\spc{L}$ is G-delta geodesic and for any point $p\in \spc{L}$ and any geodesic $\gamma$ in $\oBall(p,\varpi\kappa)\backslash\{p\}$, its $\kappa$-development with respect to $p$ is convex.
+$\spc{L}$ is a complete length $\Alex\kappa$ space if and only if $\spc{L}$ is G-delta geodesic and for any point $p\in \spc{L}$ and any geodesic $\gamma$ in $\oBall(p,\varpi\kappa)\backslash\{p\}$, its $\kappa$-development with respect to $p$ is convex.
 \end{thm}
 
 \begin{wrapfigure}{r}{26mm}
@@ -762,7 +761,7 @@ Thus, point-on-side comparison (\ref{point-on-side}) follows.
 
 
 The aim of this section is giving 
-local analogs of $\CBB{}{\kappa}$ spaces 
+local analogs of $\Alex{\kappa}$ spaces 
 and proving the equivalence to the global definitions 
 --- so called globalization theorem.
 
@@ -871,7 +870,8 @@ Our proof, is based on presentations in  \cite{plaut:dimension} and \cite{BBI}.
 The following corollary says that the expression ``space with curvature $\ge \kappa$'' makes sense.
 
 \begin{thm}{Corollary}\label{cor:CAT>k-sence}
-$\spc{L}\in\CBB{}{\Kappa}$ if and only if $\spc{L}\in\CBB{}{\kappa}$ for any $\kappa<\Kappa$.
+Let $\spc{L}$ be a complete length space.
+Then $\spc{L}$ is $\Alex\Kappa$ if and only if $\spc{L}$ is $\Alex\kappa$ for any $\kappa<\Kappa$.
 \end{thm}
 
 \parit{Proof.}
@@ -897,10 +897,12 @@ and moreover, if $x\in \l]y z\r[$ then
 \[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
 Assume that  for any hinge $\hinge x p y$ in $\spc{L}$ we have
-\[\dist{p}{ x}{}+\dist{x}{ y}{}<\varpi\kappa\ \ \Rightarrow\ \ 
+\[\dist{p}{ x}{}+\dist{x}{ y}{}
+<\varpi\kappa
+\quad\Rightarrow\quad 
 \mangle\hinge x p y
 \ge\angk\kappa x p y,\]
-then $\spc{L}\in\CBB{}{\kappa}$.
+then $\spc{L}$ is $\Alex\kappa$.
 \end{thm}
 
 %???THE PROOF IS ALMOST IDENTICAL TO {thm:devel}, MAYBE IT IS BETTER TO MAKE IT ONCE???
@@ -1178,7 +1180,7 @@ $\lim_{n}r(x_n)=0$, a contradiction.
 \parit{Proof of the globalization theorem (\ref{thm:glob}).} 
 Note that since for fixed points $x,y,z\in \spc{L}$, 
 the function $\kappa\mapsto\angk\kappa x y z$ is continuous, 
-it is sufficient to show that $\spc{L}\in\CBB{}{\kappa}$ 
+it is sufficient to show that $\spc{L}$ is $\Alex\kappa$ 
 for any $\kappa<\Kappa$.
 For the rest of the proof we fix some $\kappa<\Kappa$.
 
@@ -1604,8 +1606,8 @@ Then the same argument as above shows that $[x_n q_n]$ $\o$-converges to a geode
 
 \section{On positive lower bound}\label{sec:positive.bound}
 
-In this section we consider $\CBB{}{\kappa}$ spaces for $\kappa>0$.
-Appying rescaling we can assume that $\kappa=1$.
+In this section we consider $\Alex{\kappa}$ spaces for $\kappa>0$.
+Applying rescaling we can assume that $\kappa=1$.
 
 The following theorem states that if one ignores a few exceptional spaces, then the diameter of a space with positive lower curvature bound is bounded.
 Note that many authors (but not us) exclude these spaces in the definition of Alexandrov space with positive lower curvature bound.
@@ -1785,7 +1787,7 @@ Moreover, the extended model angle can be calculated $\angk{\kappa+} p q r$ usin
 \end{thm}
 
 \parit{Proof.}
-From Corollary~\ref{cor:CAT>k-sence}, $\Kappa<\kappa$ implies $\CBB{}{\Kappa}\supset \CBB{}{\kappa}$; 
+From Corollary~\ref{cor:CAT>k-sence}, $\Kappa<\kappa$ implies that any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$; 
 thus the extended angle comparison follows from the definition.
 
 The rules for calculating extended angle is an easy consequence of its definition.
@@ -1795,7 +1797,7 @@ The rules for calculating extended angle is an easy consequence of its definitio
 
 \section{Remarks and open problems}
 
-The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}\in\CBB{}{\kappa}$ is a long standing open problem (possibly dating back to Alexandrov),
+The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long standing open problem (possibly dating back to Alexandrov),
 but as far as we know,  it was first formally stated in print in \cite{BBI} (see the footnote in subsection 4.1.5).
 
 

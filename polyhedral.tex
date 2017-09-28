@@ -109,7 +109,7 @@ see \cite{lebedeva-petrunin-poly}.
 The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded below.
 
 \begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}\in\PM{m}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
-Then $\spc{P}\in\CBB{}{\kappa}$ if and only if the following conditions hold.
+Then $\spc{P}$ is $\Alex\kappa$ if and only if the following conditions hold.
 
 \begin{subthm}{} $\tau$ is \emph{pure}; 
 that is, any simplex in $\tau$ is  a face of some simplex of dimension exactly $m$. 
@@ -173,9 +173,9 @@ $$\T_p\mc\kappa\z
 =
 \Cone\mc\kappa(\Sigma_p).$$
 Hence it is sufficient to show that 
-$$\T_p\mc\kappa\in\CBB{}{\kappa}
-\eqlbl{eq:curv(T_p)>=k}$$
-for any $p\in \spc{P}$.
+\begin{clm}{}
+ $\T_p\mc\kappa$ is $\Alex\kappa$ for any $p\in \spc{P}$.
+\end{clm}
 
 By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
 the latter is equivalent to 
@@ -193,7 +193,7 @@ It remains to apply the induction hypothesis.\qeds
 \begin{thm}{Exercise}
 Assume  $\spc{P}\in\PM{}\kappa$ and $\dim \spc{P}\ge 2$. 
 Show that 
-if $\spc{P}\in\CBB{}{\kappa'}$ then $\kappa'\le \kappa$ and $\spc{P}\in \CBB{}{\kappa}$.
+if $\spc{P}$ is $\Alex{\kappa'}$, then $\kappa'\le \kappa$ and $\spc{P}$ is $\Alex{\kappa}$.
 \end{thm}
 
 %%%%%%%%%% UP???

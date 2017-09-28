@@ -100,7 +100,7 @@ $(\d_p f)(g) = \<g,g\> .$
 \end{thm}
 
 \begin{thm}{Existence and uniqueness of the gradient}\label{thm:ex-grad} 
-Assume $\spc{L}\in\CBB{}{\kappa}$
+Assume $\spc{L}$ is a complete $\Alex\kappa$ space
 and $f\:\spc{L}\subto\RR$ be 
 locally Lipschitz 
 and 
@@ -457,7 +457,7 @@ In this section we collect number of corollaries of the following lemma.
 \begin{thm}{Ultra limit of \textbar gradient\textbar} \label{lem:gradcon}
 Assume
 \begin{itemize}
-\item $\spc{L}_n\in\CBB{}{\kappa}$ and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
+\item $(\spc{L}_n)$ is a sequence of complete $\Alex\kappa$ spaces and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
 \item $f_n\:\spc{L}_n\subto \RR$ and $f_\o\:\spc{L}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$;
 \item $x_n\in\Dom f_n$ and $x_n\to x_\o\in \Dom f_\o$ as $n\to\o$.
 \end{itemize}
@@ -482,7 +482,7 @@ one can deduce the following slightly stronger statement.
 \begin{thm}{Proposition}\label{prop:lim|grad|=|grad|}
 Assume
 \begin{itemize}
-\item $\spc{L}_n\in\CBB{}{\kappa}$ and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
+\item $\spc{L}_n$ is a sequence of complete $\Alex\kappa$ spaces and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
 \item $f_n\:\spc{L}_n\subto \RR$ and $f_\o\:\spc{L}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$.
 \end{itemize}
 Then 
@@ -1049,7 +1049,7 @@ Thus, from Picard's theorem (\ref{thm:picard}), we get $\hat\alpha_\o\circ\varsi
 \begin{thm}{Ultra limit of gradient curves}\label{ultr-lim-g-curve}
 Assume
 \begin{itemize}
-\item $\spc{L}_n\in\CBB{}{\kappa}$ and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
+\item $(\spc{L}_n)$ is a sequence of complete $\Alex\kappa$ spaces and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
 \item $f_n\:\spc{L}_n\subto \RR$ are $\Lip$-Lipschitz and $\lambda$-concave
 $f_n\to f_\o$ as $n\to\o$ and $p_\o\in\Dom f_\o$.
 \end{itemize}
@@ -1436,9 +1436,8 @@ Summarizing the discussion above,
 we get the following.
 
 \parbf{\ref{thm:ex-grad}$'$ Existence and uniqueness of the gradient.}
-\textit{Assume $\spc{L}\in\CBB{}{\kappa}$
-and $f\in \LSCSC(\spc{L})$. Then for any point $p\in \Dom f$ either 
-there is unique gradient $\nabla_p f\in \T_p$ 
+\textit{Assume $\spc{L}$ a complete $\Alex\kappa$ space and $f\in \LSCSC(\spc{L})$. 
+Then for any point $p\in \Dom f$ either there is unique gradient $\nabla_p f\in \T_p$ 
 or $|\nabla|_pf=\infty$}
 
 \medskip
@@ -1585,7 +1584,7 @@ If $x=\sigma(s_{\min})$, we say that $\sigma$ \emph{starts in}  $x$.
 Note that according to the definition $s_{\max}\le\tfrac{\varpi\kappa}2$.
 
 Further you will see that the $(p,\kappa)$-radial curves 
-work best for $\CBB{}{\kappa}$-spaces.
+work best for $\Alex\kappa$ spaces.
 
 
 
@@ -1691,7 +1690,7 @@ by straightforward calculations one gets the following.
 
 \begin{thm}{Corollary}\label{cor:rad-comp}
 Let $\kappa\le0$,
-$\spc{L}\in\CBB{}{\kappa}$ 
+$\spc{L}$ is a complete $\Alex\kappa$ space
 and $p, q\in \spc{L}$.
 Assume $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$ is a $(p,\kappa)$-radial curve.
 Then for any $w\ge 1$, 
@@ -2382,7 +2381,7 @@ such that $\phi_t|{K_t}=\id$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ for all 
 \end{thm}
 
 \begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{m}{}$, $\partial\spc{L}=\emptyset$ , $K\subset \spc{L}$ be a compact subset and $f\:\spc{L}\to\RR$ be semiconcave function.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $\partial\spc{L}=\emptyset$ , $K\subset \spc{L}$ be a compact subset and $f\:\spc{L}\to\RR$ be semiconcave function.
 Assume that for some $t>0$ the gradient flow $\GF^t_f$ is defined everywhere in $K$,
 prove that 
 $$\partial_{\spc{L}}\GF^t_fK\subset\GF^t_f\Fr K.$$
@@ -2404,7 +2403,7 @@ Prove that there is a $(\sn\kappa R)$-Lipschitz map $\map\:\SS^{m-1}\to\spc{L}$ 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:geodesic}
-Let $\spc{L}\in \CBB{}{\kappa}$ 
+Let $\spc{L}$ be a complete length $\Alex\kappa$ space 
 and $x,y,z\in \spc{L}$.
 Assume \[\angk\kappa zxy=\pi.\]
 Show that there is a geodesic $[xy]$
