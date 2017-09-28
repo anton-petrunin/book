@@ -322,7 +322,7 @@ that is,
 \[\bm{a}^{\ne 0}=(a^1,a^2,\dots,a^\kay).\]
 
 \begin{thm}{Inverse function theorem}\label{thm:inverse-function}
-Let $\spc{L}\in\CBB{m}{\kappa}$ 
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space 
 and $p,a^0,a^1,a^2,\dots,a^m\in\spc{L}$.
 
 Assume that the point array $\bm{a}=(a^0,a^1,\dots,a^m)$ is $\kappa$-strutting for $p$.
@@ -350,7 +350,7 @@ for all $i$ and $j$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:dist-chart}
-Let $\spc{L}\in\CBB{m}{\kappa}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
 If a point array $a^0,a^1,a^2,\dots,a^m$ 
 and the value $R$ satisfy the conditions in Theorem~\ref{thm:inverse-function}, 
 then the restriction 
@@ -363,7 +363,7 @@ and the restriction $y=\dist{a^0}{}{}|\oBall(p,R)$ is called \emph{strut}\index{
 The proof of Theorem~\ref{thm:inverse-function} will reqire the following lemma.
 
 \begin{thm}{Lemma}\label{lem:pack(S^m)+}
-Let $\spc{L}\in\CBB{m}{\kappa}$ and $p\in\spc{L}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $p\in\spc{L}$.
 Assume for the directions $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\Sigma_p$ the following conditions hold 
 
 \begin{subthm}{}
@@ -504,15 +504,15 @@ the differential $\d_q\bm{x}\:\T_q\to\RR^m$ is a bi-Lipschitz homeomorphism.
 \end{thm}
 
 \parbf{Liftings.}
-Let $\spc{L}\in \CBB{m}{\kappa}$
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space
 and $\bm{x}\:\spc{L}\subto\RR^m$ 
 be a distance chart with strut $y\:\spc{L}\subto\RR$.
 Assume $\bm{x}=\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
 and $y\z=\dist{a^0}{}{}|\oBall(p,R)$ 
 and a point array $\bm{a}=(a^0,a^1,\dots,a^m)$ in $\spc{L}$.
 
-Assume we have a convergence $\spc{L}_n\GHto\spc{L}$ with
-$\spc{L}_n\in \CBB{m}{\kappa}$.
+Assume we have a convergence $\spc{L}_n\GHto\spc{L}$ where
+$(\spc{L}_n)$ is a sequence of $m$-dimensional complete length $\Alex\kappa$ space.
 Choose arbitrary liftings $a^i_n$ and $p_n$ in $\spc{L}_n$ of $a^i$ and $p$. 
 If $R>0$ as in Inverse function theorem (\ref{thm:inverse-function}) then for each sufficiently large $n$ the restriction
  $\bm{x}_n=\dist{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
@@ -539,7 +539,7 @@ is equipped with the topology of the convergence $\spc{L}_n\GHto\spc{L}$.
 The following lemma is analogous to Theorem~\ref{thm:web:Up-convex}.
 
 \begin{thm}{Perelman's lemma}\label{thm:inverse-function:concave}
-Let $\spc{L}\in\CBB{m}{\kappa}$,
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
 $\bm{x}=(x^1,x^2,\dots,x^m)\:\spc{L}\subto \RR^m$ be a distance  chart with strut $y\:\spc{L}\subto \RR$.
 Then the subfunction 
 \[f=y\circ\bm{x}^{-1}\:\RR^m\subto \RR\] 
@@ -714,7 +714,7 @@ I.e. \ref{eq:f_is_concave} holds for $\Lambda=\lambda\cdot\l(\tfrac{\sqrt{m}}{\e
 
 
 \begin{thm}{Theorem}\label{thm:dist-emb}
-Let $\spc{L}\in\CBB{m}{\kappa}$, $z\in\spc{L}$ and $R>0$.
+Let $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, $z\in\spc{L}$ and $R>0$.
 Then there is $\eps>0$, 
 $\kay\in\NN$ 
 and a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ in $\spc{L}$
@@ -730,7 +730,7 @@ say, given $r>0$ we can assume that $a^i\in\oBall(r,z)$ for each $i$.
 
 \begin{subthm}{thm:dist-emb:L_n-->L}
 Given a Gromov--Hausdorff convegence
-$\spc{L}_n\GHto\spc{L}$ with $\spc{L}_n\in\CBB{m}{\kappa}$,
+$\spc{L}_n\GHto\spc{L}$ where $(\spc{L}_n)$ is a sequence of an $m$-dimensional complete length $\Alex\kappa$ spaces,
 for all sufficiently large $n$
 the liftings $\dist{\bm{a}_n}{}{}\:\spc{L}_n\to\RR$ of the distance map $\dist{\bm{a}}{}{}$ 
 give an $[\eps,\kay]$-bi-Lipschitz embedding of $\oBall(z_n,R)\subset \spc{L}_n$ for lifting $z_n\in\spc{L}_n$ of $z$.
@@ -744,14 +744,14 @@ compare \cite[Lemma~1.3]{grove-petersen:finiteness}.
 
 \begin{thm}{Obtuse-angle lemma} \label{lem:tuda-suda} Given $v>0$, $r>0$,
 $\kappa\in\RR$ and $m\in\NN$, there is $\eps=\eps(v,r,\kappa,m)>0$ such that if
-$\spc{L}\in\CBB{m}{\kappa}$, $p\in \spc{L}$, $\vol_m \oBall(p,r)>v$, then for any two points
+$\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, $p\in \spc{L}$, $\vol_m \oBall(p,r)>v$, then for any two points
 $x,y\in \oBall(p,r)$, $\dist{x}{y}{}<\eps$ there is point $z\in \oBall(p,r)$ such that 
 \[\mangle\hinge x z y>\tfrac\pi2+\eps\ \ \text{or}\ \  \mangle\hinge y z x>\tfrac\pi2+\eps.\]
 \end{thm}
 
 \parit{Proof of \ref{thm:dist-emb}.}
 Without loss of generality, we may assume that $\kappa=-1$;
-that is, $\spc{L}\in\CBB{m}{-1}$.
+that is, $\spc{L}$ is a $\Alex{-1}$ space.
 
 \begin{wrapfigure}[8]{r}{30mm}
 \begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/gradient-bisector-triangle(0.4)}

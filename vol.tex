@@ -24,7 +24,7 @@ set
 Note that for any $\kappa$, we have $\lambda_\kappa(R)\to 1$ as $R\to0$.
 
 \begin{thm}{Proposition}\label{prop:bishop}
-Let $\spc{L}\in \CBB{m}{\kappa}$
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space
 and
 $p\in\spc{L}$.
 Denote by $o$ the tip of the tangent space $\T_p$.
@@ -62,7 +62,7 @@ According to \ref{thm:prop-gexp:short}, it satisfy the conditions in (\ref{SHORT
 Let us construct $g\:\EE^m\to \T_p$.
 
 By Theorem~\ref{thm:tan4finite}, 
-$\T_p\in \CBB{m}{0}$.
+$\T_p$ is an $m$-dimensional complete length $\Alex\kappa$ space.
 Choose a sequence of points $x_n\in \T_p$
 such that $x_n\to o$ and $\T_{x_n}=\T_{x_n}\T_p\iso \EE^m$.
 According to \ref{LinDim+-f}, such sequence exists.
@@ -86,7 +86,7 @@ it follows that $g$ meets the other requirement in (\ref{SHORT.prop:bishop:g})
 \qeds
 
 \begin{thm}{Corollary}\label{cor:bishop}
-Let $\spc{L}\in \CBB m{\kappa}$. 
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{\kappa}$ space. 
 Then
 
 \begin{subthm}{cor:bishop:doubling} The $m$-th spherical measure $\SphMes_m$ on $\spc{L}$ is doubling.
@@ -163,7 +163,7 @@ In particular, note that with our convention, in general, $\dens_p \spc{L}\ne1$.
 
 
 \begin{thm}{Lebesgue's density theorem}\label{thm:dens}
-Let $\spc{L}\in\CBB m\kappa$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
 Then 
 \begin{subthm}{thm:dens:=<1}
 $\dens_p\spc{L}\le 1$ for any $p\in \spc{L}$.
@@ -270,7 +270,7 @@ and set
 that is, $s$ is the spherical measure of the unit ball in $\T_p$
 centered at its tip.
 By Theorem~\ref{thm:tan4finite}, 
-$\T_p\in \CBB{m}{0}$.
+$\T_p$ is an $m$-dimensional complete length $\Alex0$ space.
 Therefore by \ref{cor:bishop:vol}, we get that $s\le 1$.
 
 By \ref{prop:bishop:f},
@@ -312,7 +312,7 @@ The opposite inequality follows by  \ref{thm:dens:=<1} which gives
  \ref{SphMes-tip}.
 \claimqeds
 
-Since $\T_p\in \CBB{m}{0}$,
+Since $\T_p$ is an $m$-dimensional complete length $\Alex0$ space,
 by Proposition \ref{prop:bishop:g}
 there is a short map $g\:\EE^m\to \T_p$
 such that 
@@ -370,9 +370,10 @@ the map $g$ can not preserve spherical measure,
 a contradiction.
 \qeds
 
-Combining  Lebesgue's density theorem \ref{thm:dens:0or1} and Proposition  \ref{prop:dans=1=>euclid} we immediately obtain 
+Combining  Lebesgue's density theorem \ref{thm:dens:0or1} and Proposition  \ref{prop:dans=1=>euclid} we immediately obtain the following.
+
 \begin{thm}{Corollary}\label{cor:ae-Euclidean-sph}
-Let $\spc{L}\in\CBB m{}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Then $\T_p\iso\EE^m$ for
 $\SphMes_m$-almost all points $p\in\spc{L}$.
 
@@ -638,7 +639,7 @@ for any Borel set $A\subset\spc{L}$.
 With this in mind we can now restate Corollary~\ref{cor:ae-Euclidean-sph} as follows
 
 \begin{thm}{Corollary}\label{cor:ae-Euclidean}
-Let $\spc{L}\in\CBB m{}$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Then $\T_p\iso\EE^m$ for almost all points $p\in \spc{L}$.
 \end{thm}
 
@@ -646,7 +647,8 @@ Then $\T_p\iso\EE^m$ for almost all points $p\in \spc{L}$.
 
 
 \begin{thm}{Volume Convergence Theorem}\label{thm:vol-coverge}
-Let  $\spc{L}_n, \spc{L}_\infty\in \CBB{m}{\kappa}$ and $\spc{L}_n\GHto \spc{L}_\infty$.
+Let  $\spc{L}_1, \spc{L}_2,\dots \spc{L}_\infty$ be $m$-dimensional complete length $\Alex\kappa$ spaces
+and $\spc{L}_n\GHto \spc{L}_\infty$.
 Then $\vol_m$ on $\spc{L}_n$ converges weakly to $\vol_m$ on $\spc{L}_\infty$.
 
 In particular,
@@ -856,9 +858,8 @@ The following statement is less trivial.
 It says that the coarea formula holds if the volume of the domain vanishes.
 
 \begin{thm}{Proposition}\label{prop:coarea-rough}
-Let $\kay\ge m$,
-$\spc{L}\in\CBB{\kay}{\kappa}$, 
-$\spc{M}\in\CBB{m}{\kappa}$ 
+Let $\spc{L}$ and $\spc{M}$ be complete length $\Alex\kappa$ space,
+$\kay=\dim\spc{L}\ge \dim\spc{M}=m$,
 and $f\:\spc{L}\subto\spc{M}$ be a locally Lipschitz submap.
 
 Assume $A\subset \Dom f$ 
@@ -1077,7 +1078,7 @@ The later follows from Proposition~\ref{prop:coarea-rough}.
 
 \begin{thm}{Bishop--Gromov inequality}\label{thm:bishop-gromov}
 Let $m\ge 2$ and 
-$\spc{L}\in\CBB{m}{\kappa}$, 
+$\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, 
 $p\in \spc{L}$.
 Set
 \begin{align*}
@@ -1107,7 +1108,7 @@ Similarly,  $S[R]_{\Lob{m}{\kappa}}$ denotes  a sphere of radius $R$ in ${\Lob{m
 
 \begin{thm}{Proposition}\label{prop:monotonic-spheres}
 Let $m\ge 2$ and 
-$\spc{L}\in\CBB{m}{\kappa}$, 
+$\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, 
 $p\in \spc{L}$.
 Set
 \begin{align*}
@@ -1285,7 +1286,7 @@ Note that since $\Str_p\supset \InnLoc_p$,
 we also get that $\Str_p$ contains $\vol_m$-almost all points of $\spc{L}$.
 
 \begin{thm}{Li--Rong problem}
-Let $\spc{L}\in\CBB{m}0$,
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex0$ space,
 and $\DD$ be the unit ball in $\EE^m$.
 Assume $\rad\spc{L}=1$ and $\vol_m\spc{L}=\vol_m\DD$.
 Show that $\spc{L}$ is isometric to the quotient space of  $\DD$ 
@@ -1298,7 +1299,7 @@ The following exercise generalize Bishop--Gromov inequality.
 
 \begin{thm}{Exercise}\label{thm:bishop-gromov-gen}
 Let $m\ge 2$ and 
-$\spc{L}\in\CBB{m}{\kappa}$, 
+$\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, 
 $S\subset \spc{L}$ be a compact subset.
 Set
 \begin{align*}

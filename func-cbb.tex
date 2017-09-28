@@ -6,7 +6,7 @@ native and foreign functions}
 
 Supporting vectors are defined similar to gradient.
 
-\begin{thm}{Definition}\label{def-support} Assume $\spc{L}\in\CBB m\kappa$, $f\:\spc{L}\subto\RR$ be a semiconcave locally Lipschitz subfunction 
+\begin{thm}{Definition}\label{def-support} Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, $f\:\spc{L}\subto\RR$ be a semiconcave locally Lipschitz subfunction 
 and $p\in\Dom f$.
 
 A vector $s\in \T_p$ is called a \emph{supporting vector} of $f$ at $p$ if and
@@ -16,7 +16,7 @@ A vector $s\in \T_p$ is called a \emph{supporting vector} of $f$ at $p$ if and
 The set of supporting vectors of $f$ at $p\in\Dom f$ will be denoted by $\partial_p f$.
 
 \begin{thm}{Lemma}
-Assume $\spc{L}\in\CBB m\kappa$, $f\:\spc{L}\subto\RR$ be a semiconcave subfunction and $p\in
+Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, $f\:\spc{L}\subto\RR$ be a semiconcave subfunction and $p\in
 \Dom f$.
 Then $\partial_p f$ is a closed convex subset of $\T_p$. 
 \end{thm}
@@ -45,7 +45,7 @@ $f=\dist{\partial \spc{L}}{}{}$ is semiconcave by ??? but it is foreign sinse, i
 
 
 \begin{thm}{Theorem}\label{thm:native-operations}
-Let $\spc{L}\in\CBB m\kappa$ 
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space 
 and $f_1,f_2,\dots,f_n\:\spc{L}\to\RR$ be an array of native semiconcave functions.
 Assume $\Theta\:\RR^n\to\RR$ be a locally Lipschitz semiconcave function which innreasing in each argument.
 Then $f=\Theta(f_1,f_2,\dots,f_n)$ is a native semiconcave function.
@@ -56,7 +56,8 @@ we have that $\min\{f_1,f_2\}$ as well as $f_1+f_2$ are also native.
 
 
 
-\begin{thm}{Theorem} Let $\spc{L}_n\in\CBB m\kappa$, and $\spc{L}_n\xGHto{a_n} \spc{L}$.
+\begin{thm}{Theorem} 
+Let $\spc{L}_n$ be an $m$-dimensional complete length $\Alex\kappa$ space, and $\spc{L}_n\xGHto{a_n} \spc{L}$.
 Assume $f_n\:\spc{L}_n\subto \RR$ be a sequence of native $\lambda$-concave subfunctions which converged to a subfunction $f\:\spc{L}\to\RR$.
 Then $f$ is native.
 \end{thm}
@@ -67,13 +68,13 @@ Then $f$ is native.
 
 
 
-Let $\spc{L}\in\CBB m\kappa$, 
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, 
 $\partial \spc{L}\not=\emptyset$,
 as in ???, we will denote by $\breve{\spc{L}}$ the doubling of $\spc{L}$ and by $\proj\:\breve{\spc{L}}\to \spc{L}$ the natural projection map.
 
 
 \begin{thm}{Lemma} 
-Let $\spc{L}\in\CBB m\kappa$. 
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space. 
 Then
 \begin{subthm}{with-no-bry} If $\partial \spc{L}=\emptyset$ then any semiconcave subfunction $f\:\spc{L}\subto\RR$ is native.
 \end{subthm}
@@ -203,7 +204,7 @@ F(\dist{\bm{x}}{q}{})\cdot\d_{\bm{x}}\vol^{\kay m},\]
 we say that $\OS_\eps\phi$ is defined at $q$ if the expression under integral is defined for all $\bm{x}\in \oBall(\bm{p},\eps)$.
 
 \begin{thm}{Lemma}
-Let $\spc{L}\in\CBB m\kappa$ and $\phi\in\MD(\spc{L},\RR)$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $\phi\in\MD(\spc{L},\RR)$.
 Then for any $\eps>0$, the subfunction $\OS_\eps\phi\:\spc{L}\to(-\infty,+\infty]$ is semiconcave. 
 Moreover, for any $p\in \Dom \OS_\eps\phi$, 
 the restriction $\d_p\OS_\eps\phi|\Lin_p$ is linear.
@@ -281,7 +282,7 @@ The function $f\:\spc{L}\to\RR$ defined as $f(p)=0$ and $f(x)=1$ for any $x\not=
 
 \item The condition that $\spc{L}$ is finite dimensional is also essential. 
 Consider the Wasserstein space $\spc{W}$ over $[0,1]$.
-According to ???, $\spc{W}\in \CBB{\infty}{0}$,
+According to ???, $\spc{W}$ is an infinite-dimensional complete length $\Alex0$ space,
 and according to ??? the entropy function $f$ on $\spc{W}$ is concave and satisfies the rest of conditions of the theorem.
 On the other hand $f$ takes value $-\infty$ at a dense set in $\spc{W}$.
 
@@ -309,13 +310,13 @@ Consider subgraph of $ f$
 \[M=\set{(x,t)\in \spc{L}\times\RR}{x\in K\  \t{and} \  t\le  f(x)}.\]
 Clearly $M$ is convex closed subset
  of $\spc{L}\times\RR$.
-Thus, $M\in\CBB{m+1}{}$.
+It follows that $M$ is an $(m+1)$-dimensional complete length $\Alex{}$ space.
 According to \ref{thm:fr-bry}, $\partial M=\Fr_{\spc{L}\times\RR} M$.
 
 Consider the level set 
 \[M_t=\set{x\in K}{(x,t)\in M}.\]
 Clearly, $M_t$ is a closed convex subset of $K$. 
-In particular, $M_t\in\CBB{m}{\kappa}$.
+In particular, $M_t$ is an $m$-dimensional complete length $\Alex\kappa$ space.
 Since $f$ is finite on an everywhere dense subset,
 we have that $M_t\to K$ in Hausdorff sense as $t\to-\infty$.
 Thus, according to ???, $\partial M_t\to \partial K$ in Hausdorff sense.
@@ -372,8 +373,8 @@ such that
 \[d_p f(x)=\inf\set{-\<v,x\>}{v\in V}.\]
 \begin{enumerate}
 \item Construct a semiconcave locally Lipschitz function which is not pseudodistance.
-\item Construct a space $\spc{L}\in\CBB{m}{0}$ and concave locally Lipschitz function $f$ on $\spc{L}$ which can not be approximated by concave pseudodistance functions.
-\item Show that any concave function on $\spc{L}\in\CBB{m}{0}$ can be approximated by concave pseudodistance functions.
+\item Construct  an $m$-dimensional complete length $\Alex0$ space $\spc{L}$ and concave locally Lipschitz function $f$ on $\spc{L}$ which can not be approximated by concave pseudodistance functions.
+\item Show that any concave function on  an $m$-dimensional complete length $\Alex0$ space $\spc{L}$ can be approximated by concave pseudodistance functions.
 \end{enumerate}
 
 \end{thm}
