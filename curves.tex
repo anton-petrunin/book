@@ -5,7 +5,7 @@
 \section{Curves in CBB spaces}
 
 Let
-$\spc{L}\in\CBB{}{}$ 
+$\spc{L}$ be a complete length $\Alex{}$ space
 and $\alpha\:\II\to \spc{L}$ be a curve.
 We say that $v\in\T_{\alpha(t_0)}$ is a \emph{rigth} or \emph{left} \emph{derivative} of $\alpha$ at $t_0\in\II$ (briefly, $v=\alpha^+(t_0)$ or correspondingly $v=\alpha^-(t_0)$)
 if 
@@ -30,11 +30,10 @@ for any choice of geodesics $[\alpha(t_0)\alpha(t)]$, we have
 \qeds
 
 Recal that right/left differentiability of curves is defined in \ref{def:diff-curv}.
-For $\CBB{}{}$-spaces, 
+For $\Alex{}$ spaces, 
 
 \begin{thm}{Definition}\label{def:diff-curv-yet}
-Let
-$\spc{L}\in \CBB{}{}$  
+Let $\spc{L}$ be a complete length $\Alex{}$ space  
 and $\alpha\:\II\to \spc{X}$ be a curve.
 
 We say that $\alpha$ is \emph{differentiable} at $t_0\in\II$ if 
@@ -103,7 +102,7 @@ Thus $\<v_1,v_2\>=\<v_1,v_1\>$ and similarly, $\<v_1,v_2\>=\<v_2,v_2\>$.
 Hence $v_1=v_2$.
 \qeds
 
-Acording to Rademacher's theorem, any Lipscitz real-to-real function is differentiable almost everywhere. Here its extension for Lipschitz curves in $\CBB{}{}$-spaces.
+According to Rademacher's theorem, any Lipscitz real-to-real function is differentiable almost everywhere. Here its extension for Lipschitz curves in $\Alex{}$ spaces.
 
 \begin{thm}{Rademacher's theorem}\label{thm:velocity}
 Let $\II$ be a real inteval, $\spc{L}\in\CBB m\kappa$
@@ -135,7 +134,7 @@ The original Rademacher's theorem (see \cite[3.1.6]{federer})
 states that a Lipschitz map from Euclidean space to Euclidean space is differentiable at almost all points.
 Here we give a versions of this theorem for maps with targets
 general metric space
-and also Alexandrov spaces, both $\CBB{}{}$ and $\cCat{}{}$.
+and also Alexandrov spaces, both $\Alex{}$ and $\cCat{}{}$.
 These generalizations appear in \cite{kirchheim} and \cite{lytchak:diff}.
 
 First let us define a differentiability of map 
@@ -182,8 +181,8 @@ Then $\Phi$ is metrically differentiable almost everywhere.
 
 \qeds
 
-\begin{thm}{Rademacher's theorem for $\CBB{}{}$ spaces}
-Let $\spc{L}\in\CBB{}{}$  
+\begin{thm}{Rademacher's theorem for $\Alex{}$ spaces}
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $\map\:\EE^m\subto\spc{L}$ be a locally Lipschitz submap.
 Let $A\subset \Dom \map$ be the set where $\map$ is differentiable;
 that is, $a\in A$ if and only if $\d_a\map\:\EE^m\to\T_{\map(a)}$ is defined and linear.
@@ -245,7 +244,7 @@ In particular, the assumption that $\spc{U}$ is separable is necessary in (\ref{
 
 
 \begin{thm}{Corollary}\label{cor:rademacher-cbb-sourse}
-Let $\spc{L}\in\CBB{m}{}$ and $\spc{N}$ be either $\cCat{}{}$ or $\CBB{}{}$ space.
+Let $\spc{L}\in\CBB{m}{}$ and $\spc{N}$ be either $\cCat{}{}$ or $\Alex{}$ space.
 Then any locally Lipschitz submap $f\:\spc{L}\subto\spc{N}$ is linearly differentiable almost everywhere in $\Dom f$. 
 \end{thm}
 
@@ -460,7 +459,7 @@ Equivalenty, there is a norm $\|{*}\|$ on $\RR^m$ such that
 \section{Exercises}
 
 \begin{thm}{Exercise}
-Construct a space $\spc{L}\in\CBB\infty{}$ and a curve $\alpha\:\RR\to \spc{L}$ such that 
+Construct a infinite-dimesnional complete length $\Alex{\kappa}$ space $\spc{L}\in\CBB\infty{}$ and a curve $\alpha\:\RR\to \spc{L}$ such that 
 $\alpha^+(0)=o$ 
 but $\liminf_{t\to 0}\dist{\alpha(0)}{\alpha(t)}{}/|t|>0$.
 \end{thm}

@@ -11,11 +11,6 @@ These definitions maek it easy to adapt the Euclidean intuition to the Alexandro
 Later we  give a few equivalent global definitions 
 via concavity of distance functions and development (Section~\ref{sec:func-comp-CBB}).
 
-In Section~\ref{sec:4pt} gives yet another definition via extension of short maps on 4-point subsets. 
-This definition give a uniform approach to definitions of spaces with lower and upper curvature bound.
-It gives a conceptional point of view,
-but it almost not used in the proofs.
-
 In Section~\ref{sec:loc}, 
 we give local versions of each definition and prove the globalization theorem.
 
@@ -44,13 +39,12 @@ or at least one of the model angles $\angk\kappa p{x^i}{x^j}$ is not defined.
 
 \begin{thm}{Definition}
 \label{df:cbb1+3}
-A complete length space $\spc{L}$ 
-is called an Alexandrov space with curvature $\ge \kappa$ 
-(briefly, $\spc{L}\in\CBB{}{\kappa}$\index{$\CBB{}{}$}) 
+A metric space $\spc{L}$ 
+is $\Alex{\kappa}$ 
 if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies (1+3)-point comparison.
 
 We say that $\spc{L}$ an Alexandrov space with curvature bounded below 
-(briefly, $\spc{L}$ is a  $\CBB{}{}$ space or $\spc{L}\in\CBB{}{}$) if there is $\kappa\in\RR$ such that $\spc{L}\in \CBB{}{\kappa}$.
+(briefly, $\spc{L}$ is a  $\Alex{}$ space) if  $\spc{L}$  is $\Alex{\kappa}$ for some $\kappa\in\RR$.
 \end{thm}
 
 \parbf{Remarks} 
@@ -100,7 +94,7 @@ Is the same true for $\kappa>0$, what is the difference?
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
 Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm).
-Show that $\spc{L}\in\CBB{}{}$ if and only if $\spc{L}\iso\EE^m$.
+Show that $\spc{L}$ be a complete length $\Alex{}$ space if and only if $\spc{L}\iso\EE^m$.
 \end{thm}
 
 It is straightforward to check the following claim (for definitions of $\o$-limit and $\o$-power, 
@@ -184,7 +178,7 @@ see Exercise~\ref{ex:no-geod}.
 Construct a space $\spc{L}\in \CBB{}{0}$ which is not geodesic.
 \end{thm}
 
-We are goinfg to show that all $\CBB{}{}$ spaces are G-delta geodesic in the following sense.
+We are going to show that all $\Alex{}$ spaces are G-delta geodesic in the following sense.
 
 \begin{thm}{Definition}\label{def:alm-geod}
 A complete length space $\spc{X}$ is called \emph{G-delta geodesic}\index{geodesic!G-delta geodesic space}\index{G-delta geodesic space} 
@@ -203,7 +197,7 @@ we use the notation
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:almost.geod}
-Let $\spc{L}\in\CBB{}{}$ and $p\in \spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
 Then the set $\Str(p)$ is a dense G-delta set, 
 and for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
 
@@ -292,7 +286,7 @@ and Corollary \ref{cor:two-geodesics-in-ultrapower}.
 \end{thm}
 
 \begin{thm}{Exercise}
-Construct a space $\spc{L}\in\CBB{}{}$
+Construct a space $\spc{L}$ be a complete length $\Alex{}$ space
 which contains an everywhere dense G-delta set $A$
 such that 
 $A\cap\l]xy\r[=\emptyset$
@@ -300,7 +294,7 @@ for any geodesic $[xy]$ in $\spc{L}$.
 \end{thm}
 
 \begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{}{}$ and $A\subset\spc{L}$ be a closed subset.
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $A\subset\spc{L}$ be a closed subset.
 Show that there is a dense G-delta set $W\subset\spc{L}$ such that
 for any $q\in W$ there is unique geodesic $[pq]$ with
 $p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
@@ -1279,12 +1273,12 @@ Prove that completion of $\spc{X}$ is an Alexandrov's space with curvature $\ge\
 \section{Properties of geodesics and angles}\label{sec:prop.geod}
 
 \parbf{Remark.} 
-All proofs in this section can be easely modified to use only the local definition of $\CBB{}{}$-spaces without use of the globalization theorem (\ref{thm:glob}).
+All proofs in this section can be easely modified to use only the local definition of $\Alex{}$ spaces without use of the globalization theorem (\ref{thm:glob}).
  
 \begin{thm}{Geodesics do not split}\label{thm:g-split}
-In $\CBB{}{}$-space, geodesics do not bifurcate.
+In $\Alex{}$ space, geodesics do not bifurcate.
 
-More precisely: let $\spc{L}\in\CBB{}{}$ and $[p x]$, $[p y]$ be two geodesics, then
+More precisely: let $\spc{L}$ be a complete length $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics, then
 \begin{subthm}{nonsplit} If  there is an $\eps>0$, such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
 for all $t\in[0,\eps)$, 
 then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
@@ -1295,7 +1289,7 @@ then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
 \end{thm}
 
 \begin{thm}{Corollary}
-Let $\spc{L}\in\CBB{}{}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space.
 Then restriction of any geodesic in $\spc{L}$ to a proper segment is the unique minimal geodesic joining its endpoints.
 \end{thm}
 
@@ -1337,7 +1331,7 @@ Therefore we can apply (\ref{SHORT.nonsplit}).
 \qeds
 
 \begin{thm}{Adjacent angle lemma}\label{lem:sum=pi}
-Let $\spc{L}\in\CBB{}{}$ and
+Let $\spc{L}$ be a complete length $\Alex{}$ space and
  $\hinge z x p$ and $\hinge z y p$ be two hinges with comon side $[zp]$ in $\spc{L}$.
 Assume that points $p$, $x$, $y$ and $z$ are distinct and $z\in[xy]$,
 then 
@@ -1515,7 +1509,7 @@ Since $\eps>0$ is arbitrary, \ref{eq:ang-semicon->} follows.
 %!!!ADDED LATER
 
 \begin{thm}{First variation formula}\label{1st-var+}
-Let $\spc{L}\in\CBB{}{}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space.
 For any point $q$ and geodesic $[px]$ in $\spc{L}$, we have 
 \[\dist{q}{\geod_{[p x]}(t)}{}
 =
@@ -1533,7 +1527,7 @@ Therefore the infimum $\phi$ is achieved on some particular geodesic from $p$ to
 As a corollary we obtain the following classical result:
 
 \begin{thm}{Strong angle lemma}\label{lem:strong-angle}
-Let $\spc{L}\in\CBB{}{}$ and $p,q\in \spc{L}$ be such that there is unique geodesic from $p$ to $q$ in the ultrapower $\spc{L}^\o$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p,q\in \spc{L}$ be such that there is unique geodesic from $p$ to $q$ in the ultrapower $\spc{L}^\o$.
 Then for any hinge  $\hinge  p q x$ we have
 \[\mangle\hinge p q x
 =
@@ -1564,7 +1558,7 @@ if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$ then $[p q]
 The first statement follows directly from the first variation formula (\ref{1st-var+}) 
 and definition of model angle (see Section~\ref{sec:angles}).
 The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) applyied to $\spc{L}^\o$.
-(Note that according to Proposition~\ref{prp:A^omega} $\spc{L}^\o\in\CBB{}{}$.)\qeds
+(Note that according to Proposition~\ref{prp:A^omega} $\spc{L}^\o$ is a complete length $\Alex{}$ space.)\qeds
 
 
 \parit{Proof of the first variation formula (\ref{1st-var+}).}
@@ -1655,7 +1649,7 @@ h(\ell)\le h(0)
 \dist{x}{y}{}.\]  
 Since the geodesic $[x y]$ is unique this means that $p\in [x y]$ and hence
  $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
-Since in $\CBB{}{}$-spaces, geodesics do not bifurcate (\ref{nonsplit}), 
+Since in $\Alex{}$ spaces, geodesics do not bifurcate (\ref{nonsplit}), 
 it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$ as a local geodesic $\gamma$ 
 (which might be not minimizing).
 In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold with possibly non empty boundary.
@@ -1760,7 +1754,7 @@ Let $\kappa>0$.
 Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$ 
 of the model angle function $\angk\kappa{{*}}{{*}}{{*}}$.
 Some authors define camparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$ but
-that leads to two different definition of model angles --- one for $\cCat{}{}$ spaces and an other for $\CBB{}{}$ spaces.
+that leads to two different definition of model angles --- one for $\cCat{}{}$ spaces and an other for $\Alex{}$ spaces.
 
 \begin{thm}{Definition of extended angle}
 Let $p,q,r$ be points in a metric space such that  $p\not=q$, $p\not=r$ then
