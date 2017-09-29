@@ -57,7 +57,7 @@ However, in the case $\Kappa>0$ it is not at all trivial, and will be shown only
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Let $\spc{L}$ be a complete length space.
-Show that $\spc{L}\in\CBB{}\kappa$
+Show that $\spc{L}$ is $\Alex\kappa$
 if for any quadrouple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
 \[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa\]
 there is a quadrouple of points $q,y^1,y^2,y^3\in\Lob3\kappa$
@@ -71,7 +71,7 @@ The exercise above is a partial case of (1+\textit{n})-point comparison (\ref{th
 
 \begin{thm}{Exercise}
 Let $\spc{L}$ be a length space.
-Show that $\spc{L}\in\CBB{}0$
+Show that $\spc{L}$ is $\Alex0$
 if and only if 
 \[
 \area\modtrig0(xyz)
@@ -86,7 +86,7 @@ it was given by Abraham Wald in \cite{wald}.
 
 \begin{thm}{Exercise}
 Let $\spc{L}$ be a complete length space and $\kappa\le 0$.
-Prove that $\spc{L}\in\CBB{}\kappa$ if and only if for any quadruple of points $p,q,r,s\in \spc{L}$ can be isometrically embedded into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
+Prove that $\spc{L}$ is $\Alex\kappa$ if and only if for any quadruple of points $p,q,r,s\in \spc{L}$ can be isometrically embedded into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
 
 Is the same true for $\kappa>0$, what is the difference?
 \end{thm}
@@ -102,8 +102,8 @@ see Section~\ref{ultralimits}).
 \begin{thm}{Proposition}\label{prp:A^omega}
 Let $\o$ be a selective ultrafilter on $\NN$, $(\spc{L}_n,\star_n)\to (\spc{L}_\o,\star_\o)$ 
 and $\kappa_n\to\kappa_\o$ as $n\to\o$.
-Then 
-\[\spc{L}_n\in\CBB{}{\kappa_n}\ \ \Longrightarrow\ \ \spc{L}_\o\in\CBB{}{\kappa_\o}.\]
+Assume that $\spc{L}_n$ is a complete length $\Alex{\kappa_n}$ space for each $n$.
+Then $\spc{L}_\o$ is is a complete length $\Alex{\kappa_\o}$ space.
 
 Moreover, for any complete metric space $\spc{L}$,
 its ultrapower $\spc{L}^\o$ is $\Alex\kappa$ if and only if so is $\spc{L}$.
@@ -455,7 +455,7 @@ Prove that
 \end{thm}
 
 \begin{thm}{Advanced Exercise} \label{ex:urysohn}
-Construct a geodesic space $\spc{X}\notin\CBB{}0$, 
+Construct a geodesic space $\spc{X}$ which is not $\Alex0$, 
 but which meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \l]x y\r[$
 \[\angk{0}{z}{p}{x}+\angk{0}{z}{p}{y}
 \le
@@ -491,7 +491,7 @@ The following exercise is inspired by Busemann's definition given in \cite{busem
 \begin{thm}{Exercise}
 
 \begin{subthm}{}
-Show that any space $\spc{L}\in\CBB{}0$ satisfies the following condition:
+Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
 
 \begin{itemize}
 \item For any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
@@ -860,7 +860,7 @@ if $p$ satisfies any of the equivalent condition of Theorem~\ref{thm:=def-loc} f
 
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
-Let $\spc{L}$ be a complete length metric space such that $\curv_p \spc{L}\ge\Kappa$ for any point $p\in \spc{L}$ then $\spc{L}\in\CBB{}{\Kappa}$.
+Let $\spc{L}$ be a complete length metric space such that $\curv_p \spc{L}\ge\Kappa$ for any point $p\in \spc{L}$ then $\spc{L}$ is $\Alex\Kappa$.
 \end{thm}
 
 In the two-dimensional case this theorem was proved in \cite{alexandrov:devel}, later, in \cite{toponogov-globalization+splitting} it was proved for Riemannian manifolds of all dimensions.
@@ -880,8 +880,7 @@ Note that if $\Kappa\le 0$, this statement follows directly from definition of A
 The ``if''-part also follows directly from definition.
 
 For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined, but, it is defined for sufficiently small triangles.
-Thus, if $\kappa<\Kappa$ then
-\[\spc{L}\in\CBB{}{\Kappa}\ \ \ \Longrightarrow\ \ \ \curv_p \spc{L}\ge\kappa\ \ \text{for any}\ \ p\in \spc{L}.\]
+Thus, if $\Kappa>\kappa$ then any $\Alex\Kappa$ space is locally $\Alex\kappa$
 Applying  globalization theorem (\ref{thm:glob}), we get the ``only if''-part.
 \qeds
 
@@ -1352,7 +1351,7 @@ Thus, the result follows from the triangle inequality for angles (\ref{claim:ang
 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont-cbb}
-Let $\spc{L}_n\in \CBB{}\kappa$ 
+Let $\spc{L}_n$  be a complete length $\Alex\kappa$ space
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that the sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{L}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{L}_\o$.
 Then 
@@ -1395,7 +1394,7 @@ Hence the result.
 %???ADDED LATER
 
 \begin{thm}{Angle continuity}\label{cor:ang.cont-cbb}
-Let $\spc{L}_n\in \CBB{}\kappa$ 
+Let $\spc{L}_n$  be a complete length $\Alex\kappa$ space
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that sequences $p_n, x_n, y_n$ in $\spc{L}_n$ 
 converges correspondingly to the points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$
@@ -1613,7 +1612,7 @@ The following theorem states that if one ignores a few exceptional spaces, then 
 Note that many authors (but not us) exclude these spaces in the definition of Alexandrov space with positive lower curvature bound.
 
 \begin{thm}{On diameter of space}\label{diam-k>0}
-Let $\spc{L}\in\CBB{}{1}$. 
+Let $\spc{L}$ be a complete length $\Alex1$ space. 
 Then either 
 \begin{subthm}{} $\diam \spc{L}\le \pi$; 
 \end{subthm}
@@ -1663,7 +1662,7 @@ As all of those spaces are proper it means that $\spc{L}=\spc{L}^\o$.
 \qeds
 
 \begin{thm}{Lemma}\label{concave-pi/2}
-Let $\spc{L}\in\CBB{}{1}$ and $p\in \spc{L}$.
+Let $\spc{L}\in\CBB{}{1}$ be a complete length $\Alex1$ space and $p\in \spc{L}$.
 Then $\dist{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\pi)\backslash \oBall(p,\tfrac\pi2)$.
 
 In particular, if $\diam\spc{L}\le\pi$ 
@@ -1683,7 +1682,7 @@ Show that the action of $G$ has a fixed point in $\spc{L}$.
 
 \begin{thm}{On perimeter of triple}\label{perim-k>0}
 Let  
-$\spc{L}\in\CBB{}{1}$ 
+$\spc{L}$ be a complete length $\Alex1$ space
 and $\diam \spc{L}\le \pi$.
 Then perimeter of any triple of points $p,q,r\in \spc{L}$ is at most $2\cdot\pi$.
 \end{thm}
@@ -1696,7 +1695,7 @@ Rescaling the space slightly, we can assume that $\diam\spc{L}<\pi$,
 but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
 
 By Corollary \ref{cor:CAT>k-sence},
-after rescaling we still have $\spc{L}\in\CBB{}{1}$.
+after rescaling $\spc{L}$ is still $\Alex1$.
 
 Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider case when there is a geodesic $[q r]$. 
 

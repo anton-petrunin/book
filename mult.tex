@@ -703,7 +703,7 @@ and $\dist{\~ a^i}{\~ a^j}{}\ge \dist{a^i}{a^j}{}$ for all $i$ and $j$
 the point $\~ p$ is an interior point of the convex hull of $\~ p, \~ a^0, \~ a^1,\dots,\~ a^m$.
 \end{thm} 
 
-For example if $p,a^0,a^1,a^2$ be three points in a $\CBB{2}{0}$ space
+For example if $p,a^0,a^1,a^2$ be three points in a two-dimensional $\Alex0$ space
 such that $\angk0p{a^0}{a^1},\angk0p{a^0}{a^2}>\tfrac34\cdot\pi$ 
 and $\angk0p{a^1}{a^2}>\tfrac13\cdot\pi$ then $(a^0,a^1,a^2)$ is not strutting $p$ in the sense of definition \ref{def:strut-I}, but it does strutting $p$ in the generalized sense.
 
@@ -732,8 +732,8 @@ Is there a righ-inverse of $\bm{f}$ defined in a neighborhood of $\bm{f}(p)\in \
 The following question remains completely open (so far there is no even technique which could approach it in principle).
 
 \begin{thm}{Question}
-Assume $\spc{L}\in\CBB\infty\kappa$, 
-is it allways possible to construct a bi-Lipschitz embedding $\cBall[1]_{\EE^m}\hookrightarrow \spc{L}$ for any positive integer $m$?
+Assume $\spc{L}\in\CBB\infty\kappa$ is an infinite-dimensional complete length $\Alex{\kappa}$ space, 
+is it always possible to construct a bi-Lipschitz embedding $\cBall[1]_{\EE^m}\hookrightarrow \spc{L}$ for any positive integer $m$?
 \end{thm}
 
 The following seems to be ``right'' definition of strut.
@@ -787,7 +787,7 @@ If $m=1$ define
 \]
 Further assume we already defined scalar product of gradients for all dimensions $<m$.
 Set $\phi=(\d_pf)|\Sigma_p$ and $\psi=(\d_ph)|\Sigma_p$;
-since $\Sigma_p\in\CBB{m-1}{1}$ (see ???) the scalar product
+since $\Sigma_p$ is $(m-1)$-dimensional (see ???) the scalar product
 $\<\d_\xi\phi,\d_\xi\psi\>$ is well defined for any $\xi\in\Sigma_p$.
 Further, 
 \[
@@ -817,7 +817,7 @@ Hint: Show that for each point $p$ there is a compact neighborhood $K$ and $\del
 admits an bi-Lipschitz embedding into $\RR^\kay$, where $\kay=\dim\Lin_p$.
 
 \begin{thm}{Exercise}
-Show that given $\eps>0$, $\kappa\in\RR$ and $n\in\ZZ_{\ge0}$ there is $\delta>0$ such that for any $\spc{L}\in\CBB{n}{\kappa}$ and any point $p\in\spc{L}$ there is a function $f\:\oBall(p,\delta)\to\RR$
+Show that given $\eps>0$, $\kappa\in\RR$ and $m\in\ZZ_{\ge0}$ there is $\delta>0$ such that for any $m$-dimensional complet length $\Alex{\kappa}$ space $\spc{L}$ and any point $p\in\spc{L}$ there is a function $f\:\oBall(p,\delta)\to\RR$
 such that for any geodesic $[xy]$ with $\dist{x}{y}{}>\eps$ in $\spc{L}$,
 the subfunction $f\circ\gamma$ is strongly concave.
 \end{thm}
