@@ -1,7 +1,7 @@
 %%!TEX root = the-defs-CBA.tex
 %%array^
 
-\section{Dual-(1+3)-point comparison.}\label{sec:dual-1+3}
+\section{Dual-$\Alex\kappa$ comparison}\label{sec:dual-1+3}
 
 
 
@@ -14,7 +14,7 @@ The duality relates to Wald's idea of embedding quadruples in model spaces.
 \begin{thm}{Definition}\label{def:alt-cba}
 Let $\spc{X}$ be a metric space.
 A quadruple $p,x^1,x^2,x^3$ of points in $\spc{X}$ 
-is said to satisfy \emph{dual-(1+3)-point $\kappa$-comparison at the vertex $p$} if
+is said to satisfy \emph{dual-$\Alex\kappa$ comparison} if
 \[
 \angk\kappa p{x^i}{x^j}\le \angk\kappa p{x^\kay}{x^i} + \angk\kappa p{x^\kay}{x^j}, 
 \]
@@ -24,11 +24,11 @@ or at least one of the model angles $\angk\kappa p{x^i}{x^j}$  is not defined.
 
 We say the inequality \ref{def:alt-cba} \emph{holds as an equality} if in addition, equality holds for some choice of $i,j$.
 
-Recall the (1+3)-point comparison (\ref{df:1+3}) that we used to define $\Alex{\kappa}$ spaces:
+Recall the $\Alex\kappa$ comparison (\ref{df:1+3}) that we used to define $\Alex{\kappa}$ spaces:
 %{df:cbb1+3}
 
 \begin{thm}{Definition}\label{def:cbb} 
-In a metric space, a quadruple $Q\:p,x^1,x^2,x^3$ is said to satisfy \emph{(1+3)-point $\kappa$-comparison at   $p$} if 
+In a metric space, a quadruple $Q\:p,x^1,x^2,x^3$ is said to satisfy \emph{($\Alex\kappa$ comparison} if 
 \[\angk{\kappa} p{x^1}{x^2}+\angk{\kappa} p{x^2}{x^3}+\angk{\kappa}p{x^3}{x^1}\le 2\cdot \pi,
 \]
 or at least one of the model angles $\angk\kappa p{x^i}{x^j}$  is not defined.
@@ -41,7 +41,7 @@ Conditions \ref{def:alt-cba} and \ref{def:cbb} are dual in the sense that togeth
 \label{lem:embedding-angles} 
 In a metric space, let $Q$ be a  quadruple all of whose model angles are defined.
 \begin{subthm}{embed}
-If both  (1+3)-point $\kappa$-comparison (\ref{def:cbb}) and dual-(1+3)-point $\kappa$-comparison (\ref{def:alt-cba}) hold at some $p\in Q$, then $Q$ embeds in $\Lob3\kappa$. 
+If both $\Alex\kappa$ comparison (\ref{def:cbb}) and dual-$\Alex\kappa$ comparison (\ref{def:alt-cba}) hold at some $p\in Q$, then $Q$ embeds in $\Lob3\kappa$. 
 Conversely, if such an embedding exists, then both \ref{def:alt-cba} and \ref{def:cbb} hold at every $p\in Q$. 
 \end{subthm}
 \begin{subthm}{planar-embed}
@@ -63,12 +63,12 @@ Conversely, if  $Q$  lies in  $\Lob2\kappa$, then at any $p\in Q$  the three mod
 \qeds
 
 
-%Instead of defining $\Cat{}{\kappa}$ in terms of (2+2)-point $\kappa$-comparison, as in definition \ref{def:cat}, the following theorem shows  we could  have used dual-(1+3)-point $\kappa$-comparison instead.  
+%Instead of defining $\Cat{}{\kappa}$ in terms of (2+2)-point $\kappa$-comparison, as in definition \ref{def:cat}, the following theorem shows  we could  have used dual-$\Alex\kappa$ comparison instead.  
 The following theorem is the dual formulation for $\Cat{}{\kappa}$ of definition \ref{df:1+3} of $\Alex{\kappa}$ spaces. 
-The defining condition in  \ref{df:1+3} is that every quadruple  satisfies (1+3)-point $\kappa$-comparison (\ref{def:cbb})  at every vertex $p$.
+The defining condition in  \ref{df:1+3} is that every quadruple  satisfies $\Alex\kappa$ comparison (\ref{def:cbb})  at every vertex $p$.
 
 \begin{thm}{Theorem}\label{thm:alternate-cat-def}
-A $\varpi\kappa$-geodesic metric space is $\Cat{}{\kappa}$ if and only if every quadruple  satisfies dual-(1+3)-point $\kappa$-comparison (\ref{def:alt-cba}) at some vertex $p$.
+A $\varpi\kappa$-geodesic metric space is $\Cat{}{\kappa}$ if and only if every quadruple  satisfies dual-$\Alex\kappa$ comparison (\ref{def:alt-cba}) at some vertex $p$.
 \end{thm}
 
 
@@ -84,16 +84,16 @@ Writing $Q:p,x^1,x^2,x^3$, set $\~\Sigma^\kappa(p)= \angk{\kappa} p{x^1}{x^2}+\a
 %In the proof of  theorem \ref{thm:alternate-def}, we say that two triangles in $\Lob2{\kappa}$ with a common vertex $x$  \emph{do not overlap} if the intersection of their convex hulls is $x$.  Our proof  will use the Overlap Lemma (\ref{lem:extend-overlap}).
 
 \parit{Proof of Theorem \ref{thm:alternate-cat-def}.}  
-A quadruple with an undefined model angle satisfies dual-(1+3)-point $\kappa$-comparison for some vertex, and  (2+2)-point $\kappa$-comparison (\ref{def:cba}) for all  vertex pairs. Thus it suffices to prove:
+A quadruple with an undefined model angle satisfies dual-$\Alex\kappa$ comparison for some vertex, and  (2+2)-point $\kappa$-comparison (\ref{def:cba}) for all  vertex pairs. Thus it suffices to prove:
 \begin{clm}{}\label{2+2-equiv}
 In a metric space, let $Q$ be a  quadruple all of whose model angles are defined.\\
-$Q$ satisfies dual-(1+3)-point $\kappa$-comparison (\ref{def:alt-cba})
+$Q$ satisfies dual-$\Alex\kappa$ comparison (\ref{def:alt-cba})
  for some $p\in Q$ 
 $\Longleftrightarrow$ \ \ \ \ \\
 $Q$ satisfies (2+2)-point $\kappa$-comparison (\ref{def:cba}) for all  $p^1,p^2\in Q$. \end{clm}  
 
  \parit{ ($\Rightarrow$).}
-Suppose dual-(1+3)-point $\kappa$-comparison \ref{def:alt-cba} holds at some $p\in Q$. 
+Suppose dual-$\Alex\kappa$ comparison \ref{def:alt-cba} holds at some $p\in Q$. 
 %We must show that (2+2)-point comparison (\ref{def:cba}) holds for all $p^1,p^2\in Q$.  
 Write $Q\:p,x^1,x^2,x^3$.  
 
@@ -107,7 +107,8 @@ It follows that (2+2)-point comparison  (\ref{def:cba}) holds for any pair $p^1,
 For instance, since $\angk\kappa {x^1}{x^3}p<\angk\kappa {x^1}{x^2}{x^3}$, then  \ref{def:cba} holds for $p^1=x^1$, $p^2=x^2$.
 
 \parit{($\Leftarrow$).}
-Suppose dual-(1+3)-point $\kappa$-comparison \ref{def:alt-cba}  fails for all $p\in Q$. Then  $\~\Sigma^{\kappa}(Q)\le 2\cdot \pi$. 
+Suppose dual-$\Alex\kappa$ comparison \ref{def:alt-cba}  fails for all $p\in Q$. 
+Then  $\~\Sigma^{\kappa}(Q)\le 2\cdot \pi$. 
 Moreover, for each $p\in Q$ we have a labeling $p, x^1,x^2,x^3$ of $Q$ such that 
 \[\angk{\kappa} {x^1}{x^3}{x^2}
 >

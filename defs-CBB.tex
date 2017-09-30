@@ -4,7 +4,7 @@
 }
 
 In Section~\ref{sec:angle}, 
-we will start with a global definition of Alexandrov spaces via (1+3)-point comparison.
+we will start with a global definition of Alexandrov spaces using a comparison.
 In Section~\ref{sec:more-angles}, 
 we give a number of equivalent angle comparison definitions. 
 These definitions maek it easy to adapt the Euclidean intuition to the Alexandrov's world.
@@ -23,13 +23,11 @@ discusses specific properties of spaces with positive curvature bound are given.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{(1+3)-point comparison} \label{sec:angle}
+\section{The comparison} \label{sec:angle}
 
 \begin{thm}{Definition}
 \label{df:1+3}
-A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies 
-\emph{(1+3)-point $\kappa$-comparison}%
-\index{(1+3)-point $\kappa$-comparison} 
+A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies $\Alex\kappa$ comparison
 if 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
@@ -41,7 +39,7 @@ or at least one of the model angles $\angk\kappa p{x^i}{x^j}$ is not defined.
 \label{df:cbb1+3}
 A metric space $\spc{L}$ 
 is $\Alex{\kappa}$ 
-if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies (1+3)-point comparison.
+if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies  $\Alex\kappa$ comparison.
 
 We say that $\spc{L}$ an Alexandrov space with curvature bounded below 
 (briefly, $\spc{L}$ is a  $\Alex{}$ space) if  $\spc{L}$  is $\Alex{\kappa}$ for some $\kappa\in\RR$.
@@ -145,7 +143,7 @@ Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way 
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
-By (1+3)-point comparison in $\spc{L}$,
+By $\Alex\kappa$ comparison in $\spc{L}$,
 we have
 \[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
 +\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
@@ -164,7 +162,7 @@ Since $\eps>0$ is arbitrary we have
 +\angk\kappa p{x^2}{x^3}
 +\angk\kappa p{x^3}{x^1}\le 2\cdot\pi;\]
 that is,
-the (1+3)-point $\kappa$-comparison holds in $\spc{M}$.
+the $\Alex\kappa$ comparison holds in $\spc{M}$.
 It remains to apply Proposition~\ref{prop:submet-length}.
 \qeds
 
@@ -260,7 +258,7 @@ thus, as $n\to\infty$,
 \to 1.\]
 Therefore
  $\angk\kappa q z{r_n},\ \angk\kappa q{z'}{r_n}\to\pi$. (Here we use that $t$ is small, otherwise if $\kappa>0$ the angles might be undefined.)
-From (1+3)-point comparison (\ref{df:cbb1+3}), $\angk\kappa q z {z'}=0$ and thus $z=z'$.
+From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q z {z'}=0$ and thus $z=z'$.
 
 The proof of existence is similar.
 Choose a sequence $r_n$ as above.
@@ -273,7 +271,7 @@ Then
 \angk\kappa q{z_\kay}{r_n}
 =\pi.\] 
 Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}>\pi-\eps$.
-From (1+3)-point comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}<2\cdot\eps$ and thus 
+From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}<2\cdot\eps$ and thus 
 \[\dist{z_\kay}{z_j}{}<\eps\cdot\Const(\kappa,t);\]
 that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
 \qeds
@@ -355,7 +353,7 @@ See also Problem~\ref{open:hinge-}.
 we have that (\ref{SHORT.3-sum}) imples that $\spc{L}$ is G-delta geodesic.
 
 \parit{(\ref{SHORT.3-sum}) $\Rightarrow$ (\ref{SHORT.2-sum})}. Since $z\in \l]x y\r[$, we have $\angk\kappa z x y=\pi$. 
-Thus, (1+3)-point comparison
+Thus, $\Alex\kappa$ comparison
 \[\angk\kappa z x y
 +\angk\kappa z p x
 +\angk\kappa z p y\le2\cdot\pi\]
@@ -777,7 +775,7 @@ for any $q\in W_p$ there is a geodesic $[p q]$ in $\spc{X}$.
 Let $\spc{X}$ be a complete length space and $p\in \spc{X}$.
 Then the following conditions are equivalent:
 \begin{subthmN}
-{curv>=k}(local (1+3)-point comparison) there is $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}>0$ such that comparison 
+{curv>=k}(local $\Alex\kappa$ comparison) there is $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}>0$ such that comparison 
 \[\angk\kappa q{x^1}{x^2}
 +\angk\kappa q{x^2}{x^3}
 +\angk\kappa q{x^3}{x^1}
@@ -1265,7 +1263,7 @@ Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and $
 \qeds
 
 \begin{thm}{Advanced Exercise}
-Assume $\spc{X}$ is a non-complete geodesic space for which the (1+3)-point $\kappa$-comparison holds in a neighborhood of every point. 
+Assume $\spc{X}$ is a non-complete geodesic space for which the  $\Alex\kappa$ comparison holds in a neighborhood of every point. 
 Prove that completion of $\spc{X}$ is an Alexandrov's space with curvature $\ge\kappa$.
 \end{thm}
 
@@ -1324,7 +1322,7 @@ Set
 \[z_\eps=\geod_{[p x]}(t_{\max}-\eps)
 =\geod_{[p y]}(t_{\max}-\eps).\]
 Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
-Thus from (1+3)-point comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
+Thus from $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
 
 \parit{(\ref{SHORT.angle=0}).} From hinge comparison \ref{angle} 
 \[\mangle\hinge p x y=0\ \ \Rightarrow\ \ \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
@@ -1483,7 +1481,7 @@ again we get
 \]
 
 
-By (1+3)-point comparison (\ref{df:cbb1+3}) and \ref{cor:monoton:sup}, we get
+By $\Alex\kappa$ comparison (\ref{df:cbb1+3}) and \ref{cor:monoton:sup}, we get
 \[\mangle\hinge{p_n}{x_n}{y_n}
 +\mangle\hinge{p_n}{y_n}{q_n}
 +\mangle\hinge{p_n}{x_n}{q_n}
