@@ -69,13 +69,13 @@ Then $X$ has nonempty codimension 1 strata iff $Y$ does.
 \end{thm}
 \begin{thm}{Lemma}\label{top-gr-pet}
 Let $X$ be a  compact $n$-dimensional $MCS$ such that $X_{n-1}=\emptyset$ and $X_n$ is connected.
-Then $X$ has a fundamental class in Alexander-Spanier cohomology with $\ZZ_2$ coefficients; that is, $\bar H^{n}(X,\ZZ_2)\cong \ZZ_2$. 
+Then $X$ has a fundamental class in Alexander--Spanier cohomology with $\ZZ_2$ coefficients; that is, $\bar H^{n}(X,\ZZ_2)\cong \ZZ_2$. 
 
 Also, If $X_n$ is orientable, then   $\bar H^{n}(X,\ZZ)\cong \ZZ$. 
 \end{thm}
 \begin{proof}
 It easily follows from the assumptions that the top-dimensional strata $X_l$ is a {\it connected} topological manifold. Therefore, its compactly supported cohomology satisfies $\bar H^n_c(X_l,\ZZ_2)\cong \ZZ_2$.
-Let $X_{\le n-2}$ be the union of all strata of dimensions $\le n-2$. Then by the Alexander-Spanier duality we have $\bar H^n_c(X_l,\ZZ_2)=\bar H^n_c(X\backslash X_{\le n-2},\ZZ_2)\cong \bar H^n(X, X_{\le n-2},\ZZ_2)$. 
+Let $X_{\le n-2}$ be the union of all strata of dimensions $\le n-2$. Then by the Alexander--Spanier duality we have $\bar H^n_c(X_l,\ZZ_2)=\bar H^n_c(X\backslash X_{\le n-2},\ZZ_2)\cong \bar H^n(X, X_{\le n-2},\ZZ_2)$. 
 For dimension reasons we obviously have that $\bar H^{n-1}(X_{\le n-2},\ZZ_2)=0$ and $\bar H^{n}(X_{\le n-2},\ZZ_2)=0$.
 
 From the long exact sequence of the pair this gives
@@ -89,7 +89,7 @@ The orientable case is proved in exactly the same way.
 \end{proof}
 \parbf{Remark.}
 
-Note that $MCS$ spaces are paracompact and locally contractible. Therefore for such spaces  the Alexander-Spanier cohomology coincides with the usual singular cohomology ~\cite{Spanier}[page 440 in Russian edition]
+Note that $MCS$ spaces are paracompact and locally contractible. Therefore for such spaces  the Alexander--Spanier cohomology coincides with the usual singular cohomology ~\cite{Spanier}[page 440 in Russian edition]
 We will need two general topological results which hold for spaces more general than  Alexandrov spaces and follow from the general theory of deformations of homeomorphisms developed by Siebenmann~\cite{Sieb}.
 
 \begin{thm}{Theorem}\label{local bundle}\cite[Theorem 5.4, Corollary 6.14, 6.9]{Sieb}
@@ -230,7 +230,7 @@ The proof of Theorem~\ref{gluingthm} can be trivially adapted to prove  Strong G
 
 \end{proof}
 
-For applications to pointed Gromov-Hausdorff convergence we will need the following  local version of the Gluing theorem for which the requirement that the approximated space be $\varkappa$-connected can be slightly weakened. For simplicity, we only state the unparameterized version.
+For applications to pointed Gromov--Hausdorff convergence we will need the following  local version of the Gluing theorem for which the requirement that the approximated space be $\varkappa$-connected can be slightly weakened. For simplicity, we only state the unparameterized version.
 
 \begin{thm}\label{locgluing}
 
@@ -276,7 +276,7 @@ It's easy to see that $f$ is spherically concave iff its  1-homogeneous extensio
 
 \section{Derivatives of multidistance functions}
 In this section we will consider derivatives of multidistance functions. 
-Let $\Sigma\in\CBB{n}{1}$.
+Let $\Sigma$ be an $n$-dimensional complete length $\Alex{1}$ space.
  We call a function   $h\co \Sigma\to\R$ where $\curv\Sigma\ge 1$ a function of class DER
 if it has the form
 
@@ -306,7 +306,10 @@ Note that as with the notion of  $\sdk\kappa{p}{\phi}{\psi}$ for multidistance f
 \[
 \dlang h, \hat g\drang=-h(u)
 \]
-\begin{thm}{Remark}\label{box-scalar-ineq} The definition of  $\dlang \cdot, \cdot \drang$ is just the infinitesimal version of $\sdk\kappa{p}{\phi}{\psi}$ for multidistance functions $\phi$ and $\psi$ on $\spc{L}\in\CBB{\kappa}{n}$. In particular, for any  $p\in\spc{L}$ and $\Sigma=\Sigma_p\spc{L}$ by the angle comparison we have
+
+\begin{thm}{Remark}\label{box-scalar-ineq} 
+The definition of  $\dlang \cdot, \cdot \drang$ is just the infinitesimal version of $\sdk\kappa{p}{\phi}{\psi}$ for multidistance functions $\phi$ and $\psi$ on an $n$-dimensional complete length $\Alex{\kappa}$ space $\spc{L}$. 
+In particular, for any  $p\in\spc{L}$ and $\Sigma=\Sigma_p\spc{L}$ by the angle comparison we have
 
 \[
 \dlang \d_p\phi, \d_p\psi\drang\le \sdk\kappa{p}{\phi}{\psi}
@@ -351,8 +354,9 @@ From now on we will slightly abuse notations and will denote the function $-\lan
 \section{Admissible multi distance maps and functions}
 
 \begin{thm}{Lemma}\label{ann-pi/2-vol}
-For any $n\ge 1$ there exists $c(n)$ such that the following holds. For any
-$\Sigma\in\CBB{n}{1}$, $0<\nu<1/100$ and any $S\subset \Sigma$ we have that
+For any $n\ge 1$ there exists $c(n)$ such that the following holds. 
+For any $n$-dimensional complete length $\Alex{1}$ space
+$\Sigma$, $0<\nu<1/100$ and any $S\subset \Sigma$ we have that
 \[
 \vol_n \Ann[\Sigma, \pi/2-\nu,\pi/2+\nu]\le \nu\cdot c(n)\vol_n\Sigma
 \]
@@ -373,7 +377,7 @@ By Lemma~\ref{ann-pi/2-vol} we have that
 \[
 \vol_n\Ann[\Sigma, \pi/2-2\nu,\pi/2+2\nu]\le 2\cdot \nu\cdot c(n)\vol_n\Sigma
 \]
-On the other hand each $\oBall[x_i,\delta/2]$ has volume at least $c_2(n)\delta^n\vol_n\Sigma$ by Bishop-Gromov volume comparison~\ref{thm:bishop-gromov}.
+On the other hand each $\oBall[x_i,\delta/2]$ has volume at least $c_2(n)\delta^n\vol_n\Sigma$ by Bishop--Gromov volume comparison~\ref{thm:bishop-gromov}.
 As the balls are disjoint the result follows.
 \end{proof}
 
@@ -416,7 +420,7 @@ Combined with the above this shows if $\bm\phi$ is regular at $p$ then it is als
 We will need the following Lemma about differentials of tight maps (cf. perelman-morse and Perelman-DC)
 
 \begin{thm}{Lemma}\label{lem-tight-diff-new}
-Let $\spc{L}\in \CBB{n}{\kappa}$ 
+Let $\spc{L}$  be an $n$-dimensional complete length $\Alex{\kappa}$ space
 Let  $\bm\phi =(\phi^0,\ldots,\phi^\kay)\: \spc{L}\to\RR^{\kay+1}$ be a $\kappa$-strutting at $p\in U$ such that $|dF|_1=\max_i\sum_j|\partial _jF^i|\le 1$ 
 (this guarantees that $\phi^i$ is $1$-Lipschitz for all $i$) and 
 
@@ -465,7 +469,12 @@ For all $i\ne j$.
  \]
  Thus $\angle \hat A^i\hat A^j>\pi/2$ for all $i\ne j$.
  
- The fact that  a space $\Sigma\in \CBB{n-1}{1}$ contains $\kay+1$ vectors with pairwise angles $>\pi/2$ easily  implies that $\kay\le n$ (this is surely written up somewhere already?) by induction on $n$. Indeed, the base of induction is trivial. Suppose it's true for all spaces in $\CBB{n-2}{1}$ and let $\xi_0,\ldots \xi_\kay\in \Sigma$ where  $\Sigma\in \CBB{n-1}{1}$  and $\angle \xi_i\xi_j>\pi/2$.  Then the vectors $\zeta_i=\dir{\xi_0}{\xi_i}\in\Sigma_{\xi_0}\Sigma$ still satisfy $\angle \zeta_i\zeta_j>\pi/2$ for a lll $i\ne j\ge 1$ by Toponogov and the claim follows by induction. This proves \eqref{dim-ineq-strut}.
+ The fact that   an $(n-1)$-dimensional complete length $\Alex{1}$ space $\Sigma$ contains $\kay+1$ vectors with pairwise angles $>\pi/2$ easily  implies that $\kay\le n$ (this is surely written up somewhere already?) by induction on $n$. 
+ Indeed, the base of induction is trivial. 
+ Suppose it's true in the $(n-2)$-dimensional case.
+ Let $\xi_0,\ldots \xi_\kay\in \Sigma$ in the $(n-1)$-dimensinal space  $\Sigma$  and $\angle \xi_i\xi_j>\pi/2$.  
+ Then the vectors $\zeta_i=\dir{\xi_0}{\xi_i}\in\Sigma_{\xi_0}\Sigma$ still satisfy $\angle \zeta_i\zeta_j>\pi/2$ for a lll $i\ne j\ge 1$ by Toponogov and the claim follows by induction. 
+ This proves \eqref{dim-ineq-strut}.
  
  To prove \eqref{incr-decr-all} For any $i>0$ we have
  
@@ -605,7 +614,8 @@ Let $p$ be a regular point of $f$.  By part a) of Lemma~\ref{lem-tight-diff}, $f
 The proof of Key Lemma~\ref{incompl} will use the following easy observation
 
 \begin{thm}{Lemma}\label{lem-rough-volume}
-Let $\spc{L}\in \CBB{n}{0}$ and let $p\in \spc{L}$ be any point. Let $0<\e<R/3$.
+Let $\spc{L}$ be an $n$-dimensional complete length $\Alex{0}$ space and let $p\in \spc{L}$ be any point. 
+Let $0<\e<R/3$.
 Consider the annulus $A(R,\eps,p)=\{x\in\spc{L}| $ such that $R-\e< \dist{x}{p}{}<R+\e\}$. Let $\delta\ll \e$  ($\delta<\e/10$ will do) and let $\{z_1,\ldots z_N\}$ be al $\delta$-separated net in  $A(R,\eps,p)$. 
 Then
 
@@ -702,7 +712,8 @@ Under the above assumptions $h$ is strictly $c_2\delta^{-1}$-concave on $B(p,\de
  
 \parit{Proof.}
 First observe the following: Let $\xi \in \Sigma^{n}$ be a point
-in a space $\Sigma\in \CBB{n}{1}$. Let $A(\pi/2,\nu,\xi) =\{ x \in
+in a an $n$-dimensional complete length $\Alex{1}$ space $\Sigma$. 
+Let $A(\pi/2,\nu,\xi) =\{ x \in
 \Sigma \ |\  \pi/2-\nu \le\dist{x}{p}{} \le \pi/2+\nu\}$ where $\nu\ll 1$.
 
 Let  $\{{z_i}\}_{i=1\dots M}$ be a $\delta$
@@ -1022,8 +1033,8 @@ This proves the induction step and concludes the proof of Theorem~\ref{fibration
 
 \end{proof}
 
- \begin{thm}{Corollary}\label{sphere-neighb}
- Let $\spc{L}\in \CBB{\kappa}{n}{}$ and let $p\in \spc{L}$ be any point. Then there exists $\eps>0$ such that for any $0<r\le\eps$ the sphere $S(p,r)$ is homeomorphic to $S(p,\eps)$ and $(B(p,r),p)$ is homeomorphic to the cone $(CS(p,\eps),o)$
+\begin{thm}{Corollary}\label{sphere-neighb}
+ Let $\spc{L}$ be an $n$-dimensional complete length $\Alex{}$ space and let $p\in \spc{L}$ be any point. Then there exists $\eps>0$ such that for any $0<r\le\eps$ the sphere $S(p,r)$ is homeomorphic to $S(p,\eps)$ and $(B(p,r),p)$ is homeomorphic to the cone $(CS(p,\eps),o)$
  \end{thm}
 \begin{proof}
 By ??? (is this proved somewhere yet?) there is $\eps>0$ such that  $f=\dist{p}{}{}$ has no critical points in $B(p,2\eps)\backslash\{p\}$. Therefore by the Fibration Theorem ~\eqref{fibration}, it's a bundle map from $B(p,2\eps)\backslash\{p\}$ to $(0,2\eps)$. This easily yields the result.
@@ -1032,23 +1043,26 @@ It will follow from the Stability Theorem that under the assumptions of Corollar
 Once this is proved we can derive the following result (??? can this be proved without using stability???)
 
 \begin{thm}{Theorem}\label{top-char--bry}
-Let $\spc{L}\in \CBB{\kappa}{n}{}$. Then a point $p\in \spc{L}$ belongs to $\partial \spc{L}$ if and only its pointed conical neighborhood has nonempty codimension 1 strata.
+Let $\spc{L}$ be an $n$-dimensional complete length $\Alex{\kappa}$ space.
+Then a point $p\in \spc{L}$ belongs to $\partial \spc{L}$ if and only its pointed conical neighborhood has nonempty codimension 1 strata.
 \end{thm}
 \begin{proof}
 We proceed by induction on the dimension of $\spc{L}$. The base of induction is trivial.
-Suppose the claim has been proved for Alexandrov spaces of $\dim\le n-1$ and $\spc{L}\in \CBB{\kappa}{n}{}$. Let $p\in \partial \spc{L}$. By the definition of the boundary that means that $\Sigma=\Sigma_p\spc{L}$ has a boundary. By the induction assumption this means that $\Sigma$ has nonempty codimension 1 strata. Therefore, by Lemma~\ref{n-1-strat} $K(\Sigma)$ also has nonempty codimension 1 strata. Since $K(\Sigma)$ is homeomorphic to the pointed neighborhood of $p$ in $\spc{L}$ this concludes the proof of the only if implication.
+Suppose the claim has been proved for Alexandrov spaces of dimension at most $n-1$ and $\spc{L}$ an $n$-dimensional complete length $\Alex{\kappa}$ space. 
+Let $p\in \partial \spc{L}$. By the definition of the boundary that means that $\Sigma=\Sigma_p\spc{L}$ has a boundary. By the induction assumption this means that $\Sigma$ has nonempty codimension 1 strata. Therefore, by Lemma~\ref{n-1-strat} $K(\Sigma)$ also has nonempty codimension 1 strata. Since $K(\Sigma)$ is homeomorphic to the pointed neighborhood of $p$ in $\spc{L}$ this concludes the proof of the only if implication.
 
 Now suppose $p\notin \partial \spc{L}$. Then $\Sigma=\Sigma_p\spc{L}$ has no boundary and hence, by the induction assumption $\Sigma$ has empty codimension 1 strata. Again by Lemma ~\ref{n-1-strat} this implies that $K(\Sigma)$ has empty codimension one strata.
 \end{proof}
 Since  the set of points whose conical neighborhoods have empty codimension 1 strata is obviously open we immediately obtain the following
 \begin{thm}{Corollary}\label{top=geom-bry}
-Let $\spc{L}\in \CBB{\kappa}{n}{}$. Then $\partial \spc{L}$ is equal to the closure of the $n-1$-dimensional strata of $\spc{L}$ as an $MCS$ space. In particular,
+Let $\spc{L}$ be an $n$-dimensional complete length $\Alex$ space. 
+Then $\partial \spc{L}$ is equal to the closure of the $n-1$-dimensional strata of $\spc{L}$ as an $MCS$ space. In particular,
 $\partial \spc{L}$ is closed.
 \end{thm}
 
-\begin{thm}{Grove-Petersen Theorem}\label{grove-pet}
-Let  $\spc{L}\in \CBB{\kappa}{n}{}$ be compact connected and without a boundary. 
-Then $\spc{L}$ has a fundamental class in Alexander-Spanier cohomology with $\ZZ_2$ coefficients; that is, $\bar H^{n}(\spc{L},\ZZ_2)\cong \ZZ_2$. 
+\begin{thm}{Grove--Petersen Theorem}\label{grove-pet}
+Let  $\spc{L}$ be a compact $n$-dimensional length $\Alex{\kappa}$ space and without a boundary. 
+Then $\spc{L}$ has a fundamental class in Alexander--Spanier cohomology with $\ZZ_2$ coefficients; that is, $\bar H^{n}(\spc{L},\ZZ_2)\cong \ZZ_2$. 
 
 Also, if $\spc{L}$ is orientable, then   $\bar H^{n}(\spc{L},\ZZ)\cong \ZZ$. 
 

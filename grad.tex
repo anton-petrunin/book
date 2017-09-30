@@ -1112,9 +1112,8 @@ Consider sequence of spaces $\spc{L}_n^{\times}=\spc{L}_n\times\RR$,
 with the sequence of subfunction $f^{\times}_n\:\spc{L}_n^{\times}\to\RR$, defined by
 $f^{\times}_n(p,t)=f_n(p)+t$.
 According to Theorem~\ref{thm:cbb-product}, 
-$\spc{L}_n^{\times}\in\CBB{}{\kappa_-}$ for $\kappa_-=\min\{\kappa,0\}$
-and clearly,
-and $f_n^{\times}$ are $\lambda_+$-concave,
+$\spc{L}_n^{\times}$ is a complete length $\Alex{\kappa_-}$ space for $\kappa_-=\min\{\kappa,0\}$.
+Note that $f_n^{\times}$ are $\lambda_+$-concave,
 for $\lambda_+=\max\{\lambda,0\}$.
 Analogously define  $\spc{L}_\o^{\times}=\spc{L}_\o\times\RR$,
 and $f^{\times}_\o(p,t)=f_\o(p)+t$.
@@ -1184,7 +1183,7 @@ then
 Recall that a line in a metric space is a geodesic which is minimizing on each segment.
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting} 
-Let $\spc{L}\in\CBB{}0$ 
+Let $\spc{L}$  be a complete length $\Alex{0}$ space
 and $\gamma$ be a line in $\spc{L}$. 
 Then 
 \[\spc{L}=X\oplus \gamma(\RR)\]
@@ -1204,7 +1203,7 @@ Eshenburg in \cite{eshenburg-split} obtained an analogous result for the Lorentz
 We present a proof which use gradient flow for Busemann's functions, it is close in the spirit to the proof in \cite{cheeger-gromoll-split}.
 
 \begin{thm}{Corollary}\label{cor:splitting}
-Let $\spc{L}\in\CBB{}0$. 
+Let $\spc{L}$ be a complete length $\Alex{0}$ space. 
 Then there is an isometric splitting
 \[
 \spc{L}=\spc{L}'\oplus H
@@ -1213,9 +1212,9 @@ where $H\subset \spc{L}$ is a subset isometric to a Hilbert space and $\spc{L}'\
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:splitting-vectors}
-Let $\spc{K}\in\CBB{}0$ be a cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
+Let $\spc{K}$ be an $n$-dimensional complete length $\Alex0$ cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
 (that is, $v_+ + v_-=0$).
-Then there is an isometry $\iota\:K\to K'\times \RR$, where $K'\in\CBB{}0$ is a cone with vertex $o'$ such that
+Then there is an isometry $\iota\:K\to K'\times \RR$, where $K'$ be a complete length $\Alex0$ space with a cone structure with vertex $o'$ such that
 $\iota:v_\pm\mapsto (o',\pm|v_\pm|)$.
 \end{thm}
 
@@ -2390,7 +2389,7 @@ $$\partial_{\spc{L}}\GF^t_fK\subset\GF^t_f\Fr K.$$
 \begin{thm}{Exercise}
 \label{ex:gexp} 
 Let $\spc{L}\subset\EE^2$ be Euclidean halfplane. 
-Clearly $\spc{L}\in\CBB20$.
+Clearly $\spc{L}$ is a two-dimensional complete length $\Alex{0}$ space.
 Given a point $x\in \EE^2$ let us denote by $\proj(x)$ the closest point on $\spc{L}$. 
 
 Apply the Radial comparison (\ref{rad-comp}) to show that for any interior point $p\in \spc{L}$ we have 
