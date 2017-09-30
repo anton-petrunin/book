@@ -37,24 +37,35 @@ or at least one of the model angles $\angk\kappa p{x^i}{x^j}$ is not defined.
 
 \begin{thm}{Definition}
 \label{df:cbb1+3}
-A metric space $\spc{L}$ 
-is $\Alex{\kappa}$ 
-if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies  $\Alex\kappa$ comparison.
+Let $\spc{L}$ be a metric space.
 
-We say that $\spc{L}$ an Alexandrov space with curvature bounded below 
-(briefly, $\spc{L}$ is a  $\Alex{}$ space) if  $\spc{L}$  is $\Alex{\kappa}$ for some $\kappa\in\RR$.
+\begin{subthm}{}
+$\spc{L}$ is $\Alex{\kappa}$ 
+if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies  $\Alex\kappa$ comparison.
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{L}$ is \emph{locally $\Alex{\kappa}$} 
+if any point $q\in \spc{L}$ admits a neighborhood $\Omega\ni q$ such that any quadruple $p,x^1,x^2,x^3\in \Omega$ satisfies  $\Alex\kappa$ comparison.
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{L}$  is a  $\Alex{}$ space if  $\spc{L}$  is $\Alex{\kappa}$ for some $\kappa\in\RR$.
+\end{subthm}
 \end{thm}
 
 \parbf{Remarks} 
 \begin{itemize}
-\item Alexandrov spaces with curvature bounded below usually will be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
-\item In the definition of spaces with curvature $\ge\kappa$, when $\kappa>0$ most authors assume in addition that $\diam \spc{L}\le \varpi\kappa$, or equivalently, that $\spc{L}$ is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
+\item The $\Alex\kappa$ spaces often called \emph{spaces with curvature $\ge\kappa$ in the sence of Alexandrov} these spaces will be usually denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
+\item In the definition of $\Alex{\kappa}$, when $\kappa>0$ most authors assume in addition that the diameter is at most $\varpi\kappa$.
+For complete length spaces, the latter means that it is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. 
+We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
 \item If $\kappa<\Kappa$, then any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$.
 However, in the case $\Kappa>0$ it is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
-Let $\spc{L}$ be a complete length space.
+Let $\spc{L}$ be a metric space.
 Show that $\spc{L}$ is $\Alex\kappa$
 if for any quadrouple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
 \[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa\]
@@ -68,7 +79,7 @@ for all $i$ and $j$.
 The exercise above is a partial case of (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 
 \begin{thm}{Exercise}
-Let $\spc{L}$ be a length space.
+Let $\spc{L}$ be a metric space.
 Show that $\spc{L}$ is $\Alex0$
 if and only if 
 \[
@@ -83,63 +94,83 @@ The following exercise decribes the first known definition of spaces with curvat
 it was given by Abraham Wald in \cite{wald}. 
 
 \begin{thm}{Exercise}
-Let $\spc{L}$ be a complete length space and $\kappa\le 0$.
+Let $\spc{L}$ be a metric space and $\kappa\le 0$.
 Prove that $\spc{L}$ is $\Alex\kappa$ if and only if for any quadruple of points $p,q,r,s\in \spc{L}$ can be isometrically embedded into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
 
 Is the same true for $\kappa>0$, what is the difference?
 \end{thm}
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
-Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm).
+Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm.
 Show that $\spc{L}$ be a complete length $\Alex{}$ space if and only if $\spc{L}\iso\EE^m$.
 \end{thm}
 
-It is straightforward to check the following claim (for definitions of $\o$-limit and $\o$-power, 
-see Section~\ref{ultralimits}).
+Recall that $\o$ denotes a selective ultrafilter on $\NN$, which is fixed once for all.
+The following proposition follows directly from the definition of $\Alex\kappa$ comparison and the definitions of $\o$-limit and $\o$-power given in Section~\ref{ultralimits}.
+
 
 \begin{thm}{Proposition}\label{prp:A^omega}
-Let $\o$ be a selective ultrafilter on $\NN$, $(\spc{L}_n,\star_n)\to (\spc{L}_\o,\star_\o)$ 
+Let $\spc{L}_n$ be an $\Alex{\kappa_n}$ space for each $n$.
+Assume $\spc{L}_n\to \spc{L}_\o$ 
 and $\kappa_n\to\kappa_\o$ as $n\to\o$.
-Assume that $\spc{L}_n$ is a complete length $\Alex{\kappa_n}$ space for each $n$.
-Then $\spc{L}_\o$ is is a complete length $\Alex{\kappa_\o}$ space.
+Then $\spc{L}_\o$ is $\Alex{\kappa_\o}$.
 
-Moreover, for any complete metric space $\spc{L}$,
-its ultrapower $\spc{L}^\o$ is $\Alex\kappa$ if and only if so is $\spc{L}$.
+Moreover, a metric space $\spc{L}$ is $\Alex\kappa$ if and only if so is
+its ultrapower $\spc{L}^\o$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $\spc{M}$ be a metric space.
-Assume there is a sumbetry $\sigma\:\spc{L}\to\spc{M}$.
-Then $\spc{M}$ is $\Alex{\kappa}$.
+Let $\spc{L}$ be an $\Alex{\kappa}$ space and $\spc{M}$ be a metric space and $\sigma\:\spc{L}\to\spc{M}$ be a sumbetry.
+Assume $p,x^1,x^2,x^3$ is a quadruple of points in $\spc{M}$ such that 
+$|p-x^i|<\tfrac{\varpi\kappa}2$ for any $i$.
+Then the is quadruple satisfies $\Alex{\kappa}$ comparison.
+
+In particular, 
+\begin{subthm}{}
+The space $\spc{M}$ is locally $\Alex{\kappa}$.
+Moreover, any open ball of radius $\tfrac{\varpi\kappa}4$ in $\spc{M}$ is $\Alex{\kappa}$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\kappa\le 0$ then  $\spc{M}$ is $\Alex{\kappa}$.
+\end{subthm}
 \end{thm}
+
+%??? As it will be proved in ???, if a complete lenght space is locally $\Alex{\kappa}$ then it is $\Alex{\kappa}.
 
 The theorem above together with Proposition~\ref{prop:submet/G}
 imply the following.
 
 \begin{thm}{Corollary}\label{thm:CBB/G}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and the group $G$ acts on $\spc{L}$ by isometries 
+Let $\spc{L}$ be a $\Alex{\kappa}$ space and the group $G$ acts on $\spc{L}$ by isometries 
 and it has closed orbits.
-Then the quotient space $\spc{L}/G$ is $\Alex\kappa$. 
+Then the quotient space $\spc{L}/G$ is locally $\Alex\kappa$. 
 \end{thm}
 
 \parit{Proof of \ref{thm:submetry-CBB}.}
-Fix $\delta>0$ and a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$.
+Fix a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$ such that 
+$|p-x^i|<\tfrac{\varpi\kappa}2$ for any $i$.
 Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
-Next $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{M}$.
-such that $\sigma(\hat x_i)=x_i$ and
-\[\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
+
+Since $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
+\[\dist{p}{x^i}{\spc{M}}
 \lege
-\dist{p}{x^i}{\spc{M}}\pm\delta\]
-for all $i$.
+\dist{\hat{p}}{\hat{x}^i}{\spc{L}}
+\pm\delta\]
+for all $i$ and any fixed $\delta>0$.
+
 Note that 
-\[\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}
->
-\dist{x^i}{x^j}{\spc{M}}-2\cdot\delta\]
+\[\dist{x^i}{x^j}{\spc{M}}
+\le
+\dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}\le \dist{p}{x^i}{\spc{M}}+\dist{p}{x^j}{\spc{M}}+2\cdot\delta\]
 for all $i$ and $j$.
-Therefore given $\eps>0$, the value $\delta$ above can be chousen in such a way that the inequality
-\[\angk\kappa {\hat{p}}{\hat{x}^1}{\hat{x}^2}
+
+Since $|p-x^i|<\tfrac{\varpi\kappa}2$,
+we can choose $\delta>0$ above so that the the angles $\angk\kappa {\hat{p}}{\hat{x}^i}{\hat{x}^j}$ are defined.
+Moreover, given $\eps>0$, the value $\delta$ can be chosen in such a way that the inequality
+\[\angk\kappa p{x^i}{x^j}
 <
-\angk\kappa p{x^1}{x^2}+\eps
+\angk\kappa {\hat{p}}{\hat{x}^i}{\hat{x}^j}+\eps
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
@@ -149,21 +180,18 @@ we have
 +\angk\kappa {\hat{p}}{\hat{x}^2}{\hat{x}^3}
 +\angk\kappa {\hat{p}}{\hat{x}^3}{\hat{x}^1}
 \le 
-2\cdot\pi\]
-assuming all the angles on the left hand side are defined.
+2\cdot\pi.\]
 Applying  \ref{eq:angles-M-L}, 
 we get 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
 +\angk\kappa p{x^3}{x^1}< 2\cdot\pi+3\cdot\eps.\]
-
 Since $\eps>0$ is arbitrary we have 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
 +\angk\kappa p{x^3}{x^1}\le 2\cdot\pi;\]
 that is,
-the $\Alex\kappa$ comparison holds in $\spc{M}$.
-It remains to apply Proposition~\ref{prop:submet-length}.
+the $\Alex\kappa$ comparison holds holds for the quadruple.
 \qeds
 
 \section{Geodesics}
@@ -175,11 +203,14 @@ see Exercise~\ref{ex:no-geod}.
 Construct a complete length $\Alex0$ space which is not geodesic.
 \end{thm}
 
-We are going to show that all $\Alex{}$ spaces are G-delta geodesic in the following sense.
+We are going to show that all complete length $\Alex{}$ spaces have plenty of geodesics in the following sense.
 
 \begin{thm}{Definition}\label{def:alm-geod}
-A complete length space $\spc{X}$ is called \emph{G-delta geodesic}\index{geodesic!G-delta geodesic space}\index{G-delta geodesic space} 
+A metric space $\spc{X}$ is called \emph{G-delta geodesic}\index{geodesic!G-delta geodesic space}\index{G-delta geodesic space} 
 if for any point $p\in \spc{X}$ there is a dense G-delta set $W_p\subset\spc{X}$ such that for any $q\in W_p$ there is a geodesic $[p q]$.
+
+A metric space $\spc{X}$ is called \emph{locally G-delta geodesic}\index{geodesic!G-delta geodesic space}\index{G-delta geodesic space} 
+if for any point $p\in \spc{X}$ there is a G-delta set $W_p\subset\spc{X}$ which is dense in a neighborhood of $p$ such that for any $q\in W_p$ there is a geodesic $[p q]$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:straight}
@@ -201,42 +232,37 @@ and for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
 In particular, $\spc{L}$ is G-delta geodesic.
 \end{thm}
 
-The theorem above was proved by Plaut \cite[Th. 27]{plaut:survey}.
-His proof requires the following lemma in metric geometry.
-
-\begin{thm}{Lemma}\label{lem:straight}
-Let $\spc{X}$ be a complete length space. 
-Then for any $p\in \spc{X}$ the set of $\Str(p)\subset\spc{X}$ is a dense G-delta set.
-\end{thm}
+The proof below is very close to the original proof given by Conrad Plaut \cite[Th. 27]{plaut:survey}.
 
 \parit{Proof.}
-Set 
-\[\Omega_n
-=
-\set{q\in \spc{X}}{(1-\tfrac{1}{n})\cdot\dist[{{}}]{q}{r}{}<
+Given a positive integer $n$, 
+consider the set $\Omega_n$ of all points $q\in \spc{L}$ such that
+\[(1-\tfrac{1}{n})\cdot\dist[{{}}]{q}{r}{}<
 \dist{p}{r}{}-\dist{p}{q}{}
-<\tfrac{1}{n}\ \t{for some}\ r\in \spc{X}}.\]
+<\tfrac{1}{n}\]
+for some $r\in \spc{L}$.
 Clearly $\Omega_n$ is open; 
-let us show that it is dense in $\spc{X}$.
-Assuming the contrary, there is a point $x\in \spc{X}$ such that $\oBall(x,\eps)\cap \Omega_n=\emptyset$ for some $\eps>0$.
+let us show that $\Omega_n$ is dense in $\spc{L}$.
+
+Assuming the contrary, there is a point $x\in \spc{L}$ such that 
+\[\oBall(x,\eps)\cap \Omega_n=\emptyset\] for some $\eps>0$.
 Since $\spc{L}$ is a length space, 
-for any $\delta>0$, there exists a point $y\in \spc{L}$ such that $\dist{x}{y}{}<\tfrac\eps2+\delta$ and $\dist{p}{y}{}<\dist{p}{x}{}-\tfrac\eps2+\delta$. 
-For sufficiently small $\eps$ and $\delta$, 
-it follows that $(1-\tfrac{1}{n})\cdot\dist[{{}}]{y}{x}{}
+for any $\delta>0$, there exists a point $y\in \spc{L}$ such that 
+\[\dist{x}{y}{}<\tfrac\eps2+\delta
+\quad\text{and}\quad
+\dist{p}{y}{}<\dist{p}{x}{}-\tfrac\eps2+\delta.
+\]
+If $\eps$ and $\delta$ are sufficiently small, then
+\[(1-\tfrac{1}{n})\cdot\dist[{{}}]{y}{x}{}
 <
-\dist{p}{x}{}-\dist{p}{y}{}<\tfrac{1}{n}$, 
+\dist{p}{x}{}-\dist{p}{y}{}<\tfrac{1}{n};\] 
 that is, $y\in\Omega_n$, 
 a contradiction.
 
-Since $\Str(p)=\bigcap_{n\in \NN}\Omega_n$, the result follows.
-\qeds
+Since $\Str(p)=\bigcap_{n\in \NN}\Omega_n$, it follows that $\Str(p)$ is a dense G-delta set.
 
-
-\parit{Proof of Theorem \ref{thm:almost.geod}.}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
-We show that if $q\in \Str(p)$, then there is a unique geodesic connecting $p$ and $q$.
-Thus the theorem will follow from Lemma~\ref{lem:straight}.
-
+Assume $q\in \Str(p)$;
+let us show that there is a unique geodesic connecting $p$ and $q$.
 Note that it is sufficient to show that for all sufficiently small
 $t>0$ there is unique point $z$ such that 
 \[t
@@ -248,16 +274,22 @@ $t>0$ there is unique point $z$ such that
 
 First let us show uniqueness. 
 Assume $z$ and $z'$ both satisfy \ref{eq:thm:connect-1}.
-Take a sequence $r_n\to q$ so that $(\dist{p}{r_n}{}-\dist{p}{q}{})/\dist[{{}}]{q}{r_n}{}\to 1$. 
+Take a sequence $r_n\to q$ such that 
+\[\frac{\dist{p}{r_n}{}-\dist{p}{q}{}}{\dist[{{}}]{q}{r_n}{}}
+\to 1.\] 
 By the triangle inequality, 
-\[\dist{z}{r}{}-\dist{z}{q}{},\ \ \dist{z'}{r}{}-\dist{z'}{q}{}\ge \dist{p}{r}{}-\dist{p}{q}{};\] 
+\[\dist{z}{r}{}-\dist{z}{q}{},
+\quad
+\dist{z'}{r}{}-\dist{z'}{q}{}
+\ge 
+\dist{p}{r}{}-\dist{p}{q}{};\] 
 thus, as $n\to\infty$,
 \[\frac{\dist{z}{r_n}{}-\dist{z}{q}{}}{\dist{q}{r_n}{}},
 \ \ 
 \frac{\dist{z'}{r_n}{}-\dist{z'}{q}{}}{\dist{q}{r_n}{}}
 \to 1.\]
-Therefore
- $\angk\kappa q z{r_n},\ \angk\kappa q{z'}{r_n}\to\pi$. (Here we use that $t$ is small, otherwise if $\kappa>0$ the angles might be undefined.)
+Therefore $\angk\kappa q z{r_n},\ \angk\kappa q{z'}{r_n}\to\pi$. (Here we use that $t$ is small, otherwise if $\kappa>0$ the angles might be undefined.)
+ 
 From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q z {z'}=0$ and thus $z=z'$.
 
 The proof of existence is similar.
@@ -270,7 +302,7 @@ Then
 \lim_{\kay\to\infty}
 \angk\kappa q{z_\kay}{r_n}
 =\pi.\] 
-Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}>\pi-\eps$.
+Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}\z>\pi-\eps$.
 From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}<2\cdot\eps$ and thus 
 \[\dist{z_\kay}{z_j}{}<\eps\cdot\Const(\kappa,t);\]
 that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
@@ -283,7 +315,7 @@ and Corollary \ref{cor:two-geodesics-in-ultrapower}.
 \end{thm}
 
 \begin{thm}{Exercise}
-Construct a space $\spc{L}$ be a complete length $\Alex{}$ space
+Construct a complete length $\Alex{}$ space $\spc{L}$
 which contains an everywhere dense G-delta set $A$
 such that 
 $A\cap\l]xy\r[=\emptyset$
@@ -301,7 +333,7 @@ $p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
 
 \section{More comparisons}\label{sec:more-angles}
 
-Now we are ready to give a number of equivalent definitions of Alexandrov space:
+The following theorem makes possible to adapt Euclidean intuition in the Alexandrov universe.
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_alex} 
@@ -310,7 +342,7 @@ Then
 
 \begin{subthm}{3-sum} $\spc{L}$ is $\Alex\kappa$
 \end{subthm}
-if and only if $\spc{L}$ is G-delta geodesic and one of the following conditions holds for all $p,x,y\in \spc{L}$, once $\modtrig\kappa(p x y)$ is defined:
+if and only if $\spc{L}$ is G-delta geodesic and one of the following conditions holds for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined:
 
 \begin{subthm}{2-sum} 
 (adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \l]x y\r[$, $z\not=p$ we have
@@ -369,13 +401,11 @@ Follows directly from Alexandrov's lemma (\ref{lem:alex}).
 From (\ref{SHORT.point-on-side}) we get that for $\bar p\in\l]xp\r]$ and $\bar y\in\l]xy\r]$ the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nonincreasing in each argument.
 In particular, 
 $\mangle\hinge x p y\z=\sup\{\angk\kappa x{\bar p}{\bar y}\}$.
-Thus, $\mangle\hinge x p y$ is defined and it is
+In particular, $\mangle\hinge x p y$ is defined and it is
 at least $\angk\kappa x p y$.
 
-From above and (\ref{SHORT.2-sum}), it follows that $\mangle\hinge z p y + \mangle\hinge z p x\le\pi$.
-
 \begin{wrapfigure}[10]{r}{27mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/angle-comp(1)}
+\begin{lpic}[t(-4mm),b(0mm),r(0mm),l(0mm)]{pics/angle-comp(1)}
 \lbl[r]{1,11;$z$}
 \lbl[l]{19,12;$p$}
 \lbl[tr]{13,11;$w$}
@@ -383,6 +413,9 @@ From above and (\ref{SHORT.2-sum}), it follows that $\mangle\hinge z p y + \mang
 \lbl[lt]{24,1;$y$}
 \end{lpic}
 \end{wrapfigure}
+
+From above and (\ref{SHORT.2-sum}), it follows that 
+\[\mangle\hinge z p y + \mangle\hinge z p x\le\pi.\]
 
 \parit{(\ref{SHORT.angle}) $\Rightarrow$ (\ref{SHORT.3-sum}).}
 Assume first that $\spc{L}$ is geodesic.
@@ -406,7 +439,7 @@ Passing to the limits  $w\to p$, we obtain
 \le
 2\cdot\pi.\]
 
-Finally, if $\spc{L}$ is not geodesic, we can apply above arguments for sequences of points $p_n,w_n\to p$, $p_n\in \Str(z)$, $w_n\in\l]z p_n\r[$ and $x_n\to x$, $y_n\to y$, $x_n,y_n\in \Str(w_n)$.
+If $\spc{L}$ is not geodesic, we can apply above arguments for sequences of points $p_n,w_n\to p$, $p_n\in \Str(z)$, $w_n\in\l]z p_n\r[$ and $x_n\to x$, $y_n\to y$, $x_n,y_n\in \Str(w_n)$ and pass to the limit.
 \qeds
 
 
@@ -436,8 +469,7 @@ The angle $\mangle\hinge{x}{p}{y}$ is defined and
 \end{subthm}
 \end{thm}
 
-\parit{Proof.}
-See the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) in the proof of \ref{thm:defs_of_alex}.\qeds
+The proof is given in the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) of Theorem~\ref{thm:defs_of_alex}.
 
 \begin{thm}{Exercise} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
@@ -490,25 +522,22 @@ The following exercise is inspired by Busemann's definition given in \cite{busem
 
 \begin{subthm}{}
 Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
-
-\begin{itemize}
-\item For any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
-\end{itemize}
+for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
 \end{subthm}
 
 \begin{subthm}{} Show that $\RR^2$ admits a metric defined by a norm
-such that it satisfies above condition, but which is not an Alexandrov space.
+such that it satisfies above condition, but which is not $\Alex0$.
 \end{subthm}
 
 \end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Function comparison and development} \label{sec:func-comp-CBB}
+\section{Function comparison} \label{sec:func-comp-CBB}
 
 In this section we will translate the angle comparison definitions (Theorem~\ref{thm:defs_of_alex}) 
 to a concavity-like property of the distance functions as defined in Section~\ref{sec:conv-fun}.
-Conceptually, this is quite important step;
+This a conceptual step ---
 we reformulate a global geometric condition into an infinitesimal condition on distance functions.
 We will give two formulation of this comparison:
 analytical, using function concavity, and geometrical, using development.
@@ -533,7 +562,8 @@ is $2$-concave as defined in Section~\ref{sec:conv-fun}.
 \parit{Proof.} 
 Given a geodesic $[x y]$  in $\oBall(p,\varpi\kappa)$,
 let $\ell=\dist{x}{y}{}$.
-Consider model triangle $\trig{\~p}{\~x}{\~y}=\modtrig\kappa(p x y)$ and set \begin{align*} 
+Consider the model triangle $\trig{\~p}{\~x}{\~y}=\modtrig\kappa(p x y)$.
+Set \begin{align*} 
 \~r(t)&=\dist{\~p}{\geod_{[\~x\~y]}(t)}{},
 & 
 r(t)&=\dist{p}{\geod_{[xy]}(t)}{}.                           \end{align*}
@@ -543,13 +573,14 @@ From \ref{md-diff-eq} we get $\~f''=1-\kappa\cdot  \~f$.
 
 Note that the point-on-side comparison (\ref{point-on-side}) for point $p$ and geodesic $[x y]$ is equivalent to $\~r\le r$.
 Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, 
-$\~r\le r$ is equivalent to $\~f\le f$, which is Jensen's inequality (\ref{y''-mono}) for the function
+$\~r\le r$ is equivalent to $\~f\le f$.
+The latter is the Jensen's inequality (\ref{y''-mono}) for the function
 $t\mapsto\md\kappa\dist[{{}}]{p}{\geod_{[x y]}(t)}{}$ on interval $[0,\ell]$. 
 Hence the result.
 \qeds
 
 Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
-The following exercise is analogous to Exercise~\ref{ex:busemann-CBA}.
+Compare the following exercise to Exercise~\ref{ex:busemann-CBA}.
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
@@ -568,21 +599,23 @@ satisfies
 
 \end{thm}
 
+\section{Development}
 
-We will translate the above comparison into more geometric language, using the following definition of $\kappa$-\nospace development.
+In this section we reformulate the function comparison using a more geometric language based on the definition of development given below.
+
 This definition appears in \cite{alexandrov:devel}
-and an earlier fom of it can be found in \cite{liberman}.
+and an earlier form of it can be found in \cite{liberman}.
 The definition is somewhat lengthy, but it defines a useful comparison object for a curve. 
 Often it is easier to write proofs in terms of function comparison,
-but think in terms of $\kappa$-developments.
+but think in terms of developments.
 
 \begin{thm}{Lemma}\label{lem:devel}
 Let $\kappa\in \RR$, 
 $\spc{X}$ be a metric space, 
 $\gamma\:\II\to \spc{X}$ be a $1$-Lipschitz curve,
 $p\in \spc{X}$,
-$\~p\in\Lob2{\kappa}$
-and $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
+$\~p\in\Lob2{\kappa}$.
+Assume $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
 all $t\in \II$.
 Then there exists a unique up to rotation curve
 $\~\gamma\: \II\to \Lob2\kappa$, parameterized by the arc-length 
@@ -619,8 +652,8 @@ Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$ and thus, the function $\theta$ 
 It is straightforward to check that $(\rho,\theta)$ describe $\~\gamma$ in polar coordinates on $\Lob2{\kappa}$ with center at $\~p$.
 \qeds
 
-We need the following analogues of sub- and super-graphs%??? change to epi- hypo???
- and convex/concave functions, adapted to polar coordiantes in $\Lob2{\kappa}$.
+We need the following analogues of sub- and super-graphs %??? change to epi- hypo???
+ and convex/concave functions, adapted to polar coordinates in $\Lob2{\kappa}$.
 
 \begin{wrapfigure}{r}{36mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/subgraph(1)}
@@ -687,7 +720,7 @@ Condition~\ref{2-sum} implies  that
 Further, since $\gamma$ is a unit-speed geodesic, we have that 
 \[\sum_{i=1}^n\dist{x_{i-1}}{x_i}{}\le \dist{p}{x_0}{}+\dist{p}{x_n}{}.\eqlbl{eq:thm:detr*}\]
 
-If $\kappa\le 0$ then \ref{eq:thm:detr*} immediately implies that 
+If $\kappa\le 0$ then \ref{eq:thm:detr*}  implies that 
 
 \[\sum_{i=1}^n\mangle\hinge{\~p}{\~x_i}{\~x_{i-1}}\le\pi.
 \eqlbl{eq:thm:devel**}\] 
@@ -740,11 +773,13 @@ Let $\~\gamma\:[0,T]\to\Lob2\kappa$ be $\kappa$-development with base $\~p$ of $
 Take a partition $0=t_0<t_1<\dots<t_n=T$ and set 
 \[\~y_i=\~\gamma(t_i)\ \ \text{and}\ \ \tau_i=\dist{\~y_0}{\~y_1}{}+\dist{\~y_1}{\~y_2}{}+\dots+\dist{\~y_{i-1}}{\~y_i}{}.\] 
 Since $\~\gamma$ is convex, for a fine partition we have that broken line $\~y_0\~y_1\dots\~y_n$ is also convex.
-Applying Alexandrov's lemma (\ref{lem:alex}) inductively to pairs of triangles 
-$\modtrig\kappa
-\{\tau_{i-1},\dist{\~p}{\~y_0}{},\dist{\~p}{\~y_{i-1}}{}\}$ and 
-$\modtrig\kappa
-\{\dist{\~y_{i-1}}{\~y_i}{},\dist{\~p}{\~y_{i-1}}{},\dist{\~p}{\~y_{i}}{}\}$,
+Applying Alexandrov's lemma (\ref{lem:alex}) inductively to pairs of model triangles 
+\[\modtrig\kappa
+\{\tau_{i-1},\dist{\~p}{\~y_0}{},\dist{\~p}{\~y_{i-1}}{}\}
+\]
+and 
+\[\modtrig\kappa
+\{\dist{\~y_{i-1}}{\~y_i}{},\dist{\~p}{\~y_{i-1}}{},\dist{\~p}{\~y_{i}}{}\}\]
 we obtain that sequence 
 $\~\mangle\mc\kappa\{\dist{\~p}{\~y_{i}}{};\dist{\~p}{\~y_0}{},\tau_i\}$ is non increasing.
 
@@ -758,18 +793,8 @@ Thus, point-on-side comparison (\ref{point-on-side}) follows.
 \section{Local definitions and globalization}\label{sec:loc}
 
 
-The aim of this section is giving 
-local analogs of $\Alex{\kappa}$ spaces 
-and proving the equivalence to the global definitions 
---- so called globalization theorem.
-
-First we need a local analog of the notion of a G-delta geodesic space (definition \ref{def:alm-geod}):
-
-\begin{thm}{Definition}
-Let $\spc{X}$ be a complete length space. 
-An open set $\Omega\subset\spc{X}$ is called G-delta geodesic if for every point $p\in\Omega$ there is a G-delta set $W_p$ which is dense in $\Omega$ such that
-for any $q\in W_p$ there is a geodesic $[p q]$ in $\spc{X}$.
-\end{thm}
+In this section we discuss local $\Alex{\kappa}$ spaces; 
+in particular, we prove the \emph{globalization theorem} --- equivalence of local and global definitions for complete length spaces.
 
 \begin{thm}{Theorem}\label{thm:=def-loc}
 Let $\spc{X}$ be a complete length space and $p\in \spc{X}$.
@@ -783,10 +808,10 @@ Then the following conditions are equivalent:
 holds for any $q,x^1,x^2,x^3\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}})$.
 \end{subthmN}
 
-\begin{subthmN}{def:kirszbraun-loc}(local Kirszbraun property) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$, 
-such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|F_3$).
-\end{subthmN}
+%\begin{subthmN}{def:kirszbraun-loc}(local Kirszbraun property) 
+%there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$, 
+%such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|F_3$).
+%\end{subthmN}
 
 \begin{subthmN}{conc-loc} (local function comparison) there is 
 $R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}}>0$, such that 
@@ -841,10 +866,10 @@ is G-delta geodesic and if a geodesic $\gamma$ lies in $\oBall(p,R_{\hbox{\rm\sc
 \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})
 \backslash \gamma$ then the $\kappa$-development $\~\gamma$ with respect to $q$ is convex.
 \end{subthmN}
-Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that $R_i>\tfrac{1}{9}\cdot R_j$.
+Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that $R_i\z>\tfrac{1}{9}\cdot R_j$.
 \end{thm}
 
-\parit{Proof.} The proof of each equivalence repeats the proof of corresponding global equivalence in localized form; see proofs of theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}. \qeds
+The proof of each equivalence repeats the proof of corresponding global equivalence in localized form; see proofs of theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}.
 
 Now, let us give a local definition of lower curvature bound (\ref{df:cbb1+3}).
 
