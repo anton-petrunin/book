@@ -690,7 +690,9 @@ In particular, if $\~\gamma$ is a development, we will say it is \emph{(locally)
 
 
 \begin{thm}{Development comparison\index{comparison!development comparison}}\label{thm:devel} 
-$\spc{L}$ is a complete length $\Alex\kappa$ space if and only if $\spc{L}$ is G-delta geodesic and for any point $p\in \spc{L}$ and any geodesic $\gamma$ in $\oBall(p,\varpi\kappa)\backslash\{p\}$, its $\kappa$-development with respect to $p$ is convex.
+A complete G-delta geodesic space
+$\spc{L}$ is $\Alex\kappa$ if and only if for any point $p\in \spc{L}$ and any geodesic $\gamma$ in $\oBall(p,\varpi\kappa)\backslash\{p\}$, 
+its $\kappa$-development with respect to $p$ is convex.
 \end{thm}
 
 \begin{wrapfigure}{r}{26mm}
@@ -705,63 +707,84 @@ $\spc{L}$ is a complete length $\Alex\kappa$ space if and only if $\spc{L}$ is G
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof; ($\Rightarrow$).}  
-By Theorem~\ref{thm:almost.geod}, $\spc{L}$ is G-delta geodesic.
+A simpler proof of ``if''-part can be build on the adjacent angle comparison (\ref{2-sum}).
+We use this proof since it also implies the short hinge lemma below.
 
+\parit{Proof; ``if''-part.}  
 Let $\gamma\:[0,T]\to \oBall(p,\varpi\kappa)\backslash \{p\}$ be a unit-speed geodesic in $\spc{L}$.
-Consider partition $0=t_0<t_1<\dots<t_n=T$.
-Set $x_i=\gamma(t_i)$.
+
+Consider fine partition 
+\[0=t_0<t_1<\dots<t_n=T.\]
+Set $x_i=\gamma(t_i)$ and choose a point 
+\[p'\in \Str(x_0,x_1,\dots,x_n)\] 
+sufficiently close to $p$.
+
 Let us construct a chain of model triangles 
-$\trig{\~p}{\~x_{i-1}}{\~x_i}=\modtrig\kappa(p x_{i-1}x_i)$ in such a way that direction $[\~p\~x_i]$ turns conterclockwise as $i$ grows.
-Condition~\ref{2-sum} implies  that 
-\[\mangle\hinge{\~x_i}{\~x_{i-1}}{\~p}
-+\mangle\hinge{\~x_i}{\~x_{i+1}}{\~p}
-\le\pi.\eqlbl{eq:thm:devel*}\]
+$\trig{\~p'}{\~x_{i-1}}{\~x_i}\z=\modtrig\kappa(p' x_{i-1}x_i)$ in such a way that direction $[\~p'\~x_i]$ turns counterclockwise as $i$ grows.
+By hinge comparison (\ref{angle}), we have
+\[\begin{aligned}
+\mangle\hinge {\~x_i}{\~x_{i-1}}{\~p'}
++\mangle\hinge{\~x_i}{\~x_{i+1}}{\~p'}
+&=
+\angk\kappa{x_i}{x_{i-1}}{p'}
++\angk\kappa{x_i}{x_{i+1}}{p'}
+\le
+\\
+&\le
+\mangle\hinge{x_i}{x_{i-1}}{p'}
++\mangle\hinge{x_i}{x_{i+1}}{p'}
+\le
+\\
+&\le
+\pi.
+\end{aligned}\eqlbl{eq:thm:devel*}
+\]
+
 Further, since $\gamma$ is a unit-speed geodesic, we have that 
-\[\sum_{i=1}^n\dist{x_{i-1}}{x_i}{}\le \dist{p}{x_0}{}+\dist{p}{x_n}{}.\eqlbl{eq:thm:detr*}\]
+\[\sum_{i=1}^n\dist{x_{i-1}}{x_i}{}\le \dist{p'}{x_0}{}+\dist{p'}{x_n}{}.\eqlbl{eq:thm:detr*}\]
 
 If $\kappa\le 0$ then \ref{eq:thm:detr*}  implies that 
 
-\[\sum_{i=1}^n\mangle\hinge{\~p}{\~x_i}{\~x_{i-1}}\le\pi.
+\[\sum_{i=1}^n\mangle\hinge{\~p'}{\~x_i}{\~x_{i-1}}\le\pi.
 \eqlbl{eq:thm:devel**}\] 
 
 If $\kappa>0$ then \ref{eq:thm:devel**} require more work.
 Applying rescaling we can assume that $\kappa=1$.
 Assume the contrary; 
-that is, $\sum_{i=1}^n\mangle\hinge{\~p}{\~x_i}{\~x_{i-1}}>\pi$,
+that is, $\sum_{i=1}^n\mangle\hinge{\~p'}{\~x_i}{\~x_{i-1}}>\pi$,
 then for some $\kay$ there is a point $\~y\in[\~x_{\kay}\~x_{\kay+1}]$ such that
-\[\mangle\hinge{\~p}{\~x_0}{\~x_{1}}
+\[\mangle\hinge{\~p'}{\~x_0}{\~x_{1}}
 +
 \dots
 +
-\mangle\hinge{\~p}{\~x_{\kay-1}}{\~x_\kay}
+\mangle\hinge{\~p'}{\~x_{\kay-1}}{\~x_\kay}
 +
-\mangle\hinge{\~p}{\~x_{\kay}}{\~y}
+\mangle\hinge{\~p'}{\~x_{\kay}}{\~y}
 =\pi.\]
 By \ref{eq:thm:detr*}, 
 the broken line $\~x_0\~x_1\dots\~x_\kay\~y$
 is convex; in particular,
 \[
-\dist{\~p}{\~x_0}{\SS^2}+\dist{\~p}{\~y}{\SS^2}\le\pi\]
+\dist{\~p'}{\~x_0}{\SS^2}+\dist{\~p'}{\~y}{\SS^2}\le\pi\]
 By triangle inequality
-\[\dist{\~x_0}{\~x_{1}}{\SS^2}+\dots+\dist{\~x_{\kay-1}}{\~x_\kay}{\SS^2}+\dist{\~x_\kay}{\~y}{\SS^2}\ge \dist{\~p}{\~x_0}{\SS^2}+\dist{\~p}{\~y}{\SS^2}\]
+\[\dist{\~x_0}{\~x_{1}}{\SS^2}+\dots+\dist{\~x_{\kay-1}}{\~x_\kay}{\SS^2}+\dist{\~x_\kay}{\~y}{\SS^2}\ge \dist{\~p'}{\~x_0}{\SS^2}+\dist{\~p'}{\~y}{\SS^2}\]
 Applying the triangle inequality again, 
 we get
-\[\dist{\~y}{\~x_{\kay+1}}{\SS^2}+\dist{\~x_{\kay+1}}{\~x_{\kay+2}}{\SS^2}+\dots+\dist{\~x_{n-1}}{\~x_n}{\SS^2}> \dist{\~p}{\~x_n}{\SS^2}-\dist{\~p}{\~y}{\SS^2}\]
+\[\dist{\~y}{\~x_{\kay+1}}{\SS^2}+\dist{\~x_{\kay+1}}{\~x_{\kay+2}}{\SS^2}+\dots+\dist{\~x_{n-1}}{\~x_n}{\SS^2}> \dist{\~p'}{\~x_n}{\SS^2}-\dist{\~p'}{\~y}{\SS^2}\]
 
 Hence
-\[T=\sum_{i=1}^n\dist{\~x_i}{\~x_{i-1}}{\SS^2}>\dist{\~p}{\~x_{0}}{\SS^2}+\dist{\~p}{\~x_n}{\SS^2}.\]
+\[T=\sum_{i=1}^n\dist{\~x_i}{\~x_{i-1}}{\SS^2}>\dist{\~p'}{\~x_{0}}{\SS^2}+\dist{\~p'}{\~x_n}{\SS^2}.\]
 The later contradicts that $\gamma$ is length minimizing.
 
 
-Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\~p\~x_0\~x_1\dots \~x_n]$ is convex.
+Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\~p'\~x_0\~x_1\dots \~x_n]$ is convex.
 
-Let us take finer and finer partitions and pass to the limit of the polygon $\~p\~x_0\~x_1\dots \~x_n$.
-We obtain a convex curvelinear triangle formed by a curve $\~\gamma\:[0,T]\to\Lob2{\kappa}$ which is  the limit of broken line $\~x_0\~x_1\dots \~x_n$ and two geodesics $[\~p\,\~\gamma(0)]$,
-$[\~p\,\~\gamma(T)]$.
-Since $[\~p\~x_0\~x_1\dots \~x_n]$ is convex,
+Let us take finer and finer partitions and pass to the limit of the polygon $\~p'\~x_0\~x_1\dots \~x_n$ as $p'\to p$.
+We obtain a convex curvelinear triangle formed by a curve $\~\gamma\:[0,T]\to\Lob2{\kappa}$ which is  the limit of broken line $\~x_0\~x_1\dots \~x_n$ and two geodesics $[\~p'\,\~\gamma(0)]$,
+$[\~p'\,\~\gamma(T)]$.
+Since $[\~p'\~x_0\~x_1\dots \~x_n]$ is convex,
  the natural parametrization of $\~x_0\~x_1\dots \~x_n$ 
-converges to a natural parametrization of $\~\gamma$ (see \ref{lem:lenght-of-convex-curve}).
+converges to a natural parametrization of $\~\gamma$. % ???(see \ref{lem:lenght-of-convex-curve}).
 Thus $\~\gamma$ is the $\kappa$-development of $\gamma$ with respect to $p$.
 
 \noi{($\Leftarrow$).}
@@ -788,13 +811,34 @@ For finer and finer partitions we have
 Thus, point-on-side comparison (\ref{point-on-side}) follows.
 \qeds
 
+Note that in the proof of ``if''-part we could use a slightly weaker version of the hinge comparison (\ref{angle}).
+Namely we proved the following lemma which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
+
+\begin{thm}{Short hinge lemma}\label{lem:devel-glob}
+Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
+and moreover, if $x\in \l]y z\r[$ then
+\[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
+
+Assume that  for any hinge $\hinge x p y$ in $\spc{L}$ we have
+\[\dist{p}{ x}{}+\dist{x}{ y}{}
+<\varpi\kappa
+\quad\Rightarrow\quad 
+\mangle\hinge x p y
+\ge\angk\kappa x p y,\]
+then $\spc{L}$ is $\Alex\kappa$.
+\end{thm}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Local definitions and globalization}\label{sec:loc}
 
 
-In this section we discuss local $\Alex{\kappa}$ spaces; 
+In this section we discuss locally $\Alex{\kappa}$ spaces; 
 in particular, we prove the \emph{globalization theorem} --- equivalence of local and global definitions for complete length spaces.
+
+The following theorem summarizes equivalent definitions of locally $\Alex{\kappa}$ spaces
 
 \begin{thm}{Theorem}\label{thm:=def-loc}
 Let $\spc{X}$ be a complete length space and $p\in \spc{X}$.
@@ -808,10 +852,10 @@ Then the following conditions are equivalent:
 holds for any $q,x^1,x^2,x^3\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}})$.
 \end{subthmN}
 
-%\begin{subthmN}{def:kirszbraun-loc}(local Kirszbraun property) 
-%there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$, 
-%such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|F_3$).
-%\end{subthmN}
+\begin{subthmN}{def:kirszbraun-loc}(local Kirszbraun property) 
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$, 
+such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|F_3$).
+\end{subthmN}
 
 \begin{subthmN}{conc-loc} (local function comparison) there is 
 $R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}}>0$, such that 
@@ -866,24 +910,15 @@ is G-delta geodesic and if a geodesic $\gamma$ lies in $\oBall(p,R_{\hbox{\rm\sc
 \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})
 \backslash \gamma$ then the $\kappa$-development $\~\gamma$ with respect to $q$ is convex.
 \end{subthmN}
-Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that $R_i\z>\tfrac{1}{9}\cdot R_j$.
+Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that 
+\[R_i>\tfrac{1}{9}\cdot R_j.\]
 \end{thm}
 
 The proof of each equivalence repeats the proof of corresponding global equivalence in localized form; see proofs of theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}.
 
-Now, let us give a local definition of lower curvature bound (\ref{df:cbb1+3}).
-
-\begin{thm}{Definition}
-Let $\spc{X}$ be a metric space and $p\in \spc{X}$, 
-we say that \emph{$\spc{X}$ has curvature $\ge\Kappa$ at $p$} 
-(briefly, $\curv_p \spc{X}\ge\Kappa$) 
-if $p$ satisfies any of the equivalent condition of Theorem~\ref{thm:=def-loc} for any $\kappa<\Kappa$.
-\end{thm}
-
-
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
-Let $\spc{L}$ be a complete length metric space such that $\curv_p \spc{L}\ge\Kappa$ for any point $p\in \spc{L}$ then $\spc{L}$ is $\Alex\Kappa$.
+Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
 In the two-dimensional case this theorem was proved in \cite{alexandrov:devel}, later, in \cite{toponogov-globalization+splitting} it was proved for Riemannian manifolds of all dimensions.
@@ -902,8 +937,9 @@ Note that if $\Kappa\le 0$, this statement follows directly from definition of A
 
 The ``if''-part also follows directly from definition.
 
-For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined, but, it is defined for sufficiently small triangles.
-Thus, if $\Kappa>\kappa$ then any $\Alex\Kappa$ space is locally $\Alex\kappa$
+For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined, but, it is defined if $x$, $y$ and $z$ are sufficiently close to each other.
+Thus, if $\Kappa>\kappa$ then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
+
 Applying  globalization theorem (\ref{thm:glob}), we get the ``only if''-part.
 \qeds
 
@@ -913,19 +949,7 @@ First we need the following characterization of Alexandrov space;
 it coinsides with \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
 
 
-\begin{thm}{Short hinge lemma}\label{lem:devel-glob}
-Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \l]y z\r[$ then
-\[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
-Assume that  for any hinge $\hinge x p y$ in $\spc{L}$ we have
-\[\dist{p}{ x}{}+\dist{x}{ y}{}
-<\varpi\kappa
-\quad\Rightarrow\quad 
-\mangle\hinge x p y
-\ge\angk\kappa x p y,\]
-then $\spc{L}$ is $\Alex\kappa$.
-\end{thm}
 
 %???THE PROOF IS ALMOST IDENTICAL TO {thm:devel}, MAYBE IT IS BETTER TO MAKE IT ONCE???
 
@@ -933,78 +957,7 @@ then $\spc{L}$ is $\Alex\kappa$.
 If $\kappa\le0$, the lemma follows directly from the hinge comparison (\ref{angle}).
 For $\kappa>0$ the proof is very similar to the proof of equivalence of development comparison definition (\ref{thm:devel}).
 
-Applying rescaling, we can assume that $\kappa=1$, 
-therefore $\Lob{2}\kappa=\SS^2$ and $\varpi\kappa=\pi$.
 
-According to \ref{thm:devel}, it is sufficient to show that  for any point $p\in \spc{L}$ and any geodesic $\gamma\:[0,T]\to \oBall(p,\pi)\backslash \{p\}$, its $\kappa$-development with respect to $p$ is convex.
-
-\begin{wrapfigure}{r}{26mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/development(1)}
-\lbl[rt]{8,0;$\~p'$}
-\lbl[l]{25,7.5;$\~x_0$}
-\lbl[l]{25.5,16;$\~x_1$}
-{\Large\lbl[lb]{20.3,23;$.$}
-\lbl[lb]{13.5,25;$.$}
-\lbl[b]{8,24.5;$.$}}
-\lbl[rt]{2,18.5;$\~x_n$}
-\end{lpic}
-\end{wrapfigure}
-
-Clearly $\dist{p}{\gamma(t)}{}<\pi-\eps$ for some fixed $\eps>0$.
-Consider partition $0=t_0<t_1<\dots<t_n=T$ such that $|t_i-t_{i-1}|<\eps$.
-Set $x_i=\gamma(t_i)$ 
-and choose a point $p'\in \Str(x_0,x_1,\dots,x_n)$ sufficiently close to $p$.
-Construct a chain of model triangles 
-$\trig{\~p'}{\~x_{i-1}}{\~x_i}=\modtrig\kappa(p' x_{i-1}x_i)$ on such a way that direction $[\~p'\~x_i]$ turns conterclockwise as $i$ grows.
-From the assumption of the lemma, 
-\[\begin{aligned}
-\mangle\hinge {\~x_i}{\~x_{i-1}}{\~p'}
-+\mangle\hinge{\~x_i}{\~x_{i+1}}{\~p'}
-&=
-\angk\kappa{x_i}{x_{i-1}}{p'}
-+\angk\kappa{x_i}{x_{i+1}}{p'}
-\le
-\\
-&\le
-\mangle\hinge{x_i}{x_{i-1}}{p'}
-+\mangle\hinge{x_i}{x_{i+1}}{p'}
-\le
-\\
-&\le
-\pi.
-\end{aligned}\eqlbl{eq:angles=<pi}
-\]
-
-Note that
-\[\sum_{i=1}^n\mangle\hinge{\~p'}{\~x_i}{\~x_{i-1}}\le\pi\eqlbl{clm:T>2sides}\]
-Indeed, if $\sum_{i=1}^n\mangle\hinge{\~p'}{\~x_i}{\~x_{i-1}}>\pi$,
-then for some $\kay$ there is a point $\~y\in[\~x_{\kay}\~x_{\kay+1}]$ such that
-\[\mangle\hinge{\~p'}{\~x_0}{\~x_{1}}
-+
-\dots
-+
-\mangle\hinge{\~p'}{\~x_{\kay-1}}{\~x_\kay}
-+
-\mangle\hinge{\~p'}{\~x_{\kay}}{\~y}
-=\pi.\]
-By \ref{eq:angles=<pi}, 
-the broken line $\~x_0\~x_1\dots\~x_\kay\~y$
-is convex; in particular,
-\[
-\dist{\~p'}{\~x_0}{\SS^2}+\dist{\~p'}{\~y}{\SS^2}\le\pi\]
-Therefore, by triangle inequality
-\[\dist{\~x_0}{\~x_{1}}{\SS^2}+\dots+\dist{\~x_{\kay-1}}{\~x_\kay}{\SS^2}+\dist{\~x_\kay}{\~y}{\SS^2}\ge \dist{\~p'}{\~x_0}{\SS^2}+\dist{\~p'}{\~y}{\SS^2}\]
-Applying the triangle inequality again, 
-we get
-\[\dist{\~y}{\~x_{\kay+1}}{\SS^2}+\dist{\~x_{\kay+1}}{\~x_{\kay+2}}{\SS^2}+\dots+\dist{\~x_{n-1}}{\~x_n}{\SS^2}> \dist{\~p'}{\~x_n}{\SS^2}-\dist{\~p'}{\~y}{\SS^2}\]
-
-Hence
-\[T=\sum_{i=1}^n\dist{\~x_i}{\~x_{i-1}}{\SS^2}>\dist{\~p'}{\~x_{0}}{\SS^2}+\dist{\~p'}{\~x_n}{\SS^2}.\]
-The later contradicts that $\gamma$ is length minimizing.
-
-From \ref{eq:angles=<pi} and \ref{clm:T>2sides}, it follows that the spherical polygon $[\~p'\~x_0\~x_1\dots \~x_n]$ is convex.
-
-Taking finer and finer partitions and passing to the limit $p'\to p$, the broken line $\~x_0\~x_1\dots \~x_n$ approaches development of $\gamma$ with respect to $p$ and the statement follows.
 \qeds
 
 The following lemma says that if comparison holds for all small hinges then it holds for slightly bigger hinges near the given point.
@@ -1014,7 +967,7 @@ Let $\kappa\in \RR$,
 $0<\ell\le\varpi\kappa$, 
 $\spc{X}$ be a complete geodesic space 
 and $p\in \spc{X}$ be a point 
-such that $\curv_x \spc{X}\ge\kappa$ for any $x\in \oBall(p,2\cdot\ell)$. 
+such that $\oBall(p,2\cdot\ell)$ is locally $\Alex\kappa$. 
 
 Assume that for any point 
 $q\in \oBall(p,{\ell})$, comparison
@@ -1271,9 +1224,8 @@ Therefore a similar statement is true in the ultrapower $\spc{L}^\o$;
 that is,
 for any point
 $q_\o\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}^\o$, 
- Condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
-In particular, $\curv_{q_\o}\spc{L}^\o\ge\kappa$ 
-for any $q_\o\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}^\o$.
+Condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
+
 
 Note that $r^*\ge\ComRad(p^*,\spc{L}^\o)$.
 Therefore we can apply the lemma on almost minimum 
