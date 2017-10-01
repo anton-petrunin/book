@@ -1,6 +1,6 @@
 %%!TEX root =the-defs-CBB.tex
-%READY
-\chapter{Definitions of curvature bounded below%READY
+%arXiv
+\chapter{Definitions of curvature bounded below
 }
 
 In Section~\ref{sec:angle}, 
@@ -921,9 +921,10 @@ The proof of each equivalence repeats the proof of corresponding global equivale
 Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
-In the two-dimensional case this theorem was proved in \cite{alexandrov:devel}, later, in \cite{toponogov-globalization+splitting} it was proved for Riemannian manifolds of all dimensions.
-In the above generality, the theorem first appears in \cite{BGP}; simplifications and modifications were given in \cite{plaut:dimension}, \cite{shiohama}, \cite{BBI}.
-Our proof, is based on presentations in  \cite{plaut:dimension} and \cite{BBI}.
+In the two-dimensional case this theorem was proved by Alexandr Alexandrov \cite{alexandrov:devel}, later, Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
+In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{BGP}; 
+simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{BBI}.
+Our proof, is based on presentations in \cite{plaut:dimension} and \cite{BBI}.
 
 The following corollary says that the expression ``space with curvature $\ge \kappa$'' makes sense.
 
@@ -935,30 +936,18 @@ Then $\spc{L}$ is $\Alex\Kappa$ if and only if $\spc{L}$ is $\Alex\kappa$ for an
 \parit{Proof.}
 Note that if $\Kappa\le 0$, this statement follows directly from definition of Alexandrov space (\ref{df:cbb1+3}) and monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
 
-The ``if''-part also follows directly from definition.
+The ``if''-part also follows directly from the definition.
 
-For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined, but, it is defined if $x$, $y$ and $z$ are sufficiently close to each other.
+For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined while $\angk{\kappa} x y z$ is defined.
+However, $\angk{\Kappa} x y z$ is defined if $x$, $y$ and $z$ are sufficiently close to each other.
 Thus, if $\Kappa>\kappa$ then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
-
-Applying  globalization theorem (\ref{thm:glob}), we get the ``only if''-part.
+It remains to apply the  globalization theorem (\ref{thm:glob}).
 \qeds
 
-For the proof of globalization theorem,
-will need three lemmas.
-First we need the following characterization of Alexandrov space; 
-it coinsides with \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
+In the proof of the globalization theorem,
+we will use three lemmas.
+First is the short hinge lemma \ref{lem:devel-glob} --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
 
-
-
-
-%???THE PROOF IS ALMOST IDENTICAL TO {thm:devel}, MAYBE IT IS BETTER TO MAKE IT ONCE???
-
-\parit{Proof.} 
-If $\kappa\le0$, the lemma follows directly from the hinge comparison (\ref{angle}).
-For $\kappa>0$ the proof is very similar to the proof of equivalence of development comparison definition (\ref{thm:devel}).
-
-
-\qeds
 
 The following lemma says that if comparison holds for all small hinges then it holds for slightly bigger hinges near the given point.
 
@@ -994,7 +983,7 @@ holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof of key lemma (\ref{key-lem:globalization}) .} 
+\parit{Proof.} 
 We will prove an equivalent inequality:
 \[\side\kappa \hinge x p q
 \ge\dist{p}{q}{}.\eqlbl{eq:thm:=def-loc*}\] 
@@ -1020,7 +1009,6 @@ Take $x'\in [x q]$ such that
 Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ fromed by $[x'p]$ and $[x' q]\subset [x q]$. 
 (In fact the same argument as in \ref{thm:g-split} shows that 
 condition $[x' q]\subset [x q]$ always holds.)
-
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
 
 Further, note that we have $x,x'\in \oBall(p,\ell)\cap \oBall(q,\ell)$ and moreover
@@ -1113,9 +1101,8 @@ The following lemma is analogous to the existence of minimum point on a compact.
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
 Let $\spc{X}$ be a complete metric space,
 $p\in \spc{X}$
-and $r\:\spc{X}\to \RR$ be a function.
-Assume that for some $\eps>0$,
-the function $r$ is strictly positive in $\cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ and
+and $r\:\spc{X}\to \RR$ be a function and $\eps>0$.
+Assume that the function $r$ is strictly positive in $\cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ and
 $\varliminf_{n}r(x_n)>0$ for any convergent sequence 
 $x_n\to x\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$. 
 
@@ -1153,12 +1140,6 @@ $\lim_{n}r(x_n)=0$, a contradiction.
 
 
 \parit{Proof of the globalization theorem (\ref{thm:glob}).} 
-Note that since for fixed points $x,y,z\in \spc{L}$, 
-the function $\kappa\mapsto\angk\kappa x y z$ is continuous, 
-it is sufficient to show that $\spc{L}$ is $\Alex\kappa$ 
-for any $\kappa<\Kappa$.
-For the rest of the proof we fix some $\kappa<\Kappa$.
-
 Exactly the same argument as in the proof of Theorem~\ref{thm:almost.geod} 
 shows that $\spc{L}$ is G-delta geodesic.
 By Theorem~\ref{angle-loc}, 
@@ -1178,7 +1159,7 @@ $$\liminf_{n\to\infty}\ComRad(p_n,\spc{L})>0$$
 for any converging sequence of points $p_n\to p$.
 That makes it possible to apply the lemma on almost minimum (\ref{lem:alm-min}) to the function $p\mapsto \ComRad(p,\spc{L})$.
 
-According to Short hinge lemma (\ref{lem:devel-glob}), it is sufficient  to show that 
+According to the short hinge lemma (\ref{lem:devel-glob}), it is sufficient  to show that 
 \[s_0=\inf_{p\in\spc{L}}\ComRad(p,\spc{L})
 \ge \varpi\kappa\ \ 
 \text{for any}\ \ 
@@ -1190,10 +1171,10 @@ The rest of the proof is easier for geodesic spaces
 and yet easier for compact spaces.
 Thus we give three different arguments  for each of these cases.
 
-\parit{End of the proof for a compact space.}
-By Theorem~\ref{conc-loc} 
-and compactness of $\spc{L}$, 
-it's immediate that $s_0>0$.
+\parit{Compact space.}
+Assume $\spc{L}$ is compact.
+
+By Theorem~\ref{conc-loc},  $s_0>0$.
 Take a point $p^*\in \spc{L}$ such that $r^*=\ComRad(p^*,\spc{L})$ is sufficiently close to $s_0$
 ($p^*$ such that  $s_0\le r^*<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$ will do).
 Then the key lemma (\ref{key-lem:globalization}) applied for $p^*$ and $\ell$ slightly bigger than $r^*$ (say, such that $r^*<\ell<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$) implies that
@@ -1202,23 +1183,27 @@ Then the key lemma (\ref{key-lem:globalization}) applied for $p^*$ and $\ell$ sl
 for any hinge $\hinge x{p^*}q$ such that $\dist{p^*}{x}{}+\dist{x}{q}{}<\ell$.
 Thus $r^*\ge\ell$, a contradiction.
 
-\parit{End of the proof for a geodesic space.}
-Fix $\eps=0.0001$. 
-Apply the lemma on almost minimum (\ref{lem:alm-min}) to find a point $p^*\in \spc{L}$ such that $r^*\z=\ComRad(p^*,\spc{L})<\varpi\kappa$ and 
+\parit{Geodesic case.}
+Assume $\spc{L}$ is geodesic.
+
+Fix small $\eps>0$ ($\eps=0.0001$ will do). 
+Apply the lemma on almost minimum (\ref{lem:alm-min}) to find a point $p^*\in \spc{L}$ such that 
+\[r^*\z=\ComRad(p^*,\spc{L})\z<\varpi\kappa\] 
+and 
 \[\ComRad(q,\spc{L})\z> (1-\eps)\cdot r^*\eqlbl{comrad(q)}\] 
 for any $q\in\cBall[p^*,\tfrac{1}{\eps}\cdot r^*]$. 
 
 Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and $\ell$ slightly bigger than $r^*$ leads to a contradiction.
 
-\parit{End of the proof, general case.}
+\parit{General case.}
 Let us construct $p^*\in\spc{L}$ as in the previous case.
 Since $\spc{L}$ is not geodesic, we can not apply the key lemma directly.
 Instead, let us pass to the ultrapower $\spc{L}^\o$ which
  is a geodesic space (see \ref{cor:ulara-geod}).
 
 According to Theorem~\ref{thm:=def-loc},
-inequality \ref{comrad(q)} implies that
-Condition~\ref{curv>=k} holds for some fixed $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{100}
+inequality \ref{comrad(q)} implies that the
+ondition in \ref{curv>=k} holds for some fixed $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{100}
 >0$ at any point $q\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}$.
 Therefore a similar statement is true in the ultrapower $\spc{L}^\o$;
 that is,
@@ -1233,15 +1218,15 @@ at point $p^*$ for space $\spc{L}^\o$
 with function $x\mapsto\ComRad(x,\spc{L}^\o)$
 and $\eps'=\sqrt\eps=0.01$.
 
-For the obtained point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})<\varpi\kappa$ 
+For the obtained point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$ 
 and 
 $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p^{{*}{*}},\tfrac{1}{\eps'}\cdot r^{{*}{*}}]$. 
 Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
 \begin{thm}{Advanced Exercise}
-Assume $\spc{X}$ is a non-complete geodesic space for which the  $\Alex\kappa$ comparison holds in a neighborhood of every point. 
-Prove that completion of $\spc{X}$ is an Alexandrov's space with curvature $\ge\kappa$.
+Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
+Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
 \end{thm}
 
 
