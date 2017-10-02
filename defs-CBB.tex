@@ -1240,7 +1240,7 @@ All proofs in this section can be easely modified to use only the local definiti
 \begin{thm}{Geodesics do not split}\label{thm:g-split}
 In $\Alex{}$ space, geodesics do not bifurcate.
 
-More precisely: let $\spc{L}$ be a complete length $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics, then
+More precisely: let $\spc{L}$ be a $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics, then
 \begin{subthm}{nonsplit} If  there is an $\eps>0$, such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
 for all $t\in[0,\eps)$, 
 then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
@@ -1251,7 +1251,7 @@ then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
 \end{thm}
 
 \begin{thm}{Corollary}
-Let $\spc{L}$ be a complete length $\Alex{}$ space.
+Let $\spc{L}$ be a $\Alex{}$ space.
 Then restriction of any geodesic in $\spc{L}$ to a proper segment is the unique minimal geodesic joining its endpoints.
 \end{thm}
 
@@ -1271,8 +1271,9 @@ To deal with $\kappa>0$ we have to argue locally.
 \parit{Proof of \ref{thm:g-split}; \ref{SHORT.nonsplit}.}
 Let $t_{\max}$ be the maximal value 
 such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ for all $t\in [0,t_{\max})$.
-Since geodesics are continuous $\geod_{[p x]}(t_{\max})=\geod_{[p y]}(t_{\max})$, set
-\[q=\geod_{[p x]}(t_{\max})=\geod_{[p y]}(t_{\max}).\]
+Since geodesics are continuous $\geod_{[p x]}(t_{\max})\z=\geod_{[p y]}(t_{\max})$; 
+set
+\[q=\geod_{[p x]}(t_{\max})\z=\geod_{[p y]}(t_{\max}).\]
 We have to show that $t_{\max}=\min\{\dist{p}{x}{},\dist{p}{y}{}\}$.
 
 If that is not true, choose sufficiently small $\eps>0$ such that points
@@ -1293,7 +1294,7 @@ Therefore we can apply (\ref{SHORT.nonsplit}).
 \qeds
 
 \begin{thm}{Adjacent angle lemma}\label{lem:sum=pi}
-Let $\spc{L}$ be a complete length $\Alex{}$ space and
+Let $\spc{L}$ be a $\Alex{}$ space and
  $\hinge z x p$ and $\hinge z y p$ be two hinges with comon side $[zp]$ in $\spc{L}$.
 Assume that points $p$, $x$, $y$ and $z$ are distinct and $z\in[xy]$,
 then 
@@ -1311,7 +1312,7 @@ Thus, the result follows from the triangle inequality for angles (\ref{claim:ang
 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont-cbb}
-Let $\spc{L}_n$  be a complete length $\Alex\kappa$ space
+Let $\spc{L}_n$  be a $\Alex\kappa$ space for each $n\in\NN$
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that the sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{L}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{L}_\o$.
 Then 
@@ -1524,7 +1525,6 @@ The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) ap
 
 
 \parit{Proof of the first variation formula (\ref{1st-var+}).}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
 Without loss of generality we can assume that $\kappa\le 0$.
 The inequality 
 
