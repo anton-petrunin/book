@@ -11,7 +11,7 @@ and earlier paper of Lang and Schroeder
 \section{Short map extension definitions.}\label{sec:4pt}
 
 Theorems \ref{thm:kirsz-def} and \ref{thm:cba-kirsz-def} 
- give characterizations of $\Alex{\kappa}$ and  $\Cat{}{\kappa}$$\Alex{\kappa}$ spaces.
+ give characterizations of $\Alex{\kappa}$ and $\CAT\kappa$ spaces.
 
 \begin{thm}{Theorem}\label{thm:kirsz-def} 
 Let $\spc{L}$ be a complete length space. 
@@ -223,7 +223,8 @@ the later contradicts $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
 \qeds
 
 \begin{thm}{Theorem}\label{thm:cba-kirsz-def} 
-Let $\spc{U}$ be a metric space in which any pair of points at distance $<\varpi\kappa$ are joined by a unique geodesic. Then $\spc{U}\in\Cat{}{\kappa}$ if and only if for any $3$-point set $V_3$ and  $4$-point set $V_4\supset V_3$ in $\Lob2\kappa$, where the perimeter of $V_3$ is $<2\cdot\varpi\kappa$, any short map $f\:V_3\to\spc{U}$ can be extended to a short map $F\:V_4\to\spc{U}$.
+Let $\spc{U}$ be a metric space in which any pair of points at distance $<\varpi\kappa$ are joined by a unique geodesic. 
+Then $\spc{U}$ is $\CAT\kappa$ if and only if for any $3$-point set $V_3$ and  $4$-point set $V_4\supset V_3$ in $\Lob2\kappa$, where the perimeter of $V_3$ is $<2\cdot\varpi\kappa$, any short map $f\:V_3\to\spc{U}$ can be extended to a short map $F\:V_4\to\spc{U}$.
 \end{thm}
 
 In the proof of Theorem~\ref{thm:cba-kirsz-def},
@@ -370,7 +371,7 @@ The following example shows that this condition is needed for $\kappa>0$.
 
 \begin{thm}{Example}\label{example:SS_+}
 Let $\SS^m_+$ be a closed $m$-dimensional unit hemisphere.  Denote its boundary, which is isometric to $\SS^{m-1}$, by  $\partial\SS^m_+$.
-Clearly, $\SS^m_+$ is $\Alex{1}$ and $\partial\SS^m_+\in\cCat{}1$ but the identity map ${\partial\SS^m_+}\to \partial\SS^m_+$ cannot be extended to a short map $\SS^m_+\to \partial\SS^m_+$ (there is no place for the pole).
+Clearly, $\SS^m_+$ is $\Alex{1}$ and $\partial\SS^m_+$ is $\CAT1$, but the identity map ${\partial\SS^m_+}\to \partial\SS^m_+$ cannot be extended to a short map $\SS^m_+\to \partial\SS^m_+$ (there is no place for the pole).
 
 There is also a direct generalization of this example to a hemisphere in a Hilbert space of arbitrary cardinal dimension.
 \end{thm}
@@ -659,7 +660,7 @@ $p\in \spc{L}\backslash  Q$ such that
 We will apply \ref{thm:kirsz} for $\kappa=0$ to Euclidean cones $\mathring{\spc{L}}=\Cone \spc{L}$ and $\mathring{\spc{U}}\z=\Cone \spc{U}$. 
 Note that 
 \begin{itemize}
-\item ${\mathring{\spc{U}}}\in\cCat{}0$, %???(see ???)
+\item ${\mathring{\spc{U}}}$ is a complete length $\CAT0$ space, %???(see ???)
 \item since $\diam \spc{L}\le \pi$ we have ${\mathring{\spc{L}}}$ is $\Alex{0}$. %???(see ???).
 \end{itemize}
 Further, we will view spaces $\spc{L}$ and $\spc{U}$ as unit spheres in $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ respectively.
@@ -1024,7 +1025,7 @@ is the only obstacle for extending short map.
 
 \begin{thm}{Conjecture}\label{conj:kirsz}
 Assume $\spc{L}$ is a complete length $\Alex1$ space,
-$\spc{U}\in\cCat{}{1}$,
+$\spc{U}$ is a complete length $\CAT1$ space,
 $Q\subset \spc{L}$ is a proper subset
 and $f\: Q\to\spc{U}$ be a short map, which does not admit a short extension to any bigger set $Q'\supset Q$. 
 Then 

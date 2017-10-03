@@ -137,7 +137,7 @@ If $\kappa\le 0$ then  $\spc{M}$ is $\Alex{\kappa}$.
 \end{thm}
 
 %??? As it will be proved in ???, if a complete lenght space is locally $\Alex{\kappa}$ then it is $\Alex{\kappa}.
-
+Corollary~\ref{cor:submetry-cbb} states that if $\spc{L}$ is a complete length spaces, then $\spc{M}$ is always $\Alex{\kappa}$.
 The theorem above together with Proposition~\ref{prop:submet/G}
 imply the following.
 
@@ -337,13 +337,8 @@ The following theorem makes possible to adapt Euclidean intuition in the Alexand
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_alex} 
-Let $\spc{L}$ be a complete length space. 
-Then
-
-\begin{subthm}{3-sum} $\spc{L}$ is $\Alex\kappa$
-\end{subthm}
-if and only if $\spc{L}$ is G-delta geodesic and one of the following conditions holds for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined:
-
+If $\spc{L}$ is a $\Alex\kappa$ space, 
+then the following conditions holds for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined
 \begin{subthm}{2-sum} 
 (adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \l]x y\r[$, $z\not=p$ we have
 \[\angk\kappa z p x
@@ -370,6 +365,8 @@ Moreover, if $z\in\l]x y\r[$, $z\not=p$ then
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
 for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
 \end{subthm}
+
+Moreover, in each case the converse holds if $\spc{L}$ is G-delta geodesic.
 \end{thm}
 
 \parbf{Remarks.} 
@@ -384,7 +381,7 @@ See also Problem~\ref{open:hinge-}.
 \parit{Proof.} By Theorem~\ref{thm:almost.geod}, 
 we have that (\ref{SHORT.3-sum}) imples that $\spc{L}$ is G-delta geodesic.
 
-\parit{(\ref{SHORT.3-sum}) $\Rightarrow$ (\ref{SHORT.2-sum})}. Since $z\in \l]x y\r[$, we have $\angk\kappa z x y=\pi$. 
+\parit{(\ref{SHORT.2-sum})}. Since $z\in \l]x y\r[$, we have $\angk\kappa z x y=\pi$. 
 Thus, $\Alex\kappa$ comparison
 \[\angk\kappa z x y
 +\angk\kappa z p x
@@ -395,7 +392,7 @@ implies
 \le\pi.\]
 
 \parit{(\ref{SHORT.2-sum}) $\Leftrightarrow$ (\ref{SHORT.point-on-side})}. 
-Follows directly from Alexandrov's lemma (\ref{lem:alex}).
+Follows from Alexandrov's lemma (\ref{lem:alex}).
 
 \parit{(\ref{SHORT.2-sum}) $+$ (\ref{SHORT.point-on-side}) $\Rightarrow$ (\ref{SHORT.angle}).} 
 From (\ref{SHORT.point-on-side}) we get that for $\bar p\in\l]xp\r]$ and $\bar y\in\l]xy\r]$ the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nonincreasing in each argument.
@@ -417,7 +414,7 @@ at least $\angk\kappa x p y$.
 From above and (\ref{SHORT.2-sum}), it follows that 
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi.\]
 
-\parit{(\ref{SHORT.angle}) $\Rightarrow$ (\ref{SHORT.3-sum}).}
+\parit{Converse.}
 Assume first that $\spc{L}$ is geodesic.
 Consider point $w\in \l] p z \r[$ close to $p$.
 From (\ref{SHORT.angle}), it follows that 
@@ -439,7 +436,7 @@ Passing to the limits  $w\to p$, we obtain
 \le
 2\cdot\pi.\]
 
-If $\spc{L}$ is not geodesic, we can apply above arguments for sequences of points $p_n,w_n\to p$, $p_n\in \Str(z)$, $w_n\in\l]z p_n\r[$ and $x_n\to x$, $y_n\to y$, $x_n,y_n\in \Str(w_n)$ and pass to the limit.
+If $\spc{L}$ is only G-delta geodesic, we can apply above arguments for sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that there is $[p_nz]$, $w_n\in\l]z p_n\r[$ and there are $[x_nw_n]$, $[y_n w_n]$ and then pass to the limit as $n\to\infty$.
 \qeds
 
 
@@ -942,6 +939,17 @@ For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined while $\angk{
 However, $\angk{\Kappa} x y z$ is defined if $x$, $y$ and $z$ are sufficiently close to each other.
 Thus, if $\Kappa>\kappa$ then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
 It remains to apply the  globalization theorem (\ref{thm:glob}).
+\qeds
+
+\begin{thm}{Corollary}\label{cor:submetry-cbb}
+Assume $\spc{M}$ is a target space of a sumetry from a complete length space $\Alex\kappa$ space.
+Then $\spc{M}$ is a complete length space $\Alex\kappa$ space.
+
+In particular, if $\spc{L}$ is a complete length $\Alex\kappa$ space with an isometric group action $G\acts \spc{L}$ with closed orbits then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
+\end{thm}
+
+\parit{Proof.}
+Follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 \qeds
 
 In the proof of the globalization theorem,

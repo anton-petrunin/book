@@ -379,7 +379,7 @@ Equip $\Theta$ with induced length metric.
 Let $\tilde \Theta$ be a metric covering of $\Theta$ 
 such that any closed curve in $\tilde \Theta$ of length smaller than $2\cdot\pi$ is contactable.
 
-Show that the completion of $\tilde \Theta$ is a  $\cCat{}{1}$ space.
+Show that the completion of $\tilde \Theta$ is $\CAT{1}$.
 \end{thm}
 
 \section{Open sets of Euclidean space}
@@ -403,9 +403,9 @@ Here is the main theorem of the section.
 
 \begin{thm}{Shefel's Theorem}\label{thm:shefel}
 Let $\Omega$ be an open set $\EE^3$.
-Equipp $\Omega$ with the induced length metric
+Equip $\Omega$ with the induced length metric
 and denote by $K$ the completion of universal metric cover of $\Omega$.
-Then $K$ is a $\cCat{}0$ space  
+Then $K$ is $\CAT0$ 
 if and only if $\Omega$ is two-convex.
 \end{thm}
 
@@ -415,7 +415,7 @@ The following exercise shows that analogous statement does not hold in higher di
 Let $\Pi_1,\Pi_2$ be two planes in $\EE^4$ intersecting at single point.
 Consider the complement $\Omega=\EE^4\backslash(\Pi_1\cup\Pi_2)$
 equipped with induced length metric
-denote by $K$ the completion of universal metric cover of $\Omega$.
+denote by $K$ the universal metric cover of $\Omega$.
 
 Show that 
 
@@ -424,7 +424,7 @@ $\Omega$ is two-convex.
 \end{subthm}
 
 \begin{subthm}{}
-$K\in\cCat{}0$ if and only if $\Pi_1\perp\Pi_2$.
+$K$ is $\CAT0$ if and only if $\Pi_1\perp\Pi_2$.
 \end{subthm}
 \end{thm}
 
@@ -435,7 +435,7 @@ The following corollary look more like a generalization of Theorem \ref{thm:set-
 \begin{thm}{Corollary}\label{cor:shefel}
 Let $K$ be a closed subset in $\EE^3$ 
 bounded by a Lipschitz hypersurface.
-Then $K$ with the induced length metric is a $\cCat{}0$ space  
+Then $K$ with the induced length metric is $\CAT0$  
 if and only if the interior of $K$ is two-convex and simply connected.
 \end{thm}
 
@@ -536,9 +536,11 @@ By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) it is sufficient to show
 Recall that $\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
 isometric to an open set in the cone over $\Sigma_{\tilde p}\tilde K$.
-By Theorem~\ref{thm:warp-curv-bound:cbb:S}, \ref{eq:curv=<0} follows if 
-\[\Sigma_{\tilde p}\tilde K\in\cCat{}{1}.
-\eqlbl{eq:curv=<1}\]
+By the cone property (\ref{thm:warp-curv-bound:cbb:S}), \ref{eq:curv=<0} follows if 
+
+\begin{clm}{}\label{eq:curv=<1}
+$\Sigma_{\tilde p}\tilde K$ is a complete length $\CAT1$ space.
+\end{clm}
 
 By  rescaling, we can assume every face of $K$ which does not conatin $p$ lies on the distance at least 2 from $p$.
 Denote by $\SS^2$ the unit sphere centered at $p$,
@@ -686,7 +688,7 @@ Consider the universal metric cover $\tilde\Omega'$ of $\Omega'$.
 despite that $\Int P$ is simply connected, its two-convex hull $\Omega'$ might be not simply connected.)
 Denote by $\tilde K'$ the completion of $\tilde\Omega'$.
 
-By Lemma~\ref{lem:poly-shefel}, $\tilde K'\in \cCat{}0$.
+By Lemma~\ref{lem:poly-shefel}, $\tilde K'$ is $\CAT0$.
 
 Since $\Int P$ is simply connected, the embedding $\Int P\hookrightarrow \Omega'$
 admits a lifting $\iota\:\Int P\hookrightarrow \tilde K'$.
@@ -827,9 +829,8 @@ We say that $S$ is saddle if for any convex function $f\:\spc{X}\to\RR$,
 the restriction $f|S$ has no local maxima in the interior of $S$.
 
 \begin{thm}{Generalized Shefel's  conjecture}
-Any 2-dimensional saddle surface in a $\Cat{}{\kappa}$ 
-equipped with the length-metric has curvature 
-$\le \kappa$ at any point.
+Any 2-dimensional saddle surface in a complete length $\CAT\kappa$ space
+equipped with the length-metric is locally $\CAT\kappa$.
 \end{thm}
 
 A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.

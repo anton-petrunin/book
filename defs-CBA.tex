@@ -64,16 +64,15 @@ is undefined.
 
 \begin{thm}{Definition}
 \label{def:ccat}
-A complete length space $\spc{U}$ 
-is called a \emph{$\cCat{}{\kappa}$ space} (also written $\spc{U}\in \cCat{}{\kappa}$) if every quadruple $p^1,p^2,x^1,x^2$ satisfies the (2+2)-point $\kappa$-comparison (\ref{def:2+2}).  
+A metric space $\spc{U}$ 
+is called $\CAT{}{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
 
 We write $\spc{U}$ is $\CAT{}$ to mean that  $\spc{U}$ is $\CAT{\kappa}$ for some $\kappa$.  
 \end{thm}
 
 The condition $\spc{U}\in\Cat{}{\kappa}$ should be thought of as ``$\spc{U}$ has global curvature $\le\kappa$''.
 In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
-in particular, if $\kappa\le\Kappa$ then
- $$\cCat{}{\kappa}\subset\cCat{}{\Kappa}.$$
+in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
 
 \begin{thm}{Exercise}
 \label{ex:ccat-(3+1)}
@@ -111,9 +110,11 @@ see Section~\ref{ultralimits} for the related definitions.
 
 \begin{thm}{Proposition}
 \label{prop:CAT^omega}
-If $(\spc{U}_n,\star_n)\to (\spc{U}_\o,\star_\o)$ and $\kappa_n\to\kappa_\o$ as $n\to\o$, then 
-\[\spc{U}_n\in\cCat{}{\kappa_n}\  \Longrightarrow\  \spc{U}_\o\in\cCat{}{\kappa_\o}.\]
-Moreover, a complete metric space $\spc{U}$ is $\CAT\kappa$ space if and only if its ultrapower $\spc{U}^\o$ is $\CAT\kappa$.
+Let $\spc{U}_n$ is a $\CAT{\kappa_n}$ space for each $n\in\NN$.
+Assume $\spc{U}_n\to \spc{U}_\o$ and $\kappa_n\to\kappa_\o$ as $n\to\o$.
+Then $\spc{U}_\o$ is $\CAT{\kappa_\o}$.
+
+Moreover, a metric space $\spc{U}$ is $\CAT\kappa$ space if and only if its ultrapower $\spc{U}^\o$ is $\CAT\kappa$.
 
 \end{thm} 
 
@@ -214,7 +215,7 @@ Here is a corollary from Proposition~\ref{cor:cat-completion}
 and Theorem~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:cat-unique}
-In a $\Cat{}{\kappa}$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+In a  $\varpi\kappa$-geodesic $\CAT\kappa$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 \parit{Proof.}
@@ -240,10 +241,10 @@ Here we give a few reformulations of Definition~\ref{def:ccat}.
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_cat} 
-Let  $\spc{U}$ be a $\varpi\kappa$-geodesic length space.  
+Let  $\spc{U}$ be a $\varpi\kappa$-geodesic space.  
 Then
 \begin{subthm}{cat-ineq} 
-$\spc{U}\in\Cat{}{\kappa}$
+$\spc{U}$ is $\CAT\kappa$
 \end{subthm}
 if and only if %$\spc{U}$ is $\varpi\kappa$-geodesic and 
 one of the following conditions holds for all $p,x,y\in \spc{U}$ of perimeter $<2\cdot\varpi\kappa$:
@@ -350,7 +351,7 @@ As a corollary, we display important information from the proof of \ref{thm:defs
 namely, monotonicity of the model angle with respect to adjacent sidelengths. 
 
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton-cba} 
-Suppose $\spc{U}\in\Cat{}{\kappa}$, and 
+Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space, and 
 $p,x,y\in \spc{U}$ have  perimeter $<2\cdot \varpi\kappa$.
 Then for $\bar y\in\l]x y\r]$, the function 
 \[\dist{x}{\bar y}{}\mapsto \angk\kappa x p{\bar y}\] 
@@ -383,15 +384,10 @@ is convex.
 
 \begin{thm}{Proposition}
 \label{prop:inherit-bound}
-If $\kappa<\Kappa$, then 
-\[\cCat{}{\kappa}\subset\cCat{}{\Kappa}
-\ \ \text{and}\ \ 
-\Cat{}{\kappa}\subset\Cat{}{\Kappa}.\]
+Assume $\kappa<\Kappa$.
+Then any  $\CAT\kappa$ space is $\CAT\Kappa$.
 
-Moreover
-\[\cCat{}{\kappa}=\bigcap_{\Kappa>\kappa}\cCat{}{\Kappa}
-\ \ \text{and}\ \ 
-\Cat{}{\kappa}=\bigcap_{\Kappa>\kappa}\Cat{}{\Kappa}.\]
+Moreover a space $\spc{U}$ is $\CAT\kappa$ if and only if $\spc{U}$ is $\CAT\Kappa$ for any $\Kappa>\kappa$.
 \end{thm}
 
 \parit{Proof.} The first statement follows from the adjacent-angles comparison (\ref{cat-2-sum}) and the monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
@@ -422,7 +418,7 @@ We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-thin}\index{$\kappa
 \end{thm}
 
 \begin{thm}{Exercise}
-Let $\spc{U}\in \Cat{}{\kappa}$,
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space,
 $\trig xyz$ is a triangle in $\spc{U}$
 and $\trig{\~x}{\~y}{\~z}$ is its model triangle in $\Lob{2}{\kappa}$.
 Prove that the natural map $f\:\trig{\~x}{\~y}{\~z}\to \trig xyz$ 
@@ -703,7 +699,7 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 
 
 \begin{thm}{Closest-point projection lemma}\label{lem:closest point}
-Let $\spc{U}\in\cCat{}\kappa$ and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 Assume that $\dist{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
 there is unique point $p^*\in K$ which minimze the distance to $p$;
@@ -723,12 +719,12 @@ and the restriction $f|K'$.
 \qeds
 
 \begin{thm}{Exercise}
-Let  $\spc{U}\in\cCat{}0$ and $K\subset \spc{U}$ be a closed convex set.
+Let  $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a closed convex set.
 Show that the closest-point projection $\spc{U}\to K$ is short. 
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
-Let  $\spc{U}\in\cCat{}1$ and $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
 Assume $K\subset \cBall(p,\tfrac\pi2)$ for some point $p\in \spc{U}$.
 Show that there is a short retractionof $\spc{U}$ on $K$. 
 \end{thm}
@@ -961,9 +957,6 @@ The converse, does not hold for general complete length space.
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so
 $\curv\SS^1\le 0$, but it is easy to find a quadruple of points in $\SS^1$ which violates (2+2)-point comparison.  
-
-Nevertheless, an infinitesimal bound implies a local bound.
-That is, if $\spc{U}$ is a complete length locally $\CAT\kappa$ space, then for any $p$ there is $r>0$ such that $\oBall[p,r]\in\cCat{}{\kappa}$ (Corollary \ref{cor:k-for-k}).
 
 The following theorem, 
 which essentially is  \cite[Satz 9]{alexandrov:devel}, 
@@ -1272,7 +1265,7 @@ $\Lip=\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 
 \begin{subthm}{cor:loc-family-cat}
 
-There is a space $\spc{N}\in\cCat{}{\kappa}$, an open set $\hat\Omega\subset \spc{N}$,
+There is a complete length $\CAT\kappa$ space $\spc{N}$, an open set $\hat\Omega\subset \spc{N}$,
 and a locally isometric immersion 
 \[\map\:\hat\Omega\looparrowright\spc{U},\]
 such that $\Omega^0$ and $\Omega^1$ are isometric images under $\map$ of open sets $\hat\Omega^0$ and $\hat\Omega^1$ in $\hat\Omega$, and for $\hat x\in\hat\Omega^0$, $\hat y\in\hat\Omega^1$, the geodesic $\hat\gamma_{\hat x \hat y}$ in $\spc{N}$ satisfies $\map\circ\hat\gamma_{\hat x \hat y}=\gamma_{xy}$.
@@ -1437,7 +1430,7 @@ The following Lifting globalization theorem gives an appropriate generalization 
 \label{thm:globalization-lift}
 Suppose $\spc{U}$ is a complete length space 
 with $\curv\spc{U}\le\kappa$ and  $p\in\spc{U}$.
-Then there is a space $\spc{B}\in\cCat{}{\kappa}$, where $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$ for some $\hat p \in \spc{B}$,
+Then there is a complete length $\CAT1$ space $\spc{B}$, where $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$ for some $\hat p \in \spc{B}$,
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ and the following lifting property: 
 for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\varpi\kappa/2$, 
@@ -1584,9 +1577,8 @@ Since
 =
 \bigcup_{\bar R < R}\cBall[ p,\bar R],\] 
 then $\oBall( p,R)$ is convex in $\spc{U}$ and 
-(2+2)-point comparison holds  for any quadruple in $\oBall( p,R)$. Therefore $\oBall( p,\varpi\kappa/2)\in\Cat{}{\kappa}$.
-%Since $\cBall[ p,\varpi\kappa/2)$ is complete, and it is closure of $\oBall( p,\varpi\kappa/2)$, we get $\cBall[ p,\varpi\kappa/2]\in\cCat{}{\kappa}$.
-%THAT IS THE ONLY PLACE I KNOW WERE WE HAVE TO SUFFER FROM COMPLETE-CATS
+(2+2)-point comparison holds  for any quadruple in $\oBall( p,R)$.
+Therefore $\oBall( p,\varpi\kappa/2)$ is $\CAT\kappa$.
 \qeds
 
 
@@ -1973,7 +1965,7 @@ The following exercise is the rigidity case
 of the Majorization theorem.
 
 \begin{thm}{Exercise}\label{ex:isometric-majorization}
-Let $\spc{U}\in \Cat{}{\kappa}$
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
 and $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
 Assume that $\ell<2\cdot \varpi\kappa$
 and there is a closed convex curve $\~\alpha\:[0,\ell]\to\Lob{2}{\kappa}$ such that 
@@ -1997,7 +1989,7 @@ the majorizing map for $\alpha$ is distance preserving.
 \end{thm}
   
 \begin{thm}{Arm lemma}\label{lem:arm}
-Let $\spc{U}\in\Cat{}{\kappa}$, 
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space, 
 and $P=[x^0x^1\dots x^{n+1}]$ be a polygon of length $<2\cdot \varpi\kappa$ in $\spc{U}$.
 Suppose $\~P=[\~x^0\~x^1\dots \~x^{n+1}]$ is a convex  polygon in $\Lob{2}{\kappa}$
 such that 
@@ -2241,14 +2233,14 @@ for any $x$.
 
 Let us apply Lifting globalization theorem
 (\ref{thm:globalization-lift}) for $p=F(\~p)$.
-We get a space $\spc{B}\in\Cat{}{\kappa}$
+We get a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$ and the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
 Applying the lifting property for $\alpha_x$, 
 we get existence of curve $\hat\gamma_2\:\SS^1\to \spc{B}$ such that
 $$\gamma_2=\map\circ\hat\gamma_2.$$
 
-Since $\spc{B}\in\Cat{}{\kappa}$, we can apply majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
+Since $\spc{B}$ is a geodesic $\CAT\kappa$ space, we can apply majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
 The composition of the obtained majorization with $\map$ is a majorization of $\gamma_2$.
 \qeds
 
@@ -2269,8 +2261,7 @@ for all $t$.
 
 By Corollary~\ref{cor:loc-CAT(k)},
 we may assume in addition that
-$$\oBall(\gamma_t(x),\eps)\in\Cat{}{\kappa}
-\eqlbl{eq:ball-is-CAT}$$
+$\oBall(\gamma_t(x),\eps)$ is $\CAT\kappa$ 
 for any $t$ and $x$.
 
 Choose a partition $0=t_0<t_1<\dots<t_n=1$
@@ -2300,8 +2291,7 @@ To prove ``if'' part, it is sufficient to show that any closed curve in $\spc{U}
 Let $\gamma_0$ be a closed curve in $\spc{U}$.
 According to Corollary~\ref{cor:loc-CAT(k)},
 there is $\eps>0$ such that 
-$$\oBall(\gamma(x),\eps)\in\Cat{}{\kappa}
-\eqlbl{eq:prop:ball-is-CAT}$$
+$\oBall(\gamma(x),\eps)$ is $\CAT\kappa$
 for any $x$.
 
 Choose a broken geodesic $\gamma_1$ such that $\dist{\gamma_0}{\gamma_1}{}<\eps$ for any $x$.
@@ -2314,9 +2304,7 @@ Hence $\gamma_t(x)=\geodpath_{[\gamma_0(x)\gamma_1(x)]}(t)$ gives a homotopy fro
 
 The proof of ``only if'' part is similar.
 Assume $\gamma_t$ is a homotopy between two rectifiable curves $\gamma_0$ and $\gamma_1$.
-Fix $\eps>0$ so that 
-$$\oBall(\gamma_t(x),\eps)\in\Cat{}{\kappa}
-\eqlbl{eq:prop:ball-is-CAT}$$
+Fix $\eps>0$ so that the ball $\oBall(\gamma_t(x),\eps)$ is $\CAT\kappa$
 for any $t$ and $x$.
 Choose a partition $0=t_0<t_1<\dots<t_n=1$ 
 so that 
