@@ -9,7 +9,7 @@
 Recall that according to 
 the corollaries \ref{cor:monoton:sup} 
 and \ref{cor:monoton-cba:angle=inf},
-the  $\Alex{}$ and $\cCat{}{}$ spaces have \index{space with defined angles}\emph{defined angles};
+the  $\Alex{}$ and $\CAT{}$ spaces have \index{space with defined angles}\emph{defined angles};
 that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in the space.
 
 Let $\spc{X}$ be a metric space with defined angles.
@@ -36,8 +36,7 @@ Show that
 \end{thm}
 
 \begin{thm}{Exercise}
-Assume $\spc{U}\in\cCat{}{}$
-be a space with extandable geodesics;
+Assume $\spc{U}$ is a locally compact geodesic $\CAT{}$ space with extandable geodesics;
 that is for any geodesic in $\spc{U}$
 is an arc in a both-side infinite local geodesic.
 
@@ -258,7 +257,8 @@ In general, they are different and both useful ---
 often lack of a property in one is compensated by the other.
 
 It is clear from the definition that tangent space has cone structure.
-On the other hand, in general, ultratangent space does not have a cone structure; a Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ which is $\Alex{0}$ as well as $\cCat{}{0}$ gives an example.
+On the other hand, in general, ultratangent space does not have a cone structure; 
+the Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example --- it is $\Alex{0}$ as well as $\CAT{0}$.
 
 \begin{thm}{Theorem}\label{thm:tan-is}
 \begin{subthm}{thm:tan-is-CBB}
@@ -266,7 +266,7 @@ If $\spc{L}$ is a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$ then 
 \end{subthm}
 
 \begin{subthm}{thm:tan-is-CBA}
-If $\spc{U}\in\cCat{}\kappa$ and $p\in \spc{U}$ then $\T^\o_p\in\cCat{}{0}$.
+If $\spc{U}\in\cCat{}\kappa$ and $p\in \spc{U}$ then $\T^\o_p$ is a complete length $\CAT0$ space.
 \end{subthm}
 
 \end{thm}
@@ -279,7 +279,7 @@ Since $n\cdot(\spc{L},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prp:A^ome
 
 \parit{(\ref{SHORT.thm:tan-is-CBA}).}
 Since $\spc{U}\in\cCat{}\kappa$, then for its blowup $n\cdot\spc{U}$, we have $n\cdot\spc{L}\in\cCat{}{\kappa/{n^{2}}}$.
-Since $n\cdot(\spc{U},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prop:CAT^omega} implies ${\T^\o_p}\in\cCat{}{0}$.
+Since $n\cdot(\spc{U},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prop:CAT^omega} implies that ${\T^\o_p}$ is a complete length $\CAT0$ space.
 \qeds
 
 The next theorem shows that $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
@@ -588,7 +588,7 @@ Clearly, the $\o$-differential of a locally Lipschitz subfunction is defined at 
 %By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
 
 \begin{thm}{Proposition}
-Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\cCat{}{}$ space
+Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\CAT{}$ space
 and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
 Then for any $p\in\Dom f$, the ultradifferential $\d^\o_p\:\T^\o_p\to\RR$ is a concave function.
 \end{thm}
@@ -603,7 +603,7 @@ Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{X}$ such that $\bar x^n\t
 Note taht $[\bar x^n \bar y^n]$ 
 converges to $[\bar x^\o \bar y^\o]$
 as $n\to\o$.
-The latter holds tivially in case $\cCat{}{}$
+The latter holds tivially in case $\CAT{}$
 and in $\Alex{}$ case follows from ???.
 \qeds
 

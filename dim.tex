@@ -6,7 +6,7 @@
 In Section~\ref{sec:prelim:dim}, we give definitions of different type of dimension-like invariants which have sense for metric spaces and state general relations between them.
 In sections \ref{sec:dim>m} and \ref{sec:dim=m},
 we prove equivalence of all reasonable dimension-like invariants for $\Alex{}$ spaces.
-In Section~\ref{sec:dim-cba} we discuss the dimension of  $\cCat{}{}$ spaces.
+In Section~\ref{sec:dim-cba} we discuss the dimension of  $\CAT{}$ spaces.
 
 \section{Preliminaries.}\label{sec:prelim:dim}
 
@@ -163,7 +163,7 @@ Linear dimension was first introduced in \cite{plaut:survey}
 under the name \emph{local dimension}\index{local dimension}\index{dimension!local dimension}. 
 \emph{Geometric dimension}\index{geometric dimension}\index{dimension!geometric dimension} introduced in \cite{kleiner} is closely related; 
 it coincides %should we explain why???
- with the linear dimension for $\Alex{}$ and $\cCat{}{}$ spaces.
+ with the linear dimension for $\Alex{}$ and $\CAT{}{}$ spaces.
 
 One could modify the definition of linear dimension by taking an arbitrary $n$-dimensional Banach space instead of the Euclidean $n$-space.
 Such a definition makes more sense for general metric spaces.
@@ -729,14 +729,14 @@ Hence the result.\qeds
 \section{Dimension of CBA spaces}\label{sec:dim-cba}
 
 We start with two examples.
-The first example shows that the dimension of a $\cCat{}{}$ space is not local;
-that is, a $\cCat{}{}$ space might have open sets with different linear dimension.
+The first example shows that the dimension of a complete length $\CAT{}$ spaces is not local;
+that is, such spaces might have open sets with different linear dimension.
 Such an example can be constructed by gluing at one point two Euclidean spaces of different dimensions.
-(According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\cCat{}{0}$ spaces.)
+(According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\CAT{0}$ spaces.)
 
-The second example provides a $\cCat{}{}$ space 
+The second example provides a complete length $\CAT{}$ space 
 with topological dimension one and arbitrary large Hausdorff dimension.
-Thus, for $\cCat{}{}$ spaces, one should not expect any relations between topological and Hausdorff dimensions except for the one provided by Szpilrajn's theorem (\ref{thm:szpilrajn}).
+Thus, for complete length $\CAT{}$ spaces, one should not expect any relations between topological and Hausdorff dimensions except for the one provided by Szpilrajn's theorem (\ref{thm:szpilrajn}).
 
 To construct the second type of examples,
 note that the completion of any metric tree has topological dimension one and is $\cCat{}\kappa$ for any $\kappa$.
@@ -776,26 +776,16 @@ There is a closed separable set $K\subset\spc{U}$ such that $\TopDim K\ge m$.
 
 \parbf{Remarks.}
 Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part (\ref{SHORT.thm:dim-infty-CBA:mnfld}) in finite dimensional case.
-Namely, a $\cCat{}{}$ space with linear dimension $m$ 
+Namely, a complete length $\CAT{}$ space with linear dimension $m$ 
 admits a bi-Lipschitz embedding $\map$ of an open set of $\RR^m$.
 Moreover, according to ??? the Lipschitz constants of $\map$ can be made arbitrary close to $1$.
 
 \begin{thm}{Corollary}\label{cor:dim-CBA}
-For any separable $\spc{U}\in \cCat{}{}$, we have
+For any separable complete length $\CAT{}$ space $\spc{U}$, we have
 \[\TopDim\spc{U}=\LinDim\spc{U}.\]
 
 \end{thm}
 
-
-
-%As the main dimension-like invariant, we will use $\LinDim$, the linear dimension (see \ref{def:lin-dim}).
-%We will write 
-%\begin{align*}
-%&\spc{U}\in\cCat{m}{}\ &\text{if}\ &\spc{L}\in\cCat{}{} \ \text{and}\ \LinDim\spc{L}=m\in\ZZ_{\ge0},\\
-%&\spc{U}\in\cCat{\infty}{}\ &\text{if}\ &\spc{L}\in\cCat{}{}\ \text{and}\ \LinDim\spc{L}=\infty.
-%\end{align*}
-%Thus, once we write $\spc{U}\in\cCat m{}$ we automatically assume $m<\infty$.\index{$\cCat{}{}$!$\cCat m{}$}
-%DO WE USE IT?, IF NOT IT HAS TO BE REMOVED???
 
 To prove Theorem~\ref{thm:dim-infty-CBA} we will need the followng lemma.
 Any simplicial complex can be equiped with a length-metric
@@ -1005,11 +995,11 @@ it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
 
 The following conjecture (in an equivalent form)
 appers in \cite{kleiner} (see also \cite[p.~133]{gromov:asymt-inv}) %???CHECK
- remains open for nonseparable $\cCat{}{}$ spaces;
+ remains open for nonseparable $\CAT{}$ spaces;
 for separable spaces it is true by Corollary~\ref{cor:dim-CBA}.
 
 \begin{thm}{Conjecture}
-If $\spc{U}\in\cCat{}{}$, then 
+If $\spc{U}$ is a complete length $\CAT{}$ space, then 
 \[\TopDim\spc{U}
 =
 \LinDim\spc{U}.\]

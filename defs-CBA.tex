@@ -160,7 +160,7 @@ By the law of cosines, \ref{eq:z_n->z} follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:CAT-mnfld=>ext.geod}
-Let $\spc{U}\in\cCat{}{}$.
+Let $\spc{U}$ be a complete length $\CAT{}$ space.
 Assume $\spc{U}$ is a topological manifold.
 Show that any geodesic in $\spc{U}$ can be extended 
 as a two-side infinite local geodesic.
@@ -169,7 +169,7 @@ Moreover the same holds for any $\spc{U}\in\Cat{}{}$ with nontrivial local homol
 in particular if $\spc{U}$ is a homological manifold.
 \end{thm}
 
-The following definition is analogous to the definition of $\cCat{}{}$ spaces,
+The following definition is analogous to the definition of $\CAT{}$ spaces,
 but more standard in the literature.
 
 \begin{thm}{Definition}\label{def:cat}
@@ -1176,27 +1176,27 @@ we get $\spc{W}$ is a complete length $\CAT\kappa$ space.
 Let $Q$ be the nonconvex subset of the plane 
 bounded by two rays $\gamma_1$ and $\gamma_2$
 with common starting point and angle $\alpha$ between them.
-Assume $\spc{U}\in\cCat{}{0}$
+Assume $\spc{U}$ is a complete length $\CAT0$ space
 and $\gamma_1',\gamma_2'$ be two rays in $\spc{U}$
 starting point and angle $\alpha$ between them.
-Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\cCat{}{0}$ space.
+Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\CAT{0}$ space.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
-Assume $\spc{U}\in\cCat{}{0}$ and $A\subset \spc{U}$ is a closed subset.
-Assume that the doubling of $\spc{U}$ in $A$ is $\cCat{}{0}$. 
+Assume $\spc{U}$ is complete length $\CAT0$ space and $A\subset \spc{U}$ is a closed subset.
+Assume that the doubling of $\spc{U}$ in $A$ is $\CAT0$. 
 Show that $A$ is a convex set of $\spc{U}$.
 \end{thm}
 
-\begin{thm}{Exercise} Let $\spc{U}\in\cCat{}{0}$.
+\begin{thm}{Exercise} Let $\spc{U}$ is a complete length $\CAT0$ space.
 Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
-Show that $\tilde{\spc{U}}\in \cCat{}{0}$.
+Show that $\tilde{\spc{U}}$ is $\CAT0$.
 
 More generally, assume $A\subset \spc{U}$ is a closed convex subset and $f\:\spc{X}\to \spc{U}\backslash A$ is a metric cover.
 Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$ and 
 $\bar f\:\spc{X}\to \spc{U}$ the continuos extension of $f$.
 Let $\tilde{\spc{U}}$ be the space glued from $\bar{\spc{X}}$ and $A$ by identifying $x$ and $\bar f(x)$ if $\bar f(x)\in A$.
-Show that $\tilde{\spc{U}}\in \cCat{}{0}$.
+Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
 
 
@@ -1751,7 +1751,7 @@ In particular, the map $F\:\Conv\trig{\~p}{\~x}{\~y}\to W:\~\gamma_t(s)\mapsto \
 
 \parbf{Example.} Let $\spc{Q}$ be a bounded region in $\EE^2$ formed by two congruent triangles, where the bounding quadrangle $[p x z y]$ is non-convex at $z$ (as in the picture).  
 Equip $\spc{Q}$ with the length-metric. 
-Then $\spc{Q}\in\cCat{}{0}$
+Then $\spc{Q}$ is $\CAT0$
 by Reshetnyak gluing  (\ref{thm:gluing}). 
 %(The later  by \ref{thm:gluing}the inheritance lemma (\ref{lem:inherit-angle}), since any triangle in $\spc{Q}$ that is not itself a Euclidean triangle decomposes into two Euclidean triangles.) 
 For triangle ${\trig p x y}_\spc{Q}$ in $\spc{Q}$ and its model triangle $\trig{\~p}{\~x}{\~y}$ in $\EE^2$,  
@@ -2117,7 +2117,7 @@ Let $\~\gamma$ be a geodesic of $\Conv(\~x^{n+1},\~x^0,\~x^1\dots \~x^{k+1})$.  
  \qeds
  
 \begin{thm}{Exercise}\label{ex:square}
-Let $\spc{U}\in\cCat{}{0}$ and for 4 points $x_1,x_2,x_3,x_4\in \spc{U}$
+Let $\spc{U}$ be a complete length $\CAT0$ space and for 4 points $x_1,x_2,x_3,x_4\in \spc{U}$
 there is a convex quadrilateral
 $[\~x_1\~x_2\~x_3\~x_4]$
 in $\EE^2$
@@ -2163,8 +2163,8 @@ The generalized Hadamard--Cartan theorem
 
 \begin{thm}{Hadamard--Cartan theorem}
 \label{thm:hadamard-cartan}
-Let $\spc{U}$ be a complete,  simply connected length space satisfying $\curv\spc{U}\le 0$.
-Then $\spc{U}\in\cCat{}{0}$.
+Let $\spc{U}$ be a complete,  simply connected length locally $\CAT0$ space.
+Then $\spc{U}$ is $\CAT0$.
 \end{thm}
 
 \parit{Proof.} Since $\varpi\kappa=\infty$,
@@ -2344,7 +2344,7 @@ Joining the obtained homotopies for all $i$ we get a homotoply from $\gamma_0$ t
 
 \begin{thm}{Exercise}
 Let $\spc{X}$ be a double cover of $\EE^3$ which is branching along two distinct lines $\ell^1$ and $\ell^2$.
-Show that  $\spc{X}\in\cCat{}{0}$ if and only if $\ell^1$ intersect $\ell^2$ at right angle.
+Show that  $\spc{X}$ is $\CAT0$ if and only if $\ell^1$ intersect $\ell^2$ at right angle.
 \end{thm}
 
 \parbf{About convex spaces.}
@@ -2632,7 +2632,7 @@ We do not see any reason why it should be true,
 but we also cannot construct a counterexample.
 
 \begin{thm}{Open question}
-Let $\spc{U}\in\cCat{}{0}$ and $K\subset \spc{U}$ be a compact set.
+Let $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a compact set.
 Is it true that $K$ lies in a convex compact set $\bar K\subset\spc{U}$?
 \end{thm}
 

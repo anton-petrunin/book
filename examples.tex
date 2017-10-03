@@ -16,28 +16,28 @@ Here is a question which motivates the rest of the chapter.
 
 
 \begin{thm}{Question}
-Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, form a $\cCat{}{0}$ space and why?
+Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, form a $\CAT{0}$ space and why?
 \end{thm}
 
 The answers is given below, but it is instructive to think about this question before reading further.
 
-\parbf{$\bm{A}$.} No, $A\notin \cCat{}{0}$.
+\parbf{$\bm{A}$.} No, $A$ is not $\CAT0$.
  
 The boundary $\partial A$ is the parabolid described by  $z=x^2+y^2$ in particular it bounds an open convex set in $\EE^3$ which complement is $A$.
 The closest point projection of $A\to\partial A$ is short (see \ref{lem:closest point}).
 It follows that $\partial A$ is a convex set in $A$ equipped with the induced length metric.
 
-Therefore if $A$ forms a $\cCat{}{0}$ then so is $\partial A$.
+Therefore if $A$ is $\CAT0$ then so is $\partial A$.
 The latter is not true, $\partial A$ is a smooth convex surface; by Gauss formula it has strictly positive curvature.
 
 
-\parbf{$\bm{B}$.} Yes, $B\in \cCat{}{0}$. 
+\parbf{$\bm{B}$.} Yes, $B$ is $\CAT0$. 
 
 Evidently $B$ is a convex closed set in $\EE^3$. 
 Therefore length metric on $B$ coinsides with Euclidean metric
 and (2+2)-comparison holds.
 
-\parbf{$\bm{C}$.} Yes, $C\in \cCat{}{0}$, 
+\parbf{$\bm{C}$.} Yes, $C$ is $\CAT0$, 
 but the proof is not as easy as before.
 We give a sketch here;
 a complete proof of more general statement is given in Section \ref{sec:smooth-bry}.
@@ -60,9 +60,9 @@ Further note that
 for any choice real numbers $a<b<c$.
 
 The inclusion \ref{eq:VcVnV-0} makes possible to apply recursively Reshetnyak gluing theorem \ref{thm:gluing} 
-and show that any finite union of $V_t$ forms a $\cCat{}{0}$ space.
+and show that any finite union of $V_t$ forms a $\CAT{0}$ space.
 By approximation, the (2+2)-point comparison holds for any 4 points in $C$;
-that is, $C\in \cCat{}{0}$.
+that is, $C$ is $\CAT0$.
 
 \parbf{Remark.}
 The set $C$ is not convex, but it is two-convex as defined in the next section.
@@ -168,14 +168,14 @@ two-convex hull of open set is open.
 
 \section{Sets with smooth boundary}\label{sec:smooth-bry}
 
-In this section we characterize the subsets in $\EE^m$ with smooth boundary which form $\cCat{}{0}$ spaces. 
+In this section we characterize the subsets in $\EE^m$ with smooth boundary which form $\CAT{0}$ spaces. 
 
 
 \begin{thm}{Theorem}\label{thm:set-with-smooth-bry:CBA}
 Let $K$ be a closed connected subset in $\EE^m$ equipped with the induced length metric.
 Assume $K$ is bounded by a smooth hypersurface.
 Then 
-$K\in \cCat{}{0}$ if and only if $K$  is two-convex.
+$K$ is $\CAT0$ if and only if $K$  is two-convex.
 \end{thm}
 
 This theorem is a baby case of the main result in \cite{a-b-b:CBA-m-w-b}, it is discussed in the end of chapter. 
@@ -193,7 +193,7 @@ Then by Proposition~\ref{prop:two-cove+smooth}, there is a triangle $[xyz]$ in $
 but the solid triangle $\Delta=\Conv\{x,y,z\}$ does not lie in $K$ completely.
 
 
-If $K\in\cCat{}{0}$,
+If $K$ is a complete length $\CAT0$ space,
 then by Reshetnyak majorization theorem,
 there is a short map $f\:\Delta\to K$ which preserves $x$, $y$ and $z$.
 
@@ -212,8 +212,10 @@ Fix $p\in S$.
 Assume that $k_2(p)>0$.
 Fix sufficiently small $\eps>0$ and set $K'=K\cap \cBall[p,\eps]$.
 Let us show that 
-\[K'\in\cCat{}{0}.
-\eqlbl{K'-is-CAT}\]
+
+\begin{clm}{}\label{K'-is-CAT}
+$K'$ is $\CAT0$.
+\end{clm}
 
 Consider the coordinate system with the origin at $p$
 and the principle directions and $\nu(p)$ as the coordinate directions.
@@ -268,24 +270,24 @@ $W^\kay$ is arbitrary close to $K'$.
 Therefore, in order to prove \ref{K'-is-CAT}, 
 it is sufficient to show the following.
 \begin{clm}{}
-All $W^i$ form $\cCat{}{0}$ spaces.
+All $W^i$ form complete length $\CAT{0}$ spaces.
 \end{clm}
 
 This claim is proved by induction.
-Base: $W^1=V^1$ is a $\cCat{}{0}$ space as a convex subset in $\EE^m$.
+Base: $W^1=V^1$ is a $\CAT{0}$ space as a convex subset in $\EE^m$.
 
-Step: assume that $W^i\in \cCat{}{0}$.
+Step: assume that $W^i$ is $\CAT0$.
 According to \ref{eq:VcVnV}
 \[V^{i+1}\cap W^i=V^{i+1}\cap V^i.\] 
 Moreover, this set forms a convex set in $\EE^m$ 
 and therefore it is a convex set in $W^i$ and in $V^{i+1}$.
-By Reshetnyak's gluing theorem, $W^{i+1}\in \cCat{}{0}$.
+By Reshetnyak's gluing theorem, $W^{i+1}$ is $\CAT0$.
 Hence the claim follows.
 \claimqeds
 
 Note that we proved the following
 \begin{clm}{}\label{clm-strong2convex}
-$K\in\cCat{}{0}$ if $K$ is \index{strongly two-convex set}\emph{strongly two-convex};
+$K$ is $\CAT0$ if $K$ is \index{strongly two-convex set}\emph{strongly two-convex};
 that is $k_2(p)>0$ at any point $p\in S$.
 \end{clm}
 
@@ -304,7 +306,7 @@ such that $\phi(x)\to\infty$ as $x$ approaches the boundary $B$.
 Note that for $\delta>0$, the subgraph $K_\delta$ defined by the inequality
 \[x_m\le f(x_1,\dots,x_{m-1})-\delta\cdot\phi(x_1,\dots,x_{m-1})\]
 is strongly two-convex.
-By \ref{clm-strong2convex}, $K_\delta\in\cCat{}{0}$.
+By \ref{clm-strong2convex}, $K_\delta$ is $\CAT0$.
 
 Finally as $\delta\to0$, the closed $\eps$-neighborhoods of $p$ in $K_\delta$ 
 converges to the closed $\eps$-neighborhood of $p$ in $K$.
@@ -329,7 +331,7 @@ In this section we will consider inheritance of upper curvature bound by subsets
 Let $\Omega$ be an open simply connected subset of $\EE^2$.
 Equip $\Omega$ with induced length metric and denote by 
 by $K$ its completion.
-Show that $K\in\cCat{}{0}$.
+Then $K$ is $\CAT0$.
 \end{thm}
 
 The assumption that the set $\Omega$ is not critical,
@@ -390,8 +392,8 @@ Therefore, as a consequence of Theorem~\ref{thm:set-with-smooth-bry:CBA}, the fo
 \begin{thm}{Corollary}
 Let $K$ be closed connected subset of Euclidean space 
 equipped with the induced length metric.
-Assume $K$ is bounded by a smooth hypersurface and it forms $\cCat{}{0}$ space. 
-Then any affine transformation of $K$ also forms $\cCat{}{0}$ space.
+Assume $K$ is bounded by a smooth hypersurface and it forms a $\CAT{0}$ space. 
+Then any affine transformation of $K$ also forms a $\CAT{0}$ space.
 \end{thm}
 
 By Corollary~\ref{cor:shefel}, an analogous statement holds for sets bounded by Lipschitz surfaces in three-dimensional Euclidean space.
@@ -465,7 +467,7 @@ form a two-convex subsets in $\EE^3$
 \begin{thm}{Corollary}
 Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc $\DD$. 
 Then the graph
-$z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\cCat{}{0}$ space.
+$z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\CAT{0}$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -480,7 +482,7 @@ Note that each $K_n$ is closed, simply connected and two-convex. Moreover the bo
 
 Equip $K_n$ with induced length metric.
 By Corollary~\ref{cor:shefel},
-$K_n\in\cCat{}{0}$.
+$K_n$ is $\CAT0$.
 It remains to note that as $n\to\infty$ the sequence of space $K_n$ converges to $\Gamma$ in the sence of Gromov--Hausdorff.
 \qeds
 
@@ -703,7 +705,7 @@ The statement follows since the quadruple $x^1,x^2,x^3,x^4\in\Omega$ is arbitrar
 \begin{thm}{Exercise}
 Assume $K\subset\EE^m$ is a closed set bounded by a Lipschitz hypersurface.
 Equip $K$ with the induced length metric.
-Show that if $K\in \cCat{}{0}$ then $K$ is two-convex.
+Show that if $K$ is $\CAT0$ then $K$ is two-convex.
 \end{thm}
 
 The following exercise is analogous to Exercise~\ref{ex:two-planes}.
@@ -715,7 +717,7 @@ Let $K=W\cap W'$, where
 \[W=\set{(x,y,z,t)\in \EE^4}{z\ge -x^2-y^2}\]
 and $W'=\iota(W)$ for some motion $\iota\:\EE^4\to\EE^4$.
 
-Show that $K$ is always two-convex and one can choose $\iota$ so that $K$  with the induced length metric is not $\cCat{}{0}$.
+Show that $K$ is always two-convex and one can choose $\iota$ so that $K$  with the induced length metric is not $\CAT0$.
 \end{thm}
 
 
@@ -833,12 +835,12 @@ $\le \kappa$ at any point.
 A subset $K$ is called strongly two-convex if any null-homotopic circle $\gamma\:\SS^1\to K$ is also null-homotopic in $K\cap \Conv[\gamma(\SS^1)]$.
 
 \begin{thm}{Question}
-Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\cCat{}{0}$ space? 
+Is it true that any closed strongly two-convex set with dense interior bounded by a Lipschitz hypersurface in $\EE^m$ forms a $\CAT{0}$ space? 
 \end{thm}
 
 \parbf{Metric minimizing surfaces.}
-In \cite{petrunin-metricmin} was shown that discs in $\cCat{}{0}$ spaces 
-which do not admit a length-decreasing deformations with fixed boundary form $\cCat{}{0}$ spaces.
+In \cite{petrunin-metricmin} was shown that discs in complete length $\CAT{0}$ spaces 
+which do not admit a length-decreasing deformations with fixed boundary form $\CAT{0}$ spaces.
 
 Any metric minimizing disc forms a saddle surface as defined above.
 There are saddle surfaces which are not metric minimizing globally and it is expected that there saddle surfaces which are not metric minimizing in arbitrary neighborhood of a fixed point.
