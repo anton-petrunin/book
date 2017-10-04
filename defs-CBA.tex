@@ -1,9 +1,7 @@
 %%%!TEX root = the-defs-CBA.tex
 
 \chapter{Definitions of curvature bounded above}
-Section~\ref{sec:cba-def} defines $\CAT\kappa$ spaces via a (2+2)-point comparison; 
-it is an analog of $\Cat{}{\kappa}$ spaces but the definition use only distances 
-and makes no assumptions on the presence of geodesics.  
+Section~\ref{sec:cba-def} defines $\CAT\kappa$ spaces.  
 Section~\ref{sec:cat-angles} gives definitions in terms of angle and distance comparisons for triangles.  
 Section~\ref{sec:thin-triangle} looks at thin triangles and their inheritance lemma. 
 Section~\ref{sec:func-comp} gives a useful definitions in terms of convexity of distance functions.
@@ -70,7 +68,7 @@ is called $\CAT{}{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\
 We write $\spc{U}$ is $\CAT{}$ to mean that  $\spc{U}$ is $\CAT{\kappa}$ for some $\kappa$.  
 \end{thm}
 
-The condition $\spc{U}\in\Cat{}{\kappa}$ should be thought of as ``$\spc{U}$ has global curvature $\le\kappa$''.
+The condition $\spc{U}$ is $\CAT\kappa$ should be thought of as ``$\spc{U}$ has global curvature $\le\kappa$''.
 In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
 in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
 
@@ -166,7 +164,7 @@ Assume $\spc{U}$ is a topological manifold.
 Show that any geodesic in $\spc{U}$ can be extended 
 as a two-side infinite local geodesic.
 
-Moreover the same holds for any $\spc{U}\in\Cat{}{}$ with nontrivial local homology groups at any point;
+Moreover the same holds for any locally geodesic locally $\CAT{}$ space $\spc{U}$ with nontrivial local homology groups at any point;
 in particular if $\spc{U}$ is a homological manifold.
 \end{thm}
 
@@ -174,13 +172,13 @@ The following definition is analogous to the definition of $\CAT{}$ spaces,
 but more standard in the literature.
 
 \begin{thm}{Definition}\label{def:cat}
-$\varpi\kappa$-geodesic lenght spaces which  satisfy (2+2)-point $\kappa$comparison for any quadrouple of points are called \emph{$\Cat{}{\kappa}$ spaces}.
+A metric space which  satisfy $\CAT\kappa$ comparison for any quadrouple of points is called \emph{$\CAT\kappa$ space}.
  
-We write $\spc{U}\in\Cat{}{}$ to mean: $\spc{U}\in\Cat{}{\kappa}$ for some $\kappa$.  
+We say that the space $\spc{U}$ is $\CAT{}{}$ if it is $\CAT{}\kappa$ for some $\kappa\in\RR$.  
 \end{thm}
 
 This terminology was introduced by Gromov;  
-$\Cat{}{}$ stands for Cartan--Alexandrov--Toponogov, 
+$\CAT{}$ stands for Cartan--Alexandrov--Toponogov, 
 although Toponogov did not work with curvature bounded above.
 Previously, these spaces were called \emph{$\mathfrak{R}_\kappa$ domains}, which was Alexandrov's terminology.
 
@@ -372,7 +370,7 @@ In particular, if $\bar p\in \l]x p\r]$ then
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:cats-cradle}
-Assume $\spc{U}\in \Cat{}{0}$.
+Assume $\spc{U}$ is a geodesic $\CAT0$ space.
 Show that for any two geodesic paths 
 $\gamma,\sigma\:[0,1]\to \spc{U}$
 the function 
@@ -400,7 +398,7 @@ The second statement follows since the function $\kappa\mapsto\angk\kappa x y z$
 \section{Thin triangles} \label{sec:thin-triangle}
 
 In this section we introduce the notion of thin triangles,
-use it to give another definition of $\Cat{}{}$ spaces,
+use it to characterize $\CAT{}$ spaces,
 and prove inheritance for thin triangles with respect to decomposition. 
 The inheritance lemma will lead to two fundamental constructions:  
 Alexandrov's patchwork globalization  (\ref{thm:alex-patch}) 
@@ -445,7 +443,7 @@ and $v=f(\~v)$, $w=f(\~w)$.
 
 \begin{thm}{Proposition}\label{prop:k-thin}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic length space. 
-Then $\spc{U}\in\Cat{}{\kappa}$
+Then $\spc{U}$ is  $\CAT\kappa$
 if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  is $\kappa$-thin.
 \end{thm}
 
@@ -454,7 +452,7 @@ if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  
 
 
 \begin{thm}{Corollary}\label{cor:loc-geod-are-min}
-Suppose $\spc{U}\in\Cat{}{\kappa}$.  
+Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
 Then any local geodesic in $\spc{U}$ of length $<\varpi\kappa$ is a minimizing geodesic.
 \end{thm}
 
@@ -617,14 +615,15 @@ By composition,  the natural map from $\trig{\~ p}{\~ x}{\~ y}$ to $\trig p y z$
 
 In this section, we give analytic and geometric ways of viewing the point-on-side comparison (\ref{cat-monoton}) as a convexity condition.
 
-First we obtain a corresponding differential  inequality for the distance function in $\spc{U}$.  In particular,  a geodesic space $\spc{U}$ is in $\Cat{}{0}$ if and only if  for any $p\in \spc{U}$, the function $\dist[2]{p}{}{}\:\spc{U}\to\RR$ is $2$-convex;
+First we obtain a corresponding differential  inequality for the distance function in $\spc{U}$.
+In particular, a geodesic space $\spc{U}$ is $\CAT{0}$ if and only if  for any $p\in \spc{U}$, the function $\dist[2]{p}{}{}\:\spc{U}\to\RR$ is $2$-convex;
 see Section~\ref{sec:conv-fun} for definition.
  
 \begin{thm}{Theorem}\label{thm:function-comp} 
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic length space. 
 Then the following are equivalent:
 \begin{subthm}{function-comp-cat} 
-$\spc{U}\in\Cat{}{\kappa}$,
+$\spc{U}$ is $\CAT\kappa$,
 \end{subthm}
 \begin{subthm}{function-comp}
 for any $p\in \spc{U}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies 
@@ -666,7 +665,7 @@ satisfies
 The following is a corollary of Theorem \ref{thm:function-comp}.
 
 \begin{thm}{Corollary}\label{cor:convex-balls}
-Suppose $\spc{U}\in\Cat{}{\kappa}$.
+Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 Then any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ in $\spc{U}$ is convex.
 
 Moreover, any open ball of radius $\tfrac{\varpi\kappa}2$ is convex
@@ -876,15 +875,16 @@ that is $[x\alpha(s)]\subset K$, a contradiction.
 Geometrically,   the development construction (\ref{def:devel}) translates distance comparison into a local convexity statement for subsets of $\Lob2\kappa$.  Recall that a curve in $\Lob2\kappa$ is \emph{(locally) concave with respect to $p$} if (locally) its supergraph with respect to $p$ is a convex subset of $\Lob2\kappa$ (\ref{def:convex-devel}).
 
 \begin{thm}{Development criterion\index{comparison!development comparison}}\label{thm:concave-devel} 
-For a $\varpi\kappa$-geodesic length space $\spc{U}$,
+For a $\varpi\kappa$-geodesic space $\spc{U}$,
 the following statements hold:
 
 \begin{subthm}{locally-concave-dev}
-For any $p\in \spc{U}$ and any geodesic $\gamma\:[0,T]\to\oBall(p,\varpi\kappa)$, suppose the $\kappa$-development $\~\gamma$ in $\Lob2\kappa$ of $\gamma$ with respect to $p$ is locally concave. Then $\spc{U}\in\Cat{}{\kappa}$.
+For any $p\in \spc{U}$ and any geodesic $\gamma\:[0,T]\to\oBall(p,\varpi\kappa)$, suppose the $\kappa$-development $\~\gamma$ in $\Lob2\kappa$ of $\gamma$ with respect to $p$ is locally concave. 
+Then $\spc{U}$ is $\CAT\kappa$.
 \end{subthm}
 
 \begin{subthm}{concave-dev} 
-If $\spc{U}\in\Cat{}{\kappa}$, then for any $p\in \spc{U}$ and any geodesic $\gamma:[0,T]\to\spc{U}$ 
+If $\spc{U}$ $\CAT\kappa$, then for any $p\in \spc{U}$ and any geodesic $\gamma:[0,T]\to\spc{U}$ 
 for which the triangle $\trig{p}{\gamma(0)}{\gamma(T)}$ has perimeter $<2\cdot\varpi\kappa$,
 the $\kappa$-development $\~\gamma$ in $\Lob2\kappa$ of $\gamma$ with respect to $p$ is concave. 
 \end{subthm}
@@ -942,37 +942,28 @@ The following definition gives an infinitesimal
  notion of upper curvature bound at a point of a space.
  
 
-\begin{thm}{Definition}\label{def:cba}
-Let $\spc{U}$ be a metric space and $p\in\spc{U}$.
-We say that \emph{$\spc{U}$ has curvature $\le\kappa$ at $p$} 
-(briefly, $\curv_p \spc{U}\le\kappa$) 
-if for any $\Kappa>\kappa$ there is $r>0$ such that (2+2)-point $\kappa$-comparison holds for any quadruple in $\oBall(p,r)$.
 
-We say that a space $\spc{U}$ has curvature $\le\kappa$ (briefly,  $\curv\spc{U}\le\kappa$) 
-if $\curv_p \spc{U}\le\kappa$ for any $p\in\spc{U}$.   
-\end{thm}
-
-If $\spc{U}$ is a complete length $\CAT\kappa$ space then $\curv\spc{U}\le\kappa$; this fact follows from Proposition~\ref{prop:inherit-bound}.
-The converse, does not hold for general complete length space.
+If $\spc{U}$ is $\CAT\kappa$ space then it is locally $\CAT\kappa$.
+The converse, does not hold even for complete length space.
 
 For example, $\SS^1$ is locally isometric to $\RR$, and so
-$\curv\SS^1\le 0$, but it is easy to find a quadruple of points in $\SS^1$ which violates (2+2)-point comparison.  
+is locally $\CAT0$, but it is easy to find a quadruple of points in $\SS^1$ which violates $\CAT0$ comparison.  
 
 The following theorem, 
 which essentially is  \cite[Satz 9]{alexandrov:devel}, 
-gives a global condition on geodesics that is  necessary and sufficient for a space $\spc{U}$ with $\curv\spc{U}\le\kappa$ to satisfy $\spc{U}\in\Cat{}{\kappa}$. 
+gives a global condition on geodesics that is  necessary and sufficient for a locally $\CAT\kappa$ space to be globally $\CAT\kappa$. 
 The proof use a thin-triangle decompositions, 
 and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
-For a length space $\spc{U}$, the following two statements are equivalent:
+For a complete length space $\spc{U}$, the following two statements are equivalent:
 
 \begin{subthm}{thm:alex-patch:ccat}
-$\spc{U}\in\Cat{}{\kappa}$.
+$\spc{U}$ is $\CAT\kappa$.
 \end{subthm}
  
 \begin{subthm}{thm:alex-patch:geo-uni}
-$\curv\spc{U}\le\kappa$; moreover,  pairs of points in $\spc{U}$ at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+$\spc{U}$ is locally $\CAT\kappa$; moreover,  pairs of points in $\spc{U}$ at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{subthm}
 
 \end{thm}
@@ -981,9 +972,8 @@ Note that the implication (\ref{SHORT.thm:alex-patch:ccat})$\Rightarrow$(\ref{SH
 is immediate, being the statement of Theorem~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:k-for-k}
-Let $\spc{U}$ be a complete length space 
-and $\Omega\subset\spc{U}$ be an open subset. 
-Assume $\curv_p\spc{U}\le\kappa$ for any $p\in\Omega$.
+Let $\spc{U}$ be a complete length  space 
+and $\Omega\subset\spc{U}$ be an open locally $\CAT\kappa$ subset. 
 Then for any point $p\in \Omega$ there is $R>0$ such that $\cBall[p,R]$ is a convex subset of $\spc{U}$ 
 and $\cBall[p,R]$ is $\CAT\kappa$.
 \end{thm}
@@ -998,7 +988,7 @@ The same argument as in the proof of theorem on uniqueness of geodesics (\ref{th
 shows that any two points in $\cBall(p,\tfrac R2)$ can be joint by unique geodesic which depends continuously on the end points.
 
 The same argument as in the proof of Corollary \ref{cor:convex-balls} shows that $\cBall[p,\tfrac R2]$ is a convex set.
-Then(\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat})  of Patchwork globalization implies $\oBall(p,R)\in \Cat{}{\kappa}$.
+Then(\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat})  of Patchwork globalization implies that $\oBall(p,R)$ is $\CAT\kappa$.
 \qeds
 
 The proof of Patchwork globalization uses the following construction:
@@ -1203,8 +1193,7 @@ local geodesics.  These statements will be used in the proof of the Hadamard--Ca
  globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
-Let $\spc{U}$ be a metric space with 
-$\curv\spc{U}\le\kappa$.
+Let $\spc{U}$ be a is locally $\CAT\kappa$ space.
  Let $\gamma_n\:[0,1]\to\spc{U}$ be a sequence of local geodesic paths converging to a path $\gamma_\infty\:[0,1]\to\spc{U}$.
 Then $\gamma_\infty$ is a local geodesic path.
 Moreover 
@@ -1213,9 +1202,10 @@ as $n\to\infty$.
 \end{thm}
 
 \parit{Proof.} 
-Fix $t\in[0,1]$.  By Corollary~\ref{cor:k-for-k}, we may choose $R$ satisfying $0<R<\varpi\Kappa$,
+Fix $t\in[0,1]$.
+By Corollary~\ref{cor:k-for-k}, we may choose $R$ satisfying $0<R<\varpi\Kappa$,
 and such that
-the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ and forms a $\Cat{}{\kappa}$ space.
+the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ and forms a $\CAT\kappa$ space.
 
 % ??? I replaced a sentence that seemed circular, because you need length $<\varpi\kappa$ in order to apply Jensen's inequality in order to prove length $<\varpi\kappa$. S.
 
@@ -1224,7 +1214,7 @@ the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ an
 A local geodesic segment  with length $<R/2$, and intersecting $\oBall(\gamma_\infty(t),R/2)$, cannot leave $\spc{B}$ and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
 
 
-Since $\spc{B}$ is a $\Cat{}{\kappa}$ space, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
+Since $\spc{B}$ is $\CAT\kappa$, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 which contains a neighborhood of $t$ in $[0,1]$
 and such that $\gamma_n|\II$ is minimizing for all large $n$.
@@ -1244,8 +1234,8 @@ The following theorem was proved in \cite{a-b:h-c}.
 
 \begin{thm}{No-conjugate-point theorem}
 \label{thm:no-conj-pt}
-Suppose $\spc{U}$ is a locally complete metric space with
-$\curv\spc{U}\le\kappa$.  Let $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path with length $<\varpi\kappa$.
+Suppose $\spc{U}$ is a locally complete locally $\CAT\kappa$ space.
+Let $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path with length $<\varpi\kappa$.
 Then for some neighborhoods $\Omega^0\ni \gamma(0)$ and $\Omega^1\ni\gamma(1)$ 
 there is a unique continuous map $\Omega^0\times \Omega^1\times[0,1]\to\spc{U}$
 \[(x,y,t)\mapsto\gamma_{x y}(t)\]
@@ -1278,10 +1268,10 @@ Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of N
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
-Let $\spc{U}$ be a locally complete metric space with $\curv\spc{U}\le\kappa$, 
+Let $\spc{U}$ be a locally complete locally $\CAT\kappa$ space, 
 and $\alpha\:[a,b]\to\spc{U}$ be a curve.
 
-Then there is a space $\spc{N}\in\Cat{}{\kappa}$
+Then there is a complete length $\CAT\kappa$ space $\spc{N}$
 with an open set $\hat\Omega\subset \spc{N}$,
 a curve $\hat\alpha\:[0,1]\to\hat\Omega$,
 and an open locally isometric immersion 
@@ -1339,7 +1329,7 @@ or when the homotopy leaves a complete subset of the space.
 The following corollary formulates these cases more precisely. 
 
 \begin{thm}{Corollary}\label{cor:geo-hom}
-Let $\spc{U}$ be a locally complete   metric space with $\curv\spc{U}\le\kappa$.
+Let $\spc{U}$ be a locally complete locally $\CAT\kappa$ space.
 Suppose $\gamma\:[0,1]\to\spc{U}$ is a local geodesic path with length $< \varpi\kappa$.  Let $\alpha^i\:[0,1]\to \spc{U}$, for $i=0,1$, be paths starting at $\gamma(0)$ and $\gamma(1)$ respectively.  
 
 Then there is a uniquely determined pair consisting of an interval $\II $ satisfying $0\in \II\subset[0,1]$, and a continuous family of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$ for  $t\in \II$, such that  
@@ -1373,7 +1363,7 @@ By maximality of $\II$, $\length\gamma_a=\varpi\kappa$ and so condition (\ref{SH
 \qeds
 
 \begin{thm}{Corollary}\label{cor:homotopy-from-p}
-Suppose $\spc{U}$ is a complete length space with $\curv\spc{U}\le\kappa$ 
+Suppose $\spc{U}$ is a complete length  locally $\CAT\kappa$ space 
 and $\alpha\:[0,1]\to \spc{U}$ is a path of length $\ell<\varpi\kappa$.
 Then  for all $t\in[0,1]$,
 
@@ -1401,11 +1391,11 @@ Sinse $\ell<\varpi\kappa$,
 $\II=[0,1]$ and the result follows. 
 \qeds
 
-The No-conjugate-point theorem  \ref{thm:no-conj-pt} immediately gives an extension of the first variation formula (\ref{1st-var+cba}) from geodesics in $\Cat{}\kappa$ spaces to local geodesics in spaces of curvature $\le \kappa$.
+The no-conjugate-point theorem  (\ref{thm:no-conj-pt}) immediately gives an extension of the first variation formula (\ref{1st-var+cba}) from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces.
 
   \begin{thm}{Corollary}\label{cor:1st-var++cba}
-Suppose $\spc{U}$ is a locally complete metric space with
-$\curv\spc{U}\le\kappa$. For any geodesic $[px]$ in $\spc{U}$ and local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, let  $\gamma_t\:[0,1]\to \spc{U}$ be a continuous family of local geodesic paths with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p x]}(t)$ and $\gamma_t(1)=q$.  Then
+Suppose $\spc{U}$ is a locally complete locally $\CAT\kappa$ space. 
+For any geodesic $[px]$ in $\spc{U}$ and local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, let  $\gamma_t\:[0,1]\to \spc{U}$ be a continuous family of local geodesic paths with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p x]}(t)$ and $\gamma_t(1)=q$.  Then
 \[\length(\gamma_t)
 =
 \length(\gamma)-t\cdot\cos\mangle(\gamma,[px])+o(t).
@@ -1421,15 +1411,14 @@ $\curv\spc{U}\le\kappa$. For any geodesic $[px]$ in $\spc{U}$ and local geodesic
 \section{Lifting globalization}\label{sec:cat-globalize}
 
 The Hadamard--Cartan theorem (\ref{thm:hadamard-cartan} ) states that 
-the universal metric cover of a complete space with curvature $\le0$ is a $\Cat{}{0}$ space.
+the universal metric cover of a complete space locally $\CAT0$ space is $\CAT0$.
 The following Lifting globalization theorem gives an appropriate generalization of the above statement to arbitrary curvature bounds.
 
 
 
 \begin{thm}{Lifting globalization theorem}
 \label{thm:globalization-lift}
-Suppose $\spc{U}$ is a complete length space 
-with $\curv\spc{U}\le\kappa$ and  $p\in\spc{U}$.
+Suppose $\spc{U}$ is a complete length locally $\CAT\kappa$ space and  $p\in\spc{U}$.
 Then there is a complete length $\CAT1$ space $\spc{B}$, where $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$ for some $\hat p \in \spc{B}$,
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ and the following lifting property: 
@@ -1440,8 +1429,7 @@ and $\map\circ\hat\alpha\equiv\alpha$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:loc-CAT(k)}
-Suppose $\spc{U}$ is a complete length space 
-with $\curv\spc{U}\le\kappa$.
+Suppose $\spc{U}$ is a complete length locally $\CAT\kappa$ space.
 Then for any $p\in\spc{U}$ there is $\rho_p>0$
 such that $\cBall[p,\rho_p]$ is a complete length $\CAT\kappa$ space.
 
@@ -1480,12 +1468,11 @@ The following lemma from \cite{a-b:cbc}
 is a key step in the proof.
 
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
-Let $\spc{U}$ be a length space 
-with $\curv\spc{U}\le\kappa$,
+Let $\spc{U}$ be a length locally $\CAT\kappa$ space,
 and suppose $p\in\spc{U}$, $R\le\varpi\kappa/2$.  Assume the ball  $\cBall[p,\bar{R}]$ is complete
 for all $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$, 
 which depends continuously on $x$.
-Then $\oBall(p,R) \in\Cat{}{\kappa}$.
+Then $\oBall(p,R)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 \end{thm}
  
 \parit{Proof.}
@@ -1570,7 +1557,7 @@ Further, Claim~\ref{clm:B-is-almost-convex} and the No-conjugate-point theorem (
 imply that the map $(x,z)\mapsto\gamma_{x z}$ is continuous.
 
 Therefore by the Patchwork globalization theorem (\ref{thm:alex-patch}), 
-$\cBall[ p,\bar R]\in \Cat{}{\kappa}$.
+$\cBall[ p,\bar R]$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 
 Since
 \[\oBall( p,R)
@@ -1592,7 +1579,7 @@ the map $\map$  as $\exp_p$, and
 the space $G_p$ as the ball of radius $\varpi\kappa$ in the tangent space at $p$, equipped with the metric pulled back by $\exp_p$.
 
 We are going to set $\spc{B}=\oBall[\hat p,\varpi\kappa/2]\subset G_p$,
-and use the Radial lemma (\ref{lem:radial-glob}) to prove  $\spc{B}\in\Cat{}{\kappa}$.
+and use the radial lemma (\ref{lem:radial-glob}) to prove that $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 
 \parit{Proof of Lifting globalization theorem \ref{thm:globalization-lift}.}
 Suppose $\hat\gamma$ is a homotopy of local geodesic paths that start at $p$.  Thus the map 
@@ -1634,7 +1621,7 @@ Further, again from Theorem~\ref{thm:no-conj-pt}, we have
 The map
 \[\map\:\xi\mapsto\xi(1)\:G_p\to\spc{U}\]
 is a local isometry.
-In particular, $\curv G_p\le\kappa$.
+In particular, $G_p$ is locally $\CAT\kappa$.
 \end{clm}
 
 Let $\alpha\:[0,1]\to\spc{U}$ be a path with $\length\alpha<\varpi\kappa$ and $\alpha(0)=p$.
@@ -1674,7 +1661,7 @@ $\cBall[\hat p,\bar R]$ in $G_p$ is complete.
 \end{clm}
 
 Take $\spc{B}=\oBall(\hat p,\varpi\kappa/2)$ and $\map$ constructed above.
-According to the Radial lemma (\ref{lem:radial-glob}), $\spc{B}\in\Cat{}{\kappa}$.
+According to the Radial lemma (\ref{lem:radial-glob}), $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 The remaining statements are already proved.
 \qeds
 
@@ -1714,7 +1701,7 @@ Now we come to the main theorem of this section.
 
 \begin{thm}{Majorization theorem}
 \label{thm:major}
-Any closed curve $\alpha$ with length smaller than $2\cdot \varpi\kappa$ in $\spc{U}\in\Cat{}{\kappa}$ is majorized by a convex region in $\Lob2\kappa$. \end{thm}
+Any closed curve $\alpha$ with length smaller than $2\cdot \varpi\kappa$ in  a $\varpi\kappa$-geodesic $\CAT\kappa$ space is majorized by a convex region in $\Lob2\kappa$. \end{thm}
 
 This theorem is proved by Reshetnyak in \cite{reshetnyak:major};
 our proof also uses a trick from \cite{ballmann:notes}.
@@ -1826,7 +1813,7 @@ $G_{n-1}\circ\dots\circ G_1\: D_1\to D_n$ is a short map.
 The result follows since $D_1\iso\Conv\trig{\~p}{\~x}{\~y}$.\qeds
 
 \begin{thm}{Lemma}\label{lem:majorize-triangle}
-In $\spc{U}\in\Cat{}{\kappa}$, let $\trig{p}{x}{y}$ be a triangle in $\spc{U}$ of perimeter $<2\cdot\varpi\kappa$. In $\Lob2{\kappa}$, let $\~\gamma$ be the $\kappa$-development of $[x y]$ with respect to $p$, where $\~\gamma$ has basepoint $\~p$ and subgraph $D$.
+In  a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{U}$, let $\trig{p}{x}{y}$ be a triangle in $\spc{U}$ of perimeter $<2\cdot\varpi\kappa$. In $\Lob2{\kappa}$, let $\~\gamma$ be the $\kappa$-development of $[x y]$ with respect to $p$, where $\~\gamma$ has basepoint $\~p$ and subgraph $D$.
 Consider the map $H\:D\to\spc{U}$ that sends the point with parameter $(t,s)$ under the line-of-sight map for $\~\gamma$ from $\~p$, to the point with the same parameter under the line-of-sight map $f$ for $[x y]$ from  $p$.  Then $H$ is  length-nonincreasing.
 In particular, $D$ majorizes triangle $\trig p x y$.
 \end{thm}
@@ -1956,7 +1943,7 @@ say $F$.
 Clearly $F$ is a majorizing map for $\alpha$.
 \qeds
 
-For $n=1$, the following lemma states that in a $\Cat{}{\kappa}$ space, 
+For $n=1$, the following lemma states that in a $\CAT\kappa$ space, 
 a sharp triangle comparison implies the
 presence  of an isometric copy of the convex hull of the model triangle. This rigidity statement was proved in \cite{alexandrov:devel}.
 The analogue for $\Alex{\kappa}$ spaces fails (see Exercise \ref{ex:not-flat}).
@@ -1976,7 +1963,8 @@ such that $F\:\~\alpha(t)\mapsto \alpha(t)$ for any $t$.
 \end{thm}
 
 \begin{thm}{Exercise}
-In $\spc{U}\in\Cat{}{\kappa}$, show that if a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$  is not a triangle, then exactly one of these statements holds:
+Assume a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is not a triangle.
+Show that exactly one of these statements holds:
 
 \begin{subthm}{}
 $\alpha$ is majorized by non-isometric convex regions in $\Lob2\kappa$;
@@ -2182,16 +2170,14 @@ is null-homotopic in the class of curves of length $<\ell$ in $\spc{X}$.
 A complete length space
 $\spc{U}$ is $\CAT\kappa$ 
 if and only if $\spc{U}$ is $2\cdot\varpi\kappa$-simply connected
-and $\curv\spc{U}\le\kappa$.
+and $\spc{U}$ is locally $\CAT\kappa$.
 \end{thm}
 
 In the proof we will need the following lemma.
 
 \begin{thm}{Lemma}
-Let $\spc{U}$ be a complete length space,
-$\kappa,\eps\in \RR$,
+Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space,
 $\eps>0$,
-$\curv\spc{U}\le \kappa$
 and $\gamma_1,\gamma_2\:\SS^1\to\spc{U}$ be two closed curves.
 Assume that
 \begin{subthm}{}
@@ -2281,7 +2267,7 @@ The following proposition
 makes possible to deduce Hadamard--Cartan theorem directly from the Generalized Hadamard--Cartan theorem.
 
 \begin{thm}{Proposition}
-Let $\spc{U}$ be a complete length space and $\curv\spc{U}\le \kappa$.
+Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space.
 Then $\spc{U}$ is simply connected if and only if it is $\infty$-simply connected.
 \end{thm}
 
@@ -2345,7 +2331,7 @@ A \emph{locally convex space} is a length space in which every point has a neigh
 \begin{thm}{Exercise}\label{ex:cats-cradle}
 Assume $\spc{X}$ is a convex space 
 such that angle of any hinge is defined.
-Show that $\spc{X}$ is $\Cat{}{0}$.
+Show that $\spc{X}$ is $\CAT{0}$.
 \end{thm}
 
 The following exercise gives an analog of Hadamard--Cartan theorem for locally convex spaces;
@@ -2359,7 +2345,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 
 
 %\begin{thm}{Flat triangles lemma} \label{lem:flat-triangle}
-%Suppose $\spc{U}\in \Cat{}{\kappa}$.  
+%Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
 %For a triangle $\trig{x}{y}{z}$ in $\spc{U}$ with model triangle $\trig{\~x}{\~y}{\~z} = \~\triangle_\kappa(x y z)$, the following are equivalent:
 
 %\begin{subthm}{thm:flat:angle}
@@ -2407,7 +2393,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
  
  
 %\begin{thm}{Flat triangles lemma} \label{lem:flat-triangle}
-%Suppose $\spc{U}\in \Cat{}{\kappa}$.  
+%Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
 %For a triangle 
 %$\trig{x}{y}{z}$ in $\spc{U}$ with model triangle $\trig{\~x}{\~y}{\~z} = \~\triangle_\kappa(x y z)$, the following are equivalent:
 
@@ -2492,7 +2478,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 Recall that $\o$ denotes a nonpriciple ultrafilter, see Section~\ref{ultralimits}. 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont}
-Let $\spc{U}_n\in \Cat{}\kappa$ 
+Let $\spc{U}_n$  be a $\varpi\kappa$-geodesic $\CAT\kappa$  space for each $n\in \NN$
 and $\spc{U}_n\to \spc{U}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{U}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{U}_\o$.
 Then 
@@ -2533,13 +2519,13 @@ Hence the result.
 \qeds
 
 Now we verify that the first variation formula 
-holds in the $\Cat{}{}$ setting. 
+holds in the $\CAT{}$ setting. 
 Compare first variation inequality (\ref{lem:first-var}) for general metric spaces and the
 Strong angle lemma (\ref{1st-var+}) for $\Alex{}$ spaces. 
 
 \begin{thm}{Strong angle lemma}
 \label{lem:strong-angle-cba}
-Let $\spc{U}\in \Cat{}{}$.
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
 Then for any hinge  $\hinge  p q x$ in $\spc{U}$, 
 we have
 \[\mangle\hinge p q x
@@ -2561,7 +2547,7 @@ the righthand side is at most equal to the lefthand side.
 
 
 \begin{thm}{First variation}\label{thm:1st-var-cba}
-Let $\spc{U}\in \Cat{}\kappa$.
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
 For any nontrivial geodesic $[py]$ in $\spc{U}$ and point $q\ne p$ such that  $\dist{p}{q}{}<\varpi\kappa$, we have 
 \[\dist{q}{\geod_{[p y]}(t)}{}
 =
@@ -2575,7 +2561,7 @@ The first variation equation is equivalent to the strong angle lemma (\ref{lem:s
 \qeds
 
 \begin{thm} {First variation (both-endpoints version)}\label{cor:both-end-first-var-cba}
-Let  $\spc{U}\in \Cat{}\kappa$.
+Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
 For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$  such that $p\ne q$ and $\dist{p}{q}{}<\varpi\kappa$, we have 
 \[
 \dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
@@ -2625,7 +2611,7 @@ Is it true that $K$ lies in a convex compact set $\bar K\subset\spc{U}$?
 \end{thm}
 
 The question can  easily be reduced to the case when $K$ is finite;
-so far it is not even known if any three points in a $\Cat{}{0}$-space lie in a compact convex set.
+so far it is not even known if any three points in a complete length $\CAT0$ space lie in a compact convex set.
 
 
 

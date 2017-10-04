@@ -2,11 +2,11 @@
 \section{Jacobi lengths}
 \label{sec:jacobi-length}
 
-This section gives a definition of $\curv \spc{U}\le\kappa$ that captures the notion in a Riemannian manifold of lengths of normal and
-tangential Jacobi fields.  Tangential lengths, which are linear, must be discarded in order
-to identify specific curvature bounds.
+This section gives a characterization of  locally $\CAT\kappa$ spaces that captures the notion in a Riemannian manifold of lengths of normal and tangential Jacobi fields.
+Tangential lengths, which are linear, must be discarded in order to identify specific curvature bounds.
 
-This material is from \cite{} and \cite{}.  It is used in \cite{} to prove a sharp Alexandrov curvature bound above for Riemannian manifolds-with-boundary (\ref{thm:example-mnflds-with-bry:CBA}), and in \cite{} to obtain sharp curvature bounds for subspaces of spaces with $\curv\le\kappa$ (\ref{sec:gauss-equation}).
+This material is from \cite{???} and \cite{???}.  
+It is used in \cite{???} to prove a sharp Alexandrov curvature bound above for Riemannian manifolds-with-boundary (\ref{thm:example-mnflds-with-bry:CBA}), and in \cite{} to obtain sharp curvature bounds for subspaces of spaces with $\curv\le\kappa$ (\ref{sec:gauss-equation}).
 
 \begin{thm}{Definition}
 Let $[pq]$ 
@@ -34,7 +34,7 @@ o(\dist[2]{q}{q_n}{}+|t-t_n|^2).\]
 
 \begin{thm}{Theorem}\label{thm:jacobi-length}
 Let $\spc{U}$ be a locally geodesic metric space. 
-Then $\curv \spc{U}\le\kappa$ if and only if for any $p\in\spc{U}$
+Then $\spc{U}$ is locally $\CAT\kappa$ if and only if for any $p\in\spc{U}$
 there is a neighborhood $N\ni p$
 such that for any geodesic $[pq]$ in $N$ the following two conditions hold
 
@@ -93,7 +93,8 @@ is a \emph{line-of-sight map from $p$ to $\alpha$}
 if each curve $\gamma_t$ is a geodesic from $p$ to  $\alpha(t)$ (\ref{def:sight}). 
 
 \parbf{Example.}  
-A sinusoidally $K$-convex function $f:[a,b]\to [0,\infty)$ must be continuous on $(a,b)$.  However, a sinusoidally $\kappa$-convex Jacobi length $f:[a,b]\to [0,\infty)$  in $\spc{U}\in\Cat{}{\kappa}$ may be discontinuous at the endpoints. 
+A sinusoidally $K$-convex function $f:[a,b]\to [0,\infty)$ must be continuous on $(a,b)$.
+However, a sinusoidally $\kappa$-convex Jacobi length $f:[a,b]\to [0,\infty)$  in a $\CAT\kappa$ space may be discontinuous at the endpoints. 
 Consider the complement $\spc{U}$  in  $ \EE^2$ of an open disk, and  a 
 geodesic $\gamma\: [0,1]\to\spc{U}$  which lies on the bounding circle.  
 A line-of-sight  map is defined by lifting the endpoint $\gamma(1)$ along an ``evolute''  curve of speed $1$ running at constant \,$\spc{U}$-distance from $\gamma(0)$. 
@@ -159,7 +160,8 @@ Recall that $\geodpath_{[xy]}$ denote a geodesic path from $x$ to $y$.
 
 
 \begin{thm}{Theorem}\label{thm:jacobi-length}
-Let $\spc{U}$ be a locally geodesic metric space. Then $\curv \spc{U}\le\kappa$ if and only if for any $p\in\spc{U}$ and any triangle $\trig {x}{y}{z}$ in some open ball about $p$:
+Let $\spc{U}$ be a locally geodesic metric space.
+Then $\spc{U}$ is locally $\CAT\kappa$ if and only if for any $p\in\spc{U}$ and any triangle $\trig {x}{y}{z}$ in some open ball about $p$:
 
 %\begin{subthm}{jacobi-lip}
 %line-of-sight maps are Lipschitz; 
@@ -178,12 +180,12 @@ satisfies   Jacobi splitting;
 each corresponding normal Jacobi length is  sinusoidally $(\kappa\cdot\ell^2)$-convex,
 where $\ell$ denotes ???.
  \end{subthm}
-%Then $\curv \spc{U} \le \kappa$.
+
 \end {thm}
 
 \parit{Proof of ``only if''.} 
 %\parit{($\Rightarrow$)} 
-Suppose $\curv \spc{U}\le\kappa$. 
+Suppose $\curv \spc{U}$ is locally $\CAT\kappa$. 
 For any $p\in\spc{U}$, there is a convex ball 
 $\oBall(p,R)$ which is $\CAT\kappa$ and $R<\tfrac{\varpi\kappa}{2}$ (\ref{cor:convex-balls}). 
 Choose the triangle $\trig {x}{y}{z}$ to lie in $\oBall(p,R)$.
@@ -317,8 +319,8 @@ $f_N|[0,1)$ is sinusoidally $(\kappa\cdot\ell^2)$-convex.
 \parit{Proof of ``if''.} 
 Suppose
 % (\ref{SHORT.first-var}), 
- (\ref{SHORT.jacobi-split}) and (\ref{SHORT.jacobi-convex}) hold for any triangle $\trig {x}{y}{z}$ in some open ball about each point of $\spc{U}$.  We must show
- $\curv \spc{U}\le\kappa$.
+ (\ref{SHORT.jacobi-split}) and (\ref{SHORT.jacobi-convex}) hold for any triangle $\trig {x}{y}{z}$ in some open ball about each point of $\spc{U}$.
+We must show that $\spc{U}$ is locally $\CAT\kappa$.
 
 Let  $\~\alpha$ be  the $\kappa$-development based at $\~x$ in $\Lob2\kappa$ of $\geodpath_{[yz]}$ with respect to $x$.  We thus obtain a comparison figure in $\Lob2\kappa$, two of whose sides, $[\~x\~y]$ and $[\bar x \bar z]$, are geodesics of the same length as $[xy]$ and $[xz]$ respectively, and whose third side is $\~\alpha$. Since a model triangle for $\trig {x}{y}{z}$  may be obtained by replacing  $\~\alpha$ with a geodesic of the same length, thereby increasing the angle at $\~x$,  it suffices to show \,$\mangle\hinge {x}{y}
 {z}\le\mangle\hinge {\~x}{\~y}{\~z}$.
@@ -333,8 +335,8 @@ that arises from varying $t$ in the positive direction, and satisfies Jacobi spl
 {z}\le\mangle\hinge {\~x}{\~y}{\~z}$, as required.\qeds
 
 \begin{thm}{Corollary}
-Suppose  $\curv \spc{X} \le \hat\kappa$ for some $\hat\kappa$.  If in 
-some open ball about each point, normal Jacobi lengths satisfy $f''+\kappa f\ge 0$, then $\curv \spc{X} \le \kappa$.
+Suppose  $\spc{X}$ is locally geodesic locally $\CAT{\hat\kappa}$ space for some $\hat\kappa$.
+If in some open ball about each point, normal Jacobi lengths satisfy $f''+\kappa f\ge 0$, then $\spc{X}$ is locally $\CAT\kappa$.
 \end{thm}
 
  

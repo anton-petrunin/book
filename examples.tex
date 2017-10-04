@@ -203,10 +203,9 @@ In particular $\Delta \subset K$, a contradiction.
 \parit{``If'' part.}
 Since $K$ is simply connected,
 by Cartan--Hadamard theorem \ref{thm:hadamard-cartan}, 
-it is sufficient to show that $\curv_p K\le 0$ at any point $p\in K$.
+it is sufficient to show that $K$ is locally $\CAT0$.
 
-If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$; 
-therefore $\curv_p K\le 0$.
+If $p\in\Int K$ then it admits a neighborhood isometric to a subset of $\EE^m$, which is $\CAT0$.
 
 Fix $p\in S$.
 Assume that $k_2(p)>0$.
@@ -292,7 +291,7 @@ that is $k_2(p)>0$ at any point $p\in S$.
 \end{clm}
 
 
-It remains to show that $\curv_pK\le 0$ in the case $k_2(p)=0$.
+It remains to show that $p$ admits a $\CAT0$ neighborhood in the case $k_2(p)=0$.
 
 Choose a coordinate system $(x_1,\dots,x_n)$ as above,
 so $(x_1,\dots,x_{m-1})$-coordinate hyperplane forms the tangent subspace to $S$ at $p$.
@@ -310,7 +309,7 @@ By \ref{clm-strong2convex}, $K_\delta$ is $\CAT0$.
 
 Finally as $\delta\to0$, the closed $\eps$-neighborhoods of $p$ in $K_\delta$ 
 converges to the closed $\eps$-neighborhood of $p$ in $K$.
-Therefore $\curv_pK\le 0$.
+That is, $p$ admits a closed $\CAT0$ neighborhood in $K$.
 \qeds
 
 The following $\Alex{}$ analog of the above theorem; 
@@ -530,8 +529,11 @@ Note that $K$ is a polyhedral space and the covering $\tilde\Omega\to\Omega$ ext
 Fix a point $\tilde p\in \tilde K\backslash\tilde\Omega$; 
 denote by $p$ the image of $\tilde p$ in $K$.
 By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) it is sufficient to show that 
-\[\curv_{\tilde p}\tilde K\le 0.
-\eqlbl{eq:curv=<0}\]
+
+\begin{clm}{}\label{eq:curv=<0}
+$\tilde p$ admits a $\CAT0$ neighborhood.
+\end{clm}
+
 
 Recall that $\Sigma_{\tilde p}\tilde K$ denotes the space of directions at $\tilde p$.
 Note that a small neighborhood of $\tilde p$ in $\tilde K$
