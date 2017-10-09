@@ -83,26 +83,26 @@ Writing $Q:p,x^1,x^2,x^3$, set $\~\Sigma^\kappa(p)= \angk{\kappa} p{x^1}{x^2}+\a
 %In the proof of  theorem \ref{thm:alternate-def}, we say that two triangles in $\Lob2{\kappa}$ with a common vertex $x$  \emph{do not overlap} if the intersection of their convex hulls is $x$.  Our proof  will use the Overlap Lemma (\ref{lem:extend-overlap}).
 
 \parit{Proof of Theorem \ref{thm:alternate-cat-def}.}  
-A quadruple with an undefined model angle satisfies dual-$\Alex\kappa$ comparison for some vertex, and  (2+2)-point $\kappa$-comparison (\ref{def:cba}) for all  vertex pairs. Thus it suffices to prove:
+A quadruple with an undefined model angle satisfies dual-$\Alex\kappa$ comparison for some vertex as well as $\CAT\kappa$ comparison (\ref{def:cba}). 
+Thus it suffices to prove:
 \begin{clm}{}\label{2+2-equiv}
 In a metric space, let $Q$ be a  quadruple all of whose model angles are defined.\\
 $Q$ satisfies dual-$\Alex\kappa$ comparison (\ref{def:alt-cba})
  for some $p\in Q$ 
 $\Longleftrightarrow$ \ \ \ \ \\
-$Q$ satisfies (2+2)-point $\kappa$-comparison (\ref{def:cba}) for all  $p^1,p^2\in Q$. \end{clm}  
+$Q$ satisfies $\CAT\kappa$ comparison (\ref{def:cba}) for all  $p^1,p^2\in Q$. \end{clm}  
 
  \parit{ ($\Rightarrow$).}
-Suppose dual-$\Alex\kappa$ comparison \ref{def:alt-cba} holds at some $p\in Q$. 
-%We must show that (2+2)-point comparison (\ref{def:cba}) holds for all $p^1,p^2\in Q$.  
+Suppose dual-$\Alex\kappa$ comparison \ref{def:alt-cba} holds at some $p\in Q$.   
 Write $Q\:p,x^1,x^2,x^3$.  
 
-If $\~\Sigma^{\kappa}(p)\le 2\cdot \pi$, then $Q$ embeds in $\Lob3\kappa$ by lemma \ref{lem:embedding-angles}, and the triangle inequality for angles in $\Lob3\kappa$ implies (2+2)-point comparison.
+If $\~\Sigma^{\kappa}(p)\le 2\cdot \pi$, then $Q$ embeds in $\Lob3\kappa$ by lemma \ref{lem:embedding-angles}, and the triangle inequality for angles in $\Lob3\kappa$ implies $\CAT\kappa$ comparison.
 
 Suppose $\~\Sigma^{\kappa}(p)> 2\cdot \pi$.  
-Since the sum of any two model angles at $p$ exceeds $\pi$, then (2+2)-point comparison holds for any pair $p^1,p^2\in Q$ that includes $p$. 
+Since the sum of any two model angles at $p$ exceeds $\pi$, then $\CAT\kappa$  comparison holds for any pair $p^1,p^2\in Q$ that includes $p$. 
 Now construct on each side $[\~x^j\~x^\kay]$ of the model triangle $\trig{\~x^1}{ \~x^2}{ \~x^3} = \modtrig\kappa(x^1 x^2 x^3 )$, the model triangle $\trig{\~p^i}{\~x^j}{\~x^\kay}=\modtrig{\kappa}{p}{x^j}{x^\kay}$ with $\~p^i$ and $\~x^i$  in the same closed halfspace determined by $[\~x^j\~x^\kay]$.  
 By the Overlap Lemma \ref{no-overlap}, no two triangles $\trig{\~p^i}{\~x^j}{\~x^\kay}$ overlap. 
-It follows that (2+2)-point comparison  (\ref{def:cba}) holds for any pair $p^1,p^2\in Q$ that does not include $p$.  
+It follows that $\CAT\kappa$ comparison  (\ref{def:cba}) holds for any pair $p^1,p^2\in Q$ that does not include $p$.  
 For instance, since $\angk\kappa {x^1}{x^3}p<\angk\kappa {x^1}{x^2}{x^3}$, then  \ref{def:cba} holds for $p^1=x^1$, $p^2=x^2$.
 
 \parit{($\Leftarrow$).}
@@ -118,5 +118,5 @@ Again construct on each side  $[\~x^j\~x^\kay]$ of the model triangle $\trig{\~x
  By \ref{eq:dual-1+3-pf1}, $\trig{\~p^3}{\~x^1}{\~x^2}$ and $\trig{\~p^2}{\~x^3}{\~x^1}$ do not overlap.
 Since $\~\Sigma^{\kappa}(Q)\le 2\cdot \pi$, then by lemma \ref{two-overlap},
 \[\angk{\kappa} {p}{x^3}{x^2}>\angk{\kappa} {p}{x^1}{x^2}+\angk{\kappa} {p}{x^1}{x^3}.\eqlbl{eq:dual-1+3-pf2}\]
-By \ref{eq:dual-1+3-pf1} and \ref{eq:dual-1+3-pf2},  (2+2)-point comparison fails  for $p^1=p, \,p^2=x^1$.  
+By \ref{eq:dual-1+3-pf1} and \ref{eq:dual-1+3-pf2},  $\CAT\kappa$  comparison fails  for $p^1=p, \,p^2=x^1$.  
  \qeds

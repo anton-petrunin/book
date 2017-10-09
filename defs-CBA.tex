@@ -23,14 +23,14 @@ Section \ref{sec:angles-cba} discusses angles and the first variation formula.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{(2+2)-point comparison.} \label{sec:cba-def}
+\section{Four-point comparison.} \label{sec:cba-def}
 
       
-\begin{thm}{(2+2)-point comparison}\label{def:2+2}
+\begin{thm}{$\CAT\kappa$  comparison}\label{def:2+2}
 An quadruple of points $p^1,p^2,x^1,x^2$ in a metric space 
 satisfies
-\emph{(2+2)-point $\kappa$-comparison} 
-\index{(2+2)-point comparison}
+\emph{$\CAT\kappa$ comparison} 
+\index{$\CAT\kappa$ comparison}
 if
   
 \begin{subthm}{}
@@ -51,12 +51,14 @@ is undefined.
 
 \end{thm}
 
-\begin{wrapfigure}[5]{r}{24mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(3mm)]{pics/22(0.6)}
-\lbl[lt]{12,1;$p^1$}
-\lbl[rb]{20,23;$p^2$}
-\lbl[r]{3,15;$x^1$}
-\lbl[l]{30,12;$x^2$}
+{
+
+\begin{wrapfigure}{r}{34mm}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(3mm)]{pics/22(1)}
+\lbl[lt]{13,1;$p^1$}
+\lbl[rb]{20,24;$p^2$}
+\lbl[r]{2,15;$x^1$}
+\lbl[l]{31,12;$x^2$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -68,9 +70,13 @@ is called $\CAT{}{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\
 We write $\spc{U}$ is $\CAT{}$ to mean that  $\spc{U}$ is $\CAT{\kappa}$ for some $\kappa$.  
 \end{thm}
 
-The condition $\spc{U}$ is $\CAT\kappa$ should be thought of as ``$\spc{U}$ has global curvature $\le\kappa$''.
+
+
+The condition $\spc{U}$ is $\CAT\kappa$ should be understood as ``$\spc{U}$ has global curvature $\le\kappa$''.
 In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
 in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
+
+}
 
 \begin{thm}{Exercise}
 \label{ex:ccat-(3+1)}
@@ -136,7 +142,7 @@ that is,
 
 By the law of cosines, $\angk{\kappa} {p^1}{z_n}{p^2}$ and $\angk{\kappa} {p^2}{z_n}{p^1}$ are arbitrarily small when $n$ is sufficiently large.
 
-Let us apply (2+2)-point comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z_\kay$ with large $n$ and $\kay$.
+Let us apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z_\kay$ with large $n$ and $\kay$.
 We conclude that  $\angk{\kappa} {p}{z_n}{z_\kay}$ is arbitrarily small when $n,\kay$ are sufficiently large and $p$ is either $p^1$ or $p^2$.  
 By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ converges in itself.  
 
@@ -153,7 +159,7 @@ n\to\infty.
 \eqlbl{eq:z_n->z}\]
 
 By the triangle inequality, the $z_n$ are approximate midpoints of $p^1$ and $p^2$. 
-Apply (2+2)-point comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z$. 
+Apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z$. 
 For $p=p^1$ or $p=p^2$, we see that $\angk{\kappa} {p}{z_n}{z}$ is arbitrarily small when $n$ is sufficiently large.  
 By the law of cosines, \ref{eq:z_n->z} follows.
 \qeds
@@ -276,20 +282,20 @@ or equivalently,
 \parbf{Remark.}
 \label{22remark}
 In the following proof, the part (\ref{SHORT.cat-ineq})$\Rightarrow$(\ref{SHORT.cat-2-sum})
-only requires that the (2+2)-point comparison (\ref{def:2+2}) hold for any quadruple, and does not require the existence of geodesics at distance $<\varpi\kappa$. 
+only requires that the $\CAT\kappa$ comparison (\ref{def:2+2}) hold for any quadruple, and does not require the existence of geodesics at distance $<\varpi\kappa$. 
 The same is true of the parts (\ref{SHORT.cat-2-sum})$\Leftrightarrow$(\ref{SHORT.cat-monoton}) and
 (\ref{SHORT.cat-monoton})$\Rightarrow$(\ref{SHORT.cat-hinge}).  
-Thus the conditions (\ref{SHORT.cat-2-sum}), (\ref{SHORT.cat-monoton}) and (\ref{SHORT.cat-hinge}) are valid for any metric space (not necessarily length space) which satisfies (2+2)-point comparison (\ref{def:2+2}). 
+Thus the conditions (\ref{SHORT.cat-2-sum}), (\ref{SHORT.cat-monoton}) and (\ref{SHORT.cat-hinge}) are valid for any metric space (not necessarily length space) which satisfies $\CAT\kappa$ comparison (\ref{def:2+2}). 
 The converse does not hold; for example, all these conditions are 
 vacuously true in a 
 totally disconnected space, while 
-(2+2)-point comparison is not.
+$\CAT\kappa$ comparison is not.
 
 \parit{Proof. (\ref{SHORT.cat-ineq}) $\Rightarrow$ (\ref{SHORT.cat-2-sum})}. 
 Since the perimeter of $p,x,y$ is $<2\cdot \varpi\kappa$, so is the perimeter of any subtriple of $p,z,x,y$ by the triangle inequality. 
 By Alexandrov's lemma (\ref{lem:alex}), 
 \[\angk\kappa p z x +\angk\kappa p z y  < \angk{\kappa} p x y \ \text{or}\  \angk\kappa z p x  +\angk\kappa z p y  =\pi.\]
-In the former case, (2+2)-point comparison (\ref{def:2+2}) applied to the quadruple $p, z, x, y$ implies
+In the former case, $\CAT\kappa$ comparison (\ref{def:2+2}) applied to the quadruple $p, z, x, y$ implies
 \[\angk\kappa z p x  +\angk\kappa z p y  \ge \angk{\kappa} z x y =\pi.\]
 
 \parit{(\ref{SHORT.cat-2-sum}) $\Leftrightarrow$ (\ref{SHORT.cat-monoton})}. Follows directly from  Alexandrov's lemma (\ref{lem:alex}).
@@ -318,7 +324,7 @@ By (\ref{SHORT.cat-hinge}) and the triangle inequality for angles (\ref{claim:an
 \end{wrapfigure}
 
 \parit{(\ref{SHORT.cat-monoton}) $\Rightarrow$ (\ref{SHORT.cat-ineq}).}
-Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ , we must verify (2+2)-point comparison (\ref{def:2+2}).
+Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ , we must verify $\CAT\kappa$ comparison (\ref{def:2+2}).
 In $\Lob2\kappa$, construct the model triangles  $\trig{\~p^1}{\~p^2}{\~x^1} = \modtrig\kappa(p^1 p^2 x^1 )$ 
 and $\trig{\~p^1}{\~p^2}{\~x^2}= \modtrig\kappa(p^1 p^2 x^2)$, lying on either side of a common segment $[\~p^1 \~p^2]$.
 We may suppose 
@@ -329,7 +335,7 @@ We may suppose
 \angk{\kappa}{p^2}{p^1}{x^1}+\angk{\kappa} {p^2}{p^1}{x^2}
 \le 
 \pi,\] 
-since otherwise (2+2)-point comparison holds trivially.  
+since otherwise $\CAT\kappa$ comparison holds trivially.  
 Then $[\~p^1 \~p^2]$ and $[\~x^1 \~x^2]$ intersect, say at $\~q$.  
 
 By assumption, there is a geodesic $[p^1 p^2]$.
@@ -981,7 +987,7 @@ and $\cBall[p,R]$ is $\CAT\kappa$.
 \parit{Proof.}
 Fix $\Kappa>\kappa$.
 According to Definition~\ref{def:cba},
-there is $R>0$ such that (2+2)-point $\kappa$-comparison holds in $\oBall(p,R)$.
+there is $R>0$ such that $\CAT\kappa$ comparison holds in $\oBall(p,R)$.
 
 We may assume that $\oBall(p,R)\subset\Omega$ and $R<\varpi\Kappa$.
 The same argument as in the proof of theorem on uniqueness of geodesics (\ref{thm:cat-unique}) 
@@ -1564,7 +1570,7 @@ Since
 =
 \bigcup_{\bar R < R}\cBall[ p,\bar R],\] 
 then $\oBall( p,R)$ is convex in $\spc{U}$ and 
-(2+2)-point comparison holds  for any quadruple in $\oBall( p,R)$.
+$\CAT\kappa$ comparison holds  for any quadruple in $\oBall( p,R)$.
 Therefore $\oBall( p,\varpi\kappa/2)$ is $\CAT\kappa$.
 \qeds
 
