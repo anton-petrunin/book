@@ -26,7 +26,7 @@ Section \ref{sec:angles-cba} discusses angles and the first variation formula.
 \section{Four-point comparison.} \label{sec:cba-def}
 
       
-\begin{thm}{$\CAT\kappa$  comparison}\label{def:2+2}
+\begin{thm}{Four-point comparison}\label{def:2+2}
 An quadruple of points $p^1,p^2,x^1,x^2$ in a metric space 
 satisfies
 \emph{$\CAT\kappa$ comparison} 
@@ -67,7 +67,7 @@ is undefined.
 A metric space $\spc{U}$ 
 is called $\CAT{}{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
 
-We write $\spc{U}$ is $\CAT{}$ to mean that  $\spc{U}$ is $\CAT{\kappa}$ for some $\kappa$.  
+We say that $\spc{U}$ is $\CAT{}$ if it is $\CAT{\kappa}$ for some $\kappa\in\RR$.  
 \end{thm}
 
 
@@ -78,9 +78,15 @@ in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
 
 }
 
+This terminology was introduced by Gromov;  
+$\CAT{}$ stands for \'Elie Cartan, Aleksandr Aleksandrov and Victor Toponogov.
+Originally these spaces were called \emph{$\mathfrak{R}_\kappa$ domains};
+it is Alexandrov's terminology which is still in use.
+
+
 \begin{thm}{Exercise}
 \label{ex:ccat-(3+1)}
-Let $\spc{U}$ be a complete length space.
+Let $\spc{U}$ be a metric space.
 Show that $\spc{U}$ is $\CAT\kappa$
 if and only if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
 $\angk\kappa p{x^1}{x^2}$,
@@ -90,8 +96,6 @@ satisfy all three triangle inequalities or one of these angels is undefined.
 \end{thm}
 
 \begin{thm}{Exercise}
-Let $\spc{U}$ be a complete length space.
-
 Show that $\spc{U}$ is $\CAT\kappa$
 if and only if for any quadruple of points 
 $p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
@@ -100,9 +104,9 @@ there is a quadruple $q^1,q^2,y^1,y^2$ in $\Lob m\kappa$
 such that 
 \begin{align*}
 \dist{q^1}{q^2}{}&=\dist{p^1}{p^2}{},
-\\
+&
 \dist{y^1}{y^2}{}&=\dist{x^1}{x^2}{},
-\\
+&
 \dist{q^i}{y^j}{}&\le \dist{p^i}{x^j}{}
 \end{align*}
 for any $i$ and $j$.
@@ -110,26 +114,27 @@ for any $i$ and $j$.
 
 The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower;
 see Section~\ref{ultralimits} for the related definitions.
+Recall that $\o$ denotes a selective ultrafilter on $\NN$ which is fixed once for all.
 
 
 \begin{thm}{Proposition}
 \label{prop:CAT^omega}
-Let $\spc{U}_n$ is a $\CAT{\kappa_n}$ space for each $n\in\NN$.
+Let $\spc{U}_n$ be a $\CAT{\kappa_n}$ space for each $n\in\NN$.
 Assume $\spc{U}_n\to \spc{U}_\o$ and $\kappa_n\to\kappa_\o$ as $n\to\o$.
 Then $\spc{U}_\o$ is $\CAT{\kappa_\o}$.
 
-Moreover, a metric space $\spc{U}$ is $\CAT\kappa$ space if and only if its ultrapower $\spc{U}^\o$ is $\CAT\kappa$.
+Moreover, a metric space $\spc{U}$ is $\CAT\kappa$ if and only if so is its ultrapower $\spc{U}^\o$.
 
 \end{thm} 
 
 \section{Geodesics}
 
-\begin{thm}{Theorem on uniqueness of geodesics}\label{thm:cat-unique}\label{thm:cat-complete} 
+\begin{thm}{Uniqueness of geodesics}\label{thm:cat-unique}\label{thm:cat-complete} 
 In a complete length $\CAT\kappa$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
 \end{thm}
 
 \parit{Proof.} 
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space.
+Fix a complete length $\CAT\kappa$ space $\spc{U}$.
 Fix two points $p^1,p^2\in \spc{U}$  such that 
 \[\dist{p^1}{p^2}{\spc{U}}<\varpi\kappa.\]
 
@@ -142,7 +147,7 @@ that is,
 
 By the law of cosines, $\angk{\kappa} {p^1}{z_n}{p^2}$ and $\angk{\kappa} {p^2}{z_n}{p^1}$ are arbitrarily small when $n$ is sufficiently large.
 
-Let us apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z_\kay$ with large $n$ and $\kay$.
+Let us apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1$, $p^2$, $z_n$, $z_\kay$ with large $n$ and $\kay$.
 We conclude that  $\angk{\kappa} {p}{z_n}{z_\kay}$ is arbitrarily small when $n,\kay$ are sufficiently large and $p$ is either $p^1$ or $p^2$.  
 By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ converges in itself.  
 
@@ -171,22 +176,8 @@ Show that any geodesic in $\spc{U}$ can be extended
 as a two-side infinite local geodesic.
 
 Moreover the same holds for any locally geodesic locally $\CAT{}$ space $\spc{U}$ with nontrivial local homology groups at any point;
-in particular if $\spc{U}$ is a homological manifold.
+the latter holds in particular, if $\spc{U}$ is a homological manifold.
 \end{thm}
-
-The following definition is analogous to the definition of $\CAT{}$ spaces,
-but more standard in the literature.
-
-\begin{thm}{Definition}\label{def:cat}
-A metric space which  satisfy $\CAT\kappa$ comparison for any quadrouple of points is called \emph{$\CAT\kappa$ space}.
- 
-We say that the space $\spc{U}$ is $\CAT{}{}$ if it is $\CAT{}\kappa$ for some $\kappa\in\RR$.  
-\end{thm}
-
-This terminology was introduced by Gromov;  
-$\CAT{}$ stands for Cartan--Alexandrov--Toponogov, 
-although Toponogov did not work with curvature bounded above.
-Previously, these spaces were called \emph{$\mathfrak{R}_\kappa$ domains}, which was Alexandrov's terminology.
 
 From Theorem on uniqueness of geodesics~\ref{thm:cat-unique}
 we get the following.
@@ -195,8 +186,6 @@ we get the following.
 Any a complete length $\CAT\kappa$ space space is $\varpi\kappa$-geodesic.
 \end{thm}
 
-In other words the Definition~\ref{def:cat} is weaker than \ref{def:ccat}.
-On the other hand we have the following.
 
 \begin{thm}{Proposition}\label{cor:cat-completion} 
 The completion of any geodesic $\CAT{\kappa}$ space is a complete length $\CAT\kappa$ space.
@@ -234,24 +223,20 @@ It remains to apply  Theorem~\ref{thm:cat-unique}.
 
 Here we give a few reformulations of Definition~\ref{def:ccat}.
 
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/lem_alex1(0.3)}
-\lbl[br]{17,59;$y$}
-\lbl[r]{1,2;$p$}
-\lbl[l]{86,13;$x$}
-\lbl[lb]{67,32;$z$}
+\begin{wrapfigure}[6]{r}{28mm}
+\begin{lpic}[t(-0mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
+\lbl[lb]{10,23;$x$}
+\lbl[rt]{1.5,.5;$p$}
+\lbl[bl]{25,7.5;$y$}
+\lbl[lb]{17,15;$z$}
 \end{lpic}
 \end{wrapfigure}
 
+
 \begin{thm}{Theorem}
 \label{thm:defs_of_cat} 
-Let  $\spc{U}$ be a $\varpi\kappa$-geodesic space.  
-Then
-\begin{subthm}{cat-ineq} 
-$\spc{U}$ is $\CAT\kappa$
-\end{subthm}
-if and only if %$\spc{U}$ is $\varpi\kappa$-geodesic and 
-one of the following conditions holds for all $p,x,y\in \spc{U}$ of perimeter $<2\cdot\varpi\kappa$:
+If $\spc{U}$ is a $\CAT\kappa$ space then 
+the following conditions holds for all triples $p,x,y\in \spc{U}$ of perimeter $<2\cdot\varpi\kappa$:
 
 \begin{subthm}{cat-2-sum} (adjacent-angles comparison\index{comparison!adjacent-angles comparison}) for any geodesic $[x y]$ and $z\in \l]x y\r[$, we have
 \[\angk\kappa z p x
@@ -276,6 +261,9 @@ or equivalently,
 \[\side\kappa \hinge x p y\le\dist{p}{y}{}.\]
 \end{subthm}
 %SBA:  a ``hinge'' in English is a ``movable mechanism''.  It must MOVE. BBI uses it correctly:  if you look up ``hinge'' in BBI index, it sends you to monotonicity.
+
+Moreover, if $\spc{U}$ be a $\varpi\kappa$-geodesic then converse holds in each case.  
+
 \end{thm}
 
 
@@ -291,14 +279,14 @@ vacuously true in a
 totally disconnected space, while 
 $\CAT\kappa$ comparison is not.
 
-\parit{Proof. (\ref{SHORT.cat-ineq}) $\Rightarrow$ (\ref{SHORT.cat-2-sum})}. 
+\parit{Proof. (\ref{SHORT.cat-2-sum})}. 
 Since the perimeter of $p,x,y$ is $<2\cdot \varpi\kappa$, so is the perimeter of any subtriple of $p,z,x,y$ by the triangle inequality. 
 By Alexandrov's lemma (\ref{lem:alex}), 
 \[\angk\kappa p z x +\angk\kappa p z y  < \angk{\kappa} p x y \ \text{or}\  \angk\kappa z p x  +\angk\kappa z p y  =\pi.\]
 In the former case, $\CAT\kappa$ comparison (\ref{def:2+2}) applied to the quadruple $p, z, x, y$ implies
 \[\angk\kappa z p x  +\angk\kappa z p y  \ge \angk{\kappa} z x y =\pi.\]
 
-\parit{(\ref{SHORT.cat-2-sum}) $\Leftrightarrow$ (\ref{SHORT.cat-monoton})}. Follows directly from  Alexandrov's lemma (\ref{lem:alex}).
+\parit{(\ref{SHORT.cat-2-sum}) $\Leftrightarrow$ (\ref{SHORT.cat-monoton})}. Follows from  Alexandrov's lemma (\ref{lem:alex}).
 
 \parit{(\ref{SHORT.cat-monoton}) $\Rightarrow$ (\ref{SHORT.cat-hinge}).} 
 By (\ref{SHORT.cat-monoton}), for $\bar p\in\l]x p\r]$ and $\bar y\in\l]x y\r]$ the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nondecreasing in each argument.
@@ -307,8 +295,10 @@ $\mangle\hinge x p y\z=\inf\angk\kappa x{\bar p}{\bar y}$.
 Thus $\mangle\hinge x p y$ exists and is
 at most $\angk\kappa x p y$. 
 
-\parit{(\ref{SHORT.cat-hinge}) $\Rightarrow$ (\ref{SHORT.cat-2-sum}).} 
-By (\ref{SHORT.cat-hinge}) and the triangle inequality for angles (\ref{claim:angle-3angle-inq}),
+\parit{Converse.} Assume $\spc{U}$ is $\varpi\kappa$-geodesic. 
+Let us first show that in this case (\ref{SHORT.cat-hinge}) $\Rightarrow$ (\ref{SHORT.cat-2-sum}).
+
+Indeed, by (\ref{SHORT.cat-hinge}) and the triangle inequality for angles (\ref{claim:angle-3angle-inq}),
 \[\angk\kappa z p x
 +\angk\kappa z p y \ge \mangle\hinge z p x
 +\mangle\hinge z p y \ge \pi.\]
@@ -323,7 +313,8 @@ By (\ref{SHORT.cat-hinge}) and the triangle inequality for angles (\ref{claim:an
 \end{lpic}
 \end{wrapfigure}
 
-\parit{(\ref{SHORT.cat-monoton}) $\Rightarrow$ (\ref{SHORT.cat-ineq}).}
+Therefore, it is sufficient to prove the converse for \textit{(\ref{SHORT.cat-monoton})}.
+
 Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ , we must verify $\CAT\kappa$ comparison (\ref{def:2+2}).
 In $\Lob2\kappa$, construct the model triangles  $\trig{\~p^1}{\~p^2}{\~x^1} = \modtrig\kappa(p^1 p^2 x^1 )$ 
 and $\trig{\~p^1}{\~p^2}{\~x^2}= \modtrig\kappa(p^1 p^2 x^2)$, lying on either side of a common segment $[\~p^1 \~p^2]$.
@@ -389,7 +380,7 @@ is convex.
 \begin{thm}{Proposition}
 \label{prop:inherit-bound}
 Assume $\kappa<\Kappa$.
-Then any  $\CAT\kappa$ space is $\CAT\Kappa$.
+Then any complete length $\CAT\kappa$ space is $\CAT\Kappa$.
 
 Moreover a space $\spc{U}$ is $\CAT\kappa$ if and only if $\spc{U}$ is $\CAT\Kappa$ for any $\Kappa>\kappa$.
 \end{thm}
@@ -403,10 +394,11 @@ The second statement follows since the function $\kappa\mapsto\angk\kappa x y z$
 
 \section{Thin triangles} \label{sec:thin-triangle}
 
-In this section we introduce the notion of thin triangles,
-use it to characterize $\CAT{}$ spaces,
-and prove inheritance for thin triangles with respect to decomposition. 
-The inheritance lemma will lead to two fundamental constructions:  
+In this section we define thin triangles,
+use it to characterize $\CAT{}$ spaces.
+The inheritance for thin triangles with respect to decomposition
+is the main result of this section;
+it will lead to two fundamental constructions:  
 Alexandrov's patchwork globalization  (\ref{thm:alex-patch}) 
 and Reshetnyak gluing (\ref{thm:gluing}).
  
@@ -448,27 +440,29 @@ and $v=f(\~v)$, $w=f(\~w)$.
 
 
 \begin{thm}{Proposition}\label{prop:k-thin}
-Let $\spc{U}$ be a $\varpi\kappa$-geodesic length space. 
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic space. 
 Then $\spc{U}$ is  $\CAT\kappa$
 if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  is $\kappa$-thin.
 \end{thm}
 
 \parit{Proof.}
-``If'' is immediate from point-on-side comparison (\ref{cat-monoton}).  ``Only if'' follows from Corollary \ref{two-mono-cba}.\qeds
+``If'' is immediate from point-on-side comparison (\ref{cat-monoton}).  
+``Only if'' follows from the angle-sidelength  monotonicity \ref{two-mono-cba}.
+\qeds
 
 
 \begin{thm}{Corollary}\label{cor:loc-geod-are-min}
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
-Then any local geodesic in $\spc{U}$ of length $<\varpi\kappa$ is a minimizing geodesic.
+Then any local geodesic in $\spc{U}$ of length $<\varpi\kappa$ is length-minimizing.
 \end{thm}
 
 \parit{Proof.}
 Suppose $\gamma\:[0,\ell]\to\spc{U}$ is a local geodesic  that is not minimizing, with $\ell<\varpi\kappa$.
 Choose $a$ to be the maximal value 
 such that $\gamma$ is minimizing on $[0,a]$.
-Further choose $b\in(a,\varpi\kappa-a)$ so that $\gamma$ is minimizing on $[a,b]$.
+Further choose $b>a$ so that $\gamma$ is minimizing on~$[a,b]$.
 
-Since triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is $\kappa$-thin, then
+Since triangle $\trig{\gamma(0)}{\gamma(a)}{\gamma(b)}$ is $\kappa$-thin, we have
 \[\dist{\gamma(a-\eps)}{\gamma(a+\eps)}{}<2\cdot\eps\]
 for all small $\eps>0$,
 a contradiction.
@@ -479,22 +473,22 @@ Now let us formulate the main result of this section.
 The inheritance lemma states that  in any metric space, a triangle is $\kappa$-thin if it decomposes into $\kappa$-thin triangles. 
 In contrast, $\Alex\kappa$ comparisons are not inherited in this way.
 
-\begin{wrapfigure}[6]{r}{30mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/lem_alex1(0.3)}
-\lbl[br]{17,59;$y$}
-\lbl[r]{1,2;$p$}
-\lbl[l]{86,13;$x$}
-\lbl[lb]{67,32;$z$}
+\begin{wrapfigure}[7]{r}{28mm}
+\begin{lpic}[t(-0mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
+\lbl[lb]{10,23;$x$}
+\lbl[rt]{1.5,.5;$p$}
+\lbl[bl]{25,7.5;$y$}
+\lbl[lb]{17,15;$z$}
 \end{lpic}
 \end{wrapfigure}
 
-\begin{thm}{Inheritance lemma for thin triangles}
+\begin{thm}{Inheritance lemma}
 \label{lem:inherit-angle} 
 In a metric space, consider a triangle $\trig p x y$ that \emph{decomposes}\index{decomposed triangle} 
 into two triangles $\trig p x z$ and $\trig p y z$;
 that is, $\trig p x z$ and $\trig p y z$ have common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
 
-If triangle $\trig p x y$ has perimeter $<2\cdot\varpi\kappa$
+If the triangle $\trig p x y$ has perimeter $<2\cdot\varpi\kappa$
 and both triangles $\trig p x z$ and $\trig p y z$ are $\kappa$-thin, then triangle $\trig p x y$ is  $\kappa$-thin.
 \end{thm} 
 
@@ -504,15 +498,22 @@ which is part of the proof of \cite[Lemma 2]{reshetnyak:major}.
 
 \begin{thm}{Lemma}\label{lem:quadrangle}
 Let $\trig{\~p}{\~x}{\~y}$ be a triangle in $\Lob2{\kappa}$ and $\~z\in[\~x\~y]$.
-Set $\~D=\Conv\trig{\~p}{\~x}{\~y}$.  
+Consider the solid triangle $\~D=\Conv\trig{\~p}{\~x}{\~y}$.  
 Construct  points $\dot p, \dot x, \dot z, \dot y\in \Lob2{\kappa}$ such that 
-$\dist{\dot p}{\dot x}{}=\dist{\~p}{\~x}{}$, 
-$\dist{\dot p}{\dot y}{}=\dist{\~p}{\~y}{}$,
-$\dist{\dot x}{\dot z}{}=\dist{\~x}{\~z}{}$, 
-$\dist{\dot y}{\dot z}{}=\dist{\~y}{\~z}{}$,
-$\dist{\dot p}{\dot z}{}\le \dist{\~p}{\~z}{}$
+\begin{align*}
+\dist{\dot p}{\dot x}{}&=\dist{\~p}{\~x}{},
+&
+\dist{\dot p}{\dot y}{}&=\dist{\~p}{\~y}{},
+&
+\dist{\dot p}{\dot z}{}&\le \dist{\~p}{\~z}{},
+\\
+\dist{\dot x}{\dot z}{}&=\dist{\~x}{\~z}{},
+&
+\dist{\dot y}{\dot z}{}&=\dist{\~y}{\~z}{},
+\end{align*}
 and points $\dot x$ and $\dot y$ lie on either side of $[\dot p\dot z]$.
-Set $\dot D=\Conv\trig {\dot p}{\dot x}{\dot z}\cup \Conv\trig {\dot p} {\dot y} {\dot z}$.
+Set 
+\[\dot D=\Conv\trig {\dot p}{\dot x}{\dot z}\cup \Conv\trig {\dot p} {\dot y} {\dot z}.\]
 
 Then there is a short map $F\:\~D\to \dot D$ that maps $\~p$, $\~x$, $\~y$ and $\~z$ to $\dot p$, $\dot x$, $\dot y$ and $\dot z$ respectively.
 \end{thm}
@@ -561,7 +562,7 @@ By construction, $F$ satisfies the conditions of the lemma.
 \qeds
 
 
-\parit{Proof of Inheritance for thin triangles (\ref{lem:inherit-angle}).}
+\parit{Proof of the inheritance lemma (\ref{lem:inherit-angle}).}
 Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig\kappa(p x z)$ 
 and $\trig {\dot p} {\dot y} {\dot z}=\modtrig\kappa(p y z)$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
@@ -616,7 +617,7 @@ By composition,  the natural map from $\trig{\~ p}{\~ x}{\~ y}$ to $\trig p y z$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Function comparison and development} \label{sec:func-comp}
+\section{Function comparison} \label{sec:func-comp}
 
 
 In this section, we give analytic and geometric ways of viewing the point-on-side comparison (\ref{cat-monoton}) as a convexity condition.
@@ -626,7 +627,7 @@ In particular, a geodesic space $\spc{U}$ is $\CAT{0}$ if and only if  for any $
 see Section~\ref{sec:conv-fun} for definition.
  
 \begin{thm}{Theorem}\label{thm:function-comp} 
-Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic length space. 
+Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic space. 
 Then the following are equivalent:
 \begin{subthm}{function-comp-cat} 
 $\spc{U}$ is $\CAT\kappa$,
@@ -637,7 +638,9 @@ for any $p\in \spc{U}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies
 in $\oBall(p,\varpi\kappa)$.
 \end{subthm}\end{thm}
 
-\parit{Proof.} For a geodesic $[x y]$ in $\oBall(p,\varpi\kappa)$, consider the model triangle $\trig{\~p}{\~x}{\~y}\z=\modtrig\kappa(p x y)$, and set \begin{align*} 
+\parit{Proof.} Fix sufficiently short geodesic $[x y]$ in $\oBall(p,\varpi\kappa)$.
+We can assume that the model triangle $\trig{\~p}{\~x}{\~y}\z=\modtrig\kappa(p x y)$ is defined. 
+Set \begin{align*} 
 \~r(t)&=\dist{\~p}{\geod_{[\~x\~y]}(t)}{},
 & 
 r(t)&=\dist{p}{\geod_{[xy]}(t)}{}.                           \end{align*}
