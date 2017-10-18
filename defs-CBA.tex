@@ -15,7 +15,7 @@ Patchwork globalization in \ref{sec:patchwork},
 Lifting globalization in \ref{sec:cat-globalize}
 and the Hadamard--Cartan theorem in \ref{sec:Hadamard--Cartan}.
 
-The necesury techniques to prove these theorems include 
+The necessary techniques to prove these theorems include 
 Reshetnyak's gluing theorem discussed in \ref{sec:cba-gluing},
 the structure of the space of geodesics discussed in \ref{sec:geod-space}, 
 and Reshetnyak's majorization theorem in \ref{sec:resh-kirz}.
@@ -66,7 +66,7 @@ is undefined.
 \begin{thm}{Definition}
 \label{def:ccat}
 A metric space $\spc{U}$ 
-is called $\CAT{}{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
+is called $\CAT{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
 
 We say that $\spc{U}$ is $\CAT{}$ if it is $\CAT{\kappa}$ for some $\kappa\in\RR$.  
 \end{thm}
@@ -80,9 +80,9 @@ in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
 }
 
 This terminology was introduced by Gromov;  
-$\CAT{}$ stands for \'Elie Cartan, Aleksandr Aleksandrov and Victor Toponogov.
+$\CAT{}$ stands for \'Elie Cartan, Alexander Alexandrov and Victor Toponogov.
 Originally these spaces were called \emph{$\mathfrak{R}_\kappa$ domains};
-it is Alexandrov's terminology which is still in use.
+this is Alexandrov's terminology and is still in use.
 
 
 \begin{thm}{Exercise}
@@ -150,7 +150,7 @@ By the law of cosines, $\angk{\kappa} {p^1}{z_n}{p^2}$ and $\angk{\kappa} {p^2}{
 
 Let us apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1$, $p^2$, $z_n$, $z_\kay$ with large $n$ and $\kay$.
 We conclude that  $\angk{\kappa} {p}{z_n}{z_\kay}$ is arbitrarily small when $n,\kay$ are sufficiently large and $p$ is either $p^1$ or $p^2$.  
-By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ converges in itself.  
+By \ref{eq:to|p1p2|/2} and the law of cosines, $(z_n)$ converges.  
 
 Since $\spc{U}$ is complete, the sequence $(z_n)$ converges to a midpoint of $p^1$ and $p^2$. 
 By Lemma~\ref{lem:mid>geod} we obtain  the existence of a geodesic $[p^1p^2]$.
@@ -180,13 +180,12 @@ Moreover the same holds for any locally geodesic locally $\CAT{}$ space $\spc{U}
 the latter holds in particular, if $\spc{U}$ is a homological manifold.
 \end{thm}
 
-From Uniqueness of geodesics~\ref{thm:cat-unique}
+By Uniqueness of geodesics~\ref{thm:cat-unique},
 we have the following.
 
 \begin{thm}{Corollary}\label{cor:cat-ccat}
-Any a complete length $\CAT\kappa$ space space is $\varpi\kappa$-geodesic.
+Any  complete length $\CAT\kappa$ space is $\varpi\kappa$-geodesic.
 \end{thm}
-
 
 \begin{thm}{Proposition}\label{cor:cat-completion} 
 The completion of any geodesic $\CAT{\kappa}$ space is a complete length $\CAT\kappa$ space.
@@ -383,10 +382,10 @@ is convex.
 Assume $\kappa<\Kappa$.
 Then any complete length $\CAT\kappa$ space is $\CAT\Kappa$.
 
-Moreover a space $\spc{U}$ is $\CAT\kappa$ if and only if $\spc{U}$ is $\CAT\Kappa$ for any $\Kappa>\kappa$.
+Moreover a space $\spc{U}$ is $\CAT\kappa$ if  $\spc{U}$ is $\CAT\Kappa$ for all $\Kappa>\kappa$.
 \end{thm}
 
-\parit{Proof.} The first statement follows from the adjacent-angles comparison (\ref{cat-2-sum}) and the monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
+\parit{Proof.} The first statement follows from Corollary \ref{cor:cat-ccat}, the adjacent-angles comparison (\ref{cat-2-sum}) and the monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
 
 The second statement follows since the function $\kappa\mapsto\angk\kappa x y z$ is continuous.
 \qeds
@@ -447,7 +446,7 @@ if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  
 \end{thm}
 
 \parit{Proof.}
-``If'' is immediate from point-on-side comparison (\ref{cat-monoton}).  
+``If'' is immediate from point-on-side comparison \ref{cat-monoton}.  
 ``Only if'' follows from the angle-sidelength  monotonicity \ref{two-mono-cba}.
 \qeds
 
@@ -562,7 +561,7 @@ By construction, $F$ satisfies the conditions of the lemma.
 \qeds
 
 
-\parit{Proof of the inheritance lemma (\ref{lem:inherit-angle}).}
+\parit{Proof of Inheritance lemma \ref{lem:inherit-angle}.}
 Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig\kappa(p x z)$ 
 and $\trig {\dot p} {\dot y} {\dot z}=\modtrig\kappa(p y z)$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
@@ -682,18 +681,17 @@ and any closed ball of radius $\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
 \end{thm}
 
 \parit{Proof.}
-Suppose $p\in\spc{U}$, $ R\le\varpi\kappa/2$ and two points 
+Suppose $p\in\spc{U}$, $ R\le\varpi\kappa/2$,  and two points 
 $x$ and $y$ lie in $\cBall[p, R]$ or $\oBall(p, R)$.
 By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$ then any
  geodesic $[x y]$ lies in $\oBall(p, \varpi\kappa)$.
  
-By function comparison (\ref{thm:function-comp})
-the geodesic $[x y]$ lies in $\cBall[p,R]$ and $\oBall(p,R)$ correspondingly.
+By function comparison (\ref{thm:function-comp}), 
+the geodesic $[x y]$ lies in $\cBall[p,R]$ or $\oBall(p,R)$ respectively.
 
-We proved that any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
-This implies convexity unless there is a pair of points in the ball on
-the distance at least $\varpi\kappa$.
-By triangle inequality, the later is possible only for the closed ball of radius $\tfrac{\varpi\kappa}2$.
+Thus any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
+This implies convexity unless there is a pair of points in the ball at distance at least $\varpi\kappa$.
+By the  triangle inequality, the latter is possible only for the closed ball of radius $\tfrac{\varpi\kappa}2$.
 \qeds
 
 \begin{thm}{Proposition}
@@ -710,15 +708,15 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 Assume that $\dist{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
-there is unique point $p^*\in K$ which minimze the distance to $p$;
-that is $\dist{p^*}{p}{}=\dist{K}{p}{}$. 
+there is unique point $p^*\in K$ that minimizes the distance to $p$;
+that is, $\dist{p^*}{p}{}=\dist{K}{p}{}$. 
 
 
 
 \end{thm}
 
 \parit{Proof.} 
-Fix $r$ between $\dist{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
+Fix $r$ properly between $\dist{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
 By function comparison (\ref{thm:function-comp}) 
 the function $f=\md\kappa\circ\dist{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
@@ -734,7 +732,7 @@ Show that the closest-point projection $\spc{U}\to K$ is short.
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
 Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
 Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in \spc{U}$.
-Show that there is a short retractionof $\spc{U}$ on $K$. 
+Show that there is a short retractionof $\spc{U}$ to $K$. 
 \end{thm}
 
 
@@ -753,9 +751,9 @@ holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
 It is sufficient to show that Jensen's inequality (\ref{y''-mono})
 holds on a sufficiently short 
 geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
-Namely, since 
+Since 
 \[\dist{K}{p}{},\dist{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
-we can assume that 
+we may assume that 
 \[\dist{p}{q}{}+\dist{K}{p}{}+\dist{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
 
 Namely, for each $x\in[pq]$,
