@@ -49,10 +49,7 @@ one of the six model angles
 \[\angk{\kappa}{p^1}{x^1}{x^2},\ \angk{\kappa}{p^1}{p^2}{x^1},\ \angk{\kappa}{p^1}{p^2}{x^2},\ \angk{\kappa}{p^2}{x^1}{x^2},\ \angk{\kappa}{p^2}{p^1}{x^1},\ \angk{\kappa}{p^2}{p^1}{x^2}\]
 is undefined.
 \end{subthm}
-
 \end{thm}
-
-{
 
 \begin{wrapfigure}{r}{34mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(3mm)]{pics/22(1)}
@@ -60,13 +57,43 @@ is undefined.
 \lbl[rb]{20,24;$p^2$}
 \lbl[r]{2,15;$x^1$}
 \lbl[l]{31,12;$x^2$}
+\lbl[rb]{16,12;$z$}
 \end{lpic}
 \end{wrapfigure}
+
+Here is more intuitive reformulation.
+
+\begin{thm}{Reformulation}
+Let $\spc{X}$ be a metric space.
+A quadruple $p^1,p^2,x^1,x^2\in \spc{X}$ satisfies $\CAT\kappa$ point comparison if one of the following holds:
+\begin{subthm}{}
+One of the triples 
+$(p^1,p^2,x^1)$ 
+or 
+$(p^1, p^2, x^2)$ 
+has perimeter $>2\cdot\varpi\kappa$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\trig{\~p^1}{\~p^2}{\~x^1}
+=
+\modtrig\kappa(p^1 p^2 x^1)$ 
+and
+$\trig{\~p}{\~p^2}{\~x^2}
+=
+\modtrig\kappa p^1 p^2 x^2$, then
+\[\dist{\~x^1}{\~z}{}+\dist{\~z}{\~x^2}{}\ge \dist{x^1}{x^2}{},\]
+for any $\~z\in[\~p^1\~p^2]$.
+
+\end{subthm}
+
+\end{thm}
+
 
 \begin{thm}{Definition}
 \label{def:ccat}
 A metric space $\spc{U}$ 
-is called $\CAT{}{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
+is called $\CAT{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
 
 We say that $\spc{U}$ is $\CAT{}$ if it is $\CAT{\kappa}$ for some $\kappa\in\RR$.  
 \end{thm}
@@ -77,7 +104,6 @@ The condition $\spc{U}$ is $\CAT\kappa$ should be understood as ``$\spc{U}$ has 
 In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
 in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
 
-}
 
 This terminology was introduced by Gromov;  
 $\CAT{}$ stands for \'Elie Cartan, Aleksandr Aleksandrov and Victor Toponogov.
@@ -209,7 +235,14 @@ Here is a corollary from Proposition~\ref{cor:cat-completion}
 and Theorem~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:cat-unique}
-In a  $\varpi\kappa$-geodesic $\CAT\kappa$ space, pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+Let $\spc{U}$ be a  $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+Then pairs of points in $\spc{U}$ at distance less than $\varpi\kappa$ are joined by unique geodesics, and these geodesics depend continuously on their endpoint pairs.
+
+Moreover for any pair of points $p,q\in \spc{U}$ in and any 
+\[\Lip>\sup\set{\frac{\sn\kappa r}{\sn\kappa \dist{p}{q}{}}}{0\le r\le \dist{p}{q}{}}\]
+there are neighborhoods $\Omega_p\ni p$ and $\Omega_q\ni q$ such that the map
+\[(x,y,t)\mapsto \geodpath_{[xy]}(t)\]
+is $\Lip$-Lipschitz in $\Omega_p\times \Omega_q\times[0,1]$.
 \end{thm}
 
 \parit{Proof.}

@@ -1,3 +1,284 @@
+
+
+
+
+The set of metrics on $\{a^1,a^2,\dots,a^n\}$ that can be embedded into a product of spheres with different radii admits a simple description.
+Obviously, this gives a sufficient condition for \ref{open:n-point-CBB}.
+This  condition is not necessary.
+For instance, as follows from \cite[2.2]{vilms},
+a sufficiently dense finite subset in a generic closed positively 
+curved manifold can not be embedded into a product of spheres.
+
+Theorem \ref{thm:pos-config} gives a necessary condition for \ref{open:n-point-CBB},
+but the condition is not sufficient.
+One can see this in the following example constructed by Sergei Ivanov:
+
+\begin{wrapfigure}{r}{40mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/ivanov-example(0.7)}
+\lbl[rb]{1,16;$a$}
+\lbl[lb]{55,16;$b$}
+\lbl[rb]{28,31;$x$}
+\lbl[rb]{28,7;$y$}
+\lbl[rt]{28,1;$z$}
+\lbl[lb]{44,26;$q$}
+\end{lpic}
+\end{wrapfigure}
+
+
+\parbf{Example.}
+Consider the finite set $\mathcal{F}$ formed by 6 points $a$, $b$, $x$, $y$, $z$ and $q$ with distances defined as follows:
+\begin{enumerate}
+\item $\dist{a}{b}{}=4$;
+\item $\dist{a}{x}{}=\dist{a}{y}{}=\dist{a}{z}{}=\dist{b}{x}{}=\dist{b}{y}{}=\dist{b}{z}{}=2$;
+\item $\dist{x}{y}{}=2$, $\dist{y}{z}{}=1$, $\dist{x}{z}{}=3$;
+\item $\dist{x}{q}{}=\dist{q}{b}{}=1$ and thus $\dist{a}{q}{}=3$;
+\item $\angk{0}{x}{q}{y}=\angk{0}{x}{q}{z}=\tfrac\pi3$; 
+that is, $\dist{q}{y}{}=\sqrt{3}$ and $\dist{q}{z}{}=\sqrt{7}$.
+\end{enumerate}
+
+On the diagram the degenerate triangles are marked by solid lines.
+Note that if one removes from $\spc{F}$ the point $q$ then the remaining part can be embedded in a sphere of intrinsic diameter $4$ with poles at $a$ and $b$ and the points $x,y,z$ on the equator.
+On the other hand, if one removes the  point $a$ from the space and changes the distance $\dist{z}{b}{}$ then it can be isometrically embedded into  the plane.
+
+It is straightforward to check that this finite set satisfies the conclusion of Theorem \ref{thm:pos-config} for $\kappa=0$.
+However, if such a metric appeared as an inherited metric on a subset $\{a,b,x,y,z,q\}$ in  be a complete length $\Alex{0}$ space $\spc{L}$
+then clearly  
+\[
+\mangle\hinge x a y\z
+=
+\mangle\hinge y a z\z
+=
+\mangle\hinge y b z\z
+= 
+\tfrac{\pi}{3},
+\]
+contradicting $\dist{b}{z}{}=2$.
+
+\medskip
+
+The following problem was mentioned in \cite[15(b)]{gromov-CAT}
+
+
+\begin{thm}{Open problem}\label{open:n-point-CBA}
+Describe metrics on an $n$-point set which are embeddable into complete length $\CAT\kappa$ spaces.
+\end{thm}
+
+The set of metrics on $\{a^1,a^2,\dots,a^n\}$ which can be embedded into a product of trees and hyperbolic spaces admits a simple description using decrypting matrices defined above.
+Obviously, this gives a sufficient condition for problem \ref{open:n-point-CBA}.
+This  condition is not necessary.
+The existence of a counterexample follows again
+from \cite[2.2]{vilms};
+it is sufficient to take a sufficiently dense finite subset 
+in a ball in a generic Hadamard space.
+
+The (2$n$+2)-point comparison (\ref{CBA-n-point}) gives a necessary condition for \ref{open:n-point-CBA} 
+which is not sufficient.
+One can see this in the following example constructed by Nina Lebedava:
+
+Consider a square $[\~x^1\~y^1\~x^2\~y^2]$ in $\EE^3$
+with yet two points in general position $\~z^1$, $\~z^2$ so that the convex hull of $\~x^1,\~x^2,\~y^1,\~y^2,\~z^1,\~z^2$ forms a nonregular octahedron with the faces formed by triangles $[\~x^i \~y^j \~z^\kay]$.
+Consider the induced metric on the 6-point set $\~x^1,\~x^2,\~y^1,\~y^2,\~z^1,\~z^2$.
+Note that if we increase the $\dist{\~z^1}{\~z^2}{}$ slightly 
+then in the obtained 6-point metric $\spc{F}_6$ space all the (2+2) and (4+2)-point comparisons continue to hold.
+
+Now assume we embed the points $x^1,x^2,y^1,y^2,z^1,z^2$ lie in a complete length $\CAT{0}$ space $\spc{U}$ in such a way that all the distances except $\dist{z^1}{z^2}{}$ are the same as between corresponding points in $\spc{F}_6$.
+Since $[\~x^1\~y^1\~x^2\~y^2]$ is a square,
+by Exercise~\ref{ex:square}, 
+we get that $\spc{U}$ contains an isometric copy of a square $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}\iso\Conv(\~x^1,\~y^1,\~x^2,\~y^2)_{\EE^3}$.
+Let \[\~w\in  \Conv(\~x^1,\~y^1,\~x^2,\~y^2)_{\EE^3}\]
+and $w$ be corresponding point in $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}$.
+By 
+point-on-side comparison (\ref{cat-monoton}) we have $\dist{z^i}{w}{\spc{U}}\le \dist{\~z^i}{\~w}{\EE^3}$.
+It follows that 
+\[\dist{z^1}{z^2}{\spc{U}}
+\le
+\dist{\~z^1}{\~z^2}{\EE^3},\] 
+a contradiction.%???
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{(2\textit{n}+2)-point comparison}\label{sec:2n+2}
+
+Here we give a generalization of the $\CAT\kappa$  comparison  to $n$ points.
+It follows from the generalized Kirszbraun's theorem.
+
+First let us give a reformulation of $\CAT\kappa$ comparison. 
+
+\begin{thm}{Reformulation of $\CAT\kappa$ comparison}
+Let $\spc{X}$ be a metric space.
+A quadruple $p,q,x,y\in \spc{X}$ satisfies $\CAT\kappa$ point comparison if one of the following holds:
+\begin{subthm}{}
+One of the triples 
+$(p,q,x)$ 
+or 
+$(p, q, y)$ 
+has perimeter $>2\cdot\varpi\kappa$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\trig{\~p}{\~q}{\~x}
+=
+\modtrig\kappa(p q x)$ 
+and
+$\trig{\~p}{\~q}{\~y}
+=
+\modtrig\kappa p q y$, then
+\[\dist{\~x}{\~z}{}+\dist{\~z}{\~y}{}\ge \dist{x}{y}{},\]
+for any $\~z\in[\~p\~q]$.
+
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{(2\textit{n}+2)-point comparison}\label{CBA-n-point}
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space.
+Consider $x,y\in \spc{U}$ and  an array of pairs of points $(p^1,q^1)$, $(p^2,q^2),\dots,(p^n,q^n)$  in $\spc{U}$, such that there is a model configuration
+$\~x$, $\~y$ and array of pairs $(\~p^1,\~q^1)$, $(\~p^2,\~q^2),\dots,(\~p^n,\~q^n)$ in $\Lob{3}\kappa$ with the following properties:
+\begin{subthm}{}
+$\trig{\~x}{\~p^1}{\~q^1}=\modtrig\kappa x p^1q^1$
+and 
+$\trig{\~y}{\~p^n}{\~q^n}=\modtrig\kappa y p^n q^n$;
+\end{subthm}
+
+\begin{subthm}{}
+The simplex $\~p^i\~p^{i+1}\~q^i\~q^{i+1}$ is a model simplex%
+\footnote{that is,
+perimeter of each triple in $p^i,p^{i+1},q^i$ and $q^{i+1}$ is $<2\cdot\pi$ and
+$\dist{\~p^i}{\~q^i}{}
+=\dist{p^i}{q^i}{}$,
+$\dist{\~p^i}{\~p^{i+1}}{}
+=\dist{p^i}{p^{i+1}}{}$,
+$\dist{\~q^i}{\~q^{i+1}}{}
+=\dist{q^i}{q^{i+1}}{}$,
+$\dist{\~p^i}{\~q^{i+1}}{}
+=
+\dist{p^i}{q^{i+1}}{}$ 
+and $\dist{\~p^{i+1}}{\~q^{i}}{}=\dist{p^{i+1}}{q^{i}}{}$.}
+ of $p^ip^{i+1}q^iq^{i+1}$
+for all $i$.
+\end{subthm}
+
+Then for any choice of $n$ points $\~z^i\in [\~p^i\~q^i]$,
+we have
+\[\dist{\~x}{\~z^1}{}+\dist{\~z^1}{\~z^2}{}+\dots+\dist{\~z^{n-1}}{\~z^n}{}+\dist{\~z^n}{\~y}{}
+\ge 
+\dist{x}{y}{}.\]
+\begin{center}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/chain(0.27)}
+\lbl[r]{4,33;$\~x$}
+\lbl[tr]{87,12;$\~p^1$}
+\lbl[t]{147,20;$\~p^2$}
+\lbl[t]{175,3;$\~p^3$}
+\lbl[lt]{275,18;$\~p^4$}
+\lbl[br]{40,104;$\~q^1$}
+\lbl[br]{138,127;$\~q^2$}
+\lbl[bl]{192,105;$\~q^3$}
+\lbl[bl]{266,100;$\~q^4$}
+\lbl[bl]{70,49;$\~z^1$}
+\lbl[br]{143,60;$\~z^2$}
+\lbl[bl]{184,51;$\~z^3$}
+\lbl[bl]{272,54;$\~z^4$}
+\lbl[l]{369,51;$\~y$}
+\end{lpic}
+\end{center}
+\end{thm}
+
+To prove (2\textit{n}+2)-point comparison, we need the following lemma, which is an easy corollary from Kirszbraun's theorem (\ref{thm:kirsz+}).
+
+\begin{thm}{Lemma}\label{cor:kir-from-hemisphere}%Cor>Lem
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
+$\spc{U}$ be a complete length $\CAT\kappa$ space,
+and $Q\subset \oBall(p,\tfrac{\varpi\kappa}2)\subset \spc{L}$.
+Then any short map $f\:Q\to \spc{U}$ can be extended to a short map 
+$F\:\spc{L}\to \spc{U}$.
+\end{thm}
+
+\parit{Proof.} Directly from Kirszbraun's theorem (\ref{thm:kirsz} or \ref{thm:kirsz+}), we obtain the case $\kappa\le 0$. 
+Thus it remains to prove the theorem only in case $\kappa>0$.
+After rescaling we may assume that $\kappa=1$
+and therefore $\varpi\kappa=\pi$.
+
+It is sufficient to prove that there is a point $z\in \spc{U}$ such that $\dist{z}{f(x)}{}\le \tfrac\pi2$ for all $x\in Q$; once it is proved, the statement follows from Kirszbraun's theorem (\ref{thm:kirsz+}).
+
+Further we use the same notations as in the proof of \ref{thm:kirsz+}. 
+
+Apply Kirszbraun's theorem (\ref{thm:kirsz} or \ref{thm:kirsz+}) for $\mathring f\:\mathring Q\to\mathring{\spc{U}}$ and set $q\z={\mathring F}(p)$.
+Clearly,
+\[\<f(x),q\>
+\ge 
+\cos\mangle(p,x)>0\]
+for any $x\in Q$.
+In particular, $|q|>0$. 
+Thus, for $z=\tfrac{1}{|q|}\cdot q\in\spc{U}$,
+we get $\dist{z}{f(x)}{\spc{U}}=\mangle(z,f(x))\le \tfrac{\pi}{2}$ for all $x\in Q$.
+\qeds
+
+
+\parit{Proof of (2\textit{n}+2)-point comparison.} Direct application of \ref{cor:kir-from-hemisphere} 
+gives an array of short maps $f^0,f^1,\dots,f^n\:\Lob{3}\kappa\to \spc{U}$ such that
+\begin{enumerate}[(i)]
+
+\item $\~x\stackrel{f^0}{\longmapsto} x$, 
+$\~p^1\stackrel{f^0}{\longmapsto} p^1$ and 
+$\~q^1\stackrel{f^0}{\longmapsto}q^1$;
+
+\item 
+$\~p^i      \stackrel{f^i}{\longmapsto} p^i$, 
+$\~q^{i}    \stackrel{f^i}{\longmapsto} q^i$ and 
+$\~p^{i+1}  \stackrel{f^i}{\longmapsto} p^{i+1}$, 
+$\~q^{i+1}  \stackrel{f^i}{\longmapsto} q^{i+1}$\\ 
+for $1\le i\le n-1$;
+\item 
+$\~p^n\stackrel{f^n}{\longmapsto} p^n$,
+$\~q^n\stackrel{f^n}{\longmapsto}q^n$ and $\~y\stackrel{f^n}{\longmapsto} y$.
+\end{enumerate}
+For each $i>0$, we have that $f^{i-1}|_{[\~p^i\~q^i]}=f^{i}|[\~p^i\~q^i]$ as 
+both $f^{i-1}$ and $f^{i}$ send $[\~p^i\~q^i]$ isometrically to a geodesic $[p^i q^i]$ in $\spc{U}$ which is unique.
+Thus the curves
+\[f^0([\~x\~z^1]),\ f^1([\~z^1\~z^2]),\dots,\ f^{n-1}([\~z^{n-1}\~z^n]),\ f^n([\~z^n\~y])\]
+can be joined in $\spc{U}$ into a curve connecting $x$ to $y$ with length at most 
+\[\dist{\~x}{\~z^1}{}+\dist{\~z^1}{\~z^2}{}+\dots+\dist{\~z^{n-1}}{\~z^n}{}+\dist{\~z^n}{\~y}{}.\]
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+The ``only if'' part of Theorem \ref{thm:cba-kirsz-def} does not follow directly from Kirszbraun's theorem, since the desired extension is in $\spc{U}$, not just the completion of $\spc{U}$.
+
+
+
+
+
+
+
+
+
+
+
+
 The construction of the correct parameterization is given in lemmas \ref{lem:majorize-subgraph} and \ref{lem:majorize-triangle}.
 This map is used to construct a  majorizing map for a polygon in $\spc{U}$, and passing to a limit we get the general case. 
 

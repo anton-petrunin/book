@@ -29,7 +29,7 @@ Then the result above implies for  a complete length $\CAT0$ space $\spc{U}$, an
 
 \medskip
 
-We present the proof from \cite{lang-schroeder}.
+We present the proof the original proof of Urs Lang and Viktor Schroeder from \cite{lang-schroeder}.
 
 %\parit{Proof.}
 %Let us first prove uniqueness. 
@@ -71,21 +71,22 @@ exits and is unique.
 Take a nested sequence of finite subsets 
 $F_1\subset F_2\subset \dots$ of $\IndexSet$, such that $\dist{K_{F_n}}{p}{}\to r$.
 
-Let us show that $p^*_{F_n}$ converges in itself. 
+Let us show that the sequence $(p^*_{F_n})$ converges in itself. 
 Indeed, if not then for some fixed $\eps>0$, 
 we can choose two subsequences $(y'_n)$ and $(y''_n)$ of $(p^*_{F_n})$ 
 such that $\dist{y'_n}{y''_n}{}\ge\eps$.
 Set $z_n$ to be midpoint of $[y'_ny''_n]$. 
 From point-on-side comparison (\ref{point-on-side}), 
 there is $\delta>0$ such that 
-$\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta$.
+\[\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta.\]
 Thus 
 \[\limsup_{n\to\infty}\dist{p}{z_n}{}<r.\]
 On the other hand, from convexity, each $F_n$ 
 contains all $z_\kay$ with sufficiently large $\kay$, a contradiction.
 
 Thus, $p^*_{F_n}$ converges and we can set $z=\lim_n p^*_{F_n}$.
-Clearly $\dist{p}{z}{}=r$.
+Clearly 
+\[\dist{p}{z}{}=r.\]
 
 Repeat the above arguments for  the sequence $F_n'=F_n\cup \{\alpha\}$.
 As a result, we get another point $z'$ such that $\dist{p}{z}{}=\dist{p}{z'}{}=r$ and 
