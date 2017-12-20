@@ -1,5 +1,5 @@
 %%!TEX root = the-dim.tex
-%array^
+%arXiv
 \chapter{Dimension %ready
 }
 
@@ -61,17 +61,17 @@ If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$ then
 
 \end{thm}
 
-\parbf{On product spaces.} Let us mention that
+\parbf{On product spaces.} Let us mention that the following two inequalities
 \begin{align*}
 \TopDim  (\spc{X}\times\spc{Y})
 &\le 
 \TopDim \spc{X}+ \TopDim\spc{Y},
-\\
+\intertext{and}
 \HausDim (\spc{X}\times\spc{Y})
 &\ge 
 \HausDim \spc{X}+ \HausDim\spc{Y},
 \end{align*}
-for any metric spaces $\spc{X}$ and $\spc{Y}$.
+hold for any pair of metric spaces $\spc{X}$ and $\spc{Y}$.
 
 These inequalities in might be strict.
 For the topological dimension it holds for apair of Pontryagin surfaces constructed in \cite{pontyagin-surface}.
@@ -355,9 +355,12 @@ According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set which is dense 
 Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
 Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
 $v^i=\ddir{q}{x^i}$.
-Clearly $|v^i|=\dist{q}{x^i}{}<r$ and from hinge comparison (\ref{angle})
-we have $\side\kappa \hinge o{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps$.
-Note that $\oBall(\0,r)\subset\Lin_q$ equipped with the metric $\rho(v,w)=\side\kappa \hinge o{v}{w}$ is isometric to 
+Clearly 
+\[|v^i|=\dist{q}{x^i}{}<r\] 
+and from hinge comparison (\ref{angle})
+we have 
+\[\side\kappa \hinge o{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps.\]
+Note that the ball $\oBall(\0,r)_{\Lin_q}$ equipped with the metric $\rho(v,w)\z=\side\kappa \hinge o{v}{w}$ is isometric to 
 $\cBall[r]_{\Lob{\kay}{\kappa}}$.
 Thus,
 \[
@@ -396,7 +399,7 @@ Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
 Clearly one can choose an array of directions $\xi^0,\xi^1,\dots,\xi^m\in\Lin_p$ so that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ for all $i\not=j$.
 Choose an array of points $x^0,x^1,\dots,x^m\in\spc{L}$ so that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
 in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
-Choose points $a^i\in\l]p x^i\r]$ sufficiently close to $p$.
+Choose points $a^i\in\mathopen{]}p x^i\mathclose{]}$ sufficiently close to $p$.
 One can do it so that each $\angk\kappa p{a^i}{a^j}$ is arbitrary close to $\mangle\hinge p{a^i}{a^j}$,
 in particular, $\angk\kappa p{a^i}{a^j}>\tfrac{\pi}{2}$.
 Finally, set $b=a^0$.
@@ -442,8 +445,10 @@ contains a G-delta set which is dense in a neighborhood of any point $q'\in\spc{
 
 \parit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim}).} 
 Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with an isometric cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
-Thus, the same way as in (\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}), 
-we can construct a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
+
+Repeating the construction in (\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}), 
+we get a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
+
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
 we obtain a $C^{\frac{1}{2}}$-submap 
 \[\map\:\RR^m\subto \oBall(q,R)\]
@@ -456,14 +461,17 @@ Let $W\subset\oBall(q,R)$ be the image of the embedding.
 Since $\TopDim W=m$,
 Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
 \[\HausMes_m W>0.\]
+
 Given $\eps>0$, consider a maximal $\eps$-packing of $W$;
 that is, an array of points $(x^1,x^2,\dots,x^n)$ in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
-Thus, for all small $\eps>0$,
+
+By the definition of Hausdorff measure,
 \[\pack_\eps W
 \ge
-\frac{\Const}{\eps^m}\cdot\HausMes_m W.\]
-Thus, (\ref{SHORT.pack}) follows.
+\frac{\Const}{\eps^m}\cdot\HausMes_m W\]
+for a fixed constant $\Const>0$ and all small $\eps>0$.
+Hence (\ref{SHORT.pack}) follows.
 \qedsf
 
 
@@ -473,19 +481,19 @@ Thus, (\ref{SHORT.pack}) follows.
 
 
 
-\section{Equivalence of dimensions for CBB spaces}\label{sec:dim=m}
+\section{Finite dimensional CBB spaces}\label{sec:dim=m}
 
-In this section we will show that all reasonable notions of dimension coinside on the class of Alexandrov spaces with curvature bounded below.
+In this section we will show that all reasonable notions of dimension coincide on the class of Alexandrov spaces with curvature bounded below.
 
 First we will prove a  stronger version of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
 
 \begin{thm}{Theorem}\label{thm:dim-finite}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$0<R\le \varpi\kappa$, 
-$q\in \spc{L}$ 
-and $m\in \ZZ_{\ge0}$.
+$m$ be a nonnegative integer,
+$0<R\le \varpi\kappa$ and
+$q\in \spc{L}$.
 Then the following statements are equivalent:
-\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m<\infty$;
+\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m$;
 \end{subthm}
 
 \begin{subthm}{thm:dim-finite:rank}
@@ -504,18 +512,28 @@ $m$ is the maximal integer, such that there is a point $p\in\spc{L}$ which admit
 moreover, there is $\Const=\Const(q,R)>0$  such that 
 \[\pack_\eps \oBall(q,R)>\frac\Const{\eps^m}.\]
 \end{subthm}
+
 \end{thm}
 
 The above theorem was essentially proved in \cite{BGP}.
-The next two corollaries follow directly from \ref{pack-f}.
+
+Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
+one can show that linear dimension is equal to many different types of dimensions, such 
+as \emph{small} and \emph{big inductive dimension} 
+and \emph{upper} and  \emph{lower box counting dimensions}
+(also known as \emph{Minkowski dimensions}), 
+\emph{homological dimension} and so on.
+
+The following two corollaries follow from \ref{pack-f}.
 
 \begin{thm}{Corollary}\label{cor:dim>proper}
 Any $m$-dimensional complete length $\Alex{}$ space is proper and geodesic.
 \end{thm}
 
 
-\begin{thm}{Corollary} Let $(\spc{L}_n)$ be a sequence of $m$-dimensional complete length $\Alex\kappa$ spaces and $\spc{L}_n\to \spc{L}$ as $n\to\o$.
-Then $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space.
+\begin{thm}{Corollary} Let $(\spc{L}_n)$ be a sequence of length $\Alex\kappa$ spaces and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
+Assume $\LinDim L_n\le m$ for all $n$.
+Then $\LinDim L_\o\le m$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{dim=dim} 
@@ -532,16 +550,6 @@ where $\TopDim$ and $\HausDim$ denotes  topological dimension (\ref{def:TopDim})
 In particular, $\spc{L}$ is dimension homogeneous; that is, any open set has the same linear dimension.
 \end{thm}
 
-
-
-\parbf{Remark.}
-Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
-one can show that linear dimension is equal to many different types of dimensions, such 
-as \emph{small} and \emph{big inductive dimension} 
-and \emph{upper} and \emph{lower Minkowski dimension} 
-(which is also called \emph{rough dimension} and \emph{box counting dimension}), 
-\emph{homological dimension} and so on.
-
 \parit{Proof of \ref{dim=dim}.} 
 The equality
 \[\LinDim \spc{L}= \LinDim\Omega\]
@@ -550,7 +558,7 @@ follows from \ref{LinDim}$\&$\ref{SHORT.LinDim+}.
 If $\LinDim \spc{L}=\infty$ then
 applying  \ref{TopDim}, for $\oBall(q,R)\subset \Omega$, we get that there is a compact subset $K\subset \Omega$ with arbitrary large $\TopDim K$ therefore
 \[\TopDim\Omega=\infty.\] 
-From Szpilrajn's theorem (\ref{thm:szpilrajn}),
+By Szpilrajn's theorem (\ref{thm:szpilrajn}),
 $\HausDim K\ge \TopDim K$.
 Thus, we also have 
 \[\HausDim\Omega=\infty.\]
@@ -565,7 +573,7 @@ Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
 \qeds
 
 
-\parit{Proof of Theorem~\ref{thm:dim-finite}.} Note that equivalence (\ref{SHORT.LinDim-f})$\Leftrightarrow$(\ref{SHORT.thm:dim-finite:rank}) follows from \ref{thm:dim-infty}.
+\parit{Proof of Theorem~\ref{thm:dim-finite}.} The equivalence (\ref{SHORT.LinDim-f})$\Leftrightarrow$(\ref{SHORT.thm:dim-finite:rank}) follows from \ref{thm:dim-infty}.
 
 \parit{(\ref{SHORT.LinDim-f})$\Rightarrow$(\ref{SHORT.LinDim+-f}).}
 If $\LinDim\spc{L}=m$, then from Theorem~\ref{thm:dim-infty}, 
@@ -647,7 +655,7 @@ In particular
 $\oBall(p,\eps)\iso(-\eps,\eps)$.
 \end{clm}
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(1)}
+\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/dim=1(1)}
 \lbl[t]{2,.5;$x$}
 \lbl[t]{9,.5;$p$}
 \lbl[t]{14,.5;$q$}
@@ -668,15 +676,14 @@ $\LinDim\spc{L}>1$, a contradiction.
 
 Now assume there is no geodesic passing thru $p$. 
 Since $\LinDim\spc{L}=1$ there is a point $x\not=p$.
-Take a positive $\eps<\dist{p}{x}{}$.
+
+Fix a positive value $\eps<\dist{p}{x}{}$.
 Let us show that 
-\begin{clm}{}\label{clm:1-dim-end}
-$\oBall(p,\eps)\subset [p x]$;
-in particular $\oBall(p,\eps)\iso[0,\eps)$.
-\end{clm}
+
+{
 
 \begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(1)}
+\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/dim=1(1)}
 \lbl[t]{2,.5;$p$}
 \lbl[t]{9,.5;$w$}
 \lbl[t]{14,.5;$q$}
@@ -685,15 +692,23 @@ in particular $\oBall(p,\eps)\iso[0,\eps)$.
 \end{lpic}
 \end{wrapfigure}
 
+\begin{clm}{}\label{clm:1-dim-end}
+$\oBall(p,\eps)\subset [p x]$;
+in particular $\oBall(p,\eps)\iso[0,\eps)$.
+\end{clm}
+
 Assume the contrary;
 let $z\in \oBall(p,\eps)\backslash[p y]$.
-Choose a point $w\in \l] p y \r[$ such that $\dist{p}{w}{}+\dist{p}{z}{}<\eps$.
+Choose a point $w\in \l] p y \r[$ such that 
+\[\dist{p}{w}{}+\dist{p}{z}{}<\eps.\]
 Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point which maximizes the distance $\dist{w}{q}{}$.
 Since no geodesics pass thru $p$, we have $p\not=q$.
 As above, $\mangle\hinge{q}{p}{y}=\pi$ 
 and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.
 Thus, according to Proposition~\ref{E=T}, 
 $\LinDim\spc{L}>1$, a contradiction.
+
+}
 
 Clearly $\t{\ref{clm:1-dim-mid}}+\t{\ref{clm:1-dim-end}}\Rightarrow\t{\ref{clm:1-dim-all}}$;
 hence the result.
@@ -730,10 +745,12 @@ Hence the result.\qeds
 \section{Dimension of CBA spaces}\label{sec:dim-cba}
 
 We start with two examples.
+
 The first example shows that the dimension of a complete length $\CAT{}$ spaces is not local;
 that is, such spaces might have open sets with different linear dimension.
+
 Such an example can be constructed by gluing at one point two Euclidean spaces of different dimensions.
-(According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\CAT{0}$ spaces.)
+According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\CAT{0}$ spaces.
 
 The second example provides a complete length $\CAT{}$ space 
 with topological dimension one and arbitrary large Hausdorff dimension.
@@ -749,7 +766,7 @@ For an appropriately chosen sequence $\eps_n$, the completion of $\Gamma$ will c
 \medskip
 
 The following is a  version of the theorem proved by Kleiner in \cite{kleiner},
-which is improved using the generalized Rademacher's theorem (\ref{thm:rademacher}) proved by Lytchak in \cite{lytchak:diff}.
+which is improved using the generalized Rademacher's theorem (\ref{thm:rademacher}) proved by Alexander Lytchak in \cite{lytchak:diff}.
 
 \begin{thm}{Theorem}\label{thm:dim-infty-CBA}
 For any complete length $\CAT\kappa$ space $\spc{U}$, the following statements are equivalent:
@@ -758,9 +775,10 @@ For any complete length $\CAT\kappa$ space $\spc{U}$, the following statements a
 \end{subthm}
 
 \begin{subthm}{thm:dim-infty-CBA:bary} 
-For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$  
-such that $\bigcap_i B^i=\emptyset$,
-$\bigcap_{i\not=j} B^i\not=\emptyset$ for each $j$
+For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$  
+such that 
+\[\bigcap_i B^i=\emptyset,\quad\bigcap_{i\not=j} B^i\not=\emptyset\]
+for each $j$.
 \end{subthm}
 
 
@@ -770,7 +788,8 @@ that is, $\map$ is bi-H\"older with exponent $\tfrac{1}{2}$.
 \end{subthm}
 
 \begin{subthm}{thm:dim-infty-CBA:TopDim}
-There is a closed separable set $K\subset\spc{U}$ such that $\TopDim K\ge m$.
+There is a closed separable set $K\subset\spc{U}$ such that 
+\[\TopDim K\ge m.\]
 \end{subthm}
 
 \end{thm}
@@ -779,7 +798,7 @@ There is a closed separable set $K\subset\spc{U}$ such that $\TopDim K\ge m$.
 Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part (\ref{SHORT.thm:dim-infty-CBA:mnfld}) in finite dimensional case.
 Namely, a complete length $\CAT{}$ space with linear dimension $m$ 
 admits a bi-Lipschitz embedding $\map$ of an open set of $\RR^m$.
-Moreover, according to ??? the Lipschitz constants of $\map$ can be made arbitrary close to $1$.
+Moreover, the Lipschitz constants of $\map$ can be made arbitrary close to $1$.
 
 \begin{thm}{Corollary}\label{cor:dim-CBA}
 For any separable complete length $\CAT{}$ space $\spc{U}$, we have
@@ -788,15 +807,21 @@ For any separable complete length $\CAT{}$ space $\spc{U}$, we have
 \end{thm}
 
 
-To prove Theorem~\ref{thm:dim-infty-CBA} we will need the followng lemma.
-Any simplicial complex can be equiped with a length-metric
-such that each simplex $\Delta^\kay$ 
-is isometric to the standard $\kay$-simplex with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
+To prove Theorem~\ref{thm:dim-infty-CBA} we will need the following lemma.
+
+Any simplicial complex can be equipped with a length-metric
+such that each $\kay$-simplex  
+is isometric to the standard simplex
+\[\Delta^\kay
+=
+\set{(x_0,\dots,x_\kay)\in \RR^{\kay+1}}
+{x_i\ge 0,\quad x_0+\dots+x_\kay=1}\]
+with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
 This metric will be called the  \emph{$\ell^1$-metric}\index{$\ell^1$-metric} on the simplicial complex.
 
 \begin{thm}{Lemma}\label{lem:approximation-cba}
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-$\rho$ be a continuous positive function on $\spc{U}$.
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space
+and $\rho\:\spc{U}\to\RR$ be a continuous positive function.
 Then there is a simplicial complex $\spc{N}$ equiped with $\ell^1$-metric,
 a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$ 
 and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that
@@ -810,8 +835,8 @@ for any $x\in\spc{U}$
 
 \begin{subthm}{lem:approximation-cba:im}
 If $\LinDim\spc{U}\le m$ 
-then the $\map[2]$-image of any closed simplex $\Delta$ in $\spc{N}$ 
-coinsides with the image of its $m$-skeliton.
+then the $\map[2]$-image of any closed simplex in $\spc{N}$ 
+coincides with the image of its $m$-skeleton.
 \end{subthm}
 
 \end{thm}
@@ -836,11 +861,10 @@ $\Omega_{\alpha^0}
 \not=
 \emptyset$.
 
-Further, choose a Lipschitz partition of unity 
+Fix a Lipschitz partition of unity 
 $\phi_\alpha\:\spc{U}\to [0,1]$,  subordinate to $\{\Omega_\alpha\}$.
-One may think of partition $\{\phi_\alpha\}$ 
-as of a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$; 
-the $\alpha$-s barycentric coordinate of $\map(p)$ is $\phi_\alpha(p)$.
+Consider the map $\map\:\spc{U}\to \spc{N}$ such that the barycentric coordinate of $\map(p)$ is $\phi_\alpha(p)$.
+Note that $\map$ is locally Lipschitz. 
 Clearly $\map$-preimage of any open simplex in $\spc{N}$ lies in $\Omega_\alpha$ for some $\alpha\in\IndexSet$.
 
 For each $\alpha\in\IndexSet$, 
@@ -935,7 +959,7 @@ Since $\eps>0$ is arbitrary,
 we get that $\bm{0}\in \RR^m$ is not a stable value of $f=F|K$, a contradiction.
 
 \parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
-The following claim is almost trivial.
+The following claim follows from the definition of tangent space.
 
 \begin{clm}{}\label{clm:finite-config-cba}
 Let $q\in \spc{U}$ and $\dot x^1,\dot x^2,\dots,\dot x^n\in \T_q$.
@@ -995,19 +1019,17 @@ it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
 \section{Remarks and open problems}
 
 The following conjecture (in an equivalent form)
-appers in \cite{kleiner} (see also \cite[p.~133]{gromov:asymt-inv}) %???CHECK
- remains open for nonseparable $\CAT{}$ spaces;
-for separable spaces it is true by Corollary~\ref{cor:dim-CBA}.
+appers in \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
 
 \begin{thm}{Conjecture}
-If $\spc{U}$ is a complete length $\CAT{}$ space, then 
+For any complete length $\CAT{}$ space $\spc{U}$, we have
 \[\TopDim\spc{U}
 =
 \LinDim\spc{U}.\]
 
 \end{thm}
 
-
+By Corollary~\ref{cor:dim-CBA} it holds for separable spaces
 
 
 
