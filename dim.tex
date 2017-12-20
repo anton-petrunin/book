@@ -10,7 +10,7 @@ In Section~\ref{sec:dim-cba} we discuss the dimension of  $\CAT{}$ spaces.
 
 \section{Preliminaries.}\label{sec:prelim:dim}
 
-The proof of most of the statements in this section can be found in \cite{top-dim}, 
+The proof of most of the statements in this section can be found in the book of Witold Hurewicz and Henry Wallman \cite{top-dim}, 
 the rest follows directly from the definitions.
 
 \begin{thm}{Hausdorff dimension}
@@ -34,16 +34,16 @@ Let us recall two notions in general topology:
 \label{def:TopDim}
 \index{dimension!topological dimension}
 Let $\spc{X}$ be a metric space. 
-the topological dimension of $\spc{X}$ is infimum of numbers $\ZZ_{\ge}$, 
-such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order $n$.
+The topological dimension of $\spc{X}$ is defined as the minimum of nonnegative integers $n$, 
+such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
 
 If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
 
 The topological dimension of $\spc{X}$ will be denoted by $\TopDim\spc{X}$.
 \end{thm}
 
-The following statements (\ref{dim-axiom-norm}, \ref{dim-axiom-sigma}, \ref{dim-axiom-product}) we call ``axioms'' 
-since an invariant which satisfies these conditions is commonly called ``dimension''.
+The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called ``dimension'';
+by that reason we call them axioms.
 
 \begin{thm}{Normalization axiom}
 \label{dim-axiom-norm} For any $m\in\ZZ_{\ge0}$,
@@ -51,25 +51,34 @@ since an invariant which satisfies these conditions is commonly called ``dimensi
 
 \end{thm}
 
-\begin{thm}{Cover axiom}
- \label{dim-axiom-sigma} If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$ then
- \[\TopDim \spc{X}=\sup\nolimits_n\{\TopDim A_n\}\ \ \text{and}\ \ \HausDim \spc{X}=\sup\nolimits_n\{\HausDim A_n\}.\]
+\begin{thm}{Cover axiom}\label{dim-axiom-sigma} 
+If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$ then
+\begin{align*}
+\TopDim \spc{X}&=\sup\nolimits_n\{\TopDim A_n\},
+\\
+\HausDim \spc{X}&=\sup\nolimits_n\{\HausDim A_n\}.
+\end{align*}
 
 \end{thm}
 
-\begin{thm}{Product axiom}\label{dim-axiom-product}
-For any metric spaces $\spc{X}$ and $\spc{Y}$,
-\[\TopDim  (\spc{X}\times\spc{Y})
-\le 
-\TopDim \spc{X}+ \TopDim\spc{Y},\]
-\[\HausDim (\spc{X}\times\spc{Y})
-\le 
-\HausDim \spc{X}+ \HausDim\spc{Y}.\]
+\parbf{On product spaces.} Let us mention that
+\begin{align*}
+\TopDim  (\spc{X}\times\spc{Y})
+&\le 
+\TopDim \spc{X}+ \TopDim\spc{Y},
+\\
+\HausDim (\spc{X}\times\spc{Y})
+&\ge 
+\HausDim \spc{X}+ \HausDim\spc{Y},
+\end{align*}
+for any metric spaces $\spc{X}$ and $\spc{Y}$.
 
-\end{thm}
+These inequalities in might be strict.
+For the topological dimension it holds for apair of Pontryagin surfaces constructed in \cite{pontyagin-surface}.
+For Hausdorff dimension, an example was constructed by Abram Besicovitch and Pat Moran in \cite{besicovitch-moran}.
 
-Note that both inequalities in \ref{dim-axiom-product} might be strict, such examples were constructed in \cite{pontyagin-surface} and \cite{marstrand-hausdim}%???CHECK???
-.
+\medskip
+ 
 The following theorem follows from \cite[theorems V 8 and VII 2]{top-dim}.
 
 \begin{thm}{Szpilrajn's theorem}\label{thm:szpilrajn} 
@@ -80,7 +89,6 @@ In particular,
 $\TopDim\spc{X}\le\HausDim\spc{X}$.
 \end{thm}
 
-\parbf{Remark.}
 In fact it is true that for any separable metric space $\spc{X}$ we have
 \[\TopDim\spc{X}=\inf\{\HausDim\spc{Y}\},\]
 where infimum is taken over all metric spaces $\spc{Y}$ which are homeomorphic to $\spc{X}$.
@@ -121,7 +129,7 @@ In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$ then
 In addition to $\HausDim$ and $\TopDim$, 
 we will use yet another one, which we call \emph{linear dimension}.
 
-Recal that cone map is defined in \ref{def:cone-map}.
+Recall that \emph{cone map} is a map between cones which respects the cone multiplication.
 
 \begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!Linear dimension}
 Let $\spc{X}$ be a metric space. 
@@ -131,7 +139,7 @@ The \emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\Li
 \text{isometric cone embedding}\ \  \EE^m\hookrightarrow \T_p\spc{X}\},
 \end{multline*}
 where $\EE^m$ denotes $m$-dimensional Euclidean space 
-and $\T_p\spc{X}$ denotes tangent space of $\spc{X}$ at $p$ (defined in \ref{def:tan}).
+and $\T_p\spc{X}$ denotes tangent space of $\spc{X}$ at $p$ (defined in Section~\ref{sec:tangent-space+directions}).
 \end{thm}
 
 Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
@@ -139,7 +147,7 @@ Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
 For general metric spaces, $\LinDim$ has almost no  relations to $\HausDim$ and $\TopDim$.
 Also, $\LinDim$ does not satisfy the cover axiom
  (\ref{dim-axiom-sigma}).
-For $\LinDim$, an inverse of the product axiom (\ref{dim-axiom-product}) holds; that is,
+For $\LinDim$, an inverse of the product inequality holds; that is,
 \[\LinDim(\spc{X}\times \spc{Y})
 \ge
 \LinDim\spc{X}+ \LinDim\spc{Y}
@@ -149,7 +157,7 @@ that is easy to check.
 According to the following exercise, he inequality \ref{eq:inverse-product-axiom} might be strict for some spaces, see also \cite{schroeder-foetch}.
 
 \begin{thm}{Exercise}\label{ex:schroeder-foetch}
-Construct two norms on $\RR^n$ such that 
+Construct two norms on $\RR^{10}$ such that 
 non of the corresponding metric spaces $\spc{X}$ and $\spc{Y}$
 have a isometric copy of $\EE^2$ but
 $\spc{X}\times\spc{Y}$ has isometric copy of $\EE^{10}$.
@@ -159,9 +167,9 @@ The linear dimension will be applied only to  Alexandrov spaces and to their ope
 As we shall see, in all these cases, $\LinDim$  behaves nicely and  is easy to work with.
 
 \parbf{Remarks.}
-Linear dimension was first introduced in \cite{plaut:survey}
+Linear dimension was first introduced by Conrad Plaut in \cite{plaut:survey}
 under the name \emph{local dimension}\index{local dimension}\index{dimension!local dimension}. 
-\emph{Geometric dimension}\index{geometric dimension}\index{dimension!geometric dimension} introduced in \cite{kleiner} is closely related; 
+\emph{Geometric dimension}\index{geometric dimension}\index{dimension!geometric dimension} introduced in by Bruce Kleiner in \cite{kleiner} is closely related; 
 it coincides %should we explain why???
  with the linear dimension for $\Alex{}$ and $\CAT{}$ spaces.
 
@@ -169,8 +177,7 @@ One could modify the definition of linear dimension by taking an arbitrary $n$-d
 Such a definition makes more sense for general metric spaces.
 This dimension is additive with respect to the direct product (that is, we always have equality in \ref{eq:inverse-product-axiom}). 
 
-For Alexandrov spaces (either CBB or CBA) this modification is equivalent to the definition we use in this book 
-(compare to Exercise \ref{exer:banach}).
+For Alexandrov spaces (either CBB or CAT) this modification is equivalent to the definition we use in this book.
 
 
 
@@ -184,7 +191,7 @@ For Alexandrov spaces (either CBB or CBA) this modification is equivalent to the
 
 
 
-\section{Dimension theorem for CBB%???
+\section{Dimension theorem for CBB %???
 spaces}\label{sec:dim>m}
 
 As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
@@ -238,8 +245,8 @@ of the theorem above.
 The proof of the above theorem with exception of  statement~(\ref{SHORT.TopDim}) was given in \cite{plaut:dimension}.
 At that time, it was not known whether for any complete length $\Alex\kappa$ space $\spc{L}$,
 \[\LinDim\spc{L}=\infty\ \ \Rightarrow\ \ \TopDim\spc{L}=\infty.\]
-Perelman proved this implication, 
-by combining an idea of Plaut with the technique of gradient flow (see \cite{perelman-petrunin:qg}).
+The latter implication was proved by Grigory Perelman;
+it was done by combining an idea of Conrad Plaut with the technique of gradient flow; see \cite{perelman-petrunin:qg}.
 The statement \ref{TopDim} which we prove is somewhat stronger.
 
 
@@ -261,7 +268,7 @@ Assume there is an isometric cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\
 \parit{Proof.}
 Assume $\iota(\EE^{m})$ is a proper subset of $\T_p\spc{L}$.
 Equivalently, there is a direction $\xi \in \Sigma_p\backslash\iota(\SS^{m-1})$,
-where $\SS^{m-1}$ is the unit sphere in  $\EE^{m}$. 
+where $\SS^{m-1}\subset \EE^m$ is the unit sphere. 
 
 Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\SS^{m-1})$. 
 Choose a \emph{maximal $\eps$-packing} in $\iota(\SS^{m-1})$;
@@ -293,14 +300,14 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space then
 
 \end{thm}
 
-\begin{wrapfigure}{r}{66mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(0.50)}
-\lbl[r b]{22,26;$\bar p$}
-\lbl[r b]{109,26;$p$}
-\lbl[l t]{15,18;$\bar R$}
-\lbl[l t]{101,18;$R$}
-\lbl[l t]{110,42;$x^i$}
-\lbl[t]{33,26;$\bar x^i$}
+\begin{wrapfigure}{r}{45mm}
+\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(1)}
+\lbl[r]{9,11;$\bar p$}
+\lbl[r]{33,11;$p$}
+\lbl[r]{10,5;$\bar R$}
+\lbl[l]{35,5;$R$}
+\lbl[l]{37,17;$x^i$}
+\lbl[b]{16,13.5;$\bar x^i$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -324,11 +331,11 @@ Hence the statement follows.
 
 \begin{thm}{Proposition}\label{E-comeagre} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$r<\varpi\kappa$ 
+$r\z<\varpi\kappa$ 
 and $p\in \spc{L}$.
 Assume that 
 \[\pack_{\eps} \oBall(p,r)
->\pack_{\eps}\cBall[r]_{\Lob{\kay}{\kappa}}
+>\pack_{\eps}\cBall[r]_{\Lob{m}{\kappa}}
 \eqlbl{eq:pack>pack}\]
 for some $\eps>0$.
 Then there is a G-delta set $A\subset \spc{L}$,
@@ -343,8 +350,7 @@ Choose a neighborhood $\Omega\ni p$,
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
 Set 
 \[A= \Omega\cap\Str(x^1,x^2,\dots,x^n).\]
-According to Theorem \ref{thm:almost.geod},
-$A$ is a G-delta set which is dense in $\Omega$.
+According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set which is dense in $\Omega$.
 
 Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
 Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
@@ -362,30 +368,25 @@ Thus,
 which contradicts $\kay\le m$ and \ref{eq:pack>pack}.
 \qeds
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\parit{Proof of \ref{thm:dim-infty}.} 
 The proof is essentially done in \ref{E=T}, \ref{pack-homogeneus}, \ref{E-comeagre}, \ref{thm:inverse-function}, \ref{thm:right-inverse-function}; 
 here we only assemble the proof from these parts.
 
-We prove implications 
-\[\textrm{(\ref{SHORT.LinDim+}) $\Rightarrow$ (\ref{SHORT.LinDim}) $\Rightarrow$ (\ref{SHORT.thm:dim-infty:rank}) $\Rightarrow$ (\ref{SHORT.pack}) $\Rightarrow$ (\ref{SHORT.LinDim+}) $\Rightarrow$ (\ref{SHORT.TopDim}) $\Rightarrow$ (\ref{SHORT.pack}).}\]
+We will prove implications 
+\[\textrm{(\ref{SHORT.LinDim+}) 
+$\Rightarrow$ 
+(\ref{SHORT.LinDim}) 
+$\Rightarrow$ 
+(\ref{SHORT.thm:dim-infty:rank}) 
+$\Rightarrow$ 
+(\ref{SHORT.pack}) 
+$\Rightarrow$ 
+(\ref{SHORT.LinDim+}) 
+$\Rightarrow$ 
+(\ref{SHORT.TopDim}) 
+$\Rightarrow$ 
+(\ref{SHORT.pack}).}\]
 
+\parit{Proof of \ref{thm:dim-infty}.} 
 The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivial.
 The proof of (\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}) is valid for general metric spaces;
 it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
@@ -645,13 +646,13 @@ then $\oBall(p,\eps)\subset\l]x y\r[$.
 In particular
 $\oBall(p,\eps)\iso(-\eps,\eps)$.
 \end{clm}
-\begin{wrapfigure}{r}{40mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(0.5)}
-\lbl[t]{2,0;$x$}
-\lbl[t]{73,0;$y$}
-\lbl[t]{20,0;$p$}
-\lbl[t]{29,0;$q$}
-\lbl[b]{29,12;$z$}
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(1)}
+\lbl[t]{2,.5;$x$}
+\lbl[t]{9,.5;$p$}
+\lbl[t]{14,.5;$q$}
+\lbl[t]{27,.5;$y$}
+\lbl[b]{14,9;$z$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -674,13 +675,13 @@ $\oBall(p,\eps)\subset [p x]$;
 in particular $\oBall(p,\eps)\iso[0,\eps)$.
 \end{clm}
 
-\begin{wrapfigure}{r}{40mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(0.5)}
-\lbl[r]{0,1;$p$}
-\lbl[l]{75,1;$y$}
-\lbl[t]{20,0;$w$}
-\lbl[t]{29,0;$q$}
-\lbl[b]{29,12;$z$}
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/dim=1(1)}
+\lbl[t]{2,.5;$p$}
+\lbl[t]{9,.5;$w$}
+\lbl[t]{14,.5;$q$}
+\lbl[t]{27,.5;$y$}
+\lbl[b]{14,9;$z$}
 \end{lpic}
 \end{wrapfigure}
 
