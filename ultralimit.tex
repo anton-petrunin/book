@@ -227,6 +227,19 @@ By construction $x_n\to y$ as $n\to \infty$.
 Hence the statement follows.  
 \qeds
 
+\begin{thm}{Observation}\label{obs:ultralimit-is-geodesic}
+The $\o$-limit of any sequence of length spaces is geodesic. 
+\end{thm}
+
+\parit{Proof.}
+If $\spc{X}_n$ is a sequence length spaces then for any sequence of pairs $x_n, y_n\in X_n$ there is a sequence of $\tfrac1n$-midpoints $z_n$.
+
+Let $x_n\to x_\o$, $y_n\to y_\o$ and $z_n\to z_\o$ as $n\to \o$.
+Note that $z_\o$ is a midpoint of $x_\o$ and $y_\o$ in $\spc{X}^\o$.
+
+By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}^\o$ is complete.
+Applying Lemma~\ref{lem:mid>geod} we get the statement.
+\qeds
 
 \parbf{Ultrapower.} If all the metric spaces in the sequence are identical $\spc{X}_n=\spc{X}$, 
 its $\o$-limit 
@@ -248,7 +261,7 @@ If $\spc{X}$ is proper then $\iota(\spc{X})$ forms a metric component of $\spc{X
 
 The embedding $\iota$ gives us right to treat $\spc{X}$ as a subset of its ultrapower $\spc{X}^\o$. 
 
-\begin{thm}{Observation}
+\begin{thm}{Observation}\label{obs:ultralimit-is-geodesic}
 Let $\spc{X}$ be a complete metric space. 
 Then $\spc{X}^\o$ is geodesic space if and only if $\spc{X}$ is a length space.
 \end{thm}
@@ -267,11 +280,7 @@ $n\to\o$.
 In particular, for any $\eps>0$, the point $z_n$ is an $\eps$-midpoint of $x$ and $y$ for $\o$-almost all $n$.
 It remains to apply Lemma~\ref{lem:mid>geod}.
 
-If $\spc{X}$ is a length space then for any pair of points $x$ and $y$ there is a sequence of $\tfrac1n$-midpoints $z_n$;
-its $\o$-limit $z_\o$ is a midpoint of $x$ and $y$ in $\spc{X}^\o$.
-
-By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}^\o$ is complete.
-Applying Lemma~\ref{lem:mid>geod} we get the statement.
+The ``if''-part follows from Observation~\ref{obs:ultralimit-is-geodesic}.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:two-geodesics-in-ultrapower}

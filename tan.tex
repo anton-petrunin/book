@@ -1,4 +1,5 @@
 %%!TEX root = all.tex
+%arXiv
 \chapter{First order differentiation}\label{chap:tan}
 
 
@@ -6,15 +7,16 @@
 \section{Space of directions and tangent space}
 \label{sec:tangent-space+directions}
 
+Let $\spc{X}$ be a metric space.
+If the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in $\spc{X}$,
+then we will say that the space $\spc{X}$ has \index{defined angles}\emph{defined angles}.
+
 Recall that according to 
 the corollaries \ref{cor:monoton:sup} 
 and \ref{cor:monoton-cba:angle=inf},
-the  $\Alex{}$ and $\CAT{}$ spaces have \index{space with defined angles}\emph{defined angles};
-that is the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in the space.
-
-Let $\spc{X}$ be a metric space with defined angles.
-Fix a point $p\in \spc{X}$. 
-
+the  $\Alex{}$ and $\CAT{}$ spaces have defined angles.
+ 
+Let $\spc{X}$ be a space with defined angles and $p\in \spc{X}$.
 Consider the set $\mathfrak{S}_p$ 
 of all nontrivial unit-speed geodesics  which start at $p$.
 By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
@@ -37,8 +39,7 @@ Show that
 
 \begin{thm}{Exercise}
 Assume $\spc{U}$ is a locally compact geodesic $\CAT{}$ space with extandable geodesics;
-that is for any geodesic in $\spc{U}$
-is an arc in a both-side infinite local geodesic.
+that is, any geodesic in $\spc{U}$ can be extended to a both-side infinite local geodesic.
 
 Show that $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
@@ -46,12 +47,12 @@ Show that $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
 The elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
-\begin{thm}{Exercise} 
+\begin{thm}{Advanced exercise} 
 Let $\spc{L}$ be a complete length $\Alex{1}$ space.
 Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\SS^n$.
 \end{thm}
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called tangent space at  $p$ and denoted as $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called \emph{tangent space} at  $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
 To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
@@ -62,565 +63,61 @@ set
 \lim_{\eps\to0} 
 \frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps
 \eqlbl{eq:dist-in-T_p}\]
-Since the angles in $\spc{X}$ are defined, 
-\ref{eq:dist-in-T_p}
-defines a pseudometric on $\mathfrak{T}_p$.
+If the angles in $\spc{X}$ are defined, then so is
+the limit in \ref{eq:dist-in-T_p}.
+In this case it defines a pseudometric on $\mathfrak{T}_p$.
 
 
 The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
 The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
 \[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
-The completion of $\T'_p$ is therefore  natuaral isometric to $\T_p$.
+The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
 
-The elements of $\T_p$ will be called tangent vector at $p$,
-despite that $\T_p$ is only cone --- not a vector space.
-The elements of $\T'_p$ will be called geodesic tangent vector at $p$.
+The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
+despite that $\T_p$ is only a cone --- not a vector space.
+The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
 
-\section{Velocity of curves}
+\section{Intrinsity of tangent space}\label{halbeisen}
 
-\begin{thm}{Definition}\label{def:right-derivative}
-Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessary continuous, such that $\alpha(0)=p$.
-We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
-breifly $\alpha^+(0)=v$ if there is a squence of vectors $v_n\in\T'_p$
-with corresponding geodesics $\gamma_n$, 
-such that $v_n\to v$ as $n\to\infty$ and 
-\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
-\end{thm}
-
-Note that if the condition in the Definition~\ref{def:right-derivative} holds for one choice of the sequences $(v_n)$ and $(\gamma_n)$ then it holds for any other choice of that type.
-
-Note that if $\gamma$ is a geodesic starting at $p$ 
-and the tangent vector $v\in\T_p'$ corresponds to $\gamma$ 
-then $\gamma^+(0)=v$.
-
-\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
-Assume $\spc{X}$ is a metric space with defined angles
-and $\alpha,\beta\:[0,a)\to\spc{X}$ 
-be two maps such that the right derivatives $\alpha^+(0)$, $\beta^+(0)$ are defined and $\alpha^+(0)=\beta^+(0)$.
-Show that
-\[\dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
-\end{thm}
-
-\begin{thm}{Proposition}
-Let $\spc{X}$ be a metric space with defined angles and $p\in \spc{X}$.
-Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\to \spc{X}$ such that $\alpha^+(0)=v$.
-\end{thm}
-
-\parit{Proof.}
-If $v\in \T_p'$ then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
-
-Given $v\in \T_p$ construct a sequence $v_n\in\T'_p$ 
-such that $v_n\to v$ and let $\gamma_n$ be the sequence of corresponding geodesic.
-
-The needed map $\alpha$ can be found among the maps such that $\alpha(0)=p$ and
-\[\alpha(t)=\gamma_n(t)\ \ \text{if}\ \ \eps_{n+1}\le t<\eps_n,\]
-where $(\eps_n)$
-is a decreasing sequence converging to $0$ as $n\to\infty$.
-In order to satify the condition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
-\qeds
-
-We define right and left derivatives $\alpha^+(t_0)$ and $\alpha^-(t_0)$
-of $\alpha$ at $t_0\in\II$ as 
-\[\alpha^\pm(t_0)=\check\alpha^+(0),\] where $\check\alpha(t)=\alpha(t_0\pm t)$.
-The sign conversion is not quite standard, 
-say if $\alpha$ is a smooth curve in a Riemannian manifold then we have
-\[\alpha^+(t)=-\alpha^-(t).\]
-
-
-\begin{thm}{Definition}\label{def:diff-curv}
-Let 
-$\spc{X}$ be a metric space 
-and $\alpha\:\II\to \spc{X}$ be a curve.
-
-For $t_0\in\II$, 
-if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
-we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
-In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
-Assume $\spc{X}$ is a metric space with defined angles
-Show that any geodesic $\gamma\:\II\to\spc{X}$ is both-sided differentiable everywhere.
-\end{thm}
-
-\section{Differential}
-
-\begin{thm}{Definition}
-Let $\spc{X}$ be a metric space with defined angles and
-$f\:\spc{X}\subto\RR$ be a subfunction, 
-$p\in\Dom f$ and $\II$ be a real interval.
-A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
-(briefly $\phi=\d_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
-\end{thm}
-
-\begin{thm}{Proposition}\label{prop:differential}
-Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
-Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
-\begin{subthm}{prop:differential:lip}
-The differential $\d_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
-\end{subthm}
-
-\begin{subthm}{prop:differential:homo}
-$\d_pf\:\T_p\to\RR$ is a positive homogenius function;
-that is, for any $\lam\ge 0$ and $v\in\T_p$ we have 
-\[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
-\end{subthm}
-
-\end{thm}
-
-
-\parit{Proof.}
-Passing to a subdomain of $f$ if nesessary,
-we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
-
-Take a geodessic $\gamma$ starting at $p$ which lies in $\Dom f$.
-Since $f\circ\gamma$ is semiconcave,
-the rigth derivative $(f\circ\gamma)^+(0)$ is defined.
-Since $f$ is  $\Lip$-Lipschitz, we have
-\[|(f\circ\gamma)^+(0)-(f\circ\gamma_1)^+(0)|
-\le
-\Lip\cdot\dist[{{}}]{\gamma^+(0)}{\gamma_1^+(0)}{}\eqlbl{gam-bargam}\]
-for any other geodesic $\gamma_1$ starting at $p$.
-
-Define $\phi\:\T'_p\to\RR\:\gamma^+(0)\mapsto(f\circ\gamma)^+(0)$.
-From \ref{gam-bargam}, $\phi$ is a $\Lip$-Lipschtz function defined on $\T_p'$.
-Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function. 
-
-It remains to show that $\phi$ is differential of $f$ at $p$.
-Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
-Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
-that is, if 
-\[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
-then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
-Then 
-\[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 
-\[|f\circ\alpha(t)-f\circ\gamma_n(t)|\le\Lip\cdot\dist[{{}}]{\alpha(t)}{\gamma_n(t)}{}.\]
-Hence 
-\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
-\qedsf
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Ultratangent space} 
-
-Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter.
-
-For a metric space $\spc{X}$ and a positive real number $\lam$,
-we will denote by $\lam\cdot\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
-which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
-The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted as $x\mapsto x^\lam$, 
-so 
-\[\dist{x^\lam}{y^\lam}{}
-=
-\lam\cdot\dist[{{}}]{x}{y}{}\] 
-for any $x,y\in \spc{X}$.
-
-The $\o$-blowup $\o\cdot\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
-of $n\cdot\spc{X}$; that is,
-\[\o\cdot\spc{X}
-\df
-\lim_{n\to\o} n\cdot\spc{X}.\]
-
-Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
-it corresponds to a point $x^\o\in \o\cdot\spc{X}$.
-Note that if $x\ne y$ then 
-\[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
-that is, 
-$x^\o$ and $y^\o$ 
-belong to different metric components of $\o\cdot\spc{X}$.
-
-The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
-
-Equivalently, ultratangent space $\T^\o_x\spc{X}$ can be defined the following way.
-Consider all the sequences of points $x_n\in \spc{X}$ such that
-the sequence $\ell_n=n\cdot\dist{x}{x_n}{\spc{X}}$ is bounded.
-Define the pseudistance between two such sequences as 
-\[\dist{(x_n)}{(y_n)}{}
-=
-\lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
-Then $\T^\o_x\spc{X}$ is the corresponding metric space.
-
-Both, tangent space and ultratangent space, 
-generalize the notion of tangent space of Riemannian manifold.
-In the simplest cases these two notions define the same space.
-In general, they are different and both useful ---
-often lack of a property in one is compensated by the other.
-
-It is clear from the definition that tangent space has cone structure.
-On the other hand, in general, ultratangent space does not have a cone structure; 
-the Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example --- it is $\Alex{0}$ as well as $\CAT{0}$.
-
-\begin{thm}{Theorem}\label{thm:tan-is}
-\begin{subthm}{thm:tan-is-CBB}
-If $\spc{L}$ is a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$ then $\T^\o_p$ is a complete length $\Alex{0}$ space.
-\end{subthm}
-
-\begin{subthm}{thm:tan-is-CBA}
-If $\spc{U}$ is a complete length $\CAT\kappa$ space and $p\in \spc{U}$ then $\T^\o_p$ is a complete length $\CAT0$ space.
-\end{subthm}
-
-\end{thm}
-
-The proofs of both parts are nearly identical.
-
-\parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
-Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then for its blowup $n\cdot\spc{L}$ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
-Since $n\cdot(\spc{L},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prp:A^omega} implies ${\T^\o_p}$ is a complete length $\Alex{0}$ space.
-
-\parit{(\ref{SHORT.thm:tan-is-CBA}).}
-Since $\spc{U}$ is a complete length $\CAT\kappa$ space, its blowup $n\cdot\spc{U}$ is $\CAT{\kappa/{n^{2}}}$.
-Since $n\cdot(\spc{U},p)\to(\T_p^\o,\0)$ as $n\to\o$, Proposition~\ref{prop:CAT^omega} implies that ${\T^\o_p}$ is a complete length $\CAT0$ space.
-\qeds
-
-The next theorem shows that $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
-That also implies that $\Alex\kappa$ comparison (\ref{df:cbb1+3}) as well as $n$-point comparison (\ref{thm:pos-config}) holds in $\T_p$.
+In this section address when tangent space has length metric.
 
 \begin{thm}{Theorem}
-\label{thm:T-in-T^w} 
-Let $\spc{X}$ be a metric space with defined angles.
-Then for any $p\in \spc{L}$, there is an distance preserving map 
-\[\iota:\T_p\hookrightarrow \T^\o_p\] 
-such that for any geodesic $\gamma$ starting at $p$
-we have $\gamma^+(0)\mapsto \lim_{n\to\o}[\gamma(\tfrac1n)]^n$.
+Let $\spc{U}$ be a complete length $\CAT{}$ space and $p\in \spc{U}$.
+Then $\T_p\spc{U}$ is a length space.
 \end{thm}
 
 \parit{Proof.}
-Given $v\in \T'_p$ 
-choose a geodesic $\gamma$ which starts at $p$ and $\gamma^+(0)=v$.
-Set 
-\[v^\o=\lim_{n\to\o}[\gamma(\tfrac1n)]^n.\]
+Assume $\spc{U}$ is $\CAT\kappa$.
 
-Note that the value $v^\o\in\T^\o_p$ does not depend on choice of $\gamma$.
-Indeed, if $\gamma_1$ is an other geodesic starting at $p$ such that $\gamma_1^+(0)=v$
-then 
-\[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t).\]
-Therefore 
-\[\lim_{n\to\o}[\gamma(\tfrac1n)]^n=\lim_{n\to\o}[\gamma_1(\tfrac1n)]^n.\]
+Since $\T_p=\Cone \Sigma_p$, it is sufficient to show that for any hinge $\hinge pxy$ such that 
+$\mangle \hinge pxy<\pi$ and any $\eps>0$, there is $z\in \spc{U}$ such that 
+\[\mangle \hinge pxz<\tfrac12\cdot\mangle \hinge pxy+\eps,\quad\mangle \hinge pyz<\tfrac12\cdot\mangle \hinge pxy+\eps.\eqlbl{eq:midpoint}\]
 
-Set $\iota(v)=v^\o$.
-Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
-$n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
-Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry of $\T_p'$.
+Fix a pair of positive small numbers $\zeta \ll \delta\ll \eps$.
+Let $x_\eps\in[px]$ and $y_\eps\in [py]$ denote the points such that 
+$\dist{p}{x_\eps}{}=\dist{p}{y_\eps}{}=\delta$.
+Let $z_\eps$ denotes $\zeta$-midpoint of $x_\eps$ and $y_\eps$.
 
-Since $\T_p'$ is dense in $\T_p$,
-we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
+Since $\delta\ll \eps$  we can assume that 
+\[\angk\kappa p{x_\eps}{y_\eps}<\mangle \hinge pxy+\eps.\]
+By since $\zeta \ll \delta$, by Alexandrov lemma, we have
+\[\angk\kappa p{x_\eps}{z_\eps}+\angk\kappa p{y_\eps}{z_\eps}< \angk\kappa p{x_\eps}{y_\eps}+\eps.\]
+By construction
+\[\angk\kappa p{x_\eps}{z_\eps}=\angk\kappa p{y_\eps}{z_\eps}.\]
+Applying angle comparison \ref{cat-hinge}, we get \ref{eq:midpoint}.
 \qeds
 
+The following example was constructed by Stephanie Halbeisen \cite{halbeisen}.
+It shows that an analogous statement does not hold for $\Alex{}$ spaces.
+If the dimension is finite, such examples do not exist, see \ref{thm:tan4finite}; 
+for proper spaces the question is open, see \ref{open:Halb-proper}.
 
-\section{Linear subspace of tangent space}
-
-\begin{thm}{Definition}\label{def:opp+Lin}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,v\in\T_p$.
-We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
-
-The subcone
-\[\Lin_p=\{v\in\T_p\mid\exists\ w\in\T_p\ \ \t{such that}\ \ w+v=0\}\]
-will be called \emph{linear subcone}\index{linear subspace} of $\T_p$.
-\end{thm}
-
-The reason for choosing the name ``linear subcone'' will be evident after proving Theorem~\ref{thm:lin-subcone}.
-
-Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
-Given $s<0$, set $s\cdot u=(-s)\cdot v$.
-This way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
-Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
-
-\begin{thm}{Proposition}\label{prop:opposite}
-Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Given two vectors $u,v\in\T_p$, the following statements are equivalent:
-\begin{subthm}{opposite} $u+v=0$;
-\end{subthm}
-\begin{subthm}{<x,u>} $\<u,x\>+\<v,x\>=0$ for any $x\in\T_p$;
-\end{subthm}
-\begin{subthm}{<xi,u>} $\<u,\xi\>+\<v,\xi\>=0$ for any $\xi\in\Sigma_p$.
-\end{subthm}
-\end{thm}
-
-\parit{Proof.}
-The condition $u+v=0$ is equivalent to $\<u,u\>=-\<u,v\>=\<v,v\>$;
-thus 
-(\ref{SHORT.<x,u>})$\Rightarrow$(\ref{SHORT.opposite}).
-Since $\T_p$ is isometric to a subset of $\T^\o_p$,
-the splitting theorem (\ref{thm:splitting}) applied for $\T_p^\o$
-gives (\ref{SHORT.opposite})$\Rightarrow$(\ref{SHORT.<x,u>}).
-The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is trivial.
-\qeds
-
-\begin{thm}{Proposition}\label{prop:two-opp}
-Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Then for any three vectors $u,v,w\in\T_p$, $u+v=0$ and $u+ w=0$ implies $v=w$.
-\end{thm}
-
-\parit{Proof.} From Proposition~\ref{prop:opposite} both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
-Hence the result.\qeds
-
-
-\begin{thm}{Theorem}\label{thm:lin-subcone}
-Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$. 
-Then $\Lin_p$ forms a subcone of $\T_p$ isometric to a Hilbert space.
-\end{thm}
-
-Before comming to the proof of the theorem, 
-let us give its corollary.
-
-\begin{thm}{Corollary}\label{cor:euclid-subcone}
-Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
-and $p\in \Str(x_1,x_2,\dots,x_n)$.
-Then there is a subcone $E\subset \T_p$ which isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
-\end{thm}
-
-\parit{Proof.} 
-By the definition of $\Str$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for each $i$.
-It remains to apply Theorem~\ref{thm:lin-subcone}.
-\qeds
-
-The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p$ is not a length space;
-see Habeisen's example (Section~\ref{halbeisen}).
-Otherwise the statement would follow directly from the Splitting theorem (\ref{thm:splitting}).
-In fact the proof of this theorem is a far walk around, in the proof we use construction of gradient, as well as Splitting theorem, proof of which use gradient flow.
-Thus in order to understand our proof completely one needs to read most of Chapter~\ref{chap:grad}.
-
-First we give a construction of a tangent vector $w$ for given two vectors $u,v$.
-If the tangent space is Euclidean, then  $w=-u-v$.
-
-
-
-
-\parit{Proof of \ref{thm:lin-subcone}.}
-First we show that $\Lin_p$ is a complete geodesic $\Alex0$ space.
-
-Recall that $\T^\o_p$ is a complete geodesic $\Alex0$ space (see \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
-Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
-
-Fix two vectors $x,y\in\Lin_p$.
-Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$ 
-and $v+\tfrac{1}{2}\cdot y=0$.
-Let us apply Lemma~\ref{lem:minus-sum} 
-for vectors $u$ and $v$ to obtain vector $w\in \T_p$.
-\begin{clm}{}\label{clm:w-mid(xy)}
-$w$ is a midpoint of $[x y]$.
-\end{clm}
-
-Indeed, according to Lemma~\ref{lem:minus-sum}, 
-\begin{align*}
-|w|^2
-&=
--\<w,u\>-\<w,v\>
-=
-\\
-&=
-\tfrac{1}{2}\cdot\<w,x\>+\tfrac{1}{2}\cdot\<w,y\>.
-\\
-\intertext{Therefore,}
-\dist[2]{x}{w}{}+\dist[2]{w}{y}{}
-&=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=\\
-&=|x|^2+|y|^2-\<w,x\>-\<w,y\>\le\\
-&\le |x|^2+|y|^2+\<u,x\>+\<v,x\>+\<u,y\>+\<v,y\>=\\
-&=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=\\
-&=\tfrac{1}{2}\cdot\dist[2]{x}{y}{}.
-\end{align*}
-Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
-\claimqeds
-
-Note that for any $v\in\Lin_p$ there is a line $\ell$ which contains $v$ and $\0$, thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
-\qeds
-
-\section{Differential and ultradifferential}\index{differential}
-
-Note that $\dist{p}{}{}\:\spc{L}\to\RR$ is semiconcave in $\spc{L}\backslash\{p\}$.
-Thus for any $q\not=p$ one can define differential.
-The following claim follows directly from first variation formula (\ref{1st-var+}).
-
-\begin{thm}{Theorem???}\label{thm:differential-of-dist}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
-and $p,q\in \spc{L}$ be distinct points. 
-Let $\Dir{p}{q}$ denotes the set of all directions of geodesics from $p$ to $q$ in $\spc{L}^\o$.
-Then 
-\[(\d_q\dist{p}{}{})(v)=-\sup\set{\<\xi,v\>}{\xi\in???\Dir{q}{p}}.\]
-In particular, for any geodesic $[qx]$ we have
-\[(\d_q\dist{p}{}{})(\dir qx)\ge -\cos\angk\kappa qxp\]
-if the right hand side is defined.
-\end{thm}
-
-
-\begin{thm}{Theorem}\label{thm:d_q dist_p(v)=-<dri p q, v>}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
-and $p,q\in \spc{L}$ be to distinct points such that there is unique geodesic $[p q]$ in $\spc{L}^\o$.
-Then for any $v\in\T_q$, we have
-\[(\d_q\dist{p}{}{})(v)=-\<\dir q p,v\>.\]
-In particular, the above identity holds if $q\in \Str(p)$ and if $p\in \Str(q)$.
-\end{thm}
-
-
-In general, as it shown in Halbeisen's example (see section \ref{halbeisen}),  
-$\T_p$  might be not a length space; 
-thus concavity of $\d_p f$ is meaningless. 
-Nevertheless, as the following lemma shows, differential $\d_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
-Note that in finite dimensional case $\d_p f$ is concave (see ???), 
-but again, we use gradient to prove some basic properties of dimension.
-
-\begin{thm}{Lemma}\label{lem:ohta} 
-Let $\spc{L}$ be a complete length $\Alex{}$ space
-$f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
-and $p\in \Dom f$.
-Then
-\[\sup\set{(\d_p f)(\xi)}{\xi\in\Sigma_p}
-\ge 
-\frac{(\d_p f)(u)+(\d_p f)(v)}{\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}}\]
-for any $u,v\in \T_p$.
-\end{thm}
-
-\parit{Proof of \ref{lem:ohta}.}
-We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
-Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\d_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
- and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
-
-\begin{wrapfigure}{r}{50mm}
-\begin{lpic}[t(0mm),b(-5mm),r(0mm),l(5mm)]{pics/puvvw(0.4)}
-\lbl[r]{1,1;$\~ p$}
-\lbl[lb]{14,44;$\~ u$}
-\lbl[lb]{53,5;$\~ v$}
-\lbl[b]{105,5;$\~ v'$}
-\lbl[lb]{34,23;$\~ w$}
-\lbl[lb]{11,8;$\alpha$}
-\end{lpic}
-\end{wrapfigure}
-
-Prepare a model configuration of five points: $\~p,\~u,\~v,\~v',\~w\in\EE^2$ such that
-\begin{itemize}
-\item $\mangle\hinge{\~p}{\~u}{\~v}=\alpha$, 
-\item $\dist{\~p}{\~u}{}=|u|$, 
-\item $\dist{\~p}{\~v}{}=|v|$, 
-\item $\~v'$ lies on the extension of $[\~p\~v]$ so that $\~v$ is midpoint of $[\~p\~v']$, 
-\item $\~w$ is the midpoint for $\~u$ and ${\~v}$.
-\end{itemize}
-Note that 
-\[\dist{\~p}{\~w}{}=\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
-
-Assume that $\spc{L}$ is geodesic.
-
-For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{L}$ the following way:
-\begin{enumerate}[(a)]
-\item $v_t=\exp_p(t\cdot v)$,\ \  $v_t'=\exp_p(t\cdot v')$
-\item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
-\item $w_t$ is the midpoint of $[u_t v_t]$.
-\end{enumerate}
-Clearly $\dist{p}{u_t}{}=t|u|$, $\dist{p}{v_t}{}=t|v|$, $\dist{p}{v_t'}{}=t|v'|$. 
-Since $\mangle(u,v)$ is defined, 
-we have $\dist{u_t}{v_t}{}=t\dist{\~u}{\~v}{}+o(t)$ 
-and $\dist{u_t}{v_t'}{}=t\dist{\~u}{\~v'}{}+o(t)$ 
-(see Theorem~\ref{angle} and Section~\ref{sec:angle}).
-
-From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we get that 
-\[\angk\kappa{v_t}p{w_t}
-\ge
-\angk\kappa{v_t}p{u_t}
-\ge
-\mangle\hinge{\~v}{\~p}{\~u}+\tfrac{o(t)}t\]
-and
-\[\angk\kappa{v_t}{v_t'}{w_t}
-\ge
-\angk\kappa{v_t}{v_t'}{u_t}
-\ge
-\mangle\hinge{\~v}{\~v'}{\~u}+\tfrac{o(t)}t.\]
-Clearly, 
-$\mangle\hinge{\~v}{\~p}{\~u}+\mangle\hinge{\~v}{\~x}{\~u'}=\pi$. 
-From adjacent angle comparison (\ref{2-sum}), 
-$\angk\kappa{v_t}p{v_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
-Hence
-$\angk\kappa{v_t}p{w_t}
-\to
-\mangle\hinge{\~v}{\~p}{\~v}$ as $t\to0+$
-and thus 
-\[\dist{p}{w_t}{}=t\dist{\~p}{\~w}{}+o(t).\]
-
-Since $f$ is $\lambda$-concave we have 
-\begin{align*}
-2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
-\\
-&=2\cdot f(p)
-+t\cdot [(\d_p f)(u)+(\d_p f)(v)]+o(t).
-\end{align*}
- 
-Applying $\lambda$-concavity of $f$, we get
-\[(\d_p f)(\dir p{w_t})
-\ge 
-\frac{t\cdot[(\d_p f)(u)+(\d_p f)(v)]
-+o(t)}{2\cdot t\cdot\dist[{{}}]{\~p}{\~w}{}+o(t)}
-\eqlbl{eq:lem:ohta*}\]
-and the lemma follows.
-
-\medskip
-
-Finally, if $\spc{L}$ is not geodesic one needs to make two adjustments in the above constructions.
-Namely: 
-\begin{enumerate}[(i)]
-\item For geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
-More precicely, 
-\[\dist{u_t}{\exp_p(t\cdot u)}{}=o(t).\] 
-Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
-\[\dist{p}{u_t}{}=t|u|+o(t),\] but it is sufficient for the rest of proof.
-\item The direction $\dir p{w_t}$ might be undefined.
-Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$)
-\end{enumerate}
-\qedsf
-
-\parbf{Ultradifferential.}
-Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
-\[f_n(x^n)=n\cdot(f(x)-f(p)),\]
-here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
-While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
-functions $f_n$ converge to $\o$-differential of $f$ at $p$.
-It will be denoted by $\d_p^\o f$;
-\[\d_p^\o f\:\T_p^\o\to\RR,\ \ \d_p^\o f=\lim_{n\to\o} f_n.\] 
-
-Clearly, the $\o$-differential of a locally Lipschitz subfunction is defined at each point of definition.
-%By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
-
-\begin{thm}{Proposition}
-Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\CAT{}$ space
-and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
-Then for any $p\in\Dom f$, the ultradifferential $\d^\o_p\:\T^\o_p\to\RR$ is a concave function.
-\end{thm}
-
-\parit{Proof.}
-Fix a geodesic $[x^\o y^\o]$ in $\T^\o_p$.
-It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y^\o]$
-which does not contains the ends
-there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{X}$ which converges to $[\bar x^\o\bar y^\o]$.
-
-Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{X}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
-Note taht $[\bar x^n \bar y^n]$ 
-converges to $[\bar x^\o \bar y^\o]$
-as $n\to\o$.
-The latter holds tivially in case $\CAT{}$
-and in $\Alex{}$ case follows from ???.
-\qeds
-
-
-
-\section{Halbeisen's example}\label{halbeisen}
-
-Here we give a construction of the following
-
-\begin{thm}{Halbeisen's example}\label{Halbeisen's example}
+\begin{thm}{Example}\label{Halbeisen's example}
 There is a complete length $\Alex{}$ space $\check{\spc{L}}$
 with a point $p\in\check{\spc{L}}$ such that the space of directions $\Sigma_p\check{\spc{L}}$ and therefore the tangent space $\T_p\check{\spc{L}}$ is not a length space. 
 \end{thm}
 
-Our construction is just a minor variation of one in \cite{halbeisen}.
-If the dimension is finite, such examples do not exist, see \ref{thm:tan4finite}; 
-for proper spaces the question is open, see \ref{open:Halb-proper}.
+
 
 \parit{Construction.}
 Let $\HH$ be a Hilbert space formed by infinite sequences of real numbers $\bm{x}=(x_0,x_1,\dots)$ with norm
@@ -734,11 +231,550 @@ and \ref{eq:claim:hil-con*} follows.\qeds
 Construct a non-compact complete geodesic $\Alex{0}$ space which contains no rays.
 \end{thm}
 
+\section{Velocity of curves}
+
+\begin{thm}{Definition}\label{def:right-derivative}
+Let $\spc{X}$ be a metric space.
+Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessary continuous, such that $\alpha(0)=p$.
+We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
+briefly $\alpha^+(0)=v$ if for some (and therefore any) sequence of vectors $v_n\in\T'_p$
+with corresponding geodesics $\gamma_n$, 
+such that $v_n\to v$ as $n\to\infty$ and 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
+
+We define right and left derivatives $\alpha^+(t_0)$ and $\alpha^-(t_0)$
+of $\alpha$ at $t_0\in\II$ as 
+\[\alpha^\pm(t_0)=\check\alpha^+(0),\] where $\check\alpha(t)=\alpha(t_0\pm t)$.
+\end{thm}
+
+The sign conversion is not quite standard, 
+say if $\alpha$ is a smooth curve in a Riemannian manifold then we have
+\[\alpha^+(t)=-\alpha^-(t).\]
+
+Note that if $\gamma$ is a geodesic starting at $p$ 
+and the tangent vector $v\in\T_p'$ corresponds to $\gamma$ 
+then $\gamma^+(0)=v$.
+
+\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
+Assume $\spc{X}$ is a metric space with defined angles
+and $\alpha,\beta\:[0,a)\to\spc{X}$ 
+be two maps such that the right derivatives $\alpha^+(0)$, $\beta^+(0)$ are defined and $\alpha^+(0)=\beta^+(0)$.
+Show that
+\[\dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+\end{thm}
+
+\begin{thm}{Proposition}
+Let $\spc{X}$ be a metric space with defined angles and $p\in \spc{X}$.
+Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\to \spc{X}$ such that $\alpha^+(0)=v$.
+\end{thm}
+
+\parit{Proof.}
+If $v\in \T_p'$ then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
+
+Given $v\in \T_p$ construct a sequence $v_n\in\T'_p$ 
+such that $v_n\to v$ and let $\gamma_n$ be the sequence of corresponding geodesic.
+
+The needed map $\alpha$ can be found among the maps such that $\alpha(0)\z=p$ and
+\[\alpha(t)=\gamma_n(t)\ \ \text{if}\ \ \eps_{n+1}\le t<\eps_n,\]
+where $(\eps_n)$
+is a decreasing sequence converging to $0$ as $n\to\infty$.
+In order to satify the condition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
+\qeds
+
+\begin{thm}{Definition}\label{def:diff-curv}
+Let 
+$\spc{X}$ be a metric space 
+and $\alpha\:\II\to \spc{X}$ be a curve.
+
+For $t_0\in\II$, 
+if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
+we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
+In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
+Assume $\spc{X}$ is a metric space with defined angles
+Show that any geodesic $\gamma\:\II\to\spc{X}$ is both-sided differentiable everywhere.
+\end{thm}
+
+\section{Differential}\index{differential}
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space with defined angles and
+$f\:\spc{X}\subto\RR$ be a subfunction, 
+$p\in\Dom f$ and $\II$ be a real interval.
+A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
+(briefly $\phi=\d_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
+\end{thm}
+
+\begin{thm}{Proposition}\label{prop:differential}
+Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
+\begin{subthm}{prop:differential:lip}
+The differential $\d_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+\end{subthm}
+
+\begin{subthm}{prop:differential:homo}
+$\d_pf\:\T_p\to\RR$ is a positive homogenius function;
+that is, for any $\lam\ge 0$ and $v\in\T_p$ we have 
+\[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.}
+Passing to a subdomain of $f$ if nesessary,
+we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
+
+Take a geodessic $\gamma$ starting at $p$ which lies in $\Dom f$.
+Since $f\circ\gamma$ is semiconcave,
+the rigth derivative $(f\circ\gamma)^+(0)$ is defined.
+Since $f$ is  $\Lip$-Lipschitz, we have
+\[|(f\circ\gamma)^+(0)-(f\circ\gamma_1)^+(0)|
+\le
+\Lip\cdot\dist[{{}}]{\gamma^+(0)}{\gamma_1^+(0)}{}\eqlbl{gam-bargam}\]
+for any other geodesic $\gamma_1$ starting at $p$.
+
+Define $\phi\:\T'_p\to\RR\:\gamma^+(0)\mapsto(f\circ\gamma)^+(0)$.
+From \ref{gam-bargam}, $\phi$ is a $\Lip$-Lipschtz function defined on $\T_p'$.
+Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function. 
+
+It remains to show that $\phi$ is differential of $f$ at $p$.
+Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
+Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
+that is, if 
+\[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
+Then 
+\[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 
+\[|f\circ\alpha(t)-f\circ\gamma_n(t)|\le\Lip\cdot\dist[{{}}]{\alpha(t)}{\gamma_n(t)}{}.\]
+Hence 
+\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
+\qedsf
+
+
+\begin{thm}{Exercise}\label{ex:d_q dist_p(v)=-<dri p q, v>-CAT}
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p,q\in \spc{U}$.
+Assume $\dist{p}{q}{}<\varpi\kappa$.
+Show that 
+\[(\d_q\dist{p}{}{})(v)=-\<\dir q p,v\>.\]
+
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:d_q dist_p(v)=-<dri p q, v>}
+Let $\spc{L}$ be a proper length $\Alex{\kappa}$ space and $p,q\in \spc{L}$ be distinct points. 
+Show that 
+\[(\d_q\dist{p}{}{})(v)=-\sup\set{\<\xi,v\>}{\xi\in\Dir{q}{p}}.\]
+In particular, if there is unique geodesic $[p q]$, then
+\[(\d_q\dist{p}{}{})(v)=-\<\dir q p,v\>.\]
+The latter holds if $q\in \Str(p)$ and if $p\in \Str(q)$.
+\end{thm}
+
+
+
+As it shown in Halbeisen's example (see section \ref{halbeisen}),  
+a $\Alex{}$ space  might have a tangent space at some points which are not length spaces; 
+thus concavity of $\d_p f$ is meaningless. 
+Nevertheless, as the following lemma shows, differential $\d_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
+In finite dimensional case $\d_p f$ is concave (see ???).
+
+\begin{thm}{Lemma}\label{lem:ohta} 
+Let $\spc{L}$ be a complete length $\Alex{}$ space
+$f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
+and $p\in \Dom f$.
+Then
+\[\sup\set{(\d_p f)(\xi)}{\xi\in\Sigma_p}
+\ge 
+\frac{(\d_p f)(u)+(\d_p f)(v)}{\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}}\]
+for any $u,v\in \T_p$.
+\end{thm}
+
+\parit{Proof of \ref{lem:ohta}.}
+We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
+Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\d_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
+ and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
+
+\begin{wrapfigure}{r}{30mm}
+\begin{lpic}[t(0mm),b(-0mm),r(0mm),l(0mm)]{pics/puvvw(1)}
+\lbl[t]{3,-0.5;$\~ p$}
+\lbl[b]{10,14;$\~ u$}
+\lbl[t]{15,-0.5;$\~ v$}
+\lbl[t]{28,0;$\~ v'$}
+\lbl[lb]{14,7;$\~ w$}
+\lbl{6,3.3;$\alpha$}
+\end{lpic}
+\end{wrapfigure}
+
+Prepare a model configuration of five points: $\~p,\~u,\~v,\~v',\~w\in\EE^2$ such that
+\begin{itemize}
+\item $\mangle\hinge{\~p}{\~u}{\~v}=\alpha$, 
+\item $\dist{\~p}{\~u}{}=|u|$, 
+\item $\dist{\~p}{\~v}{}=|v|$, 
+\item $\~v'$ lies on the extension of $[\~p\~v]$ so that $\~v$ is midpoint of $[\~p\~v']$, 
+\item $\~w$ is the midpoint for $\~u$ and ${\~v}$.
+\end{itemize}
+Note that 
+\[\dist{\~p}{\~w}{}=\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
+
+Assume that $\spc{L}$ is geodesic.
+
+For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{L}$ the following way:
+\begin{enumerate}[(a)]
+\item $v_t=\exp_p(t\cdot v)$,\ \  $v_t'=\exp_p(t\cdot v')$
+\item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
+\item $w_t$ is the midpoint of $[u_t v_t]$.
+\end{enumerate}
+Clearly $\dist{p}{u_t}{}=t|u|$, $\dist{p}{v_t}{}=t|v|$, $\dist{p}{v_t'}{}=t|v'|$. 
+Since $\mangle(u,v)$ is defined, 
+we have $\dist{u_t}{v_t}{}=t\dist{\~u}{\~v}{}+o(t)$ 
+and $\dist{u_t}{v_t'}{}=t\dist{\~u}{\~v'}{}+o(t)$ 
+(see Theorem~\ref{angle} and Section~\ref{sec:angle}).
+
+From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we get that 
+\[\angk\kappa{v_t}p{w_t}
+\ge
+\angk\kappa{v_t}p{u_t}
+\ge
+\mangle\hinge{\~v}{\~p}{\~u}+\tfrac{o(t)}t\]
+and
+\[\angk\kappa{v_t}{v_t'}{w_t}
+\ge
+\angk\kappa{v_t}{v_t'}{u_t}
+\ge
+\mangle\hinge{\~v}{\~v'}{\~u}+\tfrac{o(t)}t.\]
+Clearly, 
+$\mangle\hinge{\~v}{\~p}{\~u}+\mangle\hinge{\~v}{\~x}{\~u'}=\pi$. 
+From adjacent angle comparison (\ref{2-sum}), 
+$\angk\kappa{v_t}p{v_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
+Hence
+$\angk\kappa{v_t}p{w_t}
+\to
+\mangle\hinge{\~v}{\~p}{\~v}$ as $t\to0+$
+and thus 
+\[\dist{p}{w_t}{}=t\dist{\~p}{\~w}{}+o(t).\]
+
+Since $f$ is $\lambda$-concave we have 
+\begin{align*}
+2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
+\\
+&=2\cdot f(p)
++t\cdot [(\d_p f)(u)+(\d_p f)(v)]+o(t).
+\end{align*}
+ 
+Applying $\lambda$-concavity of $f$, we get
+\[(\d_p f)(\dir p{w_t})
+\ge 
+\frac{t\cdot[(\d_p f)(u)+(\d_p f)(v)]
++o(t)}{2\cdot t\cdot\dist[{{}}]{\~p}{\~w}{}+o(t)}
+\eqlbl{eq:lem:ohta*}\]
+and the lemma follows.
+
+\medskip
+
+Finally, if $\spc{L}$ is not geodesic one needs to make two adjustments in the above constructions.
+Namely: 
+\begin{enumerate}[(i)]
+\item For geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
+More precicely, 
+\[\dist{u_t}{\exp_p(t\cdot u)}{}=o(t).\] 
+Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
+\[\dist{p}{u_t}{}=t|u|+o(t),\] but it is sufficient for the rest of proof.
+\item The direction $\dir p{w_t}$ might be undefined.
+Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$)
+\end{enumerate}
+\qedsf
 
 
 
 
+\section{Ultratangent space} 
 
+Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter.
+
+For a metric space $\spc{X}$ and a positive real number $\lam$,
+we will denote by $\lam\cdot\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
+which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
+The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted as $x\mapsto x^\lam$, 
+so 
+\[\dist{x^\lam}{y^\lam}{}
+=
+\lam\cdot\dist[{{}}]{x}{y}{}\] 
+for any $x,y\in \spc{X}$.
+
+The $\o$-blowup $\o\cdot\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
+of the $n$-blowups $n\cdot\spc{X}$; that is,
+\[\o\cdot\spc{X}
+\df
+\lim_{n\to\o} n\cdot\spc{X}.\]
+
+Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
+it corresponds to a point $x^\o\in \o\cdot\spc{X}$.
+Note that if $x\ne y$ then 
+\[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
+that is, 
+$x^\o$ and $y^\o$ 
+belong to different metric components of $\o\cdot\spc{X}$.
+
+The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
+
+Equivalently, ultratangent space $\T^\o_x\spc{X}$ can be defined the following way.
+Consider all the sequences of points $x_n\in \spc{X}$ such that
+the sequence $\ell_n=n\cdot\dist{x}{x_n}{\spc{X}}$ is bounded.
+Define the pseudodistance between two such sequences as 
+\[\dist{(x_n)}{(y_n)}{}
+=
+\lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
+Then $\T^\o_x\spc{X}$ is the corresponding metric space.
+
+Tangent space as well as ultratangent space, 
+generalize the notion of tangent space of Riemannian manifold.
+In the simplest cases these two notions define the same space.
+In general, they are different and both useful ---
+often lack of a property in one is compensated by the other.
+
+It is clear from the definition that tangent space has cone structure.
+On the other hand, in general, ultratangent space does not have a cone structure; 
+the Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example --- it is $\Alex{0}$ as well as $\CAT{0}$.
+
+The following theorem is often used together with Observation \ref{obs:ultralimit-is-geodesic}.
+
+\begin{thm}{Theorem}\label{thm:tan-is}
+\begin{subthm}{thm:tan-is-CBB}
+If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$ then $\T^\o_p$ is $\Alex{0}$.
+\end{subthm}
+
+\begin{subthm}{thm:tan-is-CBA}
+If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$ then $\T^\o_p$ is $\CAT0$.
+\end{subthm}
+
+\end{thm}
+
+The proofs of both parts are nearly identical.
+
+\parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
+Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then for its blowup $n\cdot\spc{L}$ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
+By Proposition~\ref{prp:A^omega}, $\o\cdot\spc{L}$ is $\Alex0$
+and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{L}$.
+
+\parit{(\ref{SHORT.thm:tan-is-CBA}).}
+Since $\spc{U}$ is a complete length $\CAT\kappa$ space, its blowup $n\cdot\spc{U}$ is $\CAT{\kappa/{n^{2}}}$.
+By Proposition~\ref{prop:CAT^omega}, $\o\cdot\spc{U}$ is $\CAT0$
+and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{U}$.
+\qeds
+
+The next theorem shows that $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
+That also implies that $\Alex\kappa$ comparison (\ref{df:cbb1+3}) as well as $n$-point comparison (\ref{thm:pos-config}) holds in $\T_p$.
+
+\begin{thm}{Theorem}
+\label{thm:T-in-T^w} 
+Let $\spc{X}$ be a metric space with defined angles.
+Then for any $p\in \spc{L}$, there is an distance preserving map 
+\[\iota:\T_p\hookrightarrow \T^\o_p\] 
+such that for any geodesic $\gamma$ starting at $p$
+we have 
+\[\gamma^+(0)\mapsto \lim_{n\to\o}[\gamma(\tfrac1n)]^n.\]
+
+\end{thm}
+
+\parit{Proof.}
+Given $v\in \T'_p$ 
+choose a geodesic $\gamma$ which starts at $p$ and $\gamma^+(0)\z=v$.
+Set $v^n=[\gamma(\tfrac1n)]^n\in n\cdot \spc{X}$ and 
+\[v^\o=\lim_{n\to\o}v^n.\]
+
+Note that the value $v^\o\in\T^\o_p$ does not depend on choice of $\gamma$;
+that is, if $\gamma_1$ is an other geodesic starting at $p$ such that $\gamma_1^+(0)=v$,
+then 
+\[\lim_{n\to\o}v^n=\lim_{n\to\o}v_1^n,\]
+where $v_1^n=[\gamma_1(\tfrac1n)]^n\in n\cdot \spc{X}$.
+The latter follows since
+\[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t)\]
+and therefore $|v^n-v_1^n|_{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
+
+
+
+Set $\iota(v)=v^\o$.
+Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
+$n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
+Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry of $\T_p'$.
+
+Since $\T_p'$ is dense in $\T_p$,
+we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
+\qeds
+
+\begin{thm}{Corollary}\label{cor:real-tan-is}
+\begin{subthm}{thm:tan-is-CBB}
+If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$ then $\T_p$ is $\Alex{0}$.
+\end{subthm}
+
+\begin{subthm}{thm:tan-is-CBA}
+If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$ then $\T_p$ is $\CAT0$.
+\end{subthm}
+
+ 
+\end{thm}
+
+
+\parbf{Ultradifferential.}
+Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
+\[f_n(x^n)=n\cdot(f(x)-f(p)),\]
+here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
+While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
+functions $f_n$ converge to $\o$-differential of $f$ at $p$.
+It will be denoted by $\d_p^\o f$;
+\[\d_p^\o f\:\T_p^\o\to\RR,\ \ \d_p^\o f=\lim_{n\to\o} f_n.\] 
+
+Clearly, the $\o$-differential of a locally Lipschitz subfunction is defined at each point of definition.
+%By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
+
+\begin{thm}{Proposition}
+Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\CAT{}$ space
+and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
+Then for any $p\in\Dom f$, the ultradifferential $\d^\o_p\:\T^\o_p\to\RR$ is a concave function.
+\end{thm}
+
+\parit{Proof.}
+Fix a geodesic $[x^\o y^\o]$ in $\T^\o_p$.
+It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y^\o]$
+which does not contains the ends
+there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{X}$ which converges to $[\bar x^\o\bar y^\o]$.
+
+Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{X}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
+Note taht $[\bar x^n \bar y^n]$ 
+converges to $[\bar x^\o \bar y^\o]$
+as $n\to\o$.
+The latter holds tivially in case $\CAT{}$
+and in $\Alex{}$ case follows from ???.
+\qeds
+
+
+\section{Linear subspace of tangent space}
+
+\begin{thm}{Definition}\label{def:opp+Lin}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,v\in\T_p$.
+We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
+
+The subcone
+\[\Lin_p=\{v\in\T_p\mid\exists\ w\in\T_p\ \ \t{such that}\ \ w+v=0\}\]
+will be called \emph{linear subcone}\index{linear subspace} of $\T_p$.
+\end{thm}
+
+The reason for choosing the name ``linear subcone'' will be evident after proving Theorem~\ref{thm:lin-subcone}.
+
+\begin{thm}{Proposition}\label{prop:opposite}
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
+Given two vectors $u,v\in\T_p$, the following statements are equivalent:
+\begin{subthm}{opposite} $u+v=0$;
+\end{subthm}
+\begin{subthm}{<x,u>} $\<u,x\>+\<v,x\>=0$ for any $x\in\T_p$;
+\end{subthm}
+\begin{subthm}{<xi,u>} $\<u,\xi\>+\<v,\xi\>=0$ for any $\xi\in\Sigma_p$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+The condition $u+v=0$ is equivalent to 
+\[\<u,u\>=-\<u,v\>=\<v,v\>;\]
+thus 
+(\ref{SHORT.<x,u>})$\Rightarrow$(\ref{SHORT.opposite}).
+Since $\T_p$ is isometric to a subset of $\T^\o_p$,
+the splitting theorem (\ref{thm:splitting}) applied for $\T_p^\o$
+gives (\ref{SHORT.opposite})$\Rightarrow$(\ref{SHORT.<x,u>}).
+
+The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is trivial.
+\qeds
+
+\begin{thm}{Proposition}\label{prop:two-opp}
+Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
+Then for any three vectors $u,v,w\in\T_p$, $u+v=0$ and $u+ w=0$ implies $v=w$.
+\end{thm}
+
+\parit{Proof.} From Proposition~\ref{prop:opposite} both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
+Hence the result.\qeds
+
+Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
+Given $s<0$, set 
+\[s\cdot u\df (-s)\cdot v.\]
+This way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
+Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
+
+
+\begin{thm}{Theorem}\label{thm:lin-subcone}
+Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$. 
+Then $\Lin_p$ is a subcone of $\T_p$ isometric to a Hilbert space.
+\end{thm}
+
+Before comming to the proof of the theorem, 
+let us give its corollary.
+
+\begin{thm}{Corollary}\label{cor:euclid-subcone}
+Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
+and $p\in \Str(x_1,x_2,\dots,x_n)$.
+Then there is a subcone $E\subset \T_p$ which isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
+\end{thm}
+
+\parit{Proof.} 
+By the definition of $\Str$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for each $i$.
+It remains to apply Theorem~\ref{thm:lin-subcone}.
+\qeds
+
+The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p$ is not a length space;
+see Habeisen's example (Section~\ref{halbeisen}).
+Otherwise the statement would follow directly from the Splitting theorem (\ref{thm:splitting}).
+In fact the proof of this theorem is a far walk around --- we use construction of gradient, as well as the splitting theorem, namely its corollary (\ref{cor:splitting}).
+Thus in order to understand our proof completely one needs to read most of Chapter~\ref{chap:grad}.
+
+\parit{Proof of \ref{thm:lin-subcone}.}
+First we show that $\Lin_p$ is a complete geodesic $\Alex0$ space.
+
+Recall that $\T^\o_p$ is a complete geodesic $\Alex0$ space (see \ref{obs:ultralimit-is-geodesic} and \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
+Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
+
+Fix two vectors $x,y\in\Lin_p$.
+Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$ 
+and $v+\tfrac{1}{2}\cdot y=0$.
+Apply Lemma~\ref{lem:minus-sum} 
+to the vectors $u$ and $v$;
+let $w\in \T_p$ denotes the obtained tangent vector.
+\begin{clm}{}\label{clm:w-mid(xy)}
+$w$ is a midpoint of $[x y]$.
+\end{clm}
+
+Indeed, according to Lemma~\ref{lem:minus-sum}, 
+\begin{align*}
+|w|^2
+&=
+-\<w,u\>-\<w,v\>
+=
+\\
+&=
+\tfrac{1}{2}\cdot\<w,x\>+\tfrac{1}{2}\cdot\<w,y\>.
+\\
+\intertext{Therefore,}
+\dist[2]{x}{w}{}+\dist[2]{w}{y}{}
+&=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=\\
+&=|x|^2+|y|^2-\<w,x\>-\<w,y\>\le\\
+&\le |x|^2+|y|^2+\<u,x\>+\<v,x\>+\<u,y\>+\<v,y\>=\\
+&=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=\\
+&=\tfrac{1}{2}\cdot\dist[2]{x}{y}{}.
+\end{align*}
+Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
+\claimqeds
+
+Note that for any $v\in\Lin_p$ there is a line $\ell$ which contains $v$ and $\0$, thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
+\qeds
+
+
+
+
+\section{Comments}
+
+\begin{thm}{Open question}\label{open:Halb-proper}
+Let $\spc{L}$ be a proper length $\Alex\kappa$ space.
+Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
+\end{thm}
 
 
 
