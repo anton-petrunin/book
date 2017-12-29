@@ -82,28 +82,26 @@ The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geod
 In this section address when tangent space has length metric.
 
 \begin{thm}{Theorem}
-Let $\spc{U}$ be a complete length $\CAT{}$ space and $p\in \spc{U}$.
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p\in \spc{U}$.
 Then $\T_p\spc{U}$ is a length space.
 \end{thm}
 
 \parit{Proof.}
-Assume $\spc{U}$ is $\CAT\kappa$.
-
 Since $\T_p=\Cone \Sigma_p$, it is sufficient to show that for any hinge $\hinge pxy$ such that 
 $\mangle \hinge pxy<\pi$ and any $\eps>0$, there is $z\in \spc{U}$ such that 
 \[\mangle \hinge pxz<\tfrac12\cdot\mangle \hinge pxy+\eps,\quad\mangle \hinge pyz<\tfrac12\cdot\mangle \hinge pxy+\eps.\eqlbl{eq:midpoint}\]
 
-Fix a pair of positive small numbers $\zeta \ll \delta\ll \eps$.
-Let $x_\eps\in[px]$ and $y_\eps\in [py]$ denote the points such that 
-$\dist{p}{x_\eps}{}=\dist{p}{y_\eps}{}=\delta$.
-Let $z_\eps$ denotes $\zeta$-midpoint of $x_\eps$ and $y_\eps$.
+Fix a small positive number $\delta\ll \eps$.
+Let $\bar x\in \mathopen{]}px]$ and $\bar y\in \mathopen{]}py]$ denote the points such that 
+$\dist{p}{\bar x}{}=\dist{p}{\bar y}{}=\delta$.
+Let $z$ denotes the midpoint of $\bar x$ and $\bar y$.
 
 Since $\delta\ll \eps$  we can assume that 
-\[\angk\kappa p{x_\eps}{y_\eps}<\mangle \hinge pxy+\eps.\]
-By since $\zeta \ll \delta$, by Alexandrov lemma, we have
-\[\angk\kappa p{x_\eps}{z_\eps}+\angk\kappa p{y_\eps}{z_\eps}< \angk\kappa p{x_\eps}{y_\eps}+\eps.\]
+\[\angk\kappa p{\bar x}{\bar y}<\mangle \hinge pxy+\eps.\]
+By the Alexandrov's lemma (\ref{lem:alex}), we have
+\[\angk\kappa p{\bar x}{z}+\angk\kappa p{\bar y}{z}< \angk\kappa p{\bar x}{\bar y}.\]
 By construction
-\[\angk\kappa p{x_\eps}{z_\eps}=\angk\kappa p{y_\eps}{z_\eps}.\]
+\[\angk\kappa p{\bar x}{z}=\angk\kappa p{\bar y}{z}.\]
 Applying angle comparison \ref{cat-hinge}, we get \ref{eq:midpoint}.
 \qeds
 
