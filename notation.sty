@@ -229,7 +229,7 @@
 
 \let\oldo\o
 \def\o{\text{\rm \textcloseomega}}
-\def\0{o}%Should be used for center of cone...
+\def\0{0}%Should be used for center of cone...
 
 
 %SIMILAR TO ``='' SIGN
@@ -400,3 +400,5 @@
 \def\yetdist{\toshayetdist}}%
 {\def\dist{\sbadist}%
 \def\yetdist{\sbayetdist}}%
+
+\newcommand*\distfun[1]{\mathop{\rm dist}\nolimits_{#1}}

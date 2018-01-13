@@ -102,7 +102,7 @@ By the Alexandrov's lemma (\ref{lem:alex}), we have
 \[\angk\kappa p{\bar x}{z}+\angk\kappa p{\bar y}{z}< \angk\kappa p{\bar x}{\bar y}.\]
 By construction
 \[\angk\kappa p{\bar x}{z}=\angk\kappa p{\bar y}{z}.\]
-Applying angle comparison \ref{cat-hinge}, we get \ref{eq:midpoint}.
+Applying the angle comparison (\ref{cat-hinge}), we get \ref{eq:midpoint}.
 \qeds
 
 The following example was constructed by Stephanie Halbeisen \cite{halbeisen}.
@@ -140,8 +140,8 @@ Thus we can treat $\Sigma_p\spc{L}$ and $\Sigma_p\check{\spc{L}}$ as one set, wi
 let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
 
 The space $\spc{L}$  is isometric to the Euclidean cone
-over $\Sigma_p\spc{L}$ with vertex at $p$; 
-$\Sigma_p\spc{L}$ is isometric to a sphere in Hilbert space with radius $\frac{1}{\sqrt{2}}$.
+over $\Sigma_p\spc{L}$ with vertex at~$p$; 
+$\Sigma_p\spc{L}$ is isometric to a sphere in Hilbert space with radius~$\frac{1}{\sqrt{2}}$.
 In particular, $\mangle$ is length-metric of $\Sigma_p{\spc{L}}$ in $\mangle_{\HH\times\RR}$.
 
 
@@ -362,12 +362,11 @@ Show that
 
 
 \begin{thm}{Exercise}\label{ex:d_q dist_p(v)=-<dri p q, v>}
-Let $\spc{L}$ be a proper length $\Alex{\kappa}$ space and $p,q\in \spc{L}$ be distinct points. 
+Let $\spc{L}$ be a length $\Alex{\kappa}$ space and $p,q\in \spc{L}$ be distinct points. 
+Assume  $q\in \Str(p)$ or $p\in \Str(q)$
 Show that 
-\[(\d_q\dist{p}{}{})(v)=-\sup\set{\<\xi,v\>}{\xi\in\Dir{q}{p}}.\]
-In particular, if there is unique geodesic $[p q]$, then
 \[(\d_q\dist{p}{}{})(v)=-\<\dir q p,v\>.\]
-The latter holds if $q\in \Str(p)$ and if $p\in \Str(q)$.
+
 \end{thm}
 
 
@@ -646,6 +645,82 @@ as $n\to\o$.
 The latter holds tivially in case $\CAT{}$
 and in $\Alex{}$ case follows from ???.
 \qeds
+
+\section{Polar vectors}
+
+Here we give a corollary of Lemma \ref{lem:close-grad}.
+It will be used to prove basic properties of tangent space.
+
+
+\begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
+
+Given two vectors $u,v\in \T_p$ there is unique vector $w\in \T_p$ such that
+\[\<u,x\>+\<v,x\>+\<w,x\>\ge 0\]
+for any $x\in \T_p$ and
+\[\<u,w\>+\<v,w\>+\<w,w\>=0.\]
+
+\end{thm}
+
+If $\T_p$ would be a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
+However, tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
+
+To obtain the following corollary, applying the above lemma for $u=v$.
+In the finite-dimensional case, a stronger statement holds, see Milka's lemma (\ref{lem:milka}).
+
+\begin{thm}{Existence of polar vector}\label{cor:polar}
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
+and $p\in \spc{L}$. 
+Given a vector $u\in \T_p$ there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
+$u^*$ is \emph{polar}\index{polar vector} to $u$;
+that is,
+ $\<u^*,x\>+\<u,x\>\ge 0$ for any $x\in \T_p$.
+
+In particular, for any vector $u\in \T_p$ there is a polar vector $u^*\in\T_p$ such that
+$|u^*|\le |u|$.
+\end{thm}
+
+\parit{Proof of \ref{lem:minus-sum}.}
+Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
+Consider sequence of functions 
+\[f_n=|u|\cdot\dist[{{}}]{a_n}{}{}+|v|\cdot\dist[{{}}]{b_n}{}{}.\]
+According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
+\[(\d_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
+Thus, we have the following uniform convergence for all $x\in\Sigma_p$
+\[(\d_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\] 
+According to Lemma~\ref{lem:close-grad}, 
+sequence $\nabla_pf_n$ converges.
+Set 
+\[w=\lim_n\nabla_pf_n.\]
+
+From definition of gradient
+\[\begin{aligned}
+\<w,w\>&=\lim_{n\to\infty}\<\nabla_pf_n,\nabla_pf_n\>=
+&&&%right side
+\<w,x\>&=\lim_{n\to\infty}\<\nabla_pf_n,x\>\ge
+\\%second line
+&=\lim_{n\to\infty}(\d_p f_n)(\nabla_p f_n)
+=
+&&&%second line right side
+&\ge
+\lim_{n\to\infty}(\d_pf_n)(x)
+=
+\\%line 3
+&=-\<u,w\>-\<v,w\>,
+&&&%line 3 right side
+&=-\<u,x\>-\<v,x\>.
+\end{aligned}\]
+\qedsf
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Linear subspace of tangent space}

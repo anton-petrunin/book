@@ -209,22 +209,20 @@ The $\o$-limit of any sequence of metric spaces is complete.
 \parit{Proof.}
 Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
 
-Fix a Cauchy sequence $x_m\in \spc{X}_\o$.
-Passing to a subsequence we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$.
+Fix a sequence $x_m\in \spc{X}_\o$ converging in itself.
+Passing to a subsequence we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$ for any $m$.
 
-Let us choose double sequence $x_{n,m}\in \spc{X}_n$ such that $x_{n,m}\to x_m$ for each $m$ as $n\to\o$.
+Let us choose double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
 
-Set 
-\[S_{m}=\set{n\in\NN}{\dist{x_{n,m}}{x_{n,m-1}}{}<\tfrac1{2^m}}.\]
-Note that for each $m$ the set $S_{m}$ contains $\o$-almost all elements of $\NN$.
-We assume that $S_1=\NN$.
+Set $S_1=\NN$ and
+\[S_{m}=\set{n\in\NN}{\dist{x_{n,\kay}}{x_{n,\kay-1}}{}<\tfrac1{2^\kay}\quad\text{for}\quad \kay\le m}.\]
 
 For each $n$ consider the largest value $m(n)$ such that $m(n)\le n$
 and $m(n)\in S_{m}$.
 Consider the sequence $y_n=x_{n,m(n)}$;
 denote by $y\in \spc{X}^\o$ its $\o$-limit.
 By construction $x_n\to y$ as $n\to \infty$.
-Hence the statement follows.  
+Hence the statement follows.
 \qeds
 
 \begin{thm}{Observation}\label{obs:ultralimit-is-geodesic}
@@ -352,7 +350,7 @@ that is, $x_\infty=y_\infty$.
 This way we constructed a map $\nu\:x_\o\to x_\infty$;
 it is defined on a subset of $\Dom\nu \subset\spc{X}_\o$.
 By construction of $\iota$, 
-we get $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
+we get that $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
 
 Finally note that if $\spc{X}_\infty$ is compact then $\nu$ is defined on whole $\spc{X}_\o$;
 this proves (\ref{SHORT.thm:ultra-GH:a}).
@@ -428,6 +426,8 @@ the $\o$-limit is defined.
 \end{thm}
 
 The proof is straightforward.
+
+
 
 \begin{thm}{Exercise}\label{ex:nonconvex-limit}
 Construct a sequence of compact length spaces 
