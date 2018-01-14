@@ -144,11 +144,11 @@ A composite  subfunction $\phi\:\spc{L}\subto\RR$ is called \emph{multidistance 
 (briefly, $\phi\in \MD(\spc{L},\RR)$) 
 if
 $\phi\can F\circ\dist{\bm{a}}{}{}$ 
-where $\dist{\bm{a}}{}{}$ is a distance map; that is,
+where $\distfun{\bm{a}}{}{}$ is a distance map; that is,
 \[
-\dist{\bm{a}}{}{}
+\distfun{\bm{a}}{}{}
 =
-(\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})\:\spc{L}\to\RR^\kay
+(\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})\:\spc{L}\to\RR^\kay
 \]
 for some point array $\bm{a}=(a^1,\dots,a^\kay)$ and 
 $F\:\RR^\kay\subto\RR$ is a smooth subfunction
@@ -283,7 +283,7 @@ $\phi_n''(p_n)\le\lambda$ for all large $n$.
 \parit{Proof.}
 According to ???,
 there is $\delta>0$ such that for any $a\in \oBall(z,\delta)$,
-$\d_p\dist{a}{}{}<\d_p\dist[{{}}]{z}{}{}+\eps$.
+$\d_p\distfun{a}{}{}<\d_p\distfun{z}{}{}+\eps$.
 Applying Theorem \ref{thm:dist-emb},
 we get a point array $\bm{a}$ in $\oBall(z,\delta)$ such that
 the distance map $\dist{\bm{a}}{}{}$ is bi-Lipschitz in a neighborhood of $p$.
@@ -305,7 +305,7 @@ so that the directions $\dir{p}{z^i}$ form a $\tfrac\pi4$-net in $\Sigma_p$.
 Applying $\kay$ times Corollary~\ref{cor:strong-conc-approx},
 we get a collection of strongly concave functions $\phi^i$ 
 defined on a neighborhood of $p$
-such that the differential $\d_p\phi^i$ is arbitrary close to $\d_p\dist{z^i}{}{}$.
+such that the differential $\d_p\phi^i$ is arbitrary close to $\d_p\distfun{z^i}{}{}$.
 Then the function 
 \[\phi(x)=\min_i\{\phi^i(x)-\phi^i(p)\}\]
 satisfies the condition of theorem.
@@ -398,7 +398,7 @@ we get that $w=w^{m+1}$ satisfies \ref{eq:df(w)>0}.
 Now let us turn to the second part of lemma.
 Note that we can assume that $x\ne 0$.
 Therefore we can choose a sequence of points $a_n\to p$ such that $\dir{p}{a_n}\to x/|x|$ as $n\to\infty$.
-Set $f_n=\dist{a_n}{}{}$.
+Set $f_n=\distfun{a_n}{}{}$.
 We can assume that the geodesic $[pa_n]$ is unique for all $n$,
 so $\d_pf_n(z)=-\<\dir p{a_n},z\>$ for all $z$.
 It remains to apply \ref{eq:df(w)>0} for $f_n$
@@ -457,7 +457,7 @@ and otherwise $p$ is called
 
 Note that if there is a point array $(a^0,a^1,\dots,a^\kay)$
 such that%
-\footnote{More formally, $\phi^i\can F\circ\dist{a^i}{}{}$ where $F(x)=x$ and $\Dom F=(0,\infty)$.} $\phi^i\can\dist{a^i}{}{}$ for each $i$
+\footnote{More formally, $\phi^i\can F\circ\distfun{a^i}{}{}$ where $F(x)=x$ and $\Dom F=(0,\infty)$.} $\phi^i\can\distfun{a^i}{}{}$ for each $i$
 then $(\phi^0,\phi^1,\dots,\phi^\kay)$
 is $\kappa$-strutting $p$
 if and only if 
@@ -573,10 +573,10 @@ Then there is a point $z$ such that
 for each $i$.
 If $\bar z\in\l]pz\r]$ and $\bar z\to p$
 then
-\[\sdk\kappa p{\phi}{\dist{\bar z}{}{}}\to d_p\phi^i(\dir{p}{z}).\]
+\[\sdk\kappa p{\phi}{\distfun{\bar z}{}{}}\to d_p\phi^i(\dir{p}{z}).\]
 In particular, 
 taking%
-\footnote{More formally, $\psi\can G\circ\dist{a^i}{}{}$ where $G(x)=x$ and $\Dom G=(0,\infty)$.} $\psi=\dist{\bar z}{}{}$ we get the first part of the proposition. 
+\footnote{More formally, $\psi\can G\circ\distfun{a^i}{}{}$ where $G(x)=x$ and $\Dom G=(0,\infty)$.} $\psi=\distfun{\bar z}{}{}$ we get the first part of the proposition. 
 
 The second part follows once Corollary~\ref{cor:strong-conc-approx} is applyed for the base point $p$ and the point $\bar z$ found above.
 \qeds

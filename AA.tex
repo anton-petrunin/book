@@ -1,4 +1,91 @@
 
+Let $\spc{L}$ be a complete length $\Alex{}$ space.
+A subfunction $f\:\RR\times\spc{L}\subto\RR$, will be called \emph{family of subfunctions}\index{family of subfunctions};
+in this case we prefer the notation $f\:(t,p)\mapsto f_t(p)$.
+A family of subfuncrions $f_t$ is called 
+\emph{locally Lipschitz}%
+\index{locally Lipschitz family of subfunction} 
+if the corresponding subfunction $(t,p)\mapsto f_t(p)$ is locally Lipschitz.
+
+Let $\lambda\:\RR\subto\RR\:t\mapsto \lambda_t$ be a continuous subfunction.
+A family of subfunctions $f_t\:\spc{L}\to \RR$, will be called \emph{$\lambda_t$-concave}\index{$\lambda_t$-concave} 
+and for each fixed $t$, the subfunction $f_t\:\spc{L}\subto\RR$ is $\lambda_t$-concave. 
+
+Let $\II$ be a real inetrval, and $\alpha\:\II\to\spc{L}$ be locally Lipschitz??? curve.
+We will write 
+$\alpha^+(t)=\nabla f_t$
+if for any $t\in \II$, the right tangent vector $\alpha^-(t)$
+is defined and $\alpha^+(t)=\nabla_{\alpha(t)}f_t$.
+The same way we can consider equation $\alpha^-(t)=\nabla_{\alpha(t)}f_t$
+for the left tangent vector.
+The solutions of $\alpha^+(t)=\nabla f_t$ will be also called $f_t$-gradient curves.
+
+The following proposition extends
+the existence \ref{thm:glob-exist-grad-curv},
+the distance estimates \ref{thm:dist-est}, \ref{lem:fg-dist-est}
+and passage to the limit \ref{ultr-lim-g-curve} to the gradient curves for a family of semiconcave functions.
+The proofs are straightforward, and left to the reader.
+
+\begin{thm}{Proposition-definition}\label{prop-def}
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
+$\II$ be an open real interval, 
+$\lambda\:t\mapsto\lambda_t\:\II\to\RR$ be a continuous function and 
+$f_t\:\spc{L}\to \RR$, $t\in \II$ be locally Lipschitz $\lambda_t$-concave family of subfunctions.
+
+Then for any $t^0\in\II$ and any $x^0\in \Dom f_t$ there is an $f_t$-gradient curve $\alpha$ which is defined in a neighborhood of $t^0$ and such that $\alpha(t^0)\z=x^0$.
+Moreover
+\begin{subthm}{}
+If $\alpha,\beta\:\II\to \spc{L}$ are $f_t$-gradient then for any $t^0,t^1\in\II$, $t^0\le t^1$,
+\[\dist{\alpha(t^1)}{\beta(t^1)}{}\le \Lip\cdot\dist[{{}}]{\alpha(t^0)}{\beta(t^0)}{},\]
+where 
+\[\Lip=\exp\l(\int\limits_{t^0}^{t^1}\lambda(t)\cdot\d t\r).\]
+\end{subthm}
+
+\begin{subthm}{}
+Let $\eps>0$ 
+and $f_t,g_t\:\spc{L}\to \RR$ be two $\lambda_t$-concave locally Lipschitz family of function such that $|f-g|<\eps$.
+Assume
+$\alpha,\beta\:[0,t_{\max})\to \spc{L}$ are correspondingly $f_t$- and $g_t$-gradient curves such that $\alpha(0)=\beta(0)$.
+Then 
+\[\dist{\alpha(t)}{\beta(t)}{}
+\le ???
+\sqrt{\tfrac{1}{2\cdot\eps\cdot\lambda}
+\cdot
+\l(e^{\frac{t\cdot\lambda}\eps}-1\r)}\]
+for any $t\in[0,t_{\max})$.
+In particular, if $t_{\max}<\infty$, then
+\[\dist{\alpha(t)}{\beta(t)}{}
+\le
+???\Const\cdot\sqrt{\eps\cdot t}\]
+for some constant $\Const=\Const(t_{\max},\lambda)$.
+
+Moreover, the same conclusion holds for locally Lipschitz and $\lambda_t$-concave subfunctions $f_t,g_t\:\spc{L}\subto \RR$ if for any $t\in[0,t_{\max})$ there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f\cap\Dom g$.
+\end{subthm}
+
+\begin{subthm}{}
+???convergence
+\end{subthm}
+
+
+
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

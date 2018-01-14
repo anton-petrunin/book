@@ -59,7 +59,7 @@ is called \index{extremal set}\emph{extremal}
 if for any point $p\notin E$ the following condition fulfilled.
 If $q\in E$ is a point which minimize the distance to $p$
 then $\mangle \hinge q p x\le\tfrac\pi2$ for any $x\in\spc{L}$.
-Equivalently, $q$ is a critical point of the distance function $\dist{p}{}{}$,  
+Equivalently, $q$ is a critical point of the distance function $\distfun{p}{}{}$,  
 see Definition \ref{def:critical-point}.
 \end{thm}
 
@@ -71,7 +71,7 @@ for any extremal set $E\subset \spc{L}$.
 \end{thm}
 
 \parit{Proof.}
-According to ???, there is $\eps>0$ such that all the values in $(0,\eps)$ are regular for the distance function $\dist{p}{}{}$.
+According to ???, there is $\eps>0$ such that all the values in $(0,\eps)$ are regular for the distance function $\distfun{p}{}{}$.
 It remains to apply the definition of extremal set.
 \qeds
 
@@ -88,7 +88,7 @@ By Proposition \ref{prop:extrimal+nbhd}, $E$ is closed.
 
 Now assume $p\notin E$; and let $q\in E$ is a point which minimize the distance to $p$. 
 Choose $\alpha$ so that $q\in E_\alpha$.
-Since $E_\alpha$ is extremal, the point $q$ is critical for the distance function $\dist{p}{}{}$.
+Since $E_\alpha$ is extremal, the point $q$ is critical for the distance function $\distfun{p}{}{}$.
 Hence the result follows.
 \qeds
 
@@ -160,9 +160,9 @@ Fix a path-connected component $Z$ of $S_K$ and let $E$ be the closure of $Z$.
 Choose arbitrary point $p\notin E$ and let $q\in E$ be a point which minimize the distance $\dist{p}{q}{}$.
 
 Assume $\mangle\hinge qpx>\tfrac\pi2$;
-in other words the $q$ is a regular point for the function $\dist{p}{}{}$.
+in other words the $q$ is a regular point for the function $\distfun{p}{}{}$.
 Then by Morse lemma (\ref{lem:morse}),
-there is a neighborhood $\Omega\ni q$ which splits along $\dist{p}{}{}$;
+there is a neighborhood $\Omega\ni q$ which splits along $\distfun{p}{}{}$;
 that is, there is a homeomorphism $h\:\II\times \Lambda\to\Omega$,
 where $\II$ is an open real inteval containing $\dist{p}{q}{}$
 such that $\dist{p}{h(t,x)}{}=t$ for any $(t,x)\in \II\times \Lambda$.
@@ -243,7 +243,7 @@ f(p)-f(x(t))
 \ge ???
 \end{align*}
 Therefore 
-$(\d_x\dist{p}{}{})(\nabla_xf)\le ???$ 
+$(\d_x\distfun{p}{}{})(\nabla_xf)\le ???$ 
 if $0<\dist{p}{x}{}<???$.
 
 If follows that if $x(t)=\GF^t_f$ then 
@@ -283,21 +283,21 @@ For example: A cube can be presented as a quotient of a flat torus by a discrete
 an Alexandrov's space $\spc{L}$ is extremal if and only if for any $q\in \spc{L}\backslash E$,
 the following condition is fulfilled:
 
-If $\dist{q}{}{}$ has a local minimum on $E$ at a point $p$, then $p$ is a critical
-point of $\dist{q}{}{}$ on $\spc{L}$; 
-that is, $\nabla_p\dist{q}{}{}=\0$.
+If $\distfun{q}{}{}$ has a local minimum on $E$ at a point $p$, then $p$ is a critical
+point of $\distfun{q}{}{}$ on $\spc{L}$; 
+that is, $\nabla_p\distfun{q}{}{}=\0$.
 \end{thm}
 
 \parit{Proof.} For the ``only if'' part, note that if $p\in E$ is not a critical point of
-$\dist{q}{}{}$, then one can find a point $x\in \Str(p)$ (thus $\dir p x$ is
+$\distfun{q}{}{}$, then one can find a point $x\in \Str(p)$ (thus $\dir p x$ is
 uniquely defined) such that 
-\[(\d_p\dist{q}{}{})(\dir p x)>0.\] 
-Since $\nabla_p\dist{x}{}{}$ is polar to $\dir p x$ (see
+\[(\d_p\distfun{q}{}{})(\dir p x)>0.\] 
+Since $\nabla_p\distfun{x}{}{}$ is polar to $\dir p x$ (see
 ???) we get 
-\[(\d_p\dist{q}{}{})(\nabla_p\dist{x}{}{})<0,\] 
+\[(\d_p\distfun{q}{}{})(\nabla_p\distfun{x}{}{})<0,\] 
 see ???.
-Hence, the gradient flow $\GF_{\dist{x}{}{}}^t$ pushes the point $p$ closer to $q$, which
-contradicts the fact that $p$ is a minimum point $\dist{q}{}{}$ on $E$.
+Hence, the gradient flow $\GF_{\distfun{x}{}{}}^t$ pushes the point $p$ closer to $q$, which
+contradicts the fact that $p$ is a minimum point of $\distfun{q}{}{}$ on $E$.
 
 To prove the ``if'' part, it is sufficient to show that if $F\subset \spc{L}$ satisfies the condition of the theorem,
 then for any $p\in F$, and any semiconcave function $f$, either $\nabla_p f=\0$ or 
@@ -355,13 +355,13 @@ The following is yet another important technical lemma:
 \label{lem:dist-to-extr}
 Let $\spc{L}$ be a compact $m$-dimensional length $\Alex\kappa$ space. 
 Then there is $\eps>0$
-such that $\dist{E}{}{}$ has no critical values in $(0,\eps)$. 
+such that $\distfun{E}{}{}$ has no critical values in $(0,\eps)$. 
 Moreover,
-\[|\nabla_x\dist{E}{}{}|>\eps\ \ \text{if}\ \ 0<\dist{E}{x}{}<\eps.\]
+\[|\nabla_x\distfun{E}{}{}|>\eps\ \ \text{if}\ \ 0<\dist{E}{x}{}<\eps.\]
 
 For a non-compact $\spc{L}$,  the same holds 
 for the restriction
- $\dist{E}{}{}|\Omega$ to any bounded open $\Omega\subset \spc{L}$.
+ $\distfun{E}{}{}|\Omega$ to any bounded open $\Omega\subset \spc{L}$.
 \end{thm}
 
 
@@ -544,11 +544,11 @@ Moreover $\eps=\eps(m,\kappa,\diam\Omega,\vol\Omega)$.
 ???From Lemma~\ref{lem:tuda-suda}, 
 it follows that for two sufficiently close
 points $x,y\in E$ near $p$ there is a point $z$ so that
-$\<\nabla_x\dist{z}{}{},\dir xy\> >\eps$ or $\<\nabla_y\dist{z}{}{},\dir y x\>
+$\<\nabla_x\distfun{z}{}{},\dir xy\> >\eps$ or $\<\nabla_y\distfun{z}{}{},\dir y x\>
 >\eps$. 
 Then, for the corresponding point, say $x$, the gradient curve
-$t\to\GF^t_{\dist{z}{}{}}(x)$ lies in $E$, it is $1$-Lipschitz and the distance
-$\dist{\GF^t_{\dist{z}{}{}} (x)}{y}{}$ is decreasing with the speed of at least $\eps$. 
+$t\to\GF^t_{\distfun{z}{}{}}(x)$ lies in $E$, it is $1$-Lipschitz and the distance
+$\dist{\GF^t_{\distfun{z}{}{}} (x)}{y}{}$ is decreasing with the speed of at least $\eps$. 
 Hence the result.
 \qeds
 

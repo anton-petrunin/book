@@ -122,7 +122,7 @@ $y_p(t)\le \md\kappa(t-t_0)$ or, equivalently $\dist{\beta(t_0)}{\beta(t)}{}\le 
 \parit{(\ref{SHORT.thm:k-conc=lip-exist})+(\ref{SHORT.thm:k-conc=lip-diff}).} Since 
 the function $y_q$ is semiconcave, it is both-side differentiable at any $t$ such that $0<\dist{q}{\beta(t)}{}<\varpi\kappa$.
 Moreover, it is differentable at all but countable subset of such values $t$.
-Clearly, the same remains true for the function $\dist{q}{}{}\circ\beta$.
+Clearly, the same remains true for the function $\distfun{q}{}{}\circ\beta$.
 
 It remains to apply \ref{lem:count-der} for a dense countable subset $Q$ of $\oBall(p,\varpi\kappa)$; the existance of such $Q$ follows from \ref{cor:dim>proper}.
 
@@ -130,7 +130,7 @@ It remains to apply \ref{lem:count-der} for a dense countable subset $Q$ of $\oB
 \[\<\xi,\beta^+\>+\<\xi,\beta^+\>\ge 0.\eqlbl{eq:geod-polar}\]
 
 Choose $q\in \Str(p)$ so that $\xi=\dir p q$ is uniquely defined.
-From \ref{thm:d_q dist_p(v)=-<dri p q, v>}, we have $(\d_p\dist{q}{}{})(x)\z=-\<\xi,x\>$.
+From \ref{thm:d_q dist_p(v)=-<dri p q, v>}, we have $(\d_p\distfun{q}{}{})(x)\z=-\<\xi,x\>$.
 Since $y_q$ is semiconcave, $y_q^+(t_0)+y_q^-(t_0)\le 0$.
 Further,
 \[y^\pm_q(t_0)=-\sn\kappa\dist[{{}}]{p}{q}{}\cdot\<\xi,\beta^\pm(t_0)\>\] 
@@ -155,7 +155,7 @@ Note that
 \item If the angle $\tangle\mc\kappa(\alpha|_{t_0}^{t_1},p)$ is defined then $\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$ is defined for any $t$ between $t_0$ and $t_1$.
 \item If one fixes $p$ and $t_0$ such that $\dist{p}{\gamma(t_0)}{}<\varpi\kappa$, then the angle $\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$ is defined once $|t-t_0|>0$ is sufficiently small.
 \item If $\phi=\lim_{t\to t_0+}\tangle\mc\kappa(\alpha|_{t_0}^{t},p)$ is defined then
-$$\cos\phi=-(\dist{p}{}{}\circ\alpha)^+(t_0).$$
+$$\cos\phi=-(\distfun{p}{}{}\circ\alpha)^+(t_0).$$
 \end{itemize}
 
 
@@ -447,8 +447,8 @@ f_\infty(t)&=\dist{q_\infty}{\beta_\infty(t)}{},
 & f_n(t)&=\dist{q_n}{\beta_n(t)}{}.\\
 \intertext{Clearly, $f_n\to f_\infty$.
 Since $q_\infty\in \Str(p_\infty)$ and $q_n\in \Str_n(p_n)$, \ref{thm:d_q dist_p(v)=-<dri p q, v>} implies}
-(\d_{p_\infty}\dist{q_\infty}{}{})(x)&\equiv-\<\xi_\infty,x\>,
-&(\d_{p_n}\dist{q_n}{}{})(x)&\equiv-\<{\xi_n},x\>.
+(\d_{p_\infty}\distfun{q_\infty}{}{})(x)&\equiv-\<\xi_\infty,x\>,
+&(\d_{p_n}\distfun{q_n}{}{})(x)&\equiv-\<{\xi_n},x\>.
 \intertext{Thus, the functions $f_\infty$ is differentiable at $t_0$ and}
 f_\infty'(t_0)&=\mp\<\xi_\infty,\beta_\infty^\pm(t_0)\>,
 & f^\pm_n(t_0)&=-\<\xi_n,\beta^\pm_n(t_0)\>.
@@ -581,7 +581,7 @@ A curve $\gamma$ in an $m$-dimensional complete length $\Alex\kappa$ space $\spc
 
 First, let us briefly discuss properties of probation curves.
 Note that for any $p,q\in \spc{L}$,
-function $f_p=\md\kappa\circ\dist{p}{}{}$ 
+function $f_p=\md\kappa\circ\distfun{p}{}{}$ 
 has controlled concavity type $(1-\kappa\cdot  f_p(q),\kappa)$ at $q$.
 Thus, any probation curve is $\kappa$-convex. 
 
@@ -888,7 +888,7 @@ again Alexandrov's lemma.
 To prove \ref{eq:ext-mono-3}, set
 $\phi=\sup\set{\tangle\mc\kappa(\alpha_2|_b^t,p)}{t>b}$.
 Since $\alpha_2$ is $\kappa$-monotonic w.r.t. $b$, 
-we have $\cos\phi=-(\d_q\dist{p}{}{})(v)$,
+we have $\cos\phi=-(\d_q\distfun{p}{}{})(v)$,
 where $v=\alpha_1^+(b)=\alpha_2^+(b)$.
 In particular,
 \[\phi=\lim_{t\to b+}\tangle\mc\kappa(\alpha_1|^t_b,p).\]
@@ -913,9 +913,9 @@ Moreover, if for some $x\in \spc{L}$  we have $\alpha_n(0)=x$ and $|\alpha^+(0)|
 \parit{Proof of \ref{lem:mono-lim}.} 
 The first part follows directly from Definition~\ref{def:mono}.
 Note that for any $p$, 
-\[(\dist{p}{}{}\circ\alpha)^+(0)=-\cos\l(\lim_{t\to0+}\tangle\mc\kappa(\alpha|_0^t,p)\r).\]
+\[(\distfun{p}{}{}\circ\alpha)^+(0)=-\cos\l(\lim_{t\to0+}\tangle\mc\kappa(\alpha|_0^t,p)\r).\]
 From monotonicity, the limit is defined.
-Hence $(\dist{p}{}{}\circ\alpha)^+(0)$ and, from \ref{lem:count-der:rl}, also $\alpha^+(0)$ are defined.
+Hence $(\distfun{p}{}{}\circ\alpha)^+(0)$ and, from \ref{lem:count-der:rl}, also $\alpha^+(0)$ are defined.
 
 Set $\xi_n=\alpha^+(0)$. 
 Passing to a subsequence if nesesurily, we can assume that $\xi_n\to\xi\in\Sigma_x$.
@@ -1431,7 +1431,7 @@ Using \ref{eq:inq:di-inq-2}, \ref{eq:inq:di-inq-3} and \ref{eq:inq:di-inq-4}, we
 &=20\cdot\theta_{q_j}[a_i,b_i)
 \end{align*}
 In the exceptional case $a_i=0$, although $\gamma^-(0)$ might be undefined, the last inequality holds.
-Since the distance function $\dist{q_j}{}{}$ is 1-Lipschitz, we get that $\theta_{q_j}[0,\tfrac{r}{6})\le 2+\lambda r$.
+Since the distance function $\distfun{q_j}{}{}$ is 1-Lipschitz, we get that $\theta_{q_j}[0,\tfrac{r}{6})\le 2+\lambda r$.
 Therefore,
 \[\sum_i\mangle(\xi_i,\nu_i)
 \le 

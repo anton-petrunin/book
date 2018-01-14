@@ -547,7 +547,7 @@ statements are equivalent:
 \begin{subthm}{main-def'} $\spc{L}$ is $\Alex\kappa$.
 \end{subthm}
 
-\begin{subthm}{comp-kappa}(function comparison\index{comparison!function comparison}) $\spc{L}$ is  G-delta geodesic and for any $p\in \spc{L}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies the differential inequality
+\begin{subthm}{comp-kappa}(function comparison\index{comparison!function comparison}) $\spc{L}$ is  G-delta geodesic and for any $p\in \spc{L}$, the function $f=\md\kappa\circ\distfun{p}{}{}$ satisfies the differential inequality
 \[f''\le 1-\kappa\cdot f.\]
 in $\oBall(p,\varpi\kappa)$.
 \end{subthm}
@@ -859,7 +859,7 @@ $R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}}>0$, such that
 $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$ 
 is G-delta geodesic and for any 
 $q\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$, 
-the function $f=\md\kappa\circ\dist{q}{}{}$ satisfies 
+the function $f=\md\kappa\circ\distfun{q}{}{}$ satisfies 
 $f''\le 1-\kappa\cdot  f$ in
 $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$.
 \end{subthmN}
@@ -1604,7 +1604,7 @@ to prove it, use either Plaut's theorem (\ref{thm:almost.geod})
 or that  geodesics do not split (\ref{thm:g-split}).
 Let $z$ be the midpoint of a geodesic $[x y]$.
 
-Consider the function $f=\dist{x}{}{}+\dist{y}{}{}$.
+Consider the function $f=\distfun{x}{}{}+\distfun{y}{}{}$.
 As it follows from Lemma~\ref{concave-pi/2}, 
 $f$ is concave in $\oBall(z,\tfrac{\eps}{4})$.  
 Let $p\in\oBall(z,\tfrac{\eps}{4})$.  
@@ -1631,7 +1631,7 @@ As all of those spaces are proper it means that $\spc{L}=\spc{L}^\o$.
 
 \begin{thm}{Lemma}\label{concave-pi/2}
 Let $\spc{L}$ be a complete length $\Alex1$ space and $p\in \spc{L}$.
-Then $\dist{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\pi)\backslash \oBall(p,\tfrac\pi2)$.
+Then $\distfun{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\pi)\backslash \oBall(p,\tfrac\pi2)$.
 
 In particular, if $\diam\spc{L}\le\pi$ 
 then the complements $\spc{L}\backslash \oBall(p,r)$ and $\spc{L}\backslash \cBall[p,r]$ are convex for any $r>\tfrac\pi2$.
@@ -1681,7 +1681,7 @@ First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} we have that the 
 satisfies the differential inequality $y''\le 1- y$.
 
 
-Take $z_0\in [q r]$ so that restriction $\dist{p}{}{}|[q r]$ attains its maximum at $z_0$, 
+Take $z_0\in [q r]$ so that restriction $\distfun{p}{}{}|[q r]$ attains its maximum at $z_0$, 
 set $t_0=\dist{q}{z_0}{}$ so $z_0=\geod_{[q r]}(t_0)$.
 Consider the following model configuration: two geodesics $[\~p\~z_0]$, $[\~q\~r]$ in $\SS^2$ such that 
 \begin{align*}

@@ -44,7 +44,7 @@ If we need to emphasize
 that the distance is taken in the space ${\spc{X}}$, 
 we will write $\dist{x}{y}{\spc{X}}$;
 
-The function $\dist{x}{}{}\:\ushort{\spc{X}}\to\RR$ defined as $\dist{x}{}{}\:y\mapsto\dist{x}{y}{}$ will be called the \emph{distance function}\index{distance function} from $x$. 
+The function $\distfun{x}{}{}\:\ushort{\spc{X}}\to\RR$ defined as $\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}$ will be called the \emph{distance function}\index{distance function} from $x$. 
 
 We will need three variations of the above definition, which we denote by $(0,\infty]$-metric, $[0,\infty)$-metric and $(0,\infty)$-metric,
 the intervals $(0,\infty]$, $[0,\infty)$, $(0,\infty)$ describe possible values for the distance between distinct points in the space.
@@ -96,7 +96,8 @@ Now let us give some constructions which show that allowing distances between di
 \item Suppose a set ${\spc{X}}$ comes with a set of $[0,\infty]$-metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then set
 \[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
- Clearly, $\dist{}{}{}$ is a $[0,\infty]$-metric. But it need not be a $(0,\infty]$-metric  even if all $\dist{}{}{\alpha}$ are $(0,\infty)$-metrics.
+Clearly, $\dist{}{}{}$ is a $[0,\infty]$-metric.
+But it need not be a $(0,\infty]$-metric  even if all $\dist{}{}{\alpha}$ are $(0,\infty)$-metrics.
 
 \item Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and let 
@@ -227,7 +228,7 @@ This condition is equivalent to each of the following statements:
 \begin{enumerate}
 \item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
 the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
-\item The function $\dist{p}{}{}\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$.
+\item The function $\distfun{p}{}{}\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$.
 \end{enumerate}
 \end{itemize}
 
@@ -792,7 +793,7 @@ let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc
 \parbf{Kuratowski embedding.}
 Given a point $p\in\spc{X}$, consider 
 map $\kur_p\:\spc{X}\to\Bnd(\spc{X},\RR)$, 
-defined as $\kur_p x=\dist{x}{}{}-\dist{p}{}{}$.
+defined as $\kur_p x=\distfun{x}{}{}-\distfun{p}{}{}$.
 The map $\kur_p$ will be called \emph{Kuratowski map at $p$}%
 \index{Kuratowski map}.
 

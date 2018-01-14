@@ -560,7 +560,7 @@ Part \eqref{reg-open}  is obvious by Remark~\ref{equiv-def-reg}. Part \eqref{reg
 \begin{comment}
 Let $\xi_i^{\pm}\in T_p\spc{L}$ be unit vectors provided by Lemma~\ref{lem-tight-diff}  so that $\d_p\phi^i(\xi_i^-)<-\eps$, $\d_x\phi^i(\xi_i^+)>\eps$ and $\d_x\phi^j(\xi_i^\pm)=0$ for all $j\ne i$. We can assume that $v_i^\pm=\dir{p}{a_i^\pm}$ for some points $a_i^\pm$.
 
-Also, without loss of generality $\phi^0=\dist{a^0}{}{}$ and let $\xi^+=\dir{p}{a^0}$.
+Also, without loss of generality $\phi^0=\distfun{a^0}{}{}$ and let $\xi^+=\dir{p}{a^0}$.
 
 Then $\d_p(\xi^+)>\eps$ for $i>0$ and  the same is true for all points $x$ near $p$.  
 Let $v_0=\phi(p)$ and let $v$ be  close to $v$. we want to find a point $x$ such that $\phi(x)=v$ and $\dist{x}{p}{}< \frac{|v-v_0|}{\eps}$. 
@@ -679,7 +679,7 @@ This fact is not needed in this section but it will be important in the proof of
 \end{thm}
 
 
-Next, consider the function $h=N^{-1}\Sigma_\a h_\a$ where $h_\a=\phi_\a(\dist{q_\a}{}{})$  and $\phi_\a\co \R\to \R$ is the unique continuous  function  satisfying the following properties
+Next, consider the function $h=N^{-1}\Sigma_\a h_\a$ where $h_\a=\phi_\a(\distfun{q_\a}{}{})$  and $\phi_\a\co \R\to \R$ is the unique continuous  function  satisfying the following properties
 
 \begin{enumerate}
 \item $\phi_\a'(t)=1$ for $t\le \dist{p}{q_\a}{}-\delta$;
@@ -1037,7 +1037,8 @@ This proves the induction step and concludes the proof of Theorem~\ref{fibration
  Let $\spc{L}$ be an $n$-dimensional complete length $\Alex{}$ space and let $p\in \spc{L}$ be any point. Then there exists $\eps>0$ such that for any $0<r\le\eps$ the sphere $S(p,r)$ is homeomorphic to $S(p,\eps)$ and $(B(p,r),p)$ is homeomorphic to the cone $(CS(p,\eps),o)$
  \end{thm}
 \begin{proof}
-By ??? (is this proved somewhere yet?) there is $\eps>0$ such that  $f=\dist{p}{}{}$ has no critical points in $B(p,2\eps)\backslash\{p\}$. Therefore by the Fibration Theorem ~\eqref{fibration}, it's a bundle map from $B(p,2\eps)\backslash\{p\}$ to $(0,2\eps)$. This easily yields the result.
+By ??? (is this proved somewhere yet?) there is $\eps>0$ such that  $f=\distfun{p}{}{}$ has no critical points in $B(p,2\eps)\backslash\{p\}$.
+Therefore by the Fibration Theorem ~\eqref{fibration}, it's a bundle map from $B(p,2\eps)\backslash\{p\}$ to $(0,2\eps)$. This easily yields the result.
 \end{proof}
 It will follow from the Stability Theorem that under the assumptions of Corollary ~\ref{sphere-neighb}, $S(p,\eps)$ is homeomorphic to $\Sigma_p\spc{L}$ if $\eps$ is sufficiently small but we can no claim this yet.
 Once this is proved we can derive the following result (??? can this be proved without using stability???)
@@ -1127,7 +1128,7 @@ it is possible to write a homotopy exact sequence:
 \longrightarrow\pi_\kay(\spc{L}_n) \longrightarrow\pi_\kay(\spc{L}) 
 \longrightarrow\pi_{\kay-1}(F_n)\longrightarrow\cdots,\]
 where the space $F_n$ can be obtained the following way:
-Take a point $p\in \spc{L}$, and fix $\eps>0$ so that $\dist{p}{}{}\:\spc{L}\to\RR$ has no critical values
+Take a point $p\in \spc{L}$, and fix $\eps>0$ so that $\distfun{p}{}{}\:\spc{L}\to\RR$ has no critical values
 in the interval $(0,2\cdot\eps)$. 
 Consider a sequence of points $\spc{L}_n\ni p_n\to p$ and take 
 $F_n=\oBall(p_n,\eps)\subset \spc{L}_n$.

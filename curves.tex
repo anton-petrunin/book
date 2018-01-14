@@ -10,7 +10,7 @@ and $\alpha\:\II\to \spc{L}$ be a curve.
 We say that $v\in\T_{\alpha(t_0)}$ is a \emph{rigth} or \emph{left} \emph{derivative} of $\alpha$ at $t_0\in\II$ (briefly, $v=\alpha^+(t_0)$ or correspondingly $v=\alpha^-(t_0)$)
 if 
 for any $q\not=\alpha(t_0)$, we have
-\[(\dist{q}{}{}\circ\alpha)^\pm(t_0)=(\d_{\alpha(t_0)}\dist{q}{}{})(v).\]
+\[(\distfun{q}{}{}\circ\alpha)^\pm(t_0)=(\d_{\alpha(t_0)}\distfun{q}{}{})(v).\]
 
 %???This seems to be sufficient for us, but it is kind of weak def.For example: there is $\spc{L}$ and a curve $\alpha\:\RR\to \spc{L}$ such that $\alpha^+(0)=\0$ but \[\liminf_{t\to 0}\frac{\dist{\alpha(0)}{\alpha(t)}{}}{|t|}>0.\]Also this def. is good together with Kuratowski tangent cone, and it is not that good with the standard definition.A.???
 
@@ -50,10 +50,10 @@ In particular, for $\alpha\:\RR\to \RR$, $\alpha(t)=t$ we have $\alpha^+\equiv 1
 
 If $\alpha$ right/left differentiable at $t_0$.
 Then for any point $q\not=\alpha(t_0)$
-\[(\dist{q}{}{}\circ\alpha)^\pm(t_0)
+\[(\distfun{q}{}{}\circ\alpha)^\pm(t_0)
 =
-(\d_{\alpha(t_0)}\dist{q}{}{})(\alpha^\pm(t_0)).\]
-Thus, both derivatives $(\dist{q}{}{}\circ\alpha)^\pm(t_0)$ are also defined.
+(\d_{\alpha(t_0)}\distfun{q}{}{})(\alpha^\pm(t_0)).\]
+Thus, both derivatives $(\distfun{q}{}{}\circ\alpha)^\pm(t_0)$ are also defined.
 The following lemma shows that converse holds for finite-dimensional Alexandrov's spaces.
 
 
@@ -63,7 +63,7 @@ $\II$ be a real inteval,
 $\alpha\:\II\to \spc{L}$ be a curve,
 $t_0\in\II$ 
 and $Q\subset \spc{L}$ be a subset which is dense in a neighborhood of $\alpha(t_0)$.
-For $q\in Q$, set $f_q=\dist{q}{}{}\circ\alpha$.
+For $q\in Q$, set $f_q=\distfun{q}{}{}\circ\alpha$.
 Then 
 \begin{subthm}{lem:count-der:rl}
 If right (left) derivative $f^+_q(t_0)$ ($f^-_q(t_0)$) is defined for each $q\in Q\backslash \{\alpha(t_0)\}$ then $\alpha$ is right (left) differentiable at $t_0$.
@@ -96,8 +96,8 @@ Thus, to prove the first part of the lemma,
 it is sufficient to show that if $v_1$ and $v_2$ are two partial limit of $\ddir{p}{\alpha(t)}$ for $t\to 0+$ then $v_1=v_2$.
 
 For both, $v_1$ and $v_2$, we have
-\[f_q^+(0)=(\d_p\dist{q}{}{})(v_1)=(\d_p\dist{q}{}{})(v_2).\]
-We can choose $q$ so that $|v_1|\cdot\d_p\dist{q}{}{}$ is arbitrary close to function $w\mapsto -\<v_1,w\>$.
+\[f_q^+(0)=(\d_p\distfun{q}{}{})(v_1)=(\d_p\distfun{q}{}{})(v_2).\]
+We can choose $q$ so that $|v_1|\cdot\d_p\distfun{q}{}{}$ is arbitrary close to function $w\mapsto -\<v_1,w\>$.
 Thus $\<v_1,v_2\>=\<v_1,v_1\>$ and similarly, $\<v_1,v_2\>=\<v_2,v_2\>$. 
 Hence $v_1=v_2$.
 \qeds

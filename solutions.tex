@@ -62,7 +62,7 @@ and
 <
 \LongMes_m(\Im\Phi)+\eps.\]
 
-Consider the functions $\psi^i=\dist{A^i}{}{}$
+Consider the functions $\psi^i=\distfun{A^i}{}{}$
 and the map $\bm{\psi}=(\psi^1,\dots,\psi^n)\:\spc{X}\to\RR^n$.
 Note that for each $i$ and $n$,
 the composition $\psi^i\circ f_n$ is 1-Lipschitz.
@@ -138,10 +138,10 @@ and $\psi\can G\circ\dist{\bm{b}}{}{}$;
 clearly,
 \begin{align*}
 \d_p\phi(v)
-&=\sum_i\partial_i F\cdot (\d_p\dist{a^i}{}{})(v),
+&=\sum_i\partial_i F\cdot (\d_p\distfun{a^i}{}{})(v),
 \\
 \d_p\psi(v)
-&=\sum_i\partial_j G\cdot (\d_p\dist{b^j}{}{})(v).
+&=\sum_i\partial_j G\cdot (\d_p\distfun{b^j}{}{})(v).
 \end{align*}
 Applying the definition of gradient (\ref{def:grad}),
 Theorem \ref{thm:differential-of-dist}
@@ -152,7 +152,7 @@ for any choice of geodesics $[pa^i]$ the following holds
 \d_p\phi(\nabla_p\psi)
 &=\sum_i\partial_i F
 \cdot
-(\d_p\dist{a^i}{}{})(\nabla_p\psi)
+(\d_p\distfun{a^i}{}{})(\nabla_p\psi)
 \le
 \\
 &\le
@@ -174,7 +174,7 @@ for any choice of geodesics $[pa^i]$ the following holds
 \cdot
 \partial_j G
 \cdot
-(\d_p\dist{b^j}{}{})(\dir{p}{a^i})
+(\d_p\distfun{b^j}{}{})(\dir{p}{a^i})
 \le
 \\
 &\le
@@ -235,7 +235,7 @@ By the definition of Busemann function,
 &=  \lim_{t\to \infty} 2 \cosh \sqrt{-\kappa}d_{\gamma (t)} \exp\sqrt{-\kappa}\cdot(-t).
 \end{align*}
 
-By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp}) or $\Alex{\kappa}$ space (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function $f=\cosh \sqrt{-\kappa}\circ\dist{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
+By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp}) or $\Alex{\kappa}$ space (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function $f=\cosh \sqrt{-\kappa}\circ\distfun{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
 
 
 

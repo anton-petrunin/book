@@ -36,7 +36,7 @@ If $w\ne 0$, consider the ray $\gamma(t)=\tfrac1{|w|}\cdot t$
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
 A closed subset $A\subset \spc{L}$ 
 is called a 
-\index{boundary stratum}\emph{boundary stratum} if the function $\dist{A}{}{}$
+\index{boundary stratum}\emph{boundary stratum} if the function $\distfun{A}{}{}$
 is semiconcave.
 
 The choice of the term ``boundary stratum'',
@@ -87,7 +87,7 @@ $A_\o$ is a boundary stratum of $\spc{V}_\o$.
 
 \begin{thm}{Splitting Lemma}\label{lem:split}
 Let $\spc{L}$ be a complete length $\Alex0$ space and $A\subset \spc{L}$ is a closed set.
-Assume that $\dist{A}{}{}$ is concave and there is a function $f\:\spc{L}\to \RR$ which is a convex combination of Busemann functions which admits its minimum on $A$ say at $a$.
+Assume that $\distfun{A}{}{}$ is concave and there is a function $f\:\spc{L}\to \RR$ which is a convex combination of Busemann functions which admits its minimum on $A$ say at $a$.
 Then 
 there is $\lambda\ge 0$ such that 
 \[f(x)= f(a)-\lambda\cdot\dist{A}{x}{}\]
@@ -140,7 +140,7 @@ It remains to apply Exercise~\ref{ex:splitting}.
 Consider two functions $f,g\:\spc{L}\to\RR$ 
 defined as 
 \begin{align*}
-f(z)&=\dist{x'}{}{}+\dist{y}{}{},
+f(z)&=\distfun{x'}{}{}+\distfun{y}{}{},
 \\
 g(z)&=\dist{A}{z}{}.
 \end{align*}
@@ -168,7 +168,7 @@ choose $\lambda>0$ so that
 \[\d_af(v)+\lambda\cdot\d_ag(v)=0.\]
 
 
-Consider the functions $h=\dist{A}{}{}$ and
+Consider the functions $h=\distfun{A}{}{}$ and
 
 
 Set $v=\nabla_ah$

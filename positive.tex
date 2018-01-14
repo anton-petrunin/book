@@ -13,7 +13,7 @@ Moreover $\Sigma_p$ is homeomorphic to $\Sigma_q$.
 
 \parit{Proof.}
 Clearly for any $x\in \spc{L}\backslash\{p,q\}$ we have $\mangle\hinge x p q\ge\angk{1}{x}{p}{q}>\tfrac\pi2$.
-Thus $\dist{p}{}{}$ has only two critical points $p$ and $q$.
+Thus $\distfun{p}{}{}$ has only two critical points $p$ and $q$.
 Thus according to Morse lemma, $\spc{L}$ is homeomorphic to $\Susp Z_t$, where $Z_t=\dist[-1]{p}{}{}(t)$, $0<t<\dist{p}{q}{}$.
 Finally, according to ???, for all sufficiently small $t$ we have $\Sigma_p$ is homeomorphic to $Z_t$.
 
@@ -30,8 +30,8 @@ Since  $\spc{L}$ has no extremal subsets,
 from Example~\ref{ex:t-cone}, 
 it  follows that a small spherical neighborhood
 of $p\in \spc{L}$ is homeomorphic to $\RR^m$. 
-From angle comparison, $\dist{p}{}{}$ has only two critical points $p$ and $q$. 
-Therefore, this theorem follows from the Morse lemma (\ref{lem:morse}) applied to $\dist{p}{}{}$. \qeds
+From angle comparison, $\distfun{p}{}{}$ has only two critical points $p$ and $q$. 
+Therefore, this theorem follows from the Morse lemma (\ref{lem:morse}) applied to $\distfun{p}{}{}$. \qeds
 
 \begin{thm}{Radius-sphere theorem}\label{thm:rad-sphere}
 Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex{1}$ space and $\rad \spc{L}>\tfrac\pi2$ then $\spc{L}$ is homeomorphic to a sphere. 
@@ -62,7 +62,7 @@ I.e. $\cBall[q,\tfrac\pi2]=\spc{L}$, a contradiction.
 From Lemma~\ref{lemma:rad-big-U_p}, $\rad \Sigma_p>\tfrac\pi2$. 
 Since $\dim \Sigma_p<m$, by the induction hypothesis we have $\Sigma_p\simeq \SS^{m-1}$.
 Now the Morse lemma (\ref{lem:morse}) for
-$\dist{p}{}{}\:\spc{L}\to\RR$ gives that $\spc{L}\simeq\Susp\Sigma_p\simeq \SS^m$, 
+$\distfun{p}{}{}\:\spc{L}\to\RR$ gives that $\spc{L}\simeq\Susp\Sigma_p\simeq \SS^m$, 
 here $\Susp\Sigma_p$ denotes a spherical suspension over $\Sigma_p$.
 \qeds
 
@@ -195,7 +195,7 @@ is uniquely defined.
 \parit{Proof.} 
 Let $\gamma\:[0,t_0]\to \spc{L}$ be a unit-speed geodesic,
 $\gamma(0)=p$, $\gamma(t_0)=q$.
-From the angle comparison we get that $|\nabla_x\dist{p}{}{}|\ge-\cos\angk\kappa x p q$. 
+From the angle comparison we get that $|\nabla_x\distfun{p}{}{}|\ge-\cos\angk\kappa x p q$. 
 Therefore, for any $\zeta$ we have
 \[
 \tfrac{d^+}{dt}\dist[{{}}]{p}{\alpha_\zeta(t)}{}

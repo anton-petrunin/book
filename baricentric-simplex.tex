@@ -72,8 +72,8 @@ if $\InWeb\bm{f}\not=\emptyset$.
 
 \parbf{Example.} 
 If $\spc{X}$ is a geodesic space, 
-then $\Web(\dist{x}{}{},\dist{y}{}{})$ is the union of all geodesics from $x$ to $y$ and 
-$\InWeb(\dist{x}{}{},\dist{y}{}{})=\Web(\dist{x}{}{},\dist{y}{}{})\backslash\{x,y\}$.
+then $\Web(\distfun{x}{}{},\distfun{y}{}{})$ is the union of all geodesics from $x$ to $y$ and 
+$\InWeb(\distfun{x}{}{},\distfun{y}{}{})=\Web(\distfun{x}{}{},\distfun{y}{}{})\backslash\{x,y\}$.
 
 \parbf{Barycenters.}
 Let us denote by $\Delta^\kay\subset \RR^{\kay+1}$\index{$\Delta^m$} 
@@ -434,7 +434,7 @@ that is, $p=\spx{\bm{f}}(\bm{x})$.
 Let $\bm{a}=(a^0,a^1,\dots,a^\kay)$ be a point array in a metric space $\spc{U}$.
 Recall that 
 $\dist{\bm{a}}{}{}$
-denotes the distance map $(\dist{a^0}{}{},\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1}$
+denotes the distance map $(\distfun{a^0}{}{},\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1}$
 which can be also regarded as a function array.
 The \emph{radius of the point array}\index{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
 that is,
@@ -476,11 +476,11 @@ Moreover, if a closed convex set $K$ contains all $a^i$ then $\Web\dist{\bm{a}}{
 
 \begin{subthm}{thm:cat-bary-web:mnfld}
 The restriction%
-\footnote{Recall that $\dist{\bm{a}^{\without 0}}{}{}$ denotes array $(\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})$.}
+\footnote{Recall that $\distfun{\bm{a}^{\without 0}}{}{}$ denotes array $(\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})$.}
 $\dist{\bm{a}^{\without 0}}{}{}|\InWeb\dist{\bm{a}}{}{}$ is an open $C^{\frac12}$-embedding in $\RR^\kay$.
 Thus there is an inverse of $\dist{\bm{a}^{\without 0}}{}{}|\InWeb\dist{\bm{a}}{}{}$, say $\map\:\RR^\kay\subto\spc{U}$.
 
-The subfunction $f=\dist{a^0}{}{}\circ\map$ is semiconvex and locally Lipschitz.
+The subfunction $f=\distfun{a^0}{}{}\circ\map$ is semiconvex and locally Lipschitz.
 Moreover, if $\kappa\le 0$, then $f$ is convex.
 \end{subthm}
 
@@ -491,7 +491,7 @@ $\InWeb\dist{\bm{a}}{}{}$ is $C^{\frac12}$-homeomorphic to an open subset of $\R
 \begin{thm}{Definition}\label{prop-def:web-embedding}
 The submap $\map\:\RR^{\kay}\subto \spc{X}$ as in Theorem~\ref{thm:cat-bary-web:mnfld}
 will be called the \emph{$\dist{\bm{a}}{}{}$-web embedding}\index{web embedding} 
-with \emph{brace} $\dist{a^0}{}{}$.
+with \emph{brace} $\distfun{a^0}{}{}$.
 \end{thm}%!!!???
 
 \begin{thm}{Definition}
@@ -687,7 +687,7 @@ $\LinDim\spc{U}=m$,
 and $\bm{a}=(a^0,a^1,\dots a^m)$ be a point array in $\spc{U}$ 
 with radius $<\tfrac{\varpi\kappa}{2}$.
 Then 
-the $\dist{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\dist{a^0}{}{}$ is locally Lipschitz.
+the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\dist{a^0}{}{}$ is locally Lipschitz.
 \end{thm}
 
 Note that if $\bm{a}$ is degenerate,

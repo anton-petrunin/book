@@ -53,8 +53,8 @@ Note that the sequence $a_n=\dist{A_n}{x_\kay}{}$ is bounded for each $\kay$.
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
 we can assume that $\dist{A_n}{x_\kay}{}$ is converging as $n\to\infty$ for any fixed $\kay$.
 
-Note that for each $n$, the function $\dist{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
-Therefore the sequence $\dist{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
+Note that for each $n$, the function $\distfun{A_n}{}{}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
+Therefore the sequence $\distfun{A_n}{}{}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
 
 Set $A_\infty=f^{-1}(0)$.
 Since $f$ is 1-Lipschitz, 
@@ -181,10 +181,10 @@ Given a Gromov--Hausdorff convergence
 $\spc{X}_n\GHto \spc{X}_\infty$
 and a point $p_\infty\in\spc{X}_\infty$ any sequence of points $p_n\in\spc{X}_n$ such that $p_n\GHto p$  will be called \emph{lifting}\index{lifting of a point} of $p_\infty$.
 In this case the point $p_n\in \spc{X}_n$ will be called a lifting of $p_\infty$ in $\spc{X}_n$.
-In this case we say that $\dist{p_n}{}{}\:\spc{X}_n\to \RR$ 
+In this case we say that $\distfun{p_n}{}{}\:\spc{X}_n\to \RR$ 
 is a  \emph{lifting}\index{lifting of a distance function} 
-of the distance function $\dist{p}{}{}\:\spc{X}\to \RR$.
-Obviousely $\dist{p_n}{}{}\GHto\dist{p}{}{}$.
+of the distance function $\distfun{p}{}{}\:\spc{X}\to \RR$.
+Obviousely $\distfun{p_n}{}{}\GHto\distfun{p}{}{}$.
 
 Note that liftings are not uniquely defined.
 We will be interested in the properties of liftings for sufficiently large $n$.

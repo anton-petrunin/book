@@ -665,7 +665,7 @@ Then the following are equivalent:
 $\spc{U}$ is $\CAT\kappa$,
 \end{subthm}
 \begin{subthm}{function-comp}
-for any $p\in \spc{U}$, the function $f=\md\kappa\circ\dist{p}{}{}$ satisfies 
+for any $p\in \spc{U}$, the function $f=\md\kappa\circ\distfun{p}{}{}$ satisfies 
 \[f''+\kappa \cdot f\ge 1\] 
 in $\oBall(p,\varpi\kappa)$.
 \end{subthm}\end{thm}
@@ -751,7 +751,7 @@ that is, $\dist{p^*}{p}{}=\dist{K}{p}{}$.
 \parit{Proof.} 
 Fix $r$ properly between $\dist{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
 By function comparison (\ref{thm:function-comp}) 
-the function $f=\md\kappa\circ\dist{p}{}{}$ is strongly convex in $\cBall[p,r]$.
+the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
 The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'=K\cap\cBall[p,r]$ 
 and the restriction $f|K'$. 
@@ -774,7 +774,7 @@ Show that there is a short retractionof $\spc{U}$ to $K$.
 Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
 and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
 Set
-\[f=\sn\kappa\circ\dist{K}{}{}.\]
+\[f=\sn\kappa\circ\distfun{K}{}{}.\]
 Then
 \[f''+\kappa \cdot f\ge 0\]
 holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
@@ -843,7 +843,7 @@ Let $\spc{U}$  be a complete length $\CAT\kappa$ space
 and $K\subset \spc{U}$ be a closed  locally convex set.
 Then there is an open set $\Omega\supset K$
 such that the function 
-\[f=\sn\kappa\circ\dist{K}{}{}\]
+\[f=\sn\kappa\circ\distfun{K}{}{}\]
 satisfies 
 \[f''+\kappa\cdot f\ge 0\]
 in $\Omega$.
@@ -894,7 +894,7 @@ there is a value $s\in [0,1]$ such that $[x\alpha(s)]$
 lies in $\Omega$,
 but does not completely lie in $K$.
 By Corollary~\ref{cor::dist-to-convex},
-the finction $f=\sn\kappa\circ\dist{K}{}{\spc{U}}$ 
+the function $f=\sn\kappa\circ\distfun{K}{}{\spc{U}}$ 
 satisfies differential inequality
 \[f''+\kappa\cdot f\ge 0\eqlbl{f''+kappa f=<0}\]
 along $[x\alpha(s)]$.
@@ -1508,7 +1508,7 @@ Then $\oBall(p,R)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 \parit{Proof.}
 Without loss of generality, we may assume  $\spc{U}=\oBall(p,\varpi\kappa)$.
 
-Set $f=\md\kappa\circ\dist{p}{}{}$.  Let us show that
+Set $f=\md\kappa\circ\distfun{p}{}{}$.  Let us show that
 \[f''+\kappa\cdot f\ge 1.
 \eqlbl{eq:rad-conv}\]
 

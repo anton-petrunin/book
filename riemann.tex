@@ -259,8 +259,8 @@ $\Dom\bm{x}\backslash\Euk^m$ is countably $(m-1)$-rectifible.
 \begin{thm}{Definition}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $a^i,b,p\in\spc{L}$
 
-Assume $\dist{\bm{a}}{}{}=(\dist{a^1}{}{},\dist{a^2}{}{},\dots,\dist{a^m}{}{})$ 
-give a distance chart with stutt $\dist{b}{}{}$
+Assume $\distfun{\bm{a}}{}{}=(\distfun{a^1}{}{},\distfun{a^2}{}{},\dots,\distfun{a^m}{}{})$ 
+give a distance chart with stutt $\distfun{b}{}{}$
 in an open set $\Omega\subset\spc{L}$.
 The following matrix 
 $g^{ij}(p)=\<\nabla_p x^i,\nabla_p x^j\>$,
@@ -447,7 +447,7 @@ in a way similar to what is explained in \cite[3.2.46]{federer}.
 Our coarea formula can be also obtained as a corollary of these theorems in ???, ??? and ???, where a generalized versions of coarea formula were obtained in a context of general metric spaces.
 
 Is it true that image of any $\DC$-map $\RR^\kay\to\RR^m$ can be covered by countable number of $\DC$-graphs? 
-That might give a nice description of the set of singular points as image of a countable collection of DC-maps from $\RR^{m-1}$ --- a $\DC$-map $\map\:\RR^\kay\to\spc{L}$ can be defined as a map such that for any $p\in\spc{L}$, the composition $\dist{p}{}{}\circ\map$ is a $\DC$-function.
+That might give a nice description of the set of singular points as image of a countable collection of DC-maps from $\RR^{m-1}$ --- a $\DC$-map $\map\:\RR^\kay\to\spc{L}$ can be defined as a map such that for any $p\in\spc{L}$, the composition $\distfun{p}{}{}\circ\map$ is a $\DC$-function.
 
 The following question was asked by A.~Lytchak.
 
@@ -685,7 +685,7 @@ Change of coordinates???
 
 \begin{thm}{Theorem}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space 
-and $\bm{x}=(x^1,x^2,\dots,x^m)\:\spc{L}\to\RR^m$ be a distant chart, $x^i=\dist{p_i}{}{}|{\Dom \bm{x}}$.
+and $\bm{x}=(x^1,x^2,\dots,x^m)\:\spc{L}\to\RR^m$ be a distant chart, $x^i=\distfun{p_i}{}{}|{\Dom \bm{x}}$.
 Then metric tensor $g$ on $\Im\bm{x}$
 defined as $g^{ij}(\bm{x}(q))=\cos\mangle\hinge{q}{p^i}{p^j}$ 
 is positive definite almost everywhere 
@@ -701,7 +701,7 @@ Let us construct the metric tensor, using a bunch of distant functions.
 The following construction appears already in the Riemann's lecture. 
 
 For $q\in\spc{L}$,
-consider function $y=\bm{x}^{-1}\circ\dist{q}{}{}$ on $\Im\bm{x}$.
+consider function $y=\bm{x}^{-1}\circ\distfun{q}{}{}$ on $\Im\bm{x}$.
 Clearly, 
 $g(\d y,\d y)\ae1$, 
 or
@@ -713,7 +713,7 @@ I.e., for any point $q$,
 we have a linear equasion \ref{eq:riemann} on components $g^{ij}$ of metric tensor.
 Thus, to detrmine the metric tensor $g^{ij}$, 
 it is sufficient to provide an array of points $(q^1,q^2,\dots, q^s)$ in $\spc{L}$ 
-such that system of equasions for different $y^\kay=\dist{q^\kay}{}{}$ 
+such that system of equasions for different $y^\kay=\distfun{q^\kay}{}{}$ 
 completely determins $g^{ij}$ almost everywhere in $\Im\bm{x}$.
 (The idea of determining metric tensor using \ref{eq:riemann}
 noticed already by Riemann in \cite{riemann},
@@ -838,8 +838,8 @@ chart.
 
 Let $\spc{U}$ be an $m$-dimensional complete length $\CAT{}$ space
 and $\map\:\RR^m\subto \spc{U}$ is a web embedding with strutt
-$\dist{b}{}{}$.
-According to Theorem~\ref{thm:loc-lip-inverse} the function $f=\dist{b}{}{}\circ\map$ is locally Lipchitz and semiconvex.
+$\distfun{b}{}{}$.
+According to Theorem~\ref{thm:loc-lip-inverse} the function $f=\distfun{b}{}{}\circ\map$ is locally Lipchitz and semiconvex.
 In particular, 
 \begin{itemize}
 \item according to Rademacher's theorem (???), $f$ is differentiable almost everywhere in $\Dom f$.
@@ -863,9 +863,9 @@ of the differentiability of $f$ at a given point.
 Let $\spc{U}$ be an $m$-dimensional complete length $\CAT\kappa$ space, 
 $\bm{a}=(a^0,a^1,\dots a^m)$ be a nondegenerate point array in $\spc{U}$
 and $\map\:\RR^m\subto\spc{U}$ be the $\dist{\bm{a}}{}{}$-web embedding 
-with strutt $\dist{a^0}{}{}$.
+with strutt $\distfun{a^0}{}{}$.
 
-Set $f=\dist{a^0}{}{}\circ\map$.
+Set $f=\distfun{a^0}{}{}\circ\map$.
 For $\bm{y}_0$ and $\bm{y}_1\in\Dom\map$,
 set $\bm{y}_t=(1-t)\cdot \bm{y}_0+t\cdot \bm{y}_1 $, $t\in [0,1]$
 and $r=\max\{|\bm{y}_0-\bm{x}|,|\bm{y}_1-\bm{x}|\}$.
@@ -965,7 +965,7 @@ $\bm{y}_t=(1-t)\cdot \bm{y}_0+t\cdot o(r)$ and $t\in [0,1]$.
 \end{clm}
 
 \parit{Proof of the claim.}
-Set $f=(\dist{a^0}{}{})\circ\map$.
+Set $f=\distfun{a^0}{}{}\circ\map$.
 Accordig to ???,
 that $f$ is convex.
 Define
@@ -991,7 +991,7 @@ Further, set
 \end{align*}
 
 Fix $i>0$.
-Since the distance function $\dist{a^i}{}{}$ is convex, 
+Since the distance function $\distfun{a^i}{}{}$ is convex, 
 we get
 \begin{align*}
  \dist{a^i}{b_t}{}
@@ -1013,7 +1013,7 @@ together with Lemma \ref{lem:nondeg-bs-test} applied to for ???,
 implies
 \[\mangle\hinge{p_t}{a^0}{b_t}>\tfrac\pi2+\eps.
 \eqlbl{<qt-a0-pt>=pi/2+eps}\]
-Since the distance function $\dist{a^0}{}{}$ is convex, 
+Since the distance function $\distfun{a^0}{}{}$ is convex, 
 we get
 \[
 \dist{a^0}{b_t}{}
@@ -1100,9 +1100,9 @@ is it true that set of all points with rank smaller than $\kay$ is locally $\kay
 
 \begin{thm}{Otsu--Shioya smoothing}
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in\spc{L}$.
-Assume $(\dist{a^1}{}{},\dist{a^2}{}{},\dots,\dist{a^m}{}{})$
+Assume $(\distfun{a^1}{}{},\distfun{a^2}{}{},\dots,\distfun{a^m}{}{})$
 gives a distance chart 
-in a neighborhood at $p$ with a strutt $\dist{b}{}{}$.
+in a neighborhood at $p$ with a strutt $\distfun{b}{}{}$.
 
 Given $\eps>0$ and consider functions 
 \[f^i(q)=\oint\limits_{\oBall(a^i,\eps)}\dist[{{}}]{z}{q}{}\cdot\d_z\vol_m.\]
