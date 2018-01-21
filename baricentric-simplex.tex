@@ -1,6 +1,5 @@
-%array^
-\chapter{Webs and barycenters %ready
-}\label{chap:web+bary}
+%arXiv
+\chapter{Webs and barycenters}\label{chap:web+bary}
 
 In this chapter we discuss the constructions introduced by Bruce Kleiner in \cite{kleiner}.
 
@@ -580,12 +579,11 @@ Applying rescaling, we can assume $\kappa=1$;
 so $\varpi\kappa=\varpi1=\pi$.
 
 Set $\mathring{\spc{U}}=\Cone\spc{U}$;
-according to ???, $\mathring{\spc{U}}$ is $\CAT0$.
+by \ref{thm:warp-curv-bound:cbb:S}, $\mathring{\spc{U}}$ is $\CAT0$.
 Let us denote by $\iota$ the natural embedding of $\spc{U}$ as the unit sphere in $\mathring{\spc{U}}$ and 
 $\proj\:\mathring{\spc{U}}\subto\spc{U}$ the submap,
 defined as $\proj(v)=\iota^{-1}(v/|v|)$ for all 
-$v\not=o$ in 
-$\mathring{\spc{U}}$.
+$v\not=\0$.
 Note that there is $z\in\spc{U}$ and $\eps>0$ such that
 the set 
 \[K_\eps
@@ -594,17 +592,16 @@ the set
 {\<\iota(z),v\>\ge\eps}\] 
 contains all $\iota(a^i)$.
 Note that 
-$o\notin K_\eps$
+$\0\notin K_\eps$
 and
 the set $K_\eps$ is closed and convex.
-The later follows from Theorem~\ref{thm:busemann},
+The later follows from Exercise~\ref{ex:busemann-CBA},
 since $v\mapsto -\<\iota(z),v\>$ is a Busemann function.
-
 
 Denote by $\iota(\bm{a})$ the point array $(\iota(a^0), \iota(a^1),\dots,\iota(a^\kay))$ in $\mathring{\spc{U}}$. 
 From the case $\kappa=0$,
 we get that $\Im \spx{\iota(\bm{a})}\mc0\subset K_\eps$.
-In particular $\Im \spx{\iota(\bm{a})}\mc0\not\ni o$ and thus $\proj\circ\spx{\iota(\bm{a})}\mc0$ is defined.
+In particular $\Im \spx{\iota(\bm{a})}\mc0\not\ni \0$ and thus $\proj\circ\spx{\iota(\bm{a})}\mc0$ is defined.
 Direct calculations show 
 \[\spx{\bm{a}}\mc1
 =
@@ -619,7 +616,7 @@ which is proved already.
 
 \begin{thm}{Lemma}\label{lem:nondeg-test-with-balls}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-$\bm{a}=(a^0,a^1,\dots a^\kay)$ be an array of radius $<\tfrac{\varpi\kappa}2$
+$\bm{a}\z=(a^0,a^1,\dots a^\kay)$ be an array of radius $<\tfrac{\varpi\kappa}2$
 and $B^i=\cBall[a^i,r^i]$ for some array of positive reals $(r^0,r^1,\dots,r^\kay)$.
 Assume that
 $\bigcap_i B^i=\emptyset$,
@@ -647,7 +644,7 @@ minimizing the function
 
 By the  definition of web (\ref{def:web}), 
 $p$ is also the minimum point of $f$ on $\spc{U}$.
-Now let us show the following claim.
+Let us show that
 
 \begin{clm}{}
  $p\notin B^j$ for any $j$.
@@ -663,7 +660,7 @@ for some $j$.
 Then $p$ is a point of local minimum for the function 
 \[h^j(x)=\max_{i\not=j}\{\dist{B^i}{x}{}\}.\]
 Hence 
-\[\max_{i\not=j}\{\mangle\hinge p x {a^i}\}\ge \frac\pi2
+\[\max_{i\not=j}\{\mangle\hinge p x {a^i}\}\ge \tfrac\pi2
 \]
 for any $x\in\spc{U}$.
 From angle comparison (\ref{cat-hinge}), it follows that 
@@ -702,22 +699,21 @@ the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $
 Note that if $\bm{a}$ is degenerate,
 that is, if $\InWeb(\distfun{\bm{a}}{}{})=\emptyset$, 
 then
-the domain of web embedding $\map$ above is empty and hence the conclusion of the theorem trivially holds.
-
-
-As will be seen in Section~\ref{sec:web-embedding},
-the web embedding as in the above theorem
-is much better than bi-Lipschitz.
-In particular, it %!!!differentiability and convexity properties are used???
-can be used to construct bi-Lipschitz embeddings with constants arbitrarily close to $1$.
+the domain of the web embedding $\map$ above is empty and hence the conclusion of the theorem trivially holds.
 
 \begin{thm}{Lemma}\label{lem:nondeg-bs-test}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-and $\bm{a}=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
+and $\bm{a}\z=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
 Then for any $p\in \InWeb(\distfun{\bm{a}}{}{})$,
 there is $\eps>0$ such that 
-if for some $q\in \Web(\distfun({\bm{a}}{}{})$ and $b\in\spc{U}$
-we have $\dist{p}{q}{}<\eps$, $\dist{p}{b}{}<\eps$ and $\mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps$,
+if for some $q\in \Web(\distfun{\bm{a}}{}{})$ and $b\in\spc{U}$
+we have 
+\[\dist{p}{q}{}<\eps,
+\quad 
+\dist{p}{b}{}<\eps
+\quad\text{and}\quad  
+\mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\]
+for each $i$,
 then the array $b,a^0,a^1,\dots,a^m$ is nondegenerate.
 \end{thm}
 
@@ -796,7 +792,7 @@ Lemma~\ref{lem:nondeg-test-with-balls} finishes the proof.
 
 \parit{Proof of \ref{thm:loc-lip-inverse}.}
 From \ref{prop-def:web-embedding}, it is sufficient to show that 
-the $\map$ is Lipshitz.
+the $\map$ is locally Lipshitz.
 Assume the contrary; that is, there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
 \[\frac{\dist{\map(\bm{y}_n)}{\map(\bm{z}_n}{})}{|\bm{y}_n-\bm{z}_n|}
 \to\infty
