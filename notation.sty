@@ -2,6 +2,9 @@
 \usepackage{amssymb, amsfonts,  amsthm}
 \usepackage{xifthen} 
 
+
+
+
 %STANDARD SPACES
 \def\CC{\mathbb{C}}
 \def\DD{\mathbb{D}}
@@ -41,7 +44,7 @@
 \def\>{\rangle}
 \def\drang{\hbox{$\rangle\hskip-0.25em\rangle\hskip-0.1em$}}
 \def\dlang{\hbox{$\langle\hskip-0.25em\langle$}}
-\def\without{{\neq}}
+\def\without{{-}}
 
 
 
@@ -401,4 +404,4 @@
 {\def\dist{\sbadist}%
 \def\yetdist{\sbayetdist}}%
 
-\newcommand*\distfun[1]{\mathop{\rm dist}\nolimits_{#1}}
+\newcommand*\distfun[2][{}]{\mathop{\rm dist}\nolimits_{#2}^{#1}}

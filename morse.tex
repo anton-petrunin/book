@@ -234,8 +234,10 @@ For applications to pointed Gromov--Hausdorff convergence we will need the follo
 
 \begin{thm}\label{locgluing}
 
-Let $U\Subset V\Subset W\subset X$ be relatively compact  open subsets in an MCS-space $X$. Let 
-$\{U_\a\}_{\a\in \frak A}$ be a finite covering of $\bar{W}$ with the property that if $U_\a\cap \bar{V}\ne \emptyset$ then $U_\a\Subset W$.
+Let $U\Subset V\Subset W\subset X$ be relatively compact  open subsets in an MCS-space $X$.
+Let 
+$\{U_\a\}_{\a\in \frak A}$ be a finite covering of $\bar{W}$ with the property that if $U_\a\cap \bar{V}\ne \emptyset$.
+Then $U_\a\Subset W$.
 
 Then  given a function $\varkappa_0$, there exists $\varkappa=\varkappa(X, U,V,W, \{U_\a\}_{\a\in \frak A},\varkappa_0)$ such that the following holds:
 
@@ -271,7 +273,7 @@ f(y)\sin d(x,z)\ge f(z) \sin d(x,y)+f(x)\sin d(z,y).
 
 As with ordinary concave functions, for a space with boundary we demand that the canonical extension of $f$ to the doubling of $\Sigma$ be spherically concave.
 
-It's easy to see that $f$ is spherically concave iff its  1-homogeneous extension to $C\Sigma$ is concave. In particular, if $f\:\spc{X}\to\RR$ is semi-concave then $df_p\: \Sigma_pX\to \RR$ is spherically concave.
+It's easy to see that $f$ is spherically concave iff its  1-homogeneous extension to $C\Sigma$ is concave. In particular, if $f\:\spc{X}\to\RR$ is semi-concave, then $df_p\: \Sigma_pX\to \RR$ is spherically concave.
 \end{comment}
 
 \section{Derivatives of multidistance functions}
@@ -326,7 +328,7 @@ Let us collect some properties of the scalar product that will be needed in the 
 \[
 \dlang h, g\drang=\dlang g, h\drang
 \]
-\item \label{der-der} If $h\in DER(\Sigma)$ and $p\in \Sigma$ then $\d_ph\in DER(\Sigma_p\Sigma)$;
+\item \label{der-der} If $h\in DER(\Sigma)$ and $p\in \Sigma$, then $\d_ph\in DER(\Sigma_p\Sigma)$;
 \item \label{der-der-ineq} $ \dlang d_ph,d_pg\drang\le \dlang h, g\drang-h(p)g(p)$ for any $p\in\Sigma$;
 \item \label{der-single-vector} For any $h\in DER(\Sigma)$ there is a vector $\hat{A}\in C\Sigma$ such that for
  $\hat{h}=-\langle \cdot, \hat{A}\rangle$ we have $\dlang h, g\drang \ge \dlang \hat{h}, g\drang$ for any $g\in DER(\Sigma)$;
@@ -335,12 +337,14 @@ Let us collect some properties of the scalar product that will be needed in the 
 \end{enumerate}
 \end{thm}
 Property (\ref {der-der-ineq})  follows from the angle comparison and an elementary observation that
-for the unit vectors $h,g,p$ in $\mathbb R^n$ we have that $\langle P(h),P(g)\rangle=\langle h,g\rangle-\langle h,p\rangle\cdot \langle h,p\rangle$ where $P$ is the orthogonal projection to $p^\perp$. Of particular importance in  applications will be generalization of  the implication that if $\langle h,g\rangle<0$ and $\langle h,p\rangle>0$, $\langle g,p\rangle>0$ then $\langle P(h),P(g)\rangle<0$ also.
+for the unit vectors $h,g,p$ in $\mathbb R^n$ we have that $\langle P(h),P(g)\rangle=\langle h,g\rangle-\langle h,p\rangle\cdot \langle h,p\rangle$ where $P$ is the orthogonal projection to $p^\perp$.
+Of particular importance in  applications will be generalization of  the implication that if $\langle h,g\rangle<0$ and $\langle h,p\rangle>0$, $\langle g,p\rangle>0$, then $\langle P(h),P(g)\rangle<0$ also.
 
 \begin{proof}
 (\ref{der-commute}) is obvious.
 
-  To see (\ref{der-der})  let  $h=\sum_\a -a_\a\langle \cdot, {A_\a}\rangle$ then by the first variation formula we have
+To see (\ref{der-der})  let  $h=\sum_\a -a_\a\langle \cdot, {A_\a}\rangle$.
+Then by the first variation formula we have
   \[\d_ph=\sum_\a -a_\a\sin \angle A_\a p \langle \cdot, \Dir{p}{A_\a}\rangle\]
 and therefore $d_ph\in DER(\Sigma_p\Sigma)$.
 
@@ -403,17 +407,17 @@ and otherwise $p$ is called
 \end{thm} 
 
 \begin{thm}{Remark}\label{equiv-def-reg}
-It is immediate from  the definition that if $\bm{\phi}$ is a $\kappa$-strutting at $p$ then it is also a $\kappa$-strutting for points close to $p$. 
+It is immediate from  the definition that if $\bm{\phi}$ is a $\kappa$-strutting at $p$, then it is also a $\kappa$-strutting for points close to $p$. 
 Moreover, suppose $\spc{L}_n$ is a sequence of complete $\Alex\kappa$ spaces which converges to $\spc{L}$ in the sense of Gromov--Hausdorff and $\bm{\phi}\:\spc{L}\subto \RR^{\kay+1}$ is a $\kappa$-strutting.
 Let $p_n\in\spc{L}_n$ and $\bm{\phi}\:\spc{L}_n\subto \RR^{\kay+1}$ be natural lifts of $p$ and $\bm{\phi_n}$ to $\spc{L}_n$.
 Then for all large $n$ $\bm{\phi_n}$ is a $\kappa$-strutting for $p_n$.
 
-Also, by Proposition~\ref{prop:regular=+1} we have that  $\bm{\phi}\:\spc{L}\subto \RR^{\kay+1}$ is regular at $p$ if and only if there exists a point $a_{\kay+2}$ arbitrary close to $p$ such that $\bar {\bm{\phi}}=(\bm{\phi},\dist{a_{\kay+1}}{}{})$ is a $\kappa$-strutting for $p$. 
+Also, by Proposition~\ref{prop:regular=+1} we have that  $\bm{\phi}\:\spc{L}\subto \RR^{\kay+1}$ is regular at $p$ if and only if there exists a point $a_{\kay+2}$ arbitrary close to $p$ such that $\bar {\bm{\phi}}=(\bm{\phi},\distfun{a_{\kay+1}}{}{})$ is a $\kappa$-strutting for $p$. 
 
 
 Here we think of $\bar {\bm{\phi}}$ as a multi distance function in the natural way as follows.
-If $\bm\phi\can F\circ\dist{\bm{a}}{}{}$ where $\bm a=(a_0,\ldots, a_\kay)$   then  $\bar{\bm\phi}\can \bar F\circ\dist{\bar{\bm{a}}}{}{}$ where $\bar{\bm a}=(a_0,\ldots a_{\kay+1})$ and $\bar F(x_0,\ldots x_{\kay+1})=(F(x_0,\ldots x_{\kay}), x_{\kay+1})$. 
-Combined with the above this shows if $\bm\phi$ is regular at $p$ then it is also regular for points near $p$ and the same remains true for lifts of $\bm\phi$ and $p$ to $\spc{L}_n$ for all large $n$  if  $\spc{L}_n\to\spc{L}$ where $\spc{L}_n$ are complete $\Alex\kappa$ spaces.
+If $\bm\phi\can F\circ\distfun{\bm{a}}{}{}$ where $\bm a=(a_0,\ldots, a_\kay)$,   then  $\bar{\bm\phi}\can \bar F\circ\distfun{\bar{\bm{a}}}{}{}$ where $\bar{\bm a}=(a_0,\ldots a_{\kay+1})$ and $\bar F(x_0,\ldots x_{\kay+1})=(F(x_0,\ldots x_{\kay}), x_{\kay+1})$. 
+Combined with the above this shows if $\bm\phi$ is regular at $p$, then it is also regular for points near $p$ and the same remains true for lifts of $\bm\phi$ and $p$ to $\spc{L}_n$ for all large $n$  if  $\spc{L}_n\to\spc{L}$ where $\spc{L}_n$ are complete $\Alex\kappa$ spaces.
 \end{thm}
 
 
@@ -508,7 +512,10 @@ By Lemma~\ref{der-prop} (\ref{der-der-ineq}) we see that for all  $i,j\ne 0$, $i
 \]
 
 
-Let $u\in \Sigma_v\Sigma_p\spc{L}$ be given by $u= \d_vf^{j_0}$. By the same argument as above  $d_vf^{j_0}<0$ and $d_vf^j(v)>0$ for all $j>0,j\ne j_0$.  Let $\beta(t)\in \Sigma_p\spc{L}\subset T_p\spc{L}$ (we identify $ \Sigma_p\spc{L}$ be a curve in the direction of $u$ then for small $t>0$ we have that 
+Let $u\in \Sigma_v\Sigma_p\spc{L}$ be given by $u= \d_vf^{j_0}$.
+By the same argument as above  $d_vf^{j_0}<0$ and $d_vf^j(v)>0$ for all $j>0,j\ne j_0$.
+Let $\beta(t)\in \Sigma_p\spc{L}\subset T_p\spc{L}$ (we identify $ \Sigma_p\spc{L}$ be a curve in the direction of $u$.
+Then for small $t>0$ we have that 
  $\beta(t)\in S_{i_0}$ with $f^{i_0}(\beta(t)>f^{i_0}(v)$
 (note that $|\beta(t)|=1$ for all $t$ by construction).
  
@@ -545,7 +552,7 @@ Let $\bm g\co \spc{L}\to \R^k$ be an admissible map. Let $\spc{L}_{reg}(\bm g)\s
 Then the following properties hold
 \begin{enumerate}[(i)]
 \item  \label{reg-open}  $\spc{L}_{reg}(\bm g)$  is open.
-\item \label{reg-colip} Suppose $\bm{\bar\phi}\can \bar F\circ\dist{\bm{a}}{}{}=(\phi_0,\phi_1,\ldots \phi_\kay)$ is a $\kappa$-strutting such that $|dF|_1\le 1$ and
+\item \label{reg-colip} Suppose $\bm{\bar\phi}\can \bar F\circ\distfun{\bm{a}}{}{}=(\phi_0,\phi_1,\ldots \phi_\kay)$ is a $\kappa$-strutting such that $|dF|_1\le 1$ and
 \[\sdk\kappa{x}{\phi^i}{\phi^j}<-\eps\]
 for all $i\not=j$ and $x\in B(p,r)$. 
 Then $\bm\phi=(\phi_1,\ldots \phi_\kay)$ is $L$-co-Lipschitz on $B(p,R)$ where $L=L(\eps)$ depends only $\eps$ and $R=R(\kappa,\eps,r)$ depends only on $\kappa,\eps$ and $r$.
@@ -664,7 +671,8 @@ N\ge \frac{c_1}{\delta^{n-1}}
  Therefore we can complete it to a strutting  $(a^0,\dots,a^n)\in\spc{L}^{n+1}$ with $a_1=p$ and  
  \[\angk\kappa{s}{a^i}{a^j}>\tfrac{\pi}{2}+\tilde\eps.\]
  
- for some $\tilde\e>0$. Hence the map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^{n+1}$ is tight in a neighbourhood  of $s$ and the restricted map $H=\dist{\bm{a}^{\without 0}}{}{}\co \spc{L}\to\R^n$ is regular near $s$. Therefore, by the Inverse Function Theorem (~\ref{thm:inverse-function}) $H$ is an L-bilipschitz homeomorphism of the  ball $\oBall(s,R)$ for some $L,R>0$ onto an open subset of $\R^n$.
+ for some $\tilde\e>0$.
+ Hence the map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^{n+1}$ is tight in a neighbourhood  of $s$ and the restricted map $H=\distfun{\bm{a}^{\without 0}}{}{}\co \spc{L}\to\R^n$ is regular near $s$. Therefore, by the Inverse Function Theorem (~\ref{thm:inverse-function}) $H$ is an L-bilipschitz homeomorphism of the  ball $\oBall(s,R)$ for some $L,R>0$ onto an open subset of $\R^n$.
 Since $p=a_1$ we have that $H$ maps $S(p,\dist{p}{q}{}-\frac{\e \dist{p}{q}{}}{8})\cap \oBall(s,R)$ onto an open set in a hyperplane in $\R^n$ and therefore for all small $\delta$  we can find at least $\frac{c_1'}{\delta^{n-1}}$ points $q_\alpha$ in $S(p,\dist{p}{q}{}-\frac{\e \dist{p}{q}{}}{8})\cap \oBall(s,R)$ with pairwise distances $\ge \delta$. This clearly implies that 
 \[
 \angk{\kappa}{p}{q_\alpha}{q_\beta}>c_1''\delta \quad\text{ for all } \alpha\ne \beta
@@ -842,8 +850,7 @@ Denote $\Sigma_p^\e=\{\xi\in \Sigma_p \quad |\quad \d_pf_j(\xi)>\e \text{ for al
 It easily follows from the definition that  $f$ is incomplementable at $p$ iff $\diam (\Sigma_p^0)\le \pi/2$.
 
 \begin{thm}{Sublemma}\label{estimate}
-If $\diam (\Sigma_p^0)\le \pi/2$ then for all $r\in B_p(\delta)$ we have
-
+If $\diam (\Sigma_p^0)\le \pi/2$, then for all $r\in B_p(\delta)$ we have
 \begin{equation}\label{e:estimate}
 h(r)\le h(p)-c\cdot \dist{p}{r}{}+c\cdot \max_j\{0,f_j(p)-f_j(r)\}
 \end{equation}
@@ -864,8 +871,7 @@ As in the proof of  Lemma~\ref{lem:concave} this estimate can be improved for mo
 
 Indeed, recall that $N\ge \frac{c_1}{\delta^{n-1}}$.
 
-Fix a small $\mu>0$ satisfying  $\mu<\frac{c_3}{2}$ where $c_3$ is the constant from the proof of Lemma ~\ref{lem:concave} . By the first variation formula and semi-concavity of $h_\a$  we see that  if $\angle \Dir{p}{r} \Dir{p}{q_\a} \le \pi/2-\mu$ then  
-
+Fix a small $\mu>0$ satisfying  $\mu<\frac{c_3}{2}$ where $c_3$ is the constant from the proof of Lemma~\ref{lem:concave}. By the first variation formula and semi-concavity of $h_\a$  we see that  if $\angle \Dir{p}{r} \Dir{p}{q_\a} \le \pi/2-\mu$, then  
 \begin{equation}\label{b1}
 h_\a(r)\le h_\a(p)+\frac{\lambda}{2}  \cdot {\dist{p}{r}{}}^2-\frac{1}{2}\mu \cdot \dist{p}{r}{}
 \end{equation}
@@ -888,7 +894,7 @@ A standard volume comparison argument shows that  the $(n-1)$-volume of the set
 
 $A_\mu=\{\xi\in\Sigma_p$ such that $ \pi/2-\mu \le \angle \xi  \Dir{p}{r}\le \pi/2\}$ is bounded above by $c\mu$.   By another standard volume comparison this implies that the maximal number of points in $A_\mu$ with pairwise angles  $\ge \delta$ is at most $c\mu\delta^{1-n}$.
 
-This means that if $\mu\ll c$ then  for  the vast majority of $q_\a$ we must have $\angle  \Dir{p}{r} \Dir{p}{q_\a} \le \pi/2-\mu$.
+This means that if $\mu\ll c$, then  for  the vast majority of $q_\a$ we must have $\angle  \Dir{p}{r} \Dir{p}{q_\a} \le \pi/2-\mu$.
 \end{comment}
 
 
@@ -991,7 +997,8 @@ Key Lemma (~\ref{incompl}) easily yields the local fibration theorem (~\ref{fibr
 \begin{proof}[Proof of Theorem~\ref{fibration}]
 
 
-We argue by reverse induction in $k$.  If $k>n$ then the set of regular points is empty by Lemma~\ref{dim-ineq-strut} and there is nothing to prove. Suppose $k\le n$ and the theorem has been proved for $k+1$.
+We argue by reverse induction in $k$. 
+If $k>n$, then the set of regular points is empty by Lemma~\ref{dim-ineq-strut} and there is nothing to prove. Suppose $k\le n$ and the theorem has been proved for $k+1$.
  Let $f\co X\to \R^k$ be regular at $p\in X$.
 If $f$ is complementable at $p$ the statement follows by the induction assumption. Suppose $f$ is incomplementable at $p$. Let $h$ be the function provided by Lemma~\ref{incompl}. 
 \begin{comment}Suppose for simplicity that $h$ is identically zero on $S$. 
@@ -1132,7 +1139,7 @@ Take a point $p\in \spc{L}$, and fix $\eps>0$ so that $\distfun{p}{}{}\:\spc{L}\
 in the interval $(0,2\cdot\eps)$. 
 Consider a sequence of points $\spc{L}_n\ni p_n\to p$ and take 
 $F_n=\oBall(p_n,\eps)\subset \spc{L}_n$.
-In particular, if $p$ is a regular point then for large $n$, $F_n$ is homotopy
+In particular, if $p$ is a regular point, then for large $n$, $F_n$ is homotopy
 equivalent to a \emph{regular fiber over $p$}\footnote{\label{reg-fib} It is constructed the
 following way: take a distance chart $G:\oBall(p,{2\cdot\eps})\to \RR^{k}$, $k=\dim \spc{L}$ around $p\in \spc{L}$
 and lift it to $\spc{L}_n$. 
@@ -1162,7 +1169,7 @@ A point $p\in\Omega$ is called regular point of $f$ if there is a representaion 
 In case if there is no such representation, the point $p$ is called critical point of $f$.
 
 The set of regular points of $f$ forms an open set (why???).
-Moreover if $f_n\:\spc{L}_n\to \RR$ DC-converges to a $f\:\spc{L}\to\RR$ and $p\in \spc{L}$ is a regular point of $f$ then all points in a seqence $A_n\ni p_n\to p$ for sufficiently large $n$ are regular points of $f_n$ (why???)
+Moreover if $f_n\:\spc{L}_n\to \RR$ DC-converges to a $f\:\spc{L}\to\RR$ and $p\in \spc{L}$ is a regular point of $f$, then all points in a seqence $A_n\ni p_n\to p$ for sufficiently large $n$ are regular points of $f_n$ (why???)
 
 Let $\spc{L}_n\to \spc{L}_\o$ 
 and $\spc{L}_n\ni p_n\to p_\o\in \spc{L}_\o$ as $n\to\o$.

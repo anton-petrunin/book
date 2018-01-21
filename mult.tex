@@ -143,7 +143,7 @@ A composite  subfunction $\phi\:\spc{L}\subto\RR$ is called \emph{multidistance 
 \index{multidistance subfunction} 
 (briefly, $\phi\in \MD(\spc{L},\RR)$) 
 if
-$\phi\can F\circ\dist{\bm{a}}{}{}$ 
+$\phi\can F\circ\distfun{\bm{a}}{}{}$ 
 where $\distfun{\bm{a}}{}{}$ is a distance map; that is,
 \[
 \distfun{\bm{a}}{}{}
@@ -171,9 +171,9 @@ can be interpreted as multidistance functions;
 say
 
 \begin{align*}
-&\phi\can F\circ\dist{\bm{a}}{}{}
+&\phi\can F\circ\distfun{\bm{a}}{}{}
 &
-&\psi\can G\circ\dist{\bm{a}}{}{}
+&\psi\can G\circ\distfun{\bm{a}}{}{}
 \\
 &F(x,y)=x+y, 
 &
@@ -189,7 +189,7 @@ Let us consider a mutidistnat function
 \begin{align*}
 \phi&\:\spc{L}\to\RR,
 &
-\phi&\can F\circ\dist{\bm{a}}{}{}
+\phi&\can F\circ\distfun{\bm{a}}{}{}
 \end{align*}
 with the point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ and $F\:\RR^\kay\to \RR$.
 A lifting of $\phi$ is any sequence of multidistant 
@@ -199,7 +199,7 @@ functions
 &\:\spc{L}_n\to\RR,
 &
 \phi_n
-&\can F\circ\dist{\bm{a}_n}{}{}
+&\can F\circ\distfun{\bm{a}_n}{}{}
 \end{align*}
 such that $\bm{a}_n=(a_n^1,a_n^2,\dots,a_n^\kay)$
 is a point array in $\spc{L}_n$
@@ -221,13 +221,13 @@ with lower curvature bound.
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $p\in\spc{L}$.
 Choose an arbitrary point array 
 $\bm{a}=(a^1,a^2,\dots,a^\kay)$
-such that the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is bi-Lipschitz in a neighborhood of $p$.
+such that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is bi-Lipschitz in a neighborhood of $p$.
 According to  Theorem \ref{thm:dist-emb},
 such array $\bm{a}$ exists; 
 moreover 
 \begin{itemize}
 \item All the points in the array $\bm{a}$ can be chosen arbitrary close to a given point $z\in \spc{L}$. In particular we can assume that $a^i\ne p$ for any $i$.
-\item The Lipshitz and co-Lipschitz constants of the map $\dist{\bm{a}}{}{}$ near $p$ can be estimated only in terms of $m$, $\kappa$ and the distances $\dist{p}{a^i}{}$ and $\dist{a^i}{a^j}{}$. 
+\item The Lipshitz and co-Lipschitz constants of the map $\distfun{\bm{a}}{}{}$ near $p$ can be estimated only in terms of $m$, $\kappa$ and the distances $\dist{p}{a^i}{}$ and $\dist{a^i}{a^j}{}$. 
 \end{itemize}
 
 Set $\bm{x}=\dist{\bm{a}}{p}{}\in\RR^\kay$.
@@ -236,7 +236,7 @@ we can choose a smooth subfunction $F\:\RR^\kay\subto\RR$
 which is nondecreasing in each argument
 and defined in a small neighborhood of $\bm{x}$
 and such that $F''(\bm{x})\le \Lambda$ and $\partial_iF\le 1$ for each $i$.
-Consider multidistance function $\phi\can F\circ\dist{\bm{a}}{}{}$.
+Consider multidistance function $\phi\can F\circ\distfun{\bm{a}}{}{}$.
 By Proposition~\ref{prop:composite+convex},
 we get that $\phi''(p)\le \lambda$
 for some $\lambda=\lambda(\Lambda)$ such that
@@ -262,10 +262,10 @@ $\lambda\in\RR$,
 $\eps>0$
 and $p,z\in \spc{L}$.
 Then there is a multidistant function 
-$\phi\can F\circ\dist{\bm{a}}{}{}$
+$\phi\can F\circ\distfun{\bm{a}}{}{}$
 such that $\Dom\phi\ni p$,
 $\phi''(p)\le\lambda$ and
-$$\d_p\phi(\xi)<\d_p\dist[{{}}]{z}{}{}+\eps$$
+$$\d_p\phi(\xi)<\d_p\distfun{z}{}{}+\eps$$
 for any $\xi\in\Sigma_p$.
 
 Moreover, 
@@ -286,7 +286,7 @@ there is $\delta>0$ such that for any $a\in \oBall(z,\delta)$,
 $\d_p\distfun{a}{}{}<\d_p\distfun{z}{}{}+\eps$.
 Applying Theorem \ref{thm:dist-emb},
 we get a point array $\bm{a}$ in $\oBall(z,\delta)$ such that
-the distance map $\dist{\bm{a}}{}{}$ is bi-Lipschitz in a neighborhood of $p$.
+the distance map $\distfun{\bm{a}}{}{}$ is bi-Lipschitz in a neighborhood of $p$.
 It remains to apply the construction above.
 \qeds
 
@@ -406,7 +406,7 @@ and pass to the limit as $n\to\infty$.
 \qeds
 
 \parit{Proof of Proposition~\ref{prop:support}.}
-Let $\phi\can F\circ\dist{\bm{a}}{}{}$.
+Let $\phi\can F\circ\distfun{\bm{a}}{}{}$.
 Set $v^i=\partial_i F\cdot\dir{p}{a^i}$
 for some choice of geodesics $[pa^i]$.
 From \ref{???}, we have
@@ -425,16 +425,15 @@ To do this we need a new comparison function;
 it takes two multidistance functions $\phi$ and $\psi$ and returns a real value at given point $p$,
 which will be denoted as 
 $\sdk\kappa{p}{\phi}{\psi}$.
-If $\phi\can F\circ\dist{\bm{a}}{}{}$ 
-and $\psi\can G\circ\dist{\bm{b}}{}{}$
+If $\phi\can F\circ\distfun{\bm{a}}{}{}$ 
+and $\psi\can G\circ\distfun{\bm{b}}{}{}$
 then 
 $$\sdk\kappa{p}{\phi}{\psi}
 \df
 \sum_{i,j}\partial_iF\cdot\partial_jG\cdot \cos\angk\kappa p{a^i}{b^j}.$$
 The expression $\sdk\kappa{p}{\phi}{\psi}$
 should be red \emph{$\kappa$-comparison scalar of $\phi$ and $\psi$ at $p$};
-it is a model analog for the scalar product of differentials $\d_p\phi$ and $\d_p\psi$,
-although this scalar product may be undefined;
+it is a model analog for the scalar product of differentials $\d_p\phi$ and $\d_p\psi$;
 compare with Exercise~\ref{ex:d(grad)<0}.
 
 \begin{thm}{Definition}\label{def:strut-II}
@@ -498,7 +497,7 @@ and all large $n$.
 Assume that 
 an array of multidistant functions $(\phi^0,\phi^1,\dots,\phi^\kay)$ is $\kappa$-stratting $p$.
 Without loss of generality, we may assume that 
-$\phi^i\can F^i\circ\dist{\bm{a}}{}{}$ for a fixed point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$.
+$\phi^i\can F^i\circ\distfun{\bm{a}}{}{}$ for a fixed point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$.
 
 Consider vectors $v^i_j=\partial_jF^i\cdot\dir{p}{a^j}$ for some choice of geodesics $[pa^j]$.
 Applying the hinge comparison (\ref{angle})
@@ -550,7 +549,7 @@ and all large $n$.
 
 \parit{Proof; ``if''-part.}
 Assume $(\phi^0,\phi^1,\dots,\phi^\kay,\psi)$ is $\kappa$-strutting $p$.
-Assume $\psi\can G\circ\dist{\bm{b}}{}{}$;
+Assume $\psi\can G\circ\distfun{\bm{b}}{}{}$;
 $\bm{b}=(b^1,b^2,\dots,b^m)$.
 Set 
 \[v^j=\partial_jG\cdot \dir{p}{b^j}\] 
@@ -591,7 +590,7 @@ Then there is a point array
 $\bm{a}\z=(a^1,a^2,\dots, a^{n})$
 and an array of strongly concave multidistant functions 
 $\bm{\phi}=(\phi^0,\phi^1,\dots,\phi^\kay)$, 
-$\phi^i\can F^i\circ\dist{\bm{a}}{}{}$
+$\phi^i\can F^i\circ\distfun{\bm{a}}{}{}$
 such that 
 
 \begin{subthm}{prop:strut>strut:strut}
@@ -688,7 +687,7 @@ The second part follows from \ref{thm:web:lip-const}.
 The definitions of strut (\ref{def:strut-I})
 gives a necessary condition on the model angles
 $\angk{\kappa}{p}{a^i}{a^j}$ which ensure that the distance 
-map $\dist{\bm{a}^{\ne 0}}{}{}\:\spc{L}\to\RR^m$ 
+map $\distfun{\bm{a}^{\without 0}}{}{}\:\spc{L}\to\RR^m$ 
 is a homeomorphism in a neighborhood of $p$.
 One may want to exchange this condition to the following.
 
@@ -705,7 +704,7 @@ the point $\~ p$ is an interior point of the convex hull of $\~ p, \~ a^0, \~ a^
 
 For example if $p,a^0,a^1,a^2$ be three points in a two-dimensional $\Alex0$ space
 such that $\angk0p{a^0}{a^1},\angk0p{a^0}{a^2}>\tfrac34\cdot\pi$ 
-and $\angk0p{a^1}{a^2}>\tfrac13\cdot\pi$ then $(a^0,a^1,a^2)$ is not strutting $p$ in the sense of definition \ref{def:strut-I}, but it does strutting $p$ in the generalized sense.
+and $\angk0p{a^1}{a^2}>\tfrac13\cdot\pi$, then $(a^0,a^1,a^2)$ is not strutting $p$ in the sense of definition \ref{def:strut-I}, but it does strutting $p$ in the generalized sense.
 
 Although the generalized definition is more natural,
 its formulation is more complicated 

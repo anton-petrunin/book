@@ -132,11 +132,11 @@ Moreover, any open ball of radius $\tfrac{\varpi\kappa}4$ in $\spc{M}$ is $\Alex
 \end{subthm}
 
 \begin{subthm}{}
-If $\kappa\le 0$ then  $\spc{M}$ is $\Alex{\kappa}$.
+If $\kappa\le 0$, then  $\spc{M}$ is $\Alex{\kappa}$.
 \end{subthm}
 \end{thm}
 
-%??? As it will be proved in ???, if a complete lenght space is locally $\Alex{\kappa}$ then it is $\Alex{\kappa}.
+%??? As it will be proved in ???, if a complete lenght space is locally $\Alex{\kappa}$, then it is $\Alex{\kappa}.
 Corollary~\ref{cor:submetry-cbb} states that if $\spc{L}$ is a complete length spaces, then $\spc{M}$ is always $\Alex{\kappa}$.
 The theorem above together with Proposition~\ref{prop:submet/G}
 imply the following.
@@ -361,7 +361,7 @@ $\mangle\hinge x p y$ is defined and
 \[\mangle\hinge x p y\ge\angk\kappa x p y,\]
 or equivalently
 \[\side\kappa \hinge x p y\ge\dist{p}{y}{}.\]
-Moreover, if $z\in\l]x y\r[$, $z\not=p$ then 
+Moreover, if $z\in\l]x y\r[$ and $z\not=p$, then 
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
 for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
 \end{subthm}
@@ -449,7 +449,7 @@ Then for $\bar y\in\l]xy\r]$ the function
 \[\dist{x}{\bar y}{}\mapsto \angk\kappa x p{\bar y}\] 
 is nonincreasing.
 
-In particular, if geodesic $[x p]$ exists and $\bar p\in \l]x p\r]$ then
+In particular, if geodesic $[x p]$ exists and $\bar p\in \l]x p\r]$, then
 \begin{subthm}{cor:monoton:2-sides}
 the function 
 \[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nonincresing in each argument
@@ -519,7 +519,7 @@ The following exercise is inspired by Busemann's definition given in \cite{busem
 
 \begin{subthm}{}
 Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
-for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
+for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly, then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
 \end{subthm}
 
 \begin{subthm}{} Show that $\RR^2$ admits a metric defined by a norm
@@ -553,7 +553,7 @@ in $\oBall(p,\varpi\kappa)$.
 \end{subthm}
 \end{thm}
 
-In particular, a complete G-delta geodesic space $\spc{L}$ is $\Alex{0}$ if and only if for any $p\in \spc{L}$, the function $\dist[2]{p}{}{}\:\spc{L}\to\RR$ 
+In particular, a complete G-delta geodesic space $\spc{L}$ is $\Alex{0}$ if and only if for any $p\in \spc{L}$, the function $\distfun[2]{p}{}{}\:\spc{L}\to\RR$ 
 is $2$-concave as defined in Section~\ref{sec:conv-fun}.
 
 \parit{Proof.} 
@@ -584,11 +584,11 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
 and $\bus_\gamma\:\spc{L}\to \RR$ is the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
 
 \begin{subthm}{}
-If $\kappa=0$ then the Busemann function $\bus_\gamma$ is  concave.
+If $\kappa=0$, then the Busemann function $\bus_\gamma$ is  concave.
 \end{subthm}
 
 \begin{subthm}{}
-If $\kappa=-1$ then the function 
+If $\kappa=-1$, then the function 
 \[f=\exp\circ\bus_\gamma\] 
 satisfies
 \[f''- f\le 0\]
@@ -677,7 +677,7 @@ if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$
 %???THERE IS LITTLE PROBLEM IN CASE IF CURVE GOES AROUND BASE FEW TIMES!!!
 \end{thm}
 
-Note that if $\kappa>0$ then the supergraph of a curve is a subgraph with respect to the opposite point. 
+Note that if $\kappa>0$, then the supergraph of a curve is a subgraph with respect to the opposite point. 
 
 For developments,
 all the notions above will be considered with respect to their basepoints.
@@ -740,12 +740,12 @@ By hinge comparison (\ref{angle}), we have
 Further, since $\gamma$ is a unit-speed geodesic, we have that 
 \[\sum_{i=1}^n\dist{x_{i-1}}{x_i}{}\le \dist{p'}{x_0}{}+\dist{p'}{x_n}{}.\eqlbl{eq:thm:detr*}\]
 
-If $\kappa\le 0$ then \ref{eq:thm:detr*}  implies that 
+If $\kappa\le 0$, then \ref{eq:thm:detr*}  implies that 
 
 \[\sum_{i=1}^n\mangle\hinge{\~p'}{\~x_i}{\~x_{i-1}}\le\pi.
 \eqlbl{eq:thm:devel**}\] 
 
-If $\kappa>0$ then \ref{eq:thm:devel**} require more work.
+If $\kappa>0$, then \ref{eq:thm:devel**} require more work.
 Applying rescaling we can assume that $\kappa=1$.
 Assume the contrary; 
 that is, $\sum_{i=1}^n\mangle\hinge{\~p'}{\~x_i}{\~x_{i-1}}>\pi$,
@@ -813,7 +813,7 @@ Namely we proved the following lemma which will be needed later in the proof of 
 
 \begin{thm}{Short hinge lemma}\label{lem:devel-glob}
 Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \l]y z\r[$ then
+and moreover, if $x\in \l]y z\r[$, then
 \[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
 Assume that  for any hinge $\hinge x p y$ in $\spc{L}$ we have
@@ -868,8 +868,8 @@ $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$.
 $R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}}>0$ 
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ 
 is G-delta geodesic and if $q$ and geodesic $[x y]$ lie in
-$\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ and 
-$z\in \l]x y\r[$ then
+$\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ 
+and $z\in \l]x y\r[$, then
 \[\angk\kappa z q x
 +\angk\kappa z q y
 \le \pi.\]
@@ -887,12 +887,12 @@ where $\trig{\~p}{\~x}{\~y}=\modtrig\kappa(p x y)$, $\~z\in\l] \~x\~y\r[$, $\dis
 \end{subthmN}
 
 \begin{subthmN}{angle-loc} (local hinge comparison) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$, such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ then (1) for any hinge $\hinge x q y$, the angle 
-$\mangle\hinge x q y$ is defined and (2) if $x\in \l]y z\r[$ then%
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$, such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then (1) for any hinge $\hinge x q y$, the angle 
+$\mangle\hinge x q y$ is defined and (2) if $x\in \l]y z\r[$, then%
 \footnote{Let us remind that $\hinge x q y$ and $\hinge x q z$  are short notations for pairs $([x q],[x y])$ and $([x q],[x z])$, 
 thus these two hinges automatically have common side $[x q]$.}
 \[\mangle\hinge x q y+ \mangle\hinge x q z\le\pi.\]
-Moreover, if hinge $\hinge x q y$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ then 
+Moreover, if hinge $\hinge x q y$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
 \[\mangle\hinge x q y
 \ge\angk\kappa x q y.\]
 or equivalently
@@ -905,7 +905,7 @@ there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}}>0$,
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})$ 
 is G-delta geodesic and if a geodesic $\gamma$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})$ and $q\in 
 \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})
-\backslash \gamma$ then the $\kappa$-development $\~\gamma$ with respect to $q$ is convex.
+\backslash \gamma$, then the $\kappa$-development $\~\gamma$ with respect to $q$ is convex.
 \end{subthmN}
 Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that 
 \[R_i>\tfrac{1}{9}\cdot R_j.\]
@@ -937,7 +937,7 @@ The ``if''-part also follows directly from the definition.
 
 For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined while $\angk{\kappa} x y z$ is defined.
 However, $\angk{\Kappa} x y z$ is defined if $x$, $y$ and $z$ are sufficiently close to each other.
-Thus, if $\Kappa>\kappa$ then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
+Thus, if $\Kappa>\kappa$, then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
 It remains to apply the  globalization theorem (\ref{thm:glob}).
 \qeds
 
@@ -945,7 +945,7 @@ It remains to apply the  globalization theorem (\ref{thm:glob}).
 Assume $\spc{M}$ is a target space of a sumetry from a complete length space $\Alex\kappa$ space.
 Then $\spc{M}$ is a complete length space $\Alex\kappa$ space.
 
-In particular, if $\spc{L}$ is a complete length $\Alex\kappa$ space with an isometric group action $G\acts \spc{L}$ with closed orbits then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
+In particular, if $\spc{L}$ is a complete length $\Alex\kappa$ space with an isometric group action $G\acts \spc{L}$ with closed orbits, then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -957,7 +957,7 @@ we will use three lemmas.
 First is the short hinge lemma \ref{lem:devel-glob} --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
 
 
-The following lemma says that if comparison holds for all small hinges then it holds for slightly bigger hinges near the given point.
+The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
 Let $\kappa\in \RR$, 
@@ -1152,7 +1152,7 @@ Exactly the same argument as in the proof of Theorem~\ref{thm:almost.geod}
 shows that $\spc{L}$ is G-delta geodesic.
 By Theorem~\ref{angle-loc}, 
 for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \l]y z\r[$ then
+and moreover, if $x\in \l]y z\r[$, then
 \[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
 Let us denote by $\ComRad(p,\spc{L})$ 
@@ -1254,7 +1254,8 @@ for all $t\in[0,\eps)$,
 then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
 \end{subthm}
 
-\begin{subthm}{angle=0}If $\mangle\hinge p x y=0$ then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
+\begin{subthm}{angle=0}
+If $\mangle\hinge p x y=0$, then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
 \end{subthm}
 \end{thm}
 
@@ -1490,7 +1491,7 @@ where $\phi$ is the infimum of angles between $[px]$ and all geodesics from $p$ 
 \end{thm}
 
 \parbf{Remark.}
-If $\spc{L}$ is proper space then $\spc{L}^\o=\spc{L}$, see Section~\ref{ultralimits}.
+If $\spc{L}$ is proper space, then $\spc{L}^\o=\spc{L}$, see Section~\ref{ultralimits}.
 Therefore the infimum $\phi$ is achieved on some particular geodesic from $p$ to $q$.
 
 \medskip
@@ -1520,7 +1521,7 @@ The right hand side in \ref{eq:1st-var+***} is called \emph{strong angle}\index{
 Note that in general metric space angle and strong angle of the same hinge might differ.
 
 \item As it follows from Exercise~\ref{ex:ultra-unique-geod}, 
-if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$ then $[p q]$ lies in $\spc{L}$.
+if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$, then $[p q]$ lies in $\spc{L}$.
 \end{itemize}
 
 
@@ -1625,7 +1626,7 @@ it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$
 In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold with possibly non empty boundary.
 From this, it is easy to see that $\spc{L}$ falls into one of the exceptional spaces described in the theorem.
 
-Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$ then the above argument applied to $\spc{L}^\o$ yields that $\spc{L}^\o$ is isometric to one of the exceptional spaces. 
+Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$, then the above argument applied to $\spc{L}^\o$ yields that $\spc{L}^\o$ is isometric to one of the exceptional spaces. 
 As all of those spaces are proper it means that $\spc{L}=\spc{L}^\o$.
 \qeds
 
@@ -1727,10 +1728,10 @@ Some authors define camparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$ but
 that leads to two different definition of model angles --- one is good for $\CAT{}$ spaces and an other for $\Alex{}$ spaces.
 
 \begin{thm}{Definition of extended angle}
-Let $p,q,r$ be points in a metric space such that  $p\not=q$, $p\not=r$ then
-set
+Let $p,q,r$ be points in a metric space such that $p\not=q$, $p\not=r$. 
+Then set
 \[\angk{\kappa+} p q r=\sup\set{\angk{\Kappa} p q r}{\Kappa\le\kappa}.\]
-The vlaue $\angk{\kappa+} p q r$ is called \emph{extended model angle}\index{angle!extended model angle}\index{model angle!extended model angle}\index{extended model angle} of triple $p$, $q$, $r$.
+The value $\angk{\kappa+} p q r$ is called \emph{extended model angle}\index{angle!extended model angle}\index{model angle!extended model angle}\index{extended model angle} of triple $p$, $q$, $r$.
 \end{thm}
 
 \begin{thm}{Extended angle comparison}

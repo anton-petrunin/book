@@ -48,7 +48,7 @@ Clearly
 \begin{itemize}
 \item $\Reg(\kay)=\emptyset$ for $\kay>m$;
 \item $\Reg(m)=\Reg$;
-\item if $\kay\ge n$ then $\Reg(\kay)\subset \Reg(n)$.
+\item if $\kay\ge n$, then $\Reg(\kay)\subset \Reg(n)$.
 \end{itemize}
  
 Further we introduce approximate analogs of the above definitions.
@@ -94,7 +94,7 @@ Part (\ref{SHORT.prop:Reg(k):a}) is obvious.
 
 The first part of (\ref{SHORT.prop:Reg(k):G-delta}) follows from Corollary~\ref{cor:simicont-Sigma}.
 By \ref{E=T},
-if $\kay\le m$ then  $\Reg(\kay)$ is everywhere dense in $\spc{L}$.
+if $\kay\le m$, then  $\Reg(\kay)$ is everywhere dense in $\spc{L}$.
 Hence the set $\Reg(\kay)$ is a dense G-delta set of $\spc{L}$.
 Hence the second part follows.
 
@@ -278,7 +278,7 @@ then the metric tensor of $\spc{L}$ is continuous at $p$.
 
 Moreover if $\spc{L}_n$ is a sequence of $m$-dimensional complete length $\Alex{}$ spaces,
 $\spc{L}_n\GHto\spc{L}$,
-and $\bm{x}_n\:\spc{L}_n\to\RR^m$ with $y_n\:\spc{L}_n\to\RR$ be the liftings of the distance chart $\bm{x}$ with strutt $y$ then
+and $\bm{x}_n\:\spc{L}_n\to\RR^m$ with $y_n\:\spc{L}_n\to\RR$ be the liftings of the distance chart $\bm{x}$ with strutt $y$, then
 for any lifting $\spc{L}_n\ni p_n\GH\to p$, we have
 \[g_n(p_n)\to g(p)\]
 where $g_n$ denotes the metric tensor of $\spc{L}_n$ in $\bm{x}_n$.
@@ -478,7 +478,7 @@ Given a point $p\in \spc{L}$ distinct from each $a^i$,
  consider the function
 $$f(x)=\sum_{i=1}^\kay\phi(\dist{a^i}{x}{}-\dist{a^i}{p}{}).$$
 Assume $\lambda^1,\lambda^2,\dots,\lambda^\kay$ are real numbers such that
-$\dist[\prime\prime]{a^i}{}{}(p)\le\lambda^i$ for each $i$
+$\distfun[\prime\prime]{a^i}{}{}(p)\le\lambda^i$ for each $i$
 and $\theta\ge 0$ is such that
 $$|\dist{\bm{a}}{x}{}-\dist{\bm{a}}{x}{}|
 \ge 
@@ -507,7 +507,7 @@ such that $\mangle(\xi,\dir p{a^i})<\eps$.
 \parit{Proof.}
 Applying Theorem~\ref{thm:dist-emb},
 we can choose a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ so that for some $\eps>0$
-the distance map $\dist{\bm{a}}{}{}$ defines an $[\eps,\kay]$-bi-Lipschitz embedding 
+the distance map $\distfun{\bm{a}}{}{}$ defines an $[\eps,\kay]$-bi-Lipschitz embedding 
 of $\oBall(p,\eps)$.
 
 Applying Proposition~\ref{prop:conv-comp-cbb},
@@ -522,7 +522,7 @@ we have
 $\mangle(\xi,\dir px)<\eps$
 for any $x\in\oBall(z,r)$.
 
-Applying Theorem~\ref{thm:dist-emb}, we can choose a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ in $\oBall(z,r)$ such that the distance map $\dist{\bm{a}}{}{}$ defines an $[\eps,\kay]$-bi-Lipschitz embedding 
+Applying Theorem~\ref{thm:dist-emb}, we can choose a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ in $\oBall(z,r)$ such that the distance map $\distfun{\bm{a}}{}{}$ defines an $[\eps,\kay]$-bi-Lipschitz embedding 
 of $\oBall(p,\eps)$ for some $\eps>0$.
 Then apply Proposition~\ref{prop:conv-comp-cbb} the same way as above, we get the second part of theorem.
 \qeds
@@ -607,7 +607,7 @@ Then $g_n$ converges to $g$ almost everywhere.
 \end{thm}
 
 \parit{Proof.}
-??? I see two ways. First to use few strutts and Riemann expression for metric tensor then use tha $g$ can be expressed through the derivatives of strutts.
+??? I see two ways. First to use few strutts and Riemann expression for metric tensor then use that $g$ can be expressed through the derivatives of strutts.
 Second more direct using  simcontinuity of angles.
 ???
 \qeds
@@ -636,7 +636,7 @@ Maybe we will need $\lip$ and $\lip_{loc}$???
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $f\:\spc{L}\subto\RR$ be a locally Lipschhtz subfunction.
 Then $f$ is locally $1$-Lipschitz if and only if $\|\d_pf\|\le1$ almosteverywhere in $\Dom f$.
 
-Moreover, if $\Dom f=\spc{L}$ then for any functions $f$
+Moreover, if $\Dom f=\spc{L}$, then for any functions $f$
 $\lip f=\|f\|_{1,\infty}$
 \end{thm}
 
@@ -656,7 +656,7 @@ Choose a geodesic $[xy]$ for each point $y\in\oBall(z,\eps)$
 and let $\gamma_y$ be corresponding geodesic path;
 that is, $\gamma_y(t)=\geod_{[x y]}(\tfrac{t}{\dist{x}{y}{}})$.
 
-Note that if $A\subset \spc{L}$ contains almost all points of $\spc{L}$ then for some point $y\in\oBall(z,\eps)$, we have $\gamma_y(t)\in A$ for almost all values $t\in[0,1]$.
+Note that if $A\subset \spc{L}$ contains almost all points of $\spc{L}$, then for some point $y\in\oBall(z,\eps)$, we have $\gamma_y(t)\in A$ for almost all values $t\in[0,1]$.
 Thus 
 \[|f(y)-f(x)|
 \le
@@ -862,7 +862,7 @@ of the differentiability of $f$ at a given point.
 \begin{thm}{Theorem}\label{thm:loc-lip-inverse+}
 Let $\spc{U}$ be an $m$-dimensional complete length $\CAT\kappa$ space, 
 $\bm{a}=(a^0,a^1,\dots a^m)$ be a nondegenerate point array in $\spc{U}$
-and $\map\:\RR^m\subto\spc{U}$ be the $\dist{\bm{a}}{}{}$-web embedding 
+and $\map\:\RR^m\subto\spc{U}$ be the $\distfun{\bm{a}}{}{}$-web embedding 
 with strutt $\distfun{a^0}{}{}$.
 
 Set $f=\distfun{a^0}{}{}\circ\map$.
@@ -871,7 +871,7 @@ set $\bm{y}_t=(1-t)\cdot \bm{y}_0+t\cdot \bm{y}_1 $, $t\in [0,1]$
 and $r=\max\{|\bm{y}_0-\bm{x}|,|\bm{y}_1-\bm{x}|\}$.
 
 \begin{subthm}{}
-If $f$ is differentiable at $\bm{x}$ then so is $\map$.
+If $f$ is differentiable at $\bm{x}$, then so is $\map$.
 Moreover, $\map$ is almost affine at $\bm{x}$;
 that is,
 \[\dist{\map(\bm{y}_0)}{\map(\bm{y}_t)}{}
@@ -928,7 +928,7 @@ The Lemma~\ref{lem:affine=>isom} might help.
 According to Rademacher's theorem (\ref{thm:rademacher}) 
 $v\mapsto |\d_{\bm{x}}\map(v)|^2$
 is a quadratic form.
-Note that $\dist{\bm{a}^{\without 0}}{}{}$ is $m$-Lipshitz;
+Note that $\distfun{\bm{a}^{\without 0}}{}{}$ is $m$-Lipshitz;
 therefore $|\d_{\bm{x}}\map(v)|>\tfrac1{m^2}>0$.
 In particular, 
 \[

@@ -12,7 +12,7 @@ First, recall that if $\spc{L}$ is one-dimensional complete length $\Alex\kappa$
 In this case, we define boundary of $\spc{L}$ (denoted as $\partial \spc{L}$)\index{$\partial\spc{L}$} to be boundary of corresponding manifold.
 
 Now, assume that the notion of boundary is already defined in all dimensions less than $m$.
-Recall that if $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space then $\Sigma_p$ is an $(m-1)$-dimensional complete length $\Alex1$ space for any $p\in \spc{L}$ (see \ref{thm:tan4finite});
+Recall that if $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, then $\Sigma_p$ is an $(m-1)$-dimensional complete length $\Alex1$ space for any $p\in \spc{L}$ (see \ref{thm:tan4finite});
 thus $\partial\Sigma_p$ is already defined.
 Then define 
 \[\partial \spc{L}=\set{p\in \spc{L}}{\partial\Sigma_p\not=\emptyset}.\]
@@ -34,21 +34,21 @@ Here we give a simplified proof with the use of a gradient exponent.
 Let $\spc{L}$ be an $m$ dimensional complete length $\Alex\kappa$ space and
 $\partial \spc{L}\not=\emptyset$.
 Then the function 
-\[f=\sn\kappa\circ\dist{\partial \spc{L}}{}{}\] 
+\[f=\sn\kappa\circ\distfun{\partial \spc{L}}{}{}\] 
 satisfies $f''+\kappa\cdot  f\le 0$.
 
 In particular,
-\begin{subthm}{} if $\kappa=0$, the function $\dist{\partial \spc{L}}{}{}$ is concave;
+\begin{subthm}{} if $\kappa=0$, the function $\distfun{\partial \spc{L}}{}{}$ is concave;
 \end{subthm}
 
-\begin{subthm}{} if $\kappa>0$, the level sets $L_x=\dist[-1]{\partial \spc{L}}{}{}(x)\subset \spc{L}$, $x>0$
+\begin{subthm}{} if $\kappa>0$, the level sets $L_x=\distfun[-1]{\partial \spc{L}}{}{}(x)\subset \spc{L}$, $x>0$
 are strictly concave hypersurfaces.
 \end{subthm}
 
 Moreover, the same conclusions hold for $f=\sn\kappa\circ\distfun{E}{}{}$, where $E$ is an $(m-1)$-dimensional extremal subset???.
 \end{thm}
 
-Note that $\dist{\partial\spc{L}}{}{}$ (as well as function $f$ defined in the theorem) is not native semiconcave function of $\spc{L}$ (see definition ???). 
+Note that $\distfun{\partial\spc{L}}{}{}$ (as well as function $f$ defined in the theorem) is not native semiconcave function of $\spc{L}$ (see definition ???). 
 
 \begin{wrapfigure}{r}{40mm}
 \begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/dist-to-bry(0.4)}
@@ -148,7 +148,7 @@ Then $K$ be an $m$-dimensional complete length $\Alex\kappa$ space,
 moreover 
 \[\partial K=\Fr_\spc{L} K\cup(\partial \spc{L}\cap K).\]
 
-In particular, if $\partial \spc{L}=\emptyset$ then $\partial K=\Fr_\spc{L} K$.
+In particular, if $\partial \spc{L}=\emptyset$, then $\partial K=\Fr_\spc{L} K$.
 \end{thm}
 
 \parit{Proof.}
@@ -167,24 +167,25 @@ that is, $q\in\partial K$.
 Since $\partial K$ is closed (???) and $\eps$ is arbitrary positive number, 
 we get that $p\in \partial K$, or $\Fr_\spc{L} K\subset\partial K$.
 
-Finally, if $p\in\Int_\spc{L} K$ then $\Sigma_pK=\Sigma_p\spc{L}$.
+Finally, if $p\in\Int_\spc{L} K$, then $\Sigma_pK=\Sigma_p\spc{L}$.
 Thus, in this case, $p\in\partial K\ \z\Leftrightarrow\ p\in\partial \spc{L}$ and result follows.
 \qeds
 
 \section{Boundary and rank}
 
-If in addition $\kay=m-1$ and $p\notin\partial\spc{L}$ then
+If in addition $\kay=m-1$ and $p\notin\partial\spc{L}$, then
 $w_p^{-1}(q)$ is  a convex set in $\Delta^\kay$ which contains at least two distinct points. 
 
 ???
 It remains to prove the second part of the theorem.
 According to ???,
 $\partial\spc{L}$ is a closed set in $\spc{L}$.
-If $p\notin\partial\spc{L}$ then we can assume that $\Omega\cap\partial\spc{L}=\emptyset$.
+If $p\notin\partial\spc{L}$, then we can assume that $\Omega\cap\partial\spc{L}=\emptyset$.
 
 \begin{clm}{}
 Assume $w_p^{-1}(q)$ is a one point set
-for some $q\in \Omega$ then $\T_q\iso \EE^m$.
+for some $q\in \Omega$.
+Then $\T_q\iso \EE^m$.
 \end{clm}
 
 \parit{Proof of the claim.}
@@ -256,8 +257,8 @@ All such examples appear when codimension of extremal subset is $\ge 3$.
 So it still might be true that
 
 \begin{thm}{Conjecture}\label{conj:codim=2}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, $E\subset \spc{L}$ be a primitive extremal subset and $\codim
-E=2$ then $E$ equipped with length-metric is an $m$-dimensional $\Alex\kappa$ space
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, $E\subset \spc{L}$ be a primitive extremal subset and $\codim E=2$.
+Then $E$ equipped with length-metric is an $m$-dimensional $\Alex\kappa$ space
 \end{thm}
 
 
@@ -267,7 +268,7 @@ The following gives a converse to Theorem~\ref{thm:dist-to-bry}.
 
 \begin{thm}{Exercise} 
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex0$ space and $\mathfrak{C}\subset  \spc{L}$ be a closed subset such that its distance function 
-$\dist{\mathfrak{C}}{}{}\:\spc{L}\to \RR$ is a concave.
+$\distfun{\mathfrak{C}}{}{}\:\spc{L}\to \RR$ is a concave.
 Prove that $\mathfrak{C}$ is a $(m-1)$-dimensional extremal subset in $\spc{L}$.
 \end{thm}
 

@@ -39,7 +39,7 @@ and
 $f$ 
 is $\lambda_\kappa(R)$-Lipschitz in $\oBall(o,R)\subset\T_p$.
 
-(In particular, if $\kappa\ge 0$ then $f$ is a short map.)
+(In particular, if $\kappa\ge 0$, then $f$ is a short map.)
 \end{subthm}
 
 \begin{subthm}{prop:bishop:g}
@@ -113,7 +113,7 @@ In particular
 \[\sum_n r_n^{m}
 \le
 R^{ m}+o(R^{ m})\]
-and if $\kappa\ge 0$ then 
+and if $\kappa\ge 0$, then 
 \[\sum_n r_n^{ m}
 \le
 R^{m}.\]
@@ -123,7 +123,7 @@ R^{m}.\]
 \[\SphMes_m\oBall(p,R)\le \lambda_\kappa^{ m}(R)\cdot R^{m}.\]
 In particular
 \[\SphMes_m\oBall(p,R)\le R^{ m}+o(R^{m})\]
-and if $\kappa\ge 0$ then
+and if $\kappa\ge 0$, then
 \[\SphMes_m\oBall(p,R)\le R^{ m}.\]
 \end{subthm}
 
@@ -281,13 +281,13 @@ in particular $\dens_p\le s$.
 It follows that $s=1$.
 
 Further, by \ref{comp-kappa} the function $f\:\T_p\to\RR$
-defined as $f=\tfrac12\cdot\dist[2]{x}{}{}$
+defined as $f=\tfrac12\cdot\distfun[2]{x}{}{}$
 is $1$-concave.
 By Proposition~\ref{prop:GF-is-lip},
 given $t>0$,
 the gradient flow $x\mapsto\GF^t_f(x)$ is $e^t$-Lipschitz.
 On the other hand if $\bar z\in [xz]$ 
-such that $e^t\cdot\dist{x}{\bar z}{}=\dist{x}{z}{}$ for some $t\ge 0$ then $\GF^t_f(\bar z)=z$.
+such that $e^t\cdot\dist{x}{\bar z}{}=\dist{x}{z}{}$ for some $t\ge 0$, then $\GF^t_f(\bar z)=z$.
 In particular,
 \[\GF^t_f[\oBall(x,r)]=\oBall(x,e^t\cdot r)\supset\oBall(o,R),\]
 where $R=e^t\cdot r-|x|$.
@@ -652,7 +652,7 @@ and $\spc{L}_n\GHto \spc{L}_\infty$.
 Then $\vol_m$ on $\spc{L}_n$ converges weakly to $\vol_m$ on $\spc{L}_\infty$.
 
 In particular,
-if $\spc{L}_\infty$ is compact then 
+if $\spc{L}_\infty$ is compact, then 
 $\vol_m\spc{L}_n\to \vol_m\spc{L}_\infty$
 as $n\to\infty$.
 \end{thm}
@@ -805,18 +805,18 @@ It remains to apply the coarea formula to the distance function
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space,
 $f\:\spc{L}\to\RR$ be a continuous subfunction
 and $\bm{a}=(a^1,a^2,\dots,a^m)$ be a point array in $\spc{L}$.
-Assume that the distance map $\dist{\bm{a}}{}{}$ 
+Assume that the distance map $\distfun{\bm{a}}{}{}$ 
  is injective in an open set $\Omega\subset\spc{L}$.
-Then for any function $f\:\dist{\bm{a}}{}{}(\Omega)\to\RR$ 
+Then for any function $f\:\distfun{\bm{a}}{}{}(\Omega)\to\RR$ 
 we have
 \[\int\limits_{\Omega} \frac{f(\dist{\bm{a}}{p}{})}{\sqrt{\det(g_{ij})}}\cdot\d_p\vol_m
 =
-\int\limits_{\dist{\bm{a}}{}{}(\Omega)} f(\bm{x})\cdot\d x^1\cdot\d x^2\cdots\d x^m,\]
+\int\limits_{\distfun{\bm{a}}{}{}(\Omega)} f(\bm{x})\cdot\d x^1\cdot\d x^2\cdots\d x^m,\]
 where $g_{ij}=\cos\mangle\hinge p{a^i}{a^j}$.
 \end{thm}
 
 \parit{Proof.}
-Note that $|(\d_x[\dist{\bm{a}}{}{}])^{\wedge m}|\ae \frac1{\sqrt{\det(g_{ij})}}$.
+Note that $|(\d_x[\distfun{\bm{a}}{}{}])^{\wedge m}|\ae \frac1{\sqrt{\det(g_{ij})}}$.
 Then apply the coarea formula.
 \qeds
 
@@ -1035,7 +1035,7 @@ $\vol_\kay [\iota\circ f(Q^2)]=0$.
 
 Consider all the orthogonal projections $\proj^1,\dots,\proj^N$ of $\EE^n$ to $m$-dimensional coordinate subspaces,
 so $N=\tfrac{n!}{m!\cdot(n-m)!}$.
-Note that if $\d_p(\iota\circ f)$ is linear then
+Note that if $\d_p(\iota\circ f)$ is linear, then
 so are the differentials $\d_p(\proj^i\circ\iota\circ f)$
 for all $i$.
 By Propositions~\ref{prop:lin-algebra-2} and \ref{prop:lin-algebra-1},

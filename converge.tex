@@ -192,8 +192,8 @@ We will be interested in the properties of liftings for sufficiently large $n$.
 The same way we can talk about liftings of a point array
 $\bm{p}_\infty=(p_\infty^1,p_\infty^2,\dots,p_\infty^\kay)$ in $\spc{X}_\infty$
 and about the corresponding distance map 
-$\dist{\bm{p}_\infty}{}{}\:\spc{X}_\infty\to\RR^\kay$
-$$\dist{\bm{p}_\infty}{}{}\:x\mapsto(\dist{p_\infty^1}{x}{},\dist{p_\infty^2}{x}{},\dots,\dist{p_\infty^k}{x}{})$$
+$\distfun{\bm{p}_\infty}{}{}\:\spc{X}_\infty\to\RR^\kay$
+$$\distfun{\bm{p}_\infty}{}{}\:x\mapsto(\dist{p_\infty^1}{x}{},\dist{p_\infty^2}{x}{},\dots,\dist{p_\infty^k}{x}{})$$
 
 \section{Gromov's selection theorem}
 
@@ -293,13 +293,13 @@ $\GH$ and $\GH'$.
 Assume 
 $\spc{X}_n\xGHto{\GH}\spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'}\spc{X}_\infty'$.
 \begin{subthm}{}
-If  $\spc{X}_\infty$ is compact then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+If  $\spc{X}_\infty$ is compact, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
 \end{subthm}
 
 \begin{subthm}{}
 If  $\spc{X}_\infty$ is proper and there is a sequence of points $x_n\in \spc{X}_n$ 
 which converges in both
-$\GH$ and $\GH'$ then $\spc{X}_\infty\iso\spc{X}_\infty'$.
+$\GH$ and $\GH'$, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
 \end{subthm}
 \end{thm}
 
@@ -385,7 +385,7 @@ $\spc{X}\le \spc{Y}+\eps$ and $\spc{Y}\le \spc{X}+\eps$.
 \parbf{Remark for AKP.}
 This notation is a bit slang-like, maybe better to use $\succcurlyeq$ instead of $\ge$.
 Yet $\spc{Y}+\eps$ migh be needed to be changed;
-one might think that $\spc{Y}+\eps$ is a metric space $(\ushort{\spc{Y}},\dist{}{}{}+\eps \rho)$, where $\rho$ is a discreate metric on $\ushort{\spc{Y}}$ (that is, $\rho(x,y)=1$ if $x\not=y$). 
+one might think that $\spc{Y}+\eps$ is a metric space $(\ushort{\spc{Y}},\dist{}{}{}+\eps\cdot \rho)$, where $\rho$ is a discrete metric on $\ushort{\spc{Y}}$ (that is, $\rho(x,y)=1$ if $x\not=y$). 
 It will be totally correct to introduce some operator say $\op{Add}_\eps\spc{Y}$, but it is also less intuitive...
 One may also write something like 
 $\spc{X}\succcurlyeq \spc{Y}^{+\eps}$ or $\spc{X}\succcurlyeq^{\eps+} \spc{Y}$...
@@ -454,8 +454,7 @@ $b_n(z)=x^i_n$.
 
 
 \begin{thm}{Lemma}\label{lem:>=-isometry}
-Let $\spc{X}$ and $\spc{Y}$ be two metric spaces 
-and $\spc{X}$ is compact then
+Let $\spc{X}$ and $\spc{Y}$ be two metric spaces and $\spc{X}$ is compact, then
 \[
 \spc{X}\ge\spc{Y}\ge\spc{X}
 \ \ \Leftrightarrow\ \ 
@@ -569,7 +568,7 @@ Instead one consider two cases:
 \item In the non-compact case one makes a choice of point $x_\infty\in\spc{X}_\infty$ and a sequence $x_n\in\spc{X}_n$ and then to define pointed Gromov--Hausdorff convergence $(\spc{X}_n,x_n)\to (\spc{X}_\infty, x_\infty)$ one requires existance of GH-convergence $\GH$, such that $x_n\xto{\GH}x_\infty$.
 \end{enumerate}
 The later is called \emph{pointed Gromov--Hausdorff convergence}.
-It is easy to see that if $\spc{X}_n\xto{\GH}\spc{X}_\infty$ then for any sequence $x_n\in\spc{X}_n$ 
+It is easy to see that if $\spc{X}_n\xto{\GH}\spc{X}_\infty$, then for any sequence $x_n\in\spc{X}_n$ 
 such that $x_n\xto{\GH} x_\infty\in\spc{X}_\infty$, 
 the seqence $(\spc{X}_n,x_n)$ 
 converges to $(\spc{X}_\infty,x_\infty)$ 

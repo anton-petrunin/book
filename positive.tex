@@ -14,7 +14,7 @@ Moreover $\Sigma_p$ is homeomorphic to $\Sigma_q$.
 \parit{Proof.}
 Clearly for any $x\in \spc{L}\backslash\{p,q\}$ we have $\mangle\hinge x p q\ge\angk{1}{x}{p}{q}>\tfrac\pi2$.
 Thus $\distfun{p}{}{}$ has only two critical points $p$ and $q$.
-Thus according to Morse lemma, $\spc{L}$ is homeomorphic to $\Susp Z_t$, where $Z_t=\dist[-1]{p}{}{}(t)$, $0<t<\dist{p}{q}{}$.
+Thus according to Morse lemma, $\spc{L}$ is homeomorphic to $\Susp Z_t$, where $Z_t=\distfun[-1]{p}{}{}(t)$, $0<t<\dist{p}{q}{}$.
 Finally, according to ???, for all sufficiently small $t$ we have $\Sigma_p$ is homeomorphic to $Z_t$.
 
 To prove the second statement ???.
@@ -22,7 +22,8 @@ To prove the second statement ???.
 
 
 \begin{thm}{Sphere theorem}\label{thm:sphere}
-Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex{1}$ space, $\spc{L}$ does not have proper extremal subsets and $\diam \spc{L}>\tfrac\pi2$ then $\spc{L}$ is homeomorphic to $\SS^m$. 
+Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex{1}$ space, $\spc{L}$ does not have proper extremal subsets and $\diam \spc{L}>\tfrac\pi2$.
+Then $\spc{L}$ is homeomorphic to $\SS^m$. 
 \end{thm}
 
 \parit{Proof.} Assume $p,q\in \spc{L}$ realize the diameter of $\spc{L}$.
@@ -34,7 +35,8 @@ From angle comparison, $\distfun{p}{}{}$ has only two critical points $p$ and $q
 Therefore, this theorem follows from the Morse lemma (\ref{lem:morse}) applied to $\distfun{p}{}{}$. \qeds
 
 \begin{thm}{Radius-sphere theorem}\label{thm:rad-sphere}
-Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex{1}$ space and $\rad \spc{L}>\tfrac\pi2$ then $\spc{L}$ is homeomorphic to a sphere. 
+Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex{1}$ space and $\rad \spc{L}>\tfrac\pi2$.
+Then $\spc{L}$ is homeomorphic to a sphere. 
 \end{thm}
 
 We give two proofs, both are build on the following lemma.
@@ -124,9 +126,8 @@ Therefore $\mangle(\gamma^+(0),\dir p{a_i})\le \tfrac\pi2$ for each $i$, which c
 
 
 \begin{thm}{Volume-radius gap}\label{thm:vol-rad-gap}
-Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex{1}$ space and $\rad \spc{L}_n\le\tfrac\pi2$ then
-$\vol \spc{L}>\eps_m$,
-where $\eps_m=???$.
+Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex{1}$ space and $\rad \spc{L}_n\le\tfrac\pi2$.
+Then $\vol \spc{L}>\eps_m$, where $\eps_m=???$.
 \end{thm}
 
 This fact much stronger than ??? and its proof use only Morse lemma from all Alexandrov geometry.
@@ -210,7 +211,7 @@ It follows that $\angk\kappa q {\alpha_\zeta(t)}p $ is nondecreasing in $t$, hen
 
 \parit{Proof of \ref{lyt-prob}}. 
 Let $z\in \spc{L}$ be the point at maximal distance from $\partial \spc{L}$; in particular
-$z$ realizes maximum of $f=\sin\circ\dist{\partial \spc{L}}{}{}$.
+$z$ realizes maximum of $f=\sin\circ\distfun{\partial \spc{L}}{}{}$.
 From Theorem~\ref{thm:dist-to-bry}, $f(z)\le 1$ and $f''+f\le 0$.
 
 Note that $\spc{L}\subset \cBall[z,\tfrac\pi2]$, otherwise if $y\in \spc{L}$ with $\dist{y}{z}{}>\tfrac\pi2$, then applying inequality $f''+f\le 0$ to the geodesic $[z y]$, we get that $(\d_z f)(\dir z y)>0$; that is, $z$ is not a maximum of $f$.
@@ -360,7 +361,7 @@ sufficiently close\footnote{that is, $\eps$-close for some $\eps=\eps(\kappa,m)$
 is homeomorphic to a sphere.
 \end{thm}
 
-\section{Convrgence}
+\section{Convergence}
 
 \begin{thm}{???Theorem}
 Let $\spc{L}_n$ be an $m$-dimensional complete length $\Alex1$ space
@@ -371,5 +372,6 @@ such that
 for all $i,j$ we have 
 $\dist{p_{n;i}}{p_{n;j}}{}\to \dist{p_{i}}{p_{j}}{}$ as $n\to\infty$
 and for any $n$ and $i\not=j$, we have $\dist{p_{n;i}}{p_{n;j}}{}>\tfrac\pi2$. 
-Assume $\bm{p}$ be the limit array in $\spc{L}$ then there is an isometri embedding $\SS^\kay\hookrightarrow\spc{L}$ which contains all points of array $\bm{p}$ in the image.
+Assume $\bm{p}$ be the limit array in $\spc{L}$.
+Then there is an isometri embedding $\SS^\kay\hookrightarrow\spc{L}$ which contains all points of array $\bm{p}$ in the image.
 \end{thm}

@@ -102,7 +102,7 @@ We say that $\spc{U}$ is $\CAT{}$ if it is $\CAT{\kappa}$ for some $\kappa\in\RR
 
 The condition $\spc{U}$ is $\CAT\kappa$ should be understood as ``$\spc{U}$ has global curvature $\le\kappa$''.
 In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
-in particular, if $\kappa\le\Kappa$ then any $\CAT\kappa$ space is $\CAT\Kappa$.
+in particular, if $\kappa\le\Kappa$, then any $\CAT\kappa$ space is $\CAT\Kappa$.
 
 
 This terminology was introduced by Gromov;  
@@ -268,7 +268,7 @@ Here we give a few reformulations of Definition~\ref{def:ccat}.
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_cat} 
-If $\spc{U}$ is a $\CAT\kappa$ space then 
+If $\spc{U}$ is a $\CAT\kappa$ space, then 
 the following conditions hold for all triples $p,x,y\in \spc{U}$ of perimeter $<2\cdot\varpi\kappa$:
 
 \begin{subthm}{cat-2-sum} (adjacent-angles comparison\index{comparison!adjacent-angles comparison}) for any geodesic $[x y]$ and $z\in \l]x y\r[$, we have
@@ -385,7 +385,7 @@ Then for $\bar y\in\l]x y\r]$, the function
 \[\dist{x}{\bar y}{}\mapsto \angk\kappa x p{\bar y}\] 
 is nondecreasing.
 
-In particular, if $\bar p\in \l]x p\r]$ then
+In particular, if $\bar p\in \l]x p\r]$, then
 \begin{subthm}{two-mono-cba}the function 
 \[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nondecreasing in each argument,
 \end{subthm}
@@ -655,7 +655,7 @@ By composition,  the natural map from $\trig{\~ p}{\~ x}{\~ y}$ to $\trig p y z$
 In this section, we give analytic and geometric ways of viewing the point-on-side comparison (\ref{cat-monoton}) as a convexity condition.
 
 First we obtain a corresponding differential  inequality for the distance function in $\spc{U}$.
-In particular, a geodesic space $\spc{U}$ is $\CAT{0}$ if and only if  for any $p\in \spc{U}$, the function $\dist[2]{p}{}{}\:\spc{U}\to\RR$ is $2$-convex;
+In particular, a geodesic space $\spc{U}$ is $\CAT{0}$ if and only if  for any $p\in \spc{U}$, the function $\distfun[2]{p}{}{}\:\spc{U}\to\RR$ is $2$-convex;
 see Section~\ref{sec:conv-fun} for the definition.
  
 \begin{thm}{Theorem}\label{thm:function-comp} 
@@ -716,7 +716,7 @@ and any closed ball of radius $\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
 \parit{Proof.}
 Suppose $p\in\spc{U}$, $ R\le\varpi\kappa/2$,  and two points 
 $x$ and $y$ lie in $\cBall[p, R]$ or $\oBall(p, R)$.
-By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$ then any
+By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$, then any
  geodesic $[x y]$ lies in $\oBall(p, \varpi\kappa)$.
  
 By function comparison (\ref{thm:function-comp}), 
@@ -872,7 +872,7 @@ Assume $\spc{U}$ is a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ 
 Assume $\dist{x}{y}{}<\varpi\kappa$ for any $x,y\in K$.
 Then $K$ is convex.
 
-In particular, if $\kappa\le 0$ then any closed connected locally convex set in a $\spc{U}$ is convex.
+In particular, if $\kappa\le 0$, then any closed connected locally convex set in a $\spc{U}$ is convex.
 \end{thm}
 
 The following proof is inspired by the answer of Sergei Ivanov to the question of Nathan Reading, see \cite{ivanov:local-global-convexity}.
@@ -889,7 +889,7 @@ Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$
 uniquely defined and depends continuously on $s$.
 
 Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
-If $[xy]=[x\alpha(1)]$ does not completely lie in $K$ then 
+If $[xy]=[x\alpha(1)]$ does not completely lie in $K$, then 
 there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
 lies in $\Omega$,
 but does not completely lie in $K$.
@@ -983,7 +983,7 @@ The following definition gives an infinitesimal
  
 
 
-If $\spc{U}$ is $\CAT\kappa$ space then it is locally $\CAT\kappa$.
+If $\spc{U}$ is $\CAT\kappa$ space, then it is locally $\CAT\kappa$.
 The converse, does not hold even for complete length space.
 For example, $\SS^1$ is locally isometric to $\RR$, and so
 is locally $\CAT0$, but it is easy to find a quadruple of points in $\SS^1$ which violates $\CAT0$ comparison.  
@@ -1128,7 +1128,7 @@ Then $\spc{W}$ is a $\CAT\kappa$ space.
 First we prove the following:
 
 \begin{clm}{}\label{clm:geod-gluing}
-If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic then $\spc{W}$ is $\CAT\kappa$.
+If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic, then $\spc{W}$ is $\CAT\kappa$.
 \end{clm}
 
 
@@ -1710,7 +1710,7 @@ Let  $\alpha$  be a closed curve in a metric space $\spc{X}$.
 Suppose $D\subset\Lob2{\kappa}$ majorizes $\alpha$ under $F\: D \to \spc{X}$.  
 Then any geodesic subarc of $\alpha$ is the image under $F$ of a subarc of $\partial_{\Lob2{\kappa}} D$ that is geodesic in the length-metric of $D$.
 
-In particular, if $D$ is convex then the corresponding subarc is a geodesic in $\Lob2{\kappa}$.
+In particular, if $D$ is convex, then the corresponding subarc is a geodesic in $\Lob2{\kappa}$.
 \end{thm}
 
 \parit{Proof.} For a geodesic subarc $\gamma\:[a,b]\to\spc{X}$ of $\alpha=F\circ\~\alpha$, set
@@ -2074,7 +2074,10 @@ Suppose $\~p\in [\~x \~y]$ and $\~q\in[\~y\~z]$.  Then
  \eqlbl{eq:arm-eq}
 \]
 Indeed, inequality holds in one direction by majorization, and in the other direction by angle comparison
-(\ref{cat-hinge}). By first variation (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\~x \~y \~z]$ and $[x y z]$ are equal. But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so $F$ is distance-preserving on every geodesic of $\Conv(\~p, \~x, \~y)$. Hence the claim.
+(\ref{cat-hinge}).
+By first variation (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\~x \~y \~z]$ and $[x y z]$ are equal.
+But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so $F$ is distance-preserving on every geodesic of $\Conv(\~p, \~x, \~y)$.
+Hence the claim.
 
 \begin{clm}{}\label{clm:arm-induction}
 Suppose $F|\Conv(\~x^{n+1},\~x^0,\~x^1\dots \~x^{k})$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|\Conv(\~x^{n+1},\~x^0,\~x^1\dots \~x^{k+1})$ is distance-preserving.
@@ -2429,7 +2432,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 % we get the following.
 
 %\begin{clm}{}\label{clm:ang=>dist}
-%If $\mangle\hinge xyz=\angk\kappa xyz$ then for any $w\in \l]x y\r[$ we have $\dist{z}{w}{}=\dist{\~z}{\~w}{}$, where $\~w\in[\~x\~y]$ such that $\dist{\~x}{\~w}{}=\dist{x}{w}{}$.
+%If $\mangle\hinge xyz=\angk\kappa xyz$, then for any $w\in \l]x y\r[$ we have $\dist{z}{w}{}=\dist{\~z}{\~w}{}$, where $\~w\in[\~x\~y]$ such that $\dist{\~x}{\~w}{}=\dist{x}{w}{}$.
 %\end{clm}
 
 %Further,  let $v,w\in \l]xy\r[$ and they appear on the geodesic in the order $x,v,w,y$.

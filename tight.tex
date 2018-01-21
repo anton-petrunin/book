@@ -139,7 +139,7 @@ $p,b\in\spc{L}$
 and $\bm{a}=(a^1,a^2,\dots,a^\kay)\in\spc{L}^{{\times}\kay}$ be a point array.
 
 Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
-Then the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\dist{\bm{a}}{p}{}\in\RR^\kay$;
+Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\dist{\bm{a}}{p}{}\in\RR^\kay$;
 that is, there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \dist{\bm{a}}{p}{}$ and 
 $\dist{\bm{a}}{\map(\bm{x})}{}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
 Moreover
@@ -150,7 +150,7 @@ $\map(\dist{\bm{a}}{p}{})=p$.
 \end{subthm}
 
 \begin{subthm}{thm:right-inverse-function:open-map}
-The distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipschitz (in particular, open) in a neighborhood of $p$.
+The distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipschitz (in particular, open) in a neighborhood of $p$.
 \end{subthm}
 
 \end{thm}
@@ -175,7 +175,7 @@ In addition $\eps<\tfrac{1}{10}$.
 Given $\bm{x}=(x^1,x^2,\dots,x^\kay)\in \RR^\kay$
 consider the function 
 $f_{\bm{x}}\:\spc{L}\to \RR$ defined as
-\[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\dist[{{}}]{b}{}{},\]
+\[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\distfun{b}{}{},\]
 where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
 Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
 Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve which starts at $p$.
@@ -262,7 +262,7 @@ Therefore (\ref{111}) follows from \ref{inq-b} and \ref{inq-h}.
 
 The assumption in (\ref{222}) implies that $f_{\bm{x}}(q)
 =
-h_{\bm{x}}^i(q)+\eps\cdot\dist[{{}}]{b}{}{}$ and 
+h_{\bm{x}}^i(q)+\eps\cdot\distfun{b}{}{}$ and 
 \[\d_q f_{\bm{x}}\le \d_q \distfun{a^i}{}{}+\eps\cdot(\d_p\distfun{b}{}{}).\] 
 Therefore,
 \begin{align*}
@@ -310,7 +310,7 @@ Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r
 The inequlality \ref{co-lip}, for the obtained map $\map'$, implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
 there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
 \[\dist{p'}{q'}{}\le \tfrac{11}{\eps^2}\cdot|\dist{\bm{a}}{p'}{}-\bm{x}|.\]
-I.e. the distance map $\dist{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$-co-Lipschitz in $\oBall(p,\tfrac{r}{4})$.
+That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$-co-Lipschitz in $\oBall(p,\tfrac{r}{4})$.
 \qeds
 
 \section{Distance chart}\label{sec:dist-chart}
@@ -337,7 +337,7 @@ For all $i\not=j$ and any $q\in\oBall(p,R)$ we have
 
 \begin{subthm}{thm:inverse-function:chart}
 The restriction of the distance map 
-$\dist{\bm{a}^{\without 0}}{}{}$ to the ball $\oBall(p,R)$
+$\distfun{\bm{a}^{\without 0}}{}{}$ to the ball $\oBall(p,R)$
 is an open $[\eps,\sqrt{m}]$-bi-Lipschitz embedding $\oBall(p,R)\hookrightarrow\RR^m$.
 \end{subthm}
 
@@ -354,7 +354,7 @@ Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
 If a point array $a^0,a^1,a^2,\dots,a^m$ 
 and the value $R$ satisfy the conditions in Theorem~\ref{thm:inverse-function}, 
 then the restriction 
-$\bm{x}=\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
+$\bm{x}=\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
 is called a \emph{distant chart}\index{distant chart},
 the restrictions $x^i=\distfun{a^i}{}{}|\oBall(p,R)$ are called \emph{coordinates}\index{coordinate of the distant chart}
 and the restriction $y=\distfun{a^0}{}{}|\oBall(p,R)$ is called \emph{strut}\index{strut of the distant chart} of the distant chart.
@@ -417,7 +417,7 @@ in
 $\Xi=\SS^{m-1}\backslash \oBall(\xi,\tfrac\pi2)
 \iso
 \SS^{m-1}_+$ 
-(if $\zeta\in\Xi$ then $\bar\zeta^i=\zeta^i$).
+(if $\zeta\in\Xi$, then $\bar\zeta^i=\zeta^i$).
 By straightforward calculations, we get
 \[\dist{\bar\zeta^i}{\bar\zeta^j}{}\ge \dist{\zeta^i}{\zeta^j}{}-\eps>\tfrac\pi2.\]
 Thus, it is sufficient to show the following claim.
@@ -448,8 +448,8 @@ $\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and any $q\in\oBall(
 Clearly, (\ref{SHORT.thm:inverse-function:strut}) holds for $\oBall(p,R)$.
 
 \parit{(\ref{SHORT.thm:inverse-function:chart}).}
-Note that distance map $\dist{\bm{a}^{\without 0}}{}{}$ is Lipschitz
-and its restriction $\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$ is open;
+Note that distance map $\distfun{\bm{a}^{\without 0}}{}{}$ is Lipschitz
+and its restriction $\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$ is open;
 the later follows from the open map theorem (\ref{thm:right-inverse-function:open-map}).
 Thus, to prove (\ref{SHORT.thm:inverse-function:chart}), it is sufficient to show that
 \[
@@ -507,7 +507,7 @@ the differential $\d_q\bm{x}\:\T_q\to\RR^m$ is a bi-Lipschitz homeomorphism.
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space
 and $\bm{x}\:\spc{L}\subto\RR^m$ 
 be a distance chart with strut $y\:\spc{L}\subto\RR$.
-Assume $\bm{x}=\dist{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
+Assume $\bm{x}=\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
 and $y\z=\distfun{a^0}{}{}|\oBall(p,R)$ 
 and a point array $\bm{a}=(a^0,a^1,\dots,a^m)$ in $\spc{L}$.
 
@@ -515,7 +515,7 @@ Assume we have a convergence $\spc{L}_n\GHto\spc{L}$ where
 $(\spc{L}_n)$ is a sequence of $m$-dimensional complete length $\Alex\kappa$ space.
 Choose arbitrary liftings $a^i_n$ and $p_n$ in $\spc{L}_n$ of $a^i$ and $p$. 
 If $R>0$ as in Inverse function theorem (\ref{thm:inverse-function}) then for each sufficiently large $n$ the restriction
- $\bm{x}_n=\dist{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
+ $\bm{x}_n=\distfun{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
 is a distance chart 
 with strut $y_n=\distfun{a^0_n}{}{}|\oBall(p_n,R)$.
 
@@ -718,7 +718,7 @@ Let $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, $z\in\s
 Then there is $\eps>0$, 
 $\kay\in\NN$ 
 and a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ in $\spc{L}$
-such that the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ gives an embedding $\oBall(z,R)\hookrightarrow\RR^\kay$, 
+such that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ gives an embedding $\oBall(z,R)\hookrightarrow\RR^\kay$, 
 which is $[\eps,\kay]$-bi-Lipschitz.
 
 Moreover, the values $\eps$, $\kay$ and the point array $\bm{a}$ can be chosen so that:
@@ -732,7 +732,7 @@ say, given $r>0$ we can assume that $a^i\in\oBall(r,z)$ for each $i$.
 Given a Gromov--Hausdorff convegence
 $\spc{L}_n\GHto\spc{L}$ where $(\spc{L}_n)$ is a sequence of an $m$-dimensional complete length $\Alex\kappa$ spaces,
 for all sufficiently large $n$
-the liftings $\dist{\bm{a}_n}{}{}\:\spc{L}_n\to\RR$ of the distance map $\dist{\bm{a}}{}{}$ 
+the liftings $\distfun{\bm{a}_n}{}{}\:\spc{L}_n\to\RR$ of the distance map $\distfun{\bm{a}}{}{}$ 
 give an $[\eps,\kay]$-bi-Lipschitz embedding of $\oBall(z_n,R)\subset \spc{L}_n$ for lifting $z_n\in\spc{L}_n$ of $z$.
 \end{subthm}
 \end{thm}
@@ -794,13 +794,13 @@ Set $f=\min\{\distfun{x}{}{},\distfun{y}{}{}\}$ as above.
 Let us denote by $\sigma_w$ the $f$-radial curve for curvature $-1$ initiated at $w\in\spc{L}\backslash\{x,y\}$.
 Given $\xi\in\Sigma_x$ consider sequence of points $w_n\to x$ such that $\dir{x}{w_n}\to\xi$.
 Applying \ref{gen-rad-comp} for $A=\{x,y\}$, we get that $\sigma_{w_n}$ convege pointwise to a radial curve $\sigma_\xi$ such that $\sigma_\xi(0)=x$ and $\sigma^+_\xi(0)=\xi$.
-Moreover, it follows that if $\xi^1,\xi^2\in\Sigma_x$ and $\mangle(\xi^1,\xi^2)=\phi$ then $\dist{\sigma_{\xi^1}(t_1)}{\sigma_{\xi^2}(t_2)}{}\le \side{-1} \{\phi,t_1,t_2\}$.
+Moreover, it follows that if $\xi^1,\xi^2\in\Sigma_x$ and $\mangle(\xi^1,\xi^2)=\phi$, then $\dist{\sigma_{\xi^1}(t_1)}{\sigma_{\xi^2}(t_2)}{}\le \side{-1} \{\phi,t_1,t_2\}$.
 In particular, the map $\map_R\:\xi\mapsto\sigma_\xi(R)$ is a $(\sinh R)$-Lipschitz map from $\Sigma_x$ to $\spc{L}$.
 
 Let us show that $\Im\map_R\supset \RB(R;x,y)$.
 
 First note that
-if $\dist{x}{q}{}=\dist{y}{q}{}=s_0$ then $q\in\Im\map_{s}$ for any $s\ge s_0$.
+if $\dist{x}{q}{}=\dist{y}{q}{}=s_0$, then $q\in\Im\map_{s}$ for any $s\ge s_0$.
 Indeed,  $\Im\map_s$ separates %???WHY
  $x$ and $y$ in $\spc{L}$.
 Thus, for any choice of geodesics $[q x]$ and $[q y]$, 
@@ -839,7 +839,7 @@ Thus one can take $\map_R$ to be a partial limit of $\map_{R;n}$ as $n\to\infty$
 
 
 Note that for any choice of $\bm{a}\in\spc{L}^{{\times}\kay}$,
-the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is $\kay$-Lipschitz.
+the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is $\kay$-Lipschitz.
 Thus it remains to show that one can choose $\kay$, $\bm{a}$ and $\eps>0$ on such a way that 
 \[|\dist{a^i}{x}{}-\dist{a^i}{y}{}|>\eps\cdot\dist[{{}}]{x}{y}{}
 \ \ \t{for at least one}\ \ i
@@ -943,7 +943,7 @@ Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Then any Lipschitz 
 %(???DC, DMD???) 
 function $f$ with compact support in  $\spc{L}$ can be presented as a composition
-\[f=\phi\circ\dist{\bm{a}}{}{},\]
+\[f=\phi\circ\distfun{\bm{a}}{}{},\]
 where $\bm{a}=(a^1,a^2,\dots,a^\kay)$ is an array of points in $\spc{L}$ and $\phi$ be a Lipschitz function with compact support in $\RR^\kay$.
 \end{thm}
 

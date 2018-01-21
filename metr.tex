@@ -120,7 +120,7 @@ nearly any question about the other 3 types of metric spaces can be reduced to a
 \begin{itemize}
 \item 
 If $\spc{X}$ is a $[0,\infty]$-metric space 
-and $x,x'\in\spc{X}$ are such that $\dist{x}{x'}{}=0$ then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
+and $x,x'\in\spc{X}$ are such that $\dist{x}{x'}{}=0$, then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
 Thus, $\dist{}{}{}$ defines a metric on the
 quotient set $\ushort{\spc{X}}/{\sim}$ with the equivalence relation 
 $x\sim y$ iff $\dist{x}{y}{}=0$.
@@ -337,7 +337,7 @@ Let $\spc{X}$ be a metric space.  Given $[a,b]\subset [-\infty,\infty]$ and a co
 \length \alpha \df \sup_{a\le t_0\le t_1\le\ldots\le t_n\le b}\Sigma_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
 \]
 \end{thm}
-It is easy to see that if $\tau\co [c,d]\to [a,b]$ is a homeomorphism then $\length \alpha=\length(\alpha\circ\tau)$.
+It is easy to see that if $\tau\co [c,d]\to [a,b]$ is a homeomorphism, then $\length \alpha=\length(\alpha\circ\tau)$.
 
 
 Given two points $x$ and $y$ in a metric space $\spc{X}$
@@ -348,7 +348,7 @@ where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 It is easy to see that $\yetdist{}{}{}$ defines a metric on  $\spc{X}$;
 it will be called the \emph{length-metric}\index{length-metric} on $\spc{X}$.
 \begin{thm}{Definition}
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$  then $\spc{X}$ is called a \emph{length space}\index{length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$, then $\spc{X}$ is called a \emph{length space}\index{length space}.
 \end{thm}
 In other words, a metric space $\spc{X}$ is a
 \emph{length space}
@@ -362,7 +362,7 @@ Let us give a few more variations of  the notion of length spaces.
 
 \begin{itemize}
 \item Assume $R>0$.
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$ then $\spc{X}$ is called an \emph{$R$-length space}\index{$R$-length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$, then $\spc{X}$ is called an \emph{$R$-length space}\index{$R$-length space}.
 \item If any point in $\spc{X}$ admits a neighborhood  $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$
 then  $\spc{X}$ is called a \emph{locally length space}\index{locally length space}.
 \item A metric space $\spc{X}$ is called 
@@ -391,7 +391,7 @@ If complete  $(\spc{X},\yetdist{}{}{})$ is complete.
 \end{subthm}
 
 \begin{subthm}{}
-If $\spc{X}$ is compact then $(\spc{X},\yetdist{}{}{})$ is geodesic.
+If $\spc{X}$ is compact, then $(\spc{X},\yetdist{}{}{})$ is geodesic.
 \end{subthm}
 \end{thm}
 
@@ -616,7 +616,7 @@ Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$
 their maximum 
 \[\rho(x,y)=\max\{\rho_1(x,y),\rho_2(x,y)\}\]
 is also a pseudometric;
-also if for these two pseudometric $\rho_1$ and $\rho_2$ the projection $\spc{X}\to\spc{X}/{\sim}$ is short then so it true for  $\rho(x,y)$.
+also if for these two pseudometric $\rho_1$ and $\rho_2$ the projection $\spc{X}\to\spc{X}/{\sim}$ is short, then so it true for  $\rho(x,y)$.
 
 It follows that 
 the quotient space $\spc{X}/{\sim}$ admits natural pseudometric;
@@ -637,7 +637,7 @@ the set of equivalence classes will coincide with the set of points in the metri
 
 \begin{thm}{Proposition}\label{prop:length-X}
 Let $\spc{X}$ be a length space and 
-$\sim$ be an equivalence relation on $\spc{X}$ then $\spc{X}/{\sim}$
+$\sim$ be an equivalence relation on $\spc{X}$, then $\spc{X}/{\sim}$
 is a length space.
 \end{thm}
 
@@ -765,11 +765,11 @@ Assume $\spc{W}$ is the doubling of metric space $\spc{V}$ in its closed subset 
 Then 
 
 \begin{subthm}{}
- If $\spc{V}$ is a complete length space then so is $\spc{W}$.
+If $\spc{V}$ is a complete length space, then so is $\spc{W}$.
 \end{subthm}
  
 \begin{subthm}{}
-If $\spc{V}$ is proper then so is $\spc{W}$.
+If $\spc{V}$ is proper, then so is $\spc{W}$.
 In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that 
 \[\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}=\dist{x}{y'}{\spc{W}}.\]
 \end{subthm}
@@ -777,8 +777,7 @@ In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that
 \begin{subthm}{prop:doubling:projection}
 Given $x\in \spc{W}$ set $\bar x=x$ if $x\in \spc{V}$
 and $\bar x=x'$ otherwise. The map $\spc{W}\to\spc{V}$ defined by $x\mapsto \bar x$ is short and length-preserving.
-In particular if $\gamma$ is a geodesic in $\spc{W}$ 
-with ends in $\spc{V}$ then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
+In particular if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
 \end{subthm}
 \end{thm}
 

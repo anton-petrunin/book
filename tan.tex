@@ -267,7 +267,7 @@ Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\t
 \end{thm}
 
 \parit{Proof.}
-If $v\in \T_p'$ then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
+If $v\in \T_p'$, then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
 
 Given $v\in \T_p$ construct a sequence $v_n\in\T'_p$ 
 such that $v_n\to v$ and let $\gamma_n$ be the sequence of corresponding geodesic.
@@ -365,7 +365,7 @@ Show that
 Let $\spc{L}$ be a length $\Alex{\kappa}$ space and $p,q\in \spc{L}$ be distinct points. 
 Assume  $q\in \Str(p)$ or $p\in \Str(q)$
 Show that 
-\[(\d_q\dist{p}{}{})(v)=-\<\dir q p,v\>.\]
+\[(\d_q\distfun{p}{}{})(v)=-\<\dir q p,v\>.\]
 
 \end{thm}
 
@@ -508,7 +508,7 @@ of the $n$-blowups $n\cdot\spc{X}$; that is,
 
 Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
 it corresponds to a point $x^\o\in \o\cdot\spc{X}$.
-Note that if $x\ne y$ then 
+Note that if $x\ne y$, then 
 \[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
 that is, 
 $x^\o$ and $y^\o$ 
@@ -539,11 +539,11 @@ The following theorem is often used together with Observation \ref{obs:ultralimi
 
 \begin{thm}{Theorem}\label{thm:tan-is}
 \begin{subthm}{thm:tan-is-CBB}
-If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$ then $\T^\o_p$ is $\Alex{0}$.
+If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T^\o_p$ is $\Alex{0}$.
 \end{subthm}
 
 \begin{subthm}{thm:tan-is-CBA}
-If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$ then $\T^\o_p$ is $\CAT0$.
+If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T^\o_p$ is $\CAT0$.
 \end{subthm}
 
 \end{thm}
@@ -603,11 +603,11 @@ we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
 
 \begin{thm}{Corollary}\label{cor:real-tan-is}
 \begin{subthm}{thm:tan-is-CBB}
-If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$ then $\T_p$ is $\Alex{0}$.
+If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T_p$ is $\Alex{0}$.
 \end{subthm}
 
 \begin{subthm}{thm:tan-is-CBA}
-If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$ then $\T_p$ is $\CAT0$.
+If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T_p$ is $\CAT0$.
 \end{subthm}
 
  
@@ -683,7 +683,7 @@ $|u^*|\le |u|$.
 \parit{Proof of \ref{lem:minus-sum}.}
 Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
 Consider sequence of functions 
-\[f_n=|u|\cdot\dist[{{}}]{a_n}{}{}+|v|\cdot\dist[{{}}]{b_n}{}{}.\]
+\[f_n=|u|\cdot\distfun{a_n}{}{}+|v|\cdot\distfun{b_n}{}{}.\]
 According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
 \[(\d_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
 Thus, we have the following uniform convergence for all $x\in\Sigma_p$

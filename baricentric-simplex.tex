@@ -2,16 +2,16 @@
 \chapter{Webs and barycenters %ready
 }\label{chap:web+bary}
 
-The material of this chapter is used mostly for $\CAT{}$ spaces, 
-although the results in section~\ref{sec:web-general} find some applications for finite dimensional $\Alex{}$ spaces as well.
-The analogous material for $\Alex{}$ spaces is described in Chapter~\ref{chap:dist-maps}.
+In this chapter we discuss the constructions introduced by Bruce Kleiner in \cite{kleiner}.
 
+The material of this chapter is used mostly for $\CAT{}$ spaces, 
+but the results in section~\ref{sec:web-general} find some applications for finite dimensional $\Alex{}$ spaces as well.
+The analogous material for $\Alex{}$ spaces is described in Chapter~\ref{chap:dist-maps}.
 
 \section{The case of complete geodesic spaces}\label{sec:web-general}
 
 The following construction gives a $\kay$-dimensional submanifold  
 for a given ``nondegenerate'' array of $\kay+1$ strongly convex functions.
-This construction was introduced by Kleiner in \cite{kleiner}.
 
 \parbf{Webs.}
 Let us introduce a partial order $\succcurlyeq$ on $\RR^{\kay+1}$.
@@ -73,7 +73,7 @@ if $\InWeb\bm{f}\not=\emptyset$.
 \parbf{Example.} 
 If $\spc{X}$ is a geodesic space, 
 then $\Web(\distfun{x}{}{},\distfun{y}{}{})$ is the union of all geodesics from $x$ to $y$ and 
-$\InWeb(\distfun{x}{}{},\distfun{y}{}{})=\Web(\distfun{x}{}{},\distfun{y}{}{})\backslash\{x,y\}$.
+\[\InWeb(\distfun{x}{}{},\distfun{y}{}{})=\Web(\distfun{x}{}{},\distfun{y}{}{})\backslash\{x,y\}.\]
 
 \parbf{Barycenters.}
 Let us denote by $\Delta^\kay\subset \RR^{\kay+1}$\index{$\Delta^m$} 
@@ -109,8 +109,9 @@ $S=\Fr_{\RR^{\kay+1}} W$ is a convex hypersurface in $\RR^{\kay+1}$.
 \end{subthm}
 
 \begin{subthm}{thm:web:f(web)=min}
-$\bm{f}(\Web\bm{f})=\Min W \subset S$ and
-$\bm{f}(\InWeb\bm{f})= \Int_{S}(\Min W)$.
+\[\bm{f}(\Web\bm{f})=\Min W \subset S\]
+and
+\[\bm{f}(\InWeb\bm{f})= \Int_{S}(\Min W).\]
 \end{subthm}
 
 \begin{subthm}{thm:web:bary}
@@ -142,9 +143,9 @@ is uniquely defined.
 
 \parit{Proof.}
 Without loss of generality, we can assume that $f$ is $1$-convex;
-in particular the following clim holds.
+in particular the following claim holds.
 \begin{clm}{}\label{midpoint}
- if $z$ is a midpoint of $[x y]$ then  
+ if $z$ is a midpoint of the geodesic $[x y]$, then  
 \[s\le f(z)
 \le
 \tfrac{1}{2}\cdot f(x)+\tfrac{1}{2}\cdot f(y)-\tfrac{1}{8}\cdot\dist[2]{x}{y}{}.
@@ -178,11 +179,15 @@ f(p)-\Lip\cdot\ell+\tfrac{1}{2}\cdot\ell^2
 \end{align*}
 
 In particular,
-\[s
-\df
+\begin{align*}
+s
+&\df
 \inf\set{f(x)}{x\in \spc{X}}
 \ge
-f(p)-\tfrac{1}{2}\cdot{\Lip^2}.\]
+\\
+&\ge
+f(p)-\tfrac{1}{2}\cdot{\Lip^2}.
+\end{align*}
 
 Choose a sequence of points $p_n\in \spc{X}$  such that $f(p_n)\to s$.
 Applying \ref{midpoint}, for $x\z=p_n$, $y\z=p_m$, we get that $(p_n)$ is converging in itself. 
@@ -192,7 +197,7 @@ Hence, $p_n$ converges to a minimum point of $f$.
 \begin{thm}{Definition}
 Let $Q$ be a closed subset of $\RR^{\kay+1}$.
 A vector $\bm{x}\z=(x^0,x^1,\dots,x^\kay)\in\RR^{\kay+1}$
-is \emph{subnormal}\index{subnormal vector} to $Q$ at point $\bm{v}\in \Fr_{\RR^{\kay+1}}Q$ 
+is \emph{subnormal}\index{subnormal vector} to $Q$ at point $\bm{v}\in Q$ 
 if
 \[\<\bm{x},\bm{w}-\bm{v}\>
 \df
@@ -433,8 +438,9 @@ that is, $p=\spx{\bm{f}}(\bm{x})$.
 
 Let $\bm{a}=(a^0,a^1,\dots,a^\kay)$ be a point array in a metric space $\spc{U}$.
 Recall that 
-$\dist{\bm{a}}{}{}$
-denotes the distance map $(\distfun{a^0}{}{},\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1}$
+$\distfun{\bm{a}}{}{}$
+denotes the distance map
+\[(\distfun{a^0}{}{},\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1}\]
 which can be also regarded as a function array.
 The \emph{radius of the point array}\index{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
 that is,
@@ -465,39 +471,39 @@ Then:
 The $\kappa$-barycentric simplex $\spx{\bm{a}}\mc\kappa\:\Delta^\kay\to \spc{U}$ 
 is defined. 
 Moreover, $\spx{\bm{a}}\mc\kappa$ is a Lipschitz map,
-and if $\Delta^\kay$ is equipped with the $\ell^1$-metric then its Lipschitz contant can be estimated in terms of $\kappa$ and the radius of $\bm{a}$ (in particular it does not depend on $\kay$).
+and if $\Delta^\kay$ is equipped with the $\ell^1$-metric, then its Lipschitz contant can be estimated in terms of $\kappa$ and the radius of $\bm{a}$ (in particular it does not depend on $\kay$).
 \end{subthm}
 
 \begin{subthm}{thm:cat-bary-web:web=Im(bary)}
-$\Web\dist{\bm{a}}{}{}=\Im \spx{\bm{a}}\mc\kappa$.
-Moreover, if a closed convex set $K$ contains all $a^i$ then $\Web\dist{\bm{a}}{}{}\subset K$.
+$\Web(\distfun{\bm{a}}{}{})=\Im \spx{\bm{a}}\mc\kappa$.
+Moreover, if a closed convex set $K$ contains all $a^i$, then $\Web(\distfun{\bm{a}}{}{})\subset K$.
 \end{subthm}
 
 
 \begin{subthm}{thm:cat-bary-web:mnfld}
 The restriction%
-\footnote{Recall that $\distfun{\bm{a}^{\without 0}}{}{}$ denotes array $(\dist{a^1}{}{},\dots,\dist{a^\kay}{}{})$.}
-$\dist{\bm{a}^{\without 0}}{}{}|\InWeb\dist{\bm{a}}{}{}$ is an open $C^{\frac12}$-embedding in $\RR^\kay$.
-Thus there is an inverse of $\dist{\bm{a}^{\without 0}}{}{}|\InWeb\dist{\bm{a}}{}{}$, say $\map\:\RR^\kay\subto\spc{U}$.
+\footnote{Recall that $\distfun{\bm{a}^{\without 0}}{}{}$ denotes array $(\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})$.}
+$\distfun{\bm{a}^{\without 0}}{}{}|\InWeb(\distfun{\bm{a}}{}{})$ is an open $C^{\frac12}$-embedding in $\RR^\kay$.
+Thus there is an inverse of $\distfun{\bm{a}^{\without 0}}{}{}|\InWeb(\distfun{\bm{a}}{}{})$, say $\map\:\RR^\kay\subto\spc{U}$.
 
 The subfunction $f=\distfun{a^0}{}{}\circ\map$ is semiconvex and locally Lipschitz.
 Moreover, if $\kappa\le 0$, then $f$ is convex.
 \end{subthm}
 
-In particular, $\Web\dist{\bm{a}}{}{}$ is compact and
-$\InWeb\dist{\bm{a}}{}{}$ is $C^{\frac12}$-homeomorphic to an open subset of $\RR^\kay$.
+In particular, $\Web(\distfun{\bm{a}}{}{})$ is compact and
+$\InWeb(\distfun{\bm{a}}{}{})$ is $C^{\frac12}$-homeomorphic to an open subset of $\RR^\kay$.
 \end{thm}
 
 \begin{thm}{Definition}\label{prop-def:web-embedding}
 The submap $\map\:\RR^{\kay}\subto \spc{X}$ as in Theorem~\ref{thm:cat-bary-web:mnfld}
-will be called the \emph{$\dist{\bm{a}}{}{}$-web embedding}\index{web embedding} 
+will be called the \emph{$\distfun{\bm{a}}{}{}$-web embedding}\index{web embedding} 
 with \emph{brace} $\distfun{a^0}{}{}$.
 \end{thm}%!!!???
 
 \begin{thm}{Definition}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\bm{a}=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
-If  $\InWeb\dist{\bm{a}}{}{}\not=\emptyset$, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
+If  $\InWeb(\distfun{\bm{a}}{}{})\z\ne\emptyset$, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
 \end{thm}
 
 Lemma~\ref{lem:nondeg-test-with-balls} will provide examples of nondegenerate point arrays,
@@ -517,8 +523,8 @@ isometric to an $m$-dimensional Euclidean space.
 
 
 \parit{Proof.}
-For shortness, denote by $\tau\:\spc{U}\to\RR^m$
- the distance map $\dist{\bm{a}^{\without 0}}{}{}$.
+Denote by $\tau\:\spc{U}\to\RR^m$
+ the distance map $\distfun{\bm{a}^{\without 0}}{}{}$.
 
 According to Theorem~\ref{thm:cat-bary-web},
 $\sigma$ is Lipschitz
@@ -526,14 +532,15 @@ and
 the distance map 
 $\tau$,
 gives an open embedding of 
-$\InWeb\dist{\bm{a}}{}{}=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)$.
+$\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)$.
 Clearly $\tau$ its Lipschitz.
 According to Rademacher's theorem (\ref{thm:rademacher})
 the differential 
 $\d_{\bm{x}}(\tau\circ\sigma)$
 is linear for almost all $\bm{x}\in\Delta^m$.
-Further since $\InWeb\dist{\bm{a}}{}{}\not=\emptyset$,
-the area formula ??? implies that $\d_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points  $\bm{x}\in\Delta^m$.
+Further since $\InWeb(\distfun{\bm{a}}{}{})\ne\emptyset$,
+the area formula %??? 
+implies that $\d_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points  $\bm{x}\in\Delta^m$.
 
 Note that $\d_{\bm{x}}(\tau\circ\sigma)=(\d_{\sigma(\bm{x})}\tau)\circ(\d_{\bm{x}}\sigma)$.
 Applying Rademacher's theorem again, we get that
@@ -548,16 +555,18 @@ Hence the result.
 Fix $z\in\spc{U}$ and $r<\tfrac{\varpi\kappa}2$
 such that $\dist{z}{a^i}{}<r$ for all $i$.
 Note that the set $K\cap \cBall[z,r]$ is convex, closed, and contains all $a^i$.
-Applying the theorem on short retract (\ref{thm:short-retract}),
+Applying the theorem on short retract (Exercise~\ref{ex:short-retraction-CBA(1)}),
 we get the second part of (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}).
+
+\medskip
 
 The rest of the statements are proved first in case $\kappa\le 0$ 
 and then the remaining case $\kappa>0$ is reduced to the case $\kappa=0$.
 
 \parit{Case $\kappa\le 0$.}
-Consider function array $f^i=\md\kappa\circ \dist[{{}}]{a^i}{}{}$.
+Consider function array $f^i=\md\kappa\circ \distfun{a^i}{}{}$.
 From the definition of web (\ref{def:web}),
-it is clear that $\Web\dist{\bm{a}}{}{}=\Web\bm{f}$.
+it is clear that $\Web(\distfun{\bm{a}}{}{})=\Web\bm{f}$.
 Further, from the definition of $\kappa$-barycentric simplex,
 $\spx{\bm{a}}\mc\kappa=\spx{\bm{f}}$.
 
@@ -601,7 +610,7 @@ Direct calculations show
 =
 \proj\circ\spx{\iota(\bm{a})}\mc0
 \ \ \t{and}\ \ 
-\Web\dist[{{}}]{\bm{a}}{}{}=\proj[\Web\dist[{{}}]{\iota(\bm{a})}{}{}].\]
+\Web(\distfun{\bm{a}}{}{})=\proj[\Web(\distfun{\iota(\bm{a})}{}{})].\]
 This reduces the case $\kappa=1$ of the theorem to the case $\kappa=0$,
 which is proved already.
 \qeds
@@ -628,11 +637,11 @@ for each $i$
 and consider $\cBall[z,r]$ instead of $\spc{U}$.
 The later can be done since $\cBall[z,r]$ is convex and closed, 
 thus $\cBall[z,r]$ is a complete length $\CAT\kappa$ space 
-and $\Web\dist{\bm{a}}{}{}\subset\cBall[z,r]$;
+and $\Web(\distfun{\bm{a}}{}{})\subset\cBall[z,r]$;
 see \ref{cor:convex-balls} and \ref{thm:cat-bary-web:web=Im(bary)}.
 
-By Theorem~\ref{thm:cat-bary-web}, $\Web\dist{\bm{a}}{}{}$ is a compact set,
-therefore there is a point $p\in\Web\dist{\bm{a}}{}{}$
+By Theorem~\ref{thm:cat-bary-web}, $\Web(\distfun{\bm{a}}{}{})$ is a compact set,
+therefore there is a point $p\in\Web(\distfun{\bm{a}}{}{})$
 minimizing the function 
 \[f(x)=\max_i\{\dist{B^i}{x}{}\}=\max\{0,\dist{a^0}{x}{}-r^0,\dots,\dist{a^\kay}{x}{}-r^\kay\}.\]
 
@@ -665,10 +674,10 @@ p\in \bigcap_{i\not=j} B^i.
 The latter and \ref{eq:p-in-Bj} contradict $\bigcap_i B^i=\emptyset$. \claimqeds
 
 From the definition of web, it also follows that 
-\[\Web\dist{\bm{a}^{\without j}}{}{}\subset \bigcup_{i\not=j}B^i.\]
+\[\Web(\distfun{\bm{a}^{\without j}}{}{})\subset \bigcup_{i\not=j}B^i.\]
 Therefore, the claim implies that
-$p\notin\Web\dist{\bm{a}^{\without j}}{}{}$ for each $j$;
-that is, $p\in\InWeb\dist{\bm{a}}{}{}$.
+$p\notin\Web(\distfun{\bm{a}^{\without j}}{}{})$ for each $j$;
+that is, $p\in\InWeb(\distfun{\bm{a}}{}{})$.
 \qeds
 
 
@@ -687,11 +696,11 @@ $\LinDim\spc{U}=m$,
 and $\bm{a}=(a^0,a^1,\dots a^m)$ be a point array in $\spc{U}$ 
 with radius $<\tfrac{\varpi\kappa}{2}$.
 Then 
-the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\dist{a^0}{}{}$ is locally Lipschitz.
+the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\distfun{a^0}{}{}$ is locally Lipschitz.
 \end{thm}
 
 Note that if $\bm{a}$ is degenerate,
-that is, if $\InWeb\dist{\bm{a}}{}{}=\emptyset$, 
+that is, if $\InWeb(\distfun{\bm{a}}{}{})=\emptyset$, 
 then
 the domain of web embedding $\map$ above is empty and hence the conclusion of the theorem trivially holds.
 
@@ -705,9 +714,9 @@ can be used to construct bi-Lipschitz embeddings with constants arbitrarily clos
 \begin{thm}{Lemma}\label{lem:nondeg-bs-test}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
 and $\bm{a}=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
-Then for any $p\in \InWeb\dist{\bm{a}}{}{}$,
+Then for any $p\in \InWeb(\distfun{\bm{a}}{}{})$,
 there is $\eps>0$ such that 
-if for some $q\in \Web\dist{\bm{a}}{}{}$ and $b\in\spc{U}$
+if for some $q\in \Web(\distfun({\bm{a}}{}{})$ and $b\in\spc{U}$
 we have $\dist{p}{q}{}<\eps$, $\dist{p}{b}{}<\eps$ and $\mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps$,
 then the array $b,a^0,a^1,\dots,a^m$ is nondegenerate.
 \end{thm}
@@ -738,7 +747,7 @@ there is $\eps>0$ such that for any $x\in \oBall(p,10\cdot\eps)$ we have
 \eqlbl{eq:<pi/2-eps}\]
 
 Now assume for sufficiently small $\eps>0$
-there are points $b\in\spc{U}$ and $q\in\Web\dist{\bm{a}}{}{}$  such that 
+there are points $b\in\spc{U}$ and $q\in\Web(\distfun{\bm{a}}{}{})$  such that 
 \[\dist{p}{q}{}<\eps,\ \  \dist{p}{b}{}<\eps,\ \  \mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\ \ \t{for all}\ \ i.
 \eqlbl{eq:2nd-angle}\]
 Acording to Theorem~\ref{thm:cat-bary-web:web=Im(bary)},
@@ -799,7 +808,7 @@ n\to\infty.
 Set $p=\map(\bm{x})$,
 $q_n=\map(\bm{y}_n)$, 
 and $b_n=\map(\bm{z}_n)$.
-From \ref{prop-def:web-embedding}, $p$, $q_n$, $b_n\in\InWeb\dist{\bm{a}}{}{}$
+From \ref{prop-def:web-embedding}, $p$, $q_n$, $b_n\in\InWeb(\distfun{\bm{a}}{}{})$
 and $q_n,b_n\to p$ as $n\to\infty$.
 Fix arbitrary $\eps>0$.
 Note that \ref{eq:nonlip} implies
@@ -807,7 +816,7 @@ Note that \ref{eq:nonlip} implies
 \]
 for all $i>0$ and all large $n$.
 Further, according to \ref{prop-def:web-embedding}, the subfunction
-$(\dist{\bm{a}^0}{}{})\circ\map$ is locally Lipschitz.
+$(\distfun{\bm{a}^0}{}{})\circ\map$ is locally Lipschitz.
 Therefore we also have 
 \[\mangle\hinge{q_n}{a^0}{b_n}<\tfrac\pi2+\eps
 \]

@@ -53,7 +53,7 @@ We say that $\beta$ is \emph{$\kappa$-convex}\index{convex!$\kappa$-convex curve
 \[y_p(t)=\md\kappa\dist[{{}}]{p}{\beta(t)}{}\] 
 satisfies differential inequality $y_p''+\kappa\cdot  y_p\le 1$ for all $t\in\II$ such that $\dist{p}{\beta(t)}{}\z<\varpi\kappa$.
 
-If in addition $\beta$ is a unit-speed curve  then it is called \emph{$\kappa$-quasigeodesic}\index{quasigeodesic!$\kappa$-quasigeodesic}.
+If in addition $\beta$ is a unit-speed curve, then it is called \emph{$\kappa$-quasigeodesic}\index{quasigeodesic!$\kappa$-quasigeodesic}.
 \end{thm}
 
 
@@ -66,8 +66,8 @@ we will give a number of reformulations of the above definition in terms of angl
 Let us list some examples of $\kappa$-convex curves and $\kappa$-quasigeodesics:
 \begin{itemize}
 \item From function comparison \ref{thm:conc}, any local geodesic in an $m$-dimensional complete length $\Alex\kappa$ space is a $\kappa$-\nospace quasigeodesic as well as $\kappa$-convex curve.
-\item If $\diam \spc{L}\le \tfrac{\varpi\kappa}{2}$ then any constant curve in $\spc{L}$ is $\kappa$-convex.
-In particular, if $\kappa\le0$ then any constant curve is $\kappa$-convex.
+\item If $\diam \spc{L}\le \tfrac{\varpi\kappa}{2}$, then any constant curve in $\spc{L}$ is $\kappa$-convex.
+In particular, if $\kappa\le0$, then any constant curve is $\kappa$-convex.
 \item 
 Let $\spc{L}$ be isometric to a convex figure in a Euclidean plane.
 Then any billiard trajectory in  $\spc{L}$ as well as arc of its boundary equipped with a unit-speed parametrization forms a quasigeodesic in $\spc{L}$.
@@ -188,7 +188,7 @@ if the $\kappa$-developing of the restriction $\beta|[a,b]$
 with respect to $p$ is defined then it is locally convex.
 \end{subthm}
 
-Moreover, if in addition $\beta$ is a unit-speed curve then each of the conditions  (\ref{SHORT.k-convex-main})--(\ref{SHORT.k-convex-devel}) imply that $\beta$ is a $\kappa$-quasigeodesic.
+Moreover, if in addition $\beta$ is a unit-speed curve, then each of the conditions  (\ref{SHORT.k-convex-main})--(\ref{SHORT.k-convex-devel}) imply that $\beta$ is a $\kappa$-quasigeodesic.
 In this case the inequality in (\ref{SHORT.k-convex-angle}) can be also rewritten the following way:
 \begin{itemize}
  \item[\textit{\ref{SHORT.k-convex-angle}$'$)}] $\mangle(\dir{\beta(t_0)}p,\beta^\pm(t_0))
@@ -299,7 +299,7 @@ Then for any $t_0\in \II$, we have
 |\beta^+(t_0)| &= \lim_{t\to t_0+}|\beta^\pm(t)|,\ \ &|\beta^-(t_0)| &= \lim_{t\to t_0-}|\beta^\pm(t)|.
 \end{align*}
 
-In particular, if $\beta\:\II\to \spc{L}$ is a $\kappa$-quasigeodesic then $|\beta^\pm(t)|\equiv1$ for all $t\in \II$ 
+In particular, if $\beta\:\II\to \spc{L}$ is a $\kappa$-quasigeodesic, then $|\beta^\pm(t)|\equiv1$ for all $t\in \II$ 
 with the exception for the ends of $\II$, 
 where one of derivatives is not defined.
 \end{thm}
@@ -336,7 +336,7 @@ we get
 |\beta^+(0)|.
 \]
 
-Now if $\beta$ is a $\kappa$-quasigeodesic then it is a unit-speed curve.
+Now if $\beta$ is a $\kappa$-quasigeodesic, then it is a unit-speed curve.
 From \ref{vel-length}, $|\beta^\pm(t)|\ae 1$.
 Applying the proved identity, we get that the identity $|\beta^\pm(t)|\equiv1$ holds everywhere.
 \qeds
@@ -534,7 +534,7 @@ such that
 \[d_pf(x)+\<w,x\>\le 0\]
 for any $x\in\T_p$;
 see Definition \ref{def:native}.
-Note, that according to \ref{with-no-bry}, if $\partial \spc{L}=\emptyset$ then any semiconcave function is native.
+Note, that according to \ref{with-no-bry}, if $\partial \spc{L}=\emptyset$, then any semiconcave function is native.
 
 
 \begin{thm}{Theorem}\label{thm:qg+concave}
@@ -670,7 +670,7 @@ there is \emph{foot point} $x\in\Dom f$ such that
 \[f_s(y)
 =f(x)+\tfrac{1}{2\cdot s}\cdot\dist[2]{x}{y}{};\]
 that is,
-the function $f+\tfrac{1}{2\cdot s}\cdot\dist[2]{y}{}{}$ has minimum at $x$.
+the function $f+\tfrac{1}{2\cdot s}\cdot\distfun[2]{y}{}{}$ has minimum at $x$.
 Clearly 
 \[\dist{x}{y}{}\le \Lip\cdot s.
 \eqlbl{eq:lamb-conc-4}\]
@@ -680,10 +680,10 @@ then $f_s$ is defined as a minimum of semiconcave functions.
 Thus, $f_s$  is semiconcave for all $s>0$.
 If in addition 
 if $f$ is native, 
-then subfunction $f+\tfrac{1}{2\cdot s}\cdot\dist[2]{x}{}{}$ is native, see \ref{thm:native-operations}.
+then subfunction $f+\tfrac{1}{2\cdot s}\cdot\distfun[2]{x}{}{}$ is native, see \ref{thm:native-operations}.
 Thus, if $x$ is a foot point of $y\in\Dom f_s$
 then, from the existence of supporting vector, we have 
-$\d_y f+\tfrac{1}{2\cdot s}\cdot\d_y\dist[2]{x}{}{}=0$.
+$\d_y f+\tfrac{1}{2\cdot s}\cdot\d_y\distfun[2]{x}{}{}=0$.
 It follows that the geodesic $[x y]$ is uniquely defined,
 $\ddir x y\in \Lin_y$ and 
 $(\d_x f)(v)
@@ -717,7 +717,7 @@ f_s\circ\gamma(t_0)
 
 Set $y=\gamma(t_0)$ and $y_\tau=\gamma(t_0+\tau)$.
 Let $x$ be a foot point of $y$; 
-that is, the function $f + \tfrac{1}{2\cdot s}\cdot\dist[2]{y}{}{}$ has a minimum at $x$
+that is, the function $f + \tfrac{1}{2\cdot s}\cdot\distfun[2]{y}{}{}$ has a minimum at $x$
 (we can assume $x\not=y$, otherwise \ref{eq:lamb-conc-1} follows since $f_s\le f$, $\d_x f\equiv0$ and $\dist[2]{y}{y_\tau}{}\le\tau$).
 
 Set $\alpha=\mangle(\ddir y x,\gamma^+(0))$ and $\beta_\tau=\mangle\hinge x y {y_\tau}$.
@@ -732,7 +732,7 @@ First note that
 \[\dist[2]{x_\tau}{y_\tau}{}
 \le \dist[2]{x}{y}{} +[1+O(s^2)]\cdot\tau^2.
 \eqlbl{eq:lamb-conc-7}\]
-Indeed, for any $p\in \spc{L}$, the function $\tfrac{1}{2}\cdot\dist[2]{p}{}{}$ is $\l[1+O(r^2)\r]$-concave in $\oBall(p,r)$.
+Indeed, for any $p\in \spc{L}$, the function $\tfrac{1}{2}\cdot\distfun[2]{p}{}{}$ is $\l[1+O(r^2)\r]$-concave in $\oBall(p,r)$.
 Thus, from \ref{eq:lamb-conc-4} and \ref{thm:prop-gexp:func}, for all small $\tau$,  we have
 \[\begin{aligned}
 \dist[2]{x_\tau}{y_\tau}{}
@@ -799,7 +799,7 @@ any $a\in \II$ such that ${|\gamma^+(a)|}>0$, the curve $\gamma^a$ defined by
 \[\gamma^a(t)
 \df
 \gamma\left(a+\tfrac{t}{|\gamma^+(a)|}\right)\]
-is $\kappa$-convex for $t\ge0$, and if ${|\gamma^+(a)|}=0$ then $\gamma(t)=\gamma(a)$ for
+is $\kappa$-convex for $t\ge0$, and if ${|\gamma^+(a)|}=0$, then $\gamma(t)=\gamma(a)$ for
 all $t\ge a$.
 \end{thm}
 
@@ -853,7 +853,7 @@ Assume
 \end{matrix}\right.\]
 is $\kappa$-monotonic with respect to $a$ and $b$.
 
-Moreover, if in addition, $\alpha_1$ and $\alpha_2$ are $\kappa$-convex curves then so is $\beta$.
+Moreover, if in addition, $\alpha_1$ and $\alpha_2$ are $\kappa$-convex curves, then so is $\beta$.
 \end{thm}
 
 \parit{Proof.}
@@ -906,7 +906,7 @@ and
 $\alpha_n(t)\to\alpha(t)$ for each $t\in [0,a]$.
 Then $\alpha$ is $\kappa$-monotonic.
 
-Moreover, if for some $x\in \spc{L}$  we have $\alpha_n(0)=x$ and $|\alpha^+(0)|=1$ then $\alpha_n^+(0)\to\alpha^+(0)$.
+Moreover, if for some $x\in \spc{L}$  we have $\alpha_n(0)=x$ and $|\alpha^+(0)|=1$, then $\alpha_n^+(0)\to\alpha^+(0)$.
 \end{thm}
 
 
@@ -1031,7 +1031,7 @@ Note that since $\gamma^a$ is $\kappa$-convex, we have that for any $b>a$, $|\ga
 In particular entropy is non-negative (that is, it is indeed a measure).
 From \ref{cor:one-side-cont}, it follows that for any interior value $a\in\II$, we have
 \[\mu_\gamma\{a\}=\ln|\gamma^-(a)|-\ln|\gamma^+(a)|.\]
-Directly from the definition we have that if $|\gamma^+(a)|=1$ and $\mu_\gamma(a,b)=0$ then $\gamma|[a,b]$ is a quasigeodesic.
+Directly from the definition we have that if $|\gamma^+(a)|=1$ and $\mu_\gamma(a,b)=0$, then $\gamma|[a,b]$ is a quasigeodesic.
 
 
 The following proposition follows directly from 
@@ -1050,7 +1050,7 @@ Moreover, $\mu_{\gamma_n}\rightharpoonup\mu_\gamma$;
 that is, the entropies of $\gamma_n$ weakly converge to the entropy of $\gamma$.
 
 In particular, 
-if $\mu_{\gamma_n}(a,b)\to0$ and $|\gamma_n^+(a)|=1$ then the restriction $\gamma|[a,b]$ is a quasigeodesic.
+if $\mu_{\gamma_n}(a,b)\to0$ and $|\gamma_n^+(a)|=1$, then the restriction $\gamma|[a,b]$ is a quasigeodesic.
 \end{thm}
 
 
@@ -1215,7 +1215,7 @@ Further:
 \end{itemize}
 Otherwise:
 \begin{itemize}
-\item If $\gamma_\eps(a)\in\Theta$ then, from the assumption of the claim, there is a quasigeodesic $\bar\gamma\:[0,r]\to \spc{L}$ with $\bar\gamma^+(0)=w/|w|$.
+\item If $\gamma_\eps(a)\in\Theta$, then, from the assumption of the claim, there is a quasigeodesic $\bar\gamma\:[0,r]\to \spc{L}$ with $\bar\gamma^+(0)=w/|w|$.
 Let us extend $\gamma_\eps$ behind $a$ as $\gamma_\eps(a+t)=\bar\gamma(|w|\cdot t)$.
 \item If $\gamma_\eps(a)\notin\Theta$, according to \ref{exist-pre-qg},
 we can find a pre-quasigeodesic $\bar\gamma\:[0,\eps]\to \spc{L}$ with $\bar\gamma^+(0)=w$.
@@ -1238,7 +1238,7 @@ To do this we can apply open-close argument as above in a backward direction.
 According to claim \ref{clm:suff-qg-exist}, the following claim implies the theorem.
 
 \begin{clm}{Key claim.}\label{clm:qg-main}
-If $\Theta\not=\spc{L}$ then there is $p\in \spc{L}\backslash \Theta$ and $r>0$ such that for any $x\in\oBall(p,\tfrac{r}{6})\backslash \Theta$ and $\xi\in \Sigma_x$ there is a quasigeodesic $\gamma\:[0,\tfrac{r}{6}]\to \spc{L}$ with  $\gamma^+(0)=\xi$.
+If $\Theta\not=\spc{L}$, then there is $p\in \spc{L}\backslash \Theta$ and $r>0$ such that for any $x\in\oBall(p,\tfrac{r}{6})\backslash \Theta$ and $\xi\in \Sigma_x$ there is a quasigeodesic $\gamma\:[0,\tfrac{r}{6}]\to \spc{L}$ with  $\gamma^+(0)=\xi$.
 \end{clm}
 
 
@@ -1321,7 +1321,7 @@ $\xi_i=\tfrac{\gamma^+(a_i)}{|\gamma^+(a_i)|}
 \in \Sigma_{\gamma(a_i)}\mathfrak C$;
 
 \item\label{entr-estim} 
-If $x_i=\gamma(a_i)$, $y_i=\gamma(b_i)$ and $\nu_i=\dir{x_i}{y_i}$ then $\mangle(\xi_i,\nu_i)<\eps$ and
+If $x_i=\gamma(a_i)$, $y_i=\gamma(b_i)$ and $\nu_i=\dir{x_i}{y_i}$, then $\mangle(\xi_i,\nu_i)<\eps$ and
 \[\mu_\gamma(a_i,b_i)
 \le \eps\cdot\l[\mangle(\xi_i,\nu_i)+b_i-a_i\r].\]
 \end{enumerate}
@@ -1430,7 +1430,7 @@ Using \ref{eq:inq:di-inq-2}, \ref{eq:inq:di-inq-3} and \ref{eq:inq:di-inq-4}, we
 \\
 &=20\cdot\theta_{q_j}[a_i,b_i)
 \end{align*}
-In the exceptional case $a_i=0$, although $\gamma^-(0)$ might be undefined, the last inequality holds.
+In the exceptional case $a_i=0$, despite that $\gamma^-(0)$ might be undefined, the last inequality holds.
 Since the distance function $\distfun{q_j}{}{}$ is 1-Lipschitz, we get that $\theta_{q_j}[0,\tfrac{r}{6})\le 2+\lambda r$.
 Therefore,
 \[\sum_i\mangle(\xi_i,\nu_i)
@@ -1455,7 +1455,7 @@ $\GHdist(\Sigma_x,\Sigma_p)<\eps$ and moreover,
 
 \parit{Proof.}
 Note that as follows from volume continuity (\ref{vol-cont}),
-for any $\eps>0$ there is $\delta=\delta(m,\eps)>0$ such that if $\Sigma_x+\delta\ge\Sigma_p$ and $\vol\Sigma_x-\delta\le\vol\Sigma_p$ then
+for any $\eps>0$ there is $\delta=\delta(m,\eps)>0$ such that if $\Sigma_x+\delta\ge\Sigma_p$ and $\vol\Sigma_x-\delta\le\vol\Sigma_p$, then
 $\GHdist(\Sigma_p,\Sigma_x)<\eps$.
 
 Let us choose $p$ with $\delta$-maximal volume;
@@ -1511,12 +1511,11 @@ Then for any vector $v\in E$ there is a polar vector $v^*\in E$
 such that $|v|=|v^*|$.
 \end{thm}
 
-\parit{Proof.} Set $X=E\cap \Sigma_p$. If $\Sigma_\xi X\not=\emptyset$ then the proof is the
-same as for the standard Milka's lemma; it is sufficient to choose a direction in
-$\Sigma_\xi X$ and shoot a quasigeodesic $\gamma$ in $X$ of length $\pi$ in this direction such that $\gamma\subset X$;
+\parit{Proof.} Set $X=E\cap \Sigma_p$.
+If $\Sigma_\xi X\not=\emptyset$, then the proof is the same as for the standard Milka's lemma; it is sufficient to choose a direction in $\Sigma_\xi X$ and shoot a quasigeodesic $\gamma$ in $X$ of length $\pi$ in this direction such that $\gamma\subset X$;
 such $\gamma$ exists from the induction hypothesis. 
 
-If $X=\{\xi\}$ then from ???, we have $\cBall[\xi,{\tfrac\pi2}]=\Sigma_p$. 
+If $X=\{\xi\}$, then from ???, we have $\cBall[\xi,{\tfrac\pi2}]=\Sigma_p$. 
 Thus, $\xi$ is polar to itself.
 
 Otherwise, if $\Sigma_\xi X=\emptyset$ and $X$ contains at least two points, choose $\xi^*$ to be closest point in $X\backslash\xi$ from $\xi$. 
@@ -1553,7 +1552,7 @@ $\mu$ is invariant with respect to natural group action on $\Gamma$ generated by
 \end{subthm}
 
 \begin{subthm}{}
-if $e_t$ denotes evaluation map $e_t\:\gamma\mapsto\gamma(t)$ then 
+if $e_t$ denotes evaluation map $e_t\:\gamma\mapsto\gamma(t)$, then 
 \[e_t\#\mu=\vol_m\]
 where $\#$ stays for push-forward.
 %???MAyBE DEFINE AS $e_t\:\gamma\mapsto\gamma^+(t)$???
@@ -1574,7 +1573,7 @@ Set
 then \[V(r)=\vol_m\spc{L}\cdot\Const_m\cdot r^m+o(r^{m+1}).\]
 The technique of \emph{tight maps} makes it possible to prove only that
 \[V(r)=\vol_m\spc{L}\cdot\Const_m\cdot r^m+O(r^{m+1}).\]
-Note that if $\spc{L}$ is a Riemannian manifold with boundary then 
+Note that if $\spc{L}$ is a Riemannian manifold with boundary, then 
 \[V(r)
 =
 r^m\cdot\Const_m\cdot\vol_m \spc{L} +r^{m+1}\cdot\Const'_m\cdot\vol_{m-1}\partial \spc{L}
@@ -1591,7 +1590,7 @@ Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 Is it true that any quasigeodesic in $\spc{L}$ defined on a bounded interval has bounded variation of turn.
 \end{thm}
 
-If the all tangent spaces of $\spc{L}$ are sufficiently close to $\EE^m$ then the answer is ``yes''.
+If the all tangent spaces of $\spc{L}$ are sufficiently close to $\EE^m$, then the answer is ``yes''.
 In this case variation of turn can be estimated though \emph{total turn to a point}\index{turn to the point $p$}, which defined as follows:
 \[\sum_{i=1}^{n-1}\max\l\{0,\pi-\angk\kappa{a_i}{a_{i-1}}{p}-\angk\kappa{a_i}{a_{i+1}}{p}\r\}.\]
 
@@ -1623,7 +1622,7 @@ the class of funny quasigeodesics coinsides with class of geodesics.
 
 \section{Exercises}
 
-\begin{thm}{Exercise} Show that if $\spc{L}$ ia an $m$-dimensional complete length $\Alex{1}$ space and $\partial \spc{L}\not=\emptyset$ then $\rad \spc{L}\le\tfrac\pi2$.
+\begin{thm}{Exercise} Show that if $\spc{L}$ is an $m$-dimensional complete length $\Alex{1}$ space and $\partial \spc{L}\not=\emptyset$, then $\rad \spc{L}\le\tfrac\pi2$.
 \end{thm}
 
 

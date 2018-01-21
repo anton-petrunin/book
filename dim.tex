@@ -52,7 +52,7 @@ by that reason we call them axioms.
 \end{thm}
 
 \begin{thm}{Cover axiom}\label{dim-axiom-sigma} 
-If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$ then
+If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$, then
 \begin{align*}
 \TopDim \spc{X}&=\sup\nolimits_n\{\TopDim A_n\},
 \\
@@ -121,7 +121,7 @@ for some fixed $\eps>0$ and any pair $x,x'\in \spc{X}$.
 Then
 \[\HausDim \spc{X}\le \HausDim \spc{Y}.\]
 
-In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$ then  
+In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$, then  
 \[\HausDim \spc{X}\le \HausDim \spc{Y}.\]
 
 \end{thm}
@@ -294,7 +294,7 @@ Hence $\kay>m$.
 
 
 \begin{thm}{Proposition}\label{pack-homogeneus}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space then 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, then 
  for any two poins $p,\bar p\in \spc{L}$ and any $R,\bar R>0$ there is a contsant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
 \[\pack_{\delta\cdot\eps}\oBall(\bar p,\bar R)\ge \pack_{\eps}\oBall(p,R).\]
 
@@ -410,10 +410,10 @@ Finally, set $b=a^0$.
 \parit{(\ref{SHORT.thm:dim-infty:rank})$\Rightarrow$(\ref{SHORT.pack}).} 
 Let $p\in \spc{L}$ be a point which admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
 The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
-implies that the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
-\[\dist{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{})\]
+implies that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
+\[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{})\]
 is open in a neighborhood of $p$.
-Since the distance map $\dist{\bm{a}}{}{}$ is Lipschitz, 
+Since the distance map $\distfun{\bm{a}}{}{}$ is Lipschitz, 
 for any $r>0$, there is $\Const>0$ such that
 \[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\]
 Applying \ref{pack-homogeneus}, we get similar inequality for any other ball in $\spc{L}$;
@@ -452,7 +452,7 @@ we get a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
 we obtain a $C^{\frac{1}{2}}$-submap 
 \[\map\:\RR^m\subto \oBall(q,R)\]
-which is a right inverse for $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and $\map(\dist{\bm{a}}{p}{})=p$.
+which is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and $\map(\dist{\bm{a}}{p}{})=p$.
 In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
 
 
@@ -555,7 +555,7 @@ The equality
 \[\LinDim \spc{L}= \LinDim\Omega\]
 follows from \ref{LinDim}$\&$\ref{SHORT.LinDim+}.
 
-If $\LinDim \spc{L}=\infty$ then
+If $\LinDim \spc{L}=\infty$, then
 applying  \ref{TopDim}, for $\oBall(q,R)\subset \Omega$, we get that there is a compact subset $K\subset \Omega$ with arbitrary large $\TopDim K$ therefore
 \[\TopDim\Omega=\infty.\] 
 By Szpilrajn's theorem (\ref{thm:szpilrajn}),
@@ -563,7 +563,7 @@ $\HausDim K\ge \TopDim K$.
 Thus, we also have 
 \[\HausDim\Omega=\infty.\]
 
-If $\LinDim \spc{L}=m<\infty$ then first inequality in \ref{pack-f} 
+If $\LinDim \spc{L}=m<\infty$, then first inequality in \ref{pack-f} 
 implies that \[\HausDim \oBall(q,R)\le m.\] 
 According to Corollary~\ref{cor:dim>proper}, 
 $\spc{L}$ is proper and in particular it has countable base. 
@@ -595,7 +595,7 @@ Applying \ref{E-comeagre}, we get the first inequality.
 
 \parit{(\ref{SHORT.pack-f})$\Rightarrow$(\ref{SHORT.LinDim-f}).} 
 From theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
-Applying theorem \ref{thm:dim-infty} again, we get that if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$
+Applying theorem \ref{thm:dim-infty} again, we get that if $\LinDim\spc{L}\ge m+1$, then for some $\Const>0$ and any $\eps>0$
 \[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}},\]
 but
 \[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R),\] 

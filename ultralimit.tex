@@ -8,7 +8,7 @@ Our presentation is based on \cite{kleiner-leeb}.
 In this book, the use of ultralimits is very limited; 
 we use them only as a canonical way to pass to a convergent subsequence.
 (In principle, we could avoid selling our souls 
-to the set-theoretical devil but then we must say ``pass to convergent subsequence'' too many times.)
+to the set-theoretical devil, but in this case we must say ``pass to convergent subsequence'' too many times.)
 
 \section{Ultrafilters}
 
@@ -46,10 +46,10 @@ If $\o(S)=1$, we say that $S$ contains \emph{$\o$-almost all} elements of $\NN$.
 \parbf{Classical definition.}
 More commonly, a nonprinciple ultrafilter is defined as a collection, say $\mathfrak{F}$, of sets in $\NN$ such that
 \begin{enumerate}
-\item\label{filter:supset} if $P\in \mathfrak{F}$ and $Q\supset P$ then $Q\in \mathfrak{F}$,
-\item\label{filter:cap} if $P, Q\in \mathfrak{F}$ then $P\cap Q\in \mathfrak{F}$,
+\item\label{filter:supset} if $P\in \mathfrak{F}$ and $Q\supset P$, then $Q\in \mathfrak{F}$,
+\item\label{filter:cap} if $P, Q\in \mathfrak{F}$, then $P\cap Q\in \mathfrak{F}$,
 \item\label{filter:ultra} for any subset $P\subset\NN$, either $P$ or its complement is an element of $\mathfrak{F}$.
-\item\label{filter:non-prin} if $F\subset \NN $ is finite then $F\notin \mathfrak{F}$.
+\item\label{filter:non-prin} if $F\subset \NN $ is finite, then $F\notin \mathfrak{F}$.
 \end{enumerate}
 Setting $P\in\mathfrak{F}\Leftrightarrow\o(P)=1$ makes these two definitions equivalent.
 
@@ -89,7 +89,7 @@ In this case, we will write
 \ \ \text{or}\ \ 
 x_n\to x_\o\ \t{as}\ n\to\o.\]
 
-For example if $\o$ is the principle ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$ then
+For example if $\o$ is the principle ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
 $x_\o=x_n$.
 
 Note that $\o$-limits of a sequence and its subsequence may differ.
@@ -230,7 +230,7 @@ The $\o$-limit of any sequence of length spaces is geodesic.
 \end{thm}
 
 \parit{Proof.}
-If $\spc{X}_n$ is a sequence length spaces then for any sequence of pairs $x_n, y_n\in X_n$ there is a sequence of $\tfrac1n$-midpoints $z_n$.
+If $\spc{X}_n$ is a sequence length spaces, then for any sequence of pairs $x_n, y_n\in X_n$ there is a sequence of $\tfrac1n$-midpoints $z_n$.
 
 Let $x_n\to x_\o$, $y_n\to y_\o$ and $z_n\to z_\o$ as $n\to \o$.
 Note that $z_\o$ is a midpoint of $x_\o$ and $y_\o$ in $\spc{X}^\o$.
@@ -250,12 +250,13 @@ there is a distance preserving map
 $\iota:\spc{X}\hookrightarrow \spc{X}^\o$, here $\iota(y)$ is the equivalence class of constant sequence $y_n=y$. 
 
 The image $\iota(\spc{X})$ might be proper subset of $\spc{X}^\o$.
-For example $\RR^\o$ has pairs of points on distance $\infty$ from each other although each metric component of $\RR^\o$ is isometric to $\RR$.
+For example $\RR^\o$ has pairs of points on distance $\infty$ from each other;
+at the same time, each metric component of $\RR^\o$ is isometric to $\RR$.
 
 According to Theorem~\ref{thm:ultra-GH}, 
-if $\spc{X}$ is compact then $\iota(\spc{X})=\spc{X}^\o$;
+if $\spc{X}$ is compact, then $\iota(\spc{X})=\spc{X}^\o$;
 in particular, $\spc{X}^\o$ is isometric to $\spc{X}$.
-If $\spc{X}$ is proper then $\iota(\spc{X})$ forms a metric component of $\spc{X}^\o$.
+If $\spc{X}$ is proper, then $\iota(\spc{X})$ forms a metric component of $\spc{X}^\o$.
 
 The embedding $\iota$ gives us right to treat $\spc{X}$ as a subset of its ultrapower $\spc{X}^\o$. 
 
@@ -304,13 +305,13 @@ Moreover:
 
 \begin{subthm}{thm:ultra-GH:a}
 If $\spc{X}_n\GHto \spc{X}_\infty$ 
-and $\spc{X}_\infty$ is compact then 
+and $\spc{X}_\infty$ is compact, then 
 $\spc{X}_\infty$ is isometric to $\spc{X}_\o$.
 \end{subthm}
 
 \begin{subthm}{thm:ultra-GH:b}
 If $\spc{X}_n\GHto \spc{X}_\infty$ 
-and $\spc{X}_\infty$ is proper then 
+and $\spc{X}_\infty$ is proper, then 
 $\spc{X}_\infty$ is isometric to a metric component of $\spc{X}_\o$.
 \end{subthm}
 
@@ -340,7 +341,7 @@ If the $\o$-limit $x_\infty$ of $(x_n)$ exists,
 it has to lie in $\spc{X}_\infty$. 
 
 The point $x_\infty$, if defined, does not depend on the choice of $(x_n)$.
-Indeed, if $y_n\in\spc{X}_n$ be an other sequence such that $y_n\to x_\o$ as $n\to\o$ then 
+Indeed, if $y_n\in\spc{X}_n$ be an other sequence such that $y_n\to x_\o$ as $n\to\o$, then 
 \[
 \dist{y_\infty}{x_\infty}{}=\lim_{n\to\o}\dist{y_n}{x_n}{}=0;
 \]
@@ -352,7 +353,7 @@ it is defined on a subset of $\Dom\nu \subset\spc{X}_\o$.
 By construction of $\iota$, 
 we get that $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
 
-Finally note that if $\spc{X}_\infty$ is compact then $\nu$ is defined on whole $\spc{X}_\o$;
+Finally note that if $\spc{X}_\infty$ is compact, then $\nu$ is defined on whole $\spc{X}_\o$;
 this proves (\ref{SHORT.thm:ultra-GH:a}).
 
 If $\spc{X}_\infty$ is proper, choose any point $z_\infty\in \spc{X}_\infty$
@@ -421,8 +422,7 @@ such that the restrictions $f_n|\Omega_n(\kay)$ are uniformly bounded and contin
 and the open $\o$-limit of $\Omega_n(n)$ coincides with the open $\o$-limit of $\Dom f_n$.
 Then $\o$-limit of $f_n$ is defined.
 
-In particular if $f_n$ are uniformly bounded and continuous then 
-the $\o$-limit is defined.
+In particular if $f_n$ are uniformly bounded and continuous, then the $\o$-limit is defined.
 \end{thm}
 
 The proof is straightforward.

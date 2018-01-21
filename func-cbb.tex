@@ -38,10 +38,10 @@ Otherwise it is called \emph{foreign}.
 \end{thm}
 
 
-Note that if $\dim \spc{L}<\infty$, for any $p\in \spc{L}$ the function $f=\tfrac{1}{2}\cdot\dist[2]{p}{}{}$ is native
+Note that if $\dim \spc{L}<\infty$, for any $p\in \spc{L}$ the function $f=\tfrac{1}{2}\cdot\distfun[2]{p}{}{}$ is native
 sinse $\ddir q p\in\partial_q f$.
-On the other hand, if $\partial \spc{L}\not=\emptyset$ then the distance function to the boundary 
-$f=\dist{\partial \spc{L}}{}{}$ is semiconcave by ??? but it is foreign sinse, it is eqsy to see that if $p\in\partial \spc{L}$ then $\partial_p f=\emptyset$.
+On the other hand, if $\partial \spc{L}\not=\emptyset$, then the distance function to the boundary 
+$f=\distfun{\partial \spc{L}}{}{}$ is semiconcave by ??? but it is foreign since, it is easy to see that if $p\in\partial \spc{L}$, then $\partial_p f=\emptyset$.
 
 
 \begin{thm}{Theorem}\label{thm:native-operations}
@@ -76,15 +76,15 @@ as in ???, we will denote by $\breve{\spc{L}}$ the doubling of $\spc{L}$ and by 
 \begin{thm}{Lemma} 
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space. 
 Then
-\begin{subthm}{with-no-bry} If $\partial \spc{L}=\emptyset$ then any semiconcave subfunction $f\:\spc{L}\subto\RR$ is native.
+\begin{subthm}{with-no-bry} If $\partial \spc{L}=\emptyset$, then any semiconcave subfunction $f\:\spc{L}\subto\RR$ is native.
 \end{subthm}
 
-\begin{subthm}{with-bry} If $\partial\spc{L}\not=\emptyset$ then a semiconcave subfunction on $f\:\spc{L}\subto\RR$ 
+\begin{subthm}{with-bry} If $\partial\spc{L}\not=\emptyset$, then a semiconcave subfunction on $f\:\spc{L}\subto\RR$ 
 is native if and only if the subfunction $f\circ\proj\:\breve{\spc{L}}\subto\RR$ is semiconcave.
 \end{subthm}
 \end{thm}
 
-\parit{Proof.} First, by induction on $m$, we prove that if $p\notin\partial \spc{L}$ then $\partial_pf\not=\emptyset$.
+\parit{Proof.} First, by induction on $m$, we prove that if $p\notin\partial \spc{L}$, then $\partial_pf\not=\emptyset$.
 
 The base $m=1$ is trivial.
 
@@ -93,7 +93,7 @@ Note that $\phi''+\phi\le 1$ (see ???).
 Let ${\xi}\in \Sigma_p$ be a minimum point of $\phi$.
 Cleary $\d_{{\xi}}\phi\ge 0$.
 By the induction hypothesis, $\partial_{{\xi}}\phi\not=\emptyset$.
-On the other hand if $s\in\partial_\xi\phi$ then $\d_\xi\phi(s)\le -|s|^2$.
+On the other hand if $s\in\partial_\xi\phi$, then $\d_\xi\phi(s)\le -|s|^2$.
 Therefore $\partial_{\xi}\phi$ contains unique element --- the zero vector $\0$. 
 Thus $\d_{{\xi}}\phi(x)\le\<\0,x\>=0$; that is, $\d_{{\xi}}\phi\equiv 0$.
 Applying $\phi''+\phi\le 1$, for a geodesic $[\xi\eta]$ in $\Sigma_p$, we obtain 
@@ -127,7 +127,7 @@ Note that $\d_p\proj\:\T_p\breve{\spc{L}}\to\T_{\proj (p)}\spc{L}$
 
 \parit{``Only if''-part of (\ref{SHORT.with-bry}).}
 Let $\gamma$ be a geodesic in $\breve{\spc{L}}$.
-Note that if $\gamma$ comes at $\proj^{-1}\partial \spc{L}$ for two values $t_0<t_1$ then whole segment
+Note that if $\gamma$ comes at $\proj^{-1}\partial \spc{L}$ for two values $t_0<t_1$, then whole segment
  $\gamma([t_0,t_1])$ belongs to $\proj^{-1}\partial \spc{L}$.
 Otherwise reflecting $\gamma([t_0,t_1])$ in ???
 
@@ -150,7 +150,7 @@ Indeed for any vextor $v\in \T_p$
 
 
 In particular, it follows that if the space of dirrections $\Sigma_p$ has
-a diameter\footnote{We always consider $\Sigma_p$ with angle metric.} $\le \tfrac\pi2$ then
+a diameter\footnote{We always consider $\Sigma_p$ with angle metric.} $\le \tfrac\pi2$, then
 $\nabla_p f=\0$ for any native $\lambda$-concave function $f$.
 
 Clearly, for any vector $s$, supporting  $f$ at $p$ we have 
@@ -182,7 +182,7 @@ Let us define function $\os_p^\eps\:\spc{L}\to\RR$ as
 \dist[{{}}]{y}{x}{}\cdot\d_y\vol^m.\]
 
 Further, 
-given a multidistant function $\phi\can F\circ\dist{\bm{p}}{}{}$, where
+given a multidistant function $\phi\can F\circ\distfun{\bm{p}}{}{}$, where
 $\bm{p}=(p_1,p_2,\dots,p_\kay)$,
 consider new function
 \[\OS^\eps\phi
@@ -194,7 +194,7 @@ $(\os^\eps_{p_1},\os^\eps_{p_2},\dots,\os^\eps_{p_\kay})\:\spc{L}\to\RR^\kay$.
 
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space,
 $\phi\in\MD(\spc{L},\RR)$
-and $\phi\can F\circ\dist{\bm{p}}{}{}$.
+and $\phi\can F\circ\distfun{\bm{p}}{}{}$.
 Given $\eps>0$ let us consider new subfunction
 $\OS_\eps\phi\:\spc{L}\subto\RR$ defined as follows 
 \[\OS_\eps\phi(q)

@@ -75,7 +75,7 @@ Therefore,
 that is, $g=g'$.
 
 \parit{Existence.} 
-Note first that if $\d_p f\le 0$ then one can take $\nabla_p f=\0$.
+Note first that if $\d_p f\le 0$, then one can take $\nabla_p f=\0$.
 
 Otherwise, if $s=\sup\set{(\d_p f)(\xi)}{\xi\in\Sigma_p}>0$, 
 it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that 
@@ -118,15 +118,16 @@ Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
 
 The next lemma roughly states that the gradient points 
 in the direction of maximal slope; 
-moreover if the slope in the given direction is almost maximal then it is almost direction of the gradient.
+moreover if the slope in the given direction is almost maximal, then it is almost direction of the gradient.
 
 \begin{thm}{Lemma}\label{lem:alm-grad}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $f\:\spc{L}\subto\RR$ be locally Lipschitz and semiconcave 
 and $p\in \Dom f$.
 
-Assume $|\nabla_p f|>0$, 
-set $\overline{\xi}=\tfrac{1}{|\nabla_p f|}\cdot\nabla_p f$ then
+Assume $|\nabla_p f|>0$;
+set $\overline{\xi}=\tfrac{1}{|\nabla_p f|}\cdot\nabla_p f$.
+Then
 \begin{subthm}{near-grad} If for some $v\in\T_p$, we have 
 \[|v|\le 1+\eps
 \quad
@@ -542,7 +543,8 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space
 and
 $f\:\spc{L}\subto \RR$ be
 locally Lipschitz and $\lambda$-concave. 
-Assume $\hat\alpha\:[0,s_{\max})\to\Dom f$ is an $f$-gradient-like curve then 
+Assume $\hat\alpha\:[0,s_{\max})\to\Dom f$ is an $f$-gradient-like curve.
+Then 
 \[(f\circ\hat\alpha)''\le\lambda\] 
 everywhere on $[0,s_{\max})$.
 \end{thm} 
@@ -813,7 +815,8 @@ for any $t_1>t_0$ and $x\in\spc{L}$. %???CHECK???
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $f\:\spc{L}\to \RR$ be a locally Lipschitz 
 and $\lambda$-concave function.
-Assume $\alpha,\beta\:[0,t_{\max})\to \spc{L}$ be two $f$-gradient then for any $t\in[0,t_{\max})$
+Assume $\alpha,\beta\:[0,t_{\max})\to \spc{L}$ be two $f$-gradient.
+Then for any $t\in[0,t_{\max})$
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
 e^{\lambda\cdot t}\cdot\dist[{{}}]{\alpha(0)}{\beta(0)}{}.\]
@@ -895,7 +898,8 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space
 and
 $f\:\spc{L}\subto \RR$ be semiconcave subfunction.
 Assume $\alpha,\beta\:[0,t_{\max})\to\Dom f$ be two $f$-gradient curves 
-such that $\alpha(0)=\beta(0)$ then $\alpha(t)=\beta(t)$ for any $t\in[0,t_{\max})$.
+such that $\alpha(0)=\beta(0)$.
+Then $\alpha(t)=\beta(t)$ for any $t\in[0,t_{\max})$.
 \end{thm}
 
 \parit{Proof.} Follows from the first distance estimate (\ref{thm:dist-est}).\qeds
@@ -905,7 +909,7 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
 and $f\:\spc{L}\subto \RR$ be locally Lipschitz $\lambda$-concave subfunction.
 Then for any $p\in \Dom f$
 \begin{subthm}{}
-if $|\nabla_pf|>0$ then for some $\eps>0$, 
+if $|\nabla_pf|>0$, then for some $\eps>0$, 
 there is an $f$-gradient-like curve $\hat\alpha\:[0,\eps)\to\spc{L}$ which starts at $p$ (that is, $\hat\alpha(0)\z=p$);
 \end{subthm}
 
@@ -917,7 +921,7 @@ This theorem was proved by Grigory Perelman and the third author in \cite{perelm
 here we present a simplified proof given by Alexander Lytchak in \cite{lytchak:open-map}.
 
 \parit{Proof.} 
-Note that if $|\nabla_p f|=0$ then one can take constant curve $\alpha(t)=p$.
+Note that if $|\nabla_p f|=0$, then one can take constant curve $\alpha(t)=p$.
 Otherwise, take $\eps>0$, 
 such that $\oBall(p,\eps)\subset\Dom f$,
 the restriction $f|_{\oBall(p,\eps)}$ is Lipschitz
@@ -929,7 +933,7 @@ First we construct an $f^\o$-gradient-like curve $\hat\alpha_\o\:[0,\eps)\to\spc
 Second, we parametrize $\hat\alpha_\o$ as in \ref{lem:grad--grad-like}, to obtain an $f^\o$-gradient curve $\alpha_\o$ in $\spc{L}^\o$.
 Third, applying Picard's theorem (\ref{thm:picard}) together with Lemma~\ref{lem:X-X^w}, we obtain that $\alpha_\o$ lies in $\spc{L}\subset \spc{L}^\o$ and therefore one can take $\alpha=\alpha_\o$ and $\hat\alpha=\hat\alpha_\o$.
 
-Note that if $\spc{L}$ is proper then $\spc{L}=\spc{L}^\o$ and $f^\o=f$.
+Note that if $\spc{L}$ is proper, then $\spc{L}=\spc{L}^\o$ and $f^\o=f$.
 Thus, in this case, the third step is not necessary.
 
 \parit{Step 1.}
@@ -971,7 +975,7 @@ According to \ref{lem:grad--grad-like}, $\alpha(t)=\hat\alpha\circ\varsigma(t)$ 
 
 \parit{Step 3.}
 Clearly, $\nabla_p f=\nabla_p f^\o$ for any $p\in \spc{L}\subset \spc{L}^\o$;
-more formally if $\iota\:\spc{L}\hookrightarrow\spc{L}^\o$ is the natural embedding then
+more formally if $\iota\:\spc{L}\hookrightarrow\spc{L}^\o$ is the natural embedding, then
 $(\d_p\iota)(\nabla_p f)=\nabla_p f^\o$.
 Thus, it is sufficient to show that $\alpha_\o\subset \spc{L}$.
 Assume the contrary, then according to \ref{lem:X-X^w} there is a subsequence $\hat\alpha_{n_\kay}$ such that
@@ -1003,7 +1007,7 @@ $f_\o$ is $\lambda$-concave.
 
 
 \begin{subthm}{lim-grad-like}
-If $|\nabla_{p_\o}f_\o|>0$ then there is $\eps>0$ such that, the $f_n$-gradient-like curves $\hat\alpha_n\:[0,\eps)\to\spc{L}_n$ are defined for $\o$-almost all $n$.
+If $|\nabla_{p_\o}f_\o|>0$, then there is $\eps>0$ such that, the $f_n$-gradient-like curves $\hat\alpha_n\:[0,\eps)\to\spc{L}_n$ are defined for $\o$-almost all $n$.
 And moreover, a curve $\hat\alpha_\o\:[0,\eps)\to\spc{L}_\o$ is a gradient-like curve which starts at $p_\o$ if and only if
 $\hat\alpha_n(s)\to\hat\alpha_\o(s)$ as $n\to\o$ for all $s\in[0,\eps)$.
 \end{subthm}
@@ -1172,7 +1176,7 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $f\:\spc{L}\to \RR$ be a semiconcave functions.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
-Moreover, if $f$ is $\lambda$-concave then $\GF^t_f$ is $e^{\lambda\cdot t}$-Lipschitz.
+Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Lipschitz.
 \end{thm}
 
 Next proposition states that gradient flow is stable under Gromov--Hausdorff convergence.
@@ -1180,7 +1184,7 @@ It follows directly from the proposition on ultralimit of gradient curves~\ref{u
 
 \begin{thm}{Proposition}\label{grad-curve-conv}
 If $\spc{L}_n$ be an $m$-dimensional complete length $\Alex\kappa$ space, $\spc{L}_n\xto{\GH} \spc{L}$, $f_n\:\spc{L}_n\to\RR$ is a sequence of
-$\lambda$-concave functions which converges to $f\:\spc{L}\to \RR$ then
+$\lambda$-concave functions which converges to $f\:\spc{L}\to \RR$, then
 $\GF_{f_n}^t\:\spc{L}_n\to \spc{L}_n$ converges to $\GF_f^t\:\spc{L}\to \spc{L}$.
 \end{thm}
 
@@ -1257,7 +1261,7 @@ $\iota:v_\pm\mapsto (o',\pm|v_\pm|)$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
-Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space, $m\ge2$ and $\rad\spc{L}=\pi$ then 
+Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space, $m\ge2$ and $\rad\spc{L}=\pi$, then 
 \[\spc{L}\iso \SS^m.\]
  
 \end{thm}
@@ -1278,7 +1282,7 @@ Note that since $\gamma$ is a line, we have
 \[\bus_+(x)+\bus_-(x)\ge0.\]
 
 On the other hand, by \ref{comp-kappa} 
-$f(t)=\dist[2]{x}{}{}\circ\gamma(t)$ 
+$f(t)=\distfun[2]{x}{}{}\circ\gamma(t)$ 
 is $2$-concave.
 In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$. 
 Passing to the limit as $t\to\pm\infty$, we get \[\bus_+(x)+\bus_-(x)\le0.\]
@@ -1588,7 +1592,7 @@ r\cdot\cos\tangle\mc0\{s;r,\ell\}=\ell.
 \]
 
 Set 
-\[f=\tfrac{1}{2}\cdot\dist[2]{p}{}{}.\leqno(A)\mc0\] 
+\[f=\tfrac{1}{2}\cdot\distfun[2]{p}{}{}.\leqno(A)\mc0\] 
 Clearly $f$ is $1$-concave and
 \[\rho^+(r)=\tfrac{1}{r}\cdot\nabla_{\rho(r)} f\ \ \t{and}\ \ \sigma^+(s)=\tfrac{1}{s}\cdot\nabla_{\sigma(s)} f.\leqno(B)\mc0\]
 Thus from \ref{lem:grad-lip}, we have
@@ -1842,7 +1846,7 @@ Here are properties of radial curves reformulated in terms of gradient exponent:
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
 Then
 \begin{subthm}{}
- If $p,q\in \spc{L}$ be points such that $\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$ then for any geodesic $[pq]$ in $\spc{L}$, we have
+If $p,q\in \spc{L}$ be points such that $\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$, then for any geodesic $[pq]$ in $\spc{L}$, we have
 \[\gexp\mc\kappa_p(\ddir p q)=q\] 
 \end{subthm}
 
@@ -1863,8 +1867,8 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p, q\in \spc{L}$ 
 and $\dist{p}{q}{}\le \tfrac{\varpi\kappa}2$.
 If $v\in\T_p$, $|v|\le 1$ and 
-\[\sigma(t)=\gexp\mc\kappa_p(t\cdot v)\] then
-the function
+\[\sigma(t)=\gexp\mc\kappa_p(t\cdot v),\]
+then the function
 \[
 s
 \mapsto 
@@ -2080,7 +2084,7 @@ In case $\kappa<0$, such $\psi$ is not unique.
 In particular one can take curves defined by simpler equation
 \[\sigma^+(s)
 =
-\frac{\sn\kappa \dist[{{}}]{p}{\sigma(s)}{}}{\sn\kappa s}\cdot\nabla_{\sigma(s)}\dist{p}{}{}
+\frac{\sn\kappa \dist[{{}}]{p}{\sigma(s)}{}}{\sn\kappa s}\cdot\nabla_{\sigma(s)}\distfun{p}{}{}
 =
 \frac{1}{\sn\kappa s}\cdot\nabla_{\sigma(s)}(\md\kappa\circ\distfun{p}{}{}).\]
 Among all curves of that type, the radial curves for curvature $\kappa$ 
@@ -2246,7 +2250,7 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $A\subset\spc{L}$ i
 Then
 \begin{subthm}{}
 Assume $\dist{A}{q}{}=\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$ be 
-an $A$-radial geodesic then
+an $A$-radial geodesic. Then
 \[\gexp\mc\kappa_A(\ddir p q)=q\] 
 \end{subthm}
 
@@ -2267,8 +2271,8 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p, q\in \spc{L}$ 
 and $\dist{p}{q}{}\le \tfrac{\varpi\kappa}2$.
 If $v\in\T_p$, $|v|\le 1$ and 
-\[\sigma(t)=\gexp\mc\kappa_p(t\cdot v)\] then
-the function
+\[\sigma(t)=\gexp\mc\kappa_p(t\cdot v),\]
+then the function
 $
 s\mapsto \tangle\mc\kappa(\sigma|_0^s,q)
 $

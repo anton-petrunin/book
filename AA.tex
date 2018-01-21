@@ -8993,7 +8993,7 @@ $\Im\map\supset\GradBis(R;x,y)$.
 \parit{Proof.}
 Without loss of generality, we can assume that $\kappa= -1$.
 
-Set as above $f=\tfrac{1}{2}\cdot\min\{\dist[2]{x}{}{},\dist[2]{y}{}{}\}$.
+Set as above $f=\tfrac{1}{2}\cdot\min\{\distfun[2]{x}{}{},\distfun[2]{y}{}{}\}$.
 
 Denote by $\Sphere$ the metric sphere of radius $\tfrac{\dist{x}{y}{}}{2}$ with the center at $x$; 
 i.e.
@@ -9081,7 +9081,7 @@ Thus one can take $\map_R$ to be a partial limit of $\map_{R;n}$ as $n\to\infty$
 
 \parit{Proof of \ref{thm:dist-emb}.}
 Note that for any choice of $\bm{a}\in\spc{L}^\kay$,
-the distance map $\dist{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is $\kay$-Lipschitz.
+the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is $\kay$-Lipschitz.
 Thus it remains to show that one can choose $\kay$, $\bm{a}$ and $\eps>0$ on such a way that 
 $$|\dist{a^i}{x}{}-\dist{a^i}{y}{}|>\eps\cdot\dist[{{}}]{x}{y}{}
 \ \ \t{for at least one}\ \ i
@@ -9122,7 +9122,7 @@ Assume $\dist{x}{p}{}\ge\dist{y}{p}{}$;
 if not --- switch $x$ and $y$ in all the following construction.
 Choose a point $q\in [x p]$ such that $\dist{x}{q}{}=\dist{y}{q}{}$.
 Set $s_0=\dist{x}{q}{}=\dist{y}{q}{}$ and $s_1=\dist{x}{p}{}$.
-As above, set $f=\min\{\dist{x}{}{},\dist{y}{}{}\}$.
+As above, set $f=\min\{\distfun{x}{}{},\distfun{y}{}{}\}$.
 Let $\sigma\:[s_0,\infty)\to\spc{L}$ be an $f$-radial 
 curve which starts at $q$.
 Then set $p'=\sigma(s_1)$.
@@ -9212,8 +9212,8 @@ $$\<v,w\> \le \scal\mc\kappa_x(\hmy{f},\hmy{h}).$$
 \end{thm}
 
 \parit{Proof.}
-Let $f\can F\circ\dist{\bm{p}}{}{}$ 
-and $h\can H\circ\dist{\bm{q}}{}{}$.
+Let $f\can F\circ\distfun{\bm{p}}{}{}$ 
+and $h\can H\circ\distfun{\bm{q}}{}{}$.
 Given $\eps >0$, choose a smooth supporting function $\bar F$ of $F$ at $\dist{\bm{p}}{x}{}$ 
 and geodesics $[p^ix]$ such that for the vector array $v^i=\partial\bar F\cdot\dir{x}{p^i}$, we have
 \begin{align*}
@@ -9267,7 +9267,7 @@ If tangent cone is Euclidean, the described ``addition'' coinside with usual add
 For general tangent cone the value of $\plus(v^1,v^2,\dots,v^\kay)$ might depend on the order of items, it also depends on the choice of geodesics made above.
 
 
-Let $\hmy{f}\can F\circ\dist{\bm{a}}{}{}$.
+Let $\hmy{f}\can F\circ\distfun{\bm{a}}{}{}$.
 Choose a smooth supporting function $\bar F$ of $F$ at 
 $\dist{\bm{a}}{p}{}$ and a geodesic $[pa^i]$ for each $i$.
 Let $v^i=\partial_i\bar F\cdot \dir{p}{a^i}$ for each $i$.
@@ -9311,11 +9311,11 @@ that for any $z\in\T_p$, we have
 &\ge
 \d_x\hmy{f}(z)=
 \\
-&=\d_{\dist{\bm{p}}{x}{}}F\circ\d_x\dist{\bm{p}}{}{}(z)
+&=\d_{\dist{\bm{p}}{x}{}}F\circ\d_x\distfun{\bm{p}}{}{}(z)
 \\
 &=
 \inf
-\set{\d_{\dist{\bm{p}}{x}{}}\bar F\circ\d_x\dist{\bm{p}}{}{}(z)}%
+\set{\d_{\dist{\bm{p}}{x}{}}\bar F\circ\d_x\distfun{\bm{p}}{}{}(z)}%
 {\bar F\in\mathcal{S}_xF}
 \\
 &=
@@ -9350,7 +9350,7 @@ Define a sequence of submaps $\map_n\:\RR^m\subto n\blow\spc{L}:n\cdot x\mapsto 
 Clearly all $\map_n$ are $\Lip$-Lipschitz.
 Thus the $\o$-limit $\map_\subinfty\:\RR^m\to \T_q$ of $\map_n$ is also $\Lip$-Lipshitz.
 Clearly??? $\map_\subinfty$ is an inverse of 
-$\d_q f=\d_q\dist{\bm{a}}{}{}$.
+$\d_q f=\d_q\distfun{\bm{a}}{}{}$.
 
 
 

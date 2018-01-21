@@ -26,7 +26,7 @@ By Crofton's formula we have that
 L(\alpha)=\frac 1 4 \int _{\SS^2}\#(\alpha\cap v^\perp) \d_v\vol_2
 \]
 
-Obviously,  if $\#(\alpha\cap v^\perp) =0$ then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. By the intermediate value theorem the same holds true if $\#(\alpha\cap v^\perp) =1$.
+Obviously,  if $\#(\alpha\cap v^\perp) =0$, then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. By the intermediate value theorem the same holds true if $\#(\alpha\cap v^\perp) =1$.
 Suppose  $\#(\alpha\cap v^\perp) \ge 2$ for all $v\in\SS^2$. Then Crofton's formula implies that
 $L(\alpha)\ge \frac 1 4 \int_{\SS^2}2=2\pi$. \qeds
 
@@ -133,8 +133,8 @@ $$\phi(\bm{x})
 \min\set{\Const\cdot|\dist{\bm{a}}{p}{}-\bm{x}|+f(p)}{p\in \Omega}.$$
 
 \parbf{Exercise \ref{ex:d(grad)<0}.}
-Let $\phi\can F\circ\dist{\bm{a}}{}{}$ 
-and $\psi\can G\circ\dist{\bm{b}}{}{}$; 
+Let $\phi\can F\circ\distfun{\bm{a}}{}{}$ 
+and $\psi\can G\circ\distfun{\bm{b}}{}{}$; 
 clearly,
 \begin{align*}
 \d_p\phi(v)
@@ -228,7 +228,7 @@ and apply Theorem \ref{thm:CBB/G}.
 By the definition of Busemann function,
 \begin{align*}
 \exp(\sqrt{-\kappa}\cdot\bus_\gamma) 
-&= \exp \lim_{t\to \infty} \sqrt{-\kappa}\cdot(\dist{{\gamma (t)}}{}{} - t) 
+&= \exp \lim_{t\to \infty} \sqrt{-\kappa}\cdot(\distfun{{\gamma (t)}}{}{} - t) 
 \\
 &= \lim_{t\to \infty} \left(\exp \sqrt{-\kappa}(d_{\gamma (t)} -t) + \exp
 \sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right)\\
@@ -249,7 +249,7 @@ By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp
 \parbf{Exercise~\ref{ex:short-retraction-CBA(1)}.}
 Without loss of generality, we may assume that $p\in K$.
 
-If $\dist{K}{x}{}\ge\pi$ then set $\map[2](x)=p$.
+If $\dist{K}{x}{}\ge\pi$, then set $\map[2](x)=p$.
 
 Otherwise, if $\dist{K}{x}{}<\pi$, by Closest-point projection lemma~\ref{lem:closest point}, 
 there is unique point $x^*\in K$ that minimizes distance to $x$;
@@ -349,17 +349,17 @@ for any $x,y\in\spc{U}$.
 If we have equality in \ref{eq:cos=<cos}
 then 
 \[\cos\ell_x\cdot\cos\ell_y\cdot\sin\phi_x\cdot\sin\phi_y=0.\]
-If $K\subset \oBall(p,\tfrac\pi2)$ then $\ell_x,\ell_y<\tfrac\pi2$;
+If $K\subset \oBall(p,\tfrac\pi2)$, then $\ell_x,\ell_y<\tfrac\pi2$;
 which implies that $x\in K$ or $y\in K$.
 Without loss of generality we may assume that $x\in K$.
 
 It remains to show that if $y\notin K$ 
 then the inequality~\ref{eq:cos=<cos}
 is strict.
-If $\dist{K}{y}{}\ge\tfrac\pi2$ then \ref{eq:cos=<cos} holds since 
+If $\dist{K}{y}{}\ge\tfrac\pi2$, then \ref{eq:cos=<cos} holds since 
 the left hand side is $<\tfrac\pi2$,
 while right hand side is $\ge \tfrac\pi2$.
-If $\dist{K}{y}{}<\tfrac\pi2$ then $\phi_y>0$ and clearly $\psi_y<\phi_y$,
+If $\dist{K}{y}{}<\tfrac\pi2$, then $\phi_y>0$ and clearly $\psi_y<\phi_y$,
 hence the inequality~\ref{eq:cos=<cos} is strict.
 \qeds
 
@@ -382,7 +382,7 @@ Note that $\mathring{K}$ forms a convex closed subset of $\mathring{\spc{U}}$.
 According to ???, for any point $x$ there is unique point $\hat x\in \mathring{K}$
 which minimize the distance to $x$;
 that is, $\dist{\hat x}{x}{}=\dist{K}{x}{}$.
-(If $|\hat x|\ne0$ then in the notations above we have
+(If $|\hat x|\ne0$, then in the notations above we have
 $x^*=\tfrac1{|\hat x|}\cdot\hat x$.)
 
 Consider the ray $t\mapsto t\cdot p$ in  $\mathring{\spc{U}}$.
@@ -393,7 +393,7 @@ say $\alpha_s\:[0,\infty)\to \mathring{\spc{U}}$.
 
 
 
-Note that if $|x|=1$ then $|\hat x|\le 1$.
+Note that if $|x|=1$, then $|\hat x|\le 1$.
 By assumption for any $a\in K$ the function $t\mapsto |\alpha_a(t)|$ is monotonicity increasing.
 Therefore there is unique value $t_x\ge 0$ such that
 $|\alpha_{\hat x}(t_x)|=1$.
@@ -496,12 +496,12 @@ That is, $\spc{S}$ satisfies the conditions above.
 
 \parbf{Exercise~\ref{ex:set-with-smooth-bry:CBB}.}
 Denote by $\Omega$ the interior of $K$; that is $\Omega=K\backslash S$.
-Since $K$ is connected and its boundary is smooth then so is $\Omega$.
+Since $K$ is connected and its boundary is smooth, so is $\Omega$.
 
 Recall that $k_1(p),\dots, k_{m-1}(p)$ denote the principle curvatures taken in the nondecreasing order of the surface $S$ at the point $p$. 
 
 \parit{``if''-part.} 
-Note that if $S$ is convex then $K$ is locally convex;
+Note that if $S$ is convex, then $K$ is locally convex;
 that is any point $p\in K$ admits a neighborhood $U\ni p$ such that $U\cap K$ is convex.
 
 Since $K$ is connected, by Theorem~\ref{thm:local-global-convexity}, $K$ is convex.
@@ -517,7 +517,7 @@ In particular (3+1)-point comparison holds for any quadruple of points in $K$.
 \end{wrapfigure}
 
 \parit{``Only-if''-part.} 
-If $S$ is not convex then there is a triangle $[qxy]$ in $\EE^m$ such that two sides $[qx]$ and $[qy]$ lie in $\Omega$, but the side $[xy]$ does not completely lie in $K$.
+If $S$ is not convex, then there is a triangle $[qxy]$ in $\EE^m$ such that two sides $[qx]$ and $[qy]$ lie in $\Omega$, but the side $[xy]$ does not completely lie in $K$.
 Such a triangle can be found in the plane spanned by the normal vector $\nu(p)$ and the first principle direction at a point $p\in S$ where $k_1(p)<0$.
 
 Clearly
@@ -538,10 +538,7 @@ The latter contradicts \ref{eq:xy_K>xy}.
 
 
 \parbf{Exercise~\ref{ex:poly-shefel}.}
-If $\Omega$ is not two-convex then 
-there is a plane $\Pi$ in $\EE^3$ 
-which contains a vertex $v$ of $K$ 
-such that punctured neightborhood of $v$ in $\Pi$ lies in $\Omega$.
+If $\Omega$ is not two-convex, then there is a plane $\Pi$ in $\EE^3$ which contains a vertex $v$ of $K$ such that punctured neighborhood of $v$ in $\Pi$ lies in $\Omega$.
 Choose a plane $\Pi'$ parallel and very close to $\Pi$ which cuts from the complement of $\Omega$ a little piramid $S$ with vertex~$v$.
 Consider a small triangle $\triangle$ in $\Pi'$ wich surrounds the base of $S$.
 Note that $\triangle$ is a geodesic triangle in $\Omega^*$
