@@ -2126,33 +2126,36 @@ $\~x_1\~x_2\~x_3\~x_4$; that is, the convex hull of $\~x_1,\~x_2,\~x_3,\~x_4$ in
 
 \section{Hadamard--Cartan theorem}\label{sec:Hadamard--Cartan}
 
-The development of Alexandrov geomtry was largely influenced by Hadamard--Cartan theorem.
+The development of Alexandrov geomtry was greatly influenced by the Hadamard--Cartan theorem.
 Its original formulation states that if $M$ is a complete Riemannian manifold with nonpositive sectional curvature, 
 then the exponential map at any point $p\in M$ is a covering;
-in particular it implies that universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
+in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
-In this generality, theorem appeared in the lectures of Cartan, see \cite{cartan}.
+In this generality, the theorem appeared in the lectures of Cartan, see \cite{cartan}.
 For surfaces in the Euclidean plane, 
-this theroem was proved by
-Hans von Mangoldt see \cite{mangoldt} 
+the theorem was proved by
+Hans von Mangoldt see \cite{mangoldt},  
 and few years later independently by Hadamard \cite{hadamard}.
 
 Formulations for metric spaces of different generality were proved by 
-Busemann see \cite{busemann-CBA},
-Rinow see \cite{rinow},
+Busemann (see \cite{busemann-CBA}),
+Rinow (see \cite{rinow}), and 
 Gromov  \cite[p.119]{gromov:hyp-groups}. 
-A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard};
-it use Birkhoff's curve-shortening.  
-The statement in the non-proper  case was proved in the first author and Richard Bishop \cite{a-b:h-c}.  
+A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard}, using Birkhoff's curve-shortening.  
+A proof in the non-proper 
+geodesic case 
+was given by the first author and Richard Bishop \cite{a-b:h-c}.  
 This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 %??? what is it about???
 It was pointed out by Bruce 
 Kleiner (see \cite{ballmann:notes,ballmann:lectures}) 
 and independently by Martin 
 Bridson and Andr\'{e} 
-Haefliger in \cite{BH} that the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence the Hadamard--Cartan theorem applies to length spaces as well as geodesic spaces.
-
-The generalized Hadamard--Cartan theorem for proper spaces was proved by Brian Bowditch \cite{bowditch}.
+Haefliger in \cite{BH} that 
+%the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence 
+%the Hadamard--Cartan theorem
+this proof
+extends to length spaces as well as geodesic spaces, to give:
 
 \begin{thm}{Hadamard--Cartan theorem}
 \label{thm:hadamard-cartan}
@@ -2167,14 +2170,14 @@ the map $\map\:\spc{B}\to\spc{U}$ in Theorem
 Since $\spc{U}$ is simply connected, $\map\:\spc{B}\to\spc{U}$ is an isometry.
 \qeds
 
-To formulate Generalized Hadamard--Cartan theorem,
+To formulate the Generalized Hadamard--Cartan theorem,
 we need the following definition.
 
 \begin{thm}{Definition}\label{def:l-s.c.}
 Given $\ell\in (0,\infty]$,
 a metric space $\spc{X}$ is called 
 $\ell$-simply connected 
-if it is connected
+if it is connected and 
 any closed curve of length $<\ell$ 
 is null-homotopic in the class of curves of length $<\ell$ in $\spc{X}$.
 \end{thm}
@@ -2182,8 +2185,10 @@ is null-homotopic in the class of curves of length $<\ell$ in $\spc{X}$.
 Note that there is a subtle difference between 
 simply connected and $\infty$-simply connected spaces;
 the first states that any closed curve is null-homotopic while the second means that any rectifiable curve is null-homotopic in the class of rectifiable curves.
-However, as it follows from Proposition~\ref{prop:sc}, for locally $\CAT\kappa$ spaces, these two definitions are equivalent.
-The latter makes possible to deduce Hadamard--Cartan theorem directly from the Generalized Hadamard--Cartan theorem.
+However, as follows from Proposition~\ref{prop:sc}, for locally $\CAT\kappa$ spaces these two definitions are equivalent.
+This fact makes it possible to deduce the Hadamard--Cartan theorem directly from the Generalized Hadamard--Cartan theorem.
+
+For proper spaces, the generalized Hadamard--Cartan theorem was proved by Brian Bowditch \cite{bowditch}.
 
 \begin{thm}{Generalized Hadamard--Cartan theorem}\label{thm:hadamard-cartan-gen}
 A complete length space
@@ -2192,18 +2197,19 @@ if and only if $\spc{U}$ is $2\cdot\varpi\kappa$-simply connected
 and $\spc{U}$ is locally $\CAT\kappa$.
 \end{thm}
 
-In the proof we will need the following lemma.
+In the proof we need the following lemma.
 
 \begin{thm}{Lemma}
-Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space,
+
+Assume $\spc{U}$ is a complete length  locally $\CAT\kappa$ space,
 $\eps>0$,
-and $\gamma_1,\gamma_2\:\SS^1\to\spc{U}$ be two closed curves.
+and $\gamma_1,\gamma_2\:\SS^1\to\spc{U}$ are two closed curves.
 Assume that
 \begin{subthm}{}
-$\length\gamma_1,\length\gamma_2<2\cdot\varpi\kappa-4\cdot\eps$
+$\length\gamma_1,\length\gamma_2<2\cdot\varpi\kappa-4\cdot\eps$;
 \end{subthm}
  
-\begin{subthm}{} $\dist{\gamma_1(x)}{\gamma_2(x)}{}<\eps$ any $x\in\SS^1$ and the geodesic $[\gamma_1(x)\gamma_2(x)]$ is uniquely defined and depends continuously on $x$.
+\begin{subthm}{} $\dist{\gamma_1(x)}{\gamma_2(x)}{}<\eps$ for any $x\in\SS^1$, and the geodesic $[\gamma_1(x)\gamma_2(x)]$ is uniquely defined and depends continuously on $x$;
 \end{subthm}
 
 \begin{subthm}{}  $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$.
