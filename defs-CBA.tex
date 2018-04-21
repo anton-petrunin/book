@@ -2155,7 +2155,7 @@ Haefliger in \cite{BH} that
 %the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence 
 %the Hadamard--Cartan theorem
 this proof
-extends to length spaces as well as geodesic spaces, to give:
+extends to length spaces as well as geodesic spaces, giving:
 
 \begin{thm}{Hadamard--Cartan theorem}
 \label{thm:hadamard-cartan}
@@ -2170,7 +2170,7 @@ the map $\map\:\spc{B}\to\spc{U}$ in Theorem
 Since $\spc{U}$ is simply connected, $\map\:\spc{B}\to\spc{U}$ is an isometry.
 \qeds
 
-To formulate the Generalized Hadamard--Cartan theorem,
+To formulate the generalized Hadamard--Cartan theorem,
 we need the following definition.
 
 \begin{thm}{Definition}\label{def:l-s.c.}
@@ -2204,7 +2204,7 @@ In the proof we need the following lemma.
 Assume $\spc{U}$ is a complete length  locally $\CAT\kappa$ space,
 $\eps>0$,
 and $\gamma_1,\gamma_2\:\SS^1\to\spc{U}$ are two closed curves.
-Assume that
+Assume 
 \begin{subthm}{}
 $\length\gamma_1,\length\gamma_2<2\cdot\varpi\kappa-4\cdot\eps$;
 \end{subthm}
@@ -2242,31 +2242,31 @@ Note that $\alpha_x$ depends continuously on $x$ and
 $$\length\alpha_x<\tfrac{\varpi\kappa}{2}\ \ \text{and}\ \ \alpha_x(1)=\gamma_2(x)$$ 
 for any $x$.
 
-Let us apply Lifting globalization theorem
+Let us apply the lifting globalization theorem
 (\ref{thm:globalization-lift}) for $p=F(\~p)$.
 We get a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
-with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$ and the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
+with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$, and with the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
 Applying the lifting property for $\alpha_x$, 
-we get existence of curve $\hat\gamma_2\:\SS^1\to \spc{B}$ such that
+we get existence of a curve $\hat\gamma_2\:\SS^1\to \spc{B}$ such that
 $$\gamma_2=\map\circ\hat\gamma_2.$$
 
-Since $\spc{B}$ is a geodesic $\CAT\kappa$ space, we can apply majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
+Since $\spc{B}$ is a geodesic $\CAT\kappa$ space, we can apply the majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
 The composition of the obtained majorization with $\map$ is a majorization of $\gamma_2$.
 \qeds
 
 \parit{Proof.}
 The ``only if'' part follows from the Reshetnyak majorization theorem (\ref{thm:major}).
 
-Assume that $\gamma_t$, $t\in[0,1]$ 
+Let  $\gamma_t$, $t\in[0,1]$ 
 be a null-homotopy of curves in $\spc{U}$;
 that is, $\gamma_0(x)=p$ for some $p\in \spc{U}$
 and any $x\in\SS^1$.
 Assume further that $\length \gamma_t<2\cdot\varpi\kappa$ for any $t$.
-To prove ``only if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$. 
+To prove the ``only if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$. 
 
 By semicontinuity of length (\ref{thm:semicont-of-length}),
-we can choose sufficiently small $\eps>0$ such that
+we can choose  $\eps>0$ sufficiently small that
 $$\length \gamma_t<2\cdot\varpi\kappa-4\cdot\eps$$
 for all $t$.
 
@@ -2283,7 +2283,7 @@ for any $i$,
 the geodesic $[\gamma_{t_i}(x)\gamma_{t_{i-1}}(x)]$ depends continuously on $x$.
 
 Note that $\gamma_0=\gamma_{t_0}$ is majorized by a convex region in $\Lob2\kappa$.
-Applying the lemma $n$ times we get that so is $\gamma_1=\gamma_{t_n}$.\qeds
+Applying the lemma $n$ times, we see that the same holds for $\gamma_1=\gamma_{t_n}$.\qeds
 
 \begin{thm}{Proposition}\label{prop:sc}
 Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space.
@@ -2291,7 +2291,7 @@ Then $\spc{U}$ is simply connected if and only if it is $\infty$-simply connecte
 \end{thm}
 
 \parit{Proof.}
-To prove ``if'' part, it is sufficient to show that any closed curve in $\spc{U}$ is homotopic to a closed broken geodesic.
+To prove the ``if'' part, it is sufficient to show that any closed curve in $\spc{U}$ is homotopic to a closed broken geodesic.
 
 Let $\gamma_0$ be a closed curve in $\spc{U}$.
 According to Corollary~\ref{cor:loc-CAT(k)},
@@ -2307,7 +2307,7 @@ and depends continuously on~$x$.
 
 Hence $\gamma_t(x)=\geodpath_{[\gamma_0(x)\gamma_1(x)]}(t)$ gives a homotopy from $\gamma_0$ to $\gamma_1$.
 
-The proof of ``only if'' part is similar.
+The proof of the ``only if'' part is similar.
 Assume $\gamma_t$ is a homotopy between two rectifiable curves $\gamma_0$ and $\gamma_1$.
 Fix $\eps>0$ so that the ball $\oBall(\gamma_t(x),\eps)$ is $\CAT\kappa$
 for any $t$ and $x$.
@@ -2324,20 +2324,20 @@ to $\hat\gamma_{t_i}$
 setting 
 $$\hat\gamma_t
 =
-\geodpath_{[\hat\gamma_{t_{i-1}}(x)\hat\gamma_{t_i}(x)]}(t)$$
+\geodpath_{[\hat\gamma_{t_{i-1}}(x)\hat\gamma_{t_i}(x)]}(t).$$
 Since $\eps$ is sufficiently small, 
 by ???  we get
 $$\length\hat\gamma_t
 <
 10\cdot(\length\hat\gamma_{t_{i-1}}+\length\hat\gamma_{t_i}).$$
-In particular $\hat\gamma_t$ is rectifiable for all $t$.
+In particular, $\hat\gamma_t$ is rectifiable for all $t$.
 
-Joining the obtained homotopies for all $i$ we get a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
+Joining the obtained homotopies for all $i$ we obtain a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
 \qeds
 
 \begin{thm}{Exercise}
-Let $\spc{X}$ be a double cover of $\EE^3$ which is branching along two distinct lines $\ell^1$ and $\ell^2$.
-Show that  $\spc{X}$ is $\CAT0$ if and only if $\ell^1$ intersect $\ell^2$ at right angle.
+Let $\spc{X}$ be a double cover of $\EE^3$ that branches along two distinct lines $\ell^1$ and $\ell^2$.
+Show that  $\spc{X}$ is $\CAT0$ if and only if $\ell^1$ intersects $\ell^2$ at a right angle.
 \end{thm}
 
 \parbf{About convex spaces.}
@@ -2349,7 +2349,7 @@ A \emph{locally convex space} is a length space in which every point has a neigh
 
 \begin{thm}{Exercise}\label{ex:cats-cradle}
 Assume $\spc{X}$ is a convex space 
-such that angle of any hinge is defined.
+such that the angle of any hinge is defined.
 Show that $\spc{X}$ is $\CAT{0}$.
 \end{thm}
 
