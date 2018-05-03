@@ -1084,24 +1084,25 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\kappa$-thin.
 
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
-The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:glue}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper.
+The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:glue}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper and complete.  In the following form, where $\spc{U}_1$ and $\spc{U}_2$ are not assumed complete, the theorem appears in \cite{BH}.
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
-$\spc{U}_1$ and $\spc{U}_2$ are complete $\varpi\kappa$-geodesic spaces 
+$\spc{U}_1$ and $\spc{U}_2$ are %complete 
+$\varpi\kappa$-geodesic spaces 
 with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
 Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
-that is, $\spc{W}$ is gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$;see Section~\ref{sec:quotient}.
+that is, $\spc{W}$ is the gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$ (see Section~\ref{sec:quotient}.
 
-Then 
+Then: 
 \begin{subthm}{gluing0}
 Both canonical mappings $\jmath_i\:\spc{U}_i\to\spc{W}$ are isometric 
 and the images $\jmath_i(\spc{U}_i)$ are $\varpi\kappa$-convex subsets in $\spc{W}$.
 \end{subthm}
 
 \begin{subthm}{gluing2}
-If $\spc{U}_1, \spc{U}_2$ are $\CAT\kappa$ 
-then $\spc{W}$ is $\CAT\kappa$.
+If $\spc{U}_1, \spc{U}_2$ are $\CAT\kappa$ spaces,
+then $\spc{W}$ is a $\CAT\kappa$ space.
 \end{subthm} 
 \end{thm}
 
@@ -1112,23 +1113,30 @@ follows directly from $\varpi\kappa$-convexity of $A_i$.
 \parit{(\ref{SHORT.gluing2}).} 
 According to (\ref{SHORT.gluing0}),
 we can identify $\spc{U}_i$ with its image $\jmath_i(\spc{U}_i)$ in $\spc{W}$;
-this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
-Note that $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
-therefore $A$ is also $\varpi\kappa$-convex set in $\spc{W}$.
+in this way, the subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
+Thus   $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
+and $A$ is $\varpi\kappa$-convex in $\spc{W}$.
 
-Further note that completeness of $\spc{U}_1$ and $\spc{U}_2$ implies completeness of $\spc{W}$.
-Thus part (\ref{SHORT.gluing2}) can be reformulated the following way:
+Part (\ref{SHORT.gluing2}) can be reformulated as follows:
 
 \begin{thm}{Reformulation of \ref{gluing2}}
-Let $\spc{W}$ be a complete length space which has two closed $\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
-$\spc{U}_1\cup\spc{U}_2=\spc{W}$ and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ space.
+%Let $\spc{W}$ be a 
+%complete 
+%length space having two 
+%closed 
+%$\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+%$\spc{U}_1\cup\spc{U}_2=\spc{W}$ and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
+%Then $\spc{W}$ is a $\CAT\kappa$ space.
+Let $\spc{W}$ be a 
+complete 
+length space having two 
+$\varpi\kappa$-convex subsets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+$\spc{U}_1\cup\spc{U}_2=\spc{W}$, $A=\spc{U}_1\cap \spc{U}_2$ is complete and  $\varpi\kappa$-convex in $\spc{W}$, and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
 Then $\spc{W}$ is a $\CAT\kappa$ space.
 \end{thm}
 
-First we prove the following:
-
 \begin{clm}{}\label{clm:geod-gluing}
-If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic, then $\spc{W}$ is $\CAT\kappa$.
+If $\spc{W}$ is $\varpi\kappa$-geodesic, then $\spc{W}$ is $\CAT\kappa$.
 \end{clm}
 
 
@@ -1148,11 +1156,11 @@ Indeed,
 according to \ref{prop:k-thin},
 it is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
 in $\spc{W}$ is $\kappa$-thin.
-This is obviousely true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}_i$.
+This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in a single $\spc{U}_i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}_1$ and $x^1,x^2\in\spc{U}_2$.
 
 Choose points $z^1,z^2\in A=\spc{U}_1\cap\spc{U}_2$ 
-which lie correspondingly on the sides $[x^0x^1], [x^0x^2]$.
+lying respectively on the sides $[x^0x^1], [x^0x^2]$.
 Note that all distances between any pair of points from $x^0$, $x^1$, $x^2$, $z^1$, $z^2$ are less than $\varpi\kappa$.
 Therefore
 \begin{itemize}
@@ -1162,31 +1170,43 @@ Therefore
 In particular each triangle $\trig{x^0}{z^1}{z^2}$,
 $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
 
-Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice 
+Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice, 
 we get that $\trig {x^0}{x^1}{z^2}$ 
 and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \claimqeds
 
-Now we come back to the general case;
-that is, $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
-According to Corollary \ref{cor:ulara-geod},
-the ultrapower $\spc{W}^\o$ is geodesic.
-It is easy to see that 
-\begin{itemize}
-\item $\spc{U}_i^\o$ is weakly $\varpi\kappa$-convex subset of $\spc{W}^\o$,
-\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
-\end{itemize}
-%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
-From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o$ is a complete length $\CAT\kappa$ space.
-By uniqueness of geodesics (\ref{thm:cat-unique})
- $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
-consequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
+\begin{clm}{}\label{clm:geod-gluing0 }
+$\spc{W}$ is $\varpi\kappa$-geodesic if $\kappa\le0$.
+\end{clm}
+\claimqeds
 
-From Claim~\ref{clm:geod-gluing}, 
-we get that $\spc{W}^\o$ is a complete length $\CAT\kappa$ space.
-Applying the Proposition~\ref{prop:CAT^omega} once more, 
-we get $\spc{W}$ is a complete length $\CAT\kappa$ space.
-\qeds 
+Finally consider the case $\kappa>0$; by  scaling, take $\kappa=1$.
+ Then by Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1.2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to pregeodesics of $\spc{U}_i$ of length $<\pi$, by \ref{}. 
+  It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. $\Cone A$ is complete since $A$ is complete $\ldots$.
+    Gluing on $\Cone A$ and applying \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
+$\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{}, $\spc{W}$ is a $\CAT1$ space.
+\qeds
+%
+%Now we come back to the general case;
+%that is, $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
+%According to Corollary \ref{cor:ulara-geod},
+%the ultrapower $\spc{W}^\o$ is geodesic.
+%It is easy to see that 
+%\begin{itemize}
+%\item $\spc{U}_i^\o$ is weakly $\varpi\kappa$-convex subset of $\spc{W}^\o$,
+%\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
+%\end{itemize}
+%%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
+%From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o$ is a complete length $\CAT\kappa$ space.
+%By uniqueness of geodesics (\ref{thm:cat-unique})
+% $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
+%consequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
+%
+%From Claim~\ref{clm:geod-gluing}, 
+%we get that $\spc{W}^\o$ is a complete length $\CAT\kappa$ space.
+%Applying the Proposition~\ref{prop:CAT^omega} once more, 
+%we get $\spc{W}$ is a complete length $\CAT\kappa$ space.
+%\qeds 
 
 \begin{thm}{Exercise}\label{ex:two-rays}
 Let $Q$ be the nonconvex subset of the plane 
