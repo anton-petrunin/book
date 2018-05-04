@@ -1092,7 +1092,7 @@ $\spc{U}_1$ and $\spc{U}_2$ are %complete
 $\varpi\kappa$-geodesic spaces 
 with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
 Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
-that is, $\spc{W}$ is the gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$ (see Section~\ref{sec:quotient}.
+that is, $\spc{W}$ is the gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$ (see Section~\ref{sec:quotient}).
 
 Then: 
 \begin{subthm}{gluing0}
@@ -1178,11 +1178,24 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \begin{clm}{}\label{clm:geod-gluing0 }
 $\spc{W}$ is $\varpi\kappa$-geodesic if $\kappa\le0$.
 \end{clm}
+For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ such that $|p_1z^i|+|p_2z^i|$
+ converges to $|p_1p_2|$, and $|p_1z^i|$ and $|p_2z^i|$ converge.  
+ Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence.  
+ In that case, the limit point $z$ of $z^i$ satisfies $|p_1z|+|p_2|=|p_1p_2|$, so the geodesics $[p_1z]$ in $\spc{U}_1$ and $[p_2z]$ in $\spc{U}_2$ together give a geodesic $[p_1p_2]$ in $\spc{U}$.  
+ 
+ Suppose $z^i$ is not a Cauchy sequence.  Then there are subsequences  $x^i$ and $y^i$ satisfying  $\lim|x^iy^i|>0$. Let $m^i$ be the midpoint of $[x^iy^i]$. For any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
+ \[
+ |p_1m^i\ge  |p_1x^i|-\epsilon,  |p_1m^i\ge  |p_1y^i|-\epsilon|.
+ \]
+ 
+ Since triangle $\trig{p^1}{px^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\~p^1}{\~x^i}{\~y^i}$.  
+ Thus there is a nondegenerate limit triangle $\trig{p}{x}{y}$ in the Euclidean plane satisfying $|px|=|py|\le|pm|$ where $m$ is the midpoint of $[xy]$.  This  contradiction proves the claim.
+ 
 \claimqeds
 
 Finally consider the case $\kappa>0$; by  scaling, take $\kappa=1$.
- Then by Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1.2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to pregeodesics of $\spc{U}_i$ of length $<\pi$, by \ref{}. 
-  It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. $\Cone A$ is complete since $A$ is complete $\ldots$.
+By Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1,2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to geodesics of $\spc{U}_i$ of length $<\pi$, by \ref{}. 
+  It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. By the cone distance formula \ref{}, $\Cone A$ is complete since $A$ is complete.
     Gluing on $\Cone A$ and applying \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
 $\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{}, $\spc{W}$ is a $\CAT1$ space.
 \qeds
@@ -1279,7 +1292,7 @@ and therefore $\gamma_\infty$ is a local geodesic.
 
 
 The following theorem was proved by the first author and Richard Bishop \cite{a-b:h-c}.
-By analogy with Riemannian geometry, the main statement of the following theorem could be restated as: 
+In analogy with Riemannian geometry, the main statement of the following theorem could be restated as: 
 \emph{In a space of curvature $\le\kappa$, two points cannot be conjugate along a local geodesic of length $<\varpi\kappa$.}
 
 
