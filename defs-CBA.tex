@@ -1084,7 +1084,7 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\kappa$-thin.
 
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
-The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:glue}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper and complete.  In the following form, where $\spc{U}_1$ and $\spc{U}_2$ are not assumed complete, the theorem appears in \cite{BH}.
+The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:glue}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper and complete.  In the following form the theorem appears in \cite{BH}.
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
@@ -1131,7 +1131,7 @@ Let $\spc{W}$ be a
 complete 
 length space having two 
 $\varpi\kappa$-convex subsets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
-$\spc{U}_1\cup\spc{U}_2=\spc{W}$, $A=\spc{U}_1\cap \spc{U}_2$ is complete and  $\varpi\kappa$-convex in $\spc{W}$, and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
+$\spc{W}=\spc{U}_1\cup\spc{U}_2$, $A=\spc{U}_1\cap \spc{U}_2$ is complete and  $\varpi\kappa$-convex in $\spc{W}$, and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
 Then $\spc{W}$ is a $\CAT\kappa$ space.
 \end{thm}
 
@@ -1168,7 +1168,7 @@ Therefore
 \item both triangles $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ lie in $\spc{U}_2$.
 \end{itemize}
 In particular each triangle $\trig{x^0}{z^1}{z^2}$,
-$\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
+$\trig{x^1}{z^1}{z^2}$, $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
 
 Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice, 
 we get that $\trig {x^0}{x^1}{z^2}$ 
@@ -1176,25 +1176,26 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \claimqeds
 
 \begin{clm}{}\label{clm:geod-gluing0 }
-$\spc{W}$ is $\varpi\kappa$-geodesic if $\kappa\le0$.
+$\spc{W}$ is geodesic if $\kappa\le0$.
 \end{clm}
 For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ such that $|p_1z^i|+|p_2z^i|$
  converges to $|p_1p_2|$, and $|p_1z^i|$ and $|p_2z^i|$ converge.  
  Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence.  
- In that case, the limit point $z$ of $z^i$ satisfies $|p_1z|+|p_2|=|p_1p_2|$, so the geodesics $[p_1z]$ in $\spc{U}_1$ and $[p_2z]$ in $\spc{U}_2$ together give a geodesic $[p_1p_2]$ in $\spc{U}$.  
+ In that case, the limit point $z$ of $z^i$ satisfies $|p_1z|+|p_2z|=|p_1p_2|$, so the geodesics $[p_1z]$ in $\spc{U}_1$ and $[p_2z]$ in $\spc{U}_2$ together give a geodesic $[p_1p_2]$ in $\spc{U}$.  
  
- Suppose $z^i$ is not a Cauchy sequence.  Then there are subsequences  $x^i$ and $y^i$ satisfying  $\lim|x^iy^i|>0$. Let $m^i$ be the midpoint of $[x^iy^i]$. For any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
+ Suppose $z^i$ is not a Cauchy sequence.  Then there are subsequences  $x^i$ and $y^i$ of $z^i$ satisfying  $\lim|x^iy^i|>0$. Let $m^i$ be the midpoint of $[x^iy^i]$. Since $|p_1m^i|+|p_2m^i| \ge |p_1p_2|$, and  $|p_1x^i|+|p_2x^i|$ and  $|p_1y^i|+|p_2y^i|$
+ converge to $|p_1p_2|$, then for  any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
  \[
  |p_1m^i\ge  |p_1x^i|-\epsilon,  |p_1m^i\ge  |p_1y^i|-\epsilon|.
  \]
  
- Since triangle $\trig{p^1}{px^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\~p^1}{\~x^i}{\~y^i}$.  
- Thus there is a nondegenerate limit triangle $\trig{p}{x}{y}$ in the Euclidean plane satisfying $|px|=|py|\le|pm|$ where $m$ is the midpoint of $[xy]$.  This  contradiction proves the claim.
+ Since triangle $\trig{p^1}{x^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\~p^1}{\~x^i}{\~y^i}$.  
+ Then there is a nondegenerate limit triangle $\trig{p}{x}{y}$ in the Euclidean plane satisfying $|px|=|py|\le|pm|$ where $m$ is the midpoint of $[xy]$.  This  contradiction proves the claim.
  
 \claimqeds
 
 Finally consider the case $\kappa>0$; by  scaling, take $\kappa=1$.
-By Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1,2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to geodesics of $\spc{U}_i$ of length $<\pi$, by \ref{}. 
+By Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1,2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to geodesics of $\spc{U}_i$ of length $<\pi$,(see \ref{}). 
   It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. By the cone distance formula \ref{}, $\Cone A$ is complete since $A$ is complete.
     Gluing on $\Cone A$ and applying \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
 $\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{}, $\spc{W}$ is a $\CAT1$ space.
@@ -1226,7 +1227,7 @@ Let $Q$ be the nonconvex subset of the plane
 bounded by two rays $\gamma_1$ and $\gamma_2$
 with common starting point and angle $\alpha$ between them.
 Assume $\spc{U}$ is a complete length $\CAT0$ space
-and $\gamma_1',\gamma_2'$ be two rays in $\spc{U}$
+and $\gamma_1',\gamma_2'$ are two rays in $\spc{U}$ with common
 starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\CAT{0}$ space.
 \end{thm}
@@ -1242,8 +1243,8 @@ Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geode
 Show that $\tilde{\spc{U}}$ is $\CAT0$.
 
 More generally, assume $A\subset \spc{U}$ is a closed convex subset and $f\:\spc{X}\to \spc{U}\backslash A$ is a metric cover.
-Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$ and 
-$\bar f\:\bar{\spc{X}}\to \spc{U}$ the continuos extension of $f$.
+Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$, and 
+$\bar f\:\bar{\spc{X}}\to \spc{U}$ the continuous extension of $f$.
 Let $\tilde{\spc{U}}$ be the space glued from $\bar{\spc{X}}$ and $A$ by identifying $x$ and $\bar f(x)$ if $\bar f(x)\in A$.
 Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
