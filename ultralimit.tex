@@ -24,7 +24,7 @@ A finitely additive measure $\o$
 on  $\NN$ 
 is called an \emph{ultrafilter}\index{ultrafilter} if it satisfies 
 \begin{subthm}{}
-$\o(S)=0$ or $1$ for any subset $S\subset \NN$,
+$\o(S)=0$ or $1$ for any subset $S\subset \NN$.
 \end{subthm}
 An ultrafilter $\o$ is called 
 \emph{nonprinciple}\index{ultrafilter!nonprinciple ultrafilter}\index{nonprinciple ultrafilter} if in addition 
@@ -295,10 +295,10 @@ in the ultrapower $\spc{X}^\o$.
 
 \begin{thm}{Theorem}\label{thm:ultra-GH}
 Assume $\spc{X}_n$ is a sequence of complete spaces. 
-Let $\spc{X}_n\to \spc{X}_\o$ as $n\to\o$
+Let $\spc{X}_n\to \spc{X}_\o$ as $n\to\o$,
 and $\spc{Y}_n\subset \spc{X}_n$ 
-is a sequence of subsets such that $\spc{Y}_n\GHto\spc{Y}_\infty$. 
-Then there is an distance preserving map 
+be a sequence of subsets such that $\spc{Y}_n\GHto\spc{Y}_\infty$. 
+Then there is a distance preserving map 
 $\iota:\spc{Y}_\infty\to \spc{X}_\o$.
 
 Moreover:
@@ -338,43 +338,43 @@ Consider the sequence $(x_n)$
 as a sequence of points in $\bm{X}$.
 
 If the $\o$-limit $x_\infty$ of $(x_n)$ exists, 
-it has to lie in $\spc{X}_\infty$. 
+it must lie in $\spc{X}_\infty$. 
 
 The point $x_\infty$, if defined, does not depend on the choice of $(x_n)$.
-Indeed, if $y_n\in\spc{X}_n$ be an other sequence such that $y_n\to x_\o$ as $n\to\o$, then 
+Indeed, if $y_n\in\spc{X}_n$ is an other sequence such that $y_n\to x_\o$ as $n\to\o$, then 
 \[
 \dist{y_\infty}{x_\infty}{}=\lim_{n\to\o}\dist{y_n}{x_n}{}=0;
 \]
 that is, $x_\infty=y_\infty$.
 
 
-This way we constructed a map $\nu\:x_\o\to x_\infty$;
+In this way we obtain a map $\nu\:x_\o\to x_\infty$;
 it is defined on a subset of $\Dom\nu \subset\spc{X}_\o$.
 By construction of $\iota$, 
-we get that $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
+we get  $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
 
-Finally note that if $\spc{X}_\infty$ is compact, then $\nu$ is defined on whole $\spc{X}_\o$;
+Finally note that if $\spc{X}_\infty$ is compact, then $\nu$ is defined on all of $\spc{X}_\o$;
 this proves (\ref{SHORT.thm:ultra-GH:a}).
 
 If $\spc{X}_\infty$ is proper, choose any point $z_\infty\in \spc{X}_\infty$
 and set $z_\o=\iota(z_\infty)$.
-For any point $x_\o\in \spc{X}_\o$ on finite distance from $z_\o$,
+For any point $x_\o\in \spc{X}_\o$ at finite distance from $z_\o$,
 for the sequence $x_n$ 
 as above we have that $\dist{z_n}{x_n}{}$ is bounded for $\o$-almost all $n$.
-Since $\spc{X}_\infty$ is proper $\nu(x_\o)$ is defined;
+Since $\spc{X}_\infty$ is proper, $\nu(x_\o)$ is defined;
 in other words $\nu$ is defined on the metric component of $z_\o$.
 Hence (\ref{SHORT.thm:ultra-GH:b}) follows.
 \qeds
 
 \begin{thm}{Corollary} 
 \label{cor:ulara-geod}
-$\o$-limit of a sequence of complete length spaces is geodesic.
+The $\o$-limit of a sequence of complete length spaces is geodesic.
 \end{thm}
 
 \parit{Proof.} Given two points $x_\o,y_\o\in \spc{X}_\o$, find two bounded sequences of points $x_n,y_n\in \spc{X}_n$, $x_n\to x_\o$, $y_n\to y_\o$ as $n\to\o$.
 Consider a sequence of paths  $\gamma_n\:[0,1]\to \spc{X}_n$ from $_n$ to $y_n$
  such that 
-\[\length\gamma_n\le \dist{x_n}{y_n}{}+\tfrac{1}{n}\]
+\[\length\gamma_n\le \dist{x_n}{y_n}{}+\tfrac{1}{n}.\]
 Apply Theorem~\ref{thm:ultra-GH} 
 for the images $\spc{Y}_n=\gamma_n([0,1])\subset \spc{X}_n$.
 \qeds
@@ -388,12 +388,12 @@ For a sequence of sets $\Omega_n\subset \spc{X}_n$,
 consider the maximal set $\Omega_\o\subset \spc{X}_\o$ such that 
 for any $x_\o\in\Omega_\o$ and any sequence $x_n\in\spc{X}_n$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
 
-The set $\Omega_\o$ is called \emph{open $\o$-limit} of $\Omega_n$;
-we could also write it as $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
+The set $\Omega_\o$ is called the  \emph{open $\o$-limit} of $\Omega_n$;
+we could also write  $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
 
-Applying Observation~\ref{obs:ultralimit-is-complete} to the sequence of complements $\spc{X}_n\backslash \Omega_n$, we get that $\Omega_\o$ is open for any sequence $\Omega_n$.
-Despite that the definition can be applied for arbitrary sequences of sets,
-the open $\o$-convergence will be applied only for sequences of open sets.
+Applying Observation~\ref{obs:ultralimit-is-complete} to the sequence of complements $\spc{X}_n\backslash \Omega_n$, we see that $\Omega_\o$ is open for any sequence $\Omega_n$.
+The definition can be applied for arbitrary sequences of sets, but  
+open $\o$-convergence  will be applied here only for sequences of open sets.
 
 \section{Ultralimits of functions}
 
@@ -403,15 +403,15 @@ Set $\Omega_n=\Dom f_n$.
 Consider the open $\o$-limit set $\Omega_\o\subset \spc{X}_\o$ of $\Omega_n$.
 
 Assume there is a subfunction $f_\o\:\spc{X}_\o\subto\RR$
-which satisfies the following conditions: 
-(1) $\Dom f_\o=\Omega_\o$ and (2) if $x_n\to x_\o\in \Omega_\o$ for a sequence of points $x_n\in\spc{X}_n$, then $f_n(x_n)\to f_\o(x_\o)$ as $n\to\o$.
+that satisfies the following conditions: 
+(1) $\Dom f_\o=\Omega_\o$, (2) if $x_n\to x_\o\in \Omega_\o$ for a sequence of points $x_n\in\spc{X}_n$, then $f_n(x_n)\to f_\o(x_\o)$ as $n\to\o$.
 In this case 
 the subfunction $f_\o\:\spc{X}_\o\to\RR$ 
-is said to be 
+is said to be the 
 $\o$-limit of $f_n\:\spc{X}_n\to\RR$.
 
 The following lemma gives a mild condition on a sequence of functions $f_n$
-which guarantee the existence of its $\o$-limit.
+guaranteeing the existence of its $\o$-limit.
 
 \begin{thm}{Lemma}
 Let $\spc{X}_n$ be a sequence of metric spaces.
@@ -420,9 +420,9 @@ and $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 Assume for any positive integer $\kay$, there is an open set $\Omega_n(\kay)\subset \Dom f_n$
 such that the restrictions $f_n|\Omega_n(\kay)$ are uniformly bounded and continuous
 and the open $\o$-limit of $\Omega_n(n)$ coincides with the open $\o$-limit of $\Dom f_n$.
-Then $\o$-limit of $f_n$ is defined.
+Then the $\o$-limit of $f_n$ is defined.
 
-In particular if $f_n$ are uniformly bounded and continuous, then the $\o$-limit is defined.
+In particular, if the $f_n$ are uniformly bounded and continuous, then the $\o$-limit is defined.
 \end{thm}
 
 The proof is straightforward.
@@ -437,8 +437,8 @@ the $\o$-limit $\spc{X}_\o$ of $\spc{X}_n$ is compact
 and the $\o$-limit $f_\o\:\spc{X}_\o\to\RR$ of $f_n$ is not concave.
 \end{thm}
 
-If $f\:\spc{X}\subto\RR$ be a subfunction.
-The $\o$-limit of constant sequence $f_n=f$ is called $\o$-power of $f$ and denoted by $f^\o$.
+If $f\:\spc{X}\subto\RR$ is a subfunction, 
+the $\o$-limit of the constant sequence $f_n=f$ is called the $\o$-power of $f$ and denoted by $f^\o$.
 So
 \[f^\o\:\spc{X}\subto\RR,\ \ f^\o(x_\o)=\lim_{n\to\o} f(x_n).\]
 

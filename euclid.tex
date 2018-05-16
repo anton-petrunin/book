@@ -367,15 +367,44 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
+\section{Constructions.}
+\label{sec:Euclid-constructions}
+
+
+\parbf{Product space.}
+Given two metric spaces $\spc{X}$ and $\spc{Y}$, the \index{product space}\emph{product space} 
+$\spc{X}\times\spc{Y}$ is defined as the set of all pairs $(p,q)$ where $p\in\spc{X}$ and $q\in \spc{Y}$, 
+with the metric defined by 
+\[\dist{(p^1,q^1)}{(p^2,q^2)}{\spc{X}\times\spc{Y}}=\sqrt{\dist[2]{p^1}{p^2}{\spc{X}}+\dist[2]{q^1}{q^2}{\spc{Y}}}.\]
+
+\parbf{Cone.}
+The \index{cone}\emph{
+Euclidean cone} $\spc{Y}=\Cone\spc{X}$ 
+over a metric space $\spc{X}$
+is defined as the metric space whose underlying set consists of
+equivalence classes in
+$[0,\infty)\times \spc{X}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{X}$,
+and whose metric is given by the cosine rule
+\[
+\dist{(p,s)}{(q,t)}{\spc{V}} 
+=
+\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
+\]
+where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
+
+The point in the cone ${\spc{Y}}$ formed by the equivalence class of $0\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{Y}}$.
+The distance $\dist{0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
+
 \section{Remarks}
 \label{page:upper-angle}
-We use our definition of angle since in Alexandrov's geometry angles always defined (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
+In Alexandrov geometry, angles defined as in Section \ref{sec:angles} always exist (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
 
-For general metric spaces, the angle need not be defined\index{$\mangle$!$\mangle^\text{up}$}
-and it is more natural to consider \emph{upper angle}\index{angle!upper angle} which is defined as
+For general metric spaces, this angle may not exist, \index{$\mangle$!$\mangle^\text{up}$}
+and it is more natural to consider the \emph{upper angle}\index{angle!upper angle}  defined as
 \[\mangle^\text{up}\hinge p x y
 \df
 \limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
 where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+The triangle inequality (\ref{claim:angle-3angle-inq}) holds for upper angles as well.
 
-The triangle inequality (\ref{claim:angle-3angle-inq}) holds upper angles as well.
+Euclidean cones are the simplest examples of warped products (see Chapter \ref{}). 

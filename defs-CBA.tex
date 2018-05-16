@@ -1084,24 +1084,25 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\kappa$-thin.
 
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
-The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:glue}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper.
+The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:glue}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper and complete.  In the following form the theorem appears in \cite{BH}.
 
 \begin{thm}{Reshetnyak gluing}\label{thm:gluing}
 Suppose 
-$\spc{U}_1$ and $\spc{U}_2$ are complete $\varpi\kappa$-geodesic spaces 
+$\spc{U}_1$ and $\spc{U}_2$ are %complete 
+$\varpi\kappa$-geodesic spaces 
 with isometric complete $\varpi\kappa$-convex sets $A_i\subset\spc{U}_i$.  Let $\iota\:A_1\to A_2$ be an isometry.
 Let $\spc{W}=\spc{U}_1\sqcup_{\iota}\spc{U}_2$;
-that is, $\spc{W}$ is gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$;see Section~\ref{sec:quotient}.
+that is, $\spc{W}$ is the gluing of $\spc{U}_1$ and  $\spc{U}_2$ along $\iota$ (see Section~\ref{sec:quotient}).
 
-Then 
+Then: 
 \begin{subthm}{gluing0}
 Both canonical mappings $\jmath_i\:\spc{U}_i\to\spc{W}$ are isometric 
 and the images $\jmath_i(\spc{U}_i)$ are $\varpi\kappa$-convex subsets in $\spc{W}$.
 \end{subthm}
 
 \begin{subthm}{gluing2}
-If $\spc{U}_1, \spc{U}_2$ are $\CAT\kappa$ 
-then $\spc{W}$ is $\CAT\kappa$.
+If $\spc{U}_1, \spc{U}_2$ are $\CAT\kappa$ spaces,
+then $\spc{W}$ is a $\CAT\kappa$ space.
 \end{subthm} 
 \end{thm}
 
@@ -1112,23 +1113,30 @@ follows directly from $\varpi\kappa$-convexity of $A_i$.
 \parit{(\ref{SHORT.gluing2}).} 
 According to (\ref{SHORT.gluing0}),
 we can identify $\spc{U}_i$ with its image $\jmath_i(\spc{U}_i)$ in $\spc{W}$;
-this way both subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
-Note that $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
-therefore $A$ is also $\varpi\kappa$-convex set in $\spc{W}$.
+in this way, the subsets $A_i\subset \spc{U}_i$ will be identified and denoted further by $A$.
+Thus   $A=\spc{U}_1\cap \spc{U}_2\subset \spc{W}$,
+and $A$ is $\varpi\kappa$-convex in $\spc{W}$.
 
-Further note that completeness of $\spc{U}_1$ and $\spc{U}_2$ implies completeness of $\spc{W}$.
-Thus part (\ref{SHORT.gluing2}) can be reformulated the following way:
+Part (\ref{SHORT.gluing2}) can be reformulated as follows:
 
 \begin{thm}{Reformulation of \ref{gluing2}}
-Let $\spc{W}$ be a complete length space which has two closed $\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
-$\spc{U}_1\cup\spc{U}_2=\spc{W}$ and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ space.
+%Let $\spc{W}$ be a 
+%complete 
+%length space having two 
+%closed 
+%$\varpi\kappa$-convex sets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+%$\spc{U}_1\cup\spc{U}_2=\spc{W}$ and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
+%Then $\spc{W}$ is a $\CAT\kappa$ space.
+Let $\spc{W}$ be a 
+complete 
+length space having two 
+$\varpi\kappa$-convex subsets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
+$\spc{W}=\spc{U}_1\cup\spc{U}_2$, $A=\spc{U}_1\cap \spc{U}_2$ is complete and  $\varpi\kappa$-convex in $\spc{W}$, and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
 Then $\spc{W}$ is a $\CAT\kappa$ space.
 \end{thm}
 
-First we prove the following:
-
 \begin{clm}{}\label{clm:geod-gluing}
-If our space $\spc{W}$ happened to be $\varpi\kappa$-geodesic, then $\spc{W}$ is $\CAT\kappa$.
+If $\spc{W}$ is $\varpi\kappa$-geodesic, then $\spc{W}$ is $\CAT\kappa$.
 \end{clm}
 
 
@@ -1148,11 +1156,11 @@ Indeed,
 according to \ref{prop:k-thin},
 it is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
 in $\spc{W}$ is $\kappa$-thin.
-This is obviousely true if all three points $x^0$, $x^1$, $x^2$ lie in one of $\spc{U}_i$.
+This is obviously true if all three points $x^0$, $x^1$, $x^2$ lie in a single $\spc{U}_i$.
 Thus, without loss of generality, we may assume that $x^0\in\spc{U}_1$ and $x^1,x^2\in\spc{U}_2$.
 
 Choose points $z^1,z^2\in A=\spc{U}_1\cap\spc{U}_2$ 
-which lie correspondingly on the sides $[x^0x^1], [x^0x^2]$.
+lying respectively on the sides $[x^0x^1], [x^0x^2]$.
 Note that all distances between any pair of points from $x^0$, $x^1$, $x^2$, $z^1$, $z^2$ are less than $\varpi\kappa$.
 Therefore
 \begin{itemize}
@@ -1160,40 +1168,66 @@ Therefore
 \item both triangles $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ lie in $\spc{U}_2$.
 \end{itemize}
 In particular each triangle $\trig{x^0}{z^1}{z^2}$,
-$\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
+$\trig{x^1}{z^1}{z^2}$, $\trig{x^1}{z^2}{x^2}$ is $\kappa$-thin.
 
-Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice 
+Applying the inheritance lemma for thin triangles (\ref{lem:inherit-angle}) twice, 
 we get that $\trig {x^0}{x^1}{z^2}$ 
 and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \claimqeds
 
-Now we come back to the general case;
-that is, $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
-According to Corollary \ref{cor:ulara-geod},
-the ultrapower $\spc{W}^\o$ is geodesic.
-It is easy to see that 
-\begin{itemize}
-\item $\spc{U}_i^\o$ is weakly $\varpi\kappa$-convex subset of $\spc{W}^\o$,
-\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
-\end{itemize}
-%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
-From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o$ is a complete length $\CAT\kappa$ space.
-By uniqueness of geodesics (\ref{thm:cat-unique})
- $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
-consequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
+\begin{clm}{}\label{clm:geod-gluing0 }
+$\spc{W}$ is geodesic if $\kappa\le0$.
+\end{clm}
+For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ such that $|p_1z^i|+|p_2z^i|$
+ converges to $|p_1p_2|$, and $|p_1z^i|$ and $|p_2z^i|$ converge.  
+ Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence.  
+ In that case, the limit point $z$ of $z^i$ satisfies $|p_1z|+|p_2z|=|p_1p_2|$, so the geodesics $[p_1z]$ in $\spc{U}_1$ and $[p_2z]$ in $\spc{U}_2$ together give a geodesic $[p_1p_2]$ in $\spc{U}$.  
+ 
+ Suppose $z^i$ is not a Cauchy sequence.  Then there are subsequences  $x^i$ and $y^i$ of $z^i$ satisfying  $\lim|x^iy^i|>0$. Let $m^i$ be the midpoint of $[x^iy^i]$. Since $|p_1m^i|+|p_2m^i| \ge |p_1p_2|$, and  $|p_1x^i|+|p_2x^i|$ and  $|p_1y^i|+|p_2y^i|$
+ converge to $|p_1p_2|$, then for  any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
+ \[
+ |p_1m^i\ge  |p_1x^i|-\epsilon,  |p_1m^i\ge  |p_1y^i|-\epsilon|.
+ \]
+ 
+ Since triangle $\trig{p^1}{x^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\~p^1}{\~x^i}{\~y^i}$.  
+ Then there is a nondegenerate limit triangle $\trig{p}{x}{y}$ in the Euclidean plane satisfying $|px|=|py|\le|pm|$ where $m$ is the midpoint of $[xy]$.  This  contradiction proves the claim.
+ 
+\claimqeds
 
-From Claim~\ref{clm:geod-gluing}, 
-we get that $\spc{W}^\o$ is a complete length $\CAT\kappa$ space.
-Applying the Proposition~\ref{prop:CAT^omega} once more, 
-we get $\spc{W}$ is a complete length $\CAT\kappa$ space.
-\qeds 
+Finally consider the case $\kappa>0$; by  scaling, take $\kappa=1$.
+By Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1,2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to geodesics of $\spc{U}_i$ of length $<\pi$,(see \ref{}). 
+  It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. By the cone distance formula \ref{}, $\Cone A$ is complete since $A$ is complete.
+    Gluing on $\Cone A$ and applying \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
+$\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{}, $\spc{W}$ is a $\CAT1$ space.
+\qeds
+%
+%Now we come back to the general case;
+%that is, $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
+%According to Corollary \ref{cor:ulara-geod},
+%the ultrapower $\spc{W}^\o$ is geodesic.
+%It is easy to see that 
+%\begin{itemize}
+%\item $\spc{U}_i^\o$ is weakly $\varpi\kappa$-convex subset of $\spc{W}^\o$,
+%\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
+%\end{itemize}
+%%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
+%From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o$ is a complete length $\CAT\kappa$ space.
+%By uniqueness of geodesics (\ref{thm:cat-unique})
+% $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
+%consequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
+%
+%From Claim~\ref{clm:geod-gluing}, 
+%we get that $\spc{W}^\o$ is a complete length $\CAT\kappa$ space.
+%Applying the Proposition~\ref{prop:CAT^omega} once more, 
+%we get $\spc{W}$ is a complete length $\CAT\kappa$ space.
+%\qeds 
 
 \begin{thm}{Exercise}\label{ex:two-rays}
 Let $Q$ be the nonconvex subset of the plane 
 bounded by two rays $\gamma_1$ and $\gamma_2$
 with common starting point and angle $\alpha$ between them.
 Assume $\spc{U}$ is a complete length $\CAT0$ space
-and $\gamma_1',\gamma_2'$ be two rays in $\spc{U}$
+and $\gamma_1',\gamma_2'$ are two rays in $\spc{U}$ with common
 starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is a $\CAT{0}$ space.
 \end{thm}
@@ -1209,8 +1243,8 @@ Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geode
 Show that $\tilde{\spc{U}}$ is $\CAT0$.
 
 More generally, assume $A\subset \spc{U}$ is a closed convex subset and $f\:\spc{X}\to \spc{U}\backslash A$ is a metric cover.
-Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$ and 
-$\bar f\:\bar{\spc{X}}\to \spc{U}$ the continuos extension of $f$.
+Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$, and 
+$\bar f\:\bar{\spc{X}}\to \spc{U}$ the continuous extension of $f$.
 Let $\tilde{\spc{U}}$ be the space glued from $\bar{\spc{X}}$ and $A$ by identifying $x$ and $\bar f(x)$ if $\bar f(x)\in A$.
 Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
@@ -1259,7 +1293,7 @@ and therefore $\gamma_\infty$ is a local geodesic.
 
 
 The following theorem was proved by the first author and Richard Bishop \cite{a-b:h-c}.
-By analogy with Riemannian geometry, the main statement of the following theorem could be restated as: 
+In analogy with Riemannian geometry, the main statement of the following theorem could be restated as: 
 \emph{In a space of curvature $\le\kappa$, two points cannot be conjugate along a local geodesic of length $<\varpi\kappa$.}
 
 
@@ -2126,33 +2160,36 @@ $\~x_1\~x_2\~x_3\~x_4$; that is, the convex hull of $\~x_1,\~x_2,\~x_3,\~x_4$ in
 
 \section{Hadamard--Cartan theorem}\label{sec:Hadamard--Cartan}
 
-The development of Alexandrov geomtry was largely influenced by Hadamard--Cartan theorem.
+The development of Alexandrov geomtry was greatly influenced by the Hadamard--Cartan theorem.
 Its original formulation states that if $M$ is a complete Riemannian manifold with nonpositive sectional curvature, 
 then the exponential map at any point $p\in M$ is a covering;
-in particular it implies that universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
+in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
-In this generality, theorem appeared in the lectures of Cartan, see \cite{cartan}.
+In this generality, the theorem appeared in the lectures of Cartan, see \cite{cartan}.
 For surfaces in the Euclidean plane, 
-this theroem was proved by
-Hans von Mangoldt see \cite{mangoldt} 
+the theorem was proved by
+Hans von Mangoldt see \cite{mangoldt},  
 and few years later independently by Hadamard \cite{hadamard}.
 
 Formulations for metric spaces of different generality were proved by 
-Busemann see \cite{busemann-CBA},
-Rinow see \cite{rinow},
+Busemann (see \cite{busemann-CBA}),
+Rinow (see \cite{rinow}), and 
 Gromov  \cite[p.119]{gromov:hyp-groups}. 
-A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard};
-it use Birkhoff's curve-shortening.  
-The statement in the non-proper  case was proved in the first author and Richard Bishop \cite{a-b:h-c}.  
+A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard}, using Birkhoff's curve-shortening.  
+A proof in the non-proper 
+geodesic case 
+was given by the first author and Richard Bishop \cite{a-b:h-c}.  
 This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 %??? what is it about???
 It was pointed out by Bruce 
 Kleiner (see \cite{ballmann:notes,ballmann:lectures}) 
 and independently by Martin 
 Bridson and Andr\'{e} 
-Haefliger in \cite{BH} that the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence the Hadamard--Cartan theorem applies to length spaces as well as geodesic spaces.
-
-The generalized Hadamard--Cartan theorem for proper spaces was proved by Brian Bowditch \cite{bowditch}.
+Haefliger in \cite{BH} that 
+%the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence 
+%the Hadamard--Cartan theorem
+this proof
+extends to length spaces as well as geodesic spaces, giving:
 
 \begin{thm}{Hadamard--Cartan theorem}
 \label{thm:hadamard-cartan}
@@ -2167,14 +2204,14 @@ the map $\map\:\spc{B}\to\spc{U}$ in Theorem
 Since $\spc{U}$ is simply connected, $\map\:\spc{B}\to\spc{U}$ is an isometry.
 \qeds
 
-To formulate Generalized Hadamard--Cartan theorem,
+To formulate the generalized Hadamard--Cartan theorem,
 we need the following definition.
 
 \begin{thm}{Definition}\label{def:l-s.c.}
 Given $\ell\in (0,\infty]$,
 a metric space $\spc{X}$ is called 
 $\ell$-simply connected 
-if it is connected
+if it is connected and 
 any closed curve of length $<\ell$ 
 is null-homotopic in the class of curves of length $<\ell$ in $\spc{X}$.
 \end{thm}
@@ -2182,8 +2219,10 @@ is null-homotopic in the class of curves of length $<\ell$ in $\spc{X}$.
 Note that there is a subtle difference between 
 simply connected and $\infty$-simply connected spaces;
 the first states that any closed curve is null-homotopic while the second means that any rectifiable curve is null-homotopic in the class of rectifiable curves.
-However, as it follows from Proposition~\ref{prop:sc}, for locally $\CAT\kappa$ spaces, these two definitions are equivalent.
-The latter makes possible to deduce Hadamard--Cartan theorem directly from the Generalized Hadamard--Cartan theorem.
+However, as follows from Proposition~\ref{prop:sc}, for locally $\CAT\kappa$ spaces these two definitions are equivalent.
+This fact makes it possible to deduce the Hadamard--Cartan theorem directly from the Generalized Hadamard--Cartan theorem.
+
+For proper spaces, the generalized Hadamard--Cartan theorem was proved by Brian Bowditch \cite{bowditch}.
 
 \begin{thm}{Generalized Hadamard--Cartan theorem}\label{thm:hadamard-cartan-gen}
 A complete length space
@@ -2192,18 +2231,19 @@ if and only if $\spc{U}$ is $2\cdot\varpi\kappa$-simply connected
 and $\spc{U}$ is locally $\CAT\kappa$.
 \end{thm}
 
-In the proof we will need the following lemma.
+In the proof we need the following lemma.
 
 \begin{thm}{Lemma}
-Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space,
+
+Assume $\spc{U}$ is a complete length  locally $\CAT\kappa$ space,
 $\eps>0$,
-and $\gamma_1,\gamma_2\:\SS^1\to\spc{U}$ be two closed curves.
-Assume that
+and $\gamma_1,\gamma_2\:\SS^1\to\spc{U}$ are two closed curves.
+Assume 
 \begin{subthm}{}
-$\length\gamma_1,\length\gamma_2<2\cdot\varpi\kappa-4\cdot\eps$
+$\length\gamma_1,\length\gamma_2<2\cdot\varpi\kappa-4\cdot\eps$;
 \end{subthm}
  
-\begin{subthm}{} $\dist{\gamma_1(x)}{\gamma_2(x)}{}<\eps$ any $x\in\SS^1$ and the geodesic $[\gamma_1(x)\gamma_2(x)]$ is uniquely defined and depends continuously on $x$.
+\begin{subthm}{} $\dist{\gamma_1(x)}{\gamma_2(x)}{}<\eps$ for any $x\in\SS^1$, and the geodesic $[\gamma_1(x)\gamma_2(x)]$ is uniquely defined and depends continuously on $x$;
 \end{subthm}
 
 \begin{subthm}{}  $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$.
@@ -2236,31 +2276,31 @@ Note that $\alpha_x$ depends continuously on $x$ and
 $$\length\alpha_x<\tfrac{\varpi\kappa}{2}\ \ \text{and}\ \ \alpha_x(1)=\gamma_2(x)$$ 
 for any $x$.
 
-Let us apply Lifting globalization theorem
+Let us apply the lifting globalization theorem
 (\ref{thm:globalization-lift}) for $p=F(\~p)$.
 We get a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
-with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$ and the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
+with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$, and with the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
 Applying the lifting property for $\alpha_x$, 
-we get existence of curve $\hat\gamma_2\:\SS^1\to \spc{B}$ such that
+we get existence of a curve $\hat\gamma_2\:\SS^1\to \spc{B}$ such that
 $$\gamma_2=\map\circ\hat\gamma_2.$$
 
-Since $\spc{B}$ is a geodesic $\CAT\kappa$ space, we can apply majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
+Since $\spc{B}$ is a geodesic $\CAT\kappa$ space, we can apply the majorization theorem (\ref{thm:major}) for $\hat\gamma_2$.
 The composition of the obtained majorization with $\map$ is a majorization of $\gamma_2$.
 \qeds
 
 \parit{Proof.}
 The ``only if'' part follows from the Reshetnyak majorization theorem (\ref{thm:major}).
 
-Assume that $\gamma_t$, $t\in[0,1]$ 
+Let  $\gamma_t$, $t\in[0,1]$ 
 be a null-homotopy of curves in $\spc{U}$;
 that is, $\gamma_0(x)=p$ for some $p\in \spc{U}$
 and any $x\in\SS^1$.
 Assume further that $\length \gamma_t<2\cdot\varpi\kappa$ for any $t$.
-To prove ``only if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$. 
+To prove the ``only if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$. 
 
 By semicontinuity of length (\ref{thm:semicont-of-length}),
-we can choose sufficiently small $\eps>0$ such that
+we can choose  $\eps>0$ sufficiently small that
 $$\length \gamma_t<2\cdot\varpi\kappa-4\cdot\eps$$
 for all $t$.
 
@@ -2277,7 +2317,7 @@ for any $i$,
 the geodesic $[\gamma_{t_i}(x)\gamma_{t_{i-1}}(x)]$ depends continuously on $x$.
 
 Note that $\gamma_0=\gamma_{t_0}$ is majorized by a convex region in $\Lob2\kappa$.
-Applying the lemma $n$ times we get that so is $\gamma_1=\gamma_{t_n}$.\qeds
+Applying the lemma $n$ times, we see that the same holds for $\gamma_1=\gamma_{t_n}$.\qeds
 
 \begin{thm}{Proposition}\label{prop:sc}
 Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space.
@@ -2285,7 +2325,7 @@ Then $\spc{U}$ is simply connected if and only if it is $\infty$-simply connecte
 \end{thm}
 
 \parit{Proof.}
-To prove ``if'' part, it is sufficient to show that any closed curve in $\spc{U}$ is homotopic to a closed broken geodesic.
+To prove the ``if'' part, it is sufficient to show that any closed curve in $\spc{U}$ is homotopic to a closed broken geodesic.
 
 Let $\gamma_0$ be a closed curve in $\spc{U}$.
 According to Corollary~\ref{cor:loc-CAT(k)},
@@ -2301,7 +2341,7 @@ and depends continuously on~$x$.
 
 Hence $\gamma_t(x)=\geodpath_{[\gamma_0(x)\gamma_1(x)]}(t)$ gives a homotopy from $\gamma_0$ to $\gamma_1$.
 
-The proof of ``only if'' part is similar.
+The proof of the ``only if'' part is similar.
 Assume $\gamma_t$ is a homotopy between two rectifiable curves $\gamma_0$ and $\gamma_1$.
 Fix $\eps>0$ so that the ball $\oBall(\gamma_t(x),\eps)$ is $\CAT\kappa$
 for any $t$ and $x$.
@@ -2318,20 +2358,20 @@ to $\hat\gamma_{t_i}$
 setting 
 $$\hat\gamma_t
 =
-\geodpath_{[\hat\gamma_{t_{i-1}}(x)\hat\gamma_{t_i}(x)]}(t)$$
+\geodpath_{[\hat\gamma_{t_{i-1}}(x)\hat\gamma_{t_i}(x)]}(t).$$
 Since $\eps$ is sufficiently small, 
 by ???  we get
 $$\length\hat\gamma_t
 <
 10\cdot(\length\hat\gamma_{t_{i-1}}+\length\hat\gamma_{t_i}).$$
-In particular $\hat\gamma_t$ is rectifiable for all $t$.
+In particular, $\hat\gamma_t$ is rectifiable for all $t$.
 
-Joining the obtained homotopies for all $i$ we get a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
+Joining the obtained homotopies for all $i$ we obtain a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
 \qeds
 
 \begin{thm}{Exercise}
-Let $\spc{X}$ be a double cover of $\EE^3$ which is branching along two distinct lines $\ell^1$ and $\ell^2$.
-Show that  $\spc{X}$ is $\CAT0$ if and only if $\ell^1$ intersect $\ell^2$ at right angle.
+Let $\spc{X}$ be a double cover of $\EE^3$ that branches along two distinct lines $\ell^1$ and $\ell^2$.
+Show that  $\spc{X}$ is $\CAT0$ if and only if $\ell^1$ intersects $\ell^2$ at a right angle.
 \end{thm}
 
 \parbf{About convex spaces.}
@@ -2343,7 +2383,7 @@ A \emph{locally convex space} is a length space in which every point has a neigh
 
 \begin{thm}{Exercise}\label{ex:cats-cradle}
 Assume $\spc{X}$ is a convex space 
-such that angle of any hinge is defined.
+such that the angle of any hinge is defined.
 Show that $\spc{X}$ is $\CAT{0}$.
 \end{thm}
 
