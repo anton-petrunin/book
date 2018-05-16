@@ -1,23 +1,24 @@
 %%!TEX root = all.tex
 %%array^
+%arXiv
 \chapter{Measure theory}\label{chap:measure-theorey}
 
 
 \section{Carath\'eodory's construction}\label{sec:mes+balls}
 
 Let $\spc{X}$ be a metric space.
-The function $\mu$ with values in $[0,\infty]$,
+A function $\mu$ with values in $[0,\infty]$,
 defined on all subsets of $\spc{X}$
 is called \emph{outer measure} if
 \begin{itemize}
-\item $\mu\emptyset=0$;
-\item If $A\subset B\subset \spc{X}$, then $\mu A\le \mu B$; 
+\item $\mu\,\emptyset=0$;
+\item If $A\subset B\subset \spc{X}$, then $\mu\, A\le \mu\, B$; 
 \item For any sequence $A_1, A_2,\dots$ of subsets of $\spc{X}$ we have
-$$\mu\left(\bigcup_n A_n\right) \le \sum_n \mu A_n.$$
+$$\mu\left(\bigcup_n A_n\right) \le \sum_n \mu\, A_n.$$
 \end{itemize}
 
 A subset $E\subset \spc{X}$ is called \index{$\mu$-measurable}\emph{$\mu$-measurable} if 
-$$\mu A = \mu(A \cap E) + \mu(A \backslash E)$$
+$$\mu\, A = \mu(A \cap E) + \mu(A \backslash E)$$
 for every subset $A\subset\spc{X}$.
  
 Recall that given two subset $A$ and $B$ of a metric space $\spc{X}$,
@@ -32,7 +33,7 @@ Let  $\mu$ be an outer measure on a metric space $\spc{X}$.
 Then the $\mu$-measurable sets form a sigma-algebra.
 
 Moreover, if 
-\[\mu(A\cup B)=\mu A+\mu B
+\[\mu(A\cup B)=\mu\, A+\mu\, B
 \eqlbl{eq:caratheodory}\]
 for any two sets $A$ and $B$ 
 such that $\dist{A}{B}{}>0$, then any Borel set in $\spc{X}$ is $\mu$-measurable.
@@ -62,7 +63,7 @@ Note that
 the value of the infimum above is non-decreasing in $\eps$;
 in particular the limit is defined.
 
-An outer measure $\mu$ on $\spc{X}$ is called \emph{Borel regular} if any Borel set in $\spc{X}$ is $\mu$-measurable and for any set $A\subset \spc{X}$ there is a Borel set $B$ such that $A\subset B$ and $\mu A=\mu B$. 
+An outer measure $\mu$ on $\spc{X}$ is called \emph{Borel regular} if any Borel set in $\spc{X}$ is $\mu$-measurable and for any set $A\subset \spc{X}$ there is a Borel set $B$ such that $A\subset B$ and $\mu\, A=\mu\, B$. 
 
 From Carath\'eodory's lemma (\ref{lem:caratheodory}), we get the following.
 
@@ -70,8 +71,9 @@ From Carath\'eodory's lemma (\ref{lem:caratheodory}), we get the following.
 The Carath\'eodory's construction always produce a Borel regular outer measure.
 \end{thm}
 
-\begin{thm}{Examples}
-Let us apply  the Carath\'eodory's construction above for different choices of the function $\rho$.
+Let us apply  the Carath\'eodory's construction for different choices of the function $\rho$.
+
+\begin{thm}{Definitions}
 Assume that $A$ is a closed subset of a metric space $\spc{X}$.
 Fix a real value $\alpha\ge 0$ and an integer value $\kay\ge0$. 
 
@@ -104,7 +106,7 @@ the measure $\Carath_\rho$ will be called $\kay$-dimensional
 and it will be denoted as $\LongMes_\kay$.
 \end{subthm}
 
-Everytime if we need to emphasize that this is a measure $\mu$ is defined on the space $\spc{X}$, we use $\spc{X}$ as the index.
+If we need to emphasize that the measure is defined on the space $\spc{X}$, we use $\spc{X}$ as the index.
 For example, we may write $(\HausMes_\alpha A)_\spc{X}$ for the $\alpha$-dimensional Hausdorff measure of set $A$ in $\spc{X}$.
 \end{thm}
 
@@ -205,7 +207,7 @@ the definition of volume on the Euclidean spaces.
 
 
 
-\section{Doubling spaces and measures}\label{sec:doubling-mes}
+\section{Doubling spaces and measures}\label{sec:doubling-spaces}
 
 \begin{thm}{Definition}\label{def:doubling-space}
 A metric space $\spc{X}$ is called 
@@ -232,6 +234,30 @@ In particular, $B$ is uniformly bounded
 and therefore compact.
 \qeds
 
+\begin{thm}{Proposition}\label{prop:2ble=>global}
+Let $\spc{X}$ be a complete length space.
+Assume $\spc{X}$ and $r_0$ and $N$ are as in the definition \ref{def:doubling-space}.
+Then 
+\[
+\pack_{r}(\cBall[x,n\cdot r])\le N^{n-1}\]
+for any $n$ and $r\le \frac{r_0}2$.
+\end{thm}
+
+\parit{Proof.}
+Let us apply induction on $n$; the base $n=2$ follows from Definition \ref{def:doubling-space}.
+
+Now, let us and prove that
+\[\pack_{r}(\cBall[x,(n+1)\cdot r])\le N^n,\]
+using the induction hypothesis 
+\[\pack_{r}(\cBall[x,n\cdot r])\le N^{n-1}.\]
+
+By the induction hypothesis, that the ball $\cBall[x,n\cdot r]$ can be covered by $N^{n-1}$ balls of radius $r$.
+Therefore the ball $\cBall[x,(n+1)\cdot r]$ can be covered by $N^{n-1}$ balls of radius $2\cdot r$.
+From doubling; each ball of radius $2\cdot r$ can be covered by $N$ balls of radius $r$ --- hence the statement.
+\qeds
+
+\section{Doubling measures}\label{sec:doubling-mes}
+
 Given a closed ball $B=\cBall[x,R]$,
 and a positive real number $\lam$,
 let us denote by $\lam \cdot B$ the ball $\cBall[x,\lam\cdot R]$.
@@ -246,16 +272,16 @@ Let $\spc{X}$ be a metric space.
 A Borel regular measure $\mu$ on $\spc{X}$ is called 
 \index{doubling measure}\emph{doubling} 
 if 
-(1) $\mu\Omega>0$ for any open set $\Omega$ 
+(1) $\mu\,\Omega>0$ for any open set $\Omega$ 
 and
 (2) there are real numbers $r_0>0$ and $\Const$ such that
 \[\mu (2\cdot B)
 <
-\Const\cdot \mu B\]
+\Const\cdot \mu\, B\]
 for any ball $B$ in $\spc{X}$ with radius at most $r_0$.
 \end{thm}
 
-Note that the definition implies that $2\cdot B$ has finite measure.
+Note that since the inequality is strict, the definition implies that $2\cdot B$ has finite measure.
 
 
 \begin{thm}{Proposition}\label{prop:doubling-measure=>space}
@@ -277,22 +303,23 @@ In other words the balls $B_i=\cBall[x_i,\tfrac r4]$ are mutually disjoint.
 Note that $8\cdot B_i\supset B$
 for any $i$.
 Since $\mu$ is doubling, we get 
-\[\mu B_i>\tfrac1{\Const^3}\cdot \mu B\eqlbl{eq:4-ling}\]
+\[\mu\, B_i>\tfrac1{\Const^3}\cdot \mu\, B\eqlbl{eq:4-ling}\]
 On the other hand 
 $B_i\subset 2\cdot B$ for each $i$.
 Therefore 
 \begin{align*}
-\sum_{i=1}^n\mu B_i
+\sum_{i=1}^n\mu\, B_i
 &\le 
 \mu(2\cdot B)
 <
 \\
-&<\Const\cdot \mu B.
+&<\Const\cdot \mu\, B.
 \end{align*}
 Together with \ref{eq:4-ling}, 
 the later implies 
-\[n< \Const^4.\]
-\qedsf
+\[n< \Const^4\]
+--- hence the result.
+\qeds
 
 
 \begin{thm}{Proposition}\label{prop:bounded=>finite-measure}
@@ -302,7 +329,7 @@ Then any bounded set in $\spc{X}$ has finite $\mu$-measure.
 
 \parit{Proof.}
 Let $A$ be a bounded set in $\spc{X}$;
-we need to show that $\mu A<\infty$.
+we need to show that $\mu\, A<\infty$.
 Without loss of generality we may assume that $A$ is closed;
 otherwise pass to the closure of $A$.
 
@@ -331,20 +358,20 @@ can be bounded in terms of $\dist{a}{b}{\spc{X}}$, $r_a$ and $r_b$.
 \parit{Proof.}
 Let $r_0$ and $\Const$ be as in the definition of  doubling measure (\ref{def:doubling-measure}).
 
-Note that if $B$ is a ball of radius at most $r$, then
+Note that if $B$ is a ball of radius at most $r_0$, then
 \[1
 \le
-\frac{\mu B}{\mu \left(\tfrac1{2^\kay}\cdot B\right)}
+\frac{\mu\, B}{\mu \left(\tfrac1{2^\kay}\cdot B\right)}
 \le c^\kay.\]
-Therefore it is sufficient to prove the statement in the case  $r_a=r_b=r_0$.
+By Proposition~\ref{prop:2ble=>global}, therefore, it is sufficient to prove the statement in the case  $r_a=r_b\z=r_0$.
 
 Set $A=\cBall[a,r_0]$ 
 and $B=\cBall[b,r_0]$.
 Note that if $\dist{a}{b}{}<r_0$
 then $A\subset 2\cdot B$;
-in particular, $\mu A\le \mu (2\cdot B)$.
+in particular, $\mu\, A\le \mu (2\cdot B)$.
 Since $\mu$ is doubling, we get
-\[\frac{\mu A}{\mu B}<c.
+\[\frac{\mu\, A}{\mu\, B}<c.
 \eqlbl{eq:muA/muB-1}
 \]
 
@@ -357,9 +384,8 @@ $\dist{x_{i-1}}{x_i}{}
 <
 r_0$
 for all $i$.
-Applying the inequality \ref{eq:muA/muB-1}
-$n$ times, we get that if $r_a=r_b=r_0$, then
-\[\frac{\mu A}{\mu B}<c^N,
+Applying the inequality \ref{eq:muA/muB-1} few times, we get that if $r_a=r_b=r_0$, then
+\[\frac{\mu\, A}{\mu\, B}<c^N,
 \eqlbl{eq:muA/muB-2}
 \]
 where $N=\lceil\frac{\dist{x}{y}{}}{r_0}\rceil$.
@@ -370,7 +396,7 @@ where $N=\lceil\frac{\dist{x}{y}{}}{r_0}\rceil$.
 Let $A\subset \spc{X}$.
 A family of closed balls $\mathfrak{B}$ in $\spc{X}$ is called 
 \index{Vitali covering}\emph{Vitali covering}%
-\footnote{Our definition of Vitali covering is among the most restrictive ones. More general definitions are given in ???.}
+\footnote{Our definition of Vitali covering is among the most restrictive ones. More general definitions are given in the Federer's book \cite{federer}.}
 of $A$ if for every $a\in A$ and $\eps > 0$, 
 there is a ball from $\mathfrak{B}$ 
 centered at $a$ and 
@@ -384,7 +410,7 @@ $\mu$ be a doubling measure on a metric space $\spc{X}$
 and let
 $\mathfrak{B}$ be a Vitali covering
 of a set $A\subset \spc{X}$.
-Assume $\mu A<\infty$,
+Assume $\mu\, A<\infty$,
 then there is a countable collection of disjoint balls 
 $\{B_n\}_{n\in\IndexSet}\subset\mathfrak{B}$ such that
 $$\mu\l(A\l\backslash\bigcup_{n\in\IndexSet}B_n\r.\r)=0.$$
@@ -409,8 +435,7 @@ is called \emph{directionally limited}\index{directionally limited}
 if there is $\eps>0$ and a positive integer $M$
 such that for any point $p\in \spc{X}$
 there are at most $M$ distinct points $a_1,\dots a_n$
-such that if for some $i\ne j$ we have a point $x$ 
-$x\in [pa_i]$ and $|p-x|=|p-a_j|$
+such that if for some $i\ne j$ we have a point $x\in [pa_i]$ such that $|p-x|=|p-a_j|$
 then $|x-a_j|\ge\tfrac14\cdot|p-a_j|$.
 \end{thm}
  
@@ -420,7 +445,7 @@ then $|x-a_j|\ge\tfrac14\cdot|p-a_j|$.
 \begin{thm}{Besicovitch covering theorem}
 Let $\spc{X}$ be a directionally limited metric space 
 and $\mu$ be a Borel regular measure on $\spc{X}$.
-Assume $A$ is a subset in $\spc{X}$ such that $\mu A<\infty$
+Assume $A$ is a subset in $\spc{X}$ such that $\mu\, A<\infty$
 and let $\mathfrak{B}$ be a Vitali covering of $A$.
 Then there is at most countable collection of disjointed balls 
 $\{B_n\}_{n\in\IndexSet}\subset\mathfrak{B}$ such that
@@ -457,8 +482,8 @@ Let $L\:V\to W$ be a linear operator.
 Then one can consider \emph{operator norm} of $L$ defined as 
 \[|L|\df\inf\set{c\ge 0}{|L(v)|\le c\cdot|v|\ \t{for any}\ v\in V}.\]
 In other words, 
-\[|L|=\lip L;\] 
-that is, $|L|$ is the best Lipschitz constant of $L$.
+\[|L|=\lip L,\] 
+where, $\lip L$ denotes the best Lipschitz constant of $L$.
 
 The $n$-th exterior power of a  linear map $L\:V\to W$
 is defined as the (necessary unique) 
@@ -640,8 +665,8 @@ we get the following.
 Any DC-function $f\:\RR^m\to\RR$ is locally Lipschitz.
 \end{thm}
 
-We repeat Zaj\'{\i}\v{c}ek's proof from \cite{zajicek}.
-We show  that $\Sing_f(\kay,\eps)$ locally lies in a finite collection of graphs of 
+Further we repeat Zaj\'{\i}\v{c}ek's proof from \cite{zajicek}.
+First we will show  that $\Sing_f(\kay,\eps)$ locally lies in a finite collection of graphs of 
 DC-functions $\RR^{\kay-1}\to \RR^{m-k+1}$ and then apply Proposition~\ref{prop:DC=>loc-lip}.
 
 
@@ -678,7 +703,7 @@ let $\bm{x}_0,\bm{x}_1\in\Dom h_{V,\ell}$.
 Set $\bm{x}_t=(1-t)\cdot\bm{x}_0+t\cdot\bm{x}_1$.
 Clearly $x_t\in \Dom h_{V,\ell}$ for all $t\in[0,1]$.
 
-We need to show that
+Let us show that
 \[h_{V, \ell}(\bm{x}_t)
 \ge
 (1-t)\cdot h_{V, \ell}(\bm{x}_0)
@@ -706,9 +731,11 @@ t\cdot[f(\bm{z}_1)+\ell(\bm{z}_1-\bm{x}_1)]>
 \\
 &>(1-t)\cdot y_0+t\cdot y_1.
 \end{align*}
-Recall that the last inequality holds for any $y_0$ and $y_1$ such that $y_i<h_{V, \ell}(\bm{x}_i)$.
+Recall that the last inequality holds for any $y_0$ and $y_1$ such that $y_i<h_{V, \ell}(\bm{x}_i)$;
 hence \ref{eq:Jensen-for-zajicek} follows.
 \claimqeds
+
+Let us show that
 
 \begin{clm}{}\label{Zk-for-zajicek}
 Let $V$ be a $n$-dimensional subspace of $\EE^m$
@@ -728,8 +755,7 @@ h_{V, \ell^n}(\bm{x})
 forms a subset of a graph of a $\DC$-submap $H\:V^\bot\subto V$.
 \end{clm}
 
-\parit{Proof of \ref{Zk-for-zajicek}.}
-Set $h^i=h_{V,\ell^i}$.
+Indeed, set $h^i=h_{V,\ell^i}$.
 
 Note that for fixed $\bm{x}\in V^\bot$ 
 and 
@@ -753,7 +779,7 @@ such that \ref{eq:h_(V-ell)} hols for
 
 Since the restrictions  $h^i|V^\bot$ are concave, 
 we get that $\bm{x}\mapsto \bm{v}(\bm{x})$ is a DC-map. 
-It remains to apply Proposition~\ref{prop:DC=>loc-lip}. 
+Applying Proposition~\ref{prop:DC=>loc-lip}, we get \ref{Zk-for-zajicek}.
 \claimqeds
 
 Note that for any point $z\in \Sing_f(\kay,\eps)$ there is a subspace $V$ of dimension $n\df m-\kay+1$
