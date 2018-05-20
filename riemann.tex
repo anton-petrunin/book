@@ -480,7 +480,7 @@ $$f(x)=\sum_{i=1}^\kay\phi(\dist{a^i}{x}{}-\dist{a^i}{p}{}).$$
 Assume $\lambda^1,\lambda^2,\dots,\lambda^\kay$ are real numbers such that
 $\distfun[\prime\prime]{a^i}{}{}(p)\le\lambda^i$ for each $i$
 and $\theta\ge 0$ is such that
-$$|\dist{\bm{a}}{x}{}-\dist{\bm{a}}{x}{}|
+$$|\distfun{\bm{a}}{x}-\distfun{\bm{a}}{x}|
 \ge 
 \theta\cdot\dist[{{}}]{x}{y}{}$$
 for any points $x$ and $y$ in a neighborhood of $p$.
@@ -648,7 +648,7 @@ First note that for any a locally Lipschitz subfunction $f:\spc{L}\subto\RR$,
 its differential is defined almost everywhere ???.
 
 Further, assume $f:\spc{L}\subto\RR$ is locally Lipschitz subfunction which is not locally $1$-Lipschitz.
-I.e. for some point $p\in \Dom f$, given $\eps>0$ there are points $x,z\in\oBall(p,\eps)$ such that $|f(x)-f(z)|>\dist{x}{z}{}$.
+That is, for some point $p\in \Dom f$, given $\eps>0$ there are points $x,z\in\oBall(p,\eps)$ such that $|f(x)-f(z)|>\dist{x}{z}{}$.
 Then some small $\delta>0$,
 $|f(x)-f(y)|>\dist{x}{y}{}$
 for any $y\in\oBall(z,\eps)$.
@@ -709,7 +709,7 @@ or
 \ae
 1.
 \eqlbl{eq:riemann}\]
-I.e., for any point $q$,
+That is, for any point $q$,
 we have a linear equasion \ref{eq:riemann} on components $g^{ij}$ of metric tensor.
 Thus, to detrmine the metric tensor $g^{ij}$, 
 it is sufficient to provide an array of points $(q^1,q^2,\dots, q^s)$ in $\spc{L}$ 
@@ -819,7 +819,8 @@ space}.
 Moreover they have bounded variation and are differentiable almost everywhere.
 \item The Christoffel symbols  in a chart are defined as signed Radon measures.
 \item Hessian of a semiconcave function on an Alexandrov's space is defined almost
-everywhere. I.e. if $f\:\spc{L}\subto\RR$ is a semiconcave subfunction, then for almost
+everywhere. 
+That is, if $f\:\spc{L}\subto\RR$ is a semiconcave subfunction, then for almost
 any $x_0\in \Dom\bm{f}$ there is a symmetric bi-linear form $\Hess_f$ such that
 \[f(x)=f(x_0)+(\d_{x_0}f)(v)+\Hess_f(v,v)+o(|v|^2),\]
 where $v=\ddir{x_0}x$. 

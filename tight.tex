@@ -39,7 +39,7 @@ and \cite{perelman:morse}%CHECK???
 The term ``strut'' seems to have the closest meaning to the original Russian term used in \cite{BGP}.
 In the official translation,
 it appears under name ``burst'' 
-and in the non-official authors translation it was ``strainer''.
+and in the authors translation it was ``strainer''.
 It seems that both are not good, 
 so we decided to switch to ``strut''.
 
@@ -100,7 +100,7 @@ Assume $\xi^0,\xi^1,\dots,\xi^\kay$ is an array of directions in $\Sigma_p$, suc
 Without loss of generality, 
 we may assume that each direction $\xi^i$ is geodesic;
 that is, for each $i$ there is a geodesic $\gamma^i$ in $\spc{L}$ such that $\gamma^i(0)=p$ and $\xi^i=(\gamma^i)^+(0)$.
-From the definition of angle, it follows that for sufficiently small $\eps>0$ the array $a^i=\gamma^i(\eps)$ satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
+From the definition of angle, it follows that for sufficiently small $\eps>0$ the array of points $a^i=\gamma^i(\eps)$ satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
 \qeds
 
 \begin{thm}{Corollary}\label{cor:rank>=k-open}
@@ -125,26 +125,26 @@ hence the result.
 
 
 
-\section{Right-inverse mapping theorem}\label{sec:right-inverse-1}
+\section{Right-inverse theorem}\label{sec:right-inverse-1}
 
 %\parbf{Remark of A.} We might want to call it semiinverse function theorem???
 % should we change b --> a^0???
 
-\begin{thm}{Right-inverse mapping theorem}
+\begin{thm}{Right-inverse theorem}
 \label{thm:right-inverse-function}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p,b\in\spc{L}$ 
 and $\bm{a}=(a^1,\dots,a^\kay)$ be a point array in $\spc{L}$.
 
 Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
-Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\dist{\bm{a}}{p}{}\in\RR^\kay$;
-that is, there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \dist{\bm{a}}{p}{}$ and 
-$\dist{\bm{a}}{\map(\bm{x})}{}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
+Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\distfun{\bm{a}}{p}\in\RR^\kay$;
+that is, there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \distfun{\bm{a}}{p}$ and 
+$\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
 Moreover
 
 \begin{subthm}{thm:right-inverse-function:Hoelder}
 The map $\map$ can be chosen to be $C^{\frac{1}{2}}$-continuous (that is, H\"older continuous with exponent $\tfrac{1}{2}$) and such that 
-$\map(\dist{\bm{a}}{p}{})=p$.
+\[\map(\distfun{\bm{a}}{p})=p.\]
 \end{subthm}
 
 \begin{subthm}{thm:right-inverse-function:open-map}
@@ -180,12 +180,12 @@ Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve which starts at $
 
 \begin{clm}{}\label{clm:|a alpha_x|=x}
 If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$, we have
-$|\dist{\bm{a}}{p}{}-\bm{x}|
+$|\distfun{\bm{a}}{p}-\bm{x}|
 \le
 \tfrac{\eps^2}{10}\cdot t_0$
 then 
 $
-\dist{\bm{a}}{\alpha_{\bm{x}}(t_0)}{}
+\distfun{\bm{a}}{[\alpha_{\bm{x}}(t_0)]}
 = 
 \bm{x}$.
 
@@ -202,7 +202,7 @@ Consider the following real-to-real functions:
 \phi(t)
 &\df
 \max_{i}\{\dist{a^i}{\alpha_{\bm{x}}(t)}{}-x^i\},
-&
+\\
 \psi(t)
 &\df
 \min_{i}\{\dist{a^i}{\alpha_{\bm{x}}(t)}{}-x^i\}.
@@ -214,12 +214,12 @@ The same way,
 from (\ref{222}), 
 we have $\psi^+>\tfrac{1}{10}\cdot\eps^2$
 if $\psi<0$ and $t\in[0,t_0]$.
-Since $|\dist{\bm{a}}{p}{}-\bm{x}|
+Since $|\distfun{\bm{a}}{p}-\bm{x}|
 \le
 \tfrac{\eps^2}{10}\cdot t_0$, it follows that $\phi(0)\le \tfrac{\eps^2}{10}\cdot t_0$ and $\psi(0)\ge -\tfrac{\eps^2}{10}\cdot t_0$.
 Thus $\phi(t_0)\le 0$ and $\psi(t_0)\ge 0$.
 On the other hand, from \ref{eq:xy-def} we have $\phi(t_0)\ge \psi(t_0)$.
-I.e., $\phi(t_0)=\psi(t_0)=0$; hence Claim~\ref{clm:|a alpha_x|=x} follows.
+That is, $\phi(t_0)=\psi(t_0)=0$; hence Claim~\ref{clm:|a alpha_x|=x} follows.
 
 Thus, to prove Calim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
 First let us prove it assuming that $\spc{L}$ is geodesic.
@@ -284,15 +284,15 @@ perform the above estimate in $\spc{L}^\o$, the ultrapower  of $\spc{L}$.
 (Recall that according to \ref{cor:ulara-geod}, $\spc{L}^\o$ is geodesic.)
 \claimqeds
 
-Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{x}|$; 
+Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|$; 
 so we have equality in \ref{clm:|a alpha_x|=x}.
 Define the submap
 \[\map\:{\bm{x}}\mapsto \alpha_{\bm{x}}\circ t_0(\bm{x}),\ \ 
-\Dom\map=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2\cdot r}{20} )\subset\RR^\kay.\]
+\Dom\map=\oBall(\distfun{\bm{a}}{p},\tfrac{\eps^2\cdot r}{20} )\subset\RR^\kay.\]
 It follows from Claim~\ref{clm:|a alpha_x|=x}, that
-$\dist{\bm{a}}{\map(\bm{x})}{}=\bm{x}$ for any $\bm{x}\in\Dom\map$.
+$\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom\map$.
 
-Clearly $t_0(p)=0$; thus $\map(\dist{\bm{a}}{p}{})=p$.
+Clearly $t_0(p)=0$; thus $\map(\distfun{\bm{a}}{p})=p$.
 Further, by construction of $f_{\bm{x}}$, 
 \[|f_{\bm{x}}(q)-f_{\bm{y}}(q)|\le |\bm{x}-\bm{y}|,\]
 for any $q\in \spc{L}$.
@@ -302,12 +302,12 @@ Thus, we  proved (\ref{SHORT.thm:right-inverse-function:Hoelder}).
 Further, note that 
 \[\dist{p}{\map(\bm{x})}{}
 \le (1+\eps)\cdot t_0(\bm{x})
-\le\tfrac{11}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{x}|.\eqlbl{co-lip}\]
+\le\tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|.\eqlbl{co-lip}\]
 
 Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
-The inequlality \ref{co-lip}, for the obtained map $\map'$, implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
+The inequality \ref{co-lip}, for the obtained map $\map'$, implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
 there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
-\[\dist{p'}{q'}{}\le \tfrac{11}{\eps^2}\cdot|\dist{\bm{a}}{p'}{}-\bm{x}|.\]
+\[\dist{p'}{q'}{}\le \tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p'}-\bm{x}|.\]
 That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$-co-Lipschitz in $\oBall(p,\tfrac{r}{4})$.
 \qeds
 
@@ -315,9 +315,9 @@ That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$
 
 Recall that given an array 
 $\bm{a}=(a^0,a^1,\dots,a^\kay)$ 
-we denote by $\bm{a}^{\ne 0}$ the subarray of $\bm{a}$ with $a^0$ removed;
+we denote by $\bm{a}^{\without 0}$ the subarray of $\bm{a}$ with $a^0$ removed;
 that is,
-\[\bm{a}^{\ne 0}=(a^1,a^2,\dots,a^\kay).\]
+\[\bm{a}^{\without 0}=(a^1,a^2,\dots,a^\kay).\]
 
 \begin{thm}{Inverse function theorem}\label{thm:inverse-function}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space 
@@ -379,7 +379,8 @@ Without loss of generality, we can assume that all $\xi,\zeta^1,\zeta^2,\dots,\z
 let $\xi=\dir{p}{x}$ and $\zeta^i=\dir{p}{z^i}$ for all $i$.
 Fix small $r>0$, 
 let $\bar x\in \l]px\r]$ and $\bar z^i\in\l]p z^i\r]$ be points 
-such that $\dist{p}{\bar x}{}=\dist{p}{\bar z^1}{}=\dots=\dist{p}{\bar z^\kay}{}=r$.
+such that
+\[\dist{p}{\bar x}{}=\dist{p}{\bar z^1}{}=\dots=\dist{p}{\bar z^\kay}{}=r.\]
 From the definition of angle,
 if $r$ is sufficiently small, we have
 \begin{itemize}
@@ -483,7 +484,7 @@ therefore \ref{eq:y-x} and \ref{eq:x-y} implies \ref{expend}.
 
 Finally, part (\ref{SHORT.thm:inverse-function:R})
 follows since the angle $\angk\kappa q{a^i}{a^j}$ 
-is a continuous function from the following 4 numbers $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
+depends continuously from  $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
 \qeds
 
 The next proposition follows directly from Proposition~\ref{prop:stutt}.
@@ -505,15 +506,14 @@ the differential $\d_q\bm{x}\:\T_q\to\RR^m$ is a bi-Lipschitz homeomorphism.
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space
 and $\bm{x}\:\spc{L}\subto\RR^m$ 
 be a distance chart with strut $y\:\spc{L}\subto\RR$.
-Assume $\bm{x}=\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
-and $y\z=\distfun{a^0}{}{}|\oBall(p,R)$ 
-and a point array $\bm{a}=(a^0,a^1,\dots,a^m)$ in $\spc{L}$.
+Assume that $\bm{a}=(a^0,a^1,\dots,a^m)$ is the point array  in $\spc{L}$ such that $\bm{x}=\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
+and $y\z=\distfun{a^0}{}{}|\oBall(p,R)$.
 
 Assume we have a convergence $\spc{L}_n\GHto\spc{L}$ where
 $(\spc{L}_n)$ is a sequence of $m$-dimensional complete length $\Alex\kappa$ space.
 Choose arbitrary liftings $a^i_n$ and $p_n$ in $\spc{L}_n$ of $a^i$ and $p$. 
 If $R>0$ as in Inverse function theorem (\ref{thm:inverse-function}) then for each sufficiently large $n$ the restriction
- $\bm{x}_n=\distfun{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
+ $\bm{x}_n\z=\distfun{\bm{a}^{\without 0}_n}{}{}|\oBall(p_n,R)$
 is a distance chart 
 with strut $y_n=\distfun{a^0_n}{}{}|\oBall(p_n,R)$.
 
@@ -524,7 +524,7 @@ will be called
 \index{liftings of the distance chart}  
 $\bm{x}\:\spc{L}\subto\RR^m$ with strutt $y\:\spc{L}\subto\RR$.
 
-Note that a lifting forms a continuous submap 
+Note that all the lifting together define a continuous submaps 
 $\bm{x}\:\bm{\spc{L}}\subto\RR^m$ and $\bm{y}\:\bm{\spc{L}}\to\RR$, where the space
 $$\bm{\spc{L}}=\spc{L}\sqcup\l(\bigsqcup_{i\in\NN}\spc{L}_i\r),$$
 is equipped with the topology of the convergence $\spc{L}_n\GHto\spc{L}$.
@@ -555,9 +555,8 @@ t\cdot y(p)
 +(1-t)\cdot y(q)
 -\Lambda\cdot\tfrac{t\cdot(1-t)}{2}\cdot\ell^2,
 \eqlbl{eq:f_is_concave}\]
-where  
+where  $\ell=|\bm{x}(p)-\bm{x}(q)|$ and $\bm{\alpha}(t)=\geodpath_{[\bm{x}(p)\,\bm{x}(q)]}(t)$; that is,
 \begin{itemize}
-\item $\ell=|\bm{x}(p)-\bm{x}(q)|$,
 \item $\alpha^i(t)=(1-t)\cdot x^i(p)+t\cdot x^i(q)$ and 
 \item $\bm{\alpha}(t)=(\alpha^1(t),\alpha^2(t),\dots,\alpha^m(t))\in \RR^m$.
 \end{itemize}
@@ -569,7 +568,8 @@ we can assume that
 and each $x^i$ are $\lambda$-concave in $\Dom\bm{x}$.
 \item there is $\eps>0$ such that 
 $\bm{x}$ is an open $[\eps,m]$-bi-Lipshitz embedding (this follows from \ref{thm:inverse-function:chart}). 
-Moreover $\d_p\bm{x}\:\T_p\to\RR^m$ is $[\eps,m]$-bi-Lipshitz homeomorphism for any $p\in \Dom\bm{x}$ (this follows from \ref{thm:inverse-function:differential}).
+Moreover $\d_p\bm{x}\:\T_p\to\RR^m$ is $[\eps,m]$-bi-Lipshitz %\sqrt{m} works as well???
+homeomorphism for any $p\in \Dom\bm{x}$ (this follows from \ref{thm:inverse-function:differential}).
 \end{itemize}
 Fix $r>0$ so that $\oBall(z,2\cdot r)\subset\Dom\bm{x}$.
 Since $p$, $q\in\oBall(z,r)$, 
@@ -705,18 +705,18 @@ t\cdot y(p)
 \cdot
 \ell^2.
 \end{align*}
-I.e. \ref{eq:f_is_concave} holds for $\Lambda=\lambda\cdot\l(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\r)$.
+That is, \ref{eq:f_is_concave} holds for $\Lambda=\lambda\cdot\l(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\r)$.
 \qeds
 
 \section{Distance embedding}\label{sec:dist-embedding}
 
 
 \begin{thm}{Theorem}\label{thm:dist-emb}
-Let $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, $z\in\spc{L}$ and $R>0$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, $z\in\spc{L}$ and $R>0$.
 Then there is $\eps>0$, 
 $\kay\in\NN$ 
 and a point array $\bm{a}=(a^1,a^2,\dots,a^\kay)$ in $\spc{L}$
-such that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ gives an embedding $\oBall(z,R)\hookrightarrow\RR^\kay$, 
+such that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is an embedding $\oBall(z,R)\hookrightarrow\RR^\kay$, 
 which is $[\eps,\kay]$-bi-Lipschitz.
 
 Moreover, the values $\eps$, $\kay$ and the point array $\bm{a}$ can be chosen so that:
@@ -730,7 +730,7 @@ say, given $r>0$ we can assume that $a^i\in\oBall(r,z)$ for each $i$.
 Given a Gromov--Hausdorff convegence
 $\spc{L}_n\GHto\spc{L}$ where $(\spc{L}_n)$ is a sequence of an $m$-dimensional complete length $\Alex\kappa$ spaces,
 for all sufficiently large $n$
-the liftings $\distfun{\bm{a}_n}{}{}\:\spc{L}_n\to\RR$ of the distance map $\distfun{\bm{a}}{}{}$ 
+the liftings \[\distfun{\bm{a}_n}{}{}\:\spc{L}_n\to\RR\] of the distance map $\distfun{\bm{a}}{}{}$ 
 give an $[\eps,\kay]$-bi-Lipschitz embedding of $\oBall(z_n,R)\subset \spc{L}_n$ for lifting $z_n\in\spc{L}_n$ of $z$.
 \end{subthm}
 \end{thm}
@@ -748,7 +748,7 @@ $x,y\in \oBall(p,r)$, $\dist{x}{y}{}<\eps$ there is point $z\in \oBall(p,r)$ suc
 \end{thm}
 
 \parit{Proof of \ref{thm:dist-emb}.}
-Without loss of generality, we may assume that $\kappa=-1$;
+Without loss of generality, we may assume that $\kappa\z=-1$;
 that is, $\spc{L}$ is a $\Alex{-1}$ space.
 
 \begin{wrapfigure}[8]{r}{30mm}
@@ -931,7 +931,7 @@ Therefore $\dist{\check a^i}{\check a^j}{}>\delta-2\cdot\sqrt{\eps}>\tfrac\delta
 Applying Claim~\ref{clm:GB}, we get a contradiction with \ref{delta-def}.
 
 To prove (\ref{SHORT.thm:dist-emb:L_n-->L}),
-we should notice that all the constructions above  survive under noncollapsing Gromov--Hausdorff convergence. %???
+note that all the constructions above  survive under noncollapsing Gromov--Hausdorff convergence. %???
 \qeds
 
 \begin{thm}{Exercise}\label{ex:lip+dist}
