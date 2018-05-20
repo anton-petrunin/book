@@ -12,11 +12,10 @@ and rank of a point.
 In Section~\ref{sec:right-inverse-1},
 we consider distance maps for a strutting point arrays.
 For these maps we give a proof of a right-inverse theorem.
-This is an important technical result which is used in the very base of theory, in particular in the proof of some basic properties of dimension.
+This is an important technical result which is used in the very base of theory, in particular in the proof of some properties of dimension.
 
-After that we turn our attention to the finite dimensional case.
+After that we consider the finite dimensional case.
 In the Section~\ref{sec:dist-chart}, we define distance chart and prove its basic properties.
-In Section~\ref{sec:perelman-lemma} we prove Perelman's lemma which provides the key observation for further study of regularity questions in distance charts.
 In Section~\ref{sec:dist-embedding} we show that finite dimensional Alexandrov spaces are locally embeddable into Euclidean space of some big dimension.
 %???
 
@@ -37,9 +36,8 @@ it is closer to Perelman's definitons in \cite{perelman:spaces2} %CHECK???
 and \cite{perelman:morse}%CHECK???
 .
 
-The term ``strut'' seems to have the closest meaning to the original Russian term ``rasporka''%???
- used in \cite{BGP}.
-In the so called professional transaltion,
+The term ``strut'' seems to have the closest meaning to the original Russian term used in \cite{BGP}.
+In the official translation,
 it appears under name ``burst'' 
 and in the non-official authors translation it was ``strainer''.
 It seems that both are not good, 
@@ -47,7 +45,7 @@ so we decided to switch to ``strut''.
 
 \begin{thm}{Definition of struts}\label{def:strut-I}
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
-We say that a point array $(a^0,a^1,\dots,a^\kay)\in\spc{L}^{{\times}(\kay+1)}$
+We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \emph{$\kappa$-strutting}\index{strut} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
 \end{thm} 
 
@@ -77,7 +75,7 @@ Then the following conditions are equivalent:
 \end{subthm}
 
 \begin{subthm}{lem:stut<=>rank:strut}
-There is a point array $(a^0,a^1,\dots,a^\kay)\in\spc{L}^{{\times}(\kay+1)}$ which is $\kappa$-strutting for $p$.
+There is a point array $(a^0,a^1,\dots,a^\kay)$ which is $\kappa$-strutting for $p$.
 \end{subthm}
 \end{thm}
 
@@ -102,8 +100,7 @@ Assume $\xi^0,\xi^1,\dots,\xi^\kay$ is an array of directions in $\Sigma_p$, suc
 Without loss of generality, 
 we may assume that each direction $\xi^i$ is geodesic;
 that is, for each $i$ there is a geodesic $\gamma^i$ in $\spc{L}$ such that $\gamma^i(0)=p$ and $\xi^i=(\gamma^i)^+(0)$.
-Then the array $a^i=\gamma^i(\eps)$ for sufficiently small $\eps>0$
-satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
+From the definition of angle, it follows that for sufficiently small $\eps>0$ the array $a^i=\gamma^i(\eps)$ satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
 \qeds
 
 \begin{thm}{Corollary}\label{cor:rank>=k-open}
@@ -112,15 +109,16 @@ Then the set of all points in $\spc{L}$
 with rank $\ge \kay$ is open.
 \end{thm}
 
-\parit{Proof.} Given an array of points $\bm{a}=(a^0,a^1,\dots,a^\kay)\in \spc{L}^{{\times}(\kay+1)}$, consider 
+\parit{Proof.} Given an array of points $\bm{a}=(a^0,\dots,a^\kay)$ in $\spc{L}$ consider 
 the set $\Omega_{\bm{a}}$ of all points $p\in \spc{L}$ such that array $\bm{a}$
  is $\kappa$-strutting for a point $p$.
 Cleary $\Omega_{\bm{a}}$ is open.
 
 According to Proposition~\ref{prop:stutt}, the set of points in $\spc{L}$ 
 with rank $\ge \kay$ can be presented as
-\[\bigcup_{\bm{a}\in \spc{L}^{{\times}(\kay+1)}}\Omega_{\bm{a}}.\]
-Hence the result.
+\[\bigcup_{\bm{a}}\Omega_{\bm{a}},\]
+where the union is taken for all $\kay$-array $\bm{a}$ of points in $\spc{L}$,
+hence the result.
 \qeds
 
 
@@ -136,7 +134,7 @@ Hence the result.
 \label{thm:right-inverse-function}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p,b\in\spc{L}$ 
-and $\bm{a}=(a^1,a^2,\dots,a^\kay)\in\spc{L}^{{\times}\kay}$ be a point array.
+and $\bm{a}=(a^1,\dots,a^\kay)$ be a point array in $\spc{L}$.
 
 Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
 Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\dist{\bm{a}}{p}{}\in\RR^\kay$;
@@ -534,7 +532,7 @@ is equipped with the topology of the convergence $\spc{L}_n\GHto\spc{L}$.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Perelman's lemma}\label{sec:perelman-lemma}
-%Should we name it Kleiner--Perelman???
+%Should we name it Kleiner--Perelman??? It seems we do not need it so far --- we will need it once we include material o Riemannian metric.
 
 The following lemma is analogous to Theorem~\ref{thm:web:Up-convex}.
 
@@ -838,7 +836,7 @@ Thus one can take $\map_R$ to be a partial limit of $\map_{R;n}$ as $n\to\infty$
 \claimqeds
 
 
-Note that for any choice of $\bm{a}\in\spc{L}^{{\times}\kay}$,
+Note that for any choice of $\kay$-array $\bm{a}$ in $\spc{L}$,
 the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is $\kay$-Lipschitz.
 Thus it remains to show that one can choose $\kay$, $\bm{a}$ and $\eps>0$ on such a way that 
 \[|\dist{a^i}{x}{}-\dist{a^i}{y}{}|>\eps\cdot\dist[{{}}]{x}{y}{}
