@@ -1,0 +1,177 @@
+\chapter{Dimension theory}
+
+In Section~\ref{sec:prelim:dim}, we give definitions of different type of dimension-like invariants which have sense for metric spaces and state general relations between them.
+
+
+\section{Definitions}\label{sec:prelim:dim}
+
+The proof of most of the statements in this section can be found in the book of Witold Hurewicz and Henry Wallman \cite{top-dim}, 
+the rest follows directly from the definitions.
+
+\begin{thm}{Hausdorff dimension}
+\label{def:HausDim}\index{dimension!Hausdorff dimension}
+Let $\spc{X}$ be a metric space. 
+Its Hausdorff dimension is defined as
+\[\HausDim\spc{X}=\sup\bigl\{\alpha\in\RR\ \mid \HausMes_\alpha(\spc{X})>0\bigr\},\]
+ where $\HausMes_\alpha$ denotes $\alpha$-dimensional Hausdorff measure;
+it is defined in Section \ref{sec:mes+balls}.
+\end{thm}
+
+Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\IndexSet[2]}$
+ be its open cover.
+Let us recall two notions in general topology:
+\begin{itemize}
+\item The \emph{order}\index{order} of $\{V_\beta\}$ is supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ which has nonempy intersection.
+\item An open cover $\{W_\alpha\}_{\alpha\in\IndexSet}$ of $\spc{X}$ is called \emph{refinement}\index{refinement} of  $\{V_\beta\}_{\beta\in\IndexSet[2]}$ if for any $\alpha\in\IndexSet$ there is $\beta\in\IndexSet[2]$ such that $W_\alpha\subset V_\beta$.
+\end{itemize}
+
+\begin{thm}{Topological dimension}
+\label{def:TopDim}
+\index{dimension!topological dimension}
+Let $\spc{X}$ be a metric space. 
+The topological dimension of $\spc{X}$ is defined as the minimum of nonnegative integers $n$, 
+such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
+
+If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
+
+The topological dimension of $\spc{X}$ will be denoted by $\TopDim\spc{X}$.
+\end{thm}
+
+The invariants satisfying the following two statements \ref{dim-axiom-norm} and \ref{dim-axiom-sigma} are commonly called ``dimension'';
+by that reason we call them axioms.
+
+\begin{thm}{Normalization axiom}
+\label{dim-axiom-norm} For any $m\in\ZZ_{\ge0}$,
+\[\TopDim\EE^m=\HausDim\EE^m=m.\]
+
+\end{thm}
+
+\begin{thm}{Cover axiom}\label{dim-axiom-sigma} 
+If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$, then
+\begin{align*}
+\TopDim \spc{X}&=\sup\nolimits_n\{\TopDim A_n\},
+\\
+\HausDim \spc{X}&=\sup\nolimits_n\{\HausDim A_n\}.
+\end{align*}
+
+\end{thm}
+
+\parbf{On product spaces.} Let us mention that the following two inequalities
+\begin{align*}
+\TopDim  (\spc{X}\times\spc{Y})
+&\le 
+\TopDim \spc{X}+ \TopDim\spc{Y},
+\intertext{and}
+\HausDim (\spc{X}\times\spc{Y})
+&\ge 
+\HausDim \spc{X}+ \HausDim\spc{Y},
+\end{align*}
+hold for any pair of metric spaces $\spc{X}$ and $\spc{Y}$.
+
+These inequalities in might be strict.
+For the topological dimension it holds for apair of Pontryagin surfaces constructed in \cite{pontyagin-surface}.
+For Hausdorff dimension, an example was constructed by Abram Besicovitch and Pat Moran in \cite{besicovitch-moran}.
+
+\medskip
+ 
+The following theorem follows from \cite[theorems V 8 and VII 2]{top-dim}.
+
+\begin{thm}{Szpilrajn's theorem}\label{thm:szpilrajn} 
+Let $\spc{X}$ be a separable metric space.
+Assume $\TopDim\spc{X}\ge m$. Then $\HausMes_m \spc{X}>0$.
+
+In particular, 
+$\TopDim\spc{X}\le\HausDim\spc{X}$.
+\end{thm}
+
+In fact it is true that for any separable metric space $\spc{X}$ we have
+\[\TopDim\spc{X}=\inf\{\HausDim\spc{Y}\},\]
+where infimum is taken over all metric spaces $\spc{Y}$ which are homeomorphic to $\spc{X}$.
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space
+and $F\:\spc{X}\to\RR^m$ be  a continuous map.
+A point $\bm{z}\in \Im F$ is called a  \emph{stable value}\index{stable value} of $F$
+if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
+for any continuous map $F'\:\spc{X}\to\RR^m$ which is $\eps$-close to $F$;
+that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
+\end{thm}
+
+The following theorem follows from \cite[theorems VI 1$\&$2]{top-dim}.
+(This theorem also holds for non-separable metric spaces, 
+see \cite[???]{nagata} or \cite[3.2.10]{engelking}).
+
+\begin{thm}{Stable value theorem}\label{thm:stable-value}
+Let $\spc{X}$ be a separable metric space.
+Then $\TopDim\spc{X}\ge m$ if and only if there is a map $F\:\spc{X}\to\RR^{m}$ with a stable value.
+\end{thm}
+
+
+
+\begin{thm}{Proposition}\label{thm:HausDim+Lip}
+Suppose $\spc{X}$ and $\spc{Y}$ are metric spaces 
+and $\map \:\spc{X}\to \spc{Y}$ satisfies
+\[\dist{\map (x)}{\map (x')}{}\ge \eps\cdot\dist[{{}}]{x}{x'}{}\]
+for some fixed $\eps>0$ and any pair $x,x'\in \spc{X}$.
+Then
+\[\HausDim \spc{X}\le \HausDim \spc{Y}.\]
+
+In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$, then  
+\[\HausDim \spc{X}\le \HausDim \spc{Y}.\]
+
+\end{thm}
+
+\section{Linear dimension}
+
+In addition to $\HausDim$ and $\TopDim$, 
+we will use yet another one, which we call \emph{linear dimension}.
+
+Recall that \emph{cone map} is a map between cones which respects the cone multiplication.
+
+\begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!Linear dimension}
+Let $\spc{X}$ be a metric space. 
+The \emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\LinDim$}) is defined by
+\begin{multline*}
+\LinDim\spc{X}=\sup\{m\in\ZZ_{\ge0}\mid\exists\,p\in \spc{X}\ \ \text{which admits an}\\ 
+\text{isometric cone embedding}\ \  \EE^m\hookrightarrow \T_p\spc{X}\},
+\end{multline*}
+where $\EE^m$ denotes $m$-dimensional Euclidean space 
+and $\T_p\spc{X}$ denotes tangent space of $\spc{X}$ at $p$ (defined in Section~\ref{sec:tangent-space+directions}).
+\end{thm}
+
+Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
+ 
+For general metric spaces, $\LinDim$ has almost no  relations to $\HausDim$ and $\TopDim$.
+Also, $\LinDim$ does not satisfy the cover axiom
+ (\ref{dim-axiom-sigma}).
+For $\LinDim$, an inverse of the product inequality holds; that is,
+\[\LinDim(\spc{X}\times \spc{Y})
+\ge
+\LinDim\spc{X}+ \LinDim\spc{Y}
+\eqlbl{eq:inverse-product-axiom}\] 
+for any two metric spaces $\spc{X}$ and $\spc{Y}$; 
+that is easy to check. 
+According to the following exercise, he inequality \ref{eq:inverse-product-axiom} might be strict for some spaces, see also \cite{schroeder-foetch}.
+
+\begin{thm}{Exercise}\label{ex:schroeder-foetch}
+Construct two norms on $\RR^{10}$ such that 
+non of the corresponding metric spaces $\spc{X}$ and $\spc{Y}$
+have a isometric copy of $\EE^2$ but
+$\spc{X}\times\spc{Y}$ has isometric copy of $\EE^{10}$.
+\end{thm}
+
+The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in both cases of curvature bounded below and above).
+As we shall see, in all these cases, $\LinDim$  behaves nicely and  is easy to work with.
+
+\parbf{Remarks.}
+Linear dimension was first introduced by Conrad Plaut in \cite{plaut:survey}
+under the name \emph{local dimension}\index{local dimension}\index{dimension!local dimension}. 
+\emph{Geometric dimension}\index{geometric dimension}\index{dimension!geometric dimension} introduced in by Bruce Kleiner in \cite{kleiner} is closely related; 
+it coincides %should we explain why???
+ with the linear dimension for $\Alex{}$ and $\CAT{}$ spaces.
+
+One could modify the definition of linear dimension by taking an arbitrary $n$-dimensional Banach space instead of the Euclidean $n$-space.
+Such a definition makes more sense for general metric spaces.
+This dimension is additive with respect to the direct product (that is, we always have equality in \ref{eq:inverse-product-axiom}). 
+
+For Alexandrov spaces (either CBB or CAT) this modification is equivalent to the definition we use in this book.

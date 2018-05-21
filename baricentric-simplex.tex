@@ -1,5 +1,5 @@
 %arXiv
-\chapter{Webs and barycenters}\label{chap:web+bary}
+\chapter{Dimension of CAT spaces}\label{chap:web+bary}
 
 In this chapter we discuss the constructions introduced by Bruce Kleiner in \cite{kleiner}.
 
@@ -679,11 +679,261 @@ that is, $p\in\InWeb(\distfun{\bm{a}}{}{})$.
 
 
 
+\section{Dimension of CBA spaces}\label{sec:dim-cba}
+
+We start with two examples.
+
+The first example shows that the dimension of a complete length $\CAT{}$ spaces is not local;
+that is, such spaces might have open sets with different linear dimension.
+
+Such an example can be constructed by gluing at one point two Euclidean spaces of different dimensions.
+According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\CAT{0}$ spaces.
+
+The second example provides a complete length $\CAT{}$ space 
+with topological dimension one and arbitrary large Hausdorff dimension.
+Thus, for complete length $\CAT{}$ spaces, one should not expect any relations between topological and Hausdorff dimensions except for the one provided by Szpilrajn's theorem (\ref{thm:szpilrajn}).
+
+To construct the second type of examples,
+note that the completion of any metric tree has topological dimension one and is $\CAT\kappa$ for any $\kappa$.
+Start with a binary tree $\Gamma$, and a sequence $\eps_n>0$ such that $\sum_n\eps_n<\infty$.
+Define the metric on $\Gamma$
+by prescribing length of edge from level $n$ to the level $n+1$ to be  $\eps_n$.
+For an appropriately chosen sequence $\eps_n$, the completion of $\Gamma$ will contain a Cantor set of arbitrary large dimension.
+
+\medskip
+
+The following is a  version of the theorem proved by Bruce Kleiner in \cite{kleiner} with an improvement made by Alexander Lytchak in \cite{lytchak:diff}.
+
+\begin{thm}{Theorem}\label{thm:dim-infty-CBA}
+For any complete length $\CAT\kappa$ space $\spc{U}$, the following statements are equivalent:
+
+\begin{subthm}{LinDim-CBA}  $\LinDim\spc{U}\ge m$;
+\end{subthm}
+
+\begin{subthm}{thm:dim-infty-CBA:bary} 
+For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$  
+such that 
+\[\bigcap_i B^i=\emptyset,\quad\bigcap_{i\not=j} B^i\not=\emptyset\]
+for each $j$.
+\end{subthm}
+
+
+\begin{subthm}{thm:dim-infty-CBA:mnfld} 
+There is a $C^{\frac{1}{2}}$-embedding $\map\:\cBall[1]_{\EE^m}\hookrightarrow \spc{U}$;
+that is, $\map$ is bi-H\"older with exponent $\tfrac{1}{2}$.
+\end{subthm}
+
+\begin{subthm}{thm:dim-infty-CBA:TopDim}
+There is a closed separable set $K\subset\spc{U}$ such that 
+\[\TopDim K\ge m.\]
+\end{subthm}
+
+\end{thm}
+
+\parbf{Remarks.}
+Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part (\ref{SHORT.thm:dim-infty-CBA:mnfld}) in finite dimensional case.
+Namely, a complete length $\CAT{}$ space with linear dimension $m$ 
+admits a bi-Lipschitz embedding $\map$ of an open set of $\RR^m$.
+Moreover, the Lipschitz constants of $\map$ can be made arbitrary close to $1$.
+
+\begin{thm}{Corollary}\label{cor:dim-CBA}
+For any separable complete length $\CAT{}$ space $\spc{U}$, we have
+\[\TopDim\spc{U}=\LinDim\spc{U}.\]
+
+\end{thm}
+
+
+To prove Theorem~\ref{thm:dim-infty-CBA} we will need the following lemma.
+
+Any simplicial complex can be equipped with a length-metric
+such that each $\kay$-simplex  
+is isometric to the standard simplex
+\[\Delta^\kay
+=
+\set{(x_0,\dots,x_\kay)\in \RR^{\kay+1}}
+{x_i\ge 0,\quad x_0+\dots+x_\kay=1}\]
+with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
+This metric will be called the  \emph{$\ell^1$-metric}\index{$\ell^1$-metric} on the simplicial complex.
+
+\begin{thm}{Lemma}\label{lem:approximation-cba}
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space
+and $\rho\:\spc{U}\to\RR$ be a continuous positive function.
+Then there is a simplicial complex $\spc{N}$ equiped with $\ell^1$-metric,
+a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$ 
+and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that
+
+\begin{subthm}{lem:approximation-cba:displacement}
+The \emph{displacement} of composition $\map[2]\circ\map\:\spc{U}\to\spc{U}$ is bounded by $\rho$;
+that is,
+\[\dist{x}{\map[2]\circ\map(x)}{}<\rho(x)\] 
+for any $x\in\spc{U}$
+\end{subthm}
+
+\begin{subthm}{lem:approximation-cba:im}
+If $\LinDim\spc{U}\le m$ 
+then the $\map[2]$-image of any closed simplex in $\spc{N}$ 
+coincides with the image of its $m$-skeleton.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality, we can assume that  for any $x$ we have $\rho(x)\z<\rho_0$
+for some fixed $\rho_0<\tfrac{\varpi\kappa}{2}$.
+
+By Stone's theorem%ref???
+, any metric space is paracompact.
+Thus, we can choose a locally finite covering $\set{\Omega_\alpha}{\alpha\in\IndexSet}$ of $\spc{U}$ such that $\Omega_\alpha\subset \oBall(x,\tfrac{1}{3}\cdot\rho(x))$ for any $x\in \Omega_\alpha$. 
+
+Denote by $\spc{N}$ the nerve of the covering  $\{\Omega_\alpha\}$;
+that is, $\spc{N}$ is an abstract simplicial complex with set of vertexes formed by $\IndexSet$ such that
+$\{\alpha^0,\alpha^1,\dots,\alpha^n\}\subset\IndexSet$ 
+are vertexes of a simplex  if and only if
+$\Omega_{\alpha^0}
+\cap
+\Omega_{\alpha^1}
+\cap\dots\cap
+\Omega_{\alpha^n}
+\not=
+\emptyset$.
+
+Fix a Lipschitz partition of unity 
+$\phi_\alpha\:\spc{U}\to [0,1]$,  subordinate to $\{\Omega_\alpha\}$.
+Consider the map $\map\:\spc{U}\to \spc{N}$ such that the barycentric coordinate of $\map(p)$ is $\phi_\alpha(p)$.
+Note that $\map$ is locally Lipschitz. 
+Clearly $\map$-preimage of any open simplex in $\spc{N}$ lies in $\Omega_\alpha$ for some $\alpha\in\IndexSet$.
+
+For each $\alpha\in\IndexSet$, 
+choose $x_\alpha\in\Omega_\alpha$.
+Let us extend the map $\alpha\mapsto x_\alpha$
+to a map $\map[2]\:\spc{N}\to\spc{U}$ which is $\kappa$-barycentric on each simplex;
+according to Theorem~\ref{thm:cat-bary-web:Lip}, this extension exists, 
+$\map[2]$ is Lipschtz
+and its Lipschitz constant depends only on $\rho_0$ and $\kappa$.
+
+\parit{(\ref{SHORT.lem:approximation-cba:displacement})}
+Fix $x\in\spc{U}$.
+Denote by $\Delta$ the minimal simplex which contains $\map(x)$;
+and let $(\alpha^0,\alpha^1,\dots,\alpha^n)$ be the vertexes of $\Delta$.
+Note that $\alpha$ is a vertex of $\Delta$ if and only if $\phi_{\alpha}(x)>0$.
+Thus,
+\[\dist{x}{x_{\alpha^i}}{}<\tfrac{1}{3}\cdot\rho(x)\]  
+for any $i$.
+Therefore 
+\[\diam\map[2](\Delta)
+\le
+\max_{i,j}\{\dist{x_{\alpha^i}}{x_{\alpha^j}}{}\}
+<
+\tfrac{2}{3}\cdot\rho(x).\]
+In particular 
+\[\dist{x}{\map[2]\circ\map(x)}{}\le\dist{x}{x_{\alpha^0}}{}+\diam \map[2](\Delta) <\rho(x).\]
+
+\parit{(\ref{SHORT.lem:approximation-cba:im})}
+Assume the contrary;
+that is, $\map[2](\spc{N})$ is not inculded in the $\map[2]$-image of $m$-skeleton of $\spc{N}$.
+Then for some $\kay>m$,
+there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$,
+such that the baricentric simplex $\sigma=\map[2]|\Delta^\kay$ is nondegenrate; 
+that is, 
+$$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\not=\emptyset.
+$$
+Applying Corollary~\ref{cor:LinDim>bary},
+we get that $\LinDim\spc{U}\ge \kay$, a contradiction.
+\qeds
 
 
 
 
-\section{The case of finite-dimensional CAT spaces}
+
+
+\parit{Proof of Theorem~\ref{thm:dim-infty-CBA}.} 
+Note that
+\begin{itemize}
+\item The implication (\ref{SHORT.thm:dim-infty-CBA:bary})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:mnfld})
+follows directly from Lemma~\ref{lem:nondeg-test-with-balls}
+and Theorem~\ref{thm:cat-bary-web:mnfld}.
+\item The implication 
+(\ref{SHORT.thm:dim-infty-CBA:mnfld})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:TopDim}) 
+is trivial.
+\end{itemize}
+ 
+\parit{(\ref{SHORT.thm:dim-infty-CBA:TopDim})$\Rightarrow$(\ref{SHORT.LinDim-CBA}).}
+According to Theorem~\ref{thm:stable-value}, 
+there is a continuous map $f\:K\to \RR^{m}$ with a stable value.
+By Tietze extension theorem%ref???
+, it is possible to extend $f$ 
+to a continuous map $F\:\spc{U}\to \RR^{m}$.
+
+Fix $\eps>0$.
+Since $F$ is continuous, there is a continuous positive function $\rho$ defined on $\spc{U}$ such that 
+\[\dist{x}{y}{}<\rho(x)\ \ \Rightarrow\ \ | F(x)- F(y)|<\tfrac13\cdot\eps.\]
+Apply Lemma~\ref{lem:approximation-cba} for the function $\rho$.
+For the obtained simplicial complex $\spc{N}$, 
+ and maps $\map\:\spc{U}\to \spc{N}$,  $\map[2]\:\spc{N}\to \spc{U}$, we have
+\[|F\circ \map[2]\circ\map(x)-F(x)|<\tfrac13\cdot\eps\] 
+for any $x\in \spc{U}$.
+
+According to Lemma~\ref{lem:lip-approx},
+there is a locally Lipschitz map $F_\eps\:\spc{U}\to \RR^{m+1}$ 
+such that $|F_\eps(x)-F(x)|<\tfrac13\cdot\eps$ for any $x\in \spc{U}$.
+
+Note that
+$\map(K)$ is contained in a countable subcomplex of $\spc{N}$, say $\spc{N}'$.
+Indeed, since $K$ is separable, there is a countable dense collection of points $\{x_n\}$ in $K$.
+Denote by $\Delta_n$ the minimal simplex of $\spc{N}$ which contains $\map(x_n)$.
+Then $\map(K)\subset\bigcup_i\Delta_n$.
+
+Arguing by contradiction,
+assume $\LinDim\spc{U}<m$.
+By Lemma~\ref{lem:approximation-cba:im},
+the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of $(m-1)$-skeliton of $\spc{N}'$;
+in particular it can be covered 
+by countable collection of Lipschitz images of $(m-1)$-simplexes.
+Hence
+$\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|K$.
+Since $\eps>0$ is arbitrary, 
+we get that $\bm{0}\in \RR^m$ is not a stable value of $f=F|K$, a contradiction.
+
+\parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
+The following claim follows from the definition of tangent space.
+
+\begin{clm}{}\label{clm:finite-config-cba}
+Let $q\in \spc{U}$ and $\dot x^1,\dot x^2,\dots,\dot x^n\in \T_q$.
+Then given $\delta>0$,
+there is a point array $x^1,x^2,\dots,x^n$ in $\spc{U}$ 
+such that 
+\[\mangle(\dot x^i,\ddir q{x^i})<\delta\]
+and for some fixed $\lam>0$ we have
+\[\tfrac1\lam\cdot\dist[{{}}]{q}{x^i}{}=|\dot x^i|\ \ 
+\t{and}\ \  |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
+for all $i$ and $j$.
+
+Moreover the value $\lam$ can be taken arbitrary small.
+\end{clm}
+
+\parit{Proof of the Claim.} For each $i$ choose a geodesic $\gamma^i$ 
+from $q$ which goes almost in the directions of $\dot x^i$.
+Then take the point $x^i$ on $\gamma^i$ on the distance $\lam\cdot|\dot x^i|$ from $q$.
+\claimqeds
+
+
+Choose $q\in \spc{U}$ such that $\T_q$ contains a subcone $E$ isometric to $m$-dimensional Euclidean space.
+Note that one can choose $\eps>0$ 
+and a point arrray $(\dot a^0,\dot a^1,\dots,\dot a^m)$ in $E\subset \T_q$ 
+such that 
+$\bigcap_i\cBall[\dot a^i,1+\eps]=\emptyset$
+and $\bigcap_{i\not=j}\cBall[\dot a^i,1\z-\eps]\z{\not=}\emptyset$ for each $j$.
+
+Applying Claim \ref{clm:finite-config-cba}, we get a point array 
+$(a^0,a^1,\dots,a^m)$ in $\spc{U}$
+such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
+and $\bigcap_{i\not=j}\cBall[a^i,\lam]\not=\emptyset$ for each $j$.
+Since $\lam>0$ can be  chousen arbitrary small, 
+it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
+\qeds
+
+
+\section{Webs in finite-dimensional CAT spaces}
 
 Recall that web embedding and its brace is defined in \ref{prop-def:web-embedding}.
 
@@ -825,7 +1075,20 @@ we get a contradiction
 
 
 
+\section{Remarks and open problems}
 
+The following conjecture (in an equivalent form)
+appers in \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
+
+\begin{thm}{Conjecture}
+For any complete length $\CAT{}$ space $\spc{U}$, we have
+\[\TopDim\spc{U}
+=
+\LinDim\spc{U}.\]
+
+\end{thm}
+
+By Corollary~\ref{cor:dim-CBA} it holds for separable spaces
 
 
 
