@@ -188,6 +188,295 @@ For Alexandrov spaces (either CBB or CAT) this modification is equivalent to the
 
 
 
+\section{Struts and rank}\label{sec:struts+rank}
+
+Our definitions of strut 
+and distant chart 
+(\ref{def:strut-I} and \ref{def:dist-chart}) 
+%is the same as it was originally proposed by Burago but it CHECK???
+differ from the one 
+given by 
+Burago, 
+Gromov 
+and Perelman in \cite{BGP};
+it is closer to Perelman's definitons in \cite{perelman:spaces2} %CHECK??? 
+and \cite{perelman:morse}%CHECK???
+.
+
+The term ``strut'' seems to have the closest meaning to the original Russian term used in \cite{BGP}.
+In the official translation,
+it appears under name ``burst'' 
+and in the authors translation it was ``strainer''.
+It seems that both are not good, 
+so we decided to switch to ``strut''.
+
+\begin{thm}{Definition of struts}\label{def:strut-I}
+Let $\spc{L}$ be a complete length $\Alex{}$ space.
+We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
+ is \emph{$\kappa$-strutting}\index{strut} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
+\end{thm} 
+
+
+
+\begin{thm}{Definition}\label{def:rank}
+Let $\spc{L}$ be a complete length $\Alex{}$ space
+and $p\in \spc{L}$.
+Let us define rank of $\spc{L}$ at $p$ as 
+\[\rank_p=\rank_p\spc{L}
+\df\pack_{\pi/2}\Sigma_p-1.\]
+
+\end{thm}
+
+
+
+
+Thus $\rank$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
+
+
+\begin{thm}{Proposition}\label{prop:stutt}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
+and $p\in \spc{L}$.
+Then the following conditions are equivalent:
+
+\begin{subthm}{lem:stut<=>rank:rank}$\rank_p\ge\kay$
+\end{subthm}
+
+\begin{subthm}{lem:stut<=>rank:strut}
+There is a point array $(a^0,a^1,\dots,a^\kay)$ which is $\kappa$-strutting for $p$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof of \ref{prop:stutt}, (\ref{SHORT.lem:stut<=>rank:strut})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:rank}).}
+For each $i$,
+choose a point $\acute a^i\in\Str(p)$ sufficiently close to $a^i$ (so $[p\acute a^i]$ exists for each $i$).
+One can choose $\acute a^i$ on such a way that we still have
+$\angk\kappa{p}{\acute a^i}{\acute a^j}>\tfrac\pi2$ for all $i\not=j$.
+
+From hinge comparison (\ref{angle}) we have 
+\[\mangle(\dir{p}{\acute a^j},\dir{p}{\acute a^j})
+\ge
+\angk\kappa{p}{\acute a^i}{\acute a^j}
+>
+\tfrac\pi2\]
+for all $i\not=j$.
+In particular $\pack_{\pi/2}\Sigma_p\ge \kay+1$.
+
+\parit{(\ref{SHORT.lem:stut<=>rank:rank})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:strut}).} 
+Assume $\xi^0,\xi^1,\dots,\xi^\kay$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\not=j$.
+
+Without loss of generality, 
+we may assume that each direction $\xi^i$ is geodesic;
+that is, for each $i$ there is a geodesic $\gamma^i$ in $\spc{L}$ such that $\gamma^i(0)=p$ and $\xi^i=(\gamma^i)^+(0)$.
+From the definition of angle, it follows that for sufficiently small $\eps>0$ the array of points $a^i=\gamma^i(\eps)$ satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
+\qeds
+
+\begin{thm}{Corollary}\label{cor:rank>=k-open}
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $\kay\in\ZZ_{\ge0}$.
+Then the set of all points in $\spc{L}$ 
+with rank $\ge \kay$ is open.
+\end{thm}
+
+\parit{Proof.} Given an array of points $\bm{a}=(a^0,\dots,a^\kay)$ in $\spc{L}$ consider 
+the set $\Omega_{\bm{a}}$ of all points $p\in \spc{L}$ such that array $\bm{a}$
+ is $\kappa$-strutting for a point $p$.
+Cleary $\Omega_{\bm{a}}$ is open.
+
+According to Proposition~\ref{prop:stutt}, the set of points in $\spc{L}$ 
+with rank $\ge \kay$ can be presented as
+\[\bigcup_{\bm{a}}\Omega_{\bm{a}},\]
+where the union is taken for all $\kay$-array $\bm{a}$ of points in $\spc{L}$,
+hence the result.
+\qeds
+
+
+
+
+
+\section{Right-inverse theorem}\label{sec:right-inverse-1}
+
+%\parbf{Remark of A.} We might want to call it semiinverse function theorem???
+% should we change b --> a^0???
+
+\begin{thm}{Right-inverse theorem}
+\label{thm:right-inverse-function}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
+$p,b\in\spc{L}$ 
+and $\bm{a}=(a^1,\dots,a^\kay)$ be a point array in $\spc{L}$.
+
+Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
+Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\distfun{\bm{a}}{p}\in\RR^\kay$;
+that is, there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \distfun{\bm{a}}{p}$ and 
+$\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
+Moreover
+
+\begin{subthm}{thm:right-inverse-function:Hoelder}
+The map $\map$ can be chosen to be $C^{\frac{1}{2}}$-continuous (that is, H\"older continuous with exponent $\tfrac{1}{2}$) and such that 
+\[\map(\distfun{\bm{a}}{p})=p.\]
+\end{subthm}
+
+\begin{subthm}{thm:right-inverse-function:open-map}
+The distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipschitz (in particular, open) in a neighborhood of $p$.
+\end{subthm}
+
+\end{thm}
+
+Part \ref{SHORT.thm:right-inverse-function:open-map} of the theorem 
+is closely related to \cite[Theorem 5.4]{BGP} by Burago, Gromov and Perelman, 
+but the proof presented here is different; 
+yet alternative proof can be build on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
+
+%\parbf{Remark for AKP.} It seems that the set $\Im \map$ is $\kay$-rectifiable; that is, it lies in an image of a Lipschitz map from bounded domain of $\RR^\kay$ to $\spc{L}$. It seems I have a proof, but it is not yet clear we need it.???
+
+
+\parit{Proof.} 
+Fix some $\eps,r,\lambda>0$ such that the following conditions hold: 
+\begin{enumerate}[(i)]
+\item Each distance function $\distfun{a^i}{}{}$ and $\distfun{b}{}{}$ is $\tfrac\lambda2$-concave in $\oBall(p,r)$.
+\item For any $q\in \oBall(p,r)$, we have $\angk{\kappa}{q}{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and $\angk{\kappa}{q}{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i$.
+In addition $\eps<\tfrac{1}{10}$.
+\end{enumerate}
+
+
+Given $\bm{x}=(x^1,x^2,\dots,x^\kay)\in \RR^\kay$
+consider the function 
+$f_{\bm{x}}\:\spc{L}\to \RR$ defined as
+\[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\distfun{b}{}{},\]
+where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
+Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
+Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve which starts at $p$.
+
+\begin{clm}{}\label{clm:|a alpha_x|=x}
+If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$, we have
+$|\distfun{\bm{a}}{p}-\bm{x}|
+\le
+\tfrac{\eps^2}{10}\cdot t_0$
+then 
+$
+\distfun{\bm{a}}{[\alpha_{\bm{x}}(t_0)]}
+= 
+\bm{x}$.
+
+\end{clm}
+
+First note that Claim \ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,r)$, we have
+\begin{enumerate}[(i)]
+\item\label{111} $(\d_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
+\item\label{222} $(\d_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}-x^j\}<0$.
+\end{enumerate}
+Indeed, since $t_0\le\tfrac{r}2$, $\alpha_{\bm{x}}(t)\in\oBall(p,r)$ for all $t\in[0,t_0]$.
+Consider the following real-to-real functions:
+\[\begin{aligned}
+\phi(t)
+&\df
+\max_{i}\{\dist{a^i}{\alpha_{\bm{x}}(t)}{}-x^i\},
+\\
+\psi(t)
+&\df
+\min_{i}\{\dist{a^i}{\alpha_{\bm{x}}(t)}{}-x^i\}.
+\end{aligned}\eqlbl{eq:xy-def}\]
+Then from (\ref{111}), 
+we have $\phi^+<-\tfrac{1}{10}\cdot\eps^2$
+if $\phi>0$ and $t\in[0,t_0]$.
+The same way, 
+from (\ref{222}), 
+we have $\psi^+>\tfrac{1}{10}\cdot\eps^2$
+if $\psi<0$ and $t\in[0,t_0]$.
+Since $|\distfun{\bm{a}}{p}-\bm{x}|
+\le
+\tfrac{\eps^2}{10}\cdot t_0$, it follows that $\phi(0)\le \tfrac{\eps^2}{10}\cdot t_0$ and $\psi(0)\ge -\tfrac{\eps^2}{10}\cdot t_0$.
+Thus $\phi(t_0)\le 0$ and $\psi(t_0)\ge 0$.
+On the other hand, from \ref{eq:xy-def} we have $\phi(t_0)\ge \psi(t_0)$.
+That is, $\phi(t_0)=\psi(t_0)=0$; hence Claim~\ref{clm:|a alpha_x|=x} follows.
+
+Thus, to prove Calim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
+First let us prove it assuming that $\spc{L}$ is geodesic.
+
+Note that 
+\[(\d_q\distfun{b}{}{})(\dir{q}{a^i})
+\le\cos\angk{\kappa}{q}{b}{a^j}<-\tfrac\eps2,
+\eqlbl{inq-b}\]
+for all $i$ and
+\[(\d_q\distfun{a^j}{}{})(\dir{q}{a^i})
+\le
+\cos\angk{\kappa}{q}{a^i}{a^j}
+<
+-\tfrac\eps2\eqlbl{inq-a^j}\]
+for all $j\not=i$. 
+Further, \ref{inq-a^j} implies
+\[(\d_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
+for all $i\not=j$.
+The assumption in (\ref{111}), implies
+\[\d_q f_{\bm{x}}
+=
+\min_{j\not=i} \{\d_q h_{\bm{x}}^j\}+\eps\cdot(\d_q\distfun{b}{}{}).\]
+Thus,
+\begin{align*}
+-(\d_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
+&\ge
+\<\dir q{a^i},\nabla_q f_{\bm{x}}\>
+\ge
+\\
+&\ge
+(\d_qf_{\bm{x}})(\dir q{a^i})
+=
+\\
+&=
+\min_{i\not=j}\{(\d_qh_{\bm{x}}^i)(\dir q{a^i})\}+\eps\cdot(\d_q\distfun{b}{}{})(\dir q{a^i}).
+\end{align*}
+Therefore (\ref{111}) follows from \ref{inq-b} and \ref{inq-h}.
+
+The assumption in (\ref{222}) implies that $f_{\bm{x}}(q)
+=
+h_{\bm{x}}^i(q)+\eps\cdot\distfun{b}{}{}$ and 
+\[\d_q f_{\bm{x}}\le \d_q \distfun{a^i}{}{}+\eps\cdot(\d_p\distfun{b}{}{}).\] 
+Therefore,
+\begin{align*}
+(\d_q \distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
+&\ge 
+\d_qf_{\bm{x}}(\nabla_q f_{\bm{x}})
+\ge 
+\\
+&\ge
+\l[(\d_qf_{\bm{x}})(\dir qb)\r]^2
+\ge
+\\
+&\ge
+\l[\min_i\{\cos\angk\kappa qb{a^i}\}-\eps^2\r]^2.
+\end{align*}
+Thus, (\ref{222}) follows from \ref{inq-b} since $\eps<\tfrac{1}{10}$. 
+
+That finishes the proof of \ref{clm:|a alpha_x|=x} in case if $\spc{L}$ is geodesic.
+If $\spc{L}$ is not geodesic,
+perform the above estimate in $\spc{L}^\o$, the ultrapower  of $\spc{L}$. 
+(Recall that according to \ref{cor:ulara-geod}, $\spc{L}^\o$ is geodesic.)
+\claimqeds
+
+Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|$; 
+so we have equality in \ref{clm:|a alpha_x|=x}.
+Define the submap
+\[\map\:{\bm{x}}\mapsto \alpha_{\bm{x}}\circ t_0(\bm{x}),\ \ 
+\Dom\map=\oBall(\distfun{\bm{a}}{p},\tfrac{\eps^2\cdot r}{20} )\subset\RR^\kay.\]
+It follows from Claim~\ref{clm:|a alpha_x|=x}, that
+$\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom\map$.
+
+Clearly $t_0(p)=0$; thus $\map(\distfun{\bm{a}}{p})=p$.
+Further, by construction of $f_{\bm{x}}$, 
+\[|f_{\bm{x}}(q)-f_{\bm{y}}(q)|\le |\bm{x}-\bm{y}|,\]
+for any $q\in \spc{L}$.
+Therefore, according to Lemma~\ref{lem:fg-dist-est}, $\map$ is $C^{\frac{1}{2}}$-continuous.
+Thus, we  proved (\ref{SHORT.thm:right-inverse-function:Hoelder}).
+
+Further, note that 
+\[\dist{p}{\map(\bm{x})}{}
+\le (1+\eps)\cdot t_0(\bm{x})
+\le\tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|.\eqlbl{co-lip}\]
+
+Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
+The inequality \ref{co-lip}, for the obtained map $\map'$, implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
+there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
+\[\dist{p'}{q'}{}\le \tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p'}-\bm{x}|.\]
+That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$-co-Lipschitz in $\oBall(p,\tfrac{r}{4})$.
+\qeds
 
 
 
