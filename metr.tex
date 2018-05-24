@@ -3,79 +3,42 @@
 \chapter{Metric spaces}
 In this chapter we fix some conventions assuming that the reader is familiar with basic notions in metric geometry.
 
-\section{Definitions}
+\section{Metrics and its relatives}
 \label{sec:metric spaces}
 
-\begin{thm}{Definition}
-Let $\ushort{\spc{X}}$ be a set
-and 
-$$\dist{}{}{}\:\ushort{\spc{X}}\times\ushort{\spc{X}}\to[0,\infty]$$
- be a function, $(x,y)\mapsto \dist{x}{y}{}$ 
-which satisfies the following conditions:
+A metric space is a set equipped with a metric;
+the distance between points $x$ and $y$ in a metric space $\spc{X}$ will be usually \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
+the latter is used if we need to emphasize that we are working in the space $\spc{X}$.
 
-\begin{subthm}{}
- $\dist{x}{x}{}=0$ for any $x\in \ushort{\spc{X}}$;
-\end{subthm}
+The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
+\[\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}\]
+will be called the \emph{distance function}\index{distance function} from $x$. 
 
+\parbf{Generalizations.}
+Often we allowing the infinite value for the distance, but we may still use the term metric space.
+If we need to emphasize that distances in the space might take infinite value, we say \index{$\infty$-metric space}\emph{$\infty$-metric space}
+and if we need to emphasize that the distances are always finite we say \index{genuine metric space}\emph{genuine metric space}.
 
-\begin{subthm}{}(symmetry)
-$\dist{x}{y}{}=\dist{y}{x}{}$ for any $x,y\in \ushort{\spc{X}}$;
-\end{subthm}
-
-\begin{subthm}{}
- (triangle inequality) $\dist{x}{z}{}\le\dist{x}{y}{}+\dist{y}{z}{}$ for any $x,y,z\in \ushort{\spc{X}}$.
-\end{subthm}
-
-Then 
+We will also need pseudometric spaces --- those where distance between distinct points can vanish.
+The described four types of generalized metric spaces can be distinguished by the interval of allowed values for distance between distinct points:
 \begin{itemize}
-\item The pair $\spc{X}=(\ushort{\spc{X}},\dist{}{}{})$ 
-is called a \emph{$[0,\infty]$-metric space}.
-\item The set $\ushort{\spc{X}}$ is called \emph{underlying set}\index{underlying set} of $\spc{X}$. 
-The elements of $\ushort{\spc{X}}$ are called \emph{points}\index{point} of the metric space $\spc{X}$.
-\item The function $\dist{}{}{}$ is called 
-\emph{$[0,\infty]$-metric}\index{$[0,\infty]$-metric} of $\spc{X}$,
+\item genuine metric is $(0,\infty)$-valued, 
+\item $\infty$-metric is  $(0,\infty]$-valued, 
+\item pseudometric might be $[0,\infty)$-valued or $[0,\infty]$-valued, depending on the context.
 \end{itemize}
-\end{thm}
+For example, if we need to be precise, we may say $[0,\infty)$-valued metric instead of pseudometric.
 
-With a slight abuse of notations we will write $x\in\spc{X}$ meaning that $x$ is a point of $\spc{X}$.
+The metric spaces are main objects of study in this book.
+However, the described generalizations are useful
+in  various definitions and constructions.
+For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) use infinite distances.
+The following definition gives an other example.
 
-The value $\dist{x}{y}{}$ is called the \emph{distance}\index{distance} from $x$ to $y$.
-If we need to emphasize 
-that the distance is taken in the space ${\spc{X}}$, 
-we will write $\dist{x}{y}{\spc{X}}$;
-
-The function $\distfun{x}{}{}\:\ushort{\spc{X}}\to\RR$ defined as $\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}$ will be called the \emph{distance function}\index{distance function} from $x$. 
-
-We will need three variations of the above definition, which we denote by $(0,\infty]$-metric, $[0,\infty)$-metric and $(0,\infty)$-metric,
-the intervals $(0,\infty]$, $[0,\infty)$, $(0,\infty)$ describe possible values for the distance between distinct points in the space.
-
-\begin{thm}{Definition}
-A $[0,\infty]$-metric space is called a \emph{$(0,\infty]$-metric space}\index{$(0,\infty]$-metric space}
-if $\dist{x}{y}{}=0$ if and only if $x=y$.
-In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called a \emph{$(0,\infty]$-metric}\index{$(0,\infty]$-metric}.
-\end{thm}
-
-\begin{thm}{Definition}
-A $[0,\infty]$-metric space is called a \emph{$[0,\infty)$-metric space}\index{$[0,\infty)$-metric space}
-if $\dist{x}{y}{}<\infty$ for any two points $x, y$.
-In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called a \emph{$[0,\infty)$-metric}\index{$[0,\infty)$-metric}.
-\end{thm}
-
-\begin{thm}{Definition}
-A $[0,\infty]$-metric space is called a \emph{$(0,\infty)$-metric space}\index{$(0,\infty)$-metric space}
-if $0<\dist{x}{y}{}<\infty$ for any two points $x\ne y$.
-In this case the function $(x,y)\mapsto \dist{x}{y}{}$ is called a \emph{$(0,\infty)$-metric}\index{$[0,\infty)$-metric}.
-\end{thm}
-
-The main object of study in this book are $(0,\infty)$-metric spaces which will be also called  \emph{metric spaces}.
-However, the notion of $[0,\infty]$-metric spaces which allow for infinite distances between  points is useful
-in  various definitions and constructions such as the following one
-
-\begin{itemize}
-\item Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ be a collection of $[0,\infty]$-metric spaces.
+\begin{thm}{Definition}\label{def:disjoint-union}
+Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ be a collection of pseudometric spaces.
 The disjoint union 
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$$ 
-has a natural $[0,\infty]$-metric on it defined as follows:
+has a natural pseudometric on it defined the following way:
 given two points $x\in\spc{X}_\alpha$ and $y\in\spc{X}_\beta$
 set 
 \[
@@ -85,164 +48,131 @@ set
 \dist{x}{y}{\bm{X}}=\dist{x}{y}{\spc{X}_\alpha}&\text{if}\ \ \alpha=\beta.
 \end{matrix}
 \]
-The obtained metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as $\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$.
+The obtained metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
+\end{thm}
 
-\item Another example is the construction of length-metric given in Section~\ref{sec:intrinsic}.
-\end{itemize}
+Now let us give examples when vanishing distance between distinct points is useful.
 
-Now let us give some constructions which show that allowing distances between distinct point might to vanish can also be useful.
-\begin{itemize}
 
-\item Suppose a set ${\spc{X}}$ comes with a set of $[0,\infty]$-metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
-Then set
+Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
+Then 
 \[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
-Clearly, $\dist{}{}{}$ is a $[0,\infty]$-metric.
-But it need not be a $(0,\infty]$-metric  even if all $\dist{}{}{\alpha}$ are $(0,\infty)$-metrics.
+is only a pseudometric;
+if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ has to be a $[0,\infty)$-valued.
 
-\item Let $\spc{X}$ be a set,
+Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and let 
  $\map\:\spc{X}\to\spc{Y}$ be a map.
-Then one can consider the \emph{pullback metric} on $\spc{X}$
-defined as 
+If $\map$ is not injective,
+then the \emph{pullback}
 \[\dist{x}{y}{\spc{X}}=\dist{\map(x)}{\map(y)}{\spc{Y}}\]
-for any $x,y\in\spc{X}$.
+defines only a pseudometric on $\spc{X}$.
 
-Note that the pullback metric $\dist{}{}{\spc{X}}$ is only  $[0,\infty)$ even if the metric on 
-$\spc{Y}$ is $(0,\infty)$, since $\map$ need not be injective.
-
-\end{itemize}
-
-On the other hand, 
-as we will see below,
-nearly any question about the other 3 types of metric spaces can be reduced to a question about $(0,\infty)$-metric spaces.
+\parbf{Corresponing metric space and metric component.}
+The following two observations show that
+nearly any question about pseudometric spaces can be reduced to a question about genuine metric spaces.
 
 
-\begin{itemize}
-\item 
-If $\spc{X}$ is a $[0,\infty]$-metric space 
-and $x,x'\in\spc{X}$ are such that $\dist{x}{x'}{}=0$, then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
+Assume $\spc{X}$ is a pseudometric space.
+Set
+$x\sim y$ if and only if $\dist{x}{y}{}=0$. 
+Note that if $x\sim x'$, then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
 Thus, $\dist{}{}{}$ defines a metric on the
-quotient set $\ushort{\spc{X}}/{\sim}$ with the equivalence relation 
-$x\sim y$ iff $\dist{x}{y}{}=0$.
-This way we obtain a $(0,\infty]$-metric space $\spc{X}'$.
-Often we will not distinguish between the $(0,\infty]$-metric space $\spc{X}'$
-and the $[0,\infty]$-metric space $\spc{X}$. 
+quotient set $\spc{X}/{\sim}$.
+This way we obtain a metric space $\spc{X}'$.
+The space $\spc{X}'$ is called \emph{corresponding metric space} for the pseudometric space $\spc{X}$.
+Often we will not distinguish between  $\spc{X}'$
+and $\spc{X}$. 
 
 
-\item The relation $x\sim y$ iff $\dist{x}{y}{}<\infty$ is an equivalence relation.
-The equivalence class of a point $x\in\spc{X}$ will be called the \emph{metric component}\index{metric component} %???Is it OK???
- of $x$; it will be denoted as $\spc{X}_x=\oBall(x,\infty)$.
-Thus, any metric space is a disjoint union of its metric components in the sense defined above.
-\end{itemize}
+Set $x\approx y$ if and only if $\dist{x}{y}{}<\infty$;
+this is an other equivalence relation on $\spc{X}$.
+The equivalence class of a point $x\in\spc{X}$ will be called the \emph{metric component}\index{metric component} 
+ of $x$; it will be denoted as $\spc{X}_x$.
+One could think of $\spc{X}_x$ as of $\oBall(x,\infty)_{\spc{X}}$ --- the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
 
-\parbf{Related definitions.}
-For a metric space as above,
-\begin{itemize}
-\item Given $R\in[0,\infty]$ and $x\in \spc{X}$, the sets
+It follows that any metric space is a \emph{disjoint union} of its metric components in the sense defined above; see Definition~\ref{def:disjoint-union}
+
+
+\section{Notations}
+
+\parbf{Balls.}
+Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 \begin{align*}
-\oBall(x,R)&=\{y\in \spc{X}\mid \dist{x}{y}{}<R\},
+\oBall(x,R)&=\set{y\in \spc{X}}{\dist{x}{y}{}<R},
 \\
-\cBall[x,R]&=\{y\in \spc{X}\mid \dist{x}{y}{}\le R\}
+\cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}
 \end{align*}
-
-
 are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
-\begin{itemize}
-\item If we need to emphasize that these balls are taken in the metric space $\spc{X}$,
-we write $\oBall(x,R)_{\spc{X}}$
-and $\cBall[x,R]_{\spc{X}}$
+
+If we need to emphasize that these balls are taken in the metric space $\spc{X}$,
+we write 
+\[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
 correspondingly.
 
-\item In case $\spc{X}=\Lob{m}{\kappa}$, we often will not need to specify the center of the ball,
-so we may write $\oBall(R)_{\Lob{m}{\kappa}}$
-and $\cBall[R]_{\Lob{m}{\kappa}}$ correspondingly.
-\end{itemize}
-\item A set $A\subset\spc{X}$ is called \emph{bounded}\index{bounded set} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
-\item
-For subsets $A, B\subset \spc{X}$, 
-%let us define the distance from $A$ to a point $x$ in $\spc{X}$ as 
-%\[\dist{A}{x}{}
-%\df
-%\inf\set{\dist{a}{x}{}}{a\in A},\] 
-%and  ??? seems redundant as this is a special case of distances between sets. V.
-we define the distance between $A$ and $B$  as 
+In case $\spc{X}=\Lob{m}{\kappa}$, we often will not need to specify the center of the ball,
+so we may write 
+\[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}}\] correspondingly.
+
+\parbf{Distances to sets.}
+For subset $A\subset \spc{X}$, 
+let us denote the distance from $A$ to a point $x$ in $\spc{X}$ as $\distfun{A}{x}$;
+that is,
+\[\distfun{A}{x}
+\df
+\inf\set{\dist{a}{x}{}}{a\in A},\] 
+and  %??? seems redundant as this is a special case of distances between sets. V.
+we define the distance between sets $A$ and $B$  as 
 \[\dist{A}{B}{}
 \df
 \inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]
-\item
+
 For any subset $A\subset\spc{X}$,  the sets
 \begin{align*}
-\oBall(A,R)&=\{y\in \spc{X}\mid \dist{A}{y}{}<R\},
+\oBall(A,R)&=\set{y\in \spc{X}}{ \dist{A}{y}{}<R},
 \\
-\cBall[A,R]&=\{y\in \spc{X}\mid \dist{A}{y}{}\le R\}
+\cBall[A,R]&=\set{y\in \spc{X}}{\dist{A}{y}{}\le R}
 \end{align*}
 are called respectively the  \emph{open}\index{open tubular neighborhood} and \emph{closed $R$-neighborhoods}\index{closed neighborhood} of $A$.
 
-\item Similarly, define
-\begin{align*}
-\Sphere[A,R]&=\{y\in \spc{X}\mid \dist{A}{y}{}=R\},
-\end{align*}
-In particular, if $A=\{x\}$ is a one-point set in $\spc{X}$ 
-then  $\Sphere[x,R]$ 
-is the metric sphere of radius $R$ around $x$.
+\parbf{Diameter, radius and packing.}
+Let $\spc{X}$ be a metric space.
+Then the \emph{diameter}\index{Diameter} of $\spc{X}$ is  defined as
+\[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
 
-\item
-For $0<r<R$, let 
-\[
-\Ann [A,r,R]=\{x\in\spc{L}| \text{ such that }r\le \dist{x}{A}{}\le R\}
-\]
+The \emph{radius}\index{Radius} of $\spc{X}$ is  defined as
+\[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \t{for some}\ x\in\spc{X}}.\]
 
-be the closed annulus around $A$.
-\item Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
-that is, a metric space with the metric defined as restriction of the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
-\end{itemize}
+The packing number \emph{$\eps$-pack}\index{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
+If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$ 
+such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\index{maximal $\eps$-packing} in $\spc{X}$.
 
-\parbf{Types of metric spaces.}
-\begin{itemize}
-%\item ???A metric space is called \emph{finite}\index{finite metric space},
-%if its underlying set is finite. ??? I don't think there is any need to define this. V.
+\parbf{G-delta sets.}
+A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset. 
+Often we will use the following classical result:
 
-\item
-A metric space $\spc{X}$ is called \emph{complete}\index{complete space} if any converging in itself sequence converges.
-Namely, a sequence of points $x_n\in\spc{X}$ \emph{convergence in itself}\index{converges in itself} or \index{Cauchy sequence}\emph{Cauchy} if for any $\eps>0$, we have
-$\dist{x_n}{x_m}{}<\eps$ for all sufficiently large $n$ and $m$.
-A sequence of points $x_n\in\spc{X}$ is called \emph{convergent}\index{convergent sequence} if there is $x\in \spc{X}$ such that for any $\eps>0$ we have $\dist{x_n}{x}{}<\eps$ for all sufficiently large $n$.
+\begin{thm}{Bair's theorem}
+Let $\spc{X}$ be a complete metric space 
+and $\{\Omega_n\}$, $n\in \NN$ be a collection of open dense subsets of $\spc{X}$.
+Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
+\end{thm}
+ 
 
-Let $\spc{X}$ be arbitrary metric space.
-Given two converging in itself sequences $(x_n)$ and $(x'_n)$ in $\spc{X}$,
-the following limit is always defined:
-\[\rho((x_n),(x'_n))
-=
-\lim_{n\to\infty}\dist{x_n}{x_n'}{\spc{X}}\]
-and $\rho$ gives a pseudometric on the set of all senseless in $\spc{X}$ which are converging in itself.
-The corresponding metric space $\spc{Z}$ is called the \emph{completion} of $\spc{X}$,  briefly, $\spc{Z}=\overline{\spc{X}}$.
-
-Note that there is a natural embedding $\spc{X}\hookrightarrow\overline{\spc{X}}$; 
-each point $x\in\spc{X}$ is mapped to a constant sequence $(x,x,\dots)$.
-Thus the space $\spc{X}$ can be (and will be) considered as a subset of $\overline{\spc{X}}$.
-
-\item A metric space $\spc{X}$ is called \emph{locally complete}\index{locally complete} if for each point $p\in \spc{X}$ there is some $R>0$ such that  the closed ball $\cBall[p,R]\subset\spc{X}$ is complete.
-
-\item A metric space $\spc{X}$ is called \emph{proper}\index{proper space} if all closed bounded sets in $\spc{X}$ are compact. 
+\parbf{Proper spaces.}
+A metric space $\spc{X}$ is called \emph{proper}\index{proper space} if all closed bounded sets in $\spc{X}$ are compact. 
 This condition is equivalent to each of the following statements:
 \begin{enumerate}
 \item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
 the closed ball $\cBall[p,R]\subset\spc{X}$ is compact. 
 \item The function $\distfun{p}{}{}\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$.
 \end{enumerate}
-\end{itemize}
 
+We will often use the following two classical statements:
 
 \begin{thm}{Proposition}
-Proper metric spaces are separable/second countable.
+Proper metric spaces are separable and second countable.
 \end{thm}
-\parit{Proof.}
-Let $\spc{X}$ be  proper metric space and let $p\in \spc{X}$.
-Since $\spc{X}=\cup_{n=1}^\infty\cBall[p,n]$, to see that $X$ is separable it is sufficient to construct a countable dense subset in  each $\cBall[p,n]$. 
-For every $m\ge 1$  take  an open cover of $\cBall[p,n]$ by open $1/m$-balls.
-By compactness of $\cBall[p,n]$ it admits a finite subcover $\oBall(q^m_1,1/m),\ldots, \oBall(q^m_{N_m},1/m)$. Then $\cup_{m, j} \{q^m_j\}$ is a countable dense subset of $\cBall[p,n]$.
-Lastly, to see that $\spc{X}$ is second countable, let $\{p_i\}_{i=1}^\infty$ be a countable dense subset in $\spc{X}$. \\ Then $\cup_{i,j\ge 1} \oBall(p_i,\frac 1 j)$ is a countable basis of topology of $\spc{X}$.
-\qeds
+
 
 
 \begin{thm}{Proposition}\label{compact=seq-compact}
@@ -253,88 +183,13 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 \item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\cup_i\oBall(p_i,\eps)=\spc{X}$.
 \end{enumerate}
 \end{thm}
-\parit{Proof.}
-i) $\Rightarrow$ ii)  and ii) $\Rightarrow$  iii) are  obvious. We will leave iii) $\Rightarrow$  ii) as an exercise.
-
-Let us prove that ii) implies i). Let $\{U_\alpha\}_{\alpha\in\mathcal A}$ be an open cover of $\spc{X}$. 
-We claim that there is an $\eps>0$ such that for any $p\in \spc{X}$ there is $\alpha\in\mathcal A$ such that $\oBall(p_i,\eps)\subset U_\alpha$. Such $\eps$ is called the \emph{ Lebesgue number} \index{ Lebesgue number} of the cover  $\{U_\alpha\}_{\alpha\in\mathcal A}$.
-
-Suppose no such $\eps$ exists.
-Then there exists a sequence of points $p_i\in\spc{X}$ such that $\oBall(p_i,1/i)$ is not contained in any $U_\alpha$.
-By sequential compactness by passing to a subsequence we can assume that $p_i\to p$.
-Then $p\in U_{\alpha_0}$ for some $\alpha_0$ and since $U_{\alpha_0}$ is open it follows that $\oBall(p_i,1/i)\subset U_{\alpha_0}$ for all large $i$.
-This is a contradiction and hence the cover $\{U_\alpha\}_{\alpha\in\mathcal A}$ admits  a positive Lebesgue number $\eps$.
-Then by iii) there is a finite $\eps$ net $p_1,\ldots,p_{N}$ in $\spc{X}$. 
-By the choice of $\eps$ for each $i$ there is $\alpha_i$ such that
-$\oBall(p_i,\eps)\subset U_{\alpha_i}$. 
-Then $\cup_{i=1}^NU_{\alpha_i}=\spc{X}$.
-\qeds 
-
-A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset.
-
-\begin{thm}{Bair's theorem}
-Let $\spc{X}$ be a complete metric space 
-and $\{\Omega_n\}$, $n\in \NN$ be a collection of open dense subsets of $\spc{X}$.
-Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
-\end{thm}
-
-\parit{Proof.}
-Let $U\subset\spc{X}$ be open. We need to show that $U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset$. Since $\Omega_1$ is open and dense, there is $p_1\in\spc{X}$ and $r_1>0$ such that $\cBall[p_1,r_1]\subset  U\cap \Omega_1$.
-Since $\Omega_2$ is open and dense there is $p_2\in\spc{X},0<r_2<r_1/2$ such that $\cBall[p_2,r_2]\subset \oBall(p_1,r_1)\cap \Omega_2\subset U\cap\Omega_1\cap\Omega_2$. Proceeding by induction we can construct a sequence of balls $\cBall[p_i,r_i]$ such that $0<r_i<\frac {r_{i-1}}{2}$ satisfying  $\cBall[p_i,r_i]\subset \oBall(p_{i-1},r_{i-1})\cap \Omega_i\subset U\cap \bigl(\bigcap_{k=1}^i\Omega_k
- \bigr)$. Then the sequence $\{p_i\}$ converges in itself and hence, by completeness of $\spc{X}$ we have that $p_i\to p$. By construction, $p_i\in \cBall[p_j,r_j]$ for all $i\ge j$ and hence the same is true for $p$. Thus, $p\in U\cap\bigl(\bigcap_{n=1}^\infty\Omega_n\bigr)\ne\emptyset $. \qeds
- 
- Recall that a family of maps between metric spaces $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
-\begin{thm}{Arzel\`a-Ascoli theorem}\cite[Lemma 3.10]{BH}
-
-Let  $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$  be an equicontinuous family  of maps where $\spc{Y}$ is compact and $\spc{X}$ is separable. 
-
-Then $\{f_\alpha\}$ contains a uniformly convergent subsequence $f_{\alpha_i}\to f\co\spc{X}\to\spc{Y}$.
-\end{thm}
-
-\section{Invariants of metric spaces}
-
-Let $\spc{X}$ be a metric space.
-Then
-\begin{itemize}
-\item 
-The \emph{diameter}\index{Diameter} of $\spc{X}$ is  defined as
-\[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
-
-\item The \emph{radius}\index{Radius} of $\spc{X}$ is  defined as
-\[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \t{for some}\ x\in\spc{X}}.\]
-
-\item The packing number \emph{$\eps$-pack}\index{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
-If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$ 
-such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\index{maximal $\eps$-packing} in $\spc{X}$.
-
-\end{itemize}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Length spaces}\label{sec:intrinsic}
 
 \begin{thm}{Definition}
-Let $\spc{X}$ be a metric space.  Given $[a,b]\subset [-\infty,\infty]$ and a continuous curve $\alpha\co [a,b]\to \spc{X}$ we define its {\emph length} as 
+Let $\spc{X}$ be a metric space.  Given a curve $\alpha\: \II\to \spc{X}$ we define its {\emph length} as 
 \[
-\length \alpha \df \sup_{a\le t_0\le t_1\le\ldots\le t_n\le b}\Sigma_i \dist{\alpha(t_i)}{\alpha_{i+1}}{}
+\length \alpha \df \sup_{a\le t_0\le\ldots\le t_n\le b}\left\{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha_{i-1}}{}\right\}
 \]
 \end{thm}
 It is easy to see that if $\tau\co [c,d]\to [a,b]$ is a homeomorphism, then $\length \alpha=\length(\alpha\circ\tau)$.
@@ -359,7 +214,15 @@ if for any $\eps>0$ and any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\inf
 such that 
 \[\length\alpha<\dist{x}{y}{}+\eps.\]
 
-Let us give a few more variations of  the notion of length spaces.
+In this book, most of the time we consider length spaces.
+If $\spc{X}$ is length space, 
+and $A\subset \spc{X}$.
+The set $A$ comes with the inherited metric from $\spc{X}$ 
+which might be not a length-metric.
+The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
+
+\parbf{Variations of the definition.}
+We will need the following variations of the notion of length spaces.
 
 \begin{itemize}
 \item Assume $R>0$.
@@ -378,17 +241,19 @@ if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<R$ there is a geodesi
 
 Note that the notions of $\infty$-length spaces and length spaces are the same.
 Clearly, any geodesic space is a length space 
-and any $R$-geodesic space is an $R$-length space.
-\parbf{Example.} 
-Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $I_i$ of length $1+1/i$ where for each $I_i$ one end is glued to $p=\{0\}$ and the other to $q=\{1\}$.
-Then $\spc{X}$ carries a natural complete length metric  with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+and any $R$-geodesic space is $R$-length.
+
+\begin{thm}{Example} 
+Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\II_n$ of length $1+\tfrac1n$ where for each $\II_n$ one end is glued to $p$ and the other to $q$.
+Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:complete=>complete}
 Let $\spc{X}$ be a metric space
 and $\yetdist{}{}{}$ is the length metric on it.
 Show the following
 \begin{subthm}{}
-If complete  $(\spc{X},\yetdist{}{}{})$ is complete.
+If $\spc{X}$  is complete, then  $(\spc{X},\yetdist{}{}{})$ is complete.
 \end{subthm}
 
 \begin{subthm}{}
@@ -400,13 +265,6 @@ If $\spc{X}$ is compact, then $(\spc{X},\yetdist{}{}{})$ is geodesic.
 \begin{thm}{Exercise}\label{ex:no-geod}
 Give an example of a complete length space for which no pair of distinct points can be joined by a geodesic.
 \end{thm}
-
-In this book, most of the time we consider length spaces.
-If $\spc{X}$ is length space, 
-and $A\subset \spc{X}$.
-The set $A$ comes with the inherited metric from $\spc{X}$ 
-which might be not a length-metric.
-The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
 
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
@@ -427,28 +285,35 @@ Note that a $0$-midpoint is the same as a midpoint.
 
 
 \begin{thm}{Lemma}\label{lem:mid>geod}
-Let $\spc{X}$ be a complete metric space and $R>0$.
+Let $\spc{X}$ be a complete metric space.
+
 \begin{subthm}{lem:mid>length}
-Assume that for any pair of points $x,y\in \spc{X}$  
-such that $\dist{x}{y}{}<R$ and any $\eps>0$
+Assume that for any pair of points $x,y\in \spc{X}$ and any $\eps>0$
 there is a $\eps$-midpoint $z$.
-Then the space $\spc{X}$ is an $R$-length space.
+Then the space $\spc{X}$ is a length space.
 \end{subthm}
 
 \begin{subthm}{lem:mid>geod:geod}
 Assume that for any pair of points $x,y\in \spc{X}$ 
-such that $\dist{x}{y}{}<R$
 there is a midpoint $z$.
-Then the space $\spc{X}$ is an $R$-geodesic space.
+Then the space $\spc{X}$ is a geodesic space.
 \end{subthm}
+
+such that $\dist{x}{y}{}<R$
+
+\begin{subthm}{lem:mid>geod:R}
+If for some $R>0$, the assumptions above holds only for pairs of points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$, 
+then the space $\spc{X}$ is a $R$-length or $R$-geodesic correspondingly.
+
+\end{subthm}
+
 \end{thm}
 
+
 \parit{Proof.}
-Let $x,y\in \spc{X}$ be a pair of points such that $\dist{x}{y}{}<R$.
-
-Set $\eps_n=\frac\eps{2^{2\cdot n}}$.
-
-Set $\alpha(0)=x$ and $\alpha(1)=y$.
+Fix a pair of points $x,y\in \spc{X}$.
+Set $\eps_n=\frac\eps{2^{2\cdot n}}$,
+$\alpha(0)=x$ and $\alpha(1)=y$.
 
 Set $\alpha(\tfrac12)$ to be an $\eps_1$-midpoint of $\alpha(0)$ and $\alpha(1)$.
 Further, set $\alpha(\frac14)$ 
@@ -462,9 +327,8 @@ as an $\eps_{n}$-midpoint of the already defined
 $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 
-In this way we define $\alpha(t)$ for $t\in W$,
-where $W$ denotes the set of dyadic rationals in $[0,1]$.
-For any $t\in[0,1]$ consider a sequence of $t_n\in W$ such that $t_n\to t$ as $n\to\infty$.
+In this way we define $\alpha(t)$ for all dyadic rationals $t$ in $[0,1]$.
+If $t\in[0,1]$ is not a dyadic rational, consider a sequence of dyadic rationals $t_n\to t$ as $n\to\infty$.
 Note that the sequence $\alpha(t_n)$ converges;
 define $\alpha(t)$ as its limit.
 It is easy to see that $\alpha(t)$
@@ -484,13 +348,15 @@ To prove (\ref{SHORT.lem:mid>geod:geod}),
 one should repeat the same argument 
 taking midpoints instead of $\eps_n$-midpoints.
 In this case \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
+
+The proof of (\ref{lem:mid>geod:R}) obtained by a straightforward modifications of the proofs above.
 \qeds
 
-Since in a compact space a sequence of $1/n$-midpoints $z_n$ contains a convergent subsequence, Lemma  \ref{lem:mid>geod} immediately implies
-
-\begin{thm}{Proposition}
+\begin{thm}{Corollary}
 A proper length space is geodesic.
 \end{thm}
+
+It follows from Lemma \ref{lem:mid>geod}, since in a compact set a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence.
 
 \begin{thm}{Hopf--Rinow theorem}\label{thm:Hopf-Rinow}
 Any complete, locally compact length space is proper.
@@ -537,29 +403,37 @@ Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact;
 a contradiction.
 \qeds
 
-\begin{thm}{Exercise}(from \cite{BH})\label{exercise from BH}
+\begin{thm}{Exercise} %(from \cite{BH})\label{exercise from BH}
 Construct a geodesic space which is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
 
 \section{Convex sets}
 
+The following definition will be applied only to geodesic spaces,
+despite it makes sense for all metric spaces.
+
 \begin{thm}{Definition} 
 \label{def:convex-set}
-Let $\spc{X}$ be a metric space. 
-A set $A\subset\spc{X}$ is called 
+Let $\spc{X}$ be a metric space and $A\subset\spc{X}$.
+
+We say that $A$ 
 \emph{convex}%
 \index{convex set}
 if for every two points $p,q\in A$ there every geodesic $[pq]$ of $\spc{X}$ 
 lies in $A$.
-It is called 
+
+We say that $A$ 
 \emph{weakly convex}%
 \index{convex set!weakly convex set}\index{weakly convex set}
-if for every two points $p,q\in A$ there is a geodesic $[pq]$ of $\spc{X}$ 
+if for every two points $p,q\in A$ which can be connected by a geodesic,
+there is a geodesic $[pq]$ of $\spc{X}$ 
 which lies in $A$.
-If in addition every local geodesic from $p$ to $q$ lies in $A$, then $A$ is called \emph{totally convex}\index{totally convex set}
 
-If these definition is applied only when  $\dist{p}{q}{}<R$, $R\in (0,\infty]$ and only for the geodesics of length $<R$
+We say that $A$ is \emph{totally convex}\index{totally convex}
+if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
+
+If these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and some fixed $R\in (0,\infty]$ and only for the geodesics of length $<R$
 then $A$ is called correspondingly 
 \emph{$R$-convex},
 \emph{weakly  $R$-convex}%
@@ -570,15 +444,15 @@ and \emph{totally  $R$-convex}
 A set $A\subset\spc{X}$ is called 
 \emph{locally convex}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
-suc that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
+such that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
 Similarly one defines  locally weakly convex and locally totally convex sets. %???DO we neeed all of them???
 \end{thm}
 
-\parbf{Remarks.}
+\parbf{Remarks.} Let us state few observations from the definition.
 \begin{itemize}
-\item Note that \emph{(weakly) convex sets} can be also regarded as \emph{(weakly) $\infty$-convex sets}.
-\item Note that inherited metric on a weakly convex set coinsides with its length-metric.
-\item Note that any open set is locally convex by definition.
+\item The notion of \emph{(weakly) convex set} is the same as \emph{(weakly) $\infty$-convex set}.
+\item The inherited metric on a weakly convex set of a length space coincides with its length-metric.
+\item Any open set is locally convex by definition.
 \end{itemize}
 
 The following proposition states that weak convexity survive under ulralimit.
@@ -629,9 +503,8 @@ and will be called the \emph{quotient space}\index{quotient space} of $\spc{X}$ 
 
 In general case the points of the metric space $\spc{X}/{\sim}$
 are formed by equivalence classes in $\spc{X}$
-for a wider equivalence relation, say $\approx$; 
-that is, such that $x\sim y$ implies $x\approx y$ for any $x,y\in \spc{X}$.
-But in the most of the cases we will consider, 
+for a wider equivalence relation.
+However, in the most of the cases we will consider, 
 the set of equivalence classes will coincide with the set of points in the metric space $\spc{X}/{\sim}$.
 
 
@@ -671,10 +544,40 @@ From maximality of $\dist{}{}{\spc{X}/{\sim}}$, we get
 \[\yetdist{x}{y}{}=\dist{x}{y}{\spc{X}/{\sim}}\]
 for any $x,y\in \spc{X}/{\sim}$;
 that is, $\spc{X}/{\sim}$ is a length space.
-\qeds
+\qeds  
+
+\parbf{Group actions.}
+Assume a group $G$ acts on a metric space $\spc{X}$.
+Consider relation $\sim$ on $\spc{X}$
+defined as $x\sim y$ if there is $g\in G$ such that $x=g\cdot y$.
+Note that $\sim$ is an equivalence relation.
+
+In this case the quotient space $\spc{X}/{\sim}$ will be also denoted as $\spc{X}/G$;
+it could be also regarded as space of orbits.
+
+Assume that the group $G$ acts on $\spc{X}$ by isometries.
+In this case the distance between orbits $G\cdot x$ and $G\cdot y$ in $\spc{X}/G$
+can be defined directly 
+\[\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=\inf\set{\dist{x}{g\cdot y}{\spc{X}}
+=
+\dist{g^{-1}\cdot x}{y}{\spc{X}}}{g\in G}.\]
+
+If the $G$-orbits are closed, then $\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=0$ if and only if $G\cdot x=G\cdot y$.
+In this case the quotient space $\spc{X}/G$ is a metric space.
+
+The following proposition follows from the definition of quotient space:
+
+\begin{thm}{Proposition}\label{prop:submetry-X/G}
+Assume $\spc{X}$ is metric space and group $G$ acts on $\spc{X}$ by isometries.
+Then the projection $\spc{X}\to\spc{X}/G$ is a submetry;
+that is $\spc{X}\to\spc{X}/G$ is short and 1-co-Lipschitz.
+\end{thm}
+
+
+\section{Gluing and doubling}\label{sec:doubling}
 
 \parbf{Gluing.}
-Recal that disjoint union of metric spaces can be also considered as a metric.
+Recall that disjoint union of metric spaces can be also considered as a metric space; see Definition~\ref{def:disjoint-union}.
 Therefore the above construction works as well for an equivalence relation on a disjoint union of metric spaces.
 
 Consider two metric spaces $\spc{X}_1$ and $\spc{X}_2$
@@ -686,52 +589,16 @@ In this case, we say that the corresponding quotient space
 $(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called \emph{gluing}\index{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
-Assume that the map $\phi\:A_1\to A_2$ is distance preserving for the inherited metrics.
-Then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance preserving and 
+If the map $\phi\:A_1\to A_2$ is distance preserving,
+then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance preserving and 
 \[\dist{\iota_1(x_1)}{\iota_2(x_2)}{\spc{X}_1\sqcup_{\phi}\spc{X}_2}
 =
 \inf
 \set{\dist{x_1}{a_1}{\spc{X}_1}+\dist{x_2}{a_2}{\spc{X}_2}}
 { a_2=\phi(a_1)}\]
-for any $x_1\in \spc{X}_1$ and $x_2\in \spc{X}_2$.  
+for any $x_1\in \spc{X}_1$ and $x_2\in \spc{X}_2$.
 
-\parbf{Group actions.}
-Assume a group $G$ acts on a metric space $\spc{X}$.
-Consider relation $\sim$ on $\spc{X}$
-defined as $x\sim y$ if there is $g\in G$ such that $x=g\cdot y$.
-Note that $\sim$ is an equivalence relation.
-
-In this case the quotiont space $\spc{X}/{\sim}$ will ba also denoted as $\spc{X}/G$.
-
-Assume $G$ acts on $\spc{X}$ by isometrics and it has closed orbits.
-
-The case of isometric actions will be important for us.
-
-Assume that the group $G$ acts on $\spc{X}$ by isometries 
-and it has closed orbits.
-Let us denote by $\spc{X}/G$ the space of orbits of $G$.
-
-Let us equip $\spc{X}/G$ with a metric.
-Given two orbits $G\cdot x$ and $G\cdot y$ in $\spc{X}/G$
-set 
-\[\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=\inf\set{\dist{x}{g\cdot y}{\spc{X}}
-=
-\dist{g^{-1}\cdot x}{y}{\spc{X}}}{g\in G}.\]
-Note that since $G$-orbits assumed to be closed $\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=0$ if and only if $G\cdot x=G\cdot y$.
-It straightforward to check the remaining axioms of metric.
-
-\begin{thm}{Proposition}\label{prop:submetry-X/G}
-Assume $\spc{X}$ is metric space and group $G$ acts on $\spc{X}$ by isometries.
-Then the projection $\spc{X}\to\spc{X}/G$ is a submetry.
-\end{thm}
-
-\parit{Proof.}
-We need to show that the quotient map is short ans 1-co-Lipschitz.
-Both statements follow from the definition of quotient space.
-\qeds
-
-\section{Doubling}\label{sec:doubling}
-
+\parbf{Doubling.}
 Let $\spc{V}$ be a metric space 
 and $A\subset \spc{V}$ be a closed subset.
 A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
@@ -810,3 +677,10 @@ Thus, we can (and often will) consider space $\spc{X}$ as a subset of  $\Bnd(\sp
 \begin{thm}{Exercise}
 Show that any compact space is isometric to a subspace in a compact length space.
 \end{thm}
+
+Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
+that is, a metric space with the metric defined as restriction of the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
+
+A set $A\subset\spc{X}$ is called \emph{bounded}\index{bounded set} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
+
+Recall that a family of maps between metric spaces $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.

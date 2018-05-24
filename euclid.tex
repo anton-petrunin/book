@@ -101,7 +101,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 
 
-\section{Model angles and triangles.}\label{sec:mod-tri/angles}
+\section{Model angles and triangles}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space, 
 $p,q,r\in \spc{X}$ 
@@ -213,7 +213,7 @@ as required.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Angles and the first variation.}\label{sec:angles}
+\section{Angles and the first variation}\label{sec:angles}
 
 Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} as 
 follows:\index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
@@ -367,7 +367,8 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
-\section{Basic constructions.}
+
+\section{Constructions}
 \label{sec:Euclid-constructions}
 
 
@@ -388,6 +389,79 @@ where $\alpha= \min\{\pi, \dist{p}{q}{\spc{U}}\}$.
 
 The point in the cone ${\spc{Y}}$ formed by the equivalence class of $0\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{Y}}$.
 The distance $\dist{0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
+
+\section{Space of directions and tangent space}
+\label{sec:tangent-space+directions}
+
+Let $\spc{X}$ be a metric space.
+If the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in $\spc{X}$,
+then we will say that the space $\spc{X}$ has \index{defined angles}\emph{defined angles}.
+
+Recall that according to 
+the corollaries \ref{cor:monoton:sup} 
+and \ref{cor:monoton-cba:angle=inf},
+the  $\Alex{}$ and $\CAT{}$ spaces have defined angles.
+ 
+Let $\spc{X}$ be a space with defined angles and $p\in \spc{X}$.
+Consider the set $\mathfrak{S}_p$ 
+of all nontrivial unit-speed geodesics  which start at $p$.
+By \ref{claim:angle-3angle-inq} the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$;
+that is, $(\mathfrak{S}_p,\mangle)$ 
+forms a pseudometric space.
+
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called \emph{space of geodesic directions} at $p$
+and denoted as $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
+for the equivalence relation 
+\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
+
+\begin{thm}{Exercise}
+Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+Show that 
+\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
+
+\end{thm}
+
+\begin{thm}{Exercise}
+Assume $\spc{U}$ is a locally compact geodesic $\CAT{}$ space with extandable geodesics;
+that is, any geodesic in $\spc{U}$ can be extended to a both-side infinite local geodesic.
+
+Show that $\Sigma_p'$ is complete for any $p\in \spc{U}$.
+\end{thm}
+
+The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+
+\begin{thm}{Advanced exercise} 
+Let $\spc{L}$ be a complete length $\Alex{1}$ space.
+Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\SS^n$.
+\end{thm}
+
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called \emph{tangent space} at  $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+
+The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
+To do so consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
+Given $\alpha,\beta\in \mathfrak{T}_p$,
+set 
+\[\dist{\alpha}{\beta}{\mathfrak{T}_p}
+=
+\lim_{\eps\to0} 
+\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps
+\eqlbl{eq:dist-in-T_p}\]
+If the angles in $\spc{X}$ are defined, then so is
+the limit in \ref{eq:dist-in-T_p}.
+In this case it defines a pseudometric on $\mathfrak{T}_p$.
+
+
+The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The elements of $\T'_p$ are formed by the equivalence classes for the realtion 
+\[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
+
+The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
+despite that $\T_p$ is only a cone --- not a vector space.
+The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
 
 \section{Remarks}
 \label{page:upper-angle}
