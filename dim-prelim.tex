@@ -12,7 +12,7 @@ the rest follows directly from the definitions.
 \label{def:HausDim}\index{dimension!Hausdorff dimension}
 Let $\spc{X}$ be a metric space. 
 Its Hausdorff dimension is defined as
-\[\HausDim\spc{X}=\sup\bigl\{\alpha\in\RR\ \mid \HausMes_\alpha(\spc{X})>0\bigr\},\]
+\[\HausDim\spc{X}=\sup\set{\alpha\in\RR}{\HausMes_\alpha(\spc{X})>0},\]
  where $\HausMes_\alpha$ denotes $\alpha$-dimensional Hausdorff measure;
 it is defined in Section \ref{sec:mes+balls}.
 \end{thm}
@@ -130,11 +130,8 @@ Recall that \emph{cone map} is a map between cones which respects the cone multi
 
 \begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!Linear dimension}
 Let $\spc{X}$ be a metric space. 
-The \emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\LinDim$}) is defined by
-\begin{multline*}
-\LinDim\spc{X}=\sup\{m\in\ZZ_{\ge0}\mid\exists\,p\in \spc{X}\ \ \text{which admits an}\\ 
-\text{isometric cone embedding}\ \  \EE^m\hookrightarrow \T_p\spc{X}\},
-\end{multline*}
+The \emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\LinDim$}) is defined exact upper bound on $m\in\ZZ_{\ge0}$
+such that there is $p\in \spc{X}$ which admits an isometric cone embedding $\EE^m\hookrightarrow \T_p\spc{X}$
 where $\EE^m$ denotes $m$-dimensional Euclidean space 
 and $\T_p\spc{X}$ denotes tangent space of $\spc{X}$ at $p$ (defined in Section~\ref{sec:tangent-space+directions}).
 \end{thm}

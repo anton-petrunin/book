@@ -237,15 +237,15 @@
 
 %SIMILAR TO ``='' SIGN
 \def\ae{\buildrel \hbox{\tiny\it a.e.} \over{=\joinrel=}}
-\def\df{\buildrel \hbox{\tiny\it def} \over{=\joinrel=}}
+\def\df{:=}%{\buildrel \hbox{\tiny\it def} \over{=\joinrel=}}
 \def\iso{\buildrel \hbox{\tiny\it iso} \over{=\joinrel=}}
 \def\can{\buildrel \hbox{\tiny\it can} \over{=\joinrel=}}
 \def\oeq{\mathrel{\mathring{=}}}
 
 \def\|{\Arrowvert}
 
-\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r\arrowvert\,{#2}\,\r\}}
-
+%\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r\arrowvert\,{#2}\,\r\}}
+\newcommand*{\set}[2]{\l\{\,{#1}\ {:}\ {#2}\,\r\}}
 
 
 %angles-hinges-trigonometry
