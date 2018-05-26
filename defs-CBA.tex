@@ -1128,7 +1128,6 @@ Part (\ref{SHORT.gluing2}) can be reformulated as follows:
 %$\spc{U}_1\cup\spc{U}_2=\spc{W}$ and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
 %Then $\spc{W}$ is a $\CAT\kappa$ space.
 Let $\spc{W}$ be a 
-complete 
 length space having two 
 $\varpi\kappa$-convex subsets $\spc{U}_1,\spc{U}_2\subset\spc{W}$ such that
 $\spc{W}=\spc{U}_1\cup\spc{U}_2$, $A=\spc{U}_1\cap \spc{U}_2$ is complete and  $\varpi\kappa$-convex in $\spc{W}$, and $\spc{U}_1$, $\spc{U}_2$ are $\CAT\kappa$ spaces.
@@ -1186,7 +1185,7 @@ For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ 
  Suppose $z^i$ is not a Cauchy sequence.  Then there are subsequences  $x^i$ and $y^i$ of $z^i$ satisfying  $\lim|x^iy^i|>0$. Let $m^i$ be the midpoint of $[x^iy^i]$. Since $|p_1m^i|+|p_2m^i| \ge |p_1p_2|$, and  $|p_1x^i|+|p_2x^i|$ and  $|p_1y^i|+|p_2y^i|$
  converge to $|p_1p_2|$, then for  any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
  \[
- |p_1m^i\ge  |p_1x^i|-\epsilon,  |p_1m^i\ge  |p_1y^i|-\epsilon|.
+ |p_1m^i\ge  |p_1x^i|-\epsilon,  |p_1m^i\ge  |p_1y^i|-\epsilon.
  \]
  
  Since triangle $\trig{p^1}{x^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\~p^1}{\~x^i}{\~y^i}$.  
@@ -1194,10 +1193,10 @@ For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ 
  
 \claimqeds
 
-Finally consider the case $\kappa>0$; by  scaling, take $\kappa=1$.
-By Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1,2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone are carried by projection from the vertex to geodesics of $\spc{U}_i$ of length $<\pi$,(see \ref{}). 
-  It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. By the cone distance formula \ref{}, $\Cone A$ is complete since $A$ is complete.
-    Gluing on $\Cone A$ and applying \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
+Finally suppose $\kappa>0$; by  scaling, take $\kappa=1$. Consider the Euclidean cones $\Cone\spc{U}_i$ (see Section \ref{sec:Euclid-constructions}).
+By Theorem \ref{}, $\Cone\spc{U}_i$ is a $\CAT0$ space for $i=1,2$. Geodesics of $\Cone\spc{U}_i$ that do not pass through the vertex of the cone correspond, under projection from the vertex, to geodesics of $\spc{U}_i$ of length $<\pi$. 
+  It follows that $\Cone A$ is $\pi$-convex in $\Cone\spc{U}_1$ and $\Cone\spc{U}_2$. By the cone distance formula  , $\Cone A$ is complete since $A$ is complete.
+    Gluing on $\Cone A$ and applying \ref{clm:geod-gluing} and \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
 $\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{}, $\spc{W}$ is a $\CAT1$ space.
 \qeds
 %
@@ -1238,7 +1237,7 @@ Assume that the doubling of $\spc{U}$ in $A$ is $\CAT0$.
 Show that $A$ is a convex set of $\spc{U}$.
 \end{thm}
 
-\begin{thm}{Exercise} Let $\spc{U}$ is a complete length $\CAT0$ space.
+\begin{thm}{Exercise} Let $\spc{U}$ be a complete length $\CAT0$ space.
 Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
 Show that $\tilde{\spc{U}}$ is $\CAT0$.
 
