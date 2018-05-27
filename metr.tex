@@ -7,38 +7,38 @@ In this chapter we fix some conventions assuming that the reader is familiar wit
 \label{sec:metric spaces}
 
 A metric space is a set equipped with a metric;
-the distance between points $x$ and $y$ in a metric space $\spc{X}$ will be usually \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
-the latter is used if we need to emphasize that we are working in the space $\spc{X}$.
+the distance between points $x$ and $y$ in a metric space $\spc{X}$ will  usually be denoted by \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
+the latter will be used if we need to emphasize that we are working in the space $\spc{X}$.
 
 The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
 \[\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}\]
 will be called the \emph{distance function}\index{distance function} from $x$. 
 
 \parbf{Generalizations.}
-Often we allowing the infinite value for the distance, but we may still use the term metric space.
-If we need to emphasize that distances in the space might take infinite value, we say \index{$\infty$-metric space}\emph{$\infty$-metric space}
-and if we need to emphasize that the distances are always finite we say \index{genuine metric space}\emph{genuine metric space}.
+We  will often allow infinite values for the distance, but we may still use the term metric space.
+If we need to emphasize that distances in a space might take infinite values, we will say \index{$\infty$-metric space}\emph{$\infty$-metric space}
+and if we need to emphasize that the distances are always finite we will say \index{genuine metric space}\emph{genuine metric space}.
 
-We will also need pseudometric spaces --- those where distance between distinct points can vanish.
+We will also need \emph{pseudometric} spaces --- those where distances between distinct points can vanish.
 The described four types of generalized metric spaces can be distinguished by the interval of allowed values for distance between distinct points:
 \begin{itemize}
-\item genuine metric is $(0,\infty)$-valued, 
-\item $\infty$-metric is  $(0,\infty]$-valued, 
-\item pseudometric might be $[0,\infty)$-valued or $[0,\infty]$-valued, depending on the context.
+\item a genuine metric is $(0,\infty)$-valued, 
+\item an $\infty$-metric is  $(0,\infty]$-valued, 
+\item a pseudometric might be $[0,\infty)$-valued or $[0,\infty]$-valued, depending on the context.
 \end{itemize}
 For example, if we need to be precise, we may say $[0,\infty)$-valued metric instead of pseudometric.
 
-The metric spaces are main objects of study in this book.
+Metric spaces are the main object of study in this book.
 However, the described generalizations are useful
 in  various definitions and constructions.
-For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) use infinite distances.
-The following definition gives an other example.
+For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) uses infinite distances.
+The following definition gives another example.
 
 \begin{thm}{Definition}\label{def:disjoint-union}
-Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ be a collection of pseudometric spaces.
+Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ is a collection of $\infty$-metric spaces.
 The disjoint union 
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$$ 
-has a natural pseudometric on it defined the following way:
+has a natural $\infty$-metric on it defined as follows:
 given two points $x\in\spc{X}_\alpha$ and $y\in\spc{X}_\beta$
 set 
 \[
@@ -48,10 +48,10 @@ set
 \dist{x}{y}{\bm{X}}=\dist{x}{y}{\spc{X}_\alpha}&\text{if}\ \ \alpha=\beta.
 \end{matrix}
 \]
-The obtained metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
+The obtained $\infty$-metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
 \end{thm}
 
-Now let us give examples when vanishing distance between distinct points is useful.
+Next let us give examples when vanishing distance between distinct points is useful.
 
 
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
