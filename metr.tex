@@ -6,6 +6,26 @@ In this chapter we fix some conventions assuming that the reader is familiar wit
 \section{Metrics and its relatives}
 \label{sec:metric spaces}
 
+\parbf{Definitions.}
+Let $\II$ be an subinterval of $[0,\infty]$.
+A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called $\II$-valued metric if the following condition hold;
+\begin{itemize}
+ \item $\rho(x,x)=0$ for any $x$;
+ \item $\rho(x,y)\in \II$ for any pair $x\ne y$;
+ \item $\rho(x,y)+\rho(x,z)\ge \rho(y,z)$ for any triple of points $x,y, z$.
+\end{itemize}
+The value $\rho(x,y)$ is also called \index{distance}\emph{distance} between $x$ and $y$.
+
+
+The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty]$ and $[0,\infty]$.
+Any $\II$-valued metric can be refereed briefly as a metric; if we need to be more specific, we may also use the following names:
+\begin{itemize}
+\item A $(0,\infty)$-valued metric might be called \emph{genuine metric}.
+\item A $(0,\infty]$-valued metric might be called \emph{$\infty$-metric}.
+\item A $[0,\infty)$-valued metric might be called  \emph{genuine pseudommetric}.
+\item A $[0,\infty]$-valued metric might be called \emph{pseudometric} or \emph{$\infty$-pseudommetric}.
+\end{itemize}
+
 A metric space is a set equipped with a metric;
 the distance between points $x$ and $y$ in a metric space $\spc{X}$ will be usually \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
 the latter is used if we need to emphasize that we are working in the space $\spc{X}$.
@@ -14,21 +34,8 @@ The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as
 \[\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}\]
 will be called the \emph{distance function}\index{distance function} from $x$. 
 
-\parbf{Generalizations.}
-Often we allowing the infinite value for the distance, but we may still use the term metric space.
-If we need to emphasize that distances in the space might take infinite value, we say \index{$\infty$-metric space}\emph{$\infty$-metric space}
-and if we need to emphasize that the distances are always finite we say \index{genuine metric space}\emph{genuine metric space}.
-
-We will also need pseudometric spaces --- those where distance between distinct points can vanish.
-The described four types of generalized metric spaces can be distinguished by the interval of allowed values for distance between distinct points:
-\begin{itemize}
-\item genuine metric is $(0,\infty)$-valued, 
-\item $\infty$-metric is  $(0,\infty]$-valued, 
-\item pseudometric might be $[0,\infty)$-valued or $[0,\infty]$-valued, depending on the context.
-\end{itemize}
-For example, if we need to be precise, we may say $[0,\infty)$-valued metric instead of pseudometric.
-
-The metric spaces are main objects of study in this book.
+\parbf{Zero and infinity.}
+The genuine metric spaces are main objects of study in this book.
 However, the described generalizations are useful
 in  various definitions and constructions.
 For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) use infinite distances.
@@ -68,14 +75,13 @@ then the \emph{pullback}
 \[\dist{x}{y}{\spc{X}}=\dist{\map(x)}{\map(y)}{\spc{Y}}\]
 defines only a pseudometric on $\spc{X}$.
 
-\parbf{Corresponing metric space and metric component.}
+\parbf{Corresponding metric space and metric component.}
 The following two observations show that
-nearly any question about pseudometric spaces can be reduced to a question about genuine metric spaces.
-
+nearly any question about metric spaces can be reduced to a question about genuine metric spaces.
 
 Assume $\spc{X}$ is a pseudometric space.
 Set
-$x\sim y$ if and only if $\dist{x}{y}{}=0$. 
+$x\sim y$ if $\dist{x}{y}{}=0$. 
 Note that if $x\sim x'$, then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
 Thus, $\dist{}{}{}$ defines a metric on the
 quotient set $\spc{X}/{\sim}$.
@@ -91,7 +97,9 @@ The equivalence class of a point $x\in\spc{X}$ will be called the \emph{metric c
  of $x$; it will be denoted as $\spc{X}_x$.
 One could think of $\spc{X}_x$ as of $\oBall(x,\infty)_{\spc{X}}$ --- the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
 
-It follows that any metric space is a \emph{disjoint union} of its metric components in the sense defined above; see Definition~\ref{def:disjoint-union}
+It follows that any $\infty$-metric space is a \emph{disjoint union} of genuine metic spaces --- the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
+
+Summarizing the discussion above: given a $[0,\infty]$-valued metric space $\spc{X}$ we may pass to the corresponding $(0,\infty]$-valued metric space $\spc{X}'$ and the latter can be broken into a disjoint union of metric components, each of which is  a genuine metric space.
 
 
 \section{Notations}
@@ -105,7 +113,7 @@ Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 \end{align*}
 are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
 
-If we need to emphasize that these balls are taken in the metric space $\spc{X}$,
+If we need to emphasize that these balls are taken in the space $\spc{X}$,
 we write 
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
 correspondingly.
@@ -147,7 +155,9 @@ The packing number \emph{$\eps$-pack}\index{$\eps$-pack} of $\spc{X}$ is the max
 If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$ 
 such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\index{maximal $\eps$-packing} in $\spc{X}$.
 
-\parbf{G-delta sets.}
+\parbf{Open sets.}
+Recall that arbitrary union of open balls in a metric space is called \index{open set}\emph{open set}.
+
 A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset. 
 Often we will use the following classical result:
 
@@ -180,7 +190,7 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 \begin{enumerate}[i)]
 \item $\spc{X}$ is compact;
 \item $\spc{X}$ is \emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
-\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\cup_i\oBall(p_i,\eps)=\spc{X}$.
+\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
 \end{enumerate}
 \end{thm}
 
@@ -410,8 +420,6 @@ but whose completion is neither geodesic nor locally compact.
 
 \section{Convex sets}
 
-The following definition will be applied only to geodesic spaces,
-despite it makes sense for all metric spaces.
 
 \begin{thm}{Definition} 
 \label{def:convex-set}
@@ -420,20 +428,19 @@ Let $\spc{X}$ be a metric space and $A\subset\spc{X}$.
 We say that $A$ 
 \emph{convex}%
 \index{convex set}
-if for every two points $p,q\in A$ there every geodesic $[pq]$ of $\spc{X}$ 
-lies in $A$.
+if for every two points $p,q\in A$ any geodesic $[pq]$ lies in $A$.
 
 We say that $A$ 
 \emph{weakly convex}%
 \index{convex set!weakly convex set}\index{weakly convex set}
-if for every two points $p,q\in A$ which can be connected by a geodesic,
-there is a geodesic $[pq]$ of $\spc{X}$ 
+if for every two points $p,q\in A$ which can be connected by a geodesic in $\spc{X}$,
+there is a geodesic $[pq]$ 
 which lies in $A$.
 
 We say that $A$ is \emph{totally convex}\index{totally convex}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
 
-If these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and some fixed $R\in (0,\infty]$ and only for the geodesics of length $<R$
+If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$
 then $A$ is called correspondingly 
 \emph{$R$-convex},
 \emph{weakly  $R$-convex}%
@@ -460,7 +467,7 @@ An analogus statement about convexity does not hold;
 for example there is a sequence of convex discs in $\SS^2$ which converges to the half sphere $\SS^2_+$, which is not convex.
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
-Let $(\spc{X}_n,\star_n)$ be a sequence of metric spaces with marked points.
+Let $\spc{X}_n,$ be a sequence of geodesic spaces.
 Assume $A_n\subset \spc{X}_n$ be a sequence of weakly convex sets and 
 $\spc{X}_n\to \spc{X}_\o$ and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
 Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
