@@ -27,25 +27,26 @@ Any $\II$-valued metric can be refereed briefly as a metric; if we need to be mo
 \end{itemize}
 
 A metric space is a set equipped with a metric;
-the distance between points $x$ and $y$ in a metric space $\spc{X}$ will be usually \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
-the latter is used if we need to emphasize that we are working in the space $\spc{X}$.
+the distance between points $x$ and $y$ in a metric space $\spc{X}$ will  usually be denoted by \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
+the latter will be used if we need to emphasize that we are working in the space $\spc{X}$.
 
 The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
 \[\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}\]
 will be called the \emph{distance function}\index{distance function} from $x$. 
 
+
 \parbf{Zero and infinity.}
 The genuine metric spaces are main objects of study in this book.
 However, the described generalizations are useful
 in  various definitions and constructions.
-For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) use infinite distances.
-The following definition gives an other example.
+For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) uses infinite distances.
+The following definition gives another example.
 
 \begin{thm}{Definition}\label{def:disjoint-union}
-Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ be a collection of pseudometric spaces.
+Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ is a collection of $\infty$-metric spaces.
 The disjoint union 
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$$ 
-has a natural pseudometric on it defined the following way:
+has a natural $\infty$-metric on it defined as follows:
 given two points $x\in\spc{X}_\alpha$ and $y\in\spc{X}_\beta$
 set 
 \[
@@ -55,10 +56,10 @@ set
 \dist{x}{y}{\bm{X}}=\dist{x}{y}{\spc{X}_\alpha}&\text{if}\ \ \alpha=\beta.
 \end{matrix}
 \]
-The obtained metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
+The obtained $\infty$-metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
 \end{thm}
 
-Now let us give examples when vanishing distance between distinct points is useful.
+Next let us give examples when vanishing distance between distinct points is useful.
 
 
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
