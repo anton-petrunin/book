@@ -56,19 +56,19 @@ $\spc{L}$  is a  $\Alex{}$ space if  $\spc{L}$  is $\Alex{\kappa}$ for some $\ka
 
 \parbf{Remarks} 
 \begin{itemize}
-\item The $\Alex\kappa$ spaces often called \emph{spaces with curvature $\ge\kappa$ in the sence of Alexandrov} these spaces will be usually denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
+\item $\Alex\kappa$ spaces  are often called \emph{spaces with curvature $\ge\kappa$ in the sence of Alexandrov}.  These spaces will usually be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
 \item In the definition of $\Alex{\kappa}$, when $\kappa>0$ most authors assume in addition that the diameter is at most $\varpi\kappa$.
 For complete length spaces, the latter means that it is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. 
 We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
 \item If $\kappa<\Kappa$, then any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$.
-However, in the case $\Kappa>0$ it is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
+However, in the case $\Kappa>0$ this statement is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Let $\spc{L}$ be a metric space.
 Show that $\spc{L}$ is $\Alex\kappa$
 if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
-\[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa\]
+\[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa,\]
 there is a quadruple of points $q,y^1,y^2,y^3\in\Lob3\kappa$
 such that 
 \[\dist{p}{x^i}{}=\dist{q}{y^i}{} 
@@ -137,7 +137,7 @@ If $\kappa\le 0$, then  $\spc{M}$ is $\Alex{\kappa}$.
 \end{thm}
 
 %??? As it will be proved in ???, if a complete lenght space is locally $\Alex{\kappa}$, then it is $\Alex{\kappa}.
-Corollary~\ref{cor:submetry-cbb} states that if $\spc{L}$ is a complete length spaces, then $\spc{M}$ is always $\Alex{\kappa}$.
+Corollary~\ref{cor:submetry-cbb} states that if $\spc{L}$ is a complete length space, then $\spc{M}$ is always $\Alex{\kappa}$.
 The theorem above together with Proposition~\ref{prop:submet/G}
 imply the following:
 
@@ -331,7 +331,7 @@ for any geodesic $[xy]$ in $\spc{L}$.
 \begin{thm}{Exercise}
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $A\subset\spc{L}$ be a closed subset.
 Show that there is a dense G-delta set $W\subset\spc{L}$ such that
-for any $q\in W$ there is unique geodesic $[pq]$ with
+for any $q\in W$, there is a unique geodesic $[pq]$ with
 $p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
 \end{thm}
 
@@ -339,12 +339,12 @@ $p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
 
 \section{More comparisons}\label{sec:more-angles}
 
-The following theorem makes possible to adapt Euclidean intuition in the Alexandrov universe.
+The following theorem makes it possible to adapt Euclidean intuition to the Alexandrov universe.
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_alex} 
 If $\spc{L}$ is a $\Alex\kappa$ space, 
-then the following conditions holds for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined
+then the following conditions hold for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined.
 \begin{subthm}{2-sum} 
 (adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \l]x y\r[$, $z\not=p$ we have
 \[\angk\kappa z p x
@@ -376,7 +376,7 @@ Moreover, in each case the converse holds if $\spc{L}$ is G-delta geodesic.
 \end{thm}
 
 \parbf{Remarks.} 
-The monotonicity of model angle with respect to adjacent sidelengths (\ref{SHORT.two-mono-cba}) was named the \emph{convexity property} by Alexandrov.
+Monotonicity of the model angle with respect to adjacent sidelengths (\ref{cor:monoton}) was named the \emph{convexity property} by Alexandrov.
 %???REF???
 
 A bit weaker form of (\ref{SHORT.angle}) 
@@ -385,7 +385,7 @@ See also Problem~\ref{open:hinge-}.
 
 
 \parit{Proof.} By Theorem~\ref{thm:almost.geod}, 
-we have that (\ref{SHORT.3-sum}) imples that $\spc{L}$ is G-delta geodesic.
+(\ref{SHORT.3-sum}) imples that $\spc{L}$ is G-delta geodesic.
 
 \parit{(\ref{SHORT.2-sum})}. Since $z\in \l]x y\r[$, we have $\angk\kappa z x y=\pi$. 
 Thus, $\Alex\kappa$ comparison
@@ -401,10 +401,10 @@ implies
 Follows from Alexandrov's lemma (\ref{lem:alex}).
 
 \parit{(\ref{SHORT.2-sum}) $+$ (\ref{SHORT.point-on-side}) $\Rightarrow$ (\ref{SHORT.angle}).} 
-From (\ref{SHORT.point-on-side}) we get that for $\bar p\in\l]xp\r]$ and $\bar y\in\l]xy\r]$ the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nonincreasing in each argument.
+From (\ref{SHORT.point-on-side}) we get that for $\bar p\in\l]xp\r]$ and $\bar y\in\l]xy\r]$, the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nonincreasing in each argument.
 In particular, 
 $\mangle\hinge x p y\z=\sup\{\angk\kappa x{\bar p}{\bar y}\}$.
-In particular, $\mangle\hinge x p y$ is defined and it is
+Hence $\mangle\hinge x p y$ is defined and is
 at least $\angk\kappa x p y$.
 
 \begin{wrapfigure}[10]{r}{27mm}
@@ -422,27 +422,27 @@ From above and (\ref{SHORT.2-sum}), it follows that
 
 \parit{Converse.}
 Assume first that $\spc{L}$ is geodesic.
-Consider point $w\in \l] p z \r[$ close to $p$.
+Consider a point  $w\in \l] p z \r[$ close to $p$.
 From (\ref{SHORT.angle}), it follows that 
 \[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\ \ \text{and}\ \ \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
 Since $\mangle\hinge w x y\le \mangle\hinge w x p +\mangle\hinge w y{p}$ (see \ref{claim:angle-3angle-inq}), we get 
 \[\mangle\hinge w x z+ \mangle\hinge w y z +\mangle\hinge w x y
 \le
 2\cdot\pi.\]
-Applying the first inequality in (\ref{SHORT.angle}), we obtain
+Applying the first inequality in (\ref{SHORT.angle}), 
 \[\angk\kappa w x z
 + \angk\kappa w y z 
 +\angk\kappa w x y
 \le
 2\cdot\pi.\]
-Passing to the limits  $w\to p$, we obtain 
+Passing to the limits  $w\to p$, we have
 \[\angk\kappa p x z 
 + \angk\kappa p y z 
 +\angk\kappa p x y
 \le
 2\cdot\pi.\]
 
-If $\spc{L}$ is only G-delta geodesic, we can apply above arguments for sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that there is $[p_nz]$, $w_n\in\l]z p_n\r[$ and there are $[x_nw_n]$, $[y_n w_n]$ and then pass to the limit as $n\to\infty$.
+If $\spc{L}$ is only G-delta geodesic, we can apply the  above arguments to sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that  $[p_nz]$, $w_n\in\l]z p_n\r[$ and  $[x_nw_n]$, $[y_n w_n]$ exist,  and then pass to the limit as $n\to\infty$.
 \qeds
 
 
