@@ -665,6 +665,19 @@ that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and
 $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 \end{thm}
 
+The following exercise describe a global geometric property of gradient curves without direct reference of its function.
+It use the notion of self-contracting curves which was introduced by Aris Daniilidis, Olivier Ley, St\'ephane Sabourau \cite{daniilidis-ley-sabourau}.
+
+\begin{thm}{Exercise}\label{ex:elf-contracting}
+Let 
+$\spc{L}$ be a complete length $\Alex{}$ space
+$f\:\spc{L}\to\RR$ be a concave locally Lipschitz function 
+and $\alpha\:\II\to\spc{L}$ is an $f$-gradient curve.
+Show that $\alpha$ is \index{self-contracting curve}\emph{self-contracting}; that is,
+\[\dist{\alpha(t_1)}{\alpha(t_3)}{}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{}\]
+if $t_1\le t_2\le t_3$.
+\end{thm}
+
 The next lemma states that gradient and gradient-like curves are special reparametrizations of each-other.
 
 \begin{thm}{Lemma}\label{lem:grad--grad-like}
@@ -791,19 +804,6 @@ Show that $\alpha\:\RR\to\spc{L}$ is an $f$-gradient curve if and only if
 2\cdot(t_1-t_0)\cdot  (f\circ\alpha(t_1)-f(x))\]
 for any $t_1>t_0$ and $x\in\spc{L}$. %???CHECK???
 \end{thm}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
