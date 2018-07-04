@@ -3,8 +3,8 @@
 %arXiv
 \chapter{Gradient flow}\label{chap:grad}
 
-Gradient flow provides a useful tool in Alexandrov's geometry, 
-which we will use everywhere in the book.
+Gradient flow provides a tool in Alexandrov's geometry, 
+which we use everywhere in the book.
 
 The technique of gradient flow takes its roots in the so called \emph{Sharafutdinov's retraction}, 
 introduced by Vladimir Sharafutdinov in \cite{sharafutdinov}.
@@ -21,8 +21,7 @@ The following exercise is a stripped version of Sharfutdinov's retruction;
 it gives the idea behind gradient flow.
 
 \begin{thm}{Exercise}
-Let $K_t$ be a one parameter famity of convex sets in $\EE^m$
-which is nested; 
+Assume that a one parameter family of convex sets $K_t\subset \EE^m$ is nested; 
 that is, $K_{t_1}\supset K_{t_2}$ if $t_1\le t_2$.
 Show that there is a family of short maps $\phi_t\:\EE^m\to K_t$ 
 such that $\phi_t|{K_t}=\id$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ for all $t_1\le t_2$.
@@ -484,8 +483,8 @@ Passing to arbitrary subsequence of $(x_n)$ we obtain the result. \qeds
 \section{Gradient-like curves}\label{sec:gradient-like}
 
 
-Gradient-like curves provide a technical tool which will be used later in the construction of gradient curves.
-The later appear to be a special reparametrization of gradient-like curves.
+Gradient-like curves will be used later in the construction of gradient curves.
+The latter appear to be a special reparametrization of gradient-like curves.
 
 \begin{thm}{Definition}\label{def:grad-like-curve}
 Let $\spc{L}$ be a complete length $\Alex{}$ space
@@ -612,8 +611,7 @@ Together, \ref{eq:thm:concave-1} and \ref{eq:thm:concave-2} imply that $f\circ\h
 \label{prop:grad-like-unique-past}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p,q\in\spc{L}$.
 Assume $\hat\alpha\:[s_{\min},s_{\max})\to\spc{L}$ be a $\distfun{p}$-gradient-like curve such that $\hat\alpha(s)\to z\in\mathopen{]}p q\mathclose{[}$ as $s\to s_{\max}+$
-then $\alpha$ is a unit-speed geodesic
-which lies in $[p q]$.
+then $\alpha$ is a unit-speed geodesic that lies in $[p q]$.
 \end{thm}
 
 \parit{Proof.} 
@@ -910,10 +908,10 @@ and $f\:\spc{L}\subto \RR$ be locally Lipschitz $\lambda$-concave subfunction.
 Then for any $p\in \Dom f$
 \begin{subthm}{}
 if $|\nabla_pf|>0$, then for some $\eps>0$, 
-there is an $f$-gradient-like curve $\hat\alpha\:[0,\eps)\to\spc{L}$ which starts at $p$ (that is, $\hat\alpha(0)\z=p$);
+there is an $f$-gradient-like curve $\hat\alpha\:[0,\eps)\to\spc{L}$ that starts at $p$ (that is, $\hat\alpha(0)\z=p$);
 \end{subthm}
 
-\begin{subthm}{}for some $\delta>0$, there is an $f$-gradient curve $\alpha\:[0,\delta)\to \spc{L}$ which starts at $p$ (that is $\alpha(0)=p$).
+\begin{subthm}{}for some $\delta>0$, there is an $f$-gradient curve $\alpha\:[0,\delta)\to \spc{L}$ that starts at $p$ (that is $\alpha(0)=p$).
 \end{subthm}
 \end{thm}
 
@@ -955,8 +953,7 @@ Pass to a subsequence of $(\hat\alpha_n)$ such that $f\circ\hat\alpha_n$ uniform
 \[h(s)=\lim_{n\to\infty}f\circ\hat\alpha_n(s).\]
 
 Set $\hat\alpha_\o=\lim_{n\to\o}\hat\alpha_{n}$, 
-it is a curve in $\spc{L}^\o$ 
-which starts at $p\in \spc{L}\subset \spc{L}^\o$.
+it is a curve in $\spc{L}^\o$ that starts at $p\in \spc{L}\subset \spc{L}^\o$.
 
 Clearly $\hat\alpha_\o$ is $1$-Lipschitz.
 From (\ref{alm-grad}) and \ref{lem:gradcon}, we get \[(f^\o\circ\hat\alpha_\o)^+(\varsigma)\ge|\nabla_{\hat\alpha_\o(\varsigma)}f^\o|.\]
@@ -1008,13 +1005,13 @@ $f_\o$ is $\lambda$-concave.
 
 \begin{subthm}{lim-grad-like}
 If $|\nabla_{p_\o}f_\o|>0$, then there is $\eps>0$ such that, the $f_n$-gradient-like curves $\hat\alpha_n\:[0,\eps)\to\spc{L}_n$ are defined for $\o$-almost all $n$.
-And moreover, a curve $\hat\alpha_\o\:[0,\eps)\to\spc{L}_\o$ is a gradient-like curve which starts at $p_\o$ if and only if
+And moreover, a curve $\hat\alpha_\o\:[0,\eps)\to\spc{L}_\o$ is a gradient-like curve that starts at $p_\o$ if and only if
 $\hat\alpha_n(s)\to\hat\alpha_\o(s)$ as $n\to\o$ for all $s\in[0,\eps)$.
 \end{subthm}
 
 \begin{subthm}{lim-grad}
 For some $\delta>0$, the $f_n$-gradient curves $\alpha_n\:[0,\delta)\to\spc{L}_n$ are defined for $\o$-almost all $n$.
-And moreover, a curve $\alpha_\o\:[0,\delta)\to\spc{L}_\o$ is a gradient curve which starts at $p_\o$ if and only if
+And moreover, a curve $\alpha_\o\:[0,\delta)\to\spc{L}_\o$ is a gradient curve that starts at $p_\o$ if and only if
 $\alpha_n(t)\to\alpha_\o(t)$  as $n\to\o$ for all $t\in[0,\delta)$.
 \end{subthm}
 \end{thm}
@@ -1116,7 +1113,7 @@ Moreover, for any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does n
 \end{thm}
 
 
-The following theorem gurantees the existance of gradient curves for all times for the special type of semiconcave functions which play important role in the theory.
+The following theorem gurantees the existance of gradient curves for all times for the special type of semiconcave functions that play important role in the theory.
 It follows from \ref{thm:glob-exist-grad-curv},
 \ref{thm:concave} and \ref{lem:grad--grad-like}.
 
@@ -1126,7 +1123,7 @@ and $f\:\spc{L}\to\RR$ satisfies
 \[f''+\kappa\cdot f\le \lambda\] 
 for some real values $\kappa$ and $\lambda$.
 Then $f$ has \index{complete gradient}\emph{complete gradient};
-that is for any $x\in\spc{L}$ there is a $f$-gradient curve $\alpha\:[0,\infty)\to\spc{L}$ which starts at $x$.
+that is, for any $x\in\spc{L}$ there is a $f$-gradient curve $\alpha\:[0,\infty)\to\spc{L}$ that starts at~$x$.
 \end{thm}
 
 
@@ -1184,7 +1181,7 @@ It follows directly from the proposition on ultralimit of gradient curves~\ref{u
 
 \begin{thm}{Proposition}\label{grad-curve-conv}
 If $\spc{L}_n$ be an $m$-dimensional complete length $\Alex\kappa$ space, $\spc{L}_n\xto{\GH} \spc{L}$, $f_n\:\spc{L}_n\to\RR$ is a sequence of
-$\lambda$-concave functions which converges to $f\:\spc{L}\to \RR$, then
+$\lambda$-concave functions that converges to $f\:\spc{L}\to \RR$, then
 $\GF_{f_n}^t\:\spc{L}_n\to \spc{L}_n$ converges to $\GF_f^t\:\spc{L}\to \spc{L}$.
 \end{thm}
 
@@ -1219,8 +1216,7 @@ then
 \item both sets $A$ and $B$ are convex sets in $\spc{X}$.
 \end{itemize}
 
-
-Recall that a line in a metric space is a geodesic which is minimizing on each segment.
+Recall that a line in a metric space is a both side infinite geodesic; it has to minimze the length on each segment.
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting} 
 Let $\spc{L}$  be a complete length $\Alex{0}$ space
@@ -1240,7 +1236,7 @@ to Alexandrov's spaces, almost the same prove is given in \cite[1.5]{BBI}.
 Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll in \cite{cheeger-gromoll-split}.
 Jost-Hinrich Eshenburg in \cite{eshenburg-split} obtained an analogous result for the Lorentzian manifolds, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
 
-We present a proof which use gradient flow for Busemann's functions, it is close in the spirit to the proof given by Cheeger and Gromoll.
+We present a proof that use gradient flow for Busemann's functions, it is close in the spirit to the proof given in \cite{cheeger-gromoll-split}.
 
 Before goint into the proof, let us state few corollaries of the theorem.
 
@@ -1250,7 +1246,7 @@ Then there is an isometric splitting
 \[
 \spc{L}=\spc{L}'\oplus H
 \]
-where $H\subset \spc{L}$ is a subset isometric to a Hilbert space and $\spc{L}'\subset \spc{L}$ be a convex subset which contains no lines. 
+where $H\subset \spc{L}$ is a subset isometric to a Hilbert space and $\spc{L}'\subset \spc{L}$ be a convex subset that contains no lines. 
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:splitting-vectors}
@@ -1407,7 +1403,7 @@ $0
 <
 \tfrac{\varpi\kappa}2$.
 Then there is unique $(p,\kappa)$-radial curve $\sigma\:[\dist{p}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
-which starts in $x$;
+that starts in $x$;
 that is, $\sigma(\dist{p}{x}{})=x$.
 \end{thm}
 
@@ -1429,7 +1425,7 @@ Note that $\tau(t)$ is also a gradient curve  for function $\itg\kappa$ defined 
 Direct calculations show that composition $\alpha\circ\tau^{-1}$ 
 is a $(p,\kappa)$-radial curve.
 
-\parit{Uniqueness.} Assume $\sigma^1,\sigma^2$ be two $(p,\kappa)$-radial curves which starts in $x$.
+\parit{Uniqueness.} Assume $\sigma^1,\sigma^2$ be two $(p,\kappa)$-radial curves that starts in $x$.
 Then compositions $\sigma^i\circ\tau$ both give $f$-gradient curves.
 By Picard's theorem (\ref{thm:picard}), we have
 $\sigma^1\circ\tau 
@@ -1787,7 +1783,7 @@ Let $\spc{L}$ be a complete length $\Alex\kappa$ space
 and $x,y,z\in \spc{L}$.
 Assume $\angk\kappa zxy=\pi$.
 Show that there is a geodesic $[xy]$
-which contains $z$.
+that contains $z$.
 In particular, $x$ can be connected to $y$ by a minimizing geodesic.
 
 Compare to Exercise~\ref{ex:flat-in-CBB}
@@ -1824,7 +1820,7 @@ $p\in \spc{L}$
 and $\xi\in \Sigma_p$.
 Consider a sequence of points $x_n\in \spc{L}$ so that $\dir p{x_n}\to \xi$.
 Set $r_n=\dist{p}{x_n}{}$;
-denote by $\sigma_n\:[r_n,\tfrac{\varpi\kappa}2)\to \spc{L}$ be the $(p,\kappa)$-radial curve which starts in~$x_n$.
+denote by $\sigma_n\:[r_n,\tfrac{\varpi\kappa}2)\to \spc{L}$ be the $(p,\kappa)$-radial curve that starts in~$x_n$.
 
 From the radial comparison (\ref{rad-comp}), 
 we have that $\sigma_n\:[r_n,\tfrac{\varpi\kappa}2)\to \spc{L}$ 
@@ -1930,8 +1926,8 @@ given
 a $\lambda$-concave function $f$, 
 a compact set $K\subset \Dom f$
 and $\eps>0$
-there is a smooth $(\lambda-\eps)$-concave function which is 
-$\eps$-close to $f$ in the $C^0$-topology on $K$.
+there is a smooth $(\lambda-\eps)$-concave function that is 
+$\eps$-close to $f$ on $K$.
 Hence one can apply the smoothing and pass to the limit as $\eps\to0$.
 Note that by the second distance estimate the obtained limit curve does not depend on the smoothing.
 
@@ -2173,7 +2169,7 @@ $0
 <
 \tfrac{\varpi\kappa}2$.
 Then there is unique $(A,\kappa)$-radial curve $\sigma\:[\dist{A}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
-which starts in $x$.
+that starts in $x$.
 \end{thm}
 
 Next we formulate radial monotonicity and radial comparison for $(A,\kappa)$-radial curves.

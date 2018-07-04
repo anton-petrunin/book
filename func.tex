@@ -18,11 +18,9 @@ a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\su
 
 Almost all subfunctions and sub maps we consider are continuous (or at least semicontinuous).
 In this case the domain $\Dom\map$ is automatically open.
-Indeed, the continuous maps are defined as those for which preimage of open set is open.
-Assume $\map\:\spc{X}\subto \spc{Y}$ is a continuous submap.
-Since $\spc{Y}$ is open then so is $\map^{-1}(\spc{Y})$ 
-which is the same as $\Dom \map$.
-The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since it is a continuous function for special topology on $\RR$.
+Indeed, a submap $\map\:\spc{X}\subto \spc{Y}$ is continuous if the inverse image of any open set is open.
+Since $\spc{Y}$ is open then so is $\Dom \map=\map^{-1}(\spc{Y})$.
+The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since it is a continuous function for special topology on $\RR$.%
 \footnote{The continuous partially defined maps can be defined differently.
 For example, one may request that inverse images of closed sets are closed.
 While this condition is equivalent to the continuity for the functions defined on whole space,
@@ -233,7 +231,7 @@ The following lemma is an easy exercise.
 %The same definition works for arbitrary map $\alpha\:\II\to \spc{X}$, not necessary continuous.
 
 \begin{thm}{Lower semicontinuity of length}\label{thm:semicont-of-length}
-Assume $\alpha_n\:\II\to \spc{X}$ is a sequence of curves which converges pointwise to a curve $\alpha_\infty\:\II\to \spc{X}$.
+Assume $\alpha_n\:\II\to \spc{X}$ is a sequence of curves that converges pointwise to a curve $\alpha_\infty\:\II\to \spc{X}$.
 Then 
 \[\length\alpha_\infty\le \liminf_{n\to\infty}\length\alpha_n.\]
 
@@ -376,7 +374,7 @@ Hence the result.
 \begin{thm}{Corollary}
 \label{cor:der-conv-lim}
 Let $\II$ be an open interval 
-and $f_n\:\II\to\RR$ be a sequence of functions which satisfy $f_n''\le \lambda$ and converge pointwise to a function $f\:\II\to\RR$.
+and $f_n\:\II\to\RR$ be a sequence of functions such that $f_n''\le \lambda$ and converge pointwise to a function $f\:\II\to\RR$.
 Then: 
 \begin{subthm}{} If $f$ is differentiable at $t_0\in \II$, then
 \[f'(t_0)=\pm\lim_{n\to\infty} f^\pm_n(t_0).\]

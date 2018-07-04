@@ -18,7 +18,9 @@ The value $\rho(x,y)$ is also called \index{distance}\emph{distance} between $x$
 
 
 The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty]$ and $[0,\infty]$.
-Any $\II$-valued metric can be refereed briefly as a metric; if we need to be more specific, we may also use the following names:
+Any $\II$-valued metric can be refereed briefly as a metric;
+the interval should be guessed from the context, but by default metric is $(0,\infty)$-valued. 
+If we need to be more specific, we may also use the following names:
 \begin{itemize}
 \item A $(0,\infty)$-valued metric might be called \emph{genuine metric}.
 \item A $(0,\infty]$-valued metric might be called \emph{$\infty$-metric}.
@@ -263,7 +265,7 @@ and any $R$-geodesic space is $R$-length.
 
 \begin{thm}{Example} 
 Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\II_n$ of length $1+\tfrac1n$ where for each $\II_n$ one end is glued to $p$ and the other to $q$.
-Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+Then $\spc{X}$ carries a natural complete length metric such that $\dist{p}{q}{}=1$, but there is no geodesic connecting $p$ to~$q$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:complete=>complete}
@@ -441,7 +443,7 @@ We say that $A$
 \index{convex set!weakly convex set}\index{weakly convex set}
 if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
-which lies in $A$.
+that lies in $A$.
 
 We say that $A$ is \emph{totally convex}\index{totally convex}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
@@ -483,11 +485,11 @@ Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
 Fix $x_\o,y_\o\in A_\o$.
 Consider the sequences $x_n,y_n\in A_n$ such that $x_n\to x_\o$ and $y_n\to y_\o$ as $n\to\o$.
 
-Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ which lies in $A_n$.
+Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ that lies in $A_n$.
 Set
 \[\alpha_\o(t)=\lim_{n\to \o}\alpha_n(t).\]
 
-Note that $\alpha_\o$ is a geodesic path which lies in $A_\o$.
+Note that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
 Hence the result follows.
 \qeds
 
@@ -509,7 +511,7 @@ also if for these two pseudometric $\rho_1$ and $\rho_2$ the projections $\spc{X
 It follows that 
 the quotient space $\spc{X}/{\sim}$ admits natural pseudometric;
 this is the maximal pseudometric on  $\spc{X}/{\sim}$ 
-which makes the quotient map 
+that makes the quotient map 
 $\spc{X}\to\spc{X}/{\sim}$ to be short.
 The corresponding metric space will be also denoted as $\spc{X}/{\sim}$
 and will be called the \emph{quotient space}\index{quotient space} of $\spc{X}$ by the equivalence relation $\sim$.
@@ -543,7 +545,7 @@ $f\:\spc{X}\to (\spc{Y},\yetdist{}{}{})$.
 
 Consider the quotient map 
 $f\:\spc{X}\to\spc{X}/{\sim}$.
-Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric which makes $f$ to be short.
+Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric that makes $f$ to be short.
 
 Denote by $\yetdist{}{}{}$ the length-metric on $\spc{X}/{\sim}$.
 It follows that
