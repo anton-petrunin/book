@@ -1,31 +1,31 @@
 %%!TEX root = the-metr.tex
 %array^
 \chapter{Metric spaces}
-In this chapter we fix some conventions assuming that the reader is familiar with basic notions in metric geometry.
+In this chapter we fix some conventions, assuming that the reader is familiar with basic notions in metric geometry.
 
-\section{Metrics and its relatives}
+\section{Metrics and their relatives}
 \label{sec:metric spaces}
 
 \parbf{Definitions.}
-Let $\II$ be an subinterval of $[0,\infty]$.
-A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called $\II$-valued metric if the following condition hold;
+Let $\II$ be a subinterval of $[0,\infty]$.
+A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called an $\II$-valued metric if the following conditions hold;
 \begin{itemize}
  \item $\rho(x,x)=0$ for any $x$;
  \item $\rho(x,y)\in \II$ for any pair $x\ne y$;
  \item $\rho(x,y)+\rho(x,z)\ge \rho(y,z)$ for any triple of points $x,y, z$.
 \end{itemize}
-The value $\rho(x,y)$ is also called \index{distance}\emph{distance} between $x$ and $y$.
+The value $\rho(x,y)$ is also called the \index{distance}\emph{distance} between $x$ and $y$.
 
 
 The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty]$ and $[0,\infty]$.
 Any $\II$-valued metric can be refereed briefly as a metric;
-the interval should be guessed from the context, but by default metric is $(0,\infty)$-valued. 
+the interval should be apparent from the context, but by default a metric is $(0,\infty)$-valued. 
 If we need to be more specific, we may also use the following names:
 \begin{itemize}
-\item A $(0,\infty)$-valued metric might be called \emph{genuine metric}.
-\item A $(0,\infty]$-valued metric might be called \emph{$\infty$-metric}.
-\item A $[0,\infty)$-valued metric might be called  \emph{genuine pseudommetric}.
-\item A $[0,\infty]$-valued metric might be called \emph{pseudometric} or \emph{$\infty$-pseudommetric}.
+\item a $(0,\infty)$-valued metric may be called a \emph{genuine metric}.
+\item a $(0,\infty]$-valued metric may be called an \emph{$\infty$-metric}.
+\item a $[0,\infty)$-valued metric may be called  a \emph{genuine pseudommetric}.
+\item A $[0,\infty]$-valued metric may be called a \emph{pseudometric} or \emph{$\infty$-pseudometric}.
 \end{itemize}
 
 A metric space is a set equipped with a metric;
@@ -37,11 +37,11 @@ The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as
 will be called the \emph{distance function}\index{distance function} from $x$. 
 
 Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
-that is, a metric space with the metric defined as restriction of the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
+that is, a metric space with the metric defined by restricting the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
 
 
 \parbf{Zero and infinity.}
-The genuine metric spaces are main objects of study in this book.
+Genuine metric spaces are the main objects of study in this book.
 However, the described generalizations are useful
 in  various definitions and constructions.
 For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) uses infinite distances.
@@ -61,20 +61,20 @@ set
 \dist{x}{y}{\bm{X}}=\dist{x}{y}{\spc{X}_\alpha}&\text{if}\ \ \alpha=\beta.
 \end{matrix}
 \]
-The obtained $\infty$-metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted as \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
+The resulting $\infty$-metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ and  denoted by \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
 \end{thm}
 
-Next let us give examples when vanishing distance between distinct points is useful.
+Now let us give examples when vanishing distance between distinct points is useful:
 
 
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then 
 \[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
 is only a pseudometric;
-that is if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ has to be a $[0,\infty)$-valued.
+that is, if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ has to be a $[0,\infty)$-valued.
 
 Let $\spc{X}$ be a set,
-$\spc{Y}$ be a metric space and let 
+$\spc{Y}$ be a metric space and  
  $\map\:\spc{X}\to\spc{Y}$ be a map.
 If $\map$ is not injective,
 then the \emph{pullback}
@@ -91,20 +91,21 @@ $x\sim y$ if $\dist{x}{y}{}=0$.
 Note that if $x\sim x'$, then $\dist{y}{x}{}=\dist{y}{x'}{}$ for any $y\in\spc{X}$.
 Thus, $\dist{}{}{}$ defines a metric on the
 quotient set $\spc{X}/{\sim}$.
-This way we obtain a metric space $\spc{X}'$.
-The space $\spc{X}'$ is called \emph{corresponding metric space} for the pseudometric space $\spc{X}$.
-Often we will not distinguish between $\spc{X}'$ and~$\spc{X}$. 
+In this way we obtain a metric space $\spc{X}'$.
+The space $\spc{X}'$ is called the 
+\emph{corresponding metric space} for the pseudometric space $\spc{X}$.
+Often we do not distinguish between $\spc{X}'$ and~$\spc{X}$. 
 
 
 Set $x\approx y$ if and only if $\dist{x}{y}{}<\infty$;
 this is an other equivalence relation on $\spc{X}$.
 The equivalence class of a point $x\in\spc{X}$ will be called the \emph{metric component}\index{metric component} 
  of $x$; it will be denoted as $\spc{X}_x$.
-One could think of $\spc{X}_x$ as of $\oBall(x,\infty)_{\spc{X}}$ --- the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
+One could think of $\spc{X}_x$ as  $\oBall(x,\infty)_{\spc{X}}$, the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
 
-It follows that any $\infty$-metric space is a \emph{disjoint union} of genuine metic spaces --- the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
+It follows that any $\infty$-metric space is a \emph{disjoint union} of genuine metric spaces, the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
 
-Summarizing the discussion above: given a $[0,\infty]$-valued metric space $\spc{X}$ we may pass to the corresponding $(0,\infty]$-valued metric space $\spc{X}'$ and the latter can be broken into a disjoint union of metric components, each of which is  a genuine metric space.
+To summarize this discussion: Given a $[0,\infty]$-valued metric space $\spc{X}$, we may pass to the corresponding $(0,\infty]$-valued metric space $\spc{X}'$ and break the latter  into a disjoint union of metric components, each of which is  a genuine metric space.
 
 
 \section{Notations}
