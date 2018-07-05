@@ -23,7 +23,7 @@ The answers is given below, but it is instructive to think about this question b
 
 \parbf{$\bm{A}$.} No, $A$ is not $\CAT0$.
  
-The boundary $\partial A$ is the parabolid described by  $z=x^2+y^2$ in particular it bounds an open convex set in $\EE^3$ which complement is $A$.
+The boundary $\partial A$ is the parabolid described by  $z=x^2+y^2$ in particular it bounds an open convex set in $\EE^3$ with complement $A$.
 The closest point projection of $A\to\partial A$ is short (see \ref{lem:closest point}).
 It follows that $\partial A$ is a convex set in $A$ equipped with the induced length metric.
 
@@ -75,7 +75,7 @@ The following definition is closely related to the one given by Gromov in \cite[
 \begin{thm}{Definition}\label{def:two-convex}
 We say that a subset $K\subset \EE^m$ is \index{two-convex set}\emph{two-convex}
 if the following condition holds for any plane $W\subset\EE^m$.
-If $\gamma$ is a closed curve in $W\cap K$ which is null-homotopic in $K$, then it is null-homotopic in $W\cap K$.
+If $\gamma$ is a closed curve that lies in $W\cap K$ and null-homotopic in $K$, then it is null-homotopic in $W\cap K$.
 \end{thm}
 
 The following proposition follows immediately from the definition.
@@ -90,7 +90,7 @@ The following proposition describes closed two-convex sets with smooth boundary.
 Let $K\subset \EE^m$ be a closed subset.
 
 Assume that the boundary of $K$ forms a smooth hypersurface $S$.
-Consider the orthonormal vector field $\nu$ on $S$ which points outside of $K$.
+Consider the orthonormal vector field $\nu$ on $S$ that points outside of $K$.
 Denote by $k_1\le \dots\le k_{m-1}$ the scalar fields of principal curvatures on $S$ with respect to $\nu$.
 
 Then $K$ is two-convex if and only if $k_2(p)\ge 0$ at any point $p\in S$.
@@ -99,9 +99,9 @@ Moreover, if $k_2(p)<0$ at some point $p$, then $K$ the Definition~\ref{def:two-
 
 \parit{Proof; ``if'' part.}
 If $k_2(p)<0$ for some $p\in S$,
-consider the plane $W\ni p$ which spanned by the first two principle directions.
-Choose a small triangle in $W$ which surrounds $p$ and move it slightly in the direction of $\nu(p)$.
-We get a triangle $[xyz]$ which is null-homotopic in $K$,
+consider the plane $W\ni p$ spanned by the first two principle directions.
+Choose a small triangle in $W$ that surrounds $p$ and move it slightly in the direction of $\nu(p)$.
+We get a triangle $[xyz]$ that is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,x\}$ bounded by $[xyz]$ does not lie in $K$ completely.
 Therefore $K$ is not two-convex.
 
@@ -133,11 +133,10 @@ By Morse Lemma,
 there is a homotopy $\phi_t\:\DD\to K$ such that 
 $\phi_1(\DD)\subset K_s$.
 
-Consider a closed curve $\gamma\:\SS^1\to K$ which is null-homotopic in $K$.
+Consider a closed curve $\gamma\:\SS^1\to K$ that is null-homotopic in~$K$.
 Note that the distance function $f_0(x)=\dist{\Conv\gamma}{x}{\EE^m}$ is convex.
 Therefore $f_0$ can be approximated by smooth strongly convex function $f$ such that the restriction $f|_S$ is a Morse function.
-From above the there is a disc in $K$ with boundary $\gamma$
-which lies arbitrary close to $\Conv\gamma$.
+From above the there is a disc in $K$ with boundary $\gamma$ that lies arbitrary close to $\Conv\gamma$.
 Since $K$ is closed, the statement follows.
 \qeds
 
@@ -167,7 +166,7 @@ two-convex hull of open set is open.
 
 \section{Sets with smooth boundary}\label{sec:smooth-bry}
 
-In this section we characterize the subsets in $\EE^m$ with smooth boundary which form $\CAT{0}$ spaces. 
+In this section we characterize the subsets in $\EE^m$ with smooth boundary that are $\CAT{0}$ if equipped with the induced length metric. 
 
 
 \begin{thm}{Theorem}\label{thm:set-with-smooth-bry:CBA}
@@ -188,13 +187,13 @@ By Proposition~\ref{prop:two-cove+smooth}, $K$ is two-convex if and only if $k_2
 
 \parit{``Only-if'' part.}
 Assume $K$ is not two-convex.
-Then by Proposition~\ref{prop:two-cove+smooth}, there is a triangle $[xyz]$ in $K$ which is null-homotopic in $K$,
+Then by Proposition~\ref{prop:two-cove+smooth}, there is a triangle $[xyz]$ in $K$ that is null-homotopic in $K$,
 but the solid triangle $\Delta=\Conv\{x,y,z\}$ does not lie in $K$ completely.
 
 
 If $K$ is a complete length $\CAT0$ space,
 then by Reshetnyak majorization theorem,
-there is a short map $f\:\Delta\to K$ which preserves $x$, $y$ and $z$.
+there is a short map $f\:\Delta\to K$ that preserves $x$, $y$ and $z$.
 
 Note that the map $f$ has to be identity.
 In particular $\Delta \subset K$, a contradiction.
@@ -341,7 +340,7 @@ We sketch the proof from Bishop's note \cite{bishop:jordan} and suggest to finis
 It is sufficient to show that any triangle in $K$ is thin,
 as defined in \ref{def:k-thin}.
 
-Note that $K$ admits a length-preserving map to $\EE^2$ which extends the embedding $\Omega\hookrightarrow\EE^2$.
+Note that $K$ admits a length-preserving map to $\EE^2$ that extends the embedding $\Omega\hookrightarrow\EE^2$.
 Therefore the triangle $[xyz]$ can be mapped to the plane in a length-preserving way.
 Since $\Omega$ is simply connected, any open region, say $\Delta$, surrounded by the image of $[xyz]$ completely lies in $\Omega$.
 
@@ -372,7 +371,7 @@ which can be proved along the same lines.
 It will be used in the next section. 
 
 \begin{thm}{Exercise}\label{ex:bishop-sphere}
-Let $\Theta$ be an open connected subset of the unit sphere $\SS^2$ which does not contain a closed hemisphere.
+Let $\Theta$ be an open connected subset of the unit sphere $\SS^2$ that does not contain a closed hemisphere.
 Equip $\Theta$ with induced length metric.
 Let $\tilde \Theta$ be a metric covering of $\Theta$ 
 such that any closed curve in $\tilde \Theta$ of length smaller than $2\cdot\pi$ is contactable.
@@ -463,9 +462,9 @@ Equivalently, open subgraph and epigraph of $f$
 form a two-convex subsets in $\EE^3$
 
 \begin{thm}{Corollary}
-Let $f\:\DD\to \RR$ be a Lipschitz function which is saddle in the interior of the closed unit disc $\DD$. 
+Let $f\:\DD\to \RR$ be a Lipschitz function that is saddle in the interior of the closed unit disc $\DD$. 
 Then the graph
-$z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\CAT{0}$ space.
+$z\z=f(x,y)$ in $\EE^3$ equipped with induced length metric is a $\CAT{0}$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -543,11 +542,11 @@ By the cone property (\ref{thm:warp-curv-bound:cbb:S}), \ref{eq:curv=<0} follows
 $\Sigma_{\tilde p}\tilde K$ is a complete length $\CAT1$ space.
 \end{clm}
 
-By  rescaling, we can assume every face of $K$ which does not conatin $p$ lies on the distance at least 2 from $p$.
-Denote by $\SS^2$ the unit sphere centered at $p$,
-set $\Theta=\SS^2\cap\Omega$.
+Denote by $\SS^2$ the unit sphere centered at $p$
+By  rescaling, we can assume that $\SS^2$ intersects only the faces of $K$ that contain $p$.
+Set $\Theta=\SS^2\cap\Omega$.
 Note that $\Sigma_pK$ is isomeric to the completion of $\Theta$
-and $\Sigma_{\tilde p}\tilde K$ is a completion of a regular metric covering $\tilde\Theta$ of $\Theta$ which is induced by universal metric cover $\tilde \Omega\to \Omega$.
+and $\Sigma_{\tilde p}\tilde K$ is a completion of a regular metric covering $\tilde\Theta$ of $\Theta$ that is induced by universal metric cover $\tilde \Omega\to \Omega$.
 
 By Exercise \ref{ex:bishop-sphere}, it remains to show that the following.
 \begin{clm}{}
@@ -566,7 +565,7 @@ and therefore $\tilde\gamma$ is contractible in $\tilde\Theta$.
 \qeds
 
 The following proposition 
-describes a construction which was essentially given by Shefel in \cite{shefel-3D}.
+describes a construction given by Shefel in \cite{shefel-3D}.
 It produce $\Conv_2 \Omega$ for an open set $\Omega\subset\EE^3$.
 
 \begin{thm}{Proposition}\label{prop:2-conv-construction}
@@ -596,7 +595,7 @@ It remains to show that $\Omega'$ is two-convex.
 Assume contrary; 
 that is, there is a plane $\Pi$ 
 and a closed curve $\gamma\:\SS^1\to \Pi\cap \Omega'$ 
-which is null-homotopic in $\Omega'$,
+that is null-homotopic in $\Omega'$,
 but not null-homotopic in $\Pi\cap\Omega'$.
 
 By approximation we can assume that $\Pi=\Pi_n$ for a sufficiently large $n$ 
@@ -621,8 +620,7 @@ Further,
 for each $i$, 
 set $F'_i=F_i\backslash \Omega'$.
 In other words, 
-$F'_i$ is the subset of facet $F_i$ 
-which remains on the boundary of $K'$.
+$F'_i$ is the subset of facet $F_i$ that  remains on the boundary of $K'$.
 
 From the construction of two-convex hull (\ref{prop:2-conv-construction})
 
@@ -774,7 +772,7 @@ Therefore $f+\eps\cdot h$ is $(-\eps)$-concave in
 $\Omega_\eps=f^{-1}((0,\eps))\cap C$.
 Take 
 \[K_\eps\z=f^{-1}([\tfrac{1}{3}\cdot\eps,\tfrac{2}{3}\cdot\eps])\cap C.\]
-Applying Lemma~\ref{lem:smoothing}, we can find a smooth $(-\tfrac\eps2)$-concave function $f_{\eps}$ which is arbitrarily close to $f+\eps\cdot h$ on $K_\eps$ and which is defined on a neighborhood of $K_\eps$. 
+Applying Lemma~\ref{lem:smoothing}, we can find a smooth $(-\tfrac\eps2)$-concave function $f_{\eps}$ that is arbitrarily close to $f+\eps\cdot h$ on $K_\eps$ and defined on a neighborhood of $K_\eps$. 
 Take a regular value $\theta_\eps\approx\tfrac{1}{2}\cdot\eps$ of $f_\eps$. (In fact one can take $\theta_\eps=\tfrac{1}{2}\cdot\eps$, but it requires a little work.) 
 Since $|(h|C)|<1/10$, the level set $F_\eps=f_{\eps}^{-1}(\theta_\eps)$ will lie entirely in $K_\eps$.
 Therefore $F_\eps$ forms a smooth closed convex hypersurface.
@@ -795,7 +793,7 @@ Namely they show the following.
 
 \begin{thm}{Theorem}
 Let $M$ be a Riemannian manifold with boundary $\partial M$.
-A direction tangent to the boundary will be called concave if there is a short geodesic in this direction which leaves the boundary and goes into interior of $M$.
+A direction tangent to the boundary will be called concave if there is a short geodesic in this direction that leaves the boundary and goes into interior of $M$.
 A sectional direction will be called concave if all the directions in it are concave.
 
 Then $M$ is locally $\Alex\kappa$, where $\kappa$ is the infimum of sectional curvatures in $M$ and  the curvatures of $\partial M$ in the concave directions.
@@ -841,17 +839,17 @@ Is it true that any closed strongly two-convex set with dense interior bounded b
 \end{thm}
 
 \parbf{Metric minimizing surfaces.}
-In \cite{petrunin-metricmin} was shown that discs in complete length $\CAT{0}$ spaces 
-which do not admit a length-decreasing deformations with fixed boundary form $\CAT{0}$ spaces.
+In \cite{petrunin-metricmin, petrunin-stadler} it was shown that discs in complete length $\CAT{0}$ spaces 
+that do not admit a length-decreasing deformations with fixed boundary are $\CAT{0}$.
 
 Any metric minimizing disc forms a saddle surface as defined above.
-There are saddle surfaces which are not metric minimizing globally and it is expected that there saddle surfaces which are not metric minimizing in arbitrary neighborhood of a fixed point.
+There are saddle surfaces that are not metric minimizing globally and it is expected that there saddle surfaces that are not metric minimizing in arbitrary neighborhood of a fixed point.
 Constructing such examples could shed light on the Shefel's question.
 
 \parbf{On convex hypersurfaces in Alexandrov space.}
-We are not aware of any proof of theorem \ref{thm:buyalo} which is not based on the Gauss formula.
+We are not aware of any proof of Theorem~\ref{thm:buyalo} that is not based on the Gauss formula.
 
-Even if the ambient space is Euclidean, we do not know any proof which avoids approximation by simpler spaces;
+Even if the ambient space is Euclidean, we do not know any proof that avoids approximation by simpler spaces;
 the synthetic argument of Anatoliy Milka in \cite{milka-conv} is very intersting, 
 but still it requires approximation.
 

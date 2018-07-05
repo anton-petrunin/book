@@ -61,7 +61,7 @@ Then the following conditions are equivalent:
 \end{subthm}
 
 \begin{subthm}{lem:stut<=>rank:strut}
-There is a point array $(a^0,a^1,\dots,a^\kay)$ which is $\kappa$-strutting for $p$.
+There is a $\kappa$-strutting at $p$ point array $(a^0,a^1,\dots,a^\kay)$.
 \end{subthm}
 \end{thm}
 
@@ -162,7 +162,7 @@ $f_{\bm{x}}\:\spc{L}\to \RR$ defined as
 \[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\distfun{b}{}{},\]
 where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
 Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
-Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve which starts at $p$.
+Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve that starts at $p$.
 
 \begin{clm}{}\label{clm:|a alpha_x|=x}
 If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$, we have
@@ -319,7 +319,7 @@ Then the following statements are equivalent:
 \end{subthmA}
 
 \begin{subthmA}{thm:dim-infty:rank}
-There is a point $p\in\spc{L}$ which admits a $\kappa$-strutting array $(b,a^1,\dots,a^m)\in\spc{L}^{m+1}$.
+There is a point $p\in\spc{L}$ that admits a $\kappa$-strutting array $(b,a^1,\dots,a^m)\in\spc{L}^{m+1}$.
 \end{subthmA}
 
 \begin{subthmA}{LinDim+} Let $\Euk^m$ be the set 
@@ -327,7 +327,7 @@ of all points $p\in \spc{L}$ such that there is an isometric cone embedding $\EE
 Then $\Euk^m$  contains a dense G-delta set in $\spc{L}$.
 \end{subthmA}
 
-\begin{subthmA}{TopDim} There is a $C^{\frac{1}{2}}$-embedding; that is, an embedding which is bi-H\"older with exponent $\tfrac{1}{2}$,
+\begin{subthmA}{TopDim} There is a $C^{\frac{1}{2}}$-embedding; that is, a bi-H\"older embedding with exponent $\tfrac{1}{2}$,
 \[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R).\]
 \end{subthmA}.
 
@@ -354,7 +354,7 @@ At that time, it was not known whether for any complete length $\Alex\kappa$ spa
 \[\LinDim\spc{L}=\infty\ \ \Rightarrow\ \ \TopDim\spc{L}=\infty.\]
 The latter implication was proved by Grigory Perelman;
 it was done by combining an idea of Conrad Plaut with the technique of gradient flow; see \cite{perelman-petrunin:qg}.
-The statement \ref{TopDim} which we prove is somewhat stronger.
+The statement \ref{TopDim} is somewhat stronger.
 
 
 To prove Theorem \ref{thm:dim-infty}  we will need the following three propositions.
@@ -446,7 +446,7 @@ Assume that
 \eqlbl{eq:pack>pack}\]
 for some $\eps>0$.
 Then there is a G-delta set $A\subset \spc{L}$,
-which is dense in a neighborhood of $p$,
+that is dense in a neighborhood of $p$ and
 such that $\dim\Lin_q>m$ for any $q\in A$.
 \end{thm}
 
@@ -457,7 +457,7 @@ Choose a neighborhood $\Omega\ni p$,
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
 Set 
 \[A= \Omega\cap\Str(x^1,x^2,\dots,x^n).\]
-According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set which is dense in $\Omega$.
+According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set taht is dense in $\Omega$.
 
 Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
 Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
@@ -515,7 +515,7 @@ Finally, set $b=a^0$.
 
 
 \parit{(\ref{SHORT.thm:dim-infty:rank})$\Rightarrow$(\ref{SHORT.pack}).} 
-Let $p\in \spc{L}$ be a point which admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
+Let $p\in \spc{L}$ be a point that admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
 The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
 implies that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
 \[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{})\]
@@ -548,7 +548,7 @@ Applying \ref{E-comeagre}, we get that
 \begin{center}
 $\Euk^m=\set{p\in \spc{L}}{\text{there is an isometric cone embedding}\ \iota:\EE^m\hookrightarrow \T_p}$
 \end{center} 
-contains a G-delta set which is dense in a neighborhood of any point $q'\in\spc{L}$.
+contains a G-delta set that is dense in a neighborhood of any point $q'\in\spc{L}$.
 
 \parit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim}).} 
 Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with an isometric cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
@@ -559,7 +559,7 @@ we get a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
 we obtain a $C^{\frac{1}{2}}$-submap 
 \[\map\:\RR^m\subto \oBall(q,R)\]
-which is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and $\map(\distfun{\bm{a}}{p})=p$.
+that is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ such that $\map(\distfun{\bm{a}}{p})=p$.
 In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
 
 
@@ -604,7 +604,7 @@ Then the following statements are equivalent:
 \end{subthm}
 
 \begin{subthm}{thm:dim-finite:rank}
-$m$ is the maximal integer, such that there is a point $p\in\spc{L}$ which admits a $\kappa$-strutting array $b,a^1,\dots,a^m$.
+$m$ is the maximal integer, such that there is a point $p\in\spc{L}$ that admits a $\kappa$-strutting array $b,a^1,\dots,a^m$.
 \end{subthm}
 
 \begin{subthm}{LinDim+-f} $\T_p\iso \EE^m$ for any point $p$ in a dense G-delta set of $\spc{L}$.
@@ -774,7 +774,7 @@ $\oBall(p,\eps)\iso(-\eps,\eps)$.
 Assume the contrary;
 that is, there is 
 $$z\in \oBall(p,\eps)\backslash\l]x y\r[.$$
-Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point which maximizes the distance $\dist{p}{q}{}$.
+Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point that maximizes the distance $\dist{p}{q}{}$.
 At  $q$, we have three distinct directions: 
 to $x$, to $y$ and to $z$.
 Moreover, $\mangle\hinge{q}{x}{y}=\pi$.
@@ -808,7 +808,7 @@ Assume the contrary;
 let $z\in \oBall(p,\eps)\backslash[p y]$.
 Choose a point $w\in \l] p y \r[$ such that 
 \[\dist{p}{w}{}+\dist{p}{z}{}<\eps.\]
-Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point which maximizes the distance $\dist{w}{q}{}$.
+Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point that maximizes the distance $\dist{w}{q}{}$.
 Since no geodesics pass thru $p$, we have $p\not=q$.
 As above, $\mangle\hinge{q}{p}{y}=\pi$ 
 and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.

@@ -142,7 +142,7 @@ The theorem above together with Proposition~\ref{prop:submet/G}
 imply the following:
 
 \begin{thm}{Corollary}\label{thm:CBB/G}
-Assume $\spc{L}$ is a $\Alex{\kappa}$ space on which the group $G$ acts  by isometries and has  closed orbits.
+Assume that  the group $G$ acts isometrically on a $\Alex{\kappa}$ space $\spc{L}$ and has  closed orbits.
 Then the quotient space $\spc{L}/G$ is locally $\Alex\kappa$. 
 \end{thm}
 
@@ -199,7 +199,7 @@ Recall that general complete length spaces might have no geodesics;
 see Exercise~\ref{ex:no-geod}.
 
 \begin{thm}{Exercise}
-Construct a complete length $\Alex0$ space which is not geodesic.
+Construct a complete length $\Alex0$ space that is not geodesic.
 \end{thm}
 
 We are going to show that all complete length $\Alex{}$ spaces have plenty of geodesics in the following sense.
@@ -209,7 +209,9 @@ A metric space $\spc{X}$ is called \emph{G-delta geodesic}\index{geodesic!G-delt
 if for any point $p\in \spc{X}$ there is a dense G-delta set $W_p\subset\spc{X}$ such that for any $q\in W_p$ there is a geodesic $[p q]$.
 
 A metric space $\spc{X}$ is called \emph{locally G-delta geodesic}\index{geodesic!G-delta geodesic space}\index{G-delta geodesic space} 
-if for any point $p\in \spc{X}$ there is a G-delta set $W_p\subset\spc{X}$ which is dense in a neighborhood of $p$ such that for any $q\in W_p$ there is a geodesic $[p q]$.
+if for any point $p\in \spc{X}$ there is a G-delta set $W_p\subset\spc{X}$ such that
+$W_p$ is dense in a neighborhood of $p$ 
+and for any $q\in W_p$ there is a geodesic $[p q]$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:straight}
@@ -314,7 +316,7 @@ and Corollary \ref{cor:two-geodesics-in-ultrapower}.
 \end{thm}
 
 \begin{thm}{Exercise}
-Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  which correspond to the same geodesic direction $\xi\in \Sigma'_p$.
+Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  in the same geodesic direction $\xi\in \Sigma'_p$.
 Show that 
 \[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
 
@@ -322,9 +324,9 @@ Show that
 
 \begin{thm}{Exercise}
 Construct a complete length $\Alex{}$ space $\spc{L}$
-which contains an everywhere dense G-delta set $A$
+with an everywhere dense G-delta set $A$
 such that 
-$A\cap\l]xy\r[=\emptyset$
+$A\cap \l]xy\r[=\emptyset$
 for any geodesic $[xy]$ in $\spc{L}$. 
 \end{thm}
 
@@ -488,8 +490,8 @@ Prove that
 \end{thm}
 
 \begin{thm}{Advanced Exercise} \label{ex:urysohn}
-Construct a geodesic space $\spc{X}$ which is not $\Alex0$, 
-but which meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \l]x y\r[$
+Construct a geodesic space $\spc{X}$ that is not $\Alex0$, 
+but meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \l]x y\r[$
 \[\angk{0}{z}{p}{x}+\angk{0}{z}{p}{y}
 \le
 \pi.\]
@@ -506,7 +508,7 @@ the following inequality holds
 \r].\eqlbl{eq:berg-nikolaev}\]
 Prove that $\spc{L}$ is $\Alex0$.
 
-Construct a metric on a 4-point set which satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but which does not admit a distance preserving map into a $\Alex{0}$ space.
+Construct a metric on a 4-point set that satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but does not admit a distance preserving map into a $\Alex{0}$ space.
 \end{thm}
 
 Assume that for a trianglle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
@@ -529,7 +531,7 @@ for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints 
 \end{subthm}
 
 \begin{subthm}{} Show that $\RR^2$ admits a metric defined by a norm
-such that it satisfies above condition, but which is not $\Alex0$.
+such that it satisfies above condition, but not $\Alex0$.
 \end{subthm}
 
 \end{thm}
@@ -783,7 +785,8 @@ The later contradicts that $\gamma$ is length minimizing.
 Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\~p'\~x_0\~x_1\dots \~x_n]$ is convex.
 
 Let us take finer and finer partitions and pass to the limit of the polygon $\~p'\~x_0\~x_1\dots \~x_n$ as $p'\to p$.
-We obtain a convex curvelinear triangle formed by a curve $\~\gamma\:[0,T]\to\Lob2{\kappa}$ which is  the limit of broken line $\~x_0\~x_1\dots \~x_n$ and two geodesics $[\~p'\,\~\gamma(0)]$,
+We obtain a convex curvelinear triangle formed by a curve $\~\gamma\:[0,T]\to\Lob2{\kappa}$ --- the limit of broken line $\~x_0\~x_1\dots \~x_n$ 
+and two geodesics $[\~p'\,\~\gamma(0)]$,
 $[\~p'\,\~\gamma(T)]$.
 Since $[\~p'\~x_0\~x_1\dots \~x_n]$ is convex,
  the natural parametrization of $\~x_0\~x_1\dots \~x_n$ 
@@ -1006,7 +1009,7 @@ for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
 Fix $q$.
 Consider a hinge $\hinge x p q$ such that 
 \[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell.\]
-Let us construct a new hinge $\hinge{x'}p q$ which is smaller; that is,
+Let us construct a new smaller hinge $\hinge{x'}p q$; that is,
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{}
 \eqlbl{eq:thm:=def-loc-fourstar}\]

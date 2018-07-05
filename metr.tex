@@ -18,7 +18,9 @@ The value $\rho(x,y)$ is also called \index{distance}\emph{distance} between $x$
 
 
 The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty]$ and $[0,\infty]$.
-Any $\II$-valued metric can be refereed briefly as a metric; if we need to be more specific, we may also use the following names:
+Any $\II$-valued metric can be refereed briefly as a metric;
+the interval should be guessed from the context, but by default metric is $(0,\infty)$-valued. 
+If we need to be more specific, we may also use the following names:
 \begin{itemize}
 \item A $(0,\infty)$-valued metric might be called \emph{genuine metric}.
 \item A $(0,\infty]$-valued metric might be called \emph{$\infty$-metric}.
@@ -33,6 +35,9 @@ the latter will be used if we need to emphasize that we are working in the space
 The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
 \[\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}\]
 will be called the \emph{distance function}\index{distance function} from $x$. 
+
+Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
+that is, a metric space with the metric defined as restriction of the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
 
 
 \parbf{Zero and infinity.}
@@ -66,7 +71,7 @@ Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\
 Then 
 \[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
 is only a pseudometric;
-if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ has to be a $[0,\infty)$-valued.
+that is if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ has to be a $[0,\infty)$-valued.
 
 Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and let 
@@ -88,8 +93,7 @@ Thus, $\dist{}{}{}$ defines a metric on the
 quotient set $\spc{X}/{\sim}$.
 This way we obtain a metric space $\spc{X}'$.
 The space $\spc{X}'$ is called \emph{corresponding metric space} for the pseudometric space $\spc{X}$.
-Often we will not distinguish between  $\spc{X}'$
-and $\spc{X}$. 
+Often we will not distinguish between $\spc{X}'$ and~$\spc{X}$. 
 
 
 Set $x\approx y$ if and only if $\dist{x}{y}{}<\infty$;
@@ -119,9 +123,12 @@ we write
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
 correspondingly.
 
-In case $\spc{X}=\Lob{m}{\kappa}$, we often will not need to specify the center of the ball,
+Since in a model space $\Lob{m}{\kappa}$ all balls of the same radiuses are isometric;
+often will not need to specify the center of the ball,
 so we may write 
 \[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}}\] correspondingly.
+
+A set $A\subset\spc{X}$ is called \emph{bounded}\index{bounded set} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
 
 \parbf{Distances to sets.}
 For subset $A\subset \spc{X}$, 
@@ -157,7 +164,7 @@ If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$
 such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\index{maximal $\eps$-packing} in $\spc{X}$.
 
 
-\parbf{Open sets.}
+\parbf{G-delta sets.}
 Recall that arbitrary union of open balls in a metric space is called \index{open set}\emph{open set}.
 A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset. 
 Often we will use the following classical result:
@@ -209,12 +216,16 @@ consider the value
 \[\yetdist{x}{y}{}=\inf_{\alpha}\{\length\alpha\},\]
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 
-It is easy to see that $\yetdist{}{}{}$ defines a metric on  $\spc{X}$;
+It is easy to see that $\yetdist{}{}{}$ defines a $(0,\infty]$-valued metric on  $\spc{X}$;
 it will be called the \emph{length-metric}\index{length-metric} on $\spc{X}$.
+Clearly 
+\[\yetdist{x}{y}{}\ge \dist{x}{y}{}\]
+for any $x,y\in \spc{X}$.
 
-\begin{thm}{Definition}
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in\spc{X}$, then $\spc{X}$ is called a \emph{length space}\index{length space}.
+\begin{thm}{Definition}\label{def:length-space}
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\spc{X}$ is called a \emph{length space}\index{length space}.
 \end{thm}
+
 In other words, a metric space $\spc{X}$ is a
 \emph{length space}
 if for any $\eps>0$ and any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\infty$ there is a path $\alpha\:[0,1]\to\spc{X}$ connecting%
@@ -231,7 +242,7 @@ which might be not a length-metric.
 The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
 
 \parbf{Variations of the definition.}
-We will need the following variations of the notion of length spaces.
+We will need the following variations of Definition~\ref{def:length-space}:
 
 \begin{itemize}
 \item Assume $R>0$.
@@ -245,7 +256,7 @@ if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\infty$ there is a ge
 \item Assume $R>0$. A metric space $\spc{X}$ is called 
 \emph{$R$-geodesic}%
 \index{$R$-geodesic space}
-if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<R$ there is a geodesic $[x y]$ in $\spc{X}$.
+if for any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$ there is a geodesic $[x y]$ in $\spc{X}$.
 \end{itemize}
 
 Note that the notions of $\infty$-length spaces and length spaces are the same.
@@ -254,7 +265,7 @@ and any $R$-geodesic space is $R$-length.
 
 \begin{thm}{Example} 
 Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\II_n$ of length $1+\tfrac1n$ where for each $\II_n$ one end is glued to $p$ and the other to $q$.
-Then $\spc{X}$ carries a natural complete length metric with respect to which $\dist{p}{q}{}=1$ but there is no geodesic connecting $p$ to $q$.
+Then $\spc{X}$ carries a natural complete length metric such that $\dist{p}{q}{}=1$, but there is no geodesic connecting $p$ to~$q$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:complete=>complete}
@@ -272,7 +283,7 @@ If $\spc{X}$ is compact, then $(\spc{X},\yetdist{}{}{})$ is geodesic.
 
 
 \begin{thm}{Exercise}\label{ex:no-geod}
-Give an example of a complete length space for which no pair of distinct points can be joined by a geodesic.
+Give an example of a complete length space such that no pair of distinct points can be joined by a geodesic.
 \end{thm}
 
 \begin{thm}{Definition}
@@ -285,7 +296,7 @@ if
 \item Assume $\eps\ge 0$.
 A point $z\in \spc{X}$ is called \emph{$\eps$-midpoint} of $x$ and $y$
 if 
-\[\dist{x}{z}{},\dist{y}{z}{}<\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
+\[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
 
 \end{thm}
@@ -308,10 +319,8 @@ there is a midpoint $z$.
 Then the space $\spc{X}$ is a geodesic space.
 \end{subthm}
 
-such that $\dist{x}{y}{}<R$
-
 \begin{subthm}{lem:mid>geod:R}
-If for some $R>0$, the assumptions above holds only for pairs of points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$, 
+If for some $R>0$, the assumptions (\ref{SHORT.lem:mid>length}) or (\ref{SHORT.lem:mid>geod:geod}) hold only for pairs of points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$, 
 then the space $\spc{X}$ is a $R$-length or $R$-geodesic correspondingly.
 
 \end{subthm}
@@ -413,7 +422,7 @@ a contradiction.
 \qeds
 
 \begin{thm}{Exercise} %(from \cite{BH})\label{exercise from BH}
-Construct a geodesic space which is locally compact,
+Construct a geodesic space that is locally compact,
 but whose completion is neither geodesic nor locally compact.
 \end{thm}
 
@@ -422,7 +431,7 @@ but whose completion is neither geodesic nor locally compact.
 
 \begin{thm}{Definition} 
 \label{def:convex-set}
-Let $\spc{X}$ be a metric space and $A\subset\spc{X}$.
+Let $\spc{X}$ be a geodesic space and $A\subset\spc{X}$.
 
 We say that $A$ 
 \emph{convex}%
@@ -432,9 +441,9 @@ if for every two points $p,q\in A$ any geodesic $[pq]$ lies in $A$.
 We say that $A$ 
 \emph{weakly convex}%
 \index{convex set!weakly convex set}\index{weakly convex set}
-if for every two points $p,q\in A$ which can be connected by a geodesic in $\spc{X}$,
+if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
-which lies in $A$.
+that lies in $A$.
 
 We say that $A$ is \emph{totally convex}\index{totally convex}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
@@ -457,13 +466,13 @@ Similarly one defines  locally weakly convex and locally totally convex sets. %?
 \parbf{Remarks.} Let us state few observations from the definition.
 \begin{itemize}
 \item The notion of \emph{(weakly) convex set} is the same as \emph{(weakly) $\infty$-convex set}.
-\item The inherited metric on a weakly convex set of a length space coincides with its length-metric.
+\item The inherited metric on a weakly convex set coincides with its length-metric.
 \item Any open set is locally convex by definition.
 \end{itemize}
 
 The following proposition states that weak convexity survive under ulralimit.
 An analogus statement about convexity does not hold;
-for example there is a sequence of convex discs in $\SS^2$ which converges to the half sphere $\SS^2_+$, which is not convex.
+for example there is a sequence of convex discs in $\SS^2$ that converges to the half sphere $\SS^2_+$, which is not convex.
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
 Let $\spc{X}_n,$ be a sequence of geodesic spaces.
@@ -476,11 +485,11 @@ Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
 Fix $x_\o,y_\o\in A_\o$.
 Consider the sequences $x_n,y_n\in A_n$ such that $x_n\to x_\o$ and $y_n\to y_\o$ as $n\to\o$.
 
-Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ which lies in $A_n$.
+Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ that lies in $A_n$.
 Set
 \[\alpha_\o(t)=\lim_{n\to \o}\alpha_n(t).\]
 
-Note that $\alpha_\o$ is a geodesic path which lies in $A_\o$.
+Note that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
 Hence the result follows.
 \qeds
 
@@ -497,12 +506,12 @@ Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$
 their maximum 
 \[\rho(x,y)=\max\{\rho_1(x,y),\rho_2(x,y)\}\]
 is also a pseudometric;
-also if for these two pseudometric $\rho_1$ and $\rho_2$ the projection $\spc{X}\to\spc{X}/{\sim}$ is short, then so it true for  $\rho(x,y)$.
+also if for these two pseudometric $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are short, then so it true for $\rho(x,y)$.
 
 It follows that 
 the quotient space $\spc{X}/{\sim}$ admits natural pseudometric;
 this is the maximal pseudometric on  $\spc{X}/{\sim}$ 
-which makes the quotient map 
+that makes the quotient map 
 $\spc{X}\to\spc{X}/{\sim}$ to be short.
 The corresponding metric space will be also denoted as $\spc{X}/{\sim}$
 and will be called the \emph{quotient space}\index{quotient space} of $\spc{X}$ by the equivalence relation $\sim$.
@@ -536,7 +545,7 @@ $f\:\spc{X}\to (\spc{Y},\yetdist{}{}{})$.
 
 Consider the quotient map 
 $f\:\spc{X}\to\spc{X}/{\sim}$.
-Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric which makes $f$ to be short.
+Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric that makes $f$ to be short.
 
 Denote by $\yetdist{}{}{}$ the length-metric on $\spc{X}/{\sim}$.
 It follows that
@@ -559,7 +568,7 @@ defined as $x\sim y$ if there is $g\in G$ such that $x=g\cdot y$.
 Note that $\sim$ is an equivalence relation.
 
 In this case the quotient space $\spc{X}/{\sim}$ will be also denoted as $\spc{X}/G$;
-it could be also regarded as space of orbits.
+it could be also regarded as space of $G$-orbits in $\spc{X}$.
 
 Assume that the group $G$ acts on $\spc{X}$ by isometries.
 In this case the distance between orbits $G\cdot x$ and $G\cdot y$ in $\spc{X}/G$
@@ -569,7 +578,7 @@ can be defined directly
 \dist{g^{-1}\cdot x}{y}{\spc{X}}}{g\in G}.\]
 
 If the $G$-orbits are closed, then $\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=0$ if and only if $G\cdot x=G\cdot y$.
-In this case the quotient space $\spc{X}/G$ is a metric space.
+In this case the quotient space $\spc{X}/G$ is a genuine metric space.
 
 The following proposition follows from the definition of quotient space:
 
@@ -584,18 +593,18 @@ that is $\spc{X}\to\spc{X}/G$ is short and 1-co-Lipschitz.
 
 \parbf{Gluing.}
 Recall that disjoint union of metric spaces can be also considered as a metric space; see Definition~\ref{def:disjoint-union}.
-Therefore the above construction works as well for an equivalence relation on a disjoint union of metric spaces.
+Therefore the quotient-space construction works as well for an equivalence relation on a disjoint union of metric spaces.
 
 Consider two metric spaces $\spc{X}_1$ and $\spc{X}_2$
 with subset $A_1\subset\spc{X}_1$ and $A_2\subset\spc{X}_2$
 and a bijection $\phi\:A_1\to A_2$.
 Consider the minimal equivalence relation on $\spc{X}_1\sqcup\spc{X}_2$
 such that $a\sim \phi(a)$ for any $a\in A_1$.
-In this case, we say that the corresponding quotient space 
+In this case, the corresponding quotient space 
 $(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called \emph{gluing}\index{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
-If the map $\phi\:A_1\to A_2$ is distance preserving,
+Note that if the map $\phi\:A_1\to A_2$ is distance preserving,
 then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance preserving and 
 \[\dist{\iota_1(x_1)}{\iota_2(x_2)}{\spc{X}_1\sqcup_{\phi}\spc{X}_2}
 =
@@ -609,7 +618,7 @@ Let $\spc{V}$ be a metric space
 and $A\subset \spc{V}$ be a closed subset.
 A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
 
-More formally the space $\spc{W}$ can be described by the following properties.
+The space $\spc{W}$ is completely described by the following properties:
 \begin{itemize}
 \item The space $\spc{W}$ contains $\spc{V}$ as a subspace; 
 in particular the set $A$ can be treated as a subset of $\spc{W}$.
@@ -660,7 +669,7 @@ In particular if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, the
 \section{Kuratowsky embedding}
 
 Given a metric space $\spc{X}$, 
-let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc{X}$ equipped with the supremum norm,
+let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc{X}$ equipped with the sup-norm,
 \[\|f\|=\sup_{x\in\spc{X}}\{|f(x)|\}.\]
 
 \parbf{Kuratowski embedding.}
@@ -683,10 +692,3 @@ Thus, we can (and often will) consider space $\spc{X}$ as a subset of  $\Bnd(\sp
 \begin{thm}{Exercise}
 Show that any compact space is isometric to a subspace in a compact length space.
 \end{thm}
-
-Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
-that is, a metric space with the metric defined as restriction of the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
-
-A set $A\subset\spc{X}$ is called \emph{bounded}\index{bounded set} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
-
-Recall that a family of maps between metric spaces $\{f_\alpha\co \spc{X}\to\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.

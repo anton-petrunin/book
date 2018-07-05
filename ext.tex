@@ -19,7 +19,7 @@ The presence of extremal subsets in a $\Alex{}$ space
 makes it behave as something new, 
 intersting and
 different from Riemannian manifolds.
-It gives an additional combinatoric structure which
+It gives an additional combinatoric structure that
 reflects geometry and topology of the space itself, as well as of nearby spaces.
 
 \section{New Def}
@@ -57,8 +57,7 @@ Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space.
 A closed subset $E\subset \spc{L}$ 
 is called \index{extremal set}\emph{extremal}
 if for any point $p\notin E$ the following condition fulfilled.
-If $q\in E$ is a point which minimize the distance to $p$
-then $\mangle \hinge q p x\le\tfrac\pi2$ for any $x\in\spc{L}$.
+If $q\in E$ is a point that minimize the distance to $p$, then $\mangle \hinge q p x\le\tfrac\pi2$ for any $x\in\spc{L}$.
 Equivalently, $q$ is a critical point of the distance function $\distfun{p}{}{}$,  
 see Definition \ref{def:critical-point}.
 \end{thm}
@@ -85,7 +84,7 @@ $$E=\bigcup_\alpha E_\alpha.$$
 
 By Proposition \ref{prop:extrimal+nbhd}, $E$ is closed.
 
-Now assume $p\notin E$; and let $q\in E$ is a point which minimize the distance to $p$. 
+Now assume $p\notin E$; and let $q\in E$ is a point that minimize the distance to $p$. 
 Choose $\alpha$ so that $q\in E_\alpha$.
 Since $E_\alpha$ is extremal, the point $q$ is critical for the distance function $\distfun{p}{}{}$.
 Hence the result follows.
@@ -93,7 +92,7 @@ Hence the result follows.
 
 \begin{thm}{Definition}\label{def:prim-extr-set}
 An extremal set $E$ will be called \index{primitive extremal set}\emph{primitive}
-if it can not be presented as a union of extremal sets which are proper subsets of $E$.
+if it can not be presented as a union of extremal sets that are proper subsets of $E$.
 \end{thm}
 
 \parbf{Examples.}
@@ -147,21 +146,21 @@ The following proposition gives yet big number of examples.
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
 Given a cone $K$ 
 consider set $S_K\subset \spc{L}$ of all points 
-$p\in \spc{L}$ such that there is a homeomorphism $\T_p\to K$ which sends tip of $\T_p$ to the tip of $K$.
+$p\in \spc{L}$ such that there is a homeomorphism $\T_p\to K$ that sends tip of $\T_p$ to the tip of $K$.
 Let $Z$ be a path-connected components of $S_K$.
-Then the closure of $Z$ forms an extremal subset.
+Then the closure of $Z$ forms an extremal subset. %???do we need the condition on tip
 \end{thm}
 
 Note that according to ???, the set $S_K\subset \spc{L}$ can be also defined as set of all points such that its spherical neigborhood is homeomorphic to $K$.
 
 \parit{Proof.}
 Fix a path-connected component $Z$ of $S_K$ and let $E$ be the closure of $Z$.
-Choose arbitrary point $p\notin E$ and let $q\in E$ be a point which minimize the distance $\dist{p}{q}{}$.
+Choose arbitrary point $p\notin E$ and let $q\in E$ be a point that minimize the distance $\dist{p}{q}{}$.
 
 Assume $\mangle\hinge qpx>\tfrac\pi2$;
 in other words the $q$ is a regular point for the function $\distfun{p}{}{}$.
 Then by Morse lemma (\ref{lem:morse}),
-there is a neighborhood $\Omega\ni q$ which splits along $\distfun{p}{}{}$;
+there is a neighborhood $\Omega\ni q$ that splits along $\distfun{p}{}{}$;
 that is, there is a homeomorphism $h\:\II\times \Lambda\to\Omega$,
 where $\II$ is an open real inteval containing $\dist{p}{q}{}$
 such that $\dist{p}{h(t,x)}{}=t$ for any $(t,x)\in \II\times \Lambda$.
@@ -204,7 +203,7 @@ Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $E\subse
 Then the length-metric of $E$ is locally finite.
 More over, for any point $p\in E$ and $\eps>0$ there is $\delta>0$
 such that any point $q\in E\cap \oBall(p,\delta)$ can be joint to $p$
-by a curve which lies in $E$ and has length $<\eps$.
+by a curve that lies in $E$ and has length $<\eps$.
 
 \end{thm}
 
@@ -302,7 +301,7 @@ then for any $p\in F$, and any semiconcave function $f$, either $\nabla_p f=\0$ 
 $\tfrac{\nabla_p f}{|\nabla_p f|}\in \Sigma_p F$.
 If so, an $f$-gradient curve
 can be obtained as a limit of broken lines with vertexes on $F$, and from
-uniqueness, any gradient curve which starts at $F$ lives in $F$.
+uniqueness, any gradient curve that starts at $F$ stays in $F$.
 
 Let us use induction on $\dim \spc{L}$. 
 Note that if $F\subset \spc{L}$ satisfies the condition,
@@ -380,9 +379,9 @@ set of limits of $\dir p{q_n}$ for $q_n\to p$, $q_n\in X$.}, the radial curve $\
 \footnote{that follows from the fact that the curves 
 $t\mapsto\gexp(t\cdot\dir p{q_n})$ starting with $q_n$ belong to $E$
 and their converge to $\gexp(t\cdot\xi)$} 
-In particular, there is a curve which goes in any tangent direction of $E$.
+In particular, there is a curve that goes in any tangent direction of $E$.
 Therefore, as $\lam\to\infty$,  $(\lam E\subset \lam \spc{L},p)$ converges to
-a subcone $\T_p E\subset \T_p \spc{L}$, which is simply cone over $\Sigma_p E$ (see also
+a subcone $\T_p E\subset \T_p \spc{L}$, which is the cone over $\Sigma_p E$ (see also
 \cite[3.3]{perelman-petrunin:extremal})
 
 ???The same argument shows that for any $p\in \spc{L}\backslash E$ the fuction $\inf_{\xi\in\Sigma_xE}\{\mangle(\dir x p,\xi)\}$ is locally bounded away from zero.
@@ -481,9 +480,9 @@ The proof of the second is an application of quasigeodesics.
 \end{enumerate}
 
 
-Let us denote by $\Ext(x)$ the minimal extremal subset which contains a point
+Let us denote by $\Ext(x)$ the minimal extremal subset that contains a point
 $x\in \spc{L}$. 
-Extremal subsets which can be obtained this way will be called
+Extremal subsets that can be obtained this way will be called
 \emph{primitive}. 
 Set 
 \[\Ext^\circ(x)=\set{y\in \Ext(x)}{\Ext(y)=\Ext(x)};\]
@@ -555,7 +554,7 @@ Hence the result.
 \begin{thm}{Theorem} 
 Let $(\spc{L}_n)$ be a non-collapsing sequence of $m$-dimensional complete length $\Alex\kappa$ spaces, $\spc{L}_n\GHto \spc{L}$ 
 and
-$E_n \subset \spc{L}_n$ be a sequence extremal subsets which converges $E_n\to E$ as subsets.
+$E_n \subset \spc{L}_n$ be a sequence extremal subsets that converges $E_n\to E$ as subsets.
 
 Equip subsets $E_n\subset \spc{L}_n$ and $E\subset\spc{L}$ with length-metrics,
 then $E_n \GHto E$.
@@ -574,7 +573,7 @@ Set $\yetdist{p}{q}{F}=\limsup_{n\to\infty}\dist{p_n}{q_n}{F_n}$; this is easily
 From the previous paragraph, $\yetdist{p}{q}{}$ does not depend on the choice of sequences $(p_n)$ and $(q_n)$, 
 and we have $\yetdist{p}{q}{}<\tfrac{1}{\eps}\cdot\dist[{{}}]{p}{q}{}$, because from above $\eps$ can be found uniformly for all $\spc{L}_n$ in the absence of collapse.
 
-Let $\gamma\:[a,b]\to E$ be a shortest path in $E$ between $p$ and $q$ which is parametrized by arc-length. 
+Let $\gamma\:[a,b]\to E$ be a shortest path in $E$ between $p$ and $q$ parametrized by arc-length. 
 Assume $\dist{p}{q}{F}<\yetdist{p}{q}{F}$. 
 Then, from \cite[5.14]{busemann}, for some
 $t_0 \in[a, b]$ and $\eps > 0$ there is a sequence $t_i \to t_0\pm$ such that
@@ -588,7 +587,7 @@ Now consider the limit $(\tfrac{1}{|t_0-t_i |}\blow \spc{L}, r) \to (\T_r,\0)$.
 Consider the curve in $\T_r$ given by
 $\gamma^*(t) = \lim_{i\to\infty}\gamma_i(\frac{t-t_0}{t_1-t0}),$
 where ??? denotes the image of $\gamma_i$ in $\frac{1}{|t_0-t_i |}\spc{L}$. 
-Then $\gamma^*$ is a quasigeodesic between $\0$ and the tangent vector $\gamma^+(t_0)$ which has length not less than $1 + \eps$. 
+Then $\gamma^*$ is a quasigeodesic between $\0$ and the tangent vector $\gamma^+(t_0)$ that has length not less than $1 + \eps$. 
 This is a contradiction since $|\gamma^\pm(t_0)|=1$ by [Perelman and Petrunin 1994, 2.3(2)].
 
 
