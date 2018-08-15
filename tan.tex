@@ -2,13 +2,9 @@
 %arXiv
 \chapter{First order differentiation}\label{chap:tan}
 
+\section{Intrinsic property of tangent space}\label{halbeisen}
 
-
-
-
-\section{Intrinsity of tangent space}\label{halbeisen}
-
-In this section address when tangent space has length metric.
+In this section we address when the metric of the tangent space is a length metric.
 
 \begin{thm}{Theorem}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p\in \spc{U}$.
@@ -23,13 +19,13 @@ $\mangle \hinge pxy<\pi$ and any $\eps>0$, there is $z\in \spc{U}$ such that
 Fix a small positive number $\delta\ll \eps$.
 Let $\bar x\in \mathopen{]}px]$ and $\bar y\in \mathopen{]}py]$ denote the points such that 
 $\dist{p}{\bar x}{}=\dist{p}{\bar y}{}=\delta$.
-Let $z$ denotes the midpoint of $\bar x$ and $\bar y$.
+Let $z$ denote the midpoint of $\bar x$ and $\bar y$.
 
 Since $\delta\ll \eps$  we can assume that 
 \[\angk\kappa p{\bar x}{\bar y}<\mangle \hinge pxy+\eps.\]
-By the Alexandrov's lemma (\ref{lem:alex}), we have
+By  Alexandrov's lemma (\ref{lem:alex}), we have
 \[\angk\kappa p{\bar x}{z}+\angk\kappa p{\bar y}{z}< \angk\kappa p{\bar x}{\bar y}.\]
-By construction
+By construction,
 \[\angk\kappa p{\bar x}{z}=\angk\kappa p{\bar y}{z}.\]
 Applying the angle comparison (\ref{cat-hinge}), we get \ref{eq:midpoint}.
 \qeds
@@ -54,16 +50,16 @@ Fix $\eps=0.001$ and consider two functions $f,\check f:\HH\to\RR$
 \[\check f(\bm{x})
 =
 \max\left\{|\bm{x}|,\max_{n\in\NN}\{(1+\eps)\cdot x_n-\tfrac{1}{n}\}\right\}.\] 
-Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length-metric form infinite dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (it is proved formally in \ref{lem:hil-con}).
+Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length-metric form infinite dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
 Set $p$ to be the origin of $\HH\times \RR$.
 
 Note that $\check{\spc{L}}\cap\spc{L}$ is starshaped in $\HH$ with center at $p$.
-Further $\check{\spc{L}}\backslash\spc{L}$ consist of countable number of disjointed sets
-\[\Omega_n=\set{(\bm{x},\check f(\bm{x}))\in\check{\spc{L}}}{(1+\eps)\cdot x_n-\tfrac{1}{n}>|\bm{x}|}\]
-and $\dist{\Omega_n}{p}{}>\tfrac{1}{n}$.
+Further $\check{\spc{L}}\backslash\spc{L}$ consist of a countable number of disjoint sets
+\[\Omega_n=\set{(\bm{x},\check f(\bm{x}))\in\check{\spc{L}}}{(1+\eps)\cdot x_n-\tfrac{1}{n}>|\bm{x}|},\]
+where $\dist{\Omega_n}{p}{}>\tfrac{1}{n}$.
 It follows that for any geodesic $[p q]$ in $\check{\spc{L}}$,
 a small subinterval $[p \bar q]\subset [p q]$ 
-coinsides with a straight segment in $\HH\times\RR$, 
+coincides with a straight segment in $\HH\times\RR$, 
 which is also a geodesic in $\spc{L}$.
 Thus we can treat $\Sigma_p\spc{L}$ and $\Sigma_p\check{\spc{L}}$ as one set, with two angle metrics $\mangle$ and $\check\mangle$;
 let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
@@ -71,15 +67,15 @@ let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
 The space $\spc{L}$  is isometric to the Euclidean cone
 over $\Sigma_p\spc{L}$ with vertex at~$p$; 
 $\Sigma_p\spc{L}$ is isometric to a sphere in Hilbert space with radius~$\frac{1}{\sqrt{2}}$.
-In particular, $\mangle$ is length-metric of $\Sigma_p{\spc{L}}$ in $\mangle_{\HH\times\RR}$.
+In particular, $\mangle$ is the length-metric of $\Sigma_p{\spc{L}}$ in $\mangle_{\HH\times\RR}$.
 
 
 
-Thus, to show that $\check \mangle$ does not define a length-metric on $\Sigma_p{\spc{L}}$
+Thus to show that $\check \mangle$ does not define a length-metric on $\Sigma_p{\spc{L}}$
 it is sufficient to construct a pair of directions $(\xi_+,\xi_-)$ such that
 \[\check \mangle(\xi_+,\xi_-)<\mangle(\xi_+,\xi_-).\] 
 Set $\bm{e}_0=(1,0,0,\dots)$, $\bm{e}_1=(0,1,0,\dots),\dots\in \HH$. 
-Consider the following two rays in $\HH\times \RR$
+Consider the following two rays in $\HH\times \RR$:
 \[\gamma_+(t)
 =
 \tfrac{t}{\sqrt{2}}\cdot(\bm{e}_0,1)
@@ -88,13 +84,13 @@ Consider the following two rays in $\HH\times \RR$
 =
 \tfrac{t}{\sqrt{2}}\cdot(-\bm{e}_0,1),
 \ \ t\in[0,+\infty).\] 
-They form unit-speed geodesics in both, $\spc{L}$ and $\check{\spc{L}}$.
+They form unit-speed geodesics in both $\spc{L}$ and $\check{\spc{L}}$.
 Let $\xi_\pm$ be the directions of $\gamma_\pm$ at $p$.
 Denote by $\sigma_n$ the half-planes in $\HH$ 
 spanned by $\bm{e}_0$ and $\bm{e}_n$;
 that is, $\sigma_n\z=\set{x\cdot\bm{e}_0+y\cdot\bm{e}_n}{y\ge 0}$.
-Consider sequence of $2$-dimensional sectors $Q_n=\check{\spc{L}}\cap (\sigma_n\times \RR)$. 
-For each $n$, the sector $Q_n$ intersects $\Omega_n$ and it is bounded by two geodesic rays $\gamma_\pm$.
+Consider a sequence of $2$-dimensional sectors $Q_n=\check{\spc{L}}\cap (\sigma_n\times \RR)$. 
+For each $n$, the sector $Q_n$ intersects $\Omega_n$ and is bounded by two geodesic rays $\gamma_\pm$.
 Note that $Q_n\GHto Q$, where  $Q$ is a solid Euclidean angle
 in $\EE^2$ with angle measure $\beta<\mangle(\xi_+,\xi_-)=\tfrac\pi{\sqrt{2}}$.
 Indeed, $Q_n$ is isometric to the subset of $\EE^3$ described by
@@ -127,17 +123,17 @@ That is, $\check\mangle(\xi_+,\xi_-) \le \beta<\mangle(\xi_+,\xi_-)$.\qeds
 Let $\HH$ be a Hilbert space,
 $f\:\HH\to \RR$ be a convex Lipschitz function 
 and $S\subset \HH\times \RR$ be the graph of $f$ 
-equipped with length-metric.
+equipped with  the length-metric.
 Then $S$ is $\Alex{0}$.
 \end{thm}
 
-\parit{Proof.} Recall that a subset $X\subset \HH\times \RR$, 
+\parit{Proof.} Recall that for a subset $X\subset \HH\times \RR$, 
 we will denote by $\dist{*}{*}{X}$ the
 length-metric on $X$.
 
-Note that according to \ref{thm:buyalo} any convex hypersurface in a Euclidean space equipped with length-metric is non-negatively curved.
+According to \ref{thm:buyalo}, any convex hypersurface in a Euclidean space, equipped with the length-metric, is non-negatively curved.
 Thus it is sufficient to show that for any 4-point set $\{x_0,x_1,x_2,x_3\}\subset S$, 
-there is a finite-dimensional subspace $E\subset \HH\times \RR$, 
+there is a finite-dimensional subspace $E\subset \HH\times \RR$ 
 such that $\{x_i\}\in E$ and $\dist{x_i}{x_j}{S\cap E}$ is arbitrary close to $\dist{x_i}{x_j}{S}$.
 
 Clearly $\dist{x_i}{x_j}{S\cap E}\ge \dist{x_i}{x_j}{S}$; 
@@ -145,9 +141,9 @@ thus it is sufficient to show that for given $\eps>0$ one can choose $E$, so tha
 \[\dist{x_i}{x_j}{S\cap E}
 <
 \dist{x_i}{x_j}{S}+\eps
-\eqlbl{eq:claim:hil-con*}\]
+\eqlbl{eq:claim:hil-con*}.\]
 
-For each pair $(x_i,x_j)$ choose a broken line $\beta_{i j}$ connecting $x_i,x_j$ that lies under $S$ (that is, outside of $\Conv S$) in $\HH\times \RR$ 
+For each pair $(x_i,x_j)$, choose a broken line $\beta_{i j}$ connecting $x_i,x_j$ that lies under $S$ (that is, outside of $\Conv S$) in $\HH\times \RR$ 
 and has length at most $\dist{x_i}{x_j}{S}+\eps$.
 Take $E$ to be the affine hull of all the vertexes in all $\beta_{i j}$.
 Thus,
@@ -162,11 +158,11 @@ Construct a non-compact complete geodesic $\Alex{0}$ space that contains no rays
 
 \begin{thm}{Definition}\label{def:right-derivative}
 Let $\spc{X}$ be a metric space.
-Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessary continuous, such that $\alpha(0)=p$.
+Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessarily continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
-briefly $\alpha^+(0)=v$ if for some (and therefore any) sequence of vectors $v_n\in\T'_p$
+briefly $\alpha^+(0)=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$,
 with corresponding geodesics $\gamma_n$, 
-such that $v_n\to v$ as $n\to\infty$ and 
+such that $v_n\to v$ as $n\to\infty$, we have 
 \[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
 
 We define right and left derivatives $\alpha^+(t_0)$ and $\alpha^-(t_0)$
@@ -174,17 +170,16 @@ of $\alpha$ at $t_0\in\II$ as
 \[\alpha^\pm(t_0)=\check\alpha^+(0),\] where $\check\alpha(t)=\alpha(t_0\pm t)$.
 \end{thm}
 
-The sign conversion is not quite standard, 
-say if $\alpha$ is a smooth curve in a Riemannian manifold then we have
+The sign convention is not quite standard; if $\alpha$ is a smooth curve in a Riemannian manifold then we have
 \[\alpha^+(t)=-\alpha^-(t).\]
 
 Note that if $\gamma$ is a geodesic starting at $p$ 
-and the tangent vector $v\in\T_p'$ corresponds to $\gamma$ 
+and the tangent vector $v\in\T_p'$ corresponds to $\gamma$, 
 then $\gamma^+(0)=v$.
 
 \begin{thm}{Exercise}\label{ex:tangent-vect=o(t)}
-Assume $\spc{X}$ is a metric space with defined angles
-and $\alpha,\beta\:[0,a)\to\spc{X}$ 
+Assume $\spc{X}$ is a metric space with defined angles,
+and let $\alpha,\beta\:[0,a)\to\spc{X}$ 
 be two maps such that the right derivatives $\alpha^+(0)$, $\beta^+(0)$ are defined and $\alpha^+(0)=\beta^+(0)$.
 Show that
 \[\dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
@@ -198,8 +193,8 @@ Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\t
 \parit{Proof.}
 If $v\in \T_p'$, then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
 
-Given $v\in \T_p$ construct a sequence $v_n\in\T'_p$ 
-such that $v_n\to v$ and let $\gamma_n$ be the sequence of corresponding geodesic.
+Given $v\in \T_p$, construct a sequence $v_n\in\T'_p$ 
+such that $v_n\to v$, and let $\gamma_n$ be the sequence of corresponding geodesic.
 
 The needed map $\alpha$ can be found among the maps such that $\alpha(0)\z=p$ and
 \[\alpha(t)=\gamma_n(t)\ \ \text{if}\ \ \eps_{n+1}\le t<\eps_n,\]
@@ -220,7 +215,7 @@ In the exceptional cases where $t_0$ is the left (respectively right) end of $\I
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:both-sided-diff}
-Assume $\spc{X}$ is a metric space with defined angles
+Assume $\spc{X}$ is a metric space with defined angles.
 Show that any geodesic $\gamma\:\II\to\spc{X}$ is both-sided differentiable everywhere.
 \end{thm}
 
