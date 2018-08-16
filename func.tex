@@ -320,7 +320,6 @@ in particular the inequality \ref{eq:distr-conc}
 makes sense for any Borel-measurable subfunction $y$.
 The proofs of the following propositions are straightforward.
 
-
 \begin{thm}{Proposition}
 Let $\II\subset\RR$ be an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequality in \ref{eq:sec:conv-real*}.
 Assume $y_n(t)\to y_\infty(t)$ as $n\to\infty$ for any $t\in \II$.
@@ -432,39 +431,42 @@ The following notion will be used for geodesic spaces most of the time.
 
 \begin{thm}{Definition}\label{def:lam-convex}
 Let $\spc{X}$ be a metric space.
-A subfunction $f\:\spc{X}\subto(-\infty,\infty]$ is called \emph{semiconvex}\index{semiconvex}
-if 
-for any point $p\in \Dom f$ there is $\lambda\in\RR$ and a neighborhood $\Omega_p\subset \Dom f$ 
-such for any unit-speed geodesic $\gamma$ in $\Omega_p$ 
-the real-to-real function $t\mapsto f\circ\gamma(t)-\tfrac{\lambda}{2}\cdot t^2$ is convex.
+We say that an upper semicontinuous subfunction $f\:\spc{X}\subto(-\infty,\infty]$ 
+satisfies the inequality
+\[f''+\kappa\cdot  f\ge \lambda\]
+if for any unit-speed geodesic $\gamma$ in $\Dom f$ 
+the real-to-real function $y(t)= f\circ\gamma(t)$
+satisfies 
+\[y''+\kappa\cdot  y\ge \lambda\]
+in the domain $\set{t}{y(t)<\infty}$;
+see the definition in Section~\ref{sec:conv-real}.
 
+We say that a lower semicontinuous subfunction $f\:\spc{X}\subto[-\infty,\infty)$ 
+satisfies the inequality
+\[f''+\kappa\cdot  f\le \lambda\]
+if the subfunction $h=-f$ 
+satisfies 
+\[h''-\kappa\cdot  h\ge -\lambda.\]
 
-A subfunction $f\:\spc{X}\subto[-\infty,\infty)$ is called \emph{semiconcave}\index{semiconcave} 
-if the subfunction $(-f)$ is semiconvex.
+Functions satisfying the inequalities
+\[f''\ge \lambda\quad\text{and}\quad f''\le \lambda\]
+are called $\lambda$-convex and $\lambda$-concave correspondingly.
+
+$0$-convex and $0$-concave subfunctions will be also called \emph{convex} and \emph{concave} correspondingly.
+
+If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \emph{strongly convex};
+correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \emph{strongly concave}.
+
+If for any point $p\in\Dom f$ 
+there is a neighborhood $\Omega\ni p$ and a real number $\lambda$
+such that the restriction $f|\Omega$ is $\lambda$-convex (or $\lambda$-concave),
+then $f$ is called semiconvex (correspondingly semiconcave).
 \end{thm}
 
 Further, we give a meaning of certain type of second order ordinary differential inequalities in context of metric spaces.
 
-\begin{thm}{Definition}\label{def:f''}
-Let $\spc{X}$ be a metric space 
-and $\phi\:\RR^2\to\RR$ be a Lipschitz function.
-Given a semiconvex (semiconcave) subfunction $f\:\spc{X}\subto\bar\RR$, we will write
-\[f''\ge \phi(f,|f'|)\ \ \l(\t{correspondingly}\ \  f''\le \phi(f,|f'|)\ \r)\]
-if for any geodesic $\gamma$ in $\Dom f$ the real-to-real function $y=f\circ\gamma$
-satisfies the differential inequality
-\[y''\ge \phi(y,|y'|)\ \ \l(\t{correspondingly}\ \  y''\le \phi(y,|y'|)\r)\]
-in the sense of ???.
-\end{thm}
-
-%??? ADD strict inequalities???
-
-For $\lambda\in\RR$, the solutions of differential inequalities 
-\[f''\ge \lambda \ \ \t{and}\ \ f''\le\lambda\]
-will be called correspondingly \emph{$\lambda$-convex}\index{$\lambda$-convex} and \emph{$\lambda$-concave}\index{$\lambda$-concave} subfunctions.
-If $\lambda=0$,
-$0$-convex and $0$-concave subfunctions will be also called \emph{convex} and \emph{concave} correspondingly.
-If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \emph{strongly convex};
-correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \emph{strongly concave}.
+Various authors define the class of $\lambda$-convex ($\lambda$-concave) function differently. 
+It may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) function in our definitions.
 
 \begin{thm}{Proposition}\label{prop:conv-comp}
 Let $\spc{X}$ be a metric space.
@@ -473,23 +475,8 @@ and $\phi\:\RR\to\RR$ is a nondecreasing seimconvex function.
 Then the composition $\phi\circ f$ is a semiconvex subfunction.
 \end{thm}
 
+The proof is straightforward.
 
-\parbf{NB!}
-Various authors define the class of $\lambda$-convex ($\lambda$-concave) function differently. 
-It may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) function in our definitions.
 
-\medskip
 
-Further, two classes of functions, satisfying differential inequalities
-\[f''\ge \lambda-\kappa\cdot  f
-\ \ \text{and}\ \ 
-f''\le \lambda-\kappa\cdot  f\]
-will play a very important role.
-The solutions of these differential inequalities should be understood to possess a special form of convexity and concavity that is optimized to reflect properties of spaces with curvature $\le \kappa$ and $\ge\kappa$.  
-If $\kappa\not=0$,
-by adding the constant $-\lambda/\kappa$ to these solutions, we obtain the solutions of the differential inequalities
-\[f''\ge -\kappa\cdot  f
-\ \ \text{and}\ \ 
-f''\le -\kappa\cdot  f,\]
-which also arise naturally.
 
