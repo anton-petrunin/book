@@ -48,19 +48,19 @@ Set $x\sim y$ if and only if $\dist{x}{y}{f}=0$.
 The pseudometric $\dist{}{}{f}$
 becomes a metric on the equivalence classes of ``$\sim$''.
 The obtained metric space will be called warped product of $\spc{B}$ and $\spc{F}$ with the warping function $f$;
-it will be denoted by $\spc{B}\times_f \spc{F}$.
+it will be denoted by $\spc{B}\warp{f} \spc{F}$.
 
 From Fiber-independence theorem (\ref{thm:fiber-independence})
 follows that if $\iota\:A\to \check A$ is an isometry between two subsets
 $A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
 in the length spaces than for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
 the map $\iota$ induces an isometry between sets 
-$A\times_f \spc{B}\subset \spc{F}\times_f \spc{B}$ and $\check A\times_f \spc{B}\subset \check{\spc{F}}\times_f \spc{B}$.
+$A\warp{f} \spc{B}\subset \spc{F}\warp{f} \spc{B}$ and $\check A\warp{f} \spc{B}\subset \check{\spc{F}}\warp{f} \spc{B}$.
 
-The later observation makes possible to define warped product $\spc{F}\times_f \spc{B}$ where the fiber $\spc{F}$ does not have length metric.
+The later observation makes possible to define warped product $\spc{F}\warp{f} \spc{B}$ where the fiber $\spc{F}$ does not have length metric.
 Ideed according to ???, any metric space is a subspace $\spc{F}$ of a length space say $\spc{F}'$.
-Therefore we can take the warped product $\spc{F}'\times_f \spc{B}$
-and identify $\spc{F}\times_f \spc{B}$ with its subspace formed all pairs $(\phi,b)$ such that $\phi\in \spc{F}$.
+Therefore we can take the warped product $\spc{F}'\warp{f} \spc{B}$
+and identify $\spc{F}\warp{f} \spc{B}$ with its subspace formed all pairs $(\phi,b)$ such that $\phi\in \spc{F}$.
 According to Fiber-independence theorem (\ref{thm:fiber-independence}) the resultig space does not depend on the chaice of $\spc{F}'$.
 
 
@@ -73,7 +73,7 @@ We will refer to $\spc{B}$ and $\spc{F}$ as \emph{base} and \emph{fiber} respect
 and to $\spc{B}\times\{\phi_0\}$ for $\phi_0\in  \spc{F}$ and $\{p_0\}\times \spc{F}$ for $p_0\in \spc{B}-f^{-1}(0)$ as \emph{horizontal} and \emph{vertical leaves}.
 
 \begin{thm}{Proposition}
-The warped product $\spc{\spc{B}}\times_f\spc{F}$ satisfies:
+The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
 
 \begin{subthm}{horiz-leaf-proj}
 The projection $(p,\phi_0)\mapsto p$  of any  horizontal leaf $\spc{B}\times\{\phi_0\}$, with its length-metric,  is an isometry onto $\spc{B}$.
@@ -85,11 +85,11 @@ The projection $(p_0,\phi)\mapsto \phi$ of any  vertical leaf $\{p_0\}\times \sp
 
 
 \begin{subthm}{horiz-leaf-isometry}
-Each horizontal leaf $\spc{B}\times\{\phi_0\}$ is isometrically embedded in $\spc{B}\times_f\spc{F}$.
+Each horizontal leaf $\spc{B}\times\{\phi_0\}$ is isometrically embedded in $\spc{B}\warp{f}\spc{F}$.
 \end{subthm}
 
 
-\begin{subthm}{Df>0}If  $f$ achieves its minimum at $p_0$, then the vertical leaf $\{p_0\} \times \spc{F}$ is isometrically embedded in $\spc{B}\times_f\spc{F}$.
+\begin{subthm}{Df>0}If  $f$ achieves its minimum at $p_0$, then the vertical leaf $\{p_0\} \times \spc{F}$ is isometrically embedded in $\spc{B}\warp{f}\spc{F}$.
 \end{subthm}
 
 \end{thm}
@@ -100,13 +100,13 @@ Claims  (\ref{SHORT.horiz-leaf-proj}), (\ref{SHORT.vert-leaf-proj}) and (\ref{SH
 length formula \ref{wp-length}.
 
 Also by (\ref{wp-length}), the projection of
-$\spc{B}\times_f\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$   is length-nonincreasing, as is the projection onto $\{p_0\} \times \spc{F}$ given by  $(p,\phi)\mapsto (p_0,\phi)$  if $p_0$ is a local minimum point of $f$.  
+$\spc{B}\warp{f}\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$   is length-nonincreasing, as is the projection onto $\{p_0\} \times \spc{F}$ given by  $(p,\phi)\mapsto (p_0,\phi)$  if $p_0$ is a local minimum point of $f$.  
 Hence (\ref{SHORT.horiz-leaf-isometry}) and (\ref{SHORT.Df>0}).
 \qeds
 
 
 
-A horizontal leaf need not be convex even if $\spc{B}\times_f\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  For instance, suppose $\alpha:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \times_f\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
+A horizontal leaf need not be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  For instance, suppose $\alpha:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \warp{f}\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
 
 \begin{thm}{Exersice}\label{ex:chohom-1=warped-product}
 Show that orbits of isometric cohomogenity 1 group action on Riemannian manifold
@@ -129,8 +129,8 @@ Then
 \\
 &\Downarrow
 \\
-\dist{(p,\phi)}{(q,\psi)}{\spc{B}\times_f\spc{F}}
-&\ge\dist{(p,\check{\phi})}{(q,\check{\psi})}{\spc{B}\times_f\check{\spc{F}}}
+\dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp{f}\spc{F}}
+&\ge\dist{(p,\check{\phi})}{(q,\check{\psi})}{\spc{B}\warp{f}\check{\spc{F}}}
 \end{aligned}
 \eqlbl{eq:dist-fiber-indep}
 \]
@@ -150,7 +150,7 @@ from $\check\phi$ to $\check\psi$ in $\check{\spc{F}}$ such that
 (\speed\gamma_{\check{\spc{F}}})(t)\]
 for almost all $t\in[0,1]$.
 
-Consider the path $\check\gamma=(\gamma_{\spc{B}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\times_f\check{\spc{F}}$.
+Consider the path $\check\gamma=(\gamma_{\spc{B}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\warp{f}\check{\spc{F}}$.
 Clearly
 \[\length_f\gamma\ge \length_f\check\gamma.\]
 Hence the statement follows.
@@ -160,8 +160,8 @@ Hence the statement follows.
 Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\;\spc{B}\to \RR_\ge$ be two continuous nonnegative  function.
 Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
 Show that 
-$\spc{B}\times_f\spc{F}\le \spc{B}\times_g\spc{F}$;
-that is there is a distance noncontructing map $\spc{B}\times_f\spc{F}\to \spc{B}\times_g\spc{F}$.
+$\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
+that is there is a distance noncontructing map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
 \end{thm}
 
 
@@ -169,7 +169,7 @@ that is there is a distance noncontructing map $\spc{B}\times_f\spc{F}\to \spc{B
 \section{Examples}
 
 \parbf{Direct product.}
-The simplest example is the \emph{direct product} $\spc{B}\times \spc{F}$ which could be also written as a warped product $\spc{B}\times_1 \spc{F}$.  
+The simplest example is the \emph{direct product} $\spc{B}\times \spc{F}$ which could be also written as a warped product $\spc{B}\warp1 \spc{F}$.  
 For $p,q\in \spc{B}$ and $x,y\in \spc{F}$, the direct product metric simplifies to
 \[
 \dist{(p,x)}{(q,y)}{} =\sqrt{\dist[2]{p}{q}{} + \dist[2]{x}{y}{}}.
@@ -178,7 +178,7 @@ This is taken as the defining formula for the direct product of two arbitrary me
 
 \parbf{Cones.}
 The \emph{Euclidean cone} $\Cone\spc{F}$ over space $\spc{F}$
-can be defined as a warped product $[0,\infty)\times_{\id} \spc{F}$.
+can be defined as a warped product $[0,\infty)\warp{\id} \spc{F}$.
 For $s,t\in [0,\infty)$ and $x,y\in \spc{F}$, 
 the cone metric is given by cosine rule
 \[
@@ -195,13 +195,13 @@ one use the cosine rule in $\Lob2\kappa$
 =
 \side\kappa\{\alpha;s,t\}.
 \]
-This way we get so called $\kappa$-cones over $\spc{F}$ denoted by $\Cone\mc\kappa\spc{F}=[0,\infty)\times_{\sn\kappa} \spc{F}$ for $\kappa\le 0$
-and $\Cone\mc\kappa\spc{F}=[0,\varpi\kappa]\times_{\sn\kappa} \spc{F}$ for $\kappa>0$.
+This way we get so called $\kappa$-cones over $\spc{F}$ denoted by $\Cone\mc\kappa\spc{F}=[0,\infty)\warp{\sn\kappa} \spc{F}$ for $\kappa\le 0$
+and $\Cone\mc\kappa\spc{F}=[0,\varpi\kappa]\warp{\sn\kappa} \spc{F}$ for $\kappa>0$.
 
 For $1$-cone $\Cone\mc1\spc{F}$ is also called \emph{spherical suspension} over $\spc{F}$ and it is also denoted $\Susp\spc{F}$.
 That is
 \[
-\Susp\spc{F}=[0,\pi]\times_{\sin}\spc{F}.
+\Susp\spc{F}=[0,\pi]\warp{\sin}\spc{F}.
 \]
 
 \begin{thm}{Exercise}\label{ex:convexity-in-cone}
@@ -232,7 +232,7 @@ Then $\spc{W}$ is isometric to the warped product
 with base $\spc{V}$, 
 fiber $\spc{F}$ and warping function $\distfun{A}{}{}$;
 that is
-\[\spc{W}\iso\spc{F}\times_{\distfun{A}{}{}}\spc{V}.\]
+\[\spc{W}\iso\spc{F}\warp{\distfun{A}{}{}}\spc{V}.\]
 
 
 \section{1-dimensional base}
@@ -246,11 +246,11 @@ it provides conditions for the spaces and functions in the warped product with 1
 If $\spc{L}$ is a complete length $\Alex{1}$ space and $\diam\spc{L}\le\pi$
 then 
 \begin{align*}
-\Susp\spc{L}&=\spc{L}\times_{\sin}[0,\pi]\quad\text{is  $\Alex1$},
+\Susp\spc{L}&=\spc{L}\warp{\sin}[0,\pi]\quad\text{is  $\Alex1$},
 \\
-\Cone\spc{L}&=\spc{L}\times_{\id}[0,\infty)\quad\text{is  $\Alex0$},
+\Cone\spc{L}&=\spc{L}\warp{\id}[0,\infty)\quad\text{is  $\Alex0$},
 \\
-\Cone\mc{-1}\spc{L}&=\spc{L}\times_{\sinh}[0,\infty)\quad\text{is  $\Alex{-1}$}.
+\Cone\mc{-1}\spc{L}&=\spc{L}\warp{\sinh}[0,\infty)\quad\text{is  $\Alex{-1}$}.
 \end{align*}
 Moreover the converse also holds in each of three cases.
 \end{subthm}
@@ -261,14 +261,14 @@ then
 \begin{align*}
 \spc{L}\times\RR&\quad\text{is a complete length $\Alex0$ space},
 \\
-\spc{L}\times_{\exp}\RR&\quad\text{is a complete length $\Alex{-1}$ space.}
+\spc{L}\warp{\exp}\RR&\quad\text{is a complete length $\Alex{-1}$ space.}
 \end{align*}
 Moreover the converse also holds in each of two cases.
 \end{subthm}
 
 \begin{subthm}{}
 If $\spc{L}$ is a complete length $\Alex{-1}$ space,
-then $\spc{L}\times_{\cosh}\RR$ is a complete length $\Alex{-1}$ space.
+then $\spc{L}\warp{\cosh}\RR$ is a complete length $\Alex{-1}$ space.
 Moreover the converse also holds.
 \end{subthm}
 \end{thm}
@@ -281,11 +281,11 @@ Let $\spc{L}$ be a metric space.
 If $\spc{L}$ is $\CAT{1}$
 then 
 \begin{align*}
-\Susp\spc{L}&=\spc{L}\times_{\sin}[0,\pi]\quad\text{is  \CAT{1}},
+\Susp\spc{L}&=\spc{L}\warp{\sin}[0,\pi]\quad\text{is  \CAT{1}},
 \\
-\Cone\spc{L}&=\spc{L}\times_{\id}[0,\infty)\quad\text{is  \CAT{0}},
+\Cone\spc{L}&=\spc{L}\warp{\id}[0,\infty)\quad\text{is  \CAT{0}},
 \\
-\Cone\mc{-1}\spc{L}&=\spc{L}\times_{\sinh}[0,\infty)\quad\text{is  \CAT{-1}}.
+\Cone\mc{-1}\spc{L}&=\spc{L}\warp{\sinh}[0,\infty)\quad\text{is  \CAT{-1}}.
 \end{align*}
 Moreover, the converse also holds in each of three cases.
 \end{subthm}
@@ -295,14 +295,14 @@ If $\spc{L}$ is a complete length $\CAT0$ space
 then 
 $\spc{L}\times\RR$ is $\CAT0$ 
 and 
-$\spc{L}\times_{\exp}\RR$ is $\CAT{-1}$.
+$\spc{L}\warp{\exp}\RR$ is $\CAT{-1}$.
 Moreover the converse also holds in each of two cases.
 \end{subthm}
 
 \begin{subthm}{thm:warp-curv-bound:cbb:H}
 If $\spc{L}$ is $\CAT{-1}$
 then 
-$\spc{L}\times_{\cosh}\RR$
+$\spc{L}\warp{\cosh}\RR$
 is $\CAT{-1}$.
 Moreover the converse also holds.
 \end{subthm}
@@ -317,11 +317,11 @@ we will use the following proposition.
 
 \begin{subthm}{prop:warp-examples:S}
 \begin{align*}
-\Susp\mathbb S^{m-1}&=\mathbb S^{m-1}\times_{\sin}[0,\pi]\iso\SS^m,
+\Susp\mathbb S^{m-1}&=\mathbb S^{m-1}\warp{\sin}[0,\pi]\iso\SS^m,
 \\
-\Cone\mathbb S^{m-1}&=\mathbb S^{m-1}\times_{\id}[0,\infty)\iso\EE^m,
+\Cone\mathbb S^{m-1}&=\mathbb S^{m-1}\warp{\id}[0,\infty)\iso\EE^m,
 \\
-\Cone\mc{-1}\mathbb S^{m-1}&=\mathbb S^{m-1}\times_{\sinh}[0,\infty)\iso\Lob{m}{-1}.
+\Cone\mc{-1}\mathbb S^{m-1}&=\mathbb S^{m-1}\warp{\sinh}[0,\infty)\iso\Lob{m}{-1}.
 \end{align*}
 \end{subthm}
 
@@ -331,12 +331,12 @@ we will use the following proposition.
 \begin{align*}
 \EE^{m-1}\times\RR&\iso\EE^{m},
 \\
-\EE^{m-1}\times_{\exp}\RR&\iso\Lob{m}{-1}.
+\EE^{m-1}\warp{\exp}\RR&\iso\Lob{m}{-1}.
 \end{align*}
 \end{subthm}
 
 \begin{subthm}{}
-\[\Lob{m-1}{-1}\times_{\cosh}\RR\iso\Lob{m}{-1}.\]
+\[\Lob{m-1}{-1}\warp{\cosh}\RR\iso\Lob{m}{-1}.\]
 \end{subthm}
 
 \end{thm}
@@ -351,7 +351,7 @@ the correspondg statement in the Proposition~\ref{prop:warp-examples}.
 
 
 Choose arbitrary quadruple of points 
-\[(p,s),(x^1,t^1),(x^2,t^2),(x^3,t^3)\in \spc{L}\times_{\sinh}[0,\infty).\]
+\[(p,s),(x^1,t^1),(x^2,t^2),(x^3,t^3)\in \spc{L}\warp{\sinh}[0,\infty).\]
 Since $\diam\spc{L}\le\pi$,
 {(1+\textit{n})-point comparison (\ref{thm:pos-config})  provides a quadruple of points $q,y^1,y^2,y^3\in\SS^3$ such that 
 \[\dist{q}{y^i}{\SS^3}=\dist{p}{x^i}{\spc{L}}\] 
@@ -361,10 +361,10 @@ for all $i$ and $j$.
 
 
 According to Proposition~\ref{prop:warp-examples:S}, 
-\[\Cone\mc{-1}\SS^2=\SS^2\times_{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
+\[\Cone\mc{-1}\SS^2=\SS^2\warp{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
 
 Consider the quadruple points 
-\[(q,s),(y^1,t^1),(y^2,t^2),(y^3,t^3)\in \SS^2\times_{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
+\[(q,s),(y^1,t^1),(y^2,t^2),(y^3,t^3)\in \SS^2\warp{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
 By Fiber-independence theorem~\ref{thm:fiber-independence}
 \[\dist{(q,s)}{(y^i,t^i)}{\SS^2}=\dist{(p,s)}{(x^i,t^i)}{\spc{L}}\]
 and
