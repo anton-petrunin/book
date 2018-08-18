@@ -205,11 +205,21 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 
 \section{Length spaces}\label{sec:intrinsic}
 
-\begin{thm}{Definition}
+\begin{thm}{Definition}\label{def:length}
 Let $\spc{X}$ be a metric space.  Given a curve $\alpha\: \II\to \spc{X}$ we define its {\emph length} as 
 \[
 \length \alpha \df \sup_{a\le t_0\le\ldots\le t_n\le b}\left\{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha_{i-1}}{}\right\}
 \]
+\end{thm}
+
+The following lemma is an easy exercise.
+%The same definition works for arbitrary map $\alpha\:\II\to \spc{X}$, not necessary continuous.
+
+\begin{thm}{Lower semicontinuity of length}\label{thm:semicont-of-length}
+Assume $\alpha_n\:\II\to \spc{X}$ is a sequence of curves that converges pointwise to a curve $\alpha_\infty\:\II\to \spc{X}$.
+Then 
+\[\length\alpha_\infty\le \liminf_{n\to\infty}\length\alpha_n.\]
+
 \end{thm}
 
 Given two points $x$ and $y$ in a metric space $\spc{X}$

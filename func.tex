@@ -4,53 +4,32 @@
 
 Here we introduce some classes of maps between metric spaces and develop a language to describe different levels of convexity/concavity of real-valued functions on general metric space.
 
-Changing sign changes a concave function into a convex function and other way around.
 Concave functions are used mainly in the $\Alex{}$ spaces,
 while convex ones are used  mainly in $\CAT{}$ spaces.
 
-
-
-\section{Maps, functions and relatives}
+\section{Submaps}
 
 We will often need maps and functions defined on subsets of a metric space. We call them \emph{submaps} and \emph{subfunction}\index{submap}\index{subfunction}.
 Thus given a metric space $\spc{X}$ and $\spc{Y}$, 
 a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\subset \spc{X}$.
 
-Almost all subfunctions and sub maps we consider are continuous (or at least semicontinuous).
-In this case the domain $\Dom\map$ is automatically open.
+A submap is defined to be \index{continuous submap}\emph{continuous} if the inverse image of any open set is open.
+Note that for a continuous submap $\map$, the domain $\Dom\map$ is automatically open.
 Indeed, a submap $\map\:\spc{X}\subto \spc{Y}$ is continuous if the inverse image of any open set is open.
 Since $\spc{Y}$ is open then so is $\Dom \map=\map^{-1}(\spc{Y})$.
 The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since it is a continuous function for special topology on $\RR$.%
-\footnote{The continuous partially defined maps can be defined differently.
-For example, one may request that inverse images of closed sets are closed.
+
+(The continuous partially defined maps could be defined via closed sets; namely, one may request that inverse images of closed sets are closed.
 While this condition is equivalent to the continuity for the functions defined on whole space,
 it is different for partially defined functions. 
-In particular with this definition domain of the closed-continuous map must be closed.}
+In particular with this definition domain of the continuous submap would have to be closed.)
 
-\begin{thm}{Isometry}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces
-and $\map\:\spc{X}\to \spc{Y}$ be a map
-\begin{subthm}{}
-The map $\map$ is \emph{distance preserving}\index{distance preserving map} if
-$$|\map(x)-\map(x')|_{\spc{Y}}=|x-x'|_{\spc{X}}$$
-for any $x,x'\in X$.
-\end{subthm}
-
-\begin{subthm}{}
-A distance preserving bijection $\map$ is called an \emph{isometry}\index{isometry}.
-\end{subthm}
-
-\begin{subthm}{}
-The spaces $X$ and $Y$ are called \emph{isometric}\index{isometric spaces} (briefly $X\iso Y$)
- if there is an isometry  $\map\:X\to Y$.
-\end{subthm}
-
-\end{thm}
+\section{Lipschitz conditions}
 
 
 \begin{thm}{Lipschitz maps}
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces 
-$\map\:\spc{X}\subto\spc{Y}$ be a submap 
+$\map\:\spc{X}\subto\spc{Y}$ be a continuous submap 
 and $\Lip\in\RR$.
 
 \begin{subthm}{}
@@ -104,31 +83,26 @@ for any $x\in \spc{X}$ and $R>0$.
 The map $\map$ is called \emph{co-Lipshitz}\index{co-Lipshitz map} if it is $\Lip$-co-Lipshitz
 for some constant $\Lip$.
 The minimal such constant is denoted by $\colip\map$.
-\begin{itemize}
- \item The map $\map$ is called \emph{submetry}\index{submetry} if it is short and 1-co-Lipschitz.
-\end{itemize}
 
 \end{subthm}
 \end{thm}
 
-The $\Lip$-co-Lipschitz maps 
+From the definition of co-Lipschitz map we get the following.
+
+\begin{thm}{Proposition}
+Any co-Lipschitz map is open and surjective.
+\end{thm}
+
+In other words, the $\Lip$-co-Lipschitz maps 
 can be considered as a quantitative version of open maps.
 By that reason they also called $\Lip$-open; see \cite{BGP}.
 Also, be aware that some authors, 
 refer to our $\Lip$-co-Lipschitz maps
-as to $\tfrac1\Lip$-co-Lipschitz;
-see ???.
-
-\begin{thm}{Proposition}
-Any co-Lipschits map is open and surjective.
-\end{thm}
-
-\parit{Proof.} Follows from the definition directly.
-\qeds
+as to $\tfrac1\Lip$-co-Lipschitz. %REF???.
 
 \begin{thm}{Proposition}\label{prop:colip=>complete}
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces and
-$\map\: \spc{X}\to\spc{Y}$ is a continuous co-Lipschitz map 
+$\map\: \spc{X}\to\spc{Y}$ a continuous co-Lipschitz map. 
 Then $\spc{Y}$ is complete.
 \end{thm}
 
@@ -146,43 +120,107 @@ Assuming that the points $x_1,\dots,x_{n-1}$ are already constructed,
 the existence of $x_n$ satisfying \ref{eq:colip+1/2n}
 follows since $\map$ is $\Lip$-co-Lipschitz.
 
-Notice that $(x_n)$ converges in itself in $\spc{X}$.
+Notice that $(x_n)$ converges in itself;
+since $\spc{X}$ is complete, it converges in $\spc{X}$.
 Denote by $x_\infty$ its limit
 and set $y_\infty= \map(x_\infty)$.
 Since $\map$ is continuous,
 $y_n\to y_\infty$ as $n\to\infty$.
-Hence the result follows.
+Hence the result.
 \qeds
 
-\section{Sumbetry}\label{sec:quotient-CBB}
+\begin{thm}{Lemma}\label{lem:lip-approx}
+Let $\spc{X}$ be a metric space and $f\:\spc{X}\to\RR$ be a continuous function.
+Then for any $\eps>0$ there is a locally Lipschitz function $f_\eps\:\spc{X}\to\RR$
+such that $|f(x)-f_\eps(x)|<\eps$ for any $x\in \spc{X}$.
+\end{thm}
 
+\parit{Proof.}
+Assume that $f\ge 1$.
+Construct a continous positive function $\rho\:\spc{X}\to \RR_{>0}$ such that 
+\[\dist{x}{y}{}<\rho(x)\ \ \Rightarrow\ \ |f(x)-f(y)|<\eps.\]
+Consider function
+\[
+f_\eps(x)
+=
+\sup\set{f(x)
+\cdot
+\l(1-\tfrac{\dist{x}{y}{}}{\rho(x)}\r)}%
+{x\in\spc{X}}.
+\]
+It is straightforward to check that each $f_\eps$ is locally Lipschtz and $0\le f_\eps-f<\eps$.
+
+Note that any continuous function can be presented as difference of two continuous functions bounded below by $1$.
+Hence the result.
+\qeds
+
+\section{Isometries and sumbetries}\label{sec:quotient-CBB}
+
+\begin{thm}{Isometry}\label{def:isometry}
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces
+and $\map\:\spc{X}\to \spc{Y}$ be a map
+\begin{subthm}{}
+The map $\map$ is \emph{distance preserving}\index{distance preserving map} if
+$$|\map(x)-\map(x')|_{\spc{Y}}=|x-x'|_{\spc{X}}$$
+for any $x,x'\in X$.
+\end{subthm}
+
+\begin{subthm}{}
+A distance preserving bijection $\map$ is called an \emph{isometry}\index{isometry}.
+\end{subthm}
+
+\begin{subthm}{}
+The spaces $X$ and $Y$ are called \emph{isometric}\index{isometric spaces} (briefly $X\iso Y$)
+ if there is an isometry  $\map\:X\to Y$.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Submetry}\label{def:submetry}
 A map $\sigma\:\spc{L}\to\spc{M}$ between the metric spaces $\spc{L}$ and $\spc{M}$
 is called 
 \emph{submetry}\index{submetry} if 
 \[\sigma(\oBall(p,r)_\spc{L})=\oBall(\sigma(p),r)_{\spc{M}}\]
 for any $p\in \spc{L}$ and $r\ge 0$.
+\end{thm}
 
-Equivalently, a map $\sigma\:\spc{L}\to\spc{M}$ is called sumbetry if it is 1-Lipshitz and 1-co-Lipschitz at the same time.
+
+Note $\sigma\:\spc{L}\to\spc{M}$ is a sumbetry if it is 1-Lipshitz and 1-co-Lipschitz at the same time.
 
 Note that any submetry is an onto map.
 
 The main souse of examples of submetries comes from isometric group actions.
 
-Nemely, assume $\spc{L}$ is a metric space and the group $G$ acts on $\spc{L}$.
+Nemely, assume $\spc{L}$ is a metric space and $G$ be a subgroup of isometries of $\spc{L}$.
 Denote by $\spc{L}/G$ the set of $G$-orbits;
 let us equip it with the Hausdorff metric. 
 
-In general, $\spc{L}/G$ is a premetric space,
+In general, $\spc{L}/G$ is a pseudometric space,
 but if all the $G$-orbits form closed sets in $\spc{L}$
-then $\spc{L}/G$ is a metric space.
+then $\spc{L}/G$ is a genuine metric space.
 
 \begin{thm}{Proposition}\label{prop:submet/G}
-Let $\spc{L}$ be a metric space and group $G$  acts on $\spc{L}$ by isometries  
+Let $\spc{L}$ be a metric space.
+Assume that a group $G$  acts on $\spc{L}$ by isometries  
 and in such a way that every $G$-orbit is closed.
 Then the projection map $\spc{L}\to \spc{L}/G$ is a sumbetry.
 \end{thm}
 
-%???should it be proved???
+\parit{Proof.}
+Denote by $\hat x$ the projection of $x\in \spc{L}$ in $\spc{L}/G$.
+We need to show that the map $x\mapsto\hat x$ is $1$-Lipschitz and $1$-co-Lipschitz.
+The co-Lipschitz part follows directly from the definition of Hausdorff distance and co-Lipschitz map.
+
+Assume $\dist{x}{y}{\spc{L}}\le r$; equivalently $\cBall[x,r]_{\spc{L}}\ni y$.
+Since the action $G\acts \spc{L}$ is isometric, 
+$\cBall[g\cdot x,r]_{\spc{L}}\ni g\cdot y$ for any $g\in G$.
+
+In particular the orbit $G\cdot y$ lies in the closed $r$-neighborhood of the orbit $G\cdot x$.
+The same way we can prove that the orbit $G\cdot x$ lies in the closed $r$-neighborhood of the orbit $G\cdot y$. 
+That is, the Hausdorff distance between the orbits $G\cdot x$ and $G\cdot y$ is at most $r$
+or, equivalently, $\dist{\hat x}{\hat y}{\spc{L}/G}\le r$.
+Since $x$ and $y$ are arbitrary, the map $x\mapsto\hat x$ is $1$-Lipschitz.
+\qeds
 
 
 \begin{thm}{Proposition}
@@ -196,7 +234,7 @@ Then $\spc{M}$ is a length space.
 Fix $\eps>0$ and a pair of points $x,y\in \spc{M}$.
 
 Since $\sigma$ is $1$-co-Lipschitz, there are points $\hat x,\hat y\in \spc{L}$
-such that $\sigma(\hat x)=x$, $\sigma(\hat y)=y$ 
+such that $\sigma(\hat x)\z=x$, $\sigma(\hat y)\z=y$ 
 and $\dist{\hat x}{\hat y}{\spc{L}}<\dist{x}{y}{\spc{M}}+\eps$.
 
 Since ${\spc{L}}$ is a length space, 
@@ -220,25 +258,9 @@ we have that $\spc{M}$ is a length space.
 
 Let $\spc{X}$ be a metric space.
 A \emph{curve}\index{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a \emph{real interval}\index{real interval} (that is, an arbitrary convex subset of $\RR$);
-the curve it called \emph{Lipschitz}\index{Lipschitz curve} or \emph{locally Lipschitz}\index{locally Lipschitz curve} if the map $\alpha\:\II\to \spc{X}$ is.
+the curve it called \emph{Lipschitz}\index{Lipschitz curve} or \emph{locally Lipschitz}\index{locally Lipschitz curve} if the map $\alpha\:\II\to \spc{X}$~is.
 
-%??? Maybe we only need locally Lipschitz curves, A.???
-
-The length of the curve $\alpha\:\II\to \spc{X}$, 
-is defined by
-\[\length\alpha=\sup\set{\sum_n\dist{\alpha(t_{n-1})}{\alpha(t_n)}{\spc{X}}}{t_0<t_1<\dots<t_\kay}.\]
-The following lemma is an easy exercise.
-%The same definition works for arbitrary map $\alpha\:\II\to \spc{X}$, not necessary continuous.
-
-\begin{thm}{Lower semicontinuity of length}\label{thm:semicont-of-length}
-Assume $\alpha_n\:\II\to \spc{X}$ is a sequence of curves that converges pointwise to a curve $\alpha_\infty\:\II\to \spc{X}$.
-Then 
-\[\length\alpha_\infty\le \liminf_{n\to\infty}\length\alpha_n.\]
-
-\end{thm}
-
-
-
+Recall that length of curves is defined in \ref{def:length}.
 The following theorem follows from \cite[2.7.4]{BBI}.
 
 \begin{thm}{Theorem}\label{thm:speed}
@@ -246,9 +268,9 @@ Let $\spc{X}$ be a metric space
 and $\alpha\:\II \to \spc{X}$ be a locally Lipschitz
 curve. 
 Then the speed function
-\[\speed\alpha(t_0)=\lim_{t\to t_0}\frac{\dist{\alpha(t)}{\alpha(t_0)}{}}{|t-t_0|}\] 
+\[\speed_{t_0}\alpha=\lim_{t\to t_0}\frac{\dist{\alpha(t)}{\alpha(t_0)}{}}{|t-t_0|}\] 
 is defined for almost all $t_0 \in \II$ and 
-\[\length\alpha=\int\limits_\II \speed\alpha(t)\cdot\d t,\]
+\[\length\alpha=\int\limits_\II \speed_{t}\alpha\cdot\d t,\]
 where $\int$ denotes the Lebesgue integral.
 \end{thm}
 
@@ -257,8 +279,8 @@ if for any subinterval $[a,b]\subset\II$, we have
 \[b-a=\length(\alpha|[a,b]).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
 
-The following theorem from \cite{kirchheim} %CHECK??? 
-generalize the one above.
+The following theorem of Bernd Kirchheim \cite{kirchheim} %CHECK??? 
+generalizes the one above.
 
 
 \begin{thm}{Theorem}
@@ -267,38 +289,39 @@ and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz.
 Then for almost all $x\in\Dom f$ there is a prenorm $\lVert*\rVert_x$ on $\RR^n$ such that
 we have
 \[\dist{f(y)}{f(z)}{\spc{X}}=\lVert z-y\rVert_x+o(|y-x|+|z-x|).\]
-Moreover if $s(x)=\sup\set{\tfrac{\lVert w\rVert_x}{|w|}}{w\not=0}$, then 
-\[\HausMes_n[\Im f] \le \int\limits_{\Dom f}s(x).\]
 \end{thm}
 
 
 The norm $\lVert*\rVert_x$ in the above theorem 
 will be called \emph{differential of induced metric} at $x$.
 
-\section{Convexity of real-to-real functions}\label{sec:conv-real}
+\section{Convex real-to-real functions}\label{sec:conv-real}
 
-We will be interested in the solutions
+We will be interested in the generalized solutions
 of the following differential inequalities
 \[y''+\kappa\cdot  y\ge \lambda
-\ \ \t{(and respectively}
-\ \ y''+\kappa\cdot  y\le \lambda\t{)}\eqlbl{eq:sec:conv-real*}\]
+\ \ \t{and respectively}
+\ \ y''+\kappa\cdot  y\le \lambda
+\eqlbl{eq:sec:conv-real*}\]
 for fixed $\kappa,\lambda\in\RR$.
-The solution $y\:\RR\subto\RR$ are only assumed to be lower%???
- (respectively upper%???
-) semicontinuous subfunctions.
+The solution $y\:\RR\subto\RR$ are only assumed to be upper (respectively lower) semicontinuous subfunctions.
 
 The inequalities  \ref{eq:sec:conv-real*} are understood in the sense of distributions.
 That is, for any smooth function $\phi$ with compact support $\supp\phi\subset\Dom y$ the following inequality should be satisfied:
-\[\int\limits_{\Dom y}\l[y(t)\cdot\phi''(t)+\kappa\cdot  y(t)\cdot\phi(t)-\lambda\r]\cdot\d t
-\ge 0\ \ \t{(and respectively}\ \ \le0\t{)}.
+\[\begin{aligned}
+\int\limits_{\Dom y}\l[y(t)\cdot\phi''(t)+\kappa\cdot  y(t)\cdot\phi(t)-\lambda\r]\cdot\d t
+&\ge 0
+\\
+\t{respectively}\ \ &\le0.
+\end{aligned}
 \eqlbl{eq:distr-conc}\]
 The integral is understood in the sense of Lebesgue,
 in particular the inequality \ref{eq:distr-conc}
 makes sense for any Borel-measurable subfunction $y$.
-
+The proofs of the following propositions are straightforward.
 
 \begin{thm}{Proposition}
-Let $\II\subset\RR$ is an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequality in \ref{eq:sec:conv-real*}.
+Let $\II\subset\RR$ be an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequality in \ref{eq:sec:conv-real*}.
 Assume $y_n(t)\to y_\infty(t)$ as $n\to\infty$ for any $t\in \II$.
 Then $y_\infty$ is a solution of the same inequality in \ref{eq:sec:conv-real*}.
 \end{thm}
@@ -306,13 +329,17 @@ Then $y_\infty$ is a solution of the same inequality in \ref{eq:sec:conv-real*}.
 Assume $y$ is a solution of one of the inequality in \ref{eq:sec:conv-real*}.
 For $t_0\in \Dom y$, let us define right (left) derivative $y^+(t_0)$ ($y^-(t_0)$) at $t_0$ by
 \[y^\pm(t_0)=\lim_{t\to t_0\pm} \frac{y(t)-y(t_0)}{|t-t_0|}.\]
-The sign convention we use for $y^-$ is not standard, thus for $y(t)=t$ we have
-$y^\pm(t)=\pm 1$.
+Note that our sign convention for $y^-$ is not standard --- for $y(t)=t$ we have
+$y^+(t)=1$ and $y^-(t)=-1$.
 
 \begin{thm}{Proposition}\label{prop:derivative-of-convex-function}
-Let $\II\subset\RR$ is an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequality in \ref{eq:sec:conv-real*}.
-Then right  and left derivatives $y^+(t_0)$ and $y^-(t_0)$ are defined
+Let $\II\subset\RR$ be an open interval and $y\:\II\to\RR$ be a solution of the inequality in \ref{eq:sec:conv-real*}.
+Then  $y$ is locally Lipschitz; its right and left derivatives $y^+(t_0)$ and $y^-(t_0)$ are defined
 for any $t_0\in\II$.
+Moreover 
+\[y^+(t_0)+y^-(t_0)\ge 0
+\ \ \t{or respectively}
+\ \ y^+(t_0)+y^-(t_0)\le 0\]
 \end{thm}
 
 
@@ -347,10 +374,9 @@ satisfies $y(t)\le z(t)$ (respectively $y(t)\ge z(t)$) for all $t\in[t_1,t_2]$.
 \end{subthm}
 \end{thm}
 
-\parit{Proof.} It is left to the reader.\qeds
+The proof is left to the reader.
 
-
-We will often need the following simple fact about convergence of derivative of convex functions:
+We will often need the following fact about convergence of derivative of convex functions:
 
 \begin{thm}{Lemma on equilibrium}\label{lem:der-conv-lim}
 Let $\II$ be an open interval 
@@ -361,7 +387,7 @@ Then for any $t_0\in \II$,
 \end{thm}
 
 \parit{Proof.}
-Since $f_n$ are convex, we have $f^+_n(t_0)+f^-_n(t_0)\ge0$, and for any $t$,
+Since $f_n$ are convex, we have $f^+_n(t_0)+f^-_n(t_0)\ge0$, and for any~$t$,
 \[f_n(t)\ge f_n(t_0)\pm f^\pm(t_0)\cdot (t-t_0).\]
 Passing to the limit, we get
 \[f(t)\ge f(t_0)+\l[\limsup_{n\to\infty}f^+_n(t_0)\r]\cdot (t-t_0)\]
@@ -399,45 +425,48 @@ Thus, theorem follows from the lemma on equilibrium (\ref{lem:der-conv-lim}).\qe
 
 
 
-\section{Convexity of functions on metric space.}\label{sec:conv-fun}
+\section{Convex functions on a metric space}\label{sec:conv-fun}
 
 The following notion will be used for geodesic spaces most of the time.
 
 \begin{thm}{Definition}\label{def:lam-convex}
 Let $\spc{X}$ be a metric space.
-A subfunction $f\:\spc{X}\subto(-\infty,\infty]$ is called \emph{semiconvex}\index{semiconvex}
-if 
-for any point $p\in \Dom f$ there is $\lambda\in\RR$ and a neighborhood $\Omega_p\subset \Dom f$ 
-such for any unit-speed geodesic $\gamma$ in $\Omega_p$ 
-the real-to-real function $t\mapsto f\circ\gamma(t)-\tfrac{\lambda}{2}\cdot t^2$ is convex.
+We say that an upper semicontinuous subfunction $f\:\spc{X}\subto(-\infty,\infty]$ 
+satisfies the inequality
+\[f''+\kappa\cdot  f\ge \lambda\]
+if for any unit-speed geodesic $\gamma$ in $\Dom f$ 
+the real-to-real function $y(t)= f\circ\gamma(t)$
+satisfies 
+\[y''+\kappa\cdot  y\ge \lambda\]
+in the domain $\set{t}{y(t)<\infty}$;
+see the definition in Section~\ref{sec:conv-real}.
 
+We say that a lower semicontinuous subfunction $f\:\spc{X}\subto[-\infty,\infty)$ 
+satisfies the inequality
+\[f''+\kappa\cdot  f\le \lambda\]
+if the subfunction $h=-f$ 
+satisfies 
+\[h''-\kappa\cdot  h\ge -\lambda.\]
 
-A subfunction $f\:\spc{X}\subto[-\infty,\infty)$ is called \emph{semiconcave}\index{semiconcave} 
-if the subfunction $(-f)$ is semiconvex.
+Functions satisfying the inequalities
+\[f''\ge \lambda\quad\text{and}\quad f''\le \lambda\]
+are called $\lambda$-convex and $\lambda$-concave correspondingly.
+
+$0$-convex and $0$-concave subfunctions will be also called \emph{convex} and \emph{concave} correspondingly.
+
+If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \emph{strongly convex};
+correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \emph{strongly concave}.
+
+If for any point $p\in\Dom f$ 
+there is a neighborhood $\Omega\ni p$ and a real number $\lambda$
+such that the restriction $f|\Omega$ is $\lambda$-convex (or $\lambda$-concave),
+then $f$ is called semiconvex (correspondingly semiconcave).
 \end{thm}
 
 Further, we give a meaning of certain type of second order ordinary differential inequalities in context of metric spaces.
 
-\begin{thm}{Definition}\label{def:f''}
-Let $\spc{X}$ be a metric space 
-and $\phi\:\RR^2\to\RR$ be a Lipschitz function.
-Given a semiconvex (semiconcave) subfunction $f\:\spc{X}\subto\bar\RR$, we will write
-\[f''\ge \phi(f,|f'|)\ \ \l(\t{correspondingly}\ \  f''\le \phi(f,|f'|)\ \r)\]
-if for any geodesic $\gamma$ in $\Dom f$ the real-to-real function $y=f\circ\gamma$
-satisfies the differential inequality
-\[y''\ge \phi(y,|y'|)\ \ \l(\t{correspondingly}\ \  y''\le \phi(y,|y'|)\r)\]
-in the sense of ???.
-\end{thm}
-
-%??? ADD strict inequalities???
-
-For $\lambda\in\RR$, the solutions of differential inequalities 
-\[f''\ge \lambda \ \ \t{and}\ \ f''\le\lambda\]
-will be called correspondingly \emph{$\lambda$-convex}\index{$\lambda$-convex} and \emph{$\lambda$-concave}\index{$\lambda$-concave} subfunctions.
-If $\lambda=0$,
-$0$-convex and $0$-concave subfunctions will be also called \emph{convex} and \emph{concave} correspondingly.
-If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \emph{strongly convex};
-correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \emph{strongly concave}.
+Various authors define the class of $\lambda$-convex ($\lambda$-concave) function differently. 
+It may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) function in our definitions.
 
 \begin{thm}{Proposition}\label{prop:conv-comp}
 Let $\spc{X}$ be a metric space.
@@ -446,61 +475,8 @@ and $\phi\:\RR\to\RR$ is a nondecreasing seimconvex function.
 Then the composition $\phi\circ f$ is a semiconvex subfunction.
 \end{thm}
 
-
-\parbf{NB!}
-Various authors define the class of $\lambda$-convex ($\lambda$-concave) function differently. 
-It may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) function in our definitions.
-
-\medskip
-
-Further, two classes of functions, satisfying differential inequalities
-\[f''\ge \lambda-\kappa\cdot  f
-\ \ \text{and}\ \ 
-f''\le \lambda-\kappa\cdot  f\]
-will play a very important role.
-The solutions of these differential inequalities should be understood to possess a special form of convexity and concavity that is optimized to reflect properties of spaces with curvature $\le \kappa$ and $\ge\kappa$.  
-If $\kappa\not=0$,
-by adding the constant $-\lambda/\kappa$ to these solutions, we obtain the solutions of the differential inequalities
-\[f''\ge -\kappa\cdot  f
-\ \ \text{and}\ \ 
-f''\le -\kappa\cdot  f,\]
-which also arise naturally.
+The proof is straightforward.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%DOWN
-
-\section{Miscellaneous}
-
-\begin{thm}{Convexity of the limit}
-
- 
-\end{thm}
 
 
-Tietze extension theorem???
-
-\begin{thm}{Lemma}\label{lem:lip-approx}
-Let $\spc{X}$ be a metric space and $f\:\spc{X}\to\RR$ be a continuous function.
-Then for any $\eps>0$ there is a locally Lipschitz function $f_\eps\:\spc{X}\to\RR$
-such that $|f(x)-f_\eps(x)|<\eps$ for any $x\in \spc{X}$.
-\end{thm}
-
-\parit{Proof.}
-Assume that $f\ge 1$.
-Construct a continous positive function $\rho\:\spc{X}\to \RR_{>0}$ such that 
-\[\dist{x}{y}{}<\rho(x)\ \ \Rightarrow\ \ |f(x)-f(y)|<\eps.\]
-Consider function
-\[
-f_\eps(x)
-=
-\sup\set{f(x)
-\cdot
-\l(1-\tfrac{\dist{x}{y}{}}{\rho(x)}\r)}%
-{x\in\spc{X}}.
-\]
-It is straightforward to check that each $f_\eps$ is locally Lipschtz and $0\le f_\eps-f<\eps$.
-
-Note that any continuous function can be presented as difference of two continuous functions bounded below by $1$.
-Hence the result.
-\qeds
