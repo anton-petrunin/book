@@ -336,8 +336,8 @@ whenever  each angle on the left-hand side is defined.
 
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
-Assume for hinge $\hinge q p x$ 
-the angle $\alpha=\mangle\hinge q p x$ is defined then
+Assume for hinge $\hinge q p x$, 
+the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 \[\dist{p}{\geod_{[qx]}(t)}{}
 \le
 \dist{q}{p}{}-t\cdot \cos\alpha+o(t).\]
@@ -345,7 +345,7 @@ the angle $\alpha=\mangle\hinge q p x$ is defined then
 \end{thm}
 
 \parit{Proof.} Take sufficiently small $\eps>0$.
-For all sufficiently small $t>0$, we have that 
+For all sufficiently small $t>0$, we have 
 \begin{align*}
  \dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
 &\le 
@@ -353,7 +353,7 @@ For all sufficiently small $t>0$, we have that
 \\
 &\le \tfrac{t}{\eps} -t\cdot \cos\alpha + t\cdot \eps.
 \end{align*}
-Applying triangle inequality, we get 
+Applying the triangle inequality, we get 
 \begin{align*}
 \dist{p}{\geod_{[qx]}(t)}{}
 &\le \dist{p}{\geod_{[qp]}(t/\eps)}{}+\dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
@@ -416,19 +416,19 @@ for the equivalence relation
 
 
 
-The completion of $\Sigma'_p$ is called \emph{space of directions} at $p$ and is denoted as $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
 The elements of $\Sigma_p$ are called \emph{directions} at $p$.
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called \emph{tangent space} at  $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \emph{tangent space} at  $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
 
-The tangent space $\T_p$ could be also defined directly, without introducing the space of direction.
+The tangent space $\T_p$ could be also defined directly, without introducing the space of directions.
 To do so, consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
 Given $\alpha,\beta\in \mathfrak{T}_p$,
 set 
 \[\dist{\alpha}{\beta}{\mathfrak{T}_p}
 =
 \lim_{\eps\to0} 
-\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps
+\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps.
 \eqlbl{eq:dist-in-T_p}.\]
 If the angles in $\spc{X}$ are defined, then so is
 the limit in \ref{eq:dist-in-T_p}.
