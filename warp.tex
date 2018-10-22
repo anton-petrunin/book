@@ -2,101 +2,102 @@
 %arXiv
 
 \chapter{Warped products}
-Warped product is a construction that produces 
+The warped product is a construction that produces 
 a new metric space, denoted by $\spc{B}\warp f \spc{F}$,
-from two metric spaces $\spc{B}$, $\spc{F}$ and a function $f\:\spc{B}\to\RR_{\ge0}$. The space $\spc{B}$ is called the base and $\spc{F}$, the fiber of the warped product.
+from two metric spaces $\spc{B}$, $\spc{F}$ and a function $f\:\spc{B}\to\RR_{\ge0}$. %The space $\spc{B}$ is called the base and $\spc{F}$, the fiber of the warped product.
 
-Many important construction such as direct product, cone, spherical suspension and join
+Many important constructions such as direct product, cone, spherical suspension and join
 can be defined using warped products.
 
 \section{Definitions}\label{sec:wp-def}
 
-Consider length spaces $\spc{B}$ and  $\spc{F}$,  
-and a 
-locally Lipschitz   
-function
-$f:\spc{B}\to\RR_{\ge 0}$. 
+First we define $\spc{B}\times_f\spc{F}$  for length spaces $\spc{B}$ and $ \spc{F}$, and locally Lipschitz function $f\:\spc{B}\to [0,\infty)$.   Then we expand the definition to allow arbitrary metric spaces $ \spc{F}$.
+For length spaces $\spc{B}$ and $ \spc{F}$,
+consider the topological space $(B\times F)/\!\sim$, where the elements of $\{p\}\times F$ are identified if $f( p )=0$. We denote an equivalence class in $(B\times F)/\!\sim$ by any of its representatives $(p,\phi)$.
 
-Given a path $\gamma$ in $\spc{B}\times \spc{F}$,
-denote by $\gamma_\spc{B}$ and  $\gamma_\spc{F}$ its projections to $\spc{B}$ and $\spc{F}$; 
-so $\gamma(t)=(\gamma_\spc{B}(t),\gamma_\spc{F}(t))\in \spc{B}\times \spc{F}$ for any $t\in[0,1]$.
+We refer to $\spc{B}$ and $\spc{F}$ as \emph{base} and \emph{fiber} respectively; 
+and to $\spc{B}\times\{\phi_0\}$ for $\phi_0\in  \spc{F}$ and $\{p_0\}\times \spc{F}$ 
+for $p_0\in \spc{B}$ 
+as \emph{horizontal} and \emph{vertical leaves}.
 
-According to Rademacher's theorem~\ref{thm:rademacher}, 
-speed of any Lipschitz curve is defined almost everywhere.
+For any curve $\gamma\:[0,1]\to(B\times F)/\!\sim$, we write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where 
+$\gamma_\spc{B}$   is the projection of $\gamma$ to $\spc{B}$,   
+and $\gamma_F$ is the projection, where
+it is defined, of $\gamma$ to $\spc{F}$.  That is, $\gamma_\spc{B}$ is defined for
+all $t\in[0,1]$,  and  $\gamma_\spc{F}$ is defined for all  $t\in[0,1]$ such that $f(t)\ne 0$. We write $\gamma_\spc{F}\: I_+\to \spc{F}$ where $I_+=[0,1]-I_0$,    $I_0=(f\circ\gamma_\spc{B})^{-1}(0)$.
+Set  $I_+=\sqcup_{i=1,2,\ldots} \,I_i$, where the $I_i$ are the maximal open subintervals on which $f\circ\gamma_\spc{B}>0$.
 
-For a Lipschitz path $\gamma$, let us
-define its $f$-speed as
+We say $\gamma$ is Lipschitz if $\gamma_\spc{B}$ and $\gamma_\spc{F}|I_i$ are Lipschitz and  $\gamma_\spc{F}|I_i$, $i=1,\ldots$, have uniform Lipschitz constant. 
+For $\gamma$ Lipschitz, set
 \[
-\speed_f\gamma(t)
-\df 
-\sqrt{[\speed\gamma_\spc{B}(t)]^2 + [f(\gamma_\spc{B}(t))\cdot \speed\gamma_\spc{F}(t)]^2}.
-\] 
-and set 
-\[\length_f\gamma\df\int\limits_0^1\speed_f\gamma(t)\cdot\d t
-\eqlbl{wp-length}\]
+\length_f \gamma\: = \int _0^1 \sqrt{
+v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
+\eqlbl{eq:length}
+\]
+where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_\spc{B}$, $v_\spc{F}|I_+$ is  the speed of $\gamma_\spc{F}|I_+$ and $v_\spc{F}|I_0=0$.   
+The integrand is defined  almost everywhere on $[0,1]$ by Rademacher's theorem ??, and is bounded. We refer to the integrand as the \emph{$f$-speed} of $\gamma$.
 
-Consider the $f$-pseudometric on $\spc{B}\times \spc{F}$ 
-defined as the  infimum of $f$-lengths of Lipschitz curves connecting the points.
-That is,
-\[\dist{x}{y}{f}
-\df
-\inf
-\set{\length\gamma}{\gamma(0)=x,\gamma(1)=y}
+Equivalently,  
+\[
+\length_f\gamma\  \ =\ \  \sum_i \int _{I_i}\sqrt{
+v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}  \ \ +\ \  \length\, (\gamma_\spc{B}|I_0).
+\]
+%  Here the first term
+% is defined 
+% independently of enumeration because the summands are positive.
+ 
+ Then the \emph{warped product $\spc{B}\times_f\spc{F}$ with warping function $f$} is the metric  space with distance
+ \[
+ |xy|_{\spc{B}\times_f\spc{F}}\: =\inf\{\length_f\gamma\: 
+\gamma(0)=x, \gamma(1)=y\}
+ \]
+ where the curves $\gamma\:[0,1]\to \spc{B}\times_f\spc{F}$ are Lipschitz. 
+
+\medskip
+
+\parbf{Remark.} 
+Even if $f>0$, mere continuity of $f$ does not suffice to give a warped product with the properties we need. In particular,  the $f$-length formula \ref{eq:length} may not agree with the metric length.
+
+For example, let $\spc{B}$ be the union of intervals $B^i=[0,1/i]$ glued at $0$, $f(0)=1$, $(f|B_i)(1/i)=1/i$, 
+$\spc{F}=[0,1]$. Then $f$ is not locally Lipschitz. We may take $f$ to be continuous and positive. 
+The curve $\gamma(t)=(0,t)$, $0\le t \le 1$, covers a vertical leaf. Since  any two points of $\gamma$ are joined by Lipschitz curves of length $\le 3/i$ for all $i$,
+this leaf is a single point in the metric topology of $\spc{B}\warp{f} \spc{F}$; thus the metric topology is finer than the product topology of $B\times F$. The $f$-length of $\gamma$ is $1$ while the metric length is $0$. 
+
+If  $f$ is  locally Lipschitz, then the $f$-length and metric length agree (see Section \ref{sec:wp-properties}).  If in addition $f$ is positive, the metric distance is locally bounded above and below by that of direct products of $\spc{B}$ with positive rescalings of $\spc{F}$, and so the metric and product topologies of of $\spc{B}\warp{f} \spc{F}$ agree. 
+
+\vspace{3mm}
+
+The  Fiber-independence theorem (\ref{thm:fiber-independence}) implies that if $\iota\:A\to \check A$ is an isometry between two subsets
+$A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
+in length spaces $ \spc{F}$ and $\check{\spc{F}}$, and $\spc{B}$ is a length space, then for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
+the map $\iota$ induces an isometry between the sets 
+$\spc{B}\warp{f} A \subset \spc{B}\warp{f} \spc{F}$ and $\spc{B}\warp{f}\check{A}\subset \spc{B}\warp{f} \check{\spc{F}}$.
+
+The latter observation allows us to define the warped product $\spc{B}\warp{f} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
+Indeed according to ???, any metric space is a subspace $\spc{F}$ of a length space, say $\spc{F}'$.
+Therefore we can take the warped product $\spc{B}\warp{f} \spc{F}'$
+and identify $\spc{B}\warp{f} \spc{F}$ with its subspace consisting of all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
+According to the Fiber-independence theorem \ref{thm:fiber-independence}, the resulting space does not depend on the choice of $\spc{F}'$.
+
+For any $(p,\phi),(q,\psi) \in \spc{B}\times \spc{F}$, the Fiber-independence theorem gives an explicit formula:
+\[
+|(p,\phi)(q,\psi)|_{\spc{B}\times_f \spc{F}} =
+|(p,0)(q,|\phi \psi|_{\spc{F}}|_{\spc{B}\times_f\R}.
 \]
 
 
-Note that $\dist{x}{y}{f}=0$ 
-if and only if $x=y$ or both $x,y\in b\times \spc{F}$ for some $b\in\spc{B}$ such that $f(b)=0$.
-Set $x\sim y$ if and only if $\dist{x}{y}{f}=0$.
-The pseudometric $\dist{}{}{f}$
-becomes a metric on the equivalence classes of ``$\sim$''.
-The obtained metric space will be called the warped product of $\spc{B}$ and $\spc{F}$ with the warping function $f$;
-it will be denoted by $\spc{B}\warp{f} \spc{F}$.
-
-\medskip
-
-\parbf{Example.} 
-Even if $f>0$, mere continuity of $f$ does not suffice for a warped product with the properties we want. These properties include: the metric topology agrees with the product topology of $B\times F$, and    the $f$-length formula \ref{wp-length} agrees with the metric length.
-
-For example, let $\spc{B}$ be the union of intervals $B^i=[0,1/i]$ glued at $0$, $f(0)=1$, $(f|B_i)(1/i)=1/i$, 
-$\spc{F}=[0,1]$. Then $f$ is not locally Lipschitz. We may take $f$ continuous and positive. 
-The curve $\gamma(t)=(0,t)$, $0\le t \le 1$, covers a vertical leaf. Since  any two points of $\gamma$ are joined by Lipschitz curves of length $\le 1/i$ for all $i$,
-this leaf is a single point in the metric topology of $\spc{B}\warp{f} \spc{F}$; thus the metric topology is finer than the product topology of $B\times F$. The $f$-length of $\gamma$ is $1$ while the metric length is $0$.  
-
-
-\medskip
-
-From Fiber-independence theorem (\ref{thm:fiber-independence})
-follows that if $\iota\:A\to \check A$ is an isometry between two subsets
-$A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
-in the length spaces than for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
-the map $\iota$ induces an isometry between sets 
-$A\warp{f} \spc{B}\subset \spc{F}\warp{f} \spc{B}$ and $\check A\warp{f} \spc{B}\subset \check{\spc{F}}\warp{f} \spc{B}$.
-
-The later observation makes possible to define warped product $\spc{F}\warp{f} \spc{B}$ where the fiber $\spc{F}$ does not have length metric.
-Ideed according to ???, any metric space is a subspace $\spc{F}$ of a length space say $\spc{F}'$.
-Therefore we can take the warped product $\spc{F}'\warp{f} \spc{B}$
-and identify $\spc{F}\warp{f} \spc{B}$ with its subspace formed all pairs $(\phi,b)$ such that $\phi\in \spc{F}$.
-According to Fiber-independence theorem (\ref{thm:fiber-independence}) the resultig space does not depend on the chaice of $\spc{F}'$.
-
-
-
-
-
-\section{Basic propetries}
-
-We will refer to $\spc{B}$ and $\spc{F}$ as \emph{base} and \emph{fiber} respectively; 
-and to $\spc{B}\times\{\phi_0\}$ for $\phi_0\in  \spc{F}$ and $\{p_0\}\times \spc{F}$ for $p_0\in \spc{B}-f^{-1}(0)$ as \emph{horizontal} and \emph{vertical leaves}.
+\section{Basic properties}
+\label{sec:wp-properties}
 
 \begin{thm}{Proposition}
 The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
 
 \begin{subthm}{horiz-leaf-proj}
-The projection $(p,\phi_0)\mapsto p$  of any  horizontal leaf $\spc{B}\times\{\phi_0\}$, with its length-metric,  is an isometry onto $\spc{B}$.
+The projection $(p,\phi_0)\mapsto p$  of any  horizontal leaf $\spc{B}\times\{\phi_0\}$, with its length metric,  is an isometry onto $\spc{B}$.
 \end{subthm}
 
 \begin{subthm}{vert-leaf-proj}
-The projection $(p_0,\phi)\mapsto \phi$ of any  vertical leaf $\{p_0\}\times \spc{F}$, with its length-metric,  is a homothety onto $\spc{F}$ with multiplier $1/f(p_0)$.
+If $f(p_0)\ne0$, the projection $(p_0,\phi)\mapsto \phi$ of the vertical leaf $\{p_0\}\times \spc{F}$, with its length metric,  is a homothety onto $\spc{F}$ with multiplier $1/f(p_0)$.
 \end{subthm}
 
 
@@ -113,27 +114,26 @@ Each horizontal leaf $\spc{B}\times\{\phi_0\}$ is isometrically embedded in $\sp
 
 \parit{Proof.} 
 Claims  (\ref{SHORT.horiz-leaf-proj}), (\ref{SHORT.vert-leaf-proj}) and (\ref{SHORT.Df>0})  are immediate from the 
-length formula \ref{wp-length}.
-
-Also by (\ref{wp-length}), the projection of
+$f$-length formula \ref{eq:length}.
+Also by \ref{eq:length}, the projection of
 $\spc{B}\warp{f}\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$   is length-nonincreasing, as is the projection onto $\{p_0\} \times \spc{F}$ given by  $(p,\phi)\mapsto (p_0,\phi)$  if $p_0$ is a local minimum point of $f$.  
 Hence (\ref{SHORT.horiz-leaf-isometry}) and (\ref{SHORT.Df>0}).
 \qeds
 
+A horizontal leaf need not be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
+% (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  
+For instance, suppose $\alpha:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \warp{f}\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
 
-
-A horizontal leaf need not be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  For instance, suppose $\alpha:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \warp{f}\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
-
-\begin{thm}{Exersice}\label{ex:chohom-1=warped-product}
-Show that orbits of isometric cohomogenity 1 group action on Riemannian manifold
-form a vertical fiber of a warped product.
+\begin{thm}{Exercise}\label{ex:chohom-1=warped-product}
+Show that the orbits of an isometric cohomogenity-1 group action on a Riemannian manifold
+form the vertical fibers of a warped product.
 \end{thm}
 
 
 Distance in a warped product is fiber-independent, in the sense that distances may be calculated by substituting for $\spc{F}$ a different length space:
 
 \begin{thm}{Fiber-independence theorem}\label{thm:fiber-independence}
-Consider length spaces $\spc{B}$, $\spc{F}$ and  $\check{\spc{F}}$,  and a continuous function
+Consider length spaces $\spc{B}$, $\spc{F}$ and  $\check{\spc{F}}$,  and a locally Lipschitz function
 $f:\spc{B}\to\R_{\ge 0}$.  
 Assume $p,q\in \spc{B}$, $\phi,\psi\in \spc{F}$ and $\check{\phi},\check{\psi}\in \check{\spc{F}}$:
 Then 
@@ -148,15 +148,17 @@ Then
 \dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp{f}\spc{F}}
 &\ge\dist{(p,\check{\phi})}{(q,\check{\psi})}{\spc{B}\warp{f}\check{\spc{F}}}
 \end{aligned}
-\eqlbl{eq:dist-fiber-indep}
+%\eqlbl{eq:dist-fiber-indep}
 \]
 	
 \end{thm}
 
 \parit{Proof.} 
-Fix a path $\gamma=(\gamma_{\spc{B}},\gamma_{\spc{F}})$ 
-from $(p,\phi)$ to $(q,\psi)$.
+%Fix a path $\gamma=(\gamma_{\spc{B}},\gamma_{\spc{F}})$ 
+%from $(p,\phi)$ to $(q,\psi)$.
+Let $\gamma$ be a path in $\spc{B}\times \spc{F})/\!\sim$. 
 
+Suppose $f\circ\gamma_\spc{B}>0$.
 Since $\dist{\phi}{\psi}{\spc{F}}
 \ge\dist{\check{\phi}}{\check{\psi}}{\check{\spc{F}}}$,
 there is a Lipschitz path $\gamma_{\check{\spc{F}}}$ 
@@ -165,57 +167,91 @@ from $\check\phi$ to $\check\psi$ in $\check{\spc{F}}$ such that
 \ge
 (\speed\gamma_{\check{\spc{F}}})(t)\]
 for almost all $t\in[0,1]$.
-
 Consider the path $\check\gamma=(\gamma_{\spc{B}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\warp{f}\check{\spc{F}}$.
 Clearly
 \[\length_f\gamma\ge \length_f\check\gamma.\]
-Hence the statement follows.
+
+Suppose $(f\circ\gamma_\spc{B})^{-1}(0)\ne\emptyset$.  Then there is a Lipschitz path $\check\gamma$  from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\warp{f}\check{\spc{F}}$
+such that $\check\gamma_{\spc{F}}$
+is constant on each maximal subinterval on which  $f\circ(\gamma)_{\spc{B}}>0$.
+By the $f$-length formula, 
+\[\length_f\gamma \ge 
+\length\gamma_{\spc{B}}=\length_f\check\gamma.
+\]
+
+The statement follows.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:warp=<}
-Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\;\spc{B}\to \RR_\ge$ be two continuous nonnegative  function.
+Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\:\spc{B}\to \RR_\ge$ be two locally Lipschitz nonnegative  functions.
 Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
 Show that 
 $\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
-that is there is a distance noncontructing map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
+that is, there is a distance noncontracting map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
 \end{thm}
+
+To see that  $\length_f$, as defined by \ref{eq:length} in Section \ref{sec:wp-def}, agrees with the length induced by  $|**|_{\spc{B}\times_f\spc{F}}$, we may proceed as follows. Denote  $\length_f$ by $L$.  Set
+\[
+L_{\,\Sigma}\,\,=\,\sup_{t_0<\ldots<t_n}\,\sum_{i=1}^n \,d_{\,i}\,,
+\]
+where the supremum is taken over all partitions  \,$t_0<\ldots<t_n$\, of $[0,1]$, and where, letting $\bar t_i$ be a minimum point of $(f\circ\gamma_B)|[t_{i-1}\,t_i]$\,, 
+\[
+d_i=
+\begin{cases}
+\bigl |\gamma(t_i)\,\,\gamma(t_{i-1})\bigr |_{\,B\,\times\,(f\circ\gamma_B)(\bar t_i)\,\cdot F}\,
+& \text{if }(f\circ\gamma_B)(\bar t_i)>0,\\
+\bigl |\gamma_B(t_i)\,\,\gamma_B(t_{i-1})\bigr |_B
+\quad & \text{if } (f\circ\gamma_B)(\bar t_i)=0.
+\end{cases}
+ \]
+Here $B\,\times\,(f\circ\gamma_B)(\bar t_i)\cdot F$\, denotes the Cartesian product  of $B$ with a rescaling of $F$.
+ Our choice of  $\bar t_i$ ensures that any sequence of successively refined   sums is nondecreasing.
+ 
+Then  the proof that \,$L=L_{\Sigma}$\,  proceeds  as in the classical case, for length of an absolutely continuous curve in $\R^2$.
+(see \cite[p. 245-247]{goffman}.)
+
+Since $f$ is  locally Lipschitz, then outside any neighbhood in $\spc{B}\times \spc{F})/\!\sim$ of a point $x$ we have   $|x*|_{\spc{B}\times_f\spc{F}}$ bounded away from $0$. Therefore $\length_f$ determines a length structure in the sense of \cite{BBI}. Moreover, from the formula for $L_{\Sigma}$, 
+%since $f$ is  locally uniformly continuous, 
+the length $L=\length_f=L_{\Sigma}$ is a lower semi-continous functional on the space of Lipschitz curves with respect to pointwise convergence.
+%, i.e. if \,$\gamma_i\to\gamma$\, then \,$\liminf\,(\length\gamma_i) \ge\length\gamma$. 
+By \cite[Theorem 2.4.3]{BBI}, $\length_f$ agrees with the length induced by the  metric of  $\spc{B}\warp{f}\spc{F}$.
 
 
 
 \section{Examples}
 
 \parbf{Direct product.}
-The simplest example is the \emph{direct product} $\spc{B}\times \spc{F}$ which could be also written as a warped product $\spc{B}\warp1 \spc{F}$.  
-For $p,q\in \spc{B}$ and $x,y\in \spc{F}$, the direct product metric simplifies to
+The simplest example is the \emph{direct product} $\spc{B}\times \spc{F}$, which could be also written as the warped product $\spc{B}\warp1 \spc{F}$.  
+For $p,q\in \spc{B}$ and $\phi,\psi\in \spc{F}$, the direct product metric simplifies to
 \[
-\dist{(p,x)}{(q,y)}{} =\sqrt{\dist[2]{p}{q}{} + \dist[2]{x}{y}{}}.
+\dist{(p,\phi)}{(q,\psi)}{} =\sqrt{\dist[2]{p}{q}{} + \dist[2]{\phi}{\psi}{}}.
 \]
 This is taken as the defining formula for the direct product of two arbitrary metric spaces $\spc{B}$ and $\spc{F}$. 
 
 \parbf{Cones.}
-The \emph{Euclidean cone} $\Cone\spc{F}$ over space $\spc{F}$
-can be defined as a warped product $[0,\infty)\warp{\id} \spc{F}$.
-For $s,t\in [0,\infty)$ and $x,y\in \spc{F}$, 
-the cone metric is given by cosine rule
+The \emph{Euclidean cone} $\Cone\spc{F}$ over a metric space $\spc{F}$
+can be defined as the warped product $[0,\infty)\warp{\id} \spc{F}$.
+For $s,t\in [0,\infty)$ and $\phi,\psi\in \spc{F}$, 
+the cone metric is given by the cosine rule
 \[
-\dist{(p,x)}{(q,y)}{} 
+\dist{(s,\phi)}{(t,\psi)}{} 
 =
 \sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
 \]
-where $\alpha= \max\{\pi, \dist{x}{y}{}\}$.
+where $\alpha= \max\{\pi, \dist{\phi}{\psi}{}\}$.
 
-Instead Euclidean cosine rule, 
-one use the cosine rule in $\Lob2\kappa$
+Instead of the Euclidean cosine rule, 
+we may use the cosine rule in $\Lob2\kappa$:
 \[
-\dist{(p,x)}{(q,y)}{} 
+\dist{(s,\phi)}{(t,\psi)}{} 
 =
 \side\kappa\{\alpha;s,t\}.
 \]
-This way we get so called $\kappa$-cones over $\spc{F}$ denoted by $\Cone\mc\kappa\spc{F}=[0,\infty)\warp{\sn\kappa} \spc{F}$ for $\kappa\le 0$
+In this way we get  \emph{$\kappa$-cones} over $\spc{F}$, denoted by $\Cone\mc\kappa\spc{F}=[0,\infty)\warp{\sn\kappa} \spc{F}$ for $\kappa\le 0$
 and $\Cone\mc\kappa\spc{F}=[0,\varpi\kappa]\warp{\sn\kappa} \spc{F}$ for $\kappa>0$.
 
-For $1$-cone $\Cone\mc1\spc{F}$ is also called \emph{spherical suspension} over $\spc{F}$ and it is also denoted $\Susp\spc{F}$.
-That is
+The $1$-cone $\Cone\mc1\spc{F}$ is also called the \emph{spherical suspension} over $\spc{F}$,  and is also denoted by $\Susp\spc{F}$.
+That is,
 \[
 \Susp\spc{F}=[0,\pi]\warp{\sin}\spc{F}.
 \]
@@ -223,68 +259,67 @@ That is
 \begin{thm}{Exercise}\label{ex:convexity-in-cone}
 Let $\spc{F}$ be a length space and $A\subset  \spc{F}$.
 Show that $\Cone\mc\kappa A$ is convex in $\Cone\mc\kappa\spc{F}$ 
-if and only if $A$ is $\pi$ convex in $\spc{F}$.
+if and only if $A$ is $\pi$-convex in $\spc{F}$.
 \end{thm}
 
 The elements of the Euclidean cone $\spc{K}=\Cone\spc{F}$
-will be ofter refered as \index{vector}\emph{vector}.
-The tip of the cone $\spc{K}$ usually denoted as $\0$ or $\0_{\spc{K}}$
-The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defiened as $\dist{o}{w}{\spc{K}}$;
-that is the distance from $w$ to the origin.
+will often be referred to as \index{vector}\emph{vectors}.
+The tip of $\spc{K}$ is usually denoted by $\0$ or $\0_{\spc{K}}$.
+The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defined as $\dist{o}{w}{\spc{K}}$;
+that is, the distance from $w$ to the origin.
 The \index{scalar product}\emph{scalar product} $\<v,w\>$
 of two vectors $v,w\in\spc{K}$
-are defined as 
+is defined by 
 \[\<v,w\>
 \df
-\dist[2]{v}{w}{\spc{K}}-|v|^2-|w|^2.
+\bigl(\dist[2]{v}{w}{\spc{K}}-|v|^2-|w|^2\bigr)/2.
 \]
 %??? continue
 
 \parbf{Doubling.}
-The Doubling space $\spc{W}$ of space $\spc{V}$ is a closed subset $A\subset\spc{V}$
+The doubling space $\spc{W}$ of a metric space $\spc{V}$ on a closed subset $A\subset\spc{V}$
 can be also defined as a special type of warped product.
-Consider 2-point space $\spc{F}$ with distance $\pi$ from each other.
+Consider the metric space $\spc{F}$ consisting of two points with distance $\pi$ from each other.
 Then $\spc{W}$ is isometric to the warped product 
 with base $\spc{V}$, 
 fiber $\spc{F}$ and warping function $\distfun{A}{}{}$;
 that is
-\[\spc{W}\iso\spc{F}\warp{\distfun{A}{}{}}\spc{V}.\]
+\[\spc{W}\iso\spc{V}\warp{\distfun{A}{}{}}\spc{F}.\]
 
 
 \section{1-dimensional base}
 
-The following theorem is a baby case of Theorem ???;
-it provides conditions for the spaces and functions in the warped product with 1-dimensional base.
-
+The following theorems  provide conditions for the spaces and functions in a warped product with 1-dimensional base to have curvature bounds.  These theorems are baby cases of the characterization of curvature bounds in warped products given in \cite{alexander-bishop:warps,alexander-bishop:warp1}.
+%%%further section(s) to be added in next arxiv version
 
 \begin{thm}{Theorem}\label{thm:warp-curv-bound:cbb}
 \begin{subthm}{thm:warp-curv-bound:cbb:a}
 If $\spc{L}$ is a complete length $\Alex{1}$ space and $\diam\spc{L}\le\pi$
 then 
 \begin{align*}
-\Susp\spc{L}&=\spc{L}\warp{\sin}[0,\pi]\quad\text{is  $\Alex1$},
+\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is  $\Alex1$},
 \\
-\Cone\spc{L}&=\spc{L}\warp{\id}[0,\infty)\quad\text{is  $\Alex0$},
+\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is  $\Alex0$},
 \\
-\Cone\mc{-1}\spc{L}&=\spc{L}\warp{\sinh}[0,\infty)\quad\text{is  $\Alex{-1}$}.
+\Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is  $\Alex{-1}$}.
 \end{align*}
-Moreover the converse also holds in each of three cases.
+Moreover the converse also holds in each of the three cases.
 \end{subthm}
 
 \begin{subthm}{thm:cbb-product}
 If $\spc{L}$ is a complete length $\Alex0$ space
 then 
 \begin{align*}
-\spc{L}\times\RR&\quad\text{is a complete length $\Alex0$ space},
+\RR\times\spc{L}&\quad\text{is a complete length $\Alex0$ space},
 \\
-\spc{L}\warp{\exp}\RR&\quad\text{is a complete length $\Alex{-1}$ space.}
+\RR\warp{\exp}\spc{L}&\quad\text{is a complete length $\Alex{-1}$ space.}
 \end{align*}
-Moreover the converse also holds in each of two cases.
+Moreover the converse also holds in each of the two cases.
 \end{subthm}
 
 \begin{subthm}{}
 If $\spc{L}$ is a complete length $\Alex{-1}$ space,
-then $\spc{L}\warp{\cosh}\RR$ is a complete length $\Alex{-1}$ space.
+then $\RR\warp{\cosh}\spc{L}$ is a complete length $\Alex{-1}$ space.
 Moreover the converse also holds.
 \end{subthm}
 \end{thm}
@@ -297,28 +332,28 @@ Let $\spc{L}$ be a metric space.
 If $\spc{L}$ is $\CAT{1}$
 then 
 \begin{align*}
-\Susp\spc{L}&=\spc{L}\warp{\sin}[0,\pi]\quad\text{is  \CAT{1}},
+\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is  \CAT{1}},
 \\
-\Cone\spc{L}&=\spc{L}\warp{\id}[0,\infty)\quad\text{is  \CAT{0}},
+\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is  \CAT{0}},
 \\
-\Cone\mc{-1}\spc{L}&=\spc{L}\warp{\sinh}[0,\infty)\quad\text{is  \CAT{-1}}.
+\Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is  \CAT{-1}}.
 \end{align*}
-Moreover, the converse also holds in each of three cases.
+Moreover, the converse also holds in each of the three cases.
 \end{subthm}
 
 \begin{subthm}{thm:warp-curv-bound:cbb:E}
 If $\spc{L}$ is a complete length $\CAT0$ space
 then 
-$\spc{L}\times\RR$ is $\CAT0$ 
+$\RR\times\spc{L}$ is $\CAT0$ 
 and 
-$\spc{L}\warp{\exp}\RR$ is $\CAT{-1}$.
-Moreover the converse also holds in each of two cases.
+$\RR\warp{\exp}\spc{L}$ is $\CAT{-1}$.
+Moreover the converse also holds in each of the two cases.
 \end{subthm}
 
 \begin{subthm}{thm:warp-curv-bound:cbb:H}
 If $\spc{L}$ is $\CAT{-1}$
 then 
-$\spc{L}\warp{\cosh}\RR$
+$\RR\warp{\cosh}\spc{L}$
 is $\CAT{-1}$.
 Moreover the converse also holds.
 \end{subthm}
@@ -333,11 +368,11 @@ we will use the following proposition.
 
 \begin{subthm}{prop:warp-examples:S}
 \begin{align*}
-\Susp\mathbb S^{m-1}&=\mathbb S^{m-1}\warp{\sin}[0,\pi]\iso\SS^m,
+\Susp\mathbb S^{m-1}&=[0,\pi]\warp{\sin}\mathbb S^{m-1}\iso\SS^m,
 \\
-\Cone\mathbb S^{m-1}&=\mathbb S^{m-1}\warp{\id}[0,\infty)\iso\EE^m,
+\Cone\mathbb S^{m-1}&=[0,\infty)\warp{\id}\mathbb S^{m-1}\iso\EE^m,
 \\
-\Cone\mc{-1}\mathbb S^{m-1}&=\mathbb S^{m-1}\warp{\sinh}[0,\infty)\iso\Lob{m}{-1}.
+\Cone\mc{-1}\mathbb S^{m-1}&=[0,\infty)\warp{\sinh}\mathbb S^{m-1}\iso\Lob{m}{-1}.
 \end{align*}
 \end{subthm}
 
@@ -345,45 +380,45 @@ we will use the following proposition.
 
 \begin{subthm}{}
 \begin{align*}
-\EE^{m-1}\times\RR&\iso\EE^{m},
+\RR\times&\EE^{m-1}\iso\EE^{m},
 \\
-\EE^{m-1}\warp{\exp}\RR&\iso\Lob{m}{-1}.
+\RR\warp{\exp}\EE^{m-1}&\iso\Lob{m}{-1}.
 \end{align*}
 \end{subthm}
 
 \begin{subthm}{}
-\[\Lob{m-1}{-1}\warp{\cosh}\RR\iso\Lob{m}{-1}.\]
+\[\RR\warp{\cosh}\Lob{m-1}{-1}\iso\Lob{m}{-1}.\]
 \end{subthm}
 
 \end{thm}
 
-To prove is left to the reader.
+The proof is left to the reader.
 
 \parit{Proof of \ref{thm:warp-curv-bound:cbb}.}
-Let us prove the last statement in (\ref{SHORT.thm:warp-curv-bound:cbb:S}); the rest of the statements are similar;
-each proof is based on Fiber-independence theorem~\ref{thm:fiber-independence} 
+Let us prove the last statement in (\ref{SHORT.thm:warp-curv-bound:cbb:S}); the remaining statements are similar.
+Each proof is based on the Fiber-independence theorem~\ref{thm:fiber-independence} 
 and 
-the correspondg statement in the Proposition~\ref{prop:warp-examples}.
+the corresponding statement in Proposition~\ref{prop:warp-examples}.
 
 
-Choose arbitrary quadruple of points 
-\[(p,s),(x^1,t^1),(x^2,t^2),(x^3,t^3)\in \spc{L}\warp{\sinh}[0,\infty).\]
+Choose an arbitrary quadruple of points 
+\[(s,\phi),(t^1,\phi^1),(t^2,\phi^2),(t^3,\phi^3)\in[0,\infty)\warp{\sinh} \spc{L}.\]
 Since $\diam\spc{L}\le\pi$,
-{(1+\textit{n})-point comparison (\ref{thm:pos-config})  provides a quadruple of points $q,y^1,y^2,y^3\in\SS^3$ such that 
-\[\dist{q}{y^i}{\SS^3}=\dist{p}{x^i}{\spc{L}}\] 
+{(1+\textit{n})-point comparison (\ref{thm:pos-config})  provides a quadruple of points $\psi,\psi^1,\psi^2,\psi^3\in\SS^3$ such that 
+\[\dist{\psi}{\psi^i}{\SS^3}=\dist{\phi}{\phi^i}{\spc{L}}\] 
 and
-\[\dist{y^i}{y^j}{\SS^3}\ge\dist{x^i}{x^j}{\spc{L}}\]
+\[\dist{\psi^i}{\psi^j}{\SS^3}\ge\dist{\phi^i}{\phi^j}{\spc{L}}\]
 for all $i$ and $j$.
-
 
 According to Proposition~\ref{prop:warp-examples:S}, 
-\[\Cone\mc{-1}\SS^2=\SS^2\warp{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
+\[\Cone\mc{-1}\SS^3=[0,\infty)\warp{\sinh}\SS^3\iso\Lob{4}{-1}.\]
 
-Consider the quadruple points 
-\[(q,s),(y^1,t^1),(y^2,t^2),(y^3,t^3)\in \SS^2\warp{\sinh}[0,\infty)\iso\Lob{3}{-1}.\]
-By Fiber-independence theorem~\ref{thm:fiber-independence}
-\[\dist{(q,s)}{(y^i,t^i)}{\SS^2}=\dist{(p,s)}{(x^i,t^i)}{\spc{L}}\]
+Consider the quadruple of points 
+\[(s,\psi),(t^1,\psi^1),(t^2,\psi^2),(t^3,\psi^3)\in \Cone\mc{-1}\SS^3=\Lob{4}{-1}.\]
+
+By the Fiber-independence theorem~\ref{thm:fiber-independence},
+\[\dist{(s,\psi)}{(t^i,\psi^i)}{[0,\infty)\warp{\sinh}\SS^3}=\dist{(s,\phi)}{(t^i,\phi^i)}{[0,\infty)\warp{\sinh}\spc{L}}\]
 and
-\[\dist{(y^i,t^i)}{(y^j,t^j)}{\SS^2}\ge\dist{(x^i,t^i)}{(x^j,t^j)}{\spc{L}}\]
+\[\dist{(t^i,\psi^i)}{(t^j,\psi^j)}{[0,\infty)\warp{\sinh}\SS^3}\ge\dist{(t^i\phi^i)}{(t^j,\phi^j)}{[0,\infty)\warp{\sinh}\spc{L}}\]
 for all $i$ and $j$.
-It remains to apply Exercise \ref{ex:(3+1)-expanding}.\qeds
+Since four points of $\Lob{4}{-1}$ lie in an isometrically embedded copy of $\Lob{3}{-1}$, it remains to apply Exercise \ref{ex:(3+1)-expanding}.\qeds
