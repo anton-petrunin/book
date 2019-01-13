@@ -236,15 +236,15 @@ If $x(t)\ne p$ for some $t$, then
 \begin{align*}
 f(p)-f(x(t))
 \ge 
--\d_pf(\dir{p}{x})\cdot \dist{p}{x}{}-\lambda\cdot \dist[2]{p}{x}{}
+-\dd_pf(\dir{p}{x})\cdot \dist{p}{x}{}-\lambda\cdot \dist[2]{p}{x}{}
 \ge ???
 \end{align*}
 Therefore 
-$(\d_x\distfun{p}{}{})(\nabla_xf)\le ???$ 
+$(\dd_x\distfun{p}{}{})(\nabla_xf)\le ???$ 
 if $0<\dist{p}{x}{}<???$.
 
 If follows that if $x(t)=\GF^t_f$, then 
-$\tfrac{\d}{\d t}{}\dist{p}{x(t)}{}\le ???$.
+$\tfrac{\dd}{\dd t}{}\dist{p}{x(t)}{}\le ???$.
 That is, $\GF^t_f$ shrinks $\eps$-neighborhood to $p$ in time ???. 
 
 
@@ -288,10 +288,10 @@ that is, $\nabla_p\distfun{q}{}{}=\0$.
 \parit{Proof.} For the ``only if'' part, note that if $p\in E$ is not a critical point of
 $\distfun{q}{}{}$, then one can find a point $x\in \Str(p)$ (thus $\dir p x$ is
 uniquely defined) such that 
-\[(\d_p\distfun{q}{}{})(\dir p x)>0.\] 
+\[(\dd_p\distfun{q}{}{})(\dir p x)>0.\] 
 Since $\nabla_p\distfun{x}{}{}$ is polar to $\dir p x$ (see
 ???) we get 
-\[(\d_p\distfun{q}{}{})(\nabla_p\distfun{x}{}{})<0,\] 
+\[(\dd_p\distfun{q}{}{})(\nabla_p\distfun{x}{}{})<0,\] 
 see ???.
 Hence, the gradient flow $\GF_{\distfun{x}{}{}}^t$ pushes the point $p$ closer to $q$, which
 contradicts the fact that $p$ is a minimum point of $\distfun{q}{}{}$ on $E$.
@@ -311,7 +311,7 @@ Then using the inductive hypothesis we get that $\Sigma_p F\subset \Sigma_p$ is 
 If $p$ is isolated, then clearly $\diam \Sigma_p\le \tfrac\pi2$ and therefore $\nabla_p
 f=\0$, so we can assume $\Sigma_p F\not=\emptyset$. 
 
-Note that $\phi=\d_p f|\Sigma_p$ satisfies $\phi''+\phi\le 0$.
+Note that $\phi=\dd_p f|\Sigma_p$ satisfies $\phi''+\phi\le 0$.
 Take $\xi=\tfrac{\nabla_p f}{|\nabla_p f|}$, so 
 $\xi\in \Sigma_p$ is the maximal point of $\phi$.
 Let $\eta\in \Sigma_p F$ be a direction closest  to $\xi$. Then
@@ -319,7 +319,7 @@ $\mangle(\xi,\eta)\le \tfrac\pi2$;
 otherwise $F$ would not satisfy the condition in the theorem for a point $q$ with $\dir{p}{q}\approx\xi$.
 Hence, since $\Sigma_p F\subset \Sigma_p$ is an extremal subset, $\nabla_\eta\phi\in \Sigma_\eta \Sigma_p F$ and
 therefore 
-\[\d_\eta\phi(\dir\eta\xi)
+\[\dd_\eta\phi(\dir\eta\xi)
 \le
 \<\nabla_\eta\phi,\dir\eta\xi\>\le0.\]
 Hence, $\phi(\eta)\ge\phi(\xi)$, and therefore $\xi=\eta$; 
@@ -409,7 +409,7 @@ or
 \parit{Proof.}???
 $\T_p E$ is extremal as a limit of extremal subsets, see
 Lemma~\ref{lem:limit-extr}. 
-On the other hand for any semiconcave function $f$ and $p\in E$, the differential $\d_p f:\T_p\to\RR$ is concave and since $\T_p E\subset \T_p$ is extremal we have $\nabla_p f\in \T_p E$. 
+On the other hand for any semiconcave function $f$ and $p\in E$, the differential $\dd_p f:\T_p\to\RR$ is concave and since $\T_p E\subset \T_p$ is extremal we have $\nabla_p f\in \T_p E$. 
 That is, gradient curves can be approximated by broken
 geodesics with vertices on $E$, see page~\pageref{grad-constr}.
 \qeds
@@ -516,7 +516,7 @@ $E\subset \spc{L}$ and $f$ be a native $\lambda$-concave subfunction such that
 $\gamma\subset\Dom f$.
 Assume $f\circ\gamma$ is not $\lambda$-concave, then there is a non-negative
 Lipschitz function $\tau$ with support in $(a,b)$ such that
-\[\int\limits_a^b\l[(f\circ\gamma)'\cdot\tau'+\lambda\cdot\tau\r]\cdot\d s
+\[\int\limits_a^b\left[(f\circ\gamma)'\cdot\tau'+\lambda\cdot\tau\right]\cdot\dd s
 < 
 0\]
 Then as follows from Lemma~\ref{lem:grad-variation}, for small $t\ge 0$

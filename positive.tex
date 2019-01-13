@@ -23,7 +23,7 @@ To prove the second statement ???.
 
 \begin{thm}{Sphere theorem}\label{thm:sphere}
 Assume $\spc{L}$ be an $m$-dimensional complete length $\Alex{1}$ space, $\spc{L}$ does not have proper extremal subsets and $\diam \spc{L}>\tfrac\pi2$.
-Then $\spc{L}$ is homeomorphic to $\SS^m$. 
+Then $\spc{L}$ is homeomorphic to $\mathbb{S}^m$. 
 \end{thm}
 
 \parit{Proof.} Assume $p,q\in \spc{L}$ realize the diameter of $\spc{L}$.
@@ -62,9 +62,9 @@ That is, $\cBall[q,\tfrac\pi2]=\spc{L}$, a contradiction.
 
 \parit{Proof \textnumero 1.} 
 From Lemma~\ref{lemma:rad-big-U_p}, $\rad \Sigma_p>\tfrac\pi2$. 
-Since $\dim \Sigma_p<m$, by the induction hypothesis we have $\Sigma_p\simeq \SS^{m-1}$.
+Since $\dim \Sigma_p<m$, by the induction hypothesis we have $\Sigma_p\simeq \mathbb{S}^{m-1}$.
 Now the Morse lemma (\ref{lem:morse}) for
-$\distfun{p}{}{}\:\spc{L}\to\RR$ gives that $\spc{L}\simeq\Susp\Sigma_p\simeq \SS^m$, 
+$\distfun{p}{}{}\:\spc{L}\to\RR$ gives that $\spc{L}\simeq\Susp\Sigma_p\simeq \mathbb{S}^m$, 
 here $\Susp\Sigma_p$ denotes a spherical suspension over $\Sigma_p$.
 \qeds
 
@@ -180,7 +180,7 @@ Then
 \[
 \vol_{m-1}\partial \spc{L}
 \le 
-\vol_{m-1}\SS^{m-1}.
+\vol_{m-1}\mathbb{S}^{m-1}.
 \]
 
 \end{thm}
@@ -189,7 +189,7 @@ Let us first prepare a proposition:
 
 \begin{thm}{Proposition}\label{prop:unique-gexp-inverse}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $p,q\in\spc{L}$.
-Then for any point $x\in \l] p q \r[$ the inverse of the gradient exponential map $\gexp^{-1}_{p;\kappa}x$ 
+Then for any point $x\in \mathopen{]} p q \mathclose{[}$ the inverse of the gradient exponential map $\gexp^{-1}_{p;\kappa}x$ 
 is uniquely defined.
 \end{thm}
 
@@ -214,7 +214,7 @@ Let $z\in \spc{L}$ be the point at maximal distance from $\partial \spc{L}$; in 
 $z$ realizes maximum of $f=\sin\circ\distfun{\partial \spc{L}}{}{}$.
 From Theorem~\ref{thm:dist-to-bry}, $f(z)\le 1$ and $f''+f\le 0$.
 
-Note that $\spc{L}\subset \cBall[z,\tfrac\pi2]$, otherwise if $y\in \spc{L}$ with $\dist{y}{z}{}>\tfrac\pi2$, then applying inequality $f''+f\le 0$ to the geodesic $[z y]$, we get that $(\d_z f)(\dir z y)>0$; that is, $z$ is not a maximum of $f$.
+Note that $\spc{L}\subset \cBall[z,\tfrac\pi2]$, otherwise if $y\in \spc{L}$ with $\dist{y}{z}{}>\tfrac\pi2$, then applying inequality $f''+f\le 0$ to the geodesic $[z y]$, we get that $(\dd_z f)(\dir z y)>0$; that is, $z$ is not a maximum of $f$.
 
 From this it follows that gradient exponent
 \[
@@ -242,13 +242,13 @@ Now since
 \]
 is short and
 $(\partial \cBall[\0,\tfrac{\pi}{2}],\mathfrak s)$ is isometric to $\Sigma_z \spc{L}$ we get
-$\vol\partial \spc{L}\le\vol \Sigma_z \spc{L}$ and clearly, $\vol \Sigma_z \spc{L}\le \vol \SS^{m-1}$.\qeds
+$\vol\partial \spc{L}\le\vol \Sigma_z \spc{L}$ and clearly, $\vol \Sigma_z \spc{L}\le \vol \mathbb{S}^{m-1}$.\qeds
 
 \parbf{Remark.}\label{rem:lyt-prob}
 Among other corollaries of
 Conjecture~\ref{conj:bry}, it is expected that if $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space
 then $\partial \spc{L}$, equipped with length-metric, 
-admits a noncontracting map to $\SS^{m-1}$. 
+admits a noncontracting map to $\mathbb{S}^{m-1}$. 
 In particular, its intrinsic diameter is at most $\pi$
 and intrinsic perimeter of any triangle in $\partial \spc{L}$ is at most $2\cdot\pi$. 
 This does not follow from the proof above, since in general 
@@ -281,8 +281,8 @@ p
 \gexp\mc1_z(\tfrac\pi2\cdot \dir zb)\notin\partial \spc{L}.
 \]
 Clearly $p\in [b c]$, thus we need to show only that $p\not=c$.
-One can check it by calculations, but also one can see it using the following additional construction in $\SS^2$:
-Let $a'$ be the opposite point to $a$ in $\SS^2$ 
+One can check it by calculations, but also one can see it using the following additional construction in $\mathbb{S}^2$:
+Let $a'$ be the opposite point to $a$ in $\mathbb{S}^2$ 
 and $r$ be a point on the extension of $[b c]$ behind $c$ such that $\dist{z}{r}{}=\tfrac\pi2$. 
 Then $p\in[b c]$ and from the fact that $\gexp\mc1_z$ is short, one can see that $\dist{p}{r}{}=\dist{a'}{r}{}$.
 Clearly $\dist{a'}{r}{}>\dist{c}{r}{}$; therefore $p\not=c$; that is, $p\not \in\partial \spc{L}$.
@@ -313,7 +313,7 @@ equivalent to the standard sphere.
 
 \bigskip
 \noi\textit{Sketch of the proof:}
-Fix a big negative $\lambda$ and construct a function $f\:\spc{L}\to\RR$ with $\d_p
+Fix a big negative $\lambda$ and construct a function $f\:\spc{L}\to\RR$ with $\dd_p
 f(x)\approx -|x|$ and controlled concavity of type $(\lambda,\kappa)$.
 From  \ref{contr-concave}, the liftings  $f_n\:M_n\to\RR$ of  $f$ (see
 \ref{lem:lifting}) are strictly concave for large $n$.
@@ -333,7 +333,7 @@ is homeomorphic to the standard sphere.
 
 \noi{\bf Remark.} From this proof it follows that $\Sigma_p$ is
 itself smoothable. 
-Moreover, there is a non-collapsing sequence of Riemannian metrics $g_n$ on $\SS^{m-1}$ such that $(\SS^{m-1},g_n)\GHto\Sigma_p$. 
+Moreover, there is a non-collapsing sequence of Riemannian metrics $g_n$ on $\mathbb{S}^{m-1}$ such that $(\mathbb{S}^{m-1},g_n)\GHto\Sigma_p$. 
 This observation makes possible to proof a similar statement for iterated spaces of directions of smoothable Alexandrov space.
 
 \section{Codimension of collaps}
@@ -367,12 +367,12 @@ is homeomorphic to a sphere.
 \begin{thm}{???Theorem}
 Let $\spc{L}_n$ be an $m$-dimensional complete length $\Alex1$ space
 and $\spc{L}_n\GHto\spc{L}$.
-Assume that there is an array of points $\~{\bm{p}}=(\~p_0,\~p_1,\dots,\~p_\kay)$ in $\SS^\kay$ and
+Assume that there is an array of points $\tilde {\bm{p}}=(\tilde p_0,\tilde p_1,\dots,\tilde p_\kay)$ in $\mathbb{S}^\kay$ and
 a sequence of arrays $\bm{p}_n=(p_{n;0},p_{n;1},\dots,p_{n;\kay})$ in $\spc{L}_n$ 
 such that 
 for all $i,j$ we have 
 $\dist{p_{n;i}}{p_{n;j}}{}\to \dist{p_{i}}{p_{j}}{}$ as $n\to\infty$
 and for any $n$ and $i\not=j$, we have $\dist{p_{n;i}}{p_{n;j}}{}>\tfrac\pi2$. 
 Assume $\bm{p}$ be the limit array in $\spc{L}$.
-Then there is an isometric embedding $\SS^\kay\hookrightarrow\spc{L}$ that contains all points of the array $\bm{p}$ in the image.
+Then there is an isometric embedding $\mathbb{S}^\kay\hookrightarrow\spc{L}$ that contains all points of the array $\bm{p}$ in the image.
 \end{thm}

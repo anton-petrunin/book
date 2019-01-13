@@ -35,11 +35,11 @@ We may write $[p q]_{\spc{X}}$
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
 Also we use the following short-cut notation:
 \begin{align*}
-\l] p q \r[&=[pq]\backslash\{p,q\},
+\mathopen{]} p q \mathclose{[}&=[pq]\backslash\{p,q\},
 &
-\l] p q \r]&=[pq]\backslash\{p\},
+\mathopen{]} p q ]&=[pq]\backslash\{p\},
 &
-\l[ p q \r[&=[pq]\backslash\{q\}.
+[ p q \mathclose{[}&=[pq]\backslash\{q\}.
 \end{align*}
 
 %A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \emph{pregeodesic}.
@@ -106,13 +106,13 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 Let $\spc{X}$ be a metric space, 
 $p,q,r\in \spc{X}$ 
 and $\kappa\in\RR$. 
-Let us define the \emph{model triangle}\index{model triangle} $\trig{\~p}{\~q}{\~r}$ 
+Let us define the \emph{model triangle}\index{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
-$\trig{\~p}{\~q}{\~r}=\modtrig\kappa(p q r)$%
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
 \index{$\modtrig\kappa$!$\modtrig\kappa({*}{*}{*})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
-\[\dist{\~p}{\~q}{}=\dist{p}{q}{},
-\ \ \dist{\~q}{\~r}{}=\dist{q}{r}{},
-\ \ \dist{\~r}{\~p}{}=\dist{r}{p}{}.\]
+\[\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{},
+\ \ \dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
+\ \ \dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
 
 In the notation of Section~\ref{model}, 
 $\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}\}$.
@@ -124,9 +124,9 @@ In this case it also exists and is unique up to isometry of $\Lob2\kappa$.
 The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the  \emph{perimeter of triple} $p$, $q$, $r$.
 
 If for  $p,q,r\in \spc{X}$,
-$\trig{\~p}{\~q}{\~r}=\modtrig\kappa(p q r)$ is defined 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$ is defined 
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
-$\trig{\~p}{\~q}{\~r}$ at $\~ p$ will be called the \emph{model angle} of triple $p$, $q$, $r$, and will be denoted by
+$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \emph{model angle} of triple $p$, $q$, $r$, and will be denoted by
 $\angk\kappa p q r$%
 \index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}.
 
@@ -146,7 +146,7 @@ In the notation of Section~\ref{model},
 \index{Alexandrov's lemma}
 \index{lemma!Alexandrov's lemma}
 \label{lem:alex}  
-Let $p,q,r,z$ be distinct points in a metric space such that $z\in \l]p r\r[$ and 
+Let $p,q,r,z$ be distinct points in a metric space such that $z\in \mathopen{]}p r\mathclose{[}$ and 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
 Then 
 the following expressions have the same sign:
@@ -169,45 +169,45 @@ with equality if and only if the expressions in (\ref{SHORT.lem-alex-difference}
 \[
 \dist{p}{q}{}+\dist{q}{z}{}+\dist{z}{p}{}\le \dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.
 \]
-Therefore the model triangle $\trig{\~p}{\~q}{\~z}=\modtrig\kappa p q z$ is defined.
+Therefore the model triangle $\trig{\tilde p}{\tilde q}{\tilde z}=\modtrig\kappa p q z$ is defined.
 Take 
-a point $\~r$ on the extension of 
-$[\~p \~z]$ beyond $\~z$ so that $\dist{\~p}{\~r}{}=\dist{p}{r}{}$ (and therefore $\dist{\~p}{\~z}{}=\dist{p}{z}{}$). 
+a point $\tilde r$ on the extension of 
+$[\tilde p \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde p}{\tilde r}{}=\dist{p}{r}{}$ (and therefore $\dist{\tilde p}{\tilde z}{}=\dist{p}{z}{}$). 
  
 From monotonicity of function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\ref{increase}), 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
-\item $\mangle\hinge{\~p}{\~q}{\~r}-\angk\kappa{p}{q}{r}$;
-\item $\dist{\~p}{\~r}{}-\dist{p}{r}{}$;
-\item $\mangle\hinge{\~z}{\~q}{\~r}-\angk\kappa{z}{q}{r}$.
+\item $\mangle\hinge{\tilde p}{\tilde q}{\tilde r}-\angk\kappa{p}{q}{r}$;
+\item $\dist{\tilde p}{\tilde r}{}-\dist{p}{r}{}$;
+\item $\mangle\hinge{\tilde z}{\tilde q}{\tilde r}-\angk\kappa{z}{q}{r}$.
 \end{enumerate}
 Since 
-\[\mangle\hinge{\~p}{\~q}{\~r}=\mangle\hinge{\~p}{\~q}{\~z}=\angk\kappa{p}{q}{z}\]
+\[\mangle\hinge{\tilde p}{\tilde q}{\tilde r}=\mangle\hinge{\tilde p}{\tilde q}{\tilde z}=\angk\kappa{p}{q}{z}\]
 and
-\[ \mangle\hinge{\~z}{\~q}{\~r}
-=\pi-\mangle\hinge{\~z}{\~p}{\~q}
+\[ \mangle\hinge{\tilde z}{\tilde q}{\tilde r}
+=\pi-\mangle\hinge{\tilde z}{\tilde p}{\tilde q}
 =\pi-\angk\kappa{z}{p}{q},\]
 the first statement follows.
 
-For the second statement, construct $\trig{\~q}{\~z}{r'}=\modtrig\kappa q z r$ on the opposite side of $[\~q\~z]$ from $\trig{\~p}{\~q}{\~z}$.  
+For the second statement, construct $\trig{\tilde q}{\tilde z}{r'}=\modtrig\kappa q z r$ on the opposite side of $[\tilde q\tilde z]$ from $\trig{\tilde p}{\tilde q}{\tilde z}$.  
 Since
-\[\dist{\~p}{r'}{}\le \dist{\~p}{\~z}{} + \dist{\~z}{r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
+\[\dist{\tilde p}{r'}{}\le \dist{\tilde p}{\tilde z}{} + \dist{\tilde z}{r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
 then 
 \begin{align*}
 \angk\kappa{q}{p}{z} + \angk\kappa{q}{z}{r} 
 &
 = 
-\mangle\hinge{\~q}{\~p}{\~z}+ \mangle\hinge{\~q}{\~z}{r'} 
+\mangle\hinge{\tilde q}{\tilde p}{\tilde z}+ \mangle\hinge{\tilde q}{\tilde z}{r'} 
 =
 \\
 &
 = 
-\mangle\hinge{\~q}{\~p}{r'}
+\mangle\hinge{\tilde q}{\tilde p}{r'}
 \le
 \\
 &\le  \angk\kappa q p r.
 \end{align*}
-Equality holds if and only  if $\dist{\~p}{r'}{}=\dist{p}{r}{}$, 
+Equality holds if and only  if $\dist{\tilde p}{r'}{}=\dist{p}{r}{}$, 
 as required.
 \qeds
 
@@ -219,12 +219,12 @@ Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} to be \ind
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\eqlbl{eq:angle-def}\]
-for $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$, if this limit exists.
+for $\bar x\in\mathopen{]}p x]$ and $\bar y\in\mathopen{]}p y]$, if this limit exists.
 
 Similarly to $\angk\kappa p{x}{y}$, 
 we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
 \[\side\kappa \hinge p x y=
-\side\kappa \l\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\r\},\]
+\side\kappa \left\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\right\},\]
 where the right hand side is defined on page~\pageref{page:model-side}.
 The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
  of hinge $\hinge p x y$.
@@ -317,11 +317,11 @@ Thus for any $\eps>0$,
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result follows.
 
-To define $s(t,\tau)$, consider three rays $\~\gamma^1$, $\~\gamma^2$, $\~\gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\~\gamma^1,\~\gamma^2)=\alpha^{12}+\eps$, $\mangle(\~\gamma^2,\~\gamma^3)=\alpha^{23}+\eps$ and $\mangle(\~\gamma^1,\~\gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+To define $s(t,\tau)$, consider three rays $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
 We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
-$\~\gamma^2(s)\in[\~\gamma^1(t)\ \~\gamma^3(\tau)]$. 
+$\tilde \gamma^2(s)\in[\tilde \gamma^1(t)\ \tilde \gamma^3(\tau)]$. 
 Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
 
@@ -329,7 +329,7 @@ Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 Prove that the sum of adjacent angles is at least $\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
-If $p\in \l] x y \r[$, then 
+If $p\in \mathopen{]} x y \mathclose{[}$, then 
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
 \end{thm}
@@ -453,7 +453,7 @@ and it is more natural to consider the \emph{upper angle}\index{angle!upper angl
 \[\mangle^\text{up}\hinge p x y
 \df
 \limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
-where $\bar x\in\l]p x\r]$ and $\bar y\in\l]p y\r]$.
+where $\bar x\in\mathopen{]}p x]$ and $\bar y\in\mathopen{]}p y]$.
 The triangle inequality (\ref{claim:angle-3angle-inq}) holds for upper angles as well.
 
 Euclidean cones are the simplest examples of warped products (see Chapter \ref{}). 

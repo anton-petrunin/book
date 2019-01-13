@@ -1084,17 +1084,17 @@ Set
 \begin{align*}
 v(R)&=\vol_m\oBall(p,R),
 &
-\~v(R)&=\vol_m\oBall(R)_{\Lob{m}{\kappa}}.
+\tilde v(R)&=\vol_m\oBall(R)_{\Lob{m}{\kappa}}.
 \end{align*}
 Then the function
-\[f\:R\mapsto \frac{v(R)}{\~v(R)}\] 
+\[f\:R\mapsto \frac{v(R)}{\tilde v(R)}\] 
 is not increasing and
 \[\lim_{R\to0+}f(R)
 =
-\frac{\vol_{m-1}\Sigma_p}{\vol_{m-1} \SS^{m-1}}.\]
+\frac{\vol_{m-1}\Sigma_p}{\vol_{m-1} \mathbb{S}^{m-1}}.\]
 
 In particular, by Corollary~\ref{thm:simicont-Sigma},
-\[v(R)\le \~v(R)\]
+\[v(R)\le \tilde v(R)\]
 for any $R>0$.
 \end{thm}
 
@@ -1114,7 +1114,7 @@ Set
 \begin{align*}
 s(R)&=\vol_m\Sphere[p,R],
 \\
-\~s(R)&=\vol_m\Sphere(R)_{\Lob{m}{\kappa}}=(\sn\kappa R)^{m-1}\cdot\vol_{m-1}\SS^{m-1}.
+\tilde s(R)&=\vol_m\Sphere(R)_{\Lob{m}{\kappa}}=(\sn\kappa R)^{m-1}\cdot\vol_{m-1}\mathbb{S}^{m-1}.
 \end{align*}
 The function 
 \[
@@ -1151,11 +1151,11 @@ According to Corollary~\ref{cor:coarea-for-dist-function},
 \begin{align*}
 v(R)&=\int\limits_0^R s(r)\cdot\d r=\int\limits_0^R h(r)\cdot\d_r \mu,
 \\
-\~v(R)&=\int\limits_0^R\tilde s(r)\cdot\d r=\mu(0,R).
+\tilde v(R)&=\int\limits_0^R\tilde s(r)\cdot\d r=\mu(0,R).
 \end{align*}
 Therefore
 \begin{align*}
-f(R)&=\frac{v(R)}{\~v(R)}=
+f(R)&=\frac{v(R)}{\tilde v(R)}=
 \\
 &=\frac1{\mu(0,R)}\cdot\int\limits_0^R h(r)\cdot\d_r\mu=
 \\
@@ -1175,7 +1175,7 @@ that is, $f(R)$ is non-increasing in $R$ in the interval $(0,\varpi\kappa)$.
 It remains to prove that 
 \[\lim_{R\to0+}f(R)
 =
-\frac{\vol_{m-1}\Sigma_p}{\vol_{m-1} \SS^{m-1}}.\]
+\frac{\vol_{m-1}\Sigma_p}{\vol_{m-1} \mathbb{S}^{m-1}}.\]
 
 Note that
 \[\lim_{R\to0+}f(R)=\lim_{R\to0+} \frac{\vol_m\oBall(p,R)}{\alpha_m\cdot R^{ m}}.\]
@@ -1305,9 +1305,9 @@ Set
 \begin{align*}
 v(R)&=\vol_m\oBall[S,R],
 &
-\~v(R)&=\vol_m\oBall[R]_{\Lob{m}{\kappa}}.
+\tilde v(R)&=\vol_m\oBall[R]_{\Lob{m}{\kappa}}.
 \end{align*}
 Prove that the function
-\[f\:R\mapsto \frac{v(R)}{\~v(R)}\] 
+\[f\:R\mapsto \frac{v(R)}{\tilde v(R)}\] 
 is non-increasing.
 \end{thm}

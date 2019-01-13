@@ -130,7 +130,7 @@ It remains to apply \ref{lem:count-der} for a dense countable subset $Q$ of $\oB
 \[\<\xi,\beta^+\>+\<\xi,\beta^+\>\ge 0.\eqlbl{eq:geod-polar}\]
 
 Choose $q\in \Str(p)$ so that $\xi=\dir p q$ is uniquely defined.
-From \ref{thm:d_q dist_p(v)=-<dri p q, v>}, we have $(\d_p\distfun{q}{}{})(x)\z=-\<\xi,x\>$.
+From \ref{thm:d_q dist_p(v)=-<dri p q, v>}, we have $(\dd_p\distfun{q}{}{})(x)\z=-\<\xi,x\>$.
 Since $y_q$ is semiconcave, $y_q^+(t_0)+y_q^-(t_0)\le 0$.
 Further,
 \[y^\pm_q(t_0)=-\sn\kappa\dist[{{}}]{p}{q}{}\cdot\<\xi,\beta^\pm(t_0)\>\] 
@@ -403,8 +403,8 @@ the theorem follows.
 Set 
 $$\Sigma_\o=\lim_{n\to\o}\Sigma_{p_n};$$ 
 clearly $K_\o=\Cone\Sigma_\o$.
-According to Corollary~\ref{cor:S>Sigma}, $\Sigma_{p_n}\le \SS^{m-1}$ for each $n$;
-thereofre $\Sigma_\o\le \SS^{m-1}$.
+According to Corollary~\ref{cor:S>Sigma}, $\Sigma_{p_n}\le \mathbb{S}^{m-1}$ for each $n$;
+thereofre $\Sigma_\o\le \mathbb{S}^{m-1}$.
 In particular $\Sigma_\o$ is compact.
 
 Choose $q_\infty\in \Str (p_\infty)$,
@@ -447,8 +447,8 @@ f_\infty(t)&=\dist{q_\infty}{\beta_\infty(t)}{},
 & f_n(t)&=\dist{q_n}{\beta_n(t)}{}.\\
 \intertext{Clearly, $f_n\to f_\infty$.
 Since $q_\infty\in \Str(p_\infty)$ and $q_n\in \Str_n(p_n)$, \ref{thm:d_q dist_p(v)=-<dri p q, v>} implies}
-(\d_{p_\infty}\distfun{q_\infty}{}{})(x)&\equiv-\<\xi_\infty,x\>,
-&(\d_{p_n}\distfun{q_n}{}{})(x)&\equiv-\<{\xi_n},x\>.
+(\dd_{p_\infty}\distfun{q_\infty}{}{})(x)&\equiv-\<\xi_\infty,x\>,
+&(\dd_{p_n}\distfun{q_n}{}{})(x)&\equiv-\<{\xi_n},x\>.
 \intertext{Thus, the functions $f_\infty$ is differentiable at $t_0$ and}
 f_\infty'(t_0)&=\mp\<\xi_\infty,\beta_\infty^\pm(t_0)\>,
 & f^\pm_n(t_0)&=-\<\xi_n,\beta^\pm_n(t_0)\>.
@@ -486,13 +486,13 @@ Therefore it remains to show that
 Note that since $\map$ is non-contracting and norm-preserving, we have
 \[
 \begin{aligned}
-\mangle\l({\map(\xi_\infty)},\map(\beta_\infty^\pm(t_0))\r)
+\mangle\left({\map(\xi_\infty)},\map(\beta_\infty^\pm(t_0))\right)
 &\ge
-\mangle\l({\xi_\infty},{\beta_\infty^\pm(t_0)}\r),
+\mangle\left({\xi_\infty},{\beta_\infty^\pm(t_0)}\right),
 \\
-\mangle\l({\map(\beta_\infty^+(t_0))},{\map(\beta_\infty^-(t_0))}\r)
+\mangle\left({\map(\beta_\infty^+(t_0))},{\map(\beta_\infty^-(t_0))}\right)
 &\ge
-\mangle\l({\beta_\infty^+(t_0)},{\beta_\infty^-(t_0)}\r).
+\mangle\left({\beta_\infty^+(t_0)},{\beta_\infty^-(t_0)}\right).
 \end{aligned}
 \eqlbl{eq:ang-non-contr}
 \]
@@ -630,7 +630,7 @@ therefore
 \begin{align*}
 f\circ\gamma_\infty(t)
 &=
-f\l(t\cdot\gamma^+(0)\r)
+f\left(t\cdot\gamma^+(0)\right)
 =
 \\
 &=
@@ -683,10 +683,10 @@ if $f$ is native,
 then subfunction $f+\tfrac{1}{2\cdot s}\cdot\distfun[2]{x}{}{}$ is native, see \ref{thm:native-operations}.
 Thus, if $x$ is a foot point of $y\in\Dom f_s$
 then, from the existence of supporting vector, we have 
-$\d_y f+\tfrac{1}{2\cdot s}\cdot\d_y\distfun[2]{x}{}{}=0$.
+$\dd_y f+\tfrac{1}{2\cdot s}\cdot\dd_y\distfun[2]{x}{}{}=0$.
 It follows that the geodesic $[x y]$ is uniquely defined,
 $\ddir x y\in \Lin_y$ and 
-$(\d_x f)(v)
+$(\dd_x f)(v)
 =
 \tfrac{1}{s}\cdot\<\ddir x y,v\>$ for any $v\in\T_x$.
 
@@ -699,7 +699,7 @@ It is sufficient to show that for any interior value $t_0 \in \II$, $s>0$ and al
 \[f_s\circ\gamma(t_0+\tau)
 \le
 f_s\circ\gamma(t_0)
-+ \Const\cdot\tau+\tfrac{1}{2}\cdot\l[\lambda-O(s)\r]\cdot\tau^2.
++ \Const\cdot\tau+\tfrac{1}{2}\cdot\left[\lambda-O(s)\right]\cdot\tau^2.
 \eqlbl{eq:lamb-conc-1}\]
 
 \begin{wrapfigure}{r}{35mm}
@@ -718,7 +718,7 @@ f_s\circ\gamma(t_0)
 Set $y=\gamma(t_0)$ and $y_\tau=\gamma(t_0+\tau)$.
 Let $x$ be a foot point of $y$; 
 that is, the function $f + \tfrac{1}{2\cdot s}\cdot\distfun[2]{y}{}{}$ has a minimum at $x$
-(we can assume $x\not=y$, otherwise \ref{eq:lamb-conc-1} follows since $f_s\le f$, $\d_x f\equiv0$ and $\dist[2]{y}{y_\tau}{}\le\tau$).
+(we can assume $x\not=y$, otherwise \ref{eq:lamb-conc-1} follows since $f_s\le f$, $\dd_x f\equiv0$ and $\dist[2]{y}{y_\tau}{}\le\tau$).
 
 Set $\alpha=\mangle(\ddir y x,\gamma^+(0))$ and $\beta_\tau=\mangle\hinge x y {y_\tau}$.
 Since $\T_p$ splits in the direction of $\ddir x y$,
@@ -732,14 +732,14 @@ First note that
 \[\dist[2]{x_\tau}{y_\tau}{}
 \le \dist[2]{x}{y}{} +[1+O(s^2)]\cdot\tau^2.
 \eqlbl{eq:lamb-conc-7}\]
-Indeed, for any $p\in \spc{L}$, the function $\tfrac{1}{2}\cdot\distfun[2]{p}{}{}$ is $\l[1+O(r^2)\r]$-concave in $\oBall(p,r)$.
+Indeed, for any $p\in \spc{L}$, the function $\tfrac{1}{2}\cdot\distfun[2]{p}{}{}$ is $\left[1+O(r^2)\right]$-concave in $\oBall(p,r)$.
 Thus, from \ref{eq:lamb-conc-4} and \ref{thm:prop-gexp:func}, for all small $\tau$,  we have
 \[\begin{aligned}
 \dist[2]{x_\tau}{y_\tau}{}
-&\le \dist[2]{x}{y_\tau}{}+2\cdot\tau\cdot\dist[{{}}]{x}{y_\tau}{}\cdot\cos(\alpha+\beta_\tau)+\l[1+O(s^2)\r]\cdot\tau^2,
+&\le \dist[2]{x}{y_\tau}{}+2\cdot\tau\cdot\dist[{{}}]{x}{y_\tau}{}\cdot\cos(\alpha+\beta_\tau)+\left[1+O(s^2)\right]\cdot\tau^2,
 \\
 \dist[2]{x}{y_\tau}{}
-&\le \dist[2]{x}{y}{}-2\cdot\tau\cdot\dist[{{}}]{x}{y}{}\cdot\cos\alpha+\l[1+O(s^2)\r]\cdot\tau^2
+&\le \dist[2]{x}{y}{}-2\cdot\tau\cdot\dist[{{}}]{x}{y}{}\cdot\cos\alpha+\left[1+O(s^2)\right]\cdot\tau^2
 \end{aligned}
 \eqlbl{eq:lamb-conc-5}\]
 Note also that $\dist{x}{y_\tau}{}
@@ -757,7 +757,7 @@ Further, from \ref{thm:prop-gexp:func},
 \[\begin{aligned}
 f(x_\tau)
 &\le
-f(x)+(\d_x f)(\xi_\tau)\cdot \tau+\tfrac\lambda2\cdot\tau^2
+f(x)+(\dd_x f)(\xi_\tau)\cdot \tau+\tfrac\lambda2\cdot\tau^2
 =
 \\
 &=
@@ -846,7 +846,7 @@ $\kappa$-monotonic curves with respect to $a$ and $b$ respectively.
 Assume 
 \[a\le b,\ \ \alpha_1(b)=\alpha_2(b)\ \ \text{and}\ \
 \alpha^+_1(b)=\alpha^+_2(b).\] Then its joint
-\[\beta\:[a,\infty)\to \spc{L},\ \ \beta(t)=\l[
+\[\beta\:[a,\infty)\to \spc{L},\ \ \beta(t)=\left[
 \begin{matrix}
 \alpha_1(t)&\text{if}&t< b\\
 \alpha_2(t)&\text{if}&t\ge b
@@ -888,7 +888,7 @@ again Alexandrov's lemma.
 To prove \ref{eq:ext-mono-3}, set
 $\phi=\sup\set{\tangle\mc\kappa(\alpha_2|_b^t,p)}{t>b}$.
 Since $\alpha_2$ is $\kappa$-monotonic w.r.t. $b$, 
-we have $\cos\phi=-(\d_q\distfun{p}{}{})(v)$,
+we have $\cos\phi=-(\dd_q\distfun{p}{}{})(v)$,
 where $v=\alpha_1^+(b)=\alpha_2^+(b)$.
 In particular,
 \[\phi=\lim_{t\to b+}\tangle\mc\kappa(\alpha_1|^t_b,p).\]
@@ -913,7 +913,7 @@ Moreover, if for some $x\in \spc{L}$  we have $\alpha_n(0)=x$ and $|\alpha^+(0)|
 \parit{Proof of \ref{lem:mono-lim}.} 
 The first part follows directly from Definition~\ref{def:mono}.
 Note that for any $p$, 
-\[(\distfun{p}{}{}\circ\alpha)^+(0)=-\cos\l(\lim_{t\to0+}\tangle\mc\kappa(\alpha|_0^t,p)\r).\]
+\[(\distfun{p}{}{}\circ\alpha)^+(0)=-\cos\left(\lim_{t\to0+}\tangle\mc\kappa(\alpha|_0^t,p)\right).\]
 From monotonicity, the limit is defined.
 Hence $(\distfun{p}{}{}\circ\alpha)^+(0)$ and, from \ref{lem:count-der:rl}, also $\alpha^+(0)$ are defined.
 
@@ -1064,7 +1064,7 @@ Assume
 \[a\le b,\ \ \gamma_1(b)=\gamma_2(b),\ \  \gamma^-_1(b)\ \
 \text{is polar to}\ \ \gamma^+_2(b)\ \  \text{and}\ \ |\gamma^-_1(b)|\ge|\gamma^+_2(b)|\] 
 then its joint
-\[\gamma\:[a,\infty)\to \spc{L},\ \ \gamma(t)=\l[
+\[\gamma\:[a,\infty)\to \spc{L},\ \ \gamma(t)=\left[
 \begin{matrix}
 \gamma_1(t)&\text{if}&t\le b\\
 \gamma_2(t)&\text{if}&t\ge b
@@ -1104,7 +1104,7 @@ Set $s=b-a$.
 Clearly, if  $s>0$ is sufficiently small, we have 
 $\mangle(\xi,\nu)<\eps$.
 Further, from $\kappa$-convexity of $\gamma^a$ it follows that 
-\[\mu_\gamma(a,a+\tfrac{s}{3}) <\Const\cdot\l[\mangle(\xi,\nu)\r]^2.\]
+\[\mu_\gamma(a,a+\tfrac{s}{3}) <\Const\cdot\left[\mangle(\xi,\nu)\right]^2.\]
 The following exercise completes the proof.\qeds
 
 \claim{Exercise}
@@ -1323,7 +1323,7 @@ $\xi_i=\tfrac{\gamma^+(a_i)}{|\gamma^+(a_i)|}
 \item\label{entr-estim} 
 If $x_i=\gamma(a_i)$, $y_i=\gamma(b_i)$ and $\nu_i=\dir{x_i}{y_i}$, then $\mangle(\xi_i,\nu_i)<\eps$ and
 \[\mu_\gamma(a_i,b_i)
-\le \eps\cdot\l[\mangle(\xi_i,\nu_i)+b_i-a_i\r].\]
+\le \eps\cdot\left[\mangle(\xi_i,\nu_i)+b_i-a_i\right].\]
 \end{enumerate}
 After that we will show that $\mu_{\gamma_\eps}(0,\tfrac{r}{6})\to 0$ as $\eps\to0$.
 
@@ -1356,7 +1356,7 @@ From the condition~(\ref{entr-estim}) above, we have that
 \[
 \mu_{\gamma_\eps}(0,\tfrac{r}{6})
 <
-\eps\cdot\l[\tfrac{r}{6}+\sum_i\mangle(\xi_i,\nu_i)\r].\]
+\eps\cdot\left[\tfrac{r}{6}+\sum_i\mangle(\xi_i,\nu_i)\right].\]
 Therefore, to show that $\mu_{\gamma_\eps}(0,\tfrac{r}{6})\to 0$, it only remains to show
 that $\sum_i\mangle(\xi_i,\nu_i)$ is bounded above by a constant independent
 of $\eps$.
@@ -1365,7 +1365,7 @@ Since $\xi_i\in\Sigma_{x_i}\mathfrak C$, according to claim \ref{inq:di-inq}, fo
 \[
 \mangle(\xi_i,\nu_i)
 <
-2\cdot\l[\mangle(\dir{x_i}{q_j},\xi_i)-\mangle(\dir{x_i}{q_j},\nu_i)\r]
+2\cdot\left[\mangle(\dir{x_i}{q_j},\xi_i)-\mangle(\dir{x_i}{q_j},\nu_i)\right]
 \eqlbl{eq:inq:di-inq-1}\]
 and moreover,
 \[
@@ -1419,13 +1419,13 @@ Using \ref{eq:inq:di-inq-2}, \ref{eq:inq:di-inq-3} and \ref{eq:inq:di-inq-4}, we
 \begin{align*}
 \mangle(\xi_i,\nu_i)
 &<
-2\cdot\l[\mangle(\dir{x_i}{q_j},\xi_i)-\mangle(\dir{x_i}{q_j},\nu_i)\r]
+2\cdot\left[\mangle(\dir{x_i}{q_j},\xi_i)-\mangle(\dir{x_i}{q_j},\nu_i)\right]
 \le
 \\
-&\le 10\cdot\l[\cos\mangle(\dir{x_i}{q_j},\nu_i)-\cos\mangle(\dir{x_i}{q_j},\xi_i)\r]
+&\le 10\cdot\left[\cos\mangle(\dir{x_i}{q_j},\nu_i)-\cos\mangle(\dir{x_i}{q_j},\xi_i)\right]
 \le
 \\
-&\le 20\cdot\l[\<\dir{x_i}{q_j},\gamma^-(a_i)\>-\<\dir{y_i}{q_j},\gamma^-(b_i)\>+\lambda (b_i-a_i)\r]
+&\le 20\cdot\left[\<\dir{x_i}{q_j},\gamma^-(a_i)\>-\<\dir{y_i}{q_j},\gamma^-(b_i)\>+\lambda (b_i-a_i)\right]
 =
 \\
 &=20\cdot\theta_{q_j}[a_i,b_i)
@@ -1521,15 +1521,15 @@ Thus, $\xi$ is polar to itself.
 Otherwise, if $\Sigma_\xi X=\emptyset$ and $X$ contains at least two points, choose $\xi^*$ to be closest point in $X\backslash\xi$ from $\xi$. 
 Since $X\subset \Sigma_p$ is extremal (???), for any $\eta\in \Sigma_p$ we have $\mangle\hinge{\xi^*}\eta\xi\le\tfrac\pi2$ and since $\Sigma_\xi X=\emptyset$ we have $\mangle\hinge\xi\eta{\xi^*}\le\tfrac\pi2$.
 Therefore, in the model spherical triangle 
-$\trig{\~\xi}{\~\eta}{\~\xi^*}
+$\trig{\tilde \xi}{\tilde \eta}{\tilde \xi^*}
 =
 \modtrig1(\xi\eta\xi^*)$, 
-we have $\mangle\~\xi\le \tfrac\pi2$ 
-and $\mangle\~\xi^*\le \tfrac\pi2$.
+we have $\mangle\tilde \xi\le \tfrac\pi2$ 
+and $\mangle\tilde \xi^*\le \tfrac\pi2$.
 Hence 
 \begin{align*}
 \mangle(\xi,\eta)+\mangle(\eta,\xi^*)
-&=\dist{\~\xi}{\~\eta}{}+\dist{\~\eta}{\~\xi^*}{}
+&=\dist{\tilde \xi}{\tilde \eta}{}+\dist{\tilde \eta}{\tilde \xi^*}{}
 \le\pi.
 \end{align*}
 \qedsf
@@ -1569,7 +1569,7 @@ Is it true that in a $\Alex{}$ space without boundary there is an infinitely lon
 As it was noted by A.~Lytchak, the these two questions can be reduced to the following:
 Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex{}$ space and $\partial \spc{L}=\emptyset$. 
 Set
-\[V(r)=\int\limits_\spc{L}\vol_m\oBall(x,r)\cdot\d_x\vol_m,\]
+\[V(r)=\int\limits_\spc{L}\vol_m\oBall(x,r)\cdot\dd_x\vol_m,\]
 then \[V(r)=\vol_m\spc{L}\cdot\Const_m\cdot r^m+o(r^{m+1}).\]
 The technique of \emph{tight maps} makes it possible to prove only that
 \[V(r)=\vol_m\spc{L}\cdot\Const_m\cdot r^m+O(r^{m+1}).\]
@@ -1582,7 +1582,7 @@ r^m\cdot\Const_m\cdot\vol_m \spc{L} +r^{m+1}\cdot\Const'_m\cdot\vol_{m-1}\partia
 \smallskip
 
 \emph{Variation of turn} of a broken geodesic $a_0 a_2\dots a_n$ can be defined as sum of angle excesses
-\[\sum_{i=1}^{n-1}\l(\pi-\mangle\hinge{a_i}{a_{i+1}}{a_{i-1}}\r).\]
+\[\sum_{i=1}^{n-1}\left(\pi-\mangle\hinge{a_i}{a_{i+1}}{a_{i-1}}\right).\]
 Further, variation of turn for a curve can be defined as lower limit of turns of broken geodesics that converge to a given curve (you can choose in which sense).
 
 \begin{thm}{Question}
@@ -1592,7 +1592,7 @@ Is it true that any quasigeodesic in $\spc{L}$ defined on a bounded interval has
 
 If the all tangent spaces of $\spc{L}$ are sufficiently close to $\EE^m$, then the answer is ``yes''.
 In this case variation of turn can be estimated by the \emph{total turn to a point}\index{turn to the point $p$}, which defined as follows:
-\[\sum_{i=1}^{n-1}\max\l\{0,\pi-\angk\kappa{a_i}{a_{i-1}}{p}-\angk\kappa{a_i}{a_{i+1}}{p}\r\}.\]
+\[\sum_{i=1}^{n-1}\max\left\{0,\pi-\angk\kappa{a_i}{a_{i-1}}{p}-\angk\kappa{a_i}{a_{i+1}}{p}\right\}.\]
 
 
 

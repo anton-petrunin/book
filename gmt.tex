@@ -412,7 +412,7 @@ of a set $A\subset \spc{X}$.
 Assume $\mu\, A<\infty$,
 then there is a countable collection of disjoint balls 
 $\{B_n\}_{n\in\IndexSet}\subset\mathfrak{B}$ such that
-$$\mu\l(A\l\backslash\bigcup_{n\in\IndexSet}B_n\r.\r)=0.$$
+$$\mu\left(A\left\backslash\bigcup_{n\in\IndexSet}B_n\right.\right)=0.$$
 \end{thm}
 
 For the proof see for example \cite[Theorem 1.6]{heinonen};
@@ -448,7 +448,7 @@ Assume $A$ is a subset in $\spc{X}$ such that $\mu\, A<\infty$
 and let $\mathfrak{B}$ be a Vitali covering of $A$.
 Then there is at most countable collection of disjointed balls 
 $\{B_n\}_{n\in\IndexSet}\subset\mathfrak{B}$ such that
-$$\mu\l(A\l\backslash\bigcup_{n\in\IndexSet}B_n\r.\r)=0.$$
+$$\mu\left(A\left\backslash\bigcup_{n\in\IndexSet}B_n\right.\right)=0.$$
 
 \end{thm}
 
@@ -471,7 +471,7 @@ $\<{*},{*}\>$
 on $V$
 leads to canonical inner product on $V^{\wedge n}$.
 This is the (necessary unique) inner product such that
-\[\l\< v^1\wedge\cdots\wedge v^n, v^1\wedge\cdots\wedge v^n\r\> 
+\[\left\< v^1\wedge\cdots\wedge v^n, v^1\wedge\cdots\wedge v^n\right\> 
 =
 1\]
 for any orthonormal system of vectors $v^1,\cdots,v^n$ in $V$.
@@ -499,9 +499,9 @@ Note that
 \[|L^{\wedge n}|
 =
 \sup_A
-\l\{
+\left\{
 \vol_n [L(A)]
-\r\}
+\right\}
 \]
 where $A$ runs along all $n$-dimesional parallelepipeds in $V$ 
 with unit $n$-volume.
@@ -512,9 +512,9 @@ Let $\kay\ge m$
 and $f\:\EE^\kay\subto\EE^m$ be smooth submap
 then
 \[
-\int\limits_Q|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\int\limits_Q|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay
 =
-\int\limits_{f(Q)}\vol_{\kay-m}( f^{-1}(y)\cap Q)\cdot\d_y\vol_m.
+\int\limits_{f(Q)}\vol_{\kay-m}( f^{-1}(y)\cap Q)\cdot\dd_y\vol_m.
 \eqlbl{eq:coarea}
 \]
 for any Borel set $Q\subset \Dom f$.
@@ -596,28 +596,28 @@ A finite union of $n$-rectifiable sets is $n$-rectifiable.
 
 Let $f\:\RR^m\subto\RR$ be a semiconvex subfunction.
 In this case the differential 
-\[\d_xf\:\RR^m\subto\RR\] 
+\[\dd_xf\:\RR^m\subto\RR\] 
 can be defined as the limit
-\[\d_xf(v)=\lim_{\eps\to0}\frac{f(x+\eps\cdot v)-f(x)}{\eps}.\]
+\[\dd_xf(v)=\lim_{\eps\to0}\frac{f(x+\eps\cdot v)-f(x)}{\eps}.\]
 It is defined for any $x\in \Dom f$ and it is a convex 
 homogineus function;
 that is,
-\[\lam\cdot\d_xf(v)=\d_xf(\lam\cdot v)\]
+\[\lam\cdot\dd_xf(v)=\dd_xf(\lam\cdot v)\]
 for any 
 $\lam\ge0$.
 
 A point $x\in\Dom f$ is called 
 \emph{regular point of $f$}\index{regular point of semiconvex function} 
-if $\d_xf$ is linear.
+if $\dd_xf$ is linear.
 We say that $x$ is 
 \emph{$\kay$-regular}\index{regular!$\kay$-regular} 
-if $\d_xf$ is linear on a $\kay$-dimensional subspace of $\RR^m$.
+if $\dd_xf$ is linear on a $\kay$-dimensional subspace of $\RR^m$.
 We say that $x$ is 
 \emph{$(\kay,\eps)$-regular}\index{regular!$(\kay,\eps)$-regular}
 if there is a  $\kay$-dimensional subspace $V$ of $\RR^m$ 
-such that the restriction $\d_xf|V$ is \emph{$\eps$-linear}\index{$\eps$-linear function};
+such that the restriction $\dd_xf|V$ is \emph{$\eps$-linear}\index{$\eps$-linear function};
 that is, there is a linear function $\ell\:V\to\RR$ such that 
-\[\ell(v)\le\d_xf(v)< \ell(v)+\eps\cdot|v|\]
+\[\ell(v)\le\dd_xf(v)< \ell(v)+\eps\cdot|v|\]
 for any nonzero vector $v\in V$. 
 
 The subsets of 

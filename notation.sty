@@ -31,15 +31,12 @@
 
 \def\:{\colon}
 %\newcommand*{\?}{%\!\mathrel{\vcenter{\offinterlineskip\hbox{.}\vskip-0.75ex\hbox{.}\vskip-0.75ex\hbox{.}}}}%%%%???VERTICAL...
-\def\~{\tilde}
 
 
 \def\ge{\geqslant}
 \def\le{\leqslant}
 \def\lege{\lessgtr}
 \def\gele{\gtrless}
-\def\l{\hskip-0.1em\left}
-\def\r{\right}
 \def\<{\langle}
 \def\>{\rangle}
 \def\drang{\hbox{$\rangle\hskip-0.25em\rangle\hskip-0.1em$}}
@@ -196,14 +193,15 @@
 \def\MD{\mathop{\rm MD}\nolimits}
 \def\FK{\mathcal{F}K}
 
-\def\d{\bm{d}}
+\def\dd{\bm{d}}
 %{\lefteqn{\phantom{I}}\text{\bf\textit{d}}}
 %\def\geod{\vcenter{\offinterlineskip\vskip.3ex\hbox{\rm\hskip0.05em\textgamma}}^{\circ}}
 \def\geod{\mathrm{geod}}
 %\def\geodpath{\vcenter{\offinterlineskip\vskip.3ex\hbox{\rm\hskip0.05em\textgamma}}}
 \def\geodpath{\mathrm{path}}
 
-\newcommand*{\under}[1]{\text{\it \c #1}}%for the same variable under the integral
+\newcommand*{\under}[1]{\textit{\c{#1}}}
+%\def\under{}%[1]{#1}for the same variable under the integral
 
 \def\subto{\mathrel{\mathrel\circ\joinrel\hskip-0.15em\to}}
 \def\t{\text}
@@ -245,25 +243,25 @@
 
 \def\|{\Arrowvert}
 
-%\newcommand*{\set}[2]{\l\{\,\l.{#1}\vphantom{#2}\,\r\arrowvert\,{#2}\,\r\}}
-\newcommand*{\set}[2]{\l\{\,{#1}\ {:}\ {#2}\,\r\}}
+%\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right\arrowvert\,{#2}\,\right\}}
+\newcommand*{\set}[2]{\left\{\,{#1}\ {:}\ {#2}\,\right\}}
 
 
 %angles-hinges-trigonometry
 \def\mangle{\measuredangle}
-\def\tangle{\text{\rlap{$\~{\text{\phantom{n}}}$}{$\mangle$}}}
-%{{\~\mangle}}
+\def\tangle{\text{\rlap{$\tilde{\text{\phantom{n}}}$}{$\mangle$}}}
+%{{\tilde\mangle}}
 
 \newcommand*{\mc}[1]{^{#1}}%{^{\scriptscriptstyle{#1}}}
 \let\oldvarpi\varpi\newcommand*\newvarpi[1]{\oldvarpi{}^{{#1}}}\let\varpi\newvarpi
 %\def\varpi{{\scriptstyle\Pi}\mc}
 \newcommand*{\trig}[3]{[{#1}{#2}{#3}]}
-\newcommand*{\modtrig}[1]{{\~\triangle}\mc{#1}}
+\newcommand*{\modtrig}[1]{{\tilde\triangle}\mc{#1}}
 \newcommand*{\hinge}[3]{[#1\,{}^{#2}_{#3}]}
 \newcommand*{\angk}[4]{\tangle\mc{#1}(#2\,{}^{#3}_{#4}\hspace{-0.2ex})}
-\newcommand*{\sdk}[4]{\~\boxdot\mc{#1}_#2({#3},{#4})}
-\newcommand*{\angkk}[4]{\tangle\mc{#1}\l(#2\,{}^{#3}_{#4}\hspace{-0.2ex}\r)}%as \angk+big()
-\newcommand*{\side}[1]{\mathop{\~\curlyvee}\nolimits\mc{#1}}
+\newcommand*{\sdk}[4]{\tilde\boxdot\mc{#1}_#2({#3},{#4})}
+\newcommand*{\angkk}[4]{\tangle\mc{#1}\left(#2\,{}^{#3}_{#4}\hspace{-0.2ex}\right)}%as \angk+big()
+\newcommand*{\side}[1]{\mathop{\tilde\curlyvee}\nolimits\mc{#1}}
 \newcommand*{\sn}[1]{\mathrm{sn}\mc{#1}}
 \newcommand*{\cs}[1]{\mathrm{cs}\mc{#1}}
 \newcommand*{\md}[1]{\mathrm{md}\mc{#1}}

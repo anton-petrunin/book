@@ -107,16 +107,16 @@ Note that
 %Also,
 \[
 \mdk(x)=\int\limits_0^x
-\snk(x)\cdot\d x \ \t{ for }\ \ x\le \varpi\kappa
+\snk(x)\cdot\dd x \ \t{ for }\ \ x\le \varpi\kappa
 \]
 %In other words, $\md\kappa(x)=1/\kappa$ for all $x\ge\varpi\kappa$ and otherwise
 %\[\md\kappa(x) = 
 %\tfrac{1}{2}\cdot x^2+\sum_{n>1}\tfrac{(-\kappa)^{n-1}}{(2\cdot n)!}\cdot x^{2\cdot n}
 %=
 %\left[\begin{aligned} 
-%\tfrac{1}{\kappa}&\cdot\l[1-\cos(x\cdot\sqrt{\kappa} )\r]  && {\text{if }} & \kappa &> 0 \\
+%\tfrac{1}{\kappa}&\cdot\left[1-\cos(x\cdot\sqrt{\kappa} )\right]  && {\text{if }} & \kappa &> 0 \\
 % \tfrac{1}{2}&\cdot x^2                          && {\text{if }} & \kappa&=0 \\
-%\tfrac{1}{\kappa}&\cdot\l[1-\cosh(x\cdot\sqrt{-\kappa})\r] && {\text{if }} & \kappa &< 0
+%\tfrac{1}{\kappa}&\cdot\left[1-\cosh(x\cdot\sqrt{-\kappa})\right] && {\text{if }} & \kappa &< 0
 %\end{aligned}\r..\]
 %Set $\sn\kappa=(\md\kappa)'$ and $\cs\kappa=(\md\kappa)''$\index{$\sn\kappa$}\index{$\cs\kappa$}.
 %The functions $\sn\kappa, \cs\kappa:\RR_{\ge}\to\RR$ satisfy the equation $y''+\kappa\cdot y=0$,  
@@ -159,7 +159,7 @@ this way we define $\side\kappa\{\phi;b,c\}$ for some negative values of $b$ and
 
 \begin{subthm}{md-diff-eq}
 For fixed $a$ and $\phi$, the function 
-\[y(t)=\md\kappa\l(\side\kappa\{\phi;a,t\}\r)\]
+\[y(t)=\md\kappa\left(\side\kappa\{\phi;a,t\}\right)\]
  satisfies the following differential equation:
 \[y''+\kappa\cdot y=1.\]
 \end{subthm}
@@ -205,18 +205,18 @@ All the properties except Alexandrov's lemma (\ref{SHORT.lem:alex-0}) can be sho
 
 The above formulas easily imply  the cosine law in $\Lob2\kappa$, which can be expressed as follows
 \[\cos\phi
-=\l[\begin{aligned}
+=\left[\begin{aligned}
 &\frac{b^2+c^2-a^2}{2\cdot b\cdot c}
 &\text{if}&\ \ \kappa=0
 \\
-%&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
-%&\text{if}&\ \ \kappa\not=0
 &\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
 &\text{if}&\ \ \kappa\not=0
-\end{aligned}\r.\]
+&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
+&\text{if}&\ \ \kappa\not=0
+\end{aligned}\right.\]
 
 However, rather than using these explicit formulas,  we mainly will use
-the properties of $\~\mangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equalities}.
+the properties of $\tangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equalities}.
 
 \section{Hemisphere lemma}\label{curves-in-model}
 
@@ -234,12 +234,12 @@ the properties of $\~\mangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equal
 For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, $\le2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
 \end{thm}
 
-\parit{Proof.} By rescaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\SS^2$.
-Let $\alpha$ be a closed curve in $\SS^2$ of length $2\cdot\ell$.
+\parit{Proof.} By rescaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\mathbb{S}^2$.
+Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
 Assume $\ell<\pi$.
 Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
-Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\SS^2$.  
+Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\mathbb{S}^2$.  
 Let $z$ be the midpoint of  $[pq]$.  
 We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
 If not, $\alpha$ intersects the boundary  great circle in a point say $r$.

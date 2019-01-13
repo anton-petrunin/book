@@ -27,52 +27,52 @@ We say that  two triangles with a common vertex  \index{overlap}\emph{do not ove
 
 
 \begin{thm}{Overlap lemma} \label{lem:extend-overlap}
-Let $\trig{\~x^1}{\~x^2}{\~x^3}$ be a triangle in $\Lob2{\kappa}$.  Let $\~p^1,\~p^2,\~p^3$ be points such that, for any permutation $\{i,j,k\}$ of $\{1,2,3\}$, we have
+Let $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$ be a triangle in $\Lob2{\kappa}$.  Let $\tilde p^1,\tilde p^2,\tilde p^3$ be points such that, for any permutation $\{i,j,k\}$ of $\{1,2,3\}$, we have
 \begin{enumerate}[(i)]
 
 \item 
 \label{no-overlap:px=px}
-$\dist{\~p^i}{\~x^\kay}{}=\dist{\~p^j}{\~x^\kay}{}$,
-%$\dist{\~p^i}{\~x^\kay}{}=\dist{\~p^j}{\~x^\kay}{}$,
+$\dist{\tilde p^i}{\tilde x^\kay}{}=\dist{\tilde p^j}{\tilde x^\kay}{}$,
+%$\dist{\tilde p^i}{\tilde x^\kay}{}=\dist{\tilde p^j}{\tilde x^\kay}{}$,
 
 \item
 \label{no-overlap:orient-1}
-$\~p^i$ and $\~x^i$ lie in the same closed halfspace determined by $[\~x^j\~x^\kay]$,  
+$\tilde p^i$ and $\tilde x^i$ lie in the same closed halfspace determined by $[\tilde x^j\tilde x^\kay]$,  
 \end{enumerate}
 
-Assume no pair of triangles $\trig{\~p^i}{\~x^j}{\~x^\kay}$ overlap
+Assume no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^\kay}$ overlap
 then 
-\[\mangle{\~p^1} +\mangle {\~p^2}+\mangle{\~p^3}> 2\cdot\pi,\]
-where $\mangle\~p^i$ denotes $\mangle\hinge{\~p^i}{\~x^\kay}{\~x^j}$
+\[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi,\]
+where $\mangle\tilde p^i$ denotes $\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\tilde x^j}$
 for a permutation $\{i,j,k\}$ or $\{1,2,3\}$.
 \end{thm}
 
 \begin{wrapfigure}{r}{21mm}
 \begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/contr-no-overlap(1)}
-\lbl[lt]{12,15.5;{\small $\~p^1$}}
-\lbl[bl]{5.5,18;{\small $\~p^2$}}
-\lbl[r]{5,6.5;{\small $\~p^3$}}
-\lbl[lb]{4,25;$\~x^1$}
-\lbl[t]{2,0;$\~x^2$}
-\lbl[l]{18,16;$\~x^3$}
+\lbl[lt]{12,15.5;{\small $\tilde p^1$}}
+\lbl[bl]{5.5,18;{\small $\tilde p^2$}}
+\lbl[r]{5,6.5;{\small $\tilde p^3$}}
+\lbl[lb]{4,25;$\tilde x^1$}
+\lbl[t]{2,0;$\tilde x^2$}
+\lbl[l]{18,16;$\tilde x^3$}
 \end{lpic}
 \end{wrapfigure}
 
 \parbf{Remarks.}
 If $\kappa\le 0$, then overlap lemma can be proved without using condition (\ref{no-overlap:px=px}).
 This follows immediately from the formula that relates the sum of angles for the hexagon
-$[\~p^1\~x^2\~p^3\~x^1\~p^2\~x^3]$ and its area:
-\[ \mangle\~p^1
+$[\tilde p^1\tilde x^2\tilde p^3\tilde x^1\tilde p^2\tilde x^3]$ and its area:
+\[ \mangle\tilde p^1
 -
-\mangle\~x^2
+\mangle\tilde x^2
 +
-\mangle\~p^3
+\mangle\tilde p^3
 -
-\mangle\~x^1
+\mangle\tilde x^1
 +
-\mangle\~p^2
+\mangle\tilde p^2
 -
-\mangle\~x^3
+\mangle\tilde x^3
 =2\cdot\pi-\kappa\cdot{\area}.
 \]
 
@@ -84,38 +84,38 @@ An example for $\kappa>0$ can be constructed by perturbing the degenerate spheri
 
 
 
-\parit{Proof.}   Rotate the  triangle $\trig{\~p^3}{\~x^1}{\~x^2}$ around $\~x^1$ to make $[\~x^1\~p^3]$ coincide with $[\~x^1\~p^2]$.
-Let  $\dot x^2$ denote the image of $\~x^2$ after rotation. 
+\parit{Proof.}   Rotate the  triangle $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ around $\tilde x^1$ to make $[\tilde x^1\tilde p^3]$ coincide with $[\tilde x^1\tilde p^2]$.
+Let  $\dot x^2$ denote the image of $\tilde x^2$ after rotation. 
 Note that 
-$$\mangle\hinge{\~x^1}{\~x^3}{\dot x^2}
+$$\mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}
 =
-\min\{\,\mangle\hinge {\~x^1}{\~x^2}{\~p^3}
+\min\{\,\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}
 +
-\mangle\hinge {\~x^1}{\~p^2}{\~x^3},\,
-2\cdot\pi -(\mangle\hinge {\~x^1}{\~x^2}{\~p^3}
+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3},\,
+2\cdot\pi -(\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}
 +
-\mangle\hinge {\~x^1}{\~p^2}{\~x^3})\,\}.
+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3})\,\}.
 $$
 By (\ref{no-overlap:orient-1}), 
 the triangles 
-$\trig{\~p^3}{\~x^1}{\~x^2}$ 
-and $\trig{\~p^2}{\~x^3}{\~x^1}$ do not overlap if and only if 
+$\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ 
+and $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$ do not overlap if and only if 
 \[
-2\cdot\pi>\mangle\hinge {\~x^1}{\~x^2}{\~p^3}+\mangle\hinge {\~x^1}{\~p^2}{\~x^3}+\mangle\hinge {\~x^1}{\~x^2}{\~x^3}\eqlbl{eq:old-iii}\]
+2\cdot\pi>\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}\eqlbl{eq:old-iii}\]
 and
-\[\mangle\hinge{\~x^1}{\~x^3}{\~x^2}
+\[\mangle\hinge{\tilde x^1}{\tilde x^3}{\tilde x^2}
 > 
-\mangle\hinge{\~x^1}{\~x^3}{\dot x^2}.\eqlbl{eq:main-overlap}\]
+\mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}.\eqlbl{eq:main-overlap}\]
 The condition \ref{eq:main-overlap} holds if and only if 
-$\dist{\~x^2}{\~x^3}{}>\dist{\dot x^2}{\~x^3}{}$,
+$\dist{\tilde x^2}{\tilde x^3}{}>\dist{\dot x^2}{\tilde x^3}{}$,
 which in turn holds if and only if 
 \[
 \begin{aligned}
-\mangle\~p^1
-&> \mangle\hinge{\~p^2}{\~x^3}{\dot x^2}
+\mangle\tilde p^1
+&> \mangle\hinge{\tilde p^2}{\tilde x^3}{\dot x^2}
 \\
 &=
-\min\{\mangle\~p^3+\mangle\~p^2,2\cdot\pi -(\mangle\~p^3+\mangle\~p^2)\}.
+\min\{\mangle\tilde p^3+\mangle\tilde p^2,2\cdot\pi -(\mangle\tilde p^3+\mangle\tilde p^2)\}.
 \end{aligned}
 \eqlbl{eq:no-overlap}\]
 The  inequality follows since the  corresponding hinges have the same pairs of sidelengths.
@@ -124,45 +124,45 @@ The  inequality follows since the  corresponding hinges have the same pairs of s
 \begin{center} 
 %\begin{wrapfigure}{l}{44mm} 
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/4-pnt-kirsz-x2(1)}
-\lbl[br]{13.5,7;{\small $\~p^3$}}
-\lbl[t]{17,12.5;{\small $\~p^1$}}
-\lbl[bl]{8,14;{\small $\~p^2$}}
-\lbl[t]{1,0;$\~x^1$}
-\lbl[t]{29,0;$\~x^2$}
+\lbl[br]{13.5,7;{\small $\tilde p^3$}}
+\lbl[t]{17,12.5;{\small $\tilde p^1$}}
+\lbl[bl]{8,14;{\small $\tilde p^2$}}
+\lbl[t]{1,0;$\tilde x^1$}
+\lbl[t]{29,0;$\tilde x^2$}
 \lbl[b]{22.5,22;$\dot x^2$}
-\lbl[b]{10,36;$\~x^3$}
+\lbl[b]{10,36;$\tilde x^3$}
 %\end{lpic}
 %\begin{lpic}[t(5mm),b(0mm),r(0mm),l(0mm)]{pics/4-pnt-kirsz-sba(0.4)}
-\lbl[rt]{61,9;{\small $\~p^1$}}
-\lbl[l]{76,22;$\~p^2$}
-\lbl[l]{81,7;$\~p^3$}
-\lbl[t]{42,0;$\~x^1$}
-\lbl[t]{70,0;$\~x^2$}
+\lbl[rt]{61,9;{\small $\tilde p^1$}}
+\lbl[l]{76,22;$\tilde p^2$}
+\lbl[l]{81,7;$\tilde p^3$}
+\lbl[t]{42,0;$\tilde x^1$}
+\lbl[t]{70,0;$\tilde x^2$}
 \lbl[lt]{68,13;$\dot x^2$}
-\lbl[b]{50,36;$\~x^3$}
+\lbl[b]{50,36;$\tilde x^3$}
 \end{lpic}       
 
 
 %\end{wrapfigure}
 \end{center}
 
-Now assume $\mangle\~p^1 + \mangle\~p^2+\mangle\~p^3 \le 2\cdot\pi$.
+Now assume $\mangle\tilde p^1 + \mangle\tilde p^2+\mangle\tilde p^3 \le 2\cdot\pi$.
 Then  \ref{eq:no-overlap} implies 
-\[\mangle\~p^i>\mangle\~p^j + \mangle\~p^\kay.\]
+\[\mangle\tilde p^i>\mangle\tilde p^j + \mangle\tilde p^\kay.\]
 Since no pair of triangles overlap, the same holds 
 for any permutation $(i,j,\kay)$ of $(1,2,3)$.
 Therefore
-\[\mangle\~p^1+\mangle\~p^2+\mangle\~p^3>2\cdot(\mangle\~p^1+\mangle\~p^2+\mangle\~p^3),\]
+\[\mangle\tilde p^1+\mangle\tilde p^2+\mangle\tilde p^3>2\cdot(\mangle\tilde p^1+\mangle\tilde p^2+\mangle\tilde p^3),\]
 a contradiction. 
 \qeds
 
 \parit{Proof of \ref{thm:kirsz-def}; ``if'' part.} 
 Assume $\spc{L}$ is geodesic.
 Take $x^1,x^2,x^3\in \spc{L}$ so the model triangle 
-$\trig{\~x^1}{\~x^2}{\~x^3}=\modtrig\kappa(x^1 x^2 x^3)$ is defined.
+$\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa(x^1 x^2 x^3)$ is defined.
 Choose $p\in \,{]}x^1x^2{[}\,$;
 apply Kirszbrun property for $V_3=\{x^1,x^2,x^3\}$ and 
-$V_4=\{x^1,x^2,x^3,p\}$ and the map $f(x^i)=\~x^i$. 
+$V_4=\{x^1,x^2,x^3,p\}$ and the map $f(x^i)=\tilde x^i$. 
 You obtain point-on-side comparison (\ref{point-on-side}).
 
 In case $\spc{L}$ is not geodesic, pass to its ultrapower $\spc{L}^\o$.
@@ -174,8 +174,8 @@ By Proposition~\ref{prp:A^omega}, $\spc{L}$ is a complete length $\Alex\kappa$ s
 \parit{``Only if'' part.}
 Assume the contrary;
 that is,  $x^1,x^2,x^3,p\in \spc{L}$, and 
-$\~x^1,\~x^2,\~x^3\in\Lob2\kappa$ are such that
-$\dist{\~x^i}{\~x^j}{}\le\dist{x^i}{x^j}{}$ for all $i,j$ and there is no point $\~p\in \Lob2\kappa$ such that $\dist{\~p}{\~x^i}{}\le \dist{p}{x^i}{}$ for all $i$.
+$\tilde x^1,\tilde x^2,\tilde x^3\in\Lob2\kappa$ are such that
+$\dist{\tilde x^i}{\tilde x^j}{}\le\dist{x^i}{x^j}{}$ for all $i,j$ and there is no point $\tilde p\in \Lob2\kappa$ such that $\dist{\tilde p}{\tilde x^i}{}\le \dist{p}{x^i}{}$ for all $i$.
 
 Note that in this case all comparison triangles $\modtrig\kappa(p x^ix^j)$ are defined.
 That is always true if $\kappa\le0$.
@@ -186,31 +186,31 @@ If $\kappa>0$, and say $\modtrig\kappa(p x^1x^2)$ is undefined, then
 \ge
 \\
 &\ge
-2\cdot\varpi\kappa-\dist{\~x^1}{\~x^2}{}\ge 
+2\cdot\varpi\kappa-\dist{\tilde x^1}{\tilde x^2}{}\ge 
 \\
 &\ge 
-\dist{\~x^1}{\~x^3}{}+\dist{\~x^2}{\~x^3}{}.
+\dist{\tilde x^1}{\tilde x^3}{}+\dist{\tilde x^2}{\tilde x^3}{}.
 \end{align*}
-It follows that we can take $\~p$ on $[\~x^1\~x^3]$ or  $[\~x^2\~x^3]$.
+It follows that we can take $\tilde p$ on $[\tilde x^1\tilde x^3]$ or  $[\tilde x^2\tilde x^3]$.
 
-For each $i\in \{1,2,3\}$, consider a point $\~p^i\in\Lob2\kappa$ such that $\dist{\~p^i}{\~x^i}{}$ is minimal among points satisfying $\dist{\~p^i}{\~x^j}{}\le\dist{p}{ x^j}{}$ for all $j\not=i$. 
-Clearly, every $\~p^i$ is inside the triangle $\trig{\~x^1}{\~x^2}{\~x^3}$ (that is, in $\Conv(\~x^1,\~x^2,\~x^3)$), and $\dist{\~p^i}{\~x^i}{}>\dist{p}{ x^i}{}$ for each $i$.
+For each $i\in \{1,2,3\}$, consider a point $\tilde p^i\in\Lob2\kappa$ such that $\dist{\tilde p^i}{\tilde x^i}{}$ is minimal among points satisfying $\dist{\tilde p^i}{\tilde x^j}{}\le\dist{p}{ x^j}{}$ for all $j\not=i$. 
+Clearly, every $\tilde p^i$ is inside the triangle $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$ (that is, in $\Conv(\tilde x^1,\tilde x^2,\tilde x^3)$), and $\dist{\tilde p^i}{\tilde x^i}{}>\dist{p}{ x^i}{}$ for each $i$.
 Since the function $x\mapsto\tangle\mc\kappa\{x;a,b\}$
 is increasing, it follows that
 \begin{enumerate}[(i)]
-\item $\dist{\~p^i}{\~x^j}{}=\dist{p}{ x^j}{}$ for $i\not=j$;
-\item no pair of triangles from $\trig{\~p^1}{\~x^2}{\~x^3}$, $\trig{\~p^2}{\~x^3}{\~x^1}$, $\trig{\~p^3}{\~x^1}{\~x^2}$ overlap in $\trig{\~x^1}{\~x^2}{\~x^3}$.
+\item $\dist{\tilde p^i}{\tilde x^j}{}=\dist{p}{ x^j}{}$ for $i\not=j$;
+\item no pair of triangles from $\trig{\tilde p^1}{\tilde x^2}{\tilde x^3}$, $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$, $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ overlap in $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$.
 \end{enumerate}
 
 As follows from the overlap lemma (\ref{lem:extend-overlap}), 
 in this case 
-\[\mangle\hinge {\~p^1}{\~x^2}{\~x^3} 
-+\mangle\hinge {\~p^2}{\~x^3}{\~x^1}
-+\mangle\hinge {\~p^3}{\~x^1}{\~x^2}
+\[\mangle\hinge {\tilde p^1}{\tilde x^2}{\tilde x^3} 
++\mangle\hinge {\tilde p^2}{\tilde x^3}{\tilde x^1}
++\mangle\hinge {\tilde p^3}{\tilde x^1}{\tilde x^2}
 >2\cdot\pi.
 \]
-Since $\dist{\~x^i}{\~x^j}{}\le\dist{x^i}{x^j}{}$ we get
-\[\mangle\hinge {\~p^\kay}{\~x^i}{\~x^j}
+Since $\dist{\tilde x^i}{\tilde x^j}{}\le\dist{x^i}{x^j}{}$ we get
+\[\mangle\hinge {\tilde p^\kay}{\tilde x^i}{\tilde x^j}
 \le
 \angk\kappa p{x^i}{x^j}\]
 if $(i,j,k)$ is a permutation of $(1,2,3)$.
@@ -252,30 +252,30 @@ The last part of the lemma can be proved by composing the constructed map with f
 
 \parit{Proof of \ref{thm:cba-kirsz-def}; ``if'' part.}
 The point-on-side comparison (\ref{cat-monoton}) follows  by
-taking $V_3=\{\~x,\~y,\~p\}$ and  $V_4=\{\~x,\~y,\~p,\~z\}$ where $z\in \l]x y\r[$.  
-It is only necessary to observe that  $F(\~z)=z$ by uniqueness of $[x y]$.
+taking $V_3=\{\tilde x,\tilde y,\tilde p\}$ and  $V_4=\{\tilde x,\tilde y,\tilde p,\tilde z\}$ where $z\in \mathopen{]}x y\mathclose{[}$.  
+It is only necessary to observe that  $F(\tilde z)=z$ by uniqueness of $[x y]$.
 
 
 \parit{``Only if'' part.}
-Let $V_3=\{\~x^1,\~x^2,\~x^3\}$ and $V_4=\{\~x^1,\~x^2,\~x^3,\~p\}$.
+Let $V_3=\{\tilde x^1,\tilde x^2,\tilde x^3\}$ and $V_4=\{\tilde x^1,\tilde x^2,\tilde x^3,\tilde p\}$.
 
-Set $y^i\z=f(\~x^i)$ for all $i$;
-we need to find a point $q\in\spc{U}$ such that $\dist{y^i}{q}{}\le\dist{\~x^i}{\~p}{}$ for all $i$.
+Set $y^i\z=f(\tilde x^i)$ for all $i$;
+we need to find a point $q\in\spc{U}$ such that $\dist{y^i}{q}{}\le\dist{\tilde x^i}{\tilde p}{}$ for all $i$.
 
 Let $D$ be the convex set in $\Lob2\kappa$ bounded by the model triangle 
-$\trig{\~y^1}{\~y^2}{\~y^3}\z=\modtrig\kappa{y^1}{y^2}{y^3}$;
-that is, $D\z=\Conv({\~y^1},{\~y^2},{\~y^3})$.
+$\trig{\tilde y^1}{\tilde y^2}{\tilde y^3}\z=\modtrig\kappa{y^1}{y^2}{y^3}$;
+that is, $D\z=\Conv({\tilde y^1},{\tilde y^2},{\tilde y^3})$.
 
-Note that $\dist{\~y^i}{\~y^j}{}=\dist{y^i}{y^j}{}\le\dist{\~x^i}{\~x^j}{}$ for all $i,j$.
+Note that $\dist{\tilde y^i}{\tilde y^j}{}=\dist{y^i}{y^j}{}\le\dist{\tilde x^i}{\tilde x^j}{}$ for all $i,j$.
 Applying Lemma \ref{lem:smaller-trig},
 we get a short map 
 $\map\:\Lob{}{\kappa}\to D$ such that 
-$\map\:\~x^i\mapsto\~y^i$.
+$\map\:\tilde x^i\mapsto\tilde y^i$.
 
 Further, by the majorization theorem (\ref{thm:major}), 
-there is a short map $F\:D\to \spc{U}$ such that $\~y^i\mapsto y^i$ for all $i$.
+there is a short map $F\:D\to \spc{U}$ such that $\tilde y^i\mapsto y^i$ for all $i$.
 
-Thus one can take $q=F\circ\map(\~p)$.
+Thus one can take $q=F\circ\map(\tilde p)$.
 \qeds
 
 
@@ -283,56 +283,56 @@ Thus one can take $q=F\circ\map(\~p)$.
 \section{(1+\textit{n})-point comparison}\label{sec:1+n}
 
 The following theorem gives a more sensitive analog of  $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
-In a bit weaker analytic form it appears in \cite{sturm}.
+A bit weaker analytic form it was proved by Karl-Theodor Sturm \cite{sturm}.
 
 
 \begin{thm}{(1+\textit{n})-point comparison}
 \label{thm:pos-config} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
 Then for any array of points $p,x^1,\dots,x^n\in \spc{L}$  
-there is a model array $\~p,\~x^1,\dots,\~x^n\in\Lob{n}\kappa$ such that
+there is a model array $\tilde p,\tilde x^1,\dots,\tilde x^n\in\Lob{n}\kappa$ such that
 \begin{subthm}{}
-$\dist{\~p}{\~x^i}{}=\dist{p}{x^i}{}$ for all $i$.
+$\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$ for all $i$.
 \end{subthm}
 
-\begin{subthm}{}$\dist{\~x^i}{\~x^j}{}\ge\dist{x^i}{x^j}{}$ for all $i,j$.
+\begin{subthm}{}$\dist{\tilde x^i}{\tilde x^j}{}\ge\dist{x^i}{x^j}{}$ for all $i,j$.
 \end{subthm}
 \end{thm}
 
 \parit{Proof.} 
-It is sufficient to show that given $\eps>0$ there is a configuration $\~p,\~x^1,\dots,\~x^n\in\Lob{n}\kappa$ such that 
-\[\dist{\~x^i}{\~x^j}{}\ge\dist{x^i}{x^j}{}
+It is sufficient to show that given $\eps>0$ there is a configuration $\tilde p,\tilde x^1,\dots,\tilde x^n\in\Lob{n}\kappa$ such that 
+\[\dist{\tilde x^i}{\tilde x^j}{}\ge\dist{x^i}{x^j}{}
 \quad
 \text{and}
 \quad
-\bigl|\dist{\~p}{\~x^i}{}-\dist{p}{x^i}{}\bigr|\le \eps.\]
+\bigl|\dist{\tilde p}{\tilde x^i}{}-\dist{p}{x^i}{}\bigr|\le \eps.\]
 Then one can pass to a limit configuration for $\eps\to 0+$.
 
 According to \ref{thm:almost.geod}, the set $\Str(x^1,\dots,x^n)$ 
  is dense in $\spc{L}$.
-Thus, there is a point $p'\in \Str(\~x^1,\dots,\~x^n)$ such  that $\dist{p'}{p}{}\le\eps$.
+Thus, there is a point $p'\in \Str(\tilde x^1,\dots,\tilde x^n)$ such  that $\dist{p'}{p}{}\le\eps$.
 According to Corollary~\ref{cor:euclid-subcone}, 
 $\T_{p'}$ contains a subcone $E$ isometric to a Euclidean space 
 that contains all vectors $\ddir{p'}{x^i}$.
 Passing to subspace if necessary, we can assume that $\dim E\le n$.
 
-Mark a point $\~p\in \Lob{n}\kappa$ and choose a distance preserving map
-$\iota\: E\to \T_{\~p}\Lob{n}\kappa$.
+Mark a point $\tilde p\in \Lob{n}\kappa$ and choose a distance preserving map
+$\iota\: E\to \T_{\tilde p}\Lob{n}\kappa$.
 Set 
-\[\~x^i
+\[\tilde x^i
 =
-\exp_{\~p}\circ\iota(\ddir{p'}{x^i}).\]
-Thus $\dist{\~p}{\~x^i}{}=\dist{p'}{x^i}{}$ and therefore
-\[\bigl|\dist{\~p}{\~x^i}{}-\dist{p}{x^i}{}\bigr|
+\exp_{\tilde p}\circ\iota(\ddir{p'}{x^i}).\]
+Thus $\dist{\tilde p}{\tilde x^i}{}=\dist{p'}{x^i}{}$ and therefore
+\[\bigl|\dist{\tilde p}{\tilde x^i}{}-\dist{p}{x^i}{}\bigr|
 \le 
 \dist{p}{p'}{} \le\eps.\]
 From the hinge comparison (\ref{angle}) 
 we have 
-\[\angk\kappa{\~p}{\~x^i}{\~x^j}
-=\mangle\hinge{\~p}{\~x^i}{\~x^j}
+\[\angk\kappa{\tilde p}{\tilde x^i}{\tilde x^j}
+=\mangle\hinge{\tilde p}{\tilde x^i}{\tilde x^j}
 =\mangle\hinge{p'}{x^i}{x^j}\ge \angk\kappa{p'}{x^i}{x^j},\]
 thus 
-\[\dist{\~x^i}{\~x^j}{}\ge \dist{x^i}{x^j}{}.\]
+\[\dist{\tilde x^i}{\tilde x^j}{}\ge \dist{x^i}{x^j}{}.\]
 \qedsf
 
 \begin{thm}{Exercise}
@@ -351,8 +351,7 @@ but is not isometric to a subset of Alexandrov space with curvature $\ge0$.
 
 \section{Kirszbraun's theorem}\label{sec:kirszbraun}
 
-A slightly weaker version of the following theorem
-appears in \cite{lang-schroeder}.
+A slightly weaker version of the following theorem was proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
 
 \begin{thm}{Kirszbraun's theorem}
 \label{thm:kirsz+}
@@ -375,8 +374,8 @@ The Conjecture~\ref{conj:kirsz} (if true) gives an equivalent condition for the 
 roughly it states the following example is the only obstacle.
 
 \begin{thm}{Example}\label{example:SS_+}
-Let $\SS^m_+$ be a closed $m$-dimensional unit hemisphere.  Denote its boundary, which is isometric to $\SS^{m-1}$, by  $\partial\SS^m_+$.
-Clearly, $\SS^m_+$ is $\Alex{1}$ and $\partial\SS^m_+$ is $\CAT1$, but the identity map ${\partial\SS^m_+}\to \partial\SS^m_+$ cannot be extended to a short map $\SS^m_+\to \partial\SS^m_+$ (there is no place for the pole).
+Let $\mathbb{S}^m_+$ be a closed $m$-dimensional unit hemisphere.  Denote its boundary, which is isometric to $\mathbb{S}^{m-1}$, by  $\partial\mathbb{S}^m_+$.
+Clearly, $\mathbb{S}^m_+$ is $\Alex{1}$ and $\partial\mathbb{S}^m_+$ is $\CAT1$, but the identity map ${\partial\mathbb{S}^m_+}\to \partial\mathbb{S}^m_+$ cannot be extended to a short map $\mathbb{S}^m_+\to \partial\mathbb{S}^m_+$ (there is no place for the pole).
 
 There is also a direct generalization of this example to a hemisphere in a Hilbert space of arbitrary cardinal dimension.
 \end{thm}
@@ -404,14 +403,14 @@ In the proof, we assume $\kappa=0$ and provide the formulas for $\kappa=-1$ in t
 
 From (1+\textit{n})-point comparison (\ref{thm:pos-config}), 
 there is a model configuration 
-$\~p,\~x^1,\~x^2,\dots,\~x^n\in \Lob{n}{\kappa}$ such that
-$\dist{\~p}{\~x^i}{}=\dist{p}{x^i}{}$
-and $\dist{\~x^i}{\~x^j}{}\ge\dist{x^i}{x^j}{}$ 
+$\tilde p,\tilde x^1,\tilde x^2,\dots,\tilde x^n\in \Lob{n}{\kappa}$ such that
+$\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$
+and $\dist{\tilde x^i}{\tilde x^j}{}\ge\dist{x^i}{x^j}{}$ 
 for all $i$, $j$.
 It follows that we can assume that $\spc{L}=\Lob{n}{\kappa}$.
 
 For each $i$, consider functions 
-$f^i\:\spc{U}\to\RR$ and $\~f^i\:\Lob{n}{\kappa}\to\RR$ 
+$f^i\:\spc{U}\to\RR$ and $\tilde f^i\:\Lob{n}{\kappa}\to\RR$ 
 defined as follows%
 %%%%%%%%%%%%
 \footnote{In case $\kappa=-1$,
@@ -419,7 +418,7 @@ defined as follows%
 \begin{aligned}
 &f^i=\cosh\circ\distfun{y^i}{}{},
 &
-&\~f^i=\cosh\circ\distfun{\~x^i}{}{}.
+&\tilde f^i=\cosh\circ\distfun{\tilde x^i}{}{}.
 \end{aligned}
 \leqno{(A)\mc-}\]}
 %%%%%%%%%%%%
@@ -427,31 +426,31 @@ defined as follows%
 \begin{aligned}
 &f^i=\tfrac{1}{2}\cdot\distfun[2]{y^i}{}{},
 &
-&\~f^i=\tfrac{1}{2}\cdot\distfun[2]{\~x^i}{}{}.
+&\tilde f^i=\tfrac{1}{2}\cdot\distfun[2]{\tilde x^i}{}{}.
 \end{aligned}
 \leqno{(A)\mc0}
 \]
 Set
-$\bm{f}=(f^1,f^2,\dots,f^n)\:\spc{U}\to\RR^n$ and $\bm{\~f}=(\~f^1,\~f^2,\dots,\~f^n)\:\Lob{n}{\kappa}\to\RR^n$.
+$\bm{f}=(f^1,f^2,\dots,f^n)\:\spc{U}\to\RR^n$ and $\bm{\tilde f}=(\tilde f^1,\tilde f^2,\dots,\tilde f^n)\:\Lob{n}{\kappa}\to\RR^n$.
 
 Recall that the set $\Up\bm{f}(\spc{U})\subset\RR^n$ is defined on page \pageref{PAGE.def:Up}.
 Note that it is sufficient to prove that
-$\bm{\~f}(\~p)\in\Up\bm{f}(\spc{U})$.
+$\bm{\tilde f}(\tilde p)\in\Up\bm{f}(\spc{U})$.
 
 Clearly,
 $(f^i)''\ge 1$.
 Thus, by the theorem on barycentric simplex (\ref{thm:web:Up-convex}), 
 the set $\Up\bm{f}(\spc{U})\subset\RR^{n}$ is convex.
 
-Arguing by contradiction, let us assume that $\bm{\~f}(\~p)\notin\Up\bm{f}(\spc{U})$.
+Arguing by contradiction, let us assume that $\bm{\tilde f}(\tilde p)\notin\Up\bm{f}(\spc{U})$.
 
-Then there  exists a supporting hyperplane  $\alpha_1\cdot x_1+\ldots \alpha_n\cdot x_n=c$ to $\Up\bm{f}(\spc{U})$, separating it from  $\bm{\~f}(\~p)$.
+Then there  exists a supporting hyperplane  $\alpha_1\cdot x_1+\ldots \alpha_n\cdot x_n=c$ to $\Up\bm{f}(\spc{U})$, separating it from  $\bm{\tilde f}(\tilde p)$.
 According to Lemma~\ref{lem:Up-convex:subnormal}, 
 $\alpha_i\ge 0$ for each $i$. 
 So we can assume that $(\alpha_1,\alpha_2,\dots,\alpha_n)\in\Delta^{n-1}$
 (that is, $\alpha_i\ge 0$ for each $i$ and $\sum\alpha_i=1$)
 and 
-\[\sum_i\alpha_i\cdot\~f^i(\~p)
+\[\sum_i\alpha_i\cdot\tilde f^i(\tilde p)
 < 
 \inf
 \set{\sum_i\alpha_i\cdot f^i(q)}{q\in\spc{U}}.\]
@@ -467,18 +466,18 @@ set
 &
 &z=\argmin h\in \spc{U}
 \\
-&\~h=\sum_i\alpha_i\cdot \~f^i
+&\tilde h=\sum_i\alpha_i\cdot \tilde f^i
 &
-&\~h\:\Lob{n}{\kappa}\to\RR
+&\tilde h\:\Lob{n}{\kappa}\to\RR
 &
-&\~z=\argmin \~h\in \Lob{n}{\kappa}
+&\tilde z=\argmin \tilde h\in \Lob{n}{\kappa}
 \end{align*}
 Then 
-$h(z)\le \~h(\~z)$.
+$h(z)\le \tilde h(\tilde z)$.
 \end{clm}
 
 \parit{Proof of the claim.}
-Note that $\d_z h\ge 0$.
+Note that $\dd_z h\ge 0$.
 Thus, for each $i$, we have%
 \footnote{In case $\kappa=-1$, the same calculations give
 \[
@@ -488,15 +487,17 @@ Thus, for each $i$, we have%
 -\tfrac{1}{\sinh\dist[{{}}]{z}{y^i}{}}
 \cdot 
 \sum_j
-\alpha_j\cdot\l[\cosh\dist[{{}}]{z}{y^i}{}\cdot\cosh\dist[{{}}]{z}{y^j}{}-\cosh\dist[{{}}]{y^i}{y^j}{}\r].
+\alpha_j\cdot\left[\cosh\dist[{{}}]{z}{y^i}{}\cdot\cosh\dist[{{}}]{z}{y^j}{}-\cosh\dist[{{}}]{y^i}{y^j}{}\right].
 \end{aligned}
 \leqno{(B)\mc-}
 \]
+
 }
+
 \[
 \begin{aligned}
 0
-&\le (\d_z h)(\dir{z}{y^i})
+&\le (\dd_z h)(\dir{z}{y^i})
 =
 \\
 &=
@@ -511,7 +512,7 @@ Thus, for each $i$, we have%
 -\tfrac{1}{2\cdot\dist[{{}}]{z}{y^i}{}}
 \cdot 
 \sum_j
-\alpha_j\cdot\l[\dist[2]{z}{y^i}{}+\dist[2]{z}{y^j}{}-\dist[2]{y^i}{y^j}{}\r].
+\alpha_j\cdot\left[\dist[2]{z}{y^i}{}+\dist[2]{z}{y^j}{}-\dist[2]{y^i}{y^j}{}\right].
 \end{aligned}
 \leqno{(B)\mc0}\]
 In particular%
@@ -519,10 +520,10 @@ In particular%
 \footnote{In case $\kappa=-1$, the same calculations give
 \[
 \begin{aligned} 
-\sum_{i}\alpha_i\cdot\l[\sum_j
-\alpha_j\cdot\l[\cosh\dist[{{}}]{z}{y^i}{}\cdot\cosh\dist[{{}}]{z}{y^j}{}
--\cosh\dist[{{}}]{y^i}{y^j}{}\r]
-\r]\le0
+\sum_{i}\alpha_i\cdot\left[\sum_j
+\alpha_j\cdot\left[\cosh\dist[{{}}]{z}{y^i}{}\cdot\cosh\dist[{{}}]{z}{y^j}{}
+-\cosh\dist[{{}}]{y^i}{y^j}{}\right]
+\right]\le0
 \end{aligned}.
 \leqno{(C)\mc-}
 \]
@@ -533,11 +534,11 @@ In particular%
 \sum_{i}
 \alpha_i
 \cdot
-\l[\sum_j
+\left[\sum_j
 \alpha_j
 \cdot
-\l[\dist[2]{z}{y^i}{}+\dist[2]{z}{y^j}{}-\dist[2]{y^i}{y^j}{}\r]
-\r]\le 0,
+\left[\dist[2]{z}{y^i}{}+\dist[2]{z}{y^j}{}-\dist[2]{y^i}{y^j}{}\right]
+\right]\le 0,
 \end{aligned}
 \leqno{(C)\mc0}
 \]
@@ -560,29 +561,29 @@ or%
 
 Note, that if $\spc{U}\iso\Lob{n}{\kappa}$, 
 then all inequalities in $(B,C,D)$ are sharp.
-Thus the same argument as above, repeated for $\~x^1,\~x^2,\dots,\~x^n\in\Lob{n}{\kappa}$
+Thus the same argument as above, repeated for $\tilde x^1,\tilde x^2,\dots,\tilde x^n\in\Lob{n}{\kappa}$
 gives%
 \footnote%
 {In case $\kappa=-1$,
-\[(\~h(\~z))^2
+\[(\tilde h(\tilde z))^2
 =
 \sum_{i,j}
 \alpha_i\cdot\alpha_j
 \cdot
-\cosh\dist[{{}}]{\~x^i}{\~x^j}{}.
+\cosh\dist[{{}}]{\tilde x^i}{\tilde x^j}{}.
 \leqno{(E)\mc-}\]
 }
 \[
-2\cdot \~h(\~z)
+2\cdot \tilde h(\tilde z)
 =
 \sum_{i,j}
 \alpha_i\cdot\alpha_j
 \cdot
-\dist[2]{\~x^i}{\~x^j}{}. 
+\dist[2]{\tilde x^i}{\tilde x^j}{}. 
 \leqno{(E)\mc0}
 \]
 Note that 
-\[\dist{\~x^i}{\~x^j}{}
+\[\dist{\tilde x^i}{\tilde x^j}{}
 \ge
 \dist{x^i}{x^j}{}\ge\dist{y^i}{y^j}{}\]
 for all $i$, $j$.
@@ -795,8 +796,8 @@ The map $f\:Q\to\spc{U}$ is a distance preserving map and there is no point $p'\
 
 \begin{thm}{Exercise}\label{ex:flat-in-CAT}
 Let $\spc{U}$ is $\CAT0$ 
-Assume there are two point arrays $x^0,x^1,\dots,x^\kay\in\spc{U}$ and $\~x^0,\~x^1,\dots,\~x^\kay\in\EE^m$ such that 
-$\dist{x^i}{x^j}{\spc{U}}=\dist{\~x^i}{\~x^j}{\EE^m}$ for each $i,j$ and 
+Assume there are two point arrays $x^0,x^1,\dots,x^\kay\in\spc{U}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\in\EE^m$ such that 
+$\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$ and 
 for any point $z_0\in\spc{U}$, we have $\dist{z_0}{x_i}{}\ge\dist{x_0}{x_i}{}$ for at least one $i>0$.
 
 Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE^m$ and containing all points $x^i$.
@@ -804,11 +805,11 @@ Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE
 
 \begin{thm}{Exercise}\label{ex:flat-in-CBB}
 Let $\spc{L}$ be a complete length $\Alex{0}$ space,
-$x^0,x^1,\dots,x^\kay\in\spc{L}$ and $\~x^0,\~x^1,\dots,\~x^\kay\in\EE^m$
+$x^0,x^1,\dots,x^\kay\in\spc{L}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\in\EE^m$
 be two point arrays such that 
-$\dist{x^i}{x^j}{\spc{L}}=\dist{\~x^i}{\~x^j}{\EE^m}$ for each $i,j$.
+$\dist{x^i}{x^j}{\spc{L}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$.
 Assume 
-$\~x^0$ lies in the interior of $\Conv(\~x^1,\dots,\~x^\kay)$.
+$\tilde x^0$ lies in the interior of $\Conv(\tilde x^1,\dots,\tilde x^\kay)$.
 
 Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE^m$ containing all points $x^i$.
 \end{thm}
@@ -824,12 +825,12 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p, a^0,a^1,\dots,a
 Assume that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \emph{$\kappa$-strutting} for a point $p\in\spc{L}$.
 Show that there are point 
-$\~p,\~a^0,\dots,\~a^m\in \Lob{m+1}\kappa$ such that
-\[\dist{\~p}{\~a^i}{}=\dist{p}{a^i}{}\ \text{and}\ \dist{\~a^i}{\~a^j}{}=\dist{a^i}{a^j}{}\]
+$\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+\[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\ \text{and}\ \dist{\tilde a^i}{\tilde a^j}{}=\dist{a^i}{a^j}{}\]
 for all $i$ and $j$.
 \end{thm}
 
-The following statement was first observed in \cite{isbell}
+The following statement was first observed by John Isbell \cite{isbell}.
 
 \begin{thm}{Exercise}
 We say that a space $\spc{X}$ is a \emph{Kirszbraun target}\index{Kirszbraun target} 
@@ -871,52 +872,52 @@ The following statement we call (2\textit{n}+2)-comparison.
 \begin{thm}{Exercise}\label{CBA-n-point}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space.
 Consider $x,y\in \spc{U}$ and  an array of pairs of points $(p^1,q^1)$, $(p^2,q^2),\dots,(p^n,q^n)$  in $\spc{U}$, such that there is a model configuration
-$\~x$, $\~y$ and array of pairs $(\~p^1,\~q^1)$, $(\~p^2,\~q^2),\dots,(\~p^n,\~q^n)$ in $\Lob{3}\kappa$ with the following properties:
+$\tilde x$, $\tilde y$ and array of pairs $(\tilde p^1,\tilde q^1)$, $(\tilde p^2,\tilde q^2),\dots,(\tilde p^n,\tilde q^n)$ in $\Lob{3}\kappa$ with the following properties:
 \begin{subthm}{}
-$\trig{\~x}{\~p^1}{\~q^1}=\modtrig\kappa x p^1q^1$
+$\trig{\tilde x}{\tilde p^1}{\tilde q^1}=\modtrig\kappa x p^1q^1$
 and 
-$\trig{\~y}{\~p^n}{\~q^n}=\modtrig\kappa y p^n q^n$;
+$\trig{\tilde y}{\tilde p^n}{\tilde q^n}=\modtrig\kappa y p^n q^n$;
 \end{subthm}
 
 \begin{subthm}{}
-The simplex $\~p^i\~p^{i+1}\~q^i\~q^{i+1}$ is a model simplex%
+The simplex $\tilde p^i\tilde p^{i+1}\tilde q^i\tilde q^{i+1}$ is a model simplex%
 \footnote{that is,
 perimeter of each triple in $p^i,p^{i+1},q^i$ and $q^{i+1}$ is $<2\cdot\pi$ and
-$\dist{\~p^i}{\~q^i}{}
+$\dist{\tilde p^i}{\tilde q^i}{}
 =\dist{p^i}{q^i}{}$,
-$\dist{\~p^i}{\~p^{i+1}}{}
+$\dist{\tilde p^i}{\tilde p^{i+1}}{}
 =\dist{p^i}{p^{i+1}}{}$,
-$\dist{\~q^i}{\~q^{i+1}}{}
+$\dist{\tilde q^i}{\tilde q^{i+1}}{}
 =\dist{q^i}{q^{i+1}}{}$,
-$\dist{\~p^i}{\~q^{i+1}}{}
+$\dist{\tilde p^i}{\tilde q^{i+1}}{}
 =
 \dist{p^i}{q^{i+1}}{}$ 
-and $\dist{\~p^{i+1}}{\~q^{i}}{}=\dist{p^{i+1}}{q^{i}}{}$.}
+and $\dist{\tilde p^{i+1}}{\tilde q^{i}}{}=\dist{p^{i+1}}{q^{i}}{}$.}
  of $p^ip^{i+1}q^iq^{i+1}$
 for all $i$.
 \end{subthm}
 
-Then for any choice of $n$ points $\~z^i\in [\~p^i\~q^i]$,
+Then for any choice of $n$ points $\tilde z^i\in [\tilde p^i\tilde q^i]$,
 we have
-\[\dist{\~x}{\~z^1}{}+\dist{\~z^1}{\~z^2}{}+\dots+\dist{\~z^{n-1}}{\~z^n}{}+\dist{\~z^n}{\~y}{}
+\[\dist{\tilde x}{\tilde z^1}{}+\dist{\tilde z^1}{\tilde z^2}{}+\dots+\dist{\tilde z^{n-1}}{\tilde z^n}{}+\dist{\tilde z^n}{\tilde y}{}
 \ge 
 \dist{x}{y}{}.\]
 \begin{center}
 \begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/chain(1)}
-\lbl[r]{0,13;$\~x$}
-\lbl[t]{10,3;$\~p^1$}
-\lbl[t]{23,2;$\~p^2$}
+\lbl[r]{0,13;$\tilde x$}
+\lbl[t]{10,3;$\tilde p^1$}
+\lbl[t]{23,2;$\tilde p^2$}
 \lbl[t]{34,1;$\dots$}
-\lbl[t]{48,2;$\~p^n$}
-\lbl[b]{10,29;$\~q^1$}
-\lbl[b]{29,33.5;$\~q^2$}
+\lbl[t]{48,2;$\tilde p^n$}
+\lbl[b]{10,29;$\tilde q^1$}
+\lbl[b]{29,33.5;$\tilde q^2$}
 \lbl[b]{44,31;$\dots$}
-\lbl[b]{58,32;$\~q^n$}
-\lbl[br]{10,18;$\~z^1$}
-\lbl[br]{25,15;$\~z^2$}
-\lbl[br]{38,15;$\~z^3$}
-\lbl[br]{52,15;$\~z^4$}
-\lbl[l]{66,16;$\~y$}
+\lbl[b]{58,32;$\tilde q^n$}
+\lbl[br]{10,18;$\tilde z^1$}
+\lbl[br]{25,15;$\tilde z^2$}
+\lbl[br]{38,15;$\tilde z^3$}
+\lbl[br]{52,15;$\tilde z^4$}
+\lbl[l]{66,16;$\tilde y$}
 \end{lpic}
 \end{center}
 \end{thm}

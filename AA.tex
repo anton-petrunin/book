@@ -256,24 +256,24 @@ The (2$n$+2)-point comparison (\ref{CBA-n-point}) gives a necessary condition fo
 which is not sufficient.
 One can see this in the following example constructed by Nina Lebedava:
 
-Consider a square $[\~x^1\~y^1\~x^2\~y^2]$ in $\EE^3$
-with yet two points in general position $\~z^1$, $\~z^2$ so that the convex hull of $\~x^1,\~x^2,\~y^1,\~y^2,\~z^1,\~z^2$ forms a nonregular octahedron with the faces formed by triangles $[\~x^i \~y^j \~z^\kay]$.
-Consider the induced metric on the 6-point set $\~x^1,\~x^2,\~y^1,\~y^2,\~z^1,\~z^2$.
-Note that if we increase the $\dist{\~z^1}{\~z^2}{}$ slightly 
+Consider a square $[\tilde x^1\tilde y^1\tilde x^2\tilde y^2]$ in $\EE^3$
+with yet two points in general position $\tilde z^1$, $\tilde z^2$ so that the convex hull of $\tilde x^1,\tilde x^2,\tilde y^1,\tilde y^2,\tilde z^1,\tilde z^2$ forms a nonregular octahedron with the faces formed by triangles $[\tilde x^i \tilde y^j \tilde z^\kay]$.
+Consider the induced metric on the 6-point set $\tilde x^1,\tilde x^2,\tilde y^1,\tilde y^2,\tilde z^1,\tilde z^2$.
+Note that if we increase the $\dist{\tilde z^1}{\tilde z^2}{}$ slightly 
 then in the obtained 6-point metric $\spc{F}_6$ space all the (2+2) and (4+2)-point comparisons continue to hold.
 
 Now assume we embed the points $x^1,x^2,y^1,y^2,z^1,z^2$ lie in a complete length $\CAT{0}$ space $\spc{U}$ in such a way that all the distances except $\dist{z^1}{z^2}{}$ are the same as between corresponding points in $\spc{F}_6$.
-Since $[\~x^1\~y^1\~x^2\~y^2]$ is a square,
+Since $[\tilde x^1\tilde y^1\tilde x^2\tilde y^2]$ is a square,
 by Exercise~\ref{ex:square}, 
-we get that $\spc{U}$ contains an isometric copy of a square $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}\iso\Conv(\~x^1,\~y^1,\~x^2,\~y^2)_{\EE^3}$.
-Let \[\~w\in  \Conv(\~x^1,\~y^1,\~x^2,\~y^2)_{\EE^3}\]
+we get that $\spc{U}$ contains an isometric copy of a square $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}\iso\Conv(\tilde x^1,\tilde y^1,\tilde x^2,\tilde y^2)_{\EE^3}$.
+Let \[\tilde w\in  \Conv(\tilde x^1,\tilde y^1,\tilde x^2,\tilde y^2)_{\EE^3}\]
 and $w$ be corresponding point in $\Conv(x^1,y^1,x^2,y^2)_{\spc{U}}$.
 By 
-point-on-side comparison (\ref{cat-monoton}) we have $\dist{z^i}{w}{\spc{U}}\le \dist{\~z^i}{\~w}{\EE^3}$.
+point-on-side comparison (\ref{cat-monoton}) we have $\dist{z^i}{w}{\spc{U}}\le \dist{\tilde z^i}{\tilde w}{\EE^3}$.
 It follows that 
 \[\dist{z^1}{z^2}{\spc{U}}
 \le
-\dist{\~z^1}{\~z^2}{\EE^3},\] 
+\dist{\tilde z^1}{\tilde z^2}{\EE^3},\] 
 a contradiction.%???
 
 
@@ -312,15 +312,15 @@ has perimeter $>2\cdot\varpi\kappa$.
 \end{subthm}
 
 \begin{subthm}{}
-If $\trig{\~p}{\~q}{\~x}
+If $\trig{\tilde p}{\tilde q}{\tilde x}
 =
 \modtrig\kappa(p q x)$ 
 and
-$\trig{\~p}{\~q}{\~y}
+$\trig{\tilde p}{\tilde q}{\tilde y}
 =
 \modtrig\kappa p q y$, then
-\[\dist{\~x}{\~z}{}+\dist{\~z}{\~y}{}\ge \dist{x}{y}{},\]
-for any $\~z\in[\~p\~q]$.
+\[\dist{\tilde x}{\tilde z}{}+\dist{\tilde z}{\tilde y}{}\ge \dist{x}{y}{},\]
+for any $\tilde z\in[\tilde p\tilde q]$.
 
 \end{subthm}
 
@@ -329,52 +329,52 @@ for any $\~z\in[\~p\~q]$.
 \begin{thm}{(2\textit{n}+2)-point comparison}\label{CBA-n-point}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space.
 Consider $x,y\in \spc{U}$ and  an array of pairs of points $(p^1,q^1)$, $(p^2,q^2),\dots,(p^n,q^n)$  in $\spc{U}$, such that there is a model configuration
-$\~x$, $\~y$ and array of pairs $(\~p^1,\~q^1)$, $(\~p^2,\~q^2),\dots,(\~p^n,\~q^n)$ in $\Lob{3}\kappa$ with the following properties:
+$\tilde x$, $\tilde y$ and array of pairs $(\tilde p^1,\tilde q^1)$, $(\tilde p^2,\tilde q^2),\dots,(\tilde p^n,\tilde q^n)$ in $\Lob{3}\kappa$ with the following properties:
 \begin{subthm}{}
-$\trig{\~x}{\~p^1}{\~q^1}=\modtrig\kappa x p^1q^1$
+$\trig{\tilde x}{\tilde p^1}{\tilde q^1}=\modtrig\kappa x p^1q^1$
 and 
-$\trig{\~y}{\~p^n}{\~q^n}=\modtrig\kappa y p^n q^n$;
+$\trig{\tilde y}{\tilde p^n}{\tilde q^n}=\modtrig\kappa y p^n q^n$;
 \end{subthm}
 
 \begin{subthm}{}
-The simplex $\~p^i\~p^{i+1}\~q^i\~q^{i+1}$ is a model simplex%
+The simplex $\tilde p^i\tilde p^{i+1}\tilde q^i\tilde q^{i+1}$ is a model simplex%
 \footnote{that is,
 perimeter of each triple in $p^i,p^{i+1},q^i$ and $q^{i+1}$ is $<2\cdot\pi$ and
-$\dist{\~p^i}{\~q^i}{}
+$\dist{\tilde p^i}{\tilde q^i}{}
 =\dist{p^i}{q^i}{}$,
-$\dist{\~p^i}{\~p^{i+1}}{}
+$\dist{\tilde p^i}{\tilde p^{i+1}}{}
 =\dist{p^i}{p^{i+1}}{}$,
-$\dist{\~q^i}{\~q^{i+1}}{}
+$\dist{\tilde q^i}{\tilde q^{i+1}}{}
 =\dist{q^i}{q^{i+1}}{}$,
-$\dist{\~p^i}{\~q^{i+1}}{}
+$\dist{\tilde p^i}{\tilde q^{i+1}}{}
 =
 \dist{p^i}{q^{i+1}}{}$ 
-and $\dist{\~p^{i+1}}{\~q^{i}}{}=\dist{p^{i+1}}{q^{i}}{}$.}
+and $\dist{\tilde p^{i+1}}{\tilde q^{i}}{}=\dist{p^{i+1}}{q^{i}}{}$.}
  of $p^ip^{i+1}q^iq^{i+1}$
 for all $i$.
 \end{subthm}
 
-Then for any choice of $n$ points $\~z^i\in [\~p^i\~q^i]$,
+Then for any choice of $n$ points $\tilde z^i\in [\tilde p^i\tilde q^i]$,
 we have
-\[\dist{\~x}{\~z^1}{}+\dist{\~z^1}{\~z^2}{}+\dots+\dist{\~z^{n-1}}{\~z^n}{}+\dist{\~z^n}{\~y}{}
+\[\dist{\tilde x}{\tilde z^1}{}+\dist{\tilde z^1}{\tilde z^2}{}+\dots+\dist{\tilde z^{n-1}}{\tilde z^n}{}+\dist{\tilde z^n}{\tilde y}{}
 \ge 
 \dist{x}{y}{}.\]
 \begin{center}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/chain(0.27)}
-\lbl[r]{4,33;$\~x$}
-\lbl[tr]{87,12;$\~p^1$}
-\lbl[t]{147,20;$\~p^2$}
-\lbl[t]{175,3;$\~p^3$}
-\lbl[lt]{275,18;$\~p^4$}
-\lbl[br]{40,104;$\~q^1$}
-\lbl[br]{138,127;$\~q^2$}
-\lbl[bl]{192,105;$\~q^3$}
-\lbl[bl]{266,100;$\~q^4$}
-\lbl[bl]{70,49;$\~z^1$}
-\lbl[br]{143,60;$\~z^2$}
-\lbl[bl]{184,51;$\~z^3$}
-\lbl[bl]{272,54;$\~z^4$}
-\lbl[l]{369,51;$\~y$}
+\lbl[r]{4,33;$\tilde x$}
+\lbl[tr]{87,12;$\tilde p^1$}
+\lbl[t]{147,20;$\tilde p^2$}
+\lbl[t]{175,3;$\tilde p^3$}
+\lbl[lt]{275,18;$\tilde p^4$}
+\lbl[br]{40,104;$\tilde q^1$}
+\lbl[br]{138,127;$\tilde q^2$}
+\lbl[bl]{192,105;$\tilde q^3$}
+\lbl[bl]{266,100;$\tilde q^4$}
+\lbl[bl]{70,49;$\tilde z^1$}
+\lbl[br]{143,60;$\tilde z^2$}
+\lbl[bl]{184,51;$\tilde z^3$}
+\lbl[bl]{272,54;$\tilde z^4$}
+\lbl[l]{369,51;$\tilde y$}
 \end{lpic}
 \end{center}
 \end{thm}
@@ -414,26 +414,26 @@ we get $\dist{z}{f(x)}{\spc{U}}=\mangle(z,f(x))\le \tfrac{\pi}{2}$ for all $x\in
 gives an array of short maps $f^0,f^1,\dots,f^n\:\Lob{3}\kappa\to \spc{U}$ such that
 \begin{enumerate}[(i)]
 
-\item $\~x\stackrel{f^0}{\longmapsto} x$, 
-$\~p^1\stackrel{f^0}{\longmapsto} p^1$ and 
-$\~q^1\stackrel{f^0}{\longmapsto}q^1$;
+\item $\tilde x\stackrel{f^0}{\longmapsto} x$, 
+$\tilde p^1\stackrel{f^0}{\longmapsto} p^1$ and 
+$\tilde q^1\stackrel{f^0}{\longmapsto}q^1$;
 
 \item 
-$\~p^i      \stackrel{f^i}{\longmapsto} p^i$, 
-$\~q^{i}    \stackrel{f^i}{\longmapsto} q^i$ and 
-$\~p^{i+1}  \stackrel{f^i}{\longmapsto} p^{i+1}$, 
-$\~q^{i+1}  \stackrel{f^i}{\longmapsto} q^{i+1}$\\ 
+$\tilde p^i      \stackrel{f^i}{\longmapsto} p^i$, 
+$\tilde q^{i}    \stackrel{f^i}{\longmapsto} q^i$ and 
+$\tilde p^{i+1}  \stackrel{f^i}{\longmapsto} p^{i+1}$, 
+$\tilde q^{i+1}  \stackrel{f^i}{\longmapsto} q^{i+1}$\\ 
 for $1\le i\le n-1$;
 \item 
-$\~p^n\stackrel{f^n}{\longmapsto} p^n$,
-$\~q^n\stackrel{f^n}{\longmapsto}q^n$ and $\~y\stackrel{f^n}{\longmapsto} y$.
+$\tilde p^n\stackrel{f^n}{\longmapsto} p^n$,
+$\tilde q^n\stackrel{f^n}{\longmapsto}q^n$ and $\tilde y\stackrel{f^n}{\longmapsto} y$.
 \end{enumerate}
-For each $i>0$, we have that $f^{i-1}|_{[\~p^i\~q^i]}=f^{i}|[\~p^i\~q^i]$ as 
-both $f^{i-1}$ and $f^{i}$ send $[\~p^i\~q^i]$ isometrically to a geodesic $[p^i q^i]$ in $\spc{U}$ which is unique.
+For each $i>0$, we have that $f^{i-1}|_{[\tilde p^i\tilde q^i]}=f^{i}|[\tilde p^i\tilde q^i]$ as 
+both $f^{i-1}$ and $f^{i}$ send $[\tilde p^i\tilde q^i]$ isometrically to a geodesic $[p^i q^i]$ in $\spc{U}$ which is unique.
 Thus the curves
-\[f^0([\~x\~z^1]),\ f^1([\~z^1\~z^2]),\dots,\ f^{n-1}([\~z^{n-1}\~z^n]),\ f^n([\~z^n\~y])\]
+\[f^0([\tilde x\tilde z^1]),\ f^1([\tilde z^1\tilde z^2]),\dots,\ f^{n-1}([\tilde z^{n-1}\tilde z^n]),\ f^n([\tilde z^n\tilde y])\]
 can be joined in $\spc{U}$ into a curve connecting $x$ to $y$ with length at most 
-\[\dist{\~x}{\~z^1}{}+\dist{\~z^1}{\~z^2}{}+\dots+\dist{\~z^{n-1}}{\~z^n}{}+\dist{\~z^n}{\~y}{}.\]
+\[\dist{\tilde x}{\tilde z^1}{}+\dist{\tilde z^1}{\tilde z^2}{}+\dots+\dist{\tilde z^{n-1}}{\tilde z^n}{}+\dist{\tilde z^n}{\tilde y}{}.\]
 \qedsf
 
 
@@ -463,8 +463,8 @@ The ``only if'' part of Theorem \ref{thm:cba-kirsz-def} does not follow directly
 The construction of the correct parameterization is given in lemmas \ref{lem:majorize-subgraph} and \ref{lem:majorize-triangle}.
 This map is used to construct a  majorizing map for a polygon in $\spc{U}$, and passing to a limit we get the general case. 
 
-Finding such a parameterization $F\:\Conv\trig{\~p}{\~x}{\~y}\to W$ is not as simple as one might think. 
-In particular, the map $F\:\Conv\trig{\~p}{\~x}{\~y}\to W:\~\gamma_t(s)\mapsto \gamma_t(s)$ that sends the point with parameter $(t,s)$ under the line-of-sight map for $[\~x\~y]$ from $\~p$, to the point with the same parameter  under the line-of-sight map for $[x y]$ from  $p$,  is not majorizing in general.  The following example illustrates this point
+Finding such a parameterization $F\:\Conv\trig{\tilde p}{\tilde x}{\tilde y}\to W$ is not as simple as one might think. 
+In particular, the map $F\:\Conv\trig{\tilde p}{\tilde x}{\tilde y}\to W:\tilde \gamma_t(s)\mapsto \gamma_t(s)$ that sends the point with parameter $(t,s)$ under the line-of-sight map for $[\tilde x\tilde y]$ from $\tilde p$, to the point with the same parameter  under the line-of-sight map for $[x y]$ from  $p$,  is not majorizing in general.  The following example illustrates this point
 
 
 
@@ -1298,10 +1298,10 @@ Hence $(\Conv_2\Omega)^\complement=\bigcup_i R_i'$ is a polytope.
 
 \begin{thm}{Theorem}\label{thm:sect}
 Let $\spc{L}\in\CBB{}\kappa$ and $p\in \spc{L}$.
-Given two tangent vectors $u,v\in \T_p$, consider model triangle $\trig{\~\0}{\~u}{\~v}=\modtrig0(\0 u v)$ 
-and denote by $\Sect(u v)$ the region in $\EE^2$ bounded by rays $\~\0\~u$ and $\~\0\~v$.
+Given two tangent vectors $u,v\in \T_p$, consider model triangle $\trig{\tilde \0}{\tilde u}{\tilde v}=\modtrig0(\0 u v)$ 
+and denote by $\Sect(u v)$ the region in $\EE^2$ bounded by rays $\tilde \0\tilde u$ and $\tilde \0\tilde v$.
 
-Then for any geodesic $[u v]$ in $\T^\o_p$ there is a distance preserving map $\iota\:\Sect(u v)\to\T^\o_p$ such that $\iota(\~\0)=\0$, $\iota([\~u\~v])=[u v]$.
+Then for any geodesic $[u v]$ in $\T^\o_p$ there is a distance preserving map $\iota\:\Sect(u v)\to\T^\o_p$ such that $\iota(\tilde \0)=\0$, $\iota([\tilde u\tilde v])=[u v]$.
 \end{thm}
 
 \parit{Proof.}
@@ -1683,18 +1683,18 @@ Follows from Overlap lemma (\ref{lem:extend-overlap}).
 
 
 Morever, assume $p,q\in\oBall(K,\tfrac{\varpi\kappa}2)$ and  $p^*,q^*\in K$ be their closest-point projections
-and there is a model quadraleteral $[\~p\~p^{*}\~q^{*}\~q]$ in $\Lob2\kappa$
-such that $\~p$ and $\~q$ lie on one side from a line $\ell$,
-the point $\~p^*$ and $\~q^*$ are closest to $\~p$ and $\~q$ on $\ell$ 
+and there is a model quadraleteral $[\tilde p\tilde p^{*}\tilde q^{*}\tilde q]$ in $\Lob2\kappa$
+such that $\tilde p$ and $\tilde q$ lie on one side from a line $\ell$,
+the point $\tilde p^*$ and $\tilde q^*$ are closest to $\tilde p$ and $\tilde q$ on $\ell$ 
 and %???+PIC
 \begin{align*}
-\dist{\~p}{\~p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}},
+\dist{\tilde p}{\tilde p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}},
 \\
-\dist{\~q}{\~q^*}{\Lob2\kappa}&=\dist{q}{q^*}{\spc{U}},
+\dist{\tilde q}{\tilde q^*}{\Lob2\kappa}&=\dist{q}{q^*}{\spc{U}},
 \\
-\dist{\~q^*}{\~q^*}{\Lob2\kappa}&=\dist{q^*}{q^*}{\spc{U}}.
+\dist{\tilde q^*}{\tilde q^*}{\Lob2\kappa}&=\dist{q^*}{q^*}{\spc{U}}.
 \intertext{Then}
-\dist{\~p}{\~q}{\Lob2\kappa}&\le \dist{p}{q}{\spc{U}}.
+\dist{\tilde p}{\tilde q}{\Lob2\kappa}&\le \dist{p}{q}{\spc{U}}.
 \intertext{In particular if $\kappa\le 0$ then}
 \dist{p^*}{q^*}{\spc{U}}&\le \dist{p}{q}{\spc{U}}.
 \end{align*}
@@ -1713,19 +1713,19 @@ otherwise the distance from $p$ to a point on $[p^{*}q^{*}]$ whold be shorter th
 Since $K$ is convex $K\supset[p^{*}q^{*}]$;
 the later contradicts Closest-point projection lemma \ref{lem:closest point}.
 
-Applying Reshetnyak's majorization theorem to the quadrilateral $[pp^{*}q^{*}q]$ we get convex model quadraleteral $[\~p\~p^{*}\~q^{*}\~q]$
+Applying Reshetnyak's majorization theorem to the quadrilateral $[pp^{*}q^{*}q]$ we get convex model quadraleteral $[\tilde p\tilde p^{*}\tilde q^{*}\tilde q]$
 in $\Lob2\kappa$ 
 such that
 for any $x\in [pq]$ and any $y\in[p^{*}q^{*}]$ 
-and corresponding points $x\~\in [\~p\~q]$ and any $\~y\in[\~p^{*}\~q^{*}]$
+and corresponding points $x\tilde \in [\tilde p\tilde q]$ and any $\tilde y\in[\tilde p^{*}\tilde q^{*}]$
 we have 
-\[\dist{x}{y}{}\le\dist{\~x}{\~y}{}.\] 
+\[\dist{x}{y}{}\le\dist{\tilde x}{\tilde y}{}.\] 
 
-COnsider the function $\~f\:\Lob{2}{\kappa}\to\RR$ defined by
-\[\~f=\sn\kappa\dist{[\~p^{*}\~q^{*}]}{}{\Lob{2}{\kappa}}\]
+COnsider the function $\tilde f\:\Lob{2}{\kappa}\to\RR$ defined by
+\[\tilde f=\sn\kappa\dist{[\tilde p^{*}\tilde q^{*}]}{}{\Lob{2}{\kappa}}\]
 By direct calculations, the inequality
-\[\~f''+\kappa f\ge 0\]
-holds in $\oBall([\~p^{*}\~q^{*}],\tfrac{\varpi\kappa}2)$.
+\[\tilde f''+\kappa f\ge 0\]
+holds in $\oBall([\tilde p^{*}\tilde q^{*}],\tfrac{\varpi\kappa}2)$.
 
 
 
@@ -2291,25 +2291,25 @@ $[x y]\subset B$.
 
 
 
-Set $\mangle\~p^i=\mangle\hinge{\~p^i}{\~x^\kay}{\~x^j}$. 
+Set $\mangle\tilde p^i=\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\tilde x^j}$. 
 It follows that:
 \begin{subthm}{two-overlap}
-If $\mangle{\~p^1} +\mangle {\~p^2}+\mangle {\~p^3} \le 2\cdot\pi$ and 
-triangles $\trig{\~p^3}{\~x^1}{\~x^2}$, $\trig{\~p^2}{\~x^3}{\~x^1}$ do not overlap, then
+If $\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle {\tilde p^3} \le 2\cdot\pi$ and 
+triangles $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$, $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$ do not overlap, then
 \begin{align*}
-\mangle {\~p^1} 
+\mangle {\tilde p^1} 
 &> 
-\mangle{\~p^2}+ \mangle{\~p^3},
+\mangle{\tilde p^2}+ \mangle{\tilde p^3},
 \end{align*}
 
 \end{subthm}
 \begin{subthm}{no-overlap} 
-No pair of triangles $\trig{\~p^i}{\~x^j}{\~x^\kay}$  overlap if and only if 
-\[\mangle{\~p^1} +\mangle {\~p^2}+\mangle{\~p^3}> 2\cdot\pi\]
+No pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^\kay}$  overlap if and only if 
+\[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi\]
 and\footnote{If $\kappa\le 0$ then the next condition always holds. Indeed in this case the sum of angles in each model triangle is at most $\pi$.
 Therefore the second condition in (\ref{SHORT.no-overlap})
 holds  some and therefore any relabeling of $x^1, x^2, x^3$.}
-\[\mangle\hinge {\~x^1}{\~x^2}{\~p^3}+\mangle\hinge {\~x^1}{\~p^2}{\~x^3}+\mangle\hinge {\~x^1}{\~x^2}{\~x^3}<2\cdot\pi\]
+\[\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}<2\cdot\pi\]
 \end{subthm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2317,27 +2317,27 @@ holds  some and therefore any relabeling of $x^1, x^2, x^3$.}
 
 
 \parit{``If'' part of (\ref{SHORT.no-overlap}). } 
-Suppose triangles $\trig{\~p^3}{\~x^1}{\~x^2}$ and $\trig{\~p^2}{\~x^3}{\~x^1}$ overlap, 
-\[\mangle\~p^1 + \mangle\~p^2+\mangle\~p^3 > 2\cdot\pi.
+Suppose triangles $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ and $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$ overlap, 
+\[\mangle\tilde p^1 + \mangle\tilde p^2+\mangle\tilde p^3 > 2\cdot\pi.
 \eqlbl{eq:<p1+<p2+<p3}\]
 and
 \[
-2\cdot\pi>\mangle\hinge {\~x^1}{\~x^2}{\~p^3}+\mangle\hinge {\~x^1}{\~p^2}{\~x^3}+\mangle\hinge {\~x^1}{\~x^2}{\~x^3}\]
+2\cdot\pi>\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}\]
 By the former, \ref{eq:no-overlap} fails.  
-By \ref{eq:<p1+<p2+<p3}, $\mangle\~p^2+\mangle\~p^3 > \pi$. 
+By \ref{eq:<p1+<p2+<p3}, $\mangle\tilde p^2+\mangle\tilde p^3 > \pi$. 
 Therefore
-\[\mangle\~p^1
+\[\mangle\tilde p^1
 \le 
-2\cdot\pi -(\mangle\~p^2+\mangle\~p^3),\]
+2\cdot\pi -(\mangle\tilde p^2+\mangle\tilde p^3),\]
 which contradicts \ref{eq:<p1+<p2+<p3}.
 
 \parit{``Only if'' part of (\ref{SHORT.no-overlap}).} 
 Suppose no two triangles overlap and 
-\[\mangle\~p^2 + \mangle\~p^2+\mangle\~p^3 \le 2\cdot\pi.\]  
+\[\mangle\tilde p^2 + \mangle\tilde p^2+\mangle\tilde p^3 \le 2\cdot\pi.\]  
 By \ref{SHORT.two-overlap}), for $\{i,j,k\}=\{1,2,3\}$ we have
-\[\mangle\~p^i > \mangle\~p^j+\mangle\~p^\kay.\]
+\[\mangle\tilde p^i > \mangle\tilde p^j+\mangle\tilde p^\kay.\]
 Adding these three inequalities gives
-\[ \mangle\~p^1+\mangle\~p^2+\mangle\~p^3 > 2\cdot (\mangle\~p^1+\mangle\~p^2+\mangle\~p^3),\] 
+\[ \mangle\tilde p^1+\mangle\tilde p^2+\mangle\tilde p^3 > 2\cdot (\mangle\tilde p^1+\mangle\tilde p^2+\mangle\tilde p^3),\] 
 a contradiction.
 
 
@@ -2495,10 +2495,10 @@ Set
 \begin{align*}
 v(R)&=\vol_m\oBall[S,R],
 &
-\~v(R)&=\vol_m\oBall[ R]_{\Lob{m}{\kappa}}.
+\tilde v(R)&=\vol_m\oBall[ R]_{\Lob{m}{\kappa}}.
 \end{align*}
 Then the function
-\[f\:R\mapsto \frac{v(R)}{\~v(R)}\] 
+\[f\:R\mapsto \frac{v(R)}{\tilde v(R)}\] 
 is non-increasing.
 \end{thm}
 Recall that for $S\subset \spc{L}$ and $0<r<R$  by  $\mathrm{A}[S,r,R]$  we denote the annulus $\{x\in\spc{L}|$ such that $r\le \dist{x}{S}{}\le R\}$.
@@ -2516,7 +2516,7 @@ Then
 The proof is essentially the same as the proof of Theorem ~\ref{thm:bishop-gromov} modulo the following simple generalization of triangle comparison ~\ref{point-on-side}.
 
 \begin{thm}{Lemma}\label{point-on-side-gen}
-Let $\spc{L}\in\CBB{m}{0}$ and let $S\subset \spc{L}$ be a closed subset. For points $p,q\in \spc{L}$  consider the generalized comparison triangle (if it exists)  $\trig{\~p}{\~q}{\~s}=\modtrig\kappa(p q S)$ in $\Lob2\kappa$
+Let $\spc{L}\in\CBB{m}{0}$ and let $S\subset \spc{L}$ be a closed subset. For points $p,q\in \spc{L}$  consider the generalized comparison triangle (if it exists)  $\trig{\tilde p}{\tilde q}{\tilde s}=\modtrig\kappa(p q S)$ in $\Lob2\kappa$
 with $\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{}$, $\dist{\tilde p}{\tilde s}{}=\dist{p}{S}{}$ and  $\dist{\tilde q}{\tilde s}{}=\dist{q}{S}{}$.
 
 Let $x\in[pS], \tilde x\in [\tilde p\tilde s]$ be such that $\dist{x}{p}{}=\dist{\tilde x}{\tilde p}{}$. Then $\dist{x}{q}{}\ge\dist{\tilde x}{\tilde q}{}$.
@@ -2524,7 +2524,7 @@ Let $x\in[pS], \tilde x\in [\tilde p\tilde s]$ be such that $\dist{x}{p}{}=\dist
 \begin{proof}
 Let $s_1,s_2\in S$ be such that $\dist{p}{S}{}=\dist{p}{s_1}{}$ and   $\dist{q}{S}{}=\dist{q}{s_2}{}$.  
 
-Consider the comparison triangle  $\trig{\~p}{\~q}{\~s_1}=\modtrig\kappa(p q s_1)$ and let $\tilde x_1\in [\tilde s_1\tilde p]$ be such that  $\dist{x}{p}{}=\dist{\tilde x_1}{\tilde p}{}$. Then by regular point-on-side comparison we have that $\dist{x}{q}{}\ge \dist{\tilde x_1}{\tilde q}{}$. However, $\dist {q}{s_1}{}\ge\dist{q}{S}{}$ and therefore $\dist{\tilde x_1}{\tilde q}{}\ge \dist{x}{\tilde q}{} $.
+Consider the comparison triangle  $\trig{\tilde p}{\tilde q}{\tilde s_1}=\modtrig\kappa(p q s_1)$ and let $\tilde x_1\in [\tilde s_1\tilde p]$ be such that  $\dist{x}{p}{}=\dist{\tilde x_1}{\tilde p}{}$. Then by regular point-on-side comparison we have that $\dist{x}{q}{}\ge \dist{\tilde x_1}{\tilde q}{}$. However, $\dist {q}{s_1}{}\ge\dist{q}{S}{}$ and therefore $\dist{\tilde x_1}{\tilde q}{}\ge \dist{x}{\tilde q}{} $.
 
 \end{proof}
 
@@ -2970,12 +2970,12 @@ Without loss of generality we may assume that
 \angk\kappa{x^1}{x^2}{x^4}.
 \eqlbl{eq:angle-non-trig-inq}\]
 In this case, 
-consider two model triangles $[\~x^1\~x^2\~x^3]=\modtrig\kappa(x^1x^2x^3)$
+consider two model triangles $[\tilde x^1\tilde x^2\tilde x^3]=\modtrig\kappa(x^1x^2x^3)$
 and
-$[\~x^1\~x^3\~x^4]=\modtrig\kappa(x^1x^3x^4)$
-so that they lie on opposite sides of $[\~x^1\~x^3]$.
+$[\tilde x^1\tilde x^3\tilde x^4]=\modtrig\kappa(x^1x^3x^4)$
+so that they lie on opposite sides of $[\tilde x^1\tilde x^3]$.
 Note that \ref{eq:angle-non-trig-inq} implies that 
-\[\dist{\~x^2}{\~x^4}{\Lob2\kappa}
+\[\dist{\tilde x^2}{\tilde x^4}{\Lob2\kappa}
 <
 \dist{x^2}{x^4}{\spc{X}}.
 \]
@@ -3033,35 +3033,35 @@ In case (\ref{model4ii-a}), we may take
 
 
 \parit{Proof.}
-Denote by $S(p,R)$ and $S(\~p,R)\subset \Lob{m}{\kappa}$
-the spheres with center $p$ and $\~p$ and radius $R$ in $\spc{L}$ and in $\Lob{m}{\kappa}$
+Denote by $S(p,R)$ and $S(\tilde p,R)\subset \Lob{m}{\kappa}$
+the spheres with center $p$ and $\tilde p$ and radius $R$ in $\spc{L}$ and in $\Lob{m}{\kappa}$
 correspondingly. 
 Note that 
 \begin{align*}
 S(p,R)&=(\dist{p}{}{})^{-1}(R),
 &
-S(\~p,R)&=(\dist{\~p}{}{})^{-1}(R).
+S(\tilde p,R)&=(\dist{\tilde p}{}{})^{-1}(R).
 \end{align*}
-Denote by $a(R)$ and $\~a(R)$ the areas of $S(p,R)$ and $S(\~p,R)$ correspondingly;
+Denote by $a(R)$ and $\tilde a(R)$ the areas of $S(p,R)$ and $S(\tilde p,R)$ correspondingly;
 i.e.,
 \begin{align*}
 a(R)&=\vol_{m-1} S(p,R),
 &
-\~a(R)&=\vol_{m-1} S(\~p,R).
+\tilde a(R)&=\vol_{m-1} S(\tilde p,R).
 \end{align*}
 
 Let us prove the following.
 
 \begin{clm}{}\label{clm:a(R)}
 The function 
-\[R\mapsto \frac{a(R)}{\~a(R)}\]
+\[R\mapsto \frac{a(R)}{\tilde a(R)}\]
 is not increasing in
 $(0,\varpi\kappa)$.
 \end{clm}
 
 \parit{Proof of the claim.}
 We need to prove that 
-\[ \frac{a(R^1)}{\~a(R^1)}\ge \frac{a(R^2)}{\~a(R^2)}
+\[ \frac{a(R^1)}{\tilde a(R^1)}\ge \frac{a(R^2)}{\tilde a(R^2)}
 \eqlbl{eq:a(R)}\]
 if $0<R^1< R^2<\varpi\kappa$.
 
@@ -3083,11 +3083,11 @@ we get
 \cdot
 a(R^2)\] 
 Clearly 
-\[\~a(R^1)
+\[\tilde a(R^1)
 =
 \l(\frac{\sn\kappa R^1}{\sn\kappa R^2}\r)^{m-1}
 \cdot
-\~a(R^2).\]
+\tilde a(R^2).\]
 Hence \ref{eq:a(R)} follows.
 \claimqeds
 
@@ -3102,11 +3102,11 @@ we get
 \int\limits_0^R a(r)\cdot\d r
 \ge
 \\
-&\ge \frac{1}{\~a(R)}\cdot \int\limits_0^R \~a(r)\cdot\d r
+&\ge \frac{1}{\tilde a(R)}\cdot \int\limits_0^R \tilde a(r)\cdot\d r
 =
 \\
 &=
-\frac{\~v(R)}{\~a(R)}
+\frac{\tilde v(R)}{\tilde a(R)}
 \end{aligned}
 \eqlbl{eq:a/v}
 \]
@@ -3114,13 +3114,13 @@ for all $R>0$.
 
 From the Coarea formula, we get 
 \begin{align*}
-v'&\ae a, & \~v'&\ae\~a. 
+v'&\ae a, & \tilde v'&\ae\tilde a. 
 \end{align*}
 Applying  \ref{eq:a/v}, 
 we get
 \[(\ln\circ f)'
 \ae
-\frac{a}{v}-\frac{\~a}{\~v}
+\frac{a}{v}-\frac{\tilde a}{\tilde v}
 \le 0.
 \]
 Since $f$ is locally Lipschitz, this proves the theorem.
@@ -3261,7 +3261,7 @@ Note that there is $\delta>0$
 such that 
 $$\mangle \hinge p{x^i}{x^j}>\delta$$
 if $\dist{p}{x^i}{},\dist{p}{x^j}{}>2\cdot\eps$.
-In fact one can take  $\delta=\~\mangle\mc\kappa\{\eps_0;2\cdot\eps_0;2\cdot\eps_0\}$.
+In fact one can take  $\delta=\tilde \mangle\mc\kappa\{\eps_0;2\cdot\eps_0;2\cdot\eps_0\}$.
 
 Therefore at most $\pack_\delta\SS^{m-1}$ of points $\{x_1,x_2,\dots,x_n\}$ lie outside of $\cBall[p,2\cdot\eps]$.
 
@@ -3341,10 +3341,10 @@ the ball $\cBall[p_1,R_1]$ is $e^{\mp\delta}$-bi-Lipschitz to a subset of $\EE^m
 \[\SphMes_m\l(\oBall(p,R)\l\backslash \bigcup_n\cBall[p_n,R_n]\r.\r)=0.\]
 
 According to ???,
-\[\SphMes_m\oBall(p_n,R_n)\le \sum_n \~v\mc\kappa(R_n)\]
+\[\SphMes_m\oBall(p_n,R_n)\le \sum_n \tilde v\mc\kappa(R_n)\]
 for each $n$.
 Therefore
-\[\SphMes_m\oBall(p,R)\le \sum_n \~v\mc\kappa(R_n)\]
+\[\SphMes_m\oBall(p,R)\le \sum_n \tilde v\mc\kappa(R_n)\]
 
 Choose $\bar q\in \l]pq\r]$ so that $\dist{p}{\bar q}{}<\delta$.
 For each point $x\in \oBall(p,R)$, 
@@ -3356,7 +3356,7 @@ This way we get a distance noncontracting map $\oBall(p,\delta)\to \ModBall_{R+\
 Notice that ???; indeed ???.
 
 It follows that 
-\[\sum_n \~v\mc\kappa(R_n)\le \~v\mc\kappa(R+\delta)-\~v\mc\kappa(\eps\cdot R)\]
+\[\sum_n \tilde v\mc\kappa(R_n)\le \tilde v\mc\kappa(R+\delta)-\tilde v\mc\kappa(\eps\cdot R)\]
 Since 
 
 
@@ -3527,15 +3527,15 @@ for any $p\in \spc{L}$ and any $R>0$.
 According to Corollary~\ref{cor:S>Sigma},
 there is a distance noncontracting map $\map\:\Sigma_p\to\SS^{m-1}$.
 
-Fix $\~p\in \Lob m\kappa$.
-Since $\Sigma_{\~p}\iso\SS^{m-1}$,
-we can identify $\SS^{m-1}$ and $\Sigma_{\~p}$.
+Fix $\tilde p\in \Lob m\kappa$.
+Since $\Sigma_{\tilde p}\iso\SS^{m-1}$,
+we can identify $\SS^{m-1}$ and $\Sigma_{\tilde p}$.
 
 For any point $x\in\oBall(p,R)$,
 choose a geodesic $[px]$.
-Let $\~x\in\Lob m\kappa$ be the (necessary unique) point such that
-$\dir{\~p}{\~x}=\map(\dir px)$ and $\dist{\~p}{\~x}{}=\dist{p}{x}{}$.
-According to ???, the map $\map[2]\:x\mapsto \~x$ is distance noncontracting.
+Let $\tilde x\in\Lob m\kappa$ be the (necessary unique) point such that
+$\dir{\tilde p}{\tilde x}=\map(\dir px)$ and $\dist{\tilde p}{\tilde x}{}=\dist{p}{x}{}$.
+According to ???, the map $\map[2]\:x\mapsto \tilde x$ is distance noncontracting.
 Clearly, 
 $$\map[2](\oBall(p,R)_{\spc{L}})\subset \oBall(p,R)_{\Lob m\kappa}.$$
 Hence the result follows.
@@ -3670,9 +3670,9 @@ for $\SphMes_m$-almost all points $p\in \spc{L}$.
 \end{thm}
 
 Let $m$ and $\kappa$ be as in the formulation of the theorem.
-Denote by $\~v\mc\kappa(R)$ the volume of ball of radius $R$ in $\Lob{m}{\kappa}$.
+Denote by $\tilde v\mc\kappa(R)$ the volume of ball of radius $R$ in $\Lob{m}{\kappa}$.
 Note that
-\[\~v\mc\kappa(R)=\alpha_m\cdot R^m+o(R^m),\]
+\[\tilde v\mc\kappa(R)=\alpha_m\cdot R^m+o(R^m),\]
 where $\alpha_m$ denotes the volume of the unit ball in $\EE^m$.
 
 \begin{thm}{Lemma}\label{lem:R_n<R}
@@ -3680,7 +3680,7 @@ Let $\spc{L}\in\CBB{m}{\kappa}$,
 $p\in\spc{L}$ and $0<R\le \varpi\kappa$.
 Assume $\oBall(p_1,R_1),\oBall(p_2,R_2),\dots$ be a countable collection of disjoint balls in $\oBall(p,R)$.
 Then 
-\[\sum_n \~v\mc\kappa(R_n)\le \~v\mc\kappa(R).\]
+\[\sum_n \tilde v\mc\kappa(R_n)\le \tilde v\mc\kappa(R).\]
 
 \end{thm}
 
@@ -3713,7 +3713,7 @@ such that the distance $\eps=\dist{p}{p'}{}$ is arbitrary small and $\T_{p'}\iso
 In this case all the balls $\oBall(p_n,R_n)$ lie in
 $\oBall(p',R+\eps)$.
 The same argument as above shows that 
-\[\sum_n \~v\mc\kappa(R_n)\le \~v\mc\kappa(R+\eps).\]
+\[\sum_n \tilde v\mc\kappa(R_n)\le \tilde v\mc\kappa(R+\eps).\]
 Since $\eps>0$ is arbitrary, the result follows.
 \qeds
 
@@ -4497,7 +4497,7 @@ Then a spherical neighborhood of $p$ admits a $e^{\mp\eps}$-bi-Lipschitz embeddi
 \begin{thm}{Lemma}
 Let $\spc{L}\in\CBB{m}{}$ and $p\in \spc{L}$.
 Assume $\xi^0,\xi^1,\dots,\xi^m$ be unit tangent vectors at $p$.
-Let $\~\xi^0,\~\xi^1,\dots,\~\xi^m$ be the unit vectors 
+Let $\tilde \xi^0,\tilde \xi^1,\dots,\tilde \xi^m$ be the unit vectors 
 \end{thm}
 
 
@@ -5809,7 +5809,7 @@ but if $\kappa=0$
 
 \parit{Proof of Bishop--Gromov inequality for $\kappa=0$.} 
 We need to prove that 
-$$ \frac{v(R_1)}{\~v(R_1)}\ge \frac{v(R_2)}{\~v(R_2)}$$
+$$ \frac{v(R_1)}{\tilde v(R_1)}\ge \frac{v(R_2)}{\tilde v(R_2)}$$
 if $R_1< R_2$.
 
 For each point $x\in \spc{L}$ choose a geodesic path $\geod_{[px]}$;
@@ -5840,7 +5840,7 @@ we get
 \vol_m\oBall(p,R_2).
 \end{align*}
 Since $\kappa=0$, we have 
-$$\frac{\~v(R_1)}{\~v(R_2)}=\l(\frac{R_1}{R_2}\r)^m.$$
+$$\frac{\tilde v(R_1)}{\tilde v(R_2)}=\l(\frac{R_1}{R_2}\r)^m.$$
 Hence the result.\qeds
 
 
@@ -7278,47 +7278,47 @@ Assume a baricentrical simplex with vertexes $a^0,a^1,\dots,a^m$ is well defined
 
 
 \begin{thm}{No-overlap lemma}\label{lem:overlap}
-Let $\trig{\~x^1}{\~x^2}{\~x^3}$ be a triangle in $\Lob2{\kappa}$, $\~p^1,\~p^2,\~p^3$ be points inside $\trig{\~x^1}{\~x^2}{\~x^3}$ (i.e. in $\Conv(\~x^1,\~x^2,\~x^3)$) such that
+Let $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$ be a triangle in $\Lob2{\kappa}$, $\tilde p^1,\tilde p^2,\tilde p^3$ be points inside $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$ (i.e. in $\Conv(\tilde x^1,\tilde x^2,\tilde x^3)$) such that
 \begin{subthm}{lem:overlap:px=px}
-$\dist{\~p^i}{\~x^k}{}=\dist{\~p^j}{\~x^k}{}$ if $\{i,j,k\}=\{1,2,3\}$,
+$\dist{\tilde p^i}{\tilde x^k}{}=\dist{\tilde p^j}{\tilde x^k}{}$ if $\{i,j,k\}=\{1,2,3\}$,
 \end{subthm}
 \begin{subthm}{}
-no two triangles $\trig{\~p^i}{\~x^j}{\~x^k}$ overlap.
+no two triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^k}$ overlap.
 \end{subthm}
 Then
-$$\mangle\hinge {\~p^1}{\~x^2}{\~x^3} 
-+\mangle\hinge {\~p^2}{\~x^3}{\~x^1}
-+\mangle\hinge {\~p^3}{\~x^1}{\~x^2}
+$$\mangle\hinge {\tilde p^1}{\tilde x^2}{\tilde x^3} 
++\mangle\hinge {\tilde p^2}{\tilde x^3}{\tilde x^1}
++\mangle\hinge {\tilde p^3}{\tilde x^1}{\tilde x^2}
 >2\cdot\pi.$$
 
 \end{thm}
 
 \begin{wrapfigure}{r}{20mm}
 \begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/contr-no-overlap(0.4)}
-\lbl[rt]{37,34;$\~p^1$}
-\lbl[tl]{10,36;$\~p^2$}
-\lbl[bl]{14,6;$\~p^3$}
-\lbl[lb]{13,51;$\~x^1$}
-\lbl[tr]{12,0;$\~x^2$}
-\lbl[l]{44,30;$\~x^3$}
+\lbl[rt]{37,34;$\tilde p^1$}
+\lbl[tl]{10,36;$\tilde p^2$}
+\lbl[bl]{14,6;$\tilde p^3$}
+\lbl[lb]{13,51;$\tilde x^1$}
+\lbl[tr]{12,0;$\tilde x^2$}
+\lbl[l]{44,30;$\tilde x^3$}
 \end{lpic}
 \end{wrapfigure}
 
 \parbf{Remark.}
 If $\kappa\le 0$, one can prove the lemma without using condition \ref{SHORT.lem:overlap:px=px}).
 This follows immediately from the formula that relates the sum of angles for the hexagon
-$[\~p^1\~x^2\~p^3\~x^1\~p^2\~x^3]$ and its area:
-$$ \mangle\~p^1
+$[\tilde p^1\tilde x^2\tilde p^3\tilde x^1\tilde p^2\tilde x^3]$ and its area:
+$$ \mangle\tilde p^1
 -
-\mangle\~x^2
+\mangle\tilde x^2
 +
-\mangle\~p^3
+\mangle\tilde p^3
 -
-\mangle\~x^1
+\mangle\tilde x^1
 +
-\mangle\~p^2
+\mangle\tilde p^2
 -
-\mangle\~x^3
+\mangle\tilde x^3
 =2\cdot\pi-\kappa\cdot{\area}.
 $$
 
@@ -7329,36 +7329,36 @@ A counterexample to the lemma for $\kappa>0$ without condition a) can be constru
 
 \begin{wrapfigure}[11]{r}{44mm}
 \begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/4-pnt-kirsz(0.4)}
-\lbl[b]{45,35;$\~p^3$}
-\lbl[t]{42,62;$\~p^1$}
-\lbl[l]{21,49;$\~p^2$}
-\lbl[lb]{4,96;$\~x^3$}
-\lbl[tr]{9,3;$\~x^1$}
-\lbl[b]{103,56;$\~x^2$}
+\lbl[b]{45,35;$\tilde p^3$}
+\lbl[t]{42,62;$\tilde p^1$}
+\lbl[l]{21,49;$\tilde p^2$}
+\lbl[lb]{4,96;$\tilde x^3$}
+\lbl[tr]{9,3;$\tilde x^1$}
+\lbl[b]{103,56;$\tilde x^2$}
 \lbl[l]{54,100;$\dot x^2$}
 \end{lpic}
 \end{wrapfigure}
 
 \parit{Proof.} Without loss of generality, we can assume that 
-$$\mangle \~p^1\le \mangle \~p^2+\mangle \~p^3.
+$$\mangle \tilde p^1\le \mangle \tilde p^2+\mangle \tilde p^3.
 \eqlbl{eq:p2=<p1+p3}$$
 
-Rotate triangle $\trig{\~p^3}{\~x^1}{\~x^2}$ around $\~x^1$ to make $[\~x^1\~p^3]$ coincide with $[\~x^1\~p^2]$.
-Let us denote by $\dot x^2$ the image of $\~x^2$ after rotation.
+Rotate triangle $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ around $\tilde x^1$ to make $[\tilde x^1\tilde p^3]$ coincide with $[\tilde x^1\tilde p^2]$.
+Let us denote by $\dot x^2$ the image of $\tilde x^2$ after rotation.
 Then
-$\mangle\hinge{\~x^1}{\~x^3}{\dot x^2}
-\z<\mangle\hinge{\~x^1}{\~x^3}{\~x^2}$, thus
-$\dist{\~x^3}{\dot x^2}{}<\dist{\~x^3}{\~x^2}{}$ and therefore
+$\mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}
+\z<\mangle\hinge{\tilde x^1}{\tilde x^3}{\tilde x^2}$, thus
+$\dist{\tilde x^3}{\dot x^2}{}<\dist{\tilde x^3}{\tilde x^2}{}$ and therefore
 \begin{align*}
-\mangle\~p^1
-&>\mangle\hinge{\~p^2}{\~x^3}{\dot x^2}
+\mangle\tilde p^1
+&>\mangle\hinge{\tilde p^2}{\tilde x^3}{\dot x^2}
 =
 \\
 &=
-\min\{\mangle\~p^3+\mangle\~p^2,\pi -(\mangle\~p^3+\mangle\~p^2)\}.
+\min\{\mangle\tilde p^3+\mangle\tilde p^2,\pi -(\mangle\tilde p^3+\mangle\tilde p^2)\}.
 \end{align*}
 From \ref{eq:p2=<p1+p3}, we get 
-$$\mangle\~p^1> \pi -(\mangle\~p^3+\mangle\~p^2).$$
+$$\mangle\tilde p^1> \pi -(\mangle\tilde p^3+\mangle\tilde p^2).$$
 Hence the lemma follows.\qeds
 
 
@@ -8258,13 +8258,13 @@ Let $\spc{L}\in\CBB{}{\kappa}$,
 $p,q\in\spc{L}$
 and $f\:\spc{L}\subto\RR$ satisfies $f''+\kappa\cdot  f\le \lambda$.
 Consider model data
-$\~p,\~q\in \Lob2{\kappa}$ and a function $\~f\:\Lob2{\kappa}\to \RR$ such that $\~f''+\kappa\cdot \~f= \lambda$, $\dist{\~p}{\~q}{}=\dist{p}{q}{}$, $\~f(\~p)=f(p)$ and 		$\~f(\~p)=f(p)$.
-Set $g=\itg\kappa\circ(\md\kappa)^{-1}\circ f$ and $\~g=\itg\kappa\circ(\md\kappa)^{-1}\circ \~f$
+$\tilde p,\tilde q\in \Lob2{\kappa}$ and a function $\tilde f\:\Lob2{\kappa}\to \RR$ such that $\tilde f''+\kappa\cdot \tilde f= \lambda$, $\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{}$, $\tilde f(\tilde p)=f(p)$ and 		$\tilde f(\tilde p)=f(p)$.
+Set $g=\itg\kappa\circ(\md\kappa)^{-1}\circ f$ and $\tilde g=\itg\kappa\circ(\md\kappa)^{-1}\circ \tilde f$
 
 Then for any $t,\tau\ge 0$, we have
 $$\dist{\GF_{g}^t(p)}{\GF_{\itg\kappa\circ f}^\tau(q)}{}
 \le
-\dist{\GF_{\~g}^t(\~p)}{\GF_{\itg\kappa\circ \~f}^\tau(\~q)}{}$$ 
+\dist{\GF_{\tilde g}^t(\tilde p)}{\GF_{\itg\kappa\circ \tilde f}^\tau(\tilde q)}{}$$ 
 once the left part is defined.
 \end{thm}
 
@@ -8272,15 +8272,15 @@ once the left part is defined.
 Let $\spc{L}\in\CBB{}{\kappa}$ 
 and $P\subset \spc{L}$ is a closeed subset.
 Assume for two points $x,y\in\spc{L}\backslash P$, there is a model configuration
-$\~x,\~y,\~p\in \Lob2{\kappa}$ 
-such that $\dist{\~x}{\~y}{}=\dist{x}{y}{}$, $\dist{\~p}{\~x}{}=\dist{P}{x}{}$ and $\dist{\~p}{\~y}{}=\dist{P}{y}{}$.
+$\tilde x,\tilde y,\tilde p\in \Lob2{\kappa}$ 
+such that $\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{}$, $\dist{\tilde p}{\tilde x}{}=\dist{P}{x}{}$ and $\dist{\tilde p}{\tilde y}{}=\dist{P}{y}{}$.
 Set $f=\itg\kappa\circ\dist{P}{}{}$ 
-and $\~f=\itg\kappa\circ\dist{\~p}{}{}$.
+and $\tilde f=\itg\kappa\circ\dist{\tilde p}{}{}$.
 
 Then for any $t,\tau\ge 0$, we have
 $$\dist{\GF_{f}^t(x)}{\GF_{f}^\tau(y)}{}
 \le
-\dist{\GF_{\~f}^t(\~x)}{\GF_{\~f}^\tau(\~y)}{}$$ 
+\dist{\GF_{\tilde f}^t(\tilde x)}{\GF_{\tilde f}^\tau(\tilde y)}{}$$ 
 once the left part is defined.
 \end{thm}
 
@@ -9130,25 +9130,25 @@ Clearly, $s_1\le 2\cdot R$; hence $p'\in \RB\kappa(2\cdot R;x,y)$.
 
 \begin{wrapfigure}{r}{22mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pp-1-model(0.45)}
-\lbl[rt]{10,5;$\~x$}
-\lbl[lt]{33,5;$\~y$}
-\lbl[rb]{42,52;$\~p$}
-\lbl[lb]{3,52;$\~p'$}
-\lbl[l]{24,19;$\~q$}
+\lbl[rt]{10,5;$\tilde x$}
+\lbl[lt]{33,5;$\tilde y$}
+\lbl[rb]{42,52;$\tilde p$}
+\lbl[lb]{3,52;$\tilde p'$}
+\lbl[l]{24,19;$\tilde q$}
 \lbl[l]{40,17;$\Lob2{\kappa}$}
 \end{lpic}
 \end{wrapfigure}
 
 Now let us construct corresponding model configuration.
-Consider a model triangle $\trig{\~x}{\~y}{\~p}=\modtrig\kappa(x y p)$ in $\Lob2{\kappa}$.
-Let $\~p'$ be the reflection of $\~p$ in the bisecting perpendicular to $[\~x\~y]$
-and $\~q$ lie on the intersection of $[\~x\~p]$ and $[\~y\~p']$.
+Consider a model triangle $\trig{\tilde x}{\tilde y}{\tilde p}=\modtrig\kappa(x y p)$ in $\Lob2{\kappa}$.
+Let $\tilde p'$ be the reflection of $\tilde p$ in the bisecting perpendicular to $[\tilde x\tilde y]$
+and $\tilde q$ lie on the intersection of $[\tilde x\tilde p]$ and $[\tilde y\tilde p']$.
 From ??? comparison, 
-$\dist{\~y}{\~q}{}\le s_0$
-and clearly $\dist{\~y}{\~q}{}+\dist{\~q}{\~p}{}=s_1=\dist{y}{q}{}+\dist{q}{p}{}$.
-It follows that $\mangle\hinge{\~y}{\~p}{\~q}\le\angk{\kappa}{y}{p}{q}$.
+$\dist{\tilde y}{\tilde q}{}\le s_0$
+and clearly $\dist{\tilde y}{\tilde q}{}+\dist{\tilde q}{\tilde p}{}=s_1=\dist{y}{q}{}+\dist{q}{p}{}$.
+It follows that $\mangle\hinge{\tilde y}{\tilde p}{\tilde q}\le\angk{\kappa}{y}{p}{q}$.
 Thus, from radial comparison (???MORE GENERAL THAN \ref{rad-comp}???), we have 
-$$\dist{p}{p'}{}\le\dist{\~p}{\~p'}{}.
+$$\dist{p}{p'}{}\le\dist{\tilde p}{\tilde p'}{}.
 \eqlbl{eq:|p p'|}$$
 
 Assume 
@@ -9158,7 +9158,7 @@ and $|\dist{p}{x}{}-\dist{p}{y}{}|\le\eps\cdot\dist[{{}}]{x}{y}{})$.
 Clearly $\dist{x}{y}{}$, $\dist{x}{p}{}$, $\dist{y}{p}{}\le 2\cdot R$;
 thus $p'\in\RB\kappa(2\cdot R;x,y)$.
 Direct calculations show that 
-$\dist{\~p}{\~p'}{}<\sqrt{\eps}$ 
+$\dist{\tilde p}{\tilde p'}{}<\sqrt{\eps}$ 
 for all small enough $\eps>0$.
 Inequality \ref{eq:|pp'|} implies that we can fix $\eps=\eps(\delta,\kappa,\RR)>0$ so small that 
 $$\dist{p}{p'}{}<\sqrt{\eps}<\tfrac\delta 4.
@@ -10590,7 +10590,7 @@ Given real numbers $a,a',b,b',x$, if both of the following expressions are well 
 \end{wrapfigure}
 
 \parit{Proof.}
-Consider triangle $\trig p q r=\~\triangle_\kappa\{a,x,b\}$ in $\Lob_\kappa$. 
+Consider triangle $\trig p q r=\tilde \triangle_\kappa\{a,x,b\}$ in $\Lob_\kappa$. 
 Take 
 a point $s$ on the extension of $[q r]$ behind $r$ so that $|r s|=a'$ (and therefore $|q s|=a+a'$). 
 
@@ -10811,11 +10811,11 @@ the finite intersection property.
 \begin{thm}{Lemma}
 Let $\CAT_A\le \kappa$ and $\Rad A\le \varpi_\kappa/2$, $x_1,x_2,\dots, x_n\in A$ and let $p$ be a point such that for any direction $\xi\in \Sigma_p$ for some $i$ we have $\<\xi,\dir_p^{x_i}\>\le0$.
 Then there is a model configuarion 
-$\~p,\~x_1,\dots,\~x_n\in\Lob_\kappa^{n}$ and a subset $F\in \{1,2\dots,n\}$ such that 
+$\tilde p,\tilde x_1,\dots,\tilde x_n\in\Lob_\kappa^{n}$ and a subset $F\in \{1,2\dots,n\}$ such that 
 \begin{enumerate}[(i)]
-\item $|\~x_i\~x_j|\le|x_ix_j|$ for all $i,j$
-\item $|\~p\~x_i|\le |px_i|$ for all $i$ and $|\~p\~x_i|=|px_i|$ if $i\in F$.
-\item \label{conv-cond} $\~p\in \Conv(\{x_i\}_{i\in F})$
+\item $|\tilde x_i\tilde x_j|\le|x_ix_j|$ for all $i,j$
+\item $|\tilde p\tilde x_i|\le |px_i|$ for all $i$ and $|\tilde p\tilde x_i|=|px_i|$ if $i\in F$.
+\item \label{conv-cond} $\tilde p\in \Conv(\{x_i\}_{i\in F})$
 \end{enumerate}
 \end{thm}
 
@@ -10852,8 +10852,8 @@ one can take model configuration ???.
 Assume we have a model configuration for $p$ and $p'$, assume $\hat p\in [pp']$.
 Let us show that there is a model configuration for $\hat p$.???
 
-Let us consider a model configuration which satisfies properties ... and has maximal possible  $\sum_{i<j}|\~x_i\~x_j|$.
-Assume it does not satisfy \textit{(\ref{conv-cond})}, then it is easy to see that there are positive numbers $\alpha_i$ such that vector $v=\sum\alpha_i\dir_{\~p}{\~x_i}$ in the euclidean space $T_p\Lob_\kappa^{n+1}$ such that $\mangle(v,\dir_{\~p}^{\~x_i})<\pi/2$ for all $i$. 
+Let us consider a model configuration which satisfies properties ... and has maximal possible  $\sum_{i<j}|\tilde x_i\tilde x_j|$.
+Assume it does not satisfy \textit{(\ref{conv-cond})}, then it is easy to see that there are positive numbers $\alpha_i$ such that vector $v=\sum\alpha_i\dir_{\tilde p}{\tilde x_i}$ in the euclidean space $T_p\Lob_\kappa^{n+1}$ such that $\mangle(v,\dir_{\tilde p}^{\tilde x_i})<\pi/2$ for all $i$. 
 Let us constuct a vector $w\in T_pA$ 
 \qeds
 
@@ -10920,16 +10920,16 @@ can be extended as a short map $\bar f:L\to\Lob_\kappa^{n+1}$, where $\Lob_\kapp
 \end{thm}
 
 \parit{Proof.}
-Let us first prove that for any $p\in L$ and any finite subset $F\in A$ and a short map $f:F\to \Lob_\kappa$, there is a point $\~p\in\Lob_\kappa$ such that
-$$|\~p\,f(x)|\le|px|\ \ \text{for any}\ \ x\in F.$$
+Let us first prove that for any $p\in L$ and any finite subset $F\in A$ and a short map $f:F\to \Lob_\kappa$, there is a point $\tilde p\in\Lob_\kappa$ such that
+$$|\tilde p\,f(x)|\le|px|\ \ \text{for any}\ \ x\in F.$$
 Assume it is wrong, and $p, x_1,x_2,\dots, x_n\in L$ be a configuration which does not meets this property.
-We can assume that this configuration is minimal, i.e. for any for each $i$ there is a point $\~p_i$ such that $|\~p_i\,f(x_j)|\le|px_j|$ for all $j\not=i$.
-Let us choose such $\~p_i$ to make distance $|\~p_i\~x_i|$ to be minimal possible.
-Clearly $|\~p_i\~x_i|>|px_i|$, morevoer for each $j\not=i$ we have $|\~p_i\~x_j|=|px_j|$ (otherwise the configuration would not be minimal, indeed, do the cosine-trick...).
-The point $\~p_i$ must lie in a convex hull of $\{\~x_i\}$.
-Clearly $\~p_i\not=\~p_j$, that implies that points $\{\~x_i\}$ form vertexes of nondegenerate simplex...
+We can assume that this configuration is minimal, i.e. for any for each $i$ there is a point $\tilde p_i$ such that $|\tilde p_i\,f(x_j)|\le|px_j|$ for all $j\not=i$.
+Let us choose such $\tilde p_i$ to make distance $|\tilde p_i\tilde x_i|$ to be minimal possible.
+Clearly $|\tilde p_i\tilde x_i|>|px_i|$, morevoer for each $j\not=i$ we have $|\tilde p_i\tilde x_j|=|px_j|$ (otherwise the configuration would not be minimal, indeed, do the cosine-trick...).
+The point $\tilde p_i$ must lie in a convex hull of $\{\tilde x_i\}$.
+Clearly $\tilde p_i\not=\tilde p_j$, that implies that points $\{\tilde x_i\}$ form vertexes of nondegenerate simplex...
 
-Further note that simplexes $\<\~x_1\dots \~x_{i-1}\~p_i\~x_{i+1}\dots\~x_n\>$ do not overlap...
+Further note that simplexes $\<\tilde x_1\dots \tilde x_{i-1}\tilde p_i\tilde x_{i+1}\dots\tilde x_n\>$ do not overlap...
 
 Therefore the same is true for spherical simlexes
 
@@ -10951,19 +10951,19 @@ More over the same is true if one permutes indexes $\{1,2,\dots,n\}$.
 \parit{Proof.} Induction by $n$.
 
 \parit{Base, $n=2$:} In this case it is enough to show that\footnote{Note that the claim in the case $\kappa\le0$ follows immidetely from the formula which relates sum of angles for hexagone 
-$\~p_1\~x_2\~p_3\~x_1\~p_2\~x_3$ and its area:
+$\tilde p_1\tilde x_2\tilde p_3\tilde x_1\tilde p_2\tilde x_3$ and its area:
 $$
-\mangle\~p_1
+\mangle\tilde p_1
 -
-\mangle\~x_2
+\mangle\tilde x_2
 +
-\mangle\~p_3
+\mangle\tilde p_3
 -
-\mangle\~x_1
+\mangle\tilde x_1
 +
-\mangle\~p_2
+\mangle\tilde p_2
 -
-\mangle\~x_3
+\mangle\tilde x_3
 =2\pi-\kappa\cdot area.$$} 
 $$\mangle\<p_0;x_1,x_2\>
  +\mangle\<p_1;x_2,x_0\>
@@ -10972,24 +10972,24 @@ $$\mangle\<p_0;x_1,x_2\>
 
 \begin{wrapfigure}{r}{42mm}
 \begin{lpic}[t(-5mm),b(5mm),r(0mm),l(0mm)]{pics/4-pnt-kirsz(0.4)}
-\lbl[b]{45,36;$\~p_1$}
-\lbl[t]{42,63;$\~p_2$}
-\lbl[l]{21,50;$\~p_0$}
-\lbl[lb]{4,97;$\~x_1$}
-\lbl[tr]{9,4;$\~x_2$}
-\lbl[b]{104,56;$\~x_0$}
-\lbl[l]{54,101;$\~x_0'$}
+\lbl[b]{45,36;$\tilde p_1$}
+\lbl[t]{42,63;$\tilde p_2$}
+\lbl[l]{21,50;$\tilde p_0$}
+\lbl[lb]{4,97;$\tilde x_1$}
+\lbl[tr]{9,4;$\tilde x_2$}
+\lbl[b]{104,56;$\tilde x_0$}
+\lbl[l]{54,101;$\tilde x_0'$}
 \end{lpic}
 \end{wrapfigure}
 
-Rotate triangle $\<\~p_1\~x_2\~x_0\>$ around $\~x_2$ to make $[\~x_2\~p_1]$ coinside with $[\~x_2\~p_0]$.
-Denote by $\~x_0'$ the image of $\~x_0$ after rotating.
+Rotate triangle $\<\tilde p_1\tilde x_2\tilde x_0\>$ around $\tilde x_2$ to make $[\tilde x_2\tilde p_1]$ coinside with $[\tilde x_2\tilde p_0]$.
+Denote by $\tilde x_0'$ the image of $\tilde x_0$ after rotating.
 Then, we have 
-$|\~x_1\~x_0'|<|\~x_1\~x_0|$ and therefore $$\mangle\~p_2>\mangle\<\~p_0;\~x_1\~x_0'\>=$$
-$$=\min\{\mangle\~p_1+\mangle\~p_0,\pi -(\mangle\~p_1+\mangle\~p_0)\}.\eqno(**)$$
+$|\tilde x_1\tilde x_0'|<|\tilde x_1\tilde x_0|$ and therefore $$\mangle\tilde p_2>\mangle\<\tilde p_0;\tilde x_1\tilde x_0'\>=$$
+$$=\min\{\mangle\tilde p_1+\mangle\tilde p_0,\pi -(\mangle\tilde p_1+\mangle\tilde p_0)\}.\eqno(**)$$
 The same is true if one permutes indexes in this inequality.
-If sum of each pair of angles $\mangle\~p_i$ is smaller than $\pi$, then summing these inequalities we get
-$$\mangle\~p_0+\mangle\~p_1+\mangle\~p_2>2(\mangle\~p_0+\mangle\~p_1+\mangle\~p_2),$$
+If sum of each pair of angles $\mangle\tilde p_i$ is smaller than $\pi$, then summing these inequalities we get
+$$\mangle\tilde p_0+\mangle\tilde p_1+\mangle\tilde p_2>2(\mangle\tilde p_0+\mangle\tilde p_1+\mangle\tilde p_2),$$
 a contradiction.
 Therefore sum of at least one the pairs is $\ge\pi$ and thus $(**)$ implies $(*)$.
 
@@ -11570,7 +11570,7 @@ $$\angk\kappa {y_n}{a_i}{x_n}-\angk\kappa {x_n}{a_i}{y_n}\to0\ \ \text{as}\ \ n\
 Therefore, for all $i$ and all large $n$, we have $\angk\kappa {x_n}{a_i}{y_n}>\tfrac\pi2-\eps$.
 Fix such $n$ and set $x=x_n$, $y=y_n$.
 
-Apply theorem ??? to get a model configuration $\~x,\~y,\{a_i\}_{i=0}^m$ in  $\Lob_\kappa^m$ such that
+Apply theorem ??? to get a model configuration $\tilde x,\tilde y,\{a_i\}_{i=0}^m$ in  $\Lob_\kappa^m$ such that
 thus all directions $\dir_{x'}^{a_i}$ lie on angle $>\tfrac\pi2-\delta$ from $\dir_{x'}^y$.
 Therefore it lies in $B(\tfrac\pi2-\delta,-\dir_{x'}^y)$.
 
@@ -11747,7 +11747,7 @@ Note that $f(o_{\mathring L})=o_{\mathring U}$
 
 
 
-\parit{Remark.} The same statement holds for $\kappa>0$, i.e. for spheres of the same radius, if one assumes in addition that all points $\~y_1,\~y_2,\dots,\~y_m$ lie in a hemisphere (this also follow from generalized Kirszbraun's theorem).
+\parit{Remark.} The same statement holds for $\kappa>0$, i.e. for spheres of the same radius, if one assumes in addition that all points $\tilde y_1,\tilde y_2,\dots,\tilde y_m$ lie in a hemisphere (this also follow from generalized Kirszbraun's theorem).
 
 
 
@@ -12410,11 +12410,11 @@ in princple, we could write one formula ??? instead, but algebra explains nothin
 Let $L\in\CBB{}{\kappa}$, $\lambda,\mu\in\RR$. Assume
 \begin{enumerate}[(i)]
 \item $f:L\to\RR$ satisfies $f''+\mu f\le \lambda$ and $\alpha:[0,a)\to L$ be an $f$-gradient curve,
-\item $\~f:\RR\to\RR$ satisfies  $\~f''+\mu \~f=\lambda$ and $\~\alpha:[0,a)\to\RR$ be an $\~f$-gradient curve, with $\~\alpha(0)=0$
-\item $f\circ\alpha(0)=\~f(0)$ and $|\nabla_{\alpha(0)}f|\le\~f'(0)$.
+\item $\tilde f:\RR\to\RR$ satisfies  $\tilde f''+\mu \tilde f=\lambda$ and $\tilde \alpha:[0,a)\to\RR$ be an $\tilde f$-gradient curve, with $\tilde \alpha(0)=0$
+\item $f\circ\alpha(0)=\tilde f(0)$ and $|\nabla_{\alpha(0)}f|\le\tilde f'(0)$.
 \end{enumerate}
 Then for any $t\ge0$ we have
-$$f\circ\alpha(t)\le\~f\circ\~\alpha(t)\ \ \t{and}\ \  |\nabla_{\alpha(t)}f|\le\~f'\circ\~\alpha(t).$$
+$$f\circ\alpha(t)\le\tilde f\circ\tilde \alpha(t)\ \ \t{and}\ \  |\nabla_{\alpha(t)}f|\le\tilde f'\circ\tilde \alpha(t).$$
 \end{thm}
 
 \begin{thm}{Corollary}
@@ -12430,7 +12430,7 @@ $$\lim_{t\to t_0+} |\nabla_{\alpha(t)}f|=|\nabla_{\alpha(t_0)}f|.$$
 Given a curve $\gamma:[a,b]\to L$, let us define its action $A(\gamma)=\int_a^b\l|\gamma^+(t)\r|^2\d t.$
 $$A(\gamma)=\int_a^b\l|\gamma^+(t)\r|^2\d t.$$
 
-\parit{Proof.} Assume $\mu=\lambda=0$, thus $f$ is concave and $\~f$ is linear.
+\parit{Proof.} Assume $\mu=\lambda=0$, thus $f$ is concave and $\tilde f$ is linear.
 Let $p=\alpha(t_0)$, $q=\alpha(t_0+\eps)$, $h(t)=f\circ\geod_{[pq]}$.
 Clearly $h'(0)\le|\nabla_pf|$ and $h$ is concave,
 thus 
@@ -12511,10 +12511,10 @@ $f''\le\phi(f)$ for some locally Lipschitz function $\phi:\RR\to\RR$.
 
 Let $\alpha(t)$ be an $f$-gradient curve.
 
-Let $\~f:\RR\to\RR$ be a solution for differential equasion $\~f''\le\phi(\~f)$ and $\~\alpha(t)$ is an $\~f$-gradient curve which satisfies $\~f\circ\~\alpha(0)=f\circ\alpha(0)$ and $|\nabla_{\~\alpha(0)}\~f|\le |\nabla_{\alpha(0)}f|$.
+Let $\tilde f:\RR\to\RR$ be a solution for differential equasion $\tilde f''\le\phi(\tilde f)$ and $\tilde \alpha(t)$ is an $\tilde f$-gradient curve which satisfies $\tilde f\circ\tilde \alpha(0)=f\circ\alpha(0)$ and $|\nabla_{\tilde \alpha(0)}\tilde f|\le |\nabla_{\alpha(0)}f|$.
 
 Then for all $t\ge 0$ we have 
-$$\~f\circ\~\alpha(t)\ge f\circ\alpha(t)\ \ \text{and}\ \ |\nabla_{\~\alpha(t)}\~f|\le |\nabla_{\alpha(t)}f|$$
+$$\tilde f\circ\tilde \alpha(t)\ge f\circ\alpha(t)\ \ \text{and}\ \ |\nabla_{\tilde \alpha(t)}\tilde f|\le |\nabla_{\alpha(t)}f|$$
 \end{thm}
 
 
@@ -12760,16 +12760,16 @@ Therefore $\mangle(w,w')=\pi$ and thus $w\in \Lin_p$.
 Let $L\in\CBB{}{\kappa}$, $f:L\to \RR$ be a $\lambda$-concave function and $a,b\in L$.
 
 Consider comparison picture in $\EE^2$:
-a function $\~f:\EE^2\to\RR$, which satisfies $\~f''=\lambda$ and two points $\~a,\~b\in\EE^2$ such that $|\~a\~b|=|ab|$ and $|\nabla_{\~a}\~f|=|\nabla_{a}f|$.
+a function $\tilde f:\EE^2\to\RR$, which satisfies $\tilde f''=\lambda$ and two points $\tilde a,\tilde b\in\EE^2$ such that $|\tilde a\tilde b|=|ab|$ and $|\nabla_{\tilde a}\tilde f|=|\nabla_{a}f|$.
 
 Let 
 \begin{itemize}
 \item $\alpha:[0,\infty)\to L$ be $f$-gradient curves starting at $a$ and
-\item $\~\alpha:[0,\infty)\to \EE^2$ be $\~f$-gradient curves starting at $\~a$.
+\item $\tilde \alpha:[0,\infty)\to \EE^2$ be $\tilde f$-gradient curves starting at $\tilde a$.
 \end{itemize}
 
 Then for any $t\ge 0$, we have
-$$|b\,\alpha(t)|\le|\~b\,\~\alpha(t)|.$$
+$$|b\,\alpha(t)|\le|\tilde b\,\tilde \alpha(t)|.$$
 \end{thm}
 
 
@@ -12837,28 +12837,28 @@ Let $L\in\CBB{}{\kappa}$, $f:L\to \RR$ be a $\lambda$-concave function  and
 $\alpha,\beta:[0,\infty)\to L$ be two $f$-gradient curves with $\alpha(0)=a$,
 $\beta(0)=b$. 
 
-Assume that points $\~ a, \~ b\in \EE^2$ and a function $\~ f:\EE^2\to \RR$ satisfy the
+Assume that points $\tilde  a, \tilde  b\in \EE^2$ and a function $\tilde  f:\EE^2\to \RR$ satisfy the
 following:
 \begin{enumerate}[$\diamond$]
-\item $\~f''\equiv \lambda$\footnote{i.e. if $\lambda=0$, $\~ f$ is a linear function, otherwise $\~ f=\frac\lambda2\dist^2_{o}+\Const$ for some $o\in \EE^2$.} 
-\item $|\~ a\~ b|=|a b|,\ \ |\nabla_{\~ a} \~ f|=|\nabla_a f|,$
-\item $\~ f(\~ b)-\~ f(\~ a)=f(b)-f(a)$
+\item $\tilde f''\equiv \lambda$\footnote{i.e. if $\lambda=0$, $\tilde  f$ is a linear function, otherwise $\tilde  f=\frac\lambda2\dist^2_{o}+\Const$ for some $o\in \EE^2$.} 
+\item $|\tilde  a\tilde  b|=|a b|,\ \ |\nabla_{\tilde  a} \tilde  f|=|\nabla_a f|,$
+\item $\tilde  f(\tilde  b)-\tilde  f(\tilde  a)=f(b)-f(a)$
 \end{enumerate}
-Let $\~\alpha(t)$ and $\~\beta(t)$ be 
-$\~ f$-gradient curves in $\EE^2$ with
-$\~ \alpha(0)=\~ a$, $\~ \beta(0)=\~ b$.
+Let $\tilde \alpha(t)$ and $\tilde \beta(t)$ be 
+$\tilde  f$-gradient curves in $\EE^2$ with
+$\tilde  \alpha(0)=\tilde  a$, $\tilde  \beta(0)=\tilde  b$.
 Then,
 \begin{enumerate}[(i)]
-\item $|\alpha(t)b|\le |\~\alpha(t)\~ b|$ for any $t>0$.
-\item $|\alpha(t)\beta(t)|\le|\~\alpha(t)\~\beta(t)|$ for any $t>0$.
+\item $|\alpha(t)b|\le |\tilde \alpha(t)\tilde  b|$ for any $t>0$.
+\item $|\alpha(t)\beta(t)|\le|\tilde \alpha(t)\tilde \beta(t)|$ for any $t>0$.
 \item if $t_a\ge t_b$ then $|\alpha(t_a)\beta(t_b)|\le
-|\~\alpha(t_a)\~\beta(t_b)|$
+|\tilde \alpha(t_a)\tilde \beta(t_b)|$
 \end{enumerate}
 \end{thm}
 
 \parit{Proof.} Assume first that $L$ is geodesic.
 \parit{(\ref{one-end}).} Note that according to lemma~\ref{lem:concave}, for all $t\ge 0$ we have
-$$\~f\circ\~\alpha(t)\ge f\circ\alpha(t).$$
+$$\tilde f\circ\tilde \alpha(t)\ge f\circ\alpha(t).$$
 ???
 
 
@@ -12922,11 +12922,11 @@ e^{\frac{t\lambda}\eps}-1}
 Let $L\in\CBB{}{\kappa}$, $\lambda\in\RR$. Assume
 \begin{enumerate}[(i)]
 \item $f:L\to\RR$ satisfies $f''\le \lambda$ and $\alpha:[0,a)\to L$ be an $f$-gradient curve,
-\item $\~f:\RR\to\RR$ satisfies  $\~f''=\lambda$ and $\~\alpha:[0,a)\to\RR$ be an $\~f$-gradient curve, with $\~\alpha(0)=0$
-\item $f\circ\alpha(0)=\~f(0)$ and $|\nabla_{\alpha(0)}f|\le\~f'(0)$.
+\item $\tilde f:\RR\to\RR$ satisfies  $\tilde f''=\lambda$ and $\tilde \alpha:[0,a)\to\RR$ be an $\tilde f$-gradient curve, with $\tilde \alpha(0)=0$
+\item $f\circ\alpha(0)=\tilde f(0)$ and $|\nabla_{\alpha(0)}f|\le\tilde f'(0)$.
 \end{enumerate}
 Then for any $t\ge0$ we have
-$$f\circ\alpha(t)\le\~f\circ\~\alpha(t)\ \ \t{and}\ \  |\nabla_{\alpha(t)}f|\le\~f'\circ\~\alpha(t).$$
+$$f\circ\alpha(t)\le\tilde f\circ\tilde \alpha(t)\ \ \t{and}\ \  |\nabla_{\alpha(t)}f|\le\tilde f'\circ\tilde \alpha(t).$$
 \end{thm}
 
 \parit{Proof.}???\qeds
@@ -12952,16 +12952,16 @@ $\alpha$ is an $f^\o$-gradient as a curve in $L^\o\supset L$.
 Let $L\in\CBB{}{\kappa}$, 
 $f:L\to \RR$ be a function satisfying differential inequality $f''\le \mu-\kappa f$ for some $\mu,\kappa\in\RR$.
 
-Let $\~f:\Lob_\kappa\to\RR$ be a function which satisfies $\~f''= \mu-\kappa \~f$.
+Let $\tilde f:\Lob_\kappa\to\RR$ be a function which satisfies $\tilde f''= \mu-\kappa \tilde f$.
 
-Assume $a,b\in L$ and $\~a,\~b\in \Lob_\kappa$ be two pairs of points such that:
-$$f(a)=\~f(\~a),\ \ f(b)=\~f(\~b)\ \ |\nabla_af|=|\nabla_{\~a}\~f|\ \ \text{and}\ \ |ab|=|\~a\~b|.$$
+Assume $a,b\in L$ and $\tilde a,\tilde b\in \Lob_\kappa$ be two pairs of points such that:
+$$f(a)=\tilde f(\tilde a),\ \ f(b)=\tilde f(\tilde b)\ \ |\nabla_af|=|\nabla_{\tilde a}\tilde f|\ \ \text{and}\ \ |ab|=|\tilde a\tilde b|.$$
 
 Let $\alpha,\beta:[0,\infty)\to L$ be two $f$-gradient curves starting at $a$ and $b$ correspondently.
 Similarly, let
-$\~\alpha,\~\beta:[0,\infty)\to \Lob_\kappa$ be two $\~f$-gradient curves starting at $\~a$ and $\~b$ correspondently.
+$\tilde \alpha,\tilde \beta:[0,\infty)\to \Lob_\kappa$ be two $\tilde f$-gradient curves starting at $\tilde a$ and $\tilde b$ correspondently.
 Then for all $t\ge\tau\ge 0$ we have 
-$$|\alpha(t)\beta(\tau)|_{L}\le |\~\alpha(t)\~\beta(\tau)|_{\Lobs_\kappa}$$
+$$|\alpha(t)\beta(\tau)|_{L}\le |\tilde \alpha(t)\tilde \beta(\tau)|_{\Lobs_\kappa}$$
 \end{thm}
 
 \parit{Proof.}???\qeds
@@ -13224,25 +13224,25 @@ s^2+2\d(f\circ\gamma_0)\d\tau+|\nabla_{\gamma_0(s)}f|^2\d\tau^2\r]$$
 
 \begin{thm}{Claim}
 For any $t\ge 0$ we have
-$|\alpha_1(t)\,\alpha_2(0)|_L\le |\~\alpha_1(t)\,\~\alpha_2(0)|_{\Lobs_\kappa}.$
+$|\alpha_1(t)\,\alpha_2(0)|_L\le |\tilde \alpha_1(t)\,\tilde \alpha_2(0)|_{\Lobs_\kappa}.$
 \end{thm}
 
-Indeed, set $\ell(t)=|p\,\alpha_i(t)|$ and $\~\ell(t)=|\~p\~\alpha_i(t)|$.
-$\ell^+(t)\le\ell(t)$ and $\~\ell^+(t)\le\~\ell(t)$
+Indeed, set $\ell(t)=|p\,\alpha_i(t)|$ and $\tilde \ell(t)=|\tilde p\tilde \alpha_i(t)|$.
+$\ell^+(t)\le\ell(t)$ and $\tilde \ell^+(t)\le\tilde \ell(t)$
 
 Indeed, 
 $$(f\circ\alpha_i)^+(t)=d_{\alpha(t)}f(\nabla_{\alpha(t)}f)=|\nabla_{\alpha(t)}f|^2\le\sn_\kappa^2(|p\alpha(t)|);$$
-$$(\~f\circ\~\alpha_i)^+(t)=d_{\~\alpha(t)}f(\nabla_{\~\alpha(t)}\~f)=|\nabla_{\~\alpha(t)}\~f|^2=\sn_\kappa^2(|\~p\~\alpha(t)|);$$
+$$(\tilde f\circ\tilde \alpha_i)^+(t)=d_{\tilde \alpha(t)}f(\nabla_{\tilde \alpha(t)}\tilde f)=|\nabla_{\tilde \alpha(t)}\tilde f|^2=\sn_\kappa^2(|\tilde p\tilde \alpha(t)|);$$
 
 Thus according to ??? for any $t\ge 0$
 $$|\alpha_1(t)\alpha_2(t)|\le e^t|\alpha_1(0)\alpha_2(0)|.$$
 Direct calulations show that 
-$$|\~\alpha_1(t)\~\alpha_2(t)|= e^t|\~\alpha_1(0)\~\alpha_2(0)|.$$
+$$|\tilde \alpha_1(t)\tilde \alpha_2(t)|= e^t|\tilde \alpha_1(0)\tilde \alpha_2(0)|.$$
 Thus we get the result in partial case $t_1=t_2$.
 
 Without loss of generality, we can assume that $t_1\ge t_2$.
 We will prove two inequalities:
-$$|\alpha_1(t_1-t_2)\,\alpha_2(0)|\le |\~\alpha_1(t_1-t_2)\,\~\alpha_2(0)|$$
+$$|\alpha_1(t_1-t_2)\,\alpha_2(0)|\le |\tilde \alpha_1(t_1-t_2)\,\tilde \alpha_2(0)|$$
 and 
 $$|\alpha_1(t_1)\,\alpha_2(t_2)|\le e^{t_2}|\alpha_1(t_1-t_2)\,\alpha_2(0)|.$$
 
@@ -13270,22 +13270,22 @@ $$|\alpha_1(t_1)\,\alpha_2(t_2)|\le e^{t_2}|\alpha_1(t_1-t_2)\,\alpha_2(0)|.$$
 The proof will follow from ??? claims:
 
 \begin{thm}{Claim} For any $t\ge 0$, we have
-$|p\alpha_1(t)|\le |\~p\~\alpha_1(t)|$.
+$|p\alpha_1(t)|\le |\tilde p\tilde \alpha_1(t)|$.
 \end{thm}
 
 \parit{Proof.}
 Let $x\not=p$     be a point in $L$ 
-and $\~x\not=\~p$ be a point in $\Lob_\kappa$.
+and $\tilde x\not=\tilde p$ be a point in $\Lob_\kappa$.
 Note that
-$|\nabla_{\~x}\dist_{\~p}|=1$ for any $\~x\in\Lob_\kappa$ and 
+$|\nabla_{\tilde x}\dist_{\tilde p}|=1$ for any $\tilde x\in\Lob_\kappa$ and 
 $|\nabla_x\dist_p|\le1$       for any $x\in L$
 (the later follow from ???).
-Thus, $|\nabla_xf|\le \sn_\kappa(|px|)$ and $|\nabla_{\~x}f|= \sn_\kappa(|\~p\~x|)$.
+Thus, $|\nabla_xf|\le \sn_\kappa(|px|)$ and $|\nabla_{\tilde x}f|= \sn_\kappa(|\tilde p\tilde x|)$.
 
-Set $r(t)=|p\alpha_1(t)|$, and $\~r(t)=|\~p\~\alpha_1(t)|$, 
+Set $r(t)=|p\alpha_1(t)|$, and $\tilde r(t)=|\tilde p\tilde \alpha_1(t)|$, 
 Then 
-$$r^+(t)\le \sn_\kappa(r(t))\ \ \t{and}\ \ \~r^+(t)= \sn_\kappa(\~r(t))$$
-Since $r(0)=|p\alpha_1(0)|=|\~p\~\alpha_1(t)|=\~r(0)$, we get $r(t)\le \~r(t)$ for any $t\ge 0$.\qeds
+$$r^+(t)\le \sn_\kappa(r(t))\ \ \t{and}\ \ \tilde r^+(t)= \sn_\kappa(\tilde r(t))$$
+Since $r(0)=|p\alpha_1(0)|=|\tilde p\tilde \alpha_1(t)|=\tilde r(0)$, we get $r(t)\le \tilde r(t)$ for any $t\ge 0$.\qeds
 
 
 
@@ -13481,14 +13481,14 @@ $$\cos\gamma=\frac{\cosh a \cosh b-\cosh c}{\sinh a\sinh b} $$
 Assume
 \begin{enumerate}[(i)]
 \item $\ p\in L\ $ and $  f=\md_\kappa\circ\dist_{  p}$;
-\item $\~p\in\Lob_\kappa$            and $\~f=\md_\kappa\circ\dist_{\~p}$;
+\item $\tilde p\in\Lob_\kappa$            and $\tilde f=\md_\kappa\circ\dist_{\tilde p}$;
 \item $  \alpha_1,  \alpha_2:[0,\infty)\to           L$ be two $  f$-gradient curves;
-\item $\~\alpha_1,\~\alpha_2:[0,\infty)\to \Lob_\kappa$ be two $\~f$-gradient curves such that
-\subitem $|\~p\,\~\alpha_i(0)|_{\Lobs_\kappa}=|p\,\alpha_i(0)|_L$ 
-and $|\~\alpha_1(0)\~\alpha_2(0)|_{\Lobs_\kappa}=|\alpha_1(0)\alpha_2(0)|_L$ 
+\item $\tilde \alpha_1,\tilde \alpha_2:[0,\infty)\to \Lob_\kappa$ be two $\tilde f$-gradient curves such that
+\subitem $|\tilde p\,\tilde \alpha_i(0)|_{\Lobs_\kappa}=|p\,\alpha_i(0)|_L$ 
+and $|\tilde \alpha_1(0)\tilde \alpha_2(0)|_{\Lobs_\kappa}=|\alpha_1(0)\alpha_2(0)|_L$ 
 \end{enumerate}
 Then for any $t_1,t_2\ge 0$ we have 
-$$|\alpha_1(t_1)\,\alpha_2(t_2)|_L\le |\~\alpha_1(t_1)\,\~\alpha_2(t_2)|_{\Lobs_\kappa}.$$
+$$|\alpha_1(t_1)\,\alpha_2(t_2)|_L\le |\tilde \alpha_1(t_1)\,\tilde \alpha_2(t_2)|_{\Lobs_\kappa}.$$
 \end{thm}
 
 If $L$ has positive curvature, we can use above result for $\kappa=0$
@@ -13511,14 +13511,14 @@ and culculations in the proofs of these two cases are very different.
 Assume
 \begin{enumerate}[(i)]
 \item $\ p\in L\ $                   and $  f=-\tfrac1\kappa\ln\circ\cs_\kappa\circ\dist_{  p}$;
-\item $\~p\in\Lob_\kappa$            and $\~f=-\tfrac1\kappa\ln\circ\cs_\kappa\circ\dist_{\~p}$;
+\item $\tilde p\in\Lob_\kappa$            and $\tilde f=-\tfrac1\kappa\ln\circ\cs_\kappa\circ\dist_{\tilde p}$;
 \item $  \alpha_1,  \alpha_2:[0,\infty)\to           L$ be two $  f$-gradient curves such that
 \subitem $|p\alpha_i(0)|<\varpi_\kappa/2$
-\item $\~\alpha_1,\~\alpha_2:[0,\infty)\to \Lob_\kappa$ be two $\~f$-gradient curves such that
-\subitem $|\~p\~\alpha_i(0)|=|p\alpha_i(0)|$ and $|\~\alpha_1(0)\~\alpha_2(0)|=|\alpha_1(0)\alpha_2(0)|$ 
+\item $\tilde \alpha_1,\tilde \alpha_2:[0,\infty)\to \Lob_\kappa$ be two $\tilde f$-gradient curves such that
+\subitem $|\tilde p\tilde \alpha_i(0)|=|p\alpha_i(0)|$ and $|\tilde \alpha_1(0)\tilde \alpha_2(0)|=|\alpha_1(0)\alpha_2(0)|$ 
 \end{enumerate}
 Then for any $t_1,t_2\ge 0$ we have 
-$$|\alpha_1(t_1)\,\alpha_2(t_2)|_L\le |\~\alpha_1(t_1)\,\~\alpha_2(t_2)|_{\Lobs_\kappa}.$$
+$$|\alpha_1(t_1)\,\alpha_2(t_2)|_L\le |\tilde \alpha_1(t_1)\,\tilde \alpha_2(t_2)|_{\Lobs_\kappa}.$$
 \end{thm}
 
 The proof is a strightforward calculation based on ???.
@@ -13526,8 +13526,8 @@ The proof is a strightforward calculation based on ???.
 \parit{Proof.} 
 Set
 \begin{align*}
-r_i(t)&=|p\alpha_i(t)|&\~r_i(t)&=|\~p\~\alpha_i(t)|,\\
-\ell(t_1,t_2)&=|\alpha_1(t_1)\alpha_2(t_2)|,&\phi(t_1,t_2)&=\tangle_\kappa\{\ell(t_1,t_2),\~r_1(t_1),\~r_2(t_2)\}.
+r_i(t)&=|p\alpha_i(t)|&\tilde r_i(t)&=|\tilde p\tilde \alpha_i(t)|,\\
+\ell(t_1,t_2)&=|\alpha_1(t_1)\alpha_2(t_2)|,&\phi(t_1,t_2)&=\tangle_\kappa\{\ell(t_1,t_2),\tilde r_1(t_1),\tilde r_2(t_2)\}.
 \end{align*}
 The statement of the theorem easely follow from the following claim
 
@@ -13540,18 +13540,18 @@ $$\frac{\partial\phi}{\partial t_1}+\frac{\partial\phi}{\partial t_2}\le 0$$
 \parit{Proof.} 
 Set
 \begin{align*}
-r_i(t)&=|p\alpha_i(t)|&\~r_i(t)&=|\~p\~\alpha_i(t)|.
+r_i(t)&=|p\alpha_i(t)|&\tilde r_i(t)&=|\tilde p\tilde \alpha_i(t)|.
 \end{align*}
-It is straightforward to check that $\~r_i^+=\sn_\kappa\~r_i$.
+It is straightforward to check that $\tilde r_i^+=\sn_\kappa\tilde r_i$.
 On the other hand 
 $$r_i^+\le |\nabla_{\alpha_i(t)}f|=|\nabla_{\alpha_i(t)}\dist_p|\sn_\kappa r_i\le \sn_\kappa r_i.$$
 Thus, for any $t\ge0$ we have 
-$$r_i(t)\le \~r_i(t).\eqno(*)$$
+$$r_i(t)\le \tilde r_i(t).\eqno(*)$$
 
 
 \begin{thm}{Claim}
 For $i\in\{1,2\}$ and any $q\in L$, the function 
-$$\phi(t)= \tangle_\kappa\{|\alpha_i(t)q|;|pq|,\~r_i(t)\}$$
+$$\phi(t)= \tangle_\kappa\{|\alpha_i(t)q|;|pq|,\tilde r_i(t)\}$$
 is nonincreasing.
 \end{thm}
 
@@ -13568,9 +13568,9 @@ Since $f''+\kappa f\le 1$, from \ref{lem:grad-lip}, we have
 \\
 \intertext{Since $\kappa\le0$, we have $\cs_\kappa\ell,\sn_\kappa\ell\ge0$. Thus, from $(*)$}
 &\le
-\frac{\md_\kappa\ell+{\md_\kappa \~r_i\cdot\cs_\kappa\ell}-\md_\kappa |pq|}{\sn_\kappa\ell}.
+\frac{\md_\kappa\ell+{\md_\kappa \tilde r_i\cdot\cs_\kappa\ell}-\md_\kappa |pq|}{\sn_\kappa\ell}.
 \end{align*}
-Together with $\~r_i^+=\sn_\kappa\~r_i$, the later inequality is equivalet to $\phi^+(t)\le 0$
+Together with $\tilde r_i^+=\sn_\kappa\tilde r_i$, the later inequality is equivalet to $\phi^+(t)\le 0$
 \qeds
 
 \parbf{Comment}
@@ -13586,7 +13586,7 @@ $$\ell^{+} \le\frac{{\cosh\ell}-\cosh b/\cosh a}{\sinh\ell}$$
 
 \begin{thm}{Claim}
 The function 
-$$t\mapsto \tangle_\kappa\{|\alpha_1(t)\alpha_2(t)|;\~r_1(t)|,|\~r_2(t)|\}$$
+$$t\mapsto \tangle_\kappa\{|\alpha_1(t)\alpha_2(t)|;\tilde r_1(t)|,|\tilde r_2(t)|\}$$
 is nonincreasing.
 \end{thm}
 \parit{Proof.}
@@ -13604,16 +13604,16 @@ Set $\ell(t)=|\alpha_1(t)\,\alpha_2(t)|$.
 \intertext{Since $\kappa\le0$, we have $\cs_\kappa\ell-1,\sn_\kappa\ell\ge0$. Thus, from $(*)$}
 &
 \le
-\frac{2\md_\kappa\ell+[\md_\kappa \~r_1+\md_\kappa \~r_2]\cdot[\cs_\kappa\ell-1]}{\sn_\kappa\ell}.
+\frac{2\md_\kappa\ell+[\md_\kappa \tilde r_1+\md_\kappa \tilde r_2]\cdot[\cs_\kappa\ell-1]}{\sn_\kappa\ell}.
 \end{align*}
-Together with $\~r_i^+=\sn_\kappa\~r_i$, the later inequality is equivalet to
-$$\frac{\d^+}{\d t} \tangle_\kappa\{\ell(t);\~r_1(t),\~r_2(t)\}\le 0.\eqno\qed$$
+Together with $\tilde r_i^+=\sn_\kappa\tilde r_i$, the later inequality is equivalet to
+$$\frac{\d^+}{\d t} \tangle_\kappa\{\ell(t);\tilde r_1(t),\tilde r_2(t)\}\le 0.\eqno\qed$$
 Finally let us put these claims together.
 Without loss of generality, we can assume that $t_1\ge t_2$.
 From ???, we get 
-$$|\alpha_1(t_1-t_2)\,\alpha_2(0)|_L\le |\~\alpha_1(t_1-t_2)\,\~\alpha_2(0)|_{\Lobs_\kappa}.$$
+$$|\alpha_1(t_1-t_2)\,\alpha_2(0)|_L\le |\tilde \alpha_1(t_1-t_2)\,\tilde \alpha_2(0)|_{\Lobs_\kappa}.$$
 Then applyinf ???, we get
-$$|\alpha_1(t_1)\,\alpha_2(t_2)|_L\le |\~\alpha_1(t_1)\,\~\alpha_2(t_2)|_{\Lobs_\kappa}.\eqno\qed$$
+$$|\alpha_1(t_1)\,\alpha_2(t_2)|_L\le |\tilde \alpha_1(t_1)\,\tilde \alpha_2(t_2)|_{\Lobs_\kappa}.\eqno\qed$$
 
 
 
@@ -14748,15 +14748,15 @@ We say that $p\in L$ is a regular point of $F$ if it is a regular point of $\ell
 
 
 In case $\kappa=0$, there is a splitting $\T_x=\T_x^\perp\oplus\T_x^\top$, where ...
-clearly $\~p, \~q\in o\times\T_x^\top $
+clearly $\tilde p, \tilde q\in o\times\T_x^\top $
 
-Moreover, if $\kappa\le0$ then there is a line $\ell$ in $\mathcal{T}_{x;\kappa}$ passing through $\~p$, $o_x$ and $\~q$ and the space $\mathcal{T}_{x;\kappa}$ admits a wrap 
+Moreover, if $\kappa\le0$ then there is a line $\ell$ in $\mathcal{T}_{x;\kappa}$ passing through $\tilde p$, $o_x$ and $\tilde q$ and the space $\mathcal{T}_{x;\kappa}$ admits a wrap 
 
-there are isometries of $\mathcal{T}_{x;\kappa}$  $\T_{\~p}\iso\T_{\~q}\iso\T_{o_x}\mathcal{T}_{x;\kappa}\iso\T_xL$.
+there are isometries of $\mathcal{T}_{x;\kappa}$  $\T_{\tilde p}\iso\T_{\tilde q}\iso\T_{o_x}\mathcal{T}_{x;\kappa}\iso\T_xL$.
 Note also that the space $\mathcal{T}_{x;\kappa}$ does not depend on the choice the inside-point $x$ of $[pq]$.
-Note further, $\~p$ as well as $\~q$ are vertexes of $\mathcal{T}_{x;\kappa}$;
-in other words, there are isometries $\Cone_\kappa\Sigma_x\to \mathcal{T}_{x;\kappa}$ which sends vertex of $\kappa$-cone to $\~p$ or $\~q$.
-In particular both $\exp_{\~p}$ and $\exp_{\~q}$ both well defined on $\cBall(o,\varpi_\kappa)$. 
+Note further, $\tilde p$ as well as $\tilde q$ are vertexes of $\mathcal{T}_{x;\kappa}$;
+in other words, there are isometries $\Cone_\kappa\Sigma_x\to \mathcal{T}_{x;\kappa}$ which sends vertex of $\kappa$-cone to $\tilde p$ or $\tilde q$.
+In particular both $\exp_{\tilde p}$ and $\exp_{\tilde q}$ both well defined on $\cBall(o,\varpi_\kappa)$. 
 
 In the easiest case is $\kappa=0$, we have $\mathcal{T}_{x;\kappa}\iso \T_x$.
 Thus the property ??? is equivalent to the fact that $\T_x$ splits in the subcone tangent and normal to $[pq]$.
@@ -16866,15 +16866,15 @@ Since ???,
 $$\beta_\tau>\frac{\tau\sin\alpha}{\sn_\kappa|xy|}+o(t).$$
 
 
-Consider a convex quadrangle $\~x_\tau\~x\~y\~y_\tau$ in $\Lob{}\kappa$
-such that $|\~x\~x_\tau|=|\~y\~y_\tau|=\tau$, $|\~x\~y|=|xy|$, $\mangle\hinge {\~x}{\~x_\tau}{\~y}=\pi-\alpha$ and $\mangle\hinge {\~y}{\~y_\tau}{\~x}=\alpha$.
-Set $\~\beta_\tau=\mangle\hinge {\~x} {\~y} {\~y_\tau}$.
-From \ref{k-convex-angle}$'\!$, $|xy_\tau|\le|\~x\~y_\tau|$.
-Since ???, $\beta_\tau>\~\beta_\tau+o(\tau)$. 
+Consider a convex quadrangle $\tilde x_\tau\tilde x\tilde y\tilde y_\tau$ in $\Lob{}\kappa$
+such that $|\tilde x\tilde x_\tau|=|\tilde y\tilde y_\tau|=\tau$, $|\tilde x\tilde y|=|xy|$, $\mangle\hinge {\tilde x}{\tilde x_\tau}{\tilde y}=\pi-\alpha$ and $\mangle\hinge {\tilde y}{\tilde y_\tau}{\tilde x}=\alpha$.
+Set $\tilde \beta_\tau=\mangle\hinge {\tilde x} {\tilde y} {\tilde y_\tau}$.
+From \ref{k-convex-angle}$'\!$, $|xy_\tau|\le|\tilde x\tilde y_\tau|$.
+Since ???, $\beta_\tau>\tilde \beta_\tau+o(\tau)$. 
 Therefore, ???,
 $$|x_\tau y_\tau|
 \le
-|\~x_\tau\~y_\tau|+o(\tau^2)
+|\tilde x_\tau\tilde y_\tau|+o(\tau^2)
 =|xy|+\tau^2\cdot O(|xy|)+o(\tau^2),
 \eqlbl{eq:lamb-conc-2}$$
 the $O(|xy|)$-term can be ignored if $\kappa\ge 0$.
@@ -18188,17 +18188,17 @@ $$f=\Theta((\dist{q_1}{})^2,(\dist{q_2}{})^2,\dots,(\dist{q_N}{})^2)$$ be a \emp
 function} (see section~\ref{adm}).
 If $\spc{L}$ is $m$-dimensional, we say that such a function $f$ has \emph{controlled
 concavity of type} $(\lambda,\kappa)$ at $p\in \spc{L}$, if for any $\eps>0$ there is
-$\delta>0$, such that for any collection of points $\{\~ p,\~ q_i\}$ in
+$\delta>0$, such that for any collection of points $\{\tilde  p,\tilde  q_i\}$ in
 the \emph{model $m$-space}\footnote{i.e. a simply connected $m$-manifold with
 constant curvature $\kappa$.} $\Lob{m}{\kappa-\delta}$  satisfying 
-$$\dist{\~ q_i}{\~ q_j}> \dist{q_i}{q_j}-\delta
+$$\dist{\tilde  q_i}{\tilde  q_j}> \dist{q_i}{q_j}-\delta
 \ \ \text{and}\ \  
-\bigl|\dist{\~p}{\~q_i}-\dist{p}{q_i}\bigr|<\delta \ \ \text{for all}\ \ i,j,$$ 
+\bigl|\dist{\tilde p}{\tilde q_i}-\dist{p}{q_i}\bigr|<\delta \ \ \text{for all}\ \ i,j,$$ 
 we have that the function 
-$\~ f\:\Lob{m}{\kappa-\delta}\to \RR$ defined by 
-$$\~ f
-=\Theta((\dist{\~q_1}{})^2,(\dist{\~ q_2}{})^2,\dots,(\dist{\~q_n}{})^2)$$
-is $(\lambda-\eps)$-concave in a small neighborhood of $\~p$.
+$\tilde  f\:\Lob{m}{\kappa-\delta}\to \RR$ defined by 
+$$\tilde  f
+=\Theta((\dist{\tilde q_1}{})^2,(\dist{\tilde  q_2}{})^2,\dots,(\dist{\tilde q_n}{})^2)$$
+is $(\lambda-\eps)$-concave in a small neighborhood of $\tilde p$.
 
 The following lemma states that the conrolled concavity is stronger than the usual
 concavity.
@@ -19039,9 +19039,9 @@ Let us choose an array of points $(x_i)_{i=1}^n$ in $\oBall(p,r)$ such that $\di
 According to \ref{thm:euclid-subcone}, there is a dence $G_\delta$-set $\spc{L}^\bullet(x_1,x_2,\dots,x_n)\i \spc{L}$ such that if $p\in \spc{L}^\bullet(x_1,x_2,\dots,x_n)$ then all vectors $\{\ddir p{x_i}\}_{i=1}^n\i \T_p$ lie in subcone $E\i \T_p$ which isometric to Euclidean cone $\EE^{\kay}$.
 
 Let $p\in \spc{L}^\bullet(x_1,..,x_n)\cap \oBall(p,R)$.
-Choose $\~p\in\Lob{\kay}\kappa$ and isometry $\jmath\:E\to \T_{\~p}\Lob{\kay}\kappa$, and set 
-$$\~x_i=\exp_{\~p}\circ\,\jmath\circ\ddir p{x_i}$$ 
-then $\{\~x_i\}_{i=1}^n\i \oBall^\kay_\kappa(R+r)\i \Lob{\kay}\kappa$ and from camparison we have $\dist{\~x_i}{\~x_j}\ge \dist{x_i}{x_j}$.
+Choose $\tilde p\in\Lob{\kay}\kappa$ and isometry $\jmath\:E\to \T_{\tilde p}\Lob{\kay}\kappa$, and set 
+$$\tilde x_i=\exp_{\tilde p}\circ\,\jmath\circ\ddir p{x_i}$$ 
+then $\{\tilde x_i\}_{i=1}^n\i \oBall^\kay_\kappa(R+r)\i \Lob{\kay}\kappa$ and from camparison we have $\dist{\tilde x_i}{\tilde x_j}\ge \dist{x_i}{x_j}$.
 Thus, \ref{E-comeagre*} implies that $\kay>m$ for each $p\in \spc{L}^\bullet(x_1,x_2,\dots,x_n)\i \spc{L}$.
 
 
@@ -19638,25 +19638,25 @@ for some $\eps>0$, if $q\in\oBall(p,\eps)$ and $\vol_m\Sigma_q+\eps>\vol_m\Sigma
 
 \begin{thm}{Key lemma}
 Let $\spc{U}\in\CBA{}{0}$, 
-$\bm{x}=(x_0,x_1,\dots,x_\kay)\in (\spc{U})^{\kay+1}$ be a point array, $\bm{\~x}=(\~x_0,\~x_1,\dots,\~x_\kay)\in (\EE^m)^{\kay+1}$ be a model point array
-such that $\dist{\~x_i}{\~x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$.
+$\bm{x}=(x_0,x_1,\dots,x_\kay)\in (\spc{U})^{\kay+1}$ be a point array, $\bm{\tilde x}=(\tilde x_0,\tilde x_1,\dots,\tilde x_\kay)\in (\EE^m)^{\kay+1}$ be a model point array
+such that $\dist{\tilde x_i}{\tilde x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$.
 
-Then for any $\~y\in \EE^m$, there is $y\in\spc{U}$ such that $\dist{x_i}{y}\le\dist{\~x_i}{\~y}$ for any $i$.
+Then for any $\tilde y\in \EE^m$, there is $y\in\spc{U}$ such that $\dist{x_i}{y}\le\dist{\tilde x_i}{\tilde y}$ for any $i$.
 \end{thm}
 
 \parit{Proof.}
-Set $f_i=\tfrac{1}{2}(\dist{x_i}{})^2$ and $\~f_i=\tfrac{1}{2}(\dist{\~x_i}{})^2$.
+Set $f_i=\tfrac{1}{2}(\dist{x_i}{})^2$ and $\tilde f_i=\tfrac{1}{2}(\dist{\tilde x_i}{})^2$.
 Since $\spc{U}\in\CBA{}{0}$,
 all functinons $f_i$ are $1$-convex.
 Thus, one can apply theorem ??? for the function array $\bm{f}=(f_0,f_1,\dots,f_\kay)$.
 Let us recal $\preccurlyeq$ and $\Up$???
 Then, the conclusion of the lemma can be reformulated the following way: 
-for any $\~y\in \EE^m$, $\bm{\~f}(\~y)\in\Up\bm{f}(\spc{U})$.
-Note that without loss of generality, one can assume that $\~y\in\Conv(\~x_0,\~x_1,\dots,\~x_\kay)$;
+for any $\tilde y\in \EE^m$, $\bm{\tilde f}(\tilde y)\in\Up\bm{f}(\spc{U})$.
+Note that without loss of generality, one can assume that $\tilde y\in\Conv(\tilde x_0,\tilde x_1,\dots,\tilde x_\kay)$;
 in particular, ???.
 
 Assume contrary, since $\Up\bm{f}(\spc{U})$ is convex (see ???)
-we get that there is $\bm{\alpha}=(\alpha_0,\alpha_1,\dots,\alpha_\kay)\in\Delta^\kay$ such that $\sum_i\alpha_i\cdot\~f_i(\~y)\le \inf\{\,\sum_i\alpha_i\cdot f_i(y)\mid y\in\spc{U}\,\}$, which cotradicts the following claim. 
+we get that there is $\bm{\alpha}=(\alpha_0,\alpha_1,\dots,\alpha_\kay)\in\Delta^\kay$ such that $\sum_i\alpha_i\cdot\tilde f_i(\tilde y)\le \inf\{\,\sum_i\alpha_i\cdot f_i(y)\mid y\in\spc{U}\,\}$, which cotradicts the following claim. 
 
 \begin{clm}{Claim}
 Given $\bm{\alpha}=(\alpha_0,\alpha_1,\dots,\alpha_\kay)\in\Delta^\kay$,
@@ -19668,14 +19668,14 @@ set
 &
 &z=\argmin h
 \\
-&\~h=\tfrac12\sum_i\alpha_i\cdot \~f_i
+&\tilde h=\tfrac12\sum_i\alpha_i\cdot \tilde f_i
 &
-&\~h\:\EE^m\to\RR
+&\tilde h\:\EE^m\to\RR
 &
-&\~z=\argmin \~h
+&\tilde z=\argmin \tilde h
 \end{align*}
 Then 
-$h(z)\le \~h(\~z)$.
+$h(z)\le \tilde h(\tilde z)$.
 \end{clm}
 
 \parit{Proof.}
@@ -19724,13 +19724,13 @@ $$h(z)\le
 
 Note, that if $\spc{U}\iso\EE^m$, then all inequalities above are sharp.
 In particular, 
-$$\~h(\~z)=
+$$\tilde h(\tilde z)=
 \tfrac{1}{2}\cdot
 \sum_{i,j}
 \alpha_i\cdot\alpha_j
 \cdot
-(\dist{\~x_i}{\~x_j})^2. \eqlbl{eq:h(z)=<1}$$
-Since $\dist{\~x_i}{\~x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$,
+(\dist{\tilde x_i}{\tilde x_j})^2. \eqlbl{eq:h(z)=<1}$$
+Since $\dist{\tilde x_i}{\tilde x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$,
 the lemma follows from \ref{eq:h(z)=<} and \ref{eq:h(z)=<1}.
 \qeds
 
@@ -19751,20 +19751,20 @@ and $\bm{y}=(y_1,y_2,\dots, y_n)\in (\spc{U})^m$.
 Assume $q\in \spx{((\dist{\bm{y}}{})^2)}$.
 
 Then there is a model configuration
-$\~q,\~y_1,\~y_2,\dots, \~y_n$ in $\Lob{n}\kappa$ such that 
+$\tilde q,\tilde y_1,\tilde y_2,\dots, \tilde y_n$ in $\Lob{n}\kappa$ such that 
 \begin{subthm}{}
-$\dist{\~q}{\~y_i}= \dist{q}{y_i}$ for all $i$; 
+$\dist{\tilde q}{\tilde y_i}= \dist{q}{y_i}$ for all $i$; 
 \end{subthm}
 
 
-\begin{subthm}{}$\dist{\~y_i}{\~y_j}\le\dist{y_i}{y_j}$ for all $i,j$;
+\begin{subthm}{}$\dist{\tilde y_i}{\tilde y_j}\le\dist{y_i}{y_j}$ for all $i,j$;
 \end{subthm}
 
-\begin{subthm}{conv-cond} $\~q\in \Conv(\{y_i\}_{i})$.
+\begin{subthm}{conv-cond} $\tilde q\in \Conv(\{y_i\}_{i})$.
 \end{subthm}
 
-Moreover, if the equality $\dist{\~y_i}{\~y_j}=\dist{y_i}{y_j}$ holds for all $i,j$, 
-then there is an isometric embedding $\imath:\Conv(\{y_i\})\hookrightarrow \spc{L}$ such that $\imath(\~q)=q$ and $\imath(\~y_i)=y_i$ for each $i$.
+Moreover, if the equality $\dist{\tilde y_i}{\tilde y_j}=\dist{y_i}{y_j}$ holds for all $i,j$, 
+then there is an isometric embedding $\imath:\Conv(\{y_i\})\hookrightarrow \spc{L}$ such that $\imath(\tilde q)=q$ and $\imath(\tilde y_i)=y_i$ for each $i$.
 \end{thm}
 
 
@@ -19845,20 +19845,20 @@ $$f(x)=\max_{i}\{\dist{y_i}{x}-\dist{y_i}{q}\}$$
 has a local minimum at $q$.
 
 Then there is a subset $F\i\{1,2,\dots,n\}$ and a model configuration
-$\~q,\{\~y_i\}_{i\in F}$ in $\Lob{n}\kappa$ such that 
+$\tilde q,\{\tilde y_i\}_{i\in F}$ in $\Lob{n}\kappa$ such that 
 \begin{subthm}{}
-$\dist{\~q}{\~y_i}= \dist{q}{y_i}$ for all $i\in F$; 
+$\dist{\tilde q}{\tilde y_i}= \dist{q}{y_i}$ for all $i\in F$; 
 \end{subthm}
 
 
-\begin{subthm}{}$\dist{\~y_i}{\~y_j}\le\dist{y_i}{y_j}$ for all $i,j\in F$;
+\begin{subthm}{}$\dist{\tilde y_i}{\tilde y_j}\le\dist{y_i}{y_j}$ for all $i,j\in F$;
 \end{subthm}
 
-\begin{subthm}{conv-cond} $\~q\in \Conv(\{y_i\}_{i\in F})$.
+\begin{subthm}{conv-cond} $\tilde q\in \Conv(\{y_i\}_{i\in F})$.
 \end{subthm}
 
-Moreover, if in the model configuration, we have $\dist{\~y_i}{\~y_j}=\dist{y_i}{y_j}$ for all $i,j\in F$, 
-then there is an isometric embedding $\imath:\Conv(\{y_i\}_{i\in F})\hookrightarrow \spc{L}$ such that $\imath(\~q)=q$ and $\imath(\~y_i)=y_i$ for each $i\in F$.
+Moreover, if in the model configuration, we have $\dist{\tilde y_i}{\tilde y_j}=\dist{y_i}{y_j}$ for all $i,j\in F$, 
+then there is an isometric embedding $\imath:\Conv(\{y_i\}_{i\in F})\hookrightarrow \spc{L}$ such that $\imath(\tilde q)=q$ and $\imath(\tilde y_i)=y_i$ for each $i\in F$.
 \end{thm}
 
 \parbf{Comment for AKP.} 
@@ -19910,21 +19910,21 @@ From above it follows that $|h(\bm{e}_i???)|=1$ and $h(\bm{0})=h(\bm{w}^\flat)$.
 In particular 
 $$h(\bm{0}) \in \Conv(\{\bm{e}_i\}_{i\in F}).$$
 
-Take a $\~q\in \Lob{n}\kappa$ and fix an isometry $\imath:\RR^n\to \T_{\~q}\Lob{n}\kappa$, then set 
-$$\~y_i=\exp_{\~q}\circ\imath\circ h((\dist{q}{y_i})\cdot \bm{e}_i)\ \ \text{for all}\ \ i,j\in F$$ 
+Take a $\tilde q\in \Lob{n}\kappa$ and fix an isometry $\imath:\RR^n\to \T_{\tilde q}\Lob{n}\kappa$, then set 
+$$\tilde y_i=\exp_{\tilde q}\circ\imath\circ h((\dist{q}{y_i})\cdot \bm{e}_i)\ \ \text{for all}\ \ i,j\in F$$ 
 Since $|h(\bm{e}_i)|=1$, we get
-$$\dist{\~q}{\~y_i}=\dist{q}{y_i}.$$ 
+$$\dist{\tilde q}{\tilde y_i}=\dist{q}{y_i}.$$ 
 Further,
-$$\cos\angk\kappa{\~q}{\~y_i}{\~y_j}
+$$\cos\angk\kappa{\tilde q}{\tilde y_i}{\tilde y_j}
 =a_{i j}
 \ge\<\dir q{y_i},\dir q{y_j}\>
 = \cos\mangle\hinge{q}{y_i}{y_j}
 \ge\cos\angk\kappa{q}{y_i}{y_j};
 $$
-i.e. $\angk\kappa{\~q}{\~y_i}{\~y_j}\le \angk\kappa{q}{y_i}{y_j}$ and therefore
-$$\dist{\~y_i}{\~y_j}\le \dist{y_i}{y_j}.$$
+i.e. $\angk\kappa{\tilde q}{\tilde y_i}{\tilde y_j}\le \angk\kappa{q}{y_i}{y_j}$ and therefore
+$$\dist{\tilde y_i}{\tilde y_j}\le \dist{y_i}{y_j}.$$
 Finally, Since $\kappa\le 0$, $h(\bm{0}) \in \Conv(\{\bm{e}_i\}_{i\in F})$ implies
-$\~q\in\Conv(\{y_i\}_{i\in F})$.
+$\tilde q\in\Conv(\{y_i\}_{i\in F})$.
 
 Equality???
 \qeds
@@ -19961,22 +19961,22 @@ $$\sum_{i=1}^n v_i\<\xi,\dir q{y_i}\>
 -\d_q f(\xi)\le0\ \ \text{for any}\ \ \xi\in \Sigma_q \spc{L}.$$
 Therefore we can apply lemma \ref{lem:neg-config} to the configuration $q,y_1,y_2,\dots,y_n\in \spc{U}$.
 Without loss of generality we can assume that $F=\{1,2,\dots,m\}$, $m\le n$; 
-thus we get a model configuration $\~q,\~y_1,\~y_2,\dots,\~y_m\in \Lob{n}\kappa$ such that
+thus we get a model configuration $\tilde q,\tilde y_1,\tilde y_2,\dots,\tilde y_m\in \Lob{n}\kappa$ such that
 \begin{enumerate}[(i)]
-\item $\dist{\~q}{\~y_i}=\dist{q}{y_i}$ and 
-$\dist{\~y_i}{\~y_j}\le \dist{y_i}{y_j}$ for all $i,j$;
-\item $\~q\in\Conv(\~y_1,\~y_2,\dots,\~y_m)$.
+\item $\dist{\tilde q}{\tilde y_i}=\dist{q}{y_i}$ and 
+$\dist{\tilde y_i}{\tilde y_j}\le \dist{y_i}{y_j}$ for all $i,j$;
+\item $\tilde q\in\Conv(\tilde y_1,\tilde y_2,\dots,\tilde y_m)$.
 \end{enumerate}
 
 Apply \ref{thm:pos-config} to construct a model configuration 
-$\{\~p,\~x_1,\~x_2,\dots,\~x_m\}\i \Lob{n}\kappa$ such that
-$\dist{\~p}{\~x_i}=\dist{p}{x_i}$ 
-and $\dist{\~x_i}{\~x_j}\ge \dist{x_i}{x_j}$ for all $i,j$.
+$\{\tilde p,\tilde x_1,\tilde x_2,\dots,\tilde x_m\}\i \Lob{n}\kappa$ such that
+$\dist{\tilde p}{\tilde x_i}=\dist{p}{x_i}$ 
+and $\dist{\tilde x_i}{\tilde x_j}\ge \dist{x_i}{x_j}$ for all $i,j$.
 Since 
-$$\dist{\~x_i}{\~x_j}\ge \dist{x_i}{x_j}\ge \dist{y_i}{y_j}\ge\dist{\~y_i}{\~y_j}$$ 
-we can apply Kirszbraun's lemma (\ref{lem:kirsz}) to  get a point $\~s\in \Lob{n}\kappa$ such that
-$$\dist{\~s}{\~y_i}\le \dist{\~p}{\~x_i}\ \ \text{for all}\ \ i.$$
-Therefore $\dist{\~s}{\~y_i}<\dist{\~q}{\~y_i}$ for each $i$, which contradicts Lemma \ref{lem:min-conv}.
+$$\dist{\tilde x_i}{\tilde x_j}\ge \dist{x_i}{x_j}\ge \dist{y_i}{y_j}\ge\dist{\tilde y_i}{\tilde y_j}$$ 
+we can apply Kirszbraun's lemma (\ref{lem:kirsz}) to  get a point $\tilde s\in \Lob{n}\kappa$ such that
+$$\dist{\tilde s}{\tilde y_i}\le \dist{\tilde p}{\tilde x_i}\ \ \text{for all}\ \ i.$$
+Therefore $\dist{\tilde s}{\tilde y_i}<\dist{\tilde q}{\tilde y_i}$ for each $i$, which contradicts Lemma \ref{lem:min-conv}.
 
 
 
@@ -20008,9 +20008,9 @@ Lobachevsky geometry:
 
 \begin{thm}{Kirszbraun's lemma}\label{lem:kirsz}
 Let $\kappa\le 0$, 
-$\~x_1,\~x_2,\dots,\~x_m \in \Lob{\kay}\kappa$,
-$\~y_1,\~y_2,\dots,\~y_m\in \Lob{n}\kappa$ be points such that $\dist{\~x_i}{\~x_j}\ge \dist{\~y_i}{\~y_j}$ for any $i,j$.
-Then for any point $\~p\in \Lob{\kay}\kappa$ there is a point $\~s\in \Lob{n}\kappa$ such that $\dist{\~x_i}{\~p}\ge \dist{\~y_i}{\~s}$ for any $i$.
+$\tilde x_1,\tilde x_2,\dots,\tilde x_m \in \Lob{\kay}\kappa$,
+$\tilde y_1,\tilde y_2,\dots,\tilde y_m\in \Lob{n}\kappa$ be points such that $\dist{\tilde x_i}{\tilde x_j}\ge \dist{\tilde y_i}{\tilde y_j}$ for any $i,j$.
+Then for any point $\tilde p\in \Lob{\kay}\kappa$ there is a point $\tilde s\in \Lob{n}\kappa$ such that $\dist{\tilde x_i}{\tilde p}\ge \dist{\tilde y_i}{\tilde s}$ for any $i$.
 \end{thm}
 
 Different proofs of Kirszbraun's lemma can be found in ???.
@@ -20019,10 +20019,10 @@ Different proofs of Kirszbraun's lemma can be found in ???.
 
 \begin{thm}{Lemma}\label{lem:min-conv}
 Let $\kappa\le 0$, 
-$\{\~y_1,\~y_2,\dots,\~y_m\}\i \Lob{n}\kappa$ 
-and $\~q\in \Conv(\~y_1,\~y_2,\dots,\~y_m)$. 
-Then for any other point $\~s\in \Lob{n}\kappa$ the inequality 
-$$\dist{\~s}{\~y_i}\ge \dist{\~q}{\~y_i}$$
+$\{\tilde y_1,\tilde y_2,\dots,\tilde y_m\}\i \Lob{n}\kappa$ 
+and $\tilde q\in \Conv(\tilde y_1,\tilde y_2,\dots,\tilde y_m)$. 
+Then for any other point $\tilde s\in \Lob{n}\kappa$ the inequality 
+$$\dist{\tilde s}{\tilde y_i}\ge \dist{\tilde q}{\tilde y_i}$$
 holds for at least one $i$.
 \end{thm}
 
@@ -20039,15 +20039,15 @@ such that the map $x_i\mapsto y_i$ is short%
 and it can not be extended to $p\in \spc{L}$.
 Since the set is minimal, we can find a point $q\in \spc{U}$ such that $\dist{q}{y_i}>\dist{p}{x_i}$ for each $i$ and there is no way to move $q$ decreasing all distances $\dist{q}{y_i}$.
 
-Take $\~x_i=\ddir p{x_i}$ and $\~p=o_p$ in $\T_p \spc{L}$.
-Clearly $\dist{\~p}{\~x_i}=\dist{p}{x_i}$ and from comparison, we get $\dist{\~x_i}{\~x_j}\ge\dist{x_i}{x_j}$ for all $i,j$.
+Take $\tilde x_i=\ddir p{x_i}$ and $\tilde p=o_p$ in $\T_p \spc{L}$.
+Clearly $\dist{\tilde p}{\tilde x_i}=\dist{p}{x_i}$ and from comparison, we get $\dist{\tilde x_i}{\tilde x_j}\ge\dist{x_i}{x_j}$ for all $i,j$.
 
-Similarly, take $\~y_i=\ddir q{y_i}$ and $\~q=o_q$ in $\T_q \spc{L}$.
-Clearly $\dist{\~q}{\~y_i}=\dist{q}{y_i}$ and from comparison, we get $\dist{\~y_i}{\~y_j}\le\dist{y_i}{y_j}$ for all $i,j$.
-Since we can not move $q$ decreasing all distances $\dist{q}{y_i}$, we have $\~q\in\Conv(\~y_1,\~y_2,\dots,\~y_n)$.
+Similarly, take $\tilde y_i=\ddir q{y_i}$ and $\tilde q=o_q$ in $\T_q \spc{L}$.
+Clearly $\dist{\tilde q}{\tilde y_i}=\dist{q}{y_i}$ and from comparison, we get $\dist{\tilde y_i}{\tilde y_j}\le\dist{y_i}{y_j}$ for all $i,j$.
+Since we can not move $q$ decreasing all distances $\dist{q}{y_i}$, we have $\tilde q\in\Conv(\tilde y_1,\tilde y_2,\dots,\tilde y_n)$.
 
-Since both $\T_p \spc{L}$ and $\T_q \spc{L}$ are Euclidean spaces, we can apply Kirszbraun's lemma to get a point $\~s\in \T_q$ such that $\dist{\~s}{\~y_i}\le\dist{\~p}{\~x_i}$ for all $i$.
-Thus $\dist{\~s}{\~y_i}<\dist{\~q}{y_i}$ for all $i$, which contradicts Lemma \ref{lem:min-conv}.
+Since both $\T_p \spc{L}$ and $\T_q \spc{L}$ are Euclidean spaces, we can apply Kirszbraun's lemma to get a point $\tilde s\in \T_q$ such that $\dist{\tilde s}{\tilde y_i}\le\dist{\tilde p}{\tilde x_i}$ for all $i$.
+Thus $\dist{\tilde s}{\tilde y_i}<\dist{\tilde q}{y_i}$ for all $i$, which contradicts Lemma \ref{lem:min-conv}.
 \qeds
 
 To make a proof out of this sketch we need to deal with two main problems:
@@ -20114,11 +20114,11 @@ BUT, I was not able to figure out if this conditions are equivalent.
 Let $\kappa\le 0$, 
 $\spc{U}\in\CBA{}{\kappa}$, 
 $x_1,x_2,\dots,x_n\in\spc{U}$ 
-and $\~x_1,\~x_2,\dots,\~x_n\in\Lob{n}{\kappa}$
+and $\tilde x_1,\tilde x_2,\dots,\tilde x_n\in\Lob{n}{\kappa}$
 be a model configuration
-such that $\dist{\~x_i}{\~x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$.
+such that $\dist{\tilde x_i}{\tilde x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$.
 
-Then for any $\~y\in \Lob{n}{\kappa}$, there is $y\in\spc{U}$ such that $\dist{x_i}{y}\le\dist{\~x_i}{\~y}$ for any $i$.
+Then for any $\tilde y\in \Lob{n}{\kappa}$, there is $y\in\spc{U}$ such that $\dist{x_i}{y}\le\dist{\tilde x_i}{\tilde y}$ for any $i$.
 \end{thm}
 
 \parit{Proof.}
@@ -20126,7 +20126,7 @@ It is sufficient to show only two cases: $\kappa=0,-1$.
 The proofs of these two cases are identical, only formulas differ.
 In the proof, we assume $\kappa=0$ but we provide the formulas for $\kappa=-1$ in the footnotes.
 
-Note that without loss of generality, one can assume that $\~y\in\Conv(\~x_1,\~x_2,\dots,\~x_n)$.
+Note that without loss of generality, one can assume that $\tilde y\in\Conv(\tilde x_1,\tilde x_2,\dots,\tilde x_n)$.
 
 Set%
 \footnote{In case $\kappa=-1$,
@@ -20134,31 +20134,31 @@ $$
 \begin{aligned}
 &f_i=\cosh\circ\dist{x_i}{},
 &
-&\~f_i=\cosh\circ\dist{\~x_i}{}.
+&\tilde f_i=\cosh\circ\dist{\tilde x_i}{}.
 \end{aligned}\eqno{(A)_-}$$}
 $$
 \begin{aligned}
 &f_i=\tfrac{1}{2}(\dist{x_i}{})^2,
 &
-&\~f_i=\tfrac{1}{2}(\dist{\~x_i}{})^2
+&\tilde f_i=\tfrac{1}{2}(\dist{\tilde x_i}{})^2
 \end{aligned}\eqno{(A)_0}
 $$
 and 
-$\bm{f}=(f_1,f_2,\dots,f_n)$, $\bm{\~f}=(\~f_1,\~f_2,\dots,\~f_n)$.
+$\bm{f}=(f_1,f_2,\dots,f_n)$, $\bm{\tilde f}=(\tilde f_1,\tilde f_2,\dots,\tilde f_n)$.
 
 Using definition~\ref{def:supset+succcurlyeq},
 the conclusion of the lemma can be reformulated the following way: 
-\textit{$\bm{\~f}(\~y)\in\Up\bm{f}(\spc{U})$ 
-for any $\~y\in\Conv(\~x_1,\~x_2,\dots,\~x_n)$}.
+\textit{$\bm{\tilde f}(\tilde y)\in\Up\bm{f}(\spc{U})$ 
+for any $\tilde y\in\Conv(\tilde x_1,\tilde x_2,\dots,\tilde x_n)$}.
 
 Clearly,
 $f_i''\ge 1$.
 Thus, applying theorem~\ref{thm:bary}, we get that the set $\Up\bm{f}(\spc{U})\i\RR^{n}$, is convex.
 
 Let us argue by contradiction;
-assume $\bm{\~f}(\~y)\not\in\Up\bm{f}(\spc{U})$ for some $\~y\in\Conv(\~x_1,\~x_2,\dots,\~x_n)$, 
+assume $\bm{\tilde f}(\tilde y)\not\in\Up\bm{f}(\spc{U})$ for some $\tilde y\in\Conv(\tilde x_1,\tilde x_2,\dots,\tilde x_n)$, 
 then there is $\bm{\alpha}=(\alpha_1,\alpha_2,\dots,\alpha_n)\in\Delta^{n-1}$ such that 
-$$\sum_i\alpha_i\cdot\~f_i(\~y)
+$$\sum_i\alpha_i\cdot\tilde f_i(\tilde y)
 \le 
 \inf\l\{\,\sum_i\alpha_i\cdot f_i(y)\mid y\in\spc{U}\,\r\}.$$ 
 The later cotradicts the following claim.
@@ -20173,14 +20173,14 @@ set
 &
 &z=\argmin h\in \spc{U}
 \\
-&\~h=\sum_i\alpha_i\cdot \~f_i
+&\tilde h=\sum_i\alpha_i\cdot \tilde f_i
 &
-&\~h\:\Lob{n}{\kappa}\to\RR
+&\tilde h\:\Lob{n}{\kappa}\to\RR
 &
-&\~z=\argmin \~h\in \Lob{n}{\kappa}
+&\tilde z=\argmin \tilde h\in \Lob{n}{\kappa}
 \end{align*}
 Then 
-$h(z)\le \~h(\~z)$.
+$h(z)\le \tilde h(\tilde z)$.
 \end{clm}
 
 \parit{Proof of the claim.}
@@ -20265,24 +20265,24 @@ $$2\cdot h(z)
 
 Note, that if $\spc{U}\iso\Lob{n}{\kappa}$, 
 then all inequalities above are sharp.
-Thus the same argument as above, repeated for $\~x_1,\~x_2,\dots,\~x_n\in\Lob{n}{\kappa}$
+Thus the same argument as above, repeated for $\tilde x_1,\tilde x_2,\dots,\tilde x_n\in\Lob{n}{\kappa}$
 gives%
 \footnote%
 {In case $\kappa=-1$,
-$$\~h^2(\~z)
+$$\tilde h^2(\tilde z)
 =
 \sum_{i,j}
 \alpha_i\cdot\alpha_j
 \cdot
-\cosh(\dist{\~x_i}{\~x_j}).\eqno{(E)_-}$$
+\cosh(\dist{\tilde x_i}{\tilde x_j}).\eqno{(E)_-}$$
 }
-$$2\cdot \~h(\~z)
+$$2\cdot \tilde h(\tilde z)
 =
 \sum_{i,j}
 \alpha_i\cdot\alpha_j
 \cdot
-(\dist{\~x_i}{\~x_j})^2. \eqno{(E)_0}$$
-Since $\dist{\~x_i}{\~x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$,
+(\dist{\tilde x_i}{\tilde x_j})^2. \eqno{(E)_0}$$
+Since $\dist{\tilde x_i}{\tilde x_j}\ge\dist{x_i}{x_j}$ for all pairs $(i,j)$,
 the claim follows from $(D)$ and $(E)$.
 \qeds
 
@@ -20305,12 +20305,12 @@ the claim follows from $(D)$ and $(E)$.
 
 According to theorem~\ref{thm:pos-config}, 
 there is a model configuration 
-$\~p,\~x_1,\~x_2,\dots,\~x_n\in \Lob{n}{\kappa}$ such that
-$\dist{\~p}{\~x_i}=\dist{p}{x_i}$ 
-and $\dist{\~x_i}{\~x_j}\ge\dist{x_i}{x_j}$ 
+$\tilde p,\tilde x_1,\tilde x_2,\dots,\tilde x_n\in \Lob{n}{\kappa}$ such that
+$\dist{\tilde p}{\tilde x_i}=\dist{p}{x_i}$ 
+and $\dist{\tilde x_i}{\tilde x_j}\ge\dist{x_i}{x_j}$ 
 for all $i$, $j$.
-Since $f$ is short, we have $\dist{y_i}{y_j}\le\dist{\~x_i}{\~x_j}$ for all $i$, $j$.
-Thus, the lemma~\ref{lem:kirsz-neg}, applyed to the array $y_1,y_2,\dots,y_n$ and model array $\~x_1,\~x_2,\dots,\~x_n$  and $\~y:=\~p$ contradicts \ref{eq:cap=cBalls=0}.
+Since $f$ is short, we have $\dist{y_i}{y_j}\le\dist{\tilde x_i}{\tilde x_j}$ for all $i$, $j$.
+Thus, the lemma~\ref{lem:kirsz-neg}, applyed to the array $y_1,y_2,\dots,y_n$ and model array $\tilde x_1,\tilde x_2,\dots,\tilde x_n$  and $\tilde y:=\tilde p$ contradicts \ref{eq:cap=cBalls=0}.
 
 
 
@@ -20372,12 +20372,12 @@ Then there is at most countable subset $Q'\i Q$ which contained in an isometric 
 
 \begin{thm}{Rigit comparison}
 Let $\spc{L}\in\CBB{}0$ and $x_0,x_1,\dots\in \spc{L}$.
-Assume there is a collection of points $\~x_0,\~x_1,\dots$ in a Hilbert space such that $\~x_0=\sum_{i=1}^\infty\alpha_i\~x_i$ for some $\alpha_i>0$, $\sum_{i=1}^\infty\alpha_i=1$ and $\dist{x_i}{x_j}=\dist{\~x_i}{\~x_j}$ for all $i,j$.
-Then there is an isometric embedding $\imath:P???\hookrightarrow \spc{L}$ such that $\imath(\~x_i)=x_i$ for each $i\in???$.
+Assume there is a collection of points $\tilde x_0,\tilde x_1,\dots$ in a Hilbert space such that $\tilde x_0=\sum_{i=1}^\infty\alpha_i\tilde x_i$ for some $\alpha_i>0$, $\sum_{i=1}^\infty\alpha_i=1$ and $\dist{x_i}{x_j}=\dist{\tilde x_i}{\tilde x_j}$ for all $i,j$.
+Then there is an isometric embedding $\imath:P???\hookrightarrow \spc{L}$ such that $\imath(\tilde x_i)=x_i$ for each $i\in???$.
 \end{thm}
 
-\parit{Proof} Note that according to ???, $y_i=\ddir{x_0}{x_i}$ is uniquely defined, $\Lin_p\ni y_i$ for each $i\in??$ and $\dist{y_i}{y_j}=\dist{\~x_i}{\~x_j}$ for all $i,j\in???$.
-Thus there is an isometry  $\imath\:P???\to\Lin_{x_0}$ such that $\imath(\~x_i)=y_i$.
+\parit{Proof} Note that according to ???, $y_i=\ddir{x_0}{x_i}$ is uniquely defined, $\Lin_p\ni y_i$ for each $i\in??$ and $\dist{y_i}{y_j}=\dist{\tilde x_i}{\tilde x_j}$ for all $i,j\in???$.
+Thus there is an isometry  $\imath\:P???\to\Lin_{x_0}$ such that $\imath(\tilde x_i)=y_i$.
 Now apply gradient exponent $\gexp\:P'???\to \spc{L}$.
 According to ???, it is a short map.
 On the other hand, according to ??? there is a short map $F\:\spc{L}\to P???$ such that $F(x_i)=y_i$.
@@ -20389,31 +20389,31 @@ Let $\spc{L}\in\CBB{}{\kappa}$ be geodesic.
 
 Assume that for a hinge $\hinge p q r$, we have equality in the angle comparison, i.e. 
 $$\mangle\hinge p q r=\angk\kappa p q r.$$
-Let us denote by $\Delta$ the closed domain cutted from $\Lob{}\kappa$ by triangle $\trig{\~p}{\~q}{\~r}=\~\triangle_\kappa(pqr)$.
-Then there is a global isometry $\imath:\Delta\to \spc{L}$ such that $\imath([\~p\~q])=[pq]$ and $\imath([\~p\~r])=[pr]$.
+Let us denote by $\Delta$ the closed domain cutted from $\Lob{}\kappa$ by triangle $\trig{\tilde p}{\tilde q}{\tilde r}=\tilde \triangle_\kappa(pqr)$.
+Then there is a global isometry $\imath:\Delta\to \spc{L}$ such that $\imath([\tilde p\tilde q])=[pq]$ and $\imath([\tilde p\tilde r])=[pr]$.
 
 Moreover, given a geodesic $[q'r']$ coonectiong points $q'\in]pq[$ and $r'\in]pr[$,
 one can choose $\imath$ so that $\imath(\Delta)\supset[q'r']$.
 \end{thm}
 
 \parit{Proof.} Assume $\spc{L}$ is geodesic.
-Let $q'$, $r'$, $\~q'$, $\~r'$ be the mid points of  correspondingly $[pq]$, $[pr]$, $[\~p\~q]$, $[\~p\~r]$.
+Let $q'$, $r'$, $\tilde q'$, $\tilde r'$ be the mid points of  correspondingly $[pq]$, $[pr]$, $[\tilde p\tilde q]$, $[\tilde p\tilde r]$.
 
-Let us construct a map $\imath:\Delta\to \spc{L}$ the follownig way: first map $[\~q'\~r']$ isometrically to $[\~q\~r]$, so that $\imath(\~q')=q'$ and $\imath(\~r')=r'$.
+Let us construct a map $\imath:\Delta\to \spc{L}$ the follownig way: first map $[\tilde q'\tilde r']$ isometrically to $[\tilde q\tilde r]$, so that $\imath(\tilde q')=q'$ and $\imath(\tilde r')=r'$.
 
-Further note that any point $x\in\Delta\backslash [\~q'\~r']$ can be uniquely presented in one of the following ways $\GF_{\dist{\~p}^2}^t(\~y)$ or $\GF_{\dist{\~q}^2}^t(\~y)$, where $\~y\in[\~q'\~r']$ ant $t> 0$.
+Further note that any point $x\in\Delta\backslash [\tilde q'\tilde r']$ can be uniquely presented in one of the following ways $\GF_{\dist{\tilde p}^2}^t(\tilde y)$ or $\GF_{\dist{\tilde q}^2}^t(\tilde y)$, where $\tilde y\in[\tilde q'\tilde r']$ ant $t> 0$.
 
 Thus one can exted the map $\imath$ to whole $\Delta$ according the rules:
-$$\imath(\GF_{(\dist{\~p}{})^2}^t(\~y))=\GF_{(\dist{p}{})^2}^t(\imath(\~y)),$$
-$$\imath(\GF_{(\dist{\~q}{})^2}^t(\~y))=\GF_{(\dist{q}{})^2}^t(\imath(\~y)).$$
-It is clear that $\imath(\~p)=p$, $\imath(\~q)=q$, $\imath(\~r)=r$.
+$$\imath(\GF_{(\dist{\tilde p}{})^2}^t(\tilde y))=\GF_{(\dist{p}{})^2}^t(\imath(\tilde y)),$$
+$$\imath(\GF_{(\dist{\tilde q}{})^2}^t(\tilde y))=\GF_{(\dist{q}{})^2}^t(\imath(\tilde y)).$$
+It is clear that $\imath(\tilde p)=p$, $\imath(\tilde q)=q$, $\imath(\tilde r)=r$.
 
 According to ??? $\imath\:\Delta\to\spc{L}$ is a short map.
 Sinse 
-$\dist{\~p}{\~q}=\dist{p}{q}$, the image
-$\imath[\~p\~q]$ is a geodesic from $p$ to $q$.
-Sinse $\imath(\~q')=q'$, we have $\imath[\~p\~q]=[pq]$.
-Analogousely, $\imath[\~p\~r]=[pr]$.
+$\dist{\tilde p}{\tilde q}=\dist{p}{q}$, the image
+$\imath[\tilde p\tilde q]$ is a geodesic from $p$ to $q$.
+Sinse $\imath(\tilde q')=q'$, we have $\imath[\tilde p\tilde q]=[pq]$.
+Analogousely, $\imath[\tilde p\tilde r]=[pr]$.
 \qeds
 
 
@@ -20425,8 +20425,8 @@ Analogousely, $\imath[\~p\~r]=[pr]$.
 Let $\spc{L}\in\CBB{}0$, 
 $p\in \spc{L}$ 
 and $Q\i \spc{L}$.
-Assume $f\:Q\to \EE^?$ is a short map such that for some $\~p\in\Conv(f(Q))\i \EE^?$ we have 
-$$\dist{\~p}{f(x)}=\dist{p}{x}$$
+Assume $f\:Q\to \EE^?$ is a short map such that for some $\tilde p\in\Conv(f(Q))\i \EE^?$ we have 
+$$\dist{\tilde p}{f(x)}=\dist{p}{x}$$
 for any $x\in Q$.
 Then there is a flat subspace $E\i \T_p$ such that $E\ni\dir px$ for any $x\in Q$ and morover
 $\gexp_p|_{\Conv(\Log p(Q))}$ is an isometric embedding. 

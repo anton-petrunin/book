@@ -18,9 +18,7 @@ given by
 Burago, 
 Gromov 
 and Perelman in \cite{BGP};
-it is closer to Perelman's definitons in \cite{perelman:spaces2} %CHECK??? 
-and \cite{perelman:morse}%CHECK???
-.
+it is closer to Perelman's definitons \cite{perelman:spaces2,perelman:morse}.
 
 The term ``strut'' seems to have the closest meaning to the original Russian term used in \cite{BGP}.
 In the official translation,
@@ -179,8 +177,8 @@ $
 
 First note that Claim \ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,r)$, we have
 \begin{enumerate}[(i)]
-\item\label{111} $(\d_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
-\item\label{222} $(\d_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}-x^j\}<0$.
+\item\label{111} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
+\item\label{222} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}-x^j\}<0$.
 \end{enumerate}
 Indeed, since $t_0\le\tfrac{r}2$, $\alpha_{\bm{x}}(t)\in\oBall(p,r)$ for all $t\in[0,t_0]$.
 Consider the following real-to-real functions:
@@ -211,56 +209,56 @@ Thus, to prove Calim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) an
 First let us prove it assuming that $\spc{L}$ is geodesic.
 
 Note that 
-\[(\d_q\distfun{b}{}{})(\dir{q}{a^i})
+\[(\dd_q\distfun{b}{}{})(\dir{q}{a^i})
 \le\cos\angk{\kappa}{q}{b}{a^j}<-\tfrac\eps2,
 \eqlbl{inq-b}\]
 for all $i$ and
-\[(\d_q\distfun{a^j}{}{})(\dir{q}{a^i})
+\[(\dd_q\distfun{a^j}{}{})(\dir{q}{a^i})
 \le
 \cos\angk{\kappa}{q}{a^i}{a^j}
 <
 -\tfrac\eps2\eqlbl{inq-a^j}\]
 for all $j\not=i$. 
 Further, \ref{inq-a^j} implies
-\[(\d_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
+\[(\dd_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
 for all $i\not=j$.
 The assumption in (\ref{111}), implies
-\[\d_q f_{\bm{x}}
+\[\dd_q f_{\bm{x}}
 =
-\min_{j\not=i} \{\d_q h_{\bm{x}}^j\}+\eps\cdot(\d_q\distfun{b}{}{}).\]
+\min_{j\not=i} \{\dd_q h_{\bm{x}}^j\}+\eps\cdot(\dd_q\distfun{b}{}{}).\]
 Thus,
 \begin{align*}
--(\d_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
+-(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
 &\ge
 \<\dir q{a^i},\nabla_q f_{\bm{x}}\>
 \ge
 \\
 &\ge
-(\d_qf_{\bm{x}})(\dir q{a^i})
+(\dd_qf_{\bm{x}})(\dir q{a^i})
 =
 \\
 &=
-\min_{i\not=j}\{(\d_qh_{\bm{x}}^i)(\dir q{a^i})\}+\eps\cdot(\d_q\distfun{b}{}{})(\dir q{a^i}).
+\min_{i\not=j}\{(\dd_qh_{\bm{x}}^i)(\dir q{a^i})\}+\eps\cdot(\dd_q\distfun{b}{}{})(\dir q{a^i}).
 \end{align*}
 Therefore (\ref{111}) follows from \ref{inq-b} and \ref{inq-h}.
 
 The assumption in (\ref{222}) implies that $f_{\bm{x}}(q)
 =
 h_{\bm{x}}^i(q)+\eps\cdot\distfun{b}{}{}$ and 
-\[\d_q f_{\bm{x}}\le \d_q \distfun{a^i}{}{}+\eps\cdot(\d_p\distfun{b}{}{}).\] 
+\[\dd_q f_{\bm{x}}\le \dd_q \distfun{a^i}{}{}+\eps\cdot(\dd_p\distfun{b}{}{}).\] 
 Therefore,
 \begin{align*}
-(\d_q \distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
+(\dd_q \distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
 &\ge 
-\d_qf_{\bm{x}}(\nabla_q f_{\bm{x}})
+\dd_qf_{\bm{x}}(\nabla_q f_{\bm{x}})
 \ge 
 \\
 &\ge
-\l[(\d_qf_{\bm{x}})(\dir qb)\r]^2
+\left[(\dd_qf_{\bm{x}})(\dir qb)\right]^2
 \ge
 \\
 &\ge
-\l[\min_i\{\cos\angk\kappa qb{a^i}\}-\eps^2\r]^2.
+\left[\min_i\{\cos\angk\kappa qb{a^i}\}-\eps^2\right]^2.
 \end{align*}
 Thus, (\ref{222}) follows from \ref{inq-b} since $\eps<\tfrac{1}{10}$. 
 
@@ -374,12 +372,12 @@ Assume there is an isometric cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\
 
 \parit{Proof.}
 Assume $\iota(\EE^{m})$ is a proper subset of $\T_p\spc{L}$.
-Equivalently, there is a direction $\xi \in \Sigma_p\backslash\iota(\SS^{m-1})$,
-where $\SS^{m-1}\subset \EE^m$ is the unit sphere. 
+Equivalently, there is a direction $\xi \in \Sigma_p\backslash\iota(\mathbb{S}^{m-1})$,
+where $\mathbb{S}^{m-1}\subset \EE^m$ is the unit sphere. 
 
-Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\SS^{m-1})$. 
-Choose a \emph{maximal $\eps$-packing} in $\iota(\SS^{m-1})$;
-that is, an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\SS^{m-1})$ so that $n=\pack_\eps \SS^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\mathbb{S}^{m-1})$. 
+Choose a \emph{maximal $\eps$-packing} in $\iota(\mathbb{S}^{m-1})$;
+that is, an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\mathbb{S}^{m-1})$ so that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
 
 Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ so that
 $\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$;
@@ -389,13 +387,13 @@ $\angk{\kappa}p x{z^i}>\eps$ for all $i$
 and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\not=j$.
 Applying Corollary \ref{cor:euclid-subcone}, we can find a point $p'$ arbitrary close to  $p$ 
 so that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
-belong to an isometric copy of $\SS^{\kay-1}$ in $\Sigma_{p'}$.
+belong to an isometric copy of $\mathbb{S}^{\kay-1}$ in $\Sigma_{p'}$.
 In addition, we can assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
 From hinge comparison (\ref{angle}),
 $\mangle(\dir{p'}x,\dir{p'}{z^i})>\eps$ 
 and $\mangle(\dir{p'}{z^i},\dir{p'}{z^j})>\eps$;
 that is, 
-\[\pack_\eps \SS^{\kay-1}\ge n+1>\pack_\eps \SS^{m-1}.\] 
+\[\pack_\eps \mathbb{S}^{\kay-1}\ge n+1>\pack_\eps \mathbb{S}^{m-1}.\] 
 Hence $\kay>m$.
 \qeds
 
@@ -756,8 +754,8 @@ is isometric to either $[0,\eps)$ or $(-\eps,\eps)$.
 
 First let us show that
 \begin{clm}{}\label{clm:1-dim-mid}
-If $p\in\l]x y\r[$ for some $x$, $y\in\spc{L}$ and $\eps<\min\{\dist{p}{x}{},\dist{p}{y}{}\}$
-then $\oBall(p,\eps)\subset\l]x y\r[$.
+If $p\in\mathopen{]}x y\mathclose{[}$ for some $x$, $y\in\spc{L}$ and $\eps<\min\{\dist{p}{x}{},\dist{p}{y}{}\}$
+then $\oBall(p,\eps)\subset\mathopen{]}x y\mathclose{[}$.
 In particular
 $\oBall(p,\eps)\iso(-\eps,\eps)$.
 \end{clm}
@@ -773,7 +771,7 @@ $\oBall(p,\eps)\iso(-\eps,\eps)$.
 
 Assume the contrary;
 that is, there is 
-$$z\in \oBall(p,\eps)\backslash\l]x y\r[.$$
+$$z\in \oBall(p,\eps)\backslash\mathopen{]}x y\mathclose{[}.$$
 Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point that maximizes the distance $\dist{p}{q}{}$.
 At  $q$, we have three distinct directions: 
 to $x$, to $y$ and to $z$.
@@ -806,7 +804,7 @@ in particular $\oBall(p,\eps)\iso[0,\eps)$.
 
 Assume the contrary;
 let $z\in \oBall(p,\eps)\backslash[p y]$.
-Choose a point $w\in \l] p y \r[$ such that 
+Choose a point $w\in \mathopen{]} p y \mathclose{[}$ such that 
 \[\dist{p}{w}{}+\dist{p}{z}{}<\eps.\]
 Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point that maximizes the distance $\dist{w}{q}{}$.
 Since no geodesics pass thru $p$, we have $p\not=q$.
@@ -840,7 +838,7 @@ In this case $\spc{L}\iso\RR_{\ge0}$.
 \item both $\gamma_+$ and $\gamma_-$ are defined on closed intervals, say $[0,a]$ and $[0,b]$ and $\gamma_+(a)\not=\gamma_-(b)$.
 In this case $\spc{L}\iso[0,a+b]$.
 \item both $\gamma_+$ and $\gamma_-$ are defined on one closed interval, say $[0,a]$ and $\gamma_+(a)=\gamma_-(a)$.
-In this case, $\spc{L}\iso\tfrac{a}{\pi}\blow\SS^1$.
+In this case, $\spc{L}\iso\tfrac{a}{\pi}\blow\mathbb{S}^1$.
 \end{itemize}
 Hence the result.\qeds
 \end{comment}

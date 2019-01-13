@@ -89,7 +89,7 @@ Then $\kay\le m$.
 Without loss of generality, we can assume that all $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay$ are geodesic directions;
 let $\xi=\dir{p}{x}$ and $\zeta^i=\dir{p}{z^i}$ for all $i$.
 Fix small $r>0$, 
-let $\bar x\in \l]px\r]$ and $\bar z^i\in\l]p z^i\r]$ be points 
+let $\bar x\in \mathopen{]}px]$ and $\bar z^i\in\mathopen{]}p z^i]$ be points 
 such that
 \[\dist{p}{\bar x}{}=\dist{p}{\bar z^1}{}=\dots=\dist{p}{\bar z^\kay}{}=r.\]
 From the definition of angle,
@@ -113,7 +113,7 @@ According to Corollary~\ref{cor:euclid-subcone}, all directions $\acute\xi,\acut
 Thus, it  remains to prove the following claim, which is a partial case of the lemma.
 
 \begin{clm}{}
-If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\SS^{m-1}$,
+If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\mathbb{S}^{m-1}$,
 $\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all $i$ and
 $\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\not=j$,
 then $\kay\le m$.
@@ -124,27 +124,27 @@ set
 $\bar\zeta^i$
 to be the closest point to $\zeta^i$
 in
-$\Xi=\SS^{m-1}\backslash \oBall(\xi,\tfrac\pi2)
+$\Xi=\mathbb{S}^{m-1}\backslash \oBall(\xi,\tfrac\pi2)
 \iso
-\SS^{m-1}_+$ 
+\mathbb{S}^{m-1}_+$ 
 (if $\zeta\in\Xi$, then $\bar\zeta^i=\zeta^i$).
 By straightforward calculations, we get
 \[\dist{\bar\zeta^i}{\bar\zeta^j}{}\ge \dist{\zeta^i}{\zeta^j}{}-\eps>\tfrac\pi2.\]
 Thus, it is sufficient to show the following claim.
 
 \begin{clm}{}
-$\pack_{\frac\pi2}\SS^{m-1}_+= m.$
+$\pack_{\frac\pi2}\mathbb{S}^{m-1}_+= m.$
 \end{clm}
 
-Clearly, $\pack_{\frac\pi2}\SS^{m-1}_+\ge m$.
+Clearly, $\pack_{\frac\pi2}\mathbb{S}^{m-1}_+\ge m$.
 
 The opposite inequality is proved by  induction on $m$.
 The base case $m=1$ is obvious. 
-Assume $\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay}$ is an array of points in $\SS^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
-Without loss of generality we can also assume that $\bar\zeta^\kay\in\partial \SS^{m-1}_+$.
+Assume $\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay}$ is an array of points in $\mathbb{S}^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
+Without loss of generality we can also assume that $\bar\zeta^\kay\in\partial \mathbb{S}^{m-1}_+$.
 For each $i<\kay$, 
 set $\check\zeta^i
-=\dir{\bar\zeta^\kay}{\bar\zeta^i}\in\Sigma_{\bar\zeta^\kay}\SS^{m-1}_+\iso\SS^{m-2}_+$.
+=\dir{\bar\zeta^\kay}{\bar\zeta^i}\in\Sigma_{\bar\zeta^\kay}\mathbb{S}^{m-1}_+\iso\mathbb{S}^{m-2}_+$.
  By hinge comparison (\ref{angle}), $\mangle(\check\zeta^i,\check\zeta^j)>\tfrac\pi2$ 
 for all $i<j<\kay$.
 Thus, from the induction hypothesis we have that $\kay-1\le {m-1}$.
@@ -210,7 +210,7 @@ The following proposition follows from the definition of differential (\ref{def:
 \begin{thm}{Proposition}\label{thm:inverse-function:differential}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space and $\bm{x}\:\spc{L}\to\RR^m$ be a distance chart.
 Then for each $q\in\Dom\bm{x}$, 
-the differential $\d_q\bm{x}\:\T_q\to\RR^m$ is a bi-Lipschitz homeomorphism.
+the differential $\dd_q\bm{x}\:\T_q\to\RR^m$ is a bi-Lipschitz homeomorphism.
 \end{thm}
 
 \parbf{Liftings.}
@@ -237,7 +237,7 @@ $\bm{x}\:\spc{L}\subto\RR^m$ with strutt $y\:\spc{L}\subto\RR$.
 
 Note that all the lifting together define a continuous submaps 
 $\bm{x}\:\bm{\spc{L}}\subto\RR^m$ and $\bm{y}\:\bm{\spc{L}}\to\RR$, where the space
-$$\bm{\spc{L}}=\spc{L}\sqcup\l(\bigsqcup_{i\in\NN}\spc{L}_i\r),$$
+$$\bm{\spc{L}}=\spc{L}\sqcup\left(\bigsqcup_{i\in\NN}\spc{L}_i\right),$$
 is equipped with the topology of the convergence $\spc{L}_n\GHto\spc{L}$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -279,7 +279,7 @@ we can assume that
 and each $x^i$ are $\lambda$-concave in $\Dom\bm{x}$.
 \item there is $\eps>0$ such that 
 $\bm{x}$ is an open $[\eps,m]$-bi-Lipshitz embedding (this follows from \ref{thm:inverse-function:chart}). 
-Moreover $\d_p\bm{x}\:\T_p\to\RR^m$ is $[\eps,m]$-bi-Lipshitz %\sqrt{m} works as well???
+Moreover $\dd_p\bm{x}\:\T_p\to\RR^m$ is $[\eps,m]$-bi-Lipshitz %\sqrt{m} works as well???
 homeomorphism for any $p\in \Dom\bm{x}$ (this follows from \ref{thm:inverse-function:differential}).
 \end{itemize}
 Fix $r>0$ so that $\oBall(z,2\cdot r)\subset\Dom\bm{x}$.
@@ -344,12 +344,12 @@ for any $\bm{v},\bm{w}\in \Im\bm{x}$.
 Let $b,a^1,a^2,\dots,a^m\in\spc{L}$, be as in the definition of distant chart (\ref {def:dist-chart}).
 Clearly,
 \begin{itemize}
-\item $\d_p y(u)\le-\<\dir{p}{b},u\>$ and $\d_p x^i(u)\le-\<\dir{p}{a^i},u\>$ for all $i$ and
+\item $\dd_p y(u)\le-\<\dir{p}{b},u\>$ and $\dd_p x^i(u)\le-\<\dir{p}{a^i},u\>$ for all $i$ and
 \item $\mangle\hinge{p}{a^i}{a^j}$, $\mangle\hinge{p}{b}{a^j}>\tfrac{\pi}{2}$ for all $i,j$.
 \end{itemize}
 It follows from Lemma~\ref{lem:pack(S^m)+},
 that
-\[\t{if}\ \ \d_p x^i(u)\ge 0\ \ \t{for each}\ \ i\  \ \t{then}\ \ \d_p y(u)\le 0.
+\[\t{if}\ \ \dd_p x^i(u)\ge 0\ \ \t{for each}\ \ i\  \ \t{then}\ \ \dd_p y(u)\le 0.
 \eqlbl{1-st order}\]
 for any $p\in\Dom\bm{x}$ and $u\in\T_p$.
 Consider
@@ -359,16 +359,16 @@ Consider
 (it is defined since $\Im\bm{x}$ is convex).
 \end{itemize}
 Clearly,
-$\sigma^+(t)=(\d_{\sigma(t)}\bm{x})^{-1}(\bm{w}-\bm{v})$;
+$\sigma^+(t)=(\dd_{\sigma(t)}\bm{x})^{-1}(\bm{w}-\bm{v})$;
 thus
- \[(\d_{\sigma(t)}x^i)(\sigma^+(t))=w^i-v^i\ge 0.\]
-From \ref{1-st order}, we have $(\d_{\sigma(t)}y)(\sigma^+(t))\le 0$.
+ \[(\dd_{\sigma(t)}x^i)(\sigma^+(t))=w^i-v^i\ge 0.\]
+From \ref{1-st order}, we have $(\dd_{\sigma(t)}y)(\sigma^+(t))\le 0$.
 Therefore 
 \begin{align*}
 f(\bm{w})-f(\bm{v})
 &=\int\limits_0^1\phi^+(t)\cdot\d t=
 \\
-&=\int\limits_0^1(\d_{\phi(t)}y)(\sigma^+(t))\cdot\d t
+&=\int\limits_0^1(\dd_{\phi(t)}y)(\sigma^+(t))\cdot\d t
 \le 0.
 \end{align*}
 \claimqedsf
@@ -390,7 +390,7 @@ f
 \bm{\beta}(t)
 -
 \tfrac\lambda{\eps^2}\cdot\tfrac{t\cdot(1-t)}2\cdot\ell^2\cdot\bm{1}
-\r]
+]
 \ge
 \\
 &
@@ -410,13 +410,13 @@ f\circ\bm{\beta}(t)
 \ge
 t\cdot y(p)
 +(1-t)\cdot y(q)+
-\lambda\cdot\l(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\r)
+\lambda\cdot\left(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\right)
 \cdot 
 \tfrac{t\cdot(1-t)}2
 \cdot
 \ell^2.
 \end{align*}
-That is, \ref{eq:f_is_concave} holds for $\Lambda=\lambda\cdot\l(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\r)$.
+That is, \ref{eq:f_is_concave} holds for $\Lambda=\lambda\cdot\left(\tfrac{\sqrt{m}}{\eps^3}+\tfrac1{\eps^2}\right)$.
 \qeds
 
 \section{Distance embedding}\label{sec:dist-embedding}
@@ -492,7 +492,7 @@ the set $\RB(R;x,y)$ for some $x,y\in\spc{L}$ might contain segments on the boun
 
 \begin{clm}{}\label{clm:GB}
 Given a pair of distinct points $x,y\in \spc{L}$, 
-there is a $(\sinh R)$-Lipschitz map $\map\:\SS^{m-1}\to\spc{L}$ such that 
+there is a $(\sinh R)$-Lipschitz map $\map\:\mathbb{S}^{m-1}\to\spc{L}$ such that 
 $\Im\map_R\supset\RB(R;x,y)$.
 \end{clm}
 
@@ -515,14 +515,14 @@ Thus, for any choice of geodesics $[q x]$ and $[q y]$,
 the set $\Im\map_s$ contains at least one point on $[x q]\cup[q y]$.
 However, it can not contain any point except $q$.
 Indeed, assume $\map_s(\xi)= w\in]xq[$
-then according to \ref{prop:grad-like-unique-past}, $\sigma_\xi\l([0,s]\r)=[xw]$; 
+then according to \ref{prop:grad-like-unique-past}, $\sigma_\xi\left([0,s]\right)=[xw]$; 
 consequently $s<s_0$, a contradiction.
 
 
 Now assume $p\in \RB(R;x,y)$.
 Let $s_0\le s_1\le R$ and $q\in\spc{L}$ be as in the construction of radial bisector.
 From above, we have that for any $s\ge s_0$ there is $\xi(s)\in\Sigma_x$ such that $q=\sigma_{\xi(s)}(s)$.
-Note that the $\sigma_{\xi(s)}\l([s,\infty)\r)=\sigma_q\l([s_0,\infty)\r)$ 
+Note that the $\sigma_{\xi(s)}\left([s,\infty)\right)=\sigma_q\left([s_0,\infty)\right)$ 
 for any $s\ge s_0$.
 Further note, that the map $\tau\:s\mapsto \sigma_{\xi(s)}(R)$ is continuous%
 \footnote{Note however that the map $s\mapsto\xi(s)$ might be non-continuous.}
@@ -532,11 +532,11 @@ Thus, the curve $\tau|[s_0,R]$ runs along $\sigma|_{[s_0,R]}$ in opposite direct
 In particular, for some $s\in[s_0,R]$, we have
 $p=\sigma_{\xi(s)}(R)$ or $p\in\Im\map_R$.
 
-This finishes the proof of the claim in case $x$ is regular; that is, $\Sigma_x\iso\SS^{m-1}$.
+This finishes the proof of the claim in case $x$ is regular; that is, $\Sigma_x\iso\mathbb{S}^{m-1}$.
 
 To prove the general case,
 choose a sequence of regular points $x_n\to x$ (the existence of this sequence follows from \ref{LinDim+-f}).
-Applying the above argument, we get the existence of a sequence of $(\sinh R)$-Lipschitz maps $\map_{R;n}\:\SS^{m-1}\to\spc{L}$ such that 
+Applying the above argument, we get the existence of a sequence of $(\sinh R)$-Lipschitz maps $\map_{R;n}\:\mathbb{S}^{m-1}\to\spc{L}$ such that 
 $\Im\map_{R;n}
 \supset
 \RB(R;x_n,y)$.
@@ -575,7 +575,7 @@ forms a \emph{maximal $\delta$-packing}\index{maximal $\eps$-packing} in $\oBall
 that is, $\kay=\pack_\delta\oBall(z,r)$ and $\dist{a^i}{a^j}{}>\delta$ for all $i\not=j$.
 Note that according to \ref{pack}, we have $\kay>\Const/\delta^m$ for some $\Const>0$.
 Thus, we can assume that
-\[\kay>\pack_{\delta_1}\SS^{m-1},
+\[\kay>\pack_{\delta_1}\mathbb{S}^{m-1},
 \ \ \t{where}\ \ 
 \delta_1=\frac{\delta}{2\cdot\sinh (2\cdot R)}.
 \eqlbl{delta-def}\]
@@ -595,28 +595,28 @@ Clearly, $s_1\le 2\cdot R$; hence $\check p\in \RB(2\cdot R;x,y)$.
 
 \begin{wrapfigure}{r}{22mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/pp-1-model(0.45)}
-\lbl[rt]{10,5;$\~x$}
-\lbl[lt]{33,5;$\~y$}
-\lbl[rb]{42,52;$\~p$}
-\lbl[lb]{3,52;$\~{\check p}$}
-\lbl[l]{24,19;$\~q$}
+\lbl[rt]{10,5;$\tilde x$}
+\lbl[lt]{33,5;$\tilde y$}
+\lbl[rb]{42,52;$\tilde p$}
+\lbl[lb]{3,52;$\tilde {\check p}$}
+\lbl[l]{24,19;$\tilde q$}
 \lbl[l]{40,17;$\Lob2{-1}$}
 \end{lpic}
 \end{wrapfigure}
 
-%???\~{\check p} is not a good thing!!!
+%???\tilde {\check p} is not a good thing!!!
 
 Now let us construct corresponding model configuration.
-Consider a model triangle $\trig{\~x}{\~y}{\~p}=\modtrig{-1}(x y p)$ in $\Lob2{-1}$.
-Let $\~{\check p}$ be the reflection of $\~p$ in the bisecting perpendicular to $[\~x\~y]$
-and $\~q$ lie on the intersection of $[\~x\~p]$ and $[\~y\~{\check p}]$.
+Consider a model triangle $\trig{\tilde x}{\tilde y}{\tilde p}=\modtrig{-1}(x y p)$ in $\Lob2{-1}$.
+Let $\tilde {\check p}$ be the reflection of $\tilde p$ in the bisecting perpendicular to $[\tilde x\tilde y]$
+and $\tilde q$ lie on the intersection of $[\tilde x\tilde p]$ and $[\tilde y\tilde {\check p}]$.
 From ??? comparison, 
-$\dist{\~y}{\~q}{}\le s_0$
-and clearly $\dist{\~y}{\~q}{}+\dist{\~q}{\~p}{}=s_1=\dist{y}{q}{}+\dist{q}{p}{}$.
-It follows that $\mangle\hinge{\~y}{\~p}{\~q}\le\angk{-1}{y}{p}{q}$.
+$\dist{\tilde y}{\tilde q}{}\le s_0$
+and clearly $\dist{\tilde y}{\tilde q}{}+\dist{\tilde q}{\tilde p}{}=s_1=\dist{y}{q}{}+\dist{q}{p}{}$.
+It follows that $\mangle\hinge{\tilde y}{\tilde p}{\tilde q}\le\angk{-1}{y}{p}{q}$.
 Thus, from radial comparison (\ref{gen-rad-comp}) 
 we have 
-\[\dist{p}{\check p}{}\le\dist{\~p}{\~{\check p}}{}.
+\[\dist{p}{\check p}{}\le\dist{\tilde p}{\tilde {\check p}}{}.
 \eqlbl{eq:|p p'|}\]
 
 Assume 
@@ -627,7 +627,7 @@ for sufficiently small $\eps>0$.
 Clearly $\dist{x}{y}{}$, $\dist{x}{p}{}$, $\dist{y}{p}{}\le 2\cdot R$;
 thus $\check p\in\RB(2\cdot R;x,y)$.
 Direct calculations show that 
-$\dist{\~p}{\~{\check p}}{}<\sqrt{\eps}$.
+$\dist{\tilde p}{\tilde {\check p}}{}<\sqrt{\eps}$.
 Inequality \ref{eq:|p p'|} implies that we can fix $\eps=\eps(\delta,\RR)>0$ so small that 
 \[\dist{p}{\check p}{}<\sqrt{\eps}<\tfrac\delta 4.
 \eqlbl{eps-def}\]

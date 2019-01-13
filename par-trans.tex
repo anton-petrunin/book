@@ -37,15 +37,15 @@ is dense G-delta set and according to ??? its complement has zero volume.
 \parit{Proof of \ref{cor:reg-conv}.} 
 It is sufficient to prove only the second part of corollary.
 
-Sinse $p$ is Euclidean, $\SS^{m-1}\iso\Sigma_p$.
-From \ref{cor:simicont-Sigma}, $\SS^{m-1}\ge\Sigma_x$ for any $x\in \spc{L}$.
+Sinse $p$ is Euclidean, $\mathbb{S}^{m-1}\iso\Sigma_p$.
+From \ref{cor:simicont-Sigma}, $\mathbb{S}^{m-1}\ge\Sigma_x$ for any $x\in \spc{L}$.
 
 Let $x\in \l] p q \r[$. 
 Take a sequence of points $p_n\in \l] p q \r[$ such that $p_n\to p$ as $n\to\infty$.
 According to \ref{thm:parallel}, $\Sigma_x\iso\Sigma_{p_n}$. 
 Thus, from \ref{cor:simicont-Sigma}, $\Sigma_x\ge\Sigma_p$.
-That is, $\SS^{m-1}\ge \Sigma_x\ge\SS^{m-1}$ and
- according to \ref{lem:>=-isometry}, $\Sigma_x\iso\SS^{m-1}$.
+That is, $\mathbb{S}^{m-1}\ge \Sigma_x\ge\mathbb{S}^{m-1}$ and
+ according to \ref{lem:>=-isometry}, $\Sigma_x\iso\mathbb{S}^{m-1}$.
 \qeds
 
 The proof below combains idea from \cite{BGP} with an analog of geometric interpretation of parallel transport given in \cite{nikolaev}.
@@ -124,7 +124,7 @@ Set $\Pi_i=\Pi_{x_{i-1},x_i}$ and consider composition
 
 \begin{thm}{Claim}\label{clm:prop-of-Phi}
 There is $\Const\in\RR$ such that for any $v\in \T_x^\perp$
-\[|\Phi_n(v)|\le\l(1+\frac{\Const}{n}\r)\cdot|v|.\]
+\[|\Phi_n(v)|\le\left(1+\frac{\Const}{n}\right)\cdot|v|.\]
 \end{thm}
 
 Thus passing to a partial limit $\Phi_n\to\Upsilon_{x,y}$ as $n\to\infty$, we get the required map.
@@ -192,7 +192,7 @@ It is sufficient  to show that for any $u,v\in \T_x^\perp$, we have%
 
 Since $\kappa=0$, the map $\log y{???}$ is non-contracting; therefore%
 \footnote{For general $\kappa$, we have ???
-\[\l(1+O(\dist{x}{y}{})\r)\cdot\dist[{{}}]{\hat v_\eps}{\hat w_\eps}{}
+\[\left(1+O(\dist{x}{y}{})\right)\cdot\dist[{{}}]{\hat v_\eps}{\hat w_\eps}{}
 \ge
 \side\kappa \hinge{\0}{\hat v_\eps}{\hat w_\eps}
 \ge
@@ -300,18 +300,18 @@ Therefore, according to \ref{2nd-var}, for $\o$-almost all $\eps>0$ we have
 &=
 \dist{p}{q}{}
 +
-\tfrac{\eps^2}2\cdot\l\{\l(\frac{1}{\dist{p}{x}{}}+
-\frac{n}{\dist{x}{y}{}}\r)\cdot|v_0|^2
-+\l(\frac{1}{\dist{y}{q}{}}-\frac{n}{\dist{x}{y}{}}\r)\cdot|v_n|^2\r\}
+\tfrac{\eps^2}2\cdot\left\{\left(\frac{1}{\dist{p}{x}{}}+
+\frac{n}{\dist{x}{y}{}}\right)\cdot|v_0|^2
++\left(\frac{1}{\dist{y}{q}{}}-\frac{n}{\dist{x}{y}{}}\right)\cdot|v_n|^2\right\}
 +o(\eps^2).
 \end{align*}
 Thus,
-\[\l(
+\[\left(
 \frac{1}{\dist{p}{x}{}}
-+\frac{n}{\dist{x}{y}{}}\r)\cdot|v_0|^2
-+\l(\frac{1}{\dist{y}{q}{}}
++\frac{n}{\dist{x}{y}{}}\right)\cdot|v_0|^2
++\left(\frac{1}{\dist{y}{q}{}}
 -\frac{n}{\dist{x}{y}{}}
-\r)\cdot|v_n|^2\ge 0.\]
+\right)\cdot|v_n|^2\ge 0.\]
 Since $v_0=v$ and $\Phi_n(v)=v_n$, the result follows.\qeds
 
 
@@ -341,20 +341,20 @@ Thus, we have
 \[(\T_x)\mc\kappa
 =
 (\T_x^\perp)\mc\kappa\warp{\cs\kappa\circ\distfun{o}{}{}}(\T_x^\top)\mc\kappa.\]
-Set $\~p=\tau\mc\kappa\cdot\ddir x p$ and $\~q=\tau\mc\kappa\cdot\ddir x q$.
-Clearly $\~p$ and $\~q$ are uniquely defined, 
-both $\~p$ and $\~q$ lie in the fiber over $\0\in \T_x^\perp$ 
-and $\dist{\~p}{\~q}{}=\dist{p}{q}{}$.
+Set $\tilde p=\tau\mc\kappa\cdot\ddir x p$ and $\tilde q=\tau\mc\kappa\cdot\ddir x q$.
+Clearly $\tilde p$ and $\tilde q$ are uniquely defined, 
+both $\tilde p$ and $\tilde q$ lie in the fiber over $\0\in \T_x^\perp$ 
+and $\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{}$.
 
 
 \begin{thm}{???Theorem}\label{thm:2nd-var}
 Let $\o$ be a ???,
 $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
 $[pq]$ be a geodesic in $\spc{L}$ and $x\in \l] p q \r[$.
-Set $\~p=\tau\mc\kappa\ddir{x}p$ and $\~q=\tau\mc\kappa\ddir {x} q$, so $\~p,\~q\in(\T_x)\mc\kappa$.
+Set $\tilde p=\tau\mc\kappa\ddir{x}p$ and $\tilde q=\tau\mc\kappa\ddir {x} q$, so $\tilde p,\tilde q\in(\T_x)\mc\kappa$.
 
 Then there is two norm-preserving noncontracting maps 
-$\map_p\:\T_p\to\T_{\~p}$ and $\map_q\:\T_q\to\T_{\~q}$, 
+$\map_p\:\T_p\to\T_{\tilde p}$ and $\map_q\:\T_q\to\T_{\tilde q}$, 
 such that for any two vectors $v\in\T_p$ and $w\in\T_q$ we have
 \[\dist{\gexp(\eps\cdot v)}{\gexp(\eps\cdot w)}{}
 \le
@@ -390,14 +390,14 @@ $[pq]$ be a geodesic in $\spc{L}$ and $x,y$ be two distinct points $\l] p q \r[$
 
 ???
 
-Set $\~p=???\log_{\kappa,x} p$ and $\~q=???\log_{\kappa,x} q$.
+Set $\tilde p=???\log_{\kappa,x} p$ and $\tilde q=???\log_{\kappa,x} q$.
 
 Then there is two norm-preserving noncontracting maps 
-$\map_p\:\T_p\to\T_{\~p}$ and $\map_q\:\T_q\to\T_{\~q}$, 
+$\map_p\:\T_p\to\T_{\tilde p}$ and $\map_q\:\T_q\to\T_{\tilde q}$, 
 such that for any two vectors $v\in\T_p$ and $w\in\T_q$ we have
 \[\dist{\gexp_p\eps\cdot v}{\gexp_q\eps\cdot w}{}
 \le
-\dist{\exp_{\~p}\eps\cdot\map_p v}{\exp_{\~q}\eps\cdot\map_q w}{}
+\dist{\exp_{\tilde p}\eps\cdot\map_p v}{\exp_{\tilde q}\eps\cdot\map_q w}{}
 +o(\eps^2)\]
 for $\o$-almost all $\eps$.
 \end{thm}

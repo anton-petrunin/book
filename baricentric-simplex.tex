@@ -47,7 +47,7 @@ and $\bm{f}=(f^0,f^1,\dots,f^\kay)\:\spc{X}\to \RR^{\kay+1}$ be a function array
 The set 
 \[\Web\bm{f}
 \df
-\bm{f}^{-1}\l[\Min\bm{f}(\spc{X})\r]
+\bm{f}^{-1}\left[\Min\bm{f}(\spc{X})\right]
 \subset 
 \spc{X}\] 
 will be called the \emph{web}\index{web} on $\bm{f}$.
@@ -63,7 +63,7 @@ Define the \emph{inner web}\index{inner web} of $\bm{f}$
 as 
 \[\InWeb\bm{f}
 =
-\Web\bm{f}\backslash\l(\bigcup_{i}\Web\bm{f}^{\without i}\r).\]
+\Web\bm{f}\backslash\left(\bigcup_{i}\Web\bm{f}^{\without i}\right).\]
 
 
 We say that a function array is \emph{nondegenerate}\index{nondegenerate function array} 
@@ -352,7 +352,7 @@ That is, $\InWeb\bm{f}$ is $C^{\frac{1}{2}}$-homeomorphic to an open set in a co
 \parit{(\ref{SHORT.thm:web:bary})+(\ref{SHORT.thm:web:lip-const}).}
 Since $f^i$ is $1$-convex, for any $\bm{x}=(x^0,x^1,\dots,x^\kay)\in\Delta^\kay$, 
 the convex combination 
-\[\l(\sum_i x^i\cdot f^i\r)\:\spc{X}\to\RR\] 
+\[\left(\sum_i x^i\cdot f^i\right)\:\spc{X}\to\RR\] 
 is also $1$-convex.
 Therefore, according to Lemma~\ref{lem:argmin(convex)}, $\spx{\bm{f}}(\bm{x})$ is defined for any $\bm{x}\in\Delta^\kay$.
  
@@ -514,8 +514,8 @@ $\bm{a}=(a^0,a^1,\dots a^m)$ be a nondegenerate point array
 of radius $<\tfrac{\varpi\kappa}{2}$ in $\spc{U}$
 and $\sigma=\spx{\bm{a}}\mc\kappa$ be corresponding $\kappa$-baricentric simplex.
 Then for some $\bm{x}\in \Delta^m$
-the differential $\d_{\bm{x}}\sigma$ is linear 
-and the image $\Im\d_{\bm{x}}\sigma$
+the differential $\dd_{\bm{x}}\sigma$ is linear 
+and the image $\Im\dd_{\bm{x}}\sigma$
 forms a subcone isometric to an $m$-dimensional Euclidean space in the tangent cone $\T_{\sigma(\bm{x})}$.
 \end{thm}
 
@@ -534,17 +534,17 @@ $\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)
 Clearly $\tau$ its Lipschitz.
 According to Rademacher's theorem (\ref{thm:rademacher})
 the differential 
-$\d_{\bm{x}}(\tau\circ\sigma)$
+$\dd_{\bm{x}}(\tau\circ\sigma)$
 is linear for almost all $\bm{x}\in\Delta^m$.
 Further since $\InWeb(\distfun{\bm{a}}{}{})\ne\emptyset$,
 the area formula %??? 
-implies that $\d_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points  $\bm{x}\in\Delta^m$.
+implies that $\dd_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points  $\bm{x}\in\Delta^m$.
 
-Note that $\d_{\bm{x}}(\tau\circ\sigma)=(\d_{\sigma(\bm{x})}\tau)\circ(\d_{\bm{x}}\sigma)$.
+Note that $\dd_{\bm{x}}(\tau\circ\sigma)=(\dd_{\sigma(\bm{x})}\tau)\circ(\dd_{\bm{x}}\sigma)$.
 Applying Rademacher's theorem again, we get that
-$\d_{\bm{x}}\sigma$ is linear for almost all $\bm{x}\in\Delta^m$,
-at these points $\Im\d_{\bm{x}}\sigma$ forms a subcone isometric to a Euclidean space in $\T_{\sigma(\bm{x})}$.
-Clearly the dimension of $\Im\d_{\bm{x}}(\tau\circ\sigma)$ is at least as big as dimension of $\Im\d_{\bm{x}}\sigma$.
+$\dd_{\bm{x}}\sigma$ is linear for almost all $\bm{x}\in\Delta^m$,
+at these points $\Im\dd_{\bm{x}}\sigma$ forms a subcone isometric to a Euclidean space in $\T_{\sigma(\bm{x})}$.
+Clearly the dimension of $\Im\dd_{\bm{x}}(\tau\circ\sigma)$ is at least as big as dimension of $\Im\dd_{\bm{x}}\sigma$.
 Hence the result.
 \qeds
 

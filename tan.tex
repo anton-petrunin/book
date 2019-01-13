@@ -98,14 +98,14 @@ Indeed, $Q_n$ is isometric to the subset of $\EE^3$ described by
  y\ge0 \ \ 
 \text{and}\ \  
 &
-z=\max\l\{\sqrt{x^2+y^2},
-(1+\eps)\cdot y-\tfrac{1}{n} \r\}
+z=\max\left\{\sqrt{x^2+y^2},
+(1+\eps)\cdot y-\tfrac{1}{n} \right\}
 \intertext{with length-metric.
 Thus, its limit $Q$ is isometric to the subset of $\EE^3$ described by}
 y\ge0
 \ \ \text{and}\ \  
 &
-z=\max\l\{\sqrt{x^2+y^2},(1+\eps)\cdot y\r\}
+z=\max\left\{\sqrt{x^2+y^2},(1+\eps)\cdot y\right\}
 \end{align*}
 with length-metric.
 In particular, for any $t,\tau\ge0$, 
@@ -226,20 +226,20 @@ Let $\spc{X}$ be a metric space with defined angles and
 $f\:\spc{X}\subto\RR$ be a subfunction, 
 $p\in\Dom f$ and $\II$ be a real interval.
 A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
-(briefly $\phi=\d_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
+(briefly $\phi=\dd_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:differential}
 Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
-Then differential $\d_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
+Then differential $\dd_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
 \begin{subthm}{prop:differential:lip}
-The differential $\d_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\d_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+The differential $\dd_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\dd_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
 \end{subthm}
 
 \begin{subthm}{prop:differential:homo}
-$\d_pf\:\T_p\to\RR$ is a positive homogenius function;
+$\dd_pf\:\T_p\to\RR$ is a positive homogenius function;
 that is, for any $\lam\ge 0$ and $v\in\T_p$ we have 
-\[\lam\cdot\d_pf(v)=\d_pf(\lam\cdot v).\]
+\[\lam\cdot\dd_pf(v)=\dd_pf(\lam\cdot v).\]
 \end{subthm}
 
 \end{thm}
@@ -280,7 +280,7 @@ Hence
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p,q\in \spc{U}$.
 Assume $\dist{p}{q}{}<\varpi\kappa$.
 Show that 
-\[(\d_q\distfun{p}{}{})(v)=-\<\dir q p,v\>.\]
+\[(\dd_q\distfun{p}{}{})(v)=-\<\dir q p,v\>.\]
 
 \end{thm}
 
@@ -289,7 +289,7 @@ Show that
 Let $\spc{L}$ be a length $\Alex{\kappa}$ space and $p,q\in \spc{L}$ be distinct points. 
 Assume  $q\in \Str(p)$ or $p\in \Str(q)$
 Show that 
-\[(\d_q\distfun{p}{}{})(v)=-\<\dir q p,v\>.\]
+\[(\dd_q\distfun{p}{}{})(v)=-\<\dir q p,v\>.\]
 
 \end{thm}
 
@@ -297,47 +297,47 @@ Show that
 
 As it shown in Halbeisen's example (see section \ref{halbeisen}),  
 a $\Alex{}$ space  might have a tangent spaces that are not length spaces; 
-thus concavity of $\d_p f$ is meaningless. 
-Nevertheless, as the following lemma shows, differential $\d_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
-In finite dimensional case $\d_p f$ is concave (see ???).
+thus concavity of $\dd_p f$ is meaningless. 
+Nevertheless, as the following lemma shows, differential $\dd_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
+In finite dimensional case $\dd_p f$ is concave (see ???).
 
 \begin{thm}{Lemma}\label{lem:ohta} 
 Let $\spc{L}$ be a complete length $\Alex{}$ space
 $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
 and $p\in \Dom f$.
 Then
-\[\sup\set{(\d_p f)(\xi)}{\xi\in\Sigma_p}
+\[\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}
 \ge 
-\frac{(\d_p f)(u)+(\d_p f)(v)}{\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}}\]
+\frac{(\dd_p f)(u)+(\dd_p f)(v)}{\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}}\]
 for any $u,v\in \T_p$.
 \end{thm}
 
 \parit{Proof of \ref{lem:ohta}.}
 We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
-Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\d_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
+Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\dd_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
  and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
 
 \begin{wrapfigure}{r}{30mm}
 \begin{lpic}[t(0mm),b(-0mm),r(0mm),l(0mm)]{pics/puvvw(1)}
-\lbl[t]{3,-0.5;$\~ p$}
-\lbl[b]{10,14;$\~ u$}
-\lbl[t]{15,-0.5;$\~ v$}
-\lbl[t]{28,0;$\~ v'$}
-\lbl[lb]{14,7;$\~ w$}
+\lbl[t]{3,-0.5;$\tilde p$}
+\lbl[b]{10,14;$\tilde u$}
+\lbl[t]{15,-0.5;$\tilde v$}
+\lbl[t]{28,0;$\tilde v'$}
+\lbl[lb]{14,7;$\tilde w$}
 \lbl{6,3.3;$\alpha$}
 \end{lpic}
 \end{wrapfigure}
 
-Prepare a model configuration of five points: $\~p,\~u,\~v,\~v',\~w\in\EE^2$ such that
+Prepare a model configuration of five points: $\tilde p,\tilde u,\tilde v,\tilde v',\tilde w\in\EE^2$ such that
 \begin{itemize}
-\item $\mangle\hinge{\~p}{\~u}{\~v}=\alpha$, 
-\item $\dist{\~p}{\~u}{}=|u|$, 
-\item $\dist{\~p}{\~v}{}=|v|$, 
-\item $\~v'$ lies on the extension of $[\~p\~v]$ so that $\~v$ is midpoint of $[\~p\~v']$, 
-\item $\~w$ is the midpoint for $\~u$ and ${\~v}$.
+\item $\mangle\hinge{\tilde p}{\tilde u}{\tilde v}=\alpha$, 
+\item $\dist{\tilde p}{\tilde u}{}=|u|$, 
+\item $\dist{\tilde p}{\tilde v}{}=|v|$, 
+\item $\tilde v'$ lies on the extension of $[\tilde p\tilde v]$ so that $\tilde v$ is midpoint of $[\tilde p\tilde v']$, 
+\item $\tilde w$ is the midpoint for $\tilde u$ and ${\tilde v}$.
 \end{itemize}
 Note that 
-\[\dist{\~p}{\~w}{}=\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
+\[\dist{\tilde p}{\tilde w}{}=\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
 
 Assume that $\spc{L}$ is geodesic.
 
@@ -349,8 +349,8 @@ For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{L}$ the followin
 \end{enumerate}
 Clearly $\dist{p}{u_t}{}=t|u|$, $\dist{p}{v_t}{}=t|v|$, $\dist{p}{v_t'}{}=t|v'|$. 
 Since $\mangle(u,v)$ is defined, 
-we have $\dist{u_t}{v_t}{}=t\dist{\~u}{\~v}{}+o(t)$ 
-and $\dist{u_t}{v_t'}{}=t\dist{\~u}{\~v'}{}+o(t)$ 
+we have $\dist{u_t}{v_t}{}=t\dist{\tilde u}{\tilde v}{}+o(t)$ 
+and $\dist{u_t}{v_t'}{}=t\dist{\tilde u}{\tilde v'}{}+o(t)$ 
 (see Theorem~\ref{angle} and Section~\ref{sec:angle}).
 
 From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we get that 
@@ -358,37 +358,37 @@ From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}
 \ge
 \angk\kappa{v_t}p{u_t}
 \ge
-\mangle\hinge{\~v}{\~p}{\~u}+\tfrac{o(t)}t\]
+\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\tfrac{o(t)}t\]
 and
 \[\angk\kappa{v_t}{v_t'}{w_t}
 \ge
 \angk\kappa{v_t}{v_t'}{u_t}
 \ge
-\mangle\hinge{\~v}{\~v'}{\~u}+\tfrac{o(t)}t.\]
+\mangle\hinge{\tilde v}{\tilde v'}{\tilde u}+\tfrac{o(t)}t.\]
 Clearly, 
-$\mangle\hinge{\~v}{\~p}{\~u}+\mangle\hinge{\~v}{\~x}{\~u'}=\pi$. 
+$\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde x}{\tilde u'}=\pi$. 
 From adjacent angle comparison (\ref{2-sum}), 
 $\angk\kappa{v_t}p{v_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
 Hence
 $\angk\kappa{v_t}p{w_t}
 \to
-\mangle\hinge{\~v}{\~p}{\~v}$ as $t\to0+$
+\mangle\hinge{\tilde v}{\tilde p}{\tilde v}$ as $t\to0+$
 and thus 
-\[\dist{p}{w_t}{}=t\dist{\~p}{\~w}{}+o(t).\]
+\[\dist{p}{w_t}{}=t\dist{\tilde p}{\tilde w}{}+o(t).\]
 
 Since $f$ is $\lambda$-concave we have 
 \begin{align*}
 2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
 \\
 &=2\cdot f(p)
-+t\cdot [(\d_p f)(u)+(\d_p f)(v)]+o(t).
++t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
 \end{align*}
  
 Applying $\lambda$-concavity of $f$, we get
-\[(\d_p f)(\dir p{w_t})
+\[(\dd_p f)(\dir p{w_t})
 \ge 
-\frac{t\cdot[(\d_p f)(u)+(\d_p f)(v)]
-+o(t)}{2\cdot t\cdot\dist[{{}}]{\~p}{\~w}{}+o(t)}
+\frac{t\cdot[(\dd_p f)(u)+(\dd_p f)(v)]
++o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}
 \eqlbl{eq:lem:ohta*}\]
 and the lemma follows.
 
@@ -542,16 +542,16 @@ Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot
 here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
 While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
 functions $f_n$ converge to $\o$-differential of $f$ at $p$.
-It will be denoted by $\d_p^\o f$;
-\[\d_p^\o f\:\T_p^\o\to\RR,\ \ \d_p^\o f=\lim_{n\to\o} f_n.\] 
+It will be denoted by $\dd_p^\o f$;
+\[\dd_p^\o f\:\T_p^\o\to\RR,\ \ \dd_p^\o f=\lim_{n\to\o} f_n.\] 
 
 Clearly, the $\o$-differential of a locally Lipschitz subfunction is defined at each point of definition.
-%By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\d^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
+%By Theorem~\ref{thm:tan-is}, it is also clear that if $\T^\o_p$ is an Alexandrov space with upper or lower curvature bound, then differential $\dd^\o_p f$ of semiconcave locally Lipschitz function $f$ is concave.
 
 \begin{thm}{Proposition}
 Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\CAT{}$ space
 and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
-Then for any $p\in\Dom f$, the ultradifferential $\d^\o_p\:\T^\o_p\to\RR$ is a concave function.
+Then for any $p\in\Dom f$, the ultradifferential $\dd^\o_p\:\T^\o_p\to\RR$ is a concave function.
 \end{thm}
 
 \parit{Proof.}
@@ -607,9 +607,9 @@ Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u
 Consider sequence of functions 
 \[f_n=|u|\cdot\distfun{a_n}{}{}+|v|\cdot\distfun{b_n}{}{}.\]
 According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
-\[(\d_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
+\[(\dd_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
 Thus, we have the following uniform convergence for all $x\in\Sigma_p$
-\[(\d_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\] 
+\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\] 
 According to Lemma~\ref{lem:close-grad}, 
 sequence $\nabla_pf_n$ converges.
 Set 
@@ -621,11 +621,11 @@ From definition of gradient
 &&&%right side
 \<w,x\>&=\lim_{n\to\infty}\<\nabla_pf_n,x\>\ge
 \\%second line
-&=\lim_{n\to\infty}(\d_p f_n)(\nabla_p f_n)
+&=\lim_{n\to\infty}(\dd_p f_n)(\nabla_p f_n)
 =
 &&&%second line right side
 &\ge
-\lim_{n\to\infty}(\d_pf_n)(x)
+\lim_{n\to\infty}(\dd_pf_n)(x)
 =
 \\%line 3
 &=-\<u,w\>-\<v,w\>,

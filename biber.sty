@@ -1,0 +1,26 @@
+\usepackage[utf8]{inputenc}
+\usepackage[russian,
+%slovak,
+german,
+%french,
+english]{babel}
+%\usepackage[T1,T2A]{fontenc}
+%\DeclareUnicodeCharacter{2010}{-}% support older LaTeX versions
+
+\usepackage[
+sorting=none,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+\addbibresource{library.bib}

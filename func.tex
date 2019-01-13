@@ -145,7 +145,7 @@ f_\eps(x)
 =
 \sup\set{f(x)
 \cdot
-\l(1-\tfrac{\dist{x}{y}{}}{\rho(x)}\r)}%
+\left(1-\tfrac{\dist{x}{y}{}}{\rho(x)}\right)}%
 {x\in\spc{X}}.
 \]
 It is straightforward to check that each $f_\eps$ is locally Lipschtz and $0\le f_\eps-f<\eps$.
@@ -270,7 +270,7 @@ curve.
 Then the speed function
 \[\speed_{t_0}\alpha=\lim_{t\to t_0}\frac{\dist{\alpha(t)}{\alpha(t_0)}{}}{|t-t_0|}\] 
 is defined for almost all $t_0 \in \II$ and 
-\[\length\alpha=\int\limits_\II \speed_{t}\alpha\cdot\d t,\]
+\[\length\alpha=\int\limits_\II \speed_{t}\alpha\cdot\dd t,\]
 where $\int$ denotes the Lebesgue integral.
 \end{thm}
 
@@ -309,7 +309,7 @@ The solution $y\:\RR\subto\RR$ are only assumed to be upper (respectively lower)
 The inequalities  \ref{eq:sec:conv-real*} are understood in the sense of distributions.
 That is, for any smooth function $\phi$ with compact support $\supp\phi\subset\Dom y$ the following inequality should be satisfied:
 \[\begin{aligned}
-\int\limits_{\Dom y}\l[y(t)\cdot\phi''(t)+\kappa\cdot  y(t)\cdot\phi(t)-\lambda\r]\cdot\d t
+\int\limits_{\Dom y}\left[y(t)\cdot\phi''(t)+\kappa\cdot  y(t)\cdot\phi(t)-\lambda\right]\cdot\dd t
 &\ge 0
 \\
 \t{respectively}\ \ &\le0.
@@ -390,9 +390,9 @@ Then for any $t_0\in \II$,
 Since $f_n$ are convex, we have $f^+_n(t_0)+f^-_n(t_0)\ge0$, and for any~$t$,
 \[f_n(t)\ge f_n(t_0)\pm f^\pm(t_0)\cdot (t-t_0).\]
 Passing to the limit, we get
-\[f(t)\ge f(t_0)+\l[\limsup_{n\to\infty}f^+_n(t_0)\r]\cdot (t-t_0)\]
+\[f(t)\ge f(t_0)+\left[\limsup_{n\to\infty}f^+_n(t_0)\right]\cdot (t-t_0)\]
 for $t\ge t_0$, and 
-\[f(t)\ge f(t_0)-\l[\limsup_{n\to\infty}f^-_n(t_0)\r]\cdot (t-t_0)\]
+\[f(t)\ge f(t_0)-\left[\limsup_{n\to\infty}f^-_n(t_0)\right]\cdot (t-t_0)\]
 for $t\le t_0$.
 Hence the result.
 \qeds

@@ -18,17 +18,17 @@ It remains to note that this space can be obtained directly by gluing $\spc{U}$ 
 
 \parbf{ Exercise ~\ref{exr-crofton}.}
 %By rescaling we can assume that $\kappa=1$. 
-Let $\alpha$ be a closed curve in  $\SS^2$ of length $\le 2\pi$.  We wish to prove that it's contained in a hemisphere in $\SS^2$.
+Let $\alpha$ be a closed curve in  $\mathbb{S}^2$ of length $\le 2\pi$.  We wish to prove that it's contained in a hemisphere in $\mathbb{S}^2$.
 By approximation it's sufficient to prove this for  smooth curves of length $< 2\pi$ with transverse self-intersections. Furthermore, by changing such  a curve near its self-intersection points  it can be approximated with respect to the Hausdorff distance by simple closed curves. 
 Thus, without loss of generality we can assume that $\alpha$ is a simple closed curve of length $<2\pi$.
 By Crofton's formula we have that
 \[
-L(\alpha)=\frac 1 4 \int _{\SS^2}\#(\alpha\cap v^\perp) \d_v\vol_2
+L(\alpha)=\frac 1 4 \int _{\mathbb{S}^2}\#(\alpha\cap v^\perp) \dd_v\vol_2
 \]
 
 Obviously,  if $\#(\alpha\cap v^\perp) =0$, then $\alpha$ is contained in one of the hemispheres determined by $v^\perp$. By the intermediate value theorem the same holds true if $\#(\alpha\cap v^\perp) =1$.
-Suppose  $\#(\alpha\cap v^\perp) \ge 2$ for all $v\in\SS^2$. Then Crofton's formula implies that
-$L(\alpha)\ge \frac 1 4 \int_{\SS^2}2=2\pi$. \qeds
+Suppose  $\#(\alpha\cap v^\perp) \ge 2$ for all $v\in\mathbb{S}^2$. Then Crofton's formula implies that
+$L(\alpha)\ge \frac 1 4 \int_{\mathbb{S}^2}2=2\pi$. \qeds
 
 \parbf{ Exercise ~\ref{ex:no-geod}.}
 %Given a  metric graph $\Gamma$ let $\Mid(\Gamma)$ be the set of vertices of $\Gamma$ together with the baricenters of all edges in $\Gamma$ with the induced metric from $\Gamma$.
@@ -68,7 +68,7 @@ Note that for each $i$ and $n$,
 the composition $\psi^i\circ f_n$ is 1-Lipschitz.
 It follows that
 \begin{align*}
-|[\d_x(\bm\psi\circ f_n)]^{\wedge n}|
+|[\dd_x(\bm\psi\circ f_n)]^{\wedge n}|
 &\le \lip(\psi^1\circ f_n)\cdots\lip(\psi^m\circ f_n)
 \le
 \\
@@ -89,7 +89,7 @@ $\bm\psi\circ f_n\:\RR^m\subto\RR^m$,
 we get 
 \begin{align*}\vol_n(\Dom f_n)
 &=
-\int\limits_{\Im \bm\psi\circ f_n}|[\d_x(\bm\psi\circ f_n)]^{\wedge n}|\cdot\d_x\vol_m\le
+\int\limits_{\Im \bm\psi\circ f_n}|[\dd_x(\bm\psi\circ f_n)]^{\wedge n}|\cdot\dd_x\vol_m\le
 \\
 &\le \vol_n(\Im \bm\psi\circ f_n)
 \end{align*}
@@ -98,7 +98,7 @@ we get
 \LongMes_m \spc{X}+\eps
 &\ge \sum_n\,\vol_n(\Dom f_n)\ge
 \\
-&\ge \sum_n\,\int\limits_{\Dom f_n}\bigl|[\d_x(\bm\psi\circ f_n)]^{\wedge n}\bigr|\cdot\d_x\vol_n=
+&\ge \sum_n\,\int\limits_{\Dom f_n}\bigl|[\dd_x(\bm\psi\circ f_n)]^{\wedge n}\bigr|\cdot\dd_x\vol_n=
 \\
 &=\sum_n\,\vol_n(\Im \bm\psi\circ f_n)\ge
 \\
@@ -137,11 +137,11 @@ Let $\phi\can F\circ\distfun{\bm{a}}{}{}$
 and $\psi\can G\circ\distfun{\bm{b}}{}{}$; 
 clearly,
 \begin{align*}
-\d_p\phi(v)
-&=\sum_i\partial_i F\cdot (\d_p\distfun{a^i}{}{})(v),
+\dd_p\phi(v)
+&=\sum_i\partial_i F\cdot (\dd_p\distfun{a^i}{}{})(v),
 \\
-\d_p\psi(v)
-&=\sum_i\partial_j G\cdot (\d_p\distfun{b^j}{}{})(v).
+\dd_p\psi(v)
+&=\sum_i\partial_j G\cdot (\dd_p\distfun{b^j}{}{})(v).
 \end{align*}
 Applying the definition of gradient (\ref{def:grad}),
 Theorem \ref{thm:differential-of-dist}
@@ -149,10 +149,10 @@ and the identities above,
 we get that 
 for any choice of geodesics $[pa^i]$ the following holds
 \begin{align*}
-\d_p\phi(\nabla_p\psi)
+\dd_p\phi(\nabla_p\psi)
 &=\sum_i\partial_i F
 \cdot
-(\d_p\distfun{a^i}{}{})(\nabla_p\psi)
+(\dd_p\distfun{a^i}{}{})(\nabla_p\psi)
 \le
 \\
 &\le
@@ -165,7 +165,7 @@ for any choice of geodesics $[pa^i]$ the following holds
 -\sum_i
 \partial_i F
 \cdot
-\d_p\psi(\dir{p}{a^i})
+\dd_p\psi(\dir{p}{a^i})
 =
 \\
 &=
@@ -174,7 +174,7 @@ for any choice of geodesics $[pa^i]$ the following holds
 \cdot
 \partial_j G
 \cdot
-(\d_p\distfun{b^j}{}{})(\dir{p}{a^i})
+(\dd_p\distfun{b^j}{}{})(\dir{p}{a^i})
 \le
 \\
 &\le
@@ -204,10 +204,10 @@ In particular,
 \ae 0\]
 By ???, $f\circ\alpha$ is differentiable for almost all $t\in\II$.
 Therefore 
-\[\d_pf(\alpha^+(t))+\d_pf(\alpha^-(t))\ae
+\[\dd_pf(\alpha^+(t))+\dd_pf(\alpha^-(t))\ae
 0.\]
 Since 
-\[\<\nabla_pf,\alpha^\pm(t)\>\ge \d_pf(\alpha^\pm(t)),\]
+\[\<\nabla_pf,\alpha^\pm(t)\>\ge \dd_pf(\alpha^\pm(t)),\]
 we get the result.
 
 
@@ -408,10 +408,10 @@ Let
 $(t,s)\mapsto \gamma_t(s)$ be the line-of-sight map 
 for $\alpha$ from $\alpha(0)$,
 and 
-$(t,s)\mapsto \~\gamma_t(s)$ be the line-of-sight map 
-for $\~\alpha$ from $\~\alpha(0)$.
-Consider the map  $F\:\Conv\~\alpha\to \spc{U}$ such that 
-$F\:\~\gamma_t(s)\mapsto \gamma_t(s)$.
+$(t,s)\mapsto \tilde \gamma_t(s)$ be the line-of-sight map 
+for $\tilde \alpha$ from $\tilde \alpha(0)$.
+Consider the map  $F\:\Conv\tilde \alpha\to \spc{U}$ such that 
+$F\:\tilde \gamma_t(s)\mapsto \gamma_t(s)$.
 
 Show that $F$ majorizes $\alpha$
 and conclude that $F$ is distance-preserving.

@@ -7,6 +7,8 @@
 \usepackage{envmnt}
 \usepackage{notation-vitya}
 \usepackage{tikz-cd}
+\usepackage{biber}
+
 \makeindex
 
 
@@ -22,7 +24,7 @@
 \include{func}%the-func
 \include{euclid}%the-euclid%arXiv
 \include{dim-prelim}
-%\include{gmt}
+%%\include{gmt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{begin-part-defs}
 \include{defs-CBB}%the-defs-CBB%arXiv
@@ -40,5 +42,8 @@
 {\small
 \input{all.ind}
 }
-\include{bibl}
+%\include{bibl}
+
+\printbibliography[heading=bibintoc]
+
 \end{document}

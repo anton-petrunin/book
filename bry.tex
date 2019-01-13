@@ -52,12 +52,12 @@ Note that $\distfun{\partial\spc{L}}{}{}$ (as well as function $f$ defined in th
 
 \begin{wrapfigure}{r}{40mm}
 \begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/dist-to-bry(0.4)}
-\lbl[b]{14,144;$\~\gamma(0)$}
-\lbl[b]{63,158;$\~\gamma(\tau)$}
+\lbl[b]{14,144;$\tilde \gamma(0)$}
+\lbl[b]{63,158;$\tilde \gamma(\tau)$}
 \lbl[lt]{22,134;$\alpha$}
-\lbl[b]{18,39;$\~\beta$}
-\lbl[t]{15,15;$\~ p$}
-\lbl[t]{63,15;$\~ q$}
+\lbl[b]{18,39;$\tilde \beta$}
+\lbl[t]{15,15;$\tilde p$}
+\lbl[t]{63,15;$\tilde q$}
 \lbl[lb]{75,17;$\partial\Lob[+]{2}{\kappa}$}
 \end{lpic}
 \end{wrapfigure}
@@ -75,10 +75,10 @@ Let $p\in \partial \spc{L}$ be a closest point to $\gamma(0)$ and
 $\alpha=\mangle(\gamma^+(0),\dir{\gamma(0)}p)$.
 
 Consider the following configuration in the model halfplane $\Lob[+]2\kappa$: 
-Take a point $\~ p\in\partial\Lob[+]2{\kappa}$ and consider the geodesic $\~\gamma$ in
+Take a point $\tilde p\in\partial\Lob[+]2{\kappa}$ and consider the geodesic $\tilde \gamma$ in
 $\Lob[+]2\kappa$ such that 
-\[\dist{\gamma(0)}{p}{}=\dist{\~\gamma(0)}{\~ p}{}=\dist{{\partial\Lob[+]2\kappa}}{\~\gamma(0)}{},\] 
-so $\~ p$ is the closest point to $\~\gamma(0)$ on the
+\[\dist{\gamma(0)}{p}{}=\dist{\tilde \gamma(0)}{\tilde p}{}=\dist{{\partial\Lob[+]2\kappa}}{\tilde \gamma(0)}{},\] 
+so $\tilde p$ is the closest point to $\tilde \gamma(0)$ on the
 boundary%
 \footnote{In case $\kappa>0$, it is possible only if $\dist{\gamma(0)}{p}{}\le
 \frac{\pi}{2\cdot\sqrt\kappa}$. 
@@ -89,33 +89,33 @@ Since $\partial \spc{L}$ is an extremal subset, we have $\mangle\hinge{p}{p'}{\g
 $\dist{\gamma(0)}{p}{}>
 \frac{\pi}{2\cdot\sqrt\kappa}$, angle comparison  implies that $\dist{\gamma(0)}{p'}{}<\dist{\gamma(0)}{p}{}$.}
 and
-\[\mangle(\~\gamma^+(0),\dir{\~\gamma(0)}{\~ p})=\alpha.\]
+\[\mangle(\tilde \gamma^+(0),\dir{\tilde \gamma(0)}{\tilde p})=\alpha.\]
 Then it is sufficient to show that 
 \[\dist{{\partial \spc{L}}}{\gamma(\tau)}{} \le
-\dist{{\partial\Lob +{}}}{\~\gamma(\tau)}{}+o(\tau^2).\eqlbl{eq:thm:dist-to-bry*}\]
+\dist{{\partial\Lob +{}}}{\tilde \gamma(\tau)}{}+o(\tau^2).\eqlbl{eq:thm:dist-to-bry*}\]
 Set 
 $\beta(\tau)=\mangle\hinge p{\gamma(0)}{\gamma(\tau)}$
 and
-$\~\beta(\tau)=\mangle\hinge{\~p}{\~\gamma(0)}{\~\gamma(\tau)}$.
+$\tilde \beta(\tau)=\mangle\hinge{\tilde p}{\tilde \gamma(0)}{\tilde \gamma(\tau)}$.
 From the angle comparison,
 \[\dist{p}{\gamma(\tau)}{}
 \le
-\dist{\~ p}{\~ \gamma(\tau)}{}\]
+\dist{\tilde p}{\tilde \gamma(\tau)}{}\]
 and
-\[\theta(\tau)=\max\l\{0,\,\~\beta(\tau)-\beta(\tau)\r\}=o(\tau).\eqlbl{eq:thm:dist-to-bry**}\]
+\[\theta(\tau)=\max\left\{0,\,\tilde \beta(\tau)-\beta(\tau)\right\}=o(\tau).\eqlbl{eq:thm:dist-to-bry**}\]
 Note that the tangent cone at $p$ splits
 : $\T_p \spc{L}\iso\RR_{\ge0}\times \T_p\partial
 \spc{L}$;
 this follows from the fact that $p$ lies on a shortest path between
-two preimages of $\gamma(0)$ in the doubling??? $\~{\spc{L}}$ of $\spc{L}$, see
+two preimages of $\gamma(0)$ in the doubling??? $\tilde {\spc{L}}$ of $\spc{L}$, see
 ???.
 Therefore there is a direction $\xi\in \T_p\partial
 \spc{L}$ such that $\mangle(\dir p{\gamma(\tau)},\xi)+\beta(\tau)=\tfrac\pi2$.
 
 Set $q
-=\gexp\mc\kappa_p\l(\dist[{{}}]{\~ p}{\~q}{}\cdot\xi\r)$.%
+=\gexp\mc\kappa_p\l(\dist[{{}}]{\tilde p}{\tilde q}{}\cdot\xi\r)$.%
 \footnote{\label{qg-grad} 
-Alternatively, one can set $q=\gamma(\dist{\~p}{\~q}{})$, where $\gamma$ is a
+Alternatively, one can set $q=\gamma(\dist{\tilde p}{\tilde q}{})$, where $\gamma$ is a
 quasigeodesic in $\partial \spc{L}$ starting at $p$ in direction $\frac{w}{|w|}\in
 \Sigma_p$; 
 its existance follows from Theorem~\ref{thm:exist-qg-ext}.} 
@@ -131,10 +131,10 @@ Applying the comparison from Section~\ref{sph-hyp-exp}, we get
 \side\kappa \hinge{p}{q}{\gamma(\tau)}
 \le
 \\
-&\le\dist{\~ q}{\~\gamma(\tau)}{}
-+O\l(\dist[{{}}]{\~ p}{\~ q}{}\cdot\theta(\tau)\r).
+&\le\dist{\tilde q}{\tilde \gamma(\tau)}{}
++O\l(\dist[{{}}]{\tilde p}{\tilde q}{}\cdot\theta(\tau)\r).
 \end{align*}
-Clearly $\dist{\~ p}{\~ q}{}=O(\tau)$;
+Clearly $\dist{\tilde p}{\tilde q}{}=O(\tau)$;
 thus, applying \ref{eq:thm:dist-to-bry**}, we get \ref{eq:thm:dist-to-bry*}.
 \qeds
 
