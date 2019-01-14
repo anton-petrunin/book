@@ -3,27 +3,13 @@
 \chapter{Definitions of curvature bounded below
 }
 
-In Section~\ref{sec:angle}, 
-we will start with a global definition of Alexandrov spaces using a comparison.
-In Section~\ref{sec:more-angles}, 
-we give a number of equivalent angle comparison definitions. 
-These definitions make it easy to adapt Euclidean intuition to Alexandrov's world.
-Later we  give a few equivalent global definitions 
-via concavity of distance functions and development (Section~\ref{sec:func-comp-CBB}).
-
-In Section~\ref{sec:loc}, 
-we give local versions of each definition and prove the globalization theorem.
-
-Further, we discuss some basic corollaries of the definition:
-Section~\ref{sec:prop.geod}
-contains first variation formula 
-and non-splitting property of geodesics;
-Section~\ref{sec:positive.bound}
-discusses specific properties of spaces with positive curvature bound.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Four-point comparison} \label{sec:angle}
+
+Recall (Section~\ref{sec:mod-tri/angles}) that the model angle $\angk\kappa p{x}{y}$ is defined if 
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<\varpi\kappa.\] 
 
 \begin{thm}{Four-point comparison}
 \label{df:1+3}
@@ -56,20 +42,21 @@ $\spc{L}$  is a  $\Alex{}$ space if  $\spc{L}$  is $\Alex{\kappa}$ for some $\ka
 
 \parbf{Remarks} 
 \begin{itemize}
-\item $\Alex\kappa$ spaces  are often called \emph{spaces with curvature $\ge\kappa$ in the sence of Alexandrov}.  These spaces will usually be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
+\item $\Alex\kappa$ length spaces are often called \emph{spaces with curvature $\ge\kappa$ in the sence of Alexandrov}.  These spaces will usually be denoted by $\spc{L}$, for $\spc{L}$ower curvature bound.
 \item In the definition of $\Alex{\kappa}$, when $\kappa>0$ most authors assume in addition that the diameter is at most $\varpi\kappa$.
 For complete length spaces, the latter means that it is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. 
 We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
 \item If $\kappa<\Kappa$, then any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$.
-However, in the case $\Kappa>0$ this statement is not at all trivial, and will be shown only in \ref{cor:CAT>k-sence}.
+Moreover directly from the definition it follows that if $\Kappa\le 0$, then any $\Alex{\Kappa}$ is $\Alex{\kappa}$.
+However, in the case $\Kappa>0$ the latter statement does not hold and the former statement is not trivial; it will be proved in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Let $\spc{L}$ be a metric space.
 Show that $\spc{L}$ is $\Alex\kappa$
 if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
-\[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\varpi\kappa,\]
-there is a quadruple of points $q,y^1,y^2,y^3\in\Lob3\kappa$
+\[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\tfrac{\varpi\kappa}2,\]
+there is a quadruple of points $q,y^1,y^2,y^3\in\Lob2\kappa$
 such that 
 \[\dist{p}{x^i}{}=\dist{q}{y^i}{} 
 \ \ \text{and}\ \ \dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}\] 
@@ -195,13 +182,6 @@ the $\Alex\kappa$ comparison holds holds for the quadruple.
 
 \section{Geodesics}
 
-Recall that general complete length spaces might have no geodesics;
-see Exercise~\ref{ex:no-geod}.
-
-\begin{thm}{Exercise}
-Construct a complete length $\Alex0$ space that is not geodesic.
-\end{thm}
-
 We are going to show that all complete length $\Alex{}$ spaces have plenty of geodesics in the following sense.
 
 \begin{thm}{Definition}\label{def:alm-geod}
@@ -212,6 +192,13 @@ A metric space $\spc{X}$ is called \emph{locally G-delta geodesic}\index{geodesi
 if for any point $p\in \spc{X}$ there is a G-delta set $W_p\subset\spc{X}$ such that
 $W_p$ is dense in a neighborhood of $p$ 
 and for any $q\in W_p$ there is a geodesic $[p q]$.
+\end{thm}
+
+Recall that general complete length spaces might have no geodesics;
+see Exercise~\ref{ex:no-geod}.
+
+\begin{thm}{Exercise}
+Construct a complete length $\Alex0$ space that is not geodesic.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:straight}
@@ -260,12 +247,13 @@ If $\eps$ and $\delta$ are sufficiently small, then
 that is, $y\in\Omega_n$, 
 a contradiction.
 
-Since $\Str(p)=\bigcap_{n\in \NN}\Omega_n$, it follows that $\Str(p)$ is a dense G-delta set.
+Note that $\Str(p)=\bigcap_{n\in \NN}\Omega_n$.
+It follows that $\Str(p)$ is a dense G-delta set.
 
 Assume $q\in \Str(p)$;
 let us show that there is a unique geodesic connecting $p$ and $q$.
 Note that it is sufficient to show that for all sufficiently small
-$t>0$ there is unique point $z$ such that 
+$t>0$ there is a unique point $z$ such that 
 \[t
 =
 \dist{q}{z}{}
@@ -278,7 +266,8 @@ Assume $z$ and $z'$ both satisfy \ref{eq:thm:connect-1}.
 Take a sequence $r_n\to q$ such that 
 \[\frac{\dist{p}{r_n}{}-\dist{p}{q}{}}{\dist[{{}}]{q}{r_n}{}}
 \to 1.\] 
-By the triangle inequality, 
+By the triangle %???the
+inequality, 
 \[\dist{z}{r}{}-\dist{z}{q}{},
 \quad
 \dist{z'}{r}{}-\dist{z'}{q}{}
@@ -310,10 +299,19 @@ that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm
 \qeds
 
 \begin{thm}{Exercise}
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $A\subset\spc{L}$ be a closed subset.
+Show that there is a dense G-delta set $W\subset\spc{L}$ such that
+for any $q\in W$, there is a unique geodesic $[pq]$ with
+$p\in A$ that realize the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
+\end{thm}
+
+\begin{thm}{Exercise}
 Give an alternative proof of Theorem \ref{thm:almost.geod} 
 built on the fact that geodesics do not split (\ref{thm:g-split})
 and Corollary \ref{cor:two-geodesics-in-ultrapower}.
 \end{thm}
+
+Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.
 
 \begin{thm}{Exercise}
 Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  in the same geodesic direction $\xi\in \Sigma'_p$.
@@ -330,23 +328,17 @@ $A\cap \mathopen{]}xy\mathclose{[}=\emptyset$
 for any geodesic $[xy]$ in $\spc{L}$. 
 \end{thm}
 
-\begin{thm}{Exercise}
-Let $\spc{L}$ be a complete length $\Alex{}$ space and $A\subset\spc{L}$ be a closed subset.
-Show that there is a dense G-delta set $W\subset\spc{L}$ such that
-for any $q\in W$, there is a unique geodesic $[pq]$ with
-$p\in A$ and $\dist{p}{q}{}=\dist{A}{q}{}$.
-\end{thm}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{More comparisons}\label{sec:more-angles}
 
-The following theorem makes it possible to adapt Euclidean intuition to the Alexandrov universe.
+The following theorem makes it easier to use Euclidean intuition in the Alexandrov universe.
 
 \begin{thm}{Theorem}
 \label{thm:defs_of_alex} 
 If $\spc{L}$ is a $\Alex\kappa$ space, 
 then the following conditions hold for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined.
+
 \begin{subthm}{2-sum} 
 (adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, $z\not=p$ we have
 \[\angk\kappa z p x
@@ -375,6 +367,7 @@ for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
 \end{subthm}
 
 Moreover, in each case the converse holds if $\spc{L}$ is G-delta geodesic.
+That is if one of the conditions (\ref{SHORT.2-sum}), (\ref{SHORT.point-on-side}) or  (\ref{SHORT.angle}) holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
 \end{thm}
 
 \parbf{Remarks.} 
@@ -486,7 +479,7 @@ Prove that
 
 \end{thm}
 
-\begin{thm}{Advanced Exercise} \label{ex:urysohn}
+\begin{thm}{Advanced exercise} \label{ex:urysohn}
 Construct a geodesic space $\spc{X}$ that is not $\Alex0$, 
 but meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \mathopen{]}x y\mathclose{[}$
 \[\angk{0}{z}{p}{x}+\angk{0}{z}{p}{y}
@@ -494,8 +487,8 @@ but meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is 
 \pi.\]
 \end{thm}
 
-\begin{thm}{Advanced Exercise}\label{ex:lebedeva-petrunin}
-Assume $\spc{L}$ be a complete length space such that for any quadrouple $p,x,y,z\in\spc{L}$ 
+\begin{thm}{Advanced exercise}\label{ex:lebedeva-petrunin}
+Let $\spc{L}$ be a complete length space such that for any quadrouple $p,x,y,z\in\spc{L}$ 
 the following inequality holds
 \[\dist[2]{p}{x}{}+\dist[2]{p}{y}{}+\dist[2]{p}{z}{}
 \ge
@@ -505,7 +498,7 @@ the following inequality holds
 \right].\eqlbl{eq:berg-nikolaev}\]
 Prove that $\spc{L}$ is $\Alex0$.
 
-Construct a metric on a 4-point set that satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, but does not admit a distance preserving map into a $\Alex{0}$ space.
+Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, such that $\spc{X}$ is not $\Alex{0}$.
 \end{thm}
 
 Assume that for a trianglle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
@@ -527,8 +520,7 @@ Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
 for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ correspondingly, then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
 \end{subthm}
 
-\begin{subthm}{} Show that $\RR^2$ admits a metric defined by a norm
-such that it satisfies above condition, but not $\Alex0$.
+\begin{subthm}{} Show that there is a metric on $\RR^2$ defined by a norm that satisfies the above condition, but not $\Alex0$.
 \end{subthm}
 
 \end{thm}
@@ -541,8 +533,7 @@ In this section we will translate the angle comparison definitions (Theorem~\ref
 to a concavity-like property of the distance functions as defined in Section~\ref{sec:conv-fun}.
 This a conceptual step ---
 we reformulate a global geometric condition into an infinitesimal condition on distance functions.
-We will give two formulation of this comparison:
-analytical, using function concavity, and geometrical, using development.
+
 
 \begin{thm}{Theorem}\label{thm:conc} 
 Let $\spc{L}$ be a complete length space. 
@@ -562,8 +553,7 @@ In particular, a complete G-delta geodesic space $\spc{L}$ is $\Alex{0}$ if and 
 is $2$-concave as defined in Section~\ref{sec:conv-fun}.
 
 \parit{Proof.} 
-Given a geodesic $[x y]$  in $\oBall(p,\varpi\kappa)$,
-let $\ell=\dist{x}{y}{}$.
+Let $[x y]$ be a geodesic in $\oBall(p,\varpi\kappa)$ and $\ell=\dist{x}{y}{}$.
 Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$.
 Set \begin{align*} 
 \tilde r(t)&=\dist{\tilde p}{\geod_{[\tilde x\tilde y]}(t)}{},
@@ -611,7 +601,7 @@ The definition is somewhat lengthy, but it defines a useful comparison object fo
 Often it is easier to write proofs in terms of function comparison,
 but think in terms of developments.
 
-\begin{thm}{Lemma}\label{lem:devel}
+\begin{thm}{Lemma-definition}\label{lem:devel}\label{def:devel}
 Let $\kappa\in \RR$, 
 $\spc{X}$ be a metric space, 
 $\gamma\:\II\to \spc{X}$ be a $1$-Lipschitz curve,
@@ -625,10 +615,10 @@ such that
 $\dist{\tilde p}{\tilde \gamma(t)}{}=\dist{p}{\gamma(t)}{}$ for all $t$
 and the direction of
 $[\tilde p\tilde \gamma(t)]$ monotonically turns around $\tilde p$ conterclockwise, as $t$ increases.
-\end{thm}
 
-\begin{thm}{Definition of development}\label{def:devel}
-If $p,\tilde p,\gamma,\tilde \gamma$ be as in Lemma~\ref{lem:devel}
+\smallskip
+
+If $p,\tilde p,\gamma,\tilde \gamma$ be as in above,
 then $\tilde \gamma$ is called the \emph{$\kappa$-development of $\gamma$
 with respect to $p$}\index{development}; 
 the point $\tilde p$ is called \emph{the basepoint of development}\index{base of development}.
@@ -637,7 +627,7 @@ all
 $t\in \II$.
 \end{thm}
 
-\parit{Proof of Lemma~\ref{lem:devel}.}
+\parit{Proof.}
 Consider functions $\rho$, $\theta\:\II\to\RR$ defined as 
 \begin{align*}
 \rho(t)
@@ -710,7 +700,7 @@ its $\kappa$-development with respect to $p$ is convex.
 \end{wrapfigure}
 
 A simpler proof of ``if''-part can be build on the adjacent angle comparison (\ref{2-sum}).
-We use this proof since it also implies the short hinge lemma below.
+We use a longer proof since it also implies the short hinge lemma (\ref{lem:devel-glob}).
 
 \parit{Proof; ``if''-part.}  
 Let $\gamma\:[0,T]\to \oBall(p,\varpi\kappa)\backslash \{p\}$ be a unit-speed geodesic in $\spc{L}$.
@@ -1240,7 +1230,7 @@ $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p
 Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
-\begin{thm}{Advanced Exercise}
+\begin{thm}{Advanced exercise}
 Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
 Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
 \end{thm}

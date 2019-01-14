@@ -6,16 +6,20 @@
 Given a real number $\kappa$, the \emph{model $\kappa$-\hspace{0pt}plane}\index{plane!$\kappa$-plane} will be a complete simply connected 2-\hspace{0pt}dimensional Riemannian manifold of constant curvature~$\kappa$.
 
 The  model $\kappa$-plane  will be denoted by $\Lob2\kappa$.
-If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; if $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane; and if $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane.
+\begin{itemize}
+\item If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; the unit sphere $\Lob21$ will be also denoted by $\mathbb{S}^2$.
+\item If $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane, which is also denoted by $\EE^2$ 
+\item If $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane with curvature $\kappa$.
+\end{itemize}
+
+
 
 Set $\varpi\kappa=\diam\Lob2\kappa$\index{$\varpi\kappa$}, so 
 $\varpi\kappa=\infty$ if $\kappa\le0$ and $\varpi\kappa=\pi/\sqrt{\kappa}$ if $\kappa>0$.
 
 The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}{}$\index{$\dist{*}{*}{}$}, and $[x y]$\index{$[{*}{*}]$} 
 will denote the segment connecting $x$ and $y$. 
-The segment $[x y]$ is uniquely defined if $\kappa\le 0$ and if $\kappa>0$ we 
-require 
-that $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.%??? otherwise $[x y]$ is considered to be undefined.
+The segment $[x y]$ is uniquely defined for $\kappa\le 0$ and for $\kappa>0$ it is defined uniquely if $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.
 
 A triangle in $\Lob2\kappa$, with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}.
 Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for a triple $([y z],[z x],[x y])$.
@@ -35,7 +39,7 @@ otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
 We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\cs\kappa$, $\sn\kappa$ and $\md\kappa$;
 $\cs{}$ stands for \emph{cosine}, $\sn{}$ stands for \emph{sine} and $\md{}$, for \emph{modified distance}. 
 
-They are defined using the solutions of the following initial value problems respectively:
+They are defined as the solutions of the following initial value problems respectively:
 \[
 \begin{cases}
  x''+\kappa\cdot x=0,\\
@@ -56,7 +60,7 @@ They are defined using the solutions of the following initial value problems res
  \end{cases}  
 \]
 
-We set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$ and 
+Namely we set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$ and 
 \[
 \md\kappa(t)=
 \left[
@@ -100,6 +104,15 @@ we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 \right.	&
 \end{align*}
 
+\begin{wrapfigure}{r}{31mm}
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/treug(1)}
+\lbl[b]{30,18,-90;{\small $a=\side\kappa\{\phi;b,c\}$}}
+\lbl[br]{16,27;$b$}
+\lbl[tr]{16,10;$c$}
+\lbl[l]{5,19;{\scriptsize $\phi\ =\tangle\mc\kappa\{a;b,c\}$}}
+\end{lpic}
+\end{wrapfigure}
+
 
 Note that
 %\[\md\kappa(0)=(\md\kappa)'(0)=0\ \ \t{and}\ \ 
@@ -122,17 +135,6 @@ Note that
 %The functions $\sn\kappa, \cs\kappa:\RR_{\ge}\to\RR$ satisfy the equation $y''+\kappa\cdot y=0$,  
 %and have the same initial conditions as sine and cosine respectively.
 
-
-
-
-\begin{wrapfigure}{r}{31mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/treug(1)}
-\lbl[b]{30,18,-90;{\small $a=\side\kappa\{\phi;b,c\}$}}
-\lbl[br]{16,27;$b$}
-\lbl[tr]{16,10;$c$}
-\lbl[l]{5,19;{\scriptsize $\phi\ =\tangle\mc\kappa\{a;b,c\}$}}
-\end{lpic}
-\end{wrapfigure}
 
 
 Let $\phi$ be the angle of $\modtrig\kappa\{a,b,c\}$  
@@ -168,7 +170,8 @@ For fixed $a$ and $\phi$, the function
 Let $\alpha\:[a,b]\to\Lob2\kappa$ be a unit-speed geodesic, and $A$ be the image of a complete geodesic.  If $f(t)$ is the distance from $\alpha(t)$ to $A$, the function 
 \[y(t)=\sn\kappa (f(t))\]
  satisfies the following differential equation:
-\[y''+\kappa\cdot y=0.\]
+\[y''+\kappa\cdot y=0\]
+for $y\ne 0$.
 \end{subthm}
 
 \begin{subthm}{increase}
@@ -237,15 +240,19 @@ For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, 
 \parit{Proof.} By rescaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\mathbb{S}^2$.
 Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
+%???+PIC
+
 Assume $\ell<\pi$.
 Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
 Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\mathbb{S}^2$.  
 Let $z$ be the midpoint of  $[pq]$.  
 We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
-If not, $\alpha$ intersects the boundary  great circle in a point say $r$.
+If not, $\alpha$ intersects the boundary  great circle in a point, say $r$.
 Without loss of generality we may assume that $r\in\check\alpha$. 
 The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that contains $r$ and its antipodal point $r'$.
-Thus $\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi$, a contradiction.
+Thus 
+\[\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi,\] 
+a contradiction.
 
 If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circle, 
 or $\alpha$ may be strictly shortened by substituting a geodesic arc for a subarc of $\alpha$ 
