@@ -599,7 +599,7 @@ By construction, $F$ satisfies the conditions of the lemma.
 \qeds
 
 
-\parit{Proof of Inheritance lemma \ref{lem:inherit-angle}.}
+\parit{Proof of \ref{lem:inherit-angle}.}
 Construct model triangles $\trig{\dot p}{\dot x}{\dot z}\z=\modtrig\kappa(p x z)$ 
 and $\trig {\dot p} {\dot y} {\dot z}=\modtrig\kappa(p y z)$ so that $\dot x$ and $\dot y$ lie on opposite sides of $[\dot p\dot z]$.
 
@@ -759,7 +759,7 @@ By function comparison (\ref{thm:function-comp})
 the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
 The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'=K\cap\cBall[p,r]$ 
-and the restriction $f|K'$. 
+and the restriction $f|_{K'}$. 
 \qeds
 
 \begin{thm}{Exercise}
@@ -1044,7 +1044,7 @@ Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alp
 is a \emph{line-of-sight map from $p$ to $\alpha$} .  
 \end{thm}
 
-\parit{Proof of Patchwork globalization theorem (\ref{thm:alex-patch}).} As was  already noted, it only remains to prove (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}). %!!!
+\parit{Proof of \ref{thm:alex-patch}.} As was  already noted, it only remains to prove (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}). %!!!
 
 
 \begin{wrapfigure}{r}{61mm}
@@ -1182,19 +1182,22 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \begin{clm}{}\label{clm:geod-gluing0 }
 $\spc{W}$ is geodesic if $\kappa\le0$.
 \end{clm}
-For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ such that $|p_1z^i|+|p_2z^i|$
- converges to $|p_1p_2|$, and $|p_1z^i|$ and $|p_2z^i|$ converge.  
+For $p_1\in \spc{U}_1$, $p_2\in \spc{U}_2$, we may choose a sequence $z^i\in A$ such that $\dist{p_1}{z^i}{}+\dist{p_2}{z^i}{}$
+ converges to $\dist{p_1}{p_2}{}$, and $\dist{p_1}{z^i}{}$ and $\dist{p_2}{z^i}{}$ converge.  
  Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence.  
- In that case, the limit point $z$ of $z^i$ satisfies $|p_1z|+|p_2z|=|p_1p_2|$, so the geodesics $[p_1z]$ in $\spc{U}_1$ and $[p_2z]$ in $\spc{U}_2$ together give a geodesic $[p_1p_2]$ in $\spc{U}$.  
+ In that case, the limit point $z$ of $z^i$ satisfies $\dist{p_1}{z}{}+\dist{p_2}{z}{}=\dist{p_1}{p_2}{}$, so the geodesics $[p_1z]$ in $\spc{U}_1$ and $[p_2z]$ in $\spc{U}_2$ together give a geodesic $[p_1p_2]$ in $\spc{U}$.  
  
- Suppose $z^i$ is not a Cauchy sequence.  Then there are subsequences  $x^i$ and $y^i$ of $z^i$ satisfying  $\lim|x^iy^i|>0$. Let $m^i$ be the midpoint of $[x^iy^i]$. Since $|p_1m^i|+|p_2m^i| \ge |p_1p_2|$, and  $|p_1x^i|+|p_2x^i|$ and  $|p_1y^i|+|p_2y^i|$
- converge to $|p_1p_2|$, then for  any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
+ Suppose $z^i$ is not a Cauchy sequence.
+ Then there are subsequences  $x^i$ and $y^i$ of $z^i$ satisfying  $\lim\dist{x^i}{y^i}{}>0$.
+ Let $m^i$ be the midpoint of $[x^iy^i]$.
+ Since $\dist{p_1}{m^i}{}+\dist{p_2}{m^i}{} \ge \dist{p_1}{p_2}{}$, and  $\dist{p_1}{x^i}{}+\dist{p_2}{x^i}{}$ and  $\dist{p_1}{y^i}{}+\dist{p_2}{y^i}{}$
+ converge to $\dist{p_1}{p_2}{}$, then for  any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
  \[
- |p_1m^i\ge  |p_1x^i|-\epsilon,  |p_1m^i\ge  |p_1y^i|-\epsilon.
+ \dist{p_1}{m^i}{}\ge  \dist{p_1}{x^i}{}-\epsilon,  \dist{p_1}{m^i}{}\ge  \dist{p_1}{y^i}{}-\epsilon.
  \]
  
  Since triangle $\trig{p^1}{x^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\tilde p^1}{\tilde x^i}{\tilde y^i}$.  
- Then there is a nondegenerate limit triangle $\trig{p}{x}{y}$ in the Euclidean plane satisfying $|px|=|py|\le|pm|$ where $m$ is the midpoint of $[xy]$.  This  contradiction proves the claim.
+ Then there is a nondegenerate limit triangle $\trig{p}{x}{y}$ in the Euclidean plane satisfying $\dist{p}{x}{}=\dist{p}{y}{}\le\dist{p}{m}{}$ where $m$ is the midpoint of $[xy]$.  This  contradiction proves the claim.
  
 \claimqeds
 
@@ -1288,10 +1291,10 @@ A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\g
 Since $\spc{B}$ is $\CAT\kappa$, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
 Thus there is a subinterval $\II$ of $[0,1]$,
 that contains a neighborhood of $t$ in $[0,1]$
-and such that $\gamma_n|\II$ is minimizing for all large $n$.
-It follows that the restriction $\gamma_\infty|\II$ is a geodesic,
+and such that $\gamma_n|_\II$ is minimizing for all large $n$.
+It follows that the restriction $\gamma_\infty|_\II$ is a geodesic,
 and therefore $\gamma_\infty$ is a local geodesic.
-%It follows that  $[0,1]$ is covered by finitely many intervals $\II_i$,  that are open in $[0,1]$, where $\gamma_\infty|\II_i$ is  a geodesic that is the limit of geodesics $\gamma_n|\II_i$. Therefore   $\gamma_\infty$ is a local geodesic path with $\length\gamma_n\to\length\gamma_\infty$.
+%It follows that  $[0,1]$ is covered by finitely many intervals $\II_i$,  that are open in $[0,1]$, where $\gamma_\infty|_\II_i$ is  a geodesic that is the limit of geodesics $\gamma_n|\II_i$. Therefore   $\gamma_\infty$ is a local geodesic path with $\length\gamma_n\to\length\gamma_\infty$.
 %!!! I change it a bit in the beginning and at the end.
 \qeds
 
@@ -1383,7 +1386,7 @@ we only have to choose $\eps>0$ so that in addition $\dist{\alpha(\tau)}{\alpha(
 \qeds
 
 
-\parit{Proof of No-conjugate-point theorem \ref{thm:no-conj-pt}.}
+\parit{Proof of \ref{thm:no-conj-pt}.}
 Apply patchwork along $\gamma$ (\ref{lem:patch}). 
 \qeds
 
@@ -1438,8 +1441,8 @@ such that $\gamma_0(t)=\gamma_t(0)=\alpha(0)$ and $\gamma_t(1)=\alpha(t)$,
 \end{subthm}
 
 \begin{subthm}{cor:homotopy-from-p-length}
-\[\length\gamma_t\le\length(\alpha|[0,t]),\]
-and  equality holds for given $t$ if and only if the restriction $\alpha|[0,t]$ is a reparametrization of $\gamma_t$.
+\[\length\gamma_t\le\length(\alpha|_{[0,t]}),\]
+and  equality holds for given $t$ if and only if the restriction $\alpha|_{[0,t]}$ is a reparametrization of $\gamma_t$.
 \end{subthm}
 \end{thm}
 
@@ -1645,7 +1648,7 @@ the space $\mathfrak{G}_p$ as the ball of radius $\varpi\kappa$ in the tangent s
 We are going to set $\spc{B}=\oBall[\hat p,\varpi\kappa/2]\subset \mathfrak{G}_p$,
 and use the radial lemma (\ref{lem:radial-glob}) to prove that $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 
-\parit{Proof of Lifting globalization theorem \ref{thm:globalization-lift}.}
+\parit{Proof of \ref{thm:globalization-lift}.}
 Suppose $\hat\gamma$ is a homotopy of local geodesic paths that start at $p$.  Thus the map 
 \[\hat\gamma\:(t,\tau)\mapsto\hat\gamma_t(\tau)\:[0,1]\times[0,1]\to\spc{U}\] 
 is continuous,
@@ -1755,7 +1758,7 @@ In particular, if $D$ is convex, then the corresponding subarc is a geodesic in 
 \begin{align*}
 \tilde r&=\dist{\tilde \gamma(a)}{\tilde \gamma(b)}{D},
 &
-\tilde \gamma &= (F|{\Fr D})^{-1}\circ\gamma,
+\tilde \gamma &= (F|_{\Fr D})^{-1}\circ\gamma,
 \\
 s&=\length \gamma,
 &
@@ -1914,7 +1917,7 @@ where the lefthand side converges to $\dist{H(x)}{H(y)}{}$  and the righthand si
 
 
 
-\parit{Proof of majorization theorem (\ref{thm:major}).}
+\parit{Proof of \ref{thm:major}.}
 We begin by proving the theorem in case $\alpha$ is polygonal.
 
 First suppose $\alpha$ is a triangle, say $\trig p x y$.
@@ -2095,12 +2098,12 @@ Since $ \dist{\tilde y^0}{\tilde y^{n+1}}{}=\dist{x^0}{x^{n+1}}{}$, the part (\r
 
 \parit{\ref{SHORT.subthm:arm-eq}).} Suppose equality holds in (\ref{SHORT.subthm:arm-ineq}).  Then angles at the $j$-th vertex of $\tilde P$, $P$ and $\tilde P_R$ are equal for $1\le j\le n$,   and we may take $\tilde P=\tilde P_R$.  
 
-Let $F\:\tilde D\to\spc{U}$ be the majorizing map for $P$, where $\tilde D$ is the convex region bounded by $\tilde P$, and $F|\tilde P$ is length-preserving.  
+Let $F\:\tilde D\to\spc{U}$ be the majorizing map for $P$, where $\tilde D$ is the convex region bounded by $\tilde P$, and $F|_{\tilde P}$ is length-preserving.  
 
 \begin{clm}{}\label{clm:arm-triangle}
 Let $\tilde x,\tilde y,\tilde z$ be three vertices of $\tilde P$, and $x,y,z$ be the corresponding vertices of $P$.  If $\dist{\tilde x}{\tilde y}{}=
 \dist{x}{y}{}$, $\dist{\tilde y}{\tilde z}{}=
-\dist{x}{z}{}$ and $\mangle\hinge{\tilde y}{\tilde x}{\tilde z} = \mangle\hinge{y}{x}{z}$, then $F|\Conv(\tilde x, \tilde y, \tilde z)$ is distance-preserving.
+\dist{x}{z}{}$ and $\mangle\hinge{\tilde y}{\tilde x}{\tilde z} = \mangle\hinge{y}{x}{z}$, then $F|_{\Conv(\tilde x, \tilde y, \tilde z)}$ is distance-preserving.
 \end{clm} 
 
 Since $F$ is majorizing, $F$ restricts to   distance-preserving maps from $[\tilde x\tilde y]$ to $[xy]$ and $[\tilde y\tilde z]$ to $[yz]$.
@@ -2118,7 +2121,7 @@ But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so
 Hence the claim.
 
 \begin{clm}{}\label{clm:arm-induction}
-Suppose $F|\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k})$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$ is distance-preserving.
+Suppose $F|_{\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k})}$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$ is distance-preserving.
 \end{clm}
 
 
@@ -2127,13 +2130,13 @@ Set $\tilde p=[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$ 
 The following maps are distance-preserving:
 \begin{enumerate}
 \item[(i)]
-$F|\Conv(\tilde x^{k-1},\tilde x^k,\tilde x^{k+1})$,
+$F|_{\Conv(\tilde x^{k-1},\tilde x^k,\tilde x^{k+1})}$,
 
 \item[(ii)]
- $F|\Conv(\tilde x^{k+1},\tilde x^{k-1},\tilde x^{n+1})$,
+ $F|_{\Conv(\tilde x^{k+1},\tilde x^{k-1},\tilde x^{n+1})}$,
 
 \item[(iii)]
-$F|\Conv(\tilde x^{n+1},\tilde x^{k},\tilde x^{k+1})$.
+$F|_{\Conv(\tilde x^{n+1},\tilde x^{k},\tilde x^{k+1})}$.
 \end{enumerate}
 Indeed, (i) is immediate from \ref{clm:arm-triangle}.  
 Therefore $\dist{\tilde x^{k-1}}{\tilde x^{k+1}}{}=\dist{x^{k-1} }{x^{k+1}}{}$, and so $F$ restricts to a distance-preserving map from $[\tilde x^{k-1}\tilde x^{k+1}]$ onto $[x^{k-1} x^{k+1}]$.  With the induction hypothesis, it follows that $F(\tilde p)=p$, hence 
@@ -2426,7 +2429,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 %By angle-sidelength monotonicity (\ref{cor:monoton-cba}),
 
 %\begin{clm}{}\label{clm:ang=>dist}
-%If $\mangle\hinge xyz=\angk\kappa xyz$, then  the restriction $f|([xy]\cup[xz])$ is distance-preserving.\end{clm}
+%If $\mangle\hinge xyz=\angk\kappa xyz$, then  the restriction $f|_{([xy]\cup[xz])}$ is distance-preserving.\end{clm}
 
 %Suppose $v,w\in \mathopen{]}xy\mathclose{[}$,  in the order $x,v,w,y$. Applying \ref{cat-monoton} to triangles $\trig{z}{x}{y}$, 
 %$\trig {z}{x}w$ and $\trig {z}v{y}$, we find that $\dist{z}{v}{}\z=\dist{\tilde z}{\tilde v}{}$ 

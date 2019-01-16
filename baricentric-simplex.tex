@@ -9,7 +9,7 @@ The analogous material for $\Alex{}$ spaces is described in Chapter~\ref{chap:di
 
 \section{The case of complete geodesic spaces}\label{sec:web-general}
 
-The following construction gives a $\kay$-dimensional submanifold  
+The following construction gives a $\kay$-dimensional submanifold 
 for a given ``nondegenerate'' array of $\kay+1$ strongly convex functions.
 
 \parbf{Webs.}
@@ -88,7 +88,7 @@ The map $\spx{\bm{f}}$ will be called a \emph{barycentric simplex}\index{barycen
 Note that for general function array $\bm{f}$, 
 the value $\spx{\bm{f}}(\bm{x})$ might be undefined or nonuniquely defined.
 
-It is clear from the  definition, that $\spx{\bm{f}^{\without i}}$ 
+It is clear from the definition, that $\spx{\bm{f}^{\without i}}$ 
 coincides with the restriction of $\spx{\bm{f}}$ to the corresponding face of $\Delta^\kay$.
 
 
@@ -135,7 +135,7 @@ In particular, from (\ref{SHORT.thm:web:Up-convex}) and (\ref{SHORT.thm:web:f(we
 The proof is preceded by few preliminary statements.
 
 \begin{thm}{Lemma}\label{lem:argmin(convex)}
-Assume $\spc{X}$ is a complete geodesic space and let  $f\:\spc{X}\to\RR$ be a locally Lipschitz, strongly convex function.  Then the minimum point 
+Assume $\spc{X}$ is a complete geodesic space and let $f\:\spc{X}\to\RR$ be a locally Lipschitz, strongly convex function. Then the minimum point 
 of $f$
 is uniquely defined.
 \end{thm}
@@ -144,7 +144,7 @@ is uniquely defined.
 Without loss of generality, we can assume that $f$ is $1$-convex;
 in particular the following claim holds.
 \begin{clm}{}\label{midpoint}
- if $z$ is a midpoint of the geodesic $[x y]$, then  
+ if $z$ is a midpoint of the geodesic $[x y]$, then 
 \[s\le f(z)
 \le
 \tfrac{1}{2}\cdot f(x)+\tfrac{1}{2}\cdot f(y)-\tfrac{1}{8}\cdot\dist[2]{x}{y}{}.
@@ -158,7 +158,7 @@ From \ref{midpoint}, we get
 a contradiction. 
 
 \parit{Existence.}
-Fix a point $p\in  \spc{X}$; 
+Fix a point $p\in \spc{X}$; 
 let $\Lip\in\RR$ be a Lipschitz constant of $f$ in a neighborhood of $p$.
 
 Consider function $\phi(t)=f\circ\geod_{[px]}(t)$.
@@ -188,7 +188,7 @@ s
 f(p)-\tfrac{1}{2}\cdot{\Lip^2}.
 \end{align*}
 
-Choose a sequence of points $p_n\in \spc{X}$  such that $f(p_n)\to s$.
+Choose a sequence of points $p_n\in \spc{X}$ such that $f(p_n)\to s$.
 Applying \ref{midpoint}, for $x\z=p_n$, $y\z=p_m$, we get that $(p_n)$ is converging in itself. 
 Hence, $p_n$ converges to a minimum point of $f$.
 \qeds
@@ -262,14 +262,14 @@ for any $\bm{y}\succcurlyeq\bm{0}$;
 that is, $\bm{x}\succcurlyeq\bm{0}$.
 
 Further, according to Lemma~\ref{lem:argmin(convex)}, 
-the function  
+the function 
 $\sum_i x^i\cdot f^i$ has uniquely defined minimum point, say $p$.
 Clearly 
-\[\bm{v}\succcurlyeq\bm{f}(p)\ \ \t{and}\ \  \bm{f}(p)\in \Min W.\eqlbl{eq:v>f(p)}\]
+\[\bm{v}\succcurlyeq\bm{f}(p)\quad\t{and}\quad \bm{f}(p)\in \Min W.\eqlbl{eq:v>f(p)}\]
 
 Note that for any $\bm{u}\in \bar W$ there is $\bm{v}\in S$ such that $\bm{u}\succcurlyeq\bm{v}$. 
 Therefore \ref{eq:v>f(p)} implies that
-\[\bar W\subset\Up[\Min  W]\subset W.\]
+\[\bar W\subset\Up[\Min W]\subset W.\]
 Hence
 $\bar W=W$; that is, $W$ is closed.
 \qeds
@@ -282,7 +282,7 @@ $\bar W=W$; that is, $W$ is closed.
 
 
 
-\parit{Proof of Theorem~\ref{thm:web}.}
+\parit{Proof of \ref{thm:web}.}
 Without loss of generality we may assume that all $f^i$ are $1$-convex.
 
 Given $\bm{v}=(v^0,v^1,\dots,v^\kay)\in\RR^{\kay+1}$, consider the function 
@@ -296,7 +296,7 @@ According to Lemma~\ref{lem:argmin(convex)}, $\map(\bm{v})$ is uniquely defined.
 From the definition of web (\ref{def:web}) 
 we have
 $\map\circ\bm{f}(p)=p$ for any $p\in \Web\bm{f}$;
-that is,  $\map$ is a left inverse to the restriction $\bm{f}|\Web\bm{f}$.
+that is, $\map$ is a left inverse to the restriction $\bm{f}|\Web\bm{f}$.
 In particular, 
 \[\Web\bm{f}=\Im\map.
 \eqlbl{eq:Web=Im}\]
@@ -325,7 +325,7 @@ Therefore,
 \end{align*}
 In particular,
 $\map$ is $C^{\frac{1}{2}}$-continuous,
-or $\bm{f}|\Web\bm{f}$ is a $C^{\frac{1}{2}}$-embedding.
+or $\bm{f}|_{\Web\bm{f}}$ is a $C^{\frac{1}{2}}$-embedding.
 
 As in Lemma~\ref{lem:Up-convex},
 set $W=\Up\bm{f}(\spc{X})$ and $S=\Fr_{\RR^{\kay+1}}W$.
@@ -333,7 +333,7 @@ Recall that
 $S$ is a convex hypersurface in $\RR^{\kay+1}$.
 Clearly $\bm{f}(\Web\bm{f})=\Min W\subset S$.
 From the definition of inner web we have
-$\bm{v}\in \bm{f}(\InWeb\bm{f})$  
+$\bm{v}\in \bm{f}(\InWeb\bm{f})$ 
 if and only if 
 $\bm{v}\in S$ and
 for any $i$ there is $\bm{w}=(w^0,w^1,\dots,w^\kay)\in W$ such that $w^j<v^j$ for all $j\not=i$.
@@ -408,7 +408,7 @@ Thus, the same argument as above implies
 =
 \ell\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
 for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
-Since  $\Delta^\kay$ is compact,  $\spx{\bm{f}}$ is Lipschitz.
+Since $\Delta^\kay$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 
 Clearly $\spx{\bm{f}}(\Delta^\kay)\subset \Web \bm{f}$;
 it remains to show that $\spx{\bm{f}}(\Delta^\kay)\supset \Web \bm{f}$.
@@ -482,8 +482,9 @@ Moreover, if a closed convex set $K$ contains all $a^i$, then $\Web(\distfun{\bm
 \begin{subthm}{thm:cat-bary-web:mnfld}
 The restriction%
 \footnote{Recall that $\distfun{\bm{a}^{\without 0}}{}{}$ denotes array $(\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})$.}
-$\distfun{\bm{a}^{\without 0}}{}{}|\InWeb(\distfun{\bm{a}}{}{})$ is an open $C^{\frac12}$-embedding in $\RR^\kay$.
-Thus there is an inverse of $\distfun{\bm{a}^{\without 0}}{}{}|\InWeb(\distfun{\bm{a}}{}{})$, say $\map\:\RR^\kay\subto\spc{U}$.
+$\distfun{\bm{a}^{\without 0}}{}{}|_{\InWeb(\distfun{\bm{a}}{}{})}$ is an open $C^{\frac12}$-embedding in $\RR^\kay$.
+Thus there is an inverse of 
+$\distfun{\bm{a}^{\without 0}}{}{}|_{\InWeb(\distfun{\bm{a}}{}{})}$, say $\map\:\RR^\kay\subto\spc{U}$.
 
 The subfunction $f=\distfun{a^0}{}{}\circ\map$ is semiconvex and locally Lipschitz.
 Moreover, if $\kappa\le 0$, then $f$ is convex.
@@ -502,7 +503,7 @@ with \emph{brace} $\distfun{a^0}{}{}$.
 \begin{thm}{Definition}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\bm{a}=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
-If  $\InWeb(\distfun{\bm{a}}{}{})\z\ne\emptyset$, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
+If $\InWeb(\distfun{\bm{a}}{}{})\z\ne\emptyset$, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
 \end{thm}
 
 Lemma~\ref{lem:nondeg-test-with-balls} will provide examples of nondegenerate point arrays,
@@ -510,7 +511,7 @@ which can be used in Theorem~\ref{thm:cat-bary-web:mnfld}.
 
 \begin{thm}{Corollary}\label{cor:LinDim>bary}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-$\bm{a}=(a^0,a^1,\dots a^m)$ be a nondegenerate point array  
+$\bm{a}=(a^0,a^1,\dots a^m)$ be a nondegenerate point array 
 of radius $<\tfrac{\varpi\kappa}{2}$ in $\spc{U}$
 and $\sigma=\spx{\bm{a}}\mc\kappa$ be corresponding $\kappa$-baricentric simplex.
 Then for some $\bm{x}\in \Delta^m$
@@ -538,7 +539,7 @@ $\dd_{\bm{x}}(\tau\circ\sigma)$
 is linear for almost all $\bm{x}\in\Delta^m$.
 Further since $\InWeb(\distfun{\bm{a}}{}{})\ne\emptyset$,
 the area formula %??? 
-implies that $\dd_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points  $\bm{x}\in\Delta^m$.
+implies that $\dd_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points $\bm{x}\in\Delta^m$.
 
 Note that $\dd_{\bm{x}}(\tau\circ\sigma)=(\dd_{\sigma(\bm{x})}\tau)\circ(\dd_{\bm{x}}\sigma)$.
 Applying Rademacher's theorem again, we get that
@@ -549,7 +550,7 @@ Hence the result.
 \qeds
 
 
-\parit{Proof of Theorem \ref{thm:cat-bary-web}.}
+\parit{Proof of \ref{thm:cat-bary-web}.}
 Fix $z\in\spc{U}$ and $r<\tfrac{\varpi\kappa}2$
 such that $\dist{z}{a^i}{}<r$ for all $i$.
 Note that the set $K\cap \cBall[z,r]$ is convex, closed, and contains all $a^i$.
@@ -605,7 +606,7 @@ Direct calculations show
 \[\spx{\bm{a}}\mc1
 =
 \proj\circ\spx{\iota(\bm{a})}\mc0
-\ \ \t{and}\ \ 
+\quad\t{and}\quad
 \Web(\distfun{\bm{a}}{}{})=\proj[\Web(\distfun{\iota(\bm{a})}{}{})].\]
 It reduces the case $\kappa=1$ of the theorem to the case $\kappa=0$,
 which is proved already.
@@ -626,7 +627,7 @@ Then $\bm{a}$ is nondegenerate.
 \end{thm}
 
 \parit{Proof.} 
-Without loss of generality we can assume that $\spc{U}$ is geodesic and  $\diam\spc{U}\z<\varpi\kappa$.
+Without loss of generality we can assume that $\spc{U}$ is geodesic and $\diam\spc{U}\z<\varpi\kappa$.
 If not, choose a point $z\in\spc{U}$ and $r<\tfrac{\varpi\kappa}{2}$ such that
 $\dist{z}{a^i}{}\le r$
 for each $i$
@@ -641,7 +642,7 @@ therefore there is a point $p\in\Web(\distfun{\bm{a}}{}{})$
 minimizing the function 
 \[f(x)=\max_i\{\dist{B^i}{x}{}\}=\max\{0,\dist{a^0}{x}{}-r^0,\dots,\dist{a^\kay}{x}{}-r^\kay\}.\]
 
-By the  definition of web (\ref{def:web}), 
+By the definition of web (\ref{def:web}), 
 $p$ is also the minimum point of $f$ on $\spc{U}$.
 Let us show that
 
@@ -696,21 +697,21 @@ To construct the second type of examples,
 note that the completion of any metric tree has topological dimension one and is $\CAT\kappa$ for any $\kappa$.
 Start with a binary tree $\Gamma$, and a sequence $\eps_n>0$ such that $\sum_n\eps_n<\infty$.
 Define the metric on $\Gamma$
-by prescribing length of edge from level $n$ to the level $n+1$ to be  $\eps_n$.
+by prescribing length of edge from level $n$ to the level $n+1$ to be $\eps_n$.
 For an appropriately chosen sequence $\eps_n$, the completion of $\Gamma$ will contain a Cantor set of arbitrary large dimension.
 
 \medskip
 
-The following is a  version of the theorem proved by Bruce Kleiner in \cite{kleiner} with an improvement made by Alexander Lytchak in \cite{lytchak:diff}.
+The following is a version of the theorem proved by Bruce Kleiner in \cite{kleiner} with an improvement made by Alexander Lytchak in \cite{lytchak:diff}.
 
 \begin{thm}{Theorem}\label{thm:dim-infty-CBA}
 For any complete length $\CAT\kappa$ space $\spc{U}$, the following statements are equivalent:
 
-\begin{subthm}{LinDim-CBA}  $\LinDim\spc{U}\ge m$;
+\begin{subthm}{LinDim-CBA} $\LinDim\spc{U}\ge m$;
 \end{subthm}
 
 \begin{subthm}{thm:dim-infty-CBA:bary} 
-For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$  
+For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$ 
 such that 
 \[\bigcap_i B^i=\emptyset,\quad\bigcap_{i\not=j} B^i\not=\emptyset\]
 for each $j$.
@@ -745,14 +746,14 @@ For any separable complete length $\CAT{}$ space $\spc{U}$, we have
 To prove Theorem~\ref{thm:dim-infty-CBA} we will need the following lemma.
 
 Any simplicial complex can be equipped with a length-metric
-such that each $\kay$-simplex  
+such that each $\kay$-simplex 
 is isometric to the standard simplex
 \[\Delta^\kay
 =
 \set{(x_0,\dots,x_\kay)\in \RR^{\kay+1}}
 {x_i\ge 0,\quad x_0+\dots+x_\kay=1}\]
 with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
-This metric will be called the  \emph{$\ell^1$-metric}\index{$\ell^1$-metric} on the simplicial complex.
+This metric will be called the \emph{$\ell^1$-metric}\index{$\ell^1$-metric} on the simplicial complex.
 
 \begin{thm}{Lemma}\label{lem:approximation-cba}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
@@ -777,17 +778,17 @@ coincides with the image of its $m$-skeleton.
 \end{thm}
 
 \parit{Proof.}
-Without loss of generality, we can assume that  for any $x$ we have $\rho(x)\z<\rho_0$
+Without loss of generality, we can assume that for any $x$ we have $\rho(x)\z<\rho_0$
 for some fixed $\rho_0<\tfrac{\varpi\kappa}{2}$.
 
 By Stone's theorem%ref???
 , any metric space is paracompact.
 Thus, we can choose a locally finite covering $\set{\Omega_\alpha}{\alpha\in\IndexSet}$ of $\spc{U}$ such that $\Omega_\alpha\subset \oBall(x,\tfrac{1}{3}\cdot\rho(x))$ for any $x\in \Omega_\alpha$. 
 
-Denote by $\spc{N}$ the nerve of the covering  $\{\Omega_\alpha\}$;
+Denote by $\spc{N}$ the nerve of the covering $\{\Omega_\alpha\}$;
 that is, $\spc{N}$ is an abstract simplicial complex with set of vertexes formed by $\IndexSet$ such that
 $\{\alpha^0,\alpha^1,\dots,\alpha^n\}\subset\IndexSet$ 
-are vertexes of a simplex  if and only if
+are vertexes of a simplex if and only if
 $\Omega_{\alpha^0}
 \cap
 \Omega_{\alpha^1}
@@ -797,7 +798,7 @@ $\Omega_{\alpha^0}
 \emptyset$.
 
 Fix a Lipschitz partition of unity 
-$\phi_\alpha\:\spc{U}\to [0,1]$,  subordinate to $\{\Omega_\alpha\}$.
+$\phi_\alpha\:\spc{U}\to [0,1]$, subordinate to $\{\Omega_\alpha\}$.
 Consider the map $\map\:\spc{U}\to \spc{N}$ such that the barycentric coordinate of $\map(p)$ is $\phi_\alpha(p)$.
 Note that $\map$ is locally Lipschitz. 
 Clearly $\map$-preimage of any open simplex in $\spc{N}$ lies in $\Omega_\alpha$ for some $\alpha\in\IndexSet$.
@@ -816,7 +817,7 @@ Denote by $\Delta$ the minimal simplex that contains $\map(x)$;
 and let $(\alpha^0,\alpha^1,\dots,\alpha^n)$ be the vertexes of $\Delta$.
 Note that $\alpha$ is a vertex of $\Delta$ if and only if $\phi_{\alpha}(x)>0$.
 Thus,
-\[\dist{x}{x_{\alpha^i}}{}<\tfrac{1}{3}\cdot\rho(x)\]  
+\[\dist{x}{x_{\alpha^i}}{}<\tfrac{1}{3}\cdot\rho(x)\] 
 for any $i$.
 Therefore 
 \[\diam\map[2](\Delta)
@@ -832,7 +833,7 @@ Assume the contrary;
 that is, $\map[2](\spc{N})$ is not inculded in the $\map[2]$-image of $m$-skeleton of $\spc{N}$.
 Then for some $\kay>m$,
 there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$,
-such that the baricentric simplex $\sigma=\map[2]|\Delta^\kay$ is nondegenrate; 
+such that the baricentric simplex $\sigma=\map[2]|_{\Delta^\kay}$ is nondegenrate; 
 that is, 
 $$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\not=\emptyset.
 $$
@@ -845,7 +846,7 @@ we get that $\LinDim\spc{U}\ge \kay$, a contradiction.
 
 
 
-\parit{Proof of Theorem~\ref{thm:dim-infty-CBA}.} 
+\parit{Proof of \ref{thm:dim-infty-CBA}.} 
 Note that
 \begin{itemize}
 \item The implication (\ref{SHORT.thm:dim-infty-CBA:bary})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:mnfld})
@@ -865,10 +866,12 @@ to a continuous map $F\:\spc{U}\to \RR^{m}$.
 
 Fix $\eps>0$.
 Since $F$ is continuous, there is a continuous positive function $\rho$ defined on $\spc{U}$ such that 
-\[\dist{x}{y}{}<\rho(x)\ \ \Rightarrow\ \ | F(x)- F(y)|<\tfrac13\cdot\eps.\]
+\[\dist{x}{y}{}<\rho(x)
+\quad\Rightarrow\quad
+|F(x)- F(y)|<\tfrac13\cdot\eps.\]
 Apply Lemma~\ref{lem:approximation-cba} for the function $\rho$.
 For the obtained simplicial complex $\spc{N}$, 
- and maps $\map\:\spc{U}\to \spc{N}$,  $\map[2]\:\spc{N}\to \spc{U}$, we have
+ and maps $\map\:\spc{U}\to \spc{N}$, $\map[2]\:\spc{N}\to \spc{U}$, we have
 \[|F\circ \map[2]\circ\map(x)-F(x)|<\tfrac13\cdot\eps\] 
 for any $x\in \spc{U}$.
 
@@ -889,9 +892,9 @@ the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of $(m-1)$
 in particular it can be covered 
 by countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
-$\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|K$.
+$\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|_K$.
 Since $\eps>0$ is arbitrary, 
-we get that $\bm{0}\in \RR^m$ is not a stable value of $f=F|K$, a contradiction.
+we get that $\bm{0}\in \RR^m$ is not a stable value of $f=F|_K$, a contradiction.
 
 \parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
 The following claim follows from the definition of tangent space.
@@ -903,14 +906,14 @@ there is a point array $x^1,x^2,\dots,x^n$ in $\spc{U}$
 such that 
 \[\mangle(\dot x^i,\ddir q{x^i})<\delta\]
 and for some fixed $\lam>0$ we have
-\[\tfrac1\lam\cdot\dist[{{}}]{q}{x^i}{}=|\dot x^i|\ \ 
-\t{and}\ \  |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
+\[\tfrac1\lam\cdot\dist[{{}}]{q}{x^i}{}=|\dot x^i|\quad
+\t{and}\quad |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
 for all $i$ and $j$.
 
 Moreover the value $\lam$ can be taken arbitrary small.
 \end{clm}
 
-\parit{Proof of the Claim.} For each $i$ choose a geodesic $\gamma^i$ 
+\parit{Proof of the claim.} For each $i$ choose a geodesic $\gamma^i$ 
 from $q$ that goes almost in the directions of $\dot x^i$.
 Then take the point $x^i$ on $\gamma^i$ on the distance $\lam\cdot|\dot x^i|$ from $q$.
 \claimqeds
@@ -927,7 +930,7 @@ Applying Claim \ref{clm:finite-config-cba}, we get a point array
 $(a^0,a^1,\dots,a^m)$ in $\spc{U}$
 such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
 and $\bigcap_{i\not=j}\cBall[a^i,\lam]\not=\emptyset$ for each $j$.
-Since $\lam>0$ can be  chousen arbitrary small, 
+Since $\lam>0$ can be chousen arbitrary small, 
 it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
 \qeds
 
@@ -960,7 +963,7 @@ we have
 \[\dist{p}{q}{}<\eps,
 \quad 
 \dist{p}{b}{}<\eps
-\quad\text{and}\quad  
+\quad\text{and}\quad 
 \mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\]
 for each $i$,
 then the array $b,a^0,a^1,\dots,a^m$ is nondegenerate.
@@ -988,19 +991,19 @@ there is $\eps>0$ such that for any $x\in \oBall(p,10\cdot\eps)$ we have
 \mangle\hinge {x}{a^j}{u^i}
 <
 \tfrac\pi2-10\cdot\eps
-\ \ \t{for all}\ \ j\not=i.
+\quad\t{for all}\quad j\not=i.
 \eqlbl{eq:<pi/2-eps}\]
 
 Now assume for sufficiently small $\eps>0$
-there are points $b\in\spc{U}$ and $q\in\Web(\distfun{\bm{a}}{}{})$  such that 
-\[\dist{p}{q}{}<\eps,\ \  \dist{p}{b}{}<\eps,\ \  \mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\ \ \t{for all}\ \ i.
+there are points $b\in\spc{U}$ and $q\in\Web(\distfun{\bm{a}}{}{})$ such that 
+\[\dist{p}{q}{}<\eps,\quad \dist{p}{b}{}<\eps,\quad \mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\quad\t{for all}\quad i.
 \eqlbl{eq:2nd-angle}\]
 Acording to Theorem~\ref{thm:cat-bary-web:web=Im(bary)},
 for all small $\eps>0$, we have 
 \[\rad\{b,a^0,a^1,\dots,a^\kay\}<\tfrac{\varpi\kappa}2.\]
 Fix sufficiently small $\delta>0$
 and set 
-\[v^i=\geod_{[q u^i]}(\tfrac13\cdot\delta)\ \ \t{and}\ \  w^i=\geod_{[v^i b]}(\tfrac23\cdot\delta).\]
+\[v^i=\geod_{[q u^i]}(\tfrac13\cdot\delta)\quad\t{and}\quad w^i=\geod_{[v^i b]}(\tfrac23\cdot\delta).\]
 Clearly,
 \begin{align*}
 \dist{b}{w^i}{}
@@ -1031,7 +1034,7 @@ Clearly
 \begin{align*}
 &\!\!\!\!\bigcap_{i\not=m+1} B^i=\{q\},
 \\
-&\bigcap_{i\not=j}B^i\ni w^j\ \ \t{for}\ \ j\not=m+1.
+&\bigcap_{i\not=j}B^i\ni w^j\quad\t{for}\quad j\not=m+1.
 \\
 &\bigcap_{i}B^i=\{q\}\cap B^{m+1}=\emptyset.
 \end{align*}
@@ -1045,9 +1048,9 @@ the $\map$ is locally Lipshitz.
 Assume the contrary; that is, there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
 \[\frac{\dist{\map(\bm{y}_n)}{\map(\bm{z}_n}{})}{|\bm{y}_n-\bm{z}_n|}
 \to\infty
-\ \ 
+\quad
 \t{as}
-\ \ 
+\quad
 n\to\infty.
 \eqlbl{eq:nonlip}\]
 Set $p=\map(\bm{x})$,

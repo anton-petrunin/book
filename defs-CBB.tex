@@ -1,6 +1,6 @@
 %%!TEX root =the-defs-CBB.tex
 %arXiv
-\chapter{Definitions of curvature bounded below
+\chapter[CBB]{Definitions of curvature bounded below
 }
 
 
@@ -109,7 +109,7 @@ its ultrapower $\spc{L}^\o$.
 \begin{thm}{Theorem}\label{thm:submetry-CBB}
 Let $\spc{L}$ be a $\Alex{\kappa}$ space, $\spc{M}$ be a metric space and $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
 Assume $p,x^1,x^2,x^3$ is a quadruple of points in $\spc{M}$ such that 
-$|p-x^i|<\tfrac{\varpi\kappa}2$ for any $i$.
+$\dist{p}{x^i}{}<\tfrac{\varpi\kappa}2$ for any $i$.
 Then the  quadruple satisfies $\Alex{\kappa}$ comparison.
 
 In particular, 
@@ -135,7 +135,7 @@ Then the quotient space $\spc{L}/G$ is locally $\Alex\kappa$.
 
 \parit{Proof of \ref{thm:submetry-CBB}.}
 Fix a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$ such that 
-$|p-x^i|<\tfrac{\varpi\kappa}2$ for any $i$.
+$\dist{p}{x^i}<\tfrac{\varpi\kappa}2$ for any $i$.
 Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
 
 Since $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
@@ -151,7 +151,7 @@ Note that
 \dist{\hat{x}^i}{\hat{x}^j}{\spc{L}}\le \dist{p}{x^i}{\spc{M}}+\dist{p}{x^j}{\spc{M}}+2\cdot\delta\]
 for all $i$ and $j$.
 
-Since $|p-x^i|<\tfrac{\varpi\kappa}2$,
+Since $\dist{p}{x^i}{}<\tfrac{\varpi\kappa}2$,
 we can choose $\delta>0$ above so that the the angles $\angk\kappa {\hat{p}}{\hat{x}^i}{\hat{x}^j}$ are defined.
 Moreover, given $\eps>0$, the value $\delta$ can be chosen in such a way that the inequality
 \[\angk\kappa p{x^i}{x^j}
@@ -667,7 +667,7 @@ The curve $\tilde \gamma$ is called \emph{convex (concave) with respect to}\inde
 
 The curve $\tilde \gamma$ is called 
 \emph{locally convex (concave) with respect to}\index{convex!locally convex development with respect to a point} $\tilde p$ 
-if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|(a,b)$ is convex (concave) with respect to $\tilde p$.
+if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to $\tilde p$.
 
 %???THERE IS LITTLE PROBLEM IN CASE IF CURVE GOES AROUND BASE FEW TIMES!!!
 \end{thm}
@@ -847,7 +847,7 @@ holds for any $q,x^1,x^2,x^3\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.curv>
 
 \begin{subthmN}{def:kirszbraun-loc}(local Kirszbraun property) 
 there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$, 
-such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|F_3$).
+such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|_{F_3}$).
 \end{subthmN}
 
 \begin{subthmN}{conc-loc} (local function comparison) there is 
@@ -915,11 +915,19 @@ Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
 In the two-dimensional case this theorem was proved proved by Paolo Pizzetti \cite{pizzetti};
-latter it was reproved independently by by Alexandr Alexandrov \cite{alexandrov:devel}%???is it right ref???
-, later, Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
+latter it was reproved independently by by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref???
+Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{BGP}; 
 simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{BBI}.
-Our proof, is based on presentations in \cite{plaut:dimension} and \cite{BBI}.
+A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise: 
+
+\begin{thm}{Advanced exercise}
+Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
+Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
+\end{thm}
+
+Our proof, is based on presentations in \cite{plaut:dimension} and \cite{BBI};
+a nearly identical proof was obtained independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 
 The following corollary says that the expression ``space with curvature $\ge \kappa$'' makes sense.
 
@@ -940,10 +948,11 @@ It remains to apply the  globalization theorem (\ref{thm:glob}).
 \qeds
 
 \begin{thm}{Corollary}\label{cor:submetry-cbb}
-Assume $\spc{M}$ is a target space of a sumetry from a complete length space $\Alex\kappa$ space.
+Let $\spc{L}$ be a complete length $\Alex\kappa$ space.
+Assume $\spc{M}$ is a target space of a sumetry from $\spc{L}$.
 Then $\spc{M}$ is a complete length space $\Alex\kappa$ space.
 
-In particular, if $\spc{L}$ is a complete length $\Alex\kappa$ space with an isometric group action $G\acts \spc{L}$ with closed orbits, then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
+In particular, if $G\acts \spc{L}$ an isometric group action with closed orbits, then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -952,7 +961,7 @@ Follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 
 In the proof of the globalization theorem,
 we will use three lemmas.
-First is the short hinge lemma \ref{lem:devel-glob} --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
+First is the short hinge lemma (\ref{lem:devel-glob}) --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
 
 
 The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
@@ -1101,7 +1110,7 @@ this yields
 Applying monotonicity of sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
-The following lemma is analogous to the existence of minimum point on a compact.
+The following lemma works in complete spaces; it will used the same way as existence of minimum point in a compact.
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
@@ -1128,7 +1137,7 @@ Then for any $x\in \oBall(p,\tfrac{1}{\eps^2}\cdot r(p))$ with $r(x)\le r(p)$, t
 \[\dist{x}{x'}{}<\tfrac{1}\eps\cdot r(x)
 \ \ \text{and}\ \ 
 r(x')\le (1-\eps)\cdot r(x).\]
-Take $x_0=p$ and consider a sequence of points $(x_n)$ such that $x_{n+1}=x_n'$.
+Take $x_0=p$ and consider a sequence of points $(x_n)$ such that $x_{n+1}\z=x_n'$.
 Clearly 
 \[\dist{x_{n+1}}{x_n}{}
 \le
@@ -1230,11 +1239,6 @@ $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p
 Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
-\begin{thm}{Advanced exercise}
-Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
-Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
-\end{thm}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1301,10 +1305,9 @@ Therefore we can apply (\ref{SHORT.nonsplit}).
 \qeds
 
 \begin{thm}{Adjacent angle lemma}\label{lem:sum=pi}
-Let $\spc{L}$ be a $\Alex{}$ space and
- $\hinge z x p$ and $\hinge z y p$ be two hinges with comon side $[zp]$ in $\spc{L}$.
-Assume that points $p$, $x$, $y$ and $z$ are distinct and $z\in[xy]$,
-then 
+Let $\spc{L}$ be a $\Alex{}$ space.
+Assume that two hinges $\hinge z x p$ and $\hinge z y p$ in $\spc{L}$ are \index{adjacent hinges}\emph{adjacent}; that is, they share a common side $[zp]$ and $z\in\mathopen{]}xy\mathclose{[}$.
+Then 
 \[\mangle\hinge z p y + \mangle\hinge z p x=\pi. \]
 
 \end{thm}
@@ -1518,21 +1521,21 @@ In partiqular \ref{eq:1st-var+***} holds if $p\in \Str(q)$ as well as if $q\in \
 The right hand side in \ref{eq:1st-var+***} is called \emph{strong angle}\index{angle!strong angle}\index{strong angle} of hinge $\hinge p q x$. 
 Note that in general metric space angle and strong angle of the same hinge might differ.
 
-\item As it follows from Exercise~\ref{ex:ultra-unique-geod}, 
+\item As it follows from Corollary~\ref{cor:two-geodesics-in-ultrapower} Exercise~\ref{ex:ultra-unique-geod}, 
 if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$, then $[p q]$ lies in $\spc{L}$.
 \end{itemize}
 
 
 
-\parit{Proof lemma about strong angle (\ref{lem:strong-angle}).}
+\parit{Proof of \ref{lem:strong-angle}.}
 The first statement follows directly from the first variation formula (\ref{1st-var+}) 
 and definition of model angle (see Section~\ref{sec:angles}).
 The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) applyied to $\spc{L}^\o$.
 (Note that according to Proposition~\ref{prp:A^omega} $\spc{L}^\o$ is a complete length $\Alex{}$ space.)\qeds
 
 
-\parit{Proof of the first variation formula (\ref{1st-var+}).}
-Without loss of generality we can assume that $\kappa\le 0$.
+\parit{Proof of \ref{1st-var+}.}
+By Corollary~\ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
 The inequality 
 
 \[\dist{q}{\geod_{[p x]}(t)}{}
@@ -1685,7 +1688,7 @@ First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} we have that the 
 satisfies the differential inequality $y''\le 1- y$.
 
 
-Take $z_0\in [q r]$ so that restriction $\distfun{p}{}{}|[q r]$ attains its maximum at $z_0$, 
+Take $z_0\in [q r]$ so that restriction $\distfun{p}{}{}|_{[q r]}$ attains its maximum at $z_0$, 
 set $t_0=\dist{q}{z_0}{}$ so $z_0=\geod_{[q r]}(t_0)$.
 Consider the following model configuration: two geodesics $[\tilde p\tilde z_0]$, $[\tilde q\tilde r]$ in $\mathbb{S}^2$ such that 
 \begin{align*}

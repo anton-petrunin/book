@@ -11,7 +11,7 @@ can be defined using warped products.
 
 \section{Definitions}\label{sec:wp-def}
 
-First we define $\spc{B}\times_f\spc{F}$  for length spaces $\spc{B}$ and $ \spc{F}$, and locally Lipschitz function $f\:\spc{B}\to [0,\infty)$.   Then we expand the definition to allow arbitrary metric spaces $ \spc{F}$.
+First we define $\spc{B}\warp f\spc{F}$  for length spaces $\spc{B}$ and $ \spc{F}$, and locally Lipschitz function $f\:\spc{B}\to [0,\infty)$.   Then we expand the definition to allow arbitrary metric spaces $ \spc{F}$.
 For length spaces $\spc{B}$ and $ \spc{F}$,
 consider the topological space $(B\times F)/\!\sim$, where the elements of $\{p\}\times F$ are identified if $f( p )=0$. We denote an equivalence class in $(B\times F)/\!\sim$ by any of its representatives $(p,\phi)$.
 
@@ -25,40 +25,41 @@ $\gamma_\spc{B}$   is the projection of $\gamma$ to $\spc{B}$,
 and $\gamma_F$ is the projection, where
 it is defined, of $\gamma$ to $\spc{F}$.  That is, $\gamma_\spc{B}$ is defined for
 all $t\in[0,1]$,  and  $\gamma_\spc{F}$ is defined for all  $t\in[0,1]$ such that $f(t)\ne 0$. We write $\gamma_\spc{F}\: I_+\to \spc{F}$ where $I_+=[0,1]-I_0$,    $I_0=(f\circ\gamma_\spc{B})^{-1}(0)$.
-Set  $I_+=\sqcup_{i=1,2,\ldots} \,I_i$, where the $I_i$ are the maximal open subintervals on which $f\circ\gamma_\spc{B}>0$.
+Set  $I_+=\sqcup_{i=1,2,\ldots} I_i$, where the $I_i$ are the maximal open subintervals on which $f\circ\gamma_\spc{B}>0$.
 
-We say $\gamma$ is Lipschitz if $\gamma_\spc{B}$ and $\gamma_\spc{F}|I_i$ are Lipschitz and  $\gamma_\spc{F}|I_i$, $i=1,\ldots$, have uniform Lipschitz constant. 
+We say $\gamma$ is Lipschitz if $\gamma_\spc{B}$ and $\gamma_\spc{F}|_{I_i}$ are Lipschitz and  $\gamma_\spc{F}|_{I_i}$, $i=1,\ldots$, have uniform Lipschitz constant. 
 For $\gamma$ Lipschitz, set
 \[
-\length_f \gamma\: = \int _0^1 \sqrt{
+\length_f \gamma \df \int _0^1 \sqrt{
 v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
 \eqlbl{eq:length}
 \]
-where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_\spc{B}$, $v_\spc{F}|I_+$ is  the speed of $\gamma_\spc{F}|I_+$ and $v_\spc{F}|I_0=0$.   
-The integrand is defined  almost everywhere on $[0,1]$ by Rademacher's theorem ??, and is bounded. We refer to the integrand as the \emph{$f$-speed} of $\gamma$.
+where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_\spc{B}$, $v_\spc{F}|I_+$ is  the speed of $\gamma_\spc{F}|_{I_+}$ and $v_\spc{F}|_{I_0}=0$.   
+The integrand is defined  almost everywhere on $[0,1]$ by Rademacher's theorem ???, and is bounded.
+We refer to the integrand as the \emph{$f$-speed} of $\gamma$.
 
 Equivalently,  
 \[
-\length_f\gamma\  \ =\ \  \sum_i \int _{I_i}\sqrt{
-v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}  \ \ +\ \  \length\, (\gamma_\spc{B}|I_0).
+\length_f\gamma = \sum_i \int _{I_i}\sqrt{
+v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}  + \length (\gamma_\spc{B}|_{I_0}).
 \]
 %  Here the first term
 % is defined 
 % independently of enumeration because the summands are positive.
  
- Then the \emph{warped product $\spc{B}\times_f\spc{F}$ with warping function $f$} is the metric  space with distance
+ Then the \emph{warped product $\spc{B}\warp f\spc{F}$ with warping function $f$} is the metric  space with distance
  \[
- |xy|_{\spc{B}\times_f\spc{F}}\: =\inf\{\length_f\gamma\: 
+ \dist{x}{y}{\spc{B}\warp f\spc{F}}\df \inf\{\length_f\gamma\: 
 \gamma(0)=x, \gamma(1)=y\}
  \]
- where the curves $\gamma\:[0,1]\to \spc{B}\times_f\spc{F}$ are Lipschitz. 
+ where the curves $\gamma\:[0,1]\to \spc{B}\warp f\spc{F}$ are Lipschitz. 
 
 \medskip
 
 \parbf{Remark.} 
 Even if $f>0$, mere continuity of $f$ does not suffice to give a warped product with the properties we need. In particular,  the $f$-length formula \ref{eq:length} may not agree with the metric length.
 
-For example, let $\spc{B}$ be the union of intervals $B^i=[0,1/i]$ glued at $0$, $f(0)=1$, $(f|B_i)(1/i)=1/i$, 
+For example, let $\spc{B}$ be the union of intervals $B^i=[0,1/i]$ glued at $0$, $f(0)=1$, $(f|_{B_i})(1/i)=1/i$, 
 $\spc{F}=[0,1]$. Then $f$ is not locally Lipschitz. We may take $f$ to be continuous and positive. 
 The curve $\gamma(t)=(0,t)$, $0\le t \le 1$, covers a vertical leaf. Since  any two points of $\gamma$ are joined by Lipschitz curves of length $\le 3/i$ for all $i$,
 this leaf is a single point in the metric topology of $\spc{B}\warp{f} \spc{F}$; thus the metric topology is finer than the product topology of $B\times F$. The $f$-length of $\gamma$ is $1$ while the metric length is $0$. 
@@ -81,8 +82,8 @@ According to the Fiber-independence theorem \ref{thm:fiber-independence}, the re
 
 For any $(p,\phi),(q,\psi) \in \spc{B}\times \spc{F}$, the Fiber-independence theorem gives an explicit formula:
 \[
-|(p,\phi)(q,\psi)|_{\spc{B}\times_f \spc{F}} =
-|(p,0)(q,|\phi \psi|_{\spc{F}}|_{\spc{B}\times_f\R}.
+\dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp f \spc{F}} =
+\dist{(p,0)}{(q,\dist{\phi}{\psi}{\spc{F}})}{\spc{B}\warp f\R}.
 \]
 
 
@@ -122,7 +123,7 @@ Hence (\ref{SHORT.horiz-leaf-isometry}) and (\ref{SHORT.Df>0}).
 
 A horizontal leaf need not be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
 % (see Proposition \ref{prop:f=0} (\ref{f=0-fiber-choice})).  
-For instance, suppose $\alpha:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \warp{f}\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
+For instance, suppose $\alpha\:[0,1]\to \spc{B}$ is a geodesic of $\spc{B}$ satisfying $\{0,1\}\subset\alpha^{-1}(Z)\neq[0,1]$, where $Z$ is the zero set of $f$. Then for any distinct $\phi_1, \phi_2 \in \spc{F}$, the geodesic $(\alpha,\phi_2)$ of  $\spc{B} \warp{f}\spc{F}$ has its endpoints in $\spc{B}\times\{\phi_1\}$ but does not lie in $\spc{B}\times\{\phi_1\}$.
 
 \begin{thm}{Exercise}\label{ex:chohom-1=warped-product}
 Show that the orbits of an isometric cohomogenity-1 group action on a Riemannian manifold
@@ -190,30 +191,34 @@ $\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
 that is, there is a distance noncontracting map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
 \end{thm}
 
-To see that  $\length_f$, as defined by \ref{eq:length} in Section \ref{sec:wp-def}, agrees with the length induced by  $|**|_{\spc{B}\times_f\spc{F}}$, we may proceed as follows. Denote  $\length_f$ by $L$.  Set
+To see that  $\length_f$, as defined by \ref{eq:length} in Section \ref{sec:wp-def}, agrees with the length induced by  $\dist{{*}}{{*}}{\spc{B}\warp f\spc{F}}$, we may proceed as follows.
+Denote  $\length_f$ by $L$.
+Set
 \[
-L_{\,\Sigma}\,\,=\,\sup_{t_0<\ldots<t_n}\,\sum_{i=1}^n \,d_{\,i}\,,
+L_{\Sigma}=\sup_{t_0<\ldots<t_n}\sum_{i=1}^n d_{i},
 \]
-where the supremum is taken over all partitions  \,$t_0<\ldots<t_n$\, of $[0,1]$, and where, letting $\bar t_i$ be a minimum point of $(f\circ\gamma_B)|[t_{i-1}\,t_i]$\,, 
+where the supremum is taken over all partitions  $t_0<\ldots<t_n$ of $[0,1]$, and where, letting $\bar t_i$ be a minimum point of $(f\circ\gamma_B)|[t_{i-1}t_i]$, 
 \[
 d_i=
 \begin{cases}
-\bigl |\gamma(t_i)\,\,\gamma(t_{i-1})\bigr |_{\,B\,\times\,(f\circ\gamma_B)(\bar t_i)\,\cdot F}\,
+\dist{\gamma(t_i)}{\gamma(t_{i-1})}{{B\times(f\circ\gamma_B)(\bar t_i)\cdot F}}
 & \text{if }(f\circ\gamma_B)(\bar t_i)>0,\\
-\bigl |\gamma_B(t_i)\,\,\gamma_B(t_{i-1})\bigr |_B
+\dist{\gamma_B(t_i)}{\gamma_B(t_{i-1})}{B}
 \quad & \text{if } (f\circ\gamma_B)(\bar t_i)=0.
 \end{cases}
  \]
-Here $B\,\times\,(f\circ\gamma_B)(\bar t_i)\cdot F$\, denotes the Cartesian product  of $B$ with a rescaling of $F$.
+Here $B\times(f\circ\gamma_B)(\bar t_i)\cdot F$ denotes the Cartesian product  of $B$ with a rescaling of $F$.
  Our choice of  $\bar t_i$ ensures that any sequence of successively refined   sums is nondecreasing.
  
-Then  the proof that \,$L=L_{\Sigma}$\,  proceeds  as in the classical case, for length of an absolutely continuous curve in $\R^2$.
+Then  the proof that $L=L_{\Sigma}$  proceeds  as in the classical case, for length of an absolutely continuous curve in $\R^2$.
 (see \cite[p. 245--247]{goffman}.)
 
-Since $f$ is  locally Lipschitz, then outside any neighbhood in $\spc{B}\times \spc{F})/\!\sim$ of a point $x$ we have   $|x*|_{\spc{B}\times_f\spc{F}}$ bounded away from $0$. Therefore $\length_f$ determines a length structure in the sense of \cite{BBI}. Moreover, from the formula for $L_{\Sigma}$, 
+Since $f$ is  locally Lipschitz, then outside any neighborhood in $\spc{B}\times \spc{F})/\!\sim$ of a point $x$ we have   $|x*|_{\spc{B}\warp f\spc{F}}$ bounded away from $0$.
+Therefore $\length_f$ determines a length structure in the sense of \cite{BBI}.
+Moreover, from the formula for $L_{\Sigma}$, 
 %since $f$ is  locally uniformly continuous, 
 the length $L=\length_f=L_{\Sigma}$ is a lower semi-continous functional on the space of Lipschitz curves with respect to pointwise convergence.
-%, i.e. if \,$\gamma_i\to\gamma$\, then \,$\liminf\,(\length\gamma_i) \ge\length\gamma$. 
+%, i.e. if $\gamma_i\to\gamma$ then $\liminf(\length\gamma_i) \ge\length\gamma$. 
 By \cite[Theorem 2.4.3]{BBI}, $\length_f$ agrees with the length induced by the  metric of  $\spc{B}\warp{f}\spc{F}$.
 
 

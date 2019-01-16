@@ -54,13 +54,13 @@ The minimal such constant is denoted by $\lip\map$.
 \begin{subthm}{}
 We say that $\map$ is \emph{locally Lipschitz}\index{locally Lipschitz map} 
 if any point $x\in\Dom \map$ admits a neighborhood 
-$\Omega\subset \Dom\map$ such that the restriction $\map|\Omega$ is Lipschitz.
+$\Omega\subset \Dom\map$ such that the restriction $\map|_\Omega$ is Lipschitz.
 \end{subthm}
 
 \begin{subthm}{}
 Given $p\in\Dom \map$, we denote by $\lip_p\map$ the infimum of the real values $\Lip$ such that
 $p$ admits  a neighborhood 
-$\Omega\subset \Dom\map$ such that the restriction $\map|\Omega$ is $\Lip$-Lipschitz.
+$\Omega\subset \Dom\map$ such that the restriction $\map|_\Omega$ is $\Lip$-Lipschitz.
 \end{subthm}
 \end{thm}
 
@@ -161,7 +161,7 @@ Let $\spc{X}$ and $\spc{Y}$ be metric spaces
 and $\map\:\spc{X}\to \spc{Y}$ be a map
 \begin{subthm}{}
 The map $\map$ is \emph{distance preserving}\index{distance preserving map} if
-$$|\map(x)-\map(x')|_{\spc{Y}}=|x-x'|_{\spc{X}}$$
+$$\dist{\map(x)}{\map(x')}{\spc{Y}}=\dist{x}{x'}{\spc{X}}$$
 for any $x,x'\in X$.
 \end{subthm}
 
@@ -276,7 +276,7 @@ where $\int$ denotes the Lebesgue integral.
 
 A curve $\alpha\:\II\to\spc{X}$ is called \emph{unit-speed curve}\index{unit-speed curve}, 
 if for any subinterval $[a,b]\subset\II$, we have
-\[b-a=\length(\alpha|[a,b]).\]
+\[b-a=\length(\alpha|_{[a,b]}).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
 
 The following theorem of Bernd Kirchheim \cite{kirchheim} %CHECK??? 
@@ -286,7 +286,8 @@ generalizes the one above.
 \begin{thm}{Theorem}
 Let $\spc{X}$ be a metric space 
 and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
-Then for almost all $x\in\Dom f$ there is a prenorm $\lVert*\rVert_x$ on $\RR^n$ such that
+Then for almost all $x\in\Dom f$ there is a prenorm %???
+$\lVert*\rVert_x$ on $\RR^n$ such that
 we have
 \[\dist{f(y)}{f(z)}{\spc{X}}=\lVert z-y\rVert_x+o(|y-x|+|z-x|).\]
 \end{thm}
@@ -459,7 +460,7 @@ correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be call
 
 If for any point $p\in\Dom f$ 
 there is a neighborhood $\Omega\ni p$ and a real number $\lambda$
-such that the restriction $f|\Omega$ is $\lambda$-convex (or $\lambda$-concave),
+such that the restriction $f|_\Omega$ is $\lambda$-convex (or $\lambda$-concave),
 then $f$ is called semiconvex (correspondingly semiconcave).
 \end{thm}
 

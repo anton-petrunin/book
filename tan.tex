@@ -337,7 +337,9 @@ Prepare a model configuration of five points: $\tilde p,\tilde u,\tilde v,\tilde
 \item $\tilde w$ is the midpoint for $\tilde u$ and ${\tilde v}$.
 \end{itemize}
 Note that 
-\[\dist{\tilde p}{\tilde w}{}=\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
+\[\dist{\tilde p}{\tilde w}{}
+=
+\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
 
 Assume that $\spc{L}$ is geodesic.
 
@@ -347,10 +349,10 @@ For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{L}$ the followin
 \item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
 \item $w_t$ is the midpoint of $[u_t v_t]$.
 \end{enumerate}
-Clearly $\dist{p}{u_t}{}=t|u|$, $\dist{p}{v_t}{}=t|v|$, $\dist{p}{v_t'}{}=t|v'|$. 
+Clearly $\dist{p}{u_t}{}=t\cdot |u|$, $\dist{p}{v_t}{}=t\cdot|v|$, $\dist{p}{v_t'}{}=t\cdot|v'|$. 
 Since $\mangle(u,v)$ is defined, 
-we have $\dist{u_t}{v_t}{}=t\dist{\tilde u}{\tilde v}{}+o(t)$ 
-and $\dist{u_t}{v_t'}{}=t\dist{\tilde u}{\tilde v'}{}+o(t)$ 
+we have $\dist{u_t}{v_t}{}=t\cdot\dist{\tilde u}{\tilde v}{}+o(t)$ 
+and $\dist{u_t}{v_t'}{}=t\cdot\dist{\tilde u}{\tilde v'}{}+o(t)$ 
 (see Theorem~\ref{angle} and Section~\ref{sec:angle}).
 
 From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we get that 
@@ -512,7 +514,7 @@ then
 where $v_1^n=[\gamma_1(\tfrac1n)]^n\in n\cdot \spc{X}$.
 The latter follows since
 \[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t)\]
-and therefore $|v^n-v_1^n|_{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
+and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
 
 
 
@@ -749,10 +751,14 @@ Indeed, according to Lemma~\ref{lem:minus-sum},
 \\
 \intertext{Therefore,}
 \dist[2]{x}{w}{}+\dist[2]{w}{y}{}
-&=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=\\
-&=|x|^2+|y|^2-\<w,x\>-\<w,y\>\le\\
-&\le |x|^2+|y|^2+\<u,x\>+\<v,x\>+\<u,y\>+\<v,y\>=\\
-&=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=\\
+&=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=
+\\
+&=|x|^2+|y|^2-\<w,x\>-\<w,y\>\le
+\\
+&\le |x|^2+|y|^2+\<u,x\>+\<v,x\>+\<u,y\>+\<v,y\>=
+\\
+&=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=
+\\
 &=\tfrac{1}{2}\cdot\dist[2]{x}{y}{}.
 \end{align*}
 Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
