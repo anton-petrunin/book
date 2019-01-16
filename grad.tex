@@ -2109,7 +2109,7 @@ A curve $\sigma\:[s_{\min},s_{\max})\to \spc{L}$  is called
 if
 $s_{\min}
 \z=
-\dist{A}{\sigma(s_{\min})}{}\in(0,\tfrac{\varpi\kappa}2)$, 
+\distfun{A}{\sigma(s_{\min})}{}\in(0,\tfrac{\varpi\kappa}2)$, 
 and it satisfies the following differential equation
 \[\sigma^+(s)
 \z=
@@ -2126,7 +2126,7 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $A\subset \spc{L}$ be a closed subset.
 A unit-speed geodesic  $\gamma\:\II\to \spc{L}$  is called 
 \emph{$A$-radial geodesic}\index{radial geodesic} if 
-$\dist{A}{\gamma(s)}{}\equiv s$.
+$\distfun{A}{\gamma(s)}{}\equiv s$.
 \end{thm}
 
 The following propositions are analogous to the propositions \ref{prop:rad-geod} and \ref{prop:dist<s}.
@@ -2151,9 +2151,9 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space,
 $A\subset\spc{L}$ be a closed subset 
 and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ be a $(A,\kappa)$-radial curve.
 Then for any $s\in [s_{\min},s_{\max})$, 
-we have $\dist{A}{\sigma(s)}{}\le s$.
+we have $\distfun{A}{\sigma(s)}{}\le s$.
 
-Moreover, if for some $s_0$ we have $\dist{A}{\sigma(s_0)}{}= s_0$ 
+Moreover, if for some $s_0$ we have $\distfun{A}{\sigma(s_0)}{}= s_0$ 
 then the restriction $\sigma|_{[s_{\min},s_0]}$ is a $A$-radial geodesic.
 \end{thm}
 
@@ -2169,10 +2169,10 @@ and $x\in \spc{L}$.
 Assume
 $0
 <
-\dist{A}{x}{}
+\distfun{A}{x}{}
 <
 \tfrac{\varpi\kappa}2$.
-Then there is unique $(A,\kappa)$-radial curve $\sigma\:[\dist{A}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
+Then there is unique $(A,\kappa)$-radial curve $\sigma\:[\distfun{A}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
 that starts in $x$.
 \end{thm}
 
@@ -2189,7 +2189,7 @@ Then the function
 \[s\mapsto 
 \tangle\mc\kappa\{
 \dist{q}{\sigma(s)}{};
-\dist{A}{q}{},
+\distfun{A}{q}{},
 s
 \}\]
 is nonincreasing in all the domain of definition.
@@ -2203,13 +2203,13 @@ Given a set $A$ and two points $x$ and $y$ in a metric space define
 \df
 \tangle\mc\kappa\{
 \dist{x}{y}{};
-\dist{A}{x}{},
-\dist{A}{y}{}
+\distfun{A}{x}{},
+\distfun{A}{y}{}
 \}
 \]
 Note that distances $\dist{x}{y}{}$, 
-$\dist{A}{x}{}$ and 
-$\dist{A}{y}{}$ might not satisfy the triangle inequality.
+$\distfun{A}{x}{}$ and 
+$\distfun{A}{y}{}$ might not satisfy the triangle inequality.
 Therefore the model angle 
 $\angkk\kappa A{x}{y}$ might be undefined even for $\kappa\le0$.
 
@@ -2249,7 +2249,7 @@ the proof is straightforward.
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $A\subset\spc{L}$ is a closed subset with an isolated point $p\in A$.
 Then
 \begin{subthm}{}
-Assume $\dist{A}{q}{}=\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$ be 
+Assume $\distfun{A}{q}{}=\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$ be 
 an $A$-radial geodesic. Then
 \[\gexp\mc\kappa_A(\ddir p q)=q\] 
 \end{subthm}

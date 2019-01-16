@@ -142,13 +142,13 @@ and  %??? seems redundant as this is a special case of distances between sets. V
 we define the distance between sets $A$ and $B$  as 
 \[\dist{A}{B}{}
 \df
-\inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]
+\inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]%???maybe a bad notation --- this is not a distance
 
 For any subset $A\subset\spc{X}$,  the sets
 \begin{align*}
-\oBall(A,R)&=\set{y\in \spc{X}}{ \dist{A}{y}{}<R},
+\oBall(A,R)&=\set{y\in \spc{X}}{ \distfun{A}{y}{}<R},
 \\
-\cBall[A,R]&=\set{y\in \spc{X}}{\dist{A}{y}{}\le R}
+\cBall[A,R]&=\set{y\in \spc{X}}{\distfun{A}{y}{}\le R}
 \end{align*}
 are called respectively the  \emph{open}\index{open tubular neighborhood} and \emph{closed $R$-neighborhoods}\index{closed neighborhood} of $A$.
 

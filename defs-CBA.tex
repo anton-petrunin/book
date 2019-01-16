@@ -744,17 +744,17 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 
 \begin{thm}{Closest-point projection lemma}\label{lem:closest point}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
-Assume that $\dist{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
+Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
 there is unique point $p^*\in K$ that minimizes the distance to $p$;
-that is, $\dist{p^*}{p}{}=\dist{K}{p}{}$. 
+that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
 
 
 
 \end{thm}
 
 \parit{Proof.} 
-Fix $r$ properly between $\dist{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
+Fix $r$ properly between $\distfun{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
 By function comparison (\ref{thm:function-comp}) 
 the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
@@ -790,9 +790,9 @@ It is sufficient to show that Jensen's inequality (\ref{y''-mono})
 holds on a sufficiently short 
 geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
 Since 
-\[\dist{K}{p}{},\dist{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
+\[\distfun{K}{p}{},\distfun{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
 we may assume that 
-\[\dist{p}{q}{}+\dist{K}{p}{}+\dist{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
+\[\dist{p}{q}{}+\distfun{K}{p}{}+\distfun{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
 
 Namely, for each $x\in[pq]$,
 we need to find a value $h(x)\in \RR$
@@ -813,7 +813,7 @@ we get
 \[\dist{p^*}{q^*}{}<\varpi\kappa.\]
 Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
 in particular
-\[\dist{K}{x}{}\le \dist{[p^*q^*]}{x}{}\]
+\[\distfun{K}{x}{}\le \distfun{[p^*q^*]}{x}{}\]
 for any $x\in \spc{U}$.
 
 Consider a majorization $F$ for quadraliteral $[pp^{*}q^{*}q]$.
@@ -864,7 +864,7 @@ the intesection
 $K'=K\cap \oBall(p,r_p)$ is convex. 
 
 Note that 
-\[\dist{K}{x}{}=\dist{K'}{x}{}\]
+\[\distfun{K}{x}{}=\distfun{K'}{x}{}\]
 for any $x\in \oBall(p,\tfrac{r_p}2)$.
 Therefore the statement holds for 
 \[\Omega=\bigcup_{p\in K}\oBall(p,\tfrac{r_p}2).\]
@@ -1911,7 +1911,7 @@ from $D_n$ to $U_n$ increases the $D_n$-distance between two points by at most $
 Consider $y_n\in D_n$ with $y_n\to y\in D$ and $z_n\in D_n$ with $z_n\to z\in D$. Since $\delta_n\to 0$ under increasingly finer partitions, and geodesics in $\spc{U}$ vary continuously with their endpoints (\ref{thm:alex-patch}),  we have $H_n(x_n)\to 
 H(x)$ and $H_n(y_n)\to H(y)$.  Since 
 \[\dist{H_n(x_n)}{H_n(y_n)}{} \le \dist{x_n}{y_n}{D_n} + 2\cdot\delta_n,\]
-where the lefthand side converges to $\dist{H(x)}{H(y)}{}$  and the righthand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
+where the left hand side converges to $\dist{H(x)}{H(y)}{}$  and the right hand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
 \qeds
 
 
