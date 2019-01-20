@@ -35,7 +35,7 @@ v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
 \eqlbl{eq:length}
 \]
 where $\int$ is Lebesgue integral, $v_\spc{B}$ is the speed of $\gamma_\spc{B}$, $v_\spc{F}|I_+$ is  the speed of $\gamma_\spc{F}|_{I_+}$ and $v_\spc{F}|_{I_0}=0$.   
-The integrand is defined  almost everywhere on $[0,1]$ by Rademacher's theorem ???, and is bounded.
+The integrand is defined  almost everywhere on $[0,1]$ by Rademacher's theorem (\ref{thm:speed}), and is bounded.
 We refer to the integrand as the \emph{$f$-speed} of $\gamma$.
 
 Equivalently,  
@@ -64,7 +64,8 @@ $\spc{F}=[0,1]$. Then $f$ is not locally Lipschitz. We may take $f$ to be contin
 The curve $\gamma(t)=(0,t)$, $0\le t \le 1$, covers a vertical leaf. Since  any two points of $\gamma$ are joined by Lipschitz curves of length $\le 3/i$ for all $i$,
 this leaf is a single point in the metric topology of $\spc{B}\warp{f} \spc{F}$; thus the metric topology is finer than the product topology of $B\times F$. The $f$-length of $\gamma$ is $1$ while the metric length is $0$. 
 
-If  $f$ is  locally Lipschitz, then the $f$-length and metric length agree (see Section \ref{sec:wp-properties}).  If in addition $f$ is positive, the metric distance is locally bounded above and below by that of direct products of $\spc{B}$ with positive rescalings of $\spc{F}$, and so the metric and product topologies of of $\spc{B}\warp{f} \spc{F}$ agree. 
+If $f$ is locally Lipschitz, then the $f$-length and metric length agree (see Section \ref{sec:wp-properties}).
+If in addition $f$ is positive, the metric distance is locally bounded above and below by that of direct products of $\spc{B}$ with positive rescalings of $\spc{F}$, and so the metric and product topologies of $\spc{B}\warp{f} \spc{F}$ agree. 
 
 \vspace{3mm}
 
@@ -74,8 +75,8 @@ in length spaces $ \spc{F}$ and $\check{\spc{F}}$, and $\spc{B}$ is a length spa
 the map $\iota$ induces an isometry between the sets 
 $\spc{B}\warp{f} A \subset \spc{B}\warp{f} \spc{F}$ and $\spc{B}\warp{f}\check{A}\subset \spc{B}\warp{f} \check{\spc{F}}$.
 
-The latter observation allows us to define the warped product $\spc{B}\warp{f} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
-Indeed according to ???, any metric space is a subspace $\spc{F}$ of a length space, say $\spc{F}'$.
+The latter observation allows us to define the warped product $\spc{B}\z{\warp{f}} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
+Indeed we use Kuratowsky embedding to realize $\spc{F}$ as a subspace in a length space, say $\spc{F}'$.
 Therefore we can take the warped product $\spc{B}\warp{f} \spc{F}'$
 and identify $\spc{B}\warp{f} \spc{F}$ with its subspace consisting of all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
 According to the Fiber-independence theorem \ref{thm:fiber-independence}, the resulting space does not depend on the choice of $\spc{F}'$.
@@ -114,7 +115,7 @@ Each horizontal leaf $\spc{B}\times\{\phi_0\}$ is isometrically embedded in $\sp
 
 
 \parit{Proof.} 
-Claims  (\ref{SHORT.horiz-leaf-proj}), (\ref{SHORT.vert-leaf-proj}) and (\ref{SHORT.Df>0})  are immediate from the 
+Claims  (\ref{SHORT.horiz-leaf-proj}), (\ref{SHORT.vert-leaf-proj}) and (\ref{SHORT.Df>0}) follow from the 
 $f$-length formula \ref{eq:length}.
 Also by \ref{eq:length}, the projection of
 $\spc{B}\warp{f}\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$   is length-nonincreasing, as is the projection onto $\{p_0\} \times \spc{F}$ given by  $(p,\phi)\mapsto (p_0,\phi)$  if $p_0$ is a local minimum point of $f$.  
@@ -210,8 +211,7 @@ d_i=
 Here $B\times(f\circ\gamma_B)(\bar t_i)\cdot F$ denotes the Cartesian product  of $B$ with a rescaling of $F$.
  Our choice of  $\bar t_i$ ensures that any sequence of successively refined   sums is nondecreasing.
  
-Then  the proof that $L=L_{\Sigma}$  proceeds  as in the classical case, for length of an absolutely continuous curve in $\R^2$.
-(see \cite[p. 245--247]{goffman}.)
+Then  the proof that $L=L_{\Sigma}$  proceeds  as in the classical case, for length of an absolutely continuous curve in $\R^2$ \cite[p. 245--247]{goffman}.
 
 Since $f$ is  locally Lipschitz, then outside any neighborhood in $\spc{B}\times \spc{F})/\!\sim$ of a point $x$ we have   $|x*|_{\spc{B}\warp f\spc{F}}$ bounded away from $0$.
 Therefore $\length_f$ determines a length structure in the sense of \cite{BBI}.
