@@ -11,17 +11,13 @@ and earlier paper of Urs Lang and  Viktor Schroeder
 \section{Short map extension definitions.}\label{sec:4pt}
 
 \begin{thm}{Theorem}\label{thm:kirsz-def} 
-Let $\spc{L}$ be a complete length space. 
-Then $\spc{L}$ is $\Alex\kappa$ if and only if for any 3-point set $V_3$ and any 4-point set $V_4\supset V_3$ in $\spc{L}$, 
+Acomplete length space
+$\spc{L}$ is $\Alex\kappa$ if and only if for any 3-point set $V_3$ and any 4-point set $V_4\supset V_3$ in $\spc{L}$, 
 any short map $f\:V_3\to\Lob2\kappa$ can be extended to a short map $F\:V_4\to\Lob2\kappa$ (so $f=F|_{V_3}$).
 \end{thm}
 
 The proof of the ``only if'' part of Theorem \ref{thm:kirsz-def} can be obtained as a corollary of Kirszbraun's theorem (\ref{thm:kirsz+}).
-But we present another proof, based on more elementary ideas. 
-
-
-In the proof of Theorem~\ref{thm:kirsz-def}, we use the following analog of Alexandrov lemma (\ref{lem:alex}).
-It is useful in studying model angles determined by subtriples of a quadruple of points in a metric space.
+We present another, more elementary proof; it use the following analog of Alexandrov lemma (\ref{lem:alex}).
 
 We say that  two triangles with a common vertex  \index{overlap}\emph{do not overlap} if their convex hulls intersect only at the common vertex.
 
@@ -44,11 +40,11 @@ Assume no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^\kay}$ overl
 then 
 \[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi,\]
 where $\mangle\tilde p^i$ denotes $\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\tilde x^j}$
-for a permutation $\{i,j,k\}$ or $\{1,2,3\}$.
+for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
 \end{thm}
 
 \begin{wrapfigure}{r}{21mm}
-\begin{lpic}[t(-3mm),b(0mm),r(0mm),l(0mm)]{pics/contr-no-overlap(1)}
+\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/contr-no-overlap(1)}
 \lbl[lt]{12,15.5;{\small $\tilde p^1$}}
 \lbl[bl]{5.5,18;{\small $\tilde p^2$}}
 \lbl[r]{5,6.5;{\small $\tilde p^3$}}
@@ -76,8 +72,8 @@ $[\tilde p^1\tilde x^2\tilde p^3\tilde x^1\tilde p^2\tilde x^3]$ and its area:
 =2\cdot\pi-\kappa\cdot{\area}.
 \]
 
-In case $\kappa>0$, condition (\ref{no-overlap:px=px}) is essential.
-An example for $\kappa>0$ can be constructed by perturbing the degenerate spherical configuration on the picture.
+The diagram shows that condition (\ref{no-overlap:px=px}) is essential
+in case $\kappa>0$.
 
                             
 
@@ -221,13 +217,13 @@ the later contradicts $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
 
 \begin{thm}{Theorem}\label{thm:cba-kirsz-def} 
 Assume any pair of points at distance $<\varpi\kappa$ in the metric space $\spc{U}$ are joined by a unique geodesic. 
-Then $\spc{U}$ is $\CAT\kappa$ if and only if for any $3$-point set $V_3$ and  $4$-point set $V_4\supset V_3$ in $\Lob2\kappa$, where the perimeter of $V_3$ is $<2\cdot\varpi\kappa$, any short map $f\:V_3\to\spc{U}$ can be extended to a short map $F\:V_4\to\spc{U}$.
+Then $\spc{U}$ is $\CAT\kappa$ if and only if 
+for any $3$-point set $V_3$  with perimeter $<2\cdot\varpi\kappa$
+and any $4$-point set $V_4\supset V_3$ in $\Lob2\kappa$, 
+any short map $f\:V_3\to\spc{U}$ can be extended to a short map $F\:V_4\to\spc{U}$.
 \end{thm}
 
-Note that the ``only if'' part of Theorem \ref{thm:cba-kirsz-def} does not follow directly from Kirszbraun's theorem, since the desired extension is in $\spc{U}$, not just the completion of $\spc{U}$.
-
-In the proof of Theorem~\ref{thm:cba-kirsz-def},
-we use the following lemma in the geometry of model planes: 
+Note that the ``only if'' part of Theorem \ref{thm:cba-kirsz-def} does not follow directly from Kirszbraun's theorem, since the desired extension is in $\spc{U}$ --- not its completion.
 
 \begin{thm}{Lemma}\label{lem:smaller-trig}
 Let $x^1,x^2,x^3,y^1,y^2,y^3\in\Lob{}{\kappa}$
@@ -242,7 +238,7 @@ We only give an idea of the proof of  this lemma;
 alternatively, one can get the result as a corollary of  Kirszbraun's theorem (\ref{thm:kirsz+}) 
 
 \parit{Idea of the proof.}
-The map $\map$ can be constructed as a composition of the following folding maps:
+The map $\map$ can be constructed as a composition of an isometry of $\Lob{}{\kappa}$ and the following folding maps:
 Given a halfspace $H$ in $\Lob{}{\kappa}$, consider the map $\Lob{}{\kappa}\to H$, 
 that is identity on $H$ and reflects all points outside of $H$ into $H$.
 This map is a path isometry, in particular it is short. 
@@ -278,13 +274,24 @@ there is a short map $F\:D\to \spc{U}$ such that $\tilde y^i\mapsto y^i$ for all
 Thus one can take $q=F\circ\map(\tilde p)$.
 \qeds
 
+\begin{thm}{Exercise}
+Assume $\spc{X}$ is a complete length space that satisfies the following condition:
+any 4-point subset can be isometrically embedded in Euclidean 3-space.
 
+Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\spc{F}_s$ be the metric
+on the 5 point set $\{p,q,x,y,z\}$ such that $\dist{p}{q}{}=s$
+and all the remaining distances are equal $1$.
+Assume $\spc{F}_s$ admits a distance preserving map into a complete length $\CAT{0}$ space.
+Show that $\spc{F}_s$ admits a distance preserving map into a complete length $\Alex{0}$ space.
+\end{thm}
 
 \section{(1+\textit{n})-point comparison}\label{sec:1+n}
 
 The following theorem gives a more sensitive analog of  $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
-A bit weaker analytic form it was proved by Karl-Theodor Sturm \cite{sturm}.
-
 
 \begin{thm}{(1+\textit{n})-point comparison}
 \label{thm:pos-config} 
@@ -336,6 +343,47 @@ thus
 \qedsf
 
 \begin{thm}{Exercise}
+Let $p,x_1,\dots,x_n$ be a point array $p,x_1,\dots,x_n$ in a $\Alex0$ space.
+Consider the $n{\times}n$-matrix $M$ with the components 
+\[m_{i,j}=\tfrac12\cdot(|x_i-p|^2+|x_j-p|^2-|x_i-x_j|^2).\]
+Show that
+\[\bm{s}\cdot M\cdot \bm{s}^\top\ge 0\eqlbl{eq:sMs}\]
+for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
+\end{thm}
+
+\begin{wrapfigure}{r}{22 mm}
+\vskip-0mm
+\begin{tikzpicture}[scale=1,
+  thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=3mm}, ]
+
+    \node[main node] (0) at (0,0){};
+     \node[main node] (1) at (.6,-.8) {};
+     \node[main node] (2) at (.9,.3){};
+     \node[main node] (3) at (0,1) {};
+  \node[main node] (4) at (-.9,.3) {};
+  \node[main node] (5) at (-.6,-.8) {};
+
+  \path[every node/.style={font=\sffamily\small}]
+  (1) edge node[above]{}(2)
+  (2) edge node[above]{}(3)
+  (3) edge node[above]{}(4)
+  (4) edge node[above]{}(5)
+  (5) edge node[above]{}(1)
+  (1) edge[dashed] node[above]{}(3)
+  (2) edge[dashed] node[above]{}(4)
+  (3) edge[dashed] node[above]{}(5)
+  (4) edge[dashed] node[above]{}(1)
+  (5) edge[dashed] node[above]{}(2);
+\end{tikzpicture}
+\end{wrapfigure}
+
+The inequality in the above exercise is discovered by  Karl-Theodor Sturm \cite{sturm}.
+It turns out to be weaker than (1+\textit{n})-point comparison.
+An example can be constructed by perturbing the 6-point metric isometric to a regular pentagon with its center
+by making its sides slightly longer and diagonals slightly shorter \cite{LPZ}.
+
+
+\begin{thm}{Exercise}
 Give an example of metric on a finite set, that satisfies the comparison inequality 
 \[\angk{0}{p}{x_1}{x_2}+\angk{0}{p}{x_2}{x_3}+\angk{0}{p}{x_3}{x_1}
 \le
@@ -344,8 +392,114 @@ for any quadruple of points $(p,x_1,x_2,x_3)$,
 but is not isometric to a subset of Alexandrov space with curvature $\ge0$.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:strut+embedding}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
+Assume that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
+ is \emph{$\kappa$-strutting} for a point $p\in\spc{L}$.
+Show that there are point 
+$\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+\[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\ \text{and}\ \dist{\tilde a^i}{\tilde a^j}{}=\dist{a^i}{a^j}{}\]
+for all $i$ and $j$.
+\end{thm}
 
-\input{helly.tex}
+
+\section{Helly's theorem}\label{sec:helly}
+
+%???CHECK lang-schroeder HAlly THEOREM???
+
+\begin{thm}{Helly's theorem}\label{thm:helly}
+Let $\spc{U}$  be a complete length $\CAT0$ space
+and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bounded convex subsets of $\spc{U}$.
+
+If 
+\[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset\]
+then there is an index array $\alpha_1,\alpha_2,\dots,\alpha_n\in \IndexSet$ such that
+\[\bigcap_{i=1}^nK_{\alpha_i}=\emptyset.\]
+
+%???Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
+\end{thm}
+
+\parbf{Remarks.}
+\begin{enumerate}[(i)]
+\item In general, none of $K_\alpha$ might be compact; 
+otherwise the statement is trivial.
+\item If $\spc{U}$ is a Hilbert space (not necessarily separable), 
+then the above result is equivalent to the following statement: if a convex bounded set is closed in ordinary topology then it compact in the weak topology.
+One can define \emph{weak topology} on arbitrary metric space, by taking exteriors of closed ball as its prebase.
+Then the result above implies analogous statement for complete length $\CAT0$ spaces
+(compare to \cite{monod}).
+\end{enumerate}
+
+\medskip
+
+We present the original proof of Urs Lang and Viktor Schroeder from \cite{lang-schroeder}.
+
+%\parit{Proof.}
+%Let us first prove uniqueness. 
+%Assume there are two points $y',y''\in K$ 
+%so that $\dist{y'}{p}{}=\dist{y''}{p}{}=\dist{K}{p}{}$.
+%Take $z$ to be midpoint of $[y'y'']$. 
+%Since $K$ is convex, $z\in K$.
+%From comparison, we have that $\dist{z}{p}{}<\dist{y'}{p}{}=\dist{K}{p}{}$, a contradiction
+%
+%The proof of existence is analogous.
+%Take a sequence  of points $y_n\in K$ 
+%such that $\dist{y_n}{p}{}\to \dist{K}{p}{}$.
+%It is sufficient to show that $(y_n)$ converges in itself; 
+%thus one could take $p^*=\lim_n y_n$.
+
+%Assume $(y_n)$ does not converge in itself, then for some fixed $\eps>0$, 
+%we can choose two subsequences $(y_n')$ and $(y_n'')$ of $(y_n)$ 
+%such that 
+%$\dist{y'_n}{y''_n}{}\ge\eps$ for each $n$.
+%Set $z_n$ to be the midpoint of $[y'_ny''_n]$; from convexity we have $z_n\in K$.
+%From point-on-side comparison \ref{cat-monoton}, there is $\delta>0$ 
+%such that $\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta$. 
+%Thus 
+%\[\limsup_{n\to\infty}\dist{p}{z_n}{}<\dist{K}{x}{},\] 
+%a contradiction\qeds
+
+\parit{Proof of \ref{thm:helly}.} 
+Assume the contrary. Then for any finite set $F\subset \IndexSet$
+\[K_{F}\df \bigcap_{\alpha\in F}K_{\alpha}\not=\emptyset,\]
+we will construct point $z$ such that $z\in K_\alpha$ for each $\alpha$.
+Thus we will arrive to contradiction since
+\[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset.\]
+
+Choose a point $p\in \spc{U}$ and set $r=\sup\dist{K_{F}}{p}{}$ where $F$ runs all finite subsets of $\IndexSet$.
+Set $p^*_F$ to be the closest point on $K_{F}$ from $p$; 
+according to closest-point projection lemma (\ref{lem:closest point}), $p^*_F$ 
+exits and is unique.
+
+Take a nested sequence of finite subsets 
+$F_1\subset F_2\subset \dots$ of $\IndexSet$, such that $\dist{K_{F_n}}{p}{}\to r$.
+
+Let us show that the sequence $(p^*_{F_n})$ converges in itself. 
+Indeed, if not, then for some fixed $\eps>0$, 
+we can choose two subsequences $(y'_n)$ and $(y''_n)$ of $(p^*_{F_n})$ 
+such that $\dist{y'_n}{y''_n}{}\ge\eps$.
+Set $z_n$ to be midpoint of $[y'_ny''_n]$. 
+From point-on-side comparison (\ref{point-on-side}), 
+there is $\delta>0$ such that 
+\[\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta.\]
+Thus 
+\[\limsup_{n\to\infty}\dist{p}{z_n}{}<r.\]
+On the other hand, from convexity, each $F_n$ 
+contains all $z_\kay$ with sufficiently large $\kay$, a contradiction.
+
+Thus, $p^*_{F_n}$ converges and we can set $z=\lim_n p^*_{F_n}$.
+Clearly 
+\[\dist{p}{z}{}=r.\]
+
+Repeat the above arguments for  the sequence $F_n'=F_n\cup \{\alpha\}$.
+As a result, we get another point $z'$ such that $\dist{p}{z}{}=\dist{p}{z'}{}=r$ and 
+$z,z'\in K_{F_n}$ for all $n$.
+Thus, if $z\not=z'$ the midpoint $\hat z$ of $[zz']$ would belong to all 
+$K_{F_n}$ and from comparison we would have $\dist{p}{\hat z}{}<r$, a contradiction.
+
+Thus, $z'=z$; in particular 
+$z\in K_\alpha$ for each $\alpha\in\IndexSet$.
+\qeds
 
 
 
@@ -609,8 +763,7 @@ that is, there is a short map $F\:\spc{L}\to \spc{U}$ such that $F|_Q=f$.
 \end{thm}
 
 \parbf{Remark.}
-If $\spc{U}$ is proper, then in the following proof the Helly's theorem (\ref{thm:helly}) is not needed.
-Everything follows directly from compactness of closed balls in $\spc{U}$.
+If $\spc{U}$ is proper, then we do not need Helly's theorem (\ref{thm:helly}) --- compactness of closed balls in $\spc{U}$ is sufficient in this case.
 
 
 \parit{Proof of \ref{thm:kirsz}.} 
@@ -694,19 +847,6 @@ $y=f(x)$ $\Rightarrow$ $t\cdot y=\mathring f(t\cdot x)$
 for $t\ge0$.
 Clearly $\mathring f$ is short.
 
-\begin{wrapfigure}{r}{32mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/k_0(1)}
-\lbl{23,35;$\mathring{\spc{U}}=\Cone \spc{U}$}
-\lbl[br]{18,7;$\nwarrow$}
-\lbl[tl]{18,7;$\spc{U}$}
-\lbl[lt]{18,19;$z$}
-\lbl[lb]{16,27.5;$\bar s$}
-\lbl[b]{30,27.5;$\alpha$}
-\lbl[b]{7,27.5;$s$}
-\lbl[lt]{3,19;$\0$}
-\end{lpic}
-\end{wrapfigure}
-
 Applying \ref{thm:kirsz} for $\mathring f$, 
 we get a short extension map $\mathring F\:\mathring{\spc{L}}\to\mathring{\spc{U}}$. 
 Set $s=\mathring F(p)$.
@@ -723,6 +863,19 @@ for $w=t\cdot x$ and $t\to\infty$ we get
 \[\<f(x),s\>\ge \cos\mangle(p,x)\eqlbl{eq:<,>=<}\]
 for any $x\in Q$.
 
+\begin{wrapfigure}{r}{32mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/k_0(1)}
+\lbl{23,35;$\mathring{\spc{U}}=\Cone \spc{U}$}
+\lbl[br]{18,7;$\nwarrow$}
+\lbl[tl]{18,7;$\spc{U}$}
+\lbl[lt]{18,19;$z$}
+\lbl[lb]{16,27.5;$\bar s$}
+\lbl[b]{30,27.5;$\alpha$}
+\lbl[b]{7,27.5;$s$}
+\lbl[lt]{3,19;$\0$}
+\end{lpic}
+\end{wrapfigure}
+
 By comparison,
 the geodesics $\geod_{[s\ t\cdot z]}$ converge as $t\to\infty$
 and its limit is a ray; denote it by $\alpha\:[0,\infty)\to \mathring{\spc{U}}$.
@@ -738,61 +891,6 @@ or
 for any $x\in Q$.
 The latter contradicts \ref{eq:cap-of-balls}.
 \qeds
-
-
-
-
-\section{Remarks and open problems}\label{sec:kirszbraun:open}
-
-
-\begin{thm}{Open problem}\label{open:n-point-CBB}
-Find a necessary and sufficient condition for a finite metric space to be isometrically embeddable into 
-\begin{subthm}{}
-some length $\Alex{\kappa}$ space.
-\end{subthm}
-\begin{subthm}{}
-some length $\CAT{\kappa}$ space.
-\end{subthm}
-
-\end{thm}
-
-A metric on a finite set $\{a^1,a^2,\dots,a^n\}$,
-can be described by the matrix with components
-\[s^{ij}
-=
-\dist[2]{a^i}{a^j}{},\]
-which we will call the  \emph{decrypting matrix}\index{decrypting matrix}.
-The set of decrypting matrices of all metrics that admit a distance preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
-form a convex cone. 
-The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ correspondingly).
-This convexity gives hope that the cone admits an explicit description.
-At the moment only some necessary and sufficient conditions are known;
-see our paper \cite{akp-kirszbraun} for more on this and \cite{LPZ} for more recent development.
-
-
-
-The following conjecture (if true) would give the  right generality for  Kirszbraun's theorem (\ref{thm:kirsz+}).
-Roughly it states that the example \ref{example:SS_+}, 
-is the only obstacle for extending short map.
-
-\begin{thm}{Conjecture}\label{conj:kirsz}
-Assume $\spc{L}$ is a complete length $\Alex1$ space,
-$\spc{U}$ is a complete length $\CAT1$ space,
-$Q\subset \spc{L}$ is a proper subset
-and $f\: Q\to\spc{U}$ be a short map that does not admit a short extension to any bigger set $Q'\supset Q$. 
-Then 
-
-\begin{subthm}{}
-$Q$ is isometric to a sphere in a Hilbert space (of finite or cardinal dimension).
-Moreover, there is a point $p\in \spc{L}$ such that $\dist{p}{q}{}=\tfrac{\pi}{2}$ for any $q\in Q$.
-\end{subthm}
-
-\begin{subthm}{}
-The map $f\:Q\to\spc{U}$ is a distance preserving map and there is no point $p'\in \spc{U}$ such that $\dist{p'}{q'}{}=\tfrac{\pi}{2}$ for any $q'\in f(Q)$.
-\end{subthm}
-\end{thm}
-
-\section{Exercises}\label{sec:kirszbraun:exercises}
 
 \begin{thm}{Exercise}\label{ex:flat-in-CAT}
 Let $\spc{U}$ is $\CAT0$ 
@@ -814,57 +912,10 @@ $\tilde x^0$ lies in the interior of $\Conv(\tilde x^1,\dots,\tilde x^\kay)$.
 Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE^m$ containing all points $x^i$.
 \end{thm}
 
-\begin{thm}{Flat triangle is not flat} 
+\begin{thm}{Exercise} 
 \label{ex:not-flat}
 Construct  a three-dimensional complete length $\Alex0$ space $\spc{L}$ with a triangle 
 $\trig x y z$ such that all angles in $\trig x y z$ are equal to the corresponding angles of its model triangle, but $\trig x y z$  can not be filled by an isometric copy of the model solid triangle.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:strut+embedding}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p, a^0,a^1,\dots,a^m\in\spc{L}$. 
-Assume that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
- is \emph{$\kappa$-strutting} for a point $p\in\spc{L}$.
-Show that there are point 
-$\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
-\[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\ \text{and}\ \dist{\tilde a^i}{\tilde a^j}{}=\dist{a^i}{a^j}{}\]
-for all $i$ and $j$.
-\end{thm}
-
-The following statement was first observed by John Isbell \cite{isbell}.
-
-\begin{thm}{Exercise}
-We say that a space $\spc{X}$ is a \emph{Kirszbraun target}\index{Kirszbraun target} 
-if for an arbitrary metric space $\spc Z$ 
-and a subset $Q\subset\spc Z$, 
-any short map $Q\to\spc{X}$ can be extended as a short map $\spc{Z}\to\spc{X}$.
-\begin{enumerate}
-\item Prove that any metric space $\spc X$ can be isometrically embedded into a Kirszbraun target.
-\item Use it to construct an analog of convex hull in the category of metric spaces.
-\end{enumerate}
-\end{thm}
-
-\begin{thm}{Exercise}
-We say that a compact space $\spc{X}$ is a \emph{Kirszbrun source}\index{Kirszbrun source} if for an arbitrary complete metric space $\spc Z$ and subset $Q\subset\spc X$, any short map $Q\to \spc{Z}$ can be extended to a short map $\spc{X}\to\spc{Z}$.
-Prove that a metric space $\spc{X}$ is a Kirszbrun source if and only if it satisfies ultratriangle inequality for all triples of points;
-that is,
-\[
-\dist{x}{z}{}\le\max\{\dist{x}{y}{},\dist{y}{z}{}\}
-\]
-for any $x,y,z\in\spc{X}$.
-\end{thm}
-
-
-\begin{thm}{Exercise}
-Assume that a Riemannian manifold $\spc R$ satisfies the following condition:
-for an arbitrary  subset $Q\subset\spc R$, any short map $Q\to\spc{R}$ can be extended to a short map $\spc{R}\to\spc{R}$.
-Show that $\spc R$ has constant sectional curvature.
-\end{thm}
-
-\begin{thm}{Exercise}
-Assume $\spc{X}$ is a complete length space that satisfies the following condition:
-any 4-point subset can be isometrically embedded in Euclidean 3-space.
-
-Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
 \end{thm}
 
 The following statement we call (2\textit{n}+2)-comparison.
@@ -923,11 +974,95 @@ we have
 \end{thm}
 
 \begin{thm}{Exercise}
-Consider a metric space $\spc{F}_s$
-on 5 point set $p,q,x,y,z$ such that $\dist{p}{q}{}=s$
-and all the remaining distances are equal $1$.
-Assume $\spc{F}_s$ admits a distance preserving map into a complete length $\CAT{0}$ space.
-Show that $\spc{F}_s$ admits a distance preserving map into a complete length $\Alex{0}$ space.
+Assume that a Riemannian manifold $\spc R$ satisfies the following condition:
+for an arbitrary  subset $Q\subset\spc R$, any short map $Q\to\spc{R}$ can be extended to a short map $\spc{R}\to\spc{R}$.
+Show that $\spc R$ has constant sectional curvature.
+\end{thm}
+
+
+\section{Curvature free}
+
+In this section we present a collection of exercises on a curvature-free versions of Kirszbraun theorem.
+
+The following exercise gives an analog of finite$\bm{+}$one lemma (\ref{lem:kirsz-neg:new}) discovered by the second author and Stephan Stadler \cite{perunin-stadler}.
+
+\begin{thm}{Exercise}
+Let $X$ and $Y$ be metric spaces, $A\subset X$ and $f\:A\to Y$ a short map.
+Assume $Y$ is compact and for any finite set $F\subset X$ there is a short map $F\to Y$ that agrees with $f$ in $F\cap A$.
+Then there is a short map $X\to Y$ that agrees with $f$ in $A$.
+\end{thm}
+
+The following statement was first observed by John Isbell \cite{isbell}.
+
+\begin{thm}{Exercise}
+We say that a space $\spc{X}$ is a \emph{Kirszbraun target}\index{Kirszbraun target} 
+if for an arbitrary metric space $\spc Z$ 
+and a subset $Q\subset\spc Z$, 
+any short map $Q\to\spc{X}$ can be extended as a short map $\spc{Z}\to\spc{X}$.
+\begin{enumerate}
+\item Prove that any metric space $\spc X$ can be isometrically embedded into a Kirszbraun target.
+\item Use it to construct an analog of convex hull in the category of metric spaces.
+\end{enumerate}
+\end{thm}
+
+\begin{thm}{Exercise}
+We say that a compact space $\spc{X}$ is a \emph{Kirszbrun source}\index{Kirszbrun source} if for an arbitrary complete metric space $\spc Z$ and subset $Q\subset\spc X$, any short map $Q\to \spc{Z}$ can be extended to a short map $\spc{X}\to\spc{Z}$.
+Prove that a metric space $\spc{X}$ is a Kirszbrun source if and only if it satisfies ultratriangle inequality for all triples of points;
+that is,
+\[
+\dist{x}{z}{}\le\max\{\dist{x}{y}{},\dist{y}{z}{}\}
+\]
+for any $x,y,z\in\spc{X}$.
+\end{thm}
+
+
+\section{Remarks and open problems}\label{sec:kirszbraun:open}
+
+
+\begin{thm}{Open problem}\label{open:n-point-CBB}
+Find a necessary and sufficient condition for a finite metric space to be isometrically embeddable into 
+\begin{subthm}{}
+some length $\Alex{\kappa}$ space.
+\end{subthm}
+\begin{subthm}{}
+some length $\CAT{\kappa}$ space.
+\end{subthm}
+
+\end{thm}
+
+A metric on a finite set $\{a^1,a^2,\dots,a^n\}$,
+can be described by the matrix with components
+\[s^{ij}
+=
+\dist[2]{a^i}{a^j}{},\]
+which we will call the  \emph{decrypting matrix}\index{decrypting matrix}.
+The set of decrypting matrices of all metrics that admit a distance preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
+form a convex cone. 
+The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ correspondingly).
+This convexity gives hope that the cone admits an explicit description.
+At the moment only some necessary and sufficient conditions are known;
+see our paper \cite{akp-kirszbraun} for more on this 
+and the paper of Nina Lebedeva, Vladimir Zolotov and the second author \cite{LPZ} for more recent development.
+
+The following conjecture (if true) would give the  right generality for  Kirszbraun's theorem (\ref{thm:kirsz+}).
+Roughly it states that the example \ref{example:SS_+}, 
+is the only obstacle for extending short map.
+
+\begin{thm}{Conjecture}\label{conj:kirsz}
+Assume $\spc{L}$ is a complete length $\Alex1$ space,
+$\spc{U}$ is a complete length $\CAT1$ space,
+$Q\subset \spc{L}$ is a proper subset
+and $f\: Q\to\spc{U}$ be a short map that does not admit a short extension to any bigger set $Q'\supset Q$. 
+Then 
+
+\begin{subthm}{}
+$Q$ is isometric to a sphere in a Hilbert space (of finite or cardinal dimension).
+Moreover, there is a point $p\in \spc{L}$ such that $\dist{p}{q}{}=\tfrac{\pi}{2}$ for any $q\in Q$.
+\end{subthm}
+
+\begin{subthm}{}
+The map $f\:Q\to\spc{U}$ is a distance preserving map and there is no point $p'\in \spc{U}$ such that $\dist{p'}{q'}{}=\tfrac{\pi}{2}$ for any $q'\in f(Q)$.
+\end{subthm}
 \end{thm}
 
 
