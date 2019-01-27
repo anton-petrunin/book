@@ -9,7 +9,9 @@ from two metric spaces $\spc{B}$, $\spc{F}$ and a function $f\:\spc{B}\to\RR_{\g
 Many important constructions such as direct product, cone, spherical suspension and join
 can be defined using warped products.
 
-\section{Definition}\label{sec:wp-def}
+\section{Definition}
+\label{sec:wp-def}
+\label{sec:wp-properties}
 
 First we define the warped product for length spaces and then we expand the definition to allow arbitrary metric spaces $\spc{F}$.
 
@@ -35,28 +37,7 @@ Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
 where the exact lower bound is taken for all Lipschitz paths $\gamma\:[0,1]\to \spc{B}\times\spc{F}$. 
 The corresponding metric space is called \emph{warped product with base $\spc{B}$, fiber $\spc{F}$ and warping function $f$}; it will be denoted by $\spc{B}\warp f\spc{F}$.
 
-\parbf{General fiber.}
-The fiber-independence theorem proved below (\ref{thm:fiber-independence}) gives an explicit formula:
-\[
-\dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp f \spc{F}} =
-\dist{(p,0)}{(q,\dist{\phi}{\psi}{\spc{F}})}{\spc{B}\warp f\R}
-\]
-for any $(p,\phi),(q,\psi) \in \spc{B}\times \spc{F}$.
-It implies that if $\iota\:A\to \check A$ is an isometry between two subsets
-$A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
-in length spaces $\spc{F}$ and $\check{\spc{F}}$, and $\spc{B}$ is a length space, then for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
-the map $\iota$ induces an isometry between the sets 
-$\spc{B}\warp{f} A \subset \spc{B}\warp{f} \spc{F}$ and $\spc{B}\warp{f}\check{A}\subset \spc{B}\warp{f} \check{\spc{F}}$.
-
-The latter observation allows us to define the warped product $\spc{B}\z{\warp{f}} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
-Indeed we can use Kuratowsky embedding to realize $\spc{F}$ as a subspace in a length space, say $\spc{F}'$.
-Therefore we can take the warped product $\spc{B}\warp{f} \spc{F}'$
-and identify $\spc{B}\warp{f} \spc{F}$ with its subspace consisting of all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
-According to the Fiber-independence theorem \ref{thm:fiber-independence}, the resulting space does not depend on the choice of $\spc{F}'$.
-
-
-\section{Properties}
-\label{sec:wp-properties}
+The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pair $(p,\phi)\in\spc{B}\times\spc{F}$; note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
 
 \begin{thm}{Proposition}
 The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
@@ -86,12 +67,40 @@ The projection $(p,\phi)\mapsto (p_0,\phi)$ of a neighborhood of the vertical le
 Hence (\ref{SHORT.Df>0}).
 \qeds
 
-A horizontal leaf is weakly convex, but does not need to be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
+Note that any horizontal leaf is weakly convex, but does not have to be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
 For instance, if there is a geodesic with the ends in the zero set 
 \[Z=\set{(p,\phi)\in\spc{B} \warp{f}\spc{F})}{f(p)=0},\] 
 then there is a geodesic with the same ends in each horizontal leaf.
 
+\begin{thm}{Proposition}
+Suppose $\spc{B}$ and $\spc{F}$ are length spaces and $f\:\spc{B}\to [0,\infty)$ is a continuous function.
+Then the warped product $\spc{B}\warp f\spc{F}$ is a length space.
+\end{thm}
 
+\parit{Proof.}
+It is sufficient to show that for any $\alpha\:[0,1]\to \spc{B}\warp f\spc{F}$ there is a path 
+$\beta\:[0,1]\to \spc{B}\times\spc{F}$ such that 
+\[\length \alpha\ge \length_f\beta.\]
+
+If $f\circ\alpha_{\spc{B}}(t)>0$ for any $t$, then the vertical projection $\alpha_{\spc{F}}$ is defined.
+In this case, set $\beta(t)=(\alpha_{\spc{B}}(t),\alpha_{\spc{F}}(t))\in \spc{B}\times\spc{F}$;
+clearly 
+\[\length \alpha= \length_f\beta.\]
+
+If $f\circ\alpha_{\spc{B}}(t_0)>0$ for some $t_0$, set $\beta$ to be the concatenation of three curves in $\spc{B}\times\check{\spc{F}}$;
+namely: 
+(1) the horizontal curve $(\alpha_\spc{B}(t),\check\phi)$ for $t\le t_0$,
+(2) a vertical path in form $(s,\check\phi)$ to $(s,\check\psi)$
+and 
+(3) the horizontal curve $(\alpha_\spc{B}(t),\check\psi)$ for $t\ge t_0$.
+By \ref{eq:length}, the $f$-length of the middle path in the concatination is vanishing;
+therefore the $f$-length of $\check\alpha$ is the same as length of $\alpha_{\spc{B}}$;
+that is,
+\[\length_f\alpha \ge 
+\length\alpha_{\spc{B}}=\length_f\beta.
+\]
+The statement follows.
+\qeds
 
 Distance in a warped product is fiber-independent, in the sense that distances may be calculated by substituting for $\spc{F}$ a different length space:
 
@@ -116,17 +125,14 @@ Then
 In particular,
 \[
 \dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp f \spc{F}} =
-\dist{(p,0)}{(q,\dist{\phi}{\psi}{\spc{F}})}{\spc{B}\warp f\R}.
+\dist{(p,0)}{(q,\ell)}{\spc{B}\warp f\R},
 \]
-	
+were $\ell=\dist{\phi}{\psi}{\spc{F}}$.
 \end{thm}
 
 \parit{Proof.} 
-%Fix a path $\gamma=(\gamma_{\spc{B}},\gamma_{\spc{F}})$ 
-%from $(p,\phi)$ to $(q,\psi)$.
-Let $\gamma$ be a path in $(\spc{B}\times \spc{F})/\!\sim$. 
+Let $\gamma$ be a path in $(\spc{B}\times \spc{F})$. 
 
-Suppose $f\circ\gamma_\spc{B}>0$.
 Since $\dist{\phi}{\psi}{\spc{F}}
 \ge\dist{\check{\phi}}{\check{\psi}}{\check{\spc{F}}}$,
 there is a Lipschitz path $\gamma_{\check{\spc{F}}}$ 
@@ -138,17 +144,7 @@ for almost all $t\in[0,1]$.
 Consider the path $\check\gamma=(\gamma_{\spc{B}},\gamma_{\check{\spc{F}}})$ from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\warp{f}\check{\spc{F}}$.
 Clearly
 \[\length_f\gamma\ge \length_f\check\gamma.\]
-
-Suppose $(f\circ\gamma_\spc{B})^{-1}(0)\ne\emptyset$.  Then there is a Lipschitz path $\check\gamma$  from $(p,\check\phi)$ to $(q,\check\psi)$ in $\spc{B}\warp{f}\check{\spc{F}}$
-such that $\check\gamma_{\spc{F}}$
-is constant on each maximal subinterval on which  $f\circ(\gamma)_{\spc{B}}>0$.
-By the $f$-length formula, 
-\[\length_f\gamma \ge 
-\length\gamma_{\spc{B}}=\length_f\check\gamma.
-\]
-
-The statement follows.
-\qeds
+\qedsf
 
 \begin{thm}{Exercise}\label{ex:warp=<}
 Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\:\spc{B}\to \RR_\ge$ be two locally Lipschitz nonnegative  functions.
@@ -158,35 +154,24 @@ $\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
 that is, there is a distance noncontracting map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
 \end{thm}
 
-To see that  $\length_f$, as defined by \ref{eq:length} in Section \ref{sec:wp-def}, agrees with the length induced by  $\dist{{*}}{{*}}{\spc{B}\warp f\spc{F}}$, we may proceed as follows.
-Denote  $\length_f$ by $L$.
-Set
+\section{Extended definition}
+The fiber-independence theorem gives an explicit formula:
 \[
-L_{\Sigma}=\sup_{t_0<\ldots<t_n}\sum_{i=1}^n d_{i},
+\dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp f \spc{F}} =
+\dist{(p,0)}{(q,\dist{\phi}{\psi}{\spc{F}})}{\spc{B}\warp f\R}
 \]
-where the supremum is taken over all partitions  $t_0<\ldots<t_n$ of $[0,1]$, and where, letting $\bar t_i$ be a minimum point of $(f\circ\gamma_B)|[t_{i-1}t_i]$, 
-\[
-d_i=
-\begin{cases}
-\dist{\gamma(t_i)}{\gamma(t_{i-1})}{{B\times(f\circ\gamma_B)(\bar t_i)\cdot F}}
-& \text{if }(f\circ\gamma_B)(\bar t_i)>0,\\
-\dist{\gamma_B(t_i)}{\gamma_B(t_{i-1})}{B}
-\quad & \text{if } (f\circ\gamma_B)(\bar t_i)=0.
-\end{cases}
- \]
-Here $B\times(f\circ\gamma_B)(\bar t_i)\cdot F$ denotes the Cartesian product  of $B$ with a rescaling of $F$.
- Our choice of  $\bar t_i$ ensures that any sequence of successively refined   sums is nondecreasing.
- 
-Then  the proof that $L=L_{\Sigma}$  proceeds  as in the classical case, for length of an absolutely continuous curve in $\R^2$ \cite[p. 245--247]{goffman}.
+for any $(p,\phi),(q,\psi) \in \spc{B}\times \spc{F}$.
+It implies that if $\iota\:A\to \check A$ is an isometry between two subsets
+$A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
+in length spaces $\spc{F}$ and $\check{\spc{F}}$, and $\spc{B}$ is a length space, then for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
+the map $\iota$ induces an isometry between the sets 
+$\spc{B}\warp{f} A \subset \spc{B}\warp{f} \spc{F}$ and $\spc{B}\warp{f}\check{A}\subset \spc{B}\warp{f} \check{\spc{F}}$.
 
-Since $f$ is  locally Lipschitz, then outside any neighborhood in $\spc{B}\times \spc{F})/\!\sim$ of a point $x$ we have   $|x*|_{\spc{B}\warp f\spc{F}}$ bounded away from $0$.
-Therefore $\length_f$ determines a length structure in the sense of \cite{BBI}.
-Moreover, from the formula for $L_{\Sigma}$, 
-%since $f$ is  locally uniformly continuous, 
-the length $L=\length_f=L_{\Sigma}$ is a lower semi-continous functional on the space of Lipschitz curves with respect to pointwise convergence.
-%, i.e. if $\gamma_i\to\gamma$ then $\liminf(\length\gamma_i) \ge\length\gamma$. 
-By \cite[Theorem 2.4.3]{BBI}, $\length_f$ agrees with the length induced by the  metric of  $\spc{B}\warp{f}\spc{F}$.
-
+The latter observation allows us to define the warped product $\spc{B}\z{\warp{f}} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
+Indeed we can use Kuratowsky embedding to realize $\spc{F}$ as a subspace in a length space, say $\spc{F}'$.
+Therefore we can take the warped product $\spc{B}\warp{f} \spc{F}'$
+and identify $\spc{B}\warp{f} \spc{F}$ with its subspace consisting of all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
+According to the Fiber-independence theorem \ref{thm:fiber-independence}, the resulting space does not depend on the choice of $\spc{F}'$.
 
 
 \section{Examples}
@@ -236,8 +221,8 @@ if and only if $A$ is $\pi$-convex in $\spc{F}$.
 The elements of the Euclidean cone $\spc{K}=\Cone\spc{F}$
 will often be referred to as \index{vector}\emph{vectors}.
 The tip of $\spc{K}$ is usually denoted by $\0$ or $\0_{\spc{K}}$.
-The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defined as $\dist{o}{w}{\spc{K}}$;
-that is, the distance from $w$ to the origin.
+The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defined as $\dist{\0}{w}{\spc{K}}$;
+that is, the distance from $w$ to the tip.
 The \index{scalar product}\emph{scalar product} $\<v,w\>$
 of two vectors $v,w\in\spc{K}$
 is defined by 
@@ -250,12 +235,12 @@ is defined by
 \parbf{Doubling.}
 The doubling space $\spc{W}$ of a metric space $\spc{V}$ on a closed subset $A\subset\spc{V}$
 can be also defined as a special type of warped product.
-Consider the metric space $\spc{F}$ consisting of two points with distance $\pi$ from each other.
+Consider the fiber $\mathbb{S}^0$ consisting of two points with distance $2$ from each other.
 Then $\spc{W}$ is isometric to the warped product 
 with base $\spc{V}$, 
-fiber $\spc{F}$ and warping function $\distfun{A}{}{}$;
-that is
-\[\spc{W}\iso\spc{V}\warp{\distfun{A}{}{}}\spc{F}.\]
+fiber $\mathbb{S}^0$ and warping function $\distfun{A}{}{}$;
+that is,
+\[\spc{W}\iso\spc{V}\warp{\distfun{A}{}{}}\mathbb{S}^0.\]
 
 
 \section{1-dimensional base}
@@ -393,3 +378,48 @@ and
 \[\dist{(t^i,\psi^i)}{(t^j,\psi^j)}{[0,\infty)\warp{\sinh}\mathbb{S}^3}\ge\dist{(t^i\phi^i)}{(t^j,\phi^j)}{[0,\infty)\warp{\sinh}\spc{L}}\]
 for all $i$ and $j$.
 Since four points of $\Lob{4}{-1}$ lie in an isometrically embedded copy of $\Lob{3}{-1}$, it remains to apply Exercise \ref{ex:(3+1)-expanding}.\qeds
+
+\section{General case}
+
+In this section we formulate general results on curvature bounds of warped products 
+proved by the first author and Richard Bishop \cite{alexander-bishop:warps}
+
+\begin{thm}{Theorem}\label{thm:warp-CBB}
+Let $\spc{B}$ be a $\Alex\kappa$ length space and the function $f\:\spc{B}\to \RR_\ge$ satisfies $f''+\kappa\cdot f\le 0$;
+denote by $Z\subset \spc{B}$ the zero set of~$f$.
+Suppose $\spc{F}$ is a $\Alex{\kappa'}$ space.
+Then the warped product $\spc{B}\warp f\spc{F}$ is $\Alex\kappa$ in the following two cases:
+\begin{subthm}{thm:warp-CAT:Z=0}
+If $Z= \emptyset$ and 
+\[\kappa'\ge \kappa\cdot f^2(b)\]
+for any $b\in \spc{B}$.
+\end{subthm}
+
+\begin{subthm}{thm:warp-CAT:Zne0}
+If $Z\ne \emptyset$ and
+\[|d_zf|^2\le\kappa'\]
+for any $z\in Z$.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:warp-CAT}
+Let $\spc{B}$ be a $\CAT\kappa$ length space and the function $f\:\spc{B}\to \RR_\ge$ satisfies $f''+\kappa\cdot f\ge 0$;
+denote by $Z\subset \spc{B}$ the zero set of~$f$.
+Suppose $\spc{F}$ is a $\CAT{\kappa'}$  space.
+Then the warped product $\spc{B}\warp f\spc{F}$ is $\CAT\kappa$ in the following two cases:
+\begin{subthm}{thm:warp-CAT:Z=0}
+If $Z= \emptyset$ and 
+\[\kappa'\le \kappa\cdot f^2(b)\]
+for any $b\in \spc{B}$.
+\end{subthm}
+
+\begin{subthm}{thm:warp-CAT:Zne0}
+If $Z\ne \emptyset$, 
+\[[(d_zf)\dir zb]^2\ge\kappa'\] for any minimizing geodesic $[zb]$ from $Z$ to a point $b\in\spc{B}$ and 
+\[\kappa'\le \kappa\cdot f^2(b)\] for any $b\in \spc{B}$ such that $\distfun{X}{b}{}\ge \tfrac{\varpi\kappa}2$.
+\end{subthm}
+
+\end{thm}
+
+\parit{The proofs are coming.}
