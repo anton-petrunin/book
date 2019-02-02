@@ -12,11 +12,8 @@ but the results in section~\ref{sec:web-general} find some applications for fini
 The following construction gives a $\kay$-dimensional submanifold 
 for a given ``nondegenerate'' array of $\kay+1$ strongly convex functions.
 
-\parbf{Webs.}
-Let us introduce a partial order $\succcurlyeq$ on $\RR^{\kay+1}$.
-
 \begin{thm}{Definition}\label{def:ordung}
-For two real atrrays $\bm{v}$, $\bm{w}\in \RR^{\kay+1}$,
+For two real arrays $\bm{v}$, $\bm{w}\in \RR^{\kay+1}$,
 $\bm{v}=(v^0,v^1,\dots,v^\kay)$ 
 and 
 $\bm{w}=(w^0,w^1,\dots,w^\kay)$, 
@@ -116,7 +113,6 @@ and
 \begin{subthm}{thm:web:bary}
 The barycentric simplex 
 $\spx{\bm{f}}\:\Delta^\kay\to \spc{X}$ is a uniquely defined Lipshitz map and $\Im\spx{\bm{f}}=\Web\bm{f}$.
-
 In particular $\Web\bm{f}$ is compact.
 \end{subthm}
 
@@ -135,7 +131,7 @@ In particular, from (\ref{SHORT.thm:web:Up-convex}) and (\ref{SHORT.thm:web:f(we
 The proof is preceded by few preliminary statements.
 
 \begin{thm}{Lemma}\label{lem:argmin(convex)}
-Assume $\spc{X}$ is a complete geodesic space and let $f\:\spc{X}\to\RR$ be a locally Lipschitz, strongly convex function. Then the minimum point 
+Suppose $\spc{X}$ is a complete geodesic space and let $f\:\spc{X}\to\RR$ be a locally Lipschitz, strongly convex function. Then the minimum point 
 of $f$
 is uniquely defined.
 \end{thm}
@@ -503,7 +499,7 @@ with \emph{brace} $\distfun{a^0}{}{}$.
 \begin{thm}{Definition}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\bm{a}=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
-If $\InWeb(\distfun{\bm{a}}{}{})\z\ne\emptyset$, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
+If $\InWeb(\distfun{\bm{a}}{}{})$ is nonempty, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
 \end{thm}
 
 Lemma~\ref{lem:nondeg-test-with-balls} will provide examples of nondegenerate point arrays,
@@ -511,7 +507,7 @@ which can be used in Theorem~\ref{thm:cat-bary-web:mnfld}.
 
 \begin{thm}{Corollary}\label{cor:LinDim>bary}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-$\bm{a}=(a^0,a^1,\dots a^m)$ be a nondegenerate point array 
+$\bm{a}\z=(a^0,a^1,\dots a^m)$ be a nondegenerate point array 
 of radius $<\tfrac{\varpi\kappa}{2}$ in $\spc{U}$
 and $\sigma=\spx{\bm{a}}\mc\kappa$ be corresponding $\kappa$-baricentric simplex.
 Then for some $\bm{x}\in \Delta^m$
@@ -713,8 +709,11 @@ For any complete length $\CAT\kappa$ space $\spc{U}$, the following statements a
 \begin{subthm}{thm:dim-infty-CBA:bary} 
 For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$ with $a^0,a^1,\dots,a^m\in \oBall(z,\frac{\varpi\kappa}2)$ 
 such that 
-\[\bigcap_i B^i=\emptyset,\quad\bigcap_{i\not=j} B^i\not=\emptyset\]
-for each $j$.
+\[\bigcap_i B^i=\emptyset
+\quad\text{and}\quad
+\bigcap_{i\not=j} B^i\not=\emptyset
+\quad \text{for each $j$}.\]
+
 \end{subthm}
 
 
@@ -742,8 +741,6 @@ For any separable complete length $\CAT{}$ space $\spc{U}$, we have
 
 \end{thm}
 
-
-To prove Theorem~\ref{thm:dim-infty-CBA} we will need the following lemma.
 
 Any simplicial complex can be equipped with a length-metric
 such that each $\kay$-simplex 
