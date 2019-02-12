@@ -289,7 +289,93 @@ Then there are at least two distinct geodesics between $p$ and $q$
 in the ultrapower $\spc{X}^\o$.
 \end{thm}
 
+\section{Ultratangent space} 
 
+Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter.
+
+For a metric space $\spc{X}$ and a positive real number $\lam$,
+we will denote by $\lam\cdot\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
+which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
+The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted as $x\mapsto x^\lam$, 
+so 
+\[\dist{x^\lam}{y^\lam}{}
+=
+\lam\cdot\dist[{{}}]{x}{y}{}\] 
+for any $x,y\in \spc{X}$.
+
+The $\o$-blowup $\o\cdot\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
+of the $n$-blowups $n\cdot\spc{X}$; that is,
+\[\o\cdot\spc{X}
+\df
+\lim_{n\to\o} n\cdot\spc{X}.\]
+
+Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
+it corresponds to a point $x^\o\in \o\cdot\spc{X}$.
+Note that if $x\ne y$, then 
+\[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
+that is, 
+$x^\o$ and $y^\o$ 
+belong to different metric components of $\o\cdot\spc{X}$.
+
+The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
+
+Equivalently, ultratangent space $\T^\o_x\spc{X}$ can be defined the following way.
+Consider all the sequences of points $x_n\in \spc{X}$ such that
+the sequence $\ell_n=n\cdot\dist{x}{x_n}{\spc{X}}$ is bounded.
+Define the pseudodistance between two such sequences as 
+\[\dist{(x_n)}{(y_n)}{}
+=
+\lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
+Then $\T^\o_x\spc{X}$ is the corresponding metric space.
+
+Tangent space as well as ultratangent space, 
+generalize the notion of tangent space of Riemannian manifold.
+In the simplest cases these two notions define the same space.
+In general, they are different and both useful ---
+often lack of a property in one is compensated by the other.
+
+It is clear from the definition that tangent space has cone structure.
+On the other hand, in general, ultratangent space does not have a cone structure; 
+the Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example --- it is $\Alex{0}$ as well as $\CAT{0}$.
+
+The next theorem shows that the tangent space $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
+
+\begin{thm}{Theorem}\label{thm:tangent-ultratangent}
+\label{thm:T-in-T^w} 
+Let $\spc{X}$ be a metric space with defined angles.
+Then for any $p\in \spc{L}$, there is an distance preserving map 
+\[\iota:\T_p\hookrightarrow \T^\o_p\] 
+such that for any geodesic $\gamma$ starting at $p$
+we have 
+\[\gamma^+(0)\mapsto \lim_{n\to\o}[\gamma(\tfrac1n)]^n.\]
+
+\end{thm}
+
+\parit{Proof.}
+Given $v\in \T'_p$ 
+choose a geodesic $\gamma$ that starts at $p$ such that $\gamma^+(0)\z=v$.
+Set $v^n=[\gamma(\tfrac1n)]^n\in n\cdot \spc{X}$ and 
+\[v^\o=\lim_{n\to\o}v^n.\]
+
+Note that the value $v^\o\in\T^\o_p$ does not depend on choice of $\gamma$;
+that is, if $\gamma_1$ is an other geodesic starting at $p$ such that $\gamma_1^+(0)=v$,
+then 
+\[\lim_{n\to\o}v^n=\lim_{n\to\o}v_1^n,\]
+where $v_1^n=[\gamma_1(\tfrac1n)]^n\in n\cdot \spc{X}$.
+The latter follows since
+\[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t)\]
+and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
+
+
+
+Set $\iota(v)=v^\o$.
+Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
+$n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
+Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry of $\T_p'$.
+
+Since $\T_p'$ is dense in $\T_p$,
+we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
+\qeds
 
 \section{Gromov--Hausdorff convergence and ultralimits}  
 
@@ -451,5 +537,14 @@ if $\oBall(x,\eps)_{\spc{X}}\subset \Dom f$
 then $\oBall(x,\eps)_{\spc{X}^\o}\subset \Dom f^\o$.
 
 
+\parbf{Ultradifferential.}
+Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
+\[f_n(x^n)=n\cdot(f(x)-f(p)),\]
+here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
+While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
+functions $f_n$ converge to $\o$-differential of $f$ at $p$.
+It will be denoted by $\dd_p^\o f$;
+\[\dd_p^\o f\:\T_p^\o\to\RR,\ \ \dd_p^\o f=\lim_{n\to\o} f_n.\] 
 
+Clearly, the $\o$-differential $\dd_p^\o f$ of a locally Lipschitz subfunction $f$ is defined at each point $p\in \Dom f$.
 
