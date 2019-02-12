@@ -358,213 +358,7 @@ The latter holds tivially in case $\CAT{}$
 and in $\Alex{}$ case follows from \ref{cor:unique-geod-cbb}.
 \qeds
 
-\section{Polar vectors}
 
-Here we give a corollary of Lemma \ref{lem:close-grad}.
-It will be used to prove basic properties of tangent space.
-
-
-\begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
-Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-
-Given two vectors $u,v\in \T_p$ there is unique vector $w\in \T_p$ such that
-\[\<u,x\>+\<v,x\>+\<w,x\>\ge 0\]
-for any $x\in \T_p$ and
-\[\<u,w\>+\<v,w\>+\<w,w\>=0.\]
-
-\end{thm}
-
-If $\T_p$ would be a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
-However, tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
-
-
-Applying the above lemma for $u=v$, we get the following statement.
-In the finite-dimensional case, the Milka's lemma provides a stronger statement. %??? (\ref{lem:milka})
-
-\begin{thm}{Existence of polar vector}\label{cor:polar}
-Let $\spc{L}$ be a complete length $\Alex{}$ space 
-and $p\in \spc{L}$. 
-Given a vector $u\in \T_p$ there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
-$u^*$ is \emph{polar}\index{polar vector} to $u$;
-that is,
- $\<u^*,x\>+\<u,x\>\ge 0$ for any $x\in \T_p$.
-
-In particular, for any vector $u\in \T_p$ there is a polar vector $u^*\in\T_p$ such that
-$|u^*|\le |u|$.
-\end{thm}
-
-\parit{Proof of \ref{lem:minus-sum}.}
-Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
-Consider sequence of functions 
-\[f_n=|u|\cdot\distfun{a_n}{}{}+|v|\cdot\distfun{b_n}{}{}.\]
-According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
-\[(\dd_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
-Thus, we have the following uniform convergence for all $x\in\Sigma_p$
-\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\] 
-According to Lemma~\ref{lem:close-grad}, 
-sequence $\nabla_pf_n$ converges.
-Set 
-\[w=\lim_n\nabla_pf_n.\]
-
-From definition of gradient
-\[\begin{aligned}
-\<w,w\>&=\lim_{n\to\infty}\<\nabla_pf_n,\nabla_pf_n\>=
-&&&%right side
-\<w,x\>&=\lim_{n\to\infty}\<\nabla_pf_n,x\>\ge
-\\%second line
-&=\lim_{n\to\infty}(\dd_p f_n)(\nabla_p f_n)
-=
-&&&%second line right side
-&\ge
-\lim_{n\to\infty}(\dd_pf_n)(x)
-=
-\\%line 3
-&=-\<u,w\>-\<v,w\>,
-&&&%line 3 right side
-&=-\<u,x\>-\<v,x\>.
-\end{aligned}\]
-\qedsf
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Linear subspace of tangent space}
-
-\begin{thm}{Definition}\label{def:opp+Lin}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,v\in\T_p$.
-We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
-
-The subcone
-\[\Lin_p=\set{v\in\T_p}{\exists\ w\in\T_p\ \ \t{such that}\ \ w+v=0}\]
-will be called \emph{linear subcone}\index{linear subspace} of $\T_p$.
-\end{thm}
-
-The reason for the name ``linear'' will become evident in Theorem~\ref{thm:lin-subcone}.
-
-\begin{thm}{Proposition}\label{prop:opposite}
-Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Given two vectors $u,v\in\T_p$, the following statements are equivalent:
-\begin{subthm}{opposite} $u+v=0$;
-\end{subthm}
-\begin{subthm}{<x,u>} $\<u,x\>+\<v,x\>=0$ for any $x\in\T_p$;
-\end{subthm}
-\begin{subthm}{<xi,u>} $\<u,\xi\>+\<v,\xi\>=0$ for any $\xi\in\Sigma_p$.
-\end{subthm}
-\end{thm}
-
-\parit{Proof.}
-The condition $u+v=0$ is equivalent to 
-\[\<u,u\>=-\<u,v\>=\<v,v\>;\]
-thus 
-(\ref{SHORT.<x,u>})$\Rightarrow$(\ref{SHORT.opposite}).
-Since $\T_p$ is isometric to a subset of $\T^\o_p$,
-the splitting theorem (\ref{thm:splitting}) applied for $\T_p^\o$
-gives (\ref{SHORT.opposite})$\Rightarrow$(\ref{SHORT.<x,u>}).
-
-The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is trivial.
-\qeds
-
-\begin{thm}{Proposition}\label{prop:two-opp}
-Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Then for any three vectors $u,v,w\in\T_p$, $u+v=0$ and $u+ w=0$ implies $v=w$.
-\end{thm}
-
-\parit{Proof.} From Proposition~\ref{prop:opposite} both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
-Hence the result.\qeds
-
-Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
-Given $s<0$, set 
-\[s\cdot u\df (-s)\cdot v.\]
-This way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
-Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
-
-
-\begin{thm}{Theorem}\label{thm:lin-subcone}
-Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$. 
-Then $\Lin_p$ is a subcone of $\T_p$ isometric to a Hilbert space.
-\end{thm}
-
-Before comming to the proof of the theorem, 
-let us give its corollary.
-
-\begin{thm}{Corollary}\label{cor:euclid-subcone}
-Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
-and $p\in \Str(x_1,x_2,\dots,x_n)$.
-Then there is a subcone $E\subset \T_p$ that isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
-\end{thm}
-
-\parit{Proof.} 
-By the definition of $\Str$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for each $i$.
-It remains to apply Theorem~\ref{thm:lin-subcone}.
-\qeds
-
-The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p$ is not a length space;
-see Habeisen's example (\ref{Halbeisen's example}).
-Othervise, if the tangent space is a length space, the statement would follow directly from the splitting theorem (\ref{thm:splitting}).
-In fact the proof of this theorem is a far walk around --- we use construction of gradient, as well as the splitting theorem, namely its corollary (\ref{cor:splitting}).
-Thus in order to understand our proof one needs to read most of Chapter~\ref{chap:grad}.
-
-\parit{Proof of \ref{thm:lin-subcone}.}
-First we show that $\Lin_p$ is a complete geodesic $\Alex0$ space.
-
-Recall that $\T^\o_p$ is a complete geodesic $\Alex0$ space (see \ref{obs:ultralimit-is-geodesic} and \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
-Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
-
-Fix two vectors $x,y\in\Lin_p$.
-Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$ 
-and $v+\tfrac{1}{2}\cdot y=0$.
-Apply Lemma~\ref{lem:minus-sum} 
-to the vectors $u$ and $v$;
-let $w\in \T_p$ denotes the obtained tangent vector.
-\begin{clm}{}\label{clm:w-mid(xy)}
-$w$ is a midpoint of $[x y]$.
-\end{clm}
-
-Indeed, according to Lemma~\ref{lem:minus-sum}, 
-\begin{align*}
-|w|^2
-&=
--\<w,u\>-\<w,v\>
-=
-\\
-&=
-\tfrac{1}{2}\cdot\<w,x\>+\tfrac{1}{2}\cdot\<w,y\>.
-\\
-\intertext{Therefore,}
-\dist[2]{x}{w}{}+\dist[2]{w}{y}{}
-&=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=
-\\
-&=|x|^2+|y|^2-\<w,x\>-\<w,y\>\le
-\\
-&\le |x|^2+|y|^2+\<u,x\>+\<v,x\>+\<u,y\>+\<v,y\>=
-\\
-&=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=
-\\
-&=\tfrac{1}{2}\cdot\dist[2]{x}{y}{}.
-\end{align*}
-Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
-\claimqeds
-
-Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$, thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
-\qeds
-
-
-
-
-\section{Comments}
-
-\begin{thm}{Open question}\label{open:Halb-proper}
-Let $\spc{L}$ be a proper length $\Alex\kappa$ space.
-Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
-\end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1003,8 +797,213 @@ Passing to arbitrary subsequence of $(x_n)$ we obtain the result. \qeds
 
 
 
+\section{Polar vectors}
+
+Here we give a corollary of Lemma \ref{lem:close-grad}.
+It will be used to prove basic properties of tangent space.
 
 
+\begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
+
+Given two vectors $u,v\in \T_p$ there is unique vector $w\in \T_p$ such that
+\[\<u,x\>+\<v,x\>+\<w,x\>\ge 0\]
+for any $x\in \T_p$ and
+\[\<u,w\>+\<v,w\>+\<w,w\>=0.\]
+
+\end{thm}
+
+If $\T_p$ would be a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
+However, tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
+
+
+Applying the above lemma for $u=v$, we get the following statement.
+In the finite-dimensional case, the Milka's lemma provides a stronger statement. %??? (\ref{lem:milka})
+
+\begin{thm}{Existence of polar vector}\label{cor:polar}
+Let $\spc{L}$ be a complete length $\Alex{}$ space 
+and $p\in \spc{L}$. 
+Given a vector $u\in \T_p$ there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
+$u^*$ is \emph{polar}\index{polar vector} to $u$;
+that is,
+ $\<u^*,x\>+\<u,x\>\ge 0$ for any $x\in \T_p$.
+
+In particular, for any vector $u\in \T_p$ there is a polar vector $u^*\in\T_p$ such that
+$|u^*|\le |u|$.
+\end{thm}
+
+\parit{Proof of \ref{lem:minus-sum}.}
+Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
+Consider sequence of functions 
+\[f_n=|u|\cdot\distfun{a_n}{}{}+|v|\cdot\distfun{b_n}{}{}.\]
+According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
+\[(\dd_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
+Thus, we have the following uniform convergence for all $x\in\Sigma_p$
+\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\] 
+According to Lemma~\ref{lem:close-grad}, 
+sequence $\nabla_pf_n$ converges.
+Set 
+\[w=\lim_n\nabla_pf_n.\]
+
+From definition of gradient
+\[\begin{aligned}
+\<w,w\>&=\lim_{n\to\infty}\<\nabla_pf_n,\nabla_pf_n\>=
+&&&%right side
+\<w,x\>&=\lim_{n\to\infty}\<\nabla_pf_n,x\>\ge
+\\%second line
+&=\lim_{n\to\infty}(\dd_p f_n)(\nabla_p f_n)
+=
+&&&%second line right side
+&\ge
+\lim_{n\to\infty}(\dd_pf_n)(x)
+=
+\\%line 3
+&=-\<u,w\>-\<v,w\>,
+&&&%line 3 right side
+&=-\<u,x\>-\<v,x\>.
+\end{aligned}\]
+\qedsf
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Linear subspace of tangent space}
+
+\begin{thm}{Definition}\label{def:opp+Lin}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,v\in\T_p$.
+We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
+
+The subcone
+\[\Lin_p=\set{v\in\T_p}{\exists\ w\in\T_p\ \ \t{such that}\ \ w+v=0}\]
+will be called \emph{linear subcone}\index{linear subspace} of $\T_p$.
+\end{thm}
+
+The reason for the name ``linear'' will become evident in Theorem~\ref{thm:lin-subcone}.
+
+\begin{thm}{Proposition}\label{prop:opposite}
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
+Given two vectors $u,v\in\T_p$, the following statements are equivalent:
+\begin{subthm}{opposite} $u+v=0$;
+\end{subthm}
+\begin{subthm}{<x,u>} $\<u,x\>+\<v,x\>=0$ for any $x\in\T_p$;
+\end{subthm}
+\begin{subthm}{<xi,u>} $\<u,\xi\>+\<v,\xi\>=0$ for any $\xi\in\Sigma_p$.
+\end{subthm}
+\end{thm}
+
+\parit{Proof.}
+The condition $u+v=0$ is equivalent to 
+\[\<u,u\>=-\<u,v\>=\<v,v\>;\]
+thus 
+(\ref{SHORT.<x,u>})$\Rightarrow$(\ref{SHORT.opposite}).
+Since $\T_p$ is isometric to a subset of $\T^\o_p$,
+the splitting theorem (\ref{thm:splitting}) applied for $\T_p^\o$
+gives (\ref{SHORT.opposite})$\Rightarrow$(\ref{SHORT.<x,u>}).
+
+The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is trivial.
+\qeds
+
+\begin{thm}{Proposition}\label{prop:two-opp}
+Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
+Then for any three vectors $u,v,w\in\T_p$, $u+v=0$ and $u+ w=0$ implies $v=w$.
+\end{thm}
+
+\parit{Proof.} From Proposition~\ref{prop:opposite} both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
+Hence the result.\qeds
+
+Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
+Given $s<0$, set 
+\[s\cdot u\df (-s)\cdot v.\]
+This way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
+Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
+
+
+\begin{thm}{Theorem}\label{thm:lin-subcone}
+Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$. 
+Then $\Lin_p$ is a subcone of $\T_p$ isometric to a Hilbert space.
+\end{thm}
+
+Before comming to the proof of the theorem, 
+let us give its corollary.
+
+\begin{thm}{Corollary}\label{cor:euclid-subcone}
+Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
+and $p\in \Str(x_1,x_2,\dots,x_n)$.
+Then there is a subcone $E\subset \T_p$ that isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
+\end{thm}
+
+\parit{Proof.} 
+By the definition of $\Str$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for each $i$.
+It remains to apply Theorem~\ref{thm:lin-subcone}.
+\qeds
+
+The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p$ is not a length space;
+see Habeisen's example (\ref{Halbeisen's example}).
+Othervise, if the tangent space is a length space, the statement would follow directly from the splitting theorem (\ref{thm:splitting}).
+In fact the proof of this theorem is a far walk around --- we use construction of gradient, as well as the splitting theorem, namely its corollary (\ref{cor:splitting}).
+Thus in order to understand our proof one needs to read most of Chapter~\ref{chap:grad}.
+
+\parit{Proof of \ref{thm:lin-subcone}.}
+First we show that $\Lin_p$ is a complete geodesic $\Alex0$ space.
+
+Recall that $\T^\o_p$ is a complete geodesic $\Alex0$ space (see \ref{obs:ultralimit-is-geodesic} and \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
+Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
+
+Fix two vectors $x,y\in\Lin_p$.
+Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$ 
+and $v+\tfrac{1}{2}\cdot y=0$.
+Apply Lemma~\ref{lem:minus-sum} 
+to the vectors $u$ and $v$;
+let $w\in \T_p$ denotes the obtained tangent vector.
+\begin{clm}{}\label{clm:w-mid(xy)}
+$w$ is a midpoint of $[x y]$.
+\end{clm}
+
+Indeed, according to Lemma~\ref{lem:minus-sum}, 
+\begin{align*}
+|w|^2
+&=
+-\<w,u\>-\<w,v\>
+=
+\\
+&=
+\tfrac{1}{2}\cdot\<w,x\>+\tfrac{1}{2}\cdot\<w,y\>.
+\\
+\intertext{Therefore,}
+\dist[2]{x}{w}{}+\dist[2]{w}{y}{}
+&=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=
+\\
+&=|x|^2+|y|^2-\<w,x\>-\<w,y\>\le
+\\
+&\le |x|^2+|y|^2+\<u,x\>+\<v,x\>+\<u,y\>+\<v,y\>=
+\\
+&=\tfrac{1}{2}\cdot|x|^2+\tfrac{1}{2}\cdot|y|^2-\<x,y\>=
+\\
+&=\tfrac{1}{2}\cdot\dist[2]{x}{y}{}.
+\end{align*}
+Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
+\claimqeds
+
+Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$, thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
+\qeds
+
+
+
+
+\section{Comments}
+
+\begin{thm}{Open question}\label{open:Halb-proper}
+Let $\spc{L}$ be a proper length $\Alex\kappa$ space.
+Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
+\end{thm}
 
 
 
