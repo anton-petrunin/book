@@ -35,7 +35,7 @@ for proper spaces the question is open, see \ref{open:Halb-proper}.
 
 \begin{thm}{Example}\label{Halbeisen's example}
 There is a complete length $\Alex{}$ space $\check{\spc{L}}$
-with a point $p\in\check{\spc{L}}$ such that the space of directions $\Sigma_p\check{\spc{L}}$ is not a $\pi$-length space. and therefore the tangent space $\T_p\check{\spc{L}}$ is not a length space. 
+with a point $p\in\check{\spc{L}}$ such that the space of directions $\Sigma_p\check{\spc{L}}$ is not a $\pi$-length space, and therefore the tangent space $\T_p\check{\spc{L}}$ is not a length space. 
 \end{thm}
 
 
@@ -47,14 +47,14 @@ Fix $\eps=0.001$ and consider two functions $f,\check f:\HH\to\RR$
 \[f(\bm{x})=|\bm{x}|,\]
 \[\check f(\bm{x})
 =
-\max\left\{|\bm{x}|,\max_{n\in\NN}\{(1+\eps)\cdot x_n-\tfrac{1}{n}\}\right\}.\] 
+\max\left\{|\bm{x}|,\max_{n\ge1}\{(1+\eps)\cdot x_n-\tfrac{1}{n}\}\right\}.\] 
 Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length-metric form infinite dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
 Set $p$ to be the origin of $\HH\times \RR$.
 
 Note that $\check{\spc{L}}\cap\spc{L}$ is starshaped in $\HH$ with center at $p$.
 Further $\check{\spc{L}}\backslash\spc{L}$ consist of a countable number of disjoint sets
-\[\Omega_n=\set{(\bm{x},\check f(\bm{x}))\in\check{\spc{L}}}{(1+\eps)\cdot x_n-\tfrac{1}{n}>|\bm{x}|},\]
-where $\dist{\Omega_n}{p}{}>\tfrac{1}{n}$.
+\[\Omega_n=\set{(\bm{x},\check f(\bm{x}))\in\check{\spc{L}}}{(1+\eps)\cdot x_n-\tfrac{1}{n}>|\bm{x}|}.\]
+Note that $\dist{\Omega_n}{p}{}>\tfrac{1}{n}$ for each $n$.
 It follows that for any geodesic $[p q]$ in $\check{\spc{L}}$,
 a small subinterval $[p \bar q]\subset [p q]$ 
 coincides with a straight segment in $\HH\times\RR$, 
@@ -65,11 +65,9 @@ let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
 The space $\spc{L}$  is isometric to the Euclidean cone
 over $\Sigma_p\spc{L}$ with vertex at~$p$; 
 $\Sigma_p\spc{L}$ is isometric to a sphere in Hilbert space with radius~$\frac{1}{\sqrt{2}}$.
-In particular, $\mangle$ is the length-metric of $\Sigma_p{\spc{L}}$ in $\mangle_{\HH\times\RR}$.
+In particular, $\mangle$ is the length-metric of $\mangle_{\HH\times\RR}$ on $\Sigma_p{\spc{L}}$.
 
-
-
-Thus to show that $\check \mangle$ does not define a length-metric on $\Sigma_p{\spc{L}}$
+Therefore in order to show that $\check \mangle$ does not define a length-metric on $\Sigma_p{\spc{L}}$
 it is sufficient to construct a pair of directions $(\xi_+,\xi_-)$ such that
 \[\check \mangle(\xi_+,\xi_-)<\mangle(\xi_+,\xi_-).\] 
 Set $\bm{e}_0=(1,0,0,\dots)$, $\bm{e}_1=(0,1,0,\dots),\dots\in \HH$. 
@@ -179,7 +177,7 @@ As it shown in Halbeisen's example (see section \ref{halbeisen}),
 a $\Alex{}$ space  might have a tangent spaces that are not length spaces; 
 thus concavity of the differential $\dd_p f$ of a semiconcave function $f$ is meaningless. 
 Nevertheless, as the following lemma shows, differential $\dd_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
-In finite dimensional case $\dd_p f$ is concave. % (see ???)
+In the finite dimensional case $\dd_p f$ is concave. % (see ???)
 
 \begin{thm}{Lemma}\label{lem:ohta} 
 Let $\spc{L}$ be a complete length $\Alex{}$ space
@@ -819,7 +817,6 @@ However, tangent space $\T_p$ might be not a length space; see  Halbeisen's exam
 
 
 Applying the above lemma for $u=v$, we get the following statement.
-In the finite-dimensional case, the Milka's lemma provides a stronger statement. %??? (\ref{lem:milka})
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
 Let $\spc{L}$ be a complete length $\Alex{}$ space 
@@ -832,6 +829,10 @@ that is,
 In particular, for any vector $u\in \T_p$ there is a polar vector $u^*\in\T_p$ such that
 $|u^*|\le |u|$.
 \end{thm}
+
+The Milka's lemma %??? (\ref{lem:milka})
+provides a refinement of this statement;
+it states that in the finite-dimensional case, we can assume that $|u^*|= |u|$. 
 
 \parit{Proof of \ref{lem:minus-sum}.}
 Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
