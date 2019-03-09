@@ -4,7 +4,7 @@
 \chapter{Warped products}
 The warped product is a construction that produces 
 a new metric space, denoted by $\spc{B}\warp f \spc{F}$,
-from two metric spaces $\spc{B}$, $\spc{F}$ and a function $f\:\spc{B}\to\RR_{\ge0}$. %The space $\spc{B}$ is called the base and $\spc{F}$, the fiber of the warped product.
+from two metric spaces $\spc{B}$, $\spc{F}$ and a function $f\:\spc{B}\to\RR_{\ge0}$. 
 
 Many important constructions such as direct product, cone, spherical suspension and join
 can be defined using warped products.
@@ -19,14 +19,16 @@ Let $\spc{B}$ and $\spc{F}$ be length spaces and $f\:\spc{B}\to [0,\infty)$ be a
 
 For any path $\gamma\:[0,1]\to \spc{B}\times \spc{F}$, we write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where 
 $\gamma_\spc{B}$ is the projection of $\gamma$ to $\spc{B}$,   
-and $\gamma_\spc{F}$ is the projection.
+and $\gamma_\spc{F}$ is the projection to $\spc{F}$.
 If $\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz, set
 \[
 \length_f \gamma \df \int _0^1 \sqrt{
 v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
 \eqlbl{eq:length}
 \]
-where $\int$ is Lebesgue integral, $v_\spc{B}$ and $v_\spc{F}$ is the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ correspondingly.
+where $\int$ is Lebesgue integral, $v_\spc{B}$ and $v_\spc{F}$ are the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ respectively.
+
+By \ref{horiz-leaf-proj}, $\length_f\gamma$ is the sum of $\length_f\gamma$ restricted to the nonzero set of $f\circ\gamma_\spc{B}$, and the length of $gamma_\spc{B}$ restricted to the zero set. 
 
 Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
  \[
@@ -35,15 +37,15 @@ Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
  \inf\set{\length_f\gamma}{\gamma(0)=x, \gamma(1)=y}
  \]
 where the exact lower bound is taken for all Lipschitz paths $\gamma\:[0,1]\to \spc{B}\times\spc{F}$. 
-The corresponding metric space is called \emph{warped product with base $\spc{B}$, fiber $\spc{F}$ and warping function $f$}; it will be denoted by $\spc{B}\warp f\spc{F}$.
+The corresponding metric space is called the \emph{warped product with base $\spc{B}$, fiber $\spc{F}$ and warping function $f$}; it will be denoted by $\spc{B}\warp f\spc{F}$.
 
-The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pair $(p,\phi)\in\spc{B}\times\spc{F}$; note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
+The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$; note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
 
 \begin{thm}{Proposition}
 The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
 
 \begin{subthm}{horiz-leaf-proj}
-The projection $(p,\phi_0)\mapsto p$ is a submetry which restriction to any horizontal leaf $\spc{B}\times\{\phi_0\}$
+The projection $(p,\phi_0)\mapsto p$ is a submetry which when restricted to any horizontal leaf $\spc{B}\times\{\phi_0\}$
 is an isometry to $\spc{B}$.
 \end{subthm}
 
@@ -84,18 +86,18 @@ $\beta\:[0,1]\to \spc{B}\times\spc{F}$ such that
 \[\length \alpha\ge \length_f\beta.\]
 
 If $f\circ\alpha_{\spc{B}}(t)>0$ for any $t$, then the vertical projection $\alpha_{\spc{F}}$ is defined.
-In this case, set $\beta(t)=(\alpha_{\spc{B}}(t),\alpha_{\spc{F}}(t))\in \spc{B}\times\spc{F}$;
+In this case, let $\beta(t)=(\alpha_{\spc{B}}(t),\alpha_{\spc{F}}(t))\in \spc{B}\times\spc{F}$;
 clearly 
 \[\length \alpha= \length_f\beta.\]
 
-If $f\circ\alpha_{\spc{B}}(t_0)>0$ for some $t_0$, set $\beta$ to be the concatenation of three curves in $\spc{B}\times\check{\spc{F}}$;
+If $f\circ\alpha_{\spc{B}}(t_0) = 0$ for some $t_0$, let $\beta$ be the concatenation of three curves in $\spc{B}\times{\spc{F}}$;
 namely: 
-(1) the horizontal curve $(\alpha_\spc{B}(t),\check\phi)$ for $t\le t_0$,
-(2) a vertical path in form $(s,\check\phi)$ to $(s,\check\psi)$
+(1) the horizontal curve $(\alpha_\spc{B}(t),\phi)$ for $t\le t_0$,
+(2) a vertical path in form $(s,\phi)$ to $(s,\psi)$
 and 
-(3) the horizontal curve $(\alpha_\spc{B}(t),\check\psi)$ for $t\ge t_0$.
-By \ref{eq:length}, the $f$-length of the middle path in the concatination is vanishing;
-therefore the $f$-length of $\check\alpha$ is the same as length of $\alpha_{\spc{B}}$;
+(3) the horizontal curve $(\alpha_\spc{B}(t),\psi)$ for $t\ge t_0$.
+By \ref{eq:length}, the $f$-length of the middle path in the concatenation is vanishing;
+therefore the $f$-length of $\alpha$ is \ge  length of $\alpha_{\spc{B}}$;
 that is,
 \[\length_f\alpha \ge 
 \length\alpha_{\spc{B}}=\length_f\beta.
@@ -386,9 +388,9 @@ In this section we formulate general results on curvature bounds of warped produ
 proved by the first author and Richard Bishop \cite{alexander-bishop:warps}
 
 \begin{thm}{Theorem}\label{thm:warp-CBB}
-Let $\spc{B}$ be a $\Alex\kappa$ length space and the function $f\:\spc{B}\to \RR_\ge$ satisfies $f''+\kappa\cdot f\le 0$;
-denote by $Z\subset \spc{B}$ the zero set of~$f$.
-Suppose $\spc{F}$ is a $\Alex{\kappa'}$ space.
+Let $\spc{B}$ be a complete finite-dimensional $\Alex\kappa$ length space, and the function $f\:\spc{B}\to \RR_\ge$ satisfy $f''+\kappa\cdot f\le 0$.
+Denote by $Z\subset \spc{B}$ the zero set of~$f$.
+Suppose $\spc{F}$ is a complete finite-dimensional $\Alex{\kappa'}$ space.
 Then the warped product $\spc{B}\warp f\spc{F}$ is $\Alex\kappa$ in the following two cases:
 \begin{subthm}{thm:warp-CAT:Z=0}
 If $Z= \emptyset$ and 
@@ -405,9 +407,13 @@ for any $z\in Z$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:warp-CAT}
-Let $\spc{B}$ be a $\CAT\kappa$ length space and the function $f\:\spc{B}\to \RR_\ge$ satisfies $f''+\kappa\cdot f\ge 0$;
-denote by $Z\subset \spc{B}$ the zero set of~$f$.
-Suppose $\spc{F}$ is a $\CAT{\kappa'}$  space.
+Let $\spc{B}$ be a 
+complete  
+$\CAT\kappa$ length space, and the function $f\:\spc{B}\to \RR_\ge$ satisfy $f''+\kappa\cdot f\ge 0$, 
+where $f$ is Lipschitz on bounded sets or $B$ is locally compact.
+Denote by $Z\subset \spc{B}$ the zero set of~$f$.
+Suppose $\spc{F}$ is a 
+complete  $\CAT{\kappa'}$  space.
 Then the warped product $\spc{B}\warp f\spc{F}$ is $\CAT\kappa$ in the following two cases:
 \begin{subthm}{thm:warp-CAT:Z=0}
 If $Z= \emptyset$ and 
