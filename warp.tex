@@ -26,9 +26,10 @@ If $\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz, set
 v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
 \eqlbl{eq:length}
 \]
-where $\int$ is Lebesgue integral, $v_\spc{B}$ and $v_\spc{F}$ are the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ respectively.
+where $\int$ is Lebesgue integral, $v_\spc{B}$ and $v_\spc{F}$ are the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ respectively. 
 
-By \ref{horiz-leaf-proj}, $\length_f\gamma$ is the sum of $\length_f\gamma$ restricted to the nonzero set of $f\circ\gamma_\spc{B}$, and the length of $\gamma_\spc{B}$ restricted to the zero set. 
+Note that $\length_f \gamma\ge \length \gamma_\spc{B}$.
+In fact the integral in \ref{eq:length} can be broken into sum of two parts: one for the restriction of $\length_f\gamma$ as in \ref{eq:length} to the nonzero set of $f\circ\gamma_\spc{B}$, and the other for the length of $\gamma_\spc{B}$ restricted to the zero set.
 
 Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
  \[
@@ -39,7 +40,9 @@ Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
 where the exact lower bound is taken for all Lipschitz paths $\gamma\:[0,1]\to \spc{B}\times\spc{F}$. 
 The corresponding metric space is called the \emph{warped product with base $\spc{B}$, fiber $\spc{F}$ and warping function $f$}; it will be denoted by $\spc{B}\warp f\spc{F}$.
 
-The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$; note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
+The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$; note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)\z=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
+
+Note we are not claiming that every Lipschitz curve in $\spc{B}\warp f \spc{F}$ may be reparametrized as the image of a Lipschitz curve in $\spc{B}\times \spc{F}$; in fact it is not true.
 
 \begin{thm}{Proposition}
 The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
@@ -69,10 +72,6 @@ The projection $(p,\phi)\mapsto (p_0,\phi)$ of a neighborhood of the vertical le
 If $p_0$ is a global minimum point of $f$, then the same holds for the projection of whole space.
 Hence (\ref{SHORT.Df>0}).
 \qeds
-
-Let us mention an alternative way to define the $f$-length that works for any Lipschitz curve $\gamma$ in the quotient space $\spc{B}\times\spc{F}/\sim$ where $(p,\phi)\z\sim (p,\psi)$ if $f(p)=0$.
-We define $f$-length as a sum of two integrals --- one is for $\length_f\gamma$ as in \ref{eq:length} restricted to the nonzero set of $f\circ\gamma_\spc{B}$, and the the other for length of $\gamma_\spc{B}$ restricted to the zero set.
-The two definitions agree by \ref{horiz-leaf-proj}, but with the latter approach this statement follow directly from the definition.
 
 Note that any horizontal leaf is weakly convex, but does not have to be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
 For instance, if there is a geodesic with the ends in the zero set 
