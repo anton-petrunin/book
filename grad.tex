@@ -16,9 +16,12 @@ Later, Alexander Lytchak unified and generalized these two approaches
 to a wide class of metric spaces in \cite{lytchak:open-map}.
 It was yet developed further by Shin-ichi Ohta in \cite{ohta} and by Giuseppe Sevar\'e in \cite{sevare}.
 
+{\sloppy 
 Gradient flow could be considered as a nonsmooth version of first order ordinary differential equations.
-The following exercise is a stripped version of Sharfutdinov's retruction;
+The following exercise is a stripped version of Sharfutdinov's retraction;
 it gives the idea behind gradient flow.
+
+}
 
 \begin{thm}{Exercise}
 Assume that a one parameter family of convex sets $K_t\subset \EE^m$ is nested; 
@@ -53,9 +56,11 @@ such that $\phi_t|_{K_t}=\id$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ for all
 Gradient-like curves will be used later in the construction of gradient curves.
 The latter appear to be a special reparametrization of gradient-like curves.
 
-\begin{thm}{Definition}\label{def:grad-like-curve}
+\begin{thm}{Definition}\label{def:grad-like-curve}{\sloppy 
 Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction.
+
+}
 
 A Lipschitz curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ will be called \emph{$f$-gradient-like curve} if
 \[\hat\alpha^+=\tfrac{1}{|\nabla_{\hat\alpha} f|}\cdot\nabla_{\hat\alpha} f;\]
@@ -93,7 +98,7 @@ To prove the ``if'' part, note that for any $s_0\in[s_{\min},s_{\max})$ we have
 |\nabla_{\hat\alpha(s_0)}f|;
 \end{align*}
 the first inequality follows from \ref{eq:thm:grad-like-2nd-def-1} 
-and the second from lower-semicontinuity of the function $x\mapsto|\nabla_x f|$, 
+and the second from lower semicontinuity of the function $x\mapsto|\nabla_x f|$, 
 see \ref{cor:gradlim}.
 Form \ref{lem:alm-grad}, we have 
 \[\hat\alpha^+(s_0)=\tfrac{1}{|\nabla_{\hat\alpha(s_0)} f|}\cdot\nabla_{\hat\alpha(s_0)} f;\]
@@ -112,9 +117,12 @@ Assume $\hat\alpha\:[0,s_{\max})\to\Dom f$ is an $f$-gradient-like curve.
 Then 
 \[(f\circ\hat\alpha)''\le\lambda\] 
 everywhere on $[0,s_{\max})$.
-\end{thm} 
+\end{thm}
 
+{\sloppy 
 Closely related statements were proved independently by Uwe Mayer and Shin-ichi Ohta \cite[2.36]{mayer} and \cite[5.7]{ohta}.
+
+}
 
 
 \begin{thm}{Corollary}\label{cor:right-cont}
@@ -219,9 +227,11 @@ them tightly to gradient-like curves
 which were introduced in Section~\ref{sec:gradient-like}.
 
 
-\begin{thm}{Definition}\label{def:grad-curve}
+\begin{thm}{Definition}\label{def:grad-curve}{\sloppy 
 Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function.
+
+}
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \emph{$f$-gradient curve} if
 \[\alpha^+=\nabla_{\alpha} f;\]
@@ -400,7 +410,7 @@ Set $\ell(t)=\dist{\alpha(t)}{\beta(t)}{}$, from the first variation inequality 
 Hence the result.
 \qeds
 
-\begin{thm}{Second distance estimate}\label{lem:fg-dist-est}
+\begin{thm}{Second distance estimate}\label{lem:fg-dist-est}{\sloppy 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $\eps>0$ 
 and $f,g\:\spc{L}\to \RR$ be two $\lambda$-concave locally Lipschitz function such that $|f-g|<\eps$.
@@ -419,6 +429,7 @@ In particular, if $t_{\max}<\infty$, then
 \Const\cdot\sqrt{\eps\cdot t}\]
 for some constant $\Const=\Const(t_{\max},\lambda)$.
 
+}
 
 Moreover, the same conclusion holds for locally Lipschitz and $\lambda$-concave subfunctions $f,g\:\spc{L}\subto \RR$ if for any $t\in[0,t_{\max})$ there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f\cap\Dom g$.
 \end{thm}
@@ -643,7 +654,7 @@ Let us define reparametrizations
 \int\limits_0^{s}\frac{1}{h_\o'(\under s)}\cdot\dd\under s.
 \end{align*}
 The $\lambda$-convexity of $h_n$ implies that $\sigma_n\to\sigma_\o$ as $n\to\o$.
-By Lemma~\ref{lem:grad--grad-like}, 
+By \ref{lem:grad--grad-like}, 
 $\alpha_n=\hat\alpha_n\circ\varsigma_n$.
 Applying ``if''-part of (\ref{SHORT.lim-grad-like}) together with Lemma~\ref{lem:grad--grad-like},
 we get that $\alpha_\o=\hat\alpha_\o\circ\varsigma_\o$ is gradient curve.
@@ -674,7 +685,7 @@ the ``if''-part of (\ref{SHORT.lim-grad}) and Picard's theorem (\ref{thm:picard}
 Applying Lemma~\ref{lem:grad--grad-like}, we get ``only if''-part of (\ref{SHORT.lim-grad-like}).
 \qeds
 
-Directly form local existence (\ref{thm:exist-grad-curv}) and distance estimates (\ref{thm:dist-est}), we get the following:
+Directly form the local existence (\ref{thm:exist-grad-curv}) and the distance estimates (\ref{thm:dist-est}), we get the following:
 
 \begin{thm}{Global existence}\label{thm:glob-exist-grad-curv}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
@@ -790,13 +801,17 @@ then
 
 Recall that a line in a metric space is a both side infinite geodesic; it has to minimze the length on each segment.
 
-\begin{thm}{Line splitting theorem}\label{thm:splitting} 
+ {\sloppy 
+
+\begin{thm}{Line splitting theorem}\label{thm:splitting}
 Let $\spc{L}$  be a complete length $\Alex{0}$ space
 and $\gamma$ be a line in $\spc{L}$. 
 Then 
 \[\spc{L}=X\oplus \gamma(\RR)\]
 for some subset $X\subset \spc{L}$.
 \end{thm}
+
+}
 
 For smooth $2$-dimensional surfaces, 
 this theorem was proved by Stefan Cohn-Vossen in \cite{cohn-vossen_line}.
@@ -821,12 +836,16 @@ Then there is an isometric splitting
 where $H\subset \spc{L}$ is a subset isometric to a Hilbert space and $\spc{L}'\subset \spc{L}$ be a convex subset that contains no lines. 
 \end{thm}
 
+ {\sloppy 
+
 \begin{thm}{Corollary}\label{cor:splitting-vectors}
 Let $\spc{K}$ be an $n$-dimensional complete length $\Alex0$ cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
 (that is, $v_+ + v_-=0$).
 Then there is an isometry $\iota\:K\to K'\times \RR$, where $K'$ be a complete length $\Alex0$ space with a cone structure with vertex $o'$ such that
 $\iota:v_\pm\mapsto (o',\pm|v_\pm|)$.
 \end{thm}
+
+}
 
 \begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
 Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space, $m\ge2$ and $\rad\spc{L}=\pi$, then 
@@ -1109,6 +1128,7 @@ S=S(s)&=\dist{p}{\sigma(s)}{},
 \end{lpic}
 \end{center}
 
+
 It will be sufficient to prove the following two inequalities:
 \[\frac{\partial^+\phi}{\partial r}(s_{\min},r)\le 0,\ \ \ \ \ \ \ \ \frac{\partial^+\phi}{\partial s}(s,r_{\min})\le 0\leqno(*)\mc0_\phi\]
 \[
@@ -1118,14 +1138,6 @@ r\cdot\frac{\partial^+\phi}{\partial r}\le 0.
 \leqno(**)\mc0_\phi
 \]
 
-\begin{wrapfigure}{r}{51mm}
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/r-s(1)}
-\lbl[lb]{22,3;$r_{\min}$}
-\lbl[br]{3,9,-90; $s_{\min}$}
-\lbl[l]{40,41; $(r_0,s_0)$}
-\end{lpic}
-\end{wrapfigure}
-
 Once they are proved,
 the radial monotonicity follows from $(*)\mc0_\phi$.
 The radial comparison follows from both $(*)\mc0_\phi$ and $(**)\mc0_\phi$.
@@ -1133,6 +1145,15 @@ Indeed, one can connect $(s_{\min},r_{\min})$ and $(s_0,r_0)$ in $[s_{\min},\inf
 by a join of coordinate line and a segment defined by $r/s=r_0/s_0$.
 According to $(*)\mc0_\phi$ and $(**)\mc0_\phi$, the value of $\phi$ does not increase while pair $(r,s)$ moving along this join.
 Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}$.
+
+\begin{figure}
+\centering
+\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/r-s(1)}
+\lbl[lb]{22,3;$r_{\min}$}
+\lbl[br]{3,9,-90; $s_{\min}$}
+\lbl[l]{40,41; $(r_0,s_0)$}
+\end{lpic}
+\end{figure}
 
 It remains to show $(*)\mc0_\phi$ and $(**)\mc0_\phi$. 
 First let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an equivalent form:
@@ -1455,6 +1476,8 @@ Follows directly from construction of $\gexp\mc\kappa_p$ and the radial comparis
 Applying the theorem above together with \ref{LinDim+-f},
 we obtain the following.
 
+{\sloppy 
+ 
 \begin{thm}{Corollary}\label{cor:short-map-to-ball}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, $p\in\spc{L}$ and $0<R\le\tfrac{\varpi\kappa}2$.
 Then there is a short map 
@@ -1462,7 +1485,7 @@ $f\:\cBall[R]_{\Lob{m}{\kappa}}\to \spc{L}$
 such that $\Im f= \cBall[p,R]\subset \spc{L}$.
 \end{thm}
 
-
+}
 
 
 
@@ -1478,13 +1501,14 @@ Apply the Radial comparison (\ref{rad-comp}) to show that for any interior point
 \[\gexp_p v=\proj(p+v).\]
 \end{thm}
 
+{\sloppy 
 
 \begin{thm}{Exercise}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $\rad\spc{L}=R$.
 Prove that there is a $(\sn\kappa R)$-Lipschitz map $\map\:\mathbb{S}^{m-1}\to\spc{L}$ such that $\Im\map\supset\partial\spc{L}$.
 \end{thm}
 
-
+}
 
 \section{Remarks}
 

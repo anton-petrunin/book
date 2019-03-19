@@ -20,8 +20,11 @@ Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\IndexSet[2]}$
  be its open cover.
 Let us recall two notions in general topology:
 \begin{itemize}
+
 \item The \emph{order}\index{order} of $\{V_\beta\}$ is supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ with nonempy intersection.
+
 \item An open cover $\{W_\alpha\}_{\alpha\in\IndexSet}$ of $\spc{X}$ is called \emph{refinement}\index{refinement} of  $\{V_\beta\}_{\beta\in\IndexSet[2]}$ if for any $\alpha\in\IndexSet$ there is $\beta\in\IndexSet[2]$ such that $W_\alpha\subset V_\beta$.
+
 \end{itemize}
 
 \begin{thm}{Topological dimension}
@@ -96,9 +99,11 @@ for any $\eps$-close continuous map $F'\:\spc{X}\to\RR^m$;
 that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
 \end{thm}
 
+
+
 The following theorem follows from \cite[theorems VI 1$\&$2]{top-dim}.
 (This theorem also holds for non-separable metric spaces 
-\cite{nagata} or \cite[3.2.10]{engelking}). %??? reference formating
+\cite{nagata} or \cite[\nopp 3.2.10]{engelking}). 
 
 \begin{thm}{Stable value theorem}\label{thm:stable-value}
 Let $\spc{X}$ be a separable metric space.
@@ -137,7 +142,7 @@ and $\T_p\spc{X}$ denotes tangent space of $\spc{X}$ at $p$ (defined in Section~
 
 Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
  
-For general metric spaces, $\LinDim$ has almost no  relations to $\HausDim$ and $\TopDim$.
+For general metric spaces, $\LinDim$ has no relations to $\HausDim$ and $\TopDim$.
 Also, $\LinDim$ does not satisfy the cover axiom
  (\ref{dim-axiom-sigma}).
 For $\LinDim$, an inverse of the product inequality holds; that is,

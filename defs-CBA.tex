@@ -32,7 +32,7 @@ is undefined.
 \end{subthm}
 \end{thm}
 
-\begin{wrapfigure}{r}{34mm}
+\begin{wrapfigure}{r}{35mm}
 \begin{lpic}[t(-0mm),b(0mm),r(0mm),l(3mm)]{pics/22(1)}
 \lbl[lt]{13,1;$p^1$}
 \lbl[rb]{20,24;$p^2$}
@@ -172,7 +172,7 @@ n\to\infty.
 \eqlbl{eq:z_n->z}\]
 
 By the triangle inequality, the $z_n$ are approximate midpoints of $p^1$ and $p^2$. %???English???
-Apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1,p^2,z_n,z$. 
+Apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1$, $p^2$, $z_n$,~$z$. 
 For $p=p^1$ or $p=p^2$, we see that $\angk{\kappa} {p}{z_n}{z}$ is arbitrarily small when $n$ is sufficiently large.  
 By the law of cosines, \ref{eq:z_n->z} follows.
 \qeds
@@ -459,13 +459,15 @@ and $v=f(\tilde v)$, $w=f(\tilde w)$.
 
 \end{thm}
 
-
+{\sloppy 
 
 \begin{thm}{Proposition}\label{prop:k-thin}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic space. 
 Then $\spc{U}$ is  $\CAT\kappa$
 if and only if every triangle of perimeter $<2\cdot \varpi\kappa$ in $\spc{U}$  is $\kappa$-thin.
 \end{thm}
+
+}
 
 \parit{Proof.}
 ``If'' follows from point-on-side comparison \ref{cat-monoton}.  
@@ -670,9 +672,11 @@ The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\tilde
 Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
 The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
 
-\begin{thm}{Exercise}\label{ex:busemann-CBA}
+\begin{thm}{Exercise}\label{ex:busemann-CBA}{\sloppy 
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\bus_\gamma\:\spc{U}\to \RR$ be the Busemann function for a ray $\gamma\:[0,\infty)\to \spc{L}$.
+
+}
 
 \begin{subthm}{}
 If $\kappa=0$, then the Busemann function $\bus_\gamma$ is  convex.
@@ -723,14 +727,14 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 \qeds
 
 
-\begin{thm}{Closest-point projection lemma}\label{lem:closest point}
+\begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
 there is unique point $p^*\in K$ that minimizes the distance to $p$;
 that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
 
-
+}
 
 \end{thm}
 
@@ -751,7 +755,7 @@ Show that the closest-point projection $\spc{U}\to K$ is short.
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
 Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
 Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in \spc{U}$.
-Show that there is a short retraction of $\spc{U}$ to $K$. 
+Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
 
 
@@ -1244,12 +1248,15 @@ local geodesics.  These statements will be used in the proof of the Hadamard--Ca
  globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
+{\sloppy 
 Let $\spc{U}$ be a locally $\CAT\kappa$ space.
  Let $\gamma_n\:[0,1]\to\spc{U}$ be a sequence of local geodesic paths converging to a path $\gamma_\infty\:[0,1]\to\spc{U}$.
 Then $\gamma_\infty$ is a local geodesic path.
 Moreover 
 \[\length\gamma_n\to\length\gamma_\infty\]
 as $n\to\infty$.
+
+}
 \end{thm}
 
 \parit{Proof.} 
@@ -1282,7 +1289,7 @@ In analogy with Riemannian geometry, the main statement of the following theorem
 
 
 \begin{thm}{No-conjugate-point theorem}
-\label{thm:no-conj-pt}
+\label{thm:no-conj-pt}{\sloppy 
 Suppose $\spc{U}$ is a locally complete, length, locally $\CAT\kappa$ space.
 Let $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path with length $<\varpi\kappa$.
 Then for some neighborhoods $\Omega^0\ni \gamma(0)$ and $\Omega^1\ni\gamma(1)$ 
@@ -1298,6 +1305,8 @@ Moreover, we can assume that the map
 is $\Lip$-Lipschitz
 for any
 $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
+
+}
 \end{thm}
 
 The following lemma was suggested to us by Alexander Lytchak.
@@ -1373,9 +1382,11 @@ The No-conjugate-point theorem (\ref{thm:no-conj-pt}) allows us to move a local 
 so that its endpoints follow given trajectories.
 The following corollary describe how this process might terminate. 
 
-\begin{thm}{Corollary}\label{cor:geo-hom}
+\begin{thm}{Corollary}\label{cor:geo-hom}{\sloppy 
 Let $\spc{U}$ be a locally complete, length, locally $\CAT\kappa$ space.
 Suppose $\gamma\:[0,1]\to\spc{U}$ is a local geodesic path with length $< \varpi\kappa$.  Let $\alpha^i\:[0,1]\to \spc{U}$, for $i=0,1$, be paths starting at $\gamma(0)$ and $\gamma(1)$ respectively.  
+
+}
 
 Then there is a uniquely determined pair consisting of an interval $\II $ satisfying $0\in \II\subset[0,1]$, and a continuous family of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$ for  $t\in \II$, such that  
 
@@ -1911,10 +1922,7 @@ By the development criterion (\ref{thm:concave-devel}),  $\tilde \gamma$ is conc
 By Lemma~\ref{lem:majorize-subgraph},  there is a short map $G\:\Conv\modtrig\kappa(p x y)\to D$.
 Further, by Lemma~\ref{lem:majorize-triangle},  $D$ majorizes $\trig p x y$ under a majorizing map $H\:D\to\spc{U}$. Clearly $H\circ G$ is a majorizing map for $\trig p x y$.
 
-Now we claim that any closed $n$-gon $[x^1x^2 \dots x^n ]$ of perimeter less than $2\cdot \varpi\kappa$ in a $\CAT{\kappa}$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\dots\tilde x^n]\]
-under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$. 
-
-\begin{wrapfigure}{r}{35mm}
+\begin{wrapfigure}{r}{36mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(1mm)]{pics/RR(1)}
 \lbl[rb]{7,24;$\tilde x^1$}
 \lbl[r]{1,10;$\tilde x^2$}
@@ -1925,6 +1933,10 @@ under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$.
 \lbl{18,27;$R'$}
 \end{lpic}
 \end{wrapfigure}
+
+Now we claim that any closed $n$-gon $[x^1x^2 \dots x^n ]$ of perimeter less than $2\cdot \varpi\kappa$ in a $\CAT{\kappa}$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\dots\tilde x^n]\]
+under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$. 
+
 
 Assume the statement is true for $(n-1)$-gons, $n\ge 4$.  
 Then  $[x^1 x^2 \dots x^{n-1}]$  is majorized by a convex polygonal region 
@@ -2000,6 +2012,8 @@ Clearly $F$ is a majorizing map for $\alpha$.
 The following exercise is the rigidity case 
 of the majorization theorem.
 
+{\sloppy 
+
 \begin{thm}{Exercise}\label{ex:isometric-majorization}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
 and $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
@@ -2010,6 +2024,8 @@ for any $t_0$ and $t_1$.
 Then there is a distance preserving map $F\:\Conv\tilde \alpha\to \spc{U}$
 such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 \end{thm}
+
+}
 
 \begin{thm}{Exercise}
 Assume a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is not a triangle.
@@ -2097,7 +2113,7 @@ Suppose $\tilde p\in [\tilde x \tilde y]$ and $\tilde q\in[\tilde y\tilde z]$.  
 \]
 Indeed, inequality holds in one direction by majorization, and in the other direction by angle comparison
 (\ref{cat-hinge}).
-By first variation (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\tilde x \tilde y \tilde z]$ and $[x y z]$ are equal.
+By first variation formula (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\tilde x \tilde y \tilde z]$ and $[x y z]$ are equal.
 But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so $F$ is distance-preserving on every geodesic of $\Conv(\tilde p, \tilde x, \tilde y)$.
 Hence the claim.
 
@@ -2123,12 +2139,13 @@ Indeed, (i) follows from \ref{clm:arm-triangle}.
 Therefore $\dist{\tilde x^{k-1}}{\tilde x^{k+1}}{}=\dist{x^{k-1} }{x^{k+1}}{}$, and so $F$ restricts to a distance-preserving map from $[\tilde x^{k-1}\tilde x^{k+1}]$ onto $[x^{k-1} x^{k+1}]$.  With the induction hypothesis, it follows that $F(\tilde p)=p$, hence 
 \[
 \mangle\hinge{\tilde x^{k-1}}{\tilde x^{k+1}}{\tilde x^{n+1}} = \mangle\hinge{x^{n+1}}{x^{k-1}}{x^{k+1}}.
-\dist{F( \tilde p )}{F(\tilde q)}{\spc{U}}.
  \eqlbl{eq:angle-arm-eq}
 \] 
 Then (ii) follows from \ref{eq:angle-arm-eq} and \ref{clm:arm-triangle}.  Since $\dist{\tilde x^{k}}{\tilde x^{n+1}}{}=\dist{x^{k} }{x^{n+1}}{}$, (iii) follows from \ref{eq:angle-arm-eq} and (i). 
 
-Let $\tilde \gamma$ be a geodesic of $\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$.  Then $\length \tilde \gamma < \varpi\kappa$.  If $\tilde \gamma$ does not pass the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$, it  follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\tilde \gamma$  is a local geodesic of length $< \varpi\kappa$.  By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.  By continuity, $F\circ\tilde \gamma$ is a geodesic for all $\tilde \gamma$. \ref{clm:arm-induction} follows and hence the lemma.
+Let $\tilde \gamma$ be a geodesic of $\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$.
+Then $\length \tilde \gamma \z< \varpi\kappa$.
+If $\tilde \gamma$ does not pass the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$, it  follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\tilde \gamma$  is a local geodesic of length $< \varpi\kappa$.  By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.  By continuity, $F\circ\tilde \gamma$ is a geodesic for all $\tilde \gamma$. \ref{clm:arm-induction} follows and hence the lemma.
  \qeds
  
 \begin{thm}{Exercise}\label{ex:square}

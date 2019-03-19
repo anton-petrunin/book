@@ -245,7 +245,8 @@
 
 %\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right\arrowvert\,{#2}\,\right\}}
 \newcommand*{\set}[2]{\left\{\,{#1}\ {:}\ {#2}\,\right\}}
-
+%{\ifthenelse{\equal{#2}{}}{}{}}
+%\left\{\,{#1}\ {:}\ {#2}\,\right\}
 
 %angles-hinges-trigonometry
 \def\mangle{\measuredangle}
@@ -278,19 +279,19 @@
 %\newcommand*{\CBB}[2]%
 %%{\text{\rm CBB}^{#1}_{#2}}
 %{\ifthenelse{\equal{#2}{}}{\text{\rm CBB}{}^{#1}}{\text{\rm CBB}{}^{#1}[{#2}]}}%
-\newcommand*{\Alex}[1]{\ifthenelse{\equal{#1}{}}{\text{\rm CBB}}{\text{\rm CBB}[{#1}]}}%
+\newcommand*{\Alex}[1]{\ifthenelse{\equal{#1}{}}{\text{\rm CBB}}{\text{\rm CBB}({#1})}}%
 
 
 \newcommand{\Cat}[2]%
 %{\text{\rm CAT}^{#1}_{#2}}
-{\ifthenelse{\equal{#2}{}}{\text{\rm CAT}^{#1}}{\text{\rm CAT}^{#1}[{#2}]}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CAT}^{#1}}{\text{\rm CAT}^{#1}({#2})}}
 \newcommand{\cCat}[2]%
 %{\text{\rm CAT}^{#1}_{#2}}
-{\ifthenelse{\equal{#2}{}}{\text{\rm CBA}{}^{#1}}{\text{\rm CBA}{}^{#1}[{#2}]}}
-\newcommand\CAT[1]{\ifthenelse{\equal{#1}{}}{\text{\rm CAT}}{\text{\rm CAT}[{#1}]}}
+{\ifthenelse{\equal{#2}{}}{\text{\rm CBA}{}^{#1}}{\text{\rm CBA}{}^{#1}({#2})}}
+\newcommand\CAT[1]{\ifthenelse{\equal{#1}{}}{\text{\rm CAT}}{\text{\rm CAT}({#1})}}
 
-\newcommand*{\Lob}[3][{}]{\mathbb{M}_{#1}^{#2}[{#3}]}
-\newcommand*{\PM}[3][{}]{\mathbf{P}\mathbb{M}_{#1}^{#2}[{#3}]}
+\newcommand*{\Lob}[3][{}]{\mathbb{M}_{#1}^{#2}({#3})}
+\newcommand*{\PM}[3][{}]{\mathbf{P}\mathbb{M}_{#1}^{#2}({#3})}
 \newcommand*{\PS}[2][{}]{\mathbf{P}\mathbb{S}_{#1}^{#2}}
 \newcommand*{\PE}[2][{}]{\mathbf{P}\mathbb{E}_{#1}^{#2}}
 \newcommand*{\PH}[2][{}]{\mathbf{P}\mathbb{H}_{#1}^{#2}}

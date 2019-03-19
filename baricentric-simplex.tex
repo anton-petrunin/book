@@ -202,12 +202,14 @@ for any $\bm{w}\in Q$.
 \end{thm}
 
 
-\begin{thm}{Lemma}\label{lem:Up-convex}
+\begin{thm}{Lemma}\label{lem:Up-convex}{\sloppy 
 Let $\spc{X}$ be a complete geodesic space 
 and $\bm{f}\z=(f^0,f^1,\dots,f^\kay)\:\spc{X}\to\RR^{\kay+1}$ 
 be an array of strongly convex and locally Lipschitz functions.
 Set $W=\Up\bm{f}(\spc{X})$.
 Then: 
+
+}
 \begin{subthm}{lem:Up-convex:Up-convex}
 $W$ is a closed convex set bounded below with respect to $\succcurlyeq$.
 \end{subthm}
@@ -528,7 +530,7 @@ the distance map
 $\tau$,
 gives an open embedding of 
 $\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)$.
-Clearly $\tau$ its Lipschitz.
+Note that $\tau$ is Lipschitz.
 According to Rademacher's theorem %??? (\ref{thm:rademacher})
 the differential 
 $\dd_{\bm{x}}(\tau\circ\sigma)$
@@ -566,7 +568,7 @@ Further, from the definition of $\kappa$-barycentric simplex,
 $\spx{\bm{a}}\mc\kappa=\spx{\bm{f}}$.
 
 All the functions $f^i$ are strongly convex (see \ref{function-comp}).
-Thus, (\ref{thm:cat-bary-web:Lip}), (\ref{thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{thm:cat-bary-web:web=Im(bary)}) 
+Therefore (\ref{thm:cat-bary-web:Lip}), (\ref{thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{thm:cat-bary-web:web=Im(bary)}) 
  follow from Theorem \ref{thm:web}.
 %???CHECK convexity ???
 
@@ -884,7 +886,7 @@ Then $\map(K)\subset\bigcup_i\Delta_n$.
 
 Arguing by contradiction,
 assume $\LinDim\spc{U}<m$.
-By Lemma~\ref{lem:approximation-cba:im},
+By \ref{lem:approximation-cba:im},
 the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of $(m-1)$-skeliton of $\spc{N}'$;
 in particular it can be covered 
 by countable collection of Lipschitz images of $(m-1)$-simplexes.
@@ -932,9 +934,11 @@ it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
 \qeds
 
 
-\section{Webs in finite-dimensional CAT spaces}
+\section{Finite-dimensional CAT spaces}
 
 Recall that web embedding and its brace is defined in \ref{prop-def:web-embedding}.
+
+{\sloppy 
 
 \begin{thm}{Theorem}\label{thm:loc-lip-inverse}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
@@ -944,6 +948,8 @@ with radius $<\tfrac{\varpi\kappa}{2}$.
 Then 
 the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\distfun{a^0}{}{}$ is locally Lipschitz.
 \end{thm}
+
+}
 
 Note that if $\bm{a}$ is degenerate,
 that is, if $\InWeb(\distfun{\bm{a}}{}{})=\emptyset$, 

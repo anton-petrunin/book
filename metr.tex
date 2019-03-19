@@ -387,9 +387,13 @@ A proper length space is geodesic.
 
 It follows from Lemma \ref{lem:mid>geod}, since in a compact set a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence.
 
+{\sloppy
+
 \begin{thm}{Hopf--Rinow theorem}\label{thm:Hopf-Rinow}
 Any complete, locally compact length space is proper.
 \end{thm}
+
+}
 
 \parit{Proof.}
 Let $\spc{X}$ be a locally compact length space.
@@ -618,9 +622,8 @@ Note that if the map $\phi\:A_1\to A_2$ is distance preserving,
 then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance preserving and 
 \[\dist{\iota_1(x_1)}{\iota_2(x_2)}{\spc{X}_1\sqcup_{\phi}\spc{X}_2}
 =
-\inf
-\set{\dist{x_1}{a_1}{\spc{X}_1}+\dist{x_2}{a_2}{\spc{X}_2}}
-{ a_2=\phi(a_1)}\]
+\inf_{a_2=\phi(a_1)}
+\{\,\dist{x_1}{a_1}{\spc{X}_1}+\dist{x_2}{a_2}{\spc{X}_2}\,\}\]
 for any $x_1\in \spc{X}_1$ and $x_2\in \spc{X}_2$.
 
 \parbf{Doubling.}

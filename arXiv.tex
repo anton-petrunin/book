@@ -9,6 +9,8 @@
 \usepackage{tikz-cd}
 \usepackage{biber}
 
+\usepackage[toctitles]{titlesec}
+
 \makeindex
 
 
@@ -39,10 +41,10 @@
 \include{dim}%the-dim%arXiv
 \include{grad}%the-grad%arXiv
 
-{\small
+{\small\sloppy
 \input{all.ind}
+
 }
-%\include{bibl}
 
 \printbibliography[heading=bibintoc]
 

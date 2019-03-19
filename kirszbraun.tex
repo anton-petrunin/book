@@ -294,10 +294,13 @@ Show that $\spc{F}_s$ admits a distance preserving map into a complete length $\
 The following theorem gives a more sensitive analog of  $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
 
 \begin{thm}{(1+\textit{n})-point comparison}
-\label{thm:pos-config} 
+\label{thm:pos-config} {\sloppy 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
 Then for any array of points $p,x^1,\dots,x^n\in \spc{L}$  
 there is a model array $\tilde p,\tilde x^1,\dots,\tilde x^n\in\Lob{n}\kappa$ such that
+
+}
+
 \begin{subthm}{}
 $\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$ for all $i$.
 \end{subthm}
@@ -541,10 +544,11 @@ The following lemma is the main ingredient in the proof.
 \begin{thm}{Finite$\bm{+}$one lemma}\label{lem:kirsz-neg:new}
 Let $\kappa\le 0$,
 $\spc{L}$ be a complete length $\Alex{\kappa}$ space, and 
-$\spc{U}$ be a complete length $\CAT\kappa$ space.  Let  
+$\spc{U}$ be a complete length $\CAT\kappa$ space.
+Suppose
 $x^1,x^2,\dots,x^n\in\spc{L}$ 
 and $y^1,y^2,\dots,y^n\in\spc{U}$
-be
+are
 such that $\dist{x^i}{x^j}{}\ge\dist{y^i}{y^j}{}$ for all $i,j$.
 
 Then for any $p\in\spc{L}$, there is $q\in\spc{U}$ such that $\dist{y^i}{q}{}\le\dist{x^i}{p}{}$ for each $i$.
@@ -863,7 +867,7 @@ for $w=t\cdot x$ and $t\to\infty$ we get
 \[\<f(x),s\>\ge \cos\mangle(p,x)\eqlbl{eq:<,>=<}\]
 for any $x\in Q$.
 
-\begin{wrapfigure}{r}{32mm}
+\begin{wrapfigure}{r}{33mm}
 \begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/k_0(1)}
 \lbl{23,35;$\mathring{\spc{U}}=\Cone \spc{U}$}
 \lbl[br]{18,7;$\nwarrow$}
@@ -912,11 +916,15 @@ $\tilde x^0$ lies in the interior of $\Conv(\tilde x^1,\dots,\tilde x^\kay)$.
 Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE^m$ containing all points $x^i$.
 \end{thm}
 
+{\sloppy 
+
 \begin{thm}{Exercise} 
 \label{ex:not-flat}
 Construct  a three-dimensional complete length $\Alex0$ space $\spc{L}$ with a triangle 
 $\trig x y z$ such that all angles in $\trig x y z$ are equal to the corresponding angles of its model triangle, but $\trig x y z$  can not be filled by an isometric copy of the model solid triangle.
 \end{thm}
+
+}
 
 The following statement we call (2\textit{n}+2)-point comparison.
 
