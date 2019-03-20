@@ -171,8 +171,8 @@
 \def\Log{\mathop{\rm Log}\nolimits}
 \def\Min{\mathop{\rm Min}\nolimits}
 \def\OS{\mathop{\rm OS}\nolimits}
-\def\Reg{\mathop{\rm Reg}\nolimits}%TWO DIFFERENT USES!!!???
-\def\Sect{\mathop{\rm Sect}\nolimits}%TWO DIFFERENT USES!!!???
+\def\Reg{\mathop{\rm Reg}\nolimits}%TWO DIFFERENT USES???
+\def\Sect{\mathop{\rm Sect}\nolimits}%TWO DIFFERENT USES???
 \def\Sing{\mathop{\rm Sing}\nolimits}
 \def\Web{\mathop{\rm Web}\nolimits}
 \def\Shef{\mathop{\rm Shef}\nolimits}
@@ -398,10 +398,11 @@
 }%
 }%
 
-\IfFileExists{../tosha-book-switch}%
-{\def\dist{\toshadist}%
-\def\yetdist{\toshayetdist}}%
-{\def\dist{\sbadist}%
-\def\yetdist{\sbayetdist}}%
+%\IfFileExists{../tosha-book-switch}{
+\def\dist{\toshadist}%
+\def\yetdist{\toshayetdist}
+%}%
+%{\def\dist{\sbadist}%
+%\def\yetdist{\sbayetdist}}%
 
 \newcommand*\distfun[2][{}]{\mathop{\rm dist}\nolimits_{#2}^{#1}}
