@@ -1419,38 +1419,43 @@ By maximality of $\II$, $\length\gamma_a=\varpi\kappa$ and so condition (\ref{SH
 \qeds
 
 \begin{thm}{Corollary}\label{cor:homotopy-from-p}
-Suppose $\spc{U}$ is a complete length  locally $\CAT\kappa$ space 
-and $\alpha\:[0,1]\to \spc{U}$ is a path of length $\ell<\varpi\kappa$.
+Let $\spc{U}$ be a complete locally $\CAT\kappa$ length space, 
+$\alpha\:[0,1]\to \spc{U}$ be a path that starts at $p$ and ends at $q$.
 Then  
 
 \begin{subthm}{cor:homotopy-from-p-exist}
-there is a unique homotopy of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$
-such that $\gamma_0(t)=\gamma_t(0)=\alpha(0)$ and $\gamma_t(1)=\alpha(t)$,
+There is a unique homotopy of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$
+such that $\gamma_0(t)=\gamma_t(0)=p$ and $\gamma_t(1)=\alpha(t)$ for any~$t$;
 \end{subthm}
 
 \begin{subthm}{cor:homotopy-from-p-length}
-we have that
+We have that
 \[\length\gamma_t\le\length(\alpha|_{[0,t]}),\]
 for any $t\in[0,1]$, and equality holds for given $t$ if and only if the restriction $\alpha|_{[0,t]}$ is a reparametrization of $\gamma_t$.
 \end{subthm}
+
+Moreover instead of completeness of $\spc{U}$ one can assume that the set 
+\[W=\set{x\in \spc{U}}{\dist{x}{p}{}+\dist{x}{q}{}\le \ell}\] 
+is complete.
+
 \end{thm}
 
 \parit{Proof.}
-%Fix $\bar r<r$ so that 
-%\[\dist{p}{\alpha(0)}{}+\dist{p}{\alpha(1)}{}+\ell\le 2\cdot \bar r.\]
-Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. Since $\spc{U}$ is complete,  there is an interval $\II$ such that statement (\ref{SHORT.cor:homotopy-from-p-exist}) holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ where $\gamma_t$ converges uniformly to a local geodesic $\gamma_a$ of length $\varpi\kappa$.
-%for $t$ in a maximal subinterval $\II$ of $[0,1]$.
-%From Theorem~\ref{thm:no-conj-pt}, $\II$ has to be open in $[0,1]$.
+Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. By (\ref{SHORT.cor:homotopy-from-p-exist}),  there is an interval $\II$ such that statement holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
 
-By the patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition (\ref{SHORT.cor:homotopy-from-p-length}) holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$. Therefore (\ref{SHORT.cor:homotopy-from-p-length}) holds on all of $\II$. 
+By the patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition (\ref{SHORT.cor:homotopy-from-p-length}) holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
+Therefore (\ref{SHORT.cor:homotopy-from-p-length}) holds on all of $\II$. 
  
-Sinse $\ell<\varpi\kappa$, 
-$\II=[0,1]$ and the result follows. 
+Since $\ell<\varpi\kappa$, Corollary \ref{cor:geo-hom} implies that
+$\II=[0,1]$.
+Indeed if $\II=[0,a)$, then either $\length\gamma_t\to\varpi\kappa$ as $t\to a-$
+or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s):[0,a)\to\spc{U}$ with no limit as $t\to a-$.
+Since $\ell<\varpi\kappa$, the condition (\ref{SHORT.cor:homotopy-from-p-length}) implies that both of these scenarios are not possible.
 \qeds
 
 The no-conjugate-point theorem  (\ref{thm:no-conj-pt}) gives the following extension of the first variation formula (\ref{thm:1st-var-cba}) from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces.
 
-  \begin{thm}{Corollary}\label{cor:1st-var++cba}
+\begin{thm}{Corollary}\label{cor:1st-var++cba}
 Suppose $\spc{U}$ is a locally complete locally $\CAT\kappa$ space. 
 For any geodesic $[px]$ in $\spc{U}$ and local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, let  $\gamma_t\:[0,1]\to \spc{U}$ be a continuous family of local geodesic paths with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p x]}(t)$ and $\gamma_t(1)=q$.  Then
 \[\length(\gamma_t)
@@ -1530,14 +1535,14 @@ is a key step in the proof.
 
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
 Let $\spc{U}$ be a length locally $\CAT\kappa$ space,
-and suppose $p\in\spc{U}$, $R\le\varpi\kappa/2$.  Assume the ball  $\cBall[p,\bar{R}]$ is complete
-for all $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$, 
+and suppose $p\in\spc{U}$, $R\le\varpi\kappa$.
+Assume the ball  $\cBall[p,\bar{R}]$ is complete for any $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$, 
 that depends continuously on $x$.
-Then $\oBall(p,R)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+Then $\oBall(p,\tfrac R2)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 \end{thm}
  
 \parit{Proof.}
-Without loss of generality, we may assume  $\spc{U}=\oBall(p,\varpi\kappa)$.
+Without loss of generality, we may assume  $\spc{U}=\oBall(p,R)$.
 
 Set $f=\md\kappa\circ\distfun{p}{}{}$.  Let us show that
 \[f''+\kappa\cdot f\ge 1.
@@ -1548,42 +1553,44 @@ Set $f=\md\kappa\circ\distfun{p}{}{}$.  Let us show that
 Fix $z\in \spc{U}$.
 We will apply Theorem \ref{thm:no-conj-pt} for the unique geodesic path $\gamma$
 from $p$ to $z$.  
-The  notations $\Omega^i$, 
+The  notations $\Omega^0$, 
+$\Omega^1$,
 %$\iota_i$, 
-$\gamma_{x y}$, $\spc{N}$, $\hat{x}$, $\hat{y}$ will be  as in the theorem.
-In particular, $z\in\Omega^1$.
+$\gamma_{x y}$, $\spc{N}$, $\hat{x}$, $\hat{y}$ will be  as in the theorem;
+in particular, $z\in\Omega^1$.
 
 By assumption,
 $\gamma_{p y}=\geodpath_{[p y]}$ for any $y\in\Omega^1$. 
 Consequently,
  $f(y)\z=\md\kappa\dist[{{}}]{\hat{p}}{\hat{y}}{\spc{N}}$.
-From the function comparison (\ref{thm:function-comp}) applied in $\spc{N}$,
-we have $f''+\kappa\cdot f\ge 1$ in $\Omega^1$.
+Applying the function comparison (\ref{thm:function-comp}) in $\spc{N}$,
+we have that $f''+\kappa\cdot f\ge 1$ in $\Omega^1$;
+whence \ref{eq:rad-conv} follows.
 
-Fix $\bar R<R$, and consider  the complete closed ball $\cBall[ p,\bar R]\subset\spc{U}$.
-The proof of the following claim takes most of the rest of proof of the theorem.
+Fix $r<\tfrac R2$; the proof of the following claim takes most of the remaining proof.
 
 \begin{clm}{}\label{clm:B-is-convex}
-$\cBall[ p,\bar R]$ is a convex set in $\spc{U}$.
+$\cBall[ p,r]$ is a convex set in $\spc{U}$.
 \end{clm}
 
-Choose arbitrary $x,z\in \cBall[ p,\bar R]$.
-First note that \ref{eq:rad-conv} implies:
+Choose arbitrary $x,z\in \cBall[ p,r]$.
+First note that \ref{eq:rad-conv} implies the following claim.
 
 \begin{clm}{}\label{clm:B-is-almost-convex}
 If $ \gamma\:[0,1]\to\spc{U}$ 
 is a local geodesic path from $x$ to $z$ and  
-$\length \gamma<\varpi\kappa$,  
-then $\length \gamma < 2\cdot \bar R$ 
-and $ \gamma$ lies completely in $\cBall[ p,\bar R]$.
+$\length \gamma\z<\varpi\kappa$,  
+then $\length \gamma \le 2\cdot r$ 
+and $ \gamma$ lies completely in $\cBall[ p,r]$.
 \end{clm}
 
 Note that  $\dist{x}{z}{}<\varpi\kappa$.
 Thus, to prove Claim~\ref{clm:B-is-convex}, it is sufficient to show that there is a geodesic path from $x$ to $z$.
-By Corollary~\ref{cor:homotopy-from-p},
+Note that by assumption $\cBall[p,2\cdot r]$ is complete;
+therefore Corollary~\ref{cor:homotopy-from-p} implies the following.
 
 \begin{clm}{}\label{clm:loc-geod<path}
-Given a path $\alpha\:[0,1]\to\spc{U}$ from $x$ to $z$ with $\length\alpha<\varpi\kappa$,
+Given a path $\alpha\:[0,1]\to\spc{U}$ from $x$ to $z$ with $\length\alpha<2\cdot r$,
 there is a local geodesic path $\gamma$ from $x$ to $z$ such that
 \[\length\gamma\le\length\alpha.\]
 
@@ -1592,14 +1599,10 @@ there is a local geodesic path $\gamma$ from $x$ to $z$ such that
 Further, let us prove the following.
 
 \begin{clm}{}\label{clm:unique-loc-geod}
-There is unique local geodesic path $\gamma_{x z}$ in $\cBall[ p,\bar R]$ from $x$ to $z$.
+There is unique local geodesic path $\gamma_{x z}$ in $\cBall[ p,r]$ from $x$ to $z$.
 \end{clm}
 
-Denote by $\Delta_{x z}$ the set of all local geodesic paths of $\cBall[ p,\bar R]$ from $x$ to $z$.
- %Applyinglary \ref{subcor:hom-straight} twice in the subspace $\cBall[ p,r]$,first for a path from $x$ to $ p$ 
-%and second for a path from $z$ to $p$ we get bijections $\Delta_{x z}\to\Delta_{p z}\to\Delta_{p p}$.
-%According to \ref{eq:rad-conv}, 
-%$\Delta_{p p}$ contains only the constant path; hence Claim~\ref{clm:unique-loc-geod} follows.
+Denote by $\Delta_{x z}$ the set of all local geodesic paths in $\cBall[ p,r]$ from $x$ to $z$.
 By Corollary \ref{cor:geo-hom}, there is a  bijection $\Delta_{x z}\to\Delta_{p p}$.
 According to \ref{eq:rad-conv}, 
 $\Delta_{p p}$ contains only the constant path.
@@ -1616,12 +1619,12 @@ Further, Claim~\ref{clm:B-is-almost-convex} and the no-conjugate-point theorem (
 imply that the map $(x,z)\mapsto\gamma_{x z}$ is continuous.
 
 Therefore by the patchwork globalization theorem (\ref{thm:alex-patch}), 
-$\cBall[ p,\bar R]$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+$\cBall[ p,r]$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 
 Since
 \[\oBall( p,R)
 =
-\bigcup_{\bar R < R}\cBall[ p,\bar R],\] 
+\bigcup_{r < R}\cBall[ p,r],\] 
 then $\oBall( p,R)$ is convex in $\spc{U}$ and 
 $\CAT\kappa$ comparison holds  for any quadruple in $\oBall( p,R)$.
 Therefore $\oBall( p,\varpi\kappa/2)$ is $\CAT\kappa$.
@@ -1636,7 +1639,7 @@ One can think of
 the map $\map$ as an analog of $\exp_p$ in the Riemannian case; in this case
 the space $\mathfrak{G}_p$ is the ball of radius $\varpi\kappa$ in the tangent space at $p$, equipped with the metric pulled back by $\exp_p$.
 
-We are going to set $\spc{B}=\oBall[\hat p,\varpi\kappa/2]\subset \mathfrak{G}_p$,
+We are going to set $\spc{B}=\oBall(\hat p,\varpi\kappa/2)\subset \mathfrak{G}_p$,
 and use the radial lemma (\ref{lem:radial-glob}) to prove that $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 
 \parit{Proof of \ref{thm:globalization-lift}.}
@@ -1649,7 +1652,8 @@ and the following holds for each $t$:
 \item $\hat\gamma_t\:[0,1]\to\spc{U}$ is a local geodesic path in $\spc{U}$.
 \end{itemize}
 
-Let $\theta(\hat\gamma)$ denote the length of the path $t\mapsto\hat\gamma_t(1)$.
+Let $\theta(\hat\gamma)$ be the length tranced by the ends of $\hat\gamma_t$;
+that is, $\theta(\hat\gamma)$ is the length of the path $t\mapsto\hat\gamma_t(1)$.
 
 Let $\mathfrak{G}_p$ be the set of all local geodesic paths 
 with length $<\varpi\kappa$ in $\spc{U}$ that start at $p$.
@@ -1685,13 +1689,13 @@ In particular, $\mathfrak{G}_p$ is locally $\CAT\kappa$.
 Let $\alpha\:[0,1]\to\spc{U}$ be a path with $\length\alpha<\varpi\kappa$ and $\alpha(0)=p$.
 The homotopy constructed in Corollary~\ref{cor:homotopy-from-p} 
 can be regarded as a path in $\mathfrak{G}_p$, say $\hat\alpha\:[0,1]\to \mathfrak{G}_p$,
-such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha(1)=\alpha$. 
+such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha_t(1)\equiv\alpha(t)$. 
 By \ref{clm:loc-iso}, 
-\[\length\hat\alpha=\length\alpha.\]
+\[\length(\hat\alpha)_{\mathfrak{G}_p}=\length(\alpha)_{\spc{U}}.\]
 Moreover, it follows that $\alpha$ is a local geodesic path of $\spc{U}$  if and only if $\hat\alpha$ is a local geodesic path of $\mathfrak{G}_p$.
 
 Further, from Corollary~\ref{cor:homotopy-from-p},
-for any $\xi\in \mathfrak{G}_p$ and  path $\hat\alpha\:[0,1]\to   \mathfrak{G}_p$ from $\hat p$ to $\xi$,
+for any $\xi\in \mathfrak{G}_p$ and path $\hat\alpha\:[0,1]\to\mathfrak{G}_p$ from $\hat p$ to $\xi$,
 we have 
 \begin{align*}
 \length\hat\alpha
@@ -1714,7 +1718,7 @@ From \ref{eq:dist=length} and Proposition~\ref{prop:geo-complete},
 it follows
 
 \begin{clm}{}\label{clm:complete-B} 
-For any $\bar R<\varpi\kappa/2$, the closed ball
+For any $\bar R<\varpi\kappa$, the closed ball
 $\cBall[\hat p,\bar R]$ in $\mathfrak{G}_p$ is complete.
 \end{clm}
 
