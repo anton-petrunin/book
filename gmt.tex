@@ -21,7 +21,7 @@ A subset $E\subset \spc{X}$ is called \index{$\mu$-measurable}\emph{$\mu$-measur
 $$\mu\, A = \mu(A \cap E) + \mu(A \backslash E)$$
 for every subset $A\subset\spc{X}$.
  
-Recall that given two subset $A$ and $B$ of a metric space $\spc{X}$,
+Recall that given two subsets $A$ and $B$ of a metric space $\spc{X}$,
 we define 
 $$\dist{A}{B}{\spc{X}}\df \inf\set{\dist{a}{b}{\spc{X}}}{a\in A\ \text{and}\ b\in B}.$$
 The following is a classical lemma in measure theory, 
@@ -106,7 +106,7 @@ and it will be denoted as $\LongMes_\kay$.
 \end{subthm}
 
 If we need to emphasize that the measure is defined on the space $\spc{X}$, we use $\spc{X}$ as the index.
-For example, we may write $(\HausMes_\alpha A)_\spc{X}$ for the $\alpha$-dimensional Hausdorff measure of set $A$ in $\spc{X}$.
+For example, we may write $\HausMes_\alpha(A)_\spc{X}$ for the $\alpha$-dimensional Hausdorff measure of set $A$ in $\spc{X}$.
 \end{thm}
 
 The following proposition follows since
@@ -189,13 +189,13 @@ and such that the measure of unit cube $[0,1]^n$ is $1$.
 The measure on $\EE^m$ described in the Lebesgue's theorem is called \index{Euclidean volume}\emph{Euclidean volume};
 it will be denoted by $\vol_m$.
 
-Let us denote by $\alpha_m$ the volume of unit ball in $\EE^m$.
+Recall that $\alpha_m$ denotes the volume of a unit ball in $\EE^m$.
 Let us define volume in general metric space.
 
 
 \begin{thm}{Definition}\label{def:vol}
 Assume $A$ is a Borel subset of metric space and $m$ is a nonnegative integer.
-The $m$-dimesional voulme of $A$ is defined as 
+The $m$-dimensional volume of $A$ is defined as 
 \[\vol_mA=\tfrac{\alpha_m}{2^m}\cdot\HausMes_m\]
 \end{thm}
 
@@ -242,13 +242,10 @@ Then
 for any $n$ and $r\le \frac{r_0}2$.
 \end{thm}
 
+%%%???do we need it???
+
 \parit{Proof.}
 Let us apply induction on $n$; the base $n=2$ follows from Definition \ref{def:doubling-space}.
-
-Now, let us and prove that
-\[\pack_{r}(\cBall[x,(n+1)\cdot r])\le N^n,\]
-using the induction hypothesis 
-\[\pack_{r}(\cBall[x,n\cdot r])\le N^{n-1}.\]
 
 By the induction hypothesis, that the ball $\cBall[x,n\cdot r]$ can be covered by $N^{n-1}$ balls of radius $r$.
 Therefore the ball $\cBall[x,(n+1)\cdot r]$ can be covered by $N^{n-1}$ balls of radius $2\cdot r$.
@@ -538,9 +535,32 @@ The case $\kay>m$ is proved in \cite[3.2.11]{federer}
 and for $\kay=m$ it follows from \cite[3.2.3]{federer} since in this case 
 $\vol_{\kay-m}=\vol_0$ is the counting measure.
 
+The following exercise includes a version of the so called \index{Besicovitch inequality}\emph{Besicovitch inequality}.
 
+\begin{thm}{Advanced exercise}
+\label{ex:besicovitch-inq}
+Let $\spc{X}$ be a metric space and 
+$\map\:[0,1]^{\times m}\to \spc{X}$
+be a continuous map.
+Set 
+\begin{align*}
+A^i&=\set{(x^1,\dots,x^m)\in [0,1]^{\times m}}{x^i=0},
+\\
+B^i&=\set{(x^1,\dots,x^m)\in [0,1]^{\times m}}{x^i=1},
+\\
+a^i&=\dist{\map(A^i)}{\map(B^i)}{\spc{X}}
+\end{align*}
+\begin{subthm}{}
+Show that
+\[\LongMes_m (\Im\map) \ge a^1\cdot a^2\cdots a^m.\]
+\end{subthm}
+\begin{subthm}{}
+Show that in general, the inequality
+\[\vol_m (\Im\map) \ge a^1\cdot a^2\cdots a^m\]
+does not hold.
+\end{subthm}
 
-
+\end{thm}
 
 
 
@@ -586,6 +606,11 @@ The following proposition follows directly from definition above.
 A finite union of $n$-rectifiable sets is $n$-rectifiable.
 \end{thm}
 
+\begin{thm}{Exercise}
+Give an example of a set $A$ in $\RR^m$ space with finite  
+such that $\LongMes_\kay A<\infty$, but $A$ is not $\kay$-rectifiable
+for some $\kay<m$.
+\end{thm}
 
 %??? We have to find where principle idea of this proof appears.
 %Before Zaj\'{\i}\v{c}ek, I see the following refs:
@@ -730,7 +755,7 @@ t\cdot[f(\bm{z}_1)+\ell(\bm{z}_1-\bm{x}_1)]>
 \\
 &>(1-t)\cdot y_0+t\cdot y_1.
 \end{align*}
-Recall that the last inequality holds for any $y_0$ and $y_1$ such that $y_i<h_{V, \ell}(\bm{x}_i)$;
+Recall that the last inequality holds for any $y_0$ and $y_1$ such that $y_i\z<h_{V, \ell}(\bm{x}_i)$;
 hence \ref{eq:Jensen-for-zajicek} follows.
 \claimqeds
 
@@ -796,39 +821,3 @@ Since
 \[\Sing_f=\Sing_f(m),\]
 the set $\Sing_f$ is countably $(m-1)$-rectifable.
 \qeds
-
-\section{Exercises}
-
-\begin{thm}{Exercise}
-Give an example of a set $A$ in $\RR^m$ space with finite  
-such that $\LongMes_\kay A<\infty$, but $A$ is not $\kay$-rectifiable
-for some $\kay<m$.
-\end{thm}
-
-
-\begin{thm}{Besicovitch inequality}
-\label{ex:besicovitch-inq}
-Let $\spc{X}$ be a metric space and 
-$\map\:[0,1]^{\times m}\to \spc{X}$
-be a continuous map.
-Set 
-\begin{align*}
-A^i&=\set{(x^1,\dots,x^m)\in [0,1]^{\times m}}{x^i=0},
-\\
-B^i&=\set{(x^1,\dots,x^m)\in [0,1]^{\times m}}{x^i=1},
-\\
-a^i&=\dist{\map(A^i)}{\map(B^i)}{\spc{X}}
-\end{align*}
-\begin{subthm}{}
-Show that
-\[\LongMes_m (\Im\map) \ge a^1\cdot a^2\cdots a^m.\]
-\end{subthm}
-\begin{subthm}{}
-Show that in general, the inequality
-\[\vol_m (\Im\map) \ge a^1\cdot a^2\cdots a^m\]
-does not hold.
-\end{subthm}
-
-
-\end{thm}
-

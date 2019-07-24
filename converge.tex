@@ -29,7 +29,7 @@ that is,
 $$\dist{A}{x}{}\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
-Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$ 
+Given a sequence of nonempty closed sets $(A_n)_{n=1}^\infty$ in a nonempty metric space $\spc{X}$ 
 a closed set $A_\infty\subset \spc{X}$ is called Hausdorff limit of $(A_n)_{n=1}^\infty$,
 briefly $A_n\Hto A_\infty$ if 
 $$\dist{A_n}{x}{}\to\dist{A_\infty}{x}{}\ \ \t{as}\ \ n\to\infty$$
@@ -37,6 +37,14 @@ for any fixed $x\in \spc{X}$.
 
 In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called \emph{converging} or \emph{converging in the sense of Hausdorff}.
 \end{thm}
+
+%One can extend the definition slightly.
+%It is natural to assume that $\dist{\emptyset}{x}{}=\infty$ for every $x$.
+%Therefore if $\dist{A_n}{x}{}\to\infty$ for some (and therefore any) $x\in \spc{X}$, then we can assume that the Hausdorff limit of $A_n$ is the empty set.
+%Using this definition we can remove the condition 
+
+
+
 
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper space
@@ -47,7 +55,7 @@ Then  $(A_n)_{n=1}^\infty$ has a converging subsequence in the sense of Hausdorf
 \end{thm}
 
 \parit{Proof.}
-Since $X$ is proper,
+Since $\spc{X}$ is proper,
 we can choose a countable dense set $\{x_1,x_2,\dots\}$ in $\spc{X}$.
 Note that the sequence $a_n=\dist{A_n}{x_\kay}{}$ is bounded for each $\kay$. 
 Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
@@ -73,7 +81,7 @@ On the other hand,
 a contradiction.
 \qeds
 
-\section{Gromov--Hausdorff convergence}
+\section{Convergence of spaces}
 
 \begin{thm}{Definition}\label{def:comp-metr}
 Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
@@ -141,7 +149,7 @@ A sequence of open sets $\Omega_n\subset \spc{X}_n$
 converges to an open set $\Omega_\infty\subset \spc{X}_\infty$
 (briefly, $\Omega_n\to \Omega_\infty$ 
 or $\Omega_n\xto{\GH} \Omega_\infty$)
-if the complements $\spc{X}_n\backslash \Omega_n$ converge to the complement $\spc{X}_\infty\backslash \Omega_\infty$ as closed sets.
+if the complements $\spc{X}_n\backslash \Omega_n$ converge to the complement $\spc{X}_\infty\backslash \Omega_\infty$ as closed sets. %what if the limit is everything???
 \end{subthm}
 
 
@@ -534,14 +542,14 @@ were considered in geometry before Gromov,
 all the considered metric were designed to be used in very speacific problems.
 A very good account for different types of convergences used in metric geometry can be found in ???.
 
-The Gromov--Hausdorff convergence (under the name Hausdorff convergence)
-was introduced by Gromov in \cite{gromov-polynomial-growth}.
+The Gromov--Hausdorff convergence was first introduced by David Edwards in \cite{edwards}
+and rediscovered later by Mikhael Gromov in \cite{gromov-polynomial-growth}.
 It was essential step in the proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
-It is remarkable that the ultra-limits,
+The ultra-limits,
 an other important type of convergence,
 also appear first in the context of  groups of polynomial growth;
 they were introduced by ??? in ???, where generalization of Gromov's theorem.
-Both concepts quikly sprad into all branches of geometry.
+Both concepts quickly spread into all branches of geometry.
 
 
 The definition \ref{def:hausdorff-coverge} was given by Frol\'{\i}k in \cite{frolik} %CHECK

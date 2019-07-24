@@ -754,11 +754,9 @@ Show that the closest-point projection $\spc{U}\to K$ is short.
 
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
 Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
-Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in \spc{U}$.
+Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
 Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
-
-
 
 \begin{thm}{Lemma}\label{lem:dist-to-convex}
 Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
@@ -1237,6 +1235,14 @@ Let $\tilde{\spc{U}}$ be the space glued from $\bar{\spc{X}}$ and $A$ by identif
 Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:glue-spherical-suspension}
+Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
+Show that there is a decreasing continuous one-parameter family of closed convex sets $K_t$ for $t\in[0,1]$ such that $K_0=\cBall[p,\tfrac\pi2]$ and $K_1=K$.
+
+(Decreasing means with respect to inclusion; that is $K_{t_0}\supset K_{t_1}$ if $t_0\le t_1$.
+Continuous means with respect to Hausdorff distance; that is $K_t\Hto K_{t_0}$ as $t\to t_0$.)
+\end{thm}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1482,15 +1488,27 @@ it could be also described as a global version of Gauss's lemma.
 \begin{thm}{Lifting globalization theorem}
 \label{thm:globalization-lift}
 Suppose $\spc{U}$ is a complete length locally $\CAT\kappa$ space and  $p\in\spc{U}$.
-Then there is a complete length $\CAT\kappa$ space $\spc{B}$, 
-with a point $\hat p$ such that $\dist{\hat p}{\hat x}{\spc{B}}\le \tfrac{\varpi\kappa}2$ for any $\hat x\in \spc{B}$ and 
+Then there is a complete $\CAT\kappa$ length space $\spc{B}$, 
+with a point $\hat p$ such that 
 there is a locally isometric map $\map\:\spc{B}\to\spc{U}$
 such that $\map(\hat p)=p$ and the following lifting property holds: 
 for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\varpi\kappa/2$, 
 %???Maybe we want $\length\alpha\le\varpi\kappa/2$???
 there is a unique path $\hat\alpha \:[0,1]\to \spc{B}$ such that $\hat\alpha(0)=\hat p$ 
 and $\map\circ\hat\alpha\equiv\alpha$.
+
+
 \end{thm}
+
+%%%???problem with completeness
+
+Note that the lifting property implies that $\map(\spc{B})\supset\oBall(p,\varpi\kappa/2)$ and by completeness $\map(\spc{B})\supset\cBall[p,\varpi\kappa/2]$.
+Also since $\spc{B}$ is $\CAT\kappa$ the closed ball $\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}$ is weakly convex set in $\spc{B}$ (see \ref{cor:convex-balls});
+in particular $\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}$ is a complete length $\CAT\kappa$ space.
+Therefore we can assume in addition that $\dist{\hat p}{\hat x}{}\le \varpi\kappa/2$ for any $\hat x\in\spc{B}$;
+or equivalently
+\[\oBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}=\spc{B}.\]
+
 
 Before proving the theorem we state and prove its corollary.
 
@@ -1652,7 +1670,7 @@ and the following holds for each $t$:
 \item $\hat\gamma_t\:[0,1]\to\spc{U}$ is a local geodesic path in $\spc{U}$.
 \end{itemize}
 
-Let $\theta(\hat\gamma)$ be the length tranced by the ends of $\hat\gamma_t$;
+Denote by $\theta(\hat\gamma)$ the length traced by the ends of $\hat\gamma_t$;
 that is, $\theta(\hat\gamma)$ is the length of the path $t\mapsto\hat\gamma_t(1)$.
 
 Let $\mathfrak{G}_p$ be the set of all local geodesic paths 
@@ -1663,14 +1681,14 @@ Given $\alpha,\beta\in \mathfrak{G}_p$ define
 \dist{\alpha}{\beta}{\mathfrak{G}_p}
 =
 \inf_{\hat\gamma} \{\theta(\hat\gamma)\},\]
-with infimum  taken along all homotopies 
+with the exact lower bound taken along all homotopies 
 $\hat\gamma\:[0,1]\times[0,1]\to\spc{U}$ 
 such that 
 $\hat\gamma_0=\alpha$, 
 $\hat\gamma_1=\beta$ 
 and $\hat\gamma_t\in \mathfrak{G}_p$ for all $t\in[0,1]$.
 
-From Theorem~\ref{thm:no-conj-pt}, we have $\dist{\alpha}{\beta}{\mathfrak{G}_p}>0$ for distinct $\alpha$ and $\beta$;
+From \ref{thm:no-conj-pt}, we have $\dist{\alpha}{\beta}{\mathfrak{G}_p}>0$ for distinct $\alpha$ and $\beta$;
 that is,
 
 \begin{clm}{}
@@ -1689,7 +1707,7 @@ In particular, $\mathfrak{G}_p$ is locally $\CAT\kappa$.
 Let $\alpha\:[0,1]\to\spc{U}$ be a path with $\length\alpha<\varpi\kappa$ and $\alpha(0)=p$.
 The homotopy constructed in Corollary~\ref{cor:homotopy-from-p} 
 can be regarded as a path in $\mathfrak{G}_p$, say $\hat\alpha\:[0,1]\to \mathfrak{G}_p$,
-such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha_t(1)\equiv\alpha(t)$. 
+such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha_t(1)\equiv\alpha(t)$ for any $t$. 
 By \ref{clm:loc-iso}, 
 \[\length(\hat\alpha)_{\mathfrak{G}_p}=\length(\alpha)_{\spc{U}}.\]
 Moreover, it follows that $\alpha$ is a local geodesic path of $\spc{U}$  if and only if $\hat\alpha$ is a local geodesic path of $\mathfrak{G}_p$.
@@ -1704,7 +1722,9 @@ we have
 \\
 &\ge
 \length\xi
-=\length\hat\xi
+=
+\\
+&=\length\hat\xi
 \end{align*}
 where equality holds only if $\hat\alpha$ is a reparametrization of $\hat\xi$.
 In particular, 
@@ -1722,9 +1742,10 @@ For any $\bar R<\varpi\kappa$, the closed ball
 $\cBall[\hat p,\bar R]$ in $\mathfrak{G}_p$ is complete.
 \end{clm}
 
-Take $\spc{B}=\oBall(\hat p,\varpi\kappa/2)$ and $\map$ constructed above.
-According to the Radial lemma (\ref{lem:radial-glob}), $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
-The remaining statements are already proved.
+Take $\oBall(\hat p,\varpi\kappa/2)$ and $\map$ constructed above.
+According to the Radial lemma (\ref{lem:radial-glob}), $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space;
+the map $\map$ extends to its completion $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$. 
+All the remaining statements are already proved.
 \qeds
 
 \section{Reshetnyak majorization}\label{sec:resh-kirz}
@@ -2187,7 +2208,7 @@ Gromov  \cite[p.~119]{gromov:hyp-groups}.
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard}, using Birkhoff's curve-shortening.  
 A proof in the non-proper 
 geodesic case 
-was given by the first author and Richard Bishop \cite{a-b:h-c}.  
+was given by the first author and Richard Bishop~\cite{a-b:h-c}.  
 This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 %??? what is it about???
 It was pointed out by Bruce 
@@ -2285,7 +2306,7 @@ $$\length\alpha_x<\tfrac{\varpi\kappa}{2}\ \ \text{and}\ \ \alpha_x(1)=\gamma_2(
 for any $x$.
 
 Let us apply the lifting globalization theorem
-(\ref{thm:globalization-lift}) for $p=F(\tilde p)$.
+(\ref{thm:globalization-lift}) for $p\z=F(\tilde p)$.
 We get a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$, and with the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.

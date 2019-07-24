@@ -24,3 +24,7 @@ isbn=false]{biblatex}
 \renewbibmacro{in:}{}
 \renewcommand*{\bibfont}{\scriptsize}
 \addbibresource{library.bib}
+
+\DeclareFieldFormat{postnote}{#1}% no postnote prefix in "normal" citation commands
+\DeclareFieldFormat{multipostnote}{#1}% no postnote prefix in "multicite" commands
+\DeclareFieldFormat{pages}{#1}% no prefix for the `pages` field in the bibliography

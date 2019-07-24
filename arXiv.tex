@@ -1,5 +1,6 @@
 \RequirePackage{snapshot}
 \documentclass[twoside]{book}
+\usepackage{biber}
 \usepackage{akp1}
 \usepackage{hyper}
 \usepackage{letters}
@@ -8,7 +9,6 @@
 \usepackage{envmnt}
 \usepackage{notation-vitya}
 \usepackage{tikz-cd}
-\usepackage{biber}
 
 \usepackage[toctitles]{titlesec}
 
@@ -17,17 +17,19 @@
 
 \begin{document}
 \include{title-vol1}
+\include{intro1}
 \mainmatter
 \include{tableofcontents}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{begin-part-preliminaries}
 \include{model}%the-model%arXiv
 \include{metr}%arXiv
+\include{converge}%the-converge
 \include{ultralimit}%the-converge%arXiv
 \include{func}%the-func
 \include{euclid}%the-euclid%arXiv
 \include{dim-prelim}
-%%\include{gmt}
+%\include{gmt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \include{begin-part-defs}
 \include{defs-CBB}%the-defs-CBB%arXiv
@@ -41,9 +43,14 @@
 \include{baricentric-simplex}
 \include{dim}%the-dim%arXiv
 \include{grad}%the-grad%arXiv
+%\include{tight}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\appendix
+\chapter{Solutions}
+\include{defs-CBB+CBA-sol}
 
 {\small\sloppy
-\input{all.ind}
+\input{arXiv.ind}
 
 \printbibliography[heading=bibintoc]
 

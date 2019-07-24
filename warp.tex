@@ -160,14 +160,15 @@ $\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
 that is, there is a distance noncontracting map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
 \end{thm}
 
-\section{Extended definition}
-The fiber-independence theorem gives an explicit formula:
+\section{Extended definitions}
+
+The fiber-independence theorem implies that 
 \[
 \dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp f \spc{F}} =
 \dist{(p,0)}{(q,\dist{\phi}{\psi}{\spc{F}})}{\spc{B}\warp f\R}
 \]
 for any $(p,\phi),(q,\psi) \in \spc{B}\times \spc{F}$.
-It implies that if $\iota\:A\to \check A$ is an isometry between two subsets
+In particular, if $\iota\:A\to \check A$ is an isometry between two subsets
 $A\subset \spc{F}$ and $\check A\subset \check{\spc{F}}$
 in length spaces $\spc{F}$ and $\check{\spc{F}}$, and $\spc{B}$ is a length space, then for any warping function $f\:\spc{B}\to\RR_{\ge0}$,
 the map $\iota$ induces an isometry between the sets 
@@ -247,6 +248,8 @@ with base $\spc{V}$,
 fiber $\mathbb{S}^0$ and warping function $\distfun{A}{}{}$;
 that is,
 \[\spc{W}\iso\spc{V}\warp{\distfun{A}{}{}}\mathbb{S}^0.\]
+
+
 
 
 \section{1-dimensional base}
@@ -381,9 +384,23 @@ Consider the quadruple of points
 By the Fiber-independence theorem~\ref{thm:fiber-independence},
 \[\dist{(s,\psi)}{(t^i,\psi^i)}{[0,\infty)\warp{\sinh}\mathbb{S}^3}=\dist{(s,\phi)}{(t^i,\phi^i)}{[0,\infty)\warp{\sinh}\spc{L}}\]
 and
-\[\dist{(t^i,\psi^i)}{(t^j,\psi^j)}{[0,\infty)\warp{\sinh}\mathbb{S}^3}\ge\dist{(t^i\phi^i)}{(t^j,\phi^j)}{[0,\infty)\warp{\sinh}\spc{L}}\]
+\[\dist{(t^i,\psi^i)}{(t^j,\psi^j)}{[0,\infty)\warp{\sinh}\mathbb{S}^3}\ge\dist{(t^i,\phi^i)}{(t^j,\phi^j)}{[0,\infty)\warp{\sinh}\spc{L}}\]
 for all $i$ and $j$.
 Since four points of $\Lob{4}{-1}$ lie in an isometrically embedded copy of $\Lob{3}{-1}$, it remains to apply Exercise \ref{ex:(3+1)-expanding}.\qeds
+
+\begin{thm}{Exercise}
+\index{spherical join}\emph{Spherical join} $\spc{U}\star\spc{V}$ of two metric spaces $\spc{U}$ and $\spc{V}$
+is defined as the unit sphere equipped with the angle metric in the product of Euclidean cones $\Cone \spc{U}\times \Cone\spc{V}$.
+
+Assume $\spc{U}$ and $\spc{V}$ are nonempty spaces.
+\begin{subthm}{}Show that $\spc{U}\star\spc{V}$ is $\CAT1$ if and only if $\spc{U}$ and $\spc{V}$ are $\CAT1$.
+\end{subthm}
+
+\begin{subthm}{}Show that $\spc{U}\star\spc{V}$ is $\Alex1$ if and only if $\spc{U}$ and $\spc{V}$ are $\Alex1$.
+\end{subthm}
+
+\end{thm}
+
 
 \section{General case}
 
