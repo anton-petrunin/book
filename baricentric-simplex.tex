@@ -670,6 +670,8 @@ The latter and \ref{eq:p-in-Bj} contradict $\bigcap_i B^i=\emptyset$. \claimqeds
 
 From the definition of web, it also follows that 
 \[\Web(\distfun{\bm{a}^{\without j}}{}{})\subset \bigcup_{i\not=j}B^i.\]
+Indeed, if $q\in \bigcap_{i\not=j}B^i$ and $q'\notin \bigcup_{i\not=j}B^i$,
+then $\dist{a_i}{q}{}\z<\dist{a_i}{q'}{}$ for any $i\nej$ therefore $q'\notin \Web(\distfun{\bm{a}^{\without j}}{}{})$.
 Therefore, the claim implies that
 $p\notin\Web(\distfun{\bm{a}^{\without j}}{}{})$ for each $j$;
 that is, $p\in\InWeb(\distfun{\bm{a}}{}{})$.
@@ -677,7 +679,7 @@ that is, $p\in\InWeb(\distfun{\bm{a}}{}{})$.
 
 
 
-\section{Dimension of CBA spaces}\label{sec:dim-cba}
+\section{Dimension}\label{sec:dim-cba}
 
 We start with two examples.
 
@@ -735,7 +737,7 @@ There is a closed separable set $K\subset\spc{U}$ such that
 Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part (\ref{SHORT.thm:dim-infty-CBA:mnfld}) in finite dimensional case.
 Namely, a complete length $\CAT{}$ space with linear dimension $m$ 
 admits a bi-Lipschitz embedding $\map$ of an open set of $\RR^m$.
-Moreover, the Lipschitz constants of $\map$ can be made arbitrary close to $1$.
+Moreover, the Lipschitz constants of $\map$ can be made arbitrary close to~$1$.
 
 \begin{thm}{Corollary}\label{cor:dim-CBA}
 For any separable complete length $\CAT{}$ space $\spc{U}$, we have
@@ -934,7 +936,7 @@ it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
 \qeds
 
 
-\section{Finite-dimensional CAT spaces}
+\section{Finite-dimensional spaces}
 
 Recall that web embedding and its brace is defined in \ref{prop-def:web-embedding}.
 
