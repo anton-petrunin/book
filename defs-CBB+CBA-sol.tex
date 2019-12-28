@@ -1,20 +1,132 @@
 %%!TEX root = arXiv.tex
+\parbf{Exercise~\ref{exr-crofton}.}
+Suppose $\alpha$is a closed spherical curve. 
+By Crofton's formula length of curve $\alpha$ on the sphere equals to $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
+
+Since $\alpha$ is closed, almost all equators cross it at even number of points (we assume that $\infty$ is an even number.
+If $\length \alpha<2\cdot\pi$ then $n_\alpha<2$.
+Therefore there is an equator that does not cross $\alpha$ --- hence the result.
+
+
+\parbf{Exercise~\ref{ex:complete=>complete};}
+\textit{(\ref{SHORT.ex:complete=>complete:complete}).}
+Note that any Cauchy sequence $(x_n)$ in $(\spc{X},\yetdist{}{}{})$ is also Cauchy in $\spc{X}$.
+Since $\spc{X}$ is complete, $x_n$ converges; denote its limit by $x_\infty$.
+
+Passing to a subsequence, we may assume that $\yetdist{x_{n-1}}{x_n}{}<\tfrac1{2^n}$.
+It follows that there is a 1-Lipschitz curve $\alpha\:[0,1]\to (\spc{X},\yetdist{}{}{})$ such that $x_n=\alpha(\tfrac1{2^n})$ and $x_\infty=\alpha(0)$.
+In particular $\yetdist{x_n}{x_\infty}{}\to0$ and $n\to\infty$.
+
+\parit{(\ref{SHORT.ex:complete=>complete:compact}).}
+Fix two points $x,y\in\spc{X}$ such that $\ell=\yetdist{x}{y}{}<\infty$.
+Let $\alpha_n$ be a sequence of paths from $x$ to $y$ such that $\length(\alpha_n)\to\ell$ as $n\to \infty$.
+Without loss of generality we may assume that each $\alpha_n$ is $(\ell+1)$-Lipschitz.
+
+Since $\spc{X}$ is compact, there is a partial limit of $\alpha_n$ as $n\to \infty$,
+denote it by $\alpha_\infty$.
+By semicontinuity of length, $\length\alpha_\infty\le\ell$;
+that is $\alpha$ is a shortest path in $\spc{X}$.
+
+\parbf{Exercise~\ref{ex:no-geod}.}
+The following example is suggested by Fedor Nazarov \cite{nazarov}.
+
+\medskip
+
+Consider the unit ball $(B,\rho_0)$
+in the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
+
+Consider another metric $\rho_1$ which is different from $\rho_0$ by the conformal factor
+\[\phi(\bm{x})=2+\tfrac{1}2\cdot x_1+\tfrac{1}4\cdot x_2+\tfrac{1}8\cdot x_3+\dots,\]
+where $\bm{x}=(x_1,x_2\,\dots)\in B$.
+That is, if $\bm{x}(t)$, $t\in[0,\ell]$, is a curve parametrized by $\rho_0$-length 
+then its $\rho_1$-length is 
+\[\length_{\rho_1}\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}.\]
+Note that the metric $\rho_1$ is bi-Lipschitz to~$\rho_0$.
+
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length that differ only in the $m$-th coordinate, denoted by $x_m(t)$ and $x_m'(t)$ correspondingly.
+Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
+the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$, then 
+\[\length_{\rho_1}\bm{x}'\le \length_{\rho_1}\bm{x}.\]
+Moreover this inequality is strict if $x'_m(t)< x_m(t)$ for some~$t$.
+
+Fix a curve $\bm{x}(t)$, $t\in[0,\ell]$, parametrized by  $\rho_0$-length.
+We can choose $m$ large, so that $x_m(t)$ is sufficiently close to $0$ for any~$t$.
+In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
+\[y_m(t)=(1-\tfrac t\ell)\cdot x_m(0)
++\tfrac t\ell\cdot x_m(\ell)
+-\tfrac 1{100}\cdot \min\{t,\ell-t\}.\]
+Consider the curve $\bm{x}'(t)$ as above with
+\[x'_m(t)=\min\{x_m(t),y_m(t)\}.\]
+Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points, and by the above
+\[\length_{\rho_1}\bm{x}'<\length_{\rho_1}\bm{x}.\]
+That is, for any curve $\bm{x}(t)$ in $(B,\rho_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
+In particular, $(B,\rho_1)$ has no geodesics.
+
+\parbf{Exercise~\ref{exercise from BH}.}
+The following example is taken from~\cite{BH}.
+
+\medskip
+
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(2mm)]{pics/square(1)}
+\lbl[r]{3,11;{$\dots$}}
+\lbl[r]{-.5,1;{$p$}}
+\lbl[r]{-.5,21;{$q$}}
+\lbl[l]{12,11;{$\spc{X}$}}
+\end{lpic}
+\end{wrapfigure}
+
+Consider the following subset of $\R^2$ equipped with the induced length metric
+\[
+\spc{X}
+=
+\bigl((0,1]\times\{0,1\}\bigr)
+\cup
+\bigl(\{1,\tfrac12,\tfrac13,\dots\}\times[0,1]\bigr)
+\]
+Note that $\spc{X}$ is locally compact and geodesic.
+
+Its completion $\bar{\spc{X}}$ is isometric to the closure of $\spc{X}$ equipped with the induced length metric;
+$\bar{\spc{X}}$ is obtained from $\spc{X}$ by adding two points $p=(0,0)$ and $q=(0,1)$.
+
+The point $p$ admits no compact neighborhood in $\bar{\spc{X}}$ 
+and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. \qeds 
+
+\parbf{Exercise~\ref{ex:compact-in-lenght}}
+Let $\spc{X}$ be a compact metric space.
+Let us identify $\spc{X}$ with its image under Kuratowsky embedding.
+Denote by $\spc{K}$ the \emph{linear} convex hull of $\spc{X}$ is the space of bounded functions on $\spc{X}$;
+that is $x\in \spc{K}$ if and only if $x$ can not be separated from $\spc{X}$ by a hyperplane.
+
+Since $\spc{X}$ is compact, so is $\spc{K}$.
+It remains to observe that $\spc{K}$ is a length space.
+
+\parbf{Exercise~\ref{ex:nonconvex-limit}.} Let $\spc{X}_n$ be the plane with the metric induced by $\ell^n$-norm and $f_n(x,y)=x$ for all $n$.
+Observe that $\spc{X}_\o$ is the plane with the metric induced by $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not convex.
+
+\parbf{Exercise~\ref{ex:adjacent-angles}.}
+
+\parbf{Exercise~\ref{ex:tangent-vect=o(t)}.}
+
+\parbf{Exercise~\ref{ex:both-sided-diff}.}
+
+\parbf{Exercise~\ref{ex:schroeder-foetch}.}
+Choose two non-Euclidean norms $|{*}|_{\spc{X}}$ and $|{*}|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $|{*}|_{\spc{X}}+|{*}|_{\spc{Y}}$ is Euclidean. See \cite{schroeder-foetch} for more details.
+
 \parbf{Exercise~\ref{ex:urysohn}.} See the construction of Urysohn's space \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}.
 
 \parbf{Exercise~\ref{ex:lebedeva-petrunin}.}
 Read \cite{lebedeva-petrunin}.
 
 \parbf{Exercises \ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}.}
-
-blabla
-
 By the definition of Busemann function,
 \begin{align*}
-\exp(\sqrt{-\kappa}\cdot\bus_\gamma) 
-&= \exp \left[\lim_{t\to \infty} \sqrt{-\kappa}\cdot(\distfun{{\gamma (t)}}{}{} - t)\right] 
+\exp(&\sqrt{-\kappa}\cdot\bus_\gamma) 
+= \exp \left[\lim_{t\to \infty} \sqrt{-\kappa}\cdot(\distfun{{\gamma (t)}}{}{} - t)\right]=
 \\
-&= \lim_{t\to \infty} \left(\exp \left[\sqrt{-\kappa}\cdot(\distfun{\gamma (t)}{}{} -t)\right]
-+ \exp\left[\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right]\right)\\
+&= \lim_{t\to \infty} \biggl(\exp \left[\sqrt{-\kappa}\cdot(\distfun{\gamma (t)}{}{} -t)\right]
++\exp\left[\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right]\biggr)=
+\\
 &=  \lim_{t\to \infty} \left(2\cdot \cosh \left[\sqrt{-\kappa}\cdot\distfun{\gamma (t)}{}{}\right]\cdot \exp\left[\sqrt{-\kappa}\cdot(-t)\right]\right).
 \end{align*}
 
