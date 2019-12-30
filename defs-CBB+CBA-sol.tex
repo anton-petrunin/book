@@ -1,6 +1,6 @@
 %%!TEX root = arXiv.tex
 \parbf{Exercise~\ref{exr-crofton}.}
-Suppose $\alpha$is a closed spherical curve. 
+Suppose $\alpha$ is a closed spherical curve. 
 By Crofton's formula length of curve $\alpha$ on the sphere equals to $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
 
 Since $\alpha$ is closed, almost all equators cross it at even number of points (we assume that $\infty$ is an even number.
@@ -105,18 +105,71 @@ It remains to observe that $\spc{K}$ is a length space.
 Observe that $\spc{X}_\o$ is the plane with the metric induced by $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not convex.
 
 \parbf{Exercise~\ref{ex:adjacent-angles}.}
+If $\mangle\hinge pxz+\mangle\hinge pyz< \pi$, then by the triangle inequality for angles (\ref{claim:angle-3angle-inq}) we have $\mangle\hinge pxy< \pi$.
+The latter implies that a short $[xy]$ fails to be a geodesic around $p$.
 
 \parbf{Exercise~\ref{ex:tangent-vect=o(t)}.}
+By the definition of right derivative, there is a gedesic $\gamma$ such that both limits 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma(\eps)}{\spc{X}}}{\eps}
+\quad\text{and}\quad
+\limsup_{\eps\to0+}\frac{\dist{\beta(\eps)}{\gamma(\eps)}{\spc{X}}}{\eps}\]
+are arbitrarily small.
+Therefore 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}{\eps}=0.\]
 
 \parbf{Exercise~\ref{ex:both-sided-diff}.}
+Follows directly from the definition of right and left derivatives.
 
 \parbf{Exercise~\ref{ex:schroeder-foetch}.}
-Choose two non-Euclidean norms $|{*}|_{\spc{X}}$ and $|{*}|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $|{*}|_{\spc{X}}+|{*}|_{\spc{Y}}$ is Euclidean. See \cite{schroeder-foetch} for more details.
+Choose two non-Euclidean norms $|{*}|_{\spc{X}}$ and $|{*}|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $|{*}|_{\spc{X}}+|{*}|_{\spc{Y}}$ is Euclidean.
+See \cite{schroeder-foetch} for more details.
+
+\parbf{Exercise~\ref{ex:(3+1)-expanding}.} 
+Assume $\dist{p}{x^i}{}=\dist{q}{y^i}{}$ for each $i$.
+Observe and use that
+\[\dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}
+\quad\iff\quad
+\angk\kappa p{x^i}{x^j}\le \angk\kappa q{y^i}{y^j}.\]
+
+\parbf{Exercise~\ref{ex:cbb-area}.} Follows from the overlap lemma (\ref{lem:extend-overlap}).
+
+\parbf{Exercise~\ref{ex:cbb-wald}.} 
+
+\parbf{Exercise~\ref{mink+alex=euclid}.}
+
+\parbf{Exercise~\ref{ex:nongeod-cbb}.}
+Modify the induced length metric on the unit sphere in the Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
+
+\parbf{Exercise~\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
+
+\parbf{Exercise~\ref{ex:non-split-almost.geod}.}
+
+\parbf{Exercise~\ref{ex:cbb-geod-overlap}.}
+
+\parbf{Exercise~\ref{ex:G-delta-not-thru}.}
+Any nonnegatively curved metric on the plane with everywhere dense set of singular points will do the job;
+by singular point we understand a point with total angle around it strictly smaller than $2\cdot\pi$.
+
+Indeed, if $x_i$ is a singular point then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
+The set 
+\[\Omega_n=\bigcup_i \oBall(x_i,\tfrac{\eps_i}n)\]
+is open and everywhere dense.
+Note that $\Omega_n$ may intersect a geodesic only at $\tfrac1n$-end of it.
+The intersection of $\Omega_n$ is a G-delta dense set that does not intersect interior of any geodesic.
+
+
+
+\parbf{Exercise~\ref{ex:equality-alexlemma}.}
 
 \parbf{Exercise~\ref{ex:urysohn}.} See the construction of Urysohn's space \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}.
 
 \parbf{Exercise~\ref{ex:lebedeva-petrunin}.}
 Read \cite{lebedeva-petrunin}.
+
+\parbf{Exercise~\ref{ex:fat-triangle}.} Apply angle-sidelength  monotonicity (\ref{cor:monoton}) twice. 
+
+\parbf{Exercise~\ref{ex:busemann}.} The first part follows from angle-sidelength  monotonicity (\ref{cor:monoton}).
+An example for the second part can be found among metrics on $\RR^2$ induced by a norm. (Compare to Exercise~\ref{mink+alex=euclid}.)
 
 \parbf{Exercises \ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}.}
 By the definition of Busemann function,
@@ -131,6 +184,65 @@ By the definition of Busemann function,
 \end{align*}
 
 By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp}) or $\Alex{\kappa}$ space (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function\\ $f=\cosh \sqrt{-\kappa}\circ\distfun{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
+
+\parbf{Exercise~\ref{ex:noncomplete-globalization}.} Read \cite{petrunin:globalization}.
+
+\parbf{Exercise~\ref{ex:fixed-point}.} If $\diam(\spc{L}/G)>\tfrac\pi2$, then for some $x\in \spc{L}$ we have
+\[\sup \set{\distfun{G\cdot x}(y)}{y\in \spc{L}}
+>
+\tfrac\pi2.\]
+Use comparison to show that there is unique point $y^{*}$ that lies on the maximal distance from the orbit $G\cdot x$.
+Observe that $y^{*}$ is a fixed point.
+
+\parbf{Exercise~\ref{ex:kleiner}.}
+This exercise is based on the main idea in \cite{hsiang-kleiner}.
+
+\medskip
+
+Assume there are 4 such points $x_1,x_2,x_3,x_4$
+Note that from comparison the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at larger than $\tfrac\pi3$.
+On the other hand, since each $x_i$ has spaces of directions $\le\tfrac12\cdot\mathbb{S}^n$, the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at most $\tfrac\pi3$ --- a contradiction.
+
+
+\parbf{Exercise~\ref{ex:ccat-(3+1)}.}
+
+\parbf{Exercise~\ref{ex:sba-2+2-short}.}
+
+\parbf{Exercise~\ref{ex:CAT-mnfld=>ext.geod}.}
+Suppose that a geodesic $[px]$ is not expendable behind $x$.
+We may assume that $\dist{p}{x}{}<\varpi\kappa$;
+otherwise move $p$ along the geodesic toward to $x$.
+
+By the uniqueness of geodesics (\ref{thm:cat-unique}), any point $y$ in a neighborhood $\Omega\ni x$ is connected to $p$ by a unique geodesic path, denote it by $\gamma_y$.
+Moreover, $h_t(y)=\gamma_y(t)$ defines a homotopy between the identity map of $\Omega$ and the constant map with value $p$;
+this is the  so called \index{geodesic homotopy}\emph{geodesic homotopy}.
+
+Since $[px]$ is not extendable, $x\notin h_t(\Omega)$ for any $t<1$.
+In particular the local homology groups vanish at $x$ --- a contradiction.
+
+\parbf{Exercise~\ref{ex:complete-space-of-dir}.} Choose a sequence of geodesic directions $\xi_n$ at $p$; denote by $\gamma_n$ the corresponding geodesics.
+Since the space $\spc{U}$ is locally compact, we may pass a converging subsequence of $(\gamma_n)$; denote its limit by limit $\gamma_\infty$ and its direction by $\xi_\infty$.
+By comparison, $\xi_\infty$ is a limit of $(\xi_n)$.
+
+\parbf{Exercise~\ref{ex:convexity-CAT0}.} %???+PIC
+It sufficient to show that if $v$ and $y$ are midpoints of geodesics $[uw]$ and $[xz]$ in $\spc{U}$, then
+\[\dist{v}{y}{}\le \tfrac12\cdot(\dist{u}{x}{}+\dist{w}{z}{}).\]
+
+Denote by $p$ the midpoint of $[uz]$.
+Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) twice, we get
+\[\dist{v}{p}{}\le \tfrac12\cdot\dist{w}{z}{}.\]
+The same way we obtain 
+\[\dist{y}{p}{}\le \tfrac12\cdot\dist{u}{x}{}.\]
+It remains to add these two inequalities and apply the triangle inequality.
+
+(This inequality also follows directly from the majorization theorem (\ref{thm:major}).)
+
+\parbf{Exercise~\ref{ex:equality-for-thin}.}
+
+\parbf{Exercise~\ref{ex:busemann-CBA}.}
+See the solution of Exercises~\ref{ex:busemann-CBB}.
+
+\parbf{Exercise~\ref{ex:closest-point-projection}.}
 
 \parbf{Exercise~\ref{ex:short-retraction-CBA(1)}.}
 Without loss of generality, we may assume that $p\in K$.
@@ -318,6 +430,12 @@ the function $t\mapsto \dist{\phi_t(x)}{\phi_t(y)}{}$ is nonincreasing for any p
 Moreover we can assume that there is a family of short maps $\phi_t(\cBall[p,\tfrac\pi2])= K_t$ and $\phi_t(x)=x$ for any $t$ and $x\in K_t$.
 It leads to another solution of Exercise~\ref{ex:short-retraction-CBA(1)}.
 
+\parbf{Exercise~\ref{ex:reshetnyak-doubling}.}
+
+\parbf{Exercise~\ref{ex:branching}.}
+
+\parbf{Exercise~\ref{ex:glue-spherical-suspension}.}
+
 \parbf{Exercise~\ref{ex:isometric-majorization}.}
 \textit{(Easier way.)} 
 Let 
@@ -341,3 +459,73 @@ Assume
 and there is a short bijecction $f\:\alpha\to\beta$.
 Then $f$ is an isometry.
 \end{thm}
+
+\parbf{Exercise~\ref{ex:bishop}.}
+
+\parbf{Exercise~\ref{ex:square}.}
+
+\parbf{Exercise~\ref{ex:cover-branching-along-2-lines}.}
+
+\parbf{Exercise~\ref{ex:cats-cradle}.}
+
+\parbf{Exercise~\ref{ex:Hadamard--Cartan}.}
+
+\parbf{Exercise~\ref{ex:CBB+CBA}.}
+
+\parbf{Exercise~\ref{ex:5-point-CBA=>CBB}.}
+
+\parbf{Exercise~\ref{ex:sturm}.}
+
+\parbf{Exercise~\ref{ex:(3+1)-nonsufficient}.}
+
+\parbf{Exercise~\ref{ex:strut+embedding}.}
+
+\parbf{Exercise~\ref{ex:flat-in-CAT}.}
+
+\parbf{Exercise~\ref{ex:flat-in-CBB}.}
+
+\parbf{Exercise~\ref{ex:not-flat}.}
+
+\parbf{Exercise~\ref{CBA-n-point}.}
+
+\parbf{Exercise~\ref{ex:riemannian-kirszbraun-equality}.}
+
+\parbf{Exercise~\ref{ex:perunin-stadler}.}
+
+\parbf{Exercise~\ref{ex:isbell}.}
+
+\parbf{Exercise~\ref{ex:kirszbrun-source}.}
+
+\parbf{Exercise~\ref{ex:warp=<}.}
+
+\parbf{Exercise~\ref{ex:convexity-in-cone}.}
+
+\parbf{Exercise~\ref{ex:spherical-join}.}
+
+\parbf{Exercise~\ref{ex:norays}.}
+
+\parbf{Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT}.}
+
+\parbf{Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}.}
+
+\parbf{Exercise~\ref{ex:d dist(grad)<0}.}
+
+\parbf{Exercise~\ref{ex:df(v)=<grad f,v>}.}
+
+\parbf{Exercise~\ref{ex:compact-dimension-cbb}.}
+
+\parbf{Exercise~\ref{ex:sharafutdinov}.}
+
+\parbf{Exercise~\ref{ex:elf-contracting}.}
+
+\parbf{Exercise~\ref{ex:grad-curve-condition}.}
+
+\parbf{Exercise~\ref{ex:grad-curve-analitic}.}
+
+\parbf{Exercise~\ref{ex:grad-flow-bry}.}
+
+\parbf{Exercise~\ref{ex:geodesic}.}
+
+\parbf{Exercise~\ref{ex:gexp}.}
+
+\parbf{Exercise~\ref{ex:bry-cover}.}

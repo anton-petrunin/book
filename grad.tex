@@ -23,7 +23,7 @@ it gives the idea behind gradient flow.
 
 }
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:sharafutdinov}
 Assume that a one parameter family of convex sets $K_t\subset \EE^m$ is nested; 
 that is, $K_{t_1}\supset K_{t_2}$ if $t_1\le t_2$.
 Show that there is a family of short maps $\phi_t\:\EE^m\to K_t$ 
@@ -371,9 +371,8 @@ Show that $\alpha$ is an $f$-gradient curve.
 
 
 
-\begin{thm}{Exercise}
-Let 
-$\spc{L}$ be a complete length $\Alex{}$ space and $f\:\spc{L}\to\RR$ be a concave locally Lipschitz function.
+\begin{thm}{Exercise}\label{ex:grad-curve-analitic}
+Let $\spc{L}$ be a complete length $\Alex{}$ space and $f\:\spc{L}\to\RR$ be a concave locally Lipschitz function.
 Show that $\alpha\:\RR\to\spc{L}$ is an $f$-gradient curve if and only if
 \[\dist[2]{x}{\alpha(t_1)}{\spc{L}}-\dist[2]{x}{\alpha(t_0)}{\spc{L}}
 \le 
@@ -770,8 +769,8 @@ $\GF_{f_n}^t\:\spc{L}_n\to \spc{L}_n$ converges to $\GF_f^t\:\spc{L}\to \spc{L}$
 
 %??? do we need it for ultralimits???
 
-\begin{thm}{Exercise}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $\partial\spc{L}=\emptyset$ , $K\subset \spc{L}$ be a compact subset and $f\:\spc{L}\to\RR$ be semiconcave function.
+\begin{thm}{Exercise}\label{ex:grad-flow-bry}
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $\partial\spc{L}=\emptyset$, $K\subset \spc{L}$ be a compact subset and $f\:\spc{L}\to\RR$ be semiconcave function.
 Assume that for some $t>0$ the gradient flow $\GF^t_f$ is defined everywhere in $K$,
 prove that 
 $$\partial_{\spc{L}}\GF^t_fK\subset\GF^t_f\Fr K.$$
@@ -1377,9 +1376,7 @@ and $x,y,z\in \spc{L}$.
 Assume $\angk\kappa zxy=\pi$.
 Show that there is a geodesic $[xy]$
 that contains $z$.
-In particular, $x$ can be connected to $y$ by a minimizing geodesic.
-
-Compare to Exercise~\ref{ex:flat-in-CBB}
+In particular, $x$ can be connected to $y$ by a minimizing geodesic. (Compare to Exercise~\ref{ex:flat-in-CBB}.)
 \end{thm}
 
 
@@ -1491,8 +1488,7 @@ such that $\Im f= \cBall[p,R]\subset \spc{L}$.
 
 
 
-\begin{thm}{Exercise}
-\label{ex:gexp} 
+\begin{thm}{Exercise}\label{ex:gexp} 
 Let $\spc{L}\subset\EE^2$ be Euclidean halfplane. 
 Clearly $\spc{L}$ is a two-dimensional complete length $\Alex{0}$ space.
 Given a point $x\in \EE^2$ let us denote by $\proj(x)$ the closest point on $\spc{L}$. 
@@ -1503,7 +1499,7 @@ Apply the Radial comparison (\ref{rad-comp}) to show that for any interior point
 
 {\sloppy 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:bry-cover}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $\rad\spc{L}=R$.
 Prove that there is a $(\sn\kappa R)$-Lipschitz map $\map\:\mathbb{S}^{m-1}\to\spc{L}$ such that $\Im\map\supset\partial\spc{L}$.
 \end{thm}
