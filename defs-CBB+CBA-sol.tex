@@ -465,16 +465,49 @@ Then $f$ is an isometry.
 \parbf{Exercise~\ref{ex:square}.}
 
 \parbf{Exercise~\ref{ex:cover-branching-along-2-lines}.}
+If $\ell$ and $m$ do not intersect, then the double cover $\spc{X}$ is not simply connected.
+In particular, by the Hadamard--Cartan theorem, $\spc{X}$ is not $\CAT0$.
 
-\parbf{Exercise~\ref{ex:cats-cradle}.}
+If $\ell$ and $m$ intersect then $\spc{X}$ is a cone over double cover $\Sigma$ of $\mathbb{S}^2$ branching at two pairs $(x,y)$ and $(v,w)$ of antipodal points.
+Suppose $\dist{x}{v}{\mathbb{S}^2}=\ell<\tfrac\pi2$.
+Note that the inverse image of $[xv]_{\mathbb{S}^2}$ is a closed geodesic of length $4\cdot\ell<2\cdot\pi$.
+Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$ and hence $\spc{X}$ is not $\CAT0$.
 
-\parbf{Exercise~\ref{ex:Hadamard--Cartan}.}
+\parbf{Exercise~\ref{ex:cats-cradle}.} Prove that the angle comparison (\ref{cat-hinge}) holds.
 
-\parbf{Exercise~\ref{ex:CBB+CBA}.}
+\parbf{Exercise~\ref{ex:Hadamard--Cartan}.} Mimic the proof of Hadamard--Cartan theorem.
+
+\parbf{Exercise~\ref{ex:CBB+CBA}.} 
 
 \parbf{Exercise~\ref{ex:5-point-CBA=>CBB}.}
+The answers are $s\le \sqrt3$ and $s\le 2$ correspondingly.
+
+The upper bound $s\le \sqrt3$ follow from (2+2)-point comparison.
+
+The Euclidean space works as example if $s$ is smaller than large diagonal of double pyramid with unit side (that is, if $s\le 2\cdot\sqrt{2/3}$).
+Otherwise take the product $\spc{K}\times \RR$ with a 2-dimensional cone for the $\CAT0$ case.
+For the $\Alex0$ case, the needed space can be constructed by taking doubling of a proper convex set $K\subset\EE^3$ in its boundary.
+We assume that the points correspond to vertexes of a regular tetrahedral with 3 vertexes on the boundary of $K$ and one lies in its interior; it corresponds to a pair of points in the doubling on distance $s$ from each other.
+
+\parit{Remarks.}
+Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison, admits a distance preserving map into a $\CAT0$ space.
+For spaces with more than 5 points the condition is unknown;
+for 6-point metric spaces, a conjecture is formulated in \cite{LPZ}.
 
 \parbf{Exercise~\ref{ex:sturm}.}
+Let $\tilde p,\tilde x_1,\dots,\tilde x_n$ be the array in $\EE^n$ provided by the (1+\textit{n})-point comparison (\ref{thm:pos-config}).
+We may assume that $\tilde p$ is the origin of $\EE^n$.
+
+Consider an $n{\times}n$-matrix $\tilde M$ with the components 
+\[\tilde m_{i,j}=\tfrac12\cdot(|\tilde x_i-\tilde p|^2+|\tilde x_j-\tilde p|^2-|\tilde x_i-\tilde x_j|^2).\]
+Note that $\tilde m_{i,j}=\langle\tilde x_i,\tilde x_j\rangle$.
+Therefore $\tilde M=A\cdot A^\top$ for an $n{\times}n$-matrix $A$ that defines linear transformation that sends standard basis to the array $\tilde x_1,\dots,\tilde x_n$.
+Therefore
+\[\bm{s}\cdot \tilde M\cdot \bm{s}^\top=|A^\top\cdot \bm{s}^\top|^2 \ge 0\]
+for any any vector $\bm{s}$.
+Further show that
+\[\bm{s}\cdot M\cdot \bm{s}^\top\ge \bm{s}\cdot \tilde M\cdot \bm{s}^\top\]
+for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
 \parbf{Exercise~\ref{ex:(3+1)-nonsufficient}.}
 
