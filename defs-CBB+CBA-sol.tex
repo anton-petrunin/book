@@ -512,10 +512,42 @@ for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 \parbf{Exercise~\ref{ex:(3+1)-nonsufficient}.}
 
 \parbf{Exercise~\ref{ex:strut+embedding}.}
+By the (1+\textit{n})-point comparison (\ref{thm:pos-config}) there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+\[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\ \text{and}\ \dist{\tilde a^i}{\tilde a^j}{}\ge\dist{a^i}{a^j}{}\]
+for all $i$ and $j$.
+
+For each $i$, set 
+$\tilde \xi^i=\dir{\tilde p}{\tilde a^i}\in\mathbb{S}^m=\Sigma_{\tilde p}(\Lob{m+1}\kappa)$.
+Note that 
+\[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}\ge \angk\kappa{p}{ a^i}{ a^j}>\tfrac\pi2\]
+
+Consider two matrices $S$ and $\tilde S$ with the components
+$s_{i,j}=\langle\tilde \xi^i,\xi^j\rangle$
+and
+$\tilde s_{i,j}=\cos[\angk\kappa{p}{a^i}{a^j}]$.
+By construction, $S\ge 0$.
+
+Note that $s_{i,j}\le \tilde s_{i,j}\le 0$ if $i\ne j$ and
+$s_{i,j}= \tilde s_{i,j}=1$ if $i=j$.
+Therefore $\tilde S\ge0$.
+The latter implies that we can assume that
+\[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}= \angk\kappa{p}{ a^i}{ a^j}\]
+for each $i$ and $j$.
+Whence the statement follows.
 
 \parbf{Exercise~\ref{ex:flat-in-CAT}.}
 
-\parbf{Exercise~\ref{ex:flat-in-CBB}.}
+\parbf{Exercise~\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\lg_{x^0}{x^i}\in\T_{x^0}$.
+Show that all $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is an isometry.
+It follows that we can identify the convex hull $K$ of $v^i$ with the convex hull of $\tilde x^i$.
+
+Note that the gradient exponent $\gexp_{x_0}$ maps $v^i\mapsto x^i$.
+By assumption, 
+\[\dist{v^i}{v^j}{}=\dist{x^i}{x^j}{}\eqlbl{eq:vv=xx}\]
+for all $i$ and $j$.
+By \ref{thm:prop-gexp}, $\gexp_{x_0}$ is a short map.
+By \ref{eq:vv=xx}, $\gexp_{x_0}$ can not be strictly short at a pair of points in $K$.
+That is, $\gexp_{x_0}$ is an distance-preserving on $K$.
 
 \parbf{Exercise~\ref{ex:not-flat}.}
 
