@@ -549,11 +549,20 @@ By \ref{thm:prop-gexp}, $\gexp_{x_0}$ is a short map.
 By \ref{eq:vv=xx}, $\gexp_{x_0}$ can not be strictly short at a pair of points in $K$.
 That is, $\gexp_{x_0}$ is an distance-preserving on $K$.
 
-\parbf{Exercise~\ref{ex:not-flat}.}
+\parbf{Exercise~\ref{ex:not-flat}.} 
 
 \parbf{Exercise~\ref{CBA-n-point}.}
+Apply \ref{thm:kirsz} for each of the following maps
+\begin{itemize}
+\item $f_0\:\tilde x\mapsto x$, $\tilde p^1\mapsto p^1$, $\tilde q^1\mapsto q^1$;
+\item $f_i\:\tilde p^i\mapsto p^i$, $\tilde p^{i+1}\mapsto p^{i+1}$, $\tilde q^i\mapsto q^i$, $\tilde q^{i+1}\mapsto q^{i+1}$ for $1\le i<n$;
+\item $f_n\:\tilde y\mapsto y$, $\tilde p^n\mapsto p^n$, $\tilde q^n\mapsto q^n$.
+\end{itemize}
+Denote by $F_i$ the short extension of $f_i$.
+Observe that $F_{i-1}(\tilde z_i)=F_{i}(\tilde z_i)$ for each $i$ and use it.
 
 \parbf{Exercise~\ref{ex:riemannian-kirszbraun-equality}.}
+
 
 \parbf{Exercise~\ref{ex:perunin-stadler}.}
 
@@ -566,8 +575,14 @@ That is, $\gexp_{x_0}$ is an distance-preserving on $K$.
 \parbf{Exercise~\ref{ex:convexity-in-cone}.}
 
 \parbf{Exercise~\ref{ex:spherical-join}.}
+By \ref{thm:warp-curv-bound:cbb:a}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\Alex1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\Alex0$ correspondingly.
+
+By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\CAT1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\CAT0$ correspondingly.
+
+It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ correspondingly.
 
 \parbf{Exercise~\ref{ex:norays}.}
+Consider a product of an infinite collection of circles.
 
 \parbf{Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT}.}
 
@@ -584,6 +599,20 @@ That is, $\gexp_{x_0}$ is an distance-preserving on $K$.
 \parbf{Exercise~\ref{ex:elf-contracting}.}
 
 \parbf{Exercise~\ref{ex:grad-curve-condition}.}
+Set $\ell(t)=\dist{\alpha(t)}{\alpha(t_3)}{}$
+Note that 
+\[\ell'(t)\le -\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle.\]
+
+Observe that the function $t\mapsto f\circ\alpha(t)$ is non-decreasing;
+in particular, $f(\alpha(t_1))\le f(\alpha(t_2))\le f(\alpha(t_3))$.
+Therefore 
+\begin{align*}\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle&\ge\dd_{\alpha(t)}f(\dir{\alpha(t)}{\alpha(t_3)})\ge 0
+\end{align*}
+for any $t\in[t_1,t_2]$.
+Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$, hence the statement.
+
+
+
 
 \parbf{Exercise~\ref{ex:grad-curve-analitic}.}
 
