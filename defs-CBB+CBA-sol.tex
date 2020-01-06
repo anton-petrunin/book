@@ -121,7 +121,7 @@ Therefore
 Follows directly from the definition of right and left derivatives.
 
 \parbf{Exercise~\ref{ex:schroeder-foetch}.}
-Choose two non-Euclidean norms $|{*}|_{\spc{X}}$ and $|{*}|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $|{*}|_{\spc{X}}+|{*}|_{\spc{Y}}$ is Euclidean.
+Choose two non-Euclidean norms $\|{*}\|_{\spc{X}}$ and $\|{*}\|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $\|{*}\|_{\spc{X}}+\|{*}\|_{\spc{Y}}$ is Euclidean.
 See \cite{schroeder-foetch} for more details.
 
 \parbf{Exercise~\ref{ex:(3+1)-expanding}.} 
@@ -135,16 +135,12 @@ Observe and use that
 
 \parbf{Exercise~\ref{ex:cbb-wald}.} 
 
-\parbf{Exercise~\ref{mink+alex=euclid}.}
-
 \parbf{Exercise~\ref{ex:nongeod-cbb}.}
 Modify the induced length metric on the unit sphere in the Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
 
 \parbf{Exercise~\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
 
 \parbf{Exercise~\ref{ex:non-split-almost.geod}.}
-
-\parbf{Exercise~\ref{ex:cbb-geod-overlap}.}
 
 \parbf{Exercise~\ref{ex:G-delta-not-thru}.}
 Any nonnegatively curved metric on the plane with everywhere dense set of singular points will do the job;
@@ -157,7 +153,22 @@ is open and everywhere dense.
 Note that $\Omega_n$ may intersect a geodesic only at $\tfrac1n$-end of it.
 The intersection of $\Omega_n$ is a G-delta dense set that does not intersect interior of any geodesic.
 
+\parbf{Exercise~\ref{mink+alex=euclid}.} 
+Note that scaling does not change the space.
+Therefore if the space is $\Alex\kappa$ then it is $\Alex{\lambda\cdot\kappa}$ for any $\lambda>0$.
+Passing to the limit as $\lambda\to 0$, we may assume that the space is $\Alex0$.
 
+The point-on-side comparison (\ref{point-on-side}) for $p=v$, $x=w$, $y=-w$ and $z=0$ implies that 
+\[\|v+w\|^2+\|v-w\|^2\le 2\cdot\|v\|^2+2\cdot\|w\|^2.\]
+Applying the comparison for 
+$p=v+w$, $x=w-v$, $y=v-w$ and $z=0$ gives the opposite inequality.
+That is, the parallelogram identity
+\[\|v+w\|^2+\|v-w\|^2= 2\cdot\|v\|^2+2\cdot\|w\|^2.\]
+holds for any vectors $v$ and $w$.
+Whence the statement follows.
+
+\parbf{Exercise~\ref{ex:cbb-geod-overlap}.}
+Apply the hinge comparison (\ref{angle}).
 
 \parbf{Exercise~\ref{ex:equality-alexlemma}.}
 
@@ -477,7 +488,15 @@ Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$ 
 
 \parbf{Exercise~\ref{ex:Hadamard--Cartan}.} Mimic the proof of Hadamard--Cartan theorem.
 
-\parbf{Exercise~\ref{ex:CBB+CBA}.} 
+\parbf{Exercise~\ref{ex:CBB+CBA}.}
+Note that it is sufficient to show that any finite set of points $x^1,\dots,x^n\in\spc{X}$ lies in an isometric copy of a Euclidean polyhedron.
+
+Observe that $\spc{X}$ is $\Alex0$ and $\CAT0$ at the same time.
+Show that there is unique point $p$ that minimize the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
+Note that the vectors $v^i=\lg_{\geod{p}{x^i}}$ lie in a linear subspace of $\T_p$.
+Moreover if $K$ is the convex hull of $v_i$, then the origin of $\T_p$ lies in the interior of $K$ relative to its affine hull.
+Finally observe that the exponential map is defined on whole $K$ and it is distance preserving.
+The statement follows since the exponential map sends $v^i\mapsto x^i$ for each $i$.
 
 \parbf{Exercise~\ref{ex:5-point-CBA=>CBB}.}
 The answers are $s\le \sqrt3$ and $s\le 2$ correspondingly.
@@ -582,7 +601,8 @@ By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\
 It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ correspondingly.
 
 \parbf{Exercise~\ref{ex:norays}.}
-Consider a product of an infinite collection of circles.
+Consider a cube in the Hilbert space;
+that is the space of all sequences $(x_1,x_2,\dots)$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by $\ell^2$-norm.
 
 \parbf{Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT}.}
 
@@ -619,7 +639,12 @@ Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$, hence the statement.
 \parbf{Exercise~\ref{ex:grad-flow-bry}.}
 
 \parbf{Exercise~\ref{ex:geodesic}.}
+Consider $(x,\kappa)$ and $(z,\kappa)$ radial curves that start at $y$
+and observe that they form a geodesic from $x$ to $z$.
 
-\parbf{Exercise~\ref{ex:gexp}.}
+\parbf{Exercise~\ref{ex:gexp}.} Set $q=p+v$ and $q'=\gexp_pv$. 
+By radial comparison $\dist{q'}{x}{}\le \dist{q}{x}{}$ for any $x\in \spc{L}$.
+If $q\in \spc{L}$, then it implies that $q=q'$.
+Otherwise note that $q'$ lies on the boundary line of $\spc{L}$ and $\proj(q)$ is the only point on this line that satisfies the inequality. 
 
-\parbf{Exercise~\ref{ex:bry-cover}.}
+\parbf{Exercise~\ref{ex:bry-cover}.} 
