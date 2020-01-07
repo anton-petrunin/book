@@ -170,7 +170,35 @@ Whence the statement follows.
 \parbf{Exercise~\ref{ex:cbb-geod-overlap}.}
 Apply the hinge comparison (\ref{angle}).
 
-\parbf{Exercise~\ref{ex:equality-alexlemma}.}
+\parbf{Exercise~\ref{ex:equality-alexlemma}.} Without loss of generality, we can assume that the points $x,v,w,y$ appear on the geodesic $[xy]$ in the same order.
+By the point-on-side comparison (\ref{point-on-side}) we have
+\begin{align*}
+\angk\kappa xyp\le\angk\kappa xwp&\le \angk\kappa xvp,
+\\
+\angk\kappa ywp&\ge\angk\kappa yvp\ge\angk\kappa yxp.
+\end{align*}
+Therefore
+\begin{align*}\angk\kappa xyp<\angk\kappa xwp
+\quad&\Longrightarrow\quad
+\angk\kappa xyp<\angk\kappa xvp,
+\\
+\angk\kappa yxp<\angk\kappa ywp
+\quad&\Longleftarrow\quad
+\angk\kappa yxp<\angk\kappa yvp,
+\end{align*}
+
+By Alexandrov's lemma (\ref{lem:alex}), we have that 
+\begin{align*}
+\angk\kappa xyp<\angk\kappa xvp
+\quad&\Longleftrightarrow\quad
+\angk\kappa yxp<\angk\kappa yvp,
+\\
+\angk\kappa xyp<\angk\kappa xwp
+\quad&\Longleftrightarrow\quad
+\angk\kappa yxp<\angk\kappa ywp.
+\end{align*}
+Hence the statement follows.
+
 
 \parbf{Exercise~\ref{ex:urysohn}.} See the construction of Urysohn's space \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}.
 
@@ -254,6 +282,18 @@ It remains to add these two inequalities and apply the triangle inequality.
 See the solution of Exercises~\ref{ex:busemann-CBB}.
 
 \parbf{Exercise~\ref{ex:closest-point-projection}.}
+Let $p\mapsto\bar p$ denotes the closest-point projection to $K$.
+We need to show that $\dist{\bar p}{\bar q}{}\le\dist{ p}{ q}{}$ for any $p,q\in \spc{U}$.
+
+Assume $p\ne \bar p\ne \bar q\ne q$.
+Note that in this case $\mangle\hinge p{\bar p}{\bar q}\ge \tfrac\pi2$ and $\mangle\hinge q{\bar q}{\bar p}\ge \tfrac\pi2$.
+Otherwise a point on the geodesic $[\bar p\bar q]$ would be closer to $p$ or to $q$ than $\bar p$ or $\bar q$ correspondingly.
+The latter is impossible since $K$ is convex and therefore $[\bar p\bar q]\subset K$.
+
+Applying the arm lemma (\ref{lem:arm}), we get the statement.
+
+The cases $p= \bar p\ne \bar q\ne q$ and $p\ne \bar p\ne \bar q= q$ can be done similarly.
+The rest of the cases are trivial.
 
 \parbf{Exercise~\ref{ex:short-retraction-CBA(1)}.}
 Without loss of generality, we may assume that $p\in K$.
@@ -301,7 +341,8 @@ Note that
 \[\cos r\le 
 \cos\phi_x\cdot\cos\phi_y
 -
-\cos d\cdot\sin\phi_x\cdot\sin\phi_y.\eqlbl{eq:cos(r)}\]
+\cos d\cdot\sin\phi_x\cdot\sin\phi_y.
+\eqlbl{eq:cos(r)}\]
 
 Indeed, if $x,y\notin K$,
 then 
@@ -529,6 +570,9 @@ Further show that
 for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
 \parbf{Exercise~\ref{ex:(3+1)-nonsufficient}.}
+It is sufficient to construct a metric of the set of points $\{p,x^1,x^2,x^3,x^4\}$ that does not satisfy (4+1)-comparison but does meet all (3+1)-comparison.
+To do this, put $x^i$ in the vertexes of regular tetrahedron in $\EE^3$ and suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
+
 
 \parbf{Exercise~\ref{ex:strut+embedding}.}
 By the (1+\textit{n})-point comparison (\ref{thm:pos-config}) there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
@@ -583,9 +627,22 @@ Observe that $F_{i-1}(\tilde z_i)=F_{i}(\tilde z_i)$ for each $i$ and use it.
 \parbf{Exercise~\ref{ex:riemannian-kirszbraun-equality}.}
 
 
-\parbf{Exercise~\ref{ex:perunin-stadler}.}
+\parbf{Exercise~\ref{ex:perunin-stadler}.} Consider the space $\spc{Y}^{\spc{X}}$ of all maps $\spc{X}\to \spc{Y}$ equipped with the product topology.
+
+Denote by $\mathfrak{S}_F$ the set of maps $h\in \spc{Y}^\spc{X}$ such that its restriction $h|_F$ belongs is short and agrees with with $f$ in $F\cap A$.
+Note that the sets $\mathfrak{S}_F\subset \spc{Y}^\spc{X}$ are closed and any finite interection of these sets is nonempty.
+
+According to Tikhonov's theorem, $\spc{Y}^{\spc{X}}$ is compact.
+By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ for all finite sets $F\subset X$ is nonempty.
+Hence the statement follows.
 
 \parbf{Exercise~\ref{ex:isbell}.}
+(This exercise is a classical result of John Isbell which was rediscovered several times after him.)
+
+The Kuratowsky embedding is an isometric embedding of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm is an injective metric space.
+It remains to show that the latter space is injective.
+
+%???TBC
 
 \parbf{Exercise~\ref{ex:kirszbrun-source}.}
 
