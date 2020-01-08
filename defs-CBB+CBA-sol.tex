@@ -645,6 +645,20 @@ It remains to show that the latter space is injective.
 %???TBC
 
 \parbf{Exercise~\ref{ex:kirszbrun-source}.}
+To prove the only-if part it is sufficient to consider only the case of two-point spaces $\spc{Z}$.
+
+It remains to prove the if part.
+
+By Zorn's lemma, we may assume that the short map $f\:Q\to \spc{Z}$ is defined on a maximal subset $Q\subset \spc{X}$;
+that is, $f$ can not be extended to a larger set as a short map.
+Note that in this case $Q$ is a closed subset of $\spc{X}$.
+
+Assume that there is a point $x\in \spc{X}\backslash Q$.
+Denote by $\bar x$ a point in $Q$ that lies on minimal distance from $x$.
+By the ultratriangle inequality, $\dist{\bar x}{y}{}\le\dist{x}{y}{}$ for any $y\in Q$.
+Assigning $f(x)=f(\bar x)$, we extend $f$ to $Q\cup\{x\}$ as a short map --- a contradiction.
+Therefore $Q=\spc{X}$ hence the statement.
+
 
 \parbf{Exercise~\ref{ex:warp=<}.}
 
@@ -668,14 +682,35 @@ that is the space of all sequences $(x_1,x_2,\dots)$ such that $|x_i|\le 1$ and 
 \parbf{Exercise~\ref{ex:d dist(grad)<0}.}
 
 \parbf{Exercise~\ref{ex:df(v)=<grad f,v>}.}
+Since $\alpha$ is Lipschitz, so is $f\circ\alpha$.
+By standard Rademacher's theorem, the derivative $(f\circ\alpha)'$ is defined almost everywhere.
+In particular 
+\[(\dd_{\alpha(t)}f)(\alpha^+(t))+(\dd_{\alpha(t)}f)(\alpha^-(t))\ae0.\]
+
+Further by extended Rademacher's theorem, %???we need it???
+we have that
+\[\alpha^+(t)+\alpha^-(t)\ae0.\]
+In particular,
+\[\<\nabla_{\alpha(t)}f,\alpha^+(t)\>+\<\nabla_{\alpha(t)}f,\alpha^-(t)\>
+\ae0.\]
+
+Finally, by the definition of gradient, we have that 
+\[\<\nabla_{\alpha(t)}f,\alpha^\pm(t)\>\ge (\dd_{\alpha(t)}f)(\alpha^\pm(t)).\]
+Hence the result follows.
+
 
 \parbf{Exercise~\ref{ex:compact-dimension-cbb}.}
+Suppose that $\spc{L}$ is infinite dimensional.
+Denote by $\Omega_m\subset \spc{L}$ the set of all points $p$ with $\rank_p\ge m$.
+Evidently $\Omega_1\supset \Omega_2\supset\dots$ and $\Omega_m$ is open for each $m$.
+
+By \ref{LinDim+}, each $\Omega_m$ is dense in $\spc{L}$.
+Hence there is a G-delta dense set of points $p\in\spc{L}$ such that $\rank_p=\infty$.
+It follows that $\Sigma_p$ is not compact.
 
 \parbf{Exercise~\ref{ex:sharafutdinov}.}
 
 \parbf{Exercise~\ref{ex:elf-contracting}.}
-
-\parbf{Exercise~\ref{ex:grad-curve-condition}.}
 Set $\ell(t)=\dist{\alpha(t)}{\alpha(t_3)}{}$
 Note that 
 \[\ell'(t)\le -\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle.\]
@@ -688,8 +723,15 @@ Therefore
 for any $t\in[t_1,t_2]$.
 Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$, hence the statement.
 
+\parbf{Exercise~\ref{ex:grad-curve-condition}.} 
+Without loss of generality, we may assume that $(f\circ\alpha)'(t)>0$ for any $t$.
 
-
+Let $\hat\alpha$ be reparametrization of $\alpha$ by its arclength.
+Note that 
+\[(f\circ\hat\alpha)'(s)\ge |\nabla_{\hat\alpha(s)}f|\]
+almost everywhere.
+Therefore, by Theorem~\ref{thm:grad-like-2nd-def}, $\hat\alpha$ is a gradient-like curve.
+It remains to apply Lemma~\ref{lem:grad--grad-like}.
 
 \parbf{Exercise~\ref{ex:grad-curve-analitic}.}
 
