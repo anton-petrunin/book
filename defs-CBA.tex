@@ -44,7 +44,7 @@ is undefined.
 
 Here is more intuitive reformulation.
 
-\begin{thm}{Reformulation}
+\begin{thm}{Reformulation}\label{def:2+2-reformulated}
 Let $\spc{X}$ be a metric space.
 A quadruple $p^1,p^2,x^1,x^2\in \spc{X}$ satisfies $\CAT\kappa$ point comparison if one of the following holds:
 \begin{subthm}{}
@@ -117,6 +117,17 @@ such that
 \dist{q^i}{y^j}{}&\le \dist{p^i}{x^j}{}
 \end{align*}
 for any $i$ and $j$.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:berg-nikolaev}
+Let $\spc{U}$ be a complete length space such that for any quadrouple $p,q,x,y\in\spc{L}$ 
+the following inequality holds
+\[\dist[2]{p}{q}{}+\dist[2]{x}{y}{}\le \dist[2]{p}{x}{}
++\dist[2]{p}{y}{}+\dist[2]{q}{x}{}+\dist[2]{q}{y}{}.
+\eqlbl{eq:berg-nikolaev-CAT}\]
+Prove that $\spc{U}$ is $\CAT0$.
+
+Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:berg-nikolaev-CAT} for any relabeling of its points by $p,q,x,y$, such that $\spc{X}$ is not $\CAT{0}$.
 \end{thm}
 
 The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower;
@@ -1066,7 +1077,7 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\kappa$-thin.
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
 The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper and complete. 
-In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger.\cite{BH}.
+In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger}.
 
 \begin{thm}{Reshetnyak's gluing theorem}\label{thm:gluing}
 Suppose 
@@ -1289,7 +1300,7 @@ and therefore $\gamma_\infty$ is a local geodesic.
 \qeds
 
 
-The following theorem was proved by the first author and Richard Bishop \cite{a-b:h-c}.
+The following theorem was proved by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
 In analogy with Riemannian geometry, the main statement of the following theorem could be restated as: 
 \emph{In a space of curvature $\le\kappa$, two points cannot be conjugate along a local geodesic of length $<\varpi\kappa$.}
 
@@ -1317,7 +1328,7 @@ $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 
 The following lemma was suggested to us by Alexander Lytchak.
 The proof proceeds by piecing together $\CAT{\kappa}$  neighborhoods of points on a curve to construct a new $\CAT{\kappa}$ space.  
-Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of No-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{a-b:h-c}.
+Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of No-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -1548,7 +1559,7 @@ Hence the second statement follows.
 
 
 The proof of the lifting globalization theorem relies heavily on the properties of the space of local geodesic paths discussed in Section~\ref{sec:geod-space}.
-The following lemma proved by the first author and Richard Bishop \cite{a-b:cbc} 
+The following lemma proved by the first author and Richard Bishop \cite{alexander-bishop:cbc} 
 is a key step in the proof.
 
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
@@ -2208,14 +2219,14 @@ Gromov  \cite[p.~119]{gromov:hyp-groups}.
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard}, using Birkhoff's curve-shortening.  
 A proof in the non-proper 
 geodesic case 
-was given by the first author and Richard Bishop~\cite{a-b:h-c}.  
+was given by the first author and Richard Bishop~\cite{alexander-bishop:h-c}.  
 This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 %??? what is it about???
 It was pointed out by Bruce 
 Kleiner \cite{ballmann:lectures} 
 and independently by Martin 
 Bridson and Andr\'{e} 
-Haefliger \cite{BH} that 
+Haefliger \cite{bridson-haefliger} that 
 %the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence 
 %the Hadamard--Cartan theorem
 this proof
@@ -2418,7 +2429,7 @@ Show that $\spc{X}$ is $\CAT{0}$.
 \end{thm}
 
 The following exercise gives an analog of Hadamard--Cartan theorem for locally convex spaces;
-see also \cite{a-b:h-c}.
+see also \cite{alexander-bishop:h-c}.
 
 \begin{thm}{Exercise}\label{ex:Hadamard--Cartan}
 Show that a complete, simply connected, locally convex space is a convex space.

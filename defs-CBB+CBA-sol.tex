@@ -63,7 +63,7 @@ That is, for any curve $\bm{x}(t)$ in $(B,\rho_1)$, we can find a shorter curve 
 In particular, $(B,\rho_1)$ has no geodesics.
 
 \parbf{Exercise~\ref{exercise from BH}.}
-The following example is taken from~\cite{BH}.
+The following example is taken from~\cite{bridson-haefliger}.
 
 \medskip
 
@@ -202,7 +202,7 @@ Hence the statement follows.
 
 \parbf{Exercise~\ref{ex:urysohn}.} See the construction of Urysohn's space \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}.
 
-\parbf{Exercise~\ref{ex:lebedeva-petrunin}.}
+\parbf{Advanced exercise~\ref{ex:lebedeva-petrunin}.}
 Read \cite{lebedeva-petrunin}.
 
 \parbf{Exercise~\ref{ex:fat-triangle}.} Apply angle-sidelength  monotonicity (\ref{cor:monoton}) twice. 
@@ -224,7 +224,7 @@ By the definition of Busemann function,
 
 By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp}) or $\Alex{\kappa}$ space (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function\\ $f=\cosh \sqrt{-\kappa}\circ\distfun{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
 
-\parbf{Exercise~\ref{ex:noncomplete-globalization}.} Read \cite{petrunin:globalization}.
+\parbf{Advanced exercise~\ref{ex:noncomplete-globalization}.} Read \cite{petrunin:globalization}.
 
 \parbf{Exercise~\ref{ex:fixed-point}.} If $\diam(\spc{L}/G)>\tfrac\pi2$, then for some $x\in \spc{L}$ we have
 \[\sup \set{\distfun{G\cdot x}(y)}{y\in \spc{L}}
@@ -246,6 +246,12 @@ On the other hand, since each $x_i$ has spaces of directions $\le\tfrac12\cdot\m
 \parbf{Exercise~\ref{ex:ccat-(3+1)}.}
 
 \parbf{Exercise~\ref{ex:sba-2+2-short}.}
+
+\parbf{Advanced exercise~\ref{ex:berg-nikolaev}.} Read \cite{sato}. (The original proof \cite{berg-nikolaev} is much longer and it is harder to follow.)
+
+An example for the the second part of the problem, can be found among 4-point metric spaces.
+It is sufficient to take a generic convex quadraliteral and increase one of its diagonals slightly;
+it will still satisfy the inequality for all relabeling, but will fail to meet \ref{def:2+2-reformulated}.
 
 \parbf{Exercise~\ref{ex:CAT-mnfld=>ext.geod}.}
 Suppose that a geodesic $[px]$ is not expendable behind $x$.
@@ -552,7 +558,7 @@ We assume that the points correspond to vertexes of a regular tetrahedral with 3
 \parit{Remarks.}
 Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison, admits a distance preserving map into a $\CAT0$ space.
 For spaces with more than 5 points the condition is unknown;
-for 6-point metric spaces, a conjecture is formulated in \cite{LPZ}.
+for 6-point metric spaces, a conjecture is formulated in \cite{lebedeva-petrunin-zolotov}.
 
 \parbf{Exercise~\ref{ex:sturm}.}
 Let $\tilde p,\tilde x_1,\dots,\tilde x_n$ be the array in $\EE^n$ provided by the (1+\textit{n})-point comparison (\ref{thm:pos-config}).
@@ -661,6 +667,8 @@ Therefore $Q=\spc{X}$ hence the statement.
 
 
 \parbf{Exercise~\ref{ex:warp=<}.}
+It is sufficient to show that the natural map $\spc{B}\warp{g}\spc{F}\to \spc{B}\warp{f}\spc{F}$ is short.
+The latter follows from the fiber-independence theorem (\ref{thm:fiber-independence}).
 
 \parbf{Exercise~\ref{ex:convexity-in-cone}.}
 
@@ -734,6 +742,18 @@ Therefore, by Theorem~\ref{thm:grad-like-2nd-def}, $\hat\alpha$ is a gradient-li
 It remains to apply Lemma~\ref{lem:grad--grad-like}.
 
 \parbf{Exercise~\ref{ex:grad-curve-analitic}.}
+Set $h(z)=\tfrac12\cdot\dist[2]{x}{z}{}$.
+If $\alpha$ is an $f$-gradient curve then 
+\begin{align*}
+(h\circ\alpha)^+&\ge \dist{\alpha(t)}{x}{}\cdot\langle\dir{\alpha(t)}{x},\nabla_{\alpha(t)}f\rangle\ge
+\\
+&\ge \dist{\alpha(t)}{x}{}\cdot\dd_{\alpha(t)}f(\dir{\alpha(t)}{x})\ge 
+\\
+&\ge f(x)-f\circ\alpha(t).
+\end{align*}
+
+???
+
 
 \parbf{Exercise~\ref{ex:grad-flow-bry}.}
 
