@@ -155,6 +155,126 @@ Construct a non-compact complete geodesic $\Alex{0}$ space that contains no rays
 
 }
 
+\section{Rademacher theorem}
+
+In this section we will discuss an extended Rademacher theorem that was proved by Alexander Lytchak \cite{lytchak:diff}.
+Recall that differentiable curves are defined in \ref{def:diff-curv}.
+
+\begin{thm}{Lemma}\label{lem:Rademacher-dim=1}
+Let $\alpha\:\II\to \spc{Z}$ be a locally Lipschitz curve in a complete length space.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Then $\alpha$ is differentiable almost everywhere.
+\end{thm}
+
+\parit{Proof.}
+Without loss of generality, we may assume that $\alpha$ has an arc length parametrization.
+In particuler $\alpha$ is 1-Lipschitz.
+
+Recall that by Theorem~\ref{thm:speed},
+\[\speed_t\alpha\ae1.\eqlbl{eq:speed=1}\]
+
+Fix a countable dense set $T=\{t_1,t_2,\dots\}$ in $\II$;
+set
+\[h_n(t)=\dist{\alpha(t_n)}{\alpha(t)}{}.\]
+Note that $h_n$ is $1$-Lipschitz for each $n$.
+Therefore, by the standard Rademacher theorem, $h_n'(t)$ is defined for all $n$ and almost all $t$.
+
+Let us show that
+\[\sup_n \{h'_n(t)\}=1
+\quad\text{and}\quad
+\inf_n \{h'_n(t)\}=-1.
+\eqlbl{eq:h'=1}\]
+
+Fix $\eps>0$.
+Denote by $N_\eps^+$ (respectively, $N_\eps^-$) the set of all points $t \in \II$ such that $h_n'(t) < 1-\eps$ (respectively, $h_n'(t) > -1+\eps$) for all $n$.
+Note that the sets $N_\eps^\pm$ are measurable.
+
+Assume that $N_\eps^+$ has positive measure;
+fix its Lebesgue point $s$.
+Suppose $t_n$ is sufficiently close to $s$ and $t_n<s$.
+By \ref{eq:speed=1}, we have
+\[h_n(s) \ge (s-t_n)\cdot(1 - \eps^2).
+\eqlbl{hn>=}\]
+Further there is a set $A_n\subset [t_n,s]$ with measure at least $(1-\eps)\cdot|s-t_n|$ such that
+\[h_n'(t) < 1-\eps\]
+for any $t\in A_n$.
+Since $h_n$ is $1$-Lipschitz, we have
+\begin{align*}
+h_n(s)&=\int_{[t_n,s]\backslash A_n}h_n'(t)\cdot\dd t +\int_{A_n}h_n'(t)\cdot\dd t\le
+\\
+&\le (s - t_n)\cdot [\eps+(1 - \eps)^2].
+\end{align*}
+The latter contradicts \ref{hn>=}.
+
+In the same way we see that measure $N_\eps^-$ vanishes.
+Consequently, the sets 
+$N_\eps = N_\eps^+ \cup N_\eps^-$
+and 
+$N = \bigcup_{\eps>0} N_\eps$ also have vanishing measure.
+Whence \ref{eq:h'=1} follows.
+
+Now suppose $\spc{Z}$ is $\CAT{\kappa}$.
+Without loss of generality we may assume that $\alpha$ has diameter less than $\varpi\kappa$;
+in particular any two points on $\alpha$ are connected by a unique geodesic.
+
+Fix $t\in\II$ that meets \ref{eq:speed=1} and \ref{eq:h'=1}.
+In particular, for any $\delta>0$ there is a $q$ such that
+\[\mangle \hinge{\alpha(t)}{\alpha(t+\eps)}{q}\le \angk\kappa{\alpha(t)}{\alpha(t+\eps)}{q}<\delta\]
+for all sufficiently small $\eps$.
+By \ref{eq:speed=1} and ??? comparison $\alpha^+(t)$ is defined.
+
+The same way we can show that $\alpha^-(t)$ is defined.
+Applying \ref{eq:speed=1}, we get that 
+\[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^-(t)}{\alpha^+(t)}{\T_{\alpha(t)}};\]
+that is $\alpha$ is differentiable at $t$.
+
+Now suppose $\spc{Z}$ is $\Alex{\kappa}$.
+
+\qeds
+
+
+
+\begin{thm}{Lemma}
+Let $\alpha\:\II\to \spc{L}$ be a $1$-Lipschitz curve in a $\Alex{}$-space.
+Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that 
+\[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}>1-\eps.\]
+Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
+\end{thm}
+
+\begin{thm}{Lemma}
+Let $\alpha\:\II\to \spc{U}$ be a $1$-Lipschitz curve in a $\CAT{}$-space.
+Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that 
+\[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}<-1+\eps.\]
+Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
+\end{thm}
+
+
+
+\begin{thm}{Theorem}
+Let $f$ be a locally Lipschitz submap from a Euclidean space to a complete length space $\spc{Z}$.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Then the differential $\dd_x f$ is defined and liner at almost all points $x\in\Dom f$.
+\end{thm}
+
+\parit{Proof.}
+Suppose that $f\:\EE^m\subto \spc{Z}$.
+Without loss of generality we may assume that $\Dom f$ is bonded and $f$ is Lipschitz.
+
+By Lemma~\ref{lem:Rademacher-dim=1}, for any fixed vector $v$ the value $\dd_x(v)$ is defined for almost all $x\in\Dom f$.
+
+, then we can deduce it for arbitrary $m$ by standard
+arguments \cite{kirchheim,margulis-mostow}.
+Consider a line $\ell$ in $\EE^m$ in a direction of unit vector $u$.
+The restriction of $f$ to $\ell$ is Lipschitz, and by assumption this restriction is differentiable almost everywhere.
+In particular $\dd_xf(u)$ is well defined and $\dd_xf(u)=-\dd_xf(-u)$ for almost all points $x\in \Dom f\cap \ell$.
+By the Fubini theorem \cite{margulis-mostow}, $\dd_xf(u)$ is well defined and $\dd_xf(u)=-\dd_xf(-u)$
+for any fixed unit vector $u$, and almost all $x\in\Dom f$.
+It follows that for a countable set of unit vectors $\{u_i\}$ that is dense in the sphere, we have $\dd_xf(u_i)$ is well defined and $\dd_xf(u_i)=-\dd_xf(-u_i)$ at all $i$ and almost all $x\in\Dom f$.
+Therefore the same holds for any unit vector $u$ and the statement;
+that is $\dd_xf$ is defined and linear for almost all $x\in\Dom f$. %???gap???
+\qeds
+
+
 \section{Differential}
 
 
