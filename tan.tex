@@ -155,6 +155,55 @@ Construct a non-compact complete geodesic $\Alex{0}$ space that contains no rays
 
 }
 
+\section{Differentiability of curves}
+
+In this section we will give sufficient conditions for existence of one-sided derivative of a curve in $\Alex{}$ and $\CAT{}$ spaces.
+The proofs are very similar in both cases.
+
+\begin{thm}{Lemma}
+Let $\alpha\:\II\to \spc{L}$ be a $1$-Lipschitz curve in a $\Alex{}$ space.
+Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that 
+\[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}>1-\eps.\]
+Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
+\end{thm}
+
+\parit{Proof.}
+Fix a sequence of points $p_n$ such that 
+\[\liminf_{t\to t_0+} \frac{\distfun{p_n}\circ\alpha(t)-\distfun{p_n}\circ\alpha(t_0)}{t-t_0}\to 1\]
+as $n\to\infty$.
+
+Set $x=\alpha(t_0)$.
+Observe that there are sequences $\delta_n\to 0+$ and $t_n\to t+$ such that 
+\[\angk\kappa x{\alpha(s)}{p_n}>\pi-\delta_n
+\quad\text{and}\quad
+(1-\delta_n)\cdot(s-t)<\dist{\alpha(s)}{x}{}\le s-t\eqlbl{eq:ang+dist}\]
+for any $s\in(t,t_n]$.
+
+For each $n$, choose $q_n\in \Str(x,p_n)$ sufficiently close $\gamma(t_n)$ so that the inequality 
+\[\angk\kappa x{q_n}{p_n}>\pi-\delta_n\]
+still holds.
+Set $\gamma_n=\geod_{[xq_n]}$.
+
+By comparison,
+\begin{align*}
+\angk\kappa x{\alpha(s)}{q_n}&<2\cdot\pi-\angk\kappa x{q_n}{p_n} - \angk\kappa x{\alpha(s)}{p_n}<
+\\
+&<2\cdot\delta_n. 
+\end{align*}
+Therefore \ref{eq:ang+dist} implies that
+\[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot (s-t)\]
+if $s-t$ is a sufficiently small and positive.
+That is, $\alpha^+(t)$ is defined by its definition (\ref{def:right-derivative}).
+\qeds
+
+\begin{thm}{Lemma}
+Let $\alpha\:\II\to \spc{U}$ be a $1$-Lipschitz curve in a $\CAT{}$ space.
+Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that 
+\[\limsup_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}<-1+\eps.\]
+Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
+\end{thm}
+
+
 \section{Rademacher theorem}
 
 In this section we will discuss an extended Rademacher theorem that was proved by Alexander Lytchak \cite{lytchak:diff}.
@@ -231,23 +280,6 @@ that is $\alpha$ is differentiable at $t$.
 Now suppose $\spc{Z}$ is $\Alex{\kappa}$.
 
 \qeds
-
-
-
-\begin{thm}{Lemma}
-Let $\alpha\:\II\to \spc{L}$ be a $1$-Lipschitz curve in a $\Alex{}$-space.
-Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that 
-\[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}>1-\eps.\]
-Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
-\end{thm}
-
-\begin{thm}{Lemma}
-Let $\alpha\:\II\to \spc{U}$ be a $1$-Lipschitz curve in a $\CAT{}$-space.
-Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that 
-\[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}<-1+\eps.\]
-Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
-\end{thm}
-
 
 
 \begin{thm}{Theorem}

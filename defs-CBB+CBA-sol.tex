@@ -28,7 +28,7 @@ By semicontinuity of length, $\length\alpha_\infty\le\ell$;
 that is $\alpha$ is a shortest path in $\spc{X}$.
 
 \parbf{Exercise~\ref{ex:no-geod}.}
-The following example is suggested by Fedor Nazarov \cite{nazarov}.
+The following example is suggested by Fedor Nazarov~\cite{nazarov}.
 
 \medskip
 
@@ -121,6 +121,11 @@ Therefore
 Follows directly from the definition.
 
 \parbf{Exercise~\ref{ex:diff}.}
+Observe that
+\[\speed_t\alpha=|\alpha^+(t)|=|\alpha^-(t)|.\]
+Apply Theorem~\ref{thm:speed} to show that
+\[\dist{\alpha^+(t)}{\alpha^-(t)}{\T_{\alpha(t)}}=2\cdot\speed_t\alpha.\]
+
 
 \parbf{Exercise~\ref{ex:schroeder-foetch}.}
 Choose two non-Euclidean norms $\|{*}\|_{\spc{X}}$ and $\|{*}\|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $\|{*}\|_{\spc{X}}+\|{*}\|_{\spc{Y}}$ is Euclidean.
@@ -141,8 +146,6 @@ Observe and use that
 Modify the induced length metric on the unit sphere in the Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
 
 \parbf{Exercise~\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
-
-\parbf{Exercise~\ref{ex:non-split-almost.geod}.}
 
 \parbf{Exercise~\ref{ex:G-delta-not-thru}.}
 Any nonnegatively curved metric on the plane with everywhere dense set of singular points will do the job;
@@ -246,8 +249,14 @@ On the other hand, since each $x_i$ has spaces of directions $\le\tfrac12\cdot\m
 
 
 \parbf{Exercise~\ref{ex:ccat-(3+1)}.}
+Suppose, that 
+\[\angk\kappa {x^0}{x^1}{x^2}+\angk\kappa {x^0}{x^2}{x^3}<\angk\kappa {x^0}{x^1}{x^3}.\]
+Show that
+\[\angk\kappa {x^2}{x^0}{x^1}+\angk\kappa {x^2}{x^1}{x^3}+\angk\kappa {x^2}{x^3}{x^1}>2\cdot\pi.\]
+Conclude that one can take $p=x^2$.
 
 \parbf{Exercise~\ref{ex:sba-2+2-short}.}
+
 
 \parbf{Advanced exercise~\ref{ex:berg-nikolaev}.} Read \cite{sato}. (The original proof \cite{berg-nikolaev} is much longer and it is harder to follow.)
 
@@ -473,6 +482,11 @@ By Reshetnyak gluing theorem \ref{thm:gluing} the obtained space is $\CAT0$.
 
 It remains to note that this space can be obtained directly by gluing $\spc{U}$ to with $Q$ along $\gamma_1$ and $\gamma_2$.
 
+\parbf{Exercise~\ref{ex:reshetnyak-doubling}.}
+Suppose that $A$ is not convex.
+Then there is a geodesic $[xy]$ with ends in $A$ that does not lie in $A$ completely.
+Note that $[xy]$ can be lifted to two different geodesics in the doubling with the same ends and apply uniqueness of geodesics (\ref{cor:cat-unique}).
+
 \parbf{Exercise~\ref{ex:glue-spherical-suspension}.}
 Since $K$ is $\pi$-convex, it is $\CAT1$.
 By \ref{thm:warp-curv-bound:cat}, the spherical suspension $\Susp K$ is $\CAT1$ as well.
@@ -490,11 +504,8 @@ the function $t\mapsto \dist{\phi_t(x)}{\phi_t(y)}{}$ is nonincreasing for any p
 Moreover we can assume that there is a family of short maps $\phi_t(\cBall[p,\tfrac\pi2])= K_t$ and $\phi_t(x)=x$ for any $t$ and $x\in K_t$.
 It leads to another solution of Exercise~\ref{ex:short-retraction-CBA(1)}.
 
-\parbf{Exercise~\ref{ex:reshetnyak-doubling}.}
 
-\parbf{Exercise~\ref{ex:branching}.}
 
-\parbf{Exercise~\ref{ex:glue-spherical-suspension}.}
 
 \parbf{Exercise~\ref{ex:isometric-majorization}.}
 \textit{(Easier way.)} 
@@ -532,6 +543,20 @@ If $\ell$ and $m$ intersect then $\spc{X}$ is a cone over double cover $\Sigma$ 
 Suppose $\dist{x}{v}{\mathbb{S}^2}=\ell<\tfrac\pi2$.
 Note that the inverse image of $[xv]_{\mathbb{S}^2}$ is a closed geodesic of length $4\cdot\ell<2\cdot\pi$.
 Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$ and hence $\spc{X}$ is not $\CAT0$.
+
+\parbf{Exercise~\ref{ex:branching}.}
+Let us do the second part first.
+Assume $A$ has has nonempty interior. 
+Note that the space $\tilde{\spc{U}}$ is simply connected and locally isometric to the doubling $\spc{W}$ of $\spc{U}$ in $A$;
+that is, for any point in $\tilde{\spc{U}}$ has a neighborhood $\Omega$ that is isometric to a neighborhood of a point in $\spc{W}$.
+
+By Reshetnyak gluing theorem $\spc{W}$ is $\CAT0$.
+By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) $\tilde{\spc{U}}$ is $\CAT0$.
+
+To do the general case, apply the above argument to a closed $\eps$-neighborhood of $A$
+and pass to a limit as $\eps\to 0$.
+
+The first part of problem follows since geodesic is a convex set.
 
 \parbf{Exercise~\ref{ex:cats-cradle}.} Prove that the angle comparison (\ref{cat-hinge}) holds.
 
