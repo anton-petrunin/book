@@ -1,4 +1,4 @@
-%%!TEX root =ArXiv.tex
+%%!TEX root =the-metr.tex
 %array^
 \chapter{Metric spaces}
 In this chapter we fix some conventions, assuming that the reader is familiar with basic notions in metric geometry.
@@ -228,10 +228,12 @@ consider the value
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 
 It is easy to see that $\yetdist{}{}{}$ defines a $(0,\infty]$-valued metric on  $\spc{X}$;
-it will be called the \emph{length-metric}\index{length-metric} on $\spc{X}$.
+it will be called the \emph{length-metric}\index{length-metric} \footnote{\red V: I would suggest calling it the induced length metric}on $\spc{X}$.
 Clearly 
 \[\yetdist{x}{y}{}\ge \dist{x}{y}{}\]
 for any $x,y\in \spc{X}$.
+
+It  eaisly follows from the definition that the length of a curve $\alpha$ with respect to $\yetdist{}{}{}$ is equal to the length of $\alpha$ with respect to $\dist{}{}{}$. In particular, iterating the construction produces the same $\yetdist{}{}{}$.
 
 \begin{thm}{Definition}\label{def:length-space}
 If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\spc{X}$ is called a \emph{length space}\index{length space}.
