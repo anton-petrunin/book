@@ -281,11 +281,14 @@ if for any subinterval $[a,b]\subset\II$, we have
 \[b-a=\length(\alpha|_{[a,b]}).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
 
-The following theorem of Bernd Kirchheim \cite{kirchheim} %CHECK??? 
-generalizes the one above.
+The following generalization of Rademacher theorem was proved by Bernd Kirchheim \cite{kirchheim}. %CHECK??? 
 
+The conclusion of the standard Rademacher theorem does not make sense for maps to metric space since it might have no linear structure.
+But the theorem does not hold even if we assume that the target is a Banach space.
+For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance preserving and in particular Lipschitz (here $\chi_A$ denotes characteristic function of $A$).
+However the differential $\dd_xf$ is not defined for any $x$.
 
-\begin{thm}{Theorem}
+\begin{thm}{Theorem}\label{thm:Rademacher-md}
 Let $\spc{X}$ be a metric space 
 and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
 Then for almost all $x\in\Dom f$ there is a pseudonorm %???
