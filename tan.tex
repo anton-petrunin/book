@@ -1,4 +1,4 @@
-%%!TEX root = all.tex
+%%!TEX root = the-tan.tex
 %arXiv
 \chapter{First order differentiation}\label{chap:tan}
 
@@ -157,7 +157,7 @@ Construct a non-compact complete geodesic $\Alex{0}$ space that contains no rays
 
 \section{Rademacher theorem}
 
-At the end of this section we give an extension of Rademacher theorem for $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}) proved by Alexander Lytchak \cite{lytchak:diff}. 
+At the end of this section we give an extension of the Rademacher theorem for $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}) proved by Alexander Lytchak \cite{lytchak:diff}. 
 The following proposition is the 1-dimensional case of the extended Rademacher theorem.
 
 Recall that differentiable curves are defined in \ref{def:diff-curv}.
@@ -249,7 +249,7 @@ That is, $\alpha^+(0)$ is defined; see \ref{def:right-derivative}.
 
 \parit{Proof of \ref{prop:Rademacher-dim=1}.}
 By the standard Rademacher theorem, we may assume that $\alpha$ has an arc-length parametrization.
-In particuler $\alpha$ is 1-Lipschitz.
+In particular $\alpha$ is 1-Lipschitz.
 
 Recall that by Theorem~\ref{thm:speed},
 \[\speed_s\alpha\ae1.\eqlbl{eq:speed=1}\]
@@ -258,15 +258,15 @@ Fix a countable dense set $T\subset\II$;
 given $t\in T$, set
 \[h_t(s)=\dist{\alpha(t)}{\alpha(s)}{}.\]
 Note that $h_t$ is $1$-Lipschitz for each $t\in T$.
-Therefore, by the standard Rademacher theorem, $h_t'(s)$ is defined for all $t\in T$ and almost all $s\in\II$.
+Therefore, by the standard Rademacher theorem and countability of $T$ for almost all $s\in\II$  $h_t'(s)$ is defined for all $t\in T$.
 
 Set
 \[w^+(s)\df\limsup_{\substack{t\in T\\t\to s-}} \{h'_t(s)\}.\]
 Let us show that
 \[w^+(s)\ae1.\eqlbl{eq:w+=1}\]
-Note that once it is proved, Lemma \ref{lem:CBB-diff-curve} implies the proposition in the $\Alex{}$ case.
+Note that once this is proved, Lemma \ref{lem:CBB-diff-curve} implies the proposition in the $\Alex{}$ case.
 
-Fix small $\eps>0$.
+Fix a small $\eps>0$.
 Denote by $N_\eps^+$ the set of all points $s\in\II$ such that $w^+(s)<1-\eps$.
 Note that the sets $N_\eps^+$ are measurable.
 
