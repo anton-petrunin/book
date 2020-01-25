@@ -1,4 +1,4 @@
-%%!TEX root = all.tex
+%%!TEX root = the-tan.tex
 %arXiv
 \chapter{First order differentiation}\label{chap:tan}
 
@@ -149,11 +149,184 @@ and \ref{eq:claim:hil-con*} follows.\qeds
 
 {\sloppy 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:norays}
 Construct a non-compact complete geodesic $\Alex{0}$ space that contains no rays.
 \end{thm}
 
 }
+
+\section{Rademacher theorem}
+
+At the end of this section we give an extension of the Rademacher theorem for $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}) proved by Alexander Lytchak \cite{lytchak:diff}. 
+The following proposition is the 1-dimensional case of the extended Rademacher theorem.
+
+Recall that differentiable curves are defined in \ref{def:diff-curv}.
+
+\begin{thm}{Proposition}\label{prop:Rademacher-dim=1}
+Let $\alpha\:\II\to \spc{Z}$ be a locally Lipschitz curve in a complete length space.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Then $\alpha$ is differentiable almost everywhere.
+\end{thm}
+
+The following two lemmas provide sufficient conditions for existence of one-sided derivative of a curve in $\Alex{}$ and $\CAT{}$ spaces.
+The proofs of both lemmas are very similar.
+
+\begin{thm}{Lemma}\label{lem:CBB-diff-curve}
+Let $\alpha\:\II\to \spc{L}$ be a $1$-Lipschitz curve in a $\Alex{}$ space.
+Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that $\dist{\alpha(t_0)}{p}{}<\eps$ and
+\[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}>1-\eps.\]
+Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
+\end{thm}
+
+\parit{Proof.}
+Without loss of generatiy we may assume that $t_0=0$.
+Set $x=\alpha(0)$.
+Fix a sequence of points $p_n\to x$ such that 
+\[\liminf_{t\to 0+} \frac{\dist{p_n}{\alpha(t)}{}-\dist{p_n}{x}{}}{t}\to 1\]
+as $n\to\infty$.
+
+
+Observe that there are sequences $\delta_n\to 0+$ and $t_n\to 0+$ such that 
+\[\angk\kappa x{\alpha(s)}{p_n}>\pi-\delta_n
+\quad\text{and}\quad
+(1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang+dist}\]
+for any $s\in(0,t_n]$.
+
+For each $n$, choose $q_n\in \Str(x)$ sufficiently close $\alpha(t_n)$ so that the inequality 
+\[\angk\kappa x{q_n}{p_n}>\pi-\delta_n\]
+still holds.
+Set $\gamma_n=\geod_{[xq_n]}$.
+
+By comparison,
+\begin{align*}
+\angk\kappa x{\alpha(s)}{\gamma_n(s)}&\le2\cdot\pi-\angk\kappa x{p_n}{\gamma_n(s)} - \angk\kappa x{\alpha(s)}{p_n}\le
+\\
+&\le 2\cdot\pi-\angk\kappa x{q_n}{p_n} - \angk\kappa x{\alpha(s)}{p_n}<
+\\
+&<2\cdot\delta_n. 
+\end{align*}
+Therefore \ref{eq:ang+dist} implies that
+\[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot (s)\]
+if $s$ is a sufficiently small and positive.
+That is, $\alpha^+(0)$ is defined; see \ref{def:right-derivative}.
+\qeds
+
+\begin{thm}{Lemma}\label{lem:CBA-diff-curve}
+Let $\alpha\:\II\to \spc{U}$ be a $1$-Lipschitz curve in a $\CAT{}$ space.
+Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $q$ such that $\dist{\alpha(t_0)}{q}{}<\eps$ and
+\[\limsup_{t\to t_0+} \frac{\distfun{q}\circ\alpha(t)-\distfun{q}\circ\alpha(t_0)}{t-t_0}<-1+\eps.\]
+Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
+\end{thm}
+
+\parit{Proof.}
+Without loss of generatiy we may assume that $t_0=0$.
+Set $x=\alpha(0)$.
+Fix a sequence of points $q_n\to x$ such that 
+\[\liminf_{t\to 0+} \frac{\dist{q_n}{\alpha(t)}{}-\dist{q_n}{x}{}}{t}\to -1\]
+as $n\to\infty$.
+
+
+Observe that there are sequences $\delta_n\to 0+$ and $t_n\to 0+$ such that 
+\[\angk\kappa x{\alpha(s)}{q_n}<\delta_n
+\quad\text{and}\quad
+(1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang+dist}\]
+for any $s\in(0,t_n]$.
+
+Without loss of generality we can assume that $\dist{x}{q_n}{}<\varpi\kappa$ for any $n$;
+in particular geodesic $\gamma_n=\geod_{[xq_n]}$ is uniquely defined.
+
+By comparison,
+\begin{align*}
+\angk\kappa x{\alpha(s)}{\gamma_n(s)}&\le\angk\kappa x{\alpha(s)}{q_n}<
+\\
+&<\delta_n. 
+\end{align*}
+Therefore \ref{eq:ang+dist} implies that
+\[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot (s)\]
+if $s$ is a sufficiently small and positive.
+That is, $\alpha^+(0)$ is defined; see \ref{def:right-derivative}.
+\qeds
+
+\parit{Proof of \ref{prop:Rademacher-dim=1}.}
+By the standard Rademacher theorem, we may assume that $\alpha$ has an arc-length parametrization.
+In particular $\alpha$ is 1-Lipschitz.
+
+Recall that by Theorem~\ref{thm:speed},
+\[\speed_s\alpha\ae1.\eqlbl{eq:speed=1}\]
+
+Fix a countable dense set $T\subset\II$;
+given $t\in T$, set
+\[h_t(s)=\dist{\alpha(t)}{\alpha(s)}{}.\]
+Note that $h_t$ is $1$-Lipschitz for each $t\in T$.
+Therefore, by the standard Rademacher theorem and countability of $T$ for almost all $s\in\II$  $h_t'(s)$ is defined for all $t\in T$.
+
+Set
+\[w^+(s)\df\limsup_{\substack{t\in T\\t\to s-}} \{h'_t(s)\}.\]
+Let us show that
+\[w^+(s)\ae1.\eqlbl{eq:w+=1}\]
+Note that once this is proved, Lemma \ref{lem:CBB-diff-curve} implies the proposition in the $\Alex{}$ case.
+
+Fix a small $\eps>0$.
+Denote by $N_\eps^+$ the set of all points $s\in\II$ such that $w^+(s)<1-\eps$.
+Note that the sets $N_\eps^+$ are measurable.
+
+Assume that $N_\eps^+$ has positive measure;
+fix its Lebesgue point $s_0$.
+We can assume that $\speed_{s_0}\alpha=1$ and $h_t'(s_0)$ is defined for any $t\in T$.
+Suppose $t\in T$ is sufficiently close to $s_0$ and $t<s_0$.
+Since $\speed_{s_0}\alpha=1$, we have that
+\[h_t(s_0) \ge (s_0-t)\cdot(1 - \eps^2).
+\eqlbl{hn>=}\]
+Further there is a set $A\subset [t,s_0]$ with measure at least $(1-\eps)\cdot|s_0-t|$ such that
+\[h_t'(s) < 1-\eps\]
+for any $s\in A_n$.
+Since $h_t$ is $1$-Lipschitz, we have
+\begin{align*}
+h_t(s_0)&=\int_{[t,s_0]\backslash A}h_t'(s)\cdot\dd s +\int_{A}h_t'(s)\cdot\dd s\le
+\\
+&\le (s_0 - t)\cdot [\eps+(1 - \eps)^2].
+\end{align*}
+The latter contradicts \ref{hn>=}.
+That is, we have that $w^+(s)\ge1-\eps$ almost everywhere.
+Since $\eps>0$ is arbitrary, \ref{eq:w+=1} follows.
+
+The same way we can show that 
+\[w^-(s)\ae-1,
+\eqlbl{eq:w-=1}\]
+where 
+\[w^-(s)\df\liminf_{\substack{t\in T\\t\to s+}} \{h'_t(s)\}.\]
+Then Lemma \ref{lem:CBA-diff-curve} implies the proposition in the $\CAT{}$ case.
+\qeds
+
+
+\begin{thm}{Theorem}\label{thm:Rademacher-CBB+CBA}
+Let $f$ be a locally Lipschitz submap from a Euclidean space to a complete length space $\spc{Z}$.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Then the differential $\dd_x f$ is defined at almost all points $x\in\Dom f$.
+
+Moreover the differential $\dd_x f$ is \index{linear differential}\emph{linear} at almost all $x$ in the following sense: 
+the image $\Im f$ is a convex subcone of $\T_{f(x)}\spc{Z}$, and
+there is an isometry $\iota$ from $\Im f$ to a Euclidean space such that the composition $\iota\circ\dd_x f$ is linear.
+\end{thm}
+
+The proof is a reduction to the 1-dimensional case (\ref{prop:Rademacher-dim=1}) by standard arguments \cite{kirchheim,margulis-mostow}.
+
+\parit{Proof.}
+Suppose that $f\:\EE^m\subto \spc{Z}$.
+Without loss of generality we may assume that $\Dom f$ is bonded and $f$ is Lipschitz.
+
+Fix a countable dense set of vectors $\{v_i\}$ in $\EE^m$.
+Fix $v_i$ and a point $p\in \Dom f$.
+By Proposition~\ref{prop:Rademacher-dim=1}, the value $\dd_x(v_i)$ is defined at $x=p+t\cdot v_i$ for almost all $t$ such that $x\in \Dom f$.
+It follows that $\dd_x(v_i)$
+is defined for every $i$ on a set $A$ of full measure in $\Dom f$.
+Since the metric differential of $f$ is defined almost everywhere (\ref{thm:Rademacher-md}), we have that $\dd_x(v)$ is defined for any $v$ on a set $B$ of full measure in $\Dom f$.
+
+Applying the definition of metric differential and differential, we obtain that the image of $\dd_xf$ is a weakly convex set in $\T_{f(x)}$.
+It follows that $\Im\dd_xf$ is $\Alex{0}$ or $\CAT0$ if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ correspondingly.
+It remains to apply Exercise \ref{mink+alex=euclid} or \ref{mink+CAT=euclid} if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ correspondingly.
+\qeds
+
 
 \section{Differential}
 
@@ -664,7 +837,7 @@ Therefore,
 
 
 \begin{thm}{Exercise}\label{ex:d dist(grad)<0}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $a,b,p$
+Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
 are mutually distinct points in $\spc{L}$.
 Prove that 
 \[(d_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})

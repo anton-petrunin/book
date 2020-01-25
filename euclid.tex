@@ -136,9 +136,9 @@ In the notation of Section~\ref{model},
 
 \begin{wrapfigure}[6]{r}{28mm}
 \begin{lpic}[t(-0mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
-\lbl[lb]{10,23;$x$}
-\lbl[rt]{1.5,.5;$p$}
-\lbl[bl]{25,7.5;$y$}
+\lbl[lb]{10,23;$p$}
+\lbl[rt]{1.5,.5;$q$}
+\lbl[bl]{25,7.5;$r$}
 \lbl[lb]{17,15;$z$}
 \end{lpic}
 \end{wrapfigure}
@@ -326,7 +326,7 @@ $\tilde \gamma^2(s)\in[\tilde \gamma^1(t)\ \tilde \gamma^3(\tau)]$.
 Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \qeds 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:adjacent-angles}
 Prove that the sum of adjacent angles is at least $\pi$.
 
 More precisely: let $\spc{X}$ be a complete length space and $p,x,y,z\in \spc{X}$.
@@ -503,12 +503,23 @@ For $t_0\in\II$,
 if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
 we say correspondingly that  $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
 In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
+
+If $\alpha$ is both-sided differentiable at $t$, and 
+\[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^-(t)}{\alpha^-(t)}{\T_{\alpha(t)}},\] then we say that $\alpha$ is \emph{differentiable} at $t$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:both-sided-diff}
 Assume $\spc{X}$ is a metric space with defined angles.
-Show that any geodesic $\gamma\:\II\to\spc{X}$ is both-sided differentiable everywhere.
+Show that any geodesic $\gamma\:\II\to\spc{X}$ is differentiable everywhere.
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:diff}
+Let $\alpha$ be a curve in a metric space with defined angles.
+Suppose that $\speed_t\alpha$, $\alpha^+(t)$ and $\alpha^-(t)$ are defined. 
+
+Show that $\alpha$ is differentiable at $t$.
+\end{thm}
+
 
 \section{Differential}\index{differential}
 

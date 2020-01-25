@@ -1,9 +1,9 @@
-%%!TEX root = all.tex
+%%!TEX root = ArXiv.tex
 %arrays --- YES
 %arXiv
 \chapter{Kirszbraun revisited}
 
-This chapter is based on our paper \cite{akp-kirszbraun}
+This chapter is based on our paper \cite{alexander-kapovitch-kirszbraun}
 and earlier paper of Urs Lang and  Viktor Schroeder
 \cite{lang-schroeder}.
 
@@ -22,7 +22,7 @@ We present another, more elementary proof; it use the following analog of Alexan
 We say that  two triangles with a common vertex  \index{overlap}\emph{do not overlap} if their convex hulls intersect only at the common vertex.
 
 
-\begin{thm}{Overlap lemma} \label{lem:extend-overlap}
+\begin{thm}{Overlap lemma}\label{lem:extend-overlap}
 Let $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$ be a triangle in $\Lob2{\kappa}$.  Let $\tilde p^1,\tilde p^2,\tilde p^3$ be points such that, for any permutation $\{i,j,k\}$ of $\{1,2,3\}$, we have
 \begin{enumerate}[(i)]
 
@@ -274,19 +274,24 @@ there is a short map $F\:D\to \spc{U}$ such that $\tilde y^i\mapsto y^i$ for all
 Thus one can take $q=F\circ\map(\tilde p)$.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:CBB+CBA}
 Assume $\spc{X}$ is a complete length space that satisfies the following condition:
 any 4-point subset can be isometrically embedded in Euclidean 3-space.
 
 Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:5-point-CBA=>CBB}
 Let $\spc{F}_s$ be the metric
 on the 5 point set $\{p,q,x,y,z\}$ such that $\dist{p}{q}{}=s$
 and all the remaining distances are equal $1$.
-Assume $\spc{F}_s$ admits a distance preserving map into a complete length $\CAT{0}$ space.
-Show that $\spc{F}_s$ admits a distance preserving map into a complete length $\Alex{0}$ space.
+For which values $s$ the space $\spc{F}_s$ admits a distance preserving map into 
+\begin{subthm}{}
+a complete length $\CAT{0}$ space?
+\end{subthm}
+\begin{subthm}{}
+a complete length $\Alex{0}$ space?
+\end{subthm}
 \end{thm}
 
 \section{(1+\textit{n})-point comparison}\label{sec:1+n}
@@ -345,8 +350,8 @@ thus
 \[\dist{\tilde x^i}{\tilde x^j}{}\ge \dist{x^i}{x^j}{}.\]
 \qedsf
 
-\begin{thm}{Exercise}
-Let $p,x_1,\dots,x_n$ be a point array $p,x_1,\dots,x_n$ in a $\Alex0$ space.
+\begin{thm}{Exercise}\label{ex:sturm}
+Let $p,x_1,\dots,x_n$ be a point array in a $\Alex0$ space.
 Consider the $n{\times}n$-matrix $M$ with the components 
 \[m_{i,j}=\tfrac12\cdot(|x_i-p|^2+|x_j-p|^2-|x_i-x_j|^2).\]
 Show that
@@ -383,10 +388,10 @@ for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 The inequality in the above exercise is discovered by  Karl-Theodor Sturm \cite{sturm}.
 It turns out to be weaker than (1+\textit{n})-point comparison.
 An example can be constructed by perturbing the 6-point metric isometric to a regular pentagon with its center
-by making its sides slightly longer and diagonals slightly shorter \cite{LPZ}.
+by making its sides slightly longer and diagonals slightly shorter \cite{lebedeva-petrunin-zolotov}.
 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:(3+1)-nonsufficient}
 Give an example of metric on a finite set, that satisfies the comparison inequality 
 \[\angk{0}{p}{x_1}{x_2}+\angk{0}{p}{x_2}{x_3}+\angk{0}{p}{x_3}{x_1}
 \le
@@ -897,7 +902,7 @@ The latter contradicts \ref{eq:cap-of-balls}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:flat-in-CAT}
-Let $\spc{U}$ is $\CAT0$ 
+Let $\spc{U}$ be $\CAT0$. 
 Assume there are two point arrays $x^0,x^1,\dots,x^\kay\in\spc{U}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\in\EE^m$ such that 
 $\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$ and 
 for any point $z_0\in\spc{U}$ there is $i>0$ such that have $\dist{z_0}{x_i}{}\ge\dist{x_0}{x_i}{}$.
@@ -918,8 +923,7 @@ Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE
 
 {\sloppy 
 
-\begin{thm}{Exercise} 
-\label{ex:not-flat}
+\begin{thm}{Exercise} \label{ex:not-flat}
 Construct  a three-dimensional complete length $\Alex0$ space $\spc{L}$ with a triangle 
 $\trig x y z$ such that all angles in $\trig x y z$ are equal to the corresponding angles of its model triangle, but $\trig x y z$  can not be filled by an isometric copy of the model solid triangle.
 \end{thm}
@@ -941,7 +945,6 @@ $\trig{\tilde y}{\tilde p^n}{\tilde q^n}=\modtrig\kappa y p^n q^n$;
 \begin{subthm}{}
 The simplex $\tilde p^i\tilde p^{i+1}\tilde q^i\tilde q^{i+1}$ is a model simplex%
 \footnote{that is,
-perimeter of each triple in $p^i,p^{i+1},q^i$ and $q^{i+1}$ is $<2\cdot\pi$ and
 $\dist{\tilde p^i}{\tilde q^i}{}
 =\dist{p^i}{q^i}{}$,
 $\dist{\tilde p^i}{\tilde p^{i+1}}{}
@@ -981,7 +984,7 @@ we have
 \end{center}
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:riemannian-kirszbraun-equality}
 Assume that a Riemannian manifold $\spc R$ satisfies the following condition:
 for an arbitrary  subset $Q\subset\spc R$, any short map $Q\to\spc{R}$ can be extended to a short map $\spc{R}\to\spc{R}$.
 Show that $\spc R$ has constant sectional curvature.
@@ -991,18 +994,19 @@ Show that $\spc R$ has constant sectional curvature.
 \section{Curvature free}
 
 In this section we present a collection of exercises on a curvature-free analogs of Kirszbraun theorem.
+It worth to know these results despite they are far from Alexandrov geometry.
 
 The following exercise gives an analog of finite$\bm{+}$one lemma (\ref{lem:kirsz-neg:new}) discovered by the second author and Stephan Stadler \cite{perunin-stadler}.
 
-\begin{thm}{Exercise}
-Let $X$ and $Y$ be metric spaces, $A\subset X$ and $f\:A\to Y$ a short map.
-Assume $Y$ is compact and for any finite set $V\subset X$ there is a short map $V\to Y$ that agrees with $f$ in $V\cap A$.
-Then there is a short map $X\to Y$ that agrees with $f$ in $A$.
+\begin{thm}{Exercise}\label{ex:perunin-stadler}
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces, $A\subset \spc{X}$ and $f\:A\to \spc{Y}$ a short map.
+Assume $\spc{Y}$ is compact and for any finite set $F\subset \spc{X}$ there is a short map $F\to \spc{Y}$ that agrees with $f$ in $F\cap A$.
+Then there is a short map $\spc{X}\to \spc{Y}$ that agrees with $f$ in $A$.
 \end{thm}
 
 The following statement was first observed by John Isbell \cite{isbell}.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:isbell}
 We say that a space $\spc{X}$ is \emph{injective metric space}\index{injective} 
 if for an arbitrary metric space $\spc Z$ 
 and a subset $Q\subset\spc Z$, 
@@ -1013,8 +1017,9 @@ any short map $Q\to\spc{X}$ can be extended as a short map $\spc{Z}\to\spc{X}$.
 \end{enumerate}
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:kirszbrun-source}
 We say that a compact space $\spc{X}$ is a \emph{Kirszbrun source}\index{Kirszbrun source} if for an arbitrary complete metric space $\spc Z$ and subset $Q\subset\spc X$, any short map $Q\to \spc{Z}$ can be extended to a short map $\spc{X}\to\spc{Z}$.
+
 Prove that a metric space $\spc{X}$ is a Kirszbrun source if and only if it satisfies ultratriangle inequality for all triples of points;
 that is,
 \[
@@ -1049,8 +1054,8 @@ form a convex cone.
 The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ correspondingly).
 This convexity gives hope that the cone admits an explicit description.
 At the moment only some necessary and sufficient conditions are known;
-for more on this see our paper \cite{akp-kirszbraun} 
-and the paper of Nina Lebedeva, Vladimir Zolotov and the second author~\cite{LPZ}.
+for more on this see our paper \cite{alexander-kapovitch-kirszbraun} 
+and the paper of Nina Lebedeva, Vladimir Zolotov and the second author~\cite{lebedeva-petrunin-zolotov}.
 
 The following conjecture (if true) would give the  right generality for  Kirszbraun's theorem (\ref{thm:kirsz+}).
 Roughly it states that the example \ref{example:SS_+}, 

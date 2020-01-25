@@ -95,7 +95,7 @@ Any co-Lipschitz map is open and surjective.
 
 In other words, the $\Lip$-co-Lipschitz maps 
 can be considered as a quantitative version of open maps.
-By that reason they also called $\Lip$-open \cite{BGP}.
+By that reason they also called $\Lip$-open \cite{burago-gromov-perelman}.
 Also, be aware that some authors, 
 refer to our $\Lip$-co-Lipschitz maps
 as to $\tfrac1\Lip$-co-Lipschitz. %REF???.
@@ -261,14 +261,16 @@ A \emph{curve}\index{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \sp
 the curve it called \emph{Lipschitz}\index{Lipschitz curve} or \emph{locally Lipschitz}\index{locally Lipschitz curve} if the map $\alpha\:\II\to \spc{X}$~is.
 
 Recall that length of curves is defined in \ref{def:length}.
-The following theorem follows from \cite[2.7.4]{BBI}.
+The following theorem follows from \cite[2.7.4]{burago-burago-ivanov}.
 
 \begin{thm}{Theorem}\label{thm:speed}
 Let $\spc{X}$ be a metric space  
 and $\alpha\:\II \to \spc{X}$ be a locally Lipschitz
 curve. 
 Then the speed function
-\[\speed_{t_0}\alpha=\lim_{t\to t_0}\frac{\dist{\alpha(t)}{\alpha(t_0)}{}}{|t-t_0|}\] 
+\[\speed_{t_0}\alpha
+=
+\lim_{\substack{t\to t_0+\\s\to t_0-}}\frac{\dist{\alpha(t)}{\alpha(s)}{}}{|t-s|}\] 
 is defined for almost all $t_0 \in \II$ and 
 \[\length\alpha=\int\limits_\II \speed_{t}\alpha\cdot\dd t,\]
 where $\int$ denotes the Lebesgue integral.
@@ -279,11 +281,14 @@ if for any subinterval $[a,b]\subset\II$, we have
 \[b-a=\length(\alpha|_{[a,b]}).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
 
-The following theorem of Bernd Kirchheim \cite{kirchheim} %CHECK??? 
-generalizes the one above.
+The following generalization of Rademacher theorem was proved by Bernd Kirchheim \cite{kirchheim}. %CHECK??? 
 
+The conclusion of the standard Rademacher theorem does not make sense for maps to metric space since it might have no linear structure.
+But the theorem does not hold even if we assume that the target is a Banach space.
+For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance preserving and in particular Lipschitz (here $\chi_A$ denotes characteristic function of $A$).
+However the differential $\dd_xf$ is not defined for any $x$.
 
-\begin{thm}{Theorem}
+\begin{thm}{Theorem}\label{thm:Rademacher-md}
 Let $\spc{X}$ be a metric space 
 and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
 Then for almost all $x\in\Dom f$ there is a pseudonorm %???

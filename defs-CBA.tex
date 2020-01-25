@@ -44,7 +44,7 @@ is undefined.
 
 Here is more intuitive reformulation.
 
-\begin{thm}{Reformulation}
+\begin{thm}{Reformulation}\label{def:2+2-reformulated}
 Let $\spc{X}$ be a metric space.
 A quadruple $p^1,p^2,x^1,x^2\in \spc{X}$ satisfies $\CAT\kappa$ point comparison if one of the following holds:
 \begin{subthm}{}
@@ -92,8 +92,7 @@ Originally these spaces were called \emph{$\mathfrak{R}_\kappa$ domains};
 this is Alexandrov's terminology and is still in use.
 
 
-\begin{thm}{Exercise}
-\label{ex:ccat-(3+1)}
+\begin{thm}{Exercise}\label{ex:ccat-(3+1)}
 Let $\spc{U}$ be a metric space.
 Show that $\spc{U}$ is $\CAT\kappa$
 if and only if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
@@ -103,7 +102,7 @@ $\angk\kappa p{x^1}{x^3}$
 satisfy all three triangle inequalities or one of these angels is undefined.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:sba-2+2-short}
 Show that $\spc{U}$ is $\CAT\kappa$
 if and only if for any quadruple of points 
 $p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
@@ -118,6 +117,17 @@ such that
 \dist{q^i}{y^j}{}&\le \dist{p^i}{x^j}{}
 \end{align*}
 for any $i$ and $j$.
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:berg-nikolaev}
+Let $\spc{U}$ be a complete length space such that for any quadrouple $p,q,x,y\in\spc{L}$ 
+the following inequality holds
+\[\dist[2]{p}{q}{}+\dist[2]{x}{y}{}\le \dist[2]{p}{x}{}
++\dist[2]{p}{y}{}+\dist[2]{q}{x}{}+\dist[2]{q}{y}{}.
+\eqlbl{eq:berg-nikolaev-CAT}\]
+Prove that $\spc{U}$ is $\CAT0$.
+
+Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:berg-nikolaev-CAT} for any relabeling of its points by $p,q,x,y$, such that $\spc{X}$ is not $\CAT{0}$.
 \end{thm}
 
 The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower;
@@ -187,7 +197,7 @@ Moreover the same holds for any locally geodesic locally $\CAT{}$ space $\spc{U}
 the latter holds in particular, if $\spc{U}$ is a homological manifold.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:complete-space-of-dir}
 Assume $\spc{U}$ is a locally compact geodesic $\CAT{}$ space with extandable geodesics;
 that is, any geodesic in $\spc{U}$ can be extended to a both-side infinite local geodesic.
 
@@ -367,6 +377,11 @@ Therefore by monotonicity of the function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\
 Let us display a corollary from the proof of \ref{thm:defs_of_cat},
 namely, monotonicity of the model angle with respect to adjacent sidelengths. 
 
+\begin{thm}{Exercise}\label{mink+CAT=euclid} 
+Let $\spc{U}$ be  $\RR^m$ with the metric defined by a norm.
+Show that $\spc{U}$ is a complete length $\CAT{}$ space if and only if $\spc{U}\iso\EE^m$.
+\end{thm}
+
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton-cba} 
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space, and 
 $p,x,y\in \spc{U}$ have  perimeter $<2\cdot \varpi\kappa$.
@@ -435,7 +450,7 @@ that sends a point $\tilde z\in[\tilde x^i\tilde x^j]$ to the corresponding poin
 We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-thin}\index{$\kappa$-thin} if the natural map $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:equality-for-thin}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space,
 $\trig xyz$ be a triangle in $\spc{U}$
 and $\trig{\tilde x}{\tilde y}{\tilde z}$ its model triangle in $\Lob{2}{\kappa}$.
@@ -747,7 +762,7 @@ The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K
 and the restriction $f|_{K'}$. 
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:closest-point-projection}
 Let  $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a closed convex set.
 Show that the closest-point projection $\spc{U}\to K$ is short. 
 \end{thm}
@@ -1067,7 +1082,7 @@ In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\kappa$-thin.
 \section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
 
 The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major}, assuming $\spc{U}_1$, $\spc{U}_2$ are proper and complete. 
-In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger.\cite{BH}.
+In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger}.
 
 \begin{thm}{Reshetnyak's gluing theorem}\label{thm:gluing}
 Suppose 
@@ -1219,20 +1234,9 @@ Show that the space glued from $Q$ and $\spc{U}$ along the corresponding rays is
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:reshetnyak-doubling}
-Assume $\spc{U}$ is complete length $\CAT0$ space and $A\subset \spc{U}$ is a closed subset.
+Suppose $\spc{U}$ is a complete length $\CAT0$ space and $A\subset \spc{U}$ is a closed subset.
 Assume that the doubling of $\spc{U}$ in $A$ is $\CAT0$. 
 Show that $A$ is a convex set of $\spc{U}$.
-\end{thm}
-
-\begin{thm}{Exercise} Let $\spc{U}$ be a complete length $\CAT0$ space.
-Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
-Show that $\tilde{\spc{U}}$ is $\CAT0$.
-
-More generally, assume $A\subset \spc{U}$ is a closed convex subset and $f\:\spc{X}\to \spc{U}\backslash A$ is a metric cover.
-Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$, and 
-$\bar f\:\bar{\spc{X}}\to \spc{U}$ the continuous extension of $f$.
-Let $\tilde{\spc{U}}$ be the space glued from $\bar{\spc{X}}$ and $A$ by identifying $x$ and $\bar f(x)$ if $\bar f(x)\in A$.
-Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:glue-spherical-suspension}
@@ -1289,7 +1293,7 @@ and therefore $\gamma_\infty$ is a local geodesic.
 \qeds
 
 
-The following theorem was proved by the first author and Richard Bishop \cite{a-b:h-c}.
+The following theorem was proved by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
 In analogy with Riemannian geometry, the main statement of the following theorem could be restated as: 
 \emph{In a space of curvature $\le\kappa$, two points cannot be conjugate along a local geodesic of length $<\varpi\kappa$.}
 
@@ -1305,7 +1309,7 @@ such that
 $\gamma_{x y}\:[0,1]\to\spc{U}$ is a local geodesic path with 
 $\gamma_{x y}(0)=x$ and 
 $\gamma_{x y}(1)=y$ for each $(x,y)\in\Omega^0\times\Omega^1$,
-and the family $\gamma_{x y}$ contains $\gamma$.  
+and the family $\gamma_{x y}$ contains $\gamma$.
 Moreover, we can assume that the map 
 \[(x,y,t)\mapsto\gamma_{x y}(t)\:\Omega^0\times\Omega^1\times[0,1]\to\spc{U}\] 
 is $\Lip$-Lipschitz
@@ -1317,7 +1321,7 @@ $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 
 The following lemma was suggested to us by Alexander Lytchak.
 The proof proceeds by piecing together $\CAT{\kappa}$  neighborhoods of points on a curve to construct a new $\CAT{\kappa}$ space.  
-Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of No-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{a-b:h-c}.
+Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of No-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -1548,7 +1552,7 @@ Hence the second statement follows.
 
 
 The proof of the lifting globalization theorem relies heavily on the properties of the space of local geodesic paths discussed in Section~\ref{sec:geod-space}.
-The following lemma proved by the first author and Richard Bishop \cite{a-b:cbc} 
+The following lemma proved by the first author and Richard Bishop \cite{alexander-bishop:cbc} 
 is a key step in the proof.
 
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
@@ -2052,7 +2056,7 @@ such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 
 }
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:bishop}
 Assume a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is not a triangle.
 Show that exactly one of these statements holds:
 
@@ -2174,16 +2178,16 @@ If $\tilde \gamma$ does not pass the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap 
  \qeds
  
 \begin{thm}{Exercise}\label{ex:square}
-Let $\spc{U}$ be a complete length $\CAT0$ space and for 4 points $x_1,x_2,x_3,x_4\in \spc{U}$
+Let $\spc{U}$ be a complete length $\CAT0$ space and for 4 points $x^1,x^2,x^3,x^4\in \spc{U}$
 there is a convex quadrilateral
-$[\tilde x_1\tilde x_2\tilde x_3\tilde x_4]$
+$[\tilde x^1\tilde x^2\tilde x^3\tilde x^4]$
 in $\EE^2$
 such that 
-\[\dist{x_i}{x_j}{\spc{U}}=\dist{\tilde x_i}{\tilde x_j}{\EE^2}\]
+\[\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^2}\]
 for all $i$ and $j$.
 Show that $\spc{U}$ contains an isometric copy of the 
 \emph{solid quadrilateral}
-$\tilde x_1\tilde x_2\tilde x_3\tilde x_4$; that is, the convex hull of $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4$ in $\EE^2$
+$\tilde x^1\tilde x^2\tilde x^3\tilde x^4$; that is, the convex hull of $\tilde x^1,\tilde x^2,\tilde x^3,\tilde x^4$ in $\EE^2$
 \end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2208,14 +2212,14 @@ Gromov  \cite[p.~119]{gromov:hyp-groups}.
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard}, using Birkhoff's curve-shortening.  
 A proof in the non-proper 
 geodesic case 
-was given by the first author and Richard Bishop~\cite{a-b:h-c}.  
+was given by the first author and Richard Bishop~\cite{alexander-bishop:h-c}.  
 This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 %??? what is it about???
 It was pointed out by Bruce 
 Kleiner \cite{ballmann:lectures} 
 and independently by Martin 
 Bridson and Andr\'{e} 
-Haefliger \cite{BH} that 
+Haefliger \cite{bridson-haefliger} that 
 %the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence 
 %the Hadamard--Cartan theorem
 this proof
@@ -2399,9 +2403,21 @@ In particular, $\hat\gamma_t$ is rectifiable for all $t$.
 Joining the obtained homotopies for all $i$ we obtain a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:cover-branching-along-2-lines}
 Let $\spc{X}$ be a double cover of $\EE^3$ that branches along two distinct lines $\ell$ and $m$.
 Show that  $\spc{X}$ is $\CAT0$ if and only if $\ell$ intersects $m$ at a right angle.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:branching}
+Let $\spc{U}$ be a complete length $\CAT0$ space.
+Assume $\tilde{\spc{U}}\to \spc{U}$ is a metric covering branching along a geodesic.
+Show that $\tilde{\spc{U}}$ is $\CAT0$.
+
+More generally, assume $A\subset \spc{U}$ is a closed convex subset and $f\:\spc{X}\to \spc{U}\backslash A$ is a metric cover.
+Denote by $\bar{\spc{X}}$ the completion of $\spc{X}$, and 
+$\bar f\:\bar{\spc{X}}\to \spc{U}$ the continuous extension of $f$.
+Let $\tilde{\spc{U}}$ be the space glued from $\bar{\spc{X}}$ and $A$ by identifying $x$ and $\bar f(x)$ if $\bar f(x)\in A$.
+Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
 
 \parbf{About convex spaces.}
@@ -2418,7 +2434,7 @@ Show that $\spc{X}$ is $\CAT{0}$.
 \end{thm}
 
 The following exercise gives an analog of Hadamard--Cartan theorem for locally convex spaces;
-see also \cite{a-b:h-c}.
+see also \cite{alexander-bishop:h-c}.
 
 \begin{thm}{Exercise}\label{ex:Hadamard--Cartan}
 Show that a complete, simply connected, locally convex space is a convex space.

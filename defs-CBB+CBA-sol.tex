@@ -1,24 +1,318 @@
-%%!TEX root = arXiv.tex
+%%!TEX root = the-defs-CBB+CBA-sol.tex
+\parbf{Exercise~\ref{exr-crofton}.}
+Suppose $\alpha$ is a closed spherical curve. 
+By Crofton's formula length of curve $\alpha$ on the sphere equals to $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
+
+Since $\alpha$ is closed, almost all equators cross it at even number of points (we assume that $\infty$ is an even number.
+If $\length \alpha<2\cdot\pi$ then $n_\alpha<2$.
+Therefore there is an equator that does not cross $\alpha$ --- hence the result.
+
+
+\parbf{Exercise~\ref{ex:complete=>complete};}
+\textit{(\ref{SHORT.ex:complete=>complete:complete}).}
+Note that any Cauchy sequence $(x_n)$ in $(\spc{X},\yetdist{}{}{})$ is also Cauchy in $\spc{X}$.
+Since $\spc{X}$ is complete, $x_n$ converges; denote its limit by $x_\infty$.
+
+Passing to a subsequence, we may assume that $\yetdist{x_{n-1}}{x_n}{}<\tfrac1{2^n}$.
+It follows that there is a 1-Lipschitz curve $\alpha\:[0,1]\to (\spc{X},\yetdist{}{}{})$ such that $x_n=\alpha(\tfrac1{2^n})$ and $x_\infty=\alpha(0)$.
+In particular $\yetdist{x_n}{x_\infty}{}\to0$ and $n\to\infty$.
+
+\parit{(\ref{SHORT.ex:complete=>complete:compact}).}
+Fix two points $x,y\in\spc{X}$ such that $\ell=\yetdist{x}{y}{}<\infty$.
+Let $\alpha_n$ be a sequence of paths from $x$ to $y$ such that $\length(\alpha_n)\to\ell$ as $n\to \infty$.
+Without loss of generality we may assume that each $\alpha_n$ is $(\ell+1)$-Lipschitz.
+
+Since $\spc{X}$ is compact, there is a partial limit of $\alpha_n$ as $n\to \infty$,
+denote it by $\alpha_\infty$.
+By semicontinuity of length, $\length\alpha_\infty\le\ell$;
+that is $\alpha$ is a shortest path in $\spc{X}$.
+
+\parbf{Exercise~\ref{ex:no-geod}.}
+The following example is suggested by Fedor Nazarov~\cite{nazarov}.
+
+\medskip
+
+Consider the unit ball $(B,\rho_0)$
+in the space $c_0$ of all sequences converging to zero equipped with the sup-norm.
+
+Consider another metric $\rho_1$ which is different from $\rho_0$ by the conformal factor
+\[\phi(\bm{x})=2+\tfrac{1}2\cdot x_1+\tfrac{1}4\cdot x_2+\tfrac{1}8\cdot x_3+\dots,\]
+where $\bm{x}=(x_1,x_2\,\dots)\in B$.
+That is, if $\bm{x}(t)$, $t\in[0,\ell]$, is a curve parametrized by $\rho_0$-length 
+then its $\rho_1$-length is 
+\[\length_{\rho_1}\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}.\]
+Note that the metric $\rho_1$ is bi-Lipschitz to~$\rho_0$.
+
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length that differ only in the $m$-th coordinate, denoted by $x_m(t)$ and $x_m'(t)$ correspondingly.
+Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
+the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$, then 
+\[\length_{\rho_1}\bm{x}'\le \length_{\rho_1}\bm{x}.\]
+Moreover this inequality is strict if $x'_m(t)< x_m(t)$ for some~$t$.
+
+Fix a curve $\bm{x}(t)$, $t\in[0,\ell]$, parametrized by  $\rho_0$-length.
+We can choose $m$ large, so that $x_m(t)$ is sufficiently close to $0$ for any~$t$.
+In particular, for some values $t$, we have $y_m(t)<x_m(t)$, where
+\[y_m(t)=(1-\tfrac t\ell)\cdot x_m(0)
++\tfrac t\ell\cdot x_m(\ell)
+-\tfrac 1{100}\cdot \min\{t,\ell-t\}.\]
+Consider the curve $\bm{x}'(t)$ as above with
+\[x'_m(t)=\min\{x_m(t),y_m(t)\}.\]
+Note that $\bm{x}'(t)$ and $\bm{x}(t)$ have the same end points, and by the above
+\[\length_{\rho_1}\bm{x}'<\length_{\rho_1}\bm{x}.\]
+That is, for any curve $\bm{x}(t)$ in $(B,\rho_1)$, we can find a shorter curve $\bm{x}'(t)$ with the same end points.
+In particular, $(B,\rho_1)$ has no geodesics.
+
+\parbf{Exercise~\ref{exercise from BH}.}
+The following example is taken from~\cite{bridson-haefliger}.
+
+\medskip
+
+\begin{wrapfigure}{r}{25mm}
+\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(2mm)]{pics/square(1)}
+\lbl[r]{3,11;{$\dots$}}
+\lbl[r]{-.5,1;{$p$}}
+\lbl[r]{-.5,21;{$q$}}
+\lbl[l]{12,11;{$\spc{X}$}}
+\end{lpic}
+\end{wrapfigure}
+
+Consider the following subset of $\R^2$ equipped with the induced length metric
+\[
+\spc{X}
+=
+\bigl((0,1]\times\{0,1\}\bigr)
+\cup
+\bigl(\{1,\tfrac12,\tfrac13,\dots\}\times[0,1]\bigr)
+\]
+Note that $\spc{X}$ is locally compact and geodesic.
+
+Its completion $\bar{\spc{X}}$ is isometric to the closure of $\spc{X}$ equipped with the induced length metric;
+$\bar{\spc{X}}$ is obtained from $\spc{X}$ by adding two points $p=(0,0)$ and $q=(0,1)$.
+
+The point $p$ admits no compact neighborhood in $\bar{\spc{X}}$ 
+and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. \qeds 
+
+\parbf{Exercise~\ref{ex:compact-in-lenght}}
+Let $\spc{X}$ be a compact metric space.
+Let us identify $\spc{X}$ with its image in $\Bnd(\spc{X},\RR)$ under the Kuratowsky embedding.
+Denote by $\spc{K}$ the \emph{linear} convex hull of $\spc{X}$ is the space of bounded functions on $\spc{X}$.
+%that is $x\in \spc{K}$ if and only if $x$ can not be separated from $\spc{X}$ by a hyperplane.
+
+Since $\spc{X}$ is compact, so is $\spc{K}$.
+It remains to observe that $\spc{K}$ is a length space since it is convex.
+
+\parbf{Exercise~\ref{ex:nonconvex-limit}.} Let $\spc{X}_n$ be the plane with the metric induced by $\ell^n$-norm and $f_n(x,y)=x$ for all $n$.
+Observe that $\spc{X}_\o$ is the plane with the metric induced by $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not convex.
+
+\parbf{Exercise~\ref{ex:adjacent-angles}.}
+If $\mangle\hinge pxz+\mangle\hinge pyz< \pi$, then by the triangle inequality for angles (\ref{claim:angle-3angle-inq}) we have $\mangle\hinge pxy< \pi$.
+The latter implies that the curve $[xy]$ fails to be a shortest geodesic around $p$.
+
+\parbf{Exercise~\ref{ex:tangent-vect=o(t)}.}
+By the definition of a right derivative, there is a geodesic $\gamma$ such that both limits 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma(\eps)}{\spc{X}}}{\eps}
+\quad\text{and}\quad
+\limsup_{\eps\to0+}\frac{\dist{\beta(\eps)}{\gamma(\eps)}{\spc{X}}}{\eps}\]
+are arbitrarily small.
+Therefore 
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}{\eps}=0.\]
+
+\parbf{Exercise~\ref{ex:both-sided-diff}.}
+Follows directly from the definition.
+
+\parbf{Exercise~\ref{ex:diff}.}
+Observe that
+\[\speed_t\alpha=|\alpha^+(t)|=|\alpha^-(t)|.\]
+Apply Theorem~\ref{thm:speed} to show that
+\[\dist{\alpha^+(t)}{\alpha^-(t)}{\T_{\alpha(t)}}=2\cdot\speed_t\alpha.\]
+
+
+\parbf{Exercise~\ref{ex:schroeder-foetch}.}
+Choose two non-Euclidean norms $\|{*}\|_{\spc{X}}$ and $\|{*}\|_{\spc{Y}}$ on $\RR^{10}$ such that the sum $\|{*}\|_{\spc{X}}+\|{*}\|_{\spc{Y}}$ is Euclidean.
+See \cite{schroeder-foetch} for more details.
+
+\parbf{Exercise~\ref{ex:(3+1)-expanding}.} 
+Assume $\dist{p}{x^i}{}=\dist{q}{y^i}{}$ for each $i$.
+Observe and use that
+\[\dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}
+\quad\iff\quad
+\angk\kappa p{x^i}{x^j}\le \angk\kappa q{y^i}{y^j}.\]
+
+\parbf{Exercise~\ref{ex:cbb-area}.} Follows from the overlap lemma (\ref{lem:extend-overlap}).
+
+\parbf{Exercise~\ref{ex:cbb-wald}.} 
+
+\parbf{Exercise~\ref{ex:nongeod-cbb}.}
+Modify the induced length metric on the unit sphere in the Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
+
+\parbf{Exercise~\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
+
+\parbf{Exercise~\ref{ex:G-delta-not-thru}.}
+Any nonnegatively curved metric on the plane with everywhere dense set of singular points will do the job;
+by singular point we understand a point with total angle around it strictly smaller than $2\cdot\pi$.
+
+Indeed, if $x_i$ is a singular point then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
+The set 
+\[\Omega_n=\bigcup_i \oBall(x_i,\tfrac{\eps_i}n)\]
+is open and everywhere dense.
+Note that $\Omega_n$ may intersect a geodesic only at $\tfrac1n$-end of it.
+The intersection of $\Omega_n$ is a G-delta dense set that does not intersect interior of any geodesic.
+
+\parbf{Exercise~\ref{mink+alex=euclid}.} 
+Note that scaling does not change the space.
+Therefore if the space is $\Alex\kappa$ then it is $\Alex{\lambda\cdot\kappa}$ for any $\lambda>0$.
+Passing to the limit as $\lambda\to 0$, we may assume that the space is $\Alex0$.
+
+The point-on-side comparison (\ref{point-on-side}) for $p=v$, $x=w$, $y=-w$ and $z=0$ implies that 
+\[\|v+w\|^2+\|v-w\|^2\le 2\cdot\|v\|^2+2\cdot\|w\|^2.\]
+Applying the comparison for 
+$p=v+w$, $x=w-v$, $y=v-w$ and $z=0$ gives the opposite inequality.
+That is, the parallelogram identity
+\[\|v+w\|^2+\|v-w\|^2= 2\cdot\|v\|^2+2\cdot\|w\|^2.\]
+holds for any vectors $v$ and $w$.
+Whence the statement follows.
+
+\parbf{Exercise~\ref{ex:cbb-geod-overlap}.}
+Apply the hinge comparison (\ref{angle}).
+
+\parbf{Exercise~\ref{ex:equality-alexlemma}.} Without loss of generality, we can assume that the points $x,v,w,y$ appear on the geodesic $[xy]$ in the same order.
+By the point-on-side comparison (\ref{point-on-side}) we have
+\begin{align*}
+\angk\kappa xyp\le\angk\kappa xwp&\le \angk\kappa xvp,
+\\
+\angk\kappa ywp&\ge\angk\kappa yvp\ge\angk\kappa yxp.
+\end{align*}
+Therefore
+\begin{align*}\angk\kappa xyp<\angk\kappa xwp
+\quad&\Longrightarrow\quad
+\angk\kappa xyp<\angk\kappa xvp,
+\\
+\angk\kappa yxp<\angk\kappa ywp
+\quad&\Longleftarrow\quad
+\angk\kappa yxp<\angk\kappa yvp,
+\end{align*}
+
+By Alexandrov's lemma (\ref{lem:alex}), we have that 
+\begin{align*}
+\angk\kappa xyp<\angk\kappa xvp
+\quad&\Longleftrightarrow\quad
+\angk\kappa yxp<\angk\kappa yvp,
+\\
+\angk\kappa xyp<\angk\kappa xwp
+\quad&\Longleftrightarrow\quad
+\angk\kappa yxp<\angk\kappa ywp.
+\end{align*}
+Hence the statement follows.
+
+
 \parbf{Exercise~\ref{ex:urysohn}.} See the construction of Urysohn's space \cite[3.11$\tfrac{3}{2}_+$]{gromov-MS}.
 
-\parbf{Exercise~\ref{ex:lebedeva-petrunin}.}
+\parbf{Advanced exercise~\ref{ex:lebedeva-petrunin}.}
 Read \cite{lebedeva-petrunin}.
 
+\parbf{Exercise~\ref{ex:fat-triangle}.} Apply angle-sidelength  monotonicity (\ref{cor:monoton}) twice. 
+
+\parbf{Exercise~\ref{ex:busemann}.} The first part follows from angle-sidelength  monotonicity (\ref{cor:monoton}).
+An example for the second part can be found among metrics on $\RR^2$ induced by a norm. (Compare to Exercise~\ref{mink+alex=euclid}.)
+
 \parbf{Exercises \ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}.}
-
-blabla
-
 By the definition of Busemann function,
 \begin{align*}
-\exp(\sqrt{-\kappa}\cdot\bus_\gamma) 
-&= \exp \left[\lim_{t\to \infty} \sqrt{-\kappa}\cdot(\distfun{{\gamma (t)}}{}{} - t)\right] 
+\exp(&\sqrt{-\kappa}\cdot\bus_\gamma) 
+= \exp \left[\lim_{t\to \infty} \sqrt{-\kappa}\cdot(\distfun{{\gamma (t)}}{}{} - t)\right]=
 \\
-&= \lim_{t\to \infty} \left(\exp \left[\sqrt{-\kappa}\cdot(\distfun{\gamma (t)}{}{} -t)\right]
-+ \exp\left[\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right]\right)\\
+&= \lim_{t\to \infty} \biggl(\exp \left[\sqrt{-\kappa}\cdot(\distfun{\gamma (t)}{}{} -t)\right]
++\exp\left[\sqrt{-\kappa}\cdot(-d_{\gamma (t)}-t)\right]\biggr)=
+\\
 &=  \lim_{t\to \infty} \left(2\cdot \cosh \left[\sqrt{-\kappa}\cdot\distfun{\gamma (t)}{}{}\right]\cdot \exp\left[\sqrt{-\kappa}\cdot(-t)\right]\right).
 \end{align*}
 
 By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp}) or $\Alex{\kappa}$ space (\ref{comp-kappa}),  for any $p\in \spc{U}$ the function\\ $f=\cosh \sqrt{-\kappa}\circ\distfun{p}{}{}$ satisfies $f''+\kappa \cdot f\ge 0$ (respectively  $f''+\kappa \cdot f\le 0$). The result follows.
+
+\parbf{Advanced exercise~\ref{ex:noncomplete-globalization}.} Read \cite{petrunin:globalization}.
+
+\parbf{Exercise~\ref{ex:fixed-point}.} If $\diam(\spc{L}/G)>\tfrac\pi2$, then for some $x\in \spc{L}$ we have
+\[\sup \set{\distfun{G\cdot x}(y)}{y\in \spc{L}}
+>
+\tfrac\pi2.\]
+Use comparison to show that there is unique point $y^{*}$ that lies on the maximal distance from the orbit $G\cdot x$.
+Observe that $y^{*}$ is a fixed point.
+
+\parbf{Exercise~\ref{ex:kleiner}.}
+This exercise is based on the main idea in \cite{hsiang-kleiner}.
+
+\medskip
+
+Assume there are 4 such points $x_1,x_2,x_3,x_4$
+Note that from comparison the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at larger than $\tfrac\pi3$.
+On the other hand, since each $x_i$ has spaces of directions $\le\tfrac12\cdot\mathbb{S}^n$, the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at most $\tfrac\pi3$ --- a contradiction.
+
+
+\parbf{Exercise~\ref{ex:ccat-(3+1)}.}
+Suppose, that 
+\[\angk\kappa {x^0}{x^1}{x^2}+\angk\kappa {x^0}{x^2}{x^3}<\angk\kappa {x^0}{x^1}{x^3}.\]
+Show that
+\[\angk\kappa {x^2}{x^0}{x^1}+\angk\kappa {x^2}{x^1}{x^3}+\angk\kappa {x^2}{x^3}{x^1}>2\cdot\pi.\]
+Conclude that one can take $p=x^2$.
+
+\parbf{Exercise~\ref{ex:sba-2+2-short}.}
+
+
+\parbf{Advanced exercise~\ref{ex:berg-nikolaev}.} Read \cite{sato}. (The original proof \cite{berg-nikolaev} is much longer and it is harder to follow.)
+
+An example for the the second part of the problem, can be found among 4-point metric spaces.
+It is sufficient to take a generic convex quadraliteral and increase one of its diagonals slightly;
+it will still satisfy the inequality for all relabeling, but will fail to meet \ref{def:2+2-reformulated}.
+
+\parbf{Exercise~\ref{ex:CAT-mnfld=>ext.geod}.}
+Suppose that a geodesic $[px]$ is not expendable behind $x$.
+We may assume that $\dist{p}{x}{}<\varpi\kappa$;
+otherwise move $p$ along the geodesic toward to $x$.
+
+By the uniqueness of geodesics (\ref{thm:cat-unique}), any point $y$ in a neighborhood $\Omega\ni x$ is connected to $p$ by a unique geodesic path, denote it by $\gamma_y$.
+Moreover, $h_t(y)=\gamma_y(t)$ defines a homotopy between the identity map of $\Omega$ and the constant map with value $p$;
+this is the  so called \index{geodesic homotopy}\emph{geodesic homotopy}.
+
+Since $[px]$ is not extendable, $x\notin h_t(\Omega)$ for any $t<1$.
+In particular the local homology groups vanish at $x$ --- a contradiction.
+
+\parbf{Exercise~\ref{ex:complete-space-of-dir}.} Choose a sequence of geodesic directions $\xi_n$ at $p$; denote by $\gamma_n$ the corresponding geodesics.
+Since the space $\spc{U}$ is locally compact, we may pass a converging subsequence of $(\gamma_n)$; denote its limit by limit $\gamma_\infty$ and its direction by $\xi_\infty$.
+By comparison, $\xi_\infty$ is a limit of $(\xi_n)$.
+
+\parbf{Exercise~\ref{mink+CAT=euclid}.} Follow the solution in the \ref{mink+alex=euclid}, reverting all the inequalities.
+
+\parbf{Exercise~\ref{ex:convexity-CAT0}.} %???+PIC
+It sufficient to show that if $v$ and $y$ are midpoints of geodesics $[uw]$ and $[xz]$ in $\spc{U}$, then
+\[\dist{v}{y}{}\le \tfrac12\cdot(\dist{u}{x}{}+\dist{w}{z}{}).\]
+
+Denote by $p$ the midpoint of $[uz]$.
+Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) twice, we get
+\[\dist{v}{p}{}\le \tfrac12\cdot\dist{w}{z}{}.\]
+The same way we obtain 
+\[\dist{y}{p}{}\le \tfrac12\cdot\dist{u}{x}{}.\]
+It remains to add these two inequalities and apply the triangle inequality.
+
+(This inequality also follows directly from the majorization theorem (\ref{thm:major}).)
+
+\parbf{Exercise~\ref{ex:equality-for-thin}.}
+
+\parbf{Exercise~\ref{ex:busemann-CBA}.}
+See the solution of Exercises~\ref{ex:busemann-CBB}.
+
+\parbf{Exercise~\ref{ex:closest-point-projection}.}
+Let $p\mapsto\bar p$ denotes the closest-point projection to $K$.
+We need to show that $\dist{\bar p}{\bar q}{}\le\dist{ p}{ q}{}$ for any $p,q\in \spc{U}$.
+
+Assume $p\ne \bar p\ne \bar q\ne q$.
+Note that in this case $\mangle\hinge p{\bar p}{\bar q}\ge \tfrac\pi2$ and $\mangle\hinge q{\bar q}{\bar p}\ge \tfrac\pi2$.
+Otherwise a point on the geodesic $[\bar p\bar q]$ would be closer to $p$ or to $q$ than $\bar p$ or $\bar q$ correspondingly.
+The latter is impossible since $K$ is convex and therefore $[\bar p\bar q]\subset K$.
+
+Applying the arm lemma (\ref{lem:arm}), we get the statement.
+
+The cases $p= \bar p\ne \bar q\ne q$ and $p\ne \bar p\ne \bar q= q$ can be done similarly.
+The rest of the cases are trivial.
 
 \parbf{Exercise~\ref{ex:short-retraction-CBA(1)}.}
 Without loss of generality, we may assume that $p\in K$.
@@ -66,7 +360,8 @@ Note that
 \[\cos r\le 
 \cos\phi_x\cdot\cos\phi_y
 -
-\cos d\cdot\sin\phi_x\cdot\sin\phi_y.\eqlbl{eq:cos(r)}\]
+\cos d\cdot\sin\phi_x\cdot\sin\phi_y.
+\eqlbl{eq:cos(r)}\]
 
 Indeed, if $x,y\notin K$,
 then 
@@ -189,6 +484,11 @@ By Reshetnyak gluing theorem \ref{thm:gluing} the obtained space is $\CAT0$.
 
 It remains to note that this space can be obtained directly by gluing $\spc{U}$ to with $Q$ along $\gamma_1$ and $\gamma_2$.
 
+\parbf{Exercise~\ref{ex:reshetnyak-doubling}.}
+Suppose that $A$ is not convex.
+Then there is a geodesic $[xy]$ with ends in $A$ that does not lie in $A$ completely.
+Note that $[xy]$ can be lifted to two different geodesics in the doubling with the same ends and apply uniqueness of geodesics (\ref{cor:cat-unique}).
+
 \parbf{Exercise~\ref{ex:glue-spherical-suspension}.}
 Since $K$ is $\pi$-convex, it is $\CAT1$.
 By \ref{thm:warp-curv-bound:cat}, the spherical suspension $\Susp K$ is $\CAT1$ as well.
@@ -205,6 +505,9 @@ that is, there is a family of maps $\phi_t\:\cBall[p,\tfrac\pi2]\to \cBall[p,\tf
 the function $t\mapsto \dist{\phi_t(x)}{\phi_t(y)}{}$ is nonincreasing for any pair of points $x,y\in\cBall[p,\tfrac\pi2]$, $\phi_t(x)=x$ for any $x\in K$ and $\phi_1(\cBall[p,\tfrac\pi2])=K$. 
 Moreover we can assume that there is a family of short maps $\phi_t(\cBall[p,\tfrac\pi2])= K_t$ and $\phi_t(x)=x$ for any $t$ and $x\in K_t$.
 It leads to another solution of Exercise~\ref{ex:short-retraction-CBA(1)}.
+
+
+
 
 \parbf{Exercise~\ref{ex:isometric-majorization}.}
 \textit{(Easier way.)} 
@@ -229,3 +532,267 @@ Assume
 and there is a short bijecction $f\:\alpha\to\beta$.
 Then $f$ is an isometry.
 \end{thm}
+
+\parbf{Exercise~\ref{ex:bishop}.}
+
+\parbf{Exercise~\ref{ex:square}.}
+
+\parbf{Exercise~\ref{ex:cover-branching-along-2-lines}.}
+If $\ell$ and $m$ do not intersect, then the double cover $\spc{X}$ is not simply connected.
+In particular, by the Hadamard--Cartan theorem, $\spc{X}$ is not $\CAT0$.
+
+If $\ell$ and $m$ intersect then $\spc{X}$ is a cone over double cover $\Sigma$ of $\mathbb{S}^2$ branching at two pairs $(x,y)$ and $(v,w)$ of antipodal points.
+Suppose $\dist{x}{v}{\mathbb{S}^2}=\ell<\tfrac\pi2$.
+Note that the inverse image of $[xv]_{\mathbb{S}^2}$ is a closed geodesic of length $4\cdot\ell<2\cdot\pi$.
+Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$ and hence $\spc{X}$ is not $\CAT0$.
+
+\parbf{Exercise~\ref{ex:branching}.}
+Let us do the second part first.
+Assume $A$ has has nonempty interior. 
+Note that the space $\tilde{\spc{U}}$ is simply connected and locally isometric to the doubling $\spc{W}$ of $\spc{U}$ in $A$;
+that is, for any point in $\tilde{\spc{U}}$ has a neighborhood $\Omega$ that is isometric to a neighborhood of a point in $\spc{W}$.
+
+By Reshetnyak gluing theorem $\spc{W}$ is $\CAT0$.
+By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) $\tilde{\spc{U}}$ is $\CAT0$.
+
+To do the general case, apply the above argument to a closed $\eps$-neighborhood of $A$
+and pass to a limit as $\eps\to 0$.
+
+The first part of problem follows since geodesic is a convex set.
+
+\parbf{Exercise~\ref{ex:cats-cradle}.} Prove that the angle comparison (\ref{cat-hinge}) holds.
+
+\parbf{Exercise~\ref{ex:Hadamard--Cartan}.} Mimic the proof of Hadamard--Cartan theorem.
+
+\parbf{Exercise~\ref{ex:CBB+CBA}.}
+Note that it is sufficient to show that any finite set of points $x^1,\dots,x^n\in\spc{X}$ lies in an isometric copy of a Euclidean polyhedron.
+
+Observe that $\spc{X}$ is $\Alex0$ and $\CAT0$ at the same time.
+Show that there is unique point $p$ that minimize the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
+Note that the vectors $v^i=\lg_{\geod{p}{x^i}}$ lie in a linear subspace of $\T_p$.
+Moreover if $K$ is the convex hull of $v_i$, then the origin of $\T_p$ lies in the interior of $K$ relative to its affine hull.
+Finally observe that the exponential map is defined on whole $K$ and it is distance preserving.
+The statement follows since the exponential map sends $v^i\mapsto x^i$ for each $i$.
+
+\parbf{Exercise~\ref{ex:5-point-CBA=>CBB}.}
+The answers are $s\le \sqrt3$ and $s\le 2$ correspondingly.
+
+The upper bound $s\le \sqrt3$ follow from (2+2)-point comparison.
+
+The Euclidean space works as example if $s$ is smaller than large diagonal of double pyramid with unit side (that is, if $s\le 2\cdot\sqrt{2/3}$).
+Otherwise take the product $\spc{K}\times \RR$ with a 2-dimensional cone for the $\CAT0$ case.
+For the $\Alex0$ case, the needed space can be constructed by taking doubling of a proper convex set $K\subset\EE^3$ in its boundary.
+We assume that the points correspond to vertexes of a regular tetrahedral with 3 vertexes on the boundary of $K$ and one lies in its interior; it corresponds to a pair of points in the doubling on distance $s$ from each other.
+
+\parit{Remarks.}
+Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison, admits a distance preserving map into a $\CAT0$ space.
+For spaces with more than 5 points the condition is unknown;
+for 6-point metric spaces, a conjecture is formulated in \cite{lebedeva-petrunin-zolotov}.
+
+\parbf{Exercise~\ref{ex:sturm}.}
+Let $\tilde p,\tilde x_1,\dots,\tilde x_n$ be the array in $\EE^n$ provided by the (1+\textit{n})-point comparison (\ref{thm:pos-config}).
+We may assume that $\tilde p$ is the origin of $\EE^n$.
+
+Consider an $n{\times}n$-matrix $\tilde M$ with the components 
+\[\tilde m_{i,j}=\tfrac12\cdot(|\tilde x_i-\tilde p|^2+|\tilde x_j-\tilde p|^2-|\tilde x_i-\tilde x_j|^2).\]
+Note that $\tilde m_{i,j}=\langle\tilde x_i,\tilde x_j\rangle$.
+Therefore $\tilde M=A\cdot A^\top$ for an $n{\times}n$-matrix $A$ that defines linear transformation that sends standard basis to the array $\tilde x_1,\dots,\tilde x_n$.
+Therefore
+\[\bm{s}\cdot \tilde M\cdot \bm{s}^\top=|A^\top\cdot \bm{s}^\top|^2 \ge 0\]
+for any any vector $\bm{s}$.
+Further show that
+\[\bm{s}\cdot M\cdot \bm{s}^\top\ge \bm{s}\cdot \tilde M\cdot \bm{s}^\top\]
+for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
+
+\parbf{Exercise~\ref{ex:(3+1)-nonsufficient}.}
+It is sufficient to construct a metric of the set of points $\{p,x^1,x^2,x^3,x^4\}$ that does not satisfy (4+1)-comparison but does meet all (3+1)-comparison.
+To do this, put $x^i$ in the vertexes of regular tetrahedron in $\EE^3$ and suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
+
+
+\parbf{Exercise~\ref{ex:strut+embedding}.}
+By the (1+\textit{n})-point comparison (\ref{thm:pos-config}) there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+\[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\ \text{and}\ \dist{\tilde a^i}{\tilde a^j}{}\ge\dist{a^i}{a^j}{}\]
+for all $i$ and $j$.
+
+For each $i$, set 
+$\tilde \xi^i=\dir{\tilde p}{\tilde a^i}\in\mathbb{S}^m=\Sigma_{\tilde p}(\Lob{m+1}\kappa)$.
+Note that 
+\[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}\ge \angk\kappa{p}{ a^i}{ a^j}>\tfrac\pi2\]
+
+Consider two matrices $S$ and $\tilde S$ with the components
+$s_{i,j}=\langle\tilde \xi^i,\xi^j\rangle$
+and
+$\tilde s_{i,j}=\cos[\angk\kappa{p}{a^i}{a^j}]$.
+By construction, $S\ge 0$.
+
+Note that $s_{i,j}\le \tilde s_{i,j}\le 0$ if $i\ne j$ and
+$s_{i,j}= \tilde s_{i,j}=1$ if $i=j$.
+Therefore $\tilde S\ge0$.
+The latter implies that we can assume that
+\[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}= \angk\kappa{p}{ a^i}{ a^j}\]
+for each $i$ and $j$.
+Whence the statement follows.
+
+\parbf{Exercise~\ref{ex:flat-in-CAT}.}
+
+\parbf{Exercise~\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\lg_{x^0}{x^i}\in\T_{x^0}$.
+Show that all $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is an isometry.
+It follows that we can identify the convex hull $K$ of $v^i$ with the convex hull of $\tilde x^i$.
+
+Note that the gradient exponent $\gexp_{x_0}$ maps $v^i\mapsto x^i$.
+By assumption, 
+\[\dist{v^i}{v^j}{}=\dist{x^i}{x^j}{}\eqlbl{eq:vv=xx}\]
+for all $i$ and $j$.
+By \ref{thm:prop-gexp}, $\gexp_{x_0}$ is a short map.
+By \ref{eq:vv=xx}, $\gexp_{x_0}$ can not be strictly short at a pair of points in $K$.
+That is, $\gexp_{x_0}$ is an distance-preserving on $K$.
+
+\parbf{Exercise~\ref{ex:not-flat}.} 
+
+\parbf{Exercise~\ref{CBA-n-point}.}
+Apply \ref{thm:kirsz} for each of the following maps
+\begin{itemize}
+\item $f_0\:\tilde x\mapsto x$, $\tilde p^1\mapsto p^1$, $\tilde q^1\mapsto q^1$;
+\item $f_i\:\tilde p^i\mapsto p^i$, $\tilde p^{i+1}\mapsto p^{i+1}$, $\tilde q^i\mapsto q^i$, $\tilde q^{i+1}\mapsto q^{i+1}$ for $1\le i<n$;
+\item $f_n\:\tilde y\mapsto y$, $\tilde p^n\mapsto p^n$, $\tilde q^n\mapsto q^n$.
+\end{itemize}
+Denote by $F_i$ the short extension of $f_i$.
+Observe that $F_{i-1}(\tilde z_i)=F_{i}(\tilde z_i)$ for each $i$ and use it.
+
+\parbf{Exercise~\ref{ex:riemannian-kirszbraun-equality}.}
+
+
+\parbf{Exercise~\ref{ex:perunin-stadler}.} Consider the space $\spc{Y}^{\spc{X}}$ of all maps $\spc{X}\to \spc{Y}$ equipped with the product topology.
+
+Denote by $\mathfrak{S}_F$ the set of maps $h\in \spc{Y}^\spc{X}$ such that its restriction $h|_F$ belongs is short and agrees with with $f$ in $F\cap A$.
+Note that the sets $\mathfrak{S}_F\subset \spc{Y}^\spc{X}$ are closed and any finite interection of these sets is nonempty.
+
+According to Tikhonov's theorem, $\spc{Y}^{\spc{X}}$ is compact.
+By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ for all finite sets $F\subset X$ is nonempty.
+Hence the statement follows.
+
+\parbf{Exercise~\ref{ex:isbell}.}
+(This exercise is a classical result of John Isbell which was rediscovered several times after him.)
+
+The Kuratowsky embedding is an isometric embedding of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm is an injective metric space.
+It remains to show that the latter space is injective.
+
+%???TBC
+
+\parbf{Exercise~\ref{ex:kirszbrun-source}.}
+To prove the only-if part it is sufficient to consider only the case of two-point spaces $\spc{Z}$.
+
+It remains to prove the if part.
+
+By Zorn's lemma, we may assume that the short map $f\:Q\to \spc{Z}$ is defined on a maximal subset $Q\subset \spc{X}$;
+that is, $f$ can not be extended to a larger set as a short map.
+Note that in this case $Q$ is a closed subset of $\spc{X}$.
+
+Assume that there is a point $x\in \spc{X}\backslash Q$.
+Denote by $\bar x$ a point in $Q$ that lies on minimal distance from $x$.
+By the ultratriangle inequality, $\dist{\bar x}{y}{}\le\dist{x}{y}{}$ for any $y\in Q$.
+Assigning $f(x)=f(\bar x)$, we extend $f$ to $Q\cup\{x\}$ as a short map --- a contradiction.
+Therefore $Q=\spc{X}$ hence the statement.
+
+
+\parbf{Exercise~\ref{ex:warp=<}.}
+It is sufficient to show that the natural map $\spc{B}\warp{g}\spc{F}\to \spc{B}\warp{f}\spc{F}$ is short.
+The latter follows from the fiber-independence theorem (\ref{thm:fiber-independence}).
+
+\parbf{Exercise~\ref{ex:convexity-in-cone}.}
+
+\parbf{Exercise~\ref{ex:spherical-join}.}
+By \ref{thm:warp-curv-bound:cbb:a}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\Alex1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\Alex0$ correspondingly.
+
+By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\CAT1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\CAT0$ correspondingly.
+
+It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ correspondingly.
+
+\parbf{Exercise~\ref{ex:norays}.}
+Consider a cube in the Hilbert space;
+that is the space of all sequences $(x_1,x_2,\dots)$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by $\ell^2$-norm.
+
+\parbf{Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT}.}
+
+\parbf{Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}.}
+
+\parbf{Exercise~\ref{ex:d dist(grad)<0}.}
+
+\parbf{Exercise~\ref{ex:df(v)=<grad f,v>}.}
+Since $\alpha$ is Lipschitz, so is $f\circ\alpha$.
+By standard Rademacher's theorem, the derivative $(f\circ\alpha)'$ is defined almost everywhere.
+In particular 
+\[(\dd_{\alpha(t)}f)(\alpha^+(t))+(\dd_{\alpha(t)}f)(\alpha^-(t))\ae0.\]
+
+Further by extended Rademacher's theorem (more precicely its 1-dimensional case; see Proposition~\ref{prop:Rademacher-dim=1}),
+we have that
+\[\alpha^+(t)+\alpha^-(t)\ae0.\]
+In particular,
+\[\<\nabla_{\alpha(t)}f,\alpha^+(t)\>+\<\nabla_{\alpha(t)}f,\alpha^-(t)\>
+\ae0.\]
+
+Finally, by the definition of gradient, we have that 
+\[\<\nabla_{\alpha(t)}f,\alpha^\pm(t)\>\ge (\dd_{\alpha(t)}f)(\alpha^\pm(t)).\]
+Hence the result follows.
+
+
+\parbf{Exercise~\ref{ex:compact-dimension-cbb}.}
+Suppose that $\spc{L}$ is infinite dimensional.
+Denote by $\Omega_m\subset \spc{L}$ the set of all points $p$ with $\rank_p\ge m$.
+Evidently $\Omega_1\supset \Omega_2\supset\dots$ and $\Omega_m$ is open for each $m$.
+
+By \ref{LinDim+}, each $\Omega_m$ is dense in $\spc{L}$.
+Hence there is a G-delta dense set of points $p\in\spc{L}$ such that $\rank_p=\infty$.
+It follows that $\Sigma_p$ is not compact.
+
+\parbf{Exercise~\ref{ex:sharafutdinov}.}
+
+\parbf{Exercise~\ref{ex:elf-contracting}.}
+Set $\ell(t)=\dist{\alpha(t)}{\alpha(t_3)}{}$
+Note that 
+\[\ell'(t)\le -\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle.\]
+
+Observe that the function $t\mapsto f\circ\alpha(t)$ is non-decreasing;
+in particular, $f(\alpha(t_1))\le f(\alpha(t_2))\le f(\alpha(t_3))$.
+Therefore 
+\begin{align*}\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle&\ge\dd_{\alpha(t)}f(\dir{\alpha(t)}{\alpha(t_3)})\ge 0
+\end{align*}
+for any $t\in[t_1,t_2]$.
+Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$, hence the statement.
+
+\parbf{Exercise~\ref{ex:grad-curve-condition}.} 
+Without loss of generality, we may assume that $(f\circ\alpha)'(t)>0$ for any $t$.
+
+Let $\hat\alpha$ be reparametrization of $\alpha$ by its arclength.
+Note that 
+\[(f\circ\hat\alpha)'(s)\ge |\nabla_{\hat\alpha(s)}f|\]
+almost everywhere.
+Therefore, by Theorem~\ref{thm:grad-like-2nd-def}, $\hat\alpha$ is a gradient-like curve.
+It remains to apply Lemma~\ref{lem:grad--grad-like}.
+
+\parbf{Exercise~\ref{ex:grad-curve-analitic}.}
+Set $h(z)=\tfrac12\cdot\dist[2]{x}{z}{}$.
+If $\alpha$ is an $f$-gradient curve then 
+\begin{align*}
+(h\circ\alpha)^+&\ge \dist{\alpha(t)}{x}{}\cdot\langle\dir{\alpha(t)}{x},\nabla_{\alpha(t)}f\rangle\ge
+\\
+&\ge \dist{\alpha(t)}{x}{}\cdot\dd_{\alpha(t)}f(\dir{\alpha(t)}{x})\ge 
+\\
+&\ge f(x)-f\circ\alpha(t).
+\end{align*}
+
+???
+
+
+\parbf{Exercise~\ref{ex:grad-flow-bry}.}
+
+\parbf{Exercise~\ref{ex:geodesic}.}
+Consider $(x,\kappa)$ and $(z,\kappa)$ radial curves that start at $y$
+and observe that they form a geodesic from $x$ to $z$.
+
+\parbf{Exercise~\ref{ex:gexp}.} Set $q=p+v$ and $q'=\gexp_pv$. 
+By radial comparison $\dist{q'}{x}{}\le \dist{q}{x}{}$ for any $x\in \spc{L}$.
+If $q\in \spc{L}$, then it implies that $q=q'$.
+Otherwise note that $q'$ lies on the boundary line of $\spc{L}$ and $\proj(q)$ is the only point on this line that satisfies the inequality. 
+
+\parbf{Exercise~\ref{ex:bry-cover}.} 

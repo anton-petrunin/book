@@ -54,7 +54,7 @@ Let $\spc{L}$ be a metric space.
 Show that $\spc{L}$ is $\Alex\kappa$
 if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
 \[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\tfrac{\varpi\kappa}2,\]
-there is a quadruple of points $q,y^1,y^2,y^3\in\Lob2\kappa$
+there is a quadruple of points $q,y^1,y^2,y^3\in\Lob{2}\kappa$
 such that 
 \[\dist{p}{x^i}{}=\dist{q}{y^i}{} 
 \ \ \text{and}\ \ \dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}\] 
@@ -63,7 +63,7 @@ for all $i$ and $j$.
 
 The exercise above is a partial case of (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:cbb-area}
 Let $\spc{L}$ be a metric space.
 Show that $\spc{L}$ is $\Alex0$
 if and only if 
@@ -78,16 +78,11 @@ for any 4 distinct points $p,x,y,z\in\spc{L}$.
 The following exercise decribes the first known definition of spaces with curvature bounded below;
 it was given by Abraham Wald in \cite{wald}. 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:cbb-wald}
 Let $\spc{L}$ be a metric space and $\kappa\le 0$.
 Prove that $\spc{L}$ is $\Alex\kappa$ if and only if  any quadruple of points $p,q,r,s\in \spc{L}$ can be isometrically embedded into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
 
 Is the same true for $\kappa>0$, what is the difference?
-\end{thm}
-
-\begin{thm}{Exercise}\label{mink+alex=euclid} 
-Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm.
-Show that $\spc{L}$ is a complete length $\Alex{}$ space if and only if $\spc{L}\iso\EE^m$.
 \end{thm}
 
 Recall that $\o$ denotes a selective ultrafilter on $\NN$, which is fixed once for all.
@@ -194,7 +189,7 @@ and for any $q\in W_p$ there is a geodesic $[p q]$.
 Recall that general complete length spaces might have no geodesics;
 see Exercise~\ref{ex:no-geod}.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:nongeod-cbb}
 Construct a complete length $\Alex0$ space that is not geodesic.
 \end{thm}
 
@@ -294,29 +289,16 @@ From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, w
 that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:almost.geod}
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $A\subset\spc{L}$ be a closed subset.
 Show that there is a dense G-delta set $W\subset\spc{L}$ such that
 for any $q\in W$, there is a unique geodesic $[pq]$ with
 $p\in A$ that realize the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
 \end{thm}
 
-\begin{thm}{Exercise}
-Give an alternative proof of Theorem \ref{thm:almost.geod} 
-built on the fact that geodesics do not split (\ref{thm:g-split})
-and Corollary \ref{cor:two-geodesics-in-ultrapower}.
-\end{thm}
-
 Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.
 
-\begin{thm}{Exercise}
-Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  in the same geodesic direction $\xi\in \Sigma'_p$.
-Show that 
-\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
-
-\end{thm}
-
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:G-delta-not-thru}
 Construct a complete length $\Alex{}$ space $\spc{L}$
 with an everywhere dense G-delta set $A$
 such that 
@@ -433,6 +415,18 @@ Passing to the limits  $w\to p$, we have
 If $\spc{L}$ is only G-delta geodesic, we can apply the  above arguments to sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that  $[p_nz]$, $w_n\in\mathopen{]}z p_n\mathclose{[}$ and  $[x_nw_n]$, $[y_n w_n]$ exist,  and then pass to the limit as $n\to\infty$.
 \qeds
 
+\begin{thm}{Exercise}\label{mink+alex=euclid} 
+Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm.
+Show that $\spc{L}$ is a complete length $\Alex{}$ space if and only if $\spc{L}\iso\EE^m$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:cbb-geod-overlap}
+Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  in the same geodesic direction $\xi\in \Sigma'_p$.
+Show that 
+\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
+
+\end{thm}
+
 
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
@@ -462,7 +456,7 @@ The angle $\mangle\hinge{x}{p}{y}$ is defined and
 
 The proof is contained in the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) of Theorem~\ref{thm:defs_of_alex}.
 
-\begin{thm}{Exercise} 
+\begin{thm}{Exercise}\label{ex:equality-alexlemma} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
 $p,x,y\in \spc{L}$
 and $v,w\in \mathopen{]}xy\mathclose{[}$.
@@ -502,14 +496,14 @@ $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ is d
 We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-fat}\index{$\kappa$-fat} if the natural map (see definition \ref{def:k-thin}) 
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ is distance non contracting.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:fat-triangle}
 Prove that any triangle with perimeter $<\varpi\kappa$ 
 in a $\Alex{\kappa}$ space is $\kappa$-fat.
 \end{thm}
 
 The following exercise is inspired by Busemann's definition given in \cite{busemann-CBA}. 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:busemann}
 
 \begin{subthm}{}
 Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
@@ -920,16 +914,16 @@ Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 In the two-dimensional case this theorem was proved by Paolo Pizzetti \cite{pizzetti};
 latter it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref???
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
-In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{BGP}; 
-simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{BBI}.
+In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}; 
+simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{burago-burago-ivanov}.
 A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise: 
 
-\begin{thm}{Advanced exercise}
+\begin{thm}{Advanced exercise}\label{ex:noncomplete-globalization}
 Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
 Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
 \end{thm}
 
-Our proof, is based on presentations in \cite{plaut:dimension} and \cite{BBI};
+Our proof, is based on presentations in \cite{plaut:dimension} and \cite{burago-burago-ivanov};
 this proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 
 The following corollary says that the expression ``space with curvature $\ge \kappa$'' makes sense.
@@ -1651,7 +1645,7 @@ Assume that the group $G$ acts on  $\spc{L}$ by isometries and has closed orbits
 Show that the action of $G$ has a fixed point in $\spc{L}$.
 \end{thm}
 
-\begin{thm}{Advanced exercise} 
+\begin{thm}{Advanced exercise}\label{ex:kleiner}
 Let $\spc{L}$ be a complete length $\Alex{1}$ space.
 Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\mathbb{S}^n$.
 \end{thm}
@@ -1777,7 +1771,7 @@ The rules for calculating extended angle is an easy consequence of its definitio
 \section{Remarks and open problems}
 
 The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long standing open problem (possibly dating back to Alexandrov),
-but as far as we know,  it was first formally stated in print in \cite[footnote in 4.1.5]{BBI}.
+but as far as we know,  it was first formally stated in print in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 
 
 \begin{thm}{Open question}\label{open:hinge-}
