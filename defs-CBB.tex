@@ -752,11 +752,31 @@ then for some $\kay$ there is a point $\tilde y\in[\tilde x_{\kay}\tilde x_{\kay
 \mangle\hinge{\tilde p'}{\tilde x_{\kay}}{\tilde y}
 =\pi.\]
 By \ref{eq:thm:devel*}, 
-the broken line $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y$
-is convex; in particular,
+the simple  \emph{closed}  broken polygonal line $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y\tilde x_0$ bounds a region  $A\subset \SS^2$ which 
+ is locally convex. Therefore $A$ is convex because a subset of $\SS^2$ is convex iff it is locally convex.
+
+Suppose 
+
+
+\[
+\dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}>\pi.\]
+
+Then the points $\tilde p', \tilde x_0$ and $\tilde y$ lie on a great circle $C$ in $\SS^2$ and  the above inequality implies that $\dist{\tilde x_0}{\tilde y}{\mathbb{S}^2}<\pi$. Therefore there is a unique shortest from $\tilde x_0$ to $\tilde y$ and by convexity of $A$ we get that the whole closed polygonal curve $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y\tilde x_0$ is equal to $C$. Moreover, by construction of $\tilde x_i$ and  \ref{eq:thm:devel*} it follows that $C=\tilde p \tilde x_0\tilde x_1\dots\tilde x_n\tilde p$ and hence
+
+\[\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}=\pi.
+\] 
+
+ This proves   \ref{eq:thm:devel**} in this case.
+ 
+ Now suppose 
+
 \[
 \dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}\le\pi.\]
-By the triangle inequality
+
+% in particular,
+%\[
+%\dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}\le\pi.\]
+Then the curve $\tilde x_0p'\tilde y$ is a shortest geodesic in $\SS^2$. By the triangle inequality
 \[\dist{\tilde x_0}{\tilde x_{1}}{\mathbb{S}^2}+\dots+\dist{\tilde x_{\kay-1}}{\tilde x_\kay}{\mathbb{S}^2}+\dist{\tilde x_\kay}{\tilde y}{\mathbb{S}^2}\ge \dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}.\]
 Applying the triangle inequality again, 
 we get
@@ -764,7 +784,7 @@ we get
 
 Hence
 \[T=\sum_{i=1}^n\dist{\tilde x_i}{\tilde x_{i-1}}{\mathbb{S}^2}>\dist{\tilde p'}{\tilde x_{0}}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde x_n}{\mathbb{S}^2}.\]
-The latter contradicts that $\gamma$ is length minimizing.
+The latter contradicts that $\gamma$ is length minimizing. Therefore  \ref{eq:thm:devel**} is proved.
 
 
 Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex.
