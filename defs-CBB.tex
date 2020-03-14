@@ -742,7 +742,7 @@ If $\kappa>0$, then \ref{eq:thm:devel**} requires more work.
 Applying rescaling we can assume that $\kappa=1$.
 Assume the contrary; 
 that is, $\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}>\pi$,
-then for some $\kay$ there is a point $\tilde y\in[\tilde x_{\kay}\tilde x_{\kay+1}]$ such that
+then for some $\kay$ there is a point $\tilde y\in\left]\tilde x_{\kay}\tilde x_{\kay+1}\right]$ such that
 \[\mangle\hinge{\tilde p'}{\tilde x_0}{\tilde x_{1}}
 +
 \dots
@@ -752,27 +752,22 @@ then for some $\kay$ there is a point $\tilde y\in[\tilde x_{\kay}\tilde x_{\kay
 \mangle\hinge{\tilde p'}{\tilde x_{\kay}}{\tilde y}
 =\pi.\]
 By \ref{eq:thm:devel*}, 
-the simple  \emph{closed}  broken polygonal line $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y\tilde x_0$ bounds a region  $A\subset \SS^2$ which 
- is locally convex. Therefore $A$ is convex because a subset of $\SS^2$ is convex iff it is locally convex.
+the simple  \emph{closed}  broken polygonal line $[\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y]$ bounds a region  $A\subset \SS^2$ which  is locally convex.
+Therefore $A$ is convex because a subset of $\SS^2$ is convex iff it is locally convex.
 
 Suppose 
-
-
 \[
 \dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}>\pi.\]
-
-Then the points $\tilde p', \tilde x_0$ and $\tilde y$ lie on a great circle $C$ in $\SS^2$ and  the above inequality implies that $\dist{\tilde x_0}{\tilde y}{\mathbb{S}^2}<\pi$. Therefore there is a unique shortest from $\tilde x_0$ to $\tilde y$ and by convexity of $A$ we get that the whole closed polygonal curve $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y\tilde x_0$ is equal to $C$. Moreover, by construction of $\tilde x_i$ and  \ref{eq:thm:devel*} it follows that $C=\tilde p \tilde x_0\tilde x_1\dots\tilde x_n\tilde p$ and hence
+Then the points $\tilde p', \tilde x_0$ and $\tilde y$ lie on a great circle $C$ in $\SS^2$ and  the above inequality implies that $\dist{\tilde x_0}{\tilde y}{\mathbb{S}^2}<\pi$.
+Therefore there is a unique shortest from $\tilde x_0$ to $\tilde y$ and by convexity of $A$ we get that the whole closed polygonal curve $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y\tilde x_0$ is equal to $C$. Moreover, by construction of $\tilde x_i$ and  \ref{eq:thm:devel*} it follows that $C=\tilde p \tilde x_0\tilde x_1\dots\tilde x_n\tilde p$ and hence
 
 \[\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}=\pi.
 \] 
-
- This proves   \ref{eq:thm:devel**} in this case.
+This proves   \ref{eq:thm:devel**} in this case.
  
- Now suppose 
-
+Now suppose 
 \[
 \dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}\le\pi.\]
-
 % in particular,
 %\[
 %\dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}\le\pi.\]
