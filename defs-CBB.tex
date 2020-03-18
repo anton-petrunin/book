@@ -681,17 +681,7 @@ its $\kappa$-development with respect to $p$ is convex.
 
 }
 
-\begin{wrapfigure}{r}{26mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/development(1)}
-\lbl[rt]{8,0;$\tilde p$}
-\lbl[l]{25,7.5;$\tilde x_0$}
-\lbl[l]{25.5,16;$\tilde x_1$}
-{\Large\lbl[lb]{20.3,23;$.$}
-\lbl[lb]{13.5,25;$.$}
-\lbl[b]{8,24.5;$.$}}
-\lbl[rt]{2,18.5;$\tilde x_n$}
-\end{lpic}
-\end{wrapfigure}
+
 
 A simpler proof ``if''-part can be built on the adjacent angle comparison (\ref{2-sum}).
 We use a longer proof since it also implies the short hinge lemma (\ref{lem:devel-glob}).
@@ -703,7 +693,9 @@ Consider a fine partition
 \[0=t_0<t_1<\dots<t_n=T.\]
 Set $x_i=\gamma(t_i)$ and choose a point 
 \[p'\in \Str(x_0,x_1,\dots,x_n)\] 
-sufficiently close to $p$.
+sufficiently close to $p$;
+so geodesics $[p'x_i]$ exist for all $i$.
+
 
 {\sloppy 
 
@@ -725,62 +717,50 @@ By hinge comparison (\ref{angle}), we have
 \\
 &\le
 \pi.
-\end{aligned}\eqlbl{eq:thm:devel*}
+\end{aligned}
+\eqlbl{eq:thm:devel*}
 \]
 
 }
 
+\begin{wrapfigure}{r}{26mm}
+\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/development(1)}
+\lbl[rt]{8,0;$\tilde p$}
+\lbl[l]{25,7.5;$\tilde x_0$}
+\lbl[l]{25.5,16;$\tilde x_1$}
+{\Large\lbl[lb]{20.3,23;$.$}
+\lbl[lb]{13.5,25;$.$}
+\lbl[b]{8,24.5;$.$}}
+\lbl[rt]{2,18.5;$\tilde x_n$}
+\end{lpic}
+\end{wrapfigure}
+
 Further, since $\gamma$ is a unit-speed geodesic, we have that 
 \[\sum_{i=1}^n\dist{x_{i-1}}{x_i}{}\le \dist{p'}{x_0}{}+\dist{p'}{x_n}{}.\eqlbl{eq:thm:detr*}\]
+Since $\gamma$ does not pass thru $p'$, the comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ does not pass thru $\tilde p'$.
 
-If $\kappa\le 0$, then \ref{eq:thm:detr*}  implies that 
+If $\kappa\le 0$, then \ref{eq:thm:detr*} implies that
+\[\theta\df
+\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}\le\pi.
+\eqlbl{eq:thm:devel**}\]
 
-\[\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}\le\pi.
-\eqlbl{eq:thm:devel**}\] 
+In the case $\kappa>0$, the proof of \ref{eq:thm:devel**} requires more work.
+Applying rescaling, we can assume that $\kappa=1$.
+Since all the model triangles are defined this polygonal line $\tilde x_0\dots\tilde x_n$ can not pass thru the antipodal point of $\tilde p'$.
 
-If $\kappa>0$, then \ref{eq:thm:devel**} requires more work.
-Applying rescaling we can assume that $\kappa=1$.
-Assume the contrary; 
-that is, $\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}>\pi$,
-then for some $\kay$ there is a point $\tilde y\in\left]\tilde x_{\kay}\tilde x_{\kay+1}\right]$ such that
-\[\mangle\hinge{\tilde p'}{\tilde x_0}{\tilde x_{1}}
-+
-\dots
-+
-\mangle\hinge{\tilde p'}{\tilde x_{\kay-1}}{\tilde x_\kay}
-+
-\mangle\hinge{\tilde p'}{\tilde x_{\kay}}{\tilde y}
-=\pi.\]
-By \ref{eq:thm:devel*}, 
-the simple  \emph{closed}  broken polygonal line $[\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y]$ bounds a region  $A\subset \SS^2$ which  is locally convex.
-Therefore $A$ is convex because a subset of $\SS^2$ is convex iff it is locally convex.
+Consider the space $L$ glued from the \emph{solid} model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
+Note that $\theta$ is the total angle of $L$ at $\tilde p'$.
+Consider a minimizing geodesic $[\tilde x_0\tilde x_n]_L$.
 
-Suppose 
-\[
-\dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}>\pi.\]
-Then the points $\tilde p', \tilde x_0$ and $\tilde y$ lie on a great circle $C$ in $\SS^2$ and  the above inequality implies that $\dist{\tilde x_0}{\tilde y}{\mathbb{S}^2}<\pi$.
-Therefore there is a unique shortest from $\tilde x_0$ to $\tilde y$ and by convexity of $A$ we get that the whole closed polygonal curve $\tilde x_0\tilde x_1\dots\tilde x_\kay\tilde y\tilde x_0$ is equal to $C$. Moreover, by construction of $\tilde x_i$ and  \ref{eq:thm:devel*} it follows that $C=\tilde p \tilde x_0\tilde x_1\dots\tilde x_n\tilde p$ and hence
-
-\[\sum_{i=1}^n\mangle\hinge{\tilde p'}{\tilde x_i}{\tilde x_{i-1}}=\pi.
-\] 
-This proves   \ref{eq:thm:devel**} in this case.
- 
-Now suppose 
-\[
-\dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}\le\pi.\]
-% in particular,
-%\[
-%\dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}\le\pi.\]
-Then the curve $\tilde x_0p'\tilde y$ is a shortest geodesic in $\SS^2$. By the triangle inequality
-\[\dist{\tilde x_0}{\tilde x_{1}}{\mathbb{S}^2}+\dots+\dist{\tilde x_{\kay-1}}{\tilde x_\kay}{\mathbb{S}^2}+\dist{\tilde x_\kay}{\tilde y}{\mathbb{S}^2}\ge \dist{\tilde p'}{\tilde x_0}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}.\]
-Applying the triangle inequality again, 
-we get
-\[\dist{\tilde y}{\tilde x_{\kay+1}}{\mathbb{S}^2}+\dist{\tilde x_{\kay+1}}{\tilde x_{\kay+2}}{\mathbb{S}^2}+\dots+\dist{\tilde x_{n-1}}{\tilde x_n}{\mathbb{S}^2}> \dist{\tilde p'}{\tilde x_n}{\mathbb{S}^2}-\dist{\tilde p'}{\tilde y}{\mathbb{S}^2}.\]
-
-Hence
-\[T=\sum_{i=1}^n\dist{\tilde x_i}{\tilde x_{i-1}}{\mathbb{S}^2}>\dist{\tilde p'}{\tilde x_{0}}{\mathbb{S}^2}+\dist{\tilde p'}{\tilde x_n}{\mathbb{S}^2}.\]
-The latter contradicts that $\gamma$ is length minimizing. Therefore  \ref{eq:thm:devel**} is proved.
-
+By \ref{eq:thm:detr*} we may assume that $[\tilde x_0\tilde x_n]_L$ does not pass thru $\tilde p'$.
+Further if the geodesic $[\tilde x_0\tilde x_n]_L$ contains one of the points
+$\tilde x_1,\dots,\tilde x_{n-1}$, then it coincides with the polygonal line $\tilde x_0\dots\tilde x_n$.
+(In particular we have equality in \ref{eq:thm:devel*} for each $i$.)
+In this case the sum in the left hand side of \ref{eq:thm:detr*} must be at most $\pi$; otherwise $[\tilde x_0\tilde x_n]_L$ is not minimizing.
+Therefore \ref{eq:thm:devel**} follows.
+In the remaining case $[\tilde x_0\tilde x_n]_L$ meets the boundary of $L$ only at its ends.
+In this case $\dist{\tilde x_0}{\tilde x_n}{L}\le \pi$; otherwise $[\tilde x_0\tilde x_n]_L$ is not minimizing.
+Whence \ref{eq:thm:devel**} follows.
 
 Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex.
 
