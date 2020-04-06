@@ -290,7 +290,7 @@ The latter contradicts \ref{hn>=}.
 That is, we have that $w^+(s)\ge1-\eps$ almost everywhere.
 Since $\eps>0$ is arbitrary, \ref{eq:w+=1} follows.
 
-The same way we can show that 
+In the same way we can show that 
 \[w^-(s)\ae-1,
 \eqlbl{eq:w-=1}\]
 where 
@@ -323,8 +323,8 @@ is defined for every $i$ on a set $A$ of full measure in $\Dom f$.
 Since the metric differential of $f$ is defined almost everywhere (\ref{thm:Rademacher-md}), we have that $\dd_x(v)$ is defined for any $v$ on a set $B$ of full measure in $\Dom f$.
 
 Applying the definition of metric differential and differential, we obtain that the image of $\dd_xf$ is a weakly convex set in $\T_{f(x)}$.
-It follows that $\Im\dd_xf$ is $\Alex{0}$ or $\CAT0$ if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ correspondingly.
-It remains to apply Exercise \ref{mink+alex=euclid} or \ref{mink+CAT=euclid} if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ correspondingly.
+It follows that $\Im\dd_xf$ is $\Alex{0}$ or $\CAT0$ if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ respectively.
+It remains to apply Exercise \ref{mink+alex=euclid} or \ref{mink+CAT=euclid} if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ respectively.
 \qeds
 
 
@@ -350,10 +350,10 @@ Show that
 
 
 
-As it shown in Halbeisen's example (see section \ref{halbeisen}),  
-a $\Alex{}$ space  might have a tangent spaces that are not length spaces; 
+As is shown in Halbeisen's example (see section \ref{halbeisen}),  
+a $\Alex{}$ space  might have tangent spaces that are not length spaces; 
 thus concavity of the differential $\dd_p f$ of a semiconcave function $f$ is meaningless. 
-Nevertheless, as the following lemma shows, differential $\dd_p f$ of a semiconcave function allways satisfy the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
+Nevertheless, as the following lemma shows, the differential $\dd_p f$ of a semiconcave function always satisfies the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
 In the finite dimensional case $\dd_p f$ is concave. % (see ???)
 
 \begin{thm}{Lemma}\label{lem:ohta} 
@@ -451,14 +451,14 @@ and the lemma follows.
 
 \medskip
 
-Finally, if $\spc{L}$ is not geodesic one needs to make two adjustments in the above constructions.
+Finally, if $\spc{L}$ is not geodesic one needs to make two adjustments in the above construction.
 Namely: 
 \begin{enumerate}[(i)]
-\item For geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
-More precicely, 
+\item For the geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
+More precisely, 
 \[\dist{u_t}{\exp_p(t\cdot u)}{}=o(t).\] 
 Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
-\[\dist{p}{u_t}{}=t|u|+o(t),\] but it is sufficient for the rest of proof.
+\[\dist{p}{u_t}{}=t|u|+o(t),\] and this is sufficient for the rest of proof.
 \item The direction $\dir p{w_t}$ might be undefined.
 Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$)
 \end{enumerate}
@@ -470,7 +470,7 @@ Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should t
 \section{Ultratangent space} 
 
 The following theorem is often used together with the 
-observation that ultralimit of any sequence of length spaces is geodesic (see \ref{obs:ultralimit-is-geodesic}).
+observation that the ultralimit of any sequence of length spaces is geodesic (see \ref{obs:ultralimit-is-geodesic}).
 
 \begin{thm}{Theorem}\label{thm:tan-is}
 \begin{subthm}{thm:tan-is-CBB}
@@ -516,22 +516,22 @@ Moreover, $\T_p$ satisfies (2\textit{n}+2)-comparison (\ref{CBA-n-point}).
 
 \begin{thm}{Proposition}
 Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\CAT{}$ space
-and $f\:\spc{X}\subto\RR$ be a semiconcave locally Lipscitz subfunction.
+and $f\:\spc{X}\subto\RR$ is a semiconcave locally Lipscitz subfunction.
 Then for any $p\in\Dom f$, the ultradifferential $\dd^\o_p\:\T^\o_p\to\RR$ is a concave function.
 \end{thm}
 
 \parit{Proof.}
 Fix a geodesic $[x^\o y^\o]$ in $\T^\o_p$.
 It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y^\o]$
-that does not contains the ends
+that does not contain the ends
 there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{X}$ converging to $[\bar x^\o\bar y^\o]$.
 
 Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{X}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
-Note taht $[\bar x^n \bar y^n]$ 
+Note that $[\bar x^n \bar y^n]$ 
 converges to $[\bar x^\o \bar y^\o]$
 as $n\to\o$.
-The latter holds tivially in case $\CAT{}$
-and in $\Alex{}$ case follows from \ref{cor:unique-geod-cbb}.
+The latter holds trivially in the $\CAT{}$ case
+and in the $\Alex{}$ case  follows from \ref{cor:unique-geod-cbb}.
 \qeds
 
 
@@ -541,9 +541,9 @@ and in $\Alex{}$ case follows from \ref{cor:unique-geod-cbb}.
 \section{Gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition of gradient}\label{def:grad} 
-Let $\spc{L}$ be a complete length $\Alex{}$ space, 
-$f\:\spc{L}\subto\RR$ be a subfunction
-and for a point
+Let $\spc{L}$ be a complete length $\Alex{}$ space and  
+$f\:\spc{L}\subto\RR$ be a subfunction.
+Suppose  for a point
 $p\in\Dom f$ the differential $\dd_p f\:\T_p\to\RR$ is defined.
 
 A tangent vector $g\in \T_p$ is called a 
@@ -560,7 +560,7 @@ $(\dd_p f)(g) = \<g,g\> .$
 
 \begin{thm}{Existence and uniqueness of the gradient}\label{thm:ex-grad} 
 Let $\spc{L}$ be a complete $\Alex\kappa$ space
-and $f\:\spc{L}\subto\RR$ be 
+and $f\:\spc{L}\subto\RR$ be a 
 locally Lipschitz 
 and 
 semiconcave subfunction.
@@ -597,7 +597,7 @@ for any $w\in\T_p$;
 that is, $s\cdot\overline{\xi}$ is the gradient at $p$.
 
 Take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\dd_p f)(\xi_n)\to s$.
-Yet once applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
+Applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
 \[s
 \ge
 \frac{(\dd_p f)(\xi_n)+(\dd_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
@@ -625,7 +625,7 @@ Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
 
 The next lemma roughly states that the gradient points 
 in the direction of maximal slope; 
-moreover if the slope in the given direction is almost maximal, then it is almost direction of the gradient.
+moreover if the slope in the given direction is almost maximal, then it is almost the direction of the gradient.
 
 \begin{thm}{Lemma}\label{lem:alm-grad}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
@@ -660,7 +660,7 @@ In particular,
 \end{subthm}
 \end{thm}
 
-\parit{Proof.} According to definition of gradient,
+\parit{Proof.} According to thr definition of gradient,
 \begin{align*}
  |\nabla_p f|\cdot(1-\eps)
 &<
@@ -711,8 +711,8 @@ vector field''.
 
 \begin{thm}{Lemma} 
 \label{lem:grad-lip}
-Let $\spc{L}$ be a complete length $\Alex{}$ space, 
-$f\:\spc{L}\subto\RR$ satisfies $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
+Let $\spc{L}$ be a complete length $\Alex{}$ space,   
+$f\:\spc{L}\subto\RR$ satisfy $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
 $[p q]\subset \Dom f$ 
 and $\ell=\dist{p}{q}{}$.
 Then
@@ -763,7 +763,7 @@ d_p f(\dir pq)=
 \end{align*}
 \qedsf
 
-The following corollary states that gradient vector field is monotonic in the sense similar to definition of \emph{monotone operators}; see for example \cite{phelps}.
+The following corollary states that the gradient vector field is monotonic in the sense similar to the definition of \emph{monotone operators}; see for example \cite{phelps}.
 
 %???Maybe it is more natural to call this property ``semi-monotonicity or ``$\lambda$-monotonicity'' ???
 
@@ -838,7 +838,7 @@ Therefore,
 
 \begin{thm}{Exercise}\label{ex:d dist(grad)<0}
 Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
-are mutually distinct points in $\spc{L}$.
+be mutually distinct points in $\spc{L}$.
 Prove that 
 \[(d_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})
 +\cos\angk\kappa pab\le 0.\]
@@ -860,7 +860,7 @@ for almost all $t\in\II$.
 
 \section*{Semicontinuity}\label{sec:grad-semicont}
 
-In this section we collect number of corollaries of the following lemma.
+In this section we collect a number of corollaries of the following lemma.
 
 \begin{thm}{Ultralimit of \textbar gradient\textbar} \label{lem:gradcon}
 Assume
@@ -901,15 +901,15 @@ where infimum is taken for all sequences $x_n\in\Dom f_n$ such that $x_n\to x_\o
 \end{thm}
 
 \parit{Proof of \ref{lem:gradcon}.} 
-Fix an $\eps>0$ and choose $y_\o\in \Dom f_\o$ sufficiently close to $x_\o$ such that 
+Fix an $\eps>0$ and choose $y_\o\in \Dom f_\o$ sufficiently close to $x_\o$ that 
 \[|\nabla_{x_\o} f_\o|-\eps<\frac{f_\o(y_\o)-f_\o(x_\o)}{\dist{x_\o}{y_\o}{}}.\]
 Choose $y_n\in \spc{L}_n$ such that $y_n\to y_\o$ as $n\to\o$. 
-Sinse $\dist{x_\o}{y_\o}{}$ is sufficiently small, the $\lambda$-concavity of $f_n$ implies that
+Since $\dist{x_\o}{y_\o}{}$ is sufficiently small, the $\lambda$-concavity of $f_n$ implies that
 \[ |\nabla_{x_\o} f_\o|-2\cdot\eps
 <
-(\dd_{x_n}f_n)(\dir{x_n}{y_n}),\]
+(\dd_{x_n}f_n)(\dir{x_n}{y_n})\]
 for $\o$-almost all $n$.
-Hence,
+Hence
 \[
 |\nabla_{x_\o} f_\o|-2\cdot\eps
 \le 
@@ -923,7 +923,7 @@ Thus, we can (and will) consider $\T_p \spc{L}$ as a subcone of $\T_p \spc{L}^\o
 
 \begin{thm}{Corollary}\label{nablaf=mablaf^o}
 Let $\spc{L}$ be a complete length $\Alex{}$ space 
-and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction.
+and $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
 Then for any point $p\in\Dom f$ we have
 \[\nabla_p f=\nabla_p f^\o.\]
 
@@ -934,7 +934,7 @@ Note that $\spc{L}\supset\Dom f\subset \Dom f^\o\subset \spc{L}^\o$.
 Applying \ref{lem:gradcon} for $\spc{L}_n=\spc{L}$ and $x_n=x$, we get that $|\nabla_x f|\ge|\nabla_x f^\o|$.
 
 On the other hand, $f=f^\o|_{\spc{L}}$, hence $\dd_p f=\dd_p f^\o|\T_p \spc{L}$.
-Thus, from \ref{alm-max},
+Thus from \ref{alm-max},
 $|\nabla_x f|\le|\nabla_x f^\o|$. 
 Therefore
 \[
@@ -956,7 +956,7 @@ Together with \ref{gradfgradultraf}, this implies $\mangle(\nabla_x f^\o,\nabla_
 
 \begin{thm}{Semicontinuity of \textbar gradient\textbar}\label{cor:gradlim} 
 Let $\spc{L}$ be a complete length $\Alex{}$ space 
-and $f\:\spc{L}\subto\RR$ be locally Lipschitz semiconcave subfunction. 
+and $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction. 
 Then the function $x\mapsto|\nabla_x f|$  is lower-continuous;
 that is for any sequence $x_n\to x\in \Dom f$, we have 
 \[|\nabla_x f|\le \liminf_{n\to \infty} |\nabla_{x_n} f|.\]
@@ -970,7 +970,7 @@ Applying \ref{lem:gradcon} for $x_n\to x$, we get that
 |\nabla_x f^\o|
 =
 |\nabla_x f|.\]
-Passing to arbitrary subsequence of $(x_n)$ we obtain the result. \qeds
+Passing to an arbitrary subsequence of $(x_n)$ we obtain the result. \qeds
 
 
 
@@ -990,8 +990,8 @@ for any $x\in \T_p$ and
 
 \end{thm}
 
-If $\T_p$ would be a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
-However, tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
+If $\T_p$ were a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
+However, the tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
 
 
 Applying the above lemma for $u=v$, we get the following statement.
@@ -999,7 +999,7 @@ Applying the above lemma for $u=v$, we get the following statement.
 \begin{thm}{Existence of polar vector}\label{cor:polar}
 Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $p\in \spc{L}$. 
-Given a vector $u\in \T_p$ there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
+Given a vector $u\in \T_p$,  there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
 $u^*$ is \emph{polar}\index{polar vector} to $u$;
 that is,
  $\<u^*,x\>+\<u,x\>\ge 0$ for any $x\in \T_p$.
@@ -1008,24 +1008,24 @@ In particular, for any vector $u\in \T_p$ there is a polar vector $u^*\in\T_p$ s
 $|u^*|\le |u|$.
 \end{thm}
 
-The Milka's lemma %??? (\ref{lem:milka})
+Milka's lemma %??? (\ref{lem:milka})
 provides a refinement of this statement;
 it states that in the finite-dimensional case, we can assume that $|u^*|= |u|$. 
 
 \parit{Proof of \ref{lem:minus-sum}.}
 Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
-Consider sequence of functions 
+Consider a sequence of functions 
 \[f_n=|u|\cdot\distfun{a_n}{}{}+|v|\cdot\distfun{b_n}{}{}.\]
 According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
 \[(\dd_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
-Thus, we have the following uniform convergence for all $x\in\Sigma_p$
-\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\] 
+Thus we have the following uniform convergence for all $x\in\Sigma_p$:
+\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\]:
 According to Lemma~\ref{lem:close-grad}, 
-sequence $\nabla_pf_n$ converges.
+the sequence $\nabla_pf_n$ converges.
 Set 
 \[w=\lim_n\nabla_pf_n.\]
 
-From definition of gradient
+By the definition of gradient,
 \[\begin{aligned}
 \<w,w\>&=\lim_{n\to\infty}\<\nabla_pf_n,\nabla_pf_n\>=
 &&&%right side
@@ -1063,7 +1063,7 @@ We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:op
 
 The subcone
 \[\Lin_p=\set{v\in\T_p}{\exists\ w\in\T_p\ \ \t{such that}\ \ w+v=0}\]
-will be called \emph{linear subcone}\index{linear subspace} of $\T_p$.
+will be called the \emph{linear subcone}\index{linear subspace} of $\T_p$.
 \end{thm}
 
 The reason for the name ``linear'' will become evident in Theorem~\ref{thm:lin-subcone}.
@@ -1093,7 +1093,7 @@ The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is tri
 
 \begin{thm}{Proposition}\label{prop:two-opp}
 Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Then for any three vectors $u,v,w\in\T_p$, $u+v=0$ and $u+ w=0$ implies $v=w$.
+Then for any three vectors $u,v,w\in\T_p$, if $u+v=0$ and $u+ w=0$, then $v=w$.
 \end{thm}
 
 \parit{Proof.} From Proposition~\ref{prop:opposite} both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
@@ -1102,7 +1102,7 @@ Hence the result.\qeds
 Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
 Given $s<0$, set 
 \[s\cdot u\df (-s)\cdot v.\]
-This way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
+In this way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
 Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
 
 
@@ -1111,13 +1111,13 @@ Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
 Then $\Lin_p$ is a subcone of $\T_p$ isometric to a Hilbert space.
 \end{thm}
 
-Before comming to the proof of the theorem, 
+Before coming to the proof of the theorem, 
 let us give its corollary.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
 Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
 and $p\in \Str(x_1,x_2,\dots,x_n)$.
-Then there is a subcone $E\subset \T_p$ that isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
+Then there is a subcone $E\subset \T_p$ that is isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
 \end{thm}
 
 \parit{Proof.} 
@@ -1127,8 +1127,9 @@ It remains to apply Theorem~\ref{thm:lin-subcone}.
 
 The main difficulty in the proof of Theorem~\ref{thm:lin-subcone} comes from the fact that in general $\T_p$ is not a length space;
 see Habeisen's example (\ref{Halbeisen's example}).
-Othervise, if the tangent space is a length space, the statement would follow directly from the splitting theorem (\ref{thm:splitting}).
-In fact the proof of this theorem is a far walk around --- we use construction of gradient, as well as the splitting theorem, namely its corollary (\ref{cor:splitting}).
+If the tangent space were a length space, the statement would follow directly from the splitting theorem (\ref{thm:splitting}).
+In fact the proof of Theorem~\ref{thm:lin-subcone}
+   is very circuitous --- we use the construction of the gradient, as well as the splitting theorem, namely its corollary (\ref{cor:splitting}).
 Thus in order to understand our proof one needs to read most of Chapter~\ref{chap:grad}.
 
 \parit{Proof of \ref{thm:lin-subcone}.}
@@ -1142,7 +1143,7 @@ Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$
 and $v+\tfrac{1}{2}\cdot y=0$.
 Apply Lemma~\ref{lem:minus-sum} 
 to the vectors $u$ and $v$;
-let $w\in \T_p$ denotes the obtained tangent vector.
+let $w\in \T_p$ denote the obtained tangent vector.
 \begin{clm}{}\label{clm:w-mid(xy)}
 $w$ is a midpoint of $[x y]$.
 \end{clm}
@@ -1157,7 +1158,7 @@ Indeed, according to Lemma~\ref{lem:minus-sum},
 &=
 \tfrac{1}{2}\cdot\<w,x\>+\tfrac{1}{2}\cdot\<w,y\>.
 \\
-\intertext{Therefore,}
+\intertext{Therefore}
 \dist[2]{x}{w}{}+\dist[2]{w}{y}{}
 &=2\cdot|w|^2+|x|^2+|y|^2-2\cdot\<w,x\>-2\cdot\<w,y\>=
 \\
@@ -1172,7 +1173,7 @@ Indeed, according to Lemma~\ref{lem:minus-sum},
 Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
 \claimqeds
 
-Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$, thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
+Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$; thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
 \qeds
 
 
