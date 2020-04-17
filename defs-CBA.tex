@@ -2119,8 +2119,8 @@ $\tilde D$ is bounded by a convex polygon $\tilde P_R=[~y^0\tilde y^1\dots \tild
 \end{align*}
 for $1\le i\le n$, where the final inequality is by \ref{eq:arm}.
 
-By the arm lemma (\ref{lem:arm}), $\dist{\tilde x^0}{\tilde x^{n+1}}{}\le \dist{\tilde y^0}{\tilde y^{n+1}}{}$.
-Since $ \dist{\tilde y^0}{\tilde y^{n+1}}{}=\dist{x^0}{x^{n+1}}{}$, the part (\ref{SHORT.subthm:arm-ineq}) follows.
+By construction, $\dist{\tilde x^0}{\tilde x^{n+1}}{}\le \dist{\tilde y^0}{\tilde y^{n+1}}{}$.
+Since $ \dist{\tilde y^0}{\tilde y^{n+1}}{}=\dist{x^0}{x^{n+1}}{}$, part (\ref{SHORT.subthm:arm-ineq}) follows.
 
 \parit{\ref{SHORT.subthm:arm-eq}).} Suppose equality holds in (\ref{SHORT.subthm:arm-ineq}).  Then angles at the $j$-th vertex of $\tilde P$, $P$ and $\tilde P_R$ are equal for $1\le j\le n$,   and we may take $\tilde P=\tilde P_R$.  
 
@@ -2132,7 +2132,7 @@ Let $\tilde x,\tilde y,\tilde z$ be three vertices of $\tilde P$, and $x,y,z$ be
 \dist{x}{z}{}$ and $\mangle\hinge{\tilde y}{\tilde x}{\tilde z} = \mangle\hinge{y}{x}{z}$, then $F|_{\Conv(\tilde x, \tilde y, \tilde z)}$ is distance-preserving.
 \end{clm} 
 
-Since $F$ is majorizing, $F$ restricts to   distance-preserving maps from $[\tilde x\tilde y]$ to $[xy]$ and $[\tilde y\tilde z]$ to $[yz]$.
+Indeed, since $F$ is majorizing, $F$ restricts to   distance-preserving maps from $[\tilde x\tilde y]$ to $[xy]$ and $[\tilde y\tilde z]$ to $[yz]$.
 Suppose $\tilde p\in [\tilde x \tilde y]$ and $\tilde q\in[\tilde y\tilde z]$.  Then 
 \[
 \dist{\tilde p}{\tilde q}{\Lob{2}{\kappa}}
@@ -2140,9 +2140,9 @@ Suppose $\tilde p\in [\tilde x \tilde y]$ and $\tilde q\in[\tilde y\tilde z]$.  
 \dist{F( \tilde p )}{F(\tilde q)}{\spc{U}}.
  \eqlbl{eq:arm-eq}
 \]
-Indeed, inequality holds in one direction by majorization, and in the other direction by angle comparison
+This inequality holds in one direction by majorization, and in the other direction by angle comparison
 (\ref{cat-hinge}).
-By first variation formula (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\tilde x \tilde y \tilde z]$ and $[x y z]$ are equal.
+By the first variation formula (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\tilde x \tilde y \tilde z]$ and $[x y z]$ are equal.
 But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so $F$ is distance-preserving on every geodesic of $\Conv(\tilde p, \tilde x, \tilde y)$.
 Hence the claim.
 
@@ -2150,8 +2150,7 @@ Hence the claim.
 Suppose $F|_{\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k})}$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$ is distance-preserving.
 \end{clm}
 
-
-Set $\tilde p=[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$ and $p=[x^{k-1}x^{k+1}] \cap [x^{k}x^{n+1}]$.
+To verify this claim, set $\tilde p=[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$ and $p=[x^{k-1}x^{k+1}] \cap [x^{k}x^{n+1}]$.
 
 The following maps are distance-preserving:
 \begin{enumerate}
@@ -2164,8 +2163,10 @@ $F|_{\Conv(\tilde x^{k-1},\tilde x^k,\tilde x^{k+1})}$,
 \item[(iii)]
 $F|_{\Conv(\tilde x^{n+1},\tilde x^{k},\tilde x^{k+1})}$.
 \end{enumerate}
-Indeed, (i) follows from \ref{clm:arm-triangle}.  
-Therefore $\dist{\tilde x^{k-1}}{\tilde x^{k+1}}{}=\dist{x^{k-1} }{x^{k+1}}{}$, and so $F$ restricts to a distance-preserving map from $[\tilde x^{k-1}\tilde x^{k+1}]$ onto $[x^{k-1} x^{k+1}]$.  With the induction hypothesis, it follows that $F(\tilde p)=p$, hence 
+(i) follows from \ref{clm:arm-triangle}.  
+Therefore $\dist{\tilde x^{k-1}}{\tilde x^{k+1}}{}=\dist{x^{k-1} }{x^{k+1}}{}$, and so $F$ restricts to a distance-preserving map from $[\tilde x^{k-1}\tilde x^{k+1}]$ onto $[x^{k-1} x^{k+1}]$.  With the induction hypothesis
+\ref{clm:arm-induction},
+ it follows that $F(\tilde p)=p$, hence 
 \[
 \mangle\hinge{\tilde x^{k-1}}{\tilde x^{k+1}}{\tilde x^{n+1}} = \mangle\hinge{x^{n+1}}{x^{k-1}}{x^{k+1}}.
  \eqlbl{eq:angle-arm-eq}
@@ -2174,11 +2175,17 @@ Then (ii) follows from \ref{eq:angle-arm-eq} and \ref{clm:arm-triangle}.  Since 
 
 Let $\tilde \gamma$ be a geodesic of $\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$.
 Then $\length \tilde \gamma \z< \varpi\kappa$.
-If $\tilde \gamma$ does not pass the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$, it  follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\tilde \gamma$  is a local geodesic of length $< \varpi\kappa$.  By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.  By continuity, $F\circ\tilde \gamma$ is a geodesic for all $\tilde \gamma$. \ref{clm:arm-induction} follows and hence the lemma.
+If $\tilde \gamma$ does not pass 
+through
+the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$, it  follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\tilde \gamma$  is a local geodesic of length $< \varpi\kappa$.  By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.  By continuity, $F\circ\tilde \gamma$ is a geodesic for all $\tilde \gamma$. \ref{clm:arm-induction} follows.
+The base of the induction  is Exercise \ref{ex:isometric-majorization}. Hence the  Arm 
+lemma.
  \qeds
  
 \begin{thm}{Exercise}\label{ex:square}
-Let $\spc{U}$ be a complete length $\CAT0$ space and for 4 points $x^1,x^2,x^3,x^4\in \spc{U}$
+Let $\spc{U}$ be a complete length $\CAT0$ space and 
+suppose 
+for 4 points $x^1,x^2,x^3,x^4\in \spc{U}$
 there is a convex quadrilateral
 $[\tilde x^1\tilde x^2\tilde x^3\tilde x^4]$
 in $\EE^2$
@@ -2187,7 +2194,7 @@ such that
 for all $i$ and $j$.
 Show that $\spc{U}$ contains an isometric copy of the 
 \emph{solid quadrilateral}
-$\tilde x^1\tilde x^2\tilde x^3\tilde x^4$; that is, the convex hull of $\tilde x^1,\tilde x^2,\tilde x^3,\tilde x^4$ in $\EE^2$
+$\tilde x^1\tilde x^2\tilde x^3\tilde x^4$; that is, the convex hull of $\tilde x^1,\tilde x^2,\tilde x^3,\tilde x^4$ in $\EE^2$.
 \end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
