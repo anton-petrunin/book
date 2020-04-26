@@ -43,7 +43,7 @@ then its $\rho_1$-length is
 \[\length_{\rho_1}\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}.\]
 Note that the metric $\rho_1$ is bi-Lipschitz to~$\rho_0$.
 
-Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length that differ only in the $m$-th coordinate, denoted by $x_m(t)$ and $x_m'(t)$ correspondingly.
+Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length that differ only in the $m$-th coordinate, denoted by $x_m(t)$ and $x_m'(t)$ respectively.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
 the function $x'_m(t)$ is locally $1$-Lipschitz at all $t$ such that $x'_m(t)< x_m(t)$, then 
 \[\length_{\rho_1}\bm{x}'\le \length_{\rho_1}\bm{x}.\]
@@ -306,7 +306,7 @@ We need to show that $\dist{\bar p}{\bar q}{}\le\dist{ p}{ q}{}$ for any $p,q\in
 
 Assume $p\ne \bar p\ne \bar q\ne q$.
 Note that in this case $\mangle\hinge p{\bar p}{\bar q}\ge \tfrac\pi2$ and $\mangle\hinge q{\bar q}{\bar p}\ge \tfrac\pi2$.
-Otherwise a point on the geodesic $[\bar p\bar q]$ would be closer to $p$ or to $q$ than $\bar p$ or $\bar q$ correspondingly.
+Otherwise a point on the geodesic $[\bar p\bar q]$ would be closer to $p$ or to $q$ than $\bar p$ or $\bar q$ respectively.
 The latter is impossible since $K$ is convex and therefore $[\bar p\bar q]\subset K$.
 
 Applying the arm lemma (\ref{lem:arm}), we get the statement.
@@ -471,6 +471,19 @@ Consider the map $\map[2]\:\spc{U}\to K$
 defined as 
 \[\map[2](x)=\alpha_{\hat x}(t_x).\]
 
+\parbf{Exercise~\ref{ex:patchwork};} \ref{SHORT.ex:patchwork:proper}.
+Suppose that $x_n\to x_\infty$, $y_n\to y_\infty$ as $n\to\infty$,
+but $[x_ny_n]$ does not converge to $[x_\infty y_\infty]$.
+Since the space is proper, we can pass to a subsequence such that $[x_ny_n]$ converges to another geodesic.
+That is, we have at least two geodesics between $x_\infty$ and $y_\infty$.
+
+\parit{\ref{SHORT.ex:patchwork:complete}.} The following example is taken from \cite[Chapter I, Exercise 3.14]{bridson-haefliger}.
+
+Let $\Delta_n$ be a sequence of solid spherical triangles 
+with angle $\tfrac\pi4$ and adjacent sides $\pi-\tfrac1n$.
+Let us glue each $\Delta_n$ to $[0,\pi]$ along an isometry of one of the longer sides.
+It remains to show that the obtained space $\spc{X}$ is a needed example.
+
 \parbf{Exercise~\ref{ex:two-rays}.}
 Consider the angle $A$ in the plane of measure $\pi-\alpha$.
 Note that $A$ is $\CAT0$.
@@ -576,7 +589,7 @@ Finally observe that the exponential map is defined on whole $K$ and it is dista
 The statement follows since the exponential map sends $v^i\mapsto x^i$ for each $i$.
 
 \parbf{Exercise~\ref{ex:5-point-CBA=>CBB}.}
-The answers are $s\le \sqrt3$ and $s\le 2$ correspondingly.
+The answers are $s\le \sqrt3$ and $s\le 2$ respectively.
 
 The upper bound $s\le \sqrt3$ follow from (2+2)-point comparison.
 
@@ -703,11 +716,11 @@ The latter follows from the fiber-independence theorem (\ref{thm:fiber-independe
 \parbf{Exercise~\ref{ex:convexity-in-cone}.}
 
 \parbf{Exercise~\ref{ex:spherical-join}.}
-By \ref{thm:warp-curv-bound:cbb:a}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\Alex1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\Alex0$ correspondingly.
+By \ref{thm:warp-curv-bound:cbb:a}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\Alex1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\Alex0$ respectively.
 
-By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\CAT1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\CAT0$ correspondingly.
+By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\CAT1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\CAT0$ respectively.
 
-It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ correspondingly.
+It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ respectively.
 
 \parbf{Exercise~\ref{ex:norays}.}
 Consider a cube in the Hilbert space;
