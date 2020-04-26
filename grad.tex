@@ -1,4 +1,4 @@
-%%!TEX root = all.tex
+%%!TEX root = the-grad.tex
 %arrays^
 %arXiv
 \chapter{Gradient flow}\label{chap:grad}
@@ -906,7 +906,20 @@ it defines an $\RR$-action on $\spc{L}$.
 Set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)\subset \spc{L}$, it is a closed convex set, therefore it forms an Alexandrov's space.
 Consider map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
-Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$, we get that $h$ is a short and non-contracting at the same time; that is, $h$ is an isometry.\qeds
+Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$, we get that $h$ is a short and non-contracting at the same time; that is, $h$ is an isometry.
+
+Next, let $p=\gamma(0)$.
+For any point $x$ pick a shortest geodesic $[px]$. For any $t>0$ we have that  $\mangle\hinge p x {\gamma(t)} \ge \angk{0} p{x}{\gamma(t)}$ and  $\mangle\hinge p x {\gamma(-t)} \ge \angk{0} p{x}{\gamma(-t)}$.
+Therefore $\pi=\mangle\hinge p x {\gamma(t)}+\mangle\hinge p x {\gamma(-t)}\ge \angk{0} p{x}{\gamma(t)}+\angk{0} p{x}{\gamma(-t)}$. Also, both $t\mapsto \angk{0} p{x}{\gamma(t)}$ and $t\mapsto \angk{0} p{x}{\gamma(-t)}$ are non-increasing. On the other hand, the condition $\bus_+(x)+\bus_-(x)= 0$ means that 
+\[
+\lim_{t\to\infty}  \angk{0} p{x}{\gamma(t)}+ \angk{0} p{x}{\gamma(-t)}=\pi.
+\]
+ Therefore  both $ \angk{0} p{x}{\gamma(t)}$  and $ \angk{0} p{x}{\gamma(-t)}$ are constant in $t$ and hence the triangles $\trig xp{\gamma(t)}$ and $\trig xp{\gamma(-t)}$ satisfy the Euclidean cosine law for any $t>0$. Together with the fact that $\bus_\pm$-gradient flows are isometries this easily implies that $\spc{L}=X\oplus \gamma(\RR)$ for $X=\bus_+^{-1}(0)$.
+
+
+
+
+\qeds
 
 
 
