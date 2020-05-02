@@ -595,7 +595,7 @@ The statement follows since the exponential map sends $v^i\mapsto x^i$ for each 
 \parbf{Exercise~\ref{ex:5-point-CBA=>CBB}.}
 The answers are $s\le \sqrt3$ and $s\le 2$ respectively.
 
-The upper bound $s\le \sqrt3$ follow from (2+2)-point comparison.
+The upper bound $s\le \sqrt3$ follows from (2+2)-point comparison.
 
 The Euclidean space works as example if $s$ is smaller than the large diagonal of the double pyramid with unit side (that is, if $s\le 2\cdot\sqrt{2/3}$).
 Otherwise take the product $\spc{K}\times \RR$ with a 2-dimensional cone for the $\CAT0$ case.
@@ -603,7 +603,7 @@ For the $\Alex0$ case, the needed space can be constructed by doubling  a proper
 We assume that the points correspond to vertexes of a regular tetrahedral with 3 vertexes on the boundary of $K$ and one  in its interior; it corresponds to a pair of points in the doubling at distance $s$ from each other.
 
 \parit{Remarks.}
-Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison, admits a distance preserving map into a $\CAT0$ space.
+Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison admits a distance preserving map into a $\CAT0$ space.
 For spaces with more than 5 points the condition is unknown;
 for 6-point metric spaces, a conjecture is formulated in \cite{lebedeva-petrunin-zolotov}.
 
@@ -614,17 +614,17 @@ We may assume that $\tilde p$ is the origin of $\EE^n$.
 Consider an $n{\times}n$-matrix $\tilde M$ with the components 
 \[\tilde m_{i,j}=\tfrac12\cdot(|\tilde x_i-\tilde p|^2+|\tilde x_j-\tilde p|^2-|\tilde x_i-\tilde x_j|^2).\]
 Note that $\tilde m_{i,j}=\langle\tilde x_i,\tilde x_j\rangle$.
-Therefore $\tilde M=A\cdot A^\top$ for an $n{\times}n$-matrix $A$ that defines linear transformation that sends standard basis to the array $\tilde x_1,\dots,\tilde x_n$.
+Therefore $\tilde M=A\cdot A^\top$ for an $n{\times}n$-matrix $A$ that defines a linear transformation sending the standard basis to the array $\tilde x_1,\dots,\tilde x_n$.
 Therefore
 \[\bm{s}\cdot \tilde M\cdot \bm{s}^\top=|A^\top\cdot \bm{s}^\top|^2 \ge 0\]
-for any any vector $\bm{s}$.
+for any vector $\bm{s}$.
 Further show that
 \[\bm{s}\cdot M\cdot \bm{s}^\top\ge \bm{s}\cdot \tilde M\cdot \bm{s}^\top\]
 for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
 \parbf{Exercise~\ref{ex:(3+1)-nonsufficient}.}
-It is sufficient to construct a metric of the set of points $\{p,x^1,x^2,x^3,x^4\}$ that does not satisfy (4+1)-comparison but does meet all (3+1)-comparison.
-To do this, put $x^i$ in the vertexes of regular tetrahedron in $\EE^3$ and suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
+It is sufficient to construct a metric on the set of points $\{p,x^1,x^2,x^3,x^4\}$ that does not satisfy (4+1)-comparison but does satisfy all (3+1)-comparisons.
+To do this, put $x^i$ in the vertexes of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
 
 
 \parbf{Exercise~\ref{ex:strut+embedding}.}
@@ -635,9 +635,9 @@ for all $i$ and $j$.
 For each $i$, set 
 $\tilde \xi^i=\dir{\tilde p}{\tilde a^i}\in\mathbb{S}^m=\Sigma_{\tilde p}(\Lob{m+1}\kappa)$.
 Note that 
-\[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}\ge \angk\kappa{p}{ a^i}{ a^j}>\tfrac\pi2\]
+\[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}\ge \angk\kappa{p}{ a^i}{ a^j}>\tfrac\pi2.\]
 
-Consider two matrices $S$ and $\tilde S$ with the components
+Consider two matrices $S$ and $\tilde S$ with components
 $s_{i,j}=\langle\tilde \xi^i,\xi^j\rangle$
 and
 $\tilde s_{i,j}=\cos[\angk\kappa{p}{a^i}{a^j}]$.
@@ -654,16 +654,16 @@ Whence the statement follows.
 \parbf{Exercise~\ref{ex:flat-in-CAT}.}
 
 \parbf{Exercise~\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\lg_{x^0}{x^i}\in\T_{x^0}$.
-Show that all $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is an isometry.
-It follows that we can identify the convex hull $K$ of $v^i$ with the convex hull of $\tilde x^i$.
+Show that all the $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is an isometry.
+It follows that we can identify the convex hull $K$ of  the $v^i$ with the convex hull of  the $\tilde x^i$.
 
 Note that the gradient exponent $\gexp_{x_0}$ maps $v^i\mapsto x^i$.
 By assumption, 
 \[\dist{v^i}{v^j}{}=\dist{x^i}{x^j}{}\eqlbl{eq:vv=xx}\]
 for all $i$ and $j$.
 By \ref{thm:prop-gexp}, $\gexp_{x_0}$ is a short map.
-By \ref{eq:vv=xx}, $\gexp_{x_0}$ can not be strictly short at a pair of points in $K$.
-That is, $\gexp_{x_0}$ is an distance-preserving on $K$.
+By \ref{eq:vv=xx}, $\gexp_{x_0}$ cannot be strictly short at a pair of points in $K$.
+That is, $\gexp_{x_0}$ is distance-preserving on $K$.
 
 \parbf{Exercise~\ref{ex:not-flat}.} 
 
