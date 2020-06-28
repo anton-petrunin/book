@@ -8,14 +8,14 @@ It provides a tool in Alexandrov's geometry,
 which we use everywhere in the book.
 
 The technique of gradient flow takes its roots in the so called \emph{Sharafutdinov's retraction}, 
-introduced by Vladimir Sharafutdinov in \cite{sharafutdinov}.
+introduced by Vladimir Sharafutdinov \cite{sharafutdinov}.
 It was used  widely in comparison geometry since then.
-In $\Alex{}$ spaces, it was first used by Grigory Perelman and third author in \cite{perelman-petrunin:qg}.
+In $\Alex{}$ spaces, it was first used by Grigory Perelman and third author \cite{perelman-petrunin:qg}.
 Bit later, independently J\"urgen Jost and Uwe Mayer \cite{jost,mayer} 
 used the gradient flow in $\CAT{}$ spaces.
 Later, Alexander Lytchak unified and generalized these two approaches
 to a wide class of metric spaces in \cite{lytchak:open-map}.
-It was yet developed further by Shin-ichi Ohta in \cite{ohta} and by Giuseppe Sevar\'e in \cite{sevare}.
+It was yet developed further by Shin-ichi Ohta \cite{ohta} and by Giuseppe Sevar\'e \cite{sevare}.
 
 {\sloppy 
 The following exercise is a stripped version of Sharfutdinov's retraction;
@@ -406,7 +406,8 @@ Fix a choice of geodesic $[\alpha(t)\,\beta(t)]$ for each $t$.
 
 Set $\ell(t)=\dist{\alpha(t)}{\beta(t)}{}$, from the first variation inequality (\ref{lem:first-var}) and the estimate in \ref{cor:grad-lip} we get
 \[\ell^+(t)\le-\<\dir{\alpha(t)}{\beta(t)},\nabla_{\alpha(t)}f\>-\<\dir{\beta(t)}{\alpha(t)},\nabla_{\beta(t)}f\>\le \lambda\cdot\ell(t).\]
-Hence the result.
+Hence the result. 
+%??? why first variation works for 2 points.
 \qeds
 
 \begin{thm}{Second distance estimate}\label{lem:fg-dist-est}{\sloppy 
@@ -493,8 +494,8 @@ there is an $f$-gradient-like curve $\hat\alpha\:[0,\eps)\to\spc{L}$ that starts
 \end{subthm}
 \end{thm}
 
-This theorem was proved by Grigory Perelman and the third author in \cite{perelman-petrunin:qg};
-here we present a simplified proof given by Alexander Lytchak in \cite{lytchak:open-map}.
+This theorem was proved by Grigory Perelman and the third author \cite{perelman-petrunin:qg};
+here we present a simplified proof given by Alexander Lytchak \cite{lytchak:open-map}.
 
 \parit{Proof.} 
 Note that if $|\nabla_p f|=0$, then one can take constant curve $\alpha(t)=p$.
@@ -813,10 +814,10 @@ for some subset $X\subset \spc{L}$.
 }
 
 For smooth $2$-dimensional surfaces, 
-this theorem was proved by Stefan Cohn-Vossen in \cite{cohn-vossen_line}.
+this theorem was proved by Stefan Cohn-Vossen \cite{cohn-vossen_line}.
 For the Riemannian manifolds of higher dimensions 
-it was proved by Victor Toponogov in \cite{toponogov-globalization+splitting}.
-Then it was generalized by Anatoliy  Milka in  \cite{milka-line}
+it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
+Then it was generalized by Anatoliy  Milka \cite{milka-line}
 to Alexandrov's spaces, almost the same prove is given in \cite[1.5]{burago-burago-ivanov}.
 
 Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
@@ -910,7 +911,9 @@ Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bu
 
 Next, let $p=\gamma(0)$.
 For any point $x$ pick a shortest geodesic $[px]$. For any $t>0$ we have that  $\mangle\hinge p x {\gamma(t)} \ge \angk{0} p{x}{\gamma(t)}$ and  $\mangle\hinge p x {\gamma(-t)} \ge \angk{0} p{x}{\gamma(-t)}$.
-Therefore $\pi=\mangle\hinge p x {\gamma(t)}+\mangle\hinge p x {\gamma(-t)}\ge \angk{0} p{x}{\gamma(t)}+\angk{0} p{x}{\gamma(-t)}$. Also, both $t\mapsto \angk{0} p{x}{\gamma(t)}$ and $t\mapsto \angk{0} p{x}{\gamma(-t)}$ are non-increasing. On the other hand, the condition $\bus_+(x)+\bus_-(x)= 0$ means that 
+Therefore 
+\[\pi=\mangle\hinge p x {\gamma(t)}+\mangle\hinge p x {\gamma(-t)}\ge \angk{0} p{x}{\gamma(t)}+\angk{0} p{x}{\gamma(-t)}.\]
+Also, both $t\mapsto \angk{0} p{x}{\gamma(t)}$ and $t\mapsto \angk{0} p{x}{\gamma(-t)}$ are non-increasing. On the other hand, the condition $\bus_+(x)+\bus_-(x)= 0$ means that 
 \[
 \lim_{t\to\infty}  \angk{0} p{x}{\gamma(t)}+ \angk{0} p{x}{\gamma(-t)}=\pi.
 \]

@@ -4,10 +4,10 @@
 In this section we discuss the
 Gromov--Hausdorff convergence of metric spaces.
 
-It seems that Hausdorff convergence was first introduced by Hausdorff in \cite{hausdorff}
-and couple of years later an equivalent definition was given by Blaschke in \cite{blaschke}.
-Further a refinement of this definition was introduced by Frol\'{\i}k in \cite{frolik}
-and then rediscovered by Wijsman in \cite{wijsman},
+It seems that Hausdorff convergence was first introduced by Felix Hausdorff \cite{hausdorff}
+and couple of years later an equivalent definition was given by Wilhelm Blaschke \cite{blaschke}.
+Further a refinement of this definition was introduced by Zdeněk Frolík \cite{frolik}
+and then rediscovered by Robert Wijsman \cite{wijsman},
 however this refinement was a step in the direction of the so-called \emph{closed convergence} introduced by Hausdorff in the original book. 
 By that reason we call it Hausdorff convergence
 instead of
@@ -390,14 +390,6 @@ Further, we define \emph{Gromov--Hausdorff distance}\index{Gromov--Hausdorff dis
 $\spc{X}\le \spc{Y}+\eps$ and $\spc{Y}\le \spc{X}+\eps$.
 \end{thm}
 
-\parbf{Remark for AKP.}
-This notation is a bit slang-like, maybe better to use $\succcurlyeq$ instead of $\ge$.
-Yet $\spc{Y}+\eps$ migh be needed to be changed;
-one might think that $\spc{Y}+\eps$ is a metric space $(\ushort{\spc{Y}},\dist{}{}{}+\eps\cdot \rho)$, where $\rho$ is a discrete metric on $\ushort{\spc{Y}}$ (that is, $\rho(x,y)=1$ if $x\not=y$). 
-It will be totally correct to introduce some operator say $\op{Add}_\eps\spc{Y}$, but it is also less intuitive...
-One may also write something like 
-$\spc{X}\succcurlyeq \spc{Y}^{+\eps}$ or $\spc{X}\succcurlyeq^{\eps+} \spc{Y}$...
-
 \medskip
 
 The Gromov--Hausdorff distance turns the set of all isometry classes of compact metric spaces into a metric space.
@@ -535,32 +527,26 @@ Since $X$ is compact, we get that $h(\spc{X})=\spc{X}$.
 
 \section{Comments}
 
-One of the most remarcble revolution in geometry was made by seemingly very simple observation made by Gromov.
-He gave a transparent intuitive notion of convergence for metric spaces.
+The Gromov--Hausdorff convergence was first introduced by David Edwards \cite{edwards}
+and rediscovered later by Mikhael Gromov \cite{gromov-polynomial-growth}.
+It was essential tool in Gromov's proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
 Although some types of convergences of metric spaces
-were considered in geometry before Gromov,
-all the considered metric were designed to be used in very speacific problems.
-A very good account for different types of convergences used in metric geometry can be found in ???.
+were considered earlier,
+they were designed to be used in very specific problems.
 
-The Gromov--Hausdorff convergence was first introduced by David Edwards in \cite{edwards}
-and rediscovered later by Mikhael Gromov in \cite{gromov-polynomial-growth}.
-It was essential step in the proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
 The ultra-limits,
-an other important type of convergence,
+another important type of convergence,
 also appear first in the context of  groups of polynomial growth;
 they were introduced by ??? in ???, where generalization of Gromov's theorem.
 Both concepts quickly spread into all branches of geometry.
 
-
-The definition \ref{def:hausdorff-coverge} was given by Frol\'{\i}k in \cite{frolik} %CHECK
-and was rediscovered by Wijsman in \cite{wijsman}.
+The definition \ref{def:hausdorff-coverge} was given by Zdeněk Frolík \cite{frolik} %CHECK
+and was rediscovered by Robert Wijsman \cite{wijsman}.
 
 This definition is a slight modification of the convergence for subsets of metric space,
-first introduced by Hausdorff in \cite{hausdorff}%CHECK
-, two years later the same convergence was introduced by Baschke in \cite{blaschke}%independently???
-. 
-Blaschke does not refer to Hausdorff; it might mean that his discovery was independent 
-or yet more likely that this type of convergence was used in mathematical folklore before these publications. 
+first introduced by Felix Hausdorff \cite{hausdorff}%CHECK
+, two years later the same convergence was introduced by Wilhelm Baschke \cite{blaschke}. 
+Since Blaschke does not refer to Hausdorff; it is likely that this type of convergence was used in mathematical folklore before these publications. 
 
 If in this definition, 
 you exachange the pointwise convergence to uniform convergence,
