@@ -13,6 +13,13 @@ By that reason we call it Hausdorff convergence
 instead of
 \emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
 
+The Gromov--Hausdorff convergence was first introduced by David Edwards \cite{edwards}
+and rediscovered later by Mikhael Gromov \cite{gromov-polynomial-growth}.
+It was essential tool in Gromov's proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
+Convergences of metric spaces
+was considered earlier, but each time
+the definition was limited to very specific type of problems.
+
 The definition of Gromov--Hausdorff convergence or metric spaces use 
 the Hausdorff convergence.
 It means that the sequence of metric spaces admit a sequence of distance preserving embedding into huge metric space so that the their
@@ -421,12 +428,13 @@ Note that
 \[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}>\dist{x^i}{x^j}{}-2\cdot\eps_n.\]
 Thus, 
 $\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}-\dist{x^i}{x^j}{}
-\to_{n\to\infty} 
-0$ for all $i$ and $j$.
+\to 
+0$ for all $i$ and $j$ as $n\to\infty$.
 For all large $n$,
 we have $2\cdot\eps_n<\dist{x^i}{x^j}{}-\eps$.
 Thus $\dist{b_n(x^i)}{b_n(x^j)}{\spc{X}_n}>\eps$ 
-and \[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{\spc{X}_n}>\eps\] 
+and 
+\[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{\spc{X}_n}>\eps\] 
 for all $i\not=j$.
 Thus, for each large $n$, 
 the set $\{a_n\circ b_n(x^i)\}$ forms a maximal $\eps$-packing and therefore an $\eps$-net in $\spc{X}_\infty$.
@@ -525,51 +533,5 @@ Since $X$ is compact, we get that $h(\spc{X})=\spc{X}$.
 %\dist{\map (p)}{\map (q)}{}.\]
 \qeds
 
-\section{Comments}
-
-The Gromov--Hausdorff convergence was first introduced by David Edwards \cite{edwards}
-and rediscovered later by Mikhael Gromov \cite{gromov-polynomial-growth}.
-It was essential tool in Gromov's proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
-Although some types of convergences of metric spaces
-were considered earlier,
-they were designed to be used in very specific problems.
-
-The ultra-limits,
-another important type of convergence,
-also appear first in the context of  groups of polynomial growth;
-they were introduced by ??? in ???, where generalization of Gromov's theorem.
-Both concepts quickly spread into all branches of geometry.
-
-The definition \ref{def:hausdorff-coverge} was given by Zdeněk Frolík \cite{frolik} %CHECK
-and was rediscovered by Robert Wijsman \cite{wijsman}.
-
-This definition is a slight modification of the convergence for subsets of metric space,
-first introduced by Felix Hausdorff \cite{hausdorff}%CHECK
-, two years later the same convergence was introduced by Wilhelm Baschke \cite{blaschke}. 
-Since Blaschke does not refer to Hausdorff; it is likely that this type of convergence was used in mathematical folklore before these publications. 
-
-If in this definition, 
-you exachange the pointwise convergence to uniform convergence,
-then you get the usual Hausdorff convergence.
-These two convergences, coinside on the 
-set of bounded subsets
-and Frol\'{\i}k--Wijsman modification make it more sutable for working with unbounded sets.
-
-Originaly, the Gromov--Hausdorff convergence was defined differently, see ???.
-Instead one consider two cases: 
-\begin{enumerate}
-\item If the limit is compact, then one require existance of one GH-convergence.
-\item In the non-compact case one makes a choice of point $x_\infty\in\spc{X}_\infty$ and a sequence $x_n\in\spc{X}_n$ and then to define pointed Gromov--Hausdorff convergence $(\spc{X}_n,x_n)\to (\spc{X}_\infty, x_\infty)$ one requires existance of GH-convergence $\GH$, such that $x_n\xto{\GH}x_\infty$.
-\end{enumerate}
-The later is called \emph{pointed Gromov--Hausdorff convergence}.
-It is easy to see that if $\spc{X}_n\xto{\GH}\spc{X}_\infty$, then for any sequence $x_n\in\spc{X}_n$ 
-such that $x_n\xto{\GH} x_\infty\in\spc{X}_\infty$, 
-the seqence $(\spc{X}_n,x_n)$ 
-converges to $(\spc{X}_\infty,x_\infty)$ 
-in the sense of pointed Gromov--Hausdorff convergence.
-
-The Gromov--Hausdorff convergence is defined only for proper spaces;
-thus, once we write $\spc{X}_n\xto{}\spc{X}_\infty$, 
-we implicitly assume that all $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ are proper spaces.
 
 

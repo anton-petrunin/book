@@ -7,6 +7,9 @@ Gradient flow could be considered as a nonsmooth version of first order ordinary
 It provides a tool in Alexandrov's geometry, 
 which we use everywhere in the book.
 
+We consider only the $\Alex{}{}$ case since the main applications of gradient flow are there.
+But the proofs in this chapter admit straightforward extension to locally compact length spaces with defined angles between geodesics as well as $\CAT{}{}$ spaces.
+
 The technique of gradient flow takes its roots in the so called \emph{Sharafutdinov's retraction}, 
 introduced by Vladimir Sharafutdinov \cite{sharafutdinov}.
 It was used  widely in comparison geometry since then.
@@ -1542,12 +1545,185 @@ Note that by the second distance estimate the obtained limit curve does not depe
 \subsection*{Gradient curves of a family of functions}
 
 Gradient flow can be extended to a family of functions.
-
-Chanyoung Jun used this flow to study Pursuit curves in $\CAT0$ spaces \cite{jun:thesis,jun:grad}.
-Also the optimal transport plan, or equivalently geodesic in Wasserstein metric, can be described as gradient flow for a family of semiconcave functions.
+This type of flows were studied by Chanyoung Jun \cite{jun-thesis,jun:grad}, by Lucas C. F. Ferreira and Julio C. Valencia-Guevara \cite{ferreira-valencia}, and by Alexander Mielke, Riccarda Rossi, and Giuseppe Savar\'{e} \cite{mielke-rossi-savare}.
+We will follow simplified and generalized approach given by Alexander Lytchak and the third author \cite{lytchak-petrunin-2020} where an application related to of this type of flows is given.
+The original motivation of Chanyoung Jun came from study of pursuit-evasion problem.
+Another application of this type of flows come from fact that
+ the optimal transport plan, or equivalently geodesic in Wasserstein metric, can be described as gradient flow for a family of semiconcave functions.
 This observation was used by the third author to prove Alexandrov spaces with nonnegative curvature have nonnegative Ricci curvature in the sense of Lott--Villani--Sturm \cite{petrunin:optimal}.
 
+Let $f_t$ be a family of functions defined on open subsets $\Dom f_t$ of~$\spc{L}$.
+More precisely, we assume that the parameter $t$ lies in a real interval $\II$ and 
+\[\Omega=\set{(x,t)\in\spc{L}\times \II}{x\in\Dom f_t}\]
+is an open subset in $\spc{L}\times \II$.
 
+A family of functions $f_t$ is called \emph{Lipschitz} if 
+the function $(x,t)\mapsto f_t(x)$ is $\Lip$-Lipschitz for some constant $\Lip$.
+
+A family of functions $f_t$ will be called \emph{semiconcave} if 
+the function $x\mapsto f_t(x)$ is $\lambda$-concave for each $t$.
+A family $f_t$ is called \emph{locally semiconcave} if for each $(p_0,t_0)\in \Omega$ there is a neighborhood $\Omega'$ and $\lambda\in\RR$ such that the restriction of $f_t$ to $\Omega'$ is semiconcave. 
+
+Note that one cannot expect that a direct generalization of Definition \ref{def:grad-curve} holds for any family of functions $f_t$; that is, gradient curves of family $f_t$ cannot be defined as curves satisfying the equation $\alpha^+=\nabla_{\alpha} f$.
+
+For example, consider a $1$-Lipschitz curve $\alpha$ in the real line. 
+It is reasonable to assume that $\alpha$ is an $f_t$-gradient curve for the family $f_t(x)=-|x-\alpha(t)|$.
+(Indeed $\alpha$ can be realized as a limit of  gradient curves for a family of functions obtained by smoothing $f_t$.)
+On the other hand, $\alpha^+(t)$ might be undefined,
+but even if it is defined, $\alpha^+(t)\ne0$ in general, while $\nabla_{\alpha(t)} f_t\equiv0$.
+
+
+Instead we define \emph{$f_t$-gradient curve} as a Lipschitz curve $\alpha$ that satisfies the following inequality
+for any point $p$, time $t$, and
+small $\eps >0$:  
+\[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)+o(\eps),\eqlbl{def:tdflow}\]
+if there is no geodesic $[\alpha(t)\,p]$ then we impose no condition.
+
+If $\alpha^+(t)=\nabla_{\alpha(t)}f_t$ for all $t$, then \ref{def:tdflow} holds;
+it follows from the definition of gradient (\ref{def:grad}).
+On the other hand, the example above shows that the converse does not hold;
+that is, \ref{def:tdflow} generalizes Definition \ref{def:grad-curve}.
+The defining  inequality \ref{def:tdflow} is closely related to the so called \emph{evolution variational inequality} \cite[Theorem 4.0.4(iii)]{ambrosio-gigli-savare}.
+
+\begin{thm}{Distance estimate}\label{Distance estimate}
+Let $f_t$ and $h_t$ be two families of $\lambda$-concave functions on a $\Alex{}{}$ space $\spc{L}$ and $s\ge 0$.
+Assume $f_t$ and $h_t$ have common domain $\Omega\subset {\spc{L}}\times \RR$ and $|f_t(x)-h_t(x)|\le s$ for any $(x,t)\in \Omega$.
+Assume $t\mapsto \alpha(t)$ and $t\mapsto \beta(t)$ are $f_t$- and $h_t$-gradient curves respectively defined on a common interval $t\in [a,b)$; set $\ell(t)\z=|\alpha(t)\z-\beta(t)|_{\spc{L}}$.
+If for all $t$ a minimizing geodesic $[\alpha(t)\,\beta(t)]$ lies in $\set{x\in {\spc{L}}}{(x,t)\in \Omega}$, then
+\[\ell'(t)\le \lambda\cdot\ell(t)+2\cdot s/\ell(t),\]
+assuming that the left hand side is defined.
+Moreover
+\[\ell(t)^2+\tfrac{2\cdot s}\lambda\le(\ell(a)^2+\tfrac{2\cdot s}\lambda)\cdot e^{2\cdot\lambda\cdot (t-a)}.\]
+
+In particular the inequalities hold for any $t\in\II$ if $\Omega\supset B(p,2\cdot r)\times \II$ and $\alpha(t),\beta(t)\z\in B(p, r)$ for any $t\in \II$.
+\end{thm}
+
+Note that if $f_t=h_t$ then $s=0$;
+in this case the second inequality can be written as
+\[\ell(t)\le \ell(a)\cdot e^{\lambda\cdot (t-a)}.\eqlbl{dist-est-s=0}\]
+In particular it implies uniqueness of the future of gradient curve with given initial data.
+This inequality also makes it possible to estimate the distance between two gradient curves for close functions.
+In particular, it implies convergence of $f_t^n$-gradient curves if a sequence of $\Lip$-Lipschitz and $\lambda$-concave families $f^n_t$ converges uniformly as $n\to \infty$. 
+
+\parit{Proof.}
+Fix a time moment $t$ and set $f=f_t$ and $h=h_t$.
+Let $p$ be the midpoint of the geodesic $[\alpha(t)\beta(t)]$.
+Let $\gamma\:[0,\ell(t)]\to \spc{L}$ be an arc length parametrization of $[\alpha(t)\beta(t)]$ from $\alpha(t)$ to $\beta(t)$.
+Note that $\dd_{\alpha(t)}f(\dir{\alpha(t)}{p})$ is the right derivative of $f\circ\gamma$ at $0$
+and $-\dd_{\alpha(t)}h(\dir{\beta(t)}p)$ is the left derivative of $h\circ\gamma$ at $\ell(t)$.
+Since $f$ and $h$ are $\lambda$-concave,
+\begin{align*}
+f(\beta(t))&\le f(\alpha(t))+\ell(t)\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p}) +\tfrac12\cdot\lambda\cdot\ell(t)^2,
+\\
+h(\alpha(t))&\le h(\beta(t))+\ell(t)\cdot \dd_{\alpha(t)}h(\dir{\beta(t)}p) +\tfrac12\cdot\lambda\cdot\ell(t)^2,
+\end{align*}
+Adding these inequalities up and taking into account that $|f(x)-h(x)|<s$ for any $x$, we conclude that 
+\[\dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+\dd_{\alpha(t)}h(\dir{\beta(t)}p)\ge \lambda\cdot \ell(t)+2\cdot s/\ell(t).\]
+
+Applying the triangle inequality and the definition of gradient curve at $p$, we get that
+\begin{align*}
+\ell(t+\eps)&=|\alpha(t+\eps)-\beta(t+\eps)|\le
+\\
+&\le |\alpha(t+\eps)-p|+|\beta(t+\eps)-p|\le 
+\\
+&\le |\alpha(t)-p|-\eps\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+
+\\
+&\quad +|\beta(t+\eps)-p|-\eps\cdot \dd_{\beta(t)}h(\dir{\beta(t)}p)+o(\eps)=
+\\
+&=\ell(t)-\eps\cdot(\lambda\cdot \ell(t)+2\cdot s/\ell(t))+o(\eps)
+\end{align*}
+for $\eps>0$; hence the statement.
+
+Since $\alpha$ and $\beta$ are Lipschitz, $t\mapsto \ell(t)$ is a Lipschitz function.
+By Rademacher's theorem, its derivative $\ell'$ is defined almost everywhere and it satisfies the fundamental theorem of calculus.
+Therefore the first inequality implies the second one.
+\qeds
+
+\begin{thm}{Proposition}\label{prop:def-time-dependent}
+Let $\spc{L}$ be a complete length $\Alex{}{}$ space.
+Suppose $f_t$ is a family of $\lambda$-concave functions for $t\in [a,b)$ and $\Dom f_t\supset B(z,2\cdot r)$ for some fixed $z\in\spc{L}$, $r>0$ and any~$t$.
+
+Let $\alpha\:[a,b)\to B(z,r)$ be Lipschitz.
+Then $\alpha$ is an $f_t$-gradient curve if and only if 
+\[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f_t(p)-f_t\circ\alpha(t)}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\alpha(t)|\right]+o(\eps)\eqlbl{def:tdflow-plus}\]
+for any $t\in [a,b)$ and $p\in B(z,r)\setminus \{\alpha (t)\}$.
+\end{thm}
+
+\parit{Proof.}
+Note that geodesics $[\alpha(t)p]$ lie in $\Dom f_t$ for any $t$.
+
+Since $f_t$ is $\lambda$-concave, we have 
+\[\dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)
+\ge
+\frac{f(p)-f\circ\alpha(t)}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\alpha(t)|.\]
+Hence the only-if part follows.
+
+Given a point $p\in \spc{L}$ and $t$,
+consider a point $\bar p\in [\alpha(t)p]$.
+Applying \ref{def:tdflow-plus} for $\bar p$ and the triangle inequality, we get
+\[\distfun{p}{}{}\circ\alpha(t+\eps)
+\le
+\distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f(\bar p)-f\circ\alpha(t)}{|\bar p-\alpha(t)|}-\tfrac\lambda2\cdot |\bar p-\alpha(t)|\right]+o(\eps).\]
+By taking $\bar p$ close to $\alpha(t)$,
+the value $\tfrac{f(\bar p)-f\circ\alpha(t)}{|\bar p-\alpha(t)|}-\tfrac\lambda2\cdot |\bar p-\alpha(t)|$ can be made arbitrary close to $\dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)$.
+Therefore, given $\delta>0$, the following inequality
+\[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)+\eps\cdot\delta\]
+holds for all sufficiently small positive values $\eps$.
+Therefore \ref{def:tdflow} holds.
+\qeds
+
+
+Now we are ready to formulate and prove global existence of gradient curves for time-dependent family --- an analog of \ref{thm:glob-exist-grad-curv}.
+
+\begin{thm}{Theorem}\label{prop:time-dependent}
+Let $\spc{L}$ be a complete length $\Alex{}{}$ space and
+$\{f_t\}$ a family of function defined on an open set
+\[\Omega=\set{(x,t)\in \spc{L}\times\RR}{x\in \Dom f_t}.\]
+Suppose that $f_t$ is Lipschitz and locally semiconcave.
+Then for any time moment $a$ and initial point $p\in \Dom f_a$ there is a unique $f_t$-gradient curve $t\mapsto\alpha(t)$ defined on a maximal semiopen interval $[a,b)$. 
+Moreover if $b<\infty$, then $(\alpha(t),t)$ escapes from any closed set $K\subset \Omega$.
+\end{thm}
+
+\parit{Proof.}
+Let $L$ be a Lipschitz constant of $f_t$.
+Fix $b>a$ sufficiently small so that $\Dom f_t\supset B(p,\eps\cdot L)$ for any $t\in[a,b)$.
+Consider sequence  $a=t_0<t_1\dots<t_n\z=b$ and a piecewise constant family of functions on $B(p,\eps\cdot L)$ defined by $\hat f_t=f_{t_i}$ if $t_i\le t<t_{i+1}$.
+
+Note that $\hat f_t$ is time-independent on each interval $[t_i,t_{i+1})$.
+Applying \ref{thm:glob-exist-grad-curv} recursively on each interval $[t_i,t_{i+1})$, we get that the proposition holds for $\hat f_t$.
+That is, there is a unique $\hat f_t$-gradient curve $\hat \alpha$ that starts at $p$ and defined on the interval $[a,b)$.
+
+The distance estimates (\ref{Distance estimate}) show that as the partition gets finer, the gradient curves $\hat\alpha$ form a Cauchy sequence; denote its limit by $\alpha$.
+Then
+\begin{align*}
+\distfun{p}{}{}\circ\hat\alpha(t+\eps)
+&\le 
+\distfun{p}{}{}\circ\hat\alpha(t)-
+\\
+&\quad
+-\eps\cdot \left[\frac{\hat f_t(p)-\hat f_t\circ\hat\alpha(t)}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\hat\alpha(t)|\right]
++o(\eps)
+\\
+&\le 
+\distfun{p}{}{}\circ\hat\alpha(t)-
+\\
+&\quad
+-\eps\cdot \left[\frac{f_t(p)-f_t\circ\hat\alpha(t)-2\cdot s}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\hat\alpha(t)|\right]
++o(\eps)
+\end{align*}
+where 
+\[s=\sup_{t,x} \{|f_t(x)-\hat f_t(x)|\}.\]
+Since $s\to 0$ as $\hat\alpha\to \alpha$, we get that \ref{def:tdflow-plus} holds for $\alpha$;
+that is, $\alpha$ is an $f_t$-gradient curve.
+
+It proves a short time existence.
+Applying this argument recursively we can find a gradient curve defined on a maximal interval $[a,b)$.
+Uniqueness of this curve follows from the distance estimate \ref{dist-est-s=0}. 
+
+Note that $\alpha$ is $L$-Lipschitz.
+In particular, if $b<\infty$, then $\alpha(t)\to p'$ as $t\to b$.
+If $(p',b)\in \Omega$, then we can repeat the procedure, otherwise $\alpha$ escapes from any closed set in $\Omega$. 
+\qeds
 
 \subsection*{Gradient curves for non-Lipschitz functions}\label{sec:non-lip}
 
