@@ -134,13 +134,10 @@ $\angk\kappa p q r$%
 In the notation of Section~\ref{model}, 
 \[\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}.\]
 
-\begin{wrapfigure}[6]{r}{28mm}
-\begin{lpic}[t(-0mm),b(6mm),r(0mm),l(0mm)]{pics/lem_alex1(1)}
-\lbl[lb]{10,23;$p$}
-\lbl[rt]{1.5,.5;$q$}
-\lbl[bl]{25,7.5;$r$}
-\lbl[lb]{17,15;$z$}
-\end{lpic}
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-605}
 \end{wrapfigure}
 
 \begin{thm}{Alexandrov's lemma}
@@ -174,8 +171,14 @@ Therefore the model triangle $\trig{\tilde p}{\tilde q}{\tilde z}=\modtrig\kappa
 Take 
 a point $\tilde r$ on the extension of 
 $[\tilde p \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde p}{\tilde r}{}=\dist{p}{r}{}$ (and therefore $\dist{\tilde p}{\tilde z}{}=\dist{p}{z}{}$). 
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-610}
+\end{wrapfigure}
  
-From monotonicity of function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\ref{increase}), 
+From monotonicity of the function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\ref{increase}), 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
 \item $\mangle\hinge{\tilde p}{\tilde q}{\tilde r}-\angk\kappa{p}{q}{r}$;
@@ -304,21 +307,17 @@ $s=s(t,\tau)$, this chain of inequalities can be continued as follows:}
 \ &\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
 \end{align*}
 
-\begin{wrapfigure}{r}{25mm}
-\begin{lpic}[t(-4mm),b(-0mm),r(0mm),l(0mm)]{pics/s-choice(1)}
-\lbl[w]{12,35,50;$\,t\,$}
-\lbl[w]{12,12,-50;$\,\tau\,$}
-\lbl[w]{14,22.5,4;$\,s\,$}
-\lbl[lw]{9,20,-25;{$=\alpha^{12}+\eps$}}
-\lbl[lw]{9,26,28;{$=\alpha^{23}+\eps$}}
-\end{lpic}
+\begin{wrapfigure}{o}{30 mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-615}
 \end{wrapfigure}
 
 Thus for any $\eps>0$, 
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result follows.
 
-To define $s(t,\tau)$, consider three rays $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+To define $s(t,\tau)$, consider three rays $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
 We parametrize each ray by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
@@ -367,29 +366,6 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
-
-\section{Constructions}
-\label{sec:Euclid-constructions}
-
-
-\parbf{Cone.}
-The \index{cone}\emph{
-Euclidean cone} $\spc{Y}=\Cone\spc{X}$ 
-over a metric space $\spc{X}$
-is defined as the metric space whose underlying set consists of
-equivalence classes in
-$[0,\infty)\times \spc{X}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{X}$,
-and whose metric is given by the cosine rule
-\[
-\dist{(s,p)}{(t,q)}{\spc{Y}} 
-=
-\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
-\]
-where $\alpha= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
-
-The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{0\}\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{Y}}$.
-The distance $\dist{0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
-
 \section{Space of directions and tangent space}
 \label{sec:tangent-space+directions}
 
@@ -419,6 +395,34 @@ for the equivalence relation
 
 The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
 The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+
+\section{Tangent space}
+
+The \index{cone}\emph{
+Euclidean cone} $\spc{Y}=\Cone\spc{X}$ 
+over a metric space $\spc{X}$
+is defined as the metric space whose underlying set consists of
+equivalence classes in
+$[0,\infty)\times \spc{X}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{X}$,
+and whose metric is given by the cosine rule
+\[
+\dist{(s,p)}{(t,q)}{\spc{Y}} 
+=
+\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\theta},
+\]
+where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
+
+The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{0\}\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{Y}}$.
+The distance $\dist{0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
+
+
+The \index{scalar product}\emph{scalar product} $\<v,w\>$
+of two vectors $v=(s,p)$ and $w=(t,q)$ in $\Cone{\spc{X}}$
+is defined by 
+\[\<v,w\>
+\df |v|\cdot|w|\cdot\cos\theta;
+\]
+we set $\<v,w\>\df0$ if $v=\0$ or $w=\0$.
 
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \emph{tangent space} at  $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
 
@@ -532,7 +536,8 @@ A function $\phi\:\T_p\to\RR$ is called differential of $f$ at $p$
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:differential}
-Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction
+on a metric space $\spc{X}$ with defined angles.
 Then differential $\dd_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
 \begin{subthm}{prop:differential:lip}
 The differential $\dd_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\dd_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 

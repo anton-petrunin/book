@@ -2,12 +2,89 @@
 %arXiv
 \chapter{First order differentiation}\label{chap:tan}
 
+\section{Ultratangent space} 
+
+The following theorem is often used together with the 
+observation that the ultralimit of any sequence of length spaces is geodesic (see \ref{obs:ultralimit-is-geodesic}).
+
+\begin{thm}{Theorem}\label{thm:tan-is}
+\begin{subthm}{thm:tan-is-CBB}
+If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T^\o_p$ is $\Alex{0}$.
+\end{subthm}
+
+\begin{subthm}{thm:tan-is-CBA}
+If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T^\o_p$ is $\CAT0$.
+\end{subthm}
+
+\end{thm}
+
+The proofs of both parts are nearly identical.
+
+\parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
+Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then for its blowup $n\cdot\spc{L}$ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
+By Proposition~\ref{prp:A^omega}, $\o\cdot\spc{L}$ is $\Alex0$
+and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{L}$.
+
+\parit{(\ref{SHORT.thm:tan-is-CBA}).}
+Since $\spc{U}$ is a complete length $\CAT\kappa$ space, its blowup $n\cdot\spc{U}$ is $\CAT{\kappa/{n^{2}}}$.
+By Proposition~\ref{prop:CAT^omega}, $\o\cdot\spc{U}$ is $\CAT0$
+and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{U}$.
+\qeds
+
+Recall that the tangent space $\T_p$ can be considered as a subset of $\T^\o_p$ (see \ref{thm:tangent-ultratangent}).
+Therefore we get the following:
+
+\begin{thm}{Corollary}\label{cor:real-tan-is}
+\begin{subthm}{cor:tan-is-CBB}
+If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T_p$ is $\Alex{0}$.
+Moreover, $\T_p$ satisfies (1+\textit{n})-point comparison (\ref{thm:pos-config}).
+\end{subthm}
+
+\begin{subthm}{cor:tan-is-CBA}
+If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T_p$ is $\CAT0$.
+Moreover, $\T_p$ satisfies (2\textit{n}+2)-comparison (\ref{CBA-n-point}).
+\end{subthm}
+
+\end{thm}
+
+
+
+\begin{thm}{Proposition}\label{ddo-concave}
+Assume $\spc{Z}$ is a complete length $\Alex{}$ or $\CAT{}$ space
+and $f\:\spc{Z}\subto\RR$ is a semiconcave locally Lipscitz subfunction.
+Then for any $p\in\Dom f$, the ultradifferential $\dd^\o_p\:\T^\o_p\to\RR$ is a concave function.
+\end{thm}
+
+\parit{Proof.}
+Fix a geodesic $[x^\o y^\o]$ in $\T^\o_p$.
+
+
+It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y^\o]$
+that does not contain the ends
+there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{Z}$ converging to $[\bar x^\o\bar y^\o]$.
+
+Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{Z}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
+Note that $[\bar x^n \bar y^n]$ 
+converges to $[\bar x^\o \bar y^\o]$
+as $n\to\o$.
+The latter holds trivially in the $\CAT{}$ case
+and in the $\Alex{}$ case  follows from \ref{cor:unique-geod-cbb}.
+\qeds
+
 \section{Intrinsic property of tangent space}\label{halbeisen}
 
-\begin{thm}{Theorem}
+\begin{thm}{Theorem}\label{thm:tanCAT}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p\in \spc{U}$.
 Then $\T_p\spc{U}$ is a length space.
 \end{thm}
+
+This theorem together with \ref{cor:real-tan-is} imply the following.
+
+\begin{thm}{Corollary}
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p\in \spc{U}$.
+Then $\T_p\spc{U}$ is a complete length $\CAT0$ space.
+\end{thm}
+
 
 \parit{Proof.}
 Since $\T_p=\Cone \Sigma_p$, it is sufficient to show that for any hinge $\hinge pxy$ such that 
@@ -348,7 +425,20 @@ Show that
 
 \end{thm}
 
+\begin{thm}{Lemma}\label{lem:d(CAT)} 
+Let $\spc{U}$ be a complete length $\CAT{}$ space
+$f\:\spc{U}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
+and $p\in \Dom f$.
+Then $\dd_p f$ is a Lipschitz concave function on $\T_p\spc{U}$.
+\end{thm}
 
+\parit{Proof.}
+Recall that the tangent space $\T_p$ can be considered as a subspace of the ultratangent space $\T_p^\o$.
+Since $\T_p^\o$ is $\CAT0$, \ref{thm:tanCAT} implies that $\T_p$ is a convex set in $\T_p^\o$.
+
+Recall that $\dd_p^\o f$ is a concave function on $\T_p^\o$ (\ref{ddo-concave}).
+It remains to observe that $\dd_pf=(\dd_p^\o f)|_{\T_p}$.
+\qeds
 
 As is shown in Halbeisen's example (see section \ref{halbeisen}),  
 a $\Alex{}$ space  might have tangent spaces that are not length spaces; 
@@ -357,17 +447,28 @@ Nevertheless, as the following lemma shows, the differential $\dd_p f$ of a semi
 In the finite dimensional case $\dd_p f$ is concave. % (see ???)
 
 \begin{thm}{Lemma}\label{lem:ohta} 
-Let $\spc{L}$ be a complete length $\Alex{}$ space
-$f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
+Let $\spc{Z}$ be a complete length space
+$f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
 and $p\in \Dom f$.
-Then
-\[\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Then for any $u,v\in \T_p$, we have
+\[s\cdot \sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
 \ge 
-\frac{(\dd_p f)(u)+(\dd_p f)(v)}{\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}}\]
-for any $u,v\in \T_p$.
+(\dd_p f)(u)+(\dd_p f)(v),\]
+where
+\[s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}.\]
+
 \end{thm}
 
 \parit{Proof of \ref{lem:ohta}.}
+If $\spc{Z}$ is $\CAT{}$, then the statement follows from \ref{lem:d(CAT)}.
+Indeed, let $z$ be the midpoint of a geodesic $[vw]_{\T_p}$. 
+Observe that $2\cdot |z|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
+Since $\dd_pf$ is concave, we have that 
+\[2\cdot\dd_pf(z)\ge \dd_pf(v)+\dd_pf(w).\]
+It remains to choose $\xi\in \Sigma_p$ so that $\xi\cdot |z|=z$ and observe that $s\ge \dd_p(\xi)$.
+
+Now assume $\spc{Z}$ is $\Alex{}$.
 We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
 Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\dd_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
  and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
@@ -396,9 +497,9 @@ Note that
 =
 \tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\]
 
-Assume that $\spc{L}$ is geodesic.
+Assume that $\spc{Z}$ is geodesic.
 
-For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{L}$ the following way:
+For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{Z}$ the following way:
 \begin{enumerate}[(a)]
 \item $v_t=\exp_p(t\cdot v)$,\ \  $v_t'=\exp_p(t\cdot v')$
 \item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
@@ -451,7 +552,7 @@ and the lemma follows.
 
 \medskip
 
-Finally, if $\spc{L}$ is not geodesic one needs to make two adjustments in the above construction.
+Finally, if $\spc{Z}$ is not geodesic one needs to make two adjustments in the above construction.
 Namely: 
 \begin{enumerate}[(i)]
 \item For the geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
@@ -464,84 +565,12 @@ Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should t
 \end{enumerate}
 \qedsf
 
-
-
-
-\section{Ultratangent space} 
-
-The following theorem is often used together with the 
-observation that the ultralimit of any sequence of length spaces is geodesic (see \ref{obs:ultralimit-is-geodesic}).
-
-\begin{thm}{Theorem}\label{thm:tan-is}
-\begin{subthm}{thm:tan-is-CBB}
-If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T^\o_p$ is $\Alex{0}$.
-\end{subthm}
-
-\begin{subthm}{thm:tan-is-CBA}
-If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T^\o_p$ is $\CAT0$.
-\end{subthm}
-
-\end{thm}
-
-The proofs of both parts are nearly identical.
-
-\parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
-Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then for its blowup $n\cdot\spc{L}$ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
-By Proposition~\ref{prp:A^omega}, $\o\cdot\spc{L}$ is $\Alex0$
-and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{L}$.
-
-\parit{(\ref{SHORT.thm:tan-is-CBA}).}
-Since $\spc{U}$ is a complete length $\CAT\kappa$ space, its blowup $n\cdot\spc{U}$ is $\CAT{\kappa/{n^{2}}}$.
-By Proposition~\ref{prop:CAT^omega}, $\o\cdot\spc{U}$ is $\CAT0$
-and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{U}$.
-\qeds
-
-Recall that the tangent space $\T_p$ can be considered as a subset of $\T^\o_p$ (see \ref{thm:tangent-ultratangent}).
-Therefore we get the following:
-
-\begin{thm}{Corollary}\label{cor:real-tan-is}
-\begin{subthm}{cor:tan-is-CBB}
-If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T_p$ is $\Alex{0}$.
-Moreover, $\T_p$ satisfies (1+\textit{n})-point comparison (\ref{thm:pos-config}).
-\end{subthm}
-
-\begin{subthm}{cor:tan-is-CBA}
-If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T_p$ is $\CAT0$.
-Moreover, $\T_p$ satisfies (2\textit{n}+2)-comparison (\ref{CBA-n-point}).
-\end{subthm}
-
-\end{thm}
-
-
-
-\begin{thm}{Proposition}
-Assume $\spc{X}$ is a complete length $\Alex{}$ space or $\CAT{}$ space
-and $f\:\spc{X}\subto\RR$ is a semiconcave locally Lipscitz subfunction.
-Then for any $p\in\Dom f$, the ultradifferential $\dd^\o_p\:\T^\o_p\to\RR$ is a concave function.
-\end{thm}
-
-\parit{Proof.}
-Fix a geodesic $[x^\o y^\o]$ in $\T^\o_p$.
-It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y^\o]$
-that does not contain the ends
-there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{X}$ converging to $[\bar x^\o\bar y^\o]$.
-
-Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{X}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
-Note that $[\bar x^n \bar y^n]$ 
-converges to $[\bar x^\o \bar y^\o]$
-as $n\to\o$.
-The latter holds trivially in the $\CAT{}$ case
-and in the $\Alex{}$ case  follows from \ref{cor:unique-geod-cbb}.
-\qeds
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition of gradient}\label{def:grad} 
-Let $\spc{L}$ be a complete length $\Alex{}$ space and  
+Let $\spc{X}$ be a length space with defined angles and  
 $f\:\spc{L}\subto\RR$ be a subfunction.
 Suppose  for a point
 $p\in\Dom f$ the differential $\dd_p f\:\T_p\to\RR$ is defined.
@@ -559,8 +588,8 @@ $(\dd_p f)(g) = \<g,g\> .$
 \end{thm}
 
 \begin{thm}{Existence and uniqueness of the gradient}\label{thm:ex-grad} 
-Let $\spc{L}$ be a complete $\Alex\kappa$ space
-and $f\:\spc{L}\subto\RR$ be a 
+Let $\spc{X}$ be a complete length $\Alex\kappa$ or $\CAT\kappa$  space
+and $f\:\spc{X}\subto\RR$ be a 
 locally Lipschitz 
 and 
 semiconcave subfunction.
@@ -590,7 +619,10 @@ it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that
 (\dd_p f)\left(\overline{\xi}\right)=s.
 \eqlbl{overlinexi}
 \]
-Indeed, if $\overline{\xi}$ exists, then applying Lemma~\ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
+
+Indeed, suppose $\overline{\xi}$ exists.
+If $\spc{X}\in\Alex\kappa$,
+then applying Lemma~\ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
 we get
 \[(\dd_p f)(w)\le \<w,s\cdot\overline{\xi}\>\] 
 for any $w\in\T_p$;
