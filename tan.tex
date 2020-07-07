@@ -433,11 +433,11 @@ Then $\dd_p f$ is a Lipschitz concave function on $\T_p\spc{U}$.
 \end{thm}
 
 \parit{Proof.}
-Recall that the tangent space $\T_p$ can be considered as a subspace of the ultratangent space $\T_p^\o$.
+Recall that the tangent space $\T_p$ can be considered as a subspace of the ultratangent space $\T_p^\o$ (\ref{thm:tangent-ultratangent}).
 Since $\T_p^\o$ is $\CAT0$, \ref{thm:tanCAT} implies that $\T_p$ is a convex set in $\T_p^\o$.
 
 Recall that $\dd_p^\o f$ is a concave function on $\T_p^\o$ (\ref{ddo-concave}).
-It remains to observe that $\dd_pf=(\dd_p^\o f)|_{\T_p}$.
+It remains to apply that $\dd_pf=(\dd_p^\o f)|_{\T_p}$ (\ref{prop:differential:ultra}).
 \qeds
 
 As is shown in Halbeisen's example (see section \ref{halbeisen}),  
@@ -587,12 +587,21 @@ $(\dd_p f)(g) = \<g,g\> .$
 \end{subthm}
 \end{thm}
 
+\begin{thm}{Exercise}
+Let $\spc{U}$ be a complete length $\CAT0$ space.
+Show that
+\[\nabla_p(-\distfun q)=\dir pq\]
+for any pair of distinct points $p,q\in\spc{U}$.
+\end{thm}
+
+
 \begin{thm}{Existence and uniqueness of the gradient}\label{thm:ex-grad} 
-Let $\spc{X}$ be a complete length $\Alex\kappa$ or $\CAT\kappa$  space
-and $f\:\spc{X}\subto\RR$ be a 
+Let $\spc{Z}$ be a complete length space
+and $f\:\spc{Z}\subto\RR$ be a 
 locally Lipschitz 
 and 
 semiconcave subfunction.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then for any point $p\in \Dom f$, there is unique gradient $\nabla_p f\in \T_p$.
 \end{thm}
 
@@ -621,8 +630,7 @@ it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that
 \]
 
 Indeed, suppose $\overline{\xi}$ exists.
-If $\spc{X}\in\Alex\kappa$,
-then applying Lemma~\ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
+Then applying Lemma~\ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
 we get
 \[(\dd_p f)(w)\le \<w,s\cdot\overline{\xi}\>\] 
 for any $w\in\T_p$;
@@ -660,9 +668,10 @@ in the direction of maximal slope;
 moreover if the slope in the given direction is almost maximal, then it is almost the direction of the gradient.
 
 \begin{thm}{Lemma}\label{lem:alm-grad}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
-$f\:\spc{L}\subto\RR$ be locally Lipschitz and semiconcave 
+Let $\spc{Z}$ be a complete length space,
+$f\:\spc{Z}\subto\RR$ be locally Lipschitz and semiconcave 
 and $p\in \Dom f$.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 Assume $|\nabla_p f|>0$;
 set $\overline{\xi}=\tfrac{1}{|\nabla_p f|}\cdot\nabla_p f$.
@@ -692,7 +701,7 @@ In particular,
 \end{subthm}
 \end{thm}
 
-\parit{Proof.} According to thr definition of gradient,
+\parit{Proof.} According to the definition of gradient,
 \begin{align*}
  |\nabla_p f|\cdot(1-\eps)
 &<
@@ -720,9 +729,10 @@ Statements (\ref{SHORT.conv-to-grad}) and (\ref{SHORT.alm-max}) follow directly 
 As a corollary of the above lemma and Proposition~\ref{prop:conv-comp} we get the following: 
 
 \begin{thm}{Chain rule} %???DO WE NEED IT???
-Let $\spc{L}$ be a complete length $\Alex{}$ space, 
-$f\:\spc{L}\subto \RR$ be a semiconcave function
+Let $\spc{Z}$ be a complete length space, 
+$f\:\spc{Z}\subto \RR$ be a semiconcave function
 and $\phi\:\RR\to\RR$ be a non-decreasing semiconcave function.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\nabla_x f$ for any $x\in\Dom f$.
 \end{thm}
 
@@ -743,10 +753,11 @@ vector field''.
 
 \begin{thm}{Lemma} 
 \label{lem:grad-lip}
-Let $\spc{L}$ be a complete length $\Alex{}$ space,   
-$f\:\spc{L}\subto\RR$ satisfy $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
+Let $\spc{Z}$ be a complete length space,   
+$f\:\spc{Z}\subto\RR$ satisfy $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
 $[p q]\subset \Dom f$ 
 and $\ell=\dist{p}{q}{}$.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then
 \[\<\dir pq,\nabla_p f\>\ge
 \frac
@@ -801,9 +812,10 @@ The following corollary states that the gradient vector field is monotonic in th
 
 \begin{thm}{Monotonicity of gradient} 
 \label{cor:grad-lip}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$f\:\spc{L}\subto\RR$ be locally Lipschitz and $\lambda$-concave 
+Let $\spc{Z}$ be a complete length space, 
+$f\:\spc{Z}\subto\RR$ be locally Lipschitz and $\lambda$-concave 
 and $[p q]\subset \Dom f$.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then
 \[
 \<\dir p q,\nabla_p f\>
@@ -819,29 +831,25 @@ Then
 \qeds
 
 \begin{thm}{Lemma}\label{lem:close-grad}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$f,g\:\spc{L}\subto\RR$ 
+Let $\spc{Z}$ be a complete length space, 
+$f,g\:\spc{Z}\subto\RR$ 
 and $p\in\Dom f\cap\Dom g$.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 Then 
 \[\dist[2]{\nabla_p f}{\nabla_p g}{\T_p}
 \le 
-(|\nabla_p f|+|\nabla_p g|)
-\cdot
-\sup\set{|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
+s\cdot(|\nabla_p f|+|\nabla_p g|),\]
+where
+\[s=\sup\set{|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
 
-In particular, if $f_n\:\spc{L}\subto\RR$ is a sequence of locally Lipschitz and semiconcave subfunctions,
+In particular, if $f_n\:\spc{Z}\subto\RR$ is a sequence of locally Lipschitz and semiconcave subfunctions,
 $p\in \Dom f_n$ for each $n$ 
 and $\dd_p f_n$ converges uniformly on ${\Sigma_p}$ 
 then sequence $\nabla_p f_n\in \T_p$ converges.
 \end{thm}
 
 \parit{Proof.}
-Set 
-\[s
-=
-\sup
-\set{\,|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
 Clearly for any $v\in \T_p$, we have 
 \[|(\dd_p f)(v)-(\dd_p g)(v)|\le s\cdot|v|.\]
 From the definition of gradient (\ref{def:grad}) we have:
@@ -854,7 +862,7 @@ From the definition of gradient (\ref{def:grad}) we have:
 \end{align*}
 Therefore,
 \begin{align*}
-\dist[{{}}]{\nabla_pf}{\nabla_pg}{}
+\dist[2]{\nabla_pf}{\nabla_pg}{}
 &=\<\nabla_p f,\nabla_p f\>+\<\nabla_p g,\nabla_p g\>-2\cdot\<\nabla_p f,\nabla_p g\>
 \le
 \\
@@ -872,7 +880,7 @@ Therefore,
 Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
 be mutually distinct points in $\spc{L}$.
 Prove that 
-\[(d_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})
+\[(\dd_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})
 +\cos\angk\kappa pab\le 0.\]
 \end{thm}
 
@@ -892,13 +900,14 @@ for almost all $t\in\II$.
 
 \section*{Semicontinuity}\label{sec:grad-semicont}
 
-In this section we collect a number of corollaries of the following lemma.
+In this section we collect a few of corollaries of the following lemma.
 
 \begin{thm}{Ultralimit of \textbar gradient\textbar} \label{lem:gradcon}
-Assume
+Assume that
 \begin{itemize}
-\item $(\spc{L}_n)$ is a sequence of complete $\Alex\kappa$ spaces and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
-\item $f_n\:\spc{L}_n\subto \RR$ and $f_\o\:\spc{L}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$;
+\item $(\spc{Z}_n)$ is a sequence of complete length spaces and $(\spc{Z}_n,p_n) \to (\spc{Z}_\o,p_\o)$ as $n\to\o$.
+Suppose that all $\spc{Z}_n$ are either $\Alex{}$ or $\CAT{}$.
+\item $f_n\:\spc{Z}_n\subto \RR$ and $f_\o\:\spc{Z}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$.
 \item $x_n\in\Dom f_n$ and $x_n\to x_\o\in \Dom f_\o$ as $n\to\o$.
 \end{itemize}
 Then 
@@ -909,21 +918,18 @@ Then
 \end{thm}
 
 
-\parbf{Remarks.}
-In order to construct an example such that 
-$|\nabla_{x_\o} f_\o|
-\z<
-\lim_{n\to\o} |\nabla_{x_n} f_n|$;
-one can take $\spc{L}_n=\spc{L}_\o=\RR$, $f_n(x)=f_\o(x)=-|x|$ and $x_n\to 0+$.
+\parbf{Remarks.} The inequality might be strict.
+For example, consider $\spc{Z}_n=\spc{Z}_\o=\RR$, $f_n(x)=f_\o(x)=-|x|$ and $x_n\to 0+$.
 
  From the convergence of gradient curves (proved later in \ref{ultr-lim-g-curve}), 
 one can deduce the following slightly stronger statement.
  
 \begin{thm}{Proposition}\label{prop:lim|grad|=|grad|}
-Assume
+Assume that
 \begin{itemize}
-\item $\spc{L}_n$ is a sequence of complete $\Alex\kappa$ spaces and $(\spc{L}_n,p_n) \to (\spc{L}_\o,p_\o)$ as $n\to\o$;
-\item $f_n\:\spc{L}_n\subto \RR$ and $f_\o\:\spc{L}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$.
+\item $\spc{Z}_n$ is a sequence of complete length spaces and $(\spc{Z}_n,p_n) \to (\spc{Z}_\o,p_\o)$ as $n\to\o$.
+Suppose that all $\spc{Z}_n$ are either $\Alex{}$ or $\CAT{}$.
+\item $f_n\:\spc{Z}_n\subto \RR$ and $f_\o\:\spc{Z}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$.
 \end{itemize}
 Then 
 \[|\nabla_{x_\o} f_\o|
@@ -935,7 +941,7 @@ where infimum is taken for all sequences $x_n\in\Dom f_n$ such that $x_n\to x_\o
 \parit{Proof of \ref{lem:gradcon}.} 
 Fix an $\eps>0$ and choose $y_\o\in \Dom f_\o$ sufficiently close to $x_\o$ that 
 \[|\nabla_{x_\o} f_\o|-\eps<\frac{f_\o(y_\o)-f_\o(x_\o)}{\dist{x_\o}{y_\o}{}}.\]
-Choose $y_n\in \spc{L}_n$ such that $y_n\to y_\o$ as $n\to\o$. 
+Choose $y_n\in \spc{Z}_n$ such that $y_n\to y_\o$ as $n\to\o$. 
 Since $\dist{x_\o}{y_\o}{}$ is sufficiently small, the $\lambda$-concavity of $f_n$ implies that
 \[ |\nabla_{x_\o} f_\o|-2\cdot\eps
 <
@@ -949,37 +955,45 @@ Hence
 Sinse $\eps>0$ is arbitrary, the proposition follows.
 \qeds
 
-Note that the distance preserving map $\iota\:\spc{L}\hookrightarrow \spc{L}^\o$ induces an embedding 
-\[\dd_p\iota\:\T_p \spc{L}\hookrightarrow \T_p \spc{L}^\o.\]
-Thus, we can (and will) consider $\T_p \spc{L}$ as a subcone of $\T_p \spc{L}^\o$.
+Note that the distance preserving map $\iota\:\spc{Z}\hookrightarrow \spc{Z}^\o$ induces an embedding 
+\[\dd_p\iota\:\T_p \spc{Z}\hookrightarrow \T_p \spc{Z}^\o.\]
+Thus, we can (and will) consider $\T_p \spc{Z}$ as a subcone of $\T_p \spc{Z}^\o$.
 
 \begin{thm}{Corollary}\label{nablaf=mablaf^o}
-Let $\spc{L}$ be a complete length $\Alex{}$ space 
-and $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
-Then for any point $p\in\Dom f$ we have
-\[\nabla_p f=\nabla_p f^\o.\]
-
+Let $\spc{Z}$ be a complete length space 
+and $f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Then 
+\[\nabla_x f=\nabla_x f^\o.\]
+for any point $x\in\Dom f$.
 \end{thm}
 
 \parit{Proof.} 
-Note that $\spc{L}\supset\Dom f\subset \Dom f^\o\subset \spc{L}^\o$. 
-Applying \ref{lem:gradcon} for $\spc{L}_n=\spc{L}$ and $x_n=x$, we get that $|\nabla_x f|\ge|\nabla_x f^\o|$.
+Note that 
+\[
+\begin{matrix}
+\spc{Z}&\supset&\spc{Z}^\o\\
+\cup&&\cup\\
+\Dom f&\subset &\Dom f^\o
+\end{matrix}.
+\]
+Applying \ref{lem:gradcon} for $\spc{Z}_n=\spc{Z}$ and $x_n=x$, we get that $|\nabla_x f|\ge|\nabla_x f^\o|$.
 
-On the other hand, $f=f^\o|_{\spc{L}}$, hence $\dd_p f=\dd_p f^\o|\T_p \spc{L}$.
+On the other hand, $f=f^\o|_{\spc{Z}}$, hence $\dd_p f=\dd_p f^\o|_{\T_p \spc{Z}}$.
 Thus from \ref{alm-max},
 $|\nabla_x f|\le|\nabla_x f^\o|$. 
 Therefore
 \[
-|\nabla_x f|=|\nabla_x f^\o|.
+|\nabla_x f|=|\nabla_x f^\o|
 \eqlbl{gradfgradultraf}
 \]
-
+ for any $x\in \spc{Z}$.
 
 
 Further,
 \begin{align*}
-|\nabla_x f|^2&=(\dd_p f)(\nabla_x f)\\
-&=\dd_pf^\o(\nabla_x f)\le\\ 
+|\nabla_x f|^2&=(\dd_x f)(\nabla_x f)\\
+&=\dd_xf^\o(\nabla_x f)\le\\ 
 &\le\<\nabla_x f^\o,\nabla_x f\>=\\
 &=|\nabla_x f^\o|\cdot|\nabla_x f|\cdot\cos\mangle(\nabla_x f^\o,\nabla_x f).
 \end{align*}
@@ -987,8 +1001,9 @@ Together with \ref{gradfgradultraf}, this implies $\mangle(\nabla_x f^\o,\nabla_
 \qeds
 
 \begin{thm}{Semicontinuity of \textbar gradient\textbar}\label{cor:gradlim} 
-Let $\spc{L}$ be a complete length $\Alex{}$ space 
-and $f\:\spc{L}\subto\RR$ be a locally Lipschitz semiconcave subfunction. 
+Let $\spc{Z}$ be a complete length space 
+and $f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
+Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then the function $x\mapsto|\nabla_x f|$  is lower-continuous;
 that is for any sequence $x_n\to x\in \Dom f$, we have 
 \[|\nabla_x f|\le \liminf_{n\to \infty} |\nabla_{x_n} f|.\]

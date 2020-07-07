@@ -116,4 +116,44 @@ whitelabel(btex $s(t,\tau)$ etex rotated angle(z.y-z.p), .7[z.p,z.y]+(0,1));
 whitelabel(btex $\tau$ etex rotated angle(z.z-z.p), .5[z.p,z.z]);
 endfig;
 
+beginfig(805) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.p=origin;
+z.x=(.7,2)*u;
+z.y=(1.2,-1.6)*u;
+z.z=(-2.3,-.2)*u;
+
+p0=z.p{.5,1}..z.x;
+p1=z.p{.6,-1}..z.y;
+p2=z.p{-1,.1}..z.z;
+
+z.w=point .3 of p2;
+
+p3=z.x{.5,-1}..z.y;
+p4=z.y{-1,0}..z.z;
+p5=z.z{1,1}..z.x;
+
+p6=z.w{.3,1}..z.x;
+p7=z.w{.4,-1}..z.y;
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+draw p6;
+draw p7;
+
+dOt z.p,z.x,z.y,z.z,z.w;
+
+label.rt(btex $p$ etex, z.p);
+label.top(btex $x$ etex, z.x);
+label.bot(btex $y$ etex, z.y);
+label.lft(btex $z$ etex, z.z);
+label.llft(btex $w$ etex, z.w);
+endfig;
 end

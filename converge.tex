@@ -288,12 +288,13 @@ Set
 Then for any $\eps>0$,
 the function $\rho\:((\spc{X}\sqcup\spc{Y})\times (\spc{X}\sqcup\spc{Y}))$ defined below is a metric on the disjoint union $\spc{X}\sqcup\spc{Y}$.
 \begin{align*}
-\rho(x,x')&=\dist{x}{x'}{\spc{X}}&&\text{for any}\ \ x,x'\in \spc{X},
+\rho(x,x')&=\dist{x}{x'}{\spc{X}},
 \\
-\rho(y,y')&=\dist{y}{y'}{\spc{Y}}&&\text{for any}\ \ y,y'\in \spc{Y},
+\rho(y,y')&=\dist{y}{y'}{\spc{Y}},
 \\
-\rho(x,y)=\rho(y,x)&=\inf_i\{\dist{x}{x_n}{\spc{X}}+\eps+\eps_n+\dist{y_n}{y}{\spc{Y}}\}&&\text{for any}\ \ x\in\spc{X}\ \text{and}\ y\in \spc{Y}.
+\rho(x,y)=\rho(y,x)&=\inf_i\{\dist{x}{x_n}{\spc{X}}+\eps+\eps_n+\dist{y_n}{y}{\spc{Y}}\}.
 \end{align*}
+for $x,x'\in \spc{X}$ and $y,y'\in \spc{Y}$.
 
 
 In particular, both inculsions $\iota_{\spc{X}}\:\spc{X}\hookrightarrow(\spc{X}\sqcup\spc{Y},\rho)$ and $\iota_{\spc{Y}}\:\spc{Y}\hookrightarrow(\spc{X}\sqcup\spc{Y},\rho)$ are distance preserving.
