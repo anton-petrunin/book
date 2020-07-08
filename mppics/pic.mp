@@ -156,4 +156,146 @@ label.bot(btex $y$ etex, z.y);
 label.lft(btex $z$ etex, z.z);
 label.llft(btex $w$ etex, z.w);
 endfig;
+
+beginfig(810) 
+save u,p,k;
+path p[];
+u:=1.2cm;
+k:=1.3;
+
+z.p=origin;
+z.x=(-1,1.4)*u;
+z.y=(1.4,1.4)*u;
+
+draw z.p--k*z.x;
+draw z.p--k*z.y;
+
+p0=z.x{1,.7}..z.y;
+
+draw p0  pensemibold;
+hatchfill p0--z.p--cycle withcolor (30, 2mm, -.5bp);
+hatchfill p0--k*z.y{up}..tension 2..k*z.x--cycle withcolor (-60, 2mm, -.5bp);
+
+dOt z.p;
+
+whitelabel(btex subgraph etex, (.2,1.2)*u);
+whitelabel(btex supergraph etex, (.2,2.2)*u);
+whitelabel.ulft(btex $\tilde\gamma$ etex, point .15 of p0);
+label.bot(btex $\tilde p$ etex, z.p);
+endfig;
+
+beginfig(815) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.p=origin;
+z.x0=(2,1)*u;
+z.x5=(-1,2.5)*u;
+
+p0=z.x0{up}..z.x5;
+z.x1=point .2 of p0;
+z.x2=point .4 of p0;
+z.x3=point .6 of p0;
+z.x4=point .8 of p0;
+
+draw z.x0--z.x1--z.x2--z.x3--z.x4--z.x5;
+draw z.p--z.x0;
+draw z.p--z.x1;
+draw z.p--z.x2;
+draw z.p--z.x3;
+draw z.p--z.x4;
+draw z.p--z.x5;
+
+dOt z.p, z.x0, z.x1, z.x2, z.x3, z.x4, z.x5; 
+
+label.llft(btex $\tilde p$ etex, z.p);
+
+label.lrt(btex $\tilde x_0$ etex, z.x0);
+label.rt(btex $\tilde x_1$ etex, z.x1);
+label.top(btex $\dots$ etex rotated (angle(z.x3)-90), z.x3);
+label.lft(btex $\tilde x_n$ etex, z.x5);
+endfig;
+
+beginfig(820) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.x=(0,0)*u;
+z.p=(2,-3)*u;
+z.q=(2,4)*u;
+z.xx=.4[z.x,z.q];
+
+draw z.q--z.x--z.p--z.xx;
+
+dOt z.p,z.q,z.x,z.xx;
+
+whitelabelarcsprof(z.p, z.x, z.q, 12, 25, btex $\le \mangle\hinge x p q$ etex);
+labelarcsprof2(z.p, z.xx, z.q, 12, 26, btex $\ge \mangle\hinge{x'}p q$ etex);
+
+label.rt(btex $\tilde p$ etex, z.p);
+label.rt(btex $\tilde q$ etex, z.q);
+label.lft(btex $\tilde x$ etex, z.x);
+label.ulft(btex $\tilde x'$ etex, z.xx);
+endfig;
+
+beginfig(825) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(0,0)*u;
+z.q=(6,0)*u;
+z.x0=(-2,2)*u;
+z.x1=.25[z.x0,z.q];
+z.x2=.5[z.x0,z.q];
+z.x3=.5[z.x2,z.p];
+z.x4=.5[z.x3,z.q];
+z.x5=.5[z.x4,z.p];
+
+draw z.x0--z.p;
+draw z.x0--z.q;
+draw z.x1--z.p;
+draw z.x2--z.p;
+draw z.x3--z.q;
+draw z.x4--z.p;
+draw z.x5--z.q;
+
+dOt z.p,z.q,z.x0,z.x1,z.x2,z.x3,z.x4,z.x5;
+
+label.bot(btex $p$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+label.top(btex $x_0$ etex, z.x0);
+label.urt(btex $x_1$ etex, z.x1);
+label.urt(btex $x_2$ etex, z.x2);
+label.ulft(btex $x_3$ etex, z.x3);
+whitelabel.urt(btex $x_4$ etex, z.x4);
+label.bot(btex $x_5$ etex, z.x5);
+
+endfig;
+
+beginfig(830) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.q=origin;
+z.z=(-1,0)*u;
+z.x=(1,.4)*u;
+z.y=(1,-.5)*u;
+
+draw z.z--z.q;
+draw z.q{right}..z.x;
+draw z.q{right}..z.y;
+
+dOt z.q,z.x,z.y,z.z;
+
+label.bot(btex $q$ etex, z.q);
+label.top(btex $x_\eps$ etex, z.x);
+label.bot(btex $y_\eps$ etex, z.y);
+label.bot(btex $z_\eps$ etex, z.z);
+
+endfig;
+
 end
