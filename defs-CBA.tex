@@ -178,7 +178,7 @@ Let $z_n$ be the midpoint of a geodesic $[p^1_n p^2_n]$ and $z$ be the midpoint 
 
 It suffices to show that 
 \[\dist{z_n}{z}{}\to0
-\ \ \t{as}\ \ 
+\quad \t{as}\quad 
 n\to\infty.
 \eqlbl{eq:z_n->z}\]
 
@@ -355,7 +355,7 @@ We may suppose
 \[\angk{\kappa} {p^1}{p^2}{x^1}+\angk{\kappa} {p^1}{p^2}{x^2}
 \le
 \pi
-\ \ \t{and}\ \ 
+\quad \t{and}\quad 
 \angk{\kappa}{p^2}{p^1}{x^1}+\angk{\kappa} {p^2}{p^1}{x^2}
 \le 
 \pi,\] 
@@ -946,7 +946,7 @@ is nondecreasing.
 
 For a partition $0=t^0<t^1<\dots<t^n=T$
 , set 
-\[\tilde y^i=\tilde \gamma(t^i)\ \ \text{and}\ \ \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
+\[\tilde y^i=\tilde \gamma(t^i)\quad \text{and}\quad \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
 Since $\tilde \gamma$ is locally concave, 
 for a sufficiently fine partition the broken geodesic $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally convex  with respect to $\tilde p$. 
 Alexandrov's lemma (\ref{lem:alex}), applied inductively to pairs of triangles  $\modtrig\kappa \{\tau^{i-1},\dist{p}{\tilde y^0}{},\dist{p}{\tilde y^{i-1}}{}\}$ and  $\modtrig\kappa\{\dist{\tilde y^{i-1}}{\tilde y^i}{}, \dist{p}{\tilde y^{i-1}}{},\dist{p}{\tilde y^{i}}{}\}$, shows that the sequence  $\tilde \mangle\mc\kappa\{\dist{p}{\tilde y^{i}}{};\dist{p}{\tilde y^0}{},\tau^i\}$ is nondecreasing.
@@ -2103,7 +2103,7 @@ such that
 \dist{\tilde x^i}{\tilde x^{i-1}}{\Lob{2}{\kappa}}
 =
 \dist{x^i}{x^{i-1}}{\spc{U}}
-\ \ \t{and}\ \ 
+\quad \t{and}\quad 
 \mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}\ge\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}}
 \eqlbl{eq:arm}
 \]
@@ -2129,7 +2129,7 @@ $\tilde D$ is bounded by a convex polygon $\tilde P_R=[~y^0\tilde y^1\dots \tild
 \begin{align*}
 \dist{\tilde y^i}{\tilde y^{i\pm1}}{\Lob{2}{\kappa}}
 &=
-\dist{x^i}{x^{i\pm1}}{\spc{U}}, \ \ \ \ \dist{\tilde y^0}{\tilde y^{n+1}}{\Lob{2}{\kappa}}
+\dist{x^i}{x^{i\pm1}}{\spc{U}}, \qquad \dist{\tilde y^0}{\tilde y^{n+1}}{\Lob{2}{\kappa}}
 =
 \dist{x^0}{x^{n+1}}{\spc{U}},
 \\
@@ -2168,7 +2168,12 @@ Hence the claim.
 Suppose $F|_{\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k})}$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$ is distance-preserving.
 \end{clm}
 
-To verify this claim, set $\tilde p=[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$ and $p=[x^{k-1}x^{k+1}] \cap [x^{k}x^{n+1}]$.
+To verify this claim, set 
+\begin{align*}
+\tilde p&=[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}],
+\\
+p&=[x^{k-1}x^{k+1}] \cap [x^{k}x^{n+1}].
+\end{align*}
 
 The following maps are distance-preserving:
 \begin{enumerate}
@@ -2333,7 +2338,7 @@ for any $x\in\mathbb{S}^1$.
 Denote by $\alpha_x$ the joint of the paths $F\circ\geodpath_{[p\tilde \gamma_1(x)]_{\Lob2\kappa}}$ 
 and  $\geodpath_{[\gamma_1(x)\gamma_2(x)]}$ in $\spc{U}$.
 Note that $\alpha_x$ depends continuously on $x$ and
-$$\length\alpha_x<\tfrac{\varpi\kappa}{2}\ \ \text{and}\ \ \alpha_x(1)=\gamma_2(x)$$ 
+$$\length\alpha_x<\tfrac{\varpi\kappa}{2}\quad \text{and}\quad \alpha_x(1)=\gamma_2(x)$$ 
 for any $x$.
 
 Let us apply the lifting globalization theorem
@@ -2354,9 +2359,9 @@ The ``only if'' part follows from the Reshetnyak majorization theorem (\ref{thm:
 
 Let  $\gamma_t$, $t\in[0,1]$ 
 be a null-homotopy of curves in $\spc{U}$;
-that is, $\gamma_0(x)=p$ for some $p\in \spc{U}$
+that is, $\gamma_0(x)\z=p$ for some $p\in \spc{U}$
 and any $x\in\mathbb{S}^1$.
-Assume further that $\length \gamma_t<2\cdot\varpi\kappa$ for any $t$.
+Assume further that $\length \gamma_t\z<2\cdot\varpi\kappa$ for any $t$.
 To prove the ``only if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$. 
 
 By semicontinuity of length (\ref{thm:semicont-of-length}),
@@ -2377,7 +2382,8 @@ for any $i$,
 the geodesic $[\gamma_{t_i}(x)\gamma_{t_{i-1}}(x)]$ depends continuously on $x$.
 
 Note that $\gamma_0=\gamma_{t_0}$ is majorized by a convex region in $\Lob2\kappa$.
-Applying the lemma $n$ times, we see that the same holds for $\gamma_1=\gamma_{t_n}$.\qeds
+Applying the lemma $n$ times, we see that the same holds for $\gamma_1\z=\gamma_{t_n}$.
+\qeds
 
 \begin{thm}{Proposition}\label{prop:sc}
 Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space.

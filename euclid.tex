@@ -112,8 +112,8 @@ Let us define the \emph{model triangle}\index{model triangle} $\trig{\tilde p}{\
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
 \index{$\modtrig\kappa$!$\modtrig\kappa({*}{*}{*})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
 \[\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{},
-\ \ \dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
-\ \ \dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
+\quad \dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
+\quad \dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
 
 In the notation of Section~\ref{model}, 
 $\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}\}$.
@@ -389,7 +389,7 @@ The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emp
 The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
-\[[px]\sim[py]\ \ \iff\ \ \mangle\hinge pxy=0.\]
+\[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0.\]
 
 
 
@@ -442,7 +442,7 @@ In this case it defines a pseudometric on $\mathfrak{T}_p$.
 
 The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
 The elements of $\T'_p$ are formed by the equivalence classes for the relation 
-\[\alpha\sim\beta\ \ \iff\ \ \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
+\[\alpha\sim\beta\quad \iff\quad \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
 
 The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
@@ -458,7 +458,7 @@ We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
 briefly $\alpha^+(0)=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$,
 with corresponding geodesics $\gamma_n$, 
 such that $v_n\to v$ as $n\to\infty$, we have 
-\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\ \ \text{as}\ \ n\to\infty.\]
+\[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\quad \text{as}\quad n\to\infty.\]
 
 We define right and left derivatives $\alpha^+(t_0)$ and $\alpha^-(t_0)$
 of $\alpha$ at $t_0\in\II$ as 
@@ -492,7 +492,7 @@ Given $v\in \T_p$, construct a sequence $v_n\in\T'_p$
 such that $v_n\to v$, and let $\gamma_n$ be the sequence of corresponding geodesic.
 
 The needed map $\alpha$ can be found among the maps such that $\alpha(0)\z=p$ and
-\[\alpha(t)=\gamma_n(t)\ \ \text{if}\ \ \eps_{n+1}\le t<\eps_n,\]
+\[\alpha(t)=\gamma_n(t)\quad \text{if}\quad \eps_{n+1}\le t<\eps_n,\]
 where $(\eps_n)$
 is a decreasing sequence converging to $0$ as $n\to\infty$.
 In order to satify the condition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
@@ -580,7 +580,7 @@ It remains to show that $\phi$ is differential of $f$ at $p$.
 Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
 Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
 that is, if 
-\[v_n=\gamma^+_n(0)\ \ \t{and}\ \ a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+\[v_n=\gamma^+_n(0)\quad \t{and}\quad a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
 then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
 Then 
 \[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 

@@ -298,4 +298,71 @@ label.bot(btex $z_\eps$ etex, z.z);
 
 endfig;
 
+beginfig(835) 
+save u,p;
+path p[];
+u:=.7cm;
+
+z.p=origin;
+z.x=(1.4,3)*u;
+z.y=(2,-.3)*u;
+
+p1=z.p{1,3}..z.x;
+p2=z.p{1,-.5}..z.y;
+
+z.xxx=point .3 of p1;
+z.yyy=point .4 of p2;
+
+p0=z.xxx{1,-1}..z.yyy;
+
+draw p0;
+draw p1;
+draw p2;
+
+dOt z.p,z.x,z.y,z.xxx,z.yyy;
+
+label.bot(btex $p_n$ etex, z.p);
+label.top(btex $x_n$ etex, z.x);
+label.lrt(btex $y_n$ etex, z.y);
+label.ulft(btex $\bar x_n$ etex, z.xxx);
+label.bot(btex $\bar y_n$ etex, z.yyy);
+endfig;
+
+beginfig(840) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.o=origin;
+z.z=(-2,0)*u;
+z.p=1.3[z.z,z.o];
+z.r=z.z rotated 50;
+z.q=z.z rotated -60;
+z.qq=z.p+((z.q-z.p) zscaled (.5,-.15));
+z.rr=z.p+((z.r-z.p) zscaled (.5,.15));
+
+p0=arc(z.r,z.z,z.q);
+p1=arc(z.q,z.qq,z.p);
+p2=arc(z.p,z.rr,z.r);
+
+mark_rt_angle(z.p,z.z,z.z+z.p rotated 90);
+mark_rt_angle(z.p,z.z,z.z+z.p rotated -90);
+
+clip currentpicture to (p0--p1--p2--cycle);
+
+draw p0;
+draw p1;
+draw p2;
+draw z.z--z.p;
+
+dOt z.p,z.q,z.r,z.z;
+
+label.rt(btex $\tilde p$ etex, z.p);
+label.top(btex $\tilde q$ etex, z.q);
+label.bot(btex $\tilde r$ etex, z.r);
+label.lft(btex $\tilde z_0$ etex, z.z);
+
+endfig;
+
+
 end

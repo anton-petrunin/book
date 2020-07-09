@@ -57,7 +57,7 @@ if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
 there is a quadruple of points $q,y^1,y^2,y^3\in\Lob{2}\kappa$
 such that 
 \[\dist{p}{x^i}{}=\dist{q}{y^i}{} 
-\ \ \text{and}\ \ \dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}\] 
+\quad \text{and}\quad \dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}\] 
 for all $i$ and $j$.
 \end{thm} %%%???wrong???
 
@@ -266,7 +266,7 @@ By the triangle inequality,
 \dist{p}{r}{}-\dist{p}{q}{};\] 
 thus, as $n\to\infty$,
 \[\frac{\dist{z}{r_n}{}-\dist{z}{q}{}}{\dist{q}{r_n}{}},
-\ \ 
+\quad 
 \frac{\dist{z'}{r_n}{}-\dist{z'}{q}{}}{\dist{q}{r_n}{}}
 \to 1.\]
 Therefore $\angk\kappa q z{r_n},\ \angk\kappa q{z'}{r_n}\to\pi$. (Here we use that $t$ is small, otherwise if $\kappa>0$ the angles might be undefined.)
@@ -390,7 +390,7 @@ From above and (\ref{SHORT.2-sum}), it follows that
 Assume first that $\spc{L}$ is geodesic.
 Consider a point  $w\in \mathopen{]} p z \mathclose{[}$ close to $p$.
 From (\ref{SHORT.angle}), it follows that 
-\[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\ \ \text{and}\ \ \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
+\[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\quad \text{and}\quad \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
 Since $\mangle\hinge w x y\le \mangle\hinge w x p +\mangle\hinge w y{p}$ (see \ref{claim:angle-3angle-inq}), we get 
 \[\mangle\hinge w x z+ \mangle\hinge w y z +\mangle\hinge w x y
 \le
@@ -419,7 +419,7 @@ Show that $\spc{L}$ is a complete length $\Alex{}$ space if and only if $\spc{L}
 \begin{thm}{Exercise}\label{ex:cbb-geod-overlap}
 Assume $\spc{L}$ is a complete length $\Alex{}$ space, and $[px]$, $[py]$ be two geodesics  in the same geodesic direction $\xi\in \Sigma'_p$.
 Show that 
-\[[px]\subset [py]\ \ \text{or}\ \ [px]\supset [py].\]
+\[[px]\subset [py]\quad \text{or}\quad [px]\supset [py].\]
 
 \end{thm}
 
@@ -459,7 +459,7 @@ and $v,w\in \mathopen{]}xy\mathclose{[}$.
 Prove that  
 \[
 \angk\kappa xyp=\angk\kappa xvp
-\ \ \Leftrightarrow\ \ 
+\quad \Leftrightarrow\quad 
 \angk\kappa xyp=\angk\kappa xwp.
 \]
 
@@ -772,7 +772,7 @@ We can assume that $p\notin [x y]$; otherwise the statement is trivial.
 Set $T=\dist{x}{y}{}$ and $\gamma(t)=\geod_{[x y]}(t)$; note that $\gamma$ is a geodesic in $\oBall(p,\varpi\kappa)\backslash \{p\}$.
 Let $\tilde \gamma\:[0,T]\to\Lob2\kappa$ be the $\kappa$-development with base $\tilde p$ of $\gamma$ with respect to $p$.
 Take a partition $0=t_0<t_1<\dots<t_n=T$ and set 
-\[\tilde y_i=\tilde \gamma(t_i)\ \ \text{and}\ \ \tau_i=\dist{\tilde y_0}{\tilde y_1}{}+\dist{\tilde y_1}{\tilde y_2}{}+\dots+\dist{\tilde y_{i-1}}{\tilde y_i}{}.\] 
+\[\tilde y_i=\tilde \gamma(t_i)\quad \text{and}\quad \tau_i=\dist{\tilde y_0}{\tilde y_1}{}+\dist{\tilde y_1}{\tilde y_2}{}+\dots+\dist{\tilde y_{i-1}}{\tilde y_i}{}.\] 
 Since $\tilde \gamma$ is convex, for a fine partition we have that broken line $\tilde y_0\tilde y_1\dots\tilde y_n$ is also convex.
 Applying Alexandrov's lemma (\ref{lem:alex}) inductively to pairs of model triangles 
 \[\modtrig\kappa
@@ -1012,7 +1012,7 @@ In particular,
 
 \[\mangle\hinge x p{x'}
 \ge\angk\kappa x p{x'}
-\ \ \text{and}\ \ 
+\quad \text{and}\quad 
 \mangle\hinge {x'}p x
 \ge\angk\kappa {x'}p x.
 \eqlbl{eq:thm:=def-loc-threestar}\]
@@ -1023,7 +1023,7 @@ $\trig{\tilde x}{\tilde x'}{\tilde p}=\modtrig\kappa(x x' p)$.
 Take $\tilde  q$ on the extension of $[\tilde  x\tilde  x']$ beyond $x'$ such that $\dist{\tilde x}{\tilde q}{}=\dist{x}{q}{}$ (and therefore $\dist{\tilde x'}{\tilde q}{}=\dist{x'}{q}{}$).
 From \ref{eq:thm:=def-loc-threestar},
 \[\mangle\hinge x p q
-=\mangle\hinge  x p{x'}\ge\angk\kappa x p{x'}\ \ \Rightarrow\ \ 
+=\mangle\hinge  x p{x'}\ge\angk\kappa x p{x'}\quad \Rightarrow\quad 
 \side\kappa \hinge x q p\ge\dist{\tilde p}{\tilde q}{}.\]
 From the assumptions of the lemma, we have $\mangle\hinge{x'}p x+\mangle\hinge{x'}p q\le \pi$; 
 thus \ref{eq:thm:=def-loc-threestar} implies
@@ -1105,14 +1105,14 @@ for any $x\in \cBall[p^*,\tfrac{1}{\eps}\cdot r(p^*)]$.
 Assume the statement is wrong. 
 Then for any $x\in \oBall(p,\tfrac{1}{\eps^2}\cdot r(p))$ with $r(x)\le r(p)$, there is a point $x'\in \spc{X}$ such that 
 \[\dist{x}{x'}{}<\tfrac{1}\eps\cdot r(x)
-\ \ \text{and}\ \ 
+\quad \text{and}\quad 
 r(x')\le (1-\eps)\cdot r(x).\]
 Take $x_0=p$ and consider a sequence of points $(x_n)$ such that $x_{n+1}\z=x_n'$.
 Clearly 
 \[\dist{x_{n+1}}{x_n}{}
 \le
 \tfrac{r(p)}{\eps}\cdot(1-\eps)^n
-\ \ \hbox{and}\ \ 
+\quad \hbox{and}\quad 
 r(x_n)\le r(p)\cdot(1-\eps)^n.\] 
 In particular, $\dist{p}{x_n}{}<\tfrac{1}{\eps^2}\cdot r(p)$.
 Therefore $(x_n)$ converges in itself,
@@ -1146,8 +1146,8 @@ That makes it possible to apply the lemma on almost minimum (\ref{lem:alm-min}) 
 
 According to the short hinge lemma (\ref{lem:devel-glob}), it is sufficient  to show that 
 \[s_0=\inf_{p\in\spc{L}}\ComRad(p,\spc{L})
-\ge \varpi\kappa\ \ 
-\text{for any}\ \ 
+\ge \varpi\kappa\quad 
+\text{for any}\quad 
 p\in \spc{L}.
 \eqlbl{eq:thm:=def-loc-star-star}\]
 We argue by contradiction, assuming that  \ref{eq:thm:=def-loc-star-star} does not hold.
@@ -1254,8 +1254,8 @@ set
 We have to show that $t_{\max}=\min\{\dist{p}{x}{},\dist{p}{y}{}\}$.
 
 If that is not true, choose sufficiently small $\eps>0$ such that points
-\[x_\eps=\geod_{[p x]}(t_{\max}+\eps)\ \ 
-\text{and}\ \  
+\[x_\eps=\geod_{[p x]}(t_{\max}+\eps)\quad 
+\text{and}\quad  
   y_\eps=\geod_{[p y]}(t_{\max}+\eps)\] 
 are distinct.
 Set
@@ -1265,7 +1265,7 @@ Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
 Thus from $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
 
 \parit{(\ref{SHORT.angle=0}).} From hinge comparison \ref{angle} 
-\[\mangle\hinge p x y=0\ \ \Rightarrow\ \ \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
+\[\mangle\hinge p x y=0\quad \Rightarrow\quad \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
 and thus ${\geod_{[p x]}(t)}={\geod_{[p y]}(t)}$ for all small $t$. 
 Therefore we can apply (\ref{SHORT.nonsplit}).
 \qeds
@@ -1304,14 +1304,10 @@ From \ref{cor:monoton},
 =
 \sup\set{\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}}{\bar x_\o \in \mathopen{]}p_\o x_\o],\ \bar y_\o\in \mathopen{]}p_\o x_\o]}.\]
 
-\begin{wrapfigure}{r}{23mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/ang-semicont(1)}
-\lbl[rt]{2.5,3;$p_n$}
-\lbl[b]{14.5,29;$x_n$}
-\lbl[rb]{4.5,14.5;$\bar x_n$}
-\lbl[t]{9.5,1;$\bar y_n$}
-\lbl[t]{20,0;$y_n$}
-\end{lpic}
+\begin{wrapfigure}{r}{25 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-835}
 \end{wrapfigure}
 
 For fixed $\bar x_\o \in \mathopen{]}p_\o x_\o]$ 
@@ -1642,13 +1638,10 @@ after rescaling $\spc{L}$ is still $\Alex1$.
 
 Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider case when there is a geodesic $[q r]$. 
 
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/spher-trig(1)}
-\lbl[lt]{28,1;$\tilde p$}
-\lbl[rb]{7,24;$\tilde z_0$}
-\lbl[lb]{25.5,28;$\tilde q$}
-\lbl[rt]{0.5,9;$\tilde r$}
-\end{lpic}
+\begin{wrapfigure}{r}{35 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-840}
 \end{wrapfigure}
 
 First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} we have that the function
@@ -1698,8 +1691,8 @@ a contradiction.
 Let $\kappa>0$.
 Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$ 
 of the model angle function $\angk\kappa{{*}}{{*}}{{*}}$.
-Some authors define comparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$ but
-that leads to two different definition of model angles --- one is good for $\CAT{}$ spaces and the other for $\Alex{}$ spaces.
+This definition is good for $\Alex{}$ spaces, but for $\CAT{}$ spaces there is a similar definition.
+Some authors define comparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$.
 
 \begin{thm}{Definition of extended angle}
 Let $p,q,r$ be points in a metric space such that $p\not=q$, $p\not=r$. 
