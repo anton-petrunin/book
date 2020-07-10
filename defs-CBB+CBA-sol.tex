@@ -140,7 +140,8 @@ Observe and use that
 
 \parbf{Exercise~\ref{ex:cbb-area}.} Follows from the overlap lemma (\ref{lem:extend-overlap}).
 
-\parbf{Exercise~\ref{ex:cbb-wald}.} 
+
+
 
 \parbf{Exercise~\ref{ex:nongeod-cbb}.}
 Modify the induced length metric on the unit sphere in the Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space is $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
@@ -608,6 +609,42 @@ Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies t
 For spaces with more than 5 points the condition is unknown;
 for 6-point metric spaces, a conjecture is formulated in \cite{lebedeva-petrunin-zolotov}.
 
+\parbf{Exercise~\ref{ex:cbb-wald}.}
+Choose a quadruple of points $p,q,r,s$. 
+Suppose it can be isometrically embedded into some $\Lob2{\Kappa}$ for some $\Kappa\ge \kappa$.
+Then 
+\[\angk\Kappa p{q}{r}
++\angk\Kappa p{r}{s}
++\angk\Kappa p{a}{q}\le 2\cdot\pi.\]
+Applying monotonicity of the function $\kappa\mapsto\angk\kappa p{q}{r}$ (\ref{k-decrease}) we get that
+\[\angk\kappa p{q}{r}
++\angk\kappa p{r}{s}
++\angk\kappa p{s}{q}\le 2\cdot\pi.\]
+Since the quadruple $p,q,r,s$ is arbitrary, the if part follows.
+
+Now let us prove the only-if part.
+Denote by $\sigma$ the exact upper bound on values $\Kappa\ge \kappa$ such that all model triangles with the vertexes $p,q,r,s$ are defined.
+
+Recall that $\angk{\Kappa+} p{q}{r}$ denotes extended angle (\ref{def:extended-angle}).
+Observe that if 
+\[\angk{\Kappa+} p{q}{r}
++\angk{\Kappa+} p{r}{s}
++\angk{\Kappa+} p{s}{q}= 2\cdot\pi.\eqlbl{eq:Kappa3}\]
+for some $\sigma\ge \Kappa\ge \kappa$, then the quadruple admits a distance-preserving embedding into $\Lob2\Kappa$.
+
+Observe that the left hand side in \ref{eq:Kappa3} is continuous in $\Kappa$.
+Since $\spc{L}$ is $\Alex\kappa$, for $\Kappa=\kappa$ the left hands side cannot exceed $2\cdot \pi$.
+Therefore it remains smaller than $2\cdot\pi$ for all $\sigma\ge \Kappa\ge \kappa$;
+moreover the same holds for all permutations of the labels $p,q,r,s$.
+
+Note that we can assume perimeter of triple $q,r,s$ equals to $2\cdot\varpi{\sigma}$ and use it together with overlap lemma (\ref{lem:extend-overlap}) to arrive to a contradiction.
+
+According to our definition the real line is $\Alex\kappa$ for any $\kappa\in\RR$,
+but it does not satisfy the property for $\kappa>0$. 
+The condition $\kappa\le 0$ was used just once to ensure that the $\kappa$-model triangles with the vertexes $p,q,r,s$ are defined.
+One can assume instead that perimeters of all triangles in $\spc{L}$ are at most $2\cdot\varpi\kappa$.
+This condition holds for most all complete length $\Alex\kappa$ spaces of dimension at least 2.
+
 \parbf{Exercise~\ref{ex:sturm}.}
 Let $\tilde p,\tilde x_1,\dots,\tilde x_n$ be the array in $\EE^n$ provided by the (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 We may assume that $\tilde p$ is the origin of $\EE^n$.
@@ -799,9 +836,7 @@ If $\alpha$ is an $f$-gradient curve then
 \\
 &\ge f(x)-f\circ\alpha(t).
 \end{align*}
-
-???
-
+It remains to integrate the inequality and observe that $f\circ\alpha$ is nondecreasing function.
 
 \parbf{Exercise~\ref{ex:grad-flow-bry}.}
 
