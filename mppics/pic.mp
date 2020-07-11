@@ -672,4 +672,88 @@ label.rt(btex $z$ etex, z.z);
 label.lft(btex $p$ etex, z.p);
 endfig;
 
+beginfig(955) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z.x0=(7,0)*u;
+z.x1=(3,.7)*u;
+z.x2=(2,2)*u;
+z.x3=z.y3=(2.8,3.3)*u;
+
+draw z.x0--z.x1--z.x2--z.y3 pensemibold;
+
+p10=circle(z.p,z.y3);
+p1=circle(z.x1,abs(z.x2-z.x1)+abs(z.x3-z.x2));
+p0=circle(z.x0,abs(z.x1-z.x0)+abs(z.x2-z.x1)+abs(z.x3-z.x2));
+
+z.y2=cross(p10,p1);
+draw z.x1--z.y2;
+
+z.y1=cross(p10,p0);
+draw z.x0--z.y1;
+
+z.x1x2=z.x1+abs(z.x2-z.x1)*unitvector(z.y2-z.x1);
+z.x0x1=z.x0+abs(z.x1-z.x0)*unitvector(z.y1-z.x0);
+z.x0x2=z.x0+(abs(z.x1-z.x0)+abs(z.x2-z.x1))*unitvector(z.y1-z.x0);
+
+draw z.p--z.x0 dashed evenly;
+draw z.p--z.x1 dashed evenly;
+draw z.p--z.x2 dashed evenly;
+draw z.p--z.x3 dashed evenly;
+draw z.p--z.y3 dashed evenly;
+draw z.p--z.y2 dashed evenly;
+draw z.p--z.y1 dashed evenly;
+
+whiterimmark(z.x0--z.x1,z.x0--z.x0x1);
+whiterimmark2(z.x1--z.x2,z.x1--z.x1x2,z.x0x1--z.x0x2);
+whiterimmark3(z.x2--z.y3,z.x1x2--z.y2,z.x0x2--z.y1);
+whiterimmark10(z.p--z.y1,z.p--z.y2,z.p--z.y3);
+
+dOt z.p,z.x0,z.x1,z.x2,z.y1,z.y2,z.y3,z.x1x2,z.x0x1,z.x0x2;
+
+label.rt(btex $x^0$ etex, z.x0);
+label.bot(btex $x^1$ etex, z.x1);
+whitelabel.bot(btex $x^2$ etex, z.x2);
+label.urt(btex $x^3=y^3$ etex, z.y3);
+label.urt(btex $y^2$ etex, z.y2);
+label.urt(btex $y^1$ etex, z.y1);
+label.lft(btex $p$ etex, z.p);
+endfig;
+
+beginfig(960) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.x1=(0,0)*u;
+z.x2=(-.6,-1)*u;
+z.x3=(1,-1.4)*u;
+z.x4=(2.4,-.8)*u;
+z.x5=(2,0)*u;
+z.x6=(2.1,1.4)*u;
+
+p0=z.x5--z.x1--z.x2--z.x3--z.x4--cycle;
+p1=z.x5--z.x6--z.x1;
+
+hatchfill p0 withcolor (30, 2mm, -.5bp);
+hatchfill p1--cycle withcolor (120, 2mm, -.5bp);
+
+draw p0;
+draw p1;
+
+dOt z.x1,z.x2,z.x3,z.x4,z.x5,z.x6;
+
+whitelabel(btex $R_{n-1}$ etex, .5[.5[z.x1,z.x5],z.x3]);
+whitelabel(btex $R'$ etex, .3[.5[z.x1,z.x5],z.x6]);
+label.ulft(btex $\tilde x^1$ etex, z.x1);
+label.lft(btex $\tilde x^2$ etex, z.x2);
+label(btex $\dots$ etex rotated angle(z.x4-z.x3), 
+.5[z.x3,z.x4]+4*unitvector(z.x3-z.x4) rotated 90);
+label.rt(btex $\tilde x^{n-1}$ etex, z.x5);
+label.top(btex $\dot x^n$ etex, z.x6);
+endfig;
+
 end

@@ -1854,17 +1854,11 @@ $\beta_i$ has same length as $\beta$;
 that is, 
 \[\dist{x^{i-1}}{y_i}{}=\dist{x^{i-1}}{x^{i}}{}+\dist{x^{i}}{x^{i+1}}{}+\dots+\dist{x^{n-1}}{x^n}{}.\]
 
-\begin{center}
-\begin{lpic}[t(-0mm),b(2mm),r(0mm),l(0mm)]{pics/D-n(1)}
-\lbl[t]{4,0;$p$}
-\lbl[t]{100,0;$x^0=x$}
-\lbl[tw]{54,1;$x^1$}
-\lbl[t]{29.5,9;$x^2$}
-\lbl[rw]{25,20,45;$y_3$}
-\lbl[rw]{22.5,23,54;$y_2$}
-\lbl[rw]{20,25.5,60;$y_1$}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-955}
+\end{figure}
 
 Clearly $\beta_n=\beta$.
 Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the broken geodesics $\beta_{n-1}, \beta_{n-2},\dots,\beta_1$ is concave with respect to $p$.
@@ -1886,7 +1880,7 @@ In particular, $D$ majorizes triangle $\trig p x y$.
 Let $\gamma=\geod_{[x y]}$ and $T=\dist{x}{y}{}$. As in the proof of the development criterion (\ref{thm:concave-devel}), take a partition 
 \[0=t^0<t^1<\dots<t^n=T,\]
 and set $x^i=\gamma(t^i)$. 
-Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}=
+Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\z=
 \modtrig\kappa(p x^{i-1} {x^i})$, with $\tilde x^0=\tilde x$ and the direction of $[\tilde p\tilde x^i]$ turning counterclockwise as $i$ grows.  
 Let $D_n$ be the subgraph with respect to $\tilde p$ of the broken geodesic $\tilde x^0\dots \tilde x^n$.
 
@@ -1927,16 +1921,11 @@ By the development criterion (\ref{thm:concave-devel}),  $\tilde \gamma$ is conc
 By Lemma~\ref{lem:majorize-subgraph},  there is a short map $G\:\Conv\modtrig\kappa(p x y)\to D$.
 Further, by Lemma~\ref{lem:majorize-triangle},  $D$ majorizes $\trig p x y$ under a majorizing map $H\:D\to\spc{U}$. Clearly $H\circ G$ is a majorizing map for $\trig p x y$.
 
-\begin{wrapfigure}{r}{36mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(1mm)]{pics/RR(1)}
-\lbl[rb]{7,24;$\tilde x^1$}
-\lbl[r]{1,10;$\tilde x^2$}
-\lbl[lt]{26,8,41;$\dots$}
-\lbl[lb]{24.5,23;$\tilde x^{n-1}$}
-\lbl[b]{26,38.5;$\dot x^{n}$}
-\lbl{17,14;$R_{n-1}$}
-\lbl{18,27;$R'$}
-\end{lpic}
+\begin{wrapfigure}{r}{38 mm}
+\vskip-1mm
+\centering
+\includegraphics{mppics/pic-960}
+\vskip0mm
 \end{wrapfigure}
 
 Now we claim that any closed $n$-gon $[x^1x^2 \dots x^n ]$ of perimeter less than $2\cdot \varpi\kappa$ in a $\CAT{\kappa}$ space  is majorized by a convex polygonal region \[R_n=\Conv[\tilde x^1\tilde x^2\dots\tilde x^n]\]
