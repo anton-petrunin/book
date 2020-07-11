@@ -875,15 +875,6 @@ Therefore,
 \end{align*}
 \qedsf
 
-
-\begin{thm}{Exercise}\label{ex:d dist(grad)<0}
-Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
-be mutually distinct points in $\spc{L}$.
-Prove that 
-\[(\dd_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})
-+\cos\angk\kappa pab\le 0.\]
-\end{thm}
-
 \begin{thm}{Exercise}\label{ex:df(v)=<grad f,v>}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
 the function
@@ -1058,6 +1049,16 @@ $|u^*|\le |u|$.
 Milka's lemma %??? (\ref{lem:milka})
 provides a refinement of this statement;
 it states that in the finite-dimensional case, we can assume that $|u^*|= |u|$. 
+
+It is instructive to solve the following exercise before reading the proof.
+
+\begin{thm}{Exercise}\label{ex:d dist(grad)<0}
+Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
+be mutually distinct points in $\spc{L}$.
+Prove that 
+\[(\dd_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})
+\le\cos\angk\kappa pab.\]
+\end{thm}
 
 \parit{Proof of \ref{lem:minus-sum}.}
 Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.

@@ -446,16 +446,16 @@ and $\trig{\tilde x}{\tilde y}{\tilde z}$ its model triangle in $\Lob{2}{\kappa}
 Prove that the natural map $f\:\trig{\tilde x}{\tilde y}{\tilde z}\to \trig xyz$ 
  is distance-preserving if and ony if one of the following conditions hold:
 
-\begin{subthm}{}
+\begin{subthm}{ex:equality-for-thin:angle}
 $\mangle\hinge x y z= \angk\kappa x y z$,
 \end{subthm}
 
-\begin{subthm}{}
+\begin{subthm}{ex:equality-for-thin:vertex-base}
 $\dist{x}{w}{}=\dist{\tilde x}{\tilde w}{}$ for some  $\tilde w\in]\tilde y\tilde z[$ and
 $w= f(\tilde w)$,   
 \end{subthm}
 
-\begin{subthm}{} 
+\begin{subthm}{ex:equality-for-thin:side-side} 
 $\dist{v}{w}{}=\dist{\tilde v}{\tilde w}{}$ for some  
 $\tilde v\in \mathopen{]}\tilde x \tilde y\mathclose{[}$,  $\tilde w\in\mathopen{]}\tilde x \tilde z\mathclose{[}$
 and $v=f(\tilde v)$, $w=f(\tilde w)$.
@@ -1795,7 +1795,7 @@ but as one can see from the following example, the line-of-sight map is not majo
 \includegraphics{mppics/pic-950}
 \end{wrapfigure}
 
-\parbf{Example.} Let $\spc{Q}$ be a bounded region in $\EE^2$ formed by two congruent triangles, where the bounding quadrangle $[p x z y]$ is non-convex at $z$ (as in the picture).  
+\parbf{Example.} Let $\spc{Q}$ be a solid quadrilateral $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
 Equip $\spc{Q}$ with the length-metric. 
 Then $\spc{Q}$ is $\CAT0$
 by Reshetnyak gluing  (\ref{thm:gluing}). 
@@ -2033,11 +2033,11 @@ such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 }
 
 \begin{thm}{Exercise}\label{ex:bishop}
-Assume a closed curve $\alpha$ of length $<2\cdot \varpi\kappa$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is not a triangle.
+Assume a closed curve $\alpha$ in a  $\CAT0$ space is not a triangle.
 Show that exactly one of these statements holds:
 
 \begin{subthm}{}
-$\alpha$ is majorized by non-isometric convex regions in $\Lob2\kappa$;
+$\alpha$ is majorized by non-isometric convex regions in $\Lob20$;
 \end{subthm}
 
 \begin{subthm}{}
@@ -2123,7 +2123,7 @@ But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so
 Hence the claim.
 
 \begin{clm}{}\label{clm:arm-induction}
-Suppose $F|_{\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k})}$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$ is distance-preserving.
+Suppose $F|_{\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1,\dots,\tilde x^{k})}$ is distance-preserving for some $k$, $1\le k\le n-1$.   Then $F|_{\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1,\dots, \tilde x^{k+1})}$ is distance-preserving.
 \end{clm}
 
 To verify this claim, set 
