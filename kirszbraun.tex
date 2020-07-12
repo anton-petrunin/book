@@ -43,42 +43,24 @@ where $\mangle\tilde p^i$ denotes $\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\til
 for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
 \end{thm}
 
-\begin{wrapfigure}{r}{21mm}
-\begin{lpic}[t(-0mm),b(0mm),r(0mm),l(0mm)]{pics/contr-no-overlap(1)}
-\lbl[lt]{12,15.5;{\small $\tilde p^1$}}
-\lbl[bl]{5.5,18;{\small $\tilde p^2$}}
-\lbl[r]{5,6.5;{\small $\tilde p^3$}}
-\lbl[lb]{4,25;$\tilde x^1$}
-\lbl[t]{2,0;$\tilde x^2$}
-\lbl[l]{18,16;$\tilde x^3$}
-\end{lpic}
+{
+
+\begin{wrapfigure}{r}{28 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-1005}
+\vskip0mm
 \end{wrapfigure}
 
 \parbf{Remarks.}
 If $\kappa\le 0$, then overlap lemma can be proved without using condition (\ref{no-overlap:px=px}).
-This follows immediately from the formula that relates the sum of angles for the hexagon
-$[\tilde p^1\tilde x^2\tilde p^3\tilde x^1\tilde p^2\tilde x^3]$ and its area:
-\[ \mangle\tilde p^1
--
-\mangle\tilde x^2
-+
-\mangle\tilde p^3
--
-\mangle\tilde x^1
-+
-\mangle\tilde p^2
--
-\mangle\tilde x^3
-=2\cdot\pi-\kappa\cdot{\area}.
-\]
+This follows since the sum of external angles for the hexagon
+$[\tilde p^1\tilde x^2\tilde p^3\tilde x^1\tilde p^2\tilde x^3]$ and its area is $2\cdot\pi-\kappa\cdot a$, where $a$ denotes the area of the hexagon.
 
 The diagram shows that condition (\ref{no-overlap:px=px}) is essential
 in case $\kappa>0$.
 
-                            
-
-
-
+}
 
 \parit{Proof.}   Rotate the  triangle $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ around $\tilde x^1$ to make $[\tilde x^1\tilde p^3]$ coincide with $[\tilde x^1\tilde p^2]$.
 Let  $\dot x^2$ denote the image of $\tilde x^2$ after rotation. 
@@ -92,6 +74,12 @@ $$\mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}
 +
 \mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3})\,\}.
 $$
+\begin{figure}[h!]
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-1010}
+\vskip0mm
+\end{figure}
 By (\ref{no-overlap:orient-1}), 
 the triangles 
 $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ 
@@ -116,31 +104,6 @@ which in turn holds if and only if
 \eqlbl{eq:no-overlap}\]
 The  inequality follows since the  corresponding hinges have the same pairs of sidelengths.
 (The two pictures show that both possibilities for the minimum can occur.)
-
-\begin{center} 
-%\begin{wrapfigure}{l}{44mm} 
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/4-pnt-kirsz-x2(1)}
-\lbl[br]{13.5,7;{\small $\tilde p^3$}}
-\lbl[t]{17,12.5;{\small $\tilde p^1$}}
-\lbl[bl]{8,14;{\small $\tilde p^2$}}
-\lbl[t]{1,0;$\tilde x^1$}
-\lbl[t]{29,0;$\tilde x^2$}
-\lbl[b]{22.5,22;$\dot x^2$}
-\lbl[b]{10,36;$\tilde x^3$}
-%\end{lpic}
-%\begin{lpic}[t(5mm),b(0mm),r(0mm),l(0mm)]{pics/4-pnt-kirsz-sba(0.4)}
-\lbl[rt]{61,9;{\small $\tilde p^1$}}
-\lbl[l]{76,22;$\tilde p^2$}
-\lbl[l]{81,7;$\tilde p^3$}
-\lbl[t]{42,0;$\tilde x^1$}
-\lbl[t]{70,0;$\tilde x^2$}
-\lbl[lt]{68,13;$\dot x^2$}
-\lbl[b]{50,36;$\tilde x^3$}
-\end{lpic}       
-
-
-%\end{wrapfigure}
-\end{center}
 
 Now assume $\mangle\tilde p^1 + \mangle\tilde p^2+\mangle\tilde p^3 \le 2\cdot\pi$.
 Then  \ref{eq:no-overlap} implies 
@@ -369,30 +332,11 @@ Show that
 for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 \end{thm}
 
-\begin{wrapfigure}{r}{22 mm}
-\vskip-0mm
-\begin{tikzpicture}[scale=1,
-  thick,main node/.style={circle,draw,font=\sffamily\bfseries,minimum size=3mm}, ]
-
-    \node[main node] (0) at (0,0){};
-     \node[main node] (1) at (.6,-.8) {};
-     \node[main node] (2) at (.9,.3){};
-     \node[main node] (3) at (0,1) {};
-  \node[main node] (4) at (-.9,.3) {};
-  \node[main node] (5) at (-.6,-.8) {};
-
-  \path[every node/.style={font=\sffamily\small}]
-  (1) edge node[above]{}(2)
-  (2) edge node[above]{}(3)
-  (3) edge node[above]{}(4)
-  (4) edge node[above]{}(5)
-  (5) edge node[above]{}(1)
-  (1) edge[dashed] node[above]{}(3)
-  (2) edge[dashed] node[above]{}(4)
-  (3) edge[dashed] node[above]{}(5)
-  (4) edge[dashed] node[above]{}(1)
-  (5) edge[dashed] node[above]{}(2);
-\end{tikzpicture}
+\begin{wrapfigure}{r}{23 mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-1015}
+\vskip0mm
 \end{wrapfigure}
 
 The inequality in the above exercise is discovered by  Karl-Theodor Sturm \cite{sturm}.
@@ -882,17 +826,11 @@ for $w=t\cdot x$ and $t\to\infty$ we get
 \[\<f(x),s\>\ge \cos\mangle(p,x)\eqlbl{eq:<,>=<}\]
 for any $x\in Q$.
 
-\begin{wrapfigure}{r}{33mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/k_0(1)}
-\lbl{23,35;$\mathring{\spc{U}}=\Cone \spc{U}$}
-\lbl[br]{18,7;$\nwarrow$}
-\lbl[tl]{18,7;$\spc{U}$}
-\lbl[lt]{18,19;$z$}
-\lbl[lb]{16,27.5;$\bar s$}
-\lbl[b]{30,27.5;$\alpha$}
-\lbl[b]{7,27.5;$s$}
-\lbl[lt]{3,19;$\0$}
-\end{lpic}
+\begin{wrapfigure}{r}{60mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1020}
+\vskip0mm
 \end{wrapfigure}
 
 By comparison,
@@ -974,25 +912,14 @@ we have
 \[\dist{\tilde x}{\tilde z^1}{}+\dist{\tilde z^1}{\tilde z^2}{}+\dots+\dist{\tilde z^{n-1}}{\tilde z^n}{}+\dist{\tilde z^n}{\tilde y}{}
 \ge 
 \dist{x}{y}{}.\]
-\begin{center}
-\begin{lpic}[t(3mm),b(0mm),r(0mm),l(0mm)]{pics/chain(1)}
-\lbl[r]{0,13;$\tilde x$}
-\lbl[t]{10,3;$\tilde p^1$}
-\lbl[t]{23,2;$\tilde p^2$}
-\lbl[t]{34,1;$\dots$}
-\lbl[t]{48,2;$\tilde p^n$}
-\lbl[b]{10,29;$\tilde q^1$}
-\lbl[b]{29,33.5;$\tilde q^2$}
-\lbl[b]{44,31;$\dots$}
-\lbl[b]{58,32;$\tilde q^n$}
-\lbl[br]{10,18;$\tilde z^1$}
-\lbl[br]{25,15;$\tilde z^2$}
-\lbl[br]{38,15;$\tilde z^3$}
-\lbl[br]{52,15;$\tilde z^4$}
-\lbl[l]{66,16;$\tilde y$}
-\end{lpic}
-\end{center}
 \end{thm}
+
+\begin{figure}[h!]
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-1025}
+\vskip0mm
+\end{figure}
 
 \begin{thm}{Exercise}\label{ex:riemannian-kirszbraun-equality}
 Assume that a Riemannian manifold $\spc R$ satisfies the following condition:
@@ -1044,9 +971,11 @@ for any $x,y,z\in\spc{X}$.
 
 \begin{thm}{Open problem}\label{open:n-point-CBB}
 Find a necessary and sufficient condition for a finite metric space to be isometrically embeddable into 
+
 \begin{subthm}{}
 some length $\Alex{\kappa}$ space.
 \end{subthm}
+
 \begin{subthm}{}
 some length $\CAT{\kappa}$ space.
 \end{subthm}
@@ -1058,7 +987,7 @@ can be described by the matrix with components
 \[s^{ij}
 =
 \dist[2]{a^i}{a^j}{},\]
-which we will call the  \emph{decrypting matrix}\index{decrypting matrix}.
+which we will call the \emph{decrypting matrix}\index{decrypting matrix}.
 The set of decrypting matrices of all metrics that admit a distance preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
 form a convex cone. 
 The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ respectively).

@@ -756,4 +756,255 @@ label.rt(btex $\tilde x^{n-1}$ etex, z.x5);
 label.top(btex $\dot x^n$ etex, z.x6);
 endfig;
 
+beginfig(1005) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.x1=(0,0)*u;
+z.x2=(-.6,-2)*u;
+z.x3=(1.4,-.8)*u;
+
+z.p1=.4[z.x3,.2[z.x1,z.x2]];
+z.p2=.4[z.x1,.2[z.x2,z.x3]];
+z.p3=.4[z.x2,.2[z.x3,z.x1]];
+
+p1=z.x1{-1,-.5}..z.x2;
+p2=z.x2{1,0}..z.x3;
+p3=z.x3{-1,2}..z.x1;
+
+p4=z.x1..z.p2..z.p3;
+p5=z.x2..z.p3..z.p1;
+p6=z.x3..z.p1..z.p2;
+
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+draw p6;
+
+hatchfill 
+(subpath (1,2) of p4)--
+(subpath (1,2) of p5)--
+(subpath (1,2) of p6)--cycle 
+withcolor (30, 1mm, -.5bp);
+
+dOt z.x1,z.x2,z.x3,z.p1,z.p2,z.p3;
+
+label.top(btex $\tilde x^1$ etex, z.x1);
+label.bot(btex $\tilde x^2$ etex, z.x2);
+label.rt(btex $\tilde x^3$ etex, z.x3);
+label.bot(btex $\tilde p^1$ etex, z.p1+(2,0));
+label.lft(btex $\tilde p^2$ etex, z.p2);
+label.lft(btex $\tilde p^3$ etex, z.p3);
+endfig;
+
+beginfig(1010) 
+save u,p,q;
+path p[];
+path q[];
+u:=1cm;
+
+z.x1=origin;
+z.x2=(3,0)*u;
+z.x3=(.7,3)*u;
+
+z.shift=(5,0)*u;
+
+z.p3=z.x2 zscaled(.4,.1);
+z.pr3= .3*z.x3;
+
+p1= circle(z.x1,z.p3-z.x1);
+p2= circle(z.x2,z.p3-z.x2);
+p3= circle(z.x3,z.pr3-z.x3);
+
+z.p2=cross.rt(p1,p3);
+z.p1=cross.lft(p2,p3);
+
+z.px2=z.x2 rotated (angle(z.p2)-angle(z.p3));
+
+draw z.x1--z.x2--z.x3--cycle;
+draw z.x1--z.p3--z.x2--z.p1--z.x3--z.p2--cycle;
+draw z.p2--z.px2--z.x1;
+
+hatchfill 
+z.x1--z.p3--z.x2--cycle
+withcolor (30, 1mm, -.5bp);
+
+hatchfill z.x2--z.p1--z.x3--cycle 
+withcolor (110, 1mm, -.5bp);
+
+hatchfill z.x3--z.p2--z.x1--cycle
+withcolor (70, 1mm, -.5bp);
+
+whiterimmark(z.x1--z.p2,z.x1--z.p3);
+whiterimmark2(z.x2--z.p1,z.x2--z.p3,,z.px2--z.p2);
+whiterimmark3(z.x3--z.p2,z.x3--z.p1);
+
+z.q3=z.x2 zscaled(1.4,.15);
+z.qr3= .1*z.x3;
+
+q1= circle(z.x1,z.q3-z.x1);
+q2= circle(z.x2,z.q3-z.x2);
+q3= circle(z.x3,z.qr3-z.x3);
+
+z.q2=cross.rt(q1,q3);
+z.q1=cross.lft(q2,q3);
+
+z.qx2=z.x2 rotated (angle(z.q2)-angle(z.q3));
+
+draw (z.x1--z.x2--z.x3--cycle) shifted z.shift;
+draw (z.x1--z.q3--z.x2--z.q1--z.x3--z.q2--cycle) shifted z.shift;
+draw (z.q2--z.qx2--z.x1) shifted z.shift;
+
+hatchfill 
+(z.x1--z.q3--z.x2--cycle)  shifted z.shift
+withcolor (30, 1mm, -.5bp);
+
+hatchfill (z.x2--z.q1--z.x3--cycle)  shifted z.shift 
+withcolor (110, 1mm, -.5bp);
+
+hatchfill (z.x3--z.q2--z.x1--cycle)  shifted z.shift
+withcolor (70, 1mm, -.5bp);
+
+whiterimmark((z.x1--z.q2)  shifted z.shift,
+(z.x1--z.q3)  shifted z.shift);
+whiterimmark2((z.x2--z.q1)  shifted z.shift,
+(z.x2--z.q3)  shifted z.shift,
+(z.qx2--z.q2)  shifted z.shift);
+whiterimmark3((z.x3--z.q2)  shifted z.shift,
+(z.x3--z.q1)  shifted z.shift);
+
+dOt z.x1,z.x2,z.x3,z.p1,z.p2,z.p3,z.px2;
+
+dOt z.x1 + z.shift,z.x2+ z.shift,z.x3+ z.shift,z.q1+ z.shift,z.q2+ z.shift,z.q3+ z.shift,z.qx2+ z.shift;
+
+
+label.llft(btex $\tilde x^1$ etex, z.x1);
+label.lrt(btex $\tilde x^2$ etex, z.x2);
+label.top(btex $\tilde x^3$ etex, z.x3);
+whitelabel.llft(btex $\tilde p^1$ etex, z.p1);
+whitelabel.ulft(btex $\tilde p^2$ etex, z.p2);
+whitelabel.bot(btex $\tilde p^3$ etex, z.p3);
+label.urt(btex $\dot x^2$ etex, z.px2);
+
+label.llft(btex $\tilde x^1$ etex, z.x1+ z.shift);
+label.lrt(btex $\tilde x^2$ etex, z.x2+ z.shift);
+label.top(btex $\tilde x^3$ etex, z.x3+ z.shift);
+whitelabel.lft(btex $\tilde p^1$ etex, z.q1+ z.shift);
+label.rt(btex $\tilde p^2$ etex, z.q2+ z.shift);
+label.rt(btex $\tilde p^3$ etex, z.q3+ z.shift);
+label.lrt(btex $\dot x^2$ etex, z.qx2+ z.shift);
+endfig;
+
+beginfig(1015) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.o=origin;
+z0=(0,1)*u;
+z1=z0 rotated (1*360/5);
+z2=z0 rotated (2*360/5);
+z3=z0 rotated (3*360/5);
+z4=z0 rotated (4*360/5);
+
+draw z0--z1--z2--z3--z4--cycle;
+draw z0--z2--z4--z1--z3--cycle dashed evenly;
+
+dOt z.o,z0,z1,z2,z3,z4;
+endfig;
+
+beginfig(1020)
+u:=1.6cm;
+save p;path p[];
+
+z.o=origin;
+z.p=(0,1)*u;
+z.left=z.p rotated -45;
+z.leftend=2.4*z.left;
+z.right=z.p rotated 45;
+z.rightend=2.4*z.right;
+z.x=z.p rotated 95;
+z.hatx=altitude(z.o,z.x,z.right)+.2*z.p;
+z.phix=(z.hatx--z.p+z.hatx) intersectionpoint circle(z.o,z.p);
+
+
+p0=z.rightend--z.o--z.leftend{-1,1}..2*z.p..{-1,-1}cycle;
+
+z.xend=(.3*z.p+z.hatx--3*z.p+z.hatx) intersectionpoint p0;
+
+hatchfill p0  withcolor (20, 1mm, -.2bp);
+
+draw arc(z.left,z.p,z.right) penbold;
+draw z.rightend--z.o--z.leftend;
+draw z.hatx--z.xend;
+draw z.o--((z.p--3*z.p) intersectionpoint p0);
+
+dOt z.o,z.p,z.hatx,z.phix;
+
+label.llft(btex $\0$ etex, z.o);
+whitelabel.urt(btex $z$ etex, z.p);
+whitelabel.rt(btex $s$ etex, z.hatx);
+whitelabel.urt(btex $\bar s$ etex, z.phix+(0,3));
+whitelabel.lft(btex $\alpha$ etex, z.p+z.hatx);
+whitelabel(btex $\mathring{\spc{U}}=\Cone \spc{U}$ etex, (1.8*z.p) rotated -25);
+whitelabel.urt(btex $\spc{U}$ etex, z.p rotated -30);
+endfig;
+
+beginfig(1025) 
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.x=(0.1,0.1)*u;
+z.p1=(1,-1.1)*u;
+z.p2=(2.1,-1)*u;
+z.p3=(3.2,-1.1)*u;
+z.p4=(4,-.9)*u;
+z.y=(5,0)*u;
+z.q1=(1.2,.9)*u;
+z.q2=(2.1,1.1)*u;
+z.q3=(3.2,1)*u;
+z.q4=(4,.8)*u;
+
+z.z1=.4[z.p1,z.q1];
+z.z2=.4[z.p2,z.q2];
+z.z3=.4[z.p3,z.q3];
+z.z4=.4[z.p4,z.q4];
+
+draw z.x--z.z1--z.z2--z.z3--z.z4--z.y;
+draw z.p1--z.q1;
+draw z.p2--z.q2;
+draw z.p3--z.q3;
+draw z.p4--z.q4;
+
+draw z.x--z.p1--z.p2--z.p3--z.p4--z.y--z.q4--z.q3--z.q2--z.q1--cycle dashed evenly;
+draw z.p1--z.q2--z.p3--z.q4 dashed evenly;
+draw z.q1--z.p2--z.q3--z.p4 dashed evenly;
+
+dOt z.x,z.y,
+z.p1,z.p2,z.p3,z.p4,
+z.q1,z.q2,z.q3,z.q4,
+z.z1,z.z2,z.z3,z.z4;
+
+label.lft(btex $\tilde x$ etex, z.x);
+label.rt(btex $\tilde y$ etex, z.y);
+
+label.llft(btex $\tilde z^1$ etex, z.z1);
+label.ulft(btex $\tilde z^2$ etex, z.z2);
+label.ulft(btex $\tilde z^3$ etex, z.z3);
+label.ulft(btex $\tilde z^4$ etex, z.z4);
+
+label.bot(btex $\tilde p^1$ etex, z.p1);
+label.bot(btex $\tilde p^2$ etex, z.p2);
+label.bot(btex $\tilde p^3$ etex, z.p3);
+label.bot(btex $\tilde p^4$ etex, z.p4);
+
+label.top(btex $\tilde q^1$ etex, z.q1);
+label.top(btex $\tilde q^2$ etex, z.q2);
+label.top(btex $\tilde q^3$ etex, z.q3);
+label.top(btex $\tilde q^4$ etex, z.q4);
+endfig;
 end
