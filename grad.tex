@@ -142,7 +142,9 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then function $s\mapsto |\nabla_{\hat\alpha(s)}f|$
 is right-continuous; 
 that is, for any $s_0\in [0,s_{\max})$ we have
-\[|\nabla_{\hat\alpha(s_0)}f|=\lim_{s\to s_0+} |\nabla_{\hat\alpha(s)}f|.\]
+\[|\nabla_{\hat\alpha(s_0)}f|
+=
+\lim_{s\to s_0+} |\nabla_{\hat\alpha(s)}f|.\]
 
 \end{thm}
 
@@ -1150,33 +1152,21 @@ S=S(s)&=\dist{p}{\sigma(s)}{},
 \phi=\phi(r,s)&=\tangle\mc0\{\ell(r,s);r,s\}.
 \end{align*}
 
-\begin{center}
-\begin{lpic}[t(2mm),b(03mm),r(0mm),l(0mm)]{pics/rad-notation}
-\lbl[t]{5,1;$p$}
-\lbl[b]{5,29;$\rho(r)$}
-\lbl[r]{0,17;$\rho$}
-\lbl[l]{27,16;$\sigma(s)$}
-\lbl[rt]{20,6;$\sigma$}
-\lbl[br]{16,10;$S$}
-\lbl[l]{6,17;$R$}
-\lbl[t]{13,0;$\spc{L}$}
-\lbl[lb]{15,23;$\ell$}
-\lbl[lb]{53,23;$\ell$}
-\lbl[l]{43,17;$r$}
-\lbl[br]{54,10;$s$}
-\lbl[bl]{45,9;$\phi$}
-\lbl[t]{53,0;$\Lob2\kappa$}
-\end{lpic}
-\end{center}
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1505}
+\vskip0mm
+\end{figure}
 
 
 It will be sufficient to prove the following two inequalities:
-\[\frac{\partial^+\phi}{\partial r}(s_{\min},r)\le 0,\qquad
-\frac{\partial^+\phi}{\partial s}(s,r_{\min})\le 0\leqno(*)\mc0_\phi\]
+\[\tfrac{\partial^+}{\partial r}\phi(s_{\min},r)\le 0,\qquad
+\tfrac{\partial^+}{\partial s}\phi(s,r_{\min})\le 0\leqno(*)\mc0_\phi\]
 \[
-s\cdot\frac{\partial^+\phi}{\partial s}
+s\cdot\tfrac{\partial^+}{\partial s}\phi
 +
-r\cdot\frac{\partial^+\phi}{\partial r}\le 0.
+r\cdot\tfrac{\partial^+}{\partial r}\phi\le 0.
 \leqno(**)\mc0_\phi
 \]
 
@@ -1188,24 +1178,22 @@ by a join of coordinate line and a segment defined by $r/s=r_0/s_0$.
 According to $(*)\mc0_\phi$ and $(**)\mc0_\phi$, the value of $\phi$ does not increase while pair $(r,s)$ moving along this join.
 Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}$.
 
-\begin{figure}
+\begin{figure}[h!]
+\vskip-0mm
 \centering
-\begin{lpic}[t(-5mm),b(0mm),r(0mm),l(0mm)]{pics/r-s(1)}
-\lbl[lb]{22,3;$r_{\min}$}
-\lbl[br]{3,9,-90; $s_{\min}$}
-\lbl[l]{40,41; $(r_0,s_0)$}
-\end{lpic}
+\includegraphics{mppics/pic-1510}
+\vskip0mm
 \end{figure}
 
 It remains to show $(*)\mc0_\phi$ and $(**)\mc0_\phi$. 
 First let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an equivalent form:
 \[
 \begin{aligned}
-\frac{\partial^+}{\partial s}\ell(s,r_{\min})
+\tfrac{\partial^+}{\partial s}\ell(s,r_{\min})
 &\le 
 \cos\tangle\mc0\{r_{\min};s,\ell\},
 \\
-\frac{\partial^+}{\partial r}\ell(s_{\min},r)
+\tfrac{\partial^+}{\partial r}\ell(s_{\min},r)
 &\le 
 \cos\tangle\mc0\{s_{\min};r,\ell\},
 \end{aligned}
@@ -1213,9 +1201,9 @@ First let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an e
 \]
 
 \[
-s\cdot\frac{\partial^+\ell}{\partial s}
+s\cdot\tfrac{\partial^+}{\partial s}\ell
 +
-r\cdot\frac{\partial^+\ell}{\partial r}\le 
+r\cdot\tfrac{\partial^+}{\partial r}\ell\le 
  s\cdot\cos\tangle\mc0\{r;s,\ell\}
 +
 r\cdot\cos\tangle\mc0\{s;r,\ell\}=\ell.
@@ -1227,14 +1215,14 @@ Set
 Clearly $f$ is $1$-concave and
 \[\rho^+(r)=\tfrac{1}{r}\cdot\nabla_{\rho(r)} f\quad \text{and}\quad \sigma^+(s)=\tfrac{1}{s}\cdot\nabla_{\sigma(s)} f.\leqno(B)\mc0\]
 Thus from \ref{lem:grad-lip}, we have
-\[\frac{\partial^+\ell}{\partial r}
+\[\tfrac{\partial^+}{\partial r}\ell
 =
 -\tfrac{1}{r}\cdot\<\nabla_{\rho(r)} f,\dir{\rho(r)}{\sigma(s)}\>
 \le\frac{{\ell^2}+{R^2}-{S^2}}{2\cdot\ell\cdot r}.\leqno(C)\mc0\]
 Since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we get 
 \[
 \begin{aligned}
-\frac{\partial^+\ell}{\partial r}(r,s_{\min})
+\tfrac{\partial^+}{\partial r}\ell(r,s_{\min})
 &\le
 \frac{{\ell^2}+r^2-s_{\min}^2}{2\cdot\ell\cdot r}
 =\\
@@ -1245,10 +1233,10 @@ Since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we get
 \]
 which is the first inequality in $(*)\mc0_\ell$.
 By switching places of $\rho$ and $\sigma$ we obtain the second inequality in $(*)\mc0_\ell$.
-Further, summing together $(C)\mc0$ with its mirror-inequality for $\frac{\partial^+\ell}{\partial s}$, we get
-\[r\cdot\frac{\partial^+\ell}{\partial r}
+Further, summing together $(C)\mc0$ with its mirror-inequality for $\frac{\partial^+}{\partial s}\ell$, we get
+\[r\cdot\tfrac{\partial^+}{\partial r}\ell
 +
-s\cdot\frac{\partial^+\ell}{\partial s}
+s\cdot\tfrac{\partial^+}{\partial s}\ell
 \le 
 \frac{{\ell^2}+{R^2}-{S^2}}{2\cdot\ell }+\frac{{\ell^2}+{S^2}-{R^2}}{2\cdot\ell }
 = 
@@ -1259,24 +1247,24 @@ which is $(**)\mc0_\ell$.
 
 \parit{Proof of \ref{rad-mon} and \ref{rad-comp} in case $\kappa\not=0$.} Set as before
 \begin{align*}
-R=R(r)&=\dist{p}{\rho(r)}{},&\ell&=\ell(r,s)=\dist{\rho(r)}{\sigma(s)}{}
+R=R(r)&=\dist{p}{\rho(r)}{},&\ell&=\ell(r,s)=\dist{\rho(r)}{\sigma(s)}{},
 \\
 S=S(s)&=\dist{p}{\sigma(s)}{},&\phi&=\phi(r,s)=\tangle\mc\kappa\{\ell(r,s);r,s\}.
 \end{align*}
 The statement follows from the following three inequalities:
 \[
 \begin{aligned}
-&\frac{\partial^+\phi}{\partial r}(s_{\min},r)\le 0 
+&\tfrac{\partial^+}{\partial r}\phi(s_{\min},r)\le 0, 
 &
-&\frac{\partial^+\phi}{\partial s}(s,r_{\min})\le 0
+&\tfrac{\partial^+}{\partial s}\phi(s,r_{\min})\le 0,
 \end{aligned}
 \leqno(*)\mc\pm_\phi
 \]
 \[
-\sn\kappa s\cdot\cs\kappa S\cdot\frac{\partial^+\phi}{\partial s}
+\sn\kappa s\cdot\cs\kappa S\cdot\tfrac{\partial^+}{\partial s}\phi
 +
-\sn\kappa r\cdot\cs\kappa R\cdot\frac{\partial^+\phi}{\partial r}\le 0
-\leqno(**)\mc\pm_\phi
+\sn\kappa r\cdot\cs\kappa R\cdot\tfrac{\partial^+}{\partial r}\phi\le 0
+\leqno(**)\mc\pm_\phi.
 \]
 
 Once they are proved,
@@ -1296,11 +1284,11 @@ Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})$.
 As before we rewrite the inequalities $(*)\mc\pm_\phi$ and $(**)\mc\pm_\phi$ in terms of $\ell$:
 \[
 \begin{aligned}
-\frac{\partial^+\ell}{\partial s}(s,r_{\min})
+\tfrac{\partial^+}{\partial s}\ell(s,r_{\min})
 &\le 
 \cos\tangle\mc\kappa\{r_{\min};s,\ell\},
 \\
-\frac{\partial^+\ell}{\partial r}(s_{\min},r)
+\tfrac{\partial^+}{\partial r}\ell(s_{\min},r)
 &\le 
 \cos\tangle\mc\kappa\{s_{\min};r,\ell\},
 \end{aligned}
@@ -1309,9 +1297,9 @@ As before we rewrite the inequalities $(*)\mc\pm_\phi$ and $(**)\mc\pm_\phi$ in 
 
 \[
 \begin{aligned}
-\sn\kappa s&\cdot\cs\kappa S\cdot\frac{\partial^+\ell}{\partial s}
+\sn\kappa s&\cdot\cs\kappa S\cdot\tfrac{\partial^+}{\partial s}\ell
 +
-\sn\kappa r\cdot\cs\kappa R\cdot\frac{\partial^+\ell}{\partial r}\le 
+\sn\kappa r\cdot\cs\kappa R\cdot\tfrac{\partial^+}{\partial r}\ell\le 
 \\
 &\le\sn\kappa s\cdot\cs\kappa S\cdot\cos\tangle\mc\kappa\{r;s,\ell\}
 +
@@ -1333,7 +1321,7 @@ Clearly $f''+\kappa\cdot  f\le 0$ and
 \leqno(B)\mc\pm\]
 Thus from \ref{lem:grad-lip}, we have
 \[\begin{aligned}
-\frac{\partial^+\ell}{\partial r}
+\tfrac{\partial^+}{\partial r}\ell
 &=
 -\frac{1}{\tg\kappa r\cdot\cs\kappa R}
 \cdot
@@ -1360,7 +1348,7 @@ Note that for all $\kappa\not=0$,
 the function $x\mapsto\frac{1}{\kappa\cdot\cs\kappa x}$ is increasing.
 Thus, since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we get 
 \[\begin{aligned}
-\frac{\partial^+\ell}{\partial r}(r,s_{\min})
+\tfrac{\partial^+}{\partial r}\ell(r,s_{\min})
 &\le 
 \frac
 {\frac{\cs\kappa s_{\min}}{\cs\kappa r}-\cs\kappa\ell}
@@ -1376,11 +1364,11 @@ Thus, since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we get
   \end{aligned}\leqno(D)\mc\pm\]
 which is the first inequality in $(*)\mc\pm_\ell$ for $\kappa\not=0$.
 By switching places of $\rho$ and $\sigma$ we obtain the second inequality in $(*)\mc\pm_\ell$.
-Further, summing together $(C)\mc\pm$ with its mirror-inequality for $\frac{\partial^+\ell}{\partial s}$, we get
+Further, summing together $(C)\mc\pm$ with its mirror-inequality for $\tfrac{\partial^+}{\partial s}\ell$, we get
 \[\begin{aligned}
-\sn\kappa r\cdot\cs\kappa R\cdot\frac{\partial^+\ell}{\partial r}
+\sn\kappa r\cdot\cs\kappa R\cdot\tfrac{\partial^+}{\partial r}\ell
 &+
-\sn\kappa s\cdot\cs\kappa S\cdot\frac{\partial^+\ell}{\partial s}\le
+\sn\kappa s\cdot\cs\kappa S\cdot\tfrac{\partial^+}{\partial s}\ell\le
 \\
 &\le
 \frac
@@ -1620,7 +1608,7 @@ The defining  inequality \ref{def:tdflow} is closely related to the so called \e
 Let $f_t$ and $h_t$ be two families of $\lambda$-concave functions on a complete length space $\spc{Z}$ and $s\ge 0$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Assume $f_t$ and $h_t$ have common domain $\Omega\subset {\spc{Z}}\times \RR$ and $|f_t(x)-h_t(x)|\le s$ for any $(x,t)\in \Omega$.
-Assume $t\mapsto \alpha(t)$ and $t\mapsto \beta(t)$ are $f_t$- and $h_t$-gradient curves respectively defined on a common interval $t\in [a,b)$; set $\ell(t)\z=|\alpha(t)\z-\beta(t)|_{\spc{Z}}$.
+Assume $t\mapsto \alpha(t)$ and $t\mapsto \beta(t)$ are $f_t$- and $h_t$-gradient curves respectively defined on a common interval $t\in [a,b)$; set $\ell(t)\z=\dist{\alpha(t)}{\beta(t)}{\spc{Z}}$.
 If for all $t$ a minimizing geodesic $[\alpha(t)\,\beta(t)]$ lies in $\set{x\in {\spc{Z}}}{(x,t)\in \Omega}$, then
 \[\ell'(t)\le \lambda\cdot\ell(t)+2\cdot s/\ell(t),\]
 assuming that the left hand side is defined.
@@ -1654,13 +1642,13 @@ Adding these inequalities up and taking into account that $|f(x)-h(x)|<s$ for an
 
 Applying the triangle inequality and the definition of gradient curve at $p$, we get that
 \begin{align*}
-\ell(t+\eps)&=|\alpha(t+\eps)-\beta(t+\eps)|\le
+\ell(t+\eps)&=\dist{\alpha(t+\eps)}{\beta(t+\eps)}{}\le
 \\
-&\le |\alpha(t+\eps)-p|+|\beta(t+\eps)-p|\le 
+&\le \dist{\alpha(t+\eps)}{p}{}+\dist{\beta(t+\eps)}{p}{}\le 
 \\
-&\le |\alpha(t)-p|-\eps\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+
+&\le \dist{\alpha(t)}{p}{}-\eps\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+
 \\
-&\quad +|\beta(t+\eps)-p|-\eps\cdot \dd_{\beta(t)}h(\dir{\beta(t)}p)+o(\eps)=
+&\quad +\dist{\beta(t+\eps)}{p}{}-\eps\cdot \dd_{\beta(t)}h(\dir{\beta(t)}p)+o(\eps)=
 \\
 &=\ell(t)-\eps\cdot(\lambda\cdot \ell(t)+2\cdot s/\ell(t))+o(\eps)
 \end{align*}
@@ -1677,7 +1665,7 @@ Assume $f_t$ is a family of $\lambda$-concave functions for $t\in [a,b)$ and $\D
 
 Let $\alpha\:[a,b)\to B(z,r)$ be Lipschitz.
 Then $\alpha$ is an $f_t$-gradient curve if and only if 
-\[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f_t(p)-f_t\circ\alpha(t)}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\alpha(t)|\right]+o(\eps)\eqlbl{def:tdflow-plus}\]
+\[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f_t(p)-f_t\circ\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\alpha(t)}{}\right]+o(\eps)\eqlbl{def:tdflow-plus}\]
 for any $t\in [a,b)$ and $p\in B(z,r)\setminus \{\alpha (t)\}$.
 \end{thm}
 
@@ -1687,7 +1675,7 @@ Note that geodesics $[\alpha(t)p]$ lie in $\Dom f_t$ for any $t$.
 Since $f_t$ is $\lambda$-concave, we have 
 \[\dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)
 \ge
-\frac{f(p)-f\circ\alpha(t)}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\alpha(t)|.\]
+\frac{f(p)-f\circ\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\alpha(t)}{}.\]
 Hence the only-if part follows.
 
 Given a point $p\in \spc{Z}$ and $t$,
@@ -1695,9 +1683,9 @@ consider a point $\bar p\in [\alpha(t)p]$.
 Applying \ref{def:tdflow-plus} for $\bar p$ and the triangle inequality, we get
 \[\distfun{p}{}{}\circ\alpha(t+\eps)
 \le
-\distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f(\bar p)-f\circ\alpha(t)}{|\bar p-\alpha(t)|}-\tfrac\lambda2\cdot |\bar p-\alpha(t)|\right]+o(\eps).\]
+\distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f(\bar p)-f\circ\alpha(t)}{\dist{\bar p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{\bar p}{\alpha(t)}{}\right]+o(\eps).\]
 By taking $\bar p$ close to $\alpha(t)$,
-the value $\tfrac{f(\bar p)-f\circ\alpha(t)}{|\bar p-\alpha(t)|}-\tfrac\lambda2\cdot |\bar p-\alpha(t)|$ can be made arbitrary close to $\dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)$.
+the value $\tfrac{f(\bar p)-f\circ\alpha(t)}{\dist{\bar p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{\bar p}{\alpha(t)}{}$ can be made arbitrary close to $\dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)$.
 Therefore, given $\delta>0$, the following inequality
 \[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)+\eps\cdot\delta\]
 holds for all sufficiently small positive values $\eps$.
@@ -1734,14 +1722,14 @@ Then
 \distfun{p}{}{}\circ\hat\alpha(t)-
 \\
 &\quad
--\eps\cdot \left[\frac{\hat f_t(p)-\hat f_t\circ\hat\alpha(t)}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\hat\alpha(t)|\right]
+-\eps\cdot \left[\frac{\hat f_t(p)-\hat f_t\circ\hat\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\hat\alpha(t)}{}\right]
 +o(\eps)
 \\
 &\le 
 \distfun{p}{}{}\circ\hat\alpha(t)-
 \\
 &\quad
--\eps\cdot \left[\frac{f_t(p)-f_t\circ\hat\alpha(t)-2\cdot s}{|p-\alpha(t)|}-\tfrac\lambda2\cdot |p-\hat\alpha(t)|\right]
+-\eps\cdot \left[\frac{f_t(p)-f_t\circ\hat\alpha(t)-2\cdot s}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\hat\alpha(t)}{}\right]
 +o(\eps)
 \end{align*}
 where 

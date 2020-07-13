@@ -23,6 +23,26 @@ linecap:=butt;
 %filenametemplate "%j-%1c.svg";
 outputformat := "eps";
 
+beginfig(5) 
+save u,n;
+u:=1.4cm;
+n:=7;
+
+draw (0,0)*u--(1,0)*u--(1,1)*u--(0,1)*u;
+
+for i=2 step 1 until n:
+draw (1/i,0)*u--(1/i,1)*u penhair;
+endfor
+
+dOt (0,0)*u,(0,1)*u;
+
+label.lft(btex $\dots$ etex, (1/n,.5)*u);
+label.lft(btex $p$ etex, (0,0)*u);
+label.lft(btex $q$ etex, (0,1)*u);
+label.rt(btex $\spc{X}$ etex, (.5,.5)*u);
+
+endfig;
+
 beginfig(105) 
 save u,p;
 path p[];
@@ -1127,4 +1147,72 @@ label.bot(btex $q$ etex, z.q);
 
 endfig;
 
+beginfig(1505) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(0,0)*u;
+z.pp=(-.1,-.2)*u;
+z.r=(0,2)*u;
+z.s=(2,1)*u;
+z.shift=(4,0)*u;
+
+
+draw z.p--z.r--z.s--cycle;
+
+p0=z.p{-.7,1}..z.r;
+p1=z.p{1,0}..z.s;
+draw p0;
+draw p1;
+
+draw (z.pp--z.r--z.s--cycle) shifted z.shift;
+
+labelarcsprof(z.r+z.shift,z.pp+z.shift,z.s+z.shift, 17, 3, btex $\phi$ etex);
+
+dOt z.p,z.r,z.s,z.pp+z.shift,z.r+z.shift,z.s+z.shift;
+
+label(btex $\spc{L}$ etex, (x.s/2,-13));
+label(btex $\Lob2\kappa$ etex,  (x.s/2,-13)+z.shift);
+label.ulft(btex $S$ etex, .5[z.p,z.s]);
+label.ulft(btex $s$ etex, .5[z.pp,z.s]+z.shift);
+label.rt(btex $R$ etex, .5[z.p,z.r]);
+label.rt(btex $r$ etex, .5[z.pp,z.r]+z.shift);
+label.urt(btex $\ell$ etex, .5[z.r,z.s]);
+label.urt(btex $\ell$ etex, .5[z.r,z.s]+z.shift);
+label.lft(btex $\rho$ etex, point .5 of p0);
+label.lrt(btex $\sigma$ etex, point .5 of p1);
+label.top(btex $\rho(r)$ etex, z.r);
+label.rt(btex $\sigma(s)$ etex, z.s);
+endfig;
+
+beginfig(1510) 
+save u,p,s;
+path p[];
+u:=1cm;
+s:=5*u;
+
+z0=(.5*s,.2*s);
+z2=(.7*s,.9*s);
+z1=whatever*z2;
+x1=x0;
+
+
+
+hatchfill z0--(x0,s)--(s,s)--(s,y0)--cycle withcolor (20, 1mm, -.2bp);
+draw (0,y0)--(s,y0) dashed evenly;
+draw (x0,0)--(x0,s) dashed evenly;
+draw (0,0)--z1 dashed evenly;
+drawdblarrow (s,0)--(0,0)--(0,s) pensemibold;
+drawarrow z0--z1 penbold;
+drawarrow z1--z2 penbold;
+
+dOt z0,z1,z2,(x0,0),(0,y0);
+
+label.rt(btex $r$ etex, (s,0));
+label.top(btex $s$ etex, (0,s));
+label.bot(btex $r_{\min}$ etex, (x0,0));
+label.lft(btex $s_{\min}$ etex, (0,y0));
+whitelabel.rt(btex $(r_0,s_0)$ etex, z2);
+endfig;
 end

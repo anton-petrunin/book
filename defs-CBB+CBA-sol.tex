@@ -67,13 +67,10 @@ The following example is taken from~\cite{bridson-haefliger}.
 
 \medskip
 
-\begin{wrapfigure}{r}{25mm}
-\begin{lpic}[t(-0mm),b(-1mm),r(0mm),l(2mm)]{pics/square(1)}
-\lbl[r]{3,11;{$\dots$}}
-\lbl[r]{-.5,1;{$p$}}
-\lbl[r]{-.5,21;{$q$}}
-\lbl[l]{12,11;{$\spc{X}$}}
-\end{lpic}
+\begin{wrapfigure}{r}{20 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-5}
 \end{wrapfigure}
 
 Consider the following subset of $\R^2$ equipped with the induced length metric
@@ -431,7 +428,7 @@ in particular,
 \]
 Hence 
 \[\cos r'\ge \cos r;\]
-that is, the restriction $\map[2]|\oBall(K,\tfrac\pi2)$ is short.
+that is, the restriction $\map[2]|_{\oBall(K,\tfrac\pi2)}$ is short.
 Clearly $\map[2]$ is continuous. 
 Since the complement of $\oBall(K,\tfrac\pi2)$ is mapped to $p$,
 we get that $\map[2]$ is short; that is,
@@ -673,7 +670,7 @@ Let $\tilde p,\tilde x_1,\dots,\tilde x_n$ be the array in $\EE^n$ provided by t
 We may assume that $\tilde p$ is the origin of $\EE^n$.
 
 Consider an $n{\times}n$-matrix $\tilde M$ with the components 
-\[\tilde m_{i,j}=\tfrac12\cdot(|\tilde x_i-\tilde p|^2+|\tilde x_j-\tilde p|^2-|\tilde x_i-\tilde x_j|^2).\]
+\[\tilde m_{i,j}=\tfrac12\cdot(\dist[2]{\tilde x_i}{\tilde p}{}+\dist[2]{\tilde x_j}{\tilde p}{}-\dist[2]{\tilde x_i}{\tilde x_j}{}).\]
 Note that $\tilde m_{i,j}=\langle\tilde x_i,\tilde x_j\rangle$.
 Therefore $\tilde M=A\cdot A^\top$ for an $n{\times}n$-matrix $A$ that defines a linear transformation sending the standard basis to the array $\tilde x_1,\dots,\tilde x_n$.
 Therefore

@@ -326,7 +326,7 @@ thus
 \begin{thm}{Exercise}\label{ex:sturm}
 Let $p,x_1,\dots,x_n$ be a point array in a $\Alex0$ space.
 Consider the $n{\times}n$-matrix $M$ with the components 
-\[m_{i,j}=\tfrac12\cdot(|x_i-p|^2+|x_j-p|^2-|x_i-x_j|^2).\]
+\[m_{i,j}=\tfrac12\cdot(\dist[2]{x_i}{p}{}+\dist[2]{x_j}{p}{}-\dist[2]{x_i}{x_j}{}).\]
 Show that
 \[\bm{s}\cdot M\cdot \bm{s}^\top\ge 0\eqlbl{eq:sMs}\]
 for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
