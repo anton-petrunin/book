@@ -473,22 +473,22 @@ We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
 Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\dd_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
  and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
 
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(0mm),b(-0mm),r(0mm),l(0mm)]{pics/puvvw(1)}
-\lbl[t]{3,-0.5;$\tilde p$}
-\lbl[b]{10,14;$\tilde u$}
-\lbl[t]{15,-0.5;$\tilde v$}
-\lbl[t]{28,0;$\tilde v'$}
-\lbl[lb]{14,7;$\tilde w$}
-\lbl{6,3.3;$\alpha$}
-\end{lpic}
+{
+\begin{wrapfigure}{r}{33 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-1205}
+\vskip0mm
 \end{wrapfigure}
 
 Prepare a model configuration of five points: $\tilde p,\tilde u,\tilde v,\tilde v',\tilde w\in\EE^2$ such that
 \begin{itemize}
 \item $\mangle\hinge{\tilde p}{\tilde u}{\tilde v}=\alpha$, 
 \item $\dist{\tilde p}{\tilde u}{}=|u|$, 
-\item $\dist{\tilde p}{\tilde v}{}=|v|$, 
+\item $\dist{\tilde p}{\tilde v}{}=|v|$,
+\end{itemize}
+}
+\begin{itemize}
 \item $\tilde v'$ lies on the extension of $[\tilde p\tilde v]$ so that $\tilde v$ is midpoint of $[\tilde p\tilde v']$, 
 \item $\tilde w$ is the midpoint for $\tilde u$ and ${\tilde v}$.
 \end{itemize}
@@ -690,7 +690,7 @@ then
 \begin{subthm}{conv-to-grad} 
 If $v_n\in \T_p$ be a sequence of vectors such that 
 \[\limsup_{n\to\infty} |v_n|\le 1\quad  
-\t{and}\quad  \liminf_{n\to\infty}(\dd_p f)(v_n)\ge |\nabla_p f|\] 
+\text{and}\quad  \liminf_{n\to\infty}(\dd_p f)(v_n)\ge |\nabla_p f|\] 
 then 
 \[\lim_{n\to\infty} v_n=\overline{\xi}.\]
 \end{subthm}
@@ -736,15 +736,11 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\nabla_x f$ for any $x\in\Dom f$.
 \end{thm}
 
-
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(0mm),b(0mm),r(0mm),l(0mm)]{pics/grad-lip(1)}
-\lbl[t]{1,0;$p$}
-\lbl[t]{29,0;$q$}
-\lbl[b]{13,4;$\dir pq$}
-\lbl[t]{15,0;$\ell$}
-\lbl[br]{6,12;$\nabla_p f$}
-\end{lpic}
+\begin{wrapfigure}{r}{33 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-1210}
+\vskip0mm
 \end{wrapfigure}
 
 The following inequalities describe an important property of the ``gradient
@@ -1110,7 +1106,7 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,
 We say that vectors $u$ and $v$ are \emph{opposite}\index{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
 
 The subcone
-\[\Lin_p=\set{v\in\T_p}{\exists\ w\in\T_p\quad \t{such that}\quad w+v=0}\]
+\[\Lin_p=\set{v\in\T_p}{\exists\ w\in\T_p\quad \text{such that}\quad w+v=0}\]
 will be called the \emph{linear subcone}\index{linear subspace} of $\T_p$.
 \end{thm}
 

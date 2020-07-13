@@ -412,8 +412,8 @@ and whose metric is given by the cosine rule
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 
-The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{0\}\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $0$ or $0_{\spc{Y}}$.
-The distance $\dist{0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
+The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $\0$ or $\0_{\spc{Y}}$.
+The distance $\dist{\0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
 
 
 The \index{scalar product}\emph{scalar product} $\<v,w\>$
@@ -448,6 +448,7 @@ The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
 The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
 despite that $\T_p$ is only a cone --- not a vector space.
 The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
+The \emph{tip of the tangent cone} $\T_p$ will be denoted by $\0$ or $\0_{p}$.
 
 \section{Velocity of curves}
 
@@ -580,7 +581,7 @@ It remains to show that $\phi$ is differential of $f$ at $p$.
 Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
 Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
 that is, if 
-\[v_n=\gamma^+_n(0)\quad \t{and}\quad a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+\[v_n=\gamma^+_n(0)\quad \text{and}\quad a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
 then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
 Then 
 \[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 

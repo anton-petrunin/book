@@ -406,20 +406,10 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, then
 
 \end{thm}
 
-\begin{wrapfigure}{r}{45mm}
-\begin{lpic}[t(-8mm),b(0mm),r(0mm),l(0mm)]{pics/two-balls(1)}
-\lbl[r]{9,11;$\bar p$}
-\lbl[r]{33,11;$p$}
-\lbl[r]{10,5;$\bar R$}
-\lbl[l]{35,5;$R$}
-\lbl[l]{37,17;$x^i$}
-\lbl[b]{16,13.5;$\bar x^i$}
-\end{lpic}
-\end{wrapfigure}
 
 \parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
 
-Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,x^2,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
+Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
 that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Without loss of generality we can assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
@@ -428,6 +418,13 @@ For each $i$, take $\bar x^i\in[\bar p x^i]$ so that
 $\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
 From \ref{cor:monoton:2-sides},
 \[\angkk\kappa {\bar p}{\bar x^i}{\bar x^j}{}\ge\angk\kappa {\bar p}{x^i}{x^j}.\]
+\begin{figure}[h!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1405}
+\vskip0mm
+\end{figure}
+
 Applying cosine rule, we get a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
 \[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
 for all $i\not=j$.
@@ -465,8 +462,8 @@ Clearly
 \[|v^i|=\dist{q}{x^i}{}<r\] 
 and from hinge comparison (\ref{angle})
 we have 
-\[\side\kappa \hinge o{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps.\]
-Note that the ball $\oBall(\0,r)_{\Lin_q}$ equipped with the metric $\rho(v,w)\z=\side\kappa \hinge o{v}{w}$ is isometric to 
+\[\side\kappa \hinge \0{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps.\]
+Note that the ball $\oBall(\0,r)_{\Lin_q}$ equipped with the metric $\rho(v,w)\z=\side\kappa \hinge \0{v}{w}$ is isometric to 
 $\cBall[r]_{\Lob{\kay}{\kappa}}$.
 Thus,
 \[
@@ -545,9 +542,7 @@ Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
 \end{align*}
 for all sufficiently small $\eps>0$.
 Applying \ref{E-comeagre}, we get that
-\begin{center}
-$\Euk^m=\set{p\in \spc{L}}{\text{there is an isometric cone embedding}\ \iota:\EE^m\hookrightarrow \T_p}$
-\end{center} 
+$\Euk^m$
 contains a G-delta set that is dense in a neighborhood of any point $q'\in\spc{L}$.
 
 \parit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim}).} 
@@ -763,14 +758,12 @@ then $\oBall(p,\eps)\subset\mathopen{]}x y\mathclose{[}$.
 In particular
 $\oBall(p,\eps)\iso(-\eps,\eps)$.
 \end{clm}
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-3mm),b(-3mm),r(0mm),l(0mm)]{pics/dim=1(1)}
-\lbl[t]{2,.5;$x$}
-\lbl[t]{9,.5;$p$}
-\lbl[t]{14,.5;$q$}
-\lbl[t]{27,.5;$y$}
-\lbl[b]{14,9;$z$}
-\end{lpic}
+
+\begin{wrapfigure}{r}{33 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-1410}
+\vskip0mm
 \end{wrapfigure}
 
 Assume the contrary;
@@ -784,21 +777,18 @@ Thus, according to Proposition~\ref{E=T},
 $\LinDim\spc{L}>1$, a contradiction.
 
 Now assume there is no geodesic passing thru $p$. 
-Since $\LinDim\spc{L}=1$ there is a point $x\not=p$.
+Since $\LinDim\spc{L}\z=1$ there is a point $x\not=p$.
 
 Fix a positive value $\eps<\dist{p}{x}{}$.
 Let us show that 
 
 {
 
-\begin{wrapfigure}{r}{30mm}
-\begin{lpic}[t(-0mm),b(-3mm),r(0mm),l(0mm)]{pics/dim=1(1)}
-\lbl[t]{2,.5;$p$}
-\lbl[t]{9,.5;$w$}
-\lbl[t]{14,.5;$q$}
-\lbl[t]{27,.5;$y$}
-\lbl[b]{14,9;$z$}
-\end{lpic}
+\begin{wrapfigure}{r}{33 mm}
+\vskip0mm
+\centering
+\includegraphics{mppics/pic-1415}
+\vskip0mm
 \end{wrapfigure}
 
 \begin{clm}{}\label{clm:1-dim-end}
@@ -819,7 +809,7 @@ $\LinDim\spc{L}>1$, a contradiction.
 
 }
 
-Clearly $\t{\ref{clm:1-dim-mid}}+\t{\ref{clm:1-dim-end}}\Rightarrow\t{\ref{clm:1-dim-all}}$;
+Clearly $\text{\ref{clm:1-dim-mid}}+\text{\ref{clm:1-dim-end}}\Rightarrow\text{\ref{clm:1-dim-all}}$;
 hence the result.
 \qeds
 

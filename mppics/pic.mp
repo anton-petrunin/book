@@ -1007,4 +1007,124 @@ label.top(btex $\tilde q^2$ etex, z.q2);
 label.top(btex $\tilde q^3$ etex, z.q3);
 label.top(btex $\tilde q^4$ etex, z.q4);
 endfig;
+
+beginfig(1205) 
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.p=origin;
+z.v=(1,0)*u;
+z.vv=2.2*z.v;
+z.u=(.6,1.1)*u;
+z.w=.4[z.v,z.u];
+
+labelarcsprof(z.u,z.p,z.v, 17, 2, btex $\alpha$ etex);
+
+draw z.vv--z.p--z.u--z.v;
+
+dOt z.vv,z.p,z.u,z.v,z.w;
+
+label.bot(btex $\tilde p$ etex, z.p);
+label.top(btex $\tilde u$ etex, z.u);
+label.bot(btex $\tilde v$ etex, z.v);
+label.bot(btex $\tilde v'$ etex, z.vv);
+label.urt(btex $\tilde w$ etex, z.w);
+endfig;
+
+beginfig(1210) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(0,0)*u;
+z.q=(2.5,0)*u;
+z.u=(1,0)*u;
+z.g=z.u rotated 70;
+
+draw z.p--z.q dashed evenly;
+drawarrow z.p--z.u pensemibold;
+drawarrow z.p--z.g pensemibold;
+
+
+dOt z.p,z.q;
+label.bot(btex $p$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+label.bot(btex $\ell$ etex, .5[z.p,z.q]);
+label.top(btex $\dir pq$ etex, z.u);
+label.ulft(btex $\nabla_p f$ etex, z.g);
+endfig;
+
+beginfig(1405) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.pp=origin;
+z.p=(7,0)*u;
+z.RR=(0,-1.4)*u;
+z.R=(0,-1.2)*u;
+z.x=(.2,1)*u;
+z.xx=.15[z.pp,z.p+z.x];
+
+draw circle(z.p,z.R) dashed evenly;
+draw circle(z.pp,z.RR) dashed evenly;
+draw z.pp--z.p+z.x;
+
+dOt z.pp,z.p,z.p+z.x,z.xx;
+
+label.bot(btex $p$ etex, z.p);
+label.bot(btex $\bar p$ etex, z.pp);
+label.bot(btex $x^i$ etex, z.p+z.x);
+label.bot(btex $\bar x^i$ etex, z.xx);
+endfig;
+
+beginfig(1410) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.x=(0,0)*u;
+z.p=(1,0)*u;
+z.q=(2,0)*u;
+z.y=(3,0)*u;
+z.z=(2,1)*u;
+
+draw z.x--z.y;
+draw z.q--z.z;
+
+dOt z.x,z.y,z.z,z.p,z.q;
+
+label.bot(btex $x$ etex, z.x);
+label.bot(btex $y$ etex, z.y);
+label.top(btex $z$ etex, z.z);
+label.bot(btex $p$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+
+endfig;
+
+beginfig(1415) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.x=(0,0)*u;
+z.p=(1,0)*u;
+z.q=(2,0)*u;
+z.y=(3,0)*u;
+z.z=(2,1)*u;
+
+draw z.x--z.y;
+draw z.q--z.z;
+
+dOt z.x,z.y,z.z,z.p,z.q;
+
+label.bot(btex $p$ etex, z.x);
+label.bot(btex $y$ etex, z.y);
+label.top(btex $z$ etex, z.z);
+label.bot(btex $w$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+
+endfig;
+
 end
