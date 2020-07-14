@@ -1011,19 +1011,18 @@ The proof of Patchwork globalization uses the following construction:
 \begin{thm}{Definition (Line-of-sight map)} \label{def:sight}
 %Let $\spc{U}$ be a metric space in which pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs. 
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
-Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.  If   $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic from $p$ to $\bar\alpha(t)$, we say 
-\[[
-0,1]\times[0,1]\to\spc{U}\:(t,s)\mapsto\gamma_t(s)%\eqlbl{eq:line-of-sight}
-\]
-is a \emph{line-of-sight map from $p$ to $\alpha$}.   %??? map from p to alpha is confusing maybe w.r.t???
+Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.
+If $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say that the map $[0,1]\times[0,1]\to\spc{U}$ defined by
+\[(t,s)\mapsto\gamma_t(s)\]
+is a \emph{line-of-sight map for $\alpha$ with respect to $p$}.
 \end{thm}
 
-\parit{Proof of \ref{thm:alex-patch}.} As was already noted, it only remains to prove (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}). %???
+\parit{Proof of \ref{thm:alex-patch}.} It only remains to prove (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}).
 
 Let $[p x y]$ be a triangle of perimeter $<2\cdot\varpi\kappa$  in $\spc{U}$. 
 According to propositions \ref{prop:k-thin} and \ref{prop:inherit-bound}, it is sufficient to show the triangle $\trig p x y$ is $\kappa$-thin.
 
-Since pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs, there is a unique and continuous line-of-sight map (\ref{def:sight}) for  $[x y]$ from $p$.    
+Since pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs, there is a unique and continuous line-of-sight map (\ref{def:sight}) for  $[x y]$ with respect to~$p$.    
 
 For a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
 set $x^{i,j}=\gamma_{t^i}(t^j)$. 
@@ -1180,33 +1179,14 @@ For $p_1\in \spc{U}^1$, $p_2\in \spc{U}^2$, we may choose a sequence $z^i\in A$ 
 
 Finally suppose $\kappa>0$; by  scaling, take $\kappa=1$. Consider the Euclidean cones $\Cone\spc{U}^i$.
 By Theorem \ref{thm:warp-curv-bound:cbb:S}, $\Cone\spc{U}^i$ is a $\CAT0$ space for $i=1,2$.
+
 Geodesic paths of $\Cone\spc{U}^i$ that do not pass through the tip of the cone correspond, project to geodesics of length $<\pi$ in $\spc{U}^i$. 
-  It follows that $\Cone A$ is convex in $\Cone\spc{U}^1$ and $\Cone\spc{U}^2$.
-  By the cone distance formula, $\Cone A$ is complete since $A$ is complete.
-    Gluing on $\Cone A$ and applying \ref{clm:geod-gluing} and \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
+It follows that $\Cone A$ is convex in $\Cone\spc{U}^1$ and $\Cone\spc{U}^2$.
+By the cone distance formula, $\Cone A$ is complete since $A$ is complete.
+  
+Gluing on $\Cone A$ and applying \ref{clm:geod-gluing} and \ref{clm:geod-gluing0 } for $\kappa=0$, we find that 
 $\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{thm:warp-curv-bound:cbb:S}, $\spc{W}$ is a $\CAT1$ space.
 \qeds
-%
-%Now we come back to the general case;
-%that is, $\spc{W}$ is not necessury $\varpi\kappa$-geodesic.
-%According to Corollary \ref{cor:ulara-geod},
-%the ultrapower $\spc{W}^\o$ is geodesic.
-%It is easy to see that 
-%\begin{itemize}
-%\item $\spc{U}_i^\o$ is weakly $\varpi\kappa$-convex subset of $\spc{W}^\o$,
-%\item $A^\o=\spc{U}_1^\o\cap\spc{U}_2^\o$ is also a weakly $\varpi\kappa$-convex set.
-%\end{itemize}
-%%???IT SEEMS THAT ULTRAPRODUCT FOR SUBSETS ARE NOT REALLY DEFINED YET
-%From Proposition~\ref{prop:CAT^omega}, $\spc{U}_i^\o$ is a complete length $\CAT\kappa$ space.
-%By uniqueness of geodesics (\ref{thm:cat-unique})
-% $A^\o$ is $\varpi\kappa$-convex in both $\spc{U}_i$ and
-%consequently both $\spc{U}_i^\o$ are $\varpi\kappa$-convex subsets in $\spc{W}^\o$.
-%
-%From Claim~\ref{clm:geod-gluing}, 
-%we get that $\spc{W}^\o$ is a complete length $\CAT\kappa$ space.
-%Applying the Proposition~\ref{prop:CAT^omega} once more, 
-%we get $\spc{W}$ is a complete length $\CAT\kappa$ space.
-%\qeds 
 
 \begin{thm}{Exercise}\label{ex:two-rays}
 Let $Q$ be the nonconvex subset of the plane 
@@ -1481,7 +1461,6 @@ for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\va
 %???Maybe we want $\length\alpha\le\varpi\kappa/2$???
 there is a unique path $\hat\alpha \:[0,1]\to \spc{B}$ such that $\hat\alpha(0)=\hat p$ 
 and $\map\circ\hat\alpha\equiv\alpha$.
-
 
 \end{thm}
 
@@ -1796,7 +1775,7 @@ but as one can see from the following example, the line-of-sight map is not majo
 \includegraphics{mppics/pic-950}
 \end{wrapfigure}
 
-\parbf{Example.} Let $\spc{Q}$ be a solid quadrilateral $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
+\parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
 Equip $\spc{Q}$ with the length-metric. 
 Then $\spc{Q}$ is $\CAT0$
 by Reshetnyak gluing  (\ref{thm:gluing}). 
@@ -1873,7 +1852,8 @@ The result follows since $D_1\iso\Conv\trig{\tilde p}{\tilde x}{\tilde y}$.\qeds
 \begin{thm}{Lemma}\label{lem:majorize-triangle}
 Let $\trig{p}{x}{y}$ be a triangle of perimeter $<2\cdot\varpi\kappa$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{U}$.
 In $\Lob2{\kappa}$, let $\tilde \gamma$ be the $\kappa$-development of $[x y]$ with respect to $p$, where $\tilde \gamma$ has basepoint $\tilde p$ and subgraph $D$.
-Consider the map $H\:D\to\spc{U}$ that sends the point with parameter $(t,s)$ under the line-of-sight map for $\tilde \gamma$ from $\tilde p$, to the point with the same parameter under the line-of-sight map $f$ for $[x y]$ from  $p$.  Then $H$ is  length-nonincreasing.
+Consider the map $H\:D\to\spc{U}$ that sends the point with parameter $(t,s)$ under the line-of-sight map for $\tilde \gamma$ with respect to $\tilde p$, to the point with the same parameter under the line-of-sight map $f$ for $[x y]$ with respect to $p$.
+Then $H$ is  length-nonincreasing.
 In particular, $D$ majorizes triangle $\trig p x y$.
 \end{thm}
 
@@ -2158,18 +2138,18 @@ lemma.
 Let $\spc{U}$ be a complete length $\CAT0$ space and 
 suppose 
 for 4 points $x^1,x^2,x^3,x^4\in \spc{U}$
-there is a convex quadrilateral
+there is a convex quadrangle
 $[\tilde x^1\tilde x^2\tilde x^3\tilde x^4]$
 in $\EE^2$
 such that 
 \[\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^2}\]
 for all $i$ and $j$.
 Show that $\spc{U}$ contains an isometric copy of the 
-\emph{solid quadrilateral}
+\emph{solid quadrangle}
 $[\tilde x^1\tilde x^2\tilde x^3\tilde x^4]$; that is, the convex hull of $\tilde x^1,\tilde x^2,\tilde x^3,\tilde x^4$ in $\EE^2$.
 \end{thm}
 
-% ??? S: Would  "quadrangle" be  better than "quadrilateral", in analogy to "triangle"?
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2195,16 +2175,14 @@ A proof in the non-proper
 geodesic case 
 was given by the first author and Richard Bishop~\cite{alexander-bishop:h-c}.  
 This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
-%??? what is it about???
 It was pointed out by Bruce 
 Kleiner \cite{ballmann:lectures} 
 and independently by Martin 
 Bridson and Andr\'{e} 
 Haefliger \cite{bridson-haefliger} that 
-%the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence 
-%the Hadamard--Cartan theorem
+%the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence the Hadamard--Cartan theorem
 this proof
-extends to length spaces as well as geodesic spaces, giving:
+extends to length spaces as well as geodesic spaces, giving the following statement:
 
 \begin{thm}{Hadamard--Cartan theorem}
 \label{thm:hadamard-cartan}
@@ -2214,8 +2192,8 @@ Then $\spc{U}$ is $\CAT0$.
 
 \parit{Proof.} Since $\varpi\kappa=\infty$,
 the map $\map\:\spc{B}\to\spc{U}$ in Theorem
- (\ref{thm:globalization-lift}) is a metric covering. 
-%???SHOULD WE DEFINE metric covering???
+(\ref{thm:globalization-lift}) is a \index{metric covering}\emph{metric covering};
+ that is, $\map$ is a length-preserving covering map. 
 Since $\spc{U}$ is simply connected, $\map\:\spc{B}\to\spc{U}$ is an isometry.
 \qeds
 
@@ -2682,7 +2660,7 @@ Here the final equality follows from
 
 
 The following question was known in folklore in the 80's,
-%??? Dave Berg remembers this
+% Dave Berg remembers this
 but it seems that in print
 it was first mentioned in \cite{kopecka-reich}. %???
 We do not see any reason why it should be true, 

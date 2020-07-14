@@ -43,6 +43,40 @@ label.rt(btex $\spc{X}$ etex, (.5,.5)*u);
 
 endfig;
 
+beginfig(10) 
+save u,k;
+u:=.7cm;
+k=.5;
+
+
+z.p0=(0,0)*u;
+z.p1=(2,1)*u;
+z.q0=(1.2,-1.9)*u;
+z.q1=(3,-2.2)*u;
+
+z.a=k[z.p0,z.p1];
+z.b=k[z.q0,z.p1];
+z.c=k[z.q0,z.q1];
+
+draw z.p0--z.p1--z.q0--z.q1;
+draw z.a--z.b--z.c penhair dashed evenly;
+draw z.a--z.c penhair;
+draw z.p0--z.q0 penhair;
+draw z.p1--z.q1 penhair;
+
+dOt z.p0,z.p1,z.q0,z.q1,z.a,z.b,z.c;
+
+label.lft(btex $u$ etex, z.p0);
+label.urt(btex $w$ etex, z.p1);
+label.bot(btex $z$ etex, z.q1);
+label.llft(btex $x$ etex, z.q0);
+label.top(btex $v$ etex, z.a);
+label.rt(btex $p$ etex, z.b);
+label.bot(btex $y$ etex, z.c);
+endfig;
+
+
+
 beginfig(105) 
 save u,p;
 path p[];
@@ -63,6 +97,46 @@ label.rt(btex $\phi=\tangle\mc\kappa\{a;b,c\}$ etex, z.A +14*unitvector(unitvect
 label(btex $a=\side\kappa\{\phi,b,c\}$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
 label.ulft(btex $b$ etex, .5[z.A,z.C]);
 label.bot(btex $c$ etex, .5[z.A,z.B]);
+endfig;
+
+beginfig(110) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.z=origin;
+z.r=(1,1)*u;
+
+p0=circle(z.z,z.r);
+
+z.p=(.3,-.2)*u;
+z.q=-z.p;
+
+draw z.p--z.q;
+
+z.s=(.5,-.5)*u;
+
+p1= z.p{up}..z.r..z.q{-1,-1}..z.s..cycle;
+
+draw p1;
+
+p2=(subpath (0,2) of p1) rotated 180;
+
+draw p2 dashed evenly;
+
+clip currentpicture to p0;
+draw p0;
+
+dOt z.p,z.q,z.r,-z.r,z.z;
+
+label.rt(btex $p$ etex, z.p);
+label.ulft(btex $q$ etex, z.q);
+label.urt(btex $z$ etex, z.z);
+label.urt(btex $r$ etex, z.r);
+label.llft(btex $r'$ etex, -z.r);
+
+label.ulft(btex $\check\alpha$ etex, point 1.6 of p1+(1,0));
+label.ulft(btex $\alpha_1^{*}$ etex, point .6 of p2+(1,0));
 endfig;
 
 beginfig(605) 
