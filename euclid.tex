@@ -237,7 +237,7 @@ Let $p,x,y$ be a triple of points in a metric space with perimeter $\ell$.
 Then for any $\kappa,\Kappa\in\RR$,
 \[|\angk\Kappa p{x}{y}-\angk\kappa p{x}{y}|
 \le 
-\ell^2,
+(|\Kappa|+|\kappa|)\cdot\ell^2,
 \eqlbl{eq:k-K},\]
  whenever the lefthand side is defined.
 \end{thm}
@@ -255,26 +255,28 @@ The function $\kappa\mapsto \angk\kappa p{x}{y}$ is nondecreasing (\ref{k-decrea
 Thus, for $\Kappa>\kappa$, we have
 \begin{align*}
 0\le \angk\Kappa p{x}{y}-\angk{\kappa}p{x}{y}
-\le& \angk\Kappa p{x}{y}+\angk\Kappa {x}p{y}+\angk\Kappa {y}p{x}-
+&\le \angk\Kappa p{x}{y}+\angk\Kappa {x}p{y}+\angk\Kappa {y}p{x}-
 \\
-&-\angk\kappa p{x}{y}-\angk\kappa {x}p{y}-\angk\kappa {y}p{x}
+&\quad-\angk\kappa p{x}{y}-\angk\kappa {x}p{y}-\angk\kappa {y}p{x}
 = 
 \\
-=&\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
+&=\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
 \end{align*}
-Thus, \ref{eq:k-K} follows since 
-\[0
-\le
-\area\modtrig\kappa(pxy)\le \area\modtrig\Kappa(pxy)\le \ell^2.
-\]
-\qedsf
+Note that the area of model triangle with perimeter $\ell$ can not exceed the area of hemisphere with equator length $\ell$;
+in particular,
+\begin{align*}
+\area\modtrig\kappa(pxy)&\le \ell^2, 
+&
+\area\modtrig\Kappa(pxy)&\le \ell^2.
+\end{align*}
+Thus, \ref{eq:k-K} follows.
+\qeds
 
 
 
 \begin{thm}{Triangle inequality for angles}
 \label{claim:angle-3angle-inq}
-Let  $[px^1]$, $[px^2]$ and $[px^3]$ %$\gamma^1, \gamma^2, \gamma^3$ 
-be three geodesics in a metric space.
+Let  $[px^1]$, $[px^2]$ and $[px^3]$ be three geodesics in a metric space.
 If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
 
