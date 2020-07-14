@@ -19,13 +19,12 @@ A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \emph{ray}\ind
 
 A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \emph{line}\index{line}.
 
-%geodesic between points is not defined???
 A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
 We will always assume $\geod_{[p q]}$ is parametrized starting at $p$; 
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
 The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \emph{geodesic}\index{geodesic}.
 The term \emph{geodesic}\index{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
-when a confusion is possible we call the latter a \emph{constant-speed geodesic}\index{constantspeed geodesic}.
+when a confusion is possible we call the latter a \emph{constant-speed geodesic}\index{constant-speed geodesic}.
 %???MAYBE BETTER CALL IT GEODESIC CURVE???
 %%%%%%%%???MAYBE BETTER TO KEEP CONSTANTSPEED GEODESIC. IT IS CLEAR.  A GEODESIC CURVE POSSIBLY MIGHT HAVE A DIFFERENT PARAMETER. WE SHOULD NOT EVEN RAISE THIS POSSIBILITY IN THE READER'S MIND.
 %%%%%%%%%%%S:  SORRY BUT I NEED OTHER PARAMETERS IN WARPED PRODUCTS.  SO CAN WE CALL THESE ``PREGEODESICS'''AS IN BRIDSON-HAEFLIGER.
@@ -234,12 +233,13 @@ The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
  of hinge $\hinge p x y$.
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
-For any $\kappa,\Kappa\in\RR$, there exists  $\Const\in\RR$ such that
+Let $p,x,y$ be a triple of points in a metric space with perimeter $\ell$.
+Then for any $\kappa,\Kappa\in\RR$,
 \[|\angk\Kappa p{x}{y}-\angk\kappa p{x}{y}|
 \le 
-\Const\cdot\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{},
-\eqlbl{eq:k-K}\]
-whenever  the lefthand side is defined.
+\ell^2,
+\eqlbl{eq:k-K},\]
+ whenever the lefthand side is defined.
 \end{thm}
 
 Lemma~\ref{lem:k-K-angle} implies that 
@@ -263,17 +263,11 @@ Thus, for $\Kappa>\kappa$, we have
 =&\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
 \end{align*}
 Thus, \ref{eq:k-K} follows since 
-%???WHY???
 \[0
 \le
-\area\modtrig\kappa(pxy)\le \area\modtrig\Kappa(pxy),
-%\le
-%O\l(\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}\r),
+\area\modtrig\kappa(pxy)\le \area\modtrig\Kappa(pxy)\le \ell^2.
 \]
-%???
-where the latter area is at most $\dist[{{}}]{p}{x}{}\cdot\dist[{{}}]{p}{y}{}$.
-%???It is true without assuming $K\le 0$??? if $K\le 0$ and hence, by central projection from a sphere to its tangent plane, is at most $\tan\dist[{{}}]{p}{x}{}\cdot\tan\dist[{{}}]{p}{y}{}$ if $K=1$.
-\qeds
+\qedsf
 
 
 

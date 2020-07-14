@@ -282,6 +282,12 @@ By comparison, $\xi_\infty$ is a limit of $(\xi_n)$.
 
 \parbf{\ref{mink+CAT=euclid}.} Follow the solution in the \ref{mink+alex=euclid}, reversing all the inequalities.
 
+\begin{wrapfigure}{o}{45 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-10}
+\end{wrapfigure}
+
 \parbf{\ref{ex:convexity-CAT0}.} %???+PIC
 It is sufficient to show that if $v$ and $y$ are midpoints of geodesics $[uw]$ and $[xz]$ in $\spc{U}$, then
 \[\dist{v}{y}{}\le \tfrac12\cdot(\dist{u}{x}{}+\dist{w}{z}{}).\]
@@ -293,7 +299,8 @@ The same way we obtain
 \[\dist{y}{p}{}\le \tfrac12\cdot\dist{u}{x}{}.\]
 It remains to add these two inequalities and apply the triangle inequality.
 
-(This inequality also follows directly from the majorization theorem (\ref{thm:major}).)
+\parit{Comment.}
+This inequality also follows directly from the majorization theorem (\ref{thm:major}).
 
 \parbf{\ref{ex:equality-for-thin}.}
 The only-if part is evident.
@@ -472,9 +479,7 @@ that is, $\dist{\hat x}{x}{}=\dist{K}{x}{}$.
 $x^*=\tfrac1{|\hat x|}\cdot\hat x$.)
 
 Consider the ray $t\mapsto t\cdot p$ in  $\mathring{\spc{U}}$.
-%According to ???, 
-%ASK Stephanie???
-By a comparison construction, 
+By a comparison, 
 for given $s\in \mathring{\spc{U}}$
 the geodesics $\geod_{[s\ t\cdot p]}$ converge as $t\to\infty$ to a ray, 
 say $\alpha_s\:[0,\infty)\to \mathring{\spc{U}}$.
@@ -545,10 +550,10 @@ It leads to another solution of Exercise~\ref{ex:short-retraction-CBA(1)}.
 \textit{(Easier way.)} 
 Let 
 $(t,s)\mapsto \gamma_t(s)$ be the line-of-sight map 
-for $\alpha$ from $\alpha(0)$,
+for $\alpha$ with respect to $\alpha(0)$,
 and 
 $(t,s)\mapsto \tilde \gamma_t(s)$ be the line-of-sight map 
-for $\tilde \alpha$ from $\tilde \alpha(0)$.
+for $\tilde \alpha$ with respect to $\tilde \alpha(0)$.
 Consider the map  $F\:\Conv\tilde \alpha\to \spc{U}$ such that 
 $F\:\tilde \gamma_t(s)\mapsto \gamma_t(s)$.
 
@@ -731,7 +736,7 @@ By \ref{thm:prop-gexp}, $\gexp_{x_0}$ is a short map.
 By \ref{eq:vv=xx}, $\gexp_{x_0}$ cannot be strictly short at a pair of points in $K$.
 That is, $\gexp_{x_0}$ is distance-preserving on $K$.
 
-\parbf{\ref{ex:not-flat}.} The construction is forgotten now. %???
+\parbf{\ref{ex:not-flat}.} The construction is forgotten now; maybe it was wrong. %???
 
 \parbf{\ref{CBA-n-point}.}
 Apply \ref{thm:kirsz} for each of the following maps
@@ -756,12 +761,10 @@ By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ 
 Hence the statement follows.
 
 \parbf{\ref{ex:isbell}.}
-(This exercise is a classical result of John Isbell which was rediscovered several times after him.)
-
-The Kuratowsky embedding is an isometric embedding of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm is an injective metric space.
+The Kuratowsky embedding is an isometric embedding of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm.
 It remains to show that the latter space is injective.
 
-%???TBC
+The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him.
 
 \parbf{\ref{ex:kirszbrun-source}.}
 To prove the only-if part it is sufficient to consider only the case of two-point spaces $\spc{Z}$.
@@ -874,7 +877,9 @@ Therefore, by Theorem~\ref{thm:grad-like-2nd-def}, $\hat\alpha$ is a gradient-li
 It remains to apply Lemma~\ref{lem:grad--grad-like}.
 
 \parbf{\ref{ex:grad-curve-analitic}.}
-Set $h(z)=\tfrac12\cdot\dist[2]{x}{z}{}$.
+Use \ref{ex:grad-curve-condition} to prove the only-if part.
+
+To prove the if part, set $h(z)=\tfrac12\cdot\dist[2]{x}{z}{}$.
 If $\alpha$ is an $f$-gradient curve then 
 \begin{align*}
 (h\circ\alpha)^+&\ge \dist{\alpha(t)}{x}{}\cdot\langle\dir{\alpha(t)}{x},\nabla_{\alpha(t)}f\rangle\ge
@@ -884,6 +889,7 @@ If $\alpha$ is an $f$-gradient curve then
 &\ge f(x)-f\circ\alpha(t).
 \end{align*}
 It remains to integrate the inequality and observe that $f\circ\alpha$ is nondecreasing function.
+ 
 
 %\parbf{\ref{ex:grad-flow-bry}.} %???
 

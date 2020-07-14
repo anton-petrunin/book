@@ -441,7 +441,7 @@ denotes the distance map
 which can be also regarded as a function array.
 The \emph{radius of the point array}\index{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
 that is,
-\[\rad\bm{a}=\inf\set{r>0}{a^i\in \oBall(z,r)\ \text{for all}\ i \ \text{and some}\ z\in\spc{U}}.\]%???
+\[\rad\bm{a}=\inf\set{r>0}{\exists z\in\spc{U}\ \text{such that}\ a^i\in \oBall(z,r)\ \text{for any}\ i}.\]%???
 
 Fix $\kappa\in\RR$.
 Let $\bm{a}=(a^0,a^1,\dots,a^\kay)$ be a point array of radius $<\tfrac{\varpi\kappa}2$
@@ -531,7 +531,7 @@ $\tau$,
 gives an open embedding of 
 $\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)$.
 Note that $\tau$ is Lipschitz.
-According to Rademacher's theorem %??? (\ref{thm:rademacher})
+According to Rademacher's theorem (\ref{thm:Rademacher-CBB+CBA})
 the differential 
 $\dd_{\bm{x}}(\tau\circ\sigma)$
 is linear for almost all $\bm{x}\in\Delta^m$.
@@ -568,8 +568,7 @@ Further, from the definition of $\kappa$-barycentric simplex,
 $\spx{\bm{a}}\mc\kappa=\spx{\bm{f}}$.
 
 All the functions $f^i$ are strongly convex (see \ref{function-comp}).
-Therefore (\ref{thm:cat-bary-web:Lip}), (\ref{thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{thm:cat-bary-web:web=Im(bary)}) 
- follow from Theorem \ref{thm:web}.
+Therefore (\ref{SHORT.thm:cat-bary-web:Lip}), (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}) follow from Theorem \ref{thm:web}.
 %???CHECK convexity ???
 
 \parit{Case $\kappa>0$.}
