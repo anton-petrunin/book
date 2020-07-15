@@ -358,15 +358,14 @@ Then $\spc{X}_\infty\iso \bar{\spc{X}}_\infty$.
 
 
 \parit{Proof.}
-For each $x_\infty\in\spc{X}_\infty$,
-fix its liftings $x_n\in\spc{X}_n$.
+For each point $x_\infty\in\spc{X}_\infty$,
+choose its liftings $x_n\in\spc{X}_n$.
 
-Choose some ultrafilter $\o$.
-Define $\bar x_\infty\in \bar{\spc{X}}_\infty$ such that $\bar x_n\xGHto{\bar\GH}\bar x_\infty$;
-since $\bar{\spc{X}}_\infty$ is compact, the $\o$-limit is defined.
+Choose a nonprinciple ultrafilter $\o$.
+Define $\bar x_\infty\in \bar{\spc{X}}_\infty$ as the $\o$-limit of $x_n$ with respect to $\bar \tau$.
 We claim that the map $x_\infty\to \bar x_\infty$ is an isometry.
 
-Indeed, according to the definition of Gromov--Hausdorff convergence, 
+Indeed, by to the definition of Gromov--Hausdorff convergence, 
 \[\dist{\bar x_\infty}{\bar y_\infty}{\bar{\spc{X}}_\infty}
 =
 \lim_{n\to\o}\dist{x_n}{y_n}{\spc{X}_n}
@@ -426,10 +425,9 @@ Let us show that $\spc{X}_n\xto{\GH}\spc{X}_\infty$.
 Fix $\eps>0$ and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$ such that the value $\sum_{i<j}\dist{x^i}{x^j}{}$ is maximal.
 Note that 
 \[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}>\dist{x^i}{x^j}{}-2\cdot\eps_n.\]
-Thus, 
-$\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}-\dist{x^i}{x^j}{}
-\to 
-0$ for all $i$ and $j$ as $n\to\infty$.
+Since the value $\sum_{i<j}\dist{x^i}{x^j}{}$ is maximal, 
+\[\dist{a_n\circ b_n(x^i)}{a_n\circ b_n(x^j)}{}\to\dist{x^i}{x^j}{}\]
+for all $i$ and $j$ as $n\to\infty$.
 For all large $n$,
 we have $2\cdot\eps_n<\dist{x^i}{x^j}{}-\eps$.
 Thus $\dist{b_n(x^i)}{b_n(x^j)}{\spc{X}_n}>\eps$ 

@@ -580,35 +580,32 @@ Hence (\ref{SHORT.pack}) follows.
 
 \section{Inverse function theorem}
 
-Recall that given an array 
-$\bm{a}=(a^0,a^1,\dots,a^\kay)$ 
-we denote by $\bm{a}^{\without 0}$ the subarray of $\bm{a}$ with $a^0$ removed;
-that is,
-\[\bm{a}^{\without 0}=(a^1,a^2,\dots,a^\kay).\]
-
 \begin{thm}{Inverse function theorem}\label{thm:inverse-function}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space 
-and $p,a^0,a^1,a^2,\dots,a^m\in\spc{L}$.
+and $p,b,a^1,a^2,\dots,a^m\in\spc{L}$.
 
-Assume that the point array $\bm{a}=(a^0,a^1,\dots,a^m)$ is $\kappa$-strutting for~$p$.
+Assume that the point array $\bm{a}=(b,a^1,\dots,a^m)$ is $\kappa$-strutting for~$p$.
 Then
 there are $R>0$ and $\eps>0$ such that
 
 \begin{subthm}{thm:inverse-function:strut}
 For all $i\not=j$ and any $q\in\oBall(p,R)$ we have
-\[\angk\kappa{q}{a^i}{a^j}>\tfrac{\pi}{2}+\eps.\]
+\[\angk\kappa{q}{a^i}{a^j}>\tfrac{\pi}{2}+\eps
+\quad\text{and}\quad
+\angk\kappa{q}{b}{a^i}>\tfrac{\pi}{2}\]
 
 \end{subthm}
 
 \begin{subthm}{thm:inverse-function:chart}
 The restriction of the distance map 
-$\distfun{\bm{a}^{\without 0}}{}{}$ to the ball $\oBall(p,R)$
+\[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dots,\dist{a^m}{x}{})\] 
+to the ball $\oBall(p,R)$
 is an open $[\eps,\sqrt{m}]$-bi-Lipschitz embedding $\oBall(p,R)\hookrightarrow\RR^m$.
 \end{subthm}
 
 \begin{subthm}{thm:inverse-function:R}
-The value $R$ depend only on the following data:  
-\[\kappa,\  \dist{p}{a^i}{},\ \dist{a^i}{a^j}{}\]
+The value $R$ depend only on the following numbers:  
+\[\kappa,\  \dist{p}{a^i}{},\ \dist{a^i}{a^j}{},\ \dist{b}{a^i}{}\]
 for all $i$ and $j$.
 \end{subthm}
 
@@ -616,13 +613,13 @@ for all $i$ and $j$.
 
 \begin{thm}{Definition}\label{def:dist-chart}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
-If a point array $a^0,a^1,a^2,\dots,a^m$ 
+If a point array $b,a^1,a^2,\dots,a^m$ 
 and the value $R$ satisfy the conditions in Theorem~\ref{thm:inverse-function}, 
 then the restriction 
-$\bm{x}=\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$
+$\bm{x}=\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$
 is called a \emph{distant chart}\index{distant chart},
-the restrictions $x^i=\distfun{a^i}{}{}|\oBall(p,R)$ are called \emph{coordinates}\index{coordinate of the distant chart}
-and the restriction $y=\distfun{a^0}{}{}|\oBall(p,R)$ is called \emph{strut}\index{strut of the distant chart} of the distant chart.
+the restrictions $x^i=\distfun{a^i}{}{}|_{\oBall(p,R)}$ are called \emph{coordinates}\index{coordinate of the distant chart}
+and the restriction $y=\distfun{b}{}{}|_{\oBall(p,R)}$ is called \emph{strut}\index{strut of the distant chart} of the distant chart.
 \end{thm}
 
 The proof of Theorem~\ref{thm:inverse-function} will reqire the following lemma.
@@ -708,18 +705,18 @@ Thus, from the induction hypothesis we have that $\kay-1\le {m-1}$.
 
 \parit{Proof of \ref{thm:inverse-function}; (\ref{SHORT.thm:inverse-function:strut}).}  
 Fix $\eps>0$ such that 
-$\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+$\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}>\tfrac\pi2+\eps$ for all $i\not=j$.
 Choose sufficiently small $R>0$ so that 
-$\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and any $q\in\oBall(p,R)$.
+$\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa q{b}{a^i}>\tfrac\pi2+\eps$ for all $i\not=j$ and any $q\in\oBall(p,R)$.
 Clearly, (\ref{SHORT.thm:inverse-function:strut}) holds for $\oBall(p,R)$.
 
 \parit{(\ref{SHORT.thm:inverse-function:chart}).}
-Note that distance map $\distfun{\bm{a}^{\without 0}}{}{}$ is Lipschitz
-and its restriction $\distfun{\bm{a}^{\without 0}}{}{}|\oBall(p,R)$ is open;
-the later follows from the open map theorem (\ref{thm:right-inverse-function:open-map}).
+Note that distance map $\distfun{\bm{a}}{}{}$ is Lipschitz
+and its restriction $\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$ is open;
+the later follows from the right-inverse theorem (\ref{thm:right-inverse-function:open-map}).
 Thus, to prove (\ref{SHORT.thm:inverse-function:chart}), it is sufficient to show that
 \[
-\max_{i>0}\{\,|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\,\}
+\max_{i}\{\,|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\,\}
 >
 \tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
 \eqlbl{expend}
@@ -728,26 +725,34 @@ for any $x,y\in {\oBall(p,R)}$.
 
 According to Lemma~\ref{lem:pack(S^m)+}, 
 \[
+\mangle\hinge{x}y{b}
+\le
+\tfrac\pi2-\eps
+\quad\text{or}\quad
 \mangle\hinge{x}y{a^i}
 \le
 \tfrac\pi2-\eps
 \quad \text{for some}\quad i.
 \]
-Since $\dist{x}{y}{}<2\cdot R$ and $R$ is small, 
+In the latter case,
+since $\dist{x}{y}{}<2\cdot R$ and $R$ is small, 
 the hinge comparison (\ref{angle}) implies 
 \[
 \dist{a^i}{x}{}-\dist{a^i}{y}{}>\tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
 \quad \text{for some}\quad i.
 \eqlbl{eq:y-x}\]
-Switching $x$ and $y$, we get
+
+If $\mangle\hinge{x}y{b}
+\le
+\tfrac\pi2-\eps$, then 
+switching $x$ and $y$, we get
 \[
 \dist{a^j}{y}{}-\dist{a^j}{x}{}
 >
 \tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
 \quad \text{for some}\quad j.
 \eqlbl{eq:x-y}\] 
-Clearly $i\not=j$,
-therefore \ref{eq:y-x} and \ref{eq:x-y} implies \ref{expend}.
+Therefore \ref{eq:y-x} and \ref{eq:x-y} implies \ref{expend}.
 
 Finally, part (\ref{SHORT.thm:inverse-function:R})
 follows since the angle $\angk\kappa q{a^i}{a^j}$ 
