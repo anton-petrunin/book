@@ -294,15 +294,15 @@ $\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
-Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be metric spaces.
+Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be metric spaces and $\eps_n\to\0+$ as $n\to\infty$.
 Suppose that either 
 
 \begin{subthm}{}
-for each $n$ there is an $\eps_n$-isometry $f_n\:\spc{X}_n\to\spc{X}_\infty$ and $\eps_n\to\0+$ as $n\to\infty$.
+for each $n$ there is an $\eps_n$-isometry $f_n\:\spc{X}_n\to\spc{X}_\infty$, or
 \end{subthm}
 
 \begin{subthm}{}
-for each $n$ there is an $\eps_n$-isometry $h_n\:\spc{X}_\infty\to\spc{X}_n$ and $\eps_n\to\0+$ as $n\to\infty$.
+for each $n$ there is an $\eps_n$-isometry $h_n\:\spc{X}_\infty\to\spc{X}_n$.
 \end{subthm}
 
 Then there is a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$.
@@ -324,8 +324,9 @@ where we assume that $x_m\in \spc{X}_m$, $x_n\in \spc{X}_n$, and $x_\infty\in \s
 It remains to observe that $\rho$ is indeed a metric and 
 $\spc{X}_n\Hto \spc{X}_\infty$ in~$\bm{X}$.
 
-The proof of the second part is analogous.
-\qeds
+The proof of the second part is analogous; one only need to change one line in the definition of $\rho$ to the following:
+\[\rho(x_n,x_\infty)=\inf\set{\dist{x_n}{h(y_\infty)}{\spc{X}_n}+\eps_n+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}}{{y_\infty}\in \spc{X}_\infty}.\]
+\qedsf
 
 \begin{thm}{Definition}
  Given two compact spaces $\spc{X}$ and $\spc{Y}$, we will write 
@@ -453,6 +454,13 @@ choose a sequence $x^i_n\in\spc{X}_n$ such that $a_n(x^i_n)\to x^i$.
 Note that for all large $n$, we have $\dist{x^i_n}{x^j_n}{}>\eps$.
 For each point $z\in \spc{X}_\infty$, choose $x^i$ so that $\dist{z}{x^i}{}<\eps$ and define map $b_n\:\spc{X}_\infty\to\spc{X}_n$ such that 
 $b_n(z)=x^i_n$.
+Observe that 
+\[\dist{b_n(y)}{b_n(z)}{\spc{X}_n}+3\cdot\eps>\dist{y}{z}{\spc{X}_\infty}\]
+for all large $n$.
+
+The same way we can construct a map $a_n\:\spc{X}_n\to\spc{X}_\infty$ such that 
+\[\dist{a_n(y)}{a_n(z)}{\spc{X}_\infty}+3\cdot\eps>\dist{y}{z}{\spc{X}_n}\]
+Whence $\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to \infty$.
 \qeds
 
 The following theorem roughly states that isometry class of Gromov--Hausdorff limit is uniquely defined once it is compact. 
