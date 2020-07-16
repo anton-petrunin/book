@@ -242,8 +242,11 @@
 \def\|{\Arrowvert}
 
 %\newcommand*{\set}[2]{\left\{\,\left.{#1}\vphantom{#2}\,\right\arrowvert\,{#2}\,\right\}}
-\newcommand*{\set}[2]{\left\{\,{#1}\ {:}\ {#2}\,\right\}}
-%{\ifthenelse{\equal{#2}{}}{}{}}
+\newcommand*{\set}[2]%{\left\{\,{#1}\ {:}\ {#2}\,\right\}}
+{\ifthenelse{\isempty{#2}}{\left\{\,{#1}\,\right\}}{\left\{\,{#1}\ {:}\ {#2}\,\right\}}}
+%{\ifthenelse{\isempty{#3}}%
+%{\bm\|{#2}\hskip.1em\scriptstyle{*}\bm\|^{#1}_{#4}}%
+%{\bm\|{#2}\ {#3}\bm\|^{#1}_{#4}}}
 %\left\{\,{#1}\ {:}\ {#2}\,\right\}
 
 %angles-hinges-trigonometry

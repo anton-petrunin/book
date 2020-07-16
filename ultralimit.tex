@@ -51,7 +51,9 @@ More commonly, a nonprinciple ultrafilter is defined as a collection, say $\math
 \item\label{filter:ultra} for any subset $P\subset\NN$, either $P$ or its complement is an element of $\mathfrak{F}$.
 \item\label{filter:non-prin} if $F\subset \NN $ is finite, then $F\notin \mathfrak{F}$.
 \end{enumerate}
-Setting $P\in\mathfrak{F}\Leftrightarrow\o(P)=1$ makes these two definitions equivalent.
+Setting 
+\[P\in\mathfrak{F}\quad\iff\quad\o(P)=1\] 
+makes these two definitions equivalent.
 
 A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \emph{filter}; 
 if in addition $\mathfrak{F}$ satisfies Condition~\ref{filter:ultra} it is called an \emph{ultrafilter}.
@@ -87,7 +89,7 @@ that is,
 In this case, we will write 
 \[x_\o=\lim_{n\to\o} x_n
 \quad \text{or}\quad 
-x_n\to x_\o\ \text{as}\ n\to\o.\]
+x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
 For example if $\o$ is the principle ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
 $x_\o=x_n$.
@@ -191,7 +193,7 @@ Set $\spc{X}_\o$ to be the corresponding metric space;
 that is, the underlying set of $\spc{X}_\o$ is formed by classes of equivalence of sequences of points $x_n\in\spc{X}_n$ 
 defined by 
 \[(x_n)\sim(y_n)
-\ \Leftrightarrow\ 
+\quad \iff\quad 
 \lim_{n\to\o} \dist{x_n}{y_n}{}=0\]
 and the distance is defined as in \ref{eq:olim-dist}.
 
