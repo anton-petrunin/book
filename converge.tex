@@ -402,14 +402,12 @@ The Gromov--Hausdorff distance turns the set of all isometry classes of compact 
 The following theorem shows that convergence in this space coinsides with the Gromov--Hausdorff convergence defined above.
 
 \begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be compact metric spaces.
-Then 
-\[\spc{X}_n\xto{}\spc{X}_\infty
-\quad \iff\quad 
-\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0.\]
+Then there is a convergence $\spc{X}_n\GHto \spc{X}_\infty$ if and only if
+$\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to\infty$.
 
 \end{thm}
 
-\parit{Proof; $(\Leftarrow)$.}
+\parit{Proof; if part.}
 Suppose $a_n\:\spc{X}_\infty\to \spc{X}_n$
 and $b_n\:\spc{X}_n\to \spc{X}_\infty$ are sequences of maps such that
 \[\dist{a_n(x)}{a_n(y)}{\spc{X}_\infty}
@@ -446,7 +444,7 @@ Observe that $h_n$ is a $3\cdot\eps$-isometry for all large $n$.
 Since $\eps>0$ is arbitrary, there is a sequence of $\eps_n$-isometries $\spc{X}_n\to\spc{X}_\infty$ such that $\eps_n\to\0+$ as $n\to\infty$.
 It remains to apply \ref{lem:almost-isom}.
 
-\parit{$(\Rightarrow)$.}
+\parit{Only-if part.}
 Assume $\spc{X}_n\xto{\GH}\spc{X}_\infty$.
 Fix $\eps>0$ and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$.
 For each $x^i$, 
