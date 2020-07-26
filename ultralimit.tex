@@ -27,11 +27,11 @@ is called an \emph{ultrafilter}\index{ultrafilter} if it satisfies
 $\o(S)=0$ or $1$ for any subset $S\subset \NN$.
 \end{subthm}
 An ultrafilter $\o$ is called 
-\emph{nonprinciple}\index{ultrafilter!nonprinciple ultrafilter}\index{nonprinciple ultrafilter} if in addition 
+\emph{nonprincipal}\index{ultrafilter!nonprincipal ultrafilter}\index{nonprincipal ultrafilter} if in addition 
 \begin{subthm}{}
 $\o(F)=0$ for any finite subset $F\subset \NN$.
 \end{subthm}
-A nonprinciple ultrafilter $\o$ is called 
+A nonprincipal ultrafilter $\o$ is called 
 \emph{selective}\index{ultrafilter!selective ultrafilter}\index{selective ultrafilter} if in addition 
 \begin{subthm}{}
 for any partition of $\NN$ into sets $\{C_\alpha\}_{\alpha\in\IndexSet}$ such that $\o(C_\alpha)\z=0$ for each $\alpha$, 
@@ -44,7 +44,7 @@ we say that $S$ is \emph{$\o$-small}.
 If $\o(S)=1$, we say that $S$ contains \emph{$\o$-almost all} elements of $\NN$.
 
 \parbf{Classical definition.}
-More commonly, a nonprinciple ultrafilter is defined as a collection, say $\mathfrak{F}$, of sets in $\NN$ such that
+More commonly, a nonprincipal ultrafilter is defined as a collection, say $\mathfrak{F}$, of sets in $\NN$ such that
 \begin{enumerate}
 \item\label{filter:supset} if $P\in \mathfrak{F}$ and $Q\supset P$, then $Q\in \mathfrak{F}$,
 \item\label{filter:cap} if $P, Q\in \mathfrak{F}$, then $P\cap Q\in \mathfrak{F}$,
@@ -58,7 +58,7 @@ makes these two definitions equivalent.
 A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \emph{filter}; 
 if in addition $\mathfrak{F}$ satisfies Condition~\ref{filter:ultra} it is called an \emph{ultrafilter}.
 From Zorn's lemma, it follows that every filter contains an ultrafilter.
-Thus there is an ultrafilter $\mathfrak{F}$ contained in the filter of all complements of finite sets; clearly this $\mathfrak{F}$ is nonprinciple.
+Thus there is an ultrafilter $\mathfrak{F}$ contained in the filter of all complements of finite sets; clearly this $\mathfrak{F}$ is nonprincipal.
 
 The existence of a selective ultrafilter follows from the continuum hypothesis;
 it was proved by Walter Rudin \cite{rudin}.
@@ -70,7 +70,7 @@ The obtained space is called \emph{Stone--\v{C}ech compactification} of $\NN$;
 it is usually denoted as $\beta\NN$.
 
 There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined as
-$n\mapsto\o_n$, where $\o_n$ is the principle ultrafilter such that $\o_n(S)=1$ if and only if $n\in S$. 
+$n\mapsto\o_n$, where $\o_n$ is the principal ultrafilter such that $\o_n(S)=1$ if and only if $n\in S$. 
 Using the described embedding, we can (and will) consider $\NN$ as a subset of $\beta\NN$.
 
 The space $\beta\NN$ is the maximal compact Hausdorff space that contains $\NN$  as an everywhere dense subset.
@@ -91,7 +91,7 @@ In this case, we will write
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
-For example if $\o$ is the principle ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
+For example if $\o$ is the principal ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
 $x_\o=x_n$.
 
 Note that $\o$-limits of a sequence and its subsequence may differ.
@@ -105,7 +105,7 @@ If $\spc{X}$ is compact, then this map can be uniquelly extended to a continuous
 Then $x_\o$ can be regarded as the image of $\o$. 
 
 \begin{thm}{Proposition}\label{prop:ultra/partial}
-Let $\o$ be a nonprinciple ultrafilter.
+Let $\o$ be a nonprincipal ultrafilter.
 Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$
 and $x_n\to  x_\o$ as $n\to\o$.
 Then $x_\o$ is a partial limit of the sequence $(x_n)$;
@@ -120,7 +120,7 @@ Given $\eps>0$,
 set $S_\eps=\set{n\in\NN}{\dist{x_n}{x_\o}{}<\eps}$.
 
 Note that $\o(S_\eps)=1$ for any $\eps>0$.
-Since $\o$ is nonprinciple, the set $S_\eps$ is infinite.
+Since $\o$ is nonprincipal, the set $S_\eps$ is infinite.
 Therefore we can choose an increasing sequence $(n_\kay)$
 such that $n_\kay\in S_{\frac1\kay}$ for each $\kay\in \NN$.
 Clearly $x_{n_\kay}\to x_\o$ as $\kay\to\infty$.
