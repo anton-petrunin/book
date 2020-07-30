@@ -811,16 +811,69 @@ By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\
 It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ respectively.
 
 \parbf{\ref{ex:poly-unique-geodesic}.}
+Assume $\spc{P}$ is not $\CAT0$.
+Then by \ref{thm:PL-CAT}, a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
+We can assume that $\Sigma$ has minimal possible dimension;
+so, by \ref{thm:PL-CAT}, $\Sigma$ is locally $\CAT1$.
+
+Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$.
+
+Assume $\alpha_1$ and $\alpha_2$ are length minimizing;
+parameterize them by $[-\ell,\ell]$.
+Fix a small $\delta>0$ and 
+consider two curves in $\Cone\Sigma$ written in polar coordinates as 
+\[\gamma_i(t)=(\alpha_i(\arctan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
+Observe that both curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ and  have common ends.
+
+Observe that a small neighborhood of the tip of $\Cone\Sigma$ admits an isometric embedding into~$\spc{P}$.
+Hence we can construct two geodesics $\gamma_1$ and $\gamma_2$ in $\spc{P}$ with common endpoints.
+
+It remains to consider the case when $\alpha_1$ (and therefore $\alpha_2$) is not length minimizing.
+
+Pass to its maximal length minimizing arc $\bar\alpha_1$ of $\alpha_1$.
+Since $\Sigma$ is locally $\CAT1$, by the no-conjugate-point theorem (\ref{thm:no-conj-pt}) 
+there is another geodesic $\bar\alpha_2$ in $\Sigma_p$ that shares endpoints with $\bar\alpha_1$.
+It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\alpha_2$.
+
+\parit{Remark.}
+By \ref{thm:cat-unique} the converse holds as well.
 
 \parbf{\ref{ex:polyKk}.}
 
 \parbf{\ref{ex:baricenric-flag}.}
 
 \parbf{\ref{ex:obtuce-flag}.}
+Use induction on the dimension  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
+all dihedral angles of $\triangle$ are at least~$\tfrac\pi2$.
+
+The rest of the proof goes along the same lines as the proof of the flag condition (\ref{thm:flag}).
+The only difference is that a geodesic may spend time {}\emph{at least} $\pi$ on each visit to $\Star_v$.
+
+\parit{Remark.}
+Note that it is not sufficient to assume only that the all dihedral angles of the simplices are at least~$\tfrac\pi2$. 
+Indeed, the two-dimensional sphere with removed interior of a small rhombus is a spherical polyhedral space glued from four triangles with all the angles at least~$\tfrac\pi2$.
+On the other hand the boundary of the rhombus is closed local geodesic in this space.
+Therefore the space cannot be $\CAT1$.
 
 \parbf{\ref{ex:short+commuting}.}
 
 \parbf{\ref{ex:space-of-trees}.}
+The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
+
+Note that the space $\Sigma$
+over which the cone is taken comes naturally with a triangulation 
+with all-right spherical simplicies.
+Each simplex corresponds to a combinatorics of a possibly degenerate tree.
+
+Note that the link of any simplex of this triangulation satisfies the no-triangle condition.
+Indeed, fix a simplex $\triangle$ of the complex;
+suppose it is described by a possibly degenerate topological tree $t$.
+A triangle in the link of  $\triangle$ can be described by three ways to resolve a degeneracy of $t$ by adding one edge,
+such that (1) any pair of these resolutions can be done simultaneously, but (2) all three cannot be done simultaneously.
+Direct inspection shows that this is impossible.
+
+Therefore, by Proposition~\ref{prop:no-trig} our complex is flag.
+It remains to apply the flag condition (\ref{thm:flag}), and \ref{thm:warp-curv-bound:cbb:a}.
 
 \parbf{\ref{ex:cubical-complex}.}
 
