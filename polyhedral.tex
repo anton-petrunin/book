@@ -3,18 +3,17 @@
 \section{Definitions}
 
 \begin{thm}{Definition}\label{def:poly}
-A length space $\spc{P}$ is called  
-\emph{$\Lob{}\kappa$-polyhedral space} (briefly $\spc{P}\in \PM{}\kappa$, which stands for \emph{piecewise} $\Lob{}\kappa$)
+A length space $\spc{P}$ is called \emph{piecewise
+$\Lob{}\kappa$ space}
 if it admits a finite triangulation $\tau$ 
-such that an arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{m}{\kappa}$, 
-where $m$ is the dimension of $\sigma$.
-
-If we do not wish to specify $\kappa$, we will say that $\spc{P}$ is a \emph{polyhedral space}.
+such that an arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{\dim \sigma}{\kappa}$.
 
 By a 
 \index{triangulation of a polyhedral space}\emph{triangulation of a polyhedral space} 
-we will understand the triangulation as in the definition. 
+we will understand the triangulation as in the definition.
+If we do not wish to specify $\kappa$, we will say that $\spc{P}$ is a \emph{polyhedral space}. 
 
+Applying scaling we can assume that $\kappa=1$, $0$, or $-1$.
 \begin{subthm}{}
 The $\Lob{}1$-polyhedral spaces will also be 
 called 
@@ -46,10 +45,6 @@ The latter class of spaces includes in particular the infinite covers of polyhed
 The dimension of a polyhedral space $\spc{P}$
 is defined as the maximal dimension of the simplex 
 in one (and therefore any) triangulation of $\spc{P}$.
-The class of $\PM{}{\kappa}$ spaces 
-of dimension $m$ will be denoted 
-as $\PM{m}{\kappa}$.
-
 
 \parbf{Links.}
 Let $\spc{P}$ be a polyhedral space
@@ -58,7 +53,7 @@ and $\sigma$ be a simplex in a triangulation $\tau$ of $\spc{P}$.
 The simplices that contain $\sigma$
 form an abstract simplicial complex called the \emph{link} of $\sigma$, 
 denoted by $\Link_\sigma$.
-If $m$ is  the dimension of $\sigma$
+If $m=\dim\sigma$,
 then the set of vertices of $\Link_\sigma$
 is formed by the $(m+1)$-simplices that contain $\sigma$;
 the set of its edges are formed by the $(m+2)$-simplices 
@@ -68,7 +63,7 @@ The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
 formed by all the simplices $\sigma'$ 
 such that $\sigma\cap\sigma'=\emptyset$ 
-but both $\sigma$ and $\sigma'$ are faces of the same simplex.
+but both $\sigma$ and $\sigma'$ are faces a simplex of $\tau$.
 
 The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in $\sigma$.
 The angle metric between directions makes  $\Link_\sigma$ into a spherical polyhedral space.
@@ -100,15 +95,78 @@ determines the isometry class of $\Sigma_p$
 
 A small neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
 In fact, if this propery holds at any point of a compact length space $\spc{P}$
-then  $\spc{P}\in \PM{}\kappa$;
+then  $\spc{P}$ is a piecewise
+$\Lob{}\kappa$ space;
 see \cite{lebedeva-petrunin-poly}.
 
-%%%%%%%%%%  DOWN
+\section{Curvature bounds}
 
-\parbf{Curvature bounded below.}
+
+Recall that the definition of $\ell$-simply connected space is 
+given in \ref{def:l-s.c.}.
+
+The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded above.
+
+
+\begin{thm}{Theorem}\label{thm:PL-CAT}
+Let $\spc{P}$ be a piecewise
+$\Lob{}\kappa$ space and $\tau$ be its triangulation. Then 
+
+\begin{subthm}{thm:PL-CAT:curc>=k}
+$\spc{P}$  is locally $\Alex\kappa$
+if and only if any connected component of the link of any simplex $\sigma$ in $\tau$
+is $(2\cdot\pi)$-simply connected.
+Equivalently, if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
+\end{subthm}
+
+\begin{subthm}{thm:PL-CAT:CAT}
+$\spc{P}$ is a complete length $\CAT\kappa$ space
+if and only if $\spc{P}$ is $(2\cdot\varpi\kappa)$-simply connected and any connected component of the link of any simplex $\sigma$ in $\tau$
+is $(2\cdot\pi)$-simply connected.
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Proof.}
+We will only give a proof of the ``if'' part;
+the ``only if'' part is evident.
+
+Let us apply induction on $\dim\spc{P}$.
+The {}\emph{base} case $\dim\spc{P}=0$ is evident.
+
+\parit{Step.}
+Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
+
+Fix a point $p\in\spc{P}$.
+A neighborhood of $p$ 
+is isometric to the $\kappa$-cone over 
+the $\Sigma_p$.
+By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
+it is sufficient to show that 
+\begin{clm}{}\label{eq:Sigma-in-CAT(1)}
+ $\Sigma_p$ is $\CAT1$
+\end{clm}
+
+Note that $\Sigma_p$ is a spherical polyhedral space 
+and its  links are isometric to  links of $\spc{P}$. 
+By the  induction hypothesis, $\Sigma_p$ is locally $\Alex1$.
+Applying Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}),
+we get \ref{eq:Sigma-in-CAT(1)}.
+
+To prove (\ref{SHORT.thm:PL-CAT:CAT}) apply Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}) to $\spc{P}$.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:poly-unique-geodesic}
+Show that if in a Euclidean polyhedral space $\spc{P}$
+any two points can be connected by a unique geodesic 
+then $\spc{P}$ is $\CAT0$.
+\end{thm}
+
 The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded below.
 
-\begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}\in\PM{m}\kappa$ and $\tau$ be a triangulation of $\spc{P}$.
+\begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}$ be a piecewise
+$\Lob{}\kappa$ space and $\tau$ its a triangulation.
 Then $\spc{P}$ is $\Alex\kappa$ if and only if the following conditions hold.
 
 \begin{subthm}{} $\tau$ is \emph{pure}; 
@@ -119,16 +177,18 @@ that is, any simplex in $\tau$ is  a face of some simplex of dimension exactly $
 The link of any simplex of dimension $m-1$ is formed by single point or two points.
 \end{subthm}
 
-\begin{subthm}{thm:poly-CBB:connected}
-The link of any simplex of dimension $\le m-2$ is connected.
-\end{subthm}
-
 \begin{subthm}{thm:poly-CBB:2pi}
 Any link of any simplex of dimension $m-2$
 has diameter at most $\pi$.
 \end{subthm}
+
+\begin{subthm}{thm:poly-CBB:connected}
+The link of any simplex of dimension $\le m-2$ is connected.
+\end{subthm}
+
 \end{thm}
 
+\parbf{Remarks.}
 The condition (\ref{SHORT.thm:poly-CBB:connected})
 can be reformulated in the following way:
 
@@ -151,16 +211,18 @@ isometric to a circle of length $\le 2\cdot\pi$
 or a closed real interval of length $\le \pi$.
 \end{itemize}
 
-\parit{Proof.} We apply induction on $m$.
-The base case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
+\parit{Proof.}
+We will only give a proof of the ``if'' part.
+The ``only if'' par is similar and is left to the reader.
 
-\parit{ Induction Step.}
-Assume that the theorem is proved for polyhedral spaces  of $\dim <m$. Suppose  $\dim\spc{P}=m$.
+We apply induction on $m$.
+The {}\emph{base} case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
 
-We will only give a proof of the ``if" direction. The ``only if" direction is similar and is left to the reader.
+\parit{Step.}
+Assume that the theorem is proved for polyhedral spaces  of dimesnion less than $m$.
+Suppose  $\dim\spc{P}=m$.
 
-
-According to the Globalization theorem (\ref{thm:glob}),
+According to the globalization theorem (\ref{thm:glob}),
 it is sufficient to show that 
 $\spc{P}$  is locally $\Alex\kappa$. 
 
@@ -189,81 +251,19 @@ To prove the case $m\ge 3$,
 note that $\Sigma_p$ is an $(m-1)$-dimensional spherical polyhedral space and all the conditions of the theorem hold for $\Sigma_p$.
 It remains to apply the induction hypothesis.\qeds
 
-\begin{thm}{Exercise}
-Assume  $\spc{P}\in\PM{}\kappa$ and $\dim \spc{P}\ge 2$. 
+\begin{thm}{Exercise}\label{ex:polyKk}
+Assume $\spc{P}$ is a piecewise
+$\Lob{}\kappa$ space and $\dim \spc{P}\ge 2$. 
 Show that 
-if $\spc{P}$ is $\Alex{\kappa'}$, then $\kappa'\le \kappa$ and $\spc{P}$ is $\Alex{\kappa}$.
-\end{thm}
 
-%%%%%%%%%% UP???
-
-\parbf{Curvature bounded above.}
-Recall that the definition of $\ell$-simply connected space is 
-given in \ref{def:l-s.c.}.
-
-The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded above.
-
-
-\begin{thm}{Theorem}\label{thm:PL-CAT}
-Let $\spc{P}\in\PM{}\kappa$ and $\tau$ be a triangulation 
-of  $\spc{P}$. Then 
-
-\begin{subthm}{thm:PL-CAT:curc>=k}
-$\spc{P}$  is locally $\Alex\kappa$
-if and only if any connected component of the link of any simplex $\sigma$ in $\tau$
-is $(2\cdot\pi)$-simply connected.
-Equivalently, if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
+\begin{subthm}{} if $\spc{P}$ is $\Alex{\kappa'}$, then $\kappa'\le \kappa$ and $\spc{P}$ is $\Alex{\kappa}$.
 \end{subthm}
 
-\begin{subthm}{thm:PL-CAT:CAT}
-$\spc{P}$ is a complete length $\CAT\kappa$ space
-if and only if $\spc{P}$ is $(2\cdot\varpi\kappa)$-simply connected and any connected component of the link of any simplex $\sigma$ in $\tau$
-is $(2\cdot\pi)$-simply connected.
+\begin{subthm}{}
+if $\spc{P}$ is $\CAT{\kappa'}$ space, then $\kappa'\ge \kappa$ and $\spc{P}$ is $\CAT\kappa$.
 \end{subthm}
 
 \end{thm}
-
-
-\parit{Proof.}
-Let us apply induction on $\dim\spc{P}$.
-The base case $\dim\spc{P}=0$ is evident.
-
-\parit{Step.}
-Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
-
-We will only give a proof of the ``if" direction.
-
-Fix a point $p\in\spc{P}$.
-A neighborhood of $p$ 
-is isometric to the $\kappa$-cone over 
-the $\Sigma_p$.
-By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
-it is sufficient to show that 
-\begin{clm}{}\label{eq:Sigma-in-CAT(1)}
- $\Sigma_p$ is $\CAT1$
-\end{clm}
-
-Note that $\Sigma_p$ is a spherical polyhedral space 
-and its  links are isometric to  links of $\spc{P}$. 
-By the  induction hypothesis, $\Sigma_p$ is locally $\Alex1$.
-Applying Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}),
-we get \ref{eq:Sigma-in-CAT(1)}.
-
-To prove (\ref{SHORT.thm:PL-CAT:CAT}) apply Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}) to $\spc{P}$.
-\qeds
-
-\begin{thm}{Exercise}
-Show that if in a Euclidean polyhedral space $\spc{P}$
-any two points can be connected by a unique geodesic 
-then $\spc{P}$ is $\CAT0$.
-\end{thm}
-
-\begin{thm}{Exercise}
-Assume  $\spc{P}\in\PM{}\kappa$ and $\dim \spc{P}\ge 2$. 
-Show that 
-if $\spc{P}$ is a complete length $\CAT{\kappa'}$ space, then $\kappa'\ge \kappa$ and $\spc{P}$ is $\CAT\kappa$.
-\end{thm}
-
 
 \section{Flag complexes}
 
@@ -395,14 +395,14 @@ The same argument as above shows that $\gamma$ spends time $\pi$ on every visit 
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:obtuce-flag}
 Assume that a spherical polyhedral space $\spc{P}$
 admits a triangulation $\tau$ such that all dihedral angles of all simplexes are at least $\tfrac\pi2$.
 Show that $\spc{P}$ is $\CAT{1}$
 if $\tau$ is flag.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:short+commuting}
 Let $\spc{U}$ be a complete length $\CAT0$ space
 and $\phi_1,\phi_2,\dots,\phi_k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
 that is 
@@ -425,7 +425,10 @@ Show that $\spc{U}^\Gamma$ is $\CAT0$
 \end{thm}
 
 \parbf{The space of trees.}
-The following construction is given by Billera, Holmes and Vogtmann in \cite{BHV}.
+The following construction is given by 
+Louis Billera,
+Susan Holmes,
+and  Karen Vogtmann \cite{billera-holmes-vogtmann}.
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
 labeled by $a_1,\dots,a_n$.
@@ -436,14 +439,13 @@ such a tree can be also described using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with a convex closed cone in  $\mathbb{R}^{2\cdot n-3}$.
 Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the legth metric on $\spc{T}_n$ induced by these metrics.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:space-of-trees}
 Show that $\spc{T}_n$ with the described metric is a $\CAT0$.
 \end{thm}
 
 
 
-\section{Cubical complexes}
-
+\parbf{Cubical complexes.}
 The definition of a cubical complex
 mostly repeats the definition of a simplicial complex, 
 with simplices replaced by cubes.
@@ -463,7 +465,7 @@ The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \em
 it will be denoted by $\spc{Q}$ or by $\ushort{\spc{Q}}$ 
 if we need to emphasize that we are talking about a set, 
 not a complex.
-A homeomorphism from $\ushort{\spc{Q}}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of} $\spc{X}$.
+A homeomorphism from $\ushort{\spc{Q}}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of}~$\spc{X}$.
 
 The underlying space of a cubical complex $\spc{Q}$ will be always considered with the length metric
 induced from $\RR^N$.
@@ -479,243 +481,23 @@ The link of each cube in a cubical complex admits a natural
 all-right triangulation; 
 each simplex corresponds to an adjusted cube.
 
-\parbf{Cubical analog of a simplicial complex.}
-Let $\spc{S}$ be a simplicial complex and $\{v_1,\dots,v_N\}$ be the set of its vertexes.
-
-Consider $\RR^N$ with the standard basis $\{e_1,\dots,e_N\}$.
-Denote by $\square^N$ the standard unit cube in $\RR^N$;
-that is 
-\[\square^N=\set{(x_1,\dots,x_n)\in \RR^N}{0\le x_i\le 1\ \text{for each}\ i}.\]
-
-Given a $\kay$-dimensional simplex $\<v_{i_0},\dots,v_{i_\kay}\>$ in $\spc{S}$, 
-mark the $(\kay\z+1)$-dimensional faces in $\square^N$ (there are  $2^{N-\kay}$ of them)
-that are parallel to the coordinate $(k+1)$-plane 
-spanned by $e_{i_0},\dots,e_{i_\kay}$.
-
-
-Note that the set of all marked faces of $\square^{N}$
-forms a cubical complex;
-it will be called 
-the \index{cubical analog}\emph{cubical analog} of $\spc{S}$
-and will be denoted as $\square_\spc{S}$.
-
-Note that if a simplicial complex is connected then so is its cubical analog.
-
-\begin{thm}{Proposition}\label{prob:cubical-analog}
-Let $\spc{S}$ be a connected simplicial complex
-and $\spc{Q}=\square_{\spc{S}}$ be its cubical analog.
-Then $\ushort{\spc{Q}}$ is connected 
-and the link of any vertex of $\spc{Q}$
-is isometric to  ${\spc{S}}$
-equipped with the spherical right-angled metric.
-
-In particular, if $\spc{S}$ is a flag complex 
-then $\spc{Q}$ is locally $\CAT0$ 
-and therefore its universal cover $\tilde{\spc{Q}}$ is $\CAT0$.
+\begin{thm}{Exercise}\label{ex:cubical-complex}
+Show that a cubical complex $\spc{Q}$ is locally $\CAT0$ if and only if link of each vertex in $\spc{Q}$ is flag.
 \end{thm}
 
-\parit{Proof.}
-The first part of the proposition follows 
-from the construction above.
+\section{Remarks}
 
-If ${\spc{S}}$ is flag, 
-then by Flag condition (\ref{thm:flag}) 
-the link of any cube in $\spc{Q}$ is $\CAT{1}$.
-Therefore, by cone construction (\ref{thm:warp-curv-bound:cbb:a})
-$\spc{Q}$
-is locally $CAT0$.
-It remains to apply Hadamard--Cartan theorem 
-\ref{thm:hadamard-cartan}.
-\qeds
+The condition on polyhedral $\CAT\kappa$ spaces given in Theorem~\ref{thm:PL-CAT} might look easy to use, 
+but in fact, it is hard to check even in very simple cases.
+For example the description of those coverings of $\mathbb{S}^3$ branching at three 
+great circles which are $\CAT1$ requires quite a bit of work;
+an answer is given by Ruth Charney and Michael Davis \cite{charney-davis-1993}.
 
-From Proposition \ref{prob:cubical-analog}, 
-it follows that the cubical analog
-of any flag complex is aspherical.
-The following exercise states that the  converse also holds, see \cite[5.4]{davis-survey}.
-
-\begin{thm}{Exercise}
-A simplicial complex is flag 
-if and only if its cubical analog is aspherical.
-\end{thm}
-
-\section{Exotic aspherical manifolds}
-
-
-By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
-any complete length $\CAT{0}$ space is contractible.
-Therefore any complete length locally $\CAT{0}$ space 
-is \emph{aspherical};
-that is, they have contractible universal covers.
-This observation can be used to construct examples of aspherical spaces. 
-
-Let $\spc X$ be a proper topological space.
-Recall that $\spc X$ is called 
-\index{simply connected space at infinity}\emph{simply connected at infinity} 
-if for any compact set $K\subset\spc X$
-there is a bigger compact set $K'\supset K$
-such that  $\spc X\backslash K'$ is path connected 
-and any loop in $\spc X\backslash K'$
-is null-homotopic in  $\spc X\backslash K$.
-
-Recall that path connected spaces are not empty by definition.
-Therefore compact spaces are not simply connected at infinity.
-
-The following statement was proved by Michael Davis in \cite{davis-noneuclidean}.
-
-\begin{thm}{Proposition}\label{prop:aspherical}
-For any  $m\ge 4$ there is a closed aspherical 
-$m$-dimensional piecewise linear manifold
-whose universal cover is not simply connected at infinity.
-
-In particular, the universal cover of this manifold 
-is not homeomorphic to the $m$-dimensional Euclidean space.
-\end{thm}
-
-The proof requires the following lemma.
-
-\begin{thm}{Lemma}\label{lem:example-pi_infty}
-Let $\spc{S}$ be a flag complex,
-$\spc{Q}=\square_{\spc{S}}$ be its cubical analog
-and $\tilde{\spc{Q}}$ be the universal cover of $\spc{Q}$.
-
-Assume  $\tilde{\spc{Q}}$ is simply connected at infinity.
-Then $\spc{S}$ is simply connected.
-\end{thm}
-
-The proof below can be modified to prove the following extension. 
-
-\begin{thm}{Exercise}\label{ex:example-pi_infty-new}
-Under the assumptions of the Lemma~\ref{lem:example-pi_infty}, 
-for any vertex $v$ in $\spc{S}$
-the complement $\spc{S}\backslash\{v\}$ is simply connected.
-\end{thm}
-
-
-\parit{Proof of Lemma~\ref{lem:example-pi_infty}.}
-Assume $\spc{S}$ is not simply connected.
-Choose a shortest noncontractible circle $\gamma\:\mathbb{S}^1\to\spc{S}$ formed by the edges of $\spc{S}$.
-
-Note that $\gamma$ forms a 1-dimensional subcompelex of $\spc{S}$ that is a closed local geodesic.
-Denote by $G$ the subcomplex of $\spc{Q}$ that corresponds to $\gamma$.
-
-Fix a vertex $v\in G$;
-let $G_v$ be the connected component of $G$ containing $v$.
-Let $\tilde G$ be 
-the inverse image 
-of $G_v$ in $\tilde{\spc{Q}}$
-for the universal cover $\tilde{\spc{Q}}\to \spc{Q}$.
-Fix a point $\tilde v\in\tilde G$ in the inverse image of $v$.
- 
-Note that 
-\begin{clm}{}\label{tilde-G-convex}
-$\tilde G$ forms a convex set in $\tilde{\spc{Q}}$.
-\end{clm}
-
-
-Indeed, according to Proposition \ref{prob:cubical-analog},
-$\tilde{\spc{Q}}$ is $\CAT0$.
-By ???, %here there should be ref to locconvex+connected => convex in CAT(0)
-it is sufficient to show that $\tilde G$ is locally convex in $\tilde{\spc{Q}}$,
-or equivalently $G$ is locally convex in $\spc{Q}$.
-
-\begin{wrapfigure}[5]{r}{30mm}
-\begin{lpic}[t(-7mm),b(0mm),r(0mm),l(0mm)]{pics/gamma-in-S(1)}
-\lbl[t]{15,5;$\xi$}
-\lbl[b]{15,17;$\zeta$}
-\lbl[r]{14.5,10.5;$e$}
-\end{lpic}
-\end{wrapfigure}
-
-The latter can only fail if $\gamma$ contains two vertices, say $\xi$ to $\zeta$ in $\spc{S}$, that are joined by an edge not in $\gamma$; 
-denote this edge by $e$.
-
-Each edge of $\spc{S}$ has length $\tfrac\pi2$.
-Therefore each of two circles formed by $e$ and an arc of $\gamma$
-from $\xi$ to $\zeta$ is shorter that $\gamma$.
-Moreover,
-at least one of them is noncontractable 
-since $\gamma$ is not.
-That is, 
-$\gamma$ is not a shortest noncontractible circle 
---- a contradiction.
-\claimqeds
-
-Further, note that 
-$\tilde G$ is homeomorphic to the plane, 
-since $\tilde G$ is 
-a 2-dimensional manifold without boundary.
-From above, $\tilde G$ is $\CAT0$ and hence is contractible.
-
-Denote by $C_R$ the circle of radius $R$ in $\tilde G$ centered at $\tilde v$.
-All $C_R$ are homotopic to each other in $\tilde G\backslash\{\tilde v\}$ and therefore in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
-
-Note that the map $\tilde{\spc{Q}}\backslash \{\tilde v\}\to \spc{S}$
-defined by $x\mapsto\dir{\tilde v}{x}$ maps $C_R$ to a circle homotopic to $\gamma$.
-Therefore $C_R$ is not contractible in $\tilde{\spc{Q}}\backslash \{\tilde v\}$.
-
-In particular, 
-$C_R$ is not contactable in $\tilde{\spc{Q}}\backslash K$
-if $K\supset \tilde v$.
-If $R$ is large, 
-the circle $C_R$  
-lies outside of any compact set $K'$ in $\tilde{\spc{Q}}$.
-It follows that $\tilde{\spc{Q}}$ is not simply connected at infinity, a contradiction.
-\qeds
-
-\parit{Proof of Proposition~\ref{prop:aspherical}.}
-Let $\Sigma^{m-1}$ be an $(m-1)$-dmensional smooth homology sphere that is not simply connected and bounds a contractible smooth compact $m$-dimensional manifold $\spc{W}$. 
-
-For $m\ge 5$ the existence of such $(\spc{W}, \Sigma)$ follows from \cite{kervaire}. 
-For $m=4$ it follows from the construction in \cite{mazur}.
-
-Pick any smooth triangulation $\tau$ of $W$ and let $\spc{S}$ be the resulting subcomplex that triangulates $\Sigma$.
-
-
-We can assume that $\spc{S}$ is flag; 
-otherwise pass to the barycentric subdivision 
-of $\tau$ and apply Exercise~\ref{ex:baricenric-flag}.
-
-
-Let $\spc{Q}=\square_{\spc{S}}$ be the cubical analog of $\spc{S}$.
-
-By Proposition~\ref{prob:cubical-analog},
-$\spc{Q}$ is a homology manifold.
-It follows that $\spc{Q}$ is a piecewise linear manifold 
-with a finite number of singularities at its vertices.
-
-
-Removing a small neighborhood of each vertex in $\spc{Q}$,
-we can obtain a piecewise linear manifold 
-with the boundary formed by several copies of $\Sigma$.
-To each copy of $\Sigma$, 
-glue a copy of  $\spc{W}$ along its boundary.
-This results in a  closed piecewise linear manifold 
-$\spc{M}$ homotopically equivalent to $\spc{Q}$.
-
-Finally, by the Lemma~\ref{lem:example-pi_infty},  
-the universal cover $\tilde{\spc{Q}}$ of $\spc{Q}$
-is not simply connected at infinity.
-
-The same holds for 
-the universal cover $\tilde{\spc{M}}$ of $\spc{M}$.
-The later follows since homotopy equivalences 
-$f\: \spc Q\to \spc M$ and $g\:\spc M\to \spc Q$ 
-lift to proper maps 
-$\tilde f \: \tilde{\spc{Q}}\to \tilde{\spc{M}}$
-and $\tilde g \: \tilde{\spc{M}}\to \tilde{\spc{Q}}$. 
-\qeds
-
-
-\section{Comments}
-
-\parbf{Generalized flag condition.}
-It would be interesting to get an analog of the flag condition for other simplices (not necessary right-angled).
-Such a condition for some spherical Coxeter simplex
-could resolve the following problem; 
-see \cite{panov-petrunin} for more details. 
+Analogs of the flag condition for spherical Coxeter simplexes
+could resolve the following problem. 
 
 \begin{thm}{Braid space problem}
-Consider $\CC^n$ with coordinates $z_1,z_2,\dots,z_n$.
+Consider $\CC^n$ with coordinates $z_1,\dots,z_n$.
 Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
 pass to the universal cover and consider the completion $\spc{B}_n$ 
 of the obtained space.
@@ -723,55 +505,36 @@ of the obtained space.
 Is it true that $\spc{B}_n$ is $\CAT0$ for any $n$.
 \end{thm}
 
-The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$.
-This and number of related questions are discussed in \cite{panov-petrunin:ramification}
+The above question has an affirmative answer for $n\le 3$\cite{charney-davis-1993} and open for all $n\ge 4$.
+This and number of related questions are discussed by Dmitri Panov and the third author \cite{panov-petrunin}.
 
-\parbf{More exotic constructions.}
-The construction used in the proof of  Proposition~\ref{prop:aspherical} does many other interesting thins; 
-some of them discussed in the survey \cite{davis-survey} by Michael Davis.
+Recall that by Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
+any complete length $\CAT{0}$ space is contractible.
+Therefore any complete length locally $\CAT{0}$ space 
+is \emph{aspherical};
+that is, they have contractible universal covers.
 
-The following Proposition was proved by Fredric Ancel, Michael Davis and Craig Guilbault in \cite{ADG}. 
+This observation can be used together with Exercise \ref{ex:cubical-complex} to construct examples of exotic aspherical spaces;
+for example compact topological manifolds which universal cover is not homeomorphic to a Euclidean space.
+A survey on the subject it given by Michael Davis \cite{davis-2001}; a more elementary introduction to the subject is given by the authors \cite[Chapter 3]{alexander-kapovitch-petrunin-CAT}.
 
+The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing  aspherical spaces;
+a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis-1995}.
 
-\begin{thm}{Proposition}\label{prop:loc-CAT-mnfld}
-Given $m\ge 5$ there is a Euclidean polyhedral space $\spc{P}$ such that
-\begin{subthm}{}
-$\spc{P}$ is homeomorphic to a closed $m$-dimensional manifold.
+The $\CAT0$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanged the $\ell^2$-metric to a natural $\ell^1$ or $\ell^\infty$ on each cube.
+The following statement is proved by Brian Bowditch \cite{bowditch-2020}.
+
+\begin{thm}{Theorem}
+The following three conditions are equivalent.
+
+\begin{subthm}{cube-2} A cube complex $Q$ equipped with $\ell^2$-metric is $\CAT0$.
 \end{subthm}
 
-\begin{subthm}{}
-$\spc{P}$ is locally $\CAT0$
+\begin{subthm}{cube-infty} A cube complex $Q$ equiped with $\ell^\infty$-metric is \index{injective space}\emph{injective}.
+The later means that for any metric space $\spc{X}$ with a subset $A$, any short map $A\to (Q,\ell^\infty)$ can be extended to a short map $\spc{X}\to (Q,\ell^\infty)$.
 \end{subthm}
 
-\begin{subthm}{}
-The universal cover of $\spc{P}$ is not simply connected at infinity.
+\begin{subthm}{cube-1} A cube complex $Q$ equiped with $\ell^1$-metric is \index{median space}\emph{median}.
+ The later means that for any three points $x,y,z$ there is a {}\emph{unique} point   $m$ (it is called \index{median}\emph{median} of $x$, $y$, and $z$) that lies on {}\emph{some} geodesics $[xy]$, $[xz]$ and $[yz]$.
 \end{subthm}
 \end{thm}
-
-\parit{Proof.}
-Apply Exercise~\ref{ex:example-pi_infty-new} to the barycentric subdivision of the simplicial complex $\spc{S}$ provided by Exercise~\ref{ex:funny-S}.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:funny-S}
-Given a positive integer $m\ge 5$
-construct an $(m-1)$-dimensional simplicial complex $\spc{S}$ such that $\Cone\spc{S}$ is homeomorphic to $\EE^m$
-and $\pi_1(\spc{S}\backslash\{v\})\ne0$ for some vertex $v$ in $\spc{S}$.
-\end{thm}
-
-
-It worth to note that any complete simply connected Riemannian manifold with nonpositive curvature is homeomorphic to the Euclidean space of the same dimension.
-In fact by Hadamard--Cartan theorem
-(\ref{thm:hadamard-cartan}), 
-the exponential map at one point of such manifold is a homeomorphism.
-In particular there is no Riemannian analog of the proposition.
-Moreover, according to a theorem of Stone, see \cite{stone, davis-januszkiewicz}, there is no piecewise linear analog of the proposition; 
-that is the homeomorphism to a manifold in Proposition~\ref{prop:loc-CAT-mnfld} 
-can not be made piecewise linear. 
-
-A similar construction was used by Michael Davis, Tadeusz Janu\-szkie\-wicz and Jean-Fran\c{c}ois Lafont \cite{davis-januszkiewicz-lafont}
-to construct a closed smooth 4-dimensional manifold $M$ with universal cover $\tilde M$ diffeomorphic to $\RR^4$ such that 
-(1) $M$ admits a polyhedral metric that is locally $\CAT0$, 
-but (2) $M$ does not admit a Riemannian metric with nonpositive sectional curvature.
-
-
-
