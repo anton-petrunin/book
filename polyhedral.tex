@@ -3,8 +3,9 @@
 \section{Definitions}
 
 \begin{thm}{Definition}\label{def:poly}
-A length space $\spc{P}$ is called \emph{piecewise
-$\Lob{}\kappa$ space}
+A length space $\spc{P}$ is called \index{piecewise
+$\Lob{}\kappa$ space}\emph{piecewise
+$\Lob{}\kappa$}
 if it admits a finite triangulation $\tau$ 
 such that an arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{\dim \sigma}{\kappa}$.
 
@@ -44,11 +45,11 @@ The latter class of spaces includes in particular the infinite covers of polyhed
 
 The dimension of a polyhedral space $\spc{P}$
 is defined as the maximal dimension of the simplex 
-in one (and therefore any) triangulation of $\spc{P}$.
+in one (and therefore any) triangulation of~$\spc{P}$.
 
 \parbf{Links.}
 Let $\spc{P}$ be a polyhedral space
-and $\sigma$ be a simplex in a triangulation $\tau$ of $\spc{P}$.
+and $\sigma$ be a simplex in its triangulation $\tau$.
 
 The simplices that contain $\sigma$
 form an abstract simplicial complex called the \emph{link} of $\sigma$, 
@@ -70,7 +71,7 @@ The angle metric between directions makes  $\Link_\sigma$ into a spherical polyh
 We will always consider the link with this metric.
 
 \parbf{Tangent space and space of directions.}
-Let $\spc{P}$ be a polyhedral space and let  $\tau$ be a triangulation of $\spc{P}$.
+Let $\tau$ be a triangulation of a polyhedral space $\spc{P}$.
 If a point $p\in \spc{P}$ 
 lies in the interior of a $\kay$-simplex $\sigma$ of $\tau$ 
 then the tangent space $\T_p\spc{P}$
@@ -88,16 +89,14 @@ the space of directions $\Sigma_p$ is a spherical polyhedral space
 of dimension at most $m-1$. 
 
 In particular, 
-for any point $p$ in $\sigma$,
-the isometry class of $\Link_\sigma$ together with $\kay=\dim\sigma$
-determines the isometry class of $\Sigma_p$ 
- and the other way around.
+for any point $p$ in the interior of a simplex $\sigma$,
+the isometry class of $\Link_\sigma$ and $\kay=\dim\sigma$
+determines the isometry class of $\Sigma_p$ and the other way around.
 
 A small neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
 In fact, if this propery holds at any point of a compact length space $\spc{P}$
 then  $\spc{P}$ is a piecewise
-$\Lob{}\kappa$ space;
-see \cite{lebedeva-petrunin-poly}.
+$\Lob{}\kappa$ space \cite{lebedeva-petrunin-poly}.
 
 \section{Curvature bounds}
 
@@ -113,7 +112,7 @@ Let $\spc{P}$ be a piecewise
 $\Lob{}\kappa$ space and $\tau$ be its triangulation. Then 
 
 \begin{subthm}{thm:PL-CAT:curc>=k}
-$\spc{P}$  is locally $\Alex\kappa$
+$\spc{P}$  is locally $\CAT\kappa$
 if and only if any connected component of the link of any simplex $\sigma$ in $\tau$
 is $(2\cdot\pi)$-simply connected.
 Equivalently, if and only if any closed local geodesic in $\Link_\sigma$ has length at least $2\cdot\pi$.
@@ -282,7 +281,7 @@ the \emph{no-triangle condition}\index{no-triangle condition}.
 
 Note that every flag complex is determined by its 1-skeleton.
 
-\begin{thm}{Exercise}\label{ex:baricenric-flag}
+\begin{thm}{Exercise}\label{ex:barycenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
 Conclude that any simplicial complex is homeomorphic to a compact length $\CAT1$ space.
 \end{thm}
@@ -370,6 +369,12 @@ imply the ``only-if'' part.
 By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed local geodesic $\gamma$ 
 in a flag complex $\spc{S}$ with all-right metric has length at least $2\cdot\pi$.
+
+\begin{wrapfigure}{o}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1200}
+\end{wrapfigure}
 
 Fix a flag complex $\spc{S}$.
 Recall that the  \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\overline \Star_v$)
@@ -505,8 +510,7 @@ of the obtained space.
 Is it true that $\spc{B}_n$ is $\CAT0$ for any $n$.
 \end{thm}
 
-The above question has an affirmative answer for $n\le 3$\cite{charney-davis-1993} and open for all $n\ge 4$.
-This and number of related questions are discussed by Dmitri Panov and the third author \cite{panov-petrunin}.
+The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$ \cite{charney-davis-1993,panov-petrunin}.
 
 Recall that by Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
 any complete length $\CAT{0}$ space is contractible.

@@ -1102,6 +1102,42 @@ label.top(btex $\tilde q^3$ etex, z.q3);
 label.top(btex $\tilde q^4$ etex, z.q4);
 endfig;
 
+beginfig(1200) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.v=(-1,0)*u;
+z.vv=z.v xscaled -1;
+z.r=(0,.5)*u;
+z.rr=z.v+ (z.r-z.v) rotated 10;
+
+z1=.6[z.r,-z.r];
+z0=z.v-abs(z.r-z.v)*unitvector(z1-z.v);
+z2=z.vv-abs(z.r-z.v)*unitvector(z1-z.vv);
+
+p0=z0..z1{(z2-z1) rotated -50}..z2;
+p1=arc(z.r,z.rr,-z.r);
+
+hatchfill p1--cycle withcolor (77, 1.5mm, -.5bp);
+
+draw subpath (0,1) of p0 pensemibold;
+draw subpath (1,2) of p0 pensemibold dashed evenly;
+draw p1;
+draw p1 xscaled -1;
+draw z.r-- -z.r;
+draw z.v..z.r..z.vv;
+draw z.v..-z.r..z.vv;
+
+dOt z.v,z.vv;
+
+whitelabel.lft(btex $v$ etex, z.v);
+label.rt(btex $v'$ etex, z.vv);
+whitelabel.urt(btex $\gamma_v$ etex, point .5 of p0);
+whitelabel.urt(btex $\Star_v$ etex, z.r rotatedabout(z.v,-160));
+label.llft(btex $\Star_{v'}$ etex, -z.r rotatedabout(z.vv,-160));
+endfig;
+
 beginfig(1205) 
 save u,p;
 path p[];

@@ -762,9 +762,6 @@ Apply \ref{thm:kirsz} for each of the following maps
 Denote by $F_i$ the short extension of $f_i$.
 Observe that $F_{i-1}(\tilde z_i)=F_{i}(\tilde z_i)$ for each $i$ and use it.
 
-\parbf{\ref{ex:riemannian-kirszbraun-equality}.}
-
-
 \parbf{\ref{ex:perunin-stadler}.} Consider the space $\spc{Y}^{\spc{X}}$ of all maps $\spc{X}\to \spc{Y}$ equipped with the product topology.
 
 Denote by $\mathfrak{S}_F$ the set of maps $h\in \spc{Y}^\spc{X}$ such that the restriction $h|_F$  is short and agrees with $f$ in $F\cap A$.
@@ -838,9 +835,11 @@ It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\a
 \parit{Remark.}
 By \ref{thm:cat-unique} the converse holds as well.
 
-\parbf{\ref{ex:polyKk}.}
+\parbf{\ref{ex:polyKk}.} Apply \ref{thm:tan-is}, \ref{thm:poly-CBB}, and \ref{thm:PL-CAT}.
 
-\parbf{\ref{ex:baricenric-flag}.}
+\parbf{\ref{ex:barycenric-flag}.}
+Observe and use that (1) in the barycentric subdivision every vertex corresponds to a simplex of the original triangulation
+and (2) a simplex of the subdivision corresponds to a decreasing sequence of simplexes in the original triangulation. 
 
 \parbf{\ref{ex:obtuce-flag}.}
 Use induction on the dimension  to prove that if in a spherical simplex $\triangle$ every edge is at least $\tfrac\pi2$, then 
@@ -856,6 +855,8 @@ On the other hand the boundary of the rhombus is closed local geodesic in this s
 Therefore the space cannot be $\CAT1$.
 
 \parbf{\ref{ex:short+commuting}.}
+Observe that if we glue two copies of spaces along $A_i$, then the copies of $A_j$ for some $j\ne i$ form a convex subset in the clued space.
+Use it together with Reshetnyak gluing theorem $n$ times; for each label of the edges.
 
 \parbf{\ref{ex:space-of-trees}.}
 The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
@@ -876,7 +877,7 @@ Therefore, by Proposition~\ref{prop:no-trig} our complex is flag.
 It remains to apply the flag condition (\ref{thm:flag}), and \ref{thm:warp-curv-bound:cbb:a}.
 
 \parbf{\ref{ex:cubical-complex}.}
-
+Apply the flag condition (\ref{thm:flag}) and Theorem~\ref{thm:warp-curv-bound:cbb:S}.
 
 \parbf{\ref{ex:norays}.}
 Consider a cube in the Hilbert space;
