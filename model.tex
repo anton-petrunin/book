@@ -22,12 +22,12 @@ will denote the segment connecting $x$ and $y$.
 The segment $[x y]$ is uniquely defined for $\kappa\le 0$ and for $\kappa>0$ it is defined uniquely if $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.
 
 A triangle in $\Lob2\kappa$, with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}.
-Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for a triple $([y z],[z x],[x y])$.
+Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for the triple $([y z],[z x],[x y])$.
 
 The angle of $\trig x y z$ at $x$ will be denoted by $\mangle\hinge xyz$\index{$\mangle$}.
 
 By $\modtrig\kappa\{a,b,c\}$\index{$\modtrig\kappa$!$\modtrig\kappa\{{*},{*},{*}\}$} we denote a triangle in 
-$\Lob2\kappa$ with sidelengths $a,b,c$, so 
+$\Lob2\kappa$ with side lengths $a,b,c$, so 
 $\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$  are such that 
 \[\dist{x}{y}{}=c,\quad \dist{y}{z}{}=a,\quad \dist{z}{x}{}=b.\]
 For $\modtrig\kappa\{a,b,c\}$ to be defined, the sides $a,b,c$ must satisfy the triangle inequality.  If $\kappa>0$, we 
@@ -131,7 +131,7 @@ Set
 \side\kappa\{\phi;b,-c\}
 =\side\kappa\{\phi;-b,c\}
 \df\side\kappa\{\pi-\phi;b,c\},\]
-this way we define $\side\kappa\{\phi;b,c\}$ for some negative values of $b$ and $c$.
+in this way we define $\side\kappa\{\phi;b,c\}$ when one of the numbers  $b$ and $c$ is negative. %for some negative values of $b$ and $c$.
 
 
 \begin{thm}{Properties of standard functions}\label{md-equalities}
@@ -163,7 +163,8 @@ is increasing and defined if $b,c<\varpi\kappa$ and $\phi\in[0,\pi]$\footnote{Fo
 \begin{subthm}{k-decrease}
 For fixed $\phi,a,b,c$, the functions
 \[\kappa\mapsto \tangle\mc\kappa\{a;b,c\}\quad \text{and}\quad \kappa\mapsto \side\kappa \{\phi;b,c\}\]
-are respectively non-decreasing (in fact, decreasing, if $a\z\notin\{|b-c|, b+c\}$) and non-increasing (in fact, increasing, if $\phi\notin\{0,\pi\}$).
+are respectively non-decreasing (in fact, decreasing, if $a\z\notin\{|b-c|, b+c\}$%??? V: I am confused by the caveat. the comparison angle is not defined in this case
+) and non-increasing (in fact, increasing, if $\phi\notin\{0,\pi\}$ ).%??? V:  don't understand this caveat either.
 \end{subthm}
 
 \begin{subthm}{lem:alex-0}(Alexandrov's lemma)
@@ -221,7 +222,7 @@ Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ 
 Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\mathbb{S}^2$.  
 Let $z$ be the midpoint of  $[pq]$.  
 We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
-If not, $\alpha$ intersects the boundary  great circle in a point, say $r$.
+If not, $\alpha$ intersects the boundary  great circle of this hemisphere; let $r$ be a point in the intersection.
 Without loss of generality we may assume that $r\in\check\alpha$. 
 The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that contains $r$ and its antipodal point $r'$.
 Thus 
