@@ -22,10 +22,10 @@ Any $\II$-valued metric can be refereed briefly as a metric;
 the interval should be apparent from the context, but by default a metric is $(0,\infty)$-valued. 
 If we need to be more specific, we may also use the following names:
 \begin{itemize}
-\item a $(0,\infty)$-valued metric may be called a \emph{genuine metric}.
-\item a $(0,\infty]$-valued metric may be called an \emph{$\infty$-metric}.
-\item a $[0,\infty)$-valued metric may be called  a \emph{genuine pseudommetric}.
-\item A $[0,\infty]$-valued metric may be called a \emph{pseudometric} or \emph{$\infty$-pseudometric}.
+\item a $(0,\infty)$-valued metric may be called a \index{genuine metric}\emph{genuine metric}.
+\item a $(0,\infty]$-valued metric may be called an \index{$\infty$-metric}\emph{$\infty$-metric}.
+\item a $[0,\infty)$-valued metric may be called  a \index{genuine pseudommetric}\emph{genuine pseudommetric}.
+\item A $[0,\infty]$-valued metric may be called a \index{pseudometric}\emph{pseudometric} or \index{$\infty$-pseudometric}\emph{$\infty$-pseudometric}.
 \end{itemize}
 
 A metric space is a set equipped with a metric;
@@ -34,9 +34,9 @@ the latter will be used if we need to emphasize that we are working in the space
 
 The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
 \[\distfun{x}{}{}\:y\mapsto\dist{x}{y}{}\]
-will be called the \emph{distance function}\index{distance function} from $x$. 
+will be called the \index{distance function}\emph{distance function} from $x$. 
 
-Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \emph{subspace}\index{subspace};
+Any  subset $A$ in a metric space $\spc{X}$ will be also considered as a \index{subspace}\emph{subspace};
 that is, a metric space with the metric defined by restricting the metric of $\spc{X}$ to $A\times A\subset \spc{X}\times\spc{X}$.
 
 
@@ -61,7 +61,7 @@ set
 \dist{x}{y}{\bm{X}}=\dist{x}{y}{\spc{X}_\alpha}&\text{if}\quad\alpha=\beta.
 \end{matrix}
 \]
-The resulting $\infty$-metric space $\bm{X}$ will be called the \emph{disjoint union}\index{disjoint union of metric spaces} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$, denoted by \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
+The resulting $\infty$-metric space $\bm{X}$ will be called the \index{disjoint union of metric spaces}\emph{disjoint union} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$, denoted by \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
 \end{thm}
 
 Now let us give examples when vanishing distance between distinct points is useful:
@@ -77,7 +77,7 @@ Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and  
  $\map\:\spc{X}\to\spc{Y}$ be a map.
 If $\map$ is not injective,
-then the \emph{pullback}
+then the {}\emph{pullback}
 \[\dist{x}{y}{\spc{X}}=\dist{\map(x)}{\map(y)}{\spc{Y}}\]
 defines only a pseudometric on $\spc{X}$.
 
@@ -99,11 +99,11 @@ Often we do not distinguish between $\spc{X}'$ and~$\spc{X}$.
 
 Set $x\approx y$ if and only if $\dist{x}{y}{}<\infty$;
 this is another equivalence relation on $\spc{X}$.
-The equivalence class of a point $x\in\spc{X}$ will be called the \emph{metric component}\index{metric component} 
+The equivalence class of a point $x\in\spc{X}$ will be called the \index{metric component}\emph{metric component} 
  of $x$; it will be denoted as $\spc{X}_x$.
 One could think of $\spc{X}_x$ as  $\oBall(x,\infty)_{\spc{X}}$, the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
 
-It follows that any $\infty$-metric space is a \emph{disjoint union} of genuine metric spaces, the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
+It follows that any $\infty$-metric space is a {}\emph{disjoint union} of genuine metric spaces, the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
 
 To summarize this discussion: Given a $[0,\infty]$-valued metric space $\spc{X}$, we may pass to the corresponding $(0,\infty]$-valued metric space $\spc{X}'$ and break the latter  into a disjoint union of metric components, each of which is  a genuine metric space.
 
@@ -117,7 +117,7 @@ Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 \\
 \cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}
 \end{align*}
-are called respectively the  \emph{open}\index{open ball} and  the \emph{closed  balls}\index{closed ball}   of radius $R$ with center $x$.
+are called respectively the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed  balls} of radius $R$ with center $x$.
 
 If we need to emphasize that these balls are taken in the space $\spc{X}$,
 we write 
@@ -129,7 +129,7 @@ often will not need to specify the center of the ball,
 so we may write 
 \[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}}\] respectively.
 
-A set $A\subset\spc{X}$ is called \emph{bounded}\index{bounded set} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
+A set $A\subset\spc{X}$ is called \index{bounded set}\emph{bounded} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
 
 \parbf{Distances to sets.}
 For subset $A\subset \spc{X}$, 
@@ -150,19 +150,19 @@ For any subset $A\subset\spc{X}$,  the sets
 \\
 \cBall[A,R]&=\set{y\in \spc{X}}{\distfun{A}{y}{}\le R}
 \end{align*}
-are called respectively the  \emph{open}\index{open tubular neighborhood} and \emph{closed $R$-neighborhoods}\index{closed neighborhood} of $A$.
+are called respectively the  \index{open tubular neighborhood}\emph{open} and \index{closed tubular neighborhood}\emph{closed $R$-neighborhoods} of $A$.
 
 \parbf{Diameter, radius and packing.}
 Let $\spc{X}$ be a metric space.
-Then the \emph{diameter}\index{Diameter} of $\spc{X}$ is  defined as
+Then the \index{diameter}\emph{diameter} of $\spc{X}$ is  defined as
 \[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
 
-The \emph{radius}\index{Radius} of $\spc{X}$ is  defined as
+The \index{radius}\emph{radius} of $\spc{X}$ is  defined as
 \[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \text{for some}\ x\in\spc{X}}.\]
 
-The packing number \emph{$\eps$-pack}\index{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
+The packing number \index{$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
 If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$ 
-such that $\dist{x^i}{x^j}{}>\eps$ is called a \emph{maximal $\eps$-packing}\index{maximal $\eps$-packing} in $\spc{X}$.
+such that $\dist{x^i}{x^j}{}>\eps$ is called a \index{maximal packing}\emph{maximal $\eps$-packing} in $\spc{X}$.
 
 
 \parbf{G-delta sets.}
@@ -178,7 +178,7 @@ Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
  
 
 \parbf{Proper spaces.}
-A metric space $\spc{X}$ is called \emph{proper}\index{proper space} if all closed bounded sets in $\spc{X}$ are compact. 
+A metric space $\spc{X}$ is called \index{proper space}\emph{proper} if all closed bounded sets in $\spc{X}$ are compact. 
 This condition is equivalent to each of the following statements:
 \begin{enumerate}
 \item For some (and therefore any) point $p\in \spc{X}$ and any $R<\infty$, 
@@ -198,7 +198,7 @@ Proper metric spaces are separable and second countable.
 Let $\spc{X}$ be a metric space. Then the following are equivalent
 \begin{enumerate}[i)]
 \item $\spc{X}$ is compact;
-\item $\spc{X}$ is \emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
+\item $\spc{X}$ is \index{sequentially compact}\emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
 \item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
 \end{enumerate}
 \end{thm}
@@ -206,7 +206,8 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 \section{Length spaces}\label{sec:intrinsic}
 
 \begin{thm}{Definition}\label{def:length}
-Let $\spc{X}$ be a metric space.  Given a curve $\alpha\: \II\to \spc{X}$ we define its {\emph length} as 
+Let $\spc{X}$ be a metric space.
+Given a curve $\alpha\: \II\to \spc{X}$ we define its \index{length}\emph{length} as 
 \[
 \length \alpha \df \sup_{a\le t_0\le\ldots\le t_n\le b}\left\{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha (t_{i-1})}{}\right\}
 \]
@@ -228,7 +229,7 @@ consider the value
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 
 It is easy to see that $\yetdist{}{}{}$ defines a $(0,\infty]$-valued metric on  $\spc{X}$;
-it will be called the induced \emph{length-metric}\index{length-metric}on $\spc{X}$.
+it will be called the induced \index{length-metric}\emph{length-metric} on $\spc{X}$.
 Clearly 
 \[\yetdist{x}{y}{}\ge \dist{x}{y}{}\]
 for any $x,y\in \spc{X}$.
@@ -236,7 +237,7 @@ for any $x,y\in \spc{X}$.
 It  eaisly follows from the definition that the length of a curve $\alpha$ with respect to $\yetdist{}{}{}$ is equal to the length of $\alpha$ with respect to $\dist{}{}{}$. In particular, iterating the construction produces the same $\yetdist{}{}{}$.
 
 \begin{thm}{Definition}\label{def:length-space}
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\spc{X}$ is called a \emph{length space}\index{length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\spc{X}$ is called a \index{length space}\emph{length space}.
 \end{thm}
 
 In other words, a metric space $\spc{X}$ is a
@@ -259,9 +260,9 @@ We will need the following variations of Definition~\ref{def:length-space}:
 
 \begin{itemize}
 \item Assume $R>0$.
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$, then $\spc{X}$ is called an \emph{$R$-length space}\index{$R$-length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$, then $\spc{X}$ is called an \index{$R$-length space}\emph{$R$-length space}.
 \item If any point in $\spc{X}$ admits a neighborhood  $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$
-then  $\spc{X}$ is called a \emph{locally length space}\index{locally length space}.
+then  $\spc{X}$ is called a \index{locally length space}\emph{locally length space}.
 \item A metric space $\spc{X}$ is called 
 \emph{geodesic}%
 \index{geodesic space}
@@ -303,11 +304,11 @@ Give an example of a complete length space such that no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \emph{midpoint} of $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} of $x$ and $y$
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called \emph{$\eps$-midpoint} of $x$ and $y$
+A point $z\in \spc{X}$ is called \index{$\eps$-midpoint}\emph{$\eps$-midpoint} of $x$ and $y$
 if 
 \[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -461,7 +462,7 @@ if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
 that lies in $A$.
 
-We say that $A$ is \emph{totally convex}\index{totally convex}
+We say that $A$ is \index{totally convex}\emph{totally convex}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
 
 If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$
@@ -469,8 +470,7 @@ then $A$ is called respectively
 \emph{$R$-convex},
 \emph{weakly  $R$-convex}%
 \index{weakly convex set!weakly $R$-convex set} 
-and \emph{totally  $R$-convex}
-\index{totally convex set!totally $R$-convex set}.
+and \index{totally convex set!totally $R$-convex set}\emph{totally  $R$-convex}.
 
 A set $A\subset\spc{X}$ is called 
 \emph{locally convex}
@@ -481,7 +481,7 @@ Similarly one defines locally weakly convex and locally totally convex sets. %??
 
 \parbf{Remarks.} Let us state few observations from the definition.
 \begin{itemize}
-\item The notion of \emph{(weakly) convex set} is the same as \emph{(weakly) $\infty$-convex set}.
+\item The notion of \index{convex set}\index{weakly convex set}\emph{(weakly) convex set} is the same as {}\emph{(weakly) $\infty$-convex set}.
 \item The inherited metric on a weakly convex set coincides with its length-metric.
 \item Any open set is locally convex by definition.
 \end{itemize}
@@ -530,7 +530,7 @@ this is the maximal pseudometric on  $\spc{X}/{\sim}$
 that makes the quotient map 
 $\spc{X}\to\spc{X}/{\sim}$ to be short.
 The corresponding metric space will be also denoted as $\spc{X}/{\sim}$
-and will be called the \emph{quotient space}\index{quotient space} of $\spc{X}$ by the equivalence relation $\sim$.
+and will be called the \index{quotient space}\emph{quotient space} of $\spc{X}$ by the equivalence relation $\sim$.
 
 In general case the points of the metric space $\spc{X}/{\sim}$
 are formed by equivalence classes in $\spc{X}$
@@ -617,7 +617,7 @@ and a bijection $\phi\:A_1\to A_2$.
 Consider the minimal equivalence relation on $\spc{X}_1\sqcup\spc{X}_2$
 such that $a\sim \phi(a)$ for any $a\in A_1$.
 In this case, the corresponding quotient space 
-$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called \emph{gluing}\index{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
+$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called \index{gluing}\emph{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
 Note that if the map $\phi\:A_1\to A_2$ is distance preserving,
@@ -631,7 +631,7 @@ for any $x_1\in \spc{X}_1$ and $x_2\in \spc{X}_2$.
 \parbf{Doubling.}
 Let $\spc{V}$ be a metric space 
 and $A\subset \spc{V}$ be a closed subset.
-A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \emph{doubling of $\spc{V}$ in $A$}\index{doubling}.
+A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \index{doubling}\emph{doubling of $\spc{V}$ in $A$}.
 
 The space $\spc{W}$ is completely described by the following properties:
 \begin{itemize}
@@ -691,8 +691,7 @@ let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc
 Given a point $p\in\spc{X}$, consider 
 map $\kur_p\:\spc{X}\to\Bnd(\spc{X},\RR)$, 
 defined as $\kur_p x=\distfun{x}{}{}-\distfun{p}{}{}$.
-The map $\kur_p$ will be called \emph{Kuratowski map at $p$}%
-\index{Kuratowski map}.
+The map $\kur_p$ will be called \index{Kuratowski map}\emph{Kuratowski map at $p$}.
 
 From the triangle inequality, we have
 \[\|\kur_p x-\kur_p y\|

@@ -47,7 +47,7 @@ The set
 \bm{f}^{-1}\left[\Min\bm{f}(\spc{X})\right]
 \subset 
 \spc{X}\] 
-will be called the \emph{web}\index{web} on $\bm{f}$.
+will be called the \index{web}\emph{web} on $\bm{f}$.
 \end{thm}
 
 Given an array $\bm{f}=(f^0,f^1,\dots,f^\kay)$,
@@ -56,14 +56,14 @@ that is,
 \[\bm{f}^{\without i\,}\df(f^0,\dots,f^{i-1},f^{i+1},\dots,f^\kay).\]
 Clearly 
 $\Web\bm{f}^{\without i}\subset \Web\bm{f}$.
-Define the \emph{inner web}\index{inner web} of $\bm{f}$ 
+Define the \index{inner web}\emph{inner web} of $\bm{f}$ 
 as 
 \[\InWeb\bm{f}
 =
 \Web\bm{f}\backslash\left(\bigcup_{i}\Web\bm{f}^{\without i}\right).\]
 
 
-We say that a function array is \emph{nondegenerate}\index{nondegenerate function array} 
+We say that a function array is \index{nondegenerate function array}\emph{nondegenerate} 
 if $\InWeb\bm{f}\not=\emptyset$.
 
 \parbf{Example.} 
@@ -73,7 +73,7 @@ then $\Web(\distfun{x}{}{},\distfun{y}{}{})$ is the union of all geodesics from 
 
 \parbf{Barycenters.}
 Let us denote by $\Delta^\kay\subset \RR^{\kay+1}$\index{$\Delta^m$} 
-the \emph{standard $\kay$-simplex}\index{standard simplex}; 
+the \index{standard simplex}\emph{standard $\kay$-simplex}; 
 that is, $\bm{x}=(x^0,x^1,\dots,x^\kay)\in\Delta^\kay$ if $\sum_{i=0}^\kay x^i=1$ and $x^i\ge0$ for all $i$.
 
 Let $\spc{X}$ be a metric space 
@@ -81,7 +81,7 @@ and $\bm{f}=(f^0,f^1,\dots,f^\kay)\:\spc{X}\to \RR^{\kay+1}$ be a function array
 Consider the map $\spx{\bm{f}}\:\Delta^\kay\to \spc{X}$,\index{$\spx{\bm{f}}$} defined by 
 \[\spx{\bm{f}}(\bm{x})=\argmin\sum_{i=0}^\kay x^i\cdot f^i,\]
 where $\argmin f$\index{$\argmin$} denotes a point of minimum of $f$.
-The map $\spx{\bm{f}}$ will be called a \emph{barycentric simplex}\index{barycentric simplex of function array} of $\bm{f}$.
+The map $\spx{\bm{f}}$ will be called a \index{barycentric simplex of function array}\emph{barycentric simplex} of $\bm{f}$.
 Note that for general function array $\bm{f}$, 
 the value $\spx{\bm{f}}(\bm{x})$ might be undefined or nonuniquely defined.
 
@@ -192,7 +192,7 @@ Hence, $p_n$ converges to a minimum point of $f$.
 \begin{thm}{Definition}
 Let $Q$ be a closed subset of $\RR^{\kay+1}$.
 A vector $\bm{x}\z=(x^0,x^1,\dots,x^\kay)\in\RR^{\kay+1}$
-is \emph{subnormal}\index{subnormal vector} to $Q$ at point $\bm{v}\in Q$ 
+is \index{subnormal vector}\emph{subnormal} to $Q$ at point $\bm{v}\in Q$ 
 if
 \[\<\bm{x},\bm{w}-\bm{v}\>
 \df
@@ -439,7 +439,7 @@ $\distfun{\bm{a}}{}{}$
 denotes the distance map
 \[(\distfun{a^0}{}{},\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1}\]
 which can be also regarded as a function array.
-The \emph{radius of the point array}\index{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
+The \index{radius of the point array}\emph{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
 that is,
 \[\rad\bm{a}=\inf\set{r>0}{\exists z\in\spc{U}\ \text{such that}\ a^i\in \oBall(z,r)\ \text{for any}\ i}.\]%???
 
@@ -450,7 +450,7 @@ Consider function array $\bm{f}=(f^0,f^1,\dots,f^\kay)$
 where 
 \[f^i(x)\z=\md\kappa\dist[{{}}]{a^i}{x}{}.\]
 Assuming the barycentric simplex $\spx{\bm{f}}$ is defined,
-then $\spx{\bm{f}}$ is called the \emph{$\kappa$-barycentric simplex}\index{$\kappa$-barycentric simplex} for the point array $\bm{a}$;
+then $\spx{\bm{f}}$ is called the \index{$\kappa$-barycentric simplex}\emph{$\kappa$-barycentric simplex} for the point array $\bm{a}$;
 it will be denoted by $\spx{\bm{a}}\mc\kappa$.
 The points $a^0,a^1,\dots,a^\kay$ are called 
 \emph{vertexes of $\kappa$-barycentric simplex}%
@@ -494,14 +494,14 @@ $\InWeb(\distfun{\bm{a}}{}{})$ is $C^{\frac12}$-homeomorphic to an open subset o
 
 \begin{thm}{Definition}\label{prop-def:web-embedding}
 The submap $\map\:\RR^{\kay}\subto \spc{X}$ as in Theorem~\ref{thm:cat-bary-web:mnfld}
-will be called the \emph{$\distfun{\bm{a}}{}{}$-web embedding}\index{web embedding} 
-with \emph{brace} $\distfun{a^0}{}{}$.
+will be called the \index{web embedding}\emph{$\distfun{\bm{a}}{}{}$-web embedding} 
+with \index{brace}\emph{brace} $\distfun{a^0}{}{}$.
 \end{thm}
 
 \begin{thm}{Definition}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\bm{a}=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
-If $\InWeb(\distfun{\bm{a}}{}{})$ is nonempty, then the point array $\bm{a}$ is called \emph{nondegenerate}\index{nondegenerate point array}.
+If $\InWeb(\distfun{\bm{a}}{}{})$ is nonempty, then the point array $\bm{a}$ is called \index{nondegenerate point array}\emph{nondegenerate}.
 \end{thm}
 
 Lemma~\ref{lem:nondeg-test-with-balls} will provide examples of nondegenerate point arrays,
@@ -753,7 +753,7 @@ is isometric to the standard simplex
 \set{(x_0,\dots,x_\kay)\in \RR^{\kay+1}}
 {x_i\ge 0,\quad x_0+\dots+x_\kay=1}\]
 with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
-This metric will be called the \emph{$\ell^1$-metric}\index{$\ell^1$-metric} on the simplicial complex.
+This metric will be called the \index{$\ell^1$-metric}\emph{$\ell^1$-metric} on the simplicial complex.
 
 \begin{thm}{Lemma}\label{lem:approximation-cba}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
@@ -763,7 +763,7 @@ a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$
 and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that
 
 \begin{subthm}{lem:approximation-cba:displacement}
-The \emph{displacement} of composition $\map[2]\circ\map\:\spc{U}\to\spc{U}$ is bounded by $\rho$;
+The \index{displacement}\emph{displacement} of the composition $\map[2]\circ\map\:\spc{U}\to\spc{U}$ is bounded by $\rho$;
 that is,
 \[\dist{x}{\map[2]\circ\map(x)}{}<\rho(x)\] 
 for any $x\in\spc{U}$

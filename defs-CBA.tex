@@ -84,7 +84,7 @@ in particular, if $\kappa\le\Kappa$, then any $\CAT\kappa$ space is $\CAT\Kappa$
 
 This terminology was introduced by Gromov;  
 $\CAT{}$ stands for \'Elie Cartan, Alexandr Alexandrov and Victor Toponogov.
-Originally these spaces were called \emph{$\mathfrak{R}_\kappa$ domains};
+Originally these spaces were called \index{$\mathfrak{R}_\kappa$ domain}\emph{$\mathfrak{R}_\kappa$ domains};
 this is Alexandrov's terminology and is still in use.
 
 
@@ -432,11 +432,11 @@ and Reshetnyak gluing (\ref{thm:gluing}).
 Let $\trig{x^1}{x^2}{x^3}$ be a triangle of perimeter $<2\cdot \varpi\kappa$ in a metric space.
 Consider its model triangle
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ 
-and the  \emph{natural map}\index{natural map} $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ 
+and the \index{natural map}\emph{natural map} $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ 
 that sends a point $\tilde z\in[\tilde x^i\tilde x^j]$ to the corresponding point $z\in[x^ix^j]$
 (that is, such that $\dist{\tilde x^i}{\tilde z}{}=\dist{x^i}{z}{}$ and therefore $\dist{\tilde x^j}{\tilde z}{}=\dist{x^j}{z}{}$).
 
-We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-thin}\index{$\kappa$-thin} if the natural map $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ is short.
+We say the triangle $\trig{x^1}{x^2}{x^3}$ is \index{thin triangle}\emph{$\kappa$-thin} if the natural map $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ is short.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:equality-for-thin}
@@ -509,7 +509,7 @@ In contrast, $\Alex\kappa$ comparisons are not inherited in this way.
 
 \begin{thm}{Inheritance lemma}
 \label{lem:inherit-angle} 
-In a metric space, consider a triangle $\trig p x y$ that \emph{decomposes}\index{decomposed triangle} 
+In a metric space, consider a triangle $\trig p x y$ that \index{decomposed triangle}\emph{decomposes} 
 into two triangles $\trig p x z$ and $\trig p y z$;
 that is, $\trig p x z$ and $\trig p y z$ have common side $[p z]$, and the sides $[x z]$ and $[z y]$ together form the side $[x y]$ of $\trig p x y$.
 
@@ -897,7 +897,8 @@ that is $[x\alpha(s)]\subset K$, a contradiction.
 
 \section{Development}\label{sec:development-CBA}
  
-Geometrically,   the development construction (\ref{def:devel}) translates distance comparison into a local convexity statement for subsets of $\Lob2\kappa$.  Recall that a curve in $\Lob2\kappa$ is \emph{(locally) concave with respect to $p$} if (locally) its supergraph with respect to $p$ is a convex subset of $\Lob2\kappa$; see Definition~\ref{def:convex-devel}.
+Geometrically,  the development construction (\ref{def:devel}) translates distance comparison into a local convexity statement for subsets of $\Lob2\kappa$.
+Recall that a curve in $\Lob2\kappa$ is \index{concave curve}\emph{(locally) concave with respect to $p$} if (locally) its supergraph with respect to $p$ is a convex subset of $\Lob2\kappa$; see Definition~\ref{def:convex-devel}.
 
 \begin{thm}{Development criterion\index{comparison!development comparison}}\label{thm:concave-devel} 
 For a $\varpi\kappa$-geodesic space $\spc{U}$,
@@ -1014,7 +1015,7 @@ Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space 
 Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.
 If $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say that the map $[0,1]\times[0,1]\to\spc{U}$ defined by
 \[(t,s)\mapsto\gamma_t(s)\]
-is a \emph{line-of-sight map for $\alpha$ with respect to $p$}.
+is a \index{line-of-sight map}\emph{line-of-sight map for $\alpha$ with respect to $p$}.
 \end{thm}
 
 \parit{Proof of \ref{thm:alex-patch}.} It only remains to prove (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}).
@@ -1064,7 +1065,7 @@ these geodesics depend continuously on their endpoint pairs.
 \begin{subthm}{ex:patchwork:complete}
 Construct an example of complete geodesic space $\spc{U}$ such that 
 pairs of points in $\spc{U}$ are joined by unique geodesics, but
-these geodesics do \emph{not} depend continuously on their endpoint pairs.
+these geodesics do {}\emph{not} depend continuously on their endpoint pairs.
 \end{subthm}
 \end{thm}
 
@@ -1718,9 +1719,9 @@ All the remaining statements are already proved.
 Let $\spc{X}$ be a metric space,
 $\tilde \alpha$ be a simple closed curve of finite length  in $\Lob2{\kappa}$,
 and $D\subset\Lob2{\kappa}$ be a closed region bounded by $\tilde \alpha$.
-A length-nonincreasing map $F\:D\to\spc{X}$ is called \emph{majorizing} if it is length-preserving on $\tilde \alpha$.
+A length-nonincreasing map $F\:D\to\spc{X}$ is called \index{majorizing map}\emph{majorizing} if it is length-preserving on $\tilde \alpha$.
 
-In this case, we say that $D$ \emph{majorizes} the curve $\alpha=F\circ\tilde \alpha$ under the map $F$.
+In this case, we say that $D$ \index{majorizes}\emph{majorizes} the curve $\alpha=F\circ\tilde \alpha$ under the map $F$.
 \end{thm}
 
 The following proposition is a consequence of the definition.
@@ -2003,7 +2004,7 @@ such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 }
 
 \begin{thm}{Exercise}\label{ex:bishop}
-Two majorizations $F\:D\to \spc{U}$ and $F'\:D'\to \spc{U}$ will be called \emph{equivalent} if $F'=F\circ\iota$ for an isometry $\iota\:D\to D'$.
+Two majorizations $F\:D\to \spc{U}$ and $F'\:D'\to \spc{U}$ will be called \index{equivalent majorizations}\emph{equivalent} if $F'=F\circ\iota$ for an isometry $\iota\:D\to D'$.
 
 Show that a closed rectifiable curve in a $\CAT0$ space have an isometric majorization map if and only if the majorization map is unique up to equivalence.
 \end{thm}
@@ -2167,7 +2168,7 @@ A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by We
 A proof in the non-proper 
 geodesic case 
 was given by the first author and Richard Bishop~\cite{alexander-bishop:h-c}.  
-This proof applies more generally, to \emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
+This proof applies more generally, to {}\emph{convex spaces} (see Exercise \ref{ex:cats-cradle}).
 It was pointed out by Bruce 
 Kleiner \cite{ballmann:lectures} 
 and independently by Martin 
@@ -2374,10 +2375,10 @@ Show that $\tilde{\spc{U}}$ is $\CAT0$.
 \end{thm}
 
 \parbf{About convex spaces.}
-A \emph{convex space} $\spc{X}$ is a geodesic space such that the function
+A \index{convex space}\emph{convex space} $\spc{X}$ is a geodesic space such that the function
 $t\mapsto\dist{\gamma(t)}{\sigma(t)}{}$ is convex 
 for any two  geodesic paths $\gamma,\sigma:[0,1]\to \spc{X}$.  
-A \emph{locally convex space} is a length space in which every point has a neighborhood that is a convex space in the restricted metric.
+A \index{locally convex space}\emph{locally convex space} is a length space in which every point has a neighborhood that is a convex space in the restricted metric.
 
 
 \begin{thm}{Exercise}\label{ex:cats-cradle}

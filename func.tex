@@ -9,7 +9,8 @@ while convex ones are used  mainly in $\CAT{}$ spaces.
 
 \section{Submaps}
 
-We will often need maps and functions defined on subsets of a metric space. We call them \emph{submaps} and \emph{subfunction}\index{submap}\index{subfunction}.
+We will often need maps and functions defined on subsets of a metric space.
+We call them \index{submap}\emph{submaps} and \index{subfunction}\emph{subfunction}.
 Thus given a metric space $\spc{X}$ and $\spc{Y}$, 
 a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\subset \spc{X}$.
 
@@ -33,7 +34,7 @@ $\map\:\spc{X}\subto\spc{Y}$ be a continuous submap
 and $\Lip\in\RR$.
 
 \begin{subthm}{}
-The submap $\map$ is called \emph{$\Lip$-Lipschitz}\index{$\Lip$-Lipschitz map} if
+The submap $\map$ is called \index{Lipschitz map}\emph{$\Lip$-Lipschitz} if
 \[\dist{\map(x)}{\map(y)}{\spc{Y}}
 \le
 \Lip\cdot
@@ -41,18 +42,18 @@ The submap $\map$ is called \emph{$\Lip$-Lipschitz}\index{$\Lip$-Lipschitz map} 
 for any two points $x,y\in\Dom \map$.
 
 \begin{itemize}
- \item The $1$-Lipschitz maps will be also called \emph{short}\index{short map}.
+ \item The $1$-Lipschitz maps will be also called \index{short map}\emph{short}.
 \end{itemize}
 
 \end{subthm}
 
 \begin{subthm}{}
-We say that $\map$ is \emph{Lipschitz}\index{Lipschitz map} if it is $\Lip$-Lipschitz for some constant $\Lip$.
+We say that $\map$ is \index{Lipschitz map}\emph{Lipschitz} if it is $\Lip$-Lipschitz for some constant $\Lip$.
 The minimal such constant is denoted by $\lip\map$.
 \end{subthm}
 
 \begin{subthm}{}
-We say that $\map$ is \emph{locally Lipschitz}\index{locally Lipschitz map} 
+We say that $\map$ is \index{locally Lipschitz map}\emph{locally Lipschitz} 
 if any point $x\in\Dom \map$ admits a neighborhood 
 $\Omega\subset \Dom\map$ such that the restriction $\map|_\Omega$ is Lipschitz.
 \end{subthm}
@@ -74,13 +75,13 @@ Let $\spc{X}$ and $\spc{Y}$ be metric spaces,
 $\map\:\spc{X}\to\spc{Y}$ be a map 
 and $\Lip\in\RR$.
 \begin{subthm}{}
-The map $\map$ is called \emph{$\Lip$-co-Lipshitz}\index{$\Lip$-co-Lipshitz map} if 
+The map $\map$ is called \index{$\Lip$-co-Lipshitz map}\emph{$\Lip$-co-Lipshitz} if 
 \[\map(\oBall(x,\Lip\cdot R)_{\spc{X}})\supset\oBall(\map(x),R)_{\spc{Y}}\]
 for any $x\in \spc{X}$ and $R>0$.
 \end{subthm}
 
 \begin{subthm}{}
-The map $\map$ is called \emph{co-Lipshitz}\index{co-Lipshitz map} if it is $\Lip$-co-Lipshitz
+The map $\map$ is called \index{co-Lipshitz map}\emph{co-Lipshitz} if it is $\Lip$-co-Lipshitz
 for some constant $\Lip$.
 The minimal such constant is denoted by $\colip\map$.
 
@@ -160,17 +161,17 @@ Hence the result.
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces
 and $\map\:\spc{X}\to \spc{Y}$ be a map
 \begin{subthm}{}
-The map $\map$ is \emph{distance preserving}\index{distance preserving map} if
+The map $\map$ is \index{distance preserving map}\emph{distance preserving} if
 $$\dist{\map(x)}{\map(x')}{\spc{Y}}=\dist{x}{x'}{\spc{X}}$$
 for any $x,x'\in X$.
 \end{subthm}
 
 \begin{subthm}{}
-A distance preserving bijection $\map$ is called an \emph{isometry}\index{isometry}.
+A distance preserving bijection $\map$ is called an \index{isometry}\emph{isometry}.
 \end{subthm}
 
 \begin{subthm}{}
-The spaces $X$ and $Y$ are called \emph{isometric}\index{isometric spaces} (briefly $X\iso Y$)
+The spaces $X$ and $Y$ are called \index{isometric spaces}\emph{isometric} (briefly $X\iso Y$)
  if there is an isometry  $\map\:X\to Y$.
 \end{subthm}
 
@@ -257,8 +258,8 @@ we have that $\spc{M}$ is a length space.
 \section{Speed of curves}
 
 Let $\spc{X}$ be a metric space.
-A \emph{curve}\index{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a \emph{real interval}\index{real interval} (that is, an arbitrary convex subset of $\RR$);
-the curve it called \emph{Lipschitz}\index{Lipschitz curve} or \emph{locally Lipschitz}\index{locally Lipschitz curve} if the map $\alpha\:\II\to \spc{X}$~is.
+A \index{curve}\emph{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a {}\emph{real interval} (that is, an arbitrary convex subset of $\RR$);
+the curve it called \index{Lipschitz curve}\emph{Lipschitz} or \index{locally Lipschitz curve}\emph{locally Lipschitz} if the map $\alpha\:\II\to \spc{X}$~is.
 
 Recall that length of curves is defined in \ref{def:length}.
 The following theorem follows from \cite[2.7.4]{burago-burago-ivanov}.
@@ -276,7 +277,7 @@ is defined for almost all $t_0 \in \II$ and
 where $\int$ denotes the Lebesgue integral.
 \end{thm}
 
-A curve $\alpha\:\II\to\spc{X}$ is called \emph{unit-speed curve}\index{unit-speed curve}, 
+A curve $\alpha\:\II\to\spc{X}$ is called \index{unit-speed curve}\emph{unit-speed curve}, 
 if for any subinterval $[a,b]\subset\II$, we have
 \[b-a=\length(\alpha|_{[a,b]}).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
@@ -299,7 +300,7 @@ we have
 
 
 The (pseudo)norm $\lVert*\rVert_x$ in the above theorem 
-will be called \emph{differential of induced metric} at $x$.
+will be called \index{differential of metric}\emph{differential of induced metric} at $x$.
 
 \section{Convex real-to-real functions}\label{sec:conv-real}
 
@@ -362,7 +363,7 @@ there is a solution $\bar y$
 of ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
 with $\bar y(t_0)\z= y(t_0)$ such that $\bar y\ge y$ (respectively $\bar y\le y$) for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$.
 
-The function $\bar y$ is called \emph{lower} (respectively \emph{upper}) \emph{barrier} of $y$ at $t_0$\index{barrier}.
+The function $\bar y$ is called {}\emph{lower} (respectively {}\emph{upper}) \index{barrier}\emph{barrier} of $y$ at $t_0$.
 \end{subthm}
 
 \begin{subthm}{barrier'} 
@@ -462,10 +463,10 @@ Functions satisfying the inequalities
 \[f''\ge \lambda\quad\text{and}\quad f''\le \lambda\]
 are called $\lambda$-convex and $\lambda$-concave respectively.
 
-$0$-convex and $0$-concave subfunctions will be also called \emph{convex} and \emph{concave} respectively.
+$0$-convex and $0$-concave subfunctions will be also called \index{convex function}\emph{convex} and \index{concave function}\emph{concave} respectively.
 
-If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \emph{strongly convex};
-correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \emph{strongly concave}.
+If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \index{strongly convex function}\emph{strongly convex};
+correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \index{strongly concave function}\emph{strongly concave}.
 
 If for any point $p\in\Dom f$ 
 there is a neighborhood $\Omega\ni p$ and a real number $\lambda$

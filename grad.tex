@@ -10,7 +10,7 @@ which we use everywhere in the book.
 We consider only the $\Alex{}{}$ case since the main applications of gradient flow are there.
 But the proofs in this chapter admit straightforward extension to locally compact length spaces with defined angles between geodesics as well as $\CAT{}{}$ spaces.
 
-The technique of gradient flow takes its roots in the so called \emph{Sharafutdinov's retraction}, 
+The technique of gradient flow takes its roots in the so called \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction}, 
 introduced by Vladimir Sharafutdinov \cite{sharafutdinov}.
 It was used  widely in comparison geometry since then.
 In $\Alex{}$ spaces, it was first used by Grigory Perelman and third author \cite{perelman-petrunin:qg}.
@@ -66,7 +66,7 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 }
 
-A Lipschitz curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ will be called \emph{$f$-gradient-like curve} if
+A Lipschitz curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ will be called \index{gradient-like curve}\emph{$f$-gradient-like curve} if
 \[\hat\alpha^+=\tfrac{1}{|\nabla_{\hat\alpha} f|}\cdot\nabla_{\hat\alpha} f;\]
 that is, for any $s\in[s_{\min},s_{\max})$, $\hat\alpha^+(s)$ is defined and
 \[\hat\alpha^+(s)=\tfrac{1}{|\nabla_{\hat\alpha(s)} f|}\cdot\nabla_{\hat\alpha(s)} f.\]
@@ -246,7 +246,7 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 }
 
-A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \emph{$f$-gradient curve} if
+A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \index{gradient curve}\emph{$f$-gradient curve} if
 \[\alpha^+=\nabla_{\alpha} f;\]
 that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and 
 $\alpha^+(t)=\nabla_{\alpha(t)} f$.
@@ -980,7 +980,7 @@ and it satisfies the following differential equation
 \eqlbl{eq:rad}\]
 for any $s\in[s_{\min},s_{\max})$, here $\tg\kappa x\df\frac{\sn\kappa x}{\cs\kappa x}$.
 
-If $x=\sigma(s_{\min})$, we say that $\sigma$ \emph{starts in}  $x$.
+If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts in}  $x$.
 \end{thm}
 
 Note that according to the definition $s_{\max}\le\tfrac{\varpi\kappa}2$.
@@ -1450,9 +1450,9 @@ and this limit is independent from the choice of the sequence $x_n$.
 Set $\sigma_\xi(0)=p$ and if $\kappa>0$ define \[\sigma_\xi(\tfrac{\varpi\kappa}2)
 =
 \lim_{t\to\frac{\varpi\kappa}2}\sigma_\xi(t).\]
-The obtained curve $\sigma_\xi$ will be called \emph{$(p,\kappa)$-radial curve in direction $\xi$}.
+The obtained curve $\sigma_\xi$ will be called \index{radial curve}\emph{$(p,\kappa)$-radial curve in direction $\xi$}.
 
-Let us define \emph{gradient exponent} as  
+Let us define \index{gradient exponent}\emph{gradient exponent} as  
 \[
 \gexp\mc\kappa_p\:r\cdot\xi\mapsto\sigma_\xi(r)\:\cBall[\0,\tfrac{\varpi\kappa}2]\subset \T_p\to \spc{L}.
 \]
@@ -1576,12 +1576,12 @@ More precisely, we assume that the parameter $t$ lies in a real interval $\II$ a
 \[\Omega=\set{(x,t)\in\spc{Z}\times \II}{x\in\Dom f_t}\]
 is an open subset in $\spc{Z}\times \II$.
 
-A family of functions $f_t$ is called \emph{Lipschitz} if 
+A family of functions $f_t$ is called \index{Lipschitz family}\emph{Lipschitz} if 
 the function $(x,t)\mapsto f_t(x)$ is $\Lip$-Lipschitz for some constant $\Lip$.
 
-A family of functions $f_t$ will be called \emph{semiconcave} if 
+A family of functions $f_t$ will be called \index{semiconcave family}\emph{semiconcave} if 
 the function $x\mapsto f_t(x)$ is $\lambda$-concave for each $t$.
-A family $f_t$ is called \emph{locally semiconcave} if for each $(p_0,t_0)\in \Omega$ there is a neighborhood $\Omega'$ and $\lambda\in\RR$ such that the restriction of $f_t$ to $\Omega'$ is semiconcave. 
+A family $f_t$ is called \index{locally semiconcave family}\emph{locally semiconcave} if for each $(p_0,t_0)\in \Omega$ there is a neighborhood $\Omega'$ and $\lambda\in\RR$ such that the restriction of $f_t$ to $\Omega'$ is semiconcave. 
 
 Note that one cannot expect that a direct generalization of Definition \ref{def:grad-curve} holds for any family of functions $f_t$; that is, gradient curves of family $f_t$ cannot be defined as curves satisfying the equation $\alpha^+=\nabla_{\alpha} f$.
 
@@ -1592,7 +1592,7 @@ On the other hand, $\alpha^+(t)$ might be undefined,
 but even if it is defined, $\alpha^+(t)\ne0$ in general, while $\nabla_{\alpha(t)} f_t\equiv0$.
 
 
-Instead we define \emph{$f_t$-gradient curve} as a Lipschitz curve $\alpha$ that satisfies the following inequality
+Instead we define {}\emph{$f_t$-gradient curve} as a Lipschitz curve $\alpha$ that satisfies the following inequality
 for any point $p$, time $t$, and
 small $\eps >0$:  
 \[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)+o(\eps),\eqlbl{def:tdflow}\]
@@ -1602,7 +1602,7 @@ If $\alpha^+(t)=\nabla_{\alpha(t)}f_t$ for all $t$, then \ref{def:tdflow} holds;
 it follows from the definition of gradient (\ref{def:grad}).
 On the other hand, the example above shows that the converse does not hold;
 that is, \ref{def:tdflow} generalizes Definition \ref{def:grad-curve}.
-The defining  inequality \ref{def:tdflow} is closely related to the so called \emph{evolution variational inequality} \cite[Theorem 4.0.4(iii)]{ambrosio-gigli-savare}.
+The defining  inequality \ref{def:tdflow} is closely related to the so called \index{evolution variational inequality}\emph{evolution variational inequality} \cite[Theorem 4.0.4(iii)]{ambrosio-gigli-savare}.
 
 \begin{thm}{Distance estimate}\label{Distance estimate}
 Let $f_t$ and $h_t$ be two families of $\lambda$-concave functions on a complete length space $\spc{Z}$ and $s\ge 0$.
@@ -1845,7 +1845,7 @@ and $f\in\LSCSC(\spc{Z})$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 A curve 
-$\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \emph{$f$-gradient curve} if
+$\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called \index{gradient curve}\emph{$f$-gradient curve} if
 \[\alpha^+(t)=\nabla_{\alpha(t)} f\]
 if $\nabla_{\alpha(t)} f$ is defined and 
 \[(f\circ\alpha)^+(t)=\infty\]
@@ -1922,7 +1922,7 @@ and it satisfies the following differential equation
 \nabla_{\sigma(s)}\distfun{A}{}{}.\]
 for any $s\in[s_{\min},s_{\max})$, here $\tg\kappa x=\frac{\sn\kappa x}{\cs\kappa x}$.
 
-If $x=\sigma(s_{\min})$, we say that $\sigma$ \emph{starts in}  $x$.
+If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts in}  $x$.
 \end{thm}
 
 \begin{thm}{Definition}

@@ -22,7 +22,7 @@ Recall that $\NN$ denotes the set of natural numbers, $\NN=\{1,2,\dots\}$
 \begin{thm}{Definition}
 A finitely additive measure $\o$ 
 on  $\NN$ 
-is called an \emph{ultrafilter}\index{ultrafilter} if it satisfies 
+is called an \index{ultrafilter}\emph{ultrafilter} if it satisfies 
 \begin{subthm}{}
 $\o(S)=0$ or $1$ for any subset $S\subset \NN$.
 \end{subthm}
@@ -40,8 +40,8 @@ there is a set $S\subset \NN$ such that $\o(S)=1$ and $S\cap C_\alpha$ is a one-
 \end{thm}
 
 If $\o(S)=0$ for some subset $S\subset \NN$,
-we say that $S$ is \emph{$\o$-small}. 
-If $\o(S)=1$, we say that $S$ contains \emph{$\o$-almost all} elements of $\NN$.
+we say that $S$ is \index{$\o$-small}\emph{$\o$-small}. 
+If $\o(S)=1$, we say that $S$ contains \index{$\o$-almost all}\emph{$\o$-almost all} elements of $\NN$.
 
 \parbf{Classical definition.}
 More commonly, a nonprincipal ultrafilter is defined as a collection, say $\mathfrak{F}$, of sets in $\NN$ such that
@@ -55,8 +55,8 @@ Setting
 \[P\in\mathfrak{F}\quad\iff\quad\o(P)=1\] 
 makes these two definitions equivalent.
 
-A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \emph{filter}; 
-if in addition $\mathfrak{F}$ satisfies Condition~\ref{filter:ultra} it is called an \emph{ultrafilter}.
+A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \index{filter}\emph{filter}; 
+if in addition $\mathfrak{F}$ satisfies Condition~\ref{filter:ultra} it is called an \index{ultrafilter}\emph{ultrafilter}.
 From Zorn's lemma, it follows that every filter contains an ultrafilter.
 Thus there is an ultrafilter $\mathfrak{F}$ contained in the filter of all complements of finite sets; clearly this $\mathfrak{F}$ is nonprincipal.
 
@@ -66,7 +66,7 @@ it was proved by Walter Rudin \cite{rudin}.
 \parbf{Stone--\v{C}ech compactification.}
 Given a set $S\subset \NN$, consider subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
 It is straightforward to check that the sets $\Omega_S$ for all $S\subset \NN$ form a topology on the set of ultrafilters on $\NN$. 
-The obtained space is called \emph{Stone--\v{C}ech compactification} of $\NN$;
+The obtained space is called \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of $\NN$;
 it is usually denoted as $\beta\NN$.
 
 There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined as
@@ -82,7 +82,7 @@ and a map $f\:\NN\to \spc{X}$ there is unique continuous map $\bar f\:\beta\NN\t
 
 Fix an ultrafilter $\o$.
 Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$. 
-Let us define the \emph{$\o$-limit}\index{$\o$!$\o$-limit} of $(x_n)$ as the point $x_\o$ 
+Let us define the \index{ultralimit}\emph{$\o$-limit} of $(x_n)$ as the point $x_\o$ 
 such that for any $\eps>0$, $\o$-almost all elements of $(x_n)$ lie in $\oBall(x_\o,\eps)$; 
 that is,
 \[\o\set{n\in\NN}{\dist{x_\o}{x_n}{}<\eps}=1.\]
@@ -197,7 +197,7 @@ defined by
 \lim_{n\to\o} \dist{x_n}{y_n}{}=0\]
 and the distance is defined as in \ref{eq:olim-dist}.
 
-The space $\spc{X}_\o$ is called \emph{$\o$-limit}\index{$\o$-limit space} of $\spc{X}_n$.
+The space $\spc{X}_\o$ is called \index{ultralimit space}\emph{$\o$-limit} of $\spc{X}_n$.
 Typically  $\spc{X}_\o$ will denote the  
 $\o$-limit of sequence $\spc{X}_n$;
 we may also write  
@@ -307,7 +307,7 @@ in the ultrapower $\spc{X}^\o$.
 Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter.
 
 For a metric space $\spc{X}$ and a positive real number $\lam$,
-we will denote by $\lam\cdot\spc{X}$ its \emph{$\lam$-blowup}\index{blowup},
+we will denote by $\lam\cdot\spc{X}$ its \index{blowup}\emph{$\lam$-blowup},
 which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
 The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted as $x\mapsto x^\lam$, 
 so 
@@ -491,7 +491,7 @@ For a sequence of sets $\Omega_n\subset \spc{X}_n$,
 consider the maximal set $\Omega_\o\subset \spc{X}_\o$ such that 
 for any $x_\o\in\Omega_\o$ and any sequence $x_n\in\spc{X}_n$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
 
-The set $\Omega_\o$ is called the  \emph{open $\o$-limit} of $\Omega_n$;
+The set $\Omega_\o$ is called the  \index{open ultralimit}\emph{open $\o$-limit} of $\Omega_n$;
 we could also write  $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
 
 {\sloppy
@@ -504,7 +504,7 @@ open $\o$-convergence  will be applied here only for sequences of open sets.
 
 \section{Ultralimits of functions}
 
-Recall that a family of submaps between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
+Recall that a family of submaps between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
 
 Let $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 

@@ -9,7 +9,7 @@
 Let $\spc{X}$ be a metric space.
 A function $\mu$ with values in $[0,\infty]$,
 defined on all subsets of $\spc{X}$
-is called \emph{outer measure} if
+is called \index{outer measure}\emph{outer measure} if
 \begin{itemize}
 \item $\mu\,\emptyset=0$;
 \item If $A\subset B\subset \spc{X}$, then $\mu\, A\le \mu\, B$; 
@@ -62,7 +62,7 @@ Note that
 the value of the infimum above is non-decreasing in $\eps$;
 in particular the limit is defined.
 
-An outer measure $\mu$ on $\spc{X}$ is called \emph{Borel regular} if any Borel set in $\spc{X}$ is $\mu$-measurable and for any set $A\subset \spc{X}$ there is a Borel set $B$ such that $A\subset B$ and $\mu\, A=\mu\, B$. 
+An outer measure $\mu$ on $\spc{X}$ is called \index{Borel regular measure}\emph{Borel regular} if any Borel set in $\spc{X}$ is $\mu$-measurable and for any set $A\subset \spc{X}$ there is a Borel set $B$ such that $A\subset B$ and $\mu\, A=\mu\, B$. 
 
 From Carath\'eodory's lemma (\ref{lem:caratheodory}), we get the following.
 
@@ -78,11 +78,11 @@ Fix a real value $\alpha\ge 0$ and an integer value $\kay\ge0$.
 
 \begin{subthm}{def:HausMes}
 If we take $\rho A=(\diam A)^\alpha$,
-then the measure $\Carath_\rho$ is called the \emph{$\alpha$-dimensional Hausdorff measure}\index{Hausdorff measure} and denoted as $\HausMes_\alpha$.
+then the measure $\Carath_\rho$ is called the \index{Hausdorff measure}\emph{$\alpha$-dimensional Hausdorff measure} and denoted as $\HausMes_\alpha$.
 \end{subthm}
 
 \begin{subthm}{def:SphMes}
-If $\rho A=(\rad A)^\alpha$, the measure $\Carath_\rho$ is called the \emph{$\alpha$-dimensional spherical measure}\index{spherical measure} and denoted as 
+If $\rho A=(\rad A)^\alpha$, the measure $\Carath_\rho$ is called the \index{spherical measure}\emph{$\alpha$-dimensional spherical measure} and denoted as 
 $\SphMes_\alpha$.
 \end{subthm}
 
@@ -92,7 +92,7 @@ $\SphMes_\alpha$.
 %=
 %\sup
 %\set{\overline\vol_\kay f(A)}{f\:A\to\RR^\kay\ \text{and}\ \lip f\le 1}.$$
-%The measure $\Carath_\rho$ is called $\kay$-dimensional \emph{short measure}\index{short measure} and it will be denoted as $\ShortMes$.
+%The measure $\Carath_\rho$ is called $\kay$-dimensional \index{short measure}\emph{short measure} and it will be denoted as $\ShortMes$.
 
 \begin{subthm}{def:LongMes}
 Assume $\rho A$ is the least lower bound for the Lebesgue measure of a compact set $K$ in $\EE^\kay$ 
@@ -418,7 +418,7 @@ in a more general form it appears in \cite[Section 2.8]{federer}
 Next covering theorem makes a stronger condition on metric space
 but relax the condition on the measure.
 To formulate this theorem we need 
-the notion of \emph{directionally limited metric spaces}.
+the notion of {}\emph{directionally limited metric spaces}.
 This class of spaces was introduced in \cite[2.8.9]{federer};
 essentially these are the spaces where proof of Besicovitch covering theorem
 works.
@@ -427,7 +427,7 @@ compare \cite[page 7]{heinonen}).
 
 \begin{thm}{Definition}\label{def:directionally-limited}
 A metric space $\spc{X}$
-is called \emph{directionally limited}\index{directionally limited}
+is called \index{directionally limited space}\emph{directionally limited}
 if there is $\eps>0$ and a positive integer $M$
 such that for any point $p\in \spc{X}$
 there are at most $M$ distinct points $a_1,\dots a_n$
@@ -475,7 +475,7 @@ for any orthonormal system of vectors $v^1,\cdots,v^n$ in $V$.
 
 Assume $W$ is another finite dimensional real vector space, equipped with inner product.
 Let $L\:V\to W$ be a linear operator.
-Then one can consider \emph{operator norm} of $L$ defined as 
+Then one can consider \index{operator norm}\emph{operator norm} of $L$ defined as 
 \[|L|\df\inf\set{c\ge 0}{|L(v)|\le c\cdot|v|\ \text{for any}\ v\in V}.\]
 In other words, 
 \[|L|=\lip L,\] 
@@ -516,8 +516,8 @@ then
 \]
 for any Borel set $Q\subset \Dom f$.
 
-The identity \ref{eq:coarea} is called  \emph{the coarea formula}; 
-the right hand side in \ref{eq:coarea} is called \emph{the coarea of the restriction $f|Q$}.
+The identity \ref{eq:coarea} is called {}\emph{the coarea formula}; 
+the right hand side in \ref{eq:coarea} is called \index{coarea}\emph{the coarea of the restriction $f|Q$}.
 
 The coarea formula is a standard result in multivariate calculus.
 It admits a number of generalizations,
@@ -594,7 +594,7 @@ in $\Omega$
 \end{subthm}
 
 \begin{subthm}{}
-The subset $E$ is called is called \emph{countably $n$-rectifiable}\index{rectifiable set!countably rectifiable} 
+The subset $E$ is called is called \index{rectifiable set!countably rectifiable}\emph{countably $n$-rectifiable} 
 if it can be presented as a countable union of rectifible sets.
 \end{subthm}
 
@@ -640,7 +640,7 @@ if $\dd_xf$ is linear on a $\kay$-dimensional subspace of $\RR^m$.
 We say that $x$ is 
 \emph{$(\kay,\eps)$-regular}\index{regular!$(\kay,\eps)$-regular}
 if there is a  $\kay$-dimensional subspace $V$ of $\RR^m$ 
-such that the restriction $\dd_xf|V$ is \emph{$\eps$-linear}\index{$\eps$-linear function};
+such that the restriction $\dd_xf|V$ is \index{$\eps$-linear function}\emph{$\eps$-linear};
 that is, there is a linear function $\ell\:V\to\RR$ such that 
 \[\ell(v)\le\dd_xf(v)< \ell(v)+\eps\cdot|v|\]
 for any nonzero vector $v\in V$. 
@@ -677,7 +677,7 @@ $\Sing_f$ is countably $(m-1)$-rectifiable.
 In the proof we will need the following definition.
 
 \begin{thm}{Definition}
-A function $f\:\RR^m\to\RR$ is called DC-function if it can be presented as a \emph{difference} $f=a-b$ of two \emph{convex} functions $a,b\:\RR^m\subto\RR$.
+A function $f\:\RR^m\to\RR$ is called DC-function if it can be presented as a {}\emph{difference} $f=a-b$ of two {}\emph{convex} functions $a,b\:\RR^m\subto\RR$.
 
 A map $\bm{f}=(f^1,\dots,f^\kay)\:\RR^m\to\RR^\kay$ is called DC-map if each of its coordinates $f^i$ is a DC-function.
 \end{thm}

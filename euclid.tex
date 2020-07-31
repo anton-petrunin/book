@@ -9,22 +9,22 @@
 \parbf{Geodesics and their relatives.}
 Let $\spc{X}$ be a metric space 
 and $\II$\index{$\II$} be a real interval. 
-A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \emph{unit-speed geodesic}\index{unit-speed geodesic}%
-\footnote{Various authors call it differently: \emph{shortest path}, \emph{minimizing geodesic}.}; 
+A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \index{unit-speed geodesic}\emph{unit-speed geodesic}%
+\footnote{Various authors call it differently: \index{shortest path}\emph{shortest path}, \index{minimizing geodesic}\emph{minimizing geodesic}.}; 
 in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equality
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 holds for any pair $s,t\in \II$.
 
-A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \emph{ray}\index{ray}.
+A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \index{ray}\emph{ray}. %???maybe better half-line???
 
-A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \emph{line}\index{line}.
+A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \index{line}\emph{line}.
 
 A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
 We will always assume $\geod_{[p q]}$ is parametrized starting at $p$; 
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
-The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \emph{geodesic}\index{geodesic}.
-The term \emph{geodesic}\index{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
-when a confusion is possible we call the latter a \emph{constant-speed geodesic}\index{constant-speed geodesic}.
+The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \index{geodesic}\emph{geodesic}.
+The term \index{geodesic}\emph{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
+when a confusion is possible we call the latter a \index{constant-speed geodesic}\emph{constant-speed geodesic}.
 %???MAYBE BETTER CALL IT GEODESIC CURVE???
 %%%%%%%%???MAYBE BETTER TO KEEP CONSTANTSPEED GEODESIC. IT IS CLEAR.  A GEODESIC CURVE POSSIBLY MIGHT HAVE A DIFFERENT PARAMETER. WE SHOULD NOT EVEN RAISE THIS POSSIBILITY IN THE READER'S MIND.
 %%%%%%%%%%%S:  SORRY BUT I NEED OTHER PARAMETERS IN WARPED PRODUCTS.  SO CAN WE CALL THESE ``PREGEODESICS'''AS IN BRIDSON-HAEFLIGER.
@@ -41,20 +41,20 @@ Also we use the following short-cut notation:
 [ p q \mathclose{[}&=[pq]\backslash\{q\}.
 \end{align*}
 
-%A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \emph{pregeodesic}.
+%A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \index{pregeodesic}\emph{pregeodesic}.
 
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.
 However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we fixed a choice of geodesic.
 
-A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \emph{geodesic path}\index{geodesic path}.
+A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \index{geodesic path}\emph{geodesic path}.
 Given a geodesic $[p q]$,
 we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is, 
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$ is called a \emph{local geodesic}\index{geodesic!local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.
-If $\II=[0,1]$, then $\gamma$ is called a \emph{local geodesic path}.
+A curve $\gamma\:\II\to \spc{X}$ is called a \index{geodesic!local geodesic}\emph{local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.
+If $\II=[0,1]$, then $\gamma$ is called a \index{local geodesic path}\emph{local geodesic path}.
 
 \begin{thm}{Proposition}\label{prop:busemann}
 Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
@@ -72,7 +72,7 @@ Thus the limit in \ref{eq:def:busemann*} is defined.
 
 
 \parbf{Triangles.}
-For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \emph{triangle}\index{triangle}, and we will use the short notation 
+For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}, and we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$, there may be no triangle 
 $\trig p q r$, simply because one of the pairs of these points cannot be joined by a geodesic.  Or there may be many different triangles, any of which can be denoted by $\trig p q r$.
@@ -81,12 +81,12 @@ that is, made a choice of each $[q r], [r p]$ and $[p q]$.
 
 The value 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\] 
-will be called the \emph{perimeter of triangle} $\trig p q r$;
+will be called the \index{perimeter of triangle}\emph{perimeter of triangle} $\trig p q r$;
 it obviously coincides with perimeter of triple $p$, $q$, $r$ as defined below.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
-A pair of geodesics $([p x],[p y])$ will be called a  \emph{hinge}\index{hinge}, and will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called a  \index{hinge}\emph{hinge}, and will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,7 +106,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 Let $\spc{X}$ be a metric space, 
 $p,q,r\in \spc{X}$ 
 and $\kappa\in\RR$. 
-Let us define the \emph{model triangle}\index{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
+Let us define the \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
 \index{$\modtrig\kappa$!$\modtrig\kappa({*}{*}{*})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
@@ -121,12 +121,12 @@ If $\kappa\le 0$, the  model triangle is  always defined, that is, exists and is
 If $\kappa>0$, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
 In this case it also exists and is unique up to isometry of $\Lob2\kappa$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the  \emph{perimeter of triple} $p$, $q$, $r$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \index{perimeter}\emph{perimeter of triple} $p$, $q$, $r$.
 
 If for  $p,q,r\in \spc{X}$,
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$ is defined 
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
-$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \emph{model angle} of triple $p$, $q$, $r$, and will be denoted by
+$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \index{model angle}\emph{model angle} of triple $p$, $q$, $r$, and will be denoted by
 $\angk\kappa p q r$%
 \index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}.
 
@@ -218,7 +218,7 @@ as required.
 
 \section{Angles and the first variation}\label{sec:angles}
 
-Given a hinge $\hinge p x y$, we define its \emph{angle}\index{angle} to be \index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
+Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} to be \index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\eqlbl{eq:angle-def}\]
@@ -229,7 +229,7 @@ we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}
 \[\side\kappa \hinge p x y=
 \side\kappa \left\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\right\},\]
 where the right hand side is defined on page~\pageref{page:model-side}.
-The value $\side\kappa \hinge p x y$ will be called the  \emph{model side}
+The value $\side\kappa \hinge p x y$ will be called the \index{model side}\emph{model side}
  of hinge $\hinge p x y$.
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
@@ -381,16 +381,16 @@ By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on 
 that is, $(\mathfrak{S}_p,\mangle)$ 
 forms a pseudometric space.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
-The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The elements of $\Sigma'_p$ are called \index{geodesic directions}\emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
 \[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0.\]
 
 
 
-The completion of $\Sigma'_p$ is called the \emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
-The elements of $\Sigma_p$ are called \emph{directions} at $p$.
+The completion of $\Sigma'_p$ is called the \index{space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 
 \section{Tangent space}
 
@@ -420,7 +420,7 @@ is defined by
 \]
 we set $\<v,w\>\df0$ if $v=\0$ or $w=\0$.
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \emph{tangent space} at  $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
 
 The tangent space $\T_p$ could be also defined directly, without introducing the space of directions.
 To do so, consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
@@ -444,7 +444,7 @@ The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
 The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
 despite that $\T_p$ is only a cone --- not a vector space.
 The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
-The \emph{tip of the tangent cone} $\T_p$ will be denoted by $\0$ or $\0_{p}$.
+The {}\emph{tip of the tangent cone} $\T_p$ will be denoted by $\0$ or $\0_{p}$.
 
 \section{Velocity of curves}
 
@@ -502,11 +502,11 @@ and $\alpha\:\II\to \spc{X}$ be a curve.
 
 For $t_0\in\II$, 
 if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
-we say respectively that $\alpha$ is \emph{right}\index{differentiable!right differentiable} or \emph{left}\index{differentiable!left differentiable} or \emph{both-sided differentiable}\index{differentiable!both-sided differentiable} at $t_0$.
+we say respectively that $\alpha$ is \index{differentiable!right differentiable}\emph{right} or \index{differentiable!left differentiable}\emph{left} or \index{differentiable!both-sided differentiable}\emph{both-sided differentiable} at $t_0$.
 In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
 
 If $\alpha$ is both-sided differentiable at $t$, and 
-\[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^-(t)}{\alpha^-(t)}{\T_{\alpha(t)}},\] then we say that $\alpha$ is \emph{differentiable} at $t$.
+\[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^-(t)}{\alpha^-(t)}{\T_{\alpha(t)}},\] then we say that $\alpha$ is \index{differentiable curve}\emph{differentiable} at $t$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:both-sided-diff}
@@ -597,7 +597,7 @@ The last part follows from the definitions of differential and ultradifferential
 In Alexandrov geometry, angles defined as in Section \ref{sec:angles} always exist (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
 
 For general metric spaces, this angle may not exist, \index{$\mangle$!$\mangle^\text{up}$}
-and it is more natural to consider the \emph{upper angle}\index{angle!upper angle}  defined as
+and it is more natural to consider the \index{angle!upper angle}\emph{upper angle}  defined as
 \[\mangle^\text{up}\hinge p x y
 \df
 \limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
