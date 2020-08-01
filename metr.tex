@@ -1,14 +1,14 @@
 %%!TEX root =the-metr.tex
 %array^
 \chapter{Metric spaces}
-In this chapter we fix some conventions, assuming that the reader is familiar with basic notions in metric geometry.
+In this chapter we fix some conventions and notations. We are assuming that the reader is familiar with basic notions in metric geometry.
 
 \section{Metrics and their relatives}
 \label{sec:metric spaces}
 
 \parbf{Definitions.}
 Let $\II$ be a subinterval of $[0,\infty]$.
-A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called an $\II$-valued metric if the following conditions hold;
+A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called an $\II$-valued metric if the following conditions hold:
 \begin{itemize}
  \item $\rho(x,x)=0$ for any $x$;
  \item $\rho(x,y)\in \II$ for any pair $x\ne y$;
@@ -18,9 +18,9 @@ The value $\rho(x,y)$ is also called the \index{distance}\emph{distance} between
 
 
 The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty]$ and $[0,\infty]$.
-Any $\II$-valued metric can be refereed briefly as a metric;
-the interval should be apparent from the context, but by default a metric is $(0,\infty)$-valued. 
-If we need to be more specific, we may also use the following names:
+Any $\II$-valued metric can be referred to briefly as a metric;
+the interval should be apparent from context but by default a metric is $(0,\infty)$-valued. 
+If we need to be more specific we may also use the following names:
 \begin{itemize}
 \item a $(0,\infty)$-valued metric may be called a \index{genuine metric}\emph{genuine metric}.
 \item a $(0,\infty]$-valued metric may be called an \index{$\infty$-metric}\emph{$\infty$-metric}.
@@ -70,8 +70,8 @@ Now let us give examples when vanishing distance between distinct points is usef
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then 
 \[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
-is only a pseudometric;
-that is, if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ has to be $[0,\infty)$-valued.
+is in general only a pseudometric;
+that is,  even if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ might be $[0,\infty)$-valued.
 
 Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and  
@@ -115,7 +115,7 @@ Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 \begin{align*}
 \oBall(x,R)&=\set{y\in \spc{X}}{\dist{x}{y}{}<R},
 \\
-\cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}
+\cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}%V: I suggest using just square brackets  or just a bar over B for closed balls. Using both is an overkill.
 \end{align*}
 are called respectively the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed  balls} of radius $R$ with center $x$.
 
@@ -124,7 +124,7 @@ we write
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
 respectively.
 
-Since in a model space $\Lob{m}{\kappa}$ all balls of the same radiuses are isometric;
+Since in the model space $\Lob{m}{\kappa}$ all balls of the same radiuses are isometric;
 often will not need to specify the center of the ball,
 so we may write 
 \[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}}\] respectively.
@@ -166,8 +166,8 @@ such that $\dist{x^i}{x^j}{}>\eps$ is called a \index{maximal packing}\emph{maxi
 
 
 \parbf{G-delta sets.}
-Recall that arbitrary union of open balls in a metric space is called \index{open set}\emph{open set}.
-A subset of a metric space is called G-delta set if it can be presented as an intersection of countable number of open subset. 
+Recall that an arbitrary union of open balls in a metric space is called \index{open set}\emph{open set}.
+A subset of a metric space is called a G-delta set if it can be presented as an intersection of countable number of open subsets. 
 Often we will use the following classical result:
 
 \begin{thm}{Baire's theorem}
@@ -249,9 +249,8 @@ such that
 \[\length\alpha<\dist{x}{y}{}+\eps.\]
 
 In this book, most of the time we consider length spaces.
-If $\spc{X}$ is length space, 
-and $A\subset \spc{X}$.
-The set $A$ comes with the inherited metric from $\spc{X}$ 
+If $\spc{X}$ is a length space, 
+and $A\subset \spc{X}$ the set $A$ comes with the inherited metric from $\spc{X}$ 
 which might be not a length-metric.
 The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
 
@@ -304,11 +303,11 @@ Give an example of a complete length space such that no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} of $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} of $x$ and $y$% V: the standard phrase in English is "midpoint between $x$ and $y$".  I would suggest switching to that everywhere.
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called \index{$\eps$-midpoint}\emph{$\eps$-midpoint} of $x$ and $y$
+A point $z\in \spc{X}$ is called  an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} of $x$ and $y$
 if 
 \[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -374,21 +373,21 @@ Moreover,
 \end{aligned}
 \eqlbl{eq:eps-midpoint}
 \]
-Since $\eps>0$ is arbitrary, we get that (\ref{SHORT.lem:mid>length}).
+Since $\eps>0$ is arbitrary, we get (\ref{SHORT.lem:mid>length}).
 
 To prove (\ref{SHORT.lem:mid>geod:geod}), 
 one should repeat the same argument 
 taking midpoints instead of $\eps_n$-midpoints.
 In this case \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
 
-The proof of (\ref{lem:mid>geod:R}) obtained by a straightforward modifications of the proofs above.
+The proof of (\ref{lem:mid>geod:R}) is obtained by a straightforward modification of the proofs above.
 \qeds
 
 \begin{thm}{Corollary}
 A proper length space is geodesic.
 \end{thm}
 
-It follows from Lemma \ref{lem:mid>geod}, since in a compact set a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence.
+This follows from Lemma \ref{lem:mid>geod} since in a compact set a sequence of $\tfrac1n$-midpoints $z_n$ contains a convergent subsequence.
 
 {\sloppy
 
@@ -479,14 +478,14 @@ such that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset 
 Similarly one defines locally weakly convex and locally totally convex sets. %???DO we neeed all of them???
 \end{thm}
 
-\parbf{Remarks.} Let us state few observations from the definition.
+\parbf{Remarks.} Let us state a few observations that easily follow  from the definition.
 \begin{itemize}
 \item The notion of \index{convex set}\index{weakly convex set}\emph{(weakly) convex set} is the same as {}\emph{(weakly) $\infty$-convex set}.
 \item The inherited metric on a weakly convex set coincides with its length-metric.
 \item Any open set is locally convex by definition.
 \end{itemize}
 
-The following proposition states that weak convexity survive under ulralimit.
+The following proposition states that weak convexity survives under taking ulralimits.
 An analogus statement about convexity does not hold;
 for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges to the half sphere $\mathbb{S}^2_+$, which is not convex.
 
