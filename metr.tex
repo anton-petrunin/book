@@ -323,18 +323,18 @@ Let $\spc{X}$ be a complete metric space.
 \begin{subthm}{lem:mid>length}
 Assume that for any pair of points $x,y\in \spc{X}$ and any $\eps>0$
 there is a $\eps$-midpoint $z$.
-Then the space $\spc{X}$ is a length space.
+Then  $\spc{X}$ is a length space.
 \end{subthm}
 
 \begin{subthm}{lem:mid>geod:geod}
 Assume that for any pair of points $x,y\in \spc{X}$ 
 there is a midpoint $z$.
-Then the space $\spc{X}$ is a geodesic space.
+Then  $\spc{X}$ is a geodesic space.
 \end{subthm}
 
 \begin{subthm}{lem:mid>geod:R}
 If for some $R>0$, the assumptions (\ref{SHORT.lem:mid>length}) or (\ref{SHORT.lem:mid>geod:geod}) hold only for pairs of points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$, 
-then the space $\spc{X}$ is a $R$-length or $R$-geodesic respectively.
+then  $\spc{X}$ is a $R$-length or $R$-geodesic respectively.
 
 \end{subthm}
 
@@ -360,7 +360,7 @@ $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 In this way we define $\alpha(t)$ for all dyadic rationals $t$ in $[0,1]$.
 If $t\in[0,1]$ is not a dyadic rational, consider a sequence of dyadic rationals $t_n\to t$ as $n\to\infty$.
-Note that the sequence $\alpha(t_n)$ converges;
+Note that due to completeness of $\spc{X}$ the sequence $\alpha(t_n)$ converges;
 define $\alpha(t)$ as its limit.
 It is easy to see that $\alpha(t)$
 does not depend on the choice of the sequence $t_n$
@@ -490,8 +490,8 @@ An analogus statement about convexity does not hold;
 for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges to the half sphere $\mathbb{S}^2_+$, which is not convex.
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
-Let $\spc{X}_n,$ be a sequence of geodesic spaces.
-Assume $A_n\subset \spc{X}_n$ be a sequence of weakly convex sets and 
+Let $\spc{X}_n,$ be a sequence of geodesic spaces. Let $\o$ be an ultrafilter on $\mathbb N$.%V: ultrafilers and ultralimits are only defined later in the book. should this be mentioned here?
+Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets and 
 $\spc{X}_n\to \spc{X}_\o$ and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
 Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
 \end{thm}
@@ -521,20 +521,20 @@ Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$
 their maximum 
 \[\rho(x,y)=\max\{\rho_1(x,y),\rho_2(x,y)\}\]
 is also a pseudometric;
-also if for these two pseudometric $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are short, then so it true for $\rho(x,y)$.
+also if for these two pseudometric $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are short, then the same is true for $\rho(x,y)$.
 
 It follows that 
-the quotient space $\spc{X}/{\sim}$ admits natural pseudometric;
+the quotient space $\spc{X}/{\sim}$ admits a natural quotient pseudometric;
 this is the maximal pseudometric on  $\spc{X}/{\sim}$ 
 that makes the quotient map 
 $\spc{X}\to\spc{X}/{\sim}$ to be short.
 The corresponding metric space will be also denoted as $\spc{X}/{\sim}$
 and will be called the \index{quotient space}\emph{quotient space} of $\spc{X}$ by the equivalence relation $\sim$.
 
-In general case the points of the metric space $\spc{X}/{\sim}$
+In general  the points of the metric space $\spc{X}/{\sim}$
 are formed by equivalence classes in $\spc{X}$
 for a wider equivalence relation.
-However, in the most of the cases we will consider, 
+However, in  most of the cases we will consider, 
 the set of equivalence classes will coincide with the set of points in the metric space $\spc{X}/{\sim}$.
 
 
@@ -546,7 +546,7 @@ is a length space.
 \end{thm}
 
 \parit{Proof.}
-Let $\spc{Y}$ be arbitrary metric space.
+Let $\spc{Y}$ be an arbitrary metric space.
 Since $\spc{X}$ is a length space,
 the map $f\:\spc{X}\to \spc{Y}$ is short if and only if 
 \[\length(f\circ\alpha)\le \length\alpha\]
@@ -578,12 +578,12 @@ that is, $\spc{X}/{\sim}$ is a length space.
 
 \parbf{Group actions.}
 Assume a group $G$ acts on a metric space $\spc{X}$.
-Consider relation $\sim$ on $\spc{X}$
+Consider a relation $\sim$ on $\spc{X}$
 defined as $x\sim y$ if there is $g\in G$ such that $x=g\cdot y$.
 Note that $\sim$ is an equivalence relation.
 
 In this case the quotient space $\spc{X}/{\sim}$ will be also denoted as $\spc{X}/G$;
-it could be also regarded as space of $G$-orbits in $\spc{X}$.
+it can be also regarded as the space of $G$-orbits in $\spc{X}$.
 
 Assume that the group $G$ acts on $\spc{X}$ by isometries.
 In this case the distance between orbits $G\cdot x$ and $G\cdot y$ in $\spc{X}/G$
@@ -595,20 +595,20 @@ can be defined directly
 If the $G$-orbits are closed, then $\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=0$ if and only if $G\cdot x=G\cdot y$.
 In this case the quotient space $\spc{X}/G$ is a genuine metric space.
 
-The following proposition follows from the definition of quotient space:
+The following proposition follows from the definition of a quotient space:
 
 \begin{thm}{Proposition}\label{prop:submetry-X/G}
 Assume $\spc{X}$ is metric space and group $G$ acts on $\spc{X}$ by isometries.
-Then the projection $\spc{X}\to\spc{X}/G$ is a submetry;
-that is $\spc{X}\to\spc{X}/G$ is short and 1-co-Lipschitz.
+Then the projection $\pi\co \spc{X}\to\spc{X}/G$ is a submetry;
+that is  $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in spc{X}, r>0$.  %$\spc{X}\to\spc{X}/G$ satisfies  is short and 1-co-Lipschitz. %%%V: many readers will not know what co-Lipschitz means.
 \end{thm}
 
 
 \section{Gluing and doubling}\label{sec:doubling}
 
 \parbf{Gluing.}
-Recall that disjoint union of metric spaces can be also considered as a metric space; see Definition~\ref{def:disjoint-union}.
-Therefore the quotient-space construction works as well for an equivalence relation on a disjoint union of metric spaces.
+Recall that the disjoint union of metric spaces can be also considered as a metric space; see Definition~\ref{def:disjoint-union}.
+Therefore the quotient-space construction works as well for an equivalence relation on the disjoint union of metric spaces.
 
 Consider two metric spaces $\spc{X}_1$ and $\spc{X}_2$
 with subset $A_1\subset\spc{X}_1$ and $A_2\subset\spc{X}_2$
@@ -616,7 +616,7 @@ and a bijection $\phi\:A_1\to A_2$.
 Consider the minimal equivalence relation on $\spc{X}_1\sqcup\spc{X}_2$
 such that $a\sim \phi(a)$ for any $a\in A_1$.
 In this case, the corresponding quotient space 
-$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called \index{gluing}\emph{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
+$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called the \index{gluing}\emph{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
 Note that if the map $\phi\:A_1\to A_2$ is distance preserving,
@@ -630,7 +630,7 @@ for any $x_1\in \spc{X}_1$ and $x_2\in \spc{X}_2$.
 \parbf{Doubling.}
 Let $\spc{V}$ be a metric space 
 and $A\subset \spc{V}$ be a closed subset.
-A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called \index{doubling}\emph{doubling of $\spc{V}$ in $A$}.
+A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called the \index{doubling}\emph{doubling of $\spc{V}$ in $A$}.% V:  "doubling in $A$" sounds weird to me in English. I think "doubling along $A$" sounds much better. I would suggest switching the terminology.
 
 The space $\spc{W}$ is completely described by the following properties:
 \begin{itemize}
@@ -690,7 +690,7 @@ let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc
 Given a point $p\in\spc{X}$, consider 
 map $\kur_p\:\spc{X}\to\Bnd(\spc{X},\RR)$, 
 defined as $\kur_p x=\distfun{x}{}{}-\distfun{p}{}{}$.
-The map $\kur_p$ will be called \index{Kuratowski map}\emph{Kuratowski map at $p$}.
+The map $\kur_p$ will be called the \index{Kuratowski map}\emph{Kuratowski map at $p$}.
 
 From the triangle inequality, we have
 \[\|\kur_p x-\kur_p y\|
@@ -703,5 +703,5 @@ Thus, we can (and often will) consider space $\spc{X}$ as a subset of  $\Bnd(\sp
 
 
 \begin{thm}{Exercise}\label{ex:compact-in-lenght}
-Show that any compact space is isometric to a subspace in a compact length space.
+Show that any compact metric space is isometric to a subspace in a compact length space.
 \end{thm}
