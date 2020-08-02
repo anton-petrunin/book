@@ -115,7 +115,7 @@ Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 \begin{align*}
 \oBall(x,R)&=\set{y\in \spc{X}}{\dist{x}{y}{}<R},
 \\
-\cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}%V: I suggest using just square brackets  or just a bar over B for closed balls. Using both is an overkill.
+\cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}%V: I suggest using just square brackets or just a bar over B for closed balls. Using both is an overkill.
 \end{align*}
 are called respectively the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed  balls} of radius $R$ with center $x$.
 
@@ -490,7 +490,8 @@ An analogus statement about convexity does not hold;
 for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges to the half sphere $\mathbb{S}^2_+$, which is not convex.
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
-Let $\spc{X}_n,$ be a sequence of geodesic spaces. Let $\o$ be an ultrafilter on $\mathbb N$.%V: ultrafilers and ultralimits are only defined later in the book. should this be mentioned here?
+Let $\spc{X}_n,$ be a sequence of geodesic spaces.
+Let $\o$ be an ultrafilter on $\mathbb N$; see Definition~{def:ultrafilter}.
 Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets and 
 $\spc{X}_n\to \spc{X}_\o$ and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
 Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
@@ -600,7 +601,7 @@ The following proposition follows from the definition of a quotient space:
 \begin{thm}{Proposition}\label{prop:submetry-X/G}
 Assume $\spc{X}$ is metric space and group $G$ acts on $\spc{X}$ by isometries.
 Then the projection $\pi\co \spc{X}\to\spc{X}/G$ is a submetry;
-that is  $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in spc{X}, r>0$.  %$\spc{X}\to\spc{X}/G$ satisfies  is short and 1-co-Lipschitz. %%%V: many readers will not know what co-Lipschitz means.
+that is, $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in spc{X}, r>0$.
 \end{thm}
 
 
