@@ -1,30 +1,31 @@
-%%!TEX root = all.tex
+%%!TEX root = the-converge.tex
 \chapter{Convergence of metric spaces}
 
 In this section we discuss the
 Gromov--Hausdorff convergence of metric spaces.
 
-It seems that Hausdorff convergence was first introduced by Felix Hausdorff \cite{hausdorff}
-and couple of years later an equivalent definition was given by Wilhelm Blaschke \cite{blaschke}.
-Further a refinement of this definition was introduced by Zdeněk Frolík \cite{frolik}
+%It seems that 
+To the best of our knowledge Hausdorff convergence of subsets of a fixed metric space was first introduced by Felix Hausdorff \cite{hausdorff}
+and a couple of years later an equivalent definition was given by Wilhelm Blaschke \cite{blaschke}.
+A further refinement of this definition was introduced by Zdeněk Frolík \cite{frolik}
 and then rediscovered by Robert Wijsman \cite{wijsman},
 however this refinement was a step in the direction of the so-called {}\emph{closed convergence} introduced by Hausdorff in the original book. 
-By that reason we call it Hausdorff convergence
+For that reason we call it Hausdorff convergence
 instead of
 \emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
 
-The Gromov--Hausdorff convergence was first introduced by David Edwards \cite{edwards}
+Gromov--Hausdorff convergence was first introduced by David Edwards \cite{edwards}
 and rediscovered later by Mikhael Gromov \cite{gromov-polynomial-growth}.
-It was essential tool in Gromov's proof that any group of polynomial growth has is a nilpontant subgroup of finite index.
-Convergences of metric spaces
-was considered earlier, but each time
-the definition was limited to very specific type of problems.
+It was an essential tool in Gromov's proof that any group of polynomial growth has  a nilpotent subgroup of finite index.
+Other versions of convergence of metric spaces
+were considered earlier, but each time
+the definition was limited to very specific types of problems.
 
-The definition of Gromov--Hausdorff convergence or metric spaces use 
-the Hausdorff convergence.
-It means that the sequence of metric spaces admit a sequence of distance preserving embedding into huge metric space so that the their
-images converge in Hausdorff sense.
-The Gromov--Hausdorff convergence is also defined in a nonstandard way.
+The definition of Gromov--Hausdorff convergence or metric spaces uses 
+the notion of Hausdorff convergence.
+It means that a sequence of metric spaces admits a sequence of distance preserving embedding into a common ambient metric space such that the their
+images converge in the Hausdorff sense.
+Gromov--Hausdorff convergence is also defined in a nonstandard way. %V: What does that mean???
 
 \section{Convergence of subsets}
 
@@ -35,7 +36,7 @@ $$\distfun Ax\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
 Given a sequence of nonempty closed sets $(A_n)_{n=1}^\infty$ in a nonempty metric space $\spc{X}$ 
-a closed set $A_\infty\subset \spc{X}$ is called Hausdorff limit of $(A_n)_{n=1}^\infty$,
+a closed set $A_\infty\subset \spc{X}$ is called the Hausdorff limit of $(A_n)_{n=1}^\infty$,
 briefly $A_n\Hto A_\infty$ if 
 $$\distfun{A_n}x\to\distfun{A_\infty}x\quad \text{as}\quad n\to\infty$$
 for any fixed $x\in \spc{X}$.
@@ -52,7 +53,7 @@ In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called {}\emph{
 
 
 \begin{thm}{Selection theorem}
-Let $\spc{X}$ be a proper space
+Let $\spc{X}$ be a proper metric  space
 and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in $\spc{X}$.
 Assume that for some (and therefore any) point  $x\in\spc{X}$ 
 the sequence $\distfun{A_n}x$ is bounded.
@@ -74,7 +75,7 @@ Since $f$ is 1-Lipschitz,
 $\distfun{A_\infty}y\ge f(y)$ for any $y\in \spc{X}$.
 It remains to show that $\distfun{A_\infty}y\le f(y)$ for any $y$.
 
-Assume contrary;
+Assume the  contrary;
 that is, $f(z)<R<\distfun{A_\infty}z$ for some $z\in \spc{X}$ and $R>0$.
 Then for any sufficiently large $n$ there is a point $z_n\in A_n$ such that
 $\dist{x}{z_n}{}\le R$.
@@ -102,13 +103,13 @@ $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$.
 Assume that $\spc{X}_n$ forms an open set in $\bm{X}$ for each $n<\infty$ and 
 $\spc{X}_n\Hto \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$.
 
-In this case the topology $\GH$ of $\bm{X}$ is called \index{Gromov--Hausdorff convergence}\emph{Gromov--Hausdorff convergence}
+In this case the topology $\GH$ of $\bm{X}$ is called a \index{Gromov--Hausdorff convergence}\emph{Gromov--Hausdorff convergence}
 and we write $\spc{X}_n\GHto \spc{X}_\infty$ or $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$;
-the later notation is used if we need to consider specific Gromov--Hausdorff convergene $\GH$.
+the later notation is used if we need to consider the specific Gromov--Hausdorff convergene $\GH$.
 The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n)$ along $\GH$.
 \end{thm}
 
-Once we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of Gromov--Hausdorff convergence.
+Once we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of a Gromov--Hausdorff convergence.
 
 Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not to be isometric to each other. 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
@@ -134,7 +135,7 @@ where $n, m<\infty$.
 \begin{thm}{Induced convergences}
 Assume $\spc{X}_n\xGHto{\GH}\spc{X}_\infty$,
 and $\bm{X}$ as in the definition \ref{def:GH}
-and $\iota_n\:\spc{X}_n\hookrightarrow\bm{X}$, $\iota_\infty\:\spc{X}_\infty\hookrightarrow\bm{X}$ are corresponding inclusions.
+and $\iota_n\:\spc{X}_n\hookrightarrow\bm{X}$, $\iota_\infty\:\spc{X}_\infty\hookrightarrow\bm{X}$ are the corresponding inclusions.
 
 \begin{subthm}{}
 A sequence of points $x_n\in\spc{X}_n$ converges to $x_\infty\in\spc{X}_\infty$ (briefly, $x_n\to x_\infty$ or $x_n\xto{\GH} x_\infty$) 
@@ -159,7 +160,7 @@ if the complements $\spc{X}_n\backslash \Omega_n$ converge to the complement $\s
 
 
 \begin{subthm}{} Let $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{Y}_n\xGHto{\theta} \spc{Y}_\infty$. 
-A sequence of submaps, $\map_n\:\spc{X}_n\subto \spc{Y}_n$ converges to a submap $\map_\infty\:\spc{X}_\infty\subto \spc{Y}_\infty$ if the following conditions holds
+A sequence of submaps (see section \ref{sec:submaps}) $\map_n\:\spc{X}_n\subto \spc{Y}_n$ converges to a submap $\map_\infty\:\spc{X}_\infty\subto \spc{Y}_\infty$ if the following conditions holds
 \begin{itemize}
 \item $\Dom\map_n\to \Dom\map_\infty$ as a sequence of open sets.
 
@@ -170,7 +171,7 @@ as $n\to\infty$.
 \end{subthm}
 
 \begin{subthm}{} Given a sequence of measures $\mu_n$ on $\spc{X}_n$
-denote by $\iota_n\#\mu_n$ the pushforward measures on $\bm{X}$.
+denote by $\iota_n\#\mu_n$ the pushforward measures on $\bm{X}$.%V: I would suggest using the notation ${\iota_n}_\#\mu_n$ , i.e. making $\#$  a subindex. That's a much more standard notation for pushforward. 
 We say that $(\mu_n)$ weakly converges to a measure $\mu_\infty$ on $\spc{X}_\infty$ 
 (brefly, $\mu_n\xto{}
 \mu_\infty$ or $\mu_n\xto{\GH}
