@@ -2,7 +2,7 @@
 %%BoundingBox: -41 -41 41 41 
 %%HiResBoundingBox: -40.33794 -40.33794 40.33794 40.33794 
 %%Creator: MetaPost 2.000
-%%CreationDate: 2020.07.14:0147
+%%CreationDate: 2020.07.30:2334
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font BPGKLT-CMMI10 GVELZS-EURM10 MOTKLT-CMR10 TOCEMT-CMSY7 TJAOWE-CMR7
