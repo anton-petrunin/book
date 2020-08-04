@@ -1,4 +1,4 @@
-%%%!TEX root =arXiv.tex
+%%%!TEX root =the-ultralimit.tex
 \chapter{Ultralimits}
 
 Here we introduce ultralimits of sequences of points, metric spaces and functions.
@@ -6,15 +6,15 @@ The ultralimits of metric spaces can be considered as a variation of Gromov--Hau
 Our presentation is based on \cite{kleiner-leeb}.
 
 Our use of ultralimits is very limited; 
-we use them only as a canonical way to pass to a convergent subsequence.
+we use them only as a canonical way to pass to  convergent subsequences.
 (In principle, we could avoid selling our souls 
-to the set-theoretical devil, but in this case we must say ``pass to convergent subsequence'' too many times.)
+to the set-theoretical devil, but in this case we must say ``pass to convergent subsequence'' too many times.)%V:  I am not sure I like that kind of metaphor in a math book.
 
 \section{Ultrafilters}
 
 We will need the existence of a 
 selective ultrafilter $\o$,
-which we fix once and for all.
+which we will fix once and for all.
 Existence follows from the axiom of choice and continuum hypothesis.
 
 Recall that $\NN$ denotes the set of natural numbers, $\NN=\{1,2,\dots\}$
@@ -61,7 +61,7 @@ From Zorn's lemma, it follows that every filter contains an ultrafilter.
 Thus there is an ultrafilter $\mathfrak{F}$ contained in the filter of all complements of finite sets; clearly this $\mathfrak{F}$ is nonprincipal.
 
 The existence of a selective ultrafilter follows from the continuum hypothesis;
-it was proved by Walter Rudin \cite{rudin}.
+this was proved by Walter Rudin \cite{rudin}.
 
 \parbf{Stone--\v{C}ech compactification.}
 Given a set $S\subset \NN$, consider subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
@@ -82,7 +82,7 @@ and a map $f\:\NN\to \spc{X}$ there is unique continuous map $\bar f\:\beta\NN\t
 
 Fix an ultrafilter $\o$.
 Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$. 
-Let us define the \index{ultralimit}\emph{$\o$-limit} of $(x_n)$ as the point $x_\o$ 
+Let us define an \index{ultralimit}\emph{$\o$-limit} of $(x_n)$ as a point $x_\o$ 
 such that for any $\eps>0$, $\o$-almost all elements of $(x_n)$ lie in $\oBall(x_\o,\eps)$; 
 that is,
 \[\o\set{n\in\NN}{\dist{x_\o}{x_n}{}<\eps}=1.\]
@@ -91,6 +91,7 @@ In this case, we will write
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
+It easily follows from the definition that  $\o$-limits are unique if they exist. 
 For example if $\o$ is the principal ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
 $x_\o=x_n$.
 
@@ -128,7 +129,7 @@ Clearly $x_{n_\kay}\to x_\o$ as $\kay\to\infty$.
 Now assume that $\o$ is selective.
 Consider the sets
 \begin{align*}
-C_\kay&=\set{n\in\NN}{\tfrac1{n}<\dist{x_n}{x_\o}{}\le \tfrac1{n-1}},
+C_\kay&=\set{n\in\NN}{\tfrac1{\kay}<\dist{x_n}{x_\o}{}\le \tfrac1{\kay-1}},
 \intertext{where we assume $\tfrac10=\infty$ and the set }
 C_\infty&=\set{n\in\NN}{x_n=x_\o},
 \end{align*}
@@ -137,7 +138,7 @@ Note that $\o(C_\kay)=0$ for any $\kay\in\NN$.
 
 If $\o(C_\infty)=1$, we can take the sequence $(x_n)_{n\in C_\infty}$.
 
-Otherwise discarding all empty sets among $C_\kay$ and $C_\infty$ gives a partition of $\NN$ into countable collection of $\o$-small sets.
+Otherwise discarding all empty sets among $C_\kay$ and $C_\infty$ gives a partition of $\NN$ into a countable collection of $\o$-small sets.
 Since $\o$ is selective, we can choose a set $S\subset\NN$ such that
 $S$ meets each set of the partition at one point and $\o(S)=1$.
 Clearly the sequence $(x_n)_{n\in S}$ converges to $x_\o$ in the usual sense.
@@ -146,25 +147,25 @@ Clearly the sequence $(x_n)_{n\in S}$ converges to $x_\o$ in the usual sense.
 The following proposition 
 is analogous to the statement that any sequence in a compact metric space 
 has a convergent subsequence;
-it can be proved the same way.
+it can be proved in the same way.
 
 \begin{thm}{Proposition}\label{prop:ultra/compact}
 Let $\spc{X}$ be a compact metric space.
 Then
-any sequence of points $(x_n)$ in $\spc{X}$ has unique $\o$-limit $x_\o$.
+any sequence of points $(x_n)$ in $\spc{X}$ has a unique $\o$-limit $x_\o$.
 
 In particular, a bounded sequence of real numbers has a unique $\o$-limit. 
 %
 \end{thm}
 
-The following lemma is an ultralimit analog of Cauchy convergence test.
+The following lemma is an ultralimit analog of the Cauchy convergence test.
 
 \begin{thm}{Lemma}\label{lem:X-X^w}
 Let $(x_n)$ be a sequence of points in a complete space $\spc{X}$. 
-Assume for each subsequence $(y_n)$ of $(x_n)$, 
+Assume that for each subsequence $(y_n)$ of $(x_n)$, 
 the $\o$-limit 
 \[y_\o=\lim_{n\to\o}y_{n}\in \spc{X}\]
-is defined and does not depend on the choice of subsequence, 
+is defined and does not depend on the choice of a subsequence, 
 then the sequence $(x_n)$ converges in the usual sense.
 \end{thm}
 
@@ -181,13 +182,13 @@ From now on, $\o$ denotes a selective ultrafilter on the set of natural numbers.
 Let $\spc{X}_n$ be a sequence of metric spaces.
 Consider all sequences $x_n\in \spc{X}_n$.
 On the set of all such sequences,
-define a pseudometric on these subsequences by
+define a pseudometric  by the formula
 \[\dist{(x_n)}{(y_n)}{}
 =
 \lim_{n\to\o} \dist{x_n}{y_n}{}.
 \eqlbl{eq:olim-dist}\]
 Note that the $\o$-limit on the right hand side is always defined 
-and takes a value in $[0,\infty]$. 
+and takes a value in $[0,\infty]$. %V: this is technically not correct because ultralimit equal to $\infty$ has a different definition which has not been stated. I'm not sure how best to handle this.
 
 Set $\spc{X}_\o$ to be the corresponding metric space; 
 that is, the underlying set of $\spc{X}_\o$ is formed by classes of equivalence of sequences of points $x_n\in\spc{X}_n$ 
