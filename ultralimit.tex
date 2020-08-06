@@ -91,6 +91,13 @@ In this case, we will write
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
+Also, if $\spc{X}=\RR$ we say that \[\lim_{n\to\o} x_n=+\infty (-\infty)\] if 
+
+\[
+\o\set{n\in\NN}{\dist{x_\o}{x_n}{}>\eps (<-\eps)}=1\quad\text{ for any } \eps>0
+\]
+%V: I added the case of infinite limits this because it's used later on.
+
 It easily follows from the definition that  $\o$-limits are unique if they exist. 
 For example if $\o$ is the principal ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
 $x_\o=x_n$.
@@ -188,25 +195,25 @@ define a pseudometric  by the formula
 \lim_{n\to\o} \dist{x_n}{y_n}{}.
 \eqlbl{eq:olim-dist}\]
 Note that the $\o$-limit on the right hand side is always defined 
-and takes a value in $[0,\infty]$. %V: this is technically not correct because ultralimit equal to $\infty$ has a different definition which has not been stated. I'm not sure how best to handle this.
+and takes a value in $[0,\infty]$. %V: I expanded the definition of ultralimits to include the case of limits equal to infinity.
 
 Set $\spc{X}_\o$ to be the corresponding metric space; 
-that is, the underlying set of $\spc{X}_\o$ is formed by classes of equivalence of sequences of points $x_n\in\spc{X}_n$ 
+that is, the underlying set of $\spc{X}_\o$ is formed by equivalence  classes of sequences of points $x_n\in\spc{X}_n$ 
 defined by 
 \[(x_n)\sim(y_n)
 \quad \iff\quad 
 \lim_{n\to\o} \dist{x_n}{y_n}{}=0\]
 and the distance is defined as in \ref{eq:olim-dist}.
 
-The space $\spc{X}_\o$ is called \index{ultralimit space}\emph{$\o$-limit} of $\spc{X}_n$.
+The space $\spc{X}_\o$ is called the \index{ultralimit space}\emph{$\o$-limit} of $\spc{X}_n$.
 Typically  $\spc{X}_\o$ will denote the  
-$\o$-limit of sequence $\spc{X}_n$;
+$\o$-limit of a sequence $\spc{X}_n$;
 we may also write  
 \[\spc{X}_n\to\spc{X}_\o\quad \text{as}\quad  n\to\o\quad \text{or}\quad \spc{X}_\o=\lim_{n\to\o}\spc{X}_n.\]
 
 Given a sequence $x_n\in \spc{X}_n$,
 we will denote by $x_\o$ its equivalence class which is a point in $\spc{X}_\o$;
-equivalently we will write
+equivalently, we will write
 \[x_n\to x_\o \quad \text{as}\quad  n\to\o\quad \text{or}\quad x_\o=\lim_{n\to\o} x_n.\]
 
 \begin{thm}{Observation}\label{obs:ultralimit-is-complete}
@@ -216,10 +223,10 @@ The $\o$-limit of any sequence of metric spaces is complete.
 \parit{Proof.}
 Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
 
-Fix a Cauchy sequence $x_{m}\in \spc{X}_\o$.
+Fix a Cauchy sequence $x_{m}\in \spc{X}_\o$. %earlier Cauchy's sequences are referred to as sequences that converge in themselves. I think we should stick to fixed terminology. I prefer calling them  Cauchy sequences. I don't think sequences that converge in themselves is standard.
 Passing to a subsequence we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$ for any $m$.
 
-Let us choose double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
+Let us choose a double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
 Note that $\dist{x_{n,m}}{x_{n,m-1}}{}<\tfrac1{2^m}$ for $\o$-almost all $n$.
 It follows that we can choose a nested sequence of sets 
 \[\NN=S_0\supset S_1\supset S_2\supset\dots\] 
@@ -257,14 +264,14 @@ Applying Lemma~\ref{lem:mid>geod} we get the statement.
 its $\o$-limit 
 $\lim_{n\to\o}\spc{X}_n$
 is denoted by $\spc{X}^\o$
-and called $\o$-power of $\spc{X}$.
+and called the $\o$-power of $\spc{X}$.
  
 According to Theorem~\ref{thm:ultra-GH},
 there is a distance preserving map
 $\iota:\spc{X}\hookrightarrow \spc{X}^\o$, here $\iota(y)$ is the equivalence class of constant sequence $y_n=y$. 
 
-The image $\iota(\spc{X})$ might be proper subset of $\spc{X}^\o$.
-For example $\RR^\o$ has pairs of points on distance $\infty$ from each other;
+The image $\iota(\spc{X})$ might be a proper subset of $\spc{X}^\o$.
+For example $\RR^\o$ has pairs of points at distance $\infty$ from each other;
 at the same time, each metric component of $\RR^\o$ is isometric to $\RR$.
 
 According to Theorem~\ref{thm:ultra-GH}, 
@@ -272,7 +279,7 @@ if $\spc{X}$ is compact, then $\iota(\spc{X})=\spc{X}^\o$;
 in particular, $\spc{X}^\o$ is isometric to $\spc{X}$.
 If $\spc{X}$ is proper, then $\iota(\spc{X})$ forms a metric component of $\spc{X}^\o$.
 
-The embedding $\iota$ gives us right to treat $\spc{X}$ as a subset of its ultrapower $\spc{X}^\o$. 
+The embedding $\iota$ allows us to treat $\spc{X}$ as a subset of its ultrapower $\spc{X}^\o$. 
 
 \begin{thm}{Observation}\label{obs:ultrapower-is-geodesic}
 Let $\spc{X}$ be a complete metric space. 
@@ -301,11 +308,12 @@ Assume $\spc{X}$ is a complete length space
 and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  
 Then there are at least two distinct geodesics between $p$ and $q$ 
 in the ultrapower $\spc{X}^\o$.
+%V: I am not sure why this is a corollary. It's easy to prove but I don't see why it's a consequence of the previous statement.
 \end{thm}
 
 \section{Ultratangent space} 
 
-Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter.
+Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter on $\NN$.
 
 For a metric space $\spc{X}$ and a positive real number $\lam$,
 we will denote by $\lam\cdot\spc{X}$ its \index{blowup}\emph{$\lam$-blowup},
@@ -331,9 +339,9 @@ that is,
 $x^\o$ and $y^\o$ 
 belong to different metric components of $\o\cdot\spc{X}$.
 
-The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
+The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called the ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
 
-Equivalently, ultratangent space $\T^\o_x\spc{X}$ can be defined the following way.
+Equivalently, the ultratangent space $\T^\o_x\spc{X}$ can be defined as follows.
 Consider all the sequences of points $x_n\in \spc{X}$ such that
 the sequence $\ell_n=n\cdot\dist{x}{x_n}{\spc{X}}$ is bounded.
 Define the pseudodistance between two such sequences as 
@@ -342,11 +350,11 @@ Define the pseudodistance between two such sequences as
 \lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
 Then $\T^\o_x\spc{X}$ is the corresponding metric space.
 
-Tangent space as well as ultratangent space, 
-generalize the notion of tangent space of Riemannian manifold.
-In the simplest cases these two notions define the same space.
-In general, they are different and both useful ---
-often lack of a property in one is compensated by the other.
+Tangent spaces (see section \ref{sec: tangent space})  as well as ultratangent spaces 
+generalize the notion of tangent spaces on Riemannian manifolds.
+In  simplest cases these two notions define the same space.
+However in general they are different and are both useful ---
+often a lack of some property in one is compensated by the other.%V: Tangent spaces are only defined later in chapter 6. This makes this whole paragraph very confusing. I added a forward reference to the section about tangent spaces but I think that's still confusing. I would move this discussion to the section on tangent spaces. The same goes for the next theorem.
 
 It is clear from the definition that tangent space has cone structure.
 On the other hand, in general, ultratangent space does not have a cone structure; 
@@ -357,11 +365,11 @@ The next theorem shows that the tangent space $\T_p$ can be (and often will be) 
 \begin{thm}{Theorem}\label{thm:tangent-ultratangent}
 \label{thm:T-in-T^w} 
 Let $\spc{X}$ be a metric space with defined angles.
-Then for any $p\in \spc{L}$, there is an distance preserving map 
+Then for any $p\in \spc{L}$, there is a distance preserving map 
 \[\iota:\T_p\hookrightarrow \T^\o_p\] 
 such that for any geodesic $\gamma$ starting at $p$
 we have 
-\[\gamma^+(0)\mapsto \lim_{n\to\o}[\gamma(\tfrac1n)]^n.\]
+\[\gamma^+(0)\stackrel{\iota}{\mapsto} \lim_{n\to\o}[\gamma(\tfrac1n)]^n.\]
 
 \end{thm}
 
@@ -385,10 +393,10 @@ and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
 Set $\iota(v)=v^\o$.
 Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
 $n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
-Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry of $\T_p'$.
+Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry on $\T_p'$.
 
 Since $\T_p'$ is dense in $\T_p$,
-we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.
+we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.%V: we sometimes call distance preserving maps isometries or global isometries and sometimes just distance preserving maps. I think consistent terminology should be used.
 \qeds
 
 {\sloppy
@@ -441,7 +449,7 @@ as in the definition of Gromov--Hausdorff convergence.
 Consider the sequence $(x_n)$ 
 as a sequence of points in~$\bm{X}$.
 
-If the $\o$-limit $x_\infty$ of $(x_n)$ exists, 
+If the $\o$-limit $x_\infty$ of $(x_n)$ in $\bm{X}$ exists, 
 it must lie in $\spc{X}_\infty$. 
 
 The point $x_\infty$, if defined, does not depend on the choice of $(x_n)$.
@@ -469,7 +477,7 @@ Since $\spc{X}_\infty$ is proper, $\nu(x_\o)$ is defined;
 in other words $\nu$ is defined on the metric component of $z_\o$.
 Hence (\ref{SHORT.thm:ultra-GH:b}) follows.
 \qeds
-
+\begin{comment}
 \begin{thm}{Corollary} 
 \label{cor:ulara-geod}
 The $\o$-limit of a sequence of complete length spaces is geodesic.
@@ -482,7 +490,8 @@ Consider a sequence of paths  $\gamma_n\:[0,1]\to \spc{X}_n$ from $_n$ to $y_n$
 Apply Theorem~\ref{thm:ultra-GH} 
 for the images $\spc{Y}_n=\gamma_n([0,1])\subset \spc{X}_n$.
 \qeds
-
+\end{comment}
+%V: I commented out this corollary because it's already proved in Observation 4.3.2
 \section{Ultralimits of sets}
 
 Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to \spc{X}_\o$
@@ -527,12 +536,12 @@ guaranteeing the existence of its $\o$-limit.
 Let $\spc{X}_n$ be a sequence of metric spaces
 and $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 
-Assume for any positive integer $\kay$, there is an open set $\Omega_n(\kay)\subset \Dom f_n$
-such that the restrictions $f_n|_{\Omega_n(\kay)}$ are uniformly bounded and continuous
+Assume that  for any positive integer $\kay$, there is an open set $\Omega_n(\kay)\subset \Dom f_n$
+such that the restrictions $f_n|_{\Omega_n(\kay)}$ are uniformly bounded and equicontinuous
 and the open $\o$-limit of $\Omega_n(n)$ coincides with the open $\o$-limit of $\Dom f_n$.
 Then the $\o$-limit of $f_n$ is defined.
 
-In particular, if the $f_n$ are uniformly bounded and continuous, then the $\o$-limit is defined.
+In particular, if the $f_n$ are uniformly bounded and equicontinuous, then the $\o$-limit is defined.%V: I think you need equicontinuity not just continuity to get a well defined $\o$-limit.
 \end{thm}
 
 The proof is straightforward.
@@ -542,7 +551,7 @@ The proof is straightforward.
 \begin{thm}{Exercise}\label{ex:nonconvex-limit}
 Construct a sequence of compact length spaces 
 $\spc{X}_n$  
-with a converging sequence of $\Lip$-Lipschitz concave functions $f_n\:\spc{X}_n\to\RR$ such that
+with a converging sequence of $\Lip$-Lipschitz concave (see Definition \ref{def:lam-convex}) functions $f_n\:\spc{X}_n\to\RR$ such that
 the $\o$-limit $\spc{X}_\o$ of $\spc{X}_n$ is compact
 and the $\o$-limit $f_\o\:\spc{X}_\o\to\RR$ of $f_n$ is not concave.
 \end{thm}
@@ -550,7 +559,7 @@ and the $\o$-limit $f_\o\:\spc{X}_\o\to\RR$ of $f_n$ is not concave.
 }
 
 If $f\:\spc{X}\subto\RR$ is a subfunction, 
-the $\o$-limit of the constant sequence $f_n=f$ is called the $\o$-power of $f$ and denoted by $f^\o$.
+the $\o$-limit of the constant sequence $f_n=f$ is called the $\o$-power of $f$ and is denoted by $f^\o$.
 So
 \[f^\o\:\spc{X}\subto\RR,\quad f^\o(x_\o)=\lim_{n\to\o} f(x_n).\]
 
@@ -562,13 +571,13 @@ then $\oBall(x,\eps)_{\spc{X}^\o}\subset \Dom f^\o$.
 
 
 \parbf{Ultradifferential.}
-Given a function $f\:\spc{L}\to\RR$, consider sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
+Given a function $f\:\spc{L}\to\RR$, consider the sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
 \[f_n(x^n)=n\cdot(f(x)-f(p)),\]
 here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
 While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
-functions $f_n$ converge to $\o$-differential of $f$ at $p$.
+the functions $f_n$ converge to $\o$-differential of $f$ at $p$.
 It will be denoted by $\dd_p^\o f$;
 \[\dd_p^\o f\:\T_p^\o\to\RR,\quad \dd_p^\o f=\lim_{n\to\o} f_n.\] 
 
-Clearly, the $\o$-differential $\dd_p^\o f$ of a locally Lipschitz subfunction $f$ is defined at each point $p\in \Dom f$.
+Clearly, the $\o$-differential $\dd_p^\o f$ of a locally Lipschitz subfunction $f$ is defined and Lipschitz at each point $p\in \Dom f$.
 
