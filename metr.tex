@@ -69,7 +69,7 @@ Now let us give examples when vanishing distance between distinct points is usef
 
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then 
-\[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}.\]
+\[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}\]
 is in general only a pseudometric;
 that is,  even if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ might be $[0,\infty)$-valued.
 
@@ -166,8 +166,8 @@ such that $\dist{x^i}{x^j}{}>\eps$ is called a \index{maximal packing}\emph{maxi
 
 
 \parbf{G-delta sets.}
-Recall that an arbitrary union of open balls in a metric space is called \index{open set}\emph{open set}.
-A subset of a metric space is called a G-delta set if it can be presented as an intersection of countable number of open subsets. 
+Recall that an arbitrary union of open balls in a metric space is called an \index{open set}\emph{open set}.
+A subset of a metric space is called a G-delta set if it can be presented as an intersection of  a countable number of open subsets. 
 Often we will use the following classical result:
 
 \begin{thm}{Baire's theorem}
@@ -207,7 +207,7 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 
 \begin{thm}{Definition}\label{def:length}
 Let $\spc{X}$ be a metric space.
-Given a curve $\alpha\: \II\to \spc{X}$ we define its \index{length}\emph{length} as 
+Given a curve $\alpha\: \II\to \spc{X}$, we define its \index{length}\emph{length} as 
 \[
 \length \alpha \df \sup_{a\le t_0\le\ldots\le t_n\le b}\left\{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha (t_{i-1})}{}\right\}
 \]
@@ -283,7 +283,7 @@ Then $\spc{X}$ carries a natural complete length metric such that $\dist{p}{q}{}
 
 \begin{thm}{Exercise}\label{ex:complete=>complete}
 Let $\spc{X}$ be a metric space
-and $\yetdist{}{}{}$ is the length metric on it.
+and $\yetdist{}{}{}$ be the length metric on it.
 Show the following
 \begin{subthm}{ex:complete=>complete:complete}
 If $\spc{X}$  is complete, then  $(\spc{X},\yetdist{}{}{})$ is complete.
@@ -491,7 +491,7 @@ for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
 Let $\spc{X}_n,$ be a sequence of geodesic spaces.
-Let $\o$ be an ultrafilter on $\mathbb N$; see Definition~{def:ultrafilter}.
+Let $\o$ be an ultrafilter on $\mathbb N$; see Definition ~\ref{def:ultrafilter}.
 Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets and 
 $\spc{X}_n\to \spc{X}_\o$ and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
 Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
@@ -528,7 +528,7 @@ It follows that
 the quotient space $\spc{X}/{\sim}$ admits a natural quotient pseudometric;
 this is the maximal pseudometric on  $\spc{X}/{\sim}$ 
 that makes the quotient map 
-$\spc{X}\to\spc{X}/{\sim}$ to be short.
+$\spc{X}\to\spc{X}/{\sim}$ short.
 The corresponding metric space will be also denoted as $\spc{X}/{\sim}$
 and will be called the \index{quotient space}\emph{quotient space} of $\spc{X}$ by the equivalence relation $\sim$.
 
@@ -542,7 +542,7 @@ the set of equivalence classes will coincide with the set of points in the metri
 
 \begin{thm}{Proposition}\label{prop:length-X}
 Let $\spc{X}$ be a length space and 
-$\sim$ be an equivalence relation on $\spc{X}$, then $\spc{X}/{\sim}$
+$\sim$ be an equivalence relation on $\spc{X}$. Then $\spc{X}/{\sim}$
 is a length space.
 \end{thm}
 
@@ -561,7 +561,7 @@ $f\:\spc{X}\to (\spc{Y},\yetdist{}{}{})$.
 
 Consider the quotient map 
 $f\:\spc{X}\to\spc{X}/{\sim}$.
-Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric that makes $f$ to be short.
+Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric that makes $f$ short.
 
 Denote by $\yetdist{}{}{}$ the length-metric on $\spc{X}/{\sim}$.
 It follows that
@@ -599,7 +599,7 @@ In this case the quotient space $\spc{X}/G$ is a genuine metric space.
 The following proposition follows from the definition of a quotient space:
 
 \begin{thm}{Proposition}\label{prop:submetry-X/G}
-Assume $\spc{X}$ is metric space and group $G$ acts on $\spc{X}$ by isometries.
+Assume $\spc{X}$ is a metric space and the  group $G$ acts on $\spc{X}$ by isometries.
 Then the projection $\pi\co \spc{X}\to\spc{X}/G$ is a submetry;
 that is, $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in spc{X}, r>0$.
 \end{thm}
@@ -643,7 +643,7 @@ further it will be denoted as $x\mapsto x'$.
 \[
 \dist{x'}{y}{\spc{W}}
 =\dist{x}{y'}{\spc{W}}
-=\inf_{a\in A}\{\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}\}.
+=\inf_{a\in A}\{\dist{x}{a}{\spc{V}}+\dist{a}{y}{\spc{V}}\}
 \]
 for any $x,y\in \spc{V}$.
 \end{itemize}
