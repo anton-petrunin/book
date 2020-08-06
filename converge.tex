@@ -92,13 +92,13 @@ a contradiction.
 \begin{thm}{Definition}\label{def:comp-metr}
 Let $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ be a set of metric spaces.
 A metric space $\bm{X}$
-is called \index{common space}\emph{common space} of $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ if its underlying set is formed by the disjoint union $$\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$ 
+is called a \index{common space}\emph{common space} of $\set{\spc{X}_\alpha}{\alpha\in\IndexSet}$ if its underlying set is formed by the disjoint union $$\bigsqcup_{\alpha\in\IndexSet} \spc{X}_\alpha$$ 
 and each inclusion $\iota_\alpha\:\spc{X}_\alpha\hookrightarrow\bm{X}$
 is distance preserving.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:GH}
-Let $\bm{X}$ be a common space for proper metric spaces
+Let $\bm{X}$ be a common space for a proper metric spaces
 $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$.
 Assume that $\spc{X}_n$ forms an open set in $\bm{X}$ for each $n<\infty$ and 
 $\spc{X}_n\Hto \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$.
@@ -111,11 +111,11 @@ The space $\spc{X}_\infty$ is called the limit space of the sequence $(\spc{X}_n
 
 Once we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of a Gromov--Hausdorff convergence.
 
-Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not to be isometric to each other. 
+Note that for a fixed sequence of metric spaces $\spc{X}_1,\spc{X}_2,\dots$ one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'} \spc{X}_\infty'$  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
 one may take $\spc{X}_\infty\iso\RR_{\ge0}$.
 In this case a point in the disjont space $\bm{X}$ can be thought as a pair $(x,n)\in \RR_{\ge}\times (\ZZ_>\cup \{\infty\})$ 
-and the metric on $\bm{X}$ can be defined the following way
+and the metric on $\bm{X}$ can be defined as: 
 $$\dist{(x,n)}{(y,m)}{\bm{X}}\df|\tfrac1n-\tfrac1m|+|x-y|,$$
 where we assume that $0=\tfrac1\infty$.
 On the other hand, one can take $\spc{X}_\infty'\iso\RR$,
@@ -287,17 +287,16 @@ for $i\le N_\kay, n\ge N_\kay$. It's easy to verify  that such metric on $\bm X$
 \section{Convergence of compact spaces.}
 
 \begin{thm}{Definition}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces,
-a map $f\:\spc{X}\to\spc{Y}$
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces. A map $f\:\spc{X}\to\spc{Y}$
 is called an \index{isometry!$\eps$-siometry}\emph{$\eps$-isometry}
 if the following two conditions hold:
 \begin{subthm}{}
-$\Im f$ is an $\eps$-net in $\spc{Y}$
+$\Im f$ is an $\eps$-net in $\spc{Y}$.
 \end{subthm}
 
 \begin{subthm}{}
-$|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}|\le \eps$ for any $x,x'\in\spc{X}$
-%$\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\spc{X}$. %V: the notation $\lege$ is not really standard. It should be defined if introduced but it might be easier just not to use it.
+$\dist{f(x)}{f(x')}{{f(x')}{\spc{Y}}-\dist{x}{x'}\dist{f(x)}{f(x')}{\spc{X}}\le \eps$ for any $x,x'\in\spc{X}$.
+%$\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\spc{X}$. %V: the notation $\lege$ is not really standard. It should be defined if introduced but it might be easier just not to use it. 
 \end{subthm}
 
 \end{thm}
