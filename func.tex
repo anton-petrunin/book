@@ -10,7 +10,7 @@ while convex ones are used  mainly in $\CAT{}$ spaces.
 \section{Submaps}\label{sec:submaps}
 
 We will often need maps and functions defined on subsets of a metric space.
-We call them \index{submap}\emph{submaps} and \index{subfunction}\emph{subfunction}.
+We call them \index{submap}\emph{submaps} and \index{subfunction}\emph{subfunctions}.
 Thus given a metric space $\spc{X}$ and $\spc{Y}$, 
 a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\subset \spc{X}$.
 
@@ -18,19 +18,19 @@ A submap is defined to be \index{continuous submap}\emph{continuous} if the inve
 Note that for a continuous submap $\map$, the domain $\Dom\map$ is automatically open.
 Indeed, a submap $\map\:\spc{X}\subto \spc{Y}$ is continuous if the inverse image of any open set is open.
 Since $\spc{Y}$ is open then so is $\Dom \map=\map^{-1}(\spc{Y})$.
-The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since it is a continuous function for special topology on $\RR$.%
+The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since they are  continuous functions for a special topology on $\RR$.%
 
 (The continuous partially defined maps could be defined via closed sets; namely, one may request that inverse images of closed sets are closed.
-While this condition is equivalent to the continuity for the functions defined on whole space,
+While this condition is equivalent to continuity for functions defined on the whole space,
 it is different for partially defined functions. 
-In particular with this definition domain of the continuous submap would have to be closed.)
+In particular with this definition, the domain of a continuous submap would have to be closed.)
 
 \section{Lipschitz conditions}
 
 
 \begin{thm}{Lipschitz maps}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces 
-$\map\:\spc{X}\subto\spc{Y}$ be a continuous submap 
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces, 
+$\map\:\spc{X}\subto\spc{Y}$ be a continuous submap,  
 and $\Lip\in\RR$.
 
 \begin{subthm}{}
@@ -88,7 +88,7 @@ The minimal such constant is denoted by $\colip\map$.
 \end{subthm}
 \end{thm}
 
-From the definition of co-Lipschitz map we get the following.
+From the definition of co-Lipschitz map we get the following:
 
 \begin{thm}{Proposition}
 Any co-Lipschitz map is open and surjective.
@@ -99,7 +99,7 @@ can be considered as a quantitative version of open maps.
 By that reason they also called $\Lip$-open \cite{burago-gromov-perelman}.
 Also, be aware that some authors, 
 refer to our $\Lip$-co-Lipschitz maps
-as to $\tfrac1\Lip$-co-Lipschitz. %REF???.
+as  $\tfrac1\Lip$-co-Lipschitz. %REF???.
 
 \begin{thm}{Proposition}\label{prop:colip=>complete}
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces and
@@ -108,8 +108,8 @@ Then $\spc{Y}$ is complete.
 \end{thm}
 
 \parit{Proof.}
-Choose a converging in itself sequence $y_1,y_2,\dots$ in $\spc{Y}$.
-Passing to a subsequence if nececury, we may assume that $\dist{y_n}{y_{n+1}}{\spc{Y}}< \tfrac1{2^n}$ for each $n$.
+Choose a Cauchy sequence $y_1,y_2,\dots$ in $\spc{Y}$.
+Passing to a subsequence if necessary, we may assume that $\dist{y_n}{y_{n+1}}{\spc{Y}}< \tfrac1{2^n}$ for each $n$.
 
 Denote by $\Lip$ a co-Lipschitz constant of $\map$.
 Note that  there is a sequence $x_1,x_2,\dots$ in $\spc{X}$
@@ -140,7 +140,7 @@ such that $|f(x)-f_\eps(x)|<\eps$ for any $x\in \spc{X}$.
 Assume that $f\ge 1$.
 Construct a continous positive function $\rho\:\spc{X}\to \RR_{>0}$ such that 
 \[\dist{x}{y}{}<\rho(x)\quad \Rightarrow\quad |f(x)-f(y)|<\eps.\]
-Consider function
+Consider the function
 \[
 f_\eps(x)
 =
@@ -151,7 +151,7 @@ f_\eps(x)
 \]
 It is straightforward to check that each $f_\eps$ is locally Lipschtz and $0\le f_\eps-f<\eps$.
 
-Note that any continuous function can be presented as difference of two continuous functions bounded below by $1$.
+Note that any continuous function can be presented as the difference of two continuous functions bounded below by $1$.
 Hence the result.
 \qeds
 
@@ -179,20 +179,20 @@ The spaces $X$ and $Y$ are called \index{isometric spaces}\emph{isometric} (brie
 
 \begin{thm}{Submetry}\label{def:submetry}
 A map $\sigma\:\spc{L}\to\spc{M}$ between the metric spaces $\spc{L}$ and $\spc{M}$
-is called 
+is called a 
 \emph{submetry}\index{submetry} if 
 \[\sigma(\oBall(p,r)_\spc{L})=\oBall(\sigma(p),r)_{\spc{M}}\]
 for any $p\in \spc{L}$ and $r\ge 0$.
 \end{thm}
 
 
-Note $\sigma\:\spc{L}\to\spc{M}$ is a sumbetry if it is 1-Lipshitz and 1-co-Lipschitz at the same time.
+Note $\sigma\:\spc{L}\to\spc{M}$ is a submetry if it is 1-Lipshitz and 1-co-Lipschitz at the same time.
 
 Note that any submetry is an onto map.
 
-The main souse of examples of submetries comes from isometric group actions.
+The main source of examples of submetries comes from isometric group actions.
 
-Nemely, assume $\spc{L}$ is a metric space and $G$ be a subgroup of isometries of $\spc{L}$.
+Nemely, assume $\spc{L}$ is a metric space and $G$ is a subgroup of isometries of $\spc{L}$.
 Denote by $\spc{L}/G$ the set of $G$-orbits;
 let us equip it with the Hausdorff metric. 
 
@@ -217,7 +217,7 @@ Since the action $G\acts \spc{L}$ is isometric,
 $\cBall[g\cdot x,r]_{\spc{L}}\ni g\cdot y$ for any $g\in G$.
 
 In particular the orbit $G\cdot y$ lies in the closed $r$-neighborhood of the orbit $G\cdot x$.
-The same way we can prove that the orbit $G\cdot x$ lies in the closed $r$-neighborhood of the orbit $G\cdot y$. 
+In the same way we can prove that the orbit $G\cdot x$ lies in the closed $r$-neighborhood of the orbit $G\cdot y$. 
 That is, the Hausdorff distance between the orbits $G\cdot x$ and $G\cdot y$ is at most $r$
 or, equivalently, $\dist{\hat x}{\hat y}{\spc{L}/G}\le r$.
 Since $x$ and $y$ are arbitrary, the map $x\mapsto\hat x$ is $1$-Lipschitz.
@@ -227,7 +227,7 @@ Since $x$ and $y$ are arbitrary, the map $x\mapsto\hat x$ is $1$-Lipschitz.
 \begin{thm}{Proposition}
 \label{prop:submet-length}
 Let  $\spc{L}$ be a length space 
-and $\sigma\:\spc{L}\to \spc{M}$ is a submetry.
+and $\sigma\:\spc{L}\to \spc{M}$ be a submetry.
 Then $\spc{M}$ is a length space.
 \end{thm}
 
@@ -245,14 +245,13 @@ such that
 \[\length\gamma\le \dist{x}{y}{\spc{M}}+\eps.\]
 
 Since $\sigma$ is $1$-Lipschitz,
-there 
 \[\length\sigma\circ\gamma\le \length\gamma.\]
 
 Note that the curve $\sigma\circ\gamma$ joins $x$ to $y$
-and from above
+and from the above,
 \[\length\sigma\circ\gamma<\dist{x}{y}{\spc{M}}+\eps.\]
 Since $\eps>0$ is arbitrary,
-we have that $\spc{M}$ is a length space.
+$\spc{M}$ is a length space.
 \qeds
 
 \section{Speed of curves}
