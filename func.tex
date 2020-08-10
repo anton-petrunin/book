@@ -258,7 +258,7 @@ $\spc{M}$ is a length space.
 
 Let $\spc{X}$ be a metric space.
 A \index{curve}\emph{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a {}\emph{real interval} (that is, an arbitrary convex subset of $\RR$);
-the curve it called \index{Lipschitz curve}\emph{Lipschitz} or \index{locally Lipschitz curve}\emph{locally Lipschitz} if the map $\alpha\:\II\to \spc{X}$~is.
+the curve is called \index{Lipschitz curve}\emph{Lipschitz} or \index{locally Lipschitz curve}\emph{locally Lipschitz} if the map $\alpha\:\II\to \spc{X}$~is.
 
 Recall that length of curves is defined in \ref{def:length}.
 The following theorem follows from \cite[2.7.4]{burago-burago-ivanov}.
@@ -276,12 +276,12 @@ is defined for almost all $t_0 \in \II$ and
 where $\int$ denotes the Lebesgue integral.
 \end{thm}
 
-A curve $\alpha\:\II\to\spc{X}$ is called \index{unit-speed curve}\emph{unit-speed curve}, 
+A curve $\alpha\:\II\to\spc{X}$ is called a  \index{unit-speed curve}\emph{unit-speed curve}, 
 if for any subinterval $[a,b]\subset\II$, we have
 \[b-a=\length(\alpha|_{[a,b]}).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
 
-The following generalization of Rademacher theorem was proved by Bernd Kirchheim \cite{kirchheim}. %CHECK??? 
+The following generalization of Rademacher's theorem was proved by Bernd Kirchheim \cite{kirchheim}. %CHECK??? 
 
 The conclusion of the standard Rademacher theorem does not make sense for maps to metric space since it might have no linear structure.
 But the theorem does not hold even if we assume that the target is a Banach space.
@@ -299,7 +299,7 @@ we have
 
 
 The (pseudo)norm $\lVert*\rVert_x$ in the above theorem 
-will be called \index{differential of metric}\emph{differential of induced metric} at $x$.
+will be called the \index{differential of metric}\emph{differential of the tinduced metric} at $x$.
 
 \section{Convex real-to-real functions}\label{sec:conv-real}
 
@@ -327,12 +327,12 @@ makes sense for any Borel-measurable subfunction $y$.
 The proofs of the following propositions are straightforward.
 
 \begin{thm}{Proposition}
-Let $\II\subset\RR$ be an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequality in \ref{eq:sec:conv-real*}.
+Let $\II\subset\RR$ be an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequalities in \ref{eq:sec:conv-real*}.
 Assume $y_n(t)\to y_\infty(t)$ as $n\to\infty$ for any $t\in \II$.
 Then $y_\infty$ is a solution of the same inequality in \ref{eq:sec:conv-real*}.
 \end{thm}
 
-Assume $y$ is a solution of one of the inequality in \ref{eq:sec:conv-real*}.
+Assume $y$ is a solution of one of the inequalities in \ref{eq:sec:conv-real*}.
 For $t_0\in \Dom y$, let us define right (left) derivative $y^+(t_0)$ ($y^-(t_0)$) at $t_0$ by
 \[y^\pm(t_0)=\lim_{t\to t_0\pm} \frac{y(t)-y(t_0)}{|t-t_0|}.\]
 Note that our sign convention for $y^-$ is not standard --- for $y(t)=t$ we have
@@ -345,36 +345,36 @@ for any $t_0\in\II$.
 Moreover 
 \[y^+(t_0)+y^-(t_0)\ge 0
 \quad \text{or respectively}
-\quad y^+(t_0)+y^-(t_0)\le 0\]
+\quad y^+(t_0)+y^-(t_0)\le 0.\]
 \end{thm}
 
 
 The next theorem gives a  number of equivalent ways to define such a generalized solution.
 
 \begin{thm}{Theorem}\label{y''=<1-ky}
-Let $\II$ be an open real interval and $y\:\II\to\RR$ be a locally Lipschitz function
-then the following conditions are equivalent:
-\begin{subthm}{}$y''\ge \lambda-\kappa\cdot  y$ (respectively $y''\le \lambda-\kappa\cdot  y)$
+Let $\II$ be an open real interval and $y\:\II\to\RR$ be a locally Lipschitz function.
+Then the following conditions are equivalent:
+\begin{subthm}{}$y''\ge \lambda-\kappa\cdot  y$ (respectively $y''\le \lambda-\kappa\cdot  y).$
 \end{subthm}
 
 \begin{subthm}{barrier}(barrier inequality) For any $t_0\in \II$, 
 there is a solution $\bar y$ 
-of ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
+of the ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
 with $\bar y(t_0)\z= y(t_0)$ such that $\bar y\ge y$ (respectively $\bar y\le y$) for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$.
 
-The function $\bar y$ is called {}\emph{lower} (respectively {}\emph{upper}) \index{barrier}\emph{barrier} of $y$ at $t_0$.
+The function $\bar y$ is called a {}\emph{lower} (respectively {}\emph{upper}) \index{barrier}\emph{barrier} of $y$ at $t_0$.
 \end{subthm}
 
 \begin{subthm}{barrier'} 
 Suppose $y''\le \lambda-\kappa\cdot  y$ . Let $t_0\in\II$ and let  $\bar y$ be a solution of  the
  ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
-such that  $\bar y(t_0)= y(t_0)$ and $y^+(t_0)\le y(t_0)\le -y^-(t_0)$. (note that such $\bar{y}$ is unique if $y$ is differentiable at $t_0$). 
+such that  $\bar y(t_0)= y(t_0)$ and $y^+(t_0)\le y(t_0)\le -y^-(t_0)$. (Note that such a $\bar{y}$ is unique if $y$ is differentiable at $t_0$.) 
 
-Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; that is $\bar{y}$ is a barrier of $y$ at $t_0$.
+Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; that is, $\bar{y}$ is a barrier of $y$ at $t_0$.
 \end{subthm}
 
 \begin{subthm}{y''-mono} (Jensen's inequality)\index{Jensen's inequality}
-For any pair of values $t_1<t_2$ in $\II$, such that $|t_2-t_1|<\varpi\kappa$ the unique solutions $z(t)$ of \[z''\z=\lambda-\kappa\cdot  z\] such that
+For any pair of values $t_1<t_2$ in $\II$ such that $|t_2-t_1|<\varpi\kappa$,  the unique solution $z(t)$ of \[z''\z=\lambda-\kappa\cdot  z\] such that
 \[z(t_1)=y(t_1),\quad z(t_2)=y(t_2)\] 
 satisfies $y(t)\le z(t)$ (respectively $y(t)\ge z(t)$) for all $t\in[t_1,t_2]$.
 \end{subthm}
@@ -397,7 +397,7 @@ Then for any $t_0\in \II$,
 }
 
 \parit{Proof.}
-Since $f_n$ are convex, we have $f^+_n(t_0)+f^-_n(t_0)\ge0$, and for any~$t$,
+Since the $f_n$ are convex, we have $f^+_n(t_0)+f^-_n(t_0)\ge0$, and for any~$t$,
 \[f_n(t)\ge f_n(t_0)\pm f^\pm(t_0)\cdot (t-t_0).\]
 Passing to the limit, we get
 \[f(t)\ge f(t_0)+\left[\limsup_{n\to\infty}f^+_n(t_0)\right]\cdot (t-t_0)\]
@@ -410,7 +410,7 @@ Hence the result.
 \begin{thm}{Corollary}
 \label{cor:der-conv-lim}
 Let $\II$ be an open interval 
-and $f_n\:\II\to\RR$ be a sequence of functions such that $f_n''\le \lambda$ and converge pointwise to a function $f\:\II\to\RR$.
+and $f_n\:\II\to\RR$ be a sequence of functions such that $f_n''\le \lambda$ that converge pointwise to a function $f\:\II\to\RR$.
 Then: 
 \begin{subthm}{} If $f$ is differentiable at $t_0\in \II$, then
 \[f'(t_0)=\pm\lim_{n\to\infty} f^\pm_n(t_0).\]
@@ -422,8 +422,8 @@ Then:
 \end{thm}
 
 \parit{Proof.} Set $\hat f_n(t)=f_n(t)-\tfrac{\lambda}{2}\cdot t^2$ and $\hat f(t)=f(t)-\tfrac\lambda2\cdot t^2$.
-Note that $\hat f_n$ are concave and $\hat f_n\to \hat f$ pointwise.
-Thus, theorem follows from the lemma on equilibrium (\ref{lem:der-conv-lim}).\qeds
+Note that the $\hat f_n$ are concave and $\hat f_n\to \hat f$ pointwise.
+Thus the theorem follows from the lemma on equilibrium (\ref{lem:der-conv-lim}).\qeds
 
 
 
@@ -437,14 +437,14 @@ Thus, theorem follows from the lemma on equilibrium (\ref{lem:der-conv-lim}).\qe
 
 \section{Convex functions on a metric space}\label{sec:conv-fun}
 
-The following notion will be used for geodesic spaces most of the time.
+The following notation will be used for geodesic spaces most of the time.
 
 \begin{thm}{Definition}\label{def:lam-convex}
 Let $\spc{X}$ be a metric space.
 We say that an upper semicontinuous subfunction $f\:\spc{X}\subto(-\infty,\infty]$ 
 satisfies the inequality
 \[f''+\kappa\cdot  f\ge \lambda\]
-if for any unit-speed geodesic $\gamma$ in $\Dom f$ 
+if for any unit-speed geodesic $\gamma$ in $\Dom f$, 
 the real-to-real function $y(t)= f\circ\gamma(t)$
 satisfies 
 \[y''+\kappa\cdot  y\ge \lambda\]
@@ -473,15 +473,15 @@ such that the restriction $f|_\Omega$ is $\lambda$-convex (or $\lambda$-concave)
 then $f$ is called semiconvex (respectively semiconcave).
 \end{thm}
 
-Further, we give a meaning of certain type of second order ordinary differential inequalities in context of metric spaces.
+Further, we give the meaning of a certain type of second order ordinary differential inequalities in the context of metric spaces.
 
-Various authors define the class of $\lambda$-convex ($\lambda$-concave) function differently. 
-It may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) function in our definitions.
+Various authors define the class of $\lambda$-convex ($\lambda$-concave) functions differently. 
+The class may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) functions in our definitions.
 
 \begin{thm}{Proposition}\label{prop:conv-comp}
 Let $\spc{X}$ be a metric space.
 Assume that $f\:\spc{X}\subto \RR$ is a semiconvex subfunction
-and $\phi\:\RR\to\RR$ is a nondecreasing seimconvex function.
+and $\phi\:\RR\to\RR$ is a nondecreasing semiconvex function.
 Then the composition $\phi\circ f$ is a semiconvex subfunction.
 \end{thm}
 
