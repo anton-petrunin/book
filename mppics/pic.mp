@@ -567,7 +567,7 @@ z.zxy=z.zx rotatedabout(z.p,-2);
 
 p0=arc(z.z,z.zxx,z.zx)--arc(z.zx,z.zxy,z.zy)--(arc(z.zy,z.zyy,z.z))--cycle;
 
-hatchfill p0 withcolor (40, 3, -.5bp);
+fill p0 withcolor 0;
 
 p1=arc(z.z,z.zxx,z.zx);
 

@@ -35,6 +35,10 @@ pen leftpen,rightpen;
 leftpen = makepen((-1,0)--(0,0)--cycle);
 rightpen = makepen((0,0)--(1,0)--cycle);
 
+%Штрихпунктир
+def linedot =  dashpattern(on 3 off 2 on .5 off 2) enddef;
+def lpdashed =  dashed dashpattern(on 3 off 2 on 1 off 2) enddef;
+
 %=========================================================================
 %
 % Отметки букв
