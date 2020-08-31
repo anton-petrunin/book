@@ -8,7 +8,7 @@
 
 \parbf{Geodesics and their relatives.}
 Let $\spc{X}$ be a metric space 
-and $\II$\index{$\II$} be a real interval. 
+and $\II\subset \R$\index{$\II$} be an interval. 
 A globally isometric map $\gamma\:\II\to \spc{X}$ is called a \index{unit-speed geodesic}\emph{unit-speed geodesic}%
 \footnote{Various authors call it differently: \index{shortest path}\emph{shortest path}, \index{minimizing geodesic}\emph{minimizing geodesic}.}; 
 in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equality
@@ -24,11 +24,11 @@ We will always assume $\geod_{[p q]}$ is parametrized starting at $p$;
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
 The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \index{geodesic}\emph{geodesic}.
 The term \index{geodesic}\emph{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
-when a confusion is possible we call the latter a \index{pregeodesic}\emph{pregeodesic}.
+when a confusion is possible we will call the latter a \index{pregeodesic}\emph{pregeodesic}.
 %???MAYBE BETTER CALL IT GEODESIC CURVE???
 %%%%%%%%???MAYBE BETTER TO KEEP CONSTANTSPEED GEODESIC. IT IS CLEAR.  A GEODESIC CURVE POSSIBLY MIGHT HAVE A DIFFERENT PARAMETER. WE SHOULD NOT EVEN RAISE THIS POSSIBILITY IN THE READER'S MIND.
 %%%%%%%%%%%S:  SORRY BUT I NEED OTHER PARAMETERS IN WARPED PRODUCTS.  SO CAN WE CALL THESE ``PREGEODESICS'''AS IN BRIDSON-HAEFLIGER.
-With slight abuse of notation, we will use $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
+With a slight abuse of notation, we will use the notation $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
 
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
@@ -45,7 +45,7 @@ Also we use the following short-cut notation:
 
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.
-However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we fixed a choice of geodesic.
+However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we have fixed a choice of geodesic.
 
 A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \index{geodesic path}\emph{geodesic path}.
 Given a geodesic $[p q]$,
@@ -72,7 +72,7 @@ Thus the limit in \ref{eq:def:busemann*} is defined.
 
 
 \parbf{Triangles.}
-For a triple of points $p,q,r\in \spc{X}$, a choice of triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}, and we will use the short notation 
+For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}, and we will use the short notation 
 $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$, there may be no triangle 
 $\trig p q r$, simply because one of the pairs of these points cannot be joined by a geodesic.  Or there may be many different triangles, any of which can be denoted by $\trig p q r$.
@@ -82,7 +82,7 @@ that is, made a choice of each $[q r], [r p]$ and $[p q]$.
 The value 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\] 
 will be called the \index{perimeter of triangle}\emph{perimeter of triangle} $\trig p q r$;
-it obviously coincides with perimeter of triple $p$, $q$, $r$ as defined below.
+it obviously coincides with perimeter of the triple $p$, $q$, $r$ as defined below.
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
@@ -117,16 +117,16 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
 In the notation of Section~\ref{model}, 
 $\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}\}$.
 
-If $\kappa\le 0$, the  model triangle is  always defined, that is, exists and is unique up to isometry of $\Lob2\kappa$.
+If $\kappa\le 0$, the  model triangle is  always defined, that is, it exists and is unique up to isometry of $\Lob2\kappa$.
 If $\kappa>0$, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
 In this case it also exists and is unique up to isometry of $\Lob2\kappa$.
-The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \index{perimeter}\emph{perimeter of triple} $p$, $q$, $r$.
+The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \index{perimeter}\emph{perimeter of the triple} $p$, $q$, $r$.
 
 If for  $p,q,r\in \spc{X}$,
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$ is defined 
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
-$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \index{model angle}\emph{model angle} of triple $p$, $q$, $r$, and will be denoted by
+$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$, and will be denoted by
 $\angk\kappa p q r$%
 \index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}.
 
@@ -228,16 +228,16 @@ Similarly to $\angk\kappa p{x}{y}$,
 we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
 \[\side\kappa \hinge p x y=
 \side\kappa \left\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\right\},\]
-where the right hand side is defined on page~\pageref{page:model-side}.
+where the right hand side is defined in section~\ref{model}.  %on page~\pageref{page:model-side}.%V: I don't like using hard page references. They might change in formatting.
 The value $\side\kappa \hinge p x y$ will be called the \index{model side}\emph{model side}
- of hinge $\hinge p x y$.
+ of the hinge $\hinge p x y$.
 
 \begin{thm}{Lemma}\label{lem:k-K-angle}
 Let $p,x,y$ be a triple of points in a metric space with perimeter $\ell$.
 Then for any $\kappa,\Kappa\in\RR$,
 \[|\angk\Kappa p{x}{y}-\angk\kappa p{x}{y}|
 \le 
-(|\Kappa|+|\kappa|)\cdot\ell^2,
+100(|\Kappa|+|\kappa|)\cdot\ell^2,
 \eqlbl{eq:k-K},\]
  whenever the lefthand side is defined.
 \end{thm}
@@ -262,12 +262,18 @@ Thus, for $\Kappa>\kappa$, we have
 \\
 &=\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
 \end{align*}
-Note that the area of model triangle with perimeter $\ell$ can not exceed the area of hemisphere with equator length $\ell$;
-in particular,
+Note that for $ \kappa\ge 0$ a triangle of perimeter $l$ in  $\Lob2\kappa$ lies is a ball of radius $2l$ which easily implies that  $\area\modtrig\kappa(pxy)\le 100\ell^2$.
+For $\kappa<0$ one gets the same estimate by a direct computation in the hyperbolic plane.
+
+%the area of a model triangle with perimeter $\ell$ in  $\Lob2\kappa$ can not exceed the area of a hemisphere with the equator of length $\ell$;
+%in particular, $\area\modtrig\kappa(pxy)\le \ell^2$.% V: I don't understand this argument so I gave a different one. Also, something had to be said about the case of negative $\kappa$.
+
+
+Therefore
 \begin{align*}
-\area\modtrig\kappa(pxy)&\le \ell^2, 
+\area\modtrig\kappa(pxy)&\le 100\ell^2, 
 &
-\area\modtrig\Kappa(pxy)&\le \ell^2.
+\area\modtrig\Kappa(pxy)&\le 100\ell^2.
 \end{align*}
 Thus, \ref{eq:k-K} follows.
 \qeds
@@ -332,7 +338,7 @@ whenever  each angle on the left-hand side is defined.
 
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
-Assume for hinge $\hinge q p x$, 
+Assume that for a hinge $\hinge q p x$, 
 the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 \[\dist{p}{\geod_{[qx]}(t)}{}
 \le
@@ -340,7 +346,7 @@ the angle $\alpha=\mangle\hinge q p x$ is defined. Then
 
 \end{thm}
 
-\parit{Proof.} Take sufficiently small $\eps>0$.
+\parit{Proof.} Take a sufficiently small $\eps>0$.
 For all sufficiently small $t>0$, we have 
 \begin{align*}
  \dist{\geod_{[qp]}(t/\eps)}{\geod_{[qx]}(t)}{}
@@ -409,7 +415,7 @@ and whose metric is given by the cosine rule
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 
 The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $\0$ or $\0_{\spc{Y}}$.
-The distance $\dist{\0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
+For $v\in\spc{Y}$ the distance $\dist{\0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
 
 
 The \index{scalar product}\emph{scalar product} $\<v,w\>$
@@ -486,13 +492,13 @@ Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\t
 If $v\in \T_p'$, then for the corresponding geodesic $\alpha$ we have $\alpha^+(0)=v$.
 
 Given $v\in \T_p$, construct a sequence $v_n\in\T'_p$ 
-such that $v_n\to v$, and let $\gamma_n$ be the sequence of corresponding geodesic.
+such that $v_n\to v$, and let $\gamma_n$ be a sequence of corresponding geodesic.
 
 The needed map $\alpha$ can be found among the maps such that $\alpha(0)\z=p$ and
 \[\alpha(t)=\gamma_n(t)\quad \text{if}\quad \eps_{n+1}\le t<\eps_n,\]
 where $(\eps_n)$
 is a decreasing sequence converging to $0$ as $n\to\infty$.
-In order to satify the condition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
+In order to satisfy the conclusion of the proposition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
 \qeds
 
 \begin{thm}{Definition}\label{def:diff-curv}
@@ -506,7 +512,7 @@ we say respectively that $\alpha$ is \index{differentiable!right differentiable}
 In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
 
 If $\alpha$ is both-sided differentiable at $t$, and 
-\[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^-(t)}{\alpha^-(t)}{\T_{\alpha(t)}},\] then we say that $\alpha$ is \index{differentiable curve}\emph{differentiable} at $t$.
+\[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^+(t)}{\alpha^-(t)}{\T_{\alpha(t)}},\] then we say that $\alpha$ is \index{differentiable curve}\emph{differentiable} at $t$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:both-sided-diff}
@@ -516,7 +522,7 @@ Show that any geodesic $\gamma\:\II\to\spc{X}$ is differentiable everywhere.
 
 \begin{thm}{Exercise}\label{ex:diff}
 Let $\alpha$ be a curve in a metric space with defined angles.
-Suppose that $\speed_t\alpha$, $\alpha^+(t)$ and $\alpha^-(t)$ are defined. 
+Suppose that $\speed_t\alpha$, $\alpha^+(t)$ and $\alpha^-(t)$ are defined. %V: I don't think $\speed_t$ has been defined.
 
 Show that $\alpha$ is differentiable at $t$.
 \end{thm}
@@ -558,7 +564,7 @@ that is, for any $\lam\ge 0$ and $v\in\T_p$ we have
 Passing to a subdomain of $f$ if necessary,
 we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
 
-Take a geodessic $\gamma$ starting at $p$ that lies in $\Dom f$.
+Take a geodesic $\gamma$ starting at $p$ that lies in $\Dom f$.
 Since $f\circ\gamma$ is semiconcave,
 the right derivative $(f\circ\gamma)^+(0)$ is defined.
 Since $f$ is  $\Lip$-Lipschitz, we have
@@ -587,7 +593,7 @@ Then
 Hence 
 \[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
 
-The last part follows from the definitions of differential and ultradifferential. 
+The last part follows from the definitions of differential and ultradifferential. %V: was ultradifferential defined?
 \qeds
 
 }
@@ -596,8 +602,8 @@ The last part follows from the definitions of differential and ultradifferential
 \label{page:upper-angle}
 In Alexandrov geometry, angles defined as in Section \ref{sec:angles} always exist (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
 
-For general metric spaces, this angle may not exist, \index{$\mangle$!$\mangle^\text{up}$}
-and it is more natural to consider the \index{angle!upper angle}\emph{upper angle}  defined as
+For general metric spaces, angles may not exist, \index{$\mangle$!$\mangle^\text{up}$}
+and given a hinge $\hinge p x y$  it is more natural to consider the \index{angle!upper angle}\emph{upper angle}  defined as
 \[\mangle^\text{up}\hinge p x y
 \df
 \limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
