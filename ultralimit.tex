@@ -392,10 +392,10 @@ and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
 Set $\iota(v)=v^\o$.
 Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
 $n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
-Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota$ is a global isometry on $\T_p'$.
+Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota\:\T_p'\to\T_p$ is a distance preserving map.
 
 Since $\T_p'$ is dense in $\T_p$,
-we can extend $\iota$ to a global isometry $\T_p\to \T^\o_p$.%V: we sometimes call distance preserving maps isometries or global isometries and sometimes just distance preserving maps. I think consistent terminology should be used.
+we can extend $\iota$ to a distance preserving map $\T_p\to \T^\o_p$.
 \qeds
 
 {\sloppy
@@ -538,9 +538,10 @@ and $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 Assume that  for any positive integer $\kay$, there is an open set $\Omega_n(\kay)\subset \Dom f_n$
 such that the restrictions $f_n|_{\Omega_n(\kay)}$ are uniformly bounded and equicontinuous
 and the open $\o$-limit of $\Omega_n(n)$ coincides with the open $\o$-limit of $\Dom f_n$.
-Then the $\o$-limit of $f_n$ is defined.
+Then the $\o$-limit $f_\o$ of $f_n$ is defined;
+moreover $f_\o$ is a continuous subfunction.
 
-In particular, if the $f_n$ are uniformly bounded and equicontinuous, then the $\o$-limit is defined.%V: I think you need equicontinuity not just continuity to get a well defined $\o$-limit.
+In particular, if the $f_n$ are uniformly bounded and equicontinuous, then its $\o$-limit $f_\o$ is defined, bounded and uniformly continuous.
 \end{thm}
 
 The proof is straightforward.
