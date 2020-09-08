@@ -9,6 +9,7 @@ Our use of ultralimits is very limited;
 we use them only as a canonical way to pass to  convergent subsequences.
 (In principle, we could avoid selling our souls 
 to the set-theoretical devil, but in this case we must say ``pass to convergent subsequence'' too many times.)%V:  I am not sure I like that kind of metaphor in a math book.
+%A: then remove it, I think it is okey to say that it is not essential in a way. 
 
 \section{Ultrafilters}
 
@@ -91,12 +92,10 @@ In this case, we will write
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
-Also, if $\spc{X}=\RR$ we say that \[\lim_{n\to\o} x_n=+\infty (-\infty)\] if 
-
+Also, if $\spc{X}=\RR$ we say that \[\lim_{n\to\o} x_n=\pm\infty\] if 
 \[
-\o\set{n\in\NN}{\dist{x_\o}{x_n}{}>\eps (<-\eps)}=1\quad\text{ for any } \eps>0
+\o\set{n\in\NN}{\pm\dist{x_\o}{x_n}{}>L}=1\quad\text{for any}\quad L\in\RR
 \]
-%V: I added the case of infinite limits this because it's used later on.
 
 It easily follows from the definition that  $\o$-limits are unique if they exist. 
 For example if $\o$ is the principal ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
@@ -194,7 +193,7 @@ define a pseudometric  by the formula
 \lim_{n\to\o} \dist{x_n}{y_n}{}.
 \eqlbl{eq:olim-dist}\]
 Note that the $\o$-limit on the right hand side is always defined 
-and takes a value in $[0,\infty]$. %V: I expanded the definition of ultralimits to include the case of limits equal to infinity.
+and takes a value in $[0,\infty]$. 
 
 Set $\spc{X}_\o$ to be the corresponding metric space; 
 that is, the underlying set of $\spc{X}_\o$ is formed by equivalence  classes of sequences of points $x_n\in\spc{X}_n$ 
@@ -302,12 +301,13 @@ It remains to apply Lemma~\ref{lem:mid>geod}.
 The ``if''-part follows from Observation~\ref{obs:ultralimit-is-geodesic}.
 \qeds
 
+Note that the proof above together with Lemma~\ref{lem:X-X^w} implies the following:
+
 \begin{thm}{Corollary}\label{cor:two-geodesics-in-ultrapower}
 Assume $\spc{X}$ is a complete length space 
 and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  
 Then there are at least two distinct geodesics between $p$ and $q$ 
 in the ultrapower $\spc{X}^\o$.
-%V: I am not sure why this is a corollary. It's easy to prove but I don't see why it's a consequence of the previous statement.
 \end{thm}
 
 \section{Ultratangent space} 
