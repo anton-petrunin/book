@@ -129,38 +129,39 @@ In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$, then
 
 \section{Linear dimension}
 
+%???A: as V. noticed, a problem here --- since tangent cone defined in the assumption that angles are defined, some of the statements are not longer true, in particular it seems that we have equality for product.
+
 In addition to $\HausDim$ and $\TopDim$, 
 we will use yet another dimension, which we call {}\emph{linear dimension}.
 
 Recall that a \index{cone map}\emph{cone map} is a map between cones respecting the cone multiplication.
 
 \begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!Linear dimension}
-Let $\spc{X}$ be a metric space. 
+Let $\spc{X}$ be a metric space with defined angles. 
 The \index{linear dimension}\emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\LinDim$}) is defined as the exact upper bound on $m\in\ZZ_{\ge0}$
 such that there is a distance preserving cone embedding $\EE^m\hookrightarrow \T_p\spc{X}$
 for some $p\in \spc{X}$; here $\EE^m$ denotes $m$-dimensional Euclidean space 
-and $\T_p\spc{X}$ denotes the tangent space of $\spc{X}$ at $p$ (defined in Section~\ref{sec:tangent-space+directions}).%V: This makes sense only if angles are defined. The definition needs to be modified.
+and $\T_p\spc{X}$ denotes the tangent space of $\spc{X}$ at $p$ (defined in Section~\ref{sec:tangent-space+directions}).
 \end{thm}
 
 Note that $\LinDim$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
  
-For general metric spaces, $\LinDim$ has no relations to $\HausDim$ and $\TopDim$.
+The linear dimension $\LinDim$ has no immediate relations to $\HausDim$ and $\TopDim$.
 Also, $\LinDim$ does not satisfy the cover axiom
  (\ref{dim-axiom-sigma}).
-For $\LinDim$, an inverse of the product inequality holds; that is,
+Note that
 \[\LinDim(\spc{X}\times \spc{Y})
-\ge
+=
 \LinDim\spc{X}+ \LinDim\spc{Y}
 \eqlbl{eq:inverse-product-axiom}\] 
-for any two metric spaces $\spc{X}$ and $\spc{Y}$; 
-that is easy to check. 
-According to the following exercise, the inequality \ref{eq:inverse-product-axiom} might be strict for some spaces \cite{schroeder-foetch}.
+for any two metric spaces $\spc{X}$ and $\spc{Y}$ with defined angles. 
+
+The following exercise is based on a construction of Thomas Foertsch and Viktor Schroeder \cite{schroeder-foetch};
+it shows that the condition on angles in \ref{eq:inverse-product-axiom} cannot be removed.
 
 \begin{thm}{Exercise}\label{ex:schroeder-foetch}
-Construct two norms on $\RR^{10}$ such that 
-the norms of the corresponding metric spaces $\spc{X}$ and $\spc{Y}$
-have an isometric copy of $\EE^2$ but
-$\spc{X}\times\spc{Y}$ has an isometric copy of $\EE^{10}$.
+Construct metrics $\rho_1$ and $\rho_2$ on $\RR^{10}$ defined by norms such that $(\RR^{10},\rho_i)$ do \emph{not} an isometric copy of $\EE^2$ but
+$(\RR^{10},\rho_1)\times (\RR^{10},\rho_2)$ has an isometric copy of $\EE^{10}$.
 \end{thm}
 
 The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in both cases of curvature bounded below and above).
@@ -173,8 +174,7 @@ under the name \index{local dimension}\index{dimension!local dimension}\emph{loc
 it coincides %should we explain why???
  with the linear dimension for $\Alex{}$ and $\CAT{}$ spaces.
 
-One could modify the definition of linear dimension by taking an arbitrary $n$-dimensional Banach space instead of a Euclidean $n$-space.%V:This again makes no sense if we want angles to exist.???
-Such a definition makes more sense for general metric spaces.
-This dimension is additive with respect to the direct product (that is, we always have equality in \ref{eq:inverse-product-axiom}). 
-
-For Alexandrov spaces (either CBB or CAT) this modification is equivalent to the definition we use in this book.
+One can extend the definition to arbitrary metric spaces.
+To do this one should modify of the definition of tangent space
+and take an arbitrary $n$-dimensional Banach space instead of a Euclidean $n$-space.
+For Alexandrov spaces (either $\Alex{}$ or $\CAT{}$) this modification is equivalent to the definition we use in this book.

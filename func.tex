@@ -4,10 +4,6 @@
 
 Here we introduce some classes of maps between metric spaces and develop a language to describe various notions of convexity/concavity of real-valued functions on general metric space.
 
-%Concave functions are used mainly in the $\Alex{}$ spaces,
-%while convex ones are used  mainly in $\CAT{}$ spaces. 
-Convexity is used mainly in CBA, Concavity is used mainly in CBB.%V: That's a strange statement IMO. what's used is concavity (respectively convexity) of distance functions.
-
 \section{Submaps}\label{sec:submaps}
 
 We will often need maps and functions defined on subsets of a metric space.
@@ -195,14 +191,11 @@ The main source of examples of submetries comes from isometric group actions.
 
 Namely, assume $\spc{L}$ is a metric space and $G$ is a subgroup of isometries of $\spc{L}$.
 Denote by $\spc{L}/G$ the set of $G$-orbits;
-%let us equip it with the Hausdorff  metric. %V:  Hausdorff distance between subsets of a metric space has not been defined in the book, just Hausdorff convergence. So this should be changed.
-Let us equip it with Hausdorff convergence,
-
-In general, $\spc{L}/G$ is a pseudometric space,
-but if all the $G$-orbits form closed sets in $\spc{L}$
+let us equip it with the pseudometric defined by
+\[\dist{G\cdot x}{G\cdot y}{\spc{L}/G}=\inf\set{\dist{g\cdot x}{h\cdot y}{\spc{L}}}{g,h\in G}.\]
+Note that if all the $G$-orbits form closed sets in $\spc{L}$,
 then $\spc{L}/G$ is a genuine metric space.
 
-%V: In the following proposition I changed all closed balls to open ones and all strict inequalities to non strict ones. That's because for general submetry image of a closed ball of radius $r$ need not be equal to the closed ball of radius $r$. It's true for proper spaces but we are not assuming properness here.
 \begin{thm}{Proposition}\label{prop:submet/G}
 Let $\spc{L}$ be a metric space.
 Assume that a group $G$  acts on $\spc{L}$ by isometries  
@@ -447,7 +440,9 @@ Thus the theorem follows from the lemma on equilibrium (\ref{lem:der-conv-lim}).
 
 \section{Convex functions on a metric space}\label{sec:conv-fun}
 
-The following notion will be mostly used for geodesic spaces.
+In this section we define different types of convexity/concavity
+in the context of metric spaces; it will be used mostly used for geodesic spaces.
+The notation refers to the corresponding second order ordinary differential inequality. 
 
 \begin{thm}{Definition}\label{def:lam-convex}
 Let $\spc{X}$ be a metric space.
@@ -482,8 +477,6 @@ there is a neighborhood $\Omega\ni p$ and a real number $\lambda$
 such that the restriction $f|_\Omega$ is $\lambda$-convex (or $\lambda$-concave),
 then $f$ is called semiconvex (respectively semiconcave).
 \end{thm}
-
-%Further, we give the meaning  a certain type of second order ordinary differential inequalities in the context of metric spaces. %V: I don't understand what this sentence is trying to say so I commented it out.
 
 Various authors define the class of $\lambda$-convex ($\lambda$-concave) functions differently. 
 Their definitions may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) functions in our definitions.

@@ -15,7 +15,7 @@ in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equalit
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 holds for any pair $s,t\in \II$.
 
-A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \index{ray}\emph{half-line}. %???maybe better half-line???
+A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \index{half-line}\emph{half-line}. %???maybe better half-line???
 
 A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \index{line}\emph{line}.
 
@@ -57,7 +57,7 @@ A curve $\gamma\:\II\to \spc{X}$ is called a \index{geodesic!local geodesic}\emp
 If $\II=[0,1]$, then $\gamma$ is called a \index{local geodesic path}\emph{local geodesic path}.
 
 \begin{thm}{Proposition}\label{prop:busemann}
-Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a ray. 
+Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a half-line. 
 Then the \index{Busemann function}\emph{Busemann function} $\bus_\gamma\:\spc{X}\to \RR$ 
 \[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
 is defined
@@ -228,7 +228,7 @@ Similarly to $\angk\kappa p{x}{y}$,
 we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
 \[\side\kappa \hinge p x y=
 \side\kappa \left\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\right\},\]
-where the right hand side is defined in section~\ref{model}.  %on page~\pageref{page:model-side}.%V: I don't like using hard page references. They might change in formatting.
+where the right hand side is defined in Section~\ref{model}.  %on page~\pageref{page:model-side}.%V: I don't like using hard page references. They might change in formatting. %A: what do you mean by ``hard''? it is automatic as any other refs we use.
 The value $\side\kappa \hinge p x y$ will be called the \index{model side}\emph{model side}
  of the hinge $\hinge p x y$.
 
@@ -319,8 +319,8 @@ Thus for any $\eps>0$,
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result follows.
 
-To define $s(t,\tau)$, consider three rays $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
-We parametrize each ray by the distance from the starting point.
+To define $s(t,\tau)$, consider three half-lines $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+We parametrize each half-line by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
 $\tilde \gamma^2(s)\in[\tilde \gamma^1(t)\ \tilde \gamma^3(\tau)]$. 
@@ -520,9 +520,11 @@ Assume $\spc{X}$ is a metric space with defined angles.
 Show that any geodesic $\gamma\:\II\to\spc{X}$ is differentiable everywhere.
 \end{thm}
 
+Recall that the speed of curve is defined in \ref{thm:speed}.
+
 \begin{thm}{Exercise}\label{ex:diff}
 Let $\alpha$ be a curve in a metric space with defined angles.
-Suppose that $\speed_t\alpha$, $\alpha^+(t)$ and $\alpha^-(t)$ are defined. %V: I don't think $\speed_t$ has been defined.
+Suppose that $\speed_t\alpha$, $\alpha^+(t)$ and $\alpha^-(t)$ are defined.
 
 Show that $\alpha$ is differentiable at $t$.
 \end{thm}
@@ -593,7 +595,7 @@ Then
 Hence 
 \[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
 
-The last part follows from the definitions of differential and ultradifferential. %V: was ultradifferential defined?
+The last part follows from the definitions of differential and ultradifferential; see Section~\ref{sec:Ultralimits of functions}.
 \qeds
 
 }
