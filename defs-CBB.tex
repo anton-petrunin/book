@@ -75,7 +75,7 @@ if and only if
 for any 4 distinct points $p,x,y,z\in\spc{L}$.
 \end{thm}
 
-Recall that $\o$ denotes a selective ultrafilter on $\NN$, which is fixed once for all.
+Recall that $\o$ denotes a selective ultrafilter on $\NN$, which is fixed once and  for all.
 The following proposition follows directly from the definition of $\Alex\kappa$ comparison and the definitions of $\o$-limit and $\o$-power given in Section~\ref{ultralimits}.
 
 
@@ -118,7 +118,7 @@ Then the quotient space $\spc{L}/G$ is locally $\Alex\kappa$.
 \parit{Proof of \ref{thm:submetry-CBB}.}
 Fix a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$ such that 
 $\dist{p}{x^i}<\tfrac{\varpi\kappa}2$ for any $i$.
-Choose arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
+Choose an arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
 
 Since $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
 \[\dist{p}{x^i}{\spc{M}}
@@ -159,12 +159,12 @@ Since $\eps>0$ is arbitrary we have
 +\angk\kappa p{x^2}{x^3}
 +\angk\kappa p{x^3}{x^1}\le 2\cdot\pi;\]
 that is,
-the $\Alex\kappa$ comparison holds for the quadruple.
+the $\Alex\kappa$ comparison holds for this quadruple.
 \qeds
 
 \section{Geodesics}
 
-We are going to show that all complete length $\Alex{}$ spaces have plenty of geodesics in the following sense.
+We are going to show that all complete length $\Alex{}$ spaces have plenty of geodesics in the following sense. Recall that a subset of a topological space is called G-delta if it is a countable intersection of open sets.
 
 \begin{thm}{Definition}\label{def:alm-geod}
 A metric space $\spc{X}$ is called \index{geodesic!G-delta geodesic space}\index{G-delta geodesic space}\emph{G-delta geodesic} 
@@ -196,7 +196,7 @@ we use the notation
 
 \begin{thm}{Theorem}\label{thm:almost.geod}
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Then the set $\Str(p)$ is a dense G-delta set, 
+Then the set  $\Str(p)$ is a dense G-delta set, 
 and for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
 
 In particular, $\spc{L}$ is G-delta geodesic.
@@ -287,7 +287,7 @@ for any $q\in W$, there is a unique geodesic $[pq]$ with
 $p\in A$ that realize the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
 \end{thm}
 
-Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.
+Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.%??? V: why is this sentence here? directions of geodesics are not mentioned in the next exercise.
 
 \begin{thm}{Exercise}\label{ex:G-delta-not-thru}
 Construct a complete length $\Alex{}$ space $\spc{L}$
@@ -364,8 +364,9 @@ Follows from Alexandrov's lemma (\ref{lem:alex}).
 \parit{(\ref{SHORT.2-sum}) $+$ (\ref{SHORT.point-on-side}) $\Rightarrow$ (\ref{SHORT.angle}).} 
 From (\ref{SHORT.point-on-side}) we get that for $\bar p\in\mathopen{]}xp]$ and $\bar y\in\mathopen{]}xy]$, the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nonincreasing in each argument.
 In particular, 
-$\mangle\hinge x p y\z=\sup\{\angk\kappa x{\bar p}{\bar y}\}$.
-Hence $\mangle\hinge x p y$ is defined and is
+$\mangle\hinge x p y\z=\sup\{\angk\kappa x{\bar p}{\bar y}\}$
+%Hence $\mangle\hinge x p y$
+ is defined and is
 at least $\angk\kappa x p y$.
 
 \begin{wrapfigure}{o}{30 mm}
@@ -424,7 +425,7 @@ Then for $\bar y\in\mathopen{]}xy]$ the function
 \[\dist{x}{\bar y}{}\mapsto \angk\kappa x p{\bar y}\] 
 is nonincreasing.
 
-In particular, if geodesic $[x p]$ exists and $\bar p\in \mathopen{]}x p]$, then
+In particular, if a geodesic $[x p]$ exists and $\bar p\in \mathopen{]}x p]$, then
 \begin{subthm}{cor:monoton:2-sides}
 the function 
 \[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nonincresing in each argument
@@ -488,7 +489,7 @@ Prove that any triangle with perimeter $<\varpi\kappa$
 in a $\Alex{\kappa}$ space is $\kappa$-fat.
 \end{thm}
 
-The following exercise is inspired by Busemann's definition \cite{busemann-CBA}. 
+The following exercise is inspired by Busemann's definition in \cite{busemann-CBA}. 
 
 \begin{thm}{Exercise}\label{ex:busemann}
 
@@ -621,7 +622,7 @@ Consider functions $\rho$, $\theta\:\II\to\RR$ defined as
 where $t_0\in\II$ is a fixed number and $\int$  denotes Lebesgue integral.
 Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ is defined and nondecreasing.
 
-It is straightforward to check that $(\rho,\theta)$ describe $\tilde \gamma$ in polar coordinates on $\Lob2{\kappa}$ with center at $\tilde p$.
+It is straightforward to check that $(\rho,\theta)$ uniquely describe $\tilde \gamma$ in polar coordinates on $\Lob2{\kappa}$ with center at $\tilde p$.
 \qeds
 
 We need the following analogues of sub- and super-graphs %??? change to epi- hypo???
@@ -648,7 +649,7 @@ The curve $\tilde \gamma$ is called
 if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to $\tilde p$.
 \end{thm}
 
-Note that if $\kappa>0$, then the supergraph of a curve is a subgraph with respect to the opposite point. 
+Note that if $\kappa>0$, then the supergraph of a curve is the subgraph with respect to the opposite point. 
 
 For developments,
 all the notions above will be considered with respect to their basepoints.
@@ -724,7 +725,7 @@ If $\kappa\le 0$, then \ref{eq:thm:detr*} implies that
 
 In the case $\kappa>0$, the proof of \ref{eq:thm:devel**} requires more work.
 Applying rescaling, we can assume that $\kappa=1$.
-Since $\gamma\in B_\pi(p')$ point-on-side comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ can not pass through the antipodal point of $\tilde p'$.
+Since $\gamma\in B_\pi(p')$, point-on-side comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ can not pass through the antipodal point of $\tilde p'$.
 
 Consider the space $L$ glued from the model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
 Note that $\theta$ is the total angle of $L$ at $\tilde p'$.
@@ -753,7 +754,7 @@ and two geodesics $[\tilde p'\,\tilde \gamma(0)]$,
 $[\tilde p'\,\tilde \gamma(T)]$.
 Since $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex,
  the natural parametrization of $\tilde x_0\tilde x_1\dots \tilde x_n$ 
-converges to a natural parametrization of $\tilde \gamma$. % ???(see \ref{lem:lenght-of-convex-curve}).
+converges to the natural parametrization of $\tilde \gamma$. % ???(see \ref{lem:lenght-of-convex-curve}). ??? V:: what is this reference? Some explanation or reference is needed here.
 Thus $\tilde \gamma$ is the $\kappa$-development of $\gamma$ with respect to $p$. This proves the "only-if" part of \eqref{thm:devel}.
 
 \noi{($\Leftarrow$).}
@@ -772,7 +773,7 @@ Applying Alexandrov's lemma (\ref{lem:alex}) inductively to pairs of model trian
 and 
 \[\modtrig\kappa
 \{\dist{\tilde y_{i-1}}{\tilde y_i}{},\dist{\tilde p}{\tilde y_{i-1}}{},\dist{\tilde p}{\tilde y_{i}}{}\}\]
-we obtain that thesequence 
+we obtain that the sequence 
 $\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y_{i}}{};\dist{\tilde p}{\tilde y_0}{},\tau_i\}$ is non increasing.
 
 For finer and finer partitions we have 
