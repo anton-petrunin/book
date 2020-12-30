@@ -276,7 +276,7 @@ $f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction
 such that $|\nabla_p f|>0$ for any $p\in\Dom f$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
-Assume  $\alpha\:[0,t_{\max})\to \Dom f$ be a locally Lipschitz curve 
+Assume that $\alpha\:[0,t_{\max})\to \Dom f$ be a locally Lipschitz curve 
 and $\hat\alpha\:[0,s_{\max})\to \Dom f$ be its reparametrization by arc-length, 
 so $\alpha\z=\hat\alpha\circ\varsigma$ for some homeomorphism $\varsigma\:[0,t_{\max})\to [0,s_{\max})$,
 then 
@@ -714,8 +714,7 @@ Applying Lemma~\ref{lem:grad--grad-like}, we get ``only if''-part of (\ref{SHORT
 Directly form the local existence (\ref{thm:exist-grad-curv}) and the distance estimates (\ref{thm:dist-est}), we get the following:
 
 \begin{thm}{Global existence}\label{thm:glob-exist-grad-curv}
-Let $\spc{Z}$ be a complete length space 
-and $f\:\spc{Z}\subto \RR$ be locally Lipschitz and $\lambda$-concave subfunction.
+Let $f\:\spc{Z}\subto \RR$ be locally Lipschitz and $\lambda$-concave subfunction on a complete length space $\spc{Z}$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then for any $p\in \Dom f$, there is $t_{\max}\in(0,\infty]$ such that
 there is an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{Z}$ with $\alpha(0)=p$.
@@ -1148,7 +1147,7 @@ S=S(s)&=\dist{p}{\sigma(s)}{},
 \phi=\phi(r,s)&=\tangle\mc0\{\ell(r,s);r,s\}.
 \end{align*}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1505}
@@ -1174,7 +1173,7 @@ by a join of coordinate line and a segment defined by $r/s=r_0/s_0$.
 According to $(*)\mc0_\phi$ and $(**)\mc0_\phi$, the value of $\phi$ does not increase while pair $(r,s)$ moving along this join.
 Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}$.
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1510}
@@ -1785,7 +1784,7 @@ and then set $\dd_pf(v)=|v|\cdot \dd_pf(\xi)$ if $v=|v|\cdot\xi$ for some $\xi\i
 
 In other words, we define differential as the smallest 
 upper semi-continuous  positive-homogeneous function $\dd_pf\:\T_p\to\RR$
-such that $\dd_pf(\xi)\ge \hat \dd_pf(\xi)$ if $\hat\dd_pf(\xi)$ is defined.
+such that if $\hat\dd_pf(\xi)$ is defined, then $\dd_pf(\xi)\ge \hat \dd_pf(\xi)$.
 
 
 
@@ -1970,7 +1969,7 @@ Assume
 $0
 <
 \distfun{A}{x}{}
-<
+\z<
 \tfrac{\varpi\kappa}2$.
 Then there is unique $(A,\kappa)$-radial curve $\sigma\:[\distfun{A}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
 that starts in $x$.

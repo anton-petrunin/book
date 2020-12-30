@@ -172,7 +172,7 @@ a point $\tilde r$ on the extension of
 $[\tilde p \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde p}{\tilde r}{}=\dist{p}{r}{}$ (and therefore $\dist{\tilde p}{\tilde z}{}=\dist{p}{z}{}$). 
 
 \begin{wrapfigure}{r}{25mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-610}
 \end{wrapfigure}
@@ -301,25 +301,27 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
 \sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha^{12}+\eps)} +
 \\
 &\quad+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha^{23}+\eps)}\le
-\\
-\intertext{Below we define 
-$s(t,\tau)$ so that for 
-$s=s(t,\tau)$, this chain of inequalities can be continued as follows:}
-&\le
-\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
 \end{align*}
 
 \begin{wrapfigure}{o}{30 mm}
-\vskip-8mm
+\vskip-2mm
 \centering
 \includegraphics{mppics/pic-615}
+\vskip2mm
 \end{wrapfigure}
+
+Below we define 
+$s(t,\tau)$ so that for 
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:
+\[\le
+\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha^{12}+\alpha^{23}+2\cdot \eps)}.
+\]
 
 Thus for any $\eps>0$, 
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result follows.
 
-To define $s(t,\tau)$, consider three half-lines $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}+\alpha^{23}+2\cdot \eps$.
+To define $s(t,\tau)$, consider three half-lines $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}\z+\alpha^{23}\z+2\cdot \eps$.
 We parametrize each half-line by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
@@ -458,7 +460,7 @@ The {}\emph{tip of the tangent cone} $\T_p$ will be denoted by $\0$ or $\0_{p}$.
 Let $\spc{X}$ be a metric space.
 Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessarily continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
-briefly $\alpha^+(0)=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$,
+briefly $\alpha^+(0)\z=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$,
 with corresponding geodesics $\gamma_n$, 
 such that $v_n\to v$ as $n\to\infty$, we have 
 \[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\quad \text{as}\quad n\to\infty.\]

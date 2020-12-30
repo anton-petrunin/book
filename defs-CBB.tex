@@ -275,7 +275,7 @@ Then
 \angk\kappa q{z_\kay}{r_n}
 =\pi.\] 
 Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}\z>\pi-\eps$.
-From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}<2\cdot\eps$ and thus 
+From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}\z<2\cdot\eps$ and thus 
 \[\dist{z_\kay}{z_j}{}<\eps\cdot\Const(\kappa,t);\]
 that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
 \qeds
@@ -727,13 +727,16 @@ In the case $\kappa>0$, the proof of \ref{eq:thm:devel**} requires more work.
 Applying rescaling, we can assume that $\kappa=1$.
 Since $\gamma\in B_\pi(p')$, point-on-side comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ can not pass through the antipodal point of $\tilde p'$.
 
-Consider the space $L$ glued from the model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
+{\sloppy
+
+Consider the space $L$ glued from the model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\z\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
 Note that $\theta$ is the total angle of $L$ at $\tilde p'$.
 We can assume that $L$ has non empty interior.
 Otherwise all the triangles are degenerate and
 since the polygonal line $\tilde x_0\dots\tilde x_n$ does not pass through $\tilde p'$ this implies that $\theta=0$.
 %???+PIC
 
+}
 
 Consider a minimizing geodesic $[\tilde x_0\tilde x_n]_L$.
 By \ref{eq:thm:detr*} we may assume that $[\tilde x_0\tilde x_n]_L$ does not pass through $\tilde p'$.
@@ -891,12 +894,16 @@ The proof of each equivalence repeats the proof of corresponding global equivale
 Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
+{\sloppy
+
 In the two-dimensional case this theorem was proved by Paolo Pizzetti \cite{pizzetti};
 latter it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref???
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}; 
 simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{burago-burago-ivanov}.
-A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise: 
+A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise:
+
+}
 
 \begin{thm}{Advanced exercise}\label{ex:noncomplete-globalization}
 Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
@@ -1152,8 +1159,8 @@ Thus we give three different arguments  for each of these cases.
 Assume $\spc{L}$ is compact.
 
 By Theorem~\ref{conc-loc},  $s_0>0$.
-Take a point $p^*\in \spc{L}$ such that $r^*=\ComRad(p^*,\spc{L})$ is sufficiently close to $s_0$
-($p^*$ such that  $s_0\le r^*\z<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$ will do).
+Take a point $p^*\in \spc{L}$ such that $r^*\z=\ComRad(p^*,\spc{L})$ is sufficiently close to $s_0$
+($p^*$ such that  $s_0\z\le r^*\z<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$ will do).
 Then the key lemma (\ref{key-lem:globalization}) applied for $p^*$ and $\ell$ slightly bigger than $r^*$ (say, such that $r^*<\ell<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$) implies that
 \[\mangle\hinge x{p^*}q
 \ge\angk\kappa x{p^*}q\]
@@ -1176,7 +1183,7 @@ Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and $\ell$ slight
 Let us construct $p^*\in\spc{L}$ as in the previous case.
 Since $\spc{L}$ is not geodesic, we can not apply the key lemma directly.
 Instead, let us pass to the ultrapower $\spc{L}^\o$ which
- is a geodesic space (see \ref{cor:ulara-geod}).
+ is a geodesic space (see \ref{obs:ultralimit-is-geodesic}).
 
 According to Theorem~\ref{thm:=def-loc},
 inequality \ref{comrad(q)} implies that the
@@ -1191,8 +1198,7 @@ Condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k
 
 Note that $r^*\ge\ComRad(p^*,\spc{L}^\o)$.
 Therefore we can apply the lemma on almost minimum 
-at point $p^*$ for space $\spc{L}^\o$
-with function $x\mapsto\ComRad(x,\spc{L}^\o)$
+at point $p^*$ to the function $x\z\mapsto\ComRad(x,\spc{L}^\o)$
 and $\eps'=\sqrt\eps=0.01$.
 
 For the obtained point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$ 

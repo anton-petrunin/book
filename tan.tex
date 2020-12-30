@@ -297,7 +297,7 @@ Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
 
 \parit{Proof.}
 Without loss of generatiy we may assume that $t_0=0$.
-Set $x=\alpha(0)$.
+Set $x\z=\alpha(0)$.
 Fix a sequence of points $q_n\to x$ such that 
 \[\liminf_{t\to 0+} \frac{\dist{q_n}{\alpha(t)}{}-\dist{q_n}{x}{}}{t}\to -1\]
 as $n\to\infty$.
@@ -306,7 +306,7 @@ as $n\to\infty$.
 Observe that there are sequences $\delta_n\to 0+$ and $t_n\to 0+$ such that 
 \[\angk\kappa x{\alpha(s)}{q_n}<\delta_n
 \quad\text{and}\quad
-(1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang+dist}\]
+(1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang++dist}\]
 for any $s\in(0,t_n]$.
 
 Without loss of generality we can assume that $\dist{x}{q_n}{}<\varpi\kappa$ for any $n$;
@@ -318,8 +318,8 @@ By comparison,
 \\
 &<\delta_n. 
 \end{align*}
-Therefore \ref{eq:ang+dist} implies that
-\[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot (s)\]
+Therefore \ref{eq:ang++dist} implies that
+\[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot s\]
 if $s$ is a sufficiently small and positive.
 That is, $\alpha^+(0)$ is defined; see \ref{def:right-derivative}.
 \qeds
@@ -577,7 +577,7 @@ $p\in\Dom f$ the differential $\dd_p f\:\T_p\to\RR$ is defined.
 
 A tangent vector $g\in \T_p$ is called a 
 \emph{gradient of $f$ at $p$}\index{gradient} 
-(briefly,  $g=\nabla_p f$\index{$\nabla$}) if
+(briefly,  $g\z=\nabla_p f$\index{$\nabla$}) if
 \begin{subthm}{}
 $(\dd_p f)(w)\le \<g,w\>$ for any $w\in \T_p$, and
 \end{subthm}
@@ -737,7 +737,7 @@ Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\
 \end{thm}
 
 \begin{wrapfigure}{r}{33 mm}
-\vskip-7mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1210}
 \vskip0mm
@@ -781,10 +781,9 @@ if $\kappa=0$,
 
 \parit{Proof of \ref{lem:grad-lip}.} 
 Note that 
-$\geod_{[p q]}(0)=p$, 
-$\geod_{[p q]}(\ell)=q$
-and
-$(\geod_{[p q]})^+(0)\z=\dir pq$.
+\[\geod_{[p q]}(0)=p,\quad 
+\geod_{[p q]}(\ell)=q,\quad
+(\geod_{[p q]})^+(0)\z=\dir pq.\]
 Thus,
 \begin{align*}
 \<\dir pq,\nabla_p f\>
