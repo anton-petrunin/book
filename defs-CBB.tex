@@ -45,7 +45,7 @@ $\spc{L}$  is a  $\Alex{}$ space if  $\spc{L}$  is $\Alex{\kappa}$ for some $\ka
 For complete length spaces, the latter means that it is not isometric to one of the exceptional spaces, see \ref{diam-k>0}. 
 We do not make this assumption. In particular, we consider the real line to have curvature $\ge 1$.
 \item If $\kappa<\Kappa$, then any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$.
-Moreover directly from the definition it follows that if $\Kappa\le 0$, then any $\Alex{\Kappa}$ is $\Alex{\kappa}$.
+Moreover directly from the definition it follows that if $\Kappa\le 0$, then any $\Alex{\Kappa}$ space is $\Alex{\kappa}$.
 However, in the case $\Kappa>0$ the latter statement does not hold and the former statement is not trivial; it will be proved in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
@@ -61,7 +61,7 @@ such that
 for all $i$ and $j$.
 \end{thm} %%%???wrong???
 
-The exercise above is a partial case of (1+\textit{n})-point comparison (\ref{thm:pos-config}).
+The exercise above is a special case of (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 
 \begin{thm}{Exercise}\label{ex:cbb-area}
 Let $\spc{L}$ be a metric space.
@@ -284,7 +284,7 @@ that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $A\subset\spc{L}$ be a closed subset.
 Show that there is a dense G-delta set $W\subset\spc{L}$ such that
 for any $q\in W$, there is a unique geodesic $[pq]$ with
-$p\in A$ that realize the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
+$p\in A$ that realizes the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
 \end{thm}
 
 Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.%??? V: why is this sentence here? directions of geodesics are not mentioned in the next exercise.
@@ -404,7 +404,7 @@ If $\spc{L}$ is only G-delta geodesic, we can apply the  above arguments to sequ
 \qeds
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
-Let $\spc{L}$ be  $\RR^m$ with the metric defined by a norm.
+Let $\spc{L}$ be  $\RR^m$ with a metric defined by a norm.
 Show that $\spc{L}$ is a complete length $\Alex{}$ space if and only if $\spc{L}\iso\EE^m$.
 \end{thm}
 
@@ -498,7 +498,7 @@ Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
 for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ respectively, then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
 \end{subthm}
 
-\begin{subthm}{} Show that there is a metric on $\RR^2$ defined by a norm that satisfies the above condition, but not $\Alex0$.
+\begin{subthm}{} Show that there is a metric on $\RR^2$ defined by a norm that satisfies the above condition, but is not $\Alex0$.
 \end{subthm}
 
 \end{thm}
@@ -609,7 +609,7 @@ $t\in \II$.
 \end{thm}
 
 \parit{Proof.}
-Consider functions $\rho$, $\theta\:\II\to\RR$ defined as 
+Consider the functions $\rho$, $\theta\:\II\to\RR$ defined as 
 \begin{align*}
 \rho(t)
 &=\dist{p}{\gamma(t)}{},
@@ -618,6 +618,7 @@ Consider functions $\rho$, $\theta\:\II\to\RR$ defined as
 &=
 \int\limits_{t_0}^{t}
 \frac{\sqrt{1-(\rho'(\under{t}))^2}}{\sn\kappa\circ\rho(\under{t})}\cdot\dd\under{t},
+%??? V: I really hate the variable $\dd\under{t}$. Can we please change not use it? Not just here but anywhere. Unnecessarily weird notations like this one just make the book harder to read???
 \end{align*}
 where $t_0\in\II$ is a fixed number and $\int$  denotes Lebesgue integral.
 Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ is defined and nondecreasing.
@@ -843,7 +844,7 @@ $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$.
 \begin{subthmN}{2-sum-loc} (local adjacent angle comparison) there is
 $R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}}>0$ 
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ 
-is G-delta geodesic and if $q$ and geodesic $[x y]$ lie in
+is G-delta geodesic and if $q$ and a geodesic $[x y]$ lie in
 $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ 
 and $z\in \mathopen{]}x y\mathclose{[}$, then
 \[\angk\kappa z q x
@@ -853,7 +854,7 @@ and $z\in \mathopen{]}x y\mathclose{[}$, then
 
 \begin{subthmN}{monoton-loc} (local point-on-side comparison) 
 there is $R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}}>0$, 
-such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ is G-delta geodesic and if $q$ and geodesic $[x y]$ lie in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ 
+such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ is G-delta geodesic and if $q$ and a geodesic $[x y]$ lie in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ 
 and $z\in \mathopen{]}x y\mathclose{[}$, we have
 \[\angk\kappa x q y
 \le\angk\kappa x q z;\]
@@ -863,15 +864,19 @@ where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\
 \end{subthmN}
 
 \begin{subthmN}{angle-loc} (local hinge comparison) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$, such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then (1) for any hinge $\hinge x q y$, the angle 
-$\mangle\hinge x q y$ is defined and (2) if $x\in \mathopen{]}y z\mathclose{[}$, then%
-\footnote{Let us remind that $\hinge x q y$ and $\hinge x q z$  are short notations for pairs $([x q],[x y])$ and $([x q],[x z])$, 
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$, such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
+
+(1) for any hinge $\hinge x q y$, the angle 
+$\mangle\hinge x q y$ is defined and
+
+ (2) if $x\in \mathopen{]}y z\mathclose{[}$, then%
+\footnote{Let us call that $\hinge x q y$ and $\hinge x q z$  are short notations for the pairs $([x q],[x y])$ and $([x q],[x z])$, 
 thus these two hinges automatically have common side $[x q]$.}
 \[\mangle\hinge x q y+ \mangle\hinge x q z\le\pi.\]
-Moreover, if hinge $\hinge x q y$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
+Moreover, if a hinge $\hinge x q y$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
 \[\mangle\hinge x q y
-\ge\angk\kappa x q y.\]
-or equivalently
+\ge\angk\kappa x q y,\]
+or, equivalently,
 \[\side\kappa \hinge x q y\ge\dist{q}{ y}{}.\]
 \end{subthmN}
 
@@ -887,7 +892,7 @@ Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that
 \[R_i>\tfrac{1}{9}\cdot R_j.\]
 \end{thm}
 
-The proof of each equivalence repeats the proof of corresponding global equivalence in localized form; see proofs of theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}.
+The proofs of each of these equivalence repeat the proofs of the corresponding global equivalences in localized form; see the proofs of theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}.
 
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
@@ -897,7 +902,7 @@ Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 {\sloppy
 
 In the two-dimensional case this theorem was proved by Paolo Pizzetti \cite{pizzetti};
-latter it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref???
+later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref???
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}; 
 simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{burago-burago-ivanov}.
@@ -921,7 +926,7 @@ Then $\spc{L}$ is $\Alex\Kappa$ if and only if $\spc{L}$ is $\Alex\kappa$ for an
 \end{thm}
 
 \parit{Proof.}
-Note that if $\Kappa\le 0$, this statement follows directly from definition of Alexandrov space (\ref{df:cbb1+3}) and monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
+Note that if $\Kappa\le 0$, this statement follows directly from the  definition of an Alexandrov space (\ref{df:cbb1+3}) and monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
 
 The ``if''-part also follows directly from the definition.
 
@@ -933,19 +938,19 @@ It remains to apply the  globalization theorem (\ref{thm:glob}).
 
 \begin{thm}{Corollary}\label{cor:submetry-cbb}
 Let $\spc{L}$ be a complete length $\Alex\kappa$ space.
-Assume $\spc{M}$ is a target space of a sumetry from $\spc{L}$.
+Assume that a space  $\spc{M}$ is a target space of a submetry from $\spc{L}$.
 Then $\spc{M}$ is a complete length space $\Alex\kappa$ space.
 
 In particular, if $G\acts \spc{L}$ an isometric group action with closed orbits, then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
 \end{thm}
 
 \parit{Proof.}
-Follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
+This follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 \qeds
 
-In the proof of the globalization theorem,
+In the proof of the globalization theorem 
 we will use three lemmas.
-First is the short hinge lemma (\ref{lem:devel-glob}) --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and slightly weaker in case $\kappa>0$.
+First is the short hinge lemma (\ref{lem:devel-glob}) --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and is slightly weaker in case $\kappa>0$.
 
 
 The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
@@ -958,14 +963,14 @@ and $p\in \spc{X}$ be a point
 such that $\oBall(p,2\cdot\ell)$ is locally $\Alex\kappa$. 
 
 Assume that for any point 
-$q\in \oBall(p,{\ell})$, comparison
+$q\in \oBall(p,{\ell})$ the comparison
 \[\mangle\hinge x y q
 \ge\angk\kappa x y q\]
 holds for any hinge $\hinge x y q$ with 
 $\dist{x}{y}{}+\dist{x}{q}{}
 <
 \frac{2}{3}\cdot\ell$.
-Then comparison
+Then the comparison
 \[\mangle\hinge x p q
 \ge\angk\kappa x p q\] 
 holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
@@ -1001,7 +1006,7 @@ Take $x'\in [x q]$ such that
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell \eqlbl{3|xx'|}\]
 Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ fromed by $[x'p]$ and $[x' q]\subset [x q]$. 
-(In fact the same argument as in \ref{thm:g-split} shows that 
+(In fact the same argument as in \ref{thm:g-split} shows that the 
 condition $[x' q]\subset [x q]$ always holds.)
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
 
@@ -1076,10 +1081,10 @@ Together with the triangle inequality
 \]
 this yields
 \[\lim_{n\to\infty}\side\kappa \hinge{y_\kay}p q\ge \dist{p}{q}{}.\]
-Applying monotonicity of sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
+Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
-The following lemma works in complete spaces; it will used the same way as existence of minimum point in a compact.
+The following lemma works in all complete spaces; it will  serve as a substitution for the  existence of a minimum point of a continuous function on a compact space.
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
@@ -1152,10 +1157,10 @@ p\in \spc{L}.
 We argue by contradiction, assuming that  \ref{eq:thm:=def-loc-star-star} does not hold.
 
 The rest of the proof is easier for geodesic spaces 
-and yet easier for compact spaces.
+and yet easier still for compact spaces.
 Thus we give three different arguments  for each of these cases.
 
-\parit{Compact space.}
+\parit{Compact case.}
 Assume $\spc{L}$ is compact.
 
 By Theorem~\ref{conc-loc},  $s_0>0$.
@@ -1170,14 +1175,14 @@ Thus $r^*\ge\ell$, a contradiction.
 \parit{Geodesic case.}
 Assume $\spc{L}$ is geodesic.
 
-Fix small $\eps>0$ ($\eps=0.0001$ will do). 
+Fix a small $\eps>0$ ($\eps=0.0001$ will do). 
 Apply the lemma on almost minimum (\ref{lem:alm-min}) to find a point $p^*\in \spc{L}$ such that 
 \[r^*\z=\ComRad(p^*,\spc{L})\z<\varpi\kappa\] 
 and 
 \[\ComRad(q,\spc{L})\z> (1-\eps)\cdot r^*\eqlbl{comrad(q)}\] 
 for any $q\in\cBall[p^*,\tfrac{1}{\eps}\cdot r^*]$. 
 
-Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and $\ell$ slightly bigger than $r^*$ leads to a contradiction.
+Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and  an $\ell$ slightly bigger than $r^*$ leads to a contradiction.
 
 \parit{General case.}
 Let us construct $p^*\in\spc{L}$ as in the previous case.
@@ -1186,8 +1191,8 @@ Instead, let us pass to the ultrapower $\spc{L}^\o$ which
  is a geodesic space (see \ref{obs:ultralimit-is-geodesic}).
 
 According to Theorem~\ref{thm:=def-loc},
-inequality \ref{comrad(q)} implies that the
-ondition in \ref{curv>=k} holds for some fixed $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{100}
+inequality \ref{comrad(q)} implies that 
+condition  \ref{curv>=k} holds for some fixed $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{100}
 >0$ at any point $q\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}$.
 Therefore a similar statement is true in the ultrapower $\spc{L}^\o$;
 that is,
@@ -1198,13 +1203,13 @@ Condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k
 
 Note that $r^*\ge\ComRad(p^*,\spc{L}^\o)$.
 Therefore we can apply the lemma on almost minimum 
-at point $p^*$ to the function $x\z\mapsto\ComRad(x,\spc{L}^\o)$
+at the point $p^*$ to the function $x\z\mapsto\ComRad(x,\spc{L}^\o)$
 and $\eps'=\sqrt\eps=0.01$.
 
 For the obtained point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$ 
 and 
 $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p^{{*}{*}},\tfrac{1}{\eps'}\cdot r^{{*}{*}}]$. 
-Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
+Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and an $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
 
