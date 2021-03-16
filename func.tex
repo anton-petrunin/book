@@ -118,7 +118,7 @@ Assuming that the points $x_1,\dots,x_{n-1}$ are already constructed,
 the existence of $x_n$ satisfying \ref{eq:colip+1/2n}
 follows since $\map$ is $\Lip$-co-Lipschitz.
 
-Notice that $(x_n)$ converges in itself;
+Notice that $(x_n)$ is Cauchy;
 since $\spc{X}$ is complete, it converges in $\spc{X}$.
 Denote by $x_\infty$ its limit
 and set $y_\infty= \map(x_\infty)$.
@@ -158,13 +158,13 @@ Hence the result.
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces
 and $\map\:\spc{X}\to \spc{Y}$ be a map
 \begin{subthm}{}
-The map $\map$ is \index{distance preserving map}\emph{distance preserving} if
+The map $\map$ is \index{distance-preserving map}\emph{distance-preserving} if
 $$\dist{\map(x)}{\map(x')}{\spc{Y}}=\dist{x}{x'}{\spc{X}}$$
 for any $x,x'\in X$.
 \end{subthm}
 
 \begin{subthm}{}
-A distance preserving bijection $\map$ is called an \index{isometry}\emph{isometry}.
+A distance-preserving bijection $\map$ is called an \index{isometry}\emph{isometry}.
 \end{subthm}
 
 \begin{subthm}{}
@@ -281,7 +281,7 @@ The following generalization of Rademacher's theorem was proved by Bernd Kirchhe
 
 The conclusion of the standard Rademacher theorem does not make sense for maps to a metric space since the target might have no linear structure.
 But the theorem does not hold even if we assume that the target is a Banach space.
-For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance preserving and in particular Lipschitz (here $\chi_A$ denotes characteristic function of $A$).
+For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance-preserving and in particular Lipschitz (here $\chi_A$ denotes characteristic function of $A$).
 However the differential $\dd_xf$ is not defined for any $x$.
 
 \begin{thm}{Theorem}\label{thm:Rademacher-md}

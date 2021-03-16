@@ -239,7 +239,7 @@ Thus one can take $q=F\circ\map(\tilde p)$.
 
 \begin{thm}{Exercise}\label{ex:CBB+CBA}
 Assume $\spc{X}$ is a complete length space that satisfies the following condition:
-any 4-point subset admit a distance preserving map to the Euclidean 3-space.
+any 4-point subset admit a distance-preserving map to the Euclidean 3-space.
 
 Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
 \end{thm}
@@ -248,7 +248,7 @@ Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
 Let $\spc{F}_s$ be the metric
 on the 5 point set $\{p,q,x,y,z\}$ such that $\dist{p}{q}{}=s$
 and all the remaining distances are equal $1$.
-For which values $s$ the space $\spc{F}_s$ admits a distance preserving map into 
+For which values $s$ the space $\spc{F}_s$ admits a distance-preserving map into 
 \begin{subthm}{}
 a complete length $\CAT{0}$ space?
 \end{subthm}
@@ -262,7 +262,7 @@ it was given by Abraham Wald \cite{wald}.
 
 \begin{thm}{Exercise}\label{ex:cbb-wald}
 Let $\spc{L}$ be a metric space and $\kappa\le 0$.
-Prove that $\spc{L}$ is $\Alex\kappa$ if and only if  any quadruple of points $p,q,r,s\in \spc{L}$ admits a distance preserving embedding into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
+Prove that $\spc{L}$ is $\Alex\kappa$ if and only if  any quadruple of points $p,q,r,s\in \spc{L}$ admits a distance-preserving embedding into some $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
 
 Is the same true for $\kappa>0$, what is the difference?
 \end{thm}
@@ -304,7 +304,7 @@ $\T_{p'}$ contains a subcone $E$ isometric to a Euclidean space
 that contains all vectors $\ddir{p'}{x^i}$.
 Passing to subspace if necessary, we can assume that $\dim E\le n$.
 
-Mark a point $\tilde p\in \Lob{n}\kappa$ and choose a distance preserving map
+Mark a point $\tilde p\in \Lob{n}\kappa$ and choose a distance-preserving map
 $\iota\: E\to \T_{\tilde p}\Lob{n}\kappa$.
 Set 
 \[\tilde x^i
@@ -407,7 +407,7 @@ We present the original proof of Urs Lang and Viktor Schroeder from \cite{lang-s
 %The proof of existence is analogous.
 %Take a sequence  of points $y_n\in K$ 
 %such that $\dist{y_n}{p}{}\to \dist{K}{p}{}$.
-%It is sufficient to show that $(y_n)$ converges in itself; 
+%It is sufficient to show that $(y_n)$ is Cauchy; 
 %thus one could take $p^*=\lim_n y_n$.
 
 %Assume $(y_n)$ does not converge in itself, then for some fixed $\eps>0$, 
@@ -436,7 +436,7 @@ exits and is unique.
 Take a nested sequence of finite subsets 
 $F_1\subset F_2\subset \dots$ of $\IndexSet$, such that $\dist{K_{F_n}}{p}{}\to r$.
 
-Let us show that the sequence $(p^*_{F_n})$ converges in itself. 
+Let us show that the sequence $(p^*_{F_n})$ is Cauchy. 
 Indeed, if not, then for some fixed $\eps>0$, 
 we can choose two subsequences $(y'_n)$ and $(y''_n)$ of $(p^*_{F_n})$ 
 such that $\dist{y'_n}{y''_n}{}\ge\eps$.
@@ -838,7 +838,7 @@ the geodesics $\geod_{[s\ t\cdot z]}$ converge as $t\to\infty$
 and its limit is a half-line;
 denote it by $\alpha\:[0,\infty)\to \mathring{\spc{U}}$.
 From \ref{eq:=<pi/2}, 
-we have that the function $t\mapsto\<f(x),\alpha(t)\>$ is non-decreasing. 
+we have that the function $t\mapsto\<f(x),\alpha(t)\>$ is nondecreasing. 
 From \ref{eq:<,>=<}, for
 the necessarily unique point $\bar s$ on the half-line $\alpha$ such that $|\bar s|=1$ we also have 
 \[\<f(x),\bar s\>\ge \cos\mangle(p,x)\]
@@ -927,7 +927,7 @@ we have
 
 
 \begin{thm}{Open problem}\label{open:n-point-CBB}
-Find a necessary and sufficient condition for a finite metric spaces that admit distance preserving embeddings into 
+Find a necessary and sufficient condition for a finite metric spaces that admit distance-preserving embeddings into 
 
 \begin{subthm}{}
 some length $\Alex{\kappa}$ space.
@@ -945,7 +945,7 @@ can be described by the matrix with components
 =
 \dist[2]{a^i}{a^j}{},\]
 which we will call the \index{decrypting matrix}\emph{decrypting matrix}.
-The set of decrypting matrices of all metrics that admit a distance preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
+The set of decrypting matrices of all metrics that admit a distance-preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
 form a convex cone. 
 The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ respectively).
 This convexity gives hope that the cone admits an explicit description.
@@ -970,7 +970,7 @@ Moreover, there is a point $p\in \spc{L}$ such that $\dist{p}{q}{}=\tfrac{\pi}{2
 \end{subthm}
 
 \begin{subthm}{}
-The map $f\:Q\to\spc{U}$ is a distance preserving map and there is no point $p'\in \spc{U}$ such that $\dist{p'}{q'}{}=\tfrac{\pi}{2}$ for any $q'\in f(Q)$.
+The map $f\:Q\to\spc{U}$ is a distance-preserving map and there is no point $p'\in \spc{U}$ such that $\dist{p'}{q'}{}=\tfrac{\pi}{2}$ for any $q'\in f(Q)$.
 \end{subthm}
 \end{thm}
 
@@ -994,7 +994,7 @@ if for an arbitrary metric space $\spc Z$
 and a subset $Q\subset\spc Z$, 
 any short map $Q\to\spc{X}$ can be extended as a short map $\spc{Z}\to\spc{X}$.
 \begin{subthm}{ex:isbell:embedded}
-Prove that any metric space $\spc X$ admit a distance preserving embedding into an injective metric space.
+Prove that any metric space $\spc X$ admit a distance-preserving embedding into an injective metric space.
 \end{subthm}
 
 \begin{subthm}{ex:isbell:injective hull}

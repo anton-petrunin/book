@@ -125,7 +125,7 @@ Fix $\eps=0.001$ and consider two functions $f,\check f:\HH\to\RR$
 \[\check f(\bm{x})
 =
 \max\left\{|\bm{x}|,\max_{n\ge1}\{(1+\eps)\cdot x_n-\tfrac{1}{n}\}\right\}.\] 
-Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length-metric form infinite dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
+Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length metric form infinite dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
 Set $p$ to be the origin of $\HH\times \RR$.
 
 Note that $\check{\spc{L}}\cap\spc{L}$ is starshaped in $\HH$ with center at $p$.
@@ -142,9 +142,9 @@ let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
 The space $\spc{L}$  is isometric to the Euclidean cone
 over $\Sigma_p\spc{L}$ with vertex at~$p$; 
 $\Sigma_p\spc{L}$ is isometric to a sphere in Hilbert space with radius~$\frac{1}{\sqrt{2}}$.
-In particular, $\mangle$ is the length-metric of $\mangle_{\HH\times\RR}$ on $\Sigma_p{\spc{L}}$.
+In particular, $\mangle$ is the length metric of $\mangle_{\HH\times\RR}$ on $\Sigma_p{\spc{L}}$.
 
-Therefore in order to show that $\check \mangle$ does not define a length-metric on $\Sigma_p{\spc{L}}$
+Therefore in order to show that $\check \mangle$ does not define a length metric on $\Sigma_p{\spc{L}}$
 it is sufficient to construct a pair of directions $(\xi_+,\xi_-)$ such that
 \[\check \mangle(\xi_+,\xi_-)<\mangle(\xi_+,\xi_-).\] 
 Set $\bm{e}_0=(1,0,0,\dots)$, $\bm{e}_1=(0,1,0,\dots),\dots\in \HH$. 
@@ -173,14 +173,14 @@ Indeed, $Q_n$ is path isometric to the subset of $\EE^3$ described by
 &
 z=\max\left\{\sqrt{x^2+y^2},
 (1+\eps)\cdot y-\tfrac{1}{n} \right\}
-\intertext{with length-metric.
+\intertext{with length metric.
 Thus, its limit $Q$ is path isometric to the subset of $\EE^3$ described by}
 y\ge0
 \quad \text{and}\quad  
 &
 z=\max\left\{\sqrt{x^2+y^2},(1+\eps)\cdot y\right\}
 \end{align*}
-with length-metric.
+with length metric.
 In particular, for any $t,\tau\ge0$, 
 \begin{align*}
 \dist{\gamma_+(t)}{\gamma_-(\tau)}{\check{\spc{L}}} 
@@ -196,16 +196,16 @@ That is, $\check\mangle(\xi_+,\xi_-) \le \beta<\mangle(\xi_+,\xi_-)$.\qeds
 Let $\HH$ be a Hilbert space,
 $f\:\HH\to \RR$ be a convex Lipschitz function 
 and $S\subset \HH\times \RR$ be the graph of $f$ 
-equipped with  the length-metric.
+equipped with  the length metric.
 Then $S$ is $\Alex{0}$.
 \end{thm}
 
 \parit{Proof.} Recall that for a subset $X\subset \HH\times \RR$, 
 we will denote by $\dist{*}{*}{X}$ the
-length-metric on $X$.
+length metric on $X$.
 
 By Buyalo's theorem%%\ref{thm:buyalo}
-, any convex hypersurface in a Euclidean space, equipped with the length-metric, is non-negatively curved.
+, any convex hypersurface in a Euclidean space, equipped with the length metric, is non-negatively curved.
 Thus it is sufficient to show that for any 4-point set $\{x_0,x_1,x_2,x_3\}\subset S$, 
 there is a finite-dimensional subspace $E\subset \HH\times \RR$ 
 such that $\{x_i\}\in E$ and $\dist{x_i}{x_j}{S\cap E}$ is arbitrary close to $\dist{x_i}{x_j}{S}$.
@@ -642,7 +642,7 @@ Applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
 \ge
 \frac{(\dd_p f)(\xi_n)+(\dd_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
 Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
-that is, $(\xi_n)$ converges in itself.
+that is, $(\xi_n)$ is Cauchy.
 Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
 \qeds
 
@@ -731,7 +731,7 @@ As a corollary of the above lemma and Proposition~\ref{prop:conv-comp} we get th
 \begin{thm}{Chain rule} %???DO WE NEED IT???
 Let $\spc{Z}$ be a complete length space, 
 $f\:\spc{Z}\subto \RR$ be a semiconcave function
-and $\phi\:\RR\to\RR$ be a non-decreasing semiconcave function.
+and $\phi\:\RR\to\RR$ be a nondecreasing semiconcave function.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\nabla_x f$ for any $x\in\Dom f$.
 \end{thm}
@@ -941,7 +941,7 @@ Hence
 Sinse $\eps>0$ is arbitrary, the proposition follows.
 \qeds
 
-Note that the distance preserving map $\iota\:\spc{Z}\hookrightarrow \spc{Z}^\o$ induces an embedding 
+Note that the distance-preserving map $\iota\:\spc{Z}\hookrightarrow \spc{Z}^\o$ induces an embedding 
 \[\dd_p\iota\:\T_p \spc{Z}\hookrightarrow \T_p \spc{Z}^\o.\]
 Thus, we can (and will) consider $\T_p \spc{Z}$ as a subcone of $\T_p \spc{Z}^\o$.
 
@@ -1179,7 +1179,7 @@ Thus in order to understand our proof one needs to read most of Chapter~\ref{cha
 First we show that $\Lin_p$ is a complete geodesic $\Alex0$ space.
 
 Recall that $\T^\o_p$ is a complete geodesic $\Alex0$ space (see \ref{obs:ultralimit-is-geodesic} and \ref{thm:tan-is-CBB}) and $\Lin_p$ is a closed subset of $\T^\o_p$.
-Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length-metric.
+Thus, it is sufficient to show that the metric on $\Lin_p$ inherited from $\T^\o_p$ is a length metric.
 
 Fix two vectors $x,y\in\Lin_p$.
 Let $u$ and $v$ be such that $u+\tfrac{1}{2}\cdot x=0$ 

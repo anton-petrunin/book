@@ -796,9 +796,9 @@ in particular
 \[\distfun{K}{x}{}\le \distfun{[p^*q^*]}{x}{}\]
 for any $x\in \spc{U}$.
 
-Consider a majorization $F$ for quadraliteral $[pp^{*}q^{*}q]$.
+Consider a majorization $F$ for quadrangle $[pp^{*}q^{*}q]$.
 By Majoriztion theorem \ref{thm:major} and Proposition \ref{prop:majorize-geodesic}, 
-the figure $F$ is a solid convex model quadraliteral $[\tilde p\tilde p^*\tilde q^*\tilde q]$ in $\Lob2\kappa$ such that 
+the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*\tilde q]$ in $\Lob2\kappa$ such that 
 \begin{align*}
 \dist{\tilde p}{\tilde p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}}
 &
@@ -1012,7 +1012,7 @@ The proof of Patchwork globalization uses the following construction:
 \begin{thm}{Definition (Line-of-sight map)} \label{def:sight}
 %Let $\spc{U}$ be a metric space in which pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs. 
 Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{X}$. 
-Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parameterization of $\alpha$.
+Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parametrization of $\alpha$.
 If $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say that the map $[0,1]\times[0,1]\to\spc{U}$ defined by
 \[(t,s)\mapsto\gamma_t(s)\]
 is a \index{line-of-sight map}\emph{line-of-sight map for $\alpha$ with respect to $p$}.
@@ -1085,7 +1085,7 @@ that is, $\spc{W}$ is the gluing of $\spc{U}^1$ and  $\spc{U}^2$ along $\iota$ (
 
 Then: 
 \begin{subthm}{gluing0}
-Both canonical mappings $\jmath_i\:\spc{U}^i\to\spc{W}$ are distance preserving 
+Both canonical mappings $\jmath_i\:\spc{U}^i\to\spc{W}$ are distance-preserving 
 and the images $\jmath_i(\spc{U}^i)$ are $\varpi\kappa$-convex subsets in $\spc{W}$.
 \end{subthm}
 
@@ -1493,7 +1493,7 @@ are provided by Lifting globalization theorem
 (\ref{thm:globalization-lift}).
 
 Since $\map$ is local isometry,
-we can choose $r>0$ so that the restriction of $\map$ to $\cBall[\hat p,r]$ is distance preserving.
+we can choose $r>0$ so that the restriction of $\map$ to $\cBall[\hat p,r]$ is distance-preserving.
 By Lifting globalization, the image  $\Phi(\cBall[\hat p,r])$ coincides with the ball
 $\cBall[p,r]$.
 This proves the first part of theorem.
@@ -1730,7 +1730,7 @@ The following proposition is a consequence of the definition.
 \label{prop:majorize-geodesic} 
 Let  $\alpha$  be a closed curve in a metric space $\spc{X}$.
 Suppose $D\subset\Lob2{\kappa}$ majorizes $\alpha$ under $F\: D \to \spc{X}$.  
-Then any geodesic subarc of $\alpha$ is the image under $F$ of a subarc of $\partial_{\Lob2{\kappa}} D$ that is geodesic in the length-metric of $D$.
+Then any geodesic subarc of $\alpha$ is the image under $F$ of a subarc of $\partial_{\Lob2{\kappa}} D$ that is geodesic in the length metric of $D$.
 
 In particular, if $D$ is convex, then the corresponding subarc is a geodesic in $\Lob2{\kappa}$.
 \end{thm}
@@ -1777,7 +1777,7 @@ but as one can see from the following example, the line-of-sight map is not majo
 \end{wrapfigure}
 
 \parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
-Equip $\spc{Q}$ with the length-metric. 
+Equip $\spc{Q}$ with the length metric. 
 Then $\spc{Q}$ is $\CAT0$
 by Reshetnyak gluing  (\ref{thm:gluing}). 
 For triangle ${\trig p x y}_\spc{Q}$ in $\spc{Q}$ and its model triangle $\trig{\tilde p}{\tilde x}{\tilde y}$ in $\EE^2$,  
@@ -1812,7 +1812,7 @@ Assume
 \[\length\beta\z+\dist{p}{x}{}+\dist{p}{y}{}<2\cdot\varpi\kappa.\]
 \begin{subthm}{curvilinear} 
 Then $\beta$ forms a geodesic $[x y]_D$ in $D$ and therefore $\beta$, $[p x]$ and $[p y]$ form a triangle 
-${\trig p x y}_D$ in the length-metric of $D$.
+${\trig p x y}_D$ in the length metric of $D$.
 \end{subthm}
 \begin{subthm} {short-to-subgraph}
 Let $\trig{\tilde p}{\tilde x}{\tilde y}$ be the model triangle for triangle 
@@ -1877,14 +1877,14 @@ Define $H_n(x)$ by first mapping $x$ to a nearest point on $\trig{\tilde p}{\til
 Since triangles in $\spc{U}$ are $\kappa$-thin (\ref{prop:k-thin}), the restriction of $H_n$ to each triangle $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$ is short.   
 Then the triangle inequality implies that the restriction of $H_n$ to 
 \[U_n=\bigcup_{1\le i\le n}\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\]
-is short with respect to the length-metric on $D_n$. 
+is short with respect to the length metric on $D_n$. 
 Since nearest-point projection 
 from $D_n$ to $U_n$ increases the $D_n$-distance between two points by at most $2\cdot\delta_n$,  the map $H_n$ also increases the $D_n$-distance  by at most $2\cdot\delta_n$. 
 
 Consider $y_n\in D_n$ with $y_n\to y\in D$ and $z_n\in D_n$ with $z_n\to z\in D$. Since $\delta_n\to 0$ under increasingly finer partitions, and geodesics in $\spc{U}$ vary continuously with their endpoints (\ref{thm:alex-patch}),  we have $H_n(x_n)\to 
 H(x)$ and $H_n(y_n)\to H(y)$.  Since 
 \[\dist{H_n(x_n)}{H_n(y_n)}{} \le \dist{x_n}{y_n}{D_n} + 2\cdot\delta_n,\]
-where the left hand side converges to $\dist{H(x)}{H(y)}{}$  and the right hand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
+where the left-hand side converges to $\dist{H(x)}{H(y)}{}$  and the right hand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
 \qeds
 
 
@@ -1924,7 +1924,7 @@ Let $\dot R\z=\Conv\trig{\tilde x^1}{\tilde x^{n-1}}{\dot x^n}$,
 and $\dot F\:\dot R\to \spc{U}$ be a majorizing map for $\trig { x^1}{x^{n-1}}{ x^n}$ as provided above.
 
 Set 
-$R= R_{n-1}\cup \dot R$, where $R$ carries its length-metric.
+$R= R_{n-1}\cup \dot R$, where $R$ carries its length metric.
 Since $F_n$ and $F$ agree on $[\tilde x^1 \tilde x^{n-1}]$, we may define $F\:R\to\spc{U}$ by 
 \[
 F(x)=
@@ -1941,7 +1941,7 @@ If $R$ is not convex,  the total internal angle of $R$ at $\tilde x^1$ or $ \til
 By relabeling we may suppose that it holds for $\tilde x^{n-1}$.  
 
 The region $R$ is obtained by glueing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
-Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ in its length-metric is a $\CAT{\kappa}$-space.  
+Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ in its length metric is a $\CAT{\kappa}$-space.  
 Moreover $[\tilde x^{n-2}\tilde x^{n-1}]\cup[\tilde x^{n-1} \dot x^n]$ is a geodesic of $R$.
 Thus $[\tilde x^1, \tilde x^2, \dots, \tilde x^{n-1} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to $R$, followed by $F$,  is the desired majorizing map.
 
@@ -1997,7 +1997,7 @@ Assume that $\ell\z<2\cdot \varpi\kappa$
 and there is a closed convex curve $\tilde \alpha\:[0,\ell]\to\Lob{2}{\kappa}$ such that 
 \[\dist{\alpha(t_0)}{\alpha(t_1)}{\spc{U}}=\dist{\tilde \alpha(t_0)}{\tilde \alpha(t_1)}{\Lob{2}{\kappa}}\]
 for any $t_0$ and $t_1$.
-Then there is a distance preserving map $F\:\Conv\tilde \alpha\to \spc{U}$
+Then there is a distance-preserving map $F\:\Conv\tilde \alpha\to \spc{U}$
 such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 \end{thm}
 

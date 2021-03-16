@@ -44,7 +44,7 @@ that is, a metric space with the metric defined by restricting the metric of $\s
 Genuine metric spaces are the main objects of study in this book.
 However, the  generalizations above are useful
 in  various definitions and constructions.
-For example, the construction of length-metric (see Section~\ref{sec:intrinsic}) uses infinite distances.
+For example, the construction of length metric (see Section~\ref{sec:intrinsic}) uses infinite distances.
 The following definition gives another example.
 
 \begin{thm}{Definition}\label{def:disjoint-union}
@@ -229,7 +229,7 @@ consider the value
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 
 It is easy to see that $\yetdist{}{}{}$ defines a $(0,\infty]$-valued metric on  $\spc{X}$;
-it will be called the induced \index{length-metric}\emph{length-metric} on $\spc{X}$.
+it will be called the induced \index{length-metric}\emph{length metric} on $\spc{X}$.
 Clearly 
 \[\yetdist{x}{y}{}\ge \dist{x}{y}{}\]
 for any $x,y\in \spc{X}$.
@@ -251,8 +251,8 @@ such that
 In this book, most of the time we consider length spaces.
 If $\spc{X}$ is a length space, 
 and $A\subset \spc{X}$ the set $A$ comes with the inherited metric from $\spc{X}$ 
-which might be not a length-metric.
-The corresponding length-metric on $A$ will be denoted as $\dist{}{}{A}$.
+which might be not a length metric.
+The corresponding length metric on $A$ will be denoted as $\dist{}{}{A}$.
 
 \parbf{Variations of the definition.}
 We will need the following variations of Definition~\ref{def:length-space}:
@@ -481,7 +481,7 @@ Similarly one defines locally weakly convex and locally totally convex sets. %??
 \parbf{Remarks.} Let us state a few observations that easily follow  from the definition.
 \begin{itemize}
 \item The notion of \index{convex set}\index{weakly convex set}\emph{(weakly) convex set} is the same as {}\emph{(weakly) $\infty$-convex set}.
-\item The inherited metric on a weakly convex set coincides with its length-metric.
+\item The inherited metric on a weakly convex set coincides with its length metric.
 \item Any open set is locally convex by definition.
 \end{itemize}
 
@@ -553,8 +553,7 @@ the map $f\:\spc{X}\to \spc{Y}$ is short if and only if
 \[\length(f\circ\alpha)\le \length\alpha\]
 for any curve
 $\alpha\:\II\to \spc{X}$.
-
-Denote by $\yetdist{}{}{}$ the length-metric on $\spc{Y}$.
+Denote by $\yetdist{}{}{}$ the length metric on $\spc{Y}$.
 It follows that if $f\:\spc{X}\to \spc{Y}$ is short
 then so is 
 $f\:\spc{X}\to (\spc{Y},\yetdist{}{}{})$.
@@ -563,7 +562,7 @@ Consider the quotient map
 $f\:\spc{X}\to\spc{X}/{\sim}$.
 Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric that makes $f$ short.
 
-Denote by $\yetdist{}{}{}$ the length-metric on $\spc{X}/{\sim}$.
+Denote by $\yetdist{}{}{}$ the length metric on $\spc{X}/{\sim}$.
 It follows that
 \[f\:\spc{X}\to(\spc{X}/{\sim},\yetdist{}{}{})\]
 is also short.
@@ -621,8 +620,8 @@ In this case, the corresponding quotient space
 $(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called the \index{gluing}\emph{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
-Note that if the map $\phi\:A_1\to A_2$ is distance preserving,
-then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance preserving and 
+Note that if the map $\phi\:A_1\to A_2$ is distance-preserving,
+then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance-preserving and 
 \[\dist{\iota_1(x_1)}{\iota_2(x_2)}{\spc{X}_1\sqcup_{\phi}\spc{X}_2}
 =
 \inf_{a_2=\phi(a_1)}
@@ -700,7 +699,7 @@ From the triangle inequality, we have
 \sup_{z\in\spc{X}}\{|\dist{x}{z}{}-\dist{y}{z}{}|\}
 =
 \dist{x}{y}{}.\]
-Therefore, for any $p\in\spc{X}$, the Kuratowski map gives a distance preserving map $\kur_p\:\spc{X}\hookrightarrow\Bnd(\spc{X},\RR)$.
+Therefore, for any $p\in\spc{X}$, the Kuratowski map gives a distance-preserving map $\kur_p\:\spc{X}\hookrightarrow\Bnd(\spc{X},\RR)$.
 Thus, we can (and often will) consider the space $\spc{X}$ as a subset of  $\Bnd(\spc{X},\RR)$.
 
 
