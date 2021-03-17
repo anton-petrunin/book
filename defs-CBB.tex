@@ -277,7 +277,7 @@ Then
 Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}\z>\pi-\eps$.
 From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}\z<2\cdot\eps$ and thus 
 \[\dist{z_\kay}{z_j}{}<\eps\cdot\Const(\kappa,t);\]
-that is, $\{z_n\}$ converges in itself, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
+that is, $\{z_n\}$ is Cauchy, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:almost.geod}
@@ -591,7 +591,7 @@ $\tilde p\in\Lob2{\kappa}$.
 Assume $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
 all $t\in \II$.
 Then there exists a unique up to rotation curve
-$\tilde \gamma\: \II\to \Lob2\kappa$, parameterized by arc-length, 
+$\tilde \gamma\: \II\to \Lob2\kappa$, parametrized by arc-length, 
 such that
 $\dist{\tilde p}{\tilde \gamma(t)}{}\z=\dist{p}{\gamma(t)}{}$ for all $t$
 and the direction of
@@ -744,7 +744,7 @@ By \ref{eq:thm:detr*} we may assume that $[\tilde x_0\tilde x_n]_L$ does not pas
 Further if the geodesic $[\tilde x_0\tilde x_n]_L$ contains one of the points
 $\tilde x_1,\dots,\tilde x_{n-1}$, then it coincides with the polygonal line $\tilde x_0\dots\tilde x_n$.
 (In particular we have equality in \ref{eq:thm:devel*} for each~$i$.)
-In this case the sum in the left hand side of \ref{eq:thm:detr*} must be at most $\pi$; otherwise $[\tilde x_0\tilde x_n]_L$ is not minimizing.
+In this case the sum in the left-hand side of \ref{eq:thm:detr*} must be at most $\pi$; otherwise $[\tilde x_0\tilde x_n]_L$ is not minimizing.
 Therefore \ref{eq:thm:devel**} follows.
 In the remaining case $[\tilde x_0\tilde x_n]_L$ meets the boundary of $L$ only at its ends.
 In this case $\dist{\tilde x_0}{\tilde x_n}{L}\le \pi$; otherwise $[\tilde x_0\tilde x_n]_L$ is not minimizing.
@@ -1057,7 +1057,7 @@ In this case, by the assumptions of the lemma, $\side\kappa \hinge{x_n}p q\ge\di
 From \ref{eq:thm:=def-loc-fivestar}, we get that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is decreasing.
 Hence inequality \ref{eq:thm:=def-loc*} follows.
 
-Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is non-increasing and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$. Hence $r_n\to r$ as $n\to\infty$.
+Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$. Hence $r_n\to r$ as $n\to\infty$.
 Pass to a subsequence $y_\kay=x_{n_\kay}$ such that $y_\kay'=x_{n_\kay+1}\in [y_\kay q]$.
 (In particular, $\dist{y_\kay}{q}{}\ge\dist{y_\kay}{p}{}$.)
 Clearly, \[\dist{p}{y_\kay}{}+\dist{y_\kay}{y_\kay'}{}\z-\dist{p}{y_\kay'}{}=r_\kay-r_{\kay+1}\underset{\kay\to\infty} {\to}0.
@@ -1119,7 +1119,7 @@ Clearly
 \quad \hbox{and}\quad 
 r(x_n)\le r(p)\cdot(1-\eps)^n.\] 
 In particular, $\dist{p}{x_n}{}<\tfrac{1}{\eps^2}\cdot r(p)$.
-Therefore $(x_n)$ converges in itself,
+Therefore $(x_n)$ is Cauchy,
 $x_n\to x\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$
 and
 $\lim_{n}r(x_n)=0$, a contradiction.

@@ -260,7 +260,7 @@ This is analogous to Exercise \ref{ex:(3+1)-expanding}.
 \parbf{\ref{ex:berg-nikolaev}.} Read \cite{sato}. (The original proof \cite{berg-nikolaev} is much longer and it is harder to follow.)
 
 An example for the second part of the problem can be found among 4-point metric spaces.
-It is sufficient to take a generic convex quadraliteral and increase one of its diagonals slightly;
+It is sufficient to take a generic convex quadrangle and increase one of its diagonals slightly;
 it will still satisfy the inequality for all relabeling, but will fail to meet \ref{def:2+2-reformulated}.
 
 \parbf{\ref{ex:CAT-mnfld=>ext.geod}.}
@@ -309,9 +309,9 @@ The only-if part is evident.
 Use \ref{thm:defs_of_cat} to show that 
 (\ref{SHORT.ex:equality-for-thin:side-side})$\Rightarrow$(\ref{SHORT.ex:equality-for-thin:vertex-base})$\Rightarrow$(\ref{SHORT.ex:equality-for-thin:angle}).
 
-By \ref{thm:defs_of_cat}, the condition (\ref{SHORT.ex:equality-for-thin:angle}) implies that the natural map is distance preserving on the sides $[\tilde x\tilde y]$ and $[\tilde x\tilde z]$.
+By \ref{thm:defs_of_cat}, the condition (\ref{SHORT.ex:equality-for-thin:angle}) implies that the natural map is distance-preserving on the sides $[\tilde x\tilde y]$ and $[\tilde x\tilde z]$.
 Applying it again, we get that the condition (\ref{SHORT.ex:equality-for-thin:angle}) holds for all permutations of the labels $x,y,z$.
-Whence the natural map is distance preserving on all three sides.
+Whence the natural map is distance-preserving on all three sides.
 
 
 
@@ -454,7 +454,7 @@ It remains to show that if $y\notin K$
 then the inequality~\ref{eq:cos=<cos}
 is strict.
 If $\dist{K}{y}{}\ge\tfrac\pi2$, then \ref{eq:cos=<cos} holds since 
-the left hand side is $<\tfrac\pi2$,
+the left-hand side is $<\tfrac\pi2$,
 while the right hand side is $\ge \tfrac\pi2$.
 If $\dist{K}{y}{}<\tfrac\pi2$, then $\phi_y>0$. Clearly $\psi_y<\phi_y$,
 hence the inequality~\ref{eq:cos=<cos} is strict.
@@ -584,7 +584,7 @@ Show and use that boundary of a convex figure in the plane admits unique majoriz
 
 \parit{Comment.}
 A typical rectifiable closed curve in a $\CAT0$ space can be majorized by more than one convex figure.
-There are two exceptions: (1) if the majorization map is distance preserving and (2) if the curve is  formed by three sides of a geodesic triangle.
+There are two exceptions: (1) if the majorization map is distance-preserving and (2) if the curve is  formed by three sides of a geodesic triangle.
 Richard Bishop asked if there are no other exceptions.
 
 \parbf{\ref{ex:square}.}
@@ -631,7 +631,7 @@ Observe that $\spc{X}$ is $\Alex0$ and $\CAT0$ at the same time.
 Show that there is unique point $p$ that minimizes the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
 Note that the vectors $v^i=\lg_{[{p}{x^i}]}$ lie in a linear subspace of $\T_p$.
 Moreover if $K$ is the convex hull of $v_i$, then the origin of $\T_p$ lies in the interior of $K$ relative to its affine hull.
-Finally observe that the exponential map is defined on all of $K$ and is distance preserving.
+Finally observe that the exponential map is defined on all of $K$ and is distance-preserving.
 The statement follows since the exponential map sends $v^i\mapsto x^i$ for each $i$.
 
 \parbf{\ref{ex:5-point-CBA=>CBB}.}
@@ -645,13 +645,13 @@ For the $\Alex0$ case, the needed space can be constructed by doubling  a proper
 We assume that the points correspond to vertexes of a regular tetrahedral with 3 vertexes on the boundary of $K$ and one  in its interior; it corresponds to a pair of points in the doubling at distance $s$ from each other.
 
 \parit{Remarks.}
-Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison admits a distance preserving map into a $\CAT0$ space.
+Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison admits a distance-preserving map into a $\CAT0$ space.
 For spaces with more than 5 points the condition is unknown;
 for 6-point metric spaces, a conjecture is formulated in \cite{lebedeva-petrunin-zolotov}.
 
 \parbf{\ref{ex:cbb-wald}.}
 Choose a quadruple of points $p,q,r,s$. 
-Suppose that it admits a distance preserving embedding into some $\Lob2{\Kappa}$ for some $\Kappa\ge \kappa$.
+Suppose that it admits a distance-preserving embedding into some $\Lob2{\Kappa}$ for some $\Kappa\ge \kappa$.
 Then 
 \[\angk\Kappa p{q}{r}
 +\angk\Kappa p{r}{s}
@@ -672,8 +672,8 @@ Observe that if
 +\angk{\Kappa+} p{s}{q}= 2\cdot\pi.\eqlbl{eq:Kappa3}\]
 for some $\sigma\ge \Kappa\ge \kappa$, then the quadruple admits a distance-preserving embedding into $\Lob2\Kappa$.
 
-Observe that the left hand side in \ref{eq:Kappa3} is continuous in $\Kappa$.
-Since $\spc{L}$ is $\Alex\kappa$, for $\Kappa=\kappa$ the left hands side cannot exceed $2\cdot \pi$.
+Observe that the left-hand side in \ref{eq:Kappa3} is continuous in $\Kappa$.
+Since $\spc{L}$ is $\Alex\kappa$, for $\Kappa=\kappa$ the left-hand side cannot exceed $2\cdot \pi$.
 Therefore it remains smaller than $2\cdot\pi$ for all $\sigma\ge \Kappa\ge \kappa$;
 moreover the same holds for all permutations of the labels $p,q,r,s$.
 
@@ -732,15 +732,15 @@ Whence the statement follows.
 \parbf{\ref{ex:flat-in-CAT}.}
 Set $\tilde Q=\Conv\{\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\}$.
 By Kirszbraun's theorem, the map $\tilde x^i\mapsto x^i$ can be extended to a short map $F\:\tilde Q\to\spc{L}$;
-it remains to show that the map $F$ is distance preserving.
+it remains to show that the map $F$ is distance-preserving.
 
 Consider the map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ which is also short.
-Observe that the composition $\log_{x_0}\circ F$ is distance preserving.
-Therefore so $F$ is distance preserving as well;
+Observe that the composition $\log_{x_0}\circ F$ is distance-preserving.
+Therefore so $F$ is distance-preserving as well;
 in particular we can take $Q=F(\tilde Q)$.
 
 \parbf{\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\lg_{x^0}{x^i}\in\T_{x^0}$.
-Show that all the $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is distance preserving.
+Show that all the $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is distance-preserving.
 It follows that we can identify the convex hull $K$ of  the $v^i$ with the convex hull of  the $\tilde x^i$.
 
 Note that the gradient exponent $\gexp_{x_0}$ maps $v^i\mapsto x^i$.
@@ -773,7 +773,7 @@ By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ 
 Hence the statement follows.
 
 \parbf{\ref{ex:isbell}.}
-The Kuratowsky embedding is a distance preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm.
+The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm.
 It remains to show that the latter space is injective.
 
 The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him.
@@ -817,13 +817,13 @@ so, by \ref{thm:PL-CAT}, $\Sigma$ is locally $\CAT1$.
 Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$.
 
 Assume $\alpha_1$ and $\alpha_2$ are length minimizing;
-parameterize them by $[-\ell,\ell]$.
+parametrize them by $[-\ell,\ell]$.
 Fix a small $\delta>0$ and 
 consider two curves in $\Cone\Sigma$ written in polar coordinates as 
 \[\gamma_i(t)=(\alpha_i(\arctan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
 Observe that both curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ and  have common ends.
 
-Observe that a small neighborhood of the tip of $\Cone\Sigma$ admits a distance preserving embedding into~$\spc{P}$.
+Observe that a small neighborhood of the tip of $\Cone\Sigma$ admits a distance-preserving embedding into~$\spc{P}$.
 Hence we can construct two geodesics $\gamma_1$ and $\gamma_2$ in $\spc{P}$ with common endpoints.
 
 It remains to consider the case when $\alpha_1$ (and therefore $\alpha_2$) is not length minimizing.
@@ -942,7 +942,7 @@ Set $\ell(t)=\dist{\alpha(t)}{\alpha(t_3)}{}$
 Note that 
 \[\ell'(t)\le -\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle.\]
 
-Observe that the function $t\mapsto f\circ\alpha(t)$ is non-decreasing;
+Observe that the function $t\mapsto f\circ\alpha(t)$ is nondecreasing;
 in particular, $f(\alpha(t_1))\le f(\alpha(t_2))\le f(\alpha(t_3))$.
 Therefore 
 \begin{align*}\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle&\ge\dd_{\alpha(t)}f(\dir{\alpha(t)}{\alpha(t_3)})\ge 0
