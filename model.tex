@@ -8,7 +8,7 @@ Given a real number $\kappa$, the \index{plane!$\kappa$-plane}\emph{model $\kapp
 The  model $\kappa$-plane  will be denoted by $\Lob2\kappa$.
 \begin{itemize}
 \item If $\kappa>0$, $\Lob2\kappa$\index{$\Lob2\kappa$} is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; the unit sphere $\Lob21$ will be also denoted by $\mathbb{S}^2$.
-\item If $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane, which is also denoted by $\EE^2$ 
+\item If $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane, which is also denoted by $\EE^2$. 
 \item If $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane with curvature $\kappa$.
 \end{itemize}
 
@@ -21,7 +21,7 @@ The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}
 will denote the segment connecting $x$ and $y$. 
 The segment $[x y]$ is uniquely defined for $\kappa\le 0$ and for $\kappa>0$ it is defined uniquely if $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.
 
-A triangle in $\Lob2\kappa$, with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}.
+A triangle in $\Lob2\kappa$ with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{*}}{{*}}{{*}}$}.
 Formally, a triangle is an ordered set of its sides, so $\trig x y z$ is just a short notation for the triple $([y z],[z x],[x y])$.
 
 The angle of $\trig x y z$ at $x$ will be denoted by $\mangle\hinge xyz$\index{$\mangle$}.
@@ -130,7 +130,7 @@ Set
 \[
 \side\kappa\{\phi;b,-c\}
 =\side\kappa\{\phi;-b,c\}
-\df\side\kappa\{\pi-\phi;b,c\},\]
+\df\side\kappa\{\pi-\phi;b,c\};\]
 in this way we define $\side\kappa\{\phi;b,c\}$ when one of the numbers  $b$ and $c$ is negative. %for some negative values of $b$ and $c$.
 
 
@@ -168,7 +168,7 @@ are respectively nondecreasing (in fact, decreasing, if $a\z\notin\{|b\z-c|, b+c
 \end{subthm}
 
 \begin{subthm}{lem:alex-0}(Alexandrov's lemma)
-Assume that for real numbers $a$, $b$, $a'$, $b'$, $x$ and $\kappa$, the following two expressions are defined
+Assume that for real numbers $a$, $b$, $a'$, $b'$, $x$ and $\kappa$, the following two expressions are defined:
 \begin{enumerate}
 \item $\tangle\mc\kappa\{a;b,x\}+\tangle\mc\kappa\{a';b',x\}-\pi$,
 \item $\tangle\mc\kappa\{a';b+b',a\}-\tangle\mc\kappa\{x;a,b\}$,
@@ -191,9 +191,9 @@ The above formulas easily imply  the cosine law in $\Lob2\kappa$, which can be e
 &\text{if}&\quad \kappa=0
 \\
 &\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
-&\text{if}&\quad \kappa\not=0
-&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
-&\text{if}&\quad \kappa\not=0
+&\text{if}&\quad \kappa\not=0.
+%&\frac{\cs\kappa a-\cs\kappa b\cdot\cs\kappa c}{\kappa\cdot\sn\kappa b\cdot\sn\kappa c}
+%&\text{if}&\quad \kappa\not=0
 \end{aligned}\right.\]
 
 However, rather than using these explicit formulas,  we mainly will use
@@ -240,7 +240,7 @@ In the latter case,  $\alpha$ lies in a closed hemisphere obtained as a limit of
 %\begin{thm}{Lemma}\label{lem:proj-to-conv}Let $K\subset\Lob2\kappa$ be a convex closed set.Then there is a short map $\map\:\Lob2\kappa\to K$ such that $\map(x)=x$ for any $x\in K$. \end{thm}
 
 \begin{thm}{Exercise}\label{exr-crofton}
-Build a proof of Hemisphere lemma
+Construct a proof of Hemisphere lemma
 \ref{lem:hemisphere} based on Crofton's formula.
 \end{thm}
 
