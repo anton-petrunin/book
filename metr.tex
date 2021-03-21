@@ -28,8 +28,8 @@ If we need to be more specific we may also use the following names:
 \item A $[0,\infty]$-valued metric may be called a \index{pseudometric}\emph{pseudometric} or \index{$\infty$-pseudometric}\emph{$\infty$-pseudometric}.
 \end{itemize}
 
-A metric space is a set equipped with a metric;
-the distance between points $x$ and $y$ in a metric space $\spc{X}$ will  usually be denoted by \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
+A metric space is a set equipped with a metric.
+The distance between points $x$ and $y$ in a metric space $\spc{X}$ will  usually be denoted by \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
 the latter will be used if we need to emphasize that we are working in the space $\spc{X}$.
 
 The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
@@ -124,9 +124,9 @@ we write
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
 respectively.
 
-Since in the model space $\Lob{m}{\kappa}$ all balls of the same radiuses are isometric;
-often will not need to specify the center of the ball,
-so we may write 
+Since in the model space $\Lob{m}{\kappa}$ all balls of the same radius are isometric, 
+often we will not need to specify the center of the ball,
+and may write 
 \[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}}\] respectively.
 
 A set $A\subset\spc{X}$ is called \index{bounded set}\emph{bounded} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
@@ -137,9 +137,8 @@ let us denote the distance from $A$ to a point $x$ in $\spc{X}$ as $\distfun{A}{
 that is,
 \[\distfun{A}{x}
 \df
-\inf\set{\dist{a}{x}{}}{a\in A},\] 
-and 
-we define the distance between sets $A$ and $B$  as 
+\inf\set{\dist{a}{x}{}}{a\in A}.\] 
+We define the distance between sets $A$ and $B$  as 
 \[\dist{A}{B}{}
 \df
 \inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]%???maybe a bad notation --- this is not a distance
@@ -167,12 +166,13 @@ such that $\dist{x^i}{x^j}{}>\eps$ is called a \index{maximal packing}\emph{maxi
 
 \parbf{G-delta sets.}
 Recall that an arbitrary union of open balls in a metric space is called an \index{open set}\emph{open set}.
-A subset of a metric space is called a G-delta set if it can be presented as an intersection of  a countable number of open subsets. 
+A subset of a metric space is called a \emph{G-delta set} if it can be presented as an intersection of  a countable number of open subsets. 
+
 Often we will use the following classical result:
 
 \begin{thm}{Baire's theorem}
 Let $\spc{X}$ be a complete metric space 
-and $\{\Omega_n\}$, $n\in \NN$ be a collection of open dense subsets of $\spc{X}$.
+and $\{\Omega_n\}$, $n\in \NN$, be a collection of open dense subsets of $\spc{X}$.
 Then $\bigcap_{n=1}^\infty\Omega_n$ is dense in $\spc{X}$.
 \end{thm}
  
@@ -205,6 +205,8 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 
 \section{Length spaces}\label{sec:intrinsic}
 
+A \index{curve}\emph{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a {}\emph{real interval} (that is, an arbitrary convex subset of $\RR$).
+
 \begin{thm}{Definition}\label{def:length}
 Let $\spc{X}$ be a metric space.
 Given a curve $\alpha\: \II\to \spc{X}$, we define its \index{length}\emph{length} as 
@@ -223,7 +225,7 @@ Then
 
 \end{thm}
 
-Given two points $x$ and $y$ in a metric space $\spc{X}$
+Given two points $x$ and $y$ in a metric space $\spc{X}$,
 consider the value
 \[\yetdist{x}{y}{}=\inf_{\alpha}\{\length\alpha\},\]
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
@@ -234,7 +236,7 @@ Clearly
 \[\yetdist{x}{y}{}\ge \dist{x}{y}{}\]
 for any $x,y\in \spc{X}$.
 
-It  eaisly follows from the definition that the length of a curve $\alpha$ with respect to $\yetdist{}{}{}$ is equal to the length of $\alpha$ with respect to $\dist{}{}{}$. In particular, iterating the construction produces the same $\yetdist{}{}{}$.
+It  easily follows from the definition that the length of a curve $\alpha$ with respect to $\yetdist{}{}{}$ is equal to the length of $\alpha$ with respect to $\dist{}{}{}$. In particular, iterating the construction produces the same $\yetdist{}{}{}$.
 
 \begin{thm}{Definition}\label{def:length-space}
 If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\spc{X}$ is called a \index{length space}\emph{length space}.
@@ -303,7 +305,8 @@ Give an example of a complete length space such that no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} of $x$ and $y$% V: the standard phrase in English is "midpoint between $x$ and $y$".  I would suggest switching to that everywhere.
+\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} of $x$ and $y$
+% V: the standard phrase in English is "midpoint between $x$ and $y$".  I would suggest switching to that everywhere.
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
@@ -322,7 +325,7 @@ Let $\spc{X}$ be a complete metric space.
 
 \begin{subthm}{lem:mid>length}
 Assume that for any pair of points $x,y\in \spc{X}$ and any $\eps>0$
-there is a $\eps$-midpoint $z$.
+there is an $\eps$-midpoint $z$.
 Then  $\spc{X}$ is a length space.
 \end{subthm}
 
@@ -334,7 +337,7 @@ Then  $\spc{X}$ is a geodesic space.
 
 \begin{subthm}{lem:mid>geod:R}
 If for some $R>0$, the assumptions (\ref{SHORT.lem:mid>length}) or (\ref{SHORT.lem:mid>geod:geod}) hold only for pairs of points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$, 
-then  $\spc{X}$ is a $R$-length or $R$-geodesic respectively.
+then  $\spc{X}$ is an $R$-length or $R$-geodesic space respectively.
 
 \end{subthm}
 
@@ -486,7 +489,7 @@ Similarly one defines locally weakly convex and locally totally convex sets. %??
 \end{itemize}
 
 The following proposition states that weak convexity survives under taking ulralimits.
-An analogus statement about convexity does not hold;
+An analogous statement about convexity does not hold;
 for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges to the half sphere $\mathbb{S}^2_+$, which is not convex.
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
@@ -518,11 +521,11 @@ Hence the result follows.
 
 \parbf{Quotient spaces.} Assume $\spc{X}$ is a metric space
 with an equivalence relation $\sim$.
-Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$
+Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$,
 their maximum 
 \[\rho(x,y)=\max\{\rho_1(x,y),\rho_2(x,y)\}\]
-is also a pseudometric;
-also if for these two pseudometric $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are short, then the same is true for $\rho(x,y)$.
+is also a pseudometric.
+If for these two pseudometrics $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are short, then the same is true for $\rho(x,y)$.
 
 It follows that 
 the quotient space $\spc{X}/{\sim}$ admits a natural quotient pseudometric;
