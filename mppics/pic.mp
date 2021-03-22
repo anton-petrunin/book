@@ -94,7 +94,7 @@ dOt z.A,z.B,z.C;
 
 
 label.rt(btex $\phi=\tangle\mc\kappa\{a;b,c\}$ etex, z.A +14*unitvector(unitvector(z.B-z.A)+unitvector(z.C-z.A)) rotated 20);
-label(btex $a=\side\kappa\{\phi,b,c\}$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
+label(btex $a=\side\kappa\{\phi;b,c\}$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
 label.ulft(btex $b$ etex, .5[z.A,z.C]);
 label.bot(btex $c$ etex, .5[z.A,z.B]);
 endfig;
