@@ -552,7 +552,7 @@ is a length space.
 \parit{Proof.}
 Let $\spc{Y}$ be an arbitrary metric space.
 Since $\spc{X}$ is a length space,
-the map $f\:\spc{X}\to \spc{Y}$ is short if and only if 
+a map $f\:\spc{X}\to \spc{Y}$ is short if and only if 
 \[\length(f\circ\alpha)\le \length\alpha\]
 for any curve
 $\alpha\:\II\to \spc{X}$.
@@ -565,8 +565,8 @@ Consider the quotient map
 $f\:\spc{X}\to\spc{X}/{\sim}$.
 Recall that the space $\spc{X}/{\sim}$ is defined by the maximal pseudometric that makes $f$ short.
 
-Denote by $\yetdist{}{}{}$ the length metric on $\spc{X}/{\sim}$.
-It follows that
+Denoting by $\yetdist{}{}{}$ the length metric on $\spc{X}/{\sim}$,
+it follows that
 \[f\:\spc{X}\to(\spc{X}/{\sim},\yetdist{}{}{})\]
 is also short.
 
@@ -582,15 +582,14 @@ that is, $\spc{X}/{\sim}$ is a length space.
 \parbf{Group actions.}
 Assume a group $G$ acts on a metric space $\spc{X}$.
 Consider a relation $\sim$ on $\spc{X}$
-defined as $x\sim y$ if there is $g\in G$ such that $x=g\cdot y$.
+defined by $x\sim y$ if there is $g\in G$ such that $x=g\cdot y$.
 Note that $\sim$ is an equivalence relation.
 
-In this case the quotient space $\spc{X}/{\sim}$ will be also denoted as $\spc{X}/G$;
-it can be also regarded as the space of $G$-orbits in $\spc{X}$.
+In this case the quotient space $\spc{X}/{\sim}$ will also be denoted by $\spc{X}/G$, and can be regarded as the space of $G$-orbits in $\spc{X}$.
 
 Assume that the group $G$ acts on $\spc{X}$ by isometries.
-In this case the distance between orbits $G\cdot x$ and $G\cdot y$ in $\spc{X}/G$
-can be defined directly 
+Then the distance between orbits $G\cdot x$ and $G\cdot y$ in $\spc{X}/G$
+can be defined directly: 
 \[\dist{G\cdot x}{G\cdot y}{\spc{X}/G}=\inf\set{\dist{x}{g\cdot y}{\spc{X}}
 =
 \dist{g^{-1}\cdot x}{y}{\spc{X}}}{g\in G}.\]
@@ -604,7 +603,7 @@ The following proposition follows from the definition of a quotient space:
 Assume $\spc{X}$ is a metric space and the  group $G$ acts on $\spc{X}$ by isometries.
 Then the projection $\pi\co \spc{X}\to\spc{X}/G$ is a submetry;
 %???V: Submetries are only defined in chapter 5. some ocmment is an order here or a forward reference to chapter 5???
-that is, $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in spc{X}, r>0$.
+that is, $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in \spc{X}, r>0$ (see Definition~\ref{def:submetry}).
 \end{thm}
 
 
@@ -612,19 +611,19 @@ that is, $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in spc{X}, r>0$.
 
 \parbf{Gluing.}
 Recall that the disjoint union of metric spaces can be also considered as a metric space; see Definition~\ref{def:disjoint-union}.
-Therefore the quotient-space construction works as well for an equivalence relation on the disjoint union of metric spaces.
+Therefore the quotient space construction works as well for an equivalence relation on the disjoint union of metric spaces.
 
 Consider two metric spaces $\spc{X}_1$ and $\spc{X}_2$
-with subset $A_1\subset\spc{X}_1$ and $A_2\subset\spc{X}_2$
+with subsets $A_1\subset\spc{X}_1$ and $A_2\subset\spc{X}_2$,
 and a bijection $\phi\:A_1\to A_2$.
 Consider the minimal equivalence relation on $\spc{X}_1\sqcup\spc{X}_2$
 such that $a\sim \phi(a)$ for any $a\in A_1$.
 In this case, the corresponding quotient space 
-$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called the \index{gluing}\emph{gluing} of $\spc{X}$ and $\spc{Y}$ along $\phi$ and denoted as
+$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called the \index{gluing}\emph{gluing of $\spc{X}$ and $\spc{Y}$ along $\phi$} and denoted by
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
 Note that if the map $\phi\:A_1\to A_2$ is distance-preserving,
-then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance-preserving and 
+then the projections $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are also distance-preserving, and 
 \[\dist{\iota_1(x_1)}{\iota_2(x_2)}{\spc{X}_1\sqcup_{\phi}\spc{X}_2}
 =
 \inf_{a_2=\phi(a_1)}
@@ -654,7 +653,7 @@ for any $x,y\in \spc{V}$.
 
 
 
-The image of $\spc{V}$ under the reflection in $A$ will be denoted by $\spc{V}'$.
+The image of $\spc{V}$ under reflection in $A$ will be denoted by $\spc{V}'$.
 The subspace $\spc{V}'$ is an isometric copy of $\spc{V}$.
 Clearly $\spc{V}\cup\spc{V}'=\spc{W}$ and $\spc{V}\cap\spc{V}'=A$.
 Moreover $a=a'$ $\iff$ $a\in A$.
@@ -662,8 +661,8 @@ Moreover $a=a'$ $\iff$ $a\in A$.
 The following proposition follows directly from the definitions.
 
 \begin{thm}{Proposition}\label{prop:doubling}
-Assume $\spc{W}$ is the doubling of metric space $\spc{V}$ in its closed subset $A$.
-Then 
+Assume $\spc{W}$ is the doubling of the metric space $\spc{V}$ in its closed subset $A$.
+Then: 
 
 \begin{subthm}{}
 If $\spc{V}$ is a complete length space, then so is $\spc{W}$.
@@ -676,9 +675,9 @@ In this case, for any $x,y\in\spc{V}$ there is $a\in A$ such that
 \end{subthm}
 
 \begin{subthm}{prop:doubling:projection}
-Given $x\in \spc{W}$ set $\bar x=x$ if $x\in \spc{V}$
+Given $x\in \spc{W}$, set $\bar x=x$ if $x\in \spc{V}$,
 and $\bar x=x'$ otherwise. The map $\spc{W}\to\spc{V}$ defined by $x\mapsto \bar x$ is short and length-preserving.
-In particular if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
+In particular, if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, then $\bar\gamma$ is a geodesic in $\spc{V}$ with the same ends.
 \end{subthm}
 \end{thm}
 
@@ -687,13 +686,13 @@ In particular if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, the
 \section{Kuratowsky embedding}
 
 Given a metric space $\spc{X}$, 
-let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc{X}$ equipped with the sup-norm,
+let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc{X}$ equipped with the sup-norm
 \[\|f\|=\sup_{x\in\spc{X}}\{|f(x)|\}.\]
 
 \parbf{Kuratowski embedding.}
-Given a point $p\in\spc{X}$, consider 
-map $\kur_p\:\spc{X}\to\Bnd(\spc{X},\RR)$, 
-defined as $\kur_p x=\distfun{x}{}{}-\distfun{p}{}{}$.
+Given a point $p\in\spc{X}$, consider the 
+map $\kur_p\:\spc{X}\to\Bnd(\spc{X},\RR)$ 
+defined by $\kur_p x=\distfun{x}{}{}-\distfun{p}{}{}$.
 The map $\kur_p$ will be called the \index{Kuratowski map}\emph{Kuratowski map at $p$}.
 
 From the triangle inequality, we have
@@ -703,7 +702,7 @@ From the triangle inequality, we have
 =
 \dist{x}{y}{}.\]
 Therefore, for any $p\in\spc{X}$, the Kuratowski map gives a distance-preserving map $\kur_p\:\spc{X}\hookrightarrow\Bnd(\spc{X},\RR)$.
-Thus, we can (and often will) consider the space $\spc{X}$ as a subset of  $\Bnd(\spc{X},\RR)$.
+Thus we can (and often will) consider the space $\spc{X}$ as a subset of  $\Bnd(\spc{X},\RR)$.
 
 
 \begin{thm}{Exercise}\label{ex:compact-in-lenght}
