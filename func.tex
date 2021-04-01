@@ -8,7 +8,7 @@ Here we introduce some classes of maps between metric spaces and develop a langu
 
 We will often need maps and functions defined on subsets of a metric space.
 We call them \index{submap}\emph{submaps} and \index{subfunction}\emph{subfunctions}.
-Thus given  metric spaces $\spc{X}$ and $\spc{Y}$, 
+Thus, given  metric spaces $\spc{X}$ and $\spc{Y}$, 
 a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\subset \spc{X}$.
 
 A submap is said to be \index{continuous submap}\emph{continuous} if the inverse image of any open set is open.
@@ -17,17 +17,17 @@ Indeed, a submap $\map\:\spc{X}\subto \spc{Y}$ is continuous if the inverse imag
 Since $\spc{Y}$ is open then so is $\Dom \map=\map^{-1}(\spc{Y})$.
 The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since they are  continuous functions for a special topology on $\RR$.%
 
-(Continuous partially defined maps could be defined via closed sets; namely, one may require that inverse images of closed sets are closed.
+(Continuous partially defined maps could be defined via closed sets; namely, one could require that inverse images of closed sets are closed.
 While this condition is equivalent to continuity for functions defined on the whole space,
 it is different for partially defined functions. 
-In particular with this definition, the domain of a continuous submap would have to be closed.)
+In particular, with this definition the domain of a continuous submap would have to be closed.)
 
 \section{Lipschitz conditions}
 
 
 \begin{thm}{Lipschitz maps}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces, 
-$\map\:\spc{X}\subto\spc{Y}$ be a continuous submap,  
+Suppose $\spc{X}$ and $\spc{Y}$ are metric spaces, 
+$\map\:\spc{X}\subto\spc{Y}$ is a continuous submap,  
 and $\Lip\in\RR$.
 
 \begin{subthm}{}
@@ -93,13 +93,13 @@ Any co-Lipschitz map is open and surjective.
 
 In other words,  $\Lip$-co-Lipschitz maps 
 can be considered as a quantitative version of open maps.
-For that reason they also called $\Lip$-open \cite{burago-gromov-perelman}.
+For that reason they are also called $\Lip$-open \cite{burago-gromov-perelman}.
 Also, be aware that some authors
 refer to our $\Lip$-co-Lipschitz maps
 as  $\tfrac1\Lip$-co-Lipschitz. %REF???.
 
 \begin{thm}{Proposition}\label{prop:colip=>complete}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces such that $\spc{X}$ is complete and let
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces such that $\spc{X}$ is complete, and let
 $\map\: \spc{X}\to\spc{Y}$ be a continuous co-Lipschitz map. 
 Then $\spc{Y}$ is complete.
 \end{thm}
@@ -108,7 +108,7 @@ Then $\spc{Y}$ is complete.
 Choose a Cauchy sequence $y_1,y_2,\dots$ in $\spc{Y}$.
 Passing to a subsequence if necessary, we may assume that $\dist{y_n}{y_{n+1}}{\spc{Y}}< \tfrac1{2^n}$ for each $n$.
 
-Denote by $\Lip$ a co-Lipschitz constant of $\map$.
+Denote by $\Lip$ a co-Lipschitz constant for $\map$.
 Note that  there is a sequence $x_1,x_2,\dots$ in $\spc{X}$
 such that
 \[\map(x_n)=y_n\quad \text{and}\quad \dist{x_n}{x_{n+1}}{\spc{X}}< \tfrac{\Lip}{2^n}.\eqlbl{eq:colip+1/2n}\]
@@ -118,9 +118,8 @@ Assuming that the points $x_1,\dots,x_{n-1}$ are already constructed,
 the existence of $x_n$ satisfying \ref{eq:colip+1/2n}
 follows since $\map$ is $\Lip$-co-Lipschitz.
 
-Notice that $(x_n)$ is Cauchy;
-since $\spc{X}$ is complete, it converges in $\spc{X}$.
-Denote by $x_\infty$ its limit
+Notice that $(x_n)$ is Cauchy.
+Since $\spc{X}$ is complete, $(x_n)$ converges in $\spc{X}$; denote its limit by $x_\infty$ 
 and set $y_\infty= \map(x_\infty)$.
 Since $\map$ is continuous,
 $y_n\to y_\infty$ as $n\to\infty$.
@@ -148,8 +147,7 @@ f_\eps(x)
 \]
 It is straightforward to check that each $f_\eps$ is locally Lipschitz and $0\le f_\eps-f<\eps$.
 
-Note that any continuous function can be presented as the difference of two continuous functions bounded below by $1$.
-Hence the result.
+Since any continuous function can be presented as the difference of two continuous functions bounded below by $1$, the result follows.
 \qeds
 
 \section{Isometries and submetries}\label{sec:quotient-CBB}
@@ -185,7 +183,7 @@ for any $p\in \spc{L}$ and $r\ge 0$.
 
 Note $\sigma\:\spc{L}\to\spc{M}$ is a submetry if it is 1-Lipschitz and 1-co-Lipschitz at the same time.
 
-Note that any submetry is an onto map.
+Note also that any submetry is an onto map.
 
 The main source of examples of submetries comes from isometric group actions.
 
@@ -243,8 +241,8 @@ such that
 Since $\sigma$ is $1$-Lipschitz,
 \[\length\sigma\circ\gamma\le \length\gamma.\]
 
-Note that the curve $\sigma\circ\gamma$ joins $x$ to $y$
-and from the above,
+The curve $\sigma\circ\gamma$ joins $x$ to $y$,
+and by the above,
 \[\length\sigma\circ\gamma<\dist{x}{y}{\spc{M}}+\eps.\]
 Since $\eps>0$ is arbitrary,
 $\spc{M}$ is a length space.
@@ -253,12 +251,13 @@ $\spc{M}$ is a length space.
 \section{Speed of curves}
 
 Let $\spc{X}$ be a metric space.
-A %\index{curve}
-\emph{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a {}\emph{real interval} (that is, an arbitrary convex subset of $\RR$);
-the curve is called \index{Lipschitz curve}\emph{Lipschitz} or \index{locally Lipschitz curve}\emph{locally Lipschitz} if the map $\alpha\:\II\to \spc{X}$~is.
+Recall that a \emph{curve}  
+in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a real interval. 
+%(see Section~\ref\{sec:intrinsic}). 
+A curve is called \index{Lipschitz curve}\emph{Lipschitz} or \index{locally Lipschitz curve}\emph{locally Lipschitz} if $\alpha$ is Lipschitz or locally Lipschitz. 
+ Length of curves is defined in \ref{def:length}.
 
-Recall that length of curves is defined in \ref{def:length}.
-The following theorem follows from \cite[2.7.4]{burago-burago-ivanov}.
+The following theorem follows from \cite{burago-burago-ivanov}.
 
 \begin{thm}{Theorem}\label{thm:speed}
 Let $\spc{X}$ be a metric space  
@@ -268,21 +267,23 @@ Then the speed function
 \[\speed_{t_0}\alpha
 =
 \lim_{\substack{t\to t_0+\\s\to t_0-}}\frac{\dist{\alpha(t)}{\alpha(s)}{}}{|t-s|}\] 
-is defined for almost all $t_0 \in \II$ and 
+is defined for almost all $t_0 \in \II$, and 
 \[\length\alpha=\int\limits_\II \speed_{t}\alpha\cdot\dd t,\]
 where $\int$ denotes the Lebesgue integral.
 \end{thm}
 
-A curve $\alpha\:\II\to\spc{X}$ is called a  \index{unit-speed curve}\emph{unit-speed curve}, 
+A curve $\alpha\:\II\to\spc{X}$ is called a  \index{unit-speed curve}\emph{unit-speed curve}
 if for any subinterval $[a,b]\subset\II$, we have
 \[b-a=\length(\alpha|_{[a,b]}).\]
 According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
 
-The following generalization of Rademacher's theorem was proved by Bernd Kirchheim \cite{kirchheim}. %CHECK??? %S: No need to  check.
+The following generalization of the standard Rademacher theorem 
+on differentiability almost everywhere of Lipschitz maps between smooth manifolds (see \cite{burago-burago-ivanov},5.5.2) was proved by Bernd Kirchheim \cite{kirchheim}. %CHECK??? 
+%S: Note expanded sentence.
 
 The conclusion of the standard Rademacher theorem does not make sense for maps to a metric space since the target might have no linear structure.
 But the theorem does not hold even if we assume that the target is a Banach space.
-For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance-preserving and in particular Lipschitz (here $\chi_A$ denotes characteristic function of $A$).
+For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance-preserving and in particular Lipschitz (here $\chi_A$ denotes the characteristic function of $A$).
 However the differential $\dd_xf$ is not defined for any $x$.
 
 \begin{thm}{Theorem}\label{thm:Rademacher-md}
@@ -290,7 +291,6 @@ Let $\spc{X}$ be a metric space
 and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
 Then for almost all $x\in\Dom f$ there is a pseudonorm %???
 $\lVert*\rVert_x$ on $\RR^n$ such that
-we have
 \[\dist{f(y)}{f(z)}{\spc{X}}=\lVert z-y\rVert_x+o(|y-x|+|z-x|).\]
 \end{thm}
 
@@ -318,7 +318,7 @@ That is, for any smooth function $\phi$ with compact support $\supp\phi\subset\D
 \text{respectively}\quad &\le0.
 \end{aligned}
 \eqlbl{eq:distr-conc}\]
-The integral is understood in the sense of Lebesgue,
+The integral is understood in the sense of Lebesgue;
 in particular the inequality \ref{eq:distr-conc}
 makes sense for any Borel-measurable subfunction $y$.
 The proofs of the following propositions are straightforward.
@@ -370,14 +370,17 @@ For any pair of values $t_1<t_2$ in $\II$ such that $|t_2-t_1|<\varpi\kappa$,  t
 satisfies $y(t)\le z(t)$ (respectively $y(t)\ge z(t)$) for all $t\in[t_1,t_2]$.
 \end{subthm}
 
-Further, the following property holds
+Further, the following property holds:
 
 \begin{subthm}{barrier'} 
-Suppose $y''\le \lambda-\kappa\cdot  y$ . Let $t_0\in\II$ and let  $\bar y$ be a solution of  the
+Suppose $y''\le \lambda-\kappa\cdot  y$. Let $t_0\in\II$, and   $\bar y$ be a solution of  the
  ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
-such that  $\bar y(t_0)= y(t_0)$ and $y^+(t_0)\le y(t_0)\le -y^-(t_0)$. (Note that such a $\bar{y}$ is unique if $y$ is differentiable at $t_0$.) 
+such that  $\bar y^+(t_0)= y(t_0)$ and 
+$y^+(t_0)\le \bar y^+(t_0)\le -y^-(t_0)$.
+%S:  Note I changed this from $y^+(t_0)\le y(t_0)\le -y^-(t_0)$
+(Note that such a $\bar{y}$ is unique if $y$ is differentiable at $t_0$.) 
 
-Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; that is, $\bar{y}$ is a barrier of $y$ at $t_0$.
+Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; that is, $\bar{y}$ is a barrier of $y$ at $t_0$. (Similarly, by reversing inequalities, for $y''\ge \lambda-\kappa\cdot  y$.) 
 \end{subthm}
 \end{thm}
 
@@ -390,9 +393,12 @@ We will often need the following fact about convergence of derivatives of convex
 
 {\sloppy 
 
+%S: Note I changed "concave" to "convex".
 \begin{thm}{Lemma on equilibrium}\label{lem:der-conv-lim}
 Let $\II$ be an open interval 
-and $f_n\:\II\to\RR$ be a sequence of concave functions. 
+and $f_n\:\II\to\RR$ be a sequence of 
+%concave
+convex functions. 
 Assume the functions $f_n$ pointwise converge to a function $f\:\II\to\RR$.
 Then for any $t_0\in \II$,
 \[f^\pm(t_0)\le \liminf_{n\to\infty}f^\pm_n(t_0).\]
@@ -468,10 +474,10 @@ Functions satisfying the inequalities
 \[f''\ge \lambda\quad\text{and}\quad f''\le \lambda\]
 are called $\lambda$-convex and $\lambda$-concave respectively.
 
-$0$-convex and $0$-concave subfunctions will be also called \index{convex function}\emph{convex} and \index{concave function}\emph{concave} respectively.
+$0$-convex and $0$-concave subfunctions will also be called \index{convex function}\emph{convex} and \index{concave function}\emph{concave} respectively.
 
-If $f$ is $\lambda$-convex for some $\lambda>0$ it will be called \index{strongly convex function}\emph{strongly convex};
-correspondingly if $f$ is $\lambda$-concave for some $\lambda<0$ it will be called \index{strongly concave function}\emph{strongly concave}.
+If $f$ is $\lambda$-convex for some $\lambda>0$, $f$ will be called \index{strongly convex function}\emph{strongly convex};
+correspondingly, if $f$ is $\lambda$-concave for some $\lambda<0$, $f$ will be called \index{strongly concave function}\emph{strongly concave}.
 
 If for any point $p\in\Dom f$ 
 there is a neighborhood $\Omega\ni p$ and a real number $\lambda$

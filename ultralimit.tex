@@ -7,18 +7,21 @@ Our presentation is based on \cite{kleiner-leeb}.
 
 Our use of ultralimits is very limited; 
 we use them only as a canonical way to pass to  convergent subsequences.
-(In principle, we could avoid selling our souls 
-to the set-theoretical devil, but in this case we must say ``pass to convergent subsequence'' too many times.)%V:  I am not sure I like that kind of metaphor in a math book.
+(They could be avoided, but at the cost of saying ``pass to a convergent subsequence'' too many times.)
+%(In principle, we could avoid 
+%selling our souls 
+%to the set-theoretical devil, but in this case 
+%we must say ``pass to convergent subsequence'' too many times.)
+%V:  I am not sure I like that kind of metaphor in a math book.
 %A: then remove it, I think it is okey to say that it is not essential in a way. 
 
 \section{Ultrafilters}
 
-We will need the existence of a 
-selective ultrafilter $\o$,
-which we will fix once and for all.
-Existence follows from the axiom of choice and continuum hypothesis.
+We will need the existence of a fixed 
+selective ultrafilter $\o$.
+The existence follows from the axiom of choice and continuum hypothesis.
 
-Recall that $\NN$ denotes the set of natural numbers, $\NN=\{1,2,\dots\}$
+Recall that $\NN$ denotes the set of natural numbers, $\NN=\{1,2,\dots\}$.
 
 \begin{thm}{Definition}\label{def:ultrafilter}
 A finitely additive measure $\o$ 
@@ -49,9 +52,10 @@ More commonly, a nonprincipal ultrafilter is defined as a collection, say $\math
 \begin{enumerate}
 \item\label{filter:supset} if $P\in \mathfrak{F}$ and $Q\supset P$, then $Q\in \mathfrak{F}$,
 \item\label{filter:cap} if $P, Q\in \mathfrak{F}$, then $P\cap Q\in \mathfrak{F}$,
-\item\label{filter:ultra} for any subset $P\subset\NN$, either $P$ or its complement is an element of $\mathfrak{F}$.
+\item\label{filter:ultra} for any subset $P\subset\NN$, either $P$ or its complement is an element of $\mathfrak{F}$,
 \item\label{filter:non-prin} if $F\subset \NN $ is finite, then $F\notin \mathfrak{F}$.
 \end{enumerate}
+
 Setting 
 \[P\in\mathfrak{F}\quad\iff\quad\o(P)=1\] 
 makes these two definitions equivalent.
@@ -65,29 +69,28 @@ The existence of a selective ultrafilter follows from the continuum hypothesis;
 this was proved by Walter Rudin \cite{rudin}.
 
 \parbf{Stone--\v{C}ech compactification.}
-Given a set $S\subset \NN$, consider subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
+Given a set $S\subset \NN$, consider the subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
 It is straightforward to check that the sets $\Omega_S$ for all $S\subset \NN$ form a topology on the set of ultrafilters on $\NN$. 
-The obtained space is called \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of $\NN$;
-it is usually denoted as $\beta\NN$.
+The resulting space is called the \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of $\NN$; it is usually denoted by $\beta\NN$.
 
-There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined as
+There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined by 
 $n\mapsto\o_n$, where $\o_n$ is the principal ultrafilter such that $\o_n(S)=1$ if and only if $n\in S$. 
-Using the described embedding, we can (and will) consider $\NN$ as a subset of $\beta\NN$.
+Using this embedding, we can (and will) consider $\NN$ as a subset of $\beta\NN$.
 
 The space $\beta\NN$ is the maximal compact Hausdorff space that contains $\NN$  as an everywhere dense subset.
 More precisely, for any compact Hausdorff space $\spc{X}$ 
-and a map $f\:\NN\to \spc{X}$ there is unique continuous map $\bar f\:\beta\NN\to X$ such that the restriction $\bar f|_\NN$ coincides with $f$. 
+and map $f\:\NN\to \spc{X}$, there is a unique continuous map $\bar f\:\beta\NN\to X$ such that the restriction $\bar f|_\NN$ coincides with $f$. 
 
 \section{Ultralimits of points}
 \label{ultralimits}\index{ultralimit}
 
 Fix an ultrafilter $\o$.
 Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$. 
-Let us define an \index{ultralimit}\emph{$\o$-limit} of $(x_n)$ as a point $x_\o$ 
+Define an  \index{ultralimit}\emph{$\o$-limit} of $(x_n)$ to be a point $x_\o$ 
 such that for any $\eps>0$, $\o$-almost all elements of $(x_n)$ lie in $\oBall(x_\o,\eps)$; 
 that is,
 \[\o\set{n\in\NN}{\dist{x_\o}{x_n}{}<\eps}=1.\]
-In this case, we will write 
+In this case, we write 
 \[x_\o=\lim_{n\to\o} x_n
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
@@ -101,14 +104,14 @@ It easily follows from the definition that  $\o$-limits are unique if they exist
 For example if $\o$ is the principal ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
 $x_\o=x_n$.
 
-Note that $\o$-limits of a sequence and its subsequence may differ.
+Note that $\o$-limits of a sequence and its subsequences may differ.
 For example, in general
 \[\lim_{n\to\o}x_n
 \ne
 \lim_{n\to\o}x_{2\cdot n}.\]
 
 The sequence $(x_n)$ can be regarded as a map $\NN\to\spc{X}$.
-If $\spc{X}$ is compact, then this map can be uniquelly extended to a continuous map to the Stone--\v{C}ech compactification $\beta\NN$ of $\NN$.
+If $\spc{X}$ is compact, then this map can be uniquely extended to a continuous map to the Stone--\v{C}ech compactification $\beta\NN$ of $\NN$.
 Then $x_\o$ can be regarded as the image of $\o$. 
 
 \begin{thm}{Proposition}\label{prop:ultra/partial}
@@ -135,8 +138,8 @@ Now assume that $\o$ is selective.
 Consider the sets
 \begin{align*}
 C_\kay&=\set{n\in\NN}{\tfrac1{\kay}<\dist{x_n}{x_\o}{}\le \tfrac1{\kay-1}},
-\intertext{where we assume $\tfrac10=\infty$ and the set }
-C_\infty&=\set{n\in\NN}{x_n=x_\o},
+\intertext{where we assume $\tfrac10=\infty$, and the set }
+C_\infty&=\set{n\in\NN}{x_n=x_\o}.
 \end{align*}
 
 Note that $\o(C_\kay)=0$ for any $\kay\in\NN$.
@@ -166,15 +169,15 @@ In particular, a bounded sequence of real numbers has a unique $\o$-limit.
 The following lemma is an ultralimit analog of the Cauchy convergence test.
 
 \begin{thm}{Lemma}\label{lem:X-X^w}
-Let $(x_n)$ be a sequence of points in a complete space $\spc{X}$. 
-Assume that for each subsequence $(y_n)$ of $(x_n)$, 
+Let $(x_n)$ be a sequence of points in a complete metric space $\spc{X}$. 
+If for each subsequence $(y_n)$ of $(x_n)$, 
 the $\o$-limit 
 \[y_\o=\lim_{n\to\o}y_{n}\in \spc{X}\]
 is defined and does not depend on the choice of a subsequence, 
 then the sequence $(x_n)$ converges in the usual sense.
 \end{thm}
 
-\parit{Proof.} Assume that $(x_n)$ does not converge in itself. 
+\parit{Proof.} Assume the contrary. 
 Then for some $\eps>0$, there is a subsequence $(y_n)$ of $(x_n)$ such that $\dist{x_n}{y_n}{}\ge\eps$ for all $n$.
 
 It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
@@ -182,10 +185,12 @@ It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
 
 \section{Ultralimits of spaces}\label{sec:Ultralimit of spaces}
 
-From now on, $\o$ denotes a selective ultrafilter on the set of natural numbers.
+Fix a selective ultrafilter $\o$ on the set  $\NN$ of natural numbers.
 
-Let $\spc{X}_n$ be a sequence of metric spaces.
-Consider all sequences $x_n\in \spc{X}_n$.
+Let $(\spc{X}_n)$ be a sequence of metric spaces.
+Consider all sequences
+$(x_n)$ where 
+$x_n\in \spc{X}_n$.
 On the set of all such sequences,
 define a pseudometric  by the formula
 \[\dist{(x_n)}{(y_n)}{}
@@ -195,12 +200,12 @@ define a pseudometric  by the formula
 Note that the $\o$-limit on the right hand side is always defined 
 and takes a value in $[0,\infty]$. 
 
-Set $\spc{X}_\o$ to be the corresponding metric space; 
+Let $\spc{X}_\o$ be the corresponding metric space; 
 that is, the underlying set of $\spc{X}_\o$ is formed by equivalence  classes of sequences of points $x_n\in\spc{X}_n$ 
 defined by 
 \[(x_n)\sim(y_n)
 \quad \iff\quad 
-\lim_{n\to\o} \dist{x_n}{y_n}{}=0\]
+\lim_{n\to\o} \dist{x_n}{y_n}{}=0,\]
 and the distance is defined as in \ref{eq:olim-dist}.
 
 The space $\spc{X}_\o$ is called the \index{ultralimit space}\emph{$\o$-limit} of $\spc{X}_n$.
@@ -209,8 +214,8 @@ $\o$-limit of a sequence $\spc{X}_n$;
 we may also write  
 \[\spc{X}_n\to\spc{X}_\o\quad \text{as}\quad  n\to\o\quad \text{or}\quad \spc{X}_\o=\lim_{n\to\o}\spc{X}_n.\]
 
-Given a sequence $x_n\in \spc{X}_n$,
-we will denote by $x_\o$ its equivalence class which is a point in $\spc{X}_\o$;
+Given a sequence  $(x_n\in \spc{X}_n)$,
+we will denote by $x_\o$ its equivalence class, which is a point in $\spc{X}_\o$;
 equivalently, we will write
 \[x_n\to x_\o \quad \text{as}\quad  n\to\o\quad \text{or}\quad x_\o=\lim_{n\to\o} x_n.\]
 
@@ -219,12 +224,12 @@ The $\o$-limit of any sequence of metric spaces is complete.
 \end{thm}
 
 \parit{Proof.}
-Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
+Let $(\spc{X}_n)$ be a sequence of metric spaces such that $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
 
-Fix a Cauchy sequence $x_{m}\in \spc{X}_\o$. %earlier Cauchy's sequences are referred to as sequences that converge in themselves. I think we should stick to fixed terminology. I prefer calling them  Cauchy sequences. I don't think sequences that converge in themselves is standard.
-Passing to a subsequence we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$ for any $m$.
+Fix a Cauchy sequence $(x_{m})$ in $\spc{X}_\o$. %earlier Cauchy's sequences are referred to as sequences that converge in themselves. I think we should stick to fixed terminology. I prefer calling them  Cauchy sequences. I don't think sequences that converge in themselves is standard.
+Passing to a subsequence, we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$ for any $m$.
 
-Let us choose a double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
+Let us choose a double sequence $(x_{n,m})$, $x_{n,m}\in \spc{X}_n$, such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
 Note that $\dist{x_{n,m}}{x_{n,m-1}}{}<\tfrac1{2^m}$ for $\o$-almost all $n$.
 It follows that we can choose a nested sequence of sets 
 \[\NN=S_0\supset S_1\supset S_2\supset\dots\] 
@@ -237,11 +242,11 @@ such that
 
 
 
-Consider the sequence $y_n=x_{n,m(n)}$, where $m(n)$ is the largest value such that $m(n)\le n$ and $m(n)\in S_{m}$.
+Consider the sequence $(y_n=x_{n,m(n)})$, where $m(n)$ is the largest value such that $m(n)\le n$ and $m(n)\in S_{m}$.
 Denote by $y\in \spc{X}_\o$ its $\o$-limit.
 
 Observe that by construction $x_n\to y$ as $n\to \infty$.
-Hence the statement follows.
+Hence the statement.
 \qeds
 
 \begin{thm}{Observation}\label{obs:ultralimit-is-geodesic}
@@ -249,31 +254,30 @@ The $\o$-limit of any sequence of length spaces is geodesic.
 \end{thm}
 
 \parit{Proof.}
-If $\spc{X}_n$ is a sequence length spaces, then for any sequence of pairs $x_n, y_n\in X_n$ there is a sequence of $\tfrac1n$-midpoints $z_n$.
+If $(\spc{X}_n)$ is a sequence of length spaces, then for any sequence of pairs $(x_n, y_n)\in X_n$ there is a sequence of $\tfrac1n$-midpoints $z_n$.
 
 Let $x_n\to x_\o$, $y_n\to y_\o$ and $z_n\to z_\o$ as $n\to \o$.
 Note that $z_\o$ is a midpoint for $x_\o$ and $y_\o$ in $\spc{X}^\o$.
 
 By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}^\o$ is complete.
-Applying Lemma~\ref{lem:mid>geod} we get the statement.
+Applying Lemma~\ref{lem:mid>geod} we obtain the statement.
 \qeds
 
-\parbf{Ultrapower.} If all the metric spaces in the sequence are identical $\spc{X}_n\z=\spc{X}$, 
-its $\o$-limit 
+\parbf{Ultrapower.} If all the metric spaces in a sequence are identical, $\spc{X}_n\z=\spc{X}$, 
+the $\o$-limit 
 $\lim_{n\to\o}\spc{X}_n$
 is denoted by $\spc{X}^\o$
 and called the $\o$-power of $\spc{X}$.
  
 According to Theorem~\ref{thm:ultra-GH},
 there is a distance-preserving map
-$\iota:\spc{X}\hookrightarrow \spc{X}^\o$, here $\iota(y)$ is the equivalence class of constant sequence $y_n=y$. 
+$\iota:\spc{X}\hookrightarrow \spc{X}^\o$, where $\iota(y)$ is the equivalence class of the constant sequence $(y_n=y)$. 
 
 The image $\iota(\spc{X})$ might be a proper subset of $\spc{X}^\o$.
-For example $\RR^\o$ has pairs of points at distance $\infty$ from each other;
-at the same time, each metric component of $\RR^\o$ is isometric to $\RR$.
+For example, $\RR^\o$ has pairs of points at distance $\infty$ from each other, while each metric component of $\RR^\o$ is isometric to $\RR$.
 
 According to Theorem~\ref{thm:ultra-GH}, 
-if $\spc{X}$ is compact, then $\iota(\spc{X})=\spc{X}^\o$;
+if $\spc{X}$ is compact then $\iota(\spc{X})=\spc{X}^\o$;
 in particular, $\spc{X}^\o$ is isometric to $\spc{X}$.
 If $\spc{X}$ is proper, then $\iota(\spc{X})$ forms a metric component of $\spc{X}^\o$.
 
@@ -281,7 +285,7 @@ The embedding $\iota$ allows us to treat $\spc{X}$ as a subset of its ultrapower
 
 \begin{thm}{Observation}\label{obs:ultrapower-is-geodesic}
 Let $\spc{X}$ be a complete metric space. 
-Then $\spc{X}^\o$ is geodesic space if and only if $\spc{X}$ is a length space.
+Then $\spc{X}^\o$ is a geodesic space if and only if $\spc{X}$ is a length space.
 \end{thm}
 
 \parit{Proof.}
@@ -301,7 +305,7 @@ It remains to apply Lemma~\ref{lem:mid>geod}.
 The ``if''-part follows from Observation~\ref{obs:ultralimit-is-geodesic}.
 \qeds
 
-Note that the proof above together with Lemma~\ref{lem:X-X^w} implies the following:
+Note that the proof above together with Lemma~\ref{lem:X-X^w} imply the following:
 
 \begin{thm}{Corollary}\label{cor:two-geodesics-in-ultrapower}
 Assume $\spc{X}$ is a complete length space 
@@ -312,37 +316,36 @@ in the ultrapower $\spc{X}^\o$.
 
 \section{Ultratangent space} 
 
-Recall that we assume that $\o$ is a once for all fixed choice of a selective ultrafilter on $\NN$.
+Fix a selective ultrafilter $\o$ on the set  $\NN$ of natural numbers.
 
 For a metric space $\spc{X}$ and a positive real number $\lam$,
 we will denote by $\lam\cdot\spc{X}$ its \index{blowup}\emph{$\lam$-blowup},
 which is a metric space with the same underlying set as $\spc{X}$ and the metric multiplied by $\lam$.
-The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted as $x\mapsto x^\lam$, 
+The tautological bijection $\spc{X}\to \lam\cdot\spc{X}$ will be denoted by $x\mapsto x^\lam$, 
 so 
 \[\dist{x^\lam}{y^\lam}{}
 =
 \lam\cdot\dist[{{}}]{x}{y}{}\] 
 for any $x,y\in \spc{X}$.
 
-The $\o$-blowup $\o\cdot\spc{X}$ of $\spc{X}$ is defined as the $\o$-limit
+The \emph{$\o$-blowup} $\o\cdot\spc{X}$ of $\spc{X}$ is defined to be the $\o$-limit
 of the $n$-blowups $n\cdot\spc{X}$; that is,
 \[\o\cdot\spc{X}
 \df
 \lim_{n\to\o} n\cdot\spc{X}.\]
 
-Given a point $x\in \spc{X}$ we can consider the sequence $x^n\in n\cdot\spc{X}$;
-it corresponds to a point $x^\o\in \o\cdot\spc{X}$.
+Given a point $x\in \spc{X}$, we can consider the sequence ($x^n$), where $x^n\in n\cdot\spc{X}$ is the image of $x$ under $n$-blowup.
 Note that if $x\ne y$, then 
 \[\dist{x^\o}{y^\o}{\o\cdot\spc{X}}=\infty;\]
 that is, 
 $x^\o$ and $y^\o$ 
 belong to different metric components of $\o\cdot\spc{X}$.
 
-The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called the ultratangent space of $\spc{X}$ at $x$ and it is denoted as $\T^\o_x\spc{X}$.
+The metric component of $x^\o$ in $\o\cdot\spc{X}$ is called the \index{ultratangent space}\emph{ultratangent space} of $\spc{X}$ at $x$ and  is denoted by $\T^\o_x\spc{X}$ or $\T^\o_x$.
 
 Equivalently, the ultratangent space $\T^\o_x\spc{X}$ can be defined as follows.
-Consider all the sequences of points $x_n\in \spc{X}$ such that
-the sequence $\ell_n\z=n\cdot\dist{x}{x_n}{\spc{X}}$ is bounded.
+Consider all the sequences of points $x_n\in \spc{X}$ such that the sequence 
+ $(n\cdot\dist{x}{x_n}{\spc{X}})$ is bounded.
 Define the pseudodistance between two such sequences as 
 \[\dist{(x_n)}{(y_n)}{}
 =
@@ -351,13 +354,12 @@ Then $\T^\o_x\spc{X}$ is the corresponding metric space.
 
 Tangent spaces (see section \ref{sec: tangent space})  as well as ultratangent spaces 
 generalize the notion of tangent spaces on Riemannian manifolds.
-In  simplest cases these two notions define the same space.
+In  the simplest cases these two notions define the same space.
 However in general they are different and are both useful ---
 often a lack of some property in one is compensated by the other.%V: Tangent spaces are only defined later in chapter 6. This makes this whole paragraph very confusing. I added a forward reference to the section about tangent spaces but I think that's still confusing. I would move this discussion to the section on tangent spaces. The same goes for the next theorem. %S: agreed. %A: we did not try to put everything in right order --- this is an example (ref is good).
 
-It is clear from the definition that tangent space has cone structure.
-On the other hand, in general, ultratangent space does not have a cone structure; 
-the Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example --- it is $\Alex{0}$ as well as $\CAT{0}$.
+It is clear from the definition that a tangent space has a cone structure.
+On the other hand, in general an ultratangent space does not have a cone structure. The Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example. We remark that the Hilbert's cube  is a $\Alex{0}$ as well as  a $\CAT{0}$ Alexandrov space.
 
 The next theorem shows that the tangent space $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
 
@@ -373,19 +375,19 @@ we have
 \end{thm}
 
 \parit{Proof.}
-Given $v\in \T'_p$ 
-choose a geodesic $\gamma$ that starts at $p$ such that $\gamma^+(0)\z=v$.
+Given $v\in \T'_p$, 
+choose a geodesic $\gamma$ that starts at $p$ and  such that $\gamma^+(0)\z=v$.
 Set $v^n=[\gamma(\tfrac1n)]^n\in n\cdot \spc{X}$ and 
 \[v^\o=\lim_{n\to\o}v^n.\]
 
-Note that the value $v^\o\in\T^\o_p$ does not depend on choice of $\gamma$;
+Note that the value $v^\o\in\T^\o_p$ does not depend on the choice of $\gamma$;
 that is, if $\gamma_1$ is another geodesic starting at $p$ such that $\gamma_1^+(0)=v$,
 then 
 \[\lim_{n\to\o}v^n=\lim_{n\to\o}v_1^n,\]
 where $v_1^n=[\gamma_1(\tfrac1n)]^n\in n\cdot \spc{X}$.
 The latter follows since
-\[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t)\]
-and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ s $n\to\infty$.
+\[\dist{\gamma(t)}{\gamma_1(t)}{\spc{X}}=o(t),\]
+and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ as $n\to\infty$.
 
 
 
@@ -405,9 +407,9 @@ we can extend $\iota$ to a distance-preserving map $\T_p\to \T^\o_p$.
 }
 
 \begin{thm}{Theorem}\label{thm:ultra-GH}
-Assume $\spc{X}_n$ is a sequence of complete spaces. 
+Assume $(\spc{X}_n)$ is a sequence of complete spaces. 
 Let $\spc{X}_n\to \spc{X}_\o$ as $n\to\o$,
-and $\spc{Y}_n\subset \spc{X}_n$ 
+and ($\spc{Y}_n\subset \spc{X}_n$) 
 be a sequence of subsets such that $\spc{Y}_n\GHto\spc{Y}_\infty$. 
 Then there is a distance-preserving map 
 $\iota:\spc{Y}_\infty\to \spc{X}_\o$.
@@ -430,7 +432,7 @@ $\spc{X}_\infty$ is isometric to a metric component of $\spc{X}_\o$.
 
 \parit{Proof.} 
 For each point $y_\infty\in \spc{Y}_\infty$ 
-choose a lifting $y_n\in \spc{Y}_n$.
+choose a lifting $(y_n\in \spc{Y}_n)$.
 Pass to the $\o$-limit $y_\o\in \spc{X}_\o$ of $(y_n)$.
 Clearly for any $y_\infty,z_\infty\in \spc{Y}_\infty$, 
 we have 
@@ -440,10 +442,10 @@ that is, the map $y_\infty\mapsto y_\o$ gives a distance-preserving map $\iota:\
 
 \parit{(\ref{SHORT.thm:ultra-GH:a})$+$(\ref{SHORT.thm:ultra-GH:b}).}
 Fix $x_\o\in \spc{X}_\o$.
-Choose a sequence $x_n\in \spc{X}_n$ 
+Choose a sequence ($x_n\in \spc{X}_n$) 
 such that $x_n\to x_\o$ as $n\to\o$. 
 
-Denote by $\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ the common space for the convergence $\spc{X}_n\GHto \spc{X}_\infty$;
+Denote by $\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ the common space for the convergence $\spc{X}_n\GHto \spc{X}_\infty$,
 as in the definition of Gromov--Hausdorff convergence.
 Consider the sequence $(x_n)$ 
 as a sequence of points in~$\bm{X}$.
@@ -459,10 +461,9 @@ Indeed, if $y_n\in\spc{X}_n$ is another sequence such that $y_n\to x_\o$ as $n\t
 that is, $x_\infty=y_\infty$.
 
 
-In this way we obtain a map $\nu\:x_\o\to x_\infty$;
-it is defined on a subset of $\Dom\nu \subset\spc{X}_\o$.
+In this way we obtain a map $\nu\:x_\o\to x_\infty$, defined on  $\Dom\nu \subset\spc{X}_\o$.
 By construction of $\iota$, 
-we get  $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
+we have $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
 
 Finally note that if $\spc{X}_\infty$ is compact, then $\nu$ is defined on all of $\spc{X}_\o$;
 this proves (\ref{SHORT.thm:ultra-GH:a}).
@@ -470,7 +471,7 @@ this proves (\ref{SHORT.thm:ultra-GH:a}).
 If $\spc{X}_\infty$ is proper, choose any point $z_\infty\in \spc{X}_\infty$
 and set $z_\o=\iota(z_\infty)$.
 For any point $x_\o\in \spc{X}_\o$ at finite distance from $z_\o$,
-for the sequence $x_n$ 
+for the sequence $(x_n)$ 
 as above we have that $\dist{z_n}{x_n}{}$ is bounded for $\o$-almost all $n$.
 Since $\spc{X}_\infty$ is proper, $\nu(x_\o)$ is defined;
 in other words $\nu$ is defined on the metric component of $z_\o$.
@@ -493,12 +494,12 @@ for the images $\spc{Y}_n=\gamma_n([0,1])\subset \spc{X}_n$.
 
 \section{Ultralimits of sets}
 
-Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to \spc{X}_\o$
+Let $(\spc{X}_n)$ be a sequence of metric spaces, and $\spc{X}_n\to \spc{X}_\o$
 as $n\to \o$.
 
 For a sequence of sets $\Omega_n\subset \spc{X}_n$,
 consider the maximal set $\Omega_\o\subset \spc{X}_\o$ such that 
-for any $x_\o\in\Omega_\o$ and any sequence $x_n\in\spc{X}_n$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
+for any $x_\o\in\Omega_\o$ and any sequence $(x_n\in\spc{X}_n)$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
 
 The set $\Omega_\o$ is called the  \index{open ultralimit}\emph{open $\o$-limit} of $\Omega_n$;
 we could also write  $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
@@ -513,7 +514,7 @@ open $\o$-convergence  will be applied here only for sequences of open sets.
 
 \section{Ultralimits of functions}\label{sec:Ultralimits of functions}
 
-Recall that a family of submaps between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ it holds that $\dist{f(p)}{f(q)}{}<\eps$.
+Recall that a family of submaps between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ we have $\dist{f(p)}{f(q)}{}<\eps$.
 
 Let $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 
@@ -571,12 +572,12 @@ then $\oBall(x,\eps)_{\spc{X}^\o}\subset \Dom f^\o$.
 
 
 \parbf{Ultradifferential.}
-Given a function $f\:\spc{L}\to\RR$, consider the sequence of functions $f_n\:n\cdot\spc{L}\to\RR$, defined by 
+Given a function $f\:\spc{L}\to\RR$, consider the sequence of functions $f_n\:n\cdot\spc{L}\to\RR$ defined by 
 \[f_n(x^n)=n\cdot(f(x)-f(p)),\]
-here $x^n\in n\cdot\spc{L}$ is the point corresopnding to $x\in\spc{L}$.
+where $x^n\in n\cdot\spc{L}$ is the point correspnding to $x\in\spc{L}$.
 While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
-the functions $f_n$ converge to $\o$-differential of $f$ at $p$.
-It will be denoted by $\dd_p^\o f$;
+the functions $f_n$ converge to the \it{ $\o$-differential} of $f$ at $p$.
+It will be denoted by $\dd_p^\o f$:
 \[\dd_p^\o f\:\T_p^\o\to\RR,\quad \dd_p^\o f=\lim_{n\to\o} f_n.\] 
 
 Clearly, the $\o$-differential $\dd_p^\o f$ of a locally Lipschitz subfunction $f$ is defined and Lipschitz at each point $p\in \Dom f$.

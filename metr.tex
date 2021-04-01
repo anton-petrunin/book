@@ -346,27 +346,26 @@ then  $\spc{X}$ is an $R$-length or $R$-geodesic space respectively.
 
 \parit{Proof.}
 Fix a pair of points $x,y\in \spc{X}$.
-Set $\eps_n=\frac\eps{2^{2\cdot n}}$,
+Let $\eps_n=\frac\eps{2^{2\cdot n}}$,
 $\alpha(0)=x$ and $\alpha(1)=y$.
 
-Set $\alpha(\tfrac12)$ to be an $\eps_1$-midpoint for $\alpha(0)$ and $\alpha(1)$.
-Further, set $\alpha(\frac14)$ 
-and $\alpha(\frac34)$ to be $\eps_2$-midpoints 
+Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint for $\alpha(0)$ and $\alpha(1)$.
+Further, let $\alpha(\frac14)$ 
+and $\alpha(\frac34)$  be $\eps_2$-midpoints 
 for the pairs $(\alpha(0),\alpha(\tfrac12)$ 
 and $(\alpha(\tfrac12),\alpha(1)$ respectively.
 Applying the above procedure recursively,
-on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$
-for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, 
-as an $\eps_{n}$-midpoint for the already defined
+on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$,
+for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, to be an $\eps_{n}$-midpoint for the already defined
 $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 
 In this way we define $\alpha(t)$ for all dyadic rationals $t$ in $[0,1]$.
 If $t\in[0,1]$ is not a dyadic rational, consider a sequence of dyadic rationals $t_n\to t$ as $n\to\infty$.
-Note that due to completeness of $\spc{X}$ the sequence $\alpha(t_n)$ converges;
-define $\alpha(t)$ as its limit.
+By completeness of $\spc{X}$, the sequence $\alpha(t_n)$ converges;
+let $\alpha(t)$ be its limit.
 It is easy to see that $\alpha(t)$
-does not depend on the choice of the sequence $t_n$
+does not depend on the choice of the sequence $t_n$,
 and $\alpha\:[0,1]\to\spc{X}$ is a path from $x$ to $y$.
 Moreover,
 \[\begin{aligned}
@@ -376,7 +375,7 @@ Moreover,
 \end{aligned}
 \eqlbl{eq:eps-midpoint}
 \]
-Since $\eps>0$ is arbitrary, we get (\ref{SHORT.lem:mid>length}).
+Since $\eps>0$ is arbitrary, we have (\ref{SHORT.lem:mid>length}).
 
 To prove (\ref{SHORT.lem:mid>geod:geod}), 
 one should repeat the same argument 
@@ -416,7 +415,7 @@ Assume the contrary; that is, $\rho(x)<\infty$.
 Indeed, $\spc{X}$ is a length space;
 therefore for any $\eps>0$, 
 the set $\cBall[x,\rho(x)-\eps]$ is a compact $\eps$-net in $B$.
-Since $B$ is closed and hence complete, it has to be compact by Proposition~\ref{compact=seq-compact}.
+Since $B$ is closed and hence complete, it is compact by Proposition~\ref{compact=seq-compact}.
 \claimqeds
 
 \begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
@@ -436,7 +435,7 @@ Choose a finite $\tfrac\eps{10}$-net $\{a_1,a_2,\dots,a_n\}$ in $B$.
 The union $W$ of the closed balls $\cBall[a_i,\eps]$ is compact.
 Clearly 
 $\cBall[x,\rho(x)+\frac\eps{10}]\subset W$.
-Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact;
+Therefore $\cBall[x,\rho(x)+\frac\eps{10}]$ is compact,
 a contradiction.
 \qeds
 
@@ -452,27 +451,27 @@ but whose completion is neither geodesic nor locally compact.
 \label{def:convex-set}
 Let $\spc{X}$ be a geodesic space and $A\subset\spc{X}$.
 
-We say that $A$ 
+We say $A$ is 
 \emph{convex}%
 \index{convex set}
 if for every two points $p,q\in A$ any geodesic $[pq]$ lies in $A$.
 
-We say that $A$ 
+We say $A$ 
 \emph{weakly convex}%
 \index{convex set!weakly convex set}\index{weakly convex set}
 if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
 that lies in $A$.
 
-We say that $A$ is \index{totally convex}\emph{totally convex}
+We say  $A$ is \index{totally convex}\emph{totally convex}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
 
-If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$
+If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$,
 then $A$ is called respectively 
 \emph{$R$-convex},
 \emph{weakly  $R$-convex}%
 \index{weakly convex set!weakly $R$-convex set} 
-and \index{totally convex set!totally $R$-convex set}\emph{totally  $R$-convex}.
+or \index{totally convex set!totally $R$-convex set}\emph{totally  $R$-convex}.
 
 A set $A\subset\spc{X}$ is called 
 \emph{locally convex}
@@ -495,21 +494,21 @@ for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
 Let $\spc{X}_n,$ be a sequence of geodesic spaces.
 Let $\o$ be an ultrafilter on $\mathbb N$; see Definition ~\ref{def:ultrafilter}.
-Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets and 
+Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets, and 
 $\spc{X}_n\to \spc{X}_\o$ and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
 Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
 \end{thm}
 
 \parit{Proof.}
 Fix $x_\o,y_\o\in A_\o$.
-Consider the sequences $x_n,y_n\in A_n$ such that $x_n\to x_\o$ and $y_n\to y_\o$ as $n\to\o$.
+Consider sequences $x_n,y_n\in A_n$ such that $x_n\to x_\o$ and $y_n\to y_\o$ as $n\to\o$.
 
 Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ that lies in $A_n$.
 Set
 \[\alpha_\o(t)=\lim_{n\to \o}\alpha_n(t).\]
 
 Note that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
-Hence the result follows.
+The proposition follows.
 \qeds
 
 
