@@ -53,7 +53,7 @@ we denote by $\geodpath_{[pq]}$ the corresponding geodesic path;
 that is, 
 $$\geodpath_{[pq]}(t)\z\equiv\geod_{[pq]}(t\cdot\dist[{{}}]{p}{q}{}).$$
 
-A curve $\gamma\:\II\to \spc{X}$ is called a \index{geodesic!local geodesic}\emph{local geodesic}, if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.
+A curve $\gamma\:\II\to \spc{X}$ is called a \index{geodesic!local geodesic}\emph{local geodesic} if for any $t\in\II$ there is a neighborhood $U\ni t$ in $\II$ such that the restriction $\gamma|_U$ is a constant-speed geodesic.
 If $\II=[0,1]$, then $\gamma$ is called a \index{local geodesic path}\emph{local geodesic path}.
 
 \begin{thm}{Proposition}\label{prop:busemann}
@@ -120,7 +120,7 @@ $\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}
 If $\kappa\le 0$, the  model triangle is  always defined, that is, it exists and is unique up to isometry of $\Lob2\kappa$.
 If $\kappa>0$, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa.\]
-In this case it also exists and is unique up to isometry of $\Lob2\kappa$.
+In this case the model triangle exists and is unique up to isometry of $\Lob2\kappa$.
 The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \index{perimeter}\emph{perimeter of the triple} $p$, $q$, $r$.
 
 If for  $p,q,r\in \spc{X}$,
@@ -262,7 +262,7 @@ Thus, for $\Kappa>\kappa$, we have
 \\
 &=\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
 \end{align*}
-Note that for $ \kappa\ge 0$ a triangle of perimeter $l$ in  $\Lob2\kappa$ lies is a ball of radius $2l$ which easily implies that  $\area\modtrig\kappa(pxy)\le 100\ell^2$.
+Note that for $ \kappa\ge 0$ a triangle of perimeter $l$ in  $\Lob2\kappa$ lies in a ball of radius $2l$,  which easily implies that  $\area\modtrig\kappa(pxy)\le 100\ell^2$.
 For $\kappa<0$ one gets the same estimate by a direct computation in the hyperbolic plane.
 
 %the area of a model triangle with perimeter $\ell$ in  $\Lob2\kappa$ can not exceed the area of a hemisphere with the equator of length $\ell$;
@@ -275,7 +275,7 @@ Therefore
 &
 \area\modtrig\Kappa(pxy)&\le 100\ell^2.
 \end{align*}
-Thus, \ref{eq:k-K} follows.
+Thus \ref{eq:k-K} follows.
 \qeds
 
 
@@ -370,7 +370,8 @@ for any $\eps>0$ and all sufficiently small $t$.
 Hence the result.
 \qeds
 
-\section{Space of directions and tangent space}
+\section{Space of directions} 
+%and tangent space}
 \label{sec:tangent-space+directions}
 
 Let $\spc{X}$ be a metric space.
@@ -415,6 +416,8 @@ and whose metric is given by the cosine rule
 \sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\theta},
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
+We write $(t,x), t \ne 0$, as $t\cdot x$, referred to as \emph{cone multiplication}.
+%S: Note added sentence.
 
 The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{tip of the cone}\emph{tip of the cone} and is denoted by $\0$ or $\0_{\spc{Y}}$.
 For $v\in\spc{Y}$ the distance $\dist{\0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
@@ -440,11 +443,10 @@ set
 \frac{\dist{\alpha(\eps)}{\beta(\eps)}{\spc{X}}}\eps.
 \eqlbl{eq:dist-in-T_p}.\]
 If the angles in $\spc{X}$ are defined, then so is
-the limit in \ref{eq:dist-in-T_p}.
-In this case it defines a pseudometric on $\mathfrak{T}_p$.
+the limit in \ref{eq:dist-in-T_p}, and we obtain a pseudometric on $\mathfrak{T}_p$.
 
 
-The corresponding metric space admits a natuaral isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
+The corresponding metric space admits a natural isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
 The elements of $\T'_p$ are formed by the equivalence classes for the relation 
 \[\alpha\sim\beta\quad \iff\quad \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
@@ -458,7 +460,7 @@ The {}\emph{tip of the tangent cone} $\T_p$ will be denoted by $\0$ or $\0_{p}$.
 
 \begin{thm}{Definition}\label{def:right-derivative}
 Let $\spc{X}$ be a metric space.
-Assume $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ is a function, not necessarily continuous, such that $\alpha(0)=p$.
+Let $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
 briefly $\alpha^+(0)\z=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$,
 with corresponding geodesics $\gamma_n$, 
@@ -466,7 +468,7 @@ such that $v_n\to v$ as $n\to\infty$, we have
 \[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\quad \text{as}\quad n\to\infty.\]
 
 We define right and left derivatives $\alpha^+(t_0)$ and $\alpha^-(t_0)$
-of $\alpha$ at $t_0\in\II$ as 
+of $\alpha$ at $t_0\in\II$ by 
 \[\alpha^\pm(t_0)=\check\alpha^+(0),\] where $\check\alpha(t)=\alpha(t_0\pm t)$.
 \end{thm}
 
@@ -500,7 +502,7 @@ The needed map $\alpha$ can be found among the maps such that $\alpha(0)\z=p$ an
 \[\alpha(t)=\gamma_n(t)\quad \text{if}\quad \eps_{n+1}\le t<\eps_n,\]
 where $(\eps_n)$
 is a decreasing sequence converging to $0$ as $n\to\infty$.
-In order to satisfy the conclusion of the proposition one has to choose the sequence $\eps_n$ converging to $0$ very fast.
+In order to satisfy the conclusion of the proposition, one has to choose the sequence $\eps_n$ converging to $0$ very fast.
 \qeds
 
 \begin{thm}{Definition}\label{def:diff-curv}
@@ -522,7 +524,7 @@ Assume $\spc{X}$ is a metric space with defined angles.
 Show that any geodesic $\gamma\:\II\to\spc{X}$ is differentiable everywhere.
 \end{thm}
 
-Recall that the speed of curve is defined in \ref{thm:speed}.
+Recall that the speed of a curve is defined in \ref{thm:speed}.
 
 \begin{thm}{Exercise}\label{ex:diff}
 Let $\alpha$ be a curve in a metric space with defined angles.
@@ -535,11 +537,12 @@ Show that $\alpha$ is differentiable at $t$.
 \section{Differential}\index{differential}
 
 \begin{thm}{Definition}\label{def:differential}
-Let $\spc{X}$ be a metric space with defined angles and
-$f\:\spc{X}\subto\RR$ be a subfunction, 
-$p\in\Dom f$ and $\II$ be a real interval.
-A function $\phi\:\T_p\to\RR$ is called the differential of $f$ at $p$
-(briefly $\phi=\dd_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\alpha(0)=p$ and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
+Let $\spc{X}$ be a metric space with defined angles, and
+$f\:\spc{X}\subto\RR$ be a subfunction. For 
+$p\in\Dom f$, 
+%and $\II$ be a real interval.
+a function $\phi\:\T_p\to\RR$ is called the differential of $f$ at $p$
+(briefly $\phi=\dd_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\II$ is a real interval, $\alpha(0)=p$,  and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:differential}
@@ -551,13 +554,13 @@ the differential $\dd_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of
 \end{subthm}
 
 \begin{subthm}{prop:differential:homo}
-$\dd_pf\:\T_p\to\RR$ is a positive homogenius function;
+$\dd_pf\:\T_p\to\RR$ is a positive homogeneous function;
 that is, for any $\lam\ge 0$ and $v\in\T_p$ we have 
 \[\lam\cdot\dd_pf(v)=\dd_pf(\lam\cdot v).\]
 \end{subthm}
 
 \begin{subthm}{prop:differential:ultra}
-\[\dd_pf=\dd^\o_pf|_{\T_p}\]
+\[\dd_pf=\dd^\o_pf|_{\T_p}.\]
 \end{subthm}
 
 
@@ -568,7 +571,7 @@ that is, for any $\lam\ge 0$ and $v\in\T_p$ we have
 Passing to a subdomain of $f$ if necessary,
 we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
 
-Take a geodesic $\gamma$ starting at $p$ that lies in $\Dom f$.
+Take a geodesic $\gamma$  in $\Dom f$ starting at $p$.
 Since $f\circ\gamma$ is semiconcave,
 the right derivative $(f\circ\gamma)^+(0)$ is defined.
 Since $f$ is  $\Lip$-Lipschitz, we have
@@ -578,12 +581,12 @@ Since $f$ is  $\Lip$-Lipschitz, we have
 for any other geodesic $\gamma_1$ starting at $p$.
 
 Define $\phi\:\T'_p\to\RR\:\gamma^+(0)\mapsto(f\circ\gamma)^+(0)$.
-From \ref{gam-bargam}, $\phi$ is a $\Lip$-Lipschtz function defined on $\T_p'$.
-Thus, we can extend $\phi$ to a whole $\T_p$ as a $\Lip$-Lipschitz function. 
+From \ref{gam-bargam}, $\phi$ is an $\Lip$-Lipschtz function defined on $\T_p'$.
+Thus we can extend $\phi$ to all of  $\T_p$ as an $\Lip$-Lipschitz function. 
 
 {\sloppy 
 
-It remains to show that $\phi$ is differential of $f$ at $p$.
+It remains to show that $\phi$ is the differential of $f$ at $p$.
 Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
 Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
 that is, if 
@@ -607,7 +610,7 @@ The last part follows from the definitions of differential and ultradifferential
 In Alexandrov geometry, angles defined as in Section \ref{sec:angles} always exist (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
 
 For general metric spaces, angles may not exist, \index{$\mangle$!$\mangle^\text{up}$}
-and given a hinge $\hinge p x y$  it is more natural to consider the \index{angle!upper angle}\emph{upper angle}  defined as
+and given a hinge $\hinge p x y$  it is more natural to consider the \index{angle!upper angle}\emph{upper angle}  defined by
 \[\mangle^\text{up}\hinge p x y
 \df
 \limsup_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\]
