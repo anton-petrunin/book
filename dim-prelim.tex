@@ -19,7 +19,7 @@ Its Hausdorff dimension is defined as
 \end{thm}
 
 Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\IndexSet[2]}$
- be its open cover.
+ be an open cover of $\spc{X}$.
 Let us recall two notions in general topology:
 \begin{itemize}
 
@@ -33,7 +33,7 @@ Let us recall two notions in general topology:
 \label{def:TopDim}
 \index{dimension!topological dimension}
 Let $\spc{X}$ be a metric space. 
-The topological dimension of $\spc{X}$ is defined as the minimum of nonnegative integers $n$ 
+The topological dimension of $\spc{X}$ is defined to be the minimum of nonnegative integers $n$ 
 such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
 
 If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
@@ -60,11 +60,11 @@ If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$, then
 
 \end{thm}
 
-\parbf{On product spaces.} Let us mention that the following two inequalities
+\parbf{On product spaces.} Let us mention that the following two inequalities,
 \begin{align*}
 \TopDim  (\spc{X}\times\spc{Y})
 &\le 
-\TopDim \spc{X}+ \TopDim\spc{Y},
+\TopDim \spc{X}+ \TopDim\spc{Y}
 \intertext{and}
 \HausDim (\spc{X}\times\spc{Y})
 &\ge 
@@ -73,7 +73,7 @@ If $\{A_n\}_{n=1}^\infty$ is a countable closed cover of $\spc{X}$, then
 hold for any pair of metric spaces $\spc{X}$ and $\spc{Y}$.
 
 These inequalities might be strict.
-For  topological dimension  this holds for a pair of Pontryagin surfaces constructed in \cite{pontyagin-surface}.
+For  topological dimension,  strict inequality holds for a pair of Pontryagin surfaces constructed in \cite{pontyagin-surface}.
 For Hausdorff dimension, an example was constructed by Abram Besicovitch and Pat Moran \cite{besicovitch-moran}.
 
 \medskip
@@ -97,7 +97,7 @@ Let $\spc{X}$ be a metric space
 and $F\:\spc{X}\to\RR^m$ be  a continuous map.
 A point $\bm{z}\in \Im F$ is called a  \index{stable value}\emph{stable value} of $F$
 if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
-for any $\eps$-close continuous map $F'\:\spc{X}\to\RR^m$;
+for any $\eps$-close continuous map $F'\:\spc{X}\to\RR^m$,
 that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
 \end{thm}
 
@@ -160,12 +160,12 @@ The following exercise is based on a construction of Thomas Foertsch and Viktor 
 it shows that the condition on angles in \ref{eq:inverse-product-axiom} cannot be removed.
 
 \begin{thm}{Exercise}\label{ex:schroeder-foetch}
-Construct metrics $\rho_1$ and $\rho_2$ on $\RR^{10}$ defined by norms such that $(\RR^{10},\rho_i)$ do \emph{not} an isometric copy of $\EE^2$ but
+Construct metrics $\rho_1$ and $\rho_2$ on $\RR^{10}$ defined by norms, such that the $(\RR^{10},\rho_i)$ do \emph{not} contain an isometric copy of $\EE^2$ but
 $(\RR^{10},\rho_1)\times (\RR^{10},\rho_2)$ has an isometric copy of $\EE^{10}$.
 \end{thm}
 
-The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in both cases of curvature bounded below and above).
-As we shall see in all these cases $\LinDim$  behaves nicely and  is easy to work with.
+The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in cases both of curvature bounded below and curvature bounded above).
+As we shall see, in all these cases $\LinDim$  behaves nicely and  is easy to work with.
 
 \parbf{Remarks.}
 Linear dimension was first introduced by Conrad Plaut in \cite{plaut:survey}

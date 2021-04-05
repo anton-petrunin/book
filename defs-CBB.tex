@@ -232,7 +232,7 @@ a contradiction.
 Note that $\Str(p)=\bigcap_{n\in \NN}\Omega_n$.
 It follows that $\Str(p)$ is a dense G-delta set.
 
-Assume $q\in \Str(p)$;
+Assuming $q\in \Str(p)$,
 let us show that there is a unique geodesic connecting $p$ and $q$.
 Note that it is sufficient to show that for all sufficiently small
 $t>0$ there is a unique point $z$ such that 
@@ -287,7 +287,8 @@ for any $q\in W$, there is a unique geodesic $[pq]$ with
 $p\in A$ that realizes the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
 \end{thm}
 
-Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.%??? V: why is this sentence here? directions of geodesics are not mentioned in the next exercise.
+%Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.%??? V: why is this sentence here? directions of geodesics are not mentioned in the next exercise.
+%S: agreed
 
 \begin{thm}{Exercise}\label{ex:G-delta-not-thru}
 Construct a complete length $\Alex{}$ space $\spc{L}$
@@ -301,12 +302,13 @@ for any geodesic $[xy]$ in $\spc{L}$.
 
 \section{More comparisons}\label{sec:more-angles}
 
-The following theorem makes it easier to use Euclidean intuition in the Alexandrov universe.
-
+The following theorem makes it easier to use Euclidean intuition in the Alexandrov 
+%universe.
+setting.
 \begin{thm}{Theorem}
 \label{thm:defs_of_alex} 
 If $\spc{L}$ is a $\Alex\kappa$ space, 
-then the following conditions hold for all $p,x,y\in \spc{L}$, once the model triangle $\modtrig\kappa(p x y)$ is defined.
+then the following conditions hold for all $p,x,y\in \spc{L}$, provided the model triangle $\modtrig\kappa(p x y)$ is defined.
 
 \begin{subthm}{2-sum} 
 (adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, $z\not=p$ we have
@@ -336,14 +338,18 @@ for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
 \end{subthm}
 
 Moreover, in each case the converse holds if $\spc{L}$ is G-delta geodesic.
-That is if one of the conditions (\ref{SHORT.2-sum}), (\ref{SHORT.point-on-side}) or  (\ref{SHORT.angle}) holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
+That is, if one of the conditions (\ref{SHORT.2-sum}), (\ref{SHORT.point-on-side}) or  (\ref{SHORT.angle}) holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
 \end{thm}
 
 \parbf{Remarks.} 
 Monotonicity of the model angle with respect to adjacent sidelengths (\ref{cor:monoton}) was named the \index{convexity property}\emph{convexity property} by Alexandrov.
 %???REF???
 
-A bit weaker form of (\ref{SHORT.angle}) 
+A 
+%bit weaker 
+slightly stronger
+%S:note change
+form of (\ref{SHORT.angle}) 
 is given in \ref{lem:devel-glob}.
 See also Problem~\ref{open:hinge-}.
 
@@ -466,7 +472,7 @@ but meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is 
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:lebedeva-petrunin}
-Let $\spc{L}$ be a complete length space such that for any quadrouple $p,x,y,z\in\spc{L}$ 
+Let $\spc{L}$ be a complete length space such that for any quadruple $p,x,y,z\in\spc{L}$ 
 the following inequality holds
 \[\dist[2]{p}{x}{}+\dist[2]{p}{y}{}+\dist[2]{p}{z}{}
 \ge
@@ -567,7 +573,7 @@ If $\kappa=0$, then the Busemann function $\bus_\gamma$ is  concave.
 If $\kappa=-1$, then the function 
 \[f=\exp\circ\bus_\gamma\] 
 satisfies
-\[f''- f\le 0\]
+\[f''- f\le 0.\]
 \end{subthm}
 
 \end{thm}
@@ -680,8 +686,8 @@ Consider a fine partition
 Set $x_i=\gamma(t_i)$ and choose a point 
 \[p'\in \Str(x_0,x_1,\dots,x_n)\] 
 sufficiently close to $p$;
-so geodesics $[p'x_i]$ exist for all $i$.
-
+so geodesics $[p'x_i]$ exist for all $i$
+(see Definition~\ref{def:straight}).
 
 {\sloppy 
 
@@ -715,9 +721,9 @@ By hinge comparison (\ref{angle}), we have
 \includegraphics{mppics/pic-815}
 \end{wrapfigure}
 
-Further, since $\gamma$ is a unit-speed geodesic, we have that 
+Further, since $\gamma$ is a unit-speed geodesic, we have 
 \[\sum_{i=1}^n\dist{x_{i-1}}{x_i}{}\le \dist{p'}{x_0}{}+\dist{p'}{x_n}{}.\eqlbl{eq:thm:detr*}\]
-Since $\gamma$ does not pass through $p'$, the comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ does not pass through $\tilde p'$.
+Since $\gamma$ does not pass through $p'$, the development comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ does not pass through $\tilde p'$.
 
 If $\kappa\le 0$, then \ref{eq:thm:detr*} implies that
 \[\theta\df
@@ -761,7 +767,9 @@ Since $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex,
 converges to the natural parametrization of $\tilde \gamma$. % ???(see \ref{lem:lenght-of-convex-curve}). ??? V:: what is this reference? Some explanation or reference is needed here.
 Thus $\tilde \gamma$ is the $\kappa$-development of $\gamma$ with respect to $p$. This proves the "only-if" part of \eqref{thm:devel}.
 
-\noi{($\Leftarrow$).}
+%\noi{($\Leftarrow$).}
+
+\parit{Proof; ``if''-part.}  
 Assuming convexity of the development, we will prove the point-on-side comparison (\ref{point-on-side}). 
 We can assume that $p\notin [x y]$; otherwise the statement is trivial.
 
@@ -789,8 +797,8 @@ Note that in the proof of  ``if''-part we could use a slightly weaker version of
 Namely we proved the following lemma which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
 
 \begin{thm}{Short hinge lemma}\label{lem:devel-glob}
-Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \mathopen{]}y z\mathclose{[}$, then
+Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined, 
+and moreover if $x\in \mathopen{]}y z\mathclose{[}$ then
 \[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
 Assume that  for any hinge $\hinge x p y$ in $\spc{L}$ we have
@@ -818,7 +826,7 @@ The following theorem summarizes equivalent definitions of locally $\Alex{\kappa
 Let $\spc{X}$ be a complete length space and $p\in \spc{X}$.
 Then the following conditions are equivalent:
 \begin{subthmN}
-{curv>=k}(local $\Alex\kappa$ comparison) there is $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}>0$ such that comparison 
+{curv>=k}(local $\Alex\kappa$ comparison) there is $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}>0$ such that the comparison 
 \[\angk\kappa q{x^1}{x^2}
 +\angk\kappa q{x^2}{x^3}
 +\angk\kappa q{x^3}{x^1}
@@ -827,12 +835,12 @@ holds for any $q,x^1,x^2,x^3\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.curv>
 \end{subthmN}
 
 \begin{subthmN}{def:kirszbraun-loc}(local Kirszbraun property) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$, 
-such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended as a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|_{F_3}$).
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}}>0$ 
+such that for any 3-point subset $F_3$ and any 4-point subset $F_4\supset F_3$ in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:kirszbraun-loc}}})$, any short map $f\:F_3\to\Lob2\kappa$ can be extended to a short map $\bar f\:F_4\to\Lob2\kappa$ (so $f=\bar f|_{F_3}$).
 \end{subthmN}
 
 \begin{subthmN}{conc-loc} (local function comparison) there is 
-$R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}}>0$, such that 
+$R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}}>0$ such that 
 $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$ 
 is G-delta geodesic and for any 
 $q\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$, 
@@ -844,7 +852,7 @@ $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.conc-loc}}})$.
 \begin{subthmN}{2-sum-loc} (local adjacent angle comparison) there is
 $R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}}>0$ 
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ 
-is G-delta geodesic and if $q$ and a geodesic $[x y]$ lie in
+is G-delta geodesic, and if $q$ and a geodesic $[x y]$ lie in
 $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.2-sum-loc}}})$ 
 and $z\in \mathopen{]}x y\mathclose{[}$, then
 \[\angk\kappa z q x
@@ -853,9 +861,9 @@ and $z\in \mathopen{]}x y\mathclose{[}$, then
 \end{subthmN}
 
 \begin{subthmN}{monoton-loc} (local point-on-side comparison) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}}>0$, 
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}}>0$ 
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ is G-delta geodesic and if $q$ and a geodesic $[x y]$ lie in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ 
-and $z\in \mathopen{]}x y\mathclose{[}$, we have
+and $z\in \mathopen{]}x y\mathclose{[}$, then
 \[\angk\kappa x q y
 \le\angk\kappa x q z;\]
 or, equivalently, 
@@ -864,10 +872,10 @@ where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\
 \end{subthmN}
 
 \begin{subthmN}{angle-loc} (local hinge comparison) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$, such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$ such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
 
 (1) for any hinge $\hinge x q y$, the angle 
-$\mangle\hinge x q y$ is defined and
+$\mangle\hinge x q y$ is defined, and
 
  (2) if $x\in \mathopen{]}y z\mathclose{[}$, then%
 \footnote{Let us call that $\hinge x q y$ and $\hinge x q z$  are short notations for the pairs $([x q],[x y])$ and $([x q],[x z])$, 
@@ -882,9 +890,9 @@ or, equivalently,
 
 
 \begin{subthmN}{def:devel-alex-loc}(local development comparison) 
-there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}}>0$, 
+there is $R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}}>0$ 
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})$ 
-is G-delta geodesic and if a geodesic $\gamma$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})$ and $q\in 
+is G-delta geodesic, and if a geodesic $\gamma$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})$ and $q\in 
 \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.def:devel-alex-loc}}})
 \backslash \gamma$, then the $\kappa$-development $\tilde \gamma$ with respect to $q$ is convex.
 \end{subthmN}
@@ -892,7 +900,7 @@ Moreover, for each pair $i,j\in \{1,2,\dots,7\}$ we can assume that
 \[R_i>\tfrac{1}{9}\cdot R_j.\]
 \end{thm}
 
-The proofs of each of these equivalence repeat the proofs of the corresponding global equivalences in localized form; see the proofs of theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}.
+The proofs of each of these equivalences repeat the proofs of the corresponding global equivalences in localized form; see the proofs of Theorems \ref{thm:defs_of_alex}, \ref{thm:conc}, \ref{def:devel}, \ref{thm:kirsz-def}.
 
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
@@ -902,7 +910,7 @@ Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 {\sloppy
 
 In the two-dimensional case this theorem was proved by Paolo Pizzetti \cite{pizzetti};
-later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref???
+later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref??? 
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}; 
 simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{burago-burago-ivanov}.
@@ -915,10 +923,10 @@ Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space.
 Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
 \end{thm}
 
-Our proof, is based on presentations in \cite{plaut:dimension} and \cite{burago-burago-ivanov};
+Our proof of Globalization theorem \ref{thm:glob} is based on presentations in \cite{plaut:dimension} and \cite{burago-burago-ivanov};
 this proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 
-The following corollary says that the expression ``space with curvature $\ge \kappa$'' makes sense.
+The following corollary of the globalization  theorem says that the expression ``space with curvature $\ge \kappa$'' makes sense.
 
 \begin{thm}{Corollary}\label{cor:CAT>k-sence}
 Let $\spc{L}$ be a complete length space.
@@ -933,15 +941,15 @@ The ``if''-part also follows directly from the definition.
 For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined while $\angk{\kappa} x y z$ is defined.
 However, $\angk{\Kappa} x y z$ is defined if $x$, $y$ and $z$ are sufficiently close to each other.
 Thus, if $\Kappa>\kappa$, then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
-It remains to apply the  globalization theorem (\ref{thm:glob}).
+It remains to apply the  globalization theorem.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:submetry-cbb}
 Let $\spc{L}$ be a complete length $\Alex\kappa$ space.
-Assume that a space  $\spc{M}$ is a target space of a submetry from $\spc{L}$.
+Assume that a space  $\spc{M}$ is the target space of a submetry from $\spc{L}$.
 Then $\spc{M}$ is a complete length space $\Alex\kappa$ space.
 
-In particular, if $G\acts \spc{L}$ an isometric group action with closed orbits, then the quotient space $\spc{L}/G$ is a complete length space $\Alex\kappa$ space.
+In particular, if $G\acts \spc{L}$ is an isometric group action with closed orbits, then the quotient space $\spc{L}/G$ is a complete length $\Alex\kappa$ space.
 \end{thm}
 
 \parit{Proof.}
@@ -991,11 +999,11 @@ for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
 Fix $q$.
 Consider a hinge $\hinge x p q$ such that 
 \[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell.\]
-Let us construct a new smaller hinge $\hinge{x'}p q$; that is,
+First we  construct a new smaller hinge $\hinge{x'}p q$, that is,
 \[
-\dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{}
+\dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
 \eqlbl{eq:thm:=def-loc-fourstar}\]
-and such that 
+such that 
 \[\side\kappa \hinge x p q
 \ge\side\kappa \hinge{x'}p q.
 \eqlbl{eq:thm:=def-loc-fivestar}\]
@@ -1005,7 +1013,7 @@ Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$, otherwise switch the roles of $p$ and $q
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell \eqlbl{3|xx'|}\]
-Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ fromed by $[x'p]$ and $[x' q]\subset [x q]$. 
+Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$. 
 (In fact the same argument as in \ref{thm:g-split} shows that the 
 condition $[x' q]\subset [x q]$ always holds.)
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
@@ -1084,7 +1092,7 @@ this yields
 Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
-The following lemma works in all complete spaces; it will  serve as a substitution for the  existence of a minimum point of a continuous function on a compact space.
+The following lemma works in all complete spaces; it will be used as a substitute for the  existence of a minimum point of a continuous function on a compact space.
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
@@ -1157,7 +1165,7 @@ p\in \spc{L}.
 We argue by contradiction, assuming that  \ref{eq:thm:=def-loc-star-star} does not hold.
 
 The rest of the proof is easier for geodesic spaces 
-and yet easier still for compact spaces.
+and easier still for compact spaces.
 Thus we give three different arguments  for each of these cases.
 
 \parit{Compact case.}
@@ -1198,7 +1206,7 @@ Therefore a similar statement is true in the ultrapower $\spc{L}^\o$;
 that is,
 for any point
 $q_\o\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}^\o$, 
-Condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
+condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
 
 
 Note that $r^*\ge\ComRad(p^*,\spc{L}^\o)$.
@@ -1223,7 +1231,7 @@ All proofs in this section can be easily modified to use only the local definiti
 \begin{thm}{Geodesics do not split}\label{thm:g-split}
 In a $\Alex{}$ space, geodesics do not bifurcate.
 
-More precisely: let $\spc{L}$ be a $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics, then
+More precisely, let $\spc{L}$ be a $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics. Then:
 \begin{subthm}{nonsplit} If  there is an $\eps>0$, such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
 for all $t\in[0,\eps)$, 
 then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
@@ -1251,17 +1259,17 @@ To deal with $\kappa>0$ we have to argue locally.
 \parit{Proof of \ref{thm:g-split}; (\ref{SHORT.nonsplit}).}
 Let $t_{\max}$ be the maximal value 
 such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ for all $t\in [0,t_{\max})$.
-Since geodesics are continuous $\geod_{[p x]}(t_{\max})\z=\geod_{[p y]}(t_{\max})$; 
-set
+Since geodesics are continuous, $\geod_{[p x]}(t_{\max})\z=\geod_{[p y]}(t_{\max})$.
+Let
 \[q=\geod_{[p x]}(t_{\max})\z=\geod_{[p y]}(t_{\max}).\]
-We have to show that $t_{\max}=\min\{\dist{p}{x}{},\dist{p}{y}{}\}$.
+We must show that $t_{\max}=\min\{\dist{p}{x}{},\dist{p}{y}{}\}$.
 
 If that is not true, choose a sufficiently small $\eps>0$ such that the  points
 \[x_\eps=\geod_{[p x]}(t_{\max}+\eps)\quad 
 \text{and}\quad  
   y_\eps=\geod_{[p y]}(t_{\max}+\eps)\] 
 are distinct.
-Set
+Let
 \[z_\eps=\geod_{[p x]}(t_{\max}-\eps)
 =\geod_{[p y]}(t_{\max}-\eps).\]
 Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
@@ -1286,12 +1294,12 @@ From hinge comparison (\ref{angle}) we have that both angles
 $\mangle\hinge z p y$ and $\mangle\hinge z p x$ are defined and 
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi.\]
 Clearly $\mangle\hinge z x y=\pi$.
-Thus, the result follows from the triangle inequality for angles (\ref{claim:angle-3angle-inq}).
+Thus the result follows from the triangle inequality for angles (\ref{claim:angle-3angle-inq}).
 \qeds
 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont-cbb}
-Let $\spc{L}_n$  be a sequence of $\Alex\kappa$ spaces
+Suppose  $(\spc{L}_n)$  is a sequence of $\Alex\kappa$ spaces,
 % for each $n\in\NN$
  and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{L}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{L}_\o$.
@@ -1329,11 +1337,11 @@ Hence the result.
 \qeds
 
 \begin{thm}{Angle continuity}\label{cor:ang.cont-cbb}
-Let $\spc{L}_n$  be a sequence of complete length $\Alex\kappa$ spaces
+Let $(\spc{L}_n)$  be a sequence of complete length $\Alex\kappa$ spaces,
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
-Assume that sequences $p_n, x_n, y_n$ in $\spc{L}_n$ 
-converges respectively to the points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$
-and the following two conditions hold
+Assume that sequences of points $p_n, x_n, y_n$ in $\spc{L}_n$ 
+converge  to points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$,
+and the following two conditions hold:
 \begin{subthm}{}
 $p_\o\in \Str(x_\o)$,
 \end{subthm}
@@ -1362,7 +1370,7 @@ converge to
 $\hinge{p_\o}{x_\o}{y_\o}$
 as $n\to\o$.
 Hence by angle semicontinuity (\ref{lem:ang.semicont-cbb}), 
-we get
+we have
 \[
 \mangle\hinge{p_\o}{x_\o}{y_\o}
 \le
@@ -1385,8 +1393,8 @@ such that
 The hinge comparison  (\ref{angle}) implies that
 \[\mangle\hinge{p_\o}{x_\o}{q_\o}>\pi-\eps.
 \eqlbl{eq:>pi-eps}\]
-The triangle inequality for angles
-(\ref{claim:angle-3angle-inq})
+By the triangle inequality for angles
+(\ref{claim:angle-3angle-inq}),
 \[
 \begin{aligned}
 \mangle\hinge{p_\o}{x_\o}{y_\o}
@@ -1402,8 +1410,8 @@ The triangle inequality for angles
 Note that we can assume in addition that $q_\o\in\Str(p_\o)$.
 Choose $q_n\in\spc{L}_n$
 such that $q_n\to q_\o$ as $n\to\o$.
-Note that by the angle semicontinuity
- we again get
+Note that by angle semicontinuity
+ we again have
 \[
 \begin{aligned}
 \mangle\hinge{p_\o}{x_\o}{q_\o}
@@ -1418,14 +1426,14 @@ Note that by the angle semicontinuity
 \]
 
 
-By $\Alex\kappa$ comparison (\ref{df:cbb1+3}) and \ref{cor:monoton:sup}, we get
+By $\Alex\kappa$ comparison (\ref{df:cbb1+3}) and \ref{cor:monoton:sup}, 
 \[\mangle\hinge{p_n}{x_n}{y_n}
 +\mangle\hinge{p_n}{y_n}{q_n}
 +\mangle\hinge{p_n}{x_n}{q_n}
-\le 2\cdot\pi.\]
+\le 2\cdot\pi\]
 for all $n$.
 Together with \ref{eq:semicont}, \ref{eq:>pi-eps} and \ref{eq:ang-trig}, 
-it implies
+this implies
 \begin{align*}
 \lim_{n\to\o} \mangle\hinge{p_n}{x_n}{y_n}
 &\le
@@ -1472,11 +1480,11 @@ Then for any hinge  $\hinge  p q x$ we have
 \substack{
 \bar x\to p
 \\
-\bar x\in\,\mathopen{]}px]}}\angk\kappa p q{\bar x}.\eqlbl{eq:1st-var+***}\]
+\bar x\in\,\mathopen{]}px]}}\angk\kappa p q{\bar x}\eqlbl{eq:1st-var+***}\]
 for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
 
 
-In partiqular \ref{eq:1st-var+***} holds if $p\in \Str(q)$ as well as if $q\in \Str(p)$ 
+In particular, \ref{eq:1st-var+***} holds if $p\in \Str(q)$ as well as if $q\in \Str(p)$. 
 \end{thm}
 
 \parbf{Remark.}
@@ -1485,7 +1493,7 @@ In partiqular \ref{eq:1st-var+***} holds if $p\in \Str(q)$ as well as if $q\in \
 The right hand side in \ref{eq:1st-var+***} is called the \index{angle!strong angle}\index{strong angle}\emph{strong angle} of the  hinge $\hinge p q x$. 
 Note that in a general metric space the angle and the strong angle of the same hinge might differ.
 
-\item As it follows from Corollary~\ref{cor:two-geodesics-in-ultrapower}, 
+\item As follows from Corollary~\ref{cor:two-geodesics-in-ultrapower}, 
 if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$, then $[p q]$ lies in $\spc{L}$.
 \end{itemize}
 
@@ -1493,9 +1501,9 @@ if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$, then $[p q
 
 \parit{Proof of \ref{lem:strong-angle}.}
 The first statement follows directly from the first variation formula (\ref{1st-var+}) 
-and definition of model angle (see Section~\ref{sec:angles}).
-The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) applyied to $\spc{L}^\o$.
-(Note that according to Proposition~\ref{prp:A^omega} $\spc{L}^\o$ is a complete length $\Alex{}$ space.)\qeds
+and the definition of model angle (see Section~\ref{sec:angles}).
+The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) applied to $\spc{L}^\o$.
+(Note that according to Proposition~\ref{prp:A^omega}, $\spc{L}^\o$ is a complete length $\Alex{}$ space.)\qeds
 
 
 \parit{Proof of \ref{1st-var+}.}
@@ -1508,7 +1516,7 @@ follows from the first variation inequality (\ref{lem:first-var}).
 Thus, it is sufficient to show that
 \[\dist{q}{\geod_{[p x]}(t)}{}
 \ge\dist{q}{p}{}-t\cdot\cos\phi+o(t).\]
-Assume the contrary, then there is $\eps>0$, such that  $\phi+\eps<\pi$
+Assume the contrary. Then there is $\eps>0$ such that  $\phi+\eps<\pi$,
 and for a sequence $t_n\to 0+$ we have
 \[\dist{q}{\geod_{[p x]}(t_n)}{}
 <
@@ -1524,11 +1532,11 @@ Assume $\spc{L}$ is geodesic.
 Choose a sequence of geodesics $[x_n q]$.
 Let $[x_n q]\to [pq]_{\spc{L}^\o}$  as $n\to\o$ (in general $[pq]$ might lie in $\spc{L}^\o$).
 Applying both parts of hinge comparison (\ref{angle}), 
-we get that $\mangle\hinge {x_n}{q}{x}\z<\phi-\tfrac\eps2$  for all large $n$.
+we have $\mangle\hinge {x_n}{q}{x}\z<\phi-\tfrac\eps2$  for all large $n$.
 According to \ref{lem:ang.semicont-cbb}, the angle between $[pq]$ and $[px]$ is at most $\phi-\tfrac\eps2$, a contradiction.
 
 
-Finally, if $\spc{L}$ is not geodesic choose a sequence $q_n\in\Str(x_n)$, such that $q_n\to q$ and the inequality 
+Finally, if $\spc{L}$ is not geodesic, choose a sequence $q_n\in\Str(x_n)$, such that $q_n\to q$ and the inequality 
 \[\angk\kappa{x_n}{p}{q_n}\z>\pi-\phi+\tfrac\eps2\] still holds.
 Then the same argument as above shows that $[x_n q_n]$ $\o$-converges to a geodesic  $[pq]_{\spc{L}^\o}$ from $p$ to $q$  having angle at most $\phi-\tfrac{\eps}{2}$ with $[px]$.
 \qeds
@@ -1567,17 +1575,17 @@ Assume that $\spc{L}$ is a geodesic space and $\diam \spc{L}>\pi$.
 Choose $x, y\in \spc{L}$ so that $\dist{x}{y}{}=\pi+\eps$, $0<\eps<\tfrac{\pi}{4}$. 
 By moving $y$ slightly, we can also assume that the  geodesic $[x y]$ is unique;
 to prove this, use either Plaut's theorem (\ref{thm:almost.geod}) 
-or that  geodesics do not split (\ref{thm:g-split}).
+or the fact that  geodesics do not split (\ref{thm:g-split}).
 Let $z$ be the midpoint of the geodesic $[x y]$.
 
 Consider the function $f=\distfun{x}{}{}+\distfun{y}{}{}$.
-As it follows from Lemma~\ref{concave-pi/2}, 
+As follows from Lemma~\ref{concave-pi/2}, 
 $f$ is concave in $\oBall(z,\tfrac{\eps}{4})$.  
 Let $p\in\oBall(z,\tfrac{\eps}{4})$.  
 Choose a geodesic $[z p]$. 
 Set $h(t)=f\circ\geod_{[z p]}(t)$ and $\ell=\dist{z}{p}{}$.
 Clearly $h$ is concave.
-From Adjacent angle lemma (\ref{lem:sum=pi}), we have that $h^+(0)=0$. 
+From the adjacent angle lemma (\ref{lem:sum=pi}), we have $h^+(0)=0$. 
 Therefore $h$ is nonincreasing which means that \[\dist{x}{p}{}+\dist{y}{p}{}
 =
 h(\ell)\le h(0)
@@ -1587,7 +1595,7 @@ Since the geodesic $[x y]$ is unique this means that $p\in [x y]$ and hence
  $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
 Since in $\Alex{}$ spaces, geodesics do not bifurcate (\ref{nonsplit}), 
 it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$ as a local geodesic $\gamma$ 
-(which might be not minimizing).
+(which might not be minimizing).
 In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold with possibly non empty boundary.
 From this, it is easy to see that $\spc{L}$ falls into one of the exceptional spaces described in the theorem.
 
@@ -1609,7 +1617,7 @@ This is a consequence of \ref{comp-kappa}.
 
 \begin{thm}{Exercise}\label{ex:fixed-point}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex1$ space and $\diam\spc{L}\le\pi$.
-Assume that a group $G$ acts on  $\spc{L}$ by isometries and has closed orbits and 
+Assume that a group $G$ acts on  $\spc{L}$ by isometries, has closed orbits, and 
 \[\diam(\spc{L}/G)>\tfrac\pi2.\]
 Show that the action of $G$ has a fixed point in $\spc{L}$.
 \end{thm}
@@ -1622,8 +1630,8 @@ Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfra
 {\sloppy 
 
 \begin{thm}{On perimeter of a triple}\label{perim-k>0}
-Let  
-$\spc{L}$ be a complete length $\Alex1$ space
+Suppose  
+$\spc{L}$ is a complete length $\Alex1$ space
 and $\diam \spc{L}\le \pi$.
 Then the perimeter of any triple of points $p,q,r\in \spc{L}$ is at most $2\cdot\pi$.
 \end{thm}
@@ -1640,7 +1648,7 @@ but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
 By Corollary \ref{cor:CAT>k-sence},
 after rescaling $\spc{L}$ is still $\Alex1$.
 
-Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider case when there is a geodesic $[q r]$. 
+Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider the case when there is a geodesic $[q r]$. 
 
 \begin{wrapfigure}{r}{35 mm}
 \vskip-0mm
@@ -1648,13 +1656,12 @@ Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to
 \includegraphics{mppics/pic-840}
 \end{wrapfigure}
 
-First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} we have that the function
-\[y(t)=\md1\dist[{{}}]{p}{\geod_{[q r]}(t)}{}\]
+First note that since $\diam \spc{L}<\pi$, by \ref{comp-kappa} the function \[y(t)=\md1\dist[{{}}]{p}{\geod_{[q r]}(t)}{}\]
 satisfies the differential inequality $y''\le 1- y$.
 
 
-Take $z_0\in [q r]$ so that restriction $\distfun{p}{}{}|_{[q r]}$ attains its maximum at $z_0$, 
-set $t_0=\dist{q}{z_0}{}$ so $z_0=\geod_{[q r]}(t_0)$.
+Take $z_0\in [q r]$ so that the restriction $\distfun{p}{}{}|_{[q r]}$ attains its maximum at $z_0$, 
+and set $t_0=\dist{q}{z_0}{}$ so $z_0=\geod_{[q r]}(t_0)$.
 Consider the following model configuration: two geodesics $[\tilde p\tilde z_0]$, $[\tilde q\tilde r]$ in $\mathbb{S}^2$ such that 
 \begin{align*}
 \dist{\tilde p}{\tilde z_0}{}&=\dist{p}{z_0}{},
@@ -1678,14 +1685,14 @@ $y(t)\le y(t_0)+o(t-t_0)$;
 thus, $\bar y(t)$ is a barrier for 
 $y(t)=\md1\dist[{{}}]{p}{\geod_{[q r]}(t)}{}$ at 
 $t_0$ by \ref{barrier'}.
-From barrier inequality (\ref{barrier'}), we get 
+From the barrier inequality \ref{barrier'}, we get 
 \[\dist{\tilde p}{\geod_{[\tilde q\tilde r]}(t)}{}
 \ge 
 \dist{p}{\geod_{[q r]}(t)}{},\]
-thus, $\dist{\tilde p}{\tilde q}{}\ge\dist{p}{q}{}$ and $\dist{\tilde p}{\tilde r}{}\ge\dist{p}{r}{}$.
+and hence $\dist{\tilde p}{\tilde q}{}\ge\dist{p}{q}{}$ and $\dist{\tilde p}{\tilde r}{}\ge\dist{p}{r}{}$.
 
-Therefore, 
-$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ can not exceed the perimeter of the  spherical triangle $\trig{\tilde p}{\tilde q}{\tilde r}$; 
+Therefore 
+$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ cannot exceed the perimeter of the  spherical triangle $\trig{\tilde p}{\tilde q}{\tilde r}$; 
 that is,
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\le 2\cdot\pi,\]
 a contradiction.
@@ -1699,8 +1706,8 @@ This definition works well for $\Alex{}$ spaces,  for $\CAT{}$ spaces there is a
 Some authors define the comparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$.
 
 \begin{thm}{Definition of extended angle}\label{def:extended-angle}
-Let $p,q,r$ be points in a metric space such that $p\not=q$, $p\not=r$. 
-Then set
+Suppose $p,q,r$ are points in a metric space, and $p\not=q$, $p\not=r$. 
+Let
 \[\angk{\kappa+} p q r=\sup\set{\angk{\Kappa} p q r}{\Kappa\le\kappa}.\]
 The value $\angk{\kappa+} p q r$ is called the \index{angle!extended model angle}\index{model angle!extended model angle}\index{extended model angle}\emph{extended model angle} of the triple $p$, $q$, $r$.
 \end{thm}
@@ -1721,7 +1728,7 @@ Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated usi
 \begin{subthm}{} $\angk{\kappa+} p q r=\angk{\kappa+} p r q=0$ if $\dist{p}{q}{}+\dist{q}{r}{}=\dist{p}{r}{}$;
 \end{subthm}
 
-\begin{subthm}{} $\angk{\kappa+} p q r=\pi$ if none of above is applicable. 
+\begin{subthm}{} $\angk{\kappa+} p q r=\pi$ if none of the above is applicable. 
 \end{subthm}
 \end{thm}
 
@@ -1737,7 +1744,7 @@ The rules for calculating extended angle is an easy consequence of its definitio
 \section{Remarks and open problems}
 
 The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long standing open problem (possibly dating back to Alexandrov),
-but as far as we know, in print it was first stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
+but as far as we know it was first stated in print in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 
 
 \begin{thm}{Open question}\label{open:hinge-}
