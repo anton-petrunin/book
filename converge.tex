@@ -1,5 +1,5 @@
 %%!TEX root = the-converge.tex
-\chapter{Convergence of metric spaces}
+\chapter{Space of spaces}
 
 In this section we discuss the
 Gromov--Hausdorff convergence of metric spaces.
@@ -516,7 +516,80 @@ that converges in both
 $\GH$ and $\GH'$, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
 \end{thm}
 
+\section{Relation to ultralimits}
 
+
+\begin{thm}{Theorem}\label{thm:ultra-GH}
+Assume $(\spc{X}_n)$ is a sequence of complete spaces. 
+Let $\spc{X}_n\to \spc{X}_\o$ as $n\to\o$,
+and ($\spc{Y}_n\subset \spc{X}_n$) 
+be a sequence of subsets such that $\spc{Y}_n\GHto\spc{Y}_\infty$. 
+Then there is a distance-preserving map 
+$\iota:\spc{Y}_\infty\to \spc{X}_\o$.
+
+Moreover:
+
+\begin{subthm}{thm:ultra-GH:a}
+If $\spc{X}_n\GHto \spc{X}_\infty$ 
+and $\spc{X}_\infty$ is compact, then 
+$\spc{X}_\infty$ is isometric to $\spc{X}_\o$.
+\end{subthm}
+
+\begin{subthm}{thm:ultra-GH:b}
+If $\spc{X}_n\GHto \spc{X}_\infty$ 
+and $\spc{X}_\infty$ is proper, then 
+$\spc{X}_\infty$ is isometric to a metric component of $\spc{X}_\o$.
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.} 
+For each point $y_\infty\in \spc{Y}_\infty$ 
+choose a lifting $(y_n\in \spc{Y}_n)$.
+Pass to the $\o$-limit $y_\o\in \spc{X}_\o$ of $(y_n)$.
+Clearly for any $y_\infty,z_\infty\in \spc{Y}_\infty$, 
+we have 
+\[\dist{y_\infty}{z_\infty}{\spc{Y}_\infty}=\dist{y_\o}{z_\o}{\spc{X}_\o};\] 
+that is, the map $y_\infty\mapsto y_\o$ gives a distance-preserving map $\iota:\spc{Y}_\infty\to \spc{X}_\o$. 
+
+
+\parit{(\ref{SHORT.thm:ultra-GH:a})$+$(\ref{SHORT.thm:ultra-GH:b}).}
+Fix $x_\o\in \spc{X}_\o$.
+Choose a sequence ($x_n\in \spc{X}_n$) 
+such that $x_n\to x_\o$ as $n\to\o$. 
+
+Denote by $\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ the common space for the convergence $\spc{X}_n\GHto \spc{X}_\infty$,
+as in the definition of Gromov--Hausdorff convergence.
+Consider the sequence $(x_n)$ 
+as a sequence of points in~$\bm{X}$.
+
+If the $\o$-limit $x_\infty$ of $(x_n)$ in $\bm{X}$ exists, 
+it must lie in $\spc{X}_\infty$. 
+
+The point $x_\infty$, if defined, does not depend on the choice of $(x_n)$.
+Indeed, if $y_n\in\spc{X}_n$ is another sequence such that $y_n\to x_\o$ as $n\to\o$, then 
+\[
+\dist{y_\infty}{x_\infty}{}=\lim_{n\to\o}\dist{y_n}{x_n}{}=0;
+\]
+that is, $x_\infty=y_\infty$.
+
+
+In this way we obtain a map $\nu\:x_\o\to x_\infty$, defined on  $\Dom\nu \subset\spc{X}_\o$.
+By construction of $\iota$, 
+we have $\iota\circ\nu(x_\o)=x_\o$ for any $x_\o\in \Dom\nu$.
+
+Finally note that if $\spc{X}_\infty$ is compact, then $\nu$ is defined on all of $\spc{X}_\o$;
+this proves (\ref{SHORT.thm:ultra-GH:a}).
+
+If $\spc{X}_\infty$ is proper, choose any point $z_\infty\in \spc{X}_\infty$
+and set $z_\o=\iota(z_\infty)$.
+For any point $x_\o\in \spc{X}_\o$ at finite distance from $z_\o$,
+for the sequence $(x_n)$ 
+as above we have that $\dist{z_n}{x_n}{}$ is bounded for $\o$-almost all $n$.
+Since $\spc{X}_\infty$ is proper, $\nu(x_\o)$ is defined;
+in other words $\nu$ is defined on the metric component of $z_\o$.
+Hence (\ref{SHORT.thm:ultra-GH:b}) follows.
+\qeds
 
 
 
