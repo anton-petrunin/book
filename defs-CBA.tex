@@ -666,32 +666,6 @@ By Property~\ref{md-diff-eq}, we have $\tilde f''=1-\kappa\cdot  \tilde f$. Clea
 The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\tilde r(t)$  for all $t\in[0,\dist{x}{y}{}]$.  Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, $r\le \tilde r$ and $f\le \tilde f$ are equivalent.  Thus the claim follows by Jensen's inequality 
 (\ref{y''-mono}). \qeds
 
-Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
-The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
-
-\begin{thm}{Exercise}\label{ex:busemann-CBA}{\sloppy 
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space
-and $\bus_\gamma\:\spc{U}\to \RR$ be the Busemann function for a half-line $\gamma\:[0,\infty)\to \spc{L}$.
-
-}
-
-\begin{subthm}{}
-If $\kappa=0$, then the Busemann function $\bus_\gamma$ is  convex.
-\end{subthm}
-
-\begin{subthm}{}
-If $\kappa=-1$, then the function 
-\[f=\exp\circ\bus_\gamma\] 
-satisfies
-\[f''- f\ge 0.\]
-\end{subthm}
-
-\end{thm}
-
-\section{Convex sets}\label{sec:convex-CBA}
-
-The following is a corollary of Theorem \ref{thm:function-comp}.
-
 \begin{thm}{Corollary}\label{cor:convex-balls}
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 Then any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ in $\spc{U}$ is convex.
@@ -714,186 +688,27 @@ This implies convexity unless there is a pair of points in the ball at distance 
 By the  triangle inequality, the latter is possible only for the closed ball of radius $\tfrac{\varpi\kappa}2$.
 \qeds
 
-\begin{thm}{Proposition}
-Any weakly $\varpi\kappa$-convex set 
-in a complete length $\CAT\kappa$ space is $\varpi\kappa$-convex.
-\end{thm}
+Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
+The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
 
-\parit{Proof.}
-Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-unique}).
-\qeds
-
-
-\begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
-Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
-Then  
-there is unique point $p^*\in K$ that minimizes the distance to $p$;
-that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
+\begin{thm}{Exercise}\label{ex:busemann-CBA}{\sloppy 
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space
+and $\bus_\gamma\:\spc{U}\to \RR$ be the Busemann function for a half-line $\gamma\:[0,\infty)\to \spc{L}$.
 
 }
 
+\begin{subthm}{}
+If $\kappa=0$, then the Busemann function $\bus_\gamma$ is  convex.
+\end{subthm}
+
+\begin{subthm}{}
+If $\kappa=-1$, then the function 
+\[f=\exp\circ\bus_\gamma\] 
+satisfies
+\[f''- f\ge 0.\]
+\end{subthm}
+
 \end{thm}
-
-\parit{Proof.} 
-Fix $r$ properly between $\distfun{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
-By function comparison (\ref{thm:function-comp}) 
-the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
-
-The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'\z=K\cap\cBall[p,r]$ 
-and the restriction $f|_{K'}$. 
-\qeds
-
-\begin{thm}{Exercise}\label{ex:closest-point-projection}
-Let  $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a closed convex set.
-Show that the closest-point projection $\spc{U}\to K$ is short. 
-\end{thm}
-
-\begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
-Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
-Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
-Show that there is a short retraction of $\spc{U}$ to~$K$. 
-\end{thm}
-
-\begin{thm}{Lemma}\label{lem:dist-to-convex}
-Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
-and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
-Set
-\[f=\sn\kappa\circ\distfun{K}{}{}.\]
-Then
-\[f''+\kappa \cdot f\ge 0\]
-holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
-\end{thm}
-
-\parit{Proof.}
-It is sufficient to show that Jensen's inequality (\ref{y''-mono})
-holds on a sufficiently short 
-geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
-Since 
-\[\distfun{K}{p}{},\distfun{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
-we may assume that 
-\[\dist{p}{q}{}+\distfun{K}{p}{}+\distfun{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
-
-Namely, for each $x\in[pq]$,
-we need to find a value $h(x)\in \RR$
-such that for any $x$ we have
-\begin{align*}
-h(x)&\le f(x),&
-h(p)&=f(p),& w
-h(q)&=f(q),
-\end{align*}
-and
-\[h''+\kappa\cdot h\ge 0\eqlbl{h''+kh=<0}\]
-along $[pq]$.
-
-Denote by $p^{*}$ and $q^{*}$ the closest-point projections of $p$ and $q$ on $K$; 
-they are provided by lemma \ref{lem:closest point}.
-From \ref{eq:sum=<varpi} and triangle inequality,
-we get 
-\[\dist{p^*}{q^*}{}<\varpi\kappa.\]
-Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
-in particular
-\[\distfun{K}{x}{}\le \distfun{[p^*q^*]}{x}{}\]
-for any $x\in \spc{U}$.
-
-Consider a majorization $F$ for quadrangle $[pp^{*}q^{*}q]$.
-By Majoriztion theorem \ref{thm:major} and Proposition \ref{prop:majorize-geodesic}, 
-the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*\tilde q]$ in $\Lob2\kappa$ such that 
-\begin{align*}
-\dist{\tilde p}{\tilde p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}}
-&
-\dist{\tilde p}{\tilde q}{\Lob2\kappa}&=\dist{p}{q}{\spc{U}}
-\\
-\dist{\tilde q}{\tilde q^*}{\Lob2\kappa}&=\dist{q}{q^*}{\spc{U}}
-&
-\dist{\tilde p^*}{\tilde q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}
-\end{align*}
-Given $x\in [pq]$, denote by $\tilde x$ the corresponding point on $[\tilde p\tilde q]$.
-According to Majorization theorem, 
-\[\dist{[pq]}{x}{\spc{U}}
-\le
-\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}\]
-for any $x$.
-Set 
-\[h(x)
-=
-\sn\kappa
-\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
-By straghtforward calculations \ref{h''+kh=<0} hods
-and hence the staement follows.
-\qeds
-
-\begin{thm}{Corollary}\label{cor::dist-to-convex}
-Let $\spc{U}$  be a complete length $\CAT\kappa$ space
-and $K\subset \spc{U}$ be a closed  locally convex set.
-Then there is an open set $\Omega\supset K$
-such that the function 
-\[f=\sn\kappa\circ\distfun{K}{}{}\]
-satisfies 
-\[f''+\kappa\cdot f\ge 0\]
-in $\Omega$.
-\end{thm}
-
-\parit{Proof.}
-Fix $p\in K$.
-By Corollary~\ref{cor:convex-balls},
-all $\cBall[p,r]$ is convex for all small $r>0$.
-
-Since $K$ is locally convex there is $r_p>0$ such that 
-the intesection 
-$K'=K\cap \oBall(p,r_p)$ is convex. 
-
-Note that 
-\[\distfun{K}{x}{}=\distfun{K'}{x}{}\]
-for any $x\in \oBall(p,\tfrac{r_p}2)$.
-Therefore the statement holds for 
-\[\Omega=\bigcup_{p\in K}\oBall(p,\tfrac{r_p}2).\]
-\qedsf
-
-
-
-\begin{thm}{Theorem}\label{thm:local-global-convexity}
-Assume $\spc{U}$ is a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ is a closed connected locally convex set.
-Assume $\dist{x}{y}{}<\varpi\kappa$ for any $x,y\in K$.
-Then $K$ is convex.
-
-In particular, if $\kappa\le 0$, then any closed connected locally convex set in a $\spc{U}$ is convex.
-\end{thm}
-
-The following proof is inspired by the answer of Sergei Ivanov to the question of Nathan Reading \cite{ivanov:local-global-convexity}.
-
-\parit{Proof.}
-Since $K$ is locally convex,
-it is locally path connected.
-Since $K$ is connected and locally path connected it is path connected.
-
-Fix two points $x,y\in K$. 
-Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
-Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
-Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
-uniquely defined and depends continuously on $s$.
-
-Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
-If $[xy]\z=[x\alpha(1)]$ does not completely lie in $K$, then 
-there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
-lies in $\Omega$,
-but does not completely lie in $K$.
-By Corollary~\ref{cor::dist-to-convex},
-the function $f=\sn\kappa\circ\distfun{K}{}{\spc{U}}$ 
-satisfies differential inequality
-\[f''+\kappa\cdot f\ge 0\eqlbl{f''+kappa f=<0}\]
-along $[x\alpha(s)]$.
-
-Since 
-\begin{align*}
-\dist{x}{\alpha(s)}{}&<\varpi\kappa,
-&
-f(x)&=f(\alpha(s))=0,
-\end{align*}
-the barrier inequality (\ref{barrier}) 
-implies that $f(z)\le 0$ for $z\in [x\alpha(s)]$;
-that is $[x\alpha(s)]\subset K$, a contradiction.
-\qeds
 
 \section{Development}\label{sec:development-CBA}
  
@@ -2645,6 +2460,191 @@ Here the final equality follows from
 \lim_{t\to 0}\mangle\hinge q p  {\geod_{[p y]}(t)} = 0.
 \]
 \qedsf
+
+\section{Convex sets}\label{sec:convex-CBA}
+
+Recall that according to Corollary~\ref{cor:convex-balls}any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is convex.
+
+\begin{thm}{Proposition}
+Any weakly $\varpi\kappa$-convex set 
+in a complete length $\CAT\kappa$ space is $\varpi\kappa$-convex.
+\end{thm}
+
+\parit{Proof.}
+Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-unique}).
+\qeds
+
+
+\begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
+Then  
+there is unique point $p^*\in K$ that minimizes the distance to $p$;
+that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
+
+}
+
+\end{thm}
+
+\parit{Proof.} 
+Fix $r$ properly between $\distfun{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
+By function comparison (\ref{thm:function-comp}) 
+the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
+
+The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'\z=K\cap\cBall[p,r]$ 
+and the restriction $f|_{K'}$. 
+\qeds
+
+\begin{thm}{Exercise}\label{ex:closest-point-projection}
+Let  $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a closed convex set.
+Show that the closest-point projection $\spc{U}\to K$ is short. 
+\end{thm}
+
+\begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
+Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
+Show that there is a short retraction of $\spc{U}$ to~$K$. 
+\end{thm}
+
+\begin{thm}{Lemma}\label{lem:dist-to-convex}
+Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
+and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
+Set
+\[f=\sn\kappa\circ\distfun{K}{}{}.\]
+Then
+\[f''+\kappa \cdot f\ge 0\]
+holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
+\end{thm}
+
+\parit{Proof.}
+It is sufficient to show that Jensen's inequality (\ref{y''-mono})
+holds on a sufficiently short 
+geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
+Since 
+\[\distfun{K}{p}{},\distfun{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
+we may assume that 
+\[\dist{p}{q}{}+\distfun{K}{p}{}+\distfun{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
+
+Namely, for each $x\in[pq]$,
+we need to find a value $h(x)\in \RR$
+such that for any $x$ we have
+\begin{align*}
+h(x)&\le f(x),&
+h(p)&=f(p),& w
+h(q)&=f(q),
+\end{align*}
+and
+\[h''+\kappa\cdot h\ge 0\eqlbl{h''+kh=<0}\]
+along $[pq]$.
+
+Denote by $p^{*}$ and $q^{*}$ the closest-point projections of $p$ and $q$ on $K$; 
+they are provided by lemma \ref{lem:closest point}.
+From \ref{eq:sum=<varpi} and triangle inequality,
+we get 
+\[\dist{p^*}{q^*}{}<\varpi\kappa.\]
+Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
+in particular
+\[\distfun{K}{x}{}\le \distfun{[p^*q^*]}{x}{}\]
+for any $x\in \spc{U}$.
+
+Consider a majorization $F$ for quadrangle $[pp^{*}q^{*}q]$.
+By Majoriztion theorem \ref{thm:major} and Proposition \ref{prop:majorize-geodesic}, 
+the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*\tilde q]$ in $\Lob2\kappa$ such that 
+\begin{align*}
+\dist{\tilde p}{\tilde p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}}
+&
+\dist{\tilde p}{\tilde q}{\Lob2\kappa}&=\dist{p}{q}{\spc{U}}
+\\
+\dist{\tilde q}{\tilde q^*}{\Lob2\kappa}&=\dist{q}{q^*}{\spc{U}}
+&
+\dist{\tilde p^*}{\tilde q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}
+\end{align*}
+Given $x\in [pq]$, denote by $\tilde x$ the corresponding point on $[\tilde p\tilde q]$.
+According to Majorization theorem, 
+\[\dist{[pq]}{x}{\spc{U}}
+\le
+\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}\]
+for any $x$.
+Set 
+\[h(x)
+=
+\sn\kappa
+\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
+By straghtforward calculations \ref{h''+kh=<0} hods
+and hence the staement follows.
+\qeds
+
+\begin{thm}{Corollary}\label{cor::dist-to-convex}
+Let $\spc{U}$  be a complete length $\CAT\kappa$ space
+and $K\subset \spc{U}$ be a closed  locally convex set.
+Then there is an open set $\Omega\supset K$
+such that the function 
+\[f=\sn\kappa\circ\distfun{K}{}{}\]
+satisfies 
+\[f''+\kappa\cdot f\ge 0\]
+in $\Omega$.
+\end{thm}
+
+\parit{Proof.}
+Fix $p\in K$.
+By Corollary~\ref{cor:convex-balls},
+all $\cBall[p,r]$ is convex for all small $r>0$.
+
+Since $K$ is locally convex there is $r_p>0$ such that 
+the intesection 
+$K'=K\cap \oBall(p,r_p)$ is convex. 
+
+Note that 
+\[\distfun{K}{x}{}=\distfun{K'}{x}{}\]
+for any $x\in \oBall(p,\tfrac{r_p}2)$.
+Therefore the statement holds for 
+\[\Omega=\bigcup_{p\in K}\oBall(p,\tfrac{r_p}2).\]
+\qedsf
+
+
+
+\begin{thm}{Theorem}\label{thm:local-global-convexity}
+Assume $\spc{U}$ is a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ is a closed connected locally convex set.
+Assume $\dist{x}{y}{}<\varpi\kappa$ for any $x,y\in K$.
+Then $K$ is convex.
+
+In particular, if $\kappa\le 0$, then any closed connected locally convex set in a $\spc{U}$ is convex.
+\end{thm}
+
+The following proof is inspired by the answer of Sergei Ivanov to the question of Nathan Reading \cite{ivanov:local-global-convexity}.
+
+\parit{Proof.}
+Since $K$ is locally convex,
+it is locally path connected.
+Since $K$ is connected and locally path connected it is path connected.
+
+Fix two points $x,y\in K$. 
+Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
+Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
+Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
+uniquely defined and depends continuously on $s$.
+
+Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
+If $[xy]\z=[x\alpha(1)]$ does not completely lie in $K$, then 
+there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
+lies in $\Omega$,
+but does not completely lie in $K$.
+By Corollary~\ref{cor::dist-to-convex},
+the function $f=\sn\kappa\circ\distfun{K}{}{\spc{U}}$ 
+satisfies differential inequality
+\[f''+\kappa\cdot f\ge 0\eqlbl{f''+kappa f=<0}\]
+along $[x\alpha(s)]$.
+
+Since 
+\begin{align*}
+\dist{x}{\alpha(s)}{}&<\varpi\kappa,
+&
+f(x)&=f(\alpha(s))=0,
+\end{align*}
+the barrier inequality (\ref{barrier}) 
+implies that $f(z)\le 0$ for $z\in [x\alpha(s)]$;
+that is $[x\alpha(s)]\subset K$, a contradiction.
+\qeds
 
 \section{Remarks}
 
