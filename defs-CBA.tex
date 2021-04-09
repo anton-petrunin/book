@@ -9,7 +9,7 @@
 
       
 \begin{thm}{Four-point comparison}\label{def:2+2}
-A Quadruple of points $p^1,p^2,x^1,x^2$ in a metric space 
+A quadruple of points $p^1,p^2,x^1,x^2$ in a metric space 
 satisfies
 \emph{$\CAT\kappa$ comparison} 
 \index{$\CAT\kappa$ comparison}
@@ -38,7 +38,7 @@ is undefined.
 \includegraphics{mppics/pic-905}
 \end{wrapfigure}
 
-Here is more intuitive reformulation.
+Here is a more intuitive reformulation.
 
 \begin{thm}{Reformulation}\label{def:2+2-reformulated}
 Let $\spc{X}$ be a metric space.
@@ -91,11 +91,11 @@ this is Alexandrov's terminology and is still in use.
 \begin{thm}{Exercise}\label{ex:ccat-(3+1)}
 Let $\spc{U}$ be a metric space.
 Show that $\spc{U}$ is $\CAT\kappa$
-if and only if every quadruple of points in $\spc{U}$ admits one labeling by $(p,x^1,x^2,x^3)$ so that the three angles 
+if and only if every quadruple of points in $\spc{U}$ admits a labeling by $(p,x^1,x^2,x^3)$ such that the three angles 
 $\angk\kappa p{x^1}{x^2}$,
 $\angk\kappa p{x^2}{x^3}$ and
 $\angk\kappa p{x^1}{x^3}$
-satisfy all three triangle inequalities or one of these angels is undefined.
+satisfy all three triangle inequalities or one of these angles is undefined.
 (This is the CAT analogue of Definition \ref{df:cbb1+3} of CBB.)
 \end{thm}
 
@@ -103,7 +103,7 @@ satisfy all three triangle inequalities or one of these angels is undefined.
 Show that $\spc{U}$ is $\CAT\kappa$
 if and only if for any quadruple of points 
 $p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
-$\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$
+$\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$,
 there is a quadruple $q^1,q^2,y^1,y^2$ in $\Lob m\kappa$
 such that 
 \begin{align*}
@@ -117,19 +117,19 @@ for any $i$ and $j$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:berg-nikolaev}
-Let $\spc{U}$ be a complete length space such that for any quadrouple $p,q,x,y\in\spc{L}$ 
+Let $\spc{U}$ be a complete length space such that for any quadruple $p,q,x,y\in\spc{L}$ 
 the following inequality holds
 \[\dist[2]{p}{q}{}+\dist[2]{x}{y}{}\le \dist[2]{p}{x}{}
 +\dist[2]{p}{y}{}+\dist[2]{q}{x}{}+\dist[2]{q}{y}{}.
 \eqlbl{eq:berg-nikolaev-CAT}\]
 Prove that $\spc{U}$ is $\CAT0$.
 
-Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:berg-nikolaev-CAT} for any relabeling of its points by $p,q,x,y$, such that $\spc{X}$ is not $\CAT{0}$.
+Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:berg-nikolaev-CAT} for any relabeling of its points by $p,q,x,y$, and such that $\spc{X}$ is not $\CAT{0}$.
 \end{thm}
 
 The next proposition follows directly from Definition \ref{def:ccat} and the definitions of ultralimit and ultrapower;
 see Section~\ref{ultralimits} for the related definitions.
-Recall that $\o$ denotes a selective ultrafilter on $\NN$ which is fixed once for all.
+Recall that $\o$ denotes a fixed selective ultrafilter on $\NN$.
 
 
 \begin{thm}{Proposition}
@@ -195,7 +195,7 @@ the latter holds in particular, if $\spc{U}$ is a homological manifold.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:complete-space-of-dir}
-Assume $\spc{U}$ is a locally compact geodesic $\CAT{}$ space with extandable geodesics;
+Assume $\spc{U}$ is a locally compact geodesic $\CAT{}$ space with extendable geodesics;
 that is, any geodesic in $\spc{U}$ can be extended to a both-side infinite local geodesic.
 
 Show that the space of geodesic directions $\Sigma_p'$ is complete for any $p\in \spc{U}$.
@@ -287,7 +287,7 @@ or equivalently,
 \end{subthm}
 %SBA:  a ``hinge'' in English is a ``movable mechanism''.  It must MOVE. BBI uses it correctly:  if you look up ``hinge'' in BBI index, it sends you to monotonicity.
 
-Moreover, if $\spc{U}$ is  $\varpi\kappa$-geodesic, then the converse holds in each case.  
+Moreover, if  $\spc{U}$ is  $\varpi\kappa$-geodesic, then the converse holds in each case.  
 
 \end{thm}
 
@@ -298,7 +298,7 @@ In the following proof, the part (\ref{SHORT.cat-hinge})$\Rightarrow$(\ref{SHORT
 only requires that the $\CAT\kappa$ comparison (\ref{def:2+2}) hold for any quadruple, and does not require the existence of geodesics at distance $<\varpi\kappa$. 
 The same is true of the parts (\ref{SHORT.cat-2-sum})$\Leftrightarrow$(\ref{SHORT.cat-monoton}) and
 (\ref{SHORT.cat-monoton})$\Rightarrow$(\ref{SHORT.cat-hinge}).  
-Thus the conditions (\ref{SHORT.cat-2-sum}), (\ref{SHORT.cat-monoton}) and (\ref{SHORT.cat-hinge}) are valid for any metric space (not necessarily length space) that satisfies $\CAT\kappa$ comparison (\ref{def:2+2}). 
+Thus the conditions (\ref{SHORT.cat-2-sum}), (\ref{SHORT.cat-monoton}) and (\ref{SHORT.cat-hinge}) are valid for any metric space (not necessarily a length space) that satisfies $\CAT\kappa$ comparison (\ref{def:2+2}). 
 The converse does not hold; for example, all these conditions are 
 vacuously true in a 
 totally disconnected space, while 
@@ -363,13 +363,8 @@ Therefore by monotonicity of the function $a\mapsto\tangle\mc\kappa\{a;b,c\}$ (\
 \end{align*}
 \qedsf
 
-Let us display a corollary from the proof of \ref{thm:defs_of_cat},
+Let us display a corollary of the proof of \ref{thm:defs_of_cat},
 namely, monotonicity of the model angle with respect to adjacent sidelengths. 
-
-\begin{thm}{Exercise}\label{mink+CAT=euclid} 
-Let $\spc{U}$ be  $\RR^m$ with the metric defined by a norm.
-Show that $\spc{U}$ is a complete length $\CAT{}$ space if and only if $\spc{U}\iso\EE^m$.
-\end{thm}
 
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton-cba} 
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space, and 
@@ -392,6 +387,11 @@ In particular, if $\bar p\in \mathopen{]}x p]$, then
 \end{subthm}
 \end{thm}
 
+\begin{thm}{Exercise}\label{mink+CAT=euclid} 
+Let $\spc{U}$ be  $\RR^m$ with the metric defined by a norm.
+Show that $\spc{U}$ is a complete length $\CAT{}$ space if and only if $\spc{U}\iso\EE^m$.
+\end{thm}
+
 \begin{thm}{Exercise}\label{ex:convexity-CAT0}
 Assume $\spc{U}$ is a geodesic $\CAT0$ space.
 Show that for any two geodesic paths 
@@ -400,8 +400,6 @@ the function
 \[t\mapsto\dist{\gamma(t)}{\sigma(t)}{}\] 
 is convex.
 \end{thm}
-
-
 
 \begin{thm}{Proposition}
 \label{prop:inherit-bound}
@@ -440,9 +438,9 @@ We say the triangle $\trig{x^1}{x^2}{x^3}$ is \index{thin triangle}\emph{$\kappa
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:equality-for-thin}
-Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space,
-$\trig xyz$ be a triangle in $\spc{U}$
-and $\trig{\tilde x}{\tilde y}{\tilde z}$ its model triangle in $\Lob{2}{\kappa}$.
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+Let $\trig xyz$ be a triangle in $\spc{U}$
+and $\trig{\tilde x}{\tilde y}{\tilde z}$ be its model triangle in $\Lob{2}{\kappa}$.
 Prove that the natural map $f\:\trig{\tilde x}{\tilde y}{\tilde z}\to \trig xyz$ 
  is distance-preserving if and ony if one of the following conditions hold:
 
@@ -572,7 +570,7 @@ Define $F$ as follows.
 \item Map  $\Conv\trig{\tilde p}{\tilde x}{\tilde z_y}$ isometrically onto  $\Conv\trig {\dot p}{\dot x}{\dot y}$;
 similarly map $\Conv \trig{\tilde p}{\tilde y}{\tilde z_x}$ onto $\Conv \trig {\dot p}{\dot y}{\dot z}$.
 
-\item If $w$ is in one of the three circular sectors, say at distance $r$ from center of the circle, let $F(w)$ be the point on the corresponding segment 
+\item If $w$ is in one of the three circular sectors, say at distance $r$ from the center of the circle, let $F(w)$ be the point on the corresponding segment 
 $[\dot p \dot z]$, 
 $[\dot x \dot z]$ 
 or $[\dot y \dot z]$ whose distance from the lefthand endpoint of the segment is $r$.
@@ -657,16 +655,16 @@ in $\oBall(p,\varpi\kappa)$.
 
 \parit{Proof.} Fix a sufficiently short geodesic $[x y]$ in $\oBall(p,\varpi\kappa)$.
 We can assume that the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}\z=\modtrig\kappa(p x y)$ is defined. 
-Set \begin{align*} 
+Let \begin{align*} 
 \tilde r(t)&=\dist{\tilde p}{\geod_{[\tilde x\tilde y]}(t)}{},
 & 
 r(t)&=\dist{p}{\geod_{[xy]}(t)}{}.                           \end{align*}
-Set $\tilde f=\md\kappa\circ\tilde r$ and $f=\md\kappa\circ r$.
+Let $\tilde f=\md\kappa\circ\tilde r$ and $f=\md\kappa\circ r$.
 By Property~\ref{md-diff-eq}, we have $\tilde f''=1-\kappa\cdot  \tilde f$. Clearly $\tilde f(t)$ and $f(t)$ agree at $t=0$ and $t=\dist{x}{y}{}$. 
-The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\tilde r(t)$  for all $t\in[0,\dist{x}{y}{}]$.  Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, $r\le \tilde r$ and $f\le \tilde f$ are equivalent.  Thus the claim follows by Jensen's inequality 
+The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\tilde r(t)$  for all $t\in[0,\dist{x}{y}{}]$.  Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, then $r\le \tilde r$ and $f\le \tilde f$ are equivalent.  Thus the claim follows by Jensen's inequality 
 (\ref{y''-mono}). \qeds
 
-Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
+Recall that Busemann functions are defined in Proposition \ref{prop:busemann}.
 The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
 
 \begin{thm}{Exercise}\label{ex:busemann-CBA}{\sloppy 
@@ -694,7 +692,7 @@ The following is a corollary of Theorem \ref{thm:function-comp}.
 
 \begin{thm}{Corollary}\label{cor:convex-balls}
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
-Then any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ in $\spc{U}$ is convex.
+Then any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ in $\spc{U}$ is convex.
 
 Moreover, any open ball of radius $\tfrac{\varpi\kappa}2$ is convex
 and any closed ball of radius $\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
@@ -709,7 +707,7 @@ By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$, then any
 By function comparison (\ref{thm:function-comp}), 
 the geodesic $[x y]$ lies in $\cBall[p,R]$ or $\oBall(p,R)$ respectively.
 
-Thus any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
+Thus any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
 This implies convexity unless there is a pair of points in the ball at distance at least $\varpi\kappa$.
 By the  triangle inequality, the latter is possible only for the closed ball of radius $\tfrac{\varpi\kappa}2$.
 \qeds
@@ -725,7 +723,7 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 
 
 \begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space, and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
 there is unique point $p^*\in K$ that minimizes the distance to $p$;
@@ -737,7 +735,7 @@ that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$.
 
 \parit{Proof.} 
 Fix $r$ properly between $\distfun{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
-By function comparison (\ref{thm:function-comp}) 
+By function comparison (\ref{thm:function-comp}), 
 the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
 The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'\z=K\cap\cBall[p,r]$ 
@@ -755,10 +753,10 @@ Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
 Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
 
-\begin{thm}{Lemma}\label{lem:dist-to-convex}
+\begin{thm}{Proposition}\label{lem:dist-to-convex}
 Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
 and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
-Set
+Let
 \[f=\sn\kappa\circ\distfun{K}{}{}.\]
 Then
 \[f''+\kappa \cdot f\ge 0\]
@@ -768,18 +766,18 @@ holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
 \parit{Proof.}
 It is sufficient to show that Jensen's inequality (\ref{y''-mono})
 holds on a sufficiently short 
-geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
+geodesic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
 Since 
 \[\distfun{K}{p}{},\distfun{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
 we may assume that 
 \[\dist{p}{q}{}+\distfun{K}{p}{}+\distfun{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
 
-Namely, for each $x\in[pq]$,
+For each $x\in[pq]$,
 we need to find a value $h(x)\in \RR$
 such that for any $x$ we have
 \begin{align*}
 h(x)&\le f(x),&
-h(p)&=f(p),& w
+h(p)&=f(p),& 
 h(q)&=f(q),
 \end{align*}
 and
@@ -788,7 +786,7 @@ along $[pq]$.
 
 Denote by $p^{*}$ and $q^{*}$ the closest-point projections of $p$ and $q$ on $K$; 
 they are provided by lemma \ref{lem:closest point}.
-From \ref{eq:sum=<varpi} and triangle inequality,
+From \ref{eq:sum=<varpi} and the triangle inequality,
 we get 
 \[\dist{p^*}{q^*}{}<\varpi\kappa.\]
 Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
@@ -809,7 +807,7 @@ the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*
 \dist{\tilde p^*}{\tilde q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}
 \end{align*}
 Given $x\in [pq]$, denote by $\tilde x$ the corresponding point on $[\tilde p\tilde q]$.
-According to Majorization theorem, 
+Then
 \[\dist{[pq]}{x}{\spc{U}}
 \le
 \dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}\]
@@ -819,8 +817,8 @@ Set
 =
 \sn\kappa
 \dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
-By straghtforward calculations \ref{h''+kh=<0} hods
-and hence the staement follows.
+By straightforward calculations, \ref{h''+kh=<0} holds
+and hence the statement follows.
 \qeds
 
 \begin{thm}{Corollary}\label{cor::dist-to-convex}
@@ -837,10 +835,10 @@ in $\Omega$.
 \parit{Proof.}
 Fix $p\in K$.
 By Corollary~\ref{cor:convex-balls},
-all $\cBall[p,r]$ is convex for all small $r>0$.
+$\cBall[p,r]$ is convex for all small $r>0$.
 
-Since $K$ is locally convex there is $r_p>0$ such that 
-the intesection 
+Since $K$ is locally convex, there is $r_p>0$ such that 
+the intersection 
 $K'=K\cap \oBall(p,r_p)$ is convex. 
 
 Note that 
@@ -871,7 +869,7 @@ Fix two points $x,y\in K$.
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
 Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
 Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
-uniquely defined and depends continuously on $s$.
+is uniquely defined and depends continuously on $s$.
 
 Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
 If $[xy]\z=[x\alpha(1)]$ does not completely lie in $K$, then 
@@ -880,7 +878,7 @@ lies in $\Omega$,
 but does not completely lie in $K$.
 By Corollary~\ref{cor::dist-to-convex},
 the function $f=\sn\kappa\circ\distfun{K}{}{\spc{U}}$ 
-satisfies differential inequality
+satisfies the differential inequality
 \[f''+\kappa\cdot f\ge 0\eqlbl{f''+kappa f=<0}\]
 along $[x\alpha(s)]$.
 
@@ -890,7 +888,7 @@ Since
 &
 f(x)&=f(\alpha(s))=0,
 \end{align*}
-the barrier inequality (\ref{barrier}) 
+then the  barrier inequality (\ref{barrier}) 
 implies that $f(z)\le 0$ for $z\in [x\alpha(s)]$;
 that is $[x\alpha(s)]\subset K$, a contradiction.
 \qeds
