@@ -224,30 +224,30 @@ The $\o$-limit of any sequence of metric spaces is complete.
 \end{thm}
 
 \parit{Proof.}
-Let $(\spc{X}_n)$ be a sequence of metric spaces such that $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
+Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
+Choose a Cauchy sequence $(x_{m})$ in $\spc{X}_\o$.
+Passing to a subsequence, we can assume that $\dist{x_k}{x_{m}}{\spc{X}_\o}<\tfrac1{k}$ for any $k<m$.
 
-Fix a Cauchy sequence $(x_{m})$ in $\spc{X}_\o$. %earlier Cauchy's sequences are referred to as sequences that converge in themselves. I think we should stick to fixed terminology. I prefer calling them  Cauchy sequences. I don't think sequences that converge in themselves is standard.
-Passing to a subsequence, we can assume that $\dist{x_m}{x_{m-1}}{\spc{X}_\o}<\tfrac1{2^m}$ for any $m$.
-
-Let us choose a double sequence $(x_{n,m})$, $x_{n,m}\in \spc{X}_n$, such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
-Note that $\dist{x_{n,m}}{x_{n,m-1}}{}<\tfrac1{2^m}$ for $\o$-almost all $n$.
+Let us choose a double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
+Note that for any $k<m$ the inequality $\dist{x_{n,k}}{x_{n,m}}{}<\tfrac1{k}$ holds for $\o$-almost all $n$.
 It follows that we can choose a nested sequence of sets 
-\[\NN=S_0\supset S_1\supset S_2\supset\dots\] 
+\[\NN= S_1\supset S_2\supset\dots\] 
 such that 
 \begin{itemize}
-\item $\o(S_m)=1$ for each $m$, and
-\item if $n\in S_m$, then 
-\[\dist{x_{n,m}}{x_{n,m-1}}{}<\tfrac1{2^m}\]
+\item $\o(S_m)=1$ for each $m$, 
+\item $\bigcap_m S_m=\emptyset$, and
+\item $\dist{x_{n,k}}{x_{n,l}}{}<\tfrac1{k}$ for $k<l< m$ and $n\in S_m$.
 \end{itemize}
 
+Consider the sequence $y_n=x_{n,m(n)}$, where $m(n)$ is the largest value such that $n\in S_{m(n)}$.
+Denote by $y_\o\in \spc{X}_\o$ the $\o$-limit of $y_n$.
 
-
-Consider the sequence $(y_n=x_{n,m(n)})$, where $m(n)$ is the largest value such that $m(n)\le n$ and $m(n)\in S_{m}$.
-Denote by $y\in \spc{X}_\o$ its $\o$-limit.
-
-Observe that by construction $x_n\to y$ as $n\to \infty$.
-Hence the statement.
+Observe that $|y_m-x_{n,m}|<\tfrac1{m}$ for $\o$-almost all $n$.
+It follows that $|x_m-y_\o|\le \tfrac1{m}$ for any $m$.
+Therefore, $x_n\to y_\o$ as $n\to \infty$.
+That is, any Cauchy sequence in $\spc{X}_\o$ converges.
 \qeds
+
 
 \begin{thm}{Observation}\label{obs:ultralimit-is-geodesic}
 The $\o$-limit of any sequence of length spaces is geodesic. 
