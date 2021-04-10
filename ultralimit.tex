@@ -225,7 +225,7 @@ The $\o$-limit of any sequence of metric spaces is complete.
 
 \parit{Proof.}
 Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
-Choose a Cauchy sequence $(x_{m})$ in $\spc{X}_\o$.
+Choose a Cauchy sequence $x_1,x_2,\dots\in\spc{X}_\o$.
 Passing to a subsequence, we can assume that $\dist{x_k}{x_{m}}{\spc{X}_\o}<\tfrac1{k}$ for any $k<m$.
 
 Let us choose a double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
@@ -236,7 +236,7 @@ such that
 \begin{itemize}
 \item $\o(S_m)=1$ for each $m$, 
 \item $\bigcap_m S_m=\emptyset$, and
-\item $\dist{x_{n,k}}{x_{n,l}}{}<\tfrac1{k}$ for $k<l< m$ and $n\in S_m$.
+\item $\dist{x_{n,k}}{x_{n,l}}{}<\tfrac1{k}$ for $k<l\le m$ and $n\in S_m$.
 \end{itemize}
 
 Consider the sequence $y_n=x_{n,m(n)}$, where $m(n)$ is the largest value such that $n\in S_{m(n)}$.
