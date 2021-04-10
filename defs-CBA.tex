@@ -686,7 +686,7 @@ This implies convexity unless there is a pair of points in the ball at distance 
 By the  triangle inequality, the latter is possible only for the closed ball of radius $\tfrac{\varpi\kappa}2$.
 \qeds
 
-Recall that Busemann functions defined in Proposition \ref{prop:busemann}.
+Recall that Busemann functions are defined in Proposition \ref{prop:busemann}.
 The following exercise is analogous to Exercise~\ref{ex:busemann-CBB}.
 
 \begin{thm}{Exercise}\label{ex:busemann-CBA}{\sloppy 
@@ -732,7 +732,7 @@ the $\kappa$-development $\tilde \gamma$ in $\Lob2\kappa$ of $\gamma$ with respe
 
 
 \parit{Proof. (\ref{SHORT.locally-concave-dev})}.  
-Set  $\gamma=\geod_{[x y]}$ and $T=\dist{x}{y}{}$. 
+Let  $\gamma=\geod_{[x y]}$ and $T=\dist{x}{y}{}$. 
 Let $\tilde \gamma\:[0,T]\to\Lob2\kappa$ be the concave $\kappa$-development based at $\tilde p$ of $\gamma$ with respect to $p$. 
 Let us show that the function  
 \[t\mapsto \angk\kappa x p{\gamma(t)}
@@ -740,7 +740,7 @@ Let us show that the function
 is nondecreasing. 
 
 For a partition $0=t^0<t^1<\dots<t^n=T$
-, set 
+, let 
 \[\tilde y^i=\tilde \gamma(t^i)\quad \text{and}\quad \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
 Since $\tilde \gamma$ is locally concave, 
 for a sufficiently fine partition the broken geodesic $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally convex  with respect to $\tilde p$. 
@@ -754,7 +754,8 @@ the point-on-side comparison (\ref{cat-monoton}) follows.
 
 
 \parit{(\ref{SHORT.concave-dev}).}  
-Consider a partition $0=t^0<t^1<\dots<t^n=T$, and set $x^i\z=\gamma(t^i)$. Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}=\modtrig\kappa(p x^{i-1}x^i)$ with the direction of $[\tilde p\tilde x^i]$ turning counterclockwise as $i$ grows. 
+Consider a partition $0=t^0<t^1<\dots<t^n=T$, and 
+let $x^i\z=\gamma(t^i)$. Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}=\modtrig\kappa(p x^{i-1}x^i)$ with the direction of $[\tilde p\tilde x^i]$ turning counterclockwise as $i$ grows. 
 By angle comparison (\ref{cat-hinge}),
 \[\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde p}+\mangle\hinge{\tilde x^i}{\tilde x^{i+1}}{\tilde p}\ge\pi.\eqlbl{eq1:concave-devel*}
 \] 
@@ -766,9 +767,9 @@ By repeated application of Alexandrov's Lemma (\ref{lem:alex}), and inequality~\
 \[\sum_{i=1}^n\mangle\hinge{\tilde p}{\tilde x^{i-1}}{\tilde x^i}
 \le
 \angk\kappa p{x^0}{x^n}\le\pi.\] 
-Then by \ref{eq1:concave-devel*},  the broken geodesic $\tilde p\tilde x^0\tilde x^1\dots \tilde x^n$  is concave with respect to  $\tilde p$.
+Then by \ref{eq1:concave-devel*},  the broken geodesic $\tilde p\tilde x^0\tilde x^1\dots \tilde x^n$  are concave with respect to  $\tilde p$.
 
-Note that the broken geodesics $\tilde x^0\tilde x^1\dots \tilde x^n$ approach the development of $\gamma$ with respect to $p$. Since the broken geodesics is convex, its length converges to the length of $\gamma$.
+Note that  under finer partitions, the broken geodesics $\tilde x^0\tilde x^1\dots \tilde x^n$ approach the development of $\gamma$ with respect to $p$. Since the broken geodesics are convex, their lengths converge to the length of $\gamma$.
 Hence the result. 
 \qeds
 
@@ -777,8 +778,8 @@ Hence the result.
 
 \section{Patchwork globalization}\label{sec:patchwork}
 
-If $\spc{U}$ is $\CAT\kappa$ space, then it is locally $\CAT\kappa$.
-The converse, does not hold even for complete length space.
+If $\spc{U}$ is a $\CAT\kappa$ space, then it is locally $\CAT\kappa$.
+The converse does not hold even for complete length space.
 For example, $\mathbb{S}^1$ is locally isometric to $\RR$, and so
 is locally $\CAT0$, but it is easy to find a quadruple of points in $\mathbb{S}^1$ that violates $\CAT0$ comparison.  
 
@@ -813,14 +814,14 @@ and $\cBall[p,R]$ is $\CAT\kappa$.
 Fix $R>0$ such that $\CAT\kappa$ comparison holds in $\oBall(p,R)$.
 
 We may assume that $\oBall(p,R)\subset\Omega$ and $R<\varpi\Kappa$.
-The same argument as in the proof of theorem on uniqueness of geodesics (\ref{thm:cat-unique}) 
-shows that any two points in $\cBall[p,\tfrac R2]$ can be joint by a unique geodesic that depends continuously on the end points.
+The same argument as in the proof of the theorem on uniqueness of geodesics (\ref{thm:cat-unique}) 
+shows that any two points in $\cBall[p,\tfrac R2]$ can be joined by a unique geodesic that depends continuously on the end points.
 
 The same argument as in the proof of Corollary \ref{cor:convex-balls} shows that $\cBall[p,\tfrac R2]$ is a convex set.
-Then (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat})  of Patchwork globalization implies that $\cBall[p,\tfrac R2]$ is $\CAT\kappa$.
+Then (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat})  of the patchwork globalization theorem implies that $\cBall[p,\tfrac R2]$ is $\CAT\kappa$.
 \qeds
 
-The proof of Patchwork globalization uses the following construction:
+The proof of patchwork globalization uses the following construction:
 
 \begin{thm}{Definition (Line-of-sight map)} \label{def:sight}
 %Let $\spc{U}$ be a metric space in which pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs. 
@@ -834,12 +835,12 @@ is a \index{line-of-sight map}\emph{line-of-sight map for $\alpha$ with respect 
 \parit{Proof of \ref{thm:alex-patch}.} It only remains to prove (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}).
 
 Let $[p x y]$ be a triangle of perimeter $<2\cdot\varpi\kappa$  in $\spc{U}$. 
-According to propositions \ref{prop:k-thin} and \ref{prop:inherit-bound}, it is sufficient to show the triangle $\trig p x y$ is $\kappa$-thin.
+According to Propositions \ref{prop:k-thin} and \ref{prop:inherit-bound}, it is sufficient to show the triangle $\trig p x y$ is $\kappa$-thin.
 
-Since pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs, there is a unique and continuous line-of-sight map (\ref{def:sight}) for  $[x y]$ with respect to~$p$.    
+Since pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs, there is a unique and continuous line-of-sight map for  $[x y]$ with respect to~$p$.    
 
 For a partition \[0\z=t^0\z<t^1\z<\z\dots\z<t^N=1,\] 
-set $x^{i,j}=\gamma_{t^i}(t^j)$. 
+let $x^{i,j}=\gamma_{t^i}(t^j)$. 
 \begin{figure}[!ht]
 \vskip0mm
 \centering
@@ -848,7 +849,7 @@ set $x^{i,j}=\gamma_{t^i}(t^j)$.
 Since the line-of-sight map is continuous, we may assume each triangle $\trig{x^{i,j}}{x^{i,j+1}}{x^{i+1,j+1}}$ and $\trig{x^{i,j}}{x^{i+1,j}}{x^{i+1,j+1}}$ is $\kappa$-thin 
 (see Proposition~\ref{prop:k-thin}).
 
-Now we show that the $\kappa$-thin property propagates to $\trig p x y$ by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
+Now we show that the $\kappa$-thin property propagates to $\trig p x y$, by repeated application of the inheritance lemma (\ref{lem:inherit-angle}):
 \begin{itemize}
 \item 
 First, for fixed $i$, 
@@ -866,7 +867,7 @@ Applying the lemma again shows that the  triangles $\trig{x}{x^{0,N}}{x^{2,N}}$,
 In particular, $\trig p x y=\trig{p}{x^{0,N}}{x^{N,N}}$ is $\kappa$-thin.
 \qeds
 
-The following exercise implies that if the space is proper, then one can drop the condition on continuous dependence of geodesic from the formulation of the patchwork globalization.
+The following exercise implies that if the space is proper, then one can drop the condition on continuous dependence of geodesics in the formulation of patchwork globalization.
 
 \begin{thm}{Exercise}\label{ex:patchwork}
 \begin{subthm}{ex:patchwork:proper}
@@ -876,7 +877,7 @@ these geodesics depend continuously on their endpoint pairs.
 \end{subthm}
 
 \begin{subthm}{ex:patchwork:complete}
-Construct an example of complete geodesic space $\spc{U}$ such that 
+Construct an example of a complete geodesic space $\spc{U}$ such that 
 pairs of points in $\spc{U}$ are joined by unique geodesics, but
 these geodesics do {}\emph{not} depend continuously on their endpoint pairs.
 \end{subthm}
@@ -888,7 +889,7 @@ these geodesics do {}\emph{not} depend continuously on their endpoint pairs.
 The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major}, assuming $\spc{U}^1$, $\spc{U}^2$ are proper and complete. 
 In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger}.
 
-\begin{thm}{Reshetnyak's gluing theorem}\label{thm:gluing}
+\begin{thm}{Reshetnyak gluing theorem}\label{thm:gluing}
 Suppose 
 $\spc{U}^1$ and $\spc{U}^2$ are %complete 
 $\varpi\kappa$-geodesic spaces 
@@ -941,7 +942,6 @@ Then $\spc{W}$ is a $\CAT\kappa$ space.
 If $\spc{W}$ is $\varpi\kappa$-geodesic, then $\spc{W}$ is $\CAT\kappa$.
 \end{clm}
 
-
 Indeed, 
 according to \ref{prop:k-thin},
 it is sufficient to show that any triangle $\trig {x^0}{x^1}{x^2}$ of perimeter $<2\cdot \varpi\kappa$ 
@@ -971,8 +971,10 @@ and consequently $\trig {x^0}{x^1}{x^2}$ is $\kappa$-thin.
 \claimqeds
 
 \begin{clm}{}\label{clm:geod-gluing0 }
-$\spc{W}$ is geodesic if $\kappa\le0$.
+$\spc{W}$ is $\CAT\kappa$ if $\kappa\le0$.
 \end{clm}
+By \ref{clm:geod-gluing} it suffices to prove that $\spc{W}$ is geodesic.
+
 For $p_1\in \spc{U}^1$, $p_2\in \spc{U}^2$, we may choose a sequence $z^i\in A$ such that $\dist{p_1}{z^i}{}+\dist{p_2}{z^i}{}$
  converges to $\dist{p_1}{p_2}{}$, and $\dist{p_1}{z^i}{}$ and $\dist{p_2}{z^i}{}$ converge.  
  Since $A$ is complete, it suffices to show $z^i$ is a Cauchy sequence.  
@@ -984,7 +986,7 @@ For $p_1\in \spc{U}^1$, $p_2\in \spc{U}^2$, we may choose a sequence $z^i\in A$ 
  Since $\dist{p_1}{m^i}{}+\dist{p_2}{m^i}{} \ge \dist{p_1}{p_2}{}$, and  $\dist{p_1}{x^i}{}+\dist{p_2}{x^i}{}$ and  $\dist{p_1}{y^i}{}+\dist{p_2}{y^i}{}$
  converge to $\dist{p_1}{p_2}{}$, then for  any $\epsilon >0$, we may assume (taking subsequences and possibly relabeling $p_1$ and $p_2$)
  \[
- \dist{p_1}{m^i}{}\ge  \dist{p_1}{x^i}{}-\epsilon,  \dist{p_1}{m^i}{}\ge  \dist{p_1}{y^i}{}-\epsilon.
+ \dist{p_1}{m^i}{}\ge  \dist{p_1}{x^i}{}-\epsilon,     \dist{p_1}{m^i}{}\ge  \dist{p_1}{y^i}{}-\epsilon.
  \]
  
  Since triangle $\trig{p^1}{x^i}{y^i}$ is thin, the analogous inequalities hold for the Euclidean model triangle  $\trig{\tilde p^1}{\tilde x^i}{\tilde y^i}$.  
@@ -1033,7 +1035,7 @@ Continuous means with respect to Hausdorff distance; that is $K_t\Hto K_{t_0}$ a
 \section{Space of geodesics}\label{sec:geod-space}
 
 In this section we prove a  ``no-conjugate-point'' theorem for spaces with upper curvature bounds, and derive from it a number of statements about
-local geodesics.  These statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) and Lifting
+local geodesics.  These statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) and the lifting
  globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
@@ -1058,11 +1060,11 @@ the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ an
 
 %Take $R<\varpi\kappa/2$, then the function comparison (\ref{thm:function-comp}) implies that the length of any local geodesic is at most $2\cdot R<\varpi\kappa$. Therefore, by Corollary~\ref{cor:loc-geod-are-min}, any local geodesic in $\spc{B}$ is minimizing.
 
-A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\gamma_\infty(t),R/2)$, cannot leave $\spc{B}$ and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
+A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\gamma_\infty(t),R/2)$ cannot leave $\spc{B}$, and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
 
 
 Since $\spc{B}$ is $\CAT\kappa$, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
-Thus there is a subinterval $\II$ of $[0,1]$,
+Thus there is a subinterval $\II$ of $[0,1]$
 that contains a neighborhood of $t$ in $[0,1]$
 and such that $\gamma_n|_\II$ is minimizing for all large $n$.
 It follows that the restriction $\gamma_\infty|_\II$ is a geodesic,
@@ -1081,9 +1083,9 @@ In analogy with Riemannian geometry, the main statement of the following theorem
 \label{thm:no-conj-pt}{\sloppy 
 Suppose $\spc{U}$ is a locally complete, length, locally $\CAT\kappa$ space.
 Let $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path with length $<\varpi\kappa$.
-Then for some neighborhoods $\Omega^0\ni \gamma(0)$ and $\Omega^1\ni\gamma(1)$ 
-there is a unique continuous map $\Omega^0\times \Omega^1\times[0,1]\to\spc{U}$
-\[(x,y,t)\mapsto\gamma_{x y}(t)\]
+Then for some neighborhoods $\Omega^0\ni \gamma(0)$ and $\Omega^1\ni\gamma(1)$, 
+there is a unique continuous map $\Omega^0\times \Omega^1\times[0,1]\to\spc{U}$,
+\[(x,y,t)\mapsto\gamma_{x y}(t),\]
 such that 
 $\gamma_{x y}\:[0,1]\to\spc{U}$ is a local geodesic path with 
 $\gamma_{x y}(0)=x$ and 
@@ -1100,7 +1102,7 @@ $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 
 The following lemma was suggested to us by Alexander Lytchak.
 The proof proceeds by piecing together $\CAT{\kappa}$  neighborhoods of points on a curve to construct a new $\CAT{\kappa}$ space.  
-Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of No-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
+Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of the no-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -1122,7 +1124,7 @@ thus $\hat\Omega$ is locally isometric to a neighborhood of $\Omega=\map(\hat\Om
 
 \parit{Proof.} 
 According to Corollary~\ref{cor:k-for-k},
-for any $t\in[a,b]$ there is $r(t)>0$ 
+for any $t\in[a,b]$, there is $r(t)>0$ 
 such that the closed ball
 $\cBall[\alpha(t),r(t)]$ is a  convex set  that forms a complete length $\CAT\kappa$ space.
 
@@ -1153,7 +1155,7 @@ by sending the equivalence class of $(i,x)$ to $x$.
 It is straightforward to check that $\map\:\spc{N}\to\spc{U}$, $\hat\alpha\:[0,1]\to\spc{N}$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
 
 To prove the final statement in the lemma,
-we only have to choose $\eps>0$ so that in addition $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t^{i-1}$ and $t^i\le\tau'$ for some $i$.
+we only have to choose $\eps>0$ so that in addition, $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t^{i-1}$ and $t^i\le\tau'$ for some $i$.
 \qeds
 
 
@@ -1204,41 +1206,41 @@ By maximality of $\II$, $\length\gamma_a=\varpi\kappa$ and so condition (\ref{SH
 \qeds
 
 \begin{thm}{Corollary}\label{cor:homotopy-from-p}
-Let $\spc{U}$ be a complete locally $\CAT\kappa$ length space, 
+Let $\spc{U}$ be a complete locally $\CAT\kappa$ length space, and 
 $\alpha\:[0,1]\to \spc{U}$ be a path that starts at $p$ and ends at $q$.
-Then  
+Then:  
 
 \begin{subthm}{cor:homotopy-from-p-exist}
 There is a unique homotopy of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$
-such that $\gamma_0(t)=\gamma_t(0)=p$ and $\gamma_t(1)=\alpha(t)$ for any~$t$;
+such that $\gamma_0(t)=\gamma_t(0)=p$ and $\gamma_t(1)=\alpha(t)$ for any~$t$.
 \end{subthm}
 
 \begin{subthm}{cor:homotopy-from-p-length}
-We have that
+For any $t\in[0,1]$, 
 \[\length\gamma_t\le\length(\alpha|_{[0,t]}),\]
-for any $t\in[0,1]$, and equality holds for given $t$ if and only if the restriction $\alpha|_{[0,t]}$ is a reparametrization of $\gamma_t$.
+and equality holds for given $t$ if and only if the restriction $\alpha|_{[0,t]}$ is a reparametrization of $\gamma_t$.
 \end{subthm}
 
-Moreover instead of completeness of $\spc{U}$ one can assume that the set 
+Moreover, instead of completeness of $\spc{U}$, one can assume that  
 \[W=\set{x\in \spc{U}}{\dist{x}{p}{}+\dist{x}{q}{}\le \ell}\] 
 is complete.
 
 \end{thm}
 
 \parit{Proof.}
-Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. By (\ref{SHORT.cor:homotopy-from-p-exist}),  there is an interval $\II$ such that statement holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
+Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. By \ref{cor:geo-hom-length}  there is an interval $\II$ such that (a) holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
 
-By the patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition (\ref{SHORT.cor:homotopy-from-p-length}) holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
-Therefore (\ref{SHORT.cor:homotopy-from-p-length}) holds on all of $\II$. 
+By patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition (b)  holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
+Therefore (b) holds on all of $\II$. 
  
 Since $\ell<\varpi\kappa$, Corollary \ref{cor:geo-hom} implies that
 $\II=[0,1]$.
-Indeed if $\II=[0,a)$, then either $\length\gamma_t\to\varpi\kappa$ as $t\to a-$
-or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s):[0,a)\to\spc{U}$ with no limit as $t\to a-$.
-Since $\ell<\varpi\kappa$, the condition (\ref{SHORT.cor:homotopy-from-p-length}) implies that both of these scenarios are not possible.
+Indeed if $\II=[0,a)$, then either $\length\gamma_t\to\varpi\kappa$ as $t\to a-$,
+or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s):[0,a)\to\spc{U}$ has no limit as $t\to a-$.
+Since $\ell<\varpi\kappa$, \ref{cor:geo-hom} implies that neither of these is possible.
 \qeds
 
-The no-conjugate-point theorem  (\ref{thm:no-conj-pt}) gives the following extension of the first variation formula (\ref{thm:1st-var-cba}) from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces.
+The no-conjugate-point theorem  (\ref{thm:no-conj-pt}) gives the following extension of the first variation formula (\ref{thm:1st-var-cba}), from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces.
 
 \begin{thm}{Corollary}\label{cor:1st-var++cba}
 Suppose $\spc{U}$ is a locally complete locally $\CAT\kappa$ space. 
