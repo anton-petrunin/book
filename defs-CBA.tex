@@ -2463,7 +2463,7 @@ Here the final equality follows from
 
 \section{Convex sets}\label{sec:convex-CBA}
 
-Recall that according to Corollary~\ref{cor:convex-balls}any ball (close or open) of radius $R<\tfrac{\varpi\kappa}2$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is convex.
+Recall that according to Corollary~\ref{cor:convex-balls}any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is convex.
 
 \begin{thm}{Proposition}
 Any weakly $\varpi\kappa$-convex set 
@@ -2476,7 +2476,7 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 
 
 \begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space, and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
 there is unique point $p^*\in K$ that minimizes the distance to $p$;
@@ -2488,7 +2488,7 @@ that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$.
 
 \parit{Proof.} 
 Fix $r$ properly between $\distfun{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
-By function comparison (\ref{thm:function-comp}) 
+By function comparison (\ref{thm:function-comp}),
 the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
 The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'\z=K\cap\cBall[p,r]$ 
@@ -2506,10 +2506,10 @@ Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
 Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
 
-\begin{thm}{Lemma}\label{lem:dist-to-convex}
+\begin{thm}{Proposition}\label{lem:dist-to-convex}
 Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
 and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
-Set
+Let
 \[f=\sn\kappa\circ\distfun{K}{}{}.\]
 Then
 \[f''+\kappa \cdot f\ge 0\]
@@ -2519,13 +2519,13 @@ holds in $\oBall(K,\tfrac{\varpi\kappa}2)$.
 \parit{Proof.}
 It is sufficient to show that Jensen's inequality (\ref{y''-mono})
 holds on a sufficiently short 
-geodsic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
+geodesic $[pq]$ in $\oBall(K,\tfrac{\varpi\kappa}2)$.
 Since 
 \[\distfun{K}{p}{},\distfun{K}{q}{}<\tfrac{\varpi\kappa}{2},\] 
 we may assume that 
 \[\dist{p}{q}{}+\distfun{K}{p}{}+\distfun{K}{q}{}<\varpi\kappa.\eqlbl{eq:sum=<varpi}\]
 
-Namely, for each $x\in[pq]$,
+For each $x\in[pq]$,
 we need to find a value $h(x)\in \RR$
 such that for any $x$ we have
 \begin{align*}
@@ -2539,7 +2539,7 @@ along $[pq]$.
 
 Denote by $p^{*}$ and $q^{*}$ the closest-point projections of $p$ and $q$ on $K$; 
 they are provided by lemma \ref{lem:closest point}.
-From \ref{eq:sum=<varpi} and triangle inequality,
+From \ref{eq:sum=<varpi} and the triangle inequality,
 we get 
 \[\dist{p^*}{q^*}{}<\varpi\kappa.\]
 Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
@@ -2560,7 +2560,7 @@ the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*
 \dist{\tilde p^*}{\tilde q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}
 \end{align*}
 Given $x\in [pq]$, denote by $\tilde x$ the corresponding point on $[\tilde p\tilde q]$.
-According to Majorization theorem, 
+Then
 \[\dist{[pq]}{x}{\spc{U}}
 \le
 \dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}\]
@@ -2570,8 +2570,8 @@ Set
 =
 \sn\kappa
 \dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
-By straghtforward calculations \ref{h''+kh=<0} hods
-and hence the staement follows.
+By straightforward calculations, \ref{h''+kh=<0} holds
+and hence the statement follows.
 \qeds
 
 \begin{thm}{Corollary}\label{cor::dist-to-convex}
@@ -2588,10 +2588,10 @@ in $\Omega$.
 \parit{Proof.}
 Fix $p\in K$.
 By Corollary~\ref{cor:convex-balls},
-all $\cBall[p,r]$ is convex for all small $r>0$.
+$\cBall[p,r]$ is convex for all small $r>0$.
 
-Since $K$ is locally convex there is $r_p>0$ such that 
-the intesection 
+Since $K$ is locally convex, there is $r_p>0$ such that 
+the intersection
 $K'=K\cap \oBall(p,r_p)$ is convex. 
 
 Note that 
@@ -2622,7 +2622,7 @@ Fix two points $x,y\in K$.
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
 Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
 Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
-uniquely defined and depends continuously on $s$.
+is uniquely defined and depends continuously on $s$.
 
 Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
 If $[xy]\z=[x\alpha(1)]$ does not completely lie in $K$, then 
@@ -2631,7 +2631,7 @@ lies in $\Omega$,
 but does not completely lie in $K$.
 By Corollary~\ref{cor::dist-to-convex},
 the function $f=\sn\kappa\circ\distfun{K}{}{\spc{U}}$ 
-satisfies differential inequality
+satisfies the differential inequality
 \[f''+\kappa\cdot f\ge 0\eqlbl{f''+kappa f=<0}\]
 along $[x\alpha(s)]$.
 
@@ -2641,7 +2641,7 @@ Since
 &
 f(x)&=f(\alpha(s))=0,
 \end{align*}
-the barrier inequality (\ref{barrier}) 
+then the barrier inequality (\ref{barrier}) 
 implies that $f(z)\le 0$ for $z\in [x\alpha(s)]$;
 that is $[x\alpha(s)]\subset K$, a contradiction.
 \qeds
