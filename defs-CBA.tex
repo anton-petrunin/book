@@ -1165,17 +1165,17 @@ Apply patchwork along $\gamma$ (\ref{lem:patch}).
 
 
 
-The No-conjugate-point theorem (\ref{thm:no-conj-pt}) allows us to move a local geodesic path 
+The No-conjugate-point theorem (\ref{thm:no-conj-pt}) allows us to move a local geodesic  
 so that its endpoints follow given trajectories.
 The following corollary describe how this process might terminate. 
 
 \begin{thm}{Corollary}\label{cor:geo-hom}{\sloppy 
 Let $\spc{U}$ be a locally complete, length, locally $\CAT\kappa$ space.
-Suppose $\gamma\:[0,1]\to\spc{U}$ is a local geodesic path with length $< \varpi\kappa$.  Let $\alpha^i\:[0,1]\to \spc{U}$, for $i=0,1$, be paths starting at $\gamma(0)$ and $\gamma(1)$ respectively.  
+Suppose $\gamma\:[0,1]\to\spc{U}$ is a local geodesic with length $< \varpi\kappa$.  Let $\alpha^i\:[0,1]\to \spc{U}$, for $i=0,1$, be curves starting at $\gamma(0)$ and $\gamma(1)$ respectively.  
 
 }
 
-Then there is a uniquely determined pair consisting of an interval $\II $ satisfying $0\in \II\subset[0,1]$, and a continuous family of local geodesic paths $\gamma_t\:[0,1]\to \spc{U}$ for  $t\in \II$, such that  
+Then there is a uniquely determined pair consisting of an interval $\II $ satisfying $0\in \II\subset[0,1]$, and a continuous family of local geodesics $\gamma_t\:[0,1]\to \spc{U}$ for  $t\in \II$, such that  
 
 \begin{subthm}{cor:geo-hom-length}
 $\gamma_0=\gamma$, $\gamma_t(0)=\alpha^0(t)$, $\gamma_t(1)=\alpha^1(t)$, and $\gamma_t$ has length $< \varpi\kappa$,
@@ -1183,7 +1183,8 @@ $\gamma_0=\gamma$, $\gamma_t(0)=\alpha^0(t)$, $\gamma_t(1)=\alpha^1(t)$, and $\g
 
 \begin{subthm}{cor:geo-hom-cauchy}
 if $\II\ne [0,1]$, then $\II=[0, a)$, where either $\gamma_t$ converges uniformly to a local geodesic $\gamma_a$ of length $\varpi\kappa$, or 
-for some fixed $s\in [0,1]$ the curve $\gamma_t(s):[0,a)\to\spc{U}$ is a Lipschitz curve with no limit as $t\to a-$.
+for some fixed $s\in [0,1]$ the curve $\gamma_t(s):[0,a)\to\spc{U}$ is a Lipschitz curve with no limit 
+as $t\to a-$.
 %???DO WE REALLY NEED SUCH GENERALITY
 \end{subthm}
 
@@ -1201,13 +1202,13 @@ $\alpha_s$ is $ \Lip$-Lipschitz for some $\Lip$.
 
 If $\alpha_s$  for some value of $s$ does not converge as $t\to a-$, then condiion (\ref{SHORT.cor:geo-hom-cauchy}) holds.  If each $\alpha_s$  converges as $t\to a-$,  
  then $ \gamma_t$ converges as $t\to a-$, say to $\gamma_a$.
-By  Proposition~\ref{prop:geo-complete}, $\gamma_a$ is a local geodesic path and\[\length\gamma_t\to\length\gamma_a\le \varpi\kappa.\]
+By  Proposition~\ref{prop:geo-complete}, $\gamma_a$ is a local geodesic and\[\length\gamma_t\to\length\gamma_a\le \varpi\kappa.\]
 By maximality of $\II$, $\length\gamma_a=\varpi\kappa$ and so condition (\ref{SHORT.cor:geo-hom-cauchy}) again holds.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:homotopy-from-p}
 Let $\spc{U}$ be a complete locally $\CAT\kappa$ length space, and 
-$\alpha\:[0,1]\to \spc{U}$ be a path that starts at $p$ and ends at $q$.
+$\alpha\:[0,1]\to \spc{U}$ be a path of length $< \varpi\kappa$ that starts at $p$ and ends at $q$.
 Then:  
 
 \begin{subthm}{cor:homotopy-from-p-exist}
@@ -1227,17 +1228,18 @@ is complete.
 
 \end{thm}
 
-\parit{Proof.}
-Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. By \ref{cor:geo-hom-length}  there is an interval $\II$ such that (a) holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
+\parit{Proof.} By Corollary \ref{cor:geo-hom}, substituting $\bar q=p$ for $q$ and taking  $\alpha^0(t)=p$ and  $\alpha^1(t)=\alpha(t)$ for all $t\in [0,1]$, there is an interval $\II$ such that (a) holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
+%Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. By \ref{cor:geo-hom-length}  
+%S: note substitution
 
 By patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition (b)  holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
 Therefore (b) holds on all of $\II$. 
  
-Since $\ell<\varpi\kappa$, Corollary \ref{cor:geo-hom} implies that
+Corollary \ref{cor:geo-hom} implies that
 $\II=[0,1]$.
 Indeed if $\II=[0,a)$, then either $\length\gamma_t\to\varpi\kappa$ as $t\to a-$,
 or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s):[0,a)\to\spc{U}$ has no limit as $t\to a-$.
-Since $\ell<\varpi\kappa$, \ref{cor:geo-hom} implies that neither of these is possible.
+Since $\length\alpha<\varpi\kappa$, \ref{cor:geo-hom} implies that neither of these is possible.
 \qeds
 
 The no-conjugate-point theorem  (\ref{thm:no-conj-pt}) gives the following extension of the first variation formula (\ref{thm:1st-var-cba}), from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces.
