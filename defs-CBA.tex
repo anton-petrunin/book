@@ -1242,19 +1242,6 @@ or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s):[0,a)\to\spc{U}$
 Since $\length\alpha<\varpi\kappa$, \ref{cor:geo-hom} implies that neither of these is possible.
 \qeds
 
-The no-conjugate-point theorem  (\ref{thm:no-conj-pt}) gives the following extension of the first variation formula (\ref{thm:1st-var-cba}), from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces.
-
-\begin{thm}{Corollary}\label{cor:1st-var++cba}
-Suppose $\spc{U}$ is a locally complete locally $\CAT\kappa$ space. 
-For any geodesic $[px]$ in $\spc{U}$ and local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, let  $\gamma_t\:[0,1]\to \spc{U}$ be a continuous family of local geodesic paths with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p x]}(t)$ and $\gamma_t(1)=q$.  Then
-\[\length(\gamma_t)
-=
-\length(\gamma)-t\cdot\cos\mangle(\gamma,[px])+o(t).
-\]
-
-\end{thm}
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2348,7 +2335,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 Recall that $\o$ denotes a selective nonpriciple ultrafilter on $\NN$, see Section~\ref{ultralimits}. 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont}
-Let $\spc{U}_n$  be a $\varpi\kappa$-geodesic $\CAT\kappa$  space for each $n\in \NN$
+Suppose $\spc{U}_n$  is a $\varpi\kappa$-geodesic $\CAT\kappa$  space for each $n\in \NN$
 and $\spc{U}_n\to \spc{U}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{U}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{U}_\o$.
 Then 
@@ -2396,12 +2383,12 @@ strong angle lemma (\ref{1st-var+}) for $\Alex{}$ spaces.
 \begin{thm}{Strong angle lemma}
 \label{lem:strong-angle-cba}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
-Then for any hinge  $\hinge  p q x$ in $\spc{U}$, 
+Then for any hinge  $\hinge  p q y$ in $\spc{U}$, 
 we have
-\[\mangle\hinge p q x
+\[\mangle\hinge p q y
 =
-\lim_{\bar x\to p}
-\set{\angk\kappa p q{\bar x}}{\bar x\in\mathopen{]}px]}
+\lim_{\bar y\to p}
+\set{\angk\kappa p q{\bar y}}{\bar y\in\mathopen{]}py]}
 \eqlbl{eq:cba-1st-var+***}\]
 for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
 \end{thm}
@@ -2463,9 +2450,24 @@ Here the final equality follows from
 \]
 \qedsf
 
+We have  given elementary proofs of the  first-variation statements \ref{lem:strong-angle-cba}, \ref{thm:1st-var-cba} and \ref{cor:both-end-first-var-cba}. Note however that the no-conjugate-point theorem \ref{thm:no-conj-pt} not only provides a proof of these statements, but also extends the statements  
+ from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces as follows:
+ 
+\begin{thm}{First variation for local geodesics}\label{cor:1st-var++cba}
+Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
+For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$ such that $p\ne q$, and any local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, and any continuous  family   $\gamma_t\:[0,1]\to \spc{U}$ of local geodesics with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p y]}(t)$ and $\gamma_t(1)=\geod{[qz]}$, we have
+\[
+\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
+=
+\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y - \tau\cdot\cos\mangle\hinge q p z+o(t+\tau).
+%\eqlbl{eq:cba-1st-var}
+\]
+\end{thm}
+ 
+
 \section{Convex sets}\label{sec:convex-CBA}
 
-Recall that according to Corollary~\ref{cor:convex-balls}any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is convex.
+Recall that according to Corollary~\ref{cor:convex-balls}, any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ in a $\varpi\kappa$-geodesic $\CAT\kappa$ space is convex.
 
 \begin{thm}{Proposition}
 Any weakly $\varpi\kappa$-convex set 
@@ -2529,10 +2531,10 @@ we may assume that
 
 For each $x\in[pq]$,
 we need to find a value $h(x)\in \RR$
-such that for any $x$ we have
+such that 
 \begin{align*}
 h(x)&\le f(x),&
-h(p)&=f(p),& w
+h(p)&=f(p),& 
 h(q)&=f(q),
 \end{align*}
 and
@@ -2542,7 +2544,7 @@ along $[pq]$.
 Denote by $p^{*}$ and $q^{*}$ the closest-point projections of $p$ and $q$ on $K$; 
 they are provided by lemma \ref{lem:closest point}.
 From \ref{eq:sum=<varpi} and the triangle inequality,
-we get 
+we have
 \[\dist{p^*}{q^*}{}<\varpi\kappa.\]
 Since $K$ is $\varpi\kappa$-convex, $K\supset[pq]$;
 in particular
