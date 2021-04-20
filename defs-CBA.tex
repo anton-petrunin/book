@@ -884,7 +884,7 @@ these geodesics do {}\emph{not} depend continuously on their endpoint pairs.
 \end{thm}
 
 
-\section{Reshetnyak's gluing theorem}\label{sec:cba-gluing}
+\section{Reshetnyak gluing theorem}\label{sec:cba-gluing}
 
 The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major}, assuming $\spc{U}^1$, $\spc{U}^2$ are proper and complete. 
 In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger}.
@@ -996,7 +996,7 @@ For $p_1\in \spc{U}^1$, $p_2\in \spc{U}^2$, we may choose a sequence $z^i\in A$ 
 Finally suppose $\kappa>0$; by  scaling, take $\kappa=1$. Consider the Euclidean cones $\Cone\spc{U}^i$.
 By Theorem \ref{thm:warp-curv-bound:cbb:S}, $\Cone\spc{U}^i$ is a $\CAT0$ space for $i=1,2$.
 
-Geodesic paths of $\Cone\spc{U}^i$ that do not pass through the tip of the cone correspond, project to geodesics of length $<\pi$ in $\spc{U}^i$. 
+Geodesics of $\Cone\spc{U}^i$ that do not pass through the tip of the cone  project to geodesics of length $<\pi$ in $\spc{U}^i$. 
 It follows that $\Cone A$ is convex in $\Cone\spc{U}^1$ and $\Cone\spc{U}^2$.
 By the cone distance formula, $\Cone A$ is complete since $A$ is complete.
   
@@ -1084,8 +1084,9 @@ In analogy with Riemannian geometry, the main statement of the following theorem
 Suppose $\spc{U}$ is a locally complete, length, locally $\CAT\kappa$ space.
 Let $\gamma\:[0,1]\to\spc{U}$ be a local geodesic path with length $<\varpi\kappa$.
 Then for some neighborhoods $\Omega^0\ni \gamma(0)$ and $\Omega^1\ni\gamma(1)$, 
-there is a unique continuous map $\Omega^0\times \Omega^1\times[0,1]\to\spc{U}$,
-\[(x,y,t)\mapsto\gamma_{x y}(t),\]
+there is a unique continuous map from the direct product $\Omega^0\times \Omega^1\times[0,1]$ to $\spc{U}$, 
+
+\[(x,y,t)\mapsto\gamma_{x y}(t),\]  
 such that 
 $\gamma_{x y}\:[0,1]\to\spc{U}$ is a local geodesic path with 
 $\gamma_{x y}(0)=x$ and 
@@ -1272,11 +1273,11 @@ and $\map\circ\hat\alpha\equiv\alpha$.
 %%%???problem with completeness
 
 Note that the lifting property implies that $\map(\spc{B})\supset\oBall(p,\varpi\kappa/2)$ and by completeness $\map(\spc{B})\supset\cBall[p,\varpi\kappa/2]$.
-Also since $\spc{B}$ is $\CAT\kappa$ the closed ball $\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}$ is weakly convex set in $\spc{B}$ (see \ref{cor:convex-balls});
+Also since $\spc{B}$ is $\CAT\kappa$, the closed ball $\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}$ is a weakly convex set in $\spc{B}$ (see \ref{cor:convex-balls});
 in particular $\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}$ is a complete length $\CAT\kappa$ space.
 Therefore we can assume in addition that $\dist{\hat p}{\hat x}{}\le \varpi\kappa/2$ for any $\hat x\in\spc{B}$;
 or equivalently
-\[\oBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}=\spc{B}.\]
+\[\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}=\spc{B}.\]
 
 
 Before proving the theorem we state and prove its corollary.
@@ -1293,23 +1294,23 @@ for any $p$ and the function $p\mapsto\rho_p$ is 1-Lipschitz.
 \parit{Proof.} 
 Assume $\map\:\spc{B}\to \spc{U}$ 
 and $\hat p\in \spc{B}$
-are provided by Lifting globalization theorem
+are provided by the lifting globalization theorem
 (\ref{thm:globalization-lift}).
 
 Since $\map$ is local isometry,
 we can choose $r>0$ so that the restriction of $\map$ to $\cBall[\hat p,r]$ is distance-preserving.
-By Lifting globalization, the image  $\Phi(\cBall[\hat p,r])$ coincides with the ball
+By the lifting globalization, the image  $\Phi(\cBall[\hat p,r])$ coincides with the ball
 $\cBall[p,r]$.
-This proves the first part of theorem.
+This proves the first part of the theorem.
 
-To prove the second part, lat us choose $\rho_p$ to be maximal value $\le\tfrac{\varpi\kappa}2$ such that $\cBall[p,\rho_p]$ is a complete length $\CAT\kappa$ space.
+To prove the second part, let us choose $\rho_p$ to be the maximal value $\le\tfrac{\varpi\kappa}2$ such that $\cBall[p,\rho_p]$ is a complete length $\CAT\kappa$ space.
 By Corollary~\ref{cor:convex-balls}, the ball
 \[\cBall[q,\rho_p-\dist{p}{q}{}]\] 
 is convex in $\cBall[p,\rho_p]$.
 Therefore  
 \[\cBall[q,\rho_p-\dist{p}{q}{}]\] is a complete length $\CAT\kappa$ space
 for any $q\in \oBall(p,\rho_p)$.
-In particular $\rho_q\ge \rho_p-\dist{p}{q}{}$ for any $p,q\in\spc{U}$.
+In particular, $\rho_q\ge \rho_p-\dist{p}{q}{}$ for any $p,q\in\spc{U}$.
 Hence the second statement follows.
 \qeds
 
@@ -1323,7 +1324,7 @@ is a key step in the proof.
 \begin{thm}{Radial lemma}\label{lem:radial-glob}
 Let $\spc{U}$ be a length locally $\CAT\kappa$ space,
 and suppose $p\in\spc{U}$, $R\le\varpi\kappa$.
-Assume the ball  $\cBall[p,\bar{R}]$ is complete for any $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$, 
+Assume the ball  $\cBall[p,\bar{R}]$ is complete for any $\bar{R}<R$, and  there is a unique geodesic path, $\geodpath_{[p x]}$, from $p$ to any point $x\in\oBall(p,R)$ 
 that depends continuously on $x$.
 Then $\oBall(p,\tfrac R2)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 \end{thm}
@@ -1343,7 +1344,7 @@ from $p$ to $z$.
 The  notations $\Omega^0$, 
 $\Omega^1$,
 %$\iota_i$, 
-$\gamma_{x y}$, $\spc{N}$, $\hat{x}$, $\hat{y}$ will be  as in the theorem;
+$\gamma_{x y}$, $\spc{N}$, $\hat{x}$, $\hat{y}$ will be  as in  Theorem \ref{thm:globalization-lift};
 in particular, $z\in\Omega^1$.
 
 By assumption,
@@ -1354,7 +1355,7 @@ Applying the function comparison (\ref{thm:function-comp}) in $\spc{N}$,
 we have that $f''+\kappa\cdot f\ge 1$ in $\Omega^1$;
 whence \ref{eq:rad-conv} follows.
 
-Fix $r<\tfrac R2$; the proof of the following claim takes most of the remaining proof.
+Fix $r<\tfrac R2$. Proving the following claim takes most of the remaining proof:
 
 \begin{clm}{}\label{clm:B-is-convex}
 $\cBall[ p,r]$ is a convex set in $\spc{U}$.
@@ -1372,9 +1373,9 @@ and $ \gamma$ lies completely in $\cBall[ p,r]$.
 \end{clm}
 
 Note that  $\dist{x}{z}{}<\varpi\kappa$.
-Thus, to prove Claim~\ref{clm:B-is-convex}, it is sufficient to show that there is a geodesic path from $x$ to $z$.
-Note that by assumption $\cBall[p,2\cdot r]$ is complete;
-therefore Corollary~\ref{cor:homotopy-from-p} implies the following.
+Thus to prove Claim~\ref{clm:B-is-convex}, it is sufficient to show that there is a geodesic path from $x$ to $z$.
+Note that by assumption $\cBall[p,2\cdot r]$ is complete.
+Therefore Corollary~\ref{cor:homotopy-from-p} implies the following:
 
 \begin{clm}{}\label{clm:loc-geod<path}
 Given a path $\alpha\:[0,1]\to\spc{U}$ from $x$ to $z$ with $\length\alpha<2\cdot r$,
@@ -1383,10 +1384,10 @@ there is a local geodesic path $\gamma$ from $x$ to $z$ such that
 
 \end{clm}
 
-Further, let us prove the following.
+Further, let us prove the following:
 
 \begin{clm}{}\label{clm:unique-loc-geod}
-There is unique local geodesic path $\gamma_{x z}$ in $\cBall[ p,r]$ from $x$ to $z$.
+There is a unique local geodesic path $\gamma_{x z}$ in $\cBall[ p,r]$ from $x$ to $z$.
 \end{clm}
 
 Denote by $\Delta_{x z}$ the set of all local geodesic paths in $\cBall[ p,r]$ from $x$ to $z$.
@@ -1445,7 +1446,7 @@ that is, $\theta(\hat\gamma)$ is the length of the path $t\mapsto\hat\gamma_t(1)
 Let $\mathfrak{G}_p$ be the set of all local geodesic paths 
 with length $<\varpi\kappa$ in $\spc{U}$ that start at $p$.
 Denote by $\hat p\in \mathfrak{G}_p$ the constant path $\hat p(t)\equiv p$.
-Given $\alpha,\beta\in \mathfrak{G}_p$ define
+Given $\alpha,\beta\in \mathfrak{G}_p$, define
 \[
 \dist{\alpha}{\beta}{\mathfrak{G}_p}
 =
@@ -1503,8 +1504,8 @@ and
 $\hat\xi\:[0,1]\to \mathfrak{G}_p$ is the unique geodesic path from $\hat p$ to $\xi$.
 Clearly, the map $\xi\mapsto\hat\xi$ is continuous.
 
-From \ref{eq:dist=length} and Proposition~\ref{prop:geo-complete}, 
-it follows
+By \ref{eq:dist=length} and Proposition~\ref{prop:geo-complete}, 
+
 
 \begin{clm}{}\label{clm:complete-B} 
 For any $\bar R<\varpi\kappa$, the closed ball
@@ -1512,8 +1513,8 @@ $\cBall[\hat p,\bar R]$ in $\mathfrak{G}_p$ is complete.
 \end{clm}
 
 Take $\oBall(\hat p,\varpi\kappa/2)$ and $\map$ constructed above.
-According to the Radial lemma (\ref{lem:radial-glob}), $\spc{B}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space;
-the map $\map$ extends to its completion $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$. 
+According to the Radial lemma (\ref{lem:radial-glob}), $\oBall(\hat p,\varpi\kappa/2)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+The map $\map$ extends to its completion $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$. 
 All the remaining statements are already proved.
 \qeds
 
@@ -2551,9 +2552,9 @@ in particular
 \[\distfun{K}{x}{}\le \distfun{[p^*q^*]}{x}{}\]
 for any $x\in \spc{U}$.
 
-Consider a majorization $F$ for quadrangle $[pp^{*}q^{*}q]$.
-By Majoriztion theorem \ref{thm:major} and Proposition \ref{prop:majorize-geodesic}, 
-the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*\tilde q]$ in $\Lob2\kappa$ such that 
+There is a majorizing map $F: D\to \spc U$ for quadrangle $[pp^{*}q^{*}q]$, as in Definition  \ref{def:majorize} and the Reshetnyak majorization theorem \ref{thm:major}.
+By Proposition \ref{prop:majorize-geodesic}, 
+the figure $D$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*\tilde q]$ in $\Lob2\kappa$ such that 
 \begin{align*}
 \dist{\tilde p}{\tilde p^*}{\Lob2\kappa}&=\dist{p}{p^*}{\spc{U}}
 &
@@ -2561,14 +2562,13 @@ the figure $F$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*
 \\
 \dist{\tilde q}{\tilde q^*}{\Lob2\kappa}&=\dist{q}{q^*}{\spc{U}}
 &
-\dist{\tilde p^*}{\tilde q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}
+\dist{\tilde p^*}{\tilde q^*}{\Lob2\kappa}&=\dist{p^*}{q^*}{\spc{U}}.
 \end{align*}
 Given $x\in [pq]$, denote by $\tilde x$ the corresponding point on $[\tilde p\tilde q]$.
 Then
 \[\dist{[pq]}{x}{\spc{U}}
 \le
-\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}\]
-for any $x$.
+\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
 Set 
 \[h(x)
 =
@@ -2628,7 +2628,7 @@ Since $\dist{x}{\alpha(s)}{}<\varpi\kappa$ for any $s$,
 Theorem~\ref{thm:cat-unique} implies that the geodesic $[x\alpha(s)]$ 
 is uniquely defined and depends continuously on $s$.
 
-Let $\Omega\supset K$ be the open set proveded by Corollary~\ref{cor::dist-to-convex}.
+Let $\Omega\supset K$ be the open set provided by Corollary~\ref{cor::dist-to-convex}.
 If $[xy]\z=[x\alpha(1)]$ does not completely lie in $K$, then 
 there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
 lies in $\Omega$,
@@ -2668,4 +2668,4 @@ The question can  easily be reduced to the case when $K$ is finite;
 so far it is not even known if any three points in a complete length $\CAT0$ space lie in a compact convex set.
 
 One of the most beautiful applications of the Reshetnyak gluing theorem is given by Dmitri Burago,  Serge Ferleger,
-and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-kononenko1998-2,burago-ferleger-kononenko1998-3,burago-ferleger-kononenko1998-4}; they use it to study billiards a short survey on the subject is written by Dmitri Burago \cite{burago-1998}.
+and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-kononenko1998-2,burago-ferleger-kononenko1998-3,burago-ferleger-kononenko1998-4}; They use it to study billiards; a short survey on the subject is written by Dmitri Burago \cite{burago-1998}.
