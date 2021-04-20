@@ -1566,13 +1566,13 @@ Now we come to the main theorem of this section.
 \label{thm:major}
 Any closed curve $\alpha$ with length smaller than $2\cdot \varpi\kappa$ in  a $\varpi\kappa$-geodesic $\CAT\kappa$ space is majorized by a convex region in $\Lob2\kappa$. \end{thm}
 
-This theorem is proved by Yurii Reshetnyak \cite{reshetnyak:major};
-our proof uses a trick which we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
-An other proof can be build on Kirszbraun's theorem (\ref{thm:kirsz+}), but it works only for complete spaces.
+This theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major}.
+Our proof uses a trick we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
+Another proof can be built on Kirszbraun's theorem (\ref{thm:kirsz+}), but it works only for complete spaces.
 
-The case when $\alpha$ is a triangle, say $\trig p x y$, leads  and is nontrivial.
+The case when $\alpha$ is a triangle, say $\trig p x y$, is the base case and is nontrivial.
 In this case, by Proposition~\ref{cor:maj-triangle}, the majorizing convex region has to be isometric to $\Conv\trig{\tilde p}{\tilde x}{\tilde y}$, where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$.  
-There is a majorizing map for $\trig p x y$ which image $W$ is the image of the line-of-sight map (definition \ref{def:sight}) for $[x y]$ from  $p$,
+There is a majorizing map for $\trig p x y$ whose image $W$ is the image of the line-of-sight map (Definition \ref{def:sight}) for $[x y]$ from  $p$,
 but as one can see from the following example, the line-of-sight map is not majorizing in general.
 
 \begin{wrapfigure}{r}{30 mm}
@@ -1581,7 +1581,7 @@ but as one can see from the following example, the line-of-sight map is not majo
 \includegraphics{mppics/pic-950}
 \end{wrapfigure}
 
-\parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$ formed by two congruent triangles, which is non-convex at $z$ (as in the picture).  
+\parbf{Example.} Let $\spc{Q}$ be a solid quadrangle $[p x z y]$ in $\EE^2$, which is formed by two congruent triangles and is non-convex at $z$ (as in the picture).  
 Equip $\spc{Q}$ with the length metric. 
 Then $\spc{Q}$ is $\CAT0$
 by Reshetnyak gluing  (\ref{thm:gluing}). 
@@ -1647,8 +1647,8 @@ that is,
 \end{figure}
 
 Clearly $\beta_n=\beta$.
-Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the broken geodesics $\beta_{n-1}, \beta_{n-2},\dots,\beta_1$ is concave with respect to $p$.
-Let $D_i$ to be subgraph of $\beta_i$ with respect to $p$.
+Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the broken geodesics $\beta_{n-1} \beta_{n-2}\dots\beta_1$ is concave with respect to $p$.
+Let $D_i$ to be subgrah of $\beta_i$ with respect to $p$.
 Applying Lemma~\ref{lem:quadrangle} gives a short map $G_i\:D_{i}\to D_{i+1}$ that maps $y_{i}\mapsto y_{i+1}$ and does not move $p$ and $x$ (in fact,  $G_i$ is the identity everywhere except on $\Conv\trig{p}{x^{i-1}}{y_i}$).
 Thus the composition 
 \[G_{n-1}\circ\dots\circ G_1\: D_1\to D_n\] 
@@ -1721,7 +1721,7 @@ under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$.
 
 Assume the statement is true for $(n-1)$-gons, $n\ge 4$.  
 Then  $[x^1 x^2 \dots x^{n-1}]$  is majorized by a convex polygonal region 
-\[R_{n-1}=\Conv(\tilde x^1, \tilde x^2, \dots, \tilde x^{n-1}),\] 
+\[R_{n-1}=\Conv[\tilde x^1 \tilde x^2 \dots \tilde x^{n-1}],\] 
 in $\Lob2\kappa$ under a map $F_{n-1}$ satisfying $F_{n-1}(\tilde x^i)=x^i$ for all $i$. 
 Take $\dot x^n\in\Lob2{\kappa}$ such that $\trig{\tilde x^1}{\tilde x^{n-1}}{\dot x^n}=\modtrig\kappa(x^1 x^{n-1} x^n)$ 
 and this triangle lies on the other side of $[\tilde x^1\tilde x^{n-1}]$ from $R_{n-1}$.  
@@ -1743,26 +1743,64 @@ Then $F$ is length-nonincreasing, and is a majorizing map for $[x^1 x^2 \dots x^
 If $R$ is a convex subset of $\Lob2\kappa$, we are done. 
 
 If $R$ is not convex,  the total internal angle of $R$ at $\tilde x^1$ or $ \tilde x^{n-1} $ or both is $>\pi$.  
-By relabeling we may suppose that it holds for $\tilde x^{n-1}$.  
+By relabeling we may suppose this  holds for $\tilde x^{n-1}$.  
 
-The region $R$ is obtained by glueing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
-Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ in its length metric is a $\CAT{\kappa}$-space.  
+The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
+Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ with its length metric is a $\CAT{\kappa}$ space.  
 Moreover $[\tilde x^{n-2}\tilde x^{n-1}]\cup[\tilde x^{n-1} \dot x^n]$ is a geodesic of $R$.
-Thus $[\tilde x^1, \tilde x^2, \dots, \tilde x^{n-1} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to $R$, followed by $F$,  is the desired majorizing map.
+Thus $[\tilde x^1 \tilde x^2 \dots \tilde x^{n-1} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to $R$, followed by $F$,  is the desired majorizing map.
 
 \medskip
 
+Note that in fact we have proved the following statement:
+
+
 Note that in fact we proved the following:
+Note that in fact we have proved the following statement:
 
 \begin{clm}{}
 Let $F_{n-1}$ be a majorizing map for the polygon $[x^1x^2\dots x^{n-1}]$,
+\[
+\emph{Let $F_{n-1}$ be a majorizing map for the polygon $[x^1x^2\dots x^{n-1}]$,
 and $\dot F$ be a majorizing map for the triangle $[x^1x^{n-1}x^{n}]$.
 Then there is a majorizing map $F_n$ for the polygon $[x^1x^2\dots x^n]$
 such that \[\Im F_{n+1}= \Im F_n\cup\Im \dot F.\]
 
 \end{clm}
+such that \[\Im F_{n+1}= \Im F_n\cup\Im \dot F.}
+\eqlbl{eq:resh}}
+\end{clm}{}
 
 We now use this claim to prove the theorem for general curves.
+We now use to prove the theorem for general curves.
+
+Note that in fact we proved the following:
+Note that in fact we have proved the following statement:
+
+\begin{clm}{}
+Let $F_{n-1}$ be a majorizing map for the polygon $[x^1x^2\dots x^{n-1}]$,
+\[
+\emph{Let $F_{n-1}$ be a majorizing map for the polygon $[x^1x^2\dots x^{n-1}]$,
+and $\dot F$ be a majorizing map for the triangle $[x^1x^{n-1}x^{n}]$.
+Then there is a majorizing map $F_n$ for the polygon $[x^1x^2\dots x^n]$
+such that \[\Im F_{n+1}= \Im F_n\cup\Im \dot F.\]
+
+\end{clm}
+such that \[\Im F_{n+1}= \Im F_n\cup\Im \dot F.}
+\eqlbl{eq:resh}}
+
+We now use this claim to prove the theorem for general curves.
+We now use to prove the theorem for general curves.
+
+
+\[
+\emph{Let $F_{n-1}$ be a majorizing map for the polygon $[x^1x^2\dots x^{n-1}]$,
+and $\dot F$ be a majorizing map for the triangle $[x^1x^{n-1}x^{n}]$.
+Then there is a majorizing map $F_n$ for the polygon $[x^1x^2\dots x^n]$
+such that \[\Im F_{n+1}= \Im F_n\cup\Im \dot F.}
+\eqlbl{eq:resh}}
+
+We now use to prove the theorem for general curves.
 
 Assume $\alpha\:[0,\ell]\to\spc{U}$ is an  arbitrary closed curve with natural parameter.
 Choose a sequence of partitions $0=t^0_n<t^2_n<\dots<t^n_n=\ell$
@@ -1807,6 +1845,8 @@ such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 \end{thm}
 
 }
+
+
 
 \begin{thm}{Exercise}\label{ex:bishop}
 Two majorizations $F\:D\to \spc{U}$ and $F'\:D'\to \spc{U}$ will be called \index{equivalent majorizations}\emph{equivalent} if $F'=F\circ\iota$ for an isometry $\iota\:D\to D'$.
