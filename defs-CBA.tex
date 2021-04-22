@@ -884,6 +884,144 @@ these geodesics do {}\emph{not} depend continuously on their endpoint pairs.
 \end{thm}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Angles}
+\label{sec:angles-cba}
+
+Recall that $\o$ denotes a selective nonpriciple ultrafilter on $\NN$, see Section~\ref{ultralimits}. 
+
+\begin{thm}{Angle semicontinuity}\label{lem:ang.semicont}
+Suppose $\spc{U}_n$  is a $\varpi\kappa$-geodesic $\CAT\kappa$  space for each $n\in \NN$
+and $\spc{U}_n\to \spc{U}_\o$ as $n\to\o$.
+Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{U}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{U}_\o$.
+Then 
+\[\mangle\hinge{p_\o}{x_\o}{y_\o}
+\ge 
+\lim_{n\to\o} \mangle\hinge{p_n}{x_n}{y_n}.\]
+
+\end{thm}
+
+%\begin{wrapfigure}[6]{r}{23mm}
+%\begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/ang.semicont(0.12)}
+%\lbl[rt]{7,18;$p_n$}
+%\lbl[r]{30,94;$\bar x_n$}
+%\lbl[b]{116,160;$x_n$}
+%\lbl[t]{59,2;$\bar y_n$}
+%\lbl[t]{174,20;$y_n$}
+%\end{lpic}
+%\end{wrapfigure}
+
+\parit{Proof.}
+By angle-sidelength monotonicity (\ref{cor:monoton-cba}),
+\[\mangle\hinge{p_\o}{x_\o}{y_\o}
+=
+\inf\set{\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}}{\bar x_\o \in \mathopen{]}p_\o x_\o],\ \bar y_\o\in \mathopen{]}p_\o y_\o]}.\]
+
+For fixed $\bar x_\o \in \mathopen{]}p_\o x_\o]$ 
+and $\bar y_\o\in \mathopen{]}p_\o x_\o]$,
+choose $\bar x_n\in \mathopen{]} p x_n ]$ and $\bar y_n\in \mathopen{]} p y_n ]$ so that $\bar x_n\to \bar x_\o$ 
+and $\bar y_n\to \bar y_\o$ as $n\to\o$.
+Clearly 
+\[\angk\kappa{p_n}{\bar x_n}{\bar y_n}
+\to 
+\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}\] 
+as $n\to\o$.
+
+By angle comparison (\ref{cat-hinge}), $\mangle\hinge{p_n}{x_n}{y_n}\le \angk\kappa{p_n}{\bar x_n}{\bar y_n}$.
+Hence the result.
+\qeds
+
+Now we verify that the first variation formula 
+holds in the $\CAT{}$ setting. 
+Compare it to the first variation inequality (\ref{lem:first-var}) which holds for general metric spaces and to the
+strong angle lemma (\ref{1st-var+}) for $\Alex{}$ spaces. 
+
+\begin{thm}{Strong angle lemma}
+\label{lem:strong-angle-cba}
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
+Then for any hinge  $\hinge  p q y$ in $\spc{U}$, 
+we have
+\[\mangle\hinge p q y
+=
+\lim_{\bar y\to p}
+\set{\angk\kappa p q{\bar y}}{\bar y\in\mathopen{]}py]}
+\eqlbl{eq:cba-1st-var+***}\]
+for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
+\end{thm}
+
+\parit{Proof.} 
+By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the righthand side is defined and at least equal to the lefthand side. 
+
+By Lemma~\ref{lem:k-K-angle}, we may take $\kappa = 0$ in \ref{eq:cba-1st-var+***}.  
+By the cosine law and the first variation inequality (\ref{lem:first-var}),  
+the righthand side is at most equal to the lefthand side.
+\qeds
+
+
+
+\begin{thm}{First variation}\label{thm:1st-var-cba}
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
+For any nontrivial geodesic $[py]$ in $\spc{U}$ and point $q\ne p$ such that  $\dist{p}{q}{}<\varpi\kappa$, we have 
+\[\dist{q}{\geod_{[p y]}(t)}{}
+=
+\dist{q}{p}{}-t\cdot\cos\mangle\hinge p q y+o(t).
+%\eqlbl{eq:cba-1st-var}
+\]
+\end{thm}
+
+\parit{Proof.}
+The first variation equation is equivalent to the strong angle lemma (\ref{lem:strong-angle-cba}), as follows from the Euclidean cosine law.
+\qeds
+
+\begin{thm} {First variation (both-endpoints version)}\label{cor:both-end-first-var-cba}
+Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
+For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$  such that $p\ne q$ and $\dist{p}{q}{}<\varpi\kappa$, we have 
+\[
+\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
+=
+\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y - \tau\cdot\cos\mangle\hinge q p z+o(t+\tau).
+%\eqlbl{eq:cba-1st-var}
+\]
+\end{thm}
+
+\parit{Proof.}
+By the first variation equation (\ref{thm:1st-var-cba}),
+\[\begin{aligned}
+&\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{} =
+\\
+&=
+\dist{q}{\geod_{[p y]}(t)}{} - \tau\cdot\cos\mangle\hinge q  {\geod_{[p y]}(t)} z +o(\tau)\\
+&=\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y + o(t) -  \tau\cdot\cos\mangle\hinge q  {\geod_{[p y]}(t)} z +o(\tau)=\\
+&= \dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y -  \tau\cdot\cos\mangle\hinge q  p z +o(t+\tau).
+\end{aligned}
+\]
+Here the final equality follows from   
+\[
+\lim_{t\to 0}\mangle\hinge q  {\geod_{[p y]}(t)} z = \mangle\hinge q  p z.
+\eqlbl{eq:2-side-variation}
+\]
+``$\le$'' in \ref{eq:2-side-variation}  holds by angle semicontinuity (\ref{lem:ang.semicont}). ``$\ge$'' holds by the triangle inequality for angles, since angle comparison (\ref{cat-hinge}) gives 
+\[
+\lim_{t\to 0}\mangle\hinge q p  {\geod_{[p y]}(t)} = 0.
+\]
+\qedsf
+
+We have  given elementary proofs of the  first-variation statements \ref{lem:strong-angle-cba}, \ref{thm:1st-var-cba} and \ref{cor:both-end-first-var-cba}. Note however that the no-conjugate-point theorem \ref{thm:no-conj-pt} not only provides a proof of these statements, but also extends the statements  
+ from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces as follows:
+ 
+\begin{thm}{First variation for local geodesics}\label{cor:1st-var++cba}
+Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
+For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$ such that $p\ne q$, and any local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, and any continuous  family   $\gamma_t\:[0,1]\to \spc{U}$ of local geodesics with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p y]}(t)$ and $\gamma_t(1)=\geod{[qz]}$, we have
+\[
+\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
+=
+\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y - \tau\cdot\cos\mangle\hinge q p z+o(t+\tau).
+%\eqlbl{eq:cba-1st-var}
+\]
+\end{thm}
+
 \section{Reshetnyak gluing theorem}\label{sec:cba-gluing}
 
 The following theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major}, assuming $\spc{U}^1$, $\spc{U}^2$ are proper and complete. 
@@ -1566,13 +1704,13 @@ Now we come to the main theorem of this section.
 \label{thm:major}
 Any closed curve $\alpha$ with length smaller than $2\cdot \varpi\kappa$ in  a $\varpi\kappa$-geodesic $\CAT\kappa$ space is majorized by a convex region in $\Lob2\kappa$. \end{thm}
 
-This theorem is proved by Yurii Reshetnyak \cite{reshetnyak:major};
+This theorem was proved by Yurii Reshetnyak \cite{reshetnyak:major};
 our proof uses a trick which we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
 An other proof can be build on Kirszbraun's theorem (\ref{thm:kirsz+}), but it works only for complete spaces.
 
-The case when $\alpha$ is a triangle, say $\trig p x y$, leads  and is nontrivial.
+The case when $\alpha$ is a triangle, say $\trig p x y$, is the base  and is nontrivial.
 In this case, by Proposition~\ref{cor:maj-triangle}, the majorizing convex region has to be isometric to $\Conv\trig{\tilde p}{\tilde x}{\tilde y}$, where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$.  
-There is a majorizing map for $\trig p x y$ which image $W$ is the image of the line-of-sight map (definition \ref{def:sight}) for $[x y]$ from  $p$,
+There is a majorizing map for $\trig p x y$ whose image $W$ is the image of the line-of-sight map (definition \ref{def:sight}) for $[x y]$ from  $p$,
 but as one can see from the following example, the line-of-sight map is not majorizing in general.
 
 \begin{wrapfigure}{r}{30 mm}
@@ -1721,7 +1859,7 @@ under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$.
 
 Assume the statement is true for $(n-1)$-gons, $n\ge 4$.  
 Then  $[x^1 x^2 \dots x^{n-1}]$  is majorized by a convex polygonal region 
-\[R_{n-1}=\Conv(\tilde x^1, \tilde x^2, \dots, \tilde x^{n-1}),\] 
+\[R_{n-1}=\Conv[\tilde x^1 \tilde x^2,\dots \tilde x^{n-1}],\] 
 in $\Lob2\kappa$ under a map $F_{n-1}$ satisfying $F_{n-1}(\tilde x^i)=x^i$ for all $i$. 
 Take $\dot x^n\in\Lob2{\kappa}$ such that $\trig{\tilde x^1}{\tilde x^{n-1}}{\dot x^n}=\modtrig\kappa(x^1 x^{n-1} x^n)$ 
 and this triangle lies on the other side of $[\tilde x^1\tilde x^{n-1}]$ from $R_{n-1}$.  
@@ -1743,16 +1881,16 @@ Then $F$ is length-nonincreasing, and is a majorizing map for $[x^1 x^2 \dots x^
 If $R$ is a convex subset of $\Lob2\kappa$, we are done. 
 
 If $R$ is not convex,  the total internal angle of $R$ at $\tilde x^1$ or $ \tilde x^{n-1} $ or both is $>\pi$.  
-By relabeling we may suppose that it holds for $\tilde x^{n-1}$.  
+By relabeling we may suppose this holds for $\tilde x^{n-1}$.  
 
-The region $R$ is obtained by glueing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
-Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ in its length metric is a $\CAT{\kappa}$-space.  
+The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
+Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ carrying its length metric is a $\CAT{\kappa}$-space.  
 Moreover $[\tilde x^{n-2}\tilde x^{n-1}]\cup[\tilde x^{n-1} \dot x^n]$ is a geodesic of $R$.
-Thus $[\tilde x^1, \tilde x^2, \dots, \tilde x^{n-1} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to $R$, followed by $F$,  is the desired majorizing map.
+Thus $[\tilde x^1 \tilde x^2 \dots \tilde x^{n-1} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to $R$, followed by $F$,  is the desired majorizing map.
 
 \medskip
 
-Note that in fact we proved the following:
+Note that in fact we have proved the following:
 
 \begin{clm}{}
 Let $F_{n-1}$ be a majorizing map for the polygon $[x^1x^2\dots x^{n-1}]$,
@@ -1811,7 +1949,7 @@ such that $F\:\tilde \alpha(t)\mapsto \alpha(t)$ for any $t$.
 \begin{thm}{Exercise}\label{ex:bishop}
 Two majorizations $F\:D\to \spc{U}$ and $F'\:D'\to \spc{U}$ will be called \index{equivalent majorizations}\emph{equivalent} if $F'=F\circ\iota$ for an isometry $\iota\:D\to D'$.
 
-Show that a closed rectifiable curve in a $\CAT0$ space have an isometric majorization map if and only if the majorization map is unique up to equivalence.
+Show that a closed rectifiable curve in a $\CAT0$ space has an isometric majorization map if and only if the majorization map is unique up to equivalence.
 \end{thm}
 
 
@@ -1852,7 +1990,7 @@ to a distance-preserving map of $\Conv(\tilde x^0,\tilde x^1\dots \tilde x^{n+1}
 \parit{Proof. \ref{SHORT.subthm:arm-ineq}).}
 By majorization (\ref{thm:major}), $P$ is majorized by a convex region $\tilde D$ in $\Lob{2}{\kappa}$.
 By Proposition \ref{prop:majorize-geodesic} and the definition of angle,
-$\tilde D$ is bounded by a convex polygon $\tilde P_R=[y^0\tilde y^1\dots \tilde y^{n+1}]$ that satisfies
+$\tilde D$ is bounded by a convex polygon $\tilde P_R=[\tilde y^0\tilde y^1\dots \tilde y^{n+1}]$ that satisfies
 \begin{align*}
 \dist{\tilde y^i}{\tilde y^{i\pm1}}{\Lob{2}{\kappa}}
 &=
@@ -1860,11 +1998,11 @@ $\tilde D$ is bounded by a convex polygon $\tilde P_R=[y^0\tilde y^1\dots \tilde
 =
 \dist{x^0}{x^{n+1}}{\spc{U}},
 \\
-& \mangle\hinge{\tilde y^i}{\tilde y^{i-1}}{\tilde y^{i+1}}\ge\mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}\ge\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}},
+& \mangle\hinge{\tilde y^i}{\tilde y^{i-1}}{\tilde y^{i+1}}\ge\mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}\ge\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}}
 \end{align*}
 for $1\le i\le n$, where the final inequality is by \ref{eq:arm}.
 
-By the classical arm lemma \cite{sabitov}, we get $\dist{\tilde x^0}{\tilde x^{n+1}}{}\le \dist{\tilde y^0}{\tilde y^{n+1}}{}$.
+The classical arm lemma \cite{sabitov} gives $\dist{\tilde x^0}{\tilde x^{n+1}}{}\le \dist{\tilde y^0}{\tilde y^{n+1}}{}$.
 Since $ \dist{\tilde y^0}{\tilde y^{n+1}}{}=\dist{x^0}{x^{n+1}}{}$, part (\ref{SHORT.subthm:arm-ineq}) follows.
 
 \parit{\ref{SHORT.subthm:arm-eq}).} Suppose equality holds in (\ref{SHORT.subthm:arm-ineq}).
@@ -2061,15 +2199,15 @@ Since
 there is a point $\tilde p\in D$ such that 
 $\dist{\tilde p}{\tilde \gamma(x)}{\Lob2\kappa}<\tfrac{\varpi\kappa}2-\eps$
 for any $x\in\mathbb{S}^1$.
-Denote by $\alpha_x$ the joint of the paths $F\circ\geodpath_{[p\tilde \gamma_1(x)]_{\Lob2\kappa}}$ 
+Denote by $\alpha_x$ the join of the paths $F\circ\geodpath_{[p\tilde \gamma_1(x)]_{\Lob2\kappa}}$ 
 and  $\geodpath_{[\gamma_1(x)\gamma_2(x)]}$ in $\spc{U}$.
-Note that $\alpha_x$ depends continuously on $x$ and
+Note that $\alpha_x$ depends continuously on $x$, and
 $$\length\alpha_x<\tfrac{\varpi\kappa}{2}\quad \text{and}\quad \alpha_x(1)=\gamma_2(x)$$ 
-for any $x$.
+hold for any $x$.
 
 Let us apply the lifting globalization theorem
 (\ref{thm:globalization-lift}) for $p\z=F(\tilde p)$.
-We get a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
+We obtain a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$, and with the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
 Applying the lifting property for $\alpha_x$, 
@@ -2080,7 +2218,7 @@ Since $\spc{B}$ is a geodesic $\CAT\kappa$ space, we can apply the majorization 
 The composition of the obtained majorization with $\map$ is a majorization of $\gamma_2$.
 \qeds
 
-\parit{Proof.}
+\parit{Proof of Theorem \ref{thm:hadamard-cartan-gen}.}
 The ``only if'' part follows from the Reshetnyak majorization theorem (\ref{thm:major}).
 
 Let  $\gamma_t$, $t\in[0,1]$ 
@@ -2088,7 +2226,7 @@ be a null-homotopy of curves in $\spc{U}$;
 that is, $\gamma_0(x)\z=p$ for some $p\in \spc{U}$
 and any $x\in\mathbb{S}^1$.
 Assume further that $\length \gamma_t\z<2\cdot\varpi\kappa$ for any $t$.
-To prove the ``only if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$. 
+To prove the ``if'' part, it is sufficient to show that $\gamma_1$ is majorized by a convex region in $\Lob2\kappa$ if $\spc{U}$ is locally $\CAT\kappa$. 
 
 By semicontinuity of length (\ref{thm:semicont-of-length}),
 we can choose  $\eps>0$ sufficiently small that
@@ -2159,7 +2297,7 @@ $$\length\hat\gamma_t
 10\cdot(\length\hat\gamma_{t_{i-1}}+\length\hat\gamma_{t_i}).$$
 In particular, $\hat\gamma_t$ is rectifiable for all $t$.
 
-Joining the obtained homotopies for all $i$ we obtain a homotoply from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
+Joining the obtained homotopies for all $i$ we obtain a homotopy from $\gamma_0$ to $\gamma_1$ in the class of rectifiable curves.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:cover-branching-along-2-lines}
@@ -2328,142 +2466,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 %The implication (\ref{SHORT.thm:flat:isometry})$\Rightarrow$(\ref{SHORT.thm:flat:dist}) holds trivially.
 %\reds
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Angles}
-\label{sec:angles-cba}
-
-Recall that $\o$ denotes a selective nonpriciple ultrafilter on $\NN$, see Section~\ref{ultralimits}. 
-
-\begin{thm}{Angle semicontinuity}\label{lem:ang.semicont}
-Suppose $\spc{U}_n$  is a $\varpi\kappa$-geodesic $\CAT\kappa$  space for each $n\in \NN$
-and $\spc{U}_n\to \spc{U}_\o$ as $n\to\o$.
-Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{U}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{U}_\o$.
-Then 
-\[\mangle\hinge{p_\o}{x_\o}{y_\o}
-\ge 
-\lim_{n\to\o} \mangle\hinge{p_n}{x_n}{y_n}.\]
-
-\end{thm}
-
-%\begin{wrapfigure}[6]{r}{23mm}
-%\begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/ang.semicont(0.12)}
-%\lbl[rt]{7,18;$p_n$}
-%\lbl[r]{30,94;$\bar x_n$}
-%\lbl[b]{116,160;$x_n$}
-%\lbl[t]{59,2;$\bar y_n$}
-%\lbl[t]{174,20;$y_n$}
-%\end{lpic}
-%\end{wrapfigure}
-
-\parit{Proof.}
-By angle-sidelength monotonicity (\ref{cor:monoton-cba}),
-\[\mangle\hinge{p_\o}{x_\o}{y_\o}
-=
-\inf\set{\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}}{\bar x_\o \in \mathopen{]}p_\o x_\o],\ \bar y_\o\in \mathopen{]}p_\o y_\o]}.\]
-
-For fixed $\bar x_\o \in \mathopen{]}p_\o x_\o]$ 
-and $\bar y_\o\in \mathopen{]}p_\o x_\o]$,
-choose $\bar x_n\in \mathopen{]} p x_n ]$ and $\bar y_n\in \mathopen{]} p y_n ]$ so that $\bar x_n\to \bar x_\o$ 
-and $\bar y_n\to \bar y_\o$ as $n\to\o$.
-Clearly 
-\[\angk\kappa{p_n}{\bar x_n}{\bar y_n}
-\to 
-\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}\] 
-as $n\to\o$.
-
-By angle comparison (\ref{cat-hinge}), $\mangle\hinge{p_n}{x_n}{y_n}\le \angk\kappa{p_n}{\bar x_n}{\bar y_n}$.
-Hence the result.
-\qeds
-
-Now we verify that the first variation formula 
-holds in the $\CAT{}$ setting. 
-Compare it to the first variation inequality (\ref{lem:first-var}) which holds for general metric spaces and to the
-strong angle lemma (\ref{1st-var+}) for $\Alex{}$ spaces. 
-
-\begin{thm}{Strong angle lemma}
-\label{lem:strong-angle-cba}
-Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
-Then for any hinge  $\hinge  p q y$ in $\spc{U}$, 
-we have
-\[\mangle\hinge p q y
-=
-\lim_{\bar y\to p}
-\set{\angk\kappa p q{\bar y}}{\bar y\in\mathopen{]}py]}
-\eqlbl{eq:cba-1st-var+***}\]
-for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
-\end{thm}
-
-\parit{Proof.} 
-By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the righthand side is defined and at least equal to the lefthand side. 
-
-By Lemma~\ref{lem:k-K-angle}, we may take $\kappa = 0$ in \ref{eq:cba-1st-var+***}.  
-By the cosine law and the first variation inequality (\ref{lem:first-var}),  
-the righthand side is at most equal to the lefthand side.
-\qeds
-
-
-
-\begin{thm}{First variation}\label{thm:1st-var-cba}
-Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
-For any nontrivial geodesic $[py]$ in $\spc{U}$ and point $q\ne p$ such that  $\dist{p}{q}{}<\varpi\kappa$, we have 
-\[\dist{q}{\geod_{[p y]}(t)}{}
-=
-\dist{q}{p}{}-t\cdot\cos\mangle\hinge p q y+o(t).
-%\eqlbl{eq:cba-1st-var}
-\]
-\end{thm}
-
-\parit{Proof.}
-The first variation equation is equivalent to the strong angle lemma (\ref{lem:strong-angle-cba}), as follows from the Euclidean cosine law.
-\qeds
-
-\begin{thm} {First variation (both-endpoints version)}\label{cor:both-end-first-var-cba}
-Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
-For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$  such that $p\ne q$ and $\dist{p}{q}{}<\varpi\kappa$, we have 
-\[
-\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
-=
-\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y - \tau\cdot\cos\mangle\hinge q p z+o(t+\tau).
-%\eqlbl{eq:cba-1st-var}
-\]
-\end{thm}
-
-\parit{Proof.}
-By the first variation equation (\ref{thm:1st-var-cba}),
-\[\begin{aligned}
-&\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{} =
-\\
-&=
-\dist{q}{\geod_{[p y]}(t)}{} - \tau\cdot\cos\mangle\hinge q  {\geod_{[p y]}(t)} z +o(\tau)\\
-&=\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y + o(t) -  \tau\cdot\cos\mangle\hinge q  {\geod_{[p y]}(t)} z +o(\tau)=\\
-&= \dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y -  \tau\cdot\cos\mangle\hinge q  p z +o(t+\tau).
-\end{aligned}
-\]
-Here the final equality follows from   
-\[
-\lim_{t\to 0}\mangle\hinge q  {\geod_{[p y]}(t)} z = \mangle\hinge q  p z.
-\eqlbl{eq:2-side-variation}
-\]
-``$\le$'' in \ref{eq:2-side-variation}  holds by angle semicontinuity (\ref{lem:ang.semicont}). ``$\ge$'' holds by the triangle inequality for angles, since angle comparison (\ref{cat-hinge}) gives 
-\[
-\lim_{t\to 0}\mangle\hinge q p  {\geod_{[p y]}(t)} = 0.
-\]
-\qedsf
-
-We have  given elementary proofs of the  first-variation statements \ref{lem:strong-angle-cba}, \ref{thm:1st-var-cba} and \ref{cor:both-end-first-var-cba}. Note however that the no-conjugate-point theorem \ref{thm:no-conj-pt} not only provides a proof of these statements, but also extends the statements  
- from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces as follows:
- 
-\begin{thm}{First variation for local geodesics}\label{cor:1st-var++cba}
-Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
-For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$ such that $p\ne q$, and any local geodesic $\gamma\:[0,1]\to \spc{U}$ from $p$ to $q$ of  length $<\varpi\kappa$, and any continuous  family   $\gamma_t\:[0,1]\to \spc{U}$ of local geodesics with $\gamma_0=\gamma$, $\gamma_t(0)=\geod_{[p y]}(t)$ and $\gamma_t(1)=\geod{[qz]}$, we have
-\[
-\dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
-=
-\dist{q}{p}{} - t\cdot\cos\mangle\hinge p q y - \tau\cdot\cos\mangle\hinge q p z+o(t+\tau).
-%\eqlbl{eq:cba-1st-var}
-\]
-\end{thm}
  
 
 \section{Convex sets}\label{sec:convex-CBA}
@@ -2668,4 +2671,4 @@ The question can  easily be reduced to the case when $K$ is finite;
 so far it is not even known if any three points in a complete length $\CAT0$ space lie in a compact convex set.
 
 One of the most beautiful applications of the Reshetnyak gluing theorem is given by Dmitri Burago,  Serge Ferleger,
-and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-kononenko1998-2,burago-ferleger-kononenko1998-3,burago-ferleger-kononenko1998-4}; They use it to study billiards; a short survey on the subject is written by Dmitri Burago \cite{burago-1998}.
+and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-kononenko1998-2,burago-ferleger-kononenko1998-3,burago-ferleger-kononenko1998-4}. They use it to study billiards; a short survey on the subject is written by Dmitri Burago \cite{burago-1998}.
