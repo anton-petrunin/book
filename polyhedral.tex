@@ -3,15 +3,16 @@
 \section{Definitions}
 
 \begin{thm}{Definition}\label{def:poly}
-A length space $\spc{P}$ is called \index{piecewise
+A length space $\spc{P}$ is called a  \index{piecewise
 $\Lob{}\kappa$ space}\emph{piecewise
-$\Lob{}\kappa$}
+$\Lob{}\kappa$ polyhedral space} 
 if it admits a finite triangulation $\tau$ 
 such that an arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{\dim \sigma}{\kappa}$.
 
 By a 
-\index{triangulation of a polyhedral space}\emph{triangulation of a polyhedral space} 
-we will understand the triangulation as in the definition.
+\index{triangulation of a polyhedral space}\emph{triangulation} of a piecewise
+$\Lob{}\kappa$ polyhedral space 
+we will understand a triangulation as in the definition.
 If we do not wish to specify $\kappa$, we will say that $\spc{P}$ is a \index{polyhedral space}\emph{polyhedral space}. 
 
 Applying scaling we can assume that $\kappa=1$, $0$, or $-1$.
@@ -30,7 +31,7 @@ called
 \begin{subthm}{}
 The $\Lob{}{-1}$-polyhedral spaces will also be 
 called 
-\emph{hyperbolic polyhedral space}\index{hyperbolic polyhedral space}.
+\emph{hyperbolic polyhedral spaces}\index{hyperbolic polyhedral space}.
 \end{subthm}
 \end{thm}
 
@@ -64,7 +65,7 @@ The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
 formed by all the simplices $\sigma'$ 
 such that $\sigma\cap\sigma'=\emptyset$ 
-but both $\sigma$ and $\sigma'$ are faces a simplex of $\tau$.
+but both $\sigma$ and $\sigma'$ are faces of a simplex of $\tau$.
 
 The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in $\sigma$.
 The angle metric between directions makes  $\Link_\sigma$ into a spherical polyhedral space.
@@ -91,7 +92,7 @@ of dimension at most $m-1$.
 In particular, 
 for any point $p$ in the interior of a simplex $\sigma$,
 the isometry class of $\Link_\sigma$ and $\kay=\dim\sigma$
-determines the isometry class of $\Sigma_p$ and the other way around.
+determine the isometry class of $\Sigma_p$ and the other way around.
 
 A small neighborhood of $p$ is isometric to a neighborhood of the tip of the $\kappa$-cone over $\Sigma_p$.
 In fact, if this propery holds at any point of a compact length space $\spc{P}$
@@ -109,7 +110,7 @@ The following theorem provides a combinatorial description of polyhedral spaces 
 
 \begin{thm}{Theorem}\label{thm:PL-CAT}
 Let $\spc{P}$ be a piecewise
-$\Lob{}\kappa$ space and $\tau$ be its triangulation. Then 
+$\Lob{}\kappa$ space and $\tau$ be a triangulation of $\spc{P}$. Then 
 
 \begin{subthm}{thm:PL-CAT:curc>=k}
 $\spc{P}$  is locally $\CAT\kappa$
@@ -132,7 +133,7 @@ We will only give a proof of the ``if'' part;
 the ``only if'' part is evident.
 
 Let us apply induction on $\dim\spc{P}$.
-The {}\emph{base} case $\dim\spc{P}=0$ is evident.
+The {}\emph{Base} case $\dim\spc{P}=0$ is evident.
 
 \parit{Step.}
 Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
@@ -140,32 +141,32 @@ Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\sp
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
 is isometric to a neighborhood of the tip in the $\kappa$-cone over 
-the $\Sigma_p$.
+ $\Sigma_p$.
 By Theorem~\ref{thm:warp-curv-bound:cbb:a}, 
 it is sufficient to show that 
 \begin{clm}{}\label{eq:Sigma-in-CAT(1)}
- $\Sigma_p$ is $\CAT1$
+ $\Sigma_p$ is $\CAT1$.
 \end{clm}
 
 Note that $\Sigma_p$ is a spherical polyhedral space 
 and its  links are isometric to  links of $\spc{P}$. 
-By the  induction hypothesis, $\Sigma_p$ is locally $\Alex1$.
-Applying Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}),
+By the  induction hypothesis, $\Sigma_p$ is locally $\CAT1$.
+Applying the generalized Hadamard--Cartan theorem \ref{thm:hadamard-cartan-gen},
 we get \ref{eq:Sigma-in-CAT(1)}.
 
-To prove (\ref{SHORT.thm:PL-CAT:CAT}) apply Generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}) to $\spc{P}$.
+To prove (\ref{SHORT.thm:PL-CAT:CAT}) apply the generalized Hadamard--Cartan theorem to $\spc{P}$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:poly-unique-geodesic}
 Show that if in a Euclidean polyhedral space $\spc{P}$
-any two points can be connected by a unique geodesic 
+any two points can be connected by a unique geodesic,  
 then $\spc{P}$ is $\CAT0$.
 \end{thm}
 
 The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded below.
 
 \begin{thm}{Theorem}\label{thm:poly-CBB} Let $\spc{P}$ be a piecewise
-$\Lob{}\kappa$ space and $\tau$ its a triangulation.
+$\Lob{}\kappa$ space and $\tau$ be a triangulation of $\spc{P}$.
 Then $\spc{P}$ is $\Alex\kappa$ if and only if the following conditions hold.
 
 \begin{subthm}{} $\tau$ is \index{pure triangulation}\emph{pure}; 
@@ -173,7 +174,7 @@ that is, any simplex in $\tau$ is  a face of some simplex of dimension exactly $
 \end{subthm}
 
 \begin{subthm}{thm:poly-CBB:m-1}
-The link of any simplex of dimension $m-1$ is formed by single point or two points.
+The link of any simplex of dimension $m-1$ is formed by a single point or two points.
 \end{subthm}
 
 \begin{subthm}{thm:poly-CBB:2pi}
@@ -212,10 +213,10 @@ or a closed real interval of length $\le \pi$.
 
 \parit{Proof.}
 We will only give a proof of the ``if'' part.
-The ``only if'' par is similar and is left to the reader.
+The ``only if'' part is similar and is left to the reader.
 
 We apply induction on $m$.
-The {}\emph{base} case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
+The {}\emph{Base} case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
 
 \parit{Step.}
 Assume that the theorem is proved for polyhedral spaces  of dimesnion less than $m$.
@@ -255,11 +256,11 @@ Assume $\spc{P}$ is a piecewise
 $\Lob{}\kappa$ space and $\dim \spc{P}\ge 2$. 
 Show that 
 
-\begin{subthm}{} if $\spc{P}$ is $\Alex{\kappa'}$, then $\kappa'\le \kappa$ and $\spc{P}$ is $\Alex{\kappa}$.
+\begin{subthm}{} if $\spc{P}$ is $\Alex{\kappa'}$, then $\kappa'\le \kappa$ and $\spc{P}$ is $\Alex{\kappa}$, 
 \end{subthm}
 
 \begin{subthm}{}
-if $\spc{P}$ is $\CAT{\kappa'}$ space, then $\kappa'\ge \kappa$ and $\spc{P}$ is $\CAT\kappa$.
+if $\spc{P}$ is $\CAT{\kappa'}$, then $\kappa'\ge \kappa$ and $\spc{P}$ is $\CAT\kappa$.
 \end{subthm}
 
 \end{thm}
@@ -271,7 +272,7 @@ if $\spc{P}$ is $\CAT{\kappa'}$ space, then $\kappa'\ge \kappa$ and $\spc{P}$ is
 A simplicial complex $\mathcal{S}$ 
 is called \index{flag complex}\emph{flag} if whenever $\{v_0,\z\dots,v_\kay\}$
 is a set of distinct vertices of $\mathcal{S}$
-that pairwise joined by edges, then the vertexes $v_0,\dots,v_\kay$
+that are pairwise joined by edges, then the vertexes $v_0,\dots,v_\kay$
 span a $\kay$-simplex in $\mathcal{S}$.
 
 If the above condition is satisfied only for $\kay=2$, 
@@ -290,11 +291,11 @@ Conclude that any simplicial complex is homeomorphic to a compact length $\CAT1$
 \begin{thm}{Proposition}\label{prop:no-trig}
 A simplicial complex $\mathcal{S}$ is flag if and only if 
 $\mathcal{S}$ as well as all the links of all its simplices
-satisfies the no-triangle condition.
+satisfy the no-triangle condition.
 \end{thm}
 
 From the definition of flag complex 
-we get the following.
+we get the following:
 
 \begin{thm}{Lemma}\label{lem:link-of-flag}
 Any link of a flag complex is flag.
@@ -328,7 +329,7 @@ is equipped with an \index{all-right spherical metric}\emph{all-right spherical 
 if it is a length metric and each simplex is isometric 
 to a spherical simplex all of whose angles are right.
 
-Spherical polyhedral $\CAT1$ spaces glued from of right-angled simplices
+Spherical polyhedral $\CAT1$ spaces glued from right-angled simplices
 admit the following characterization 
 discovered by Gromov \cite[p. 122]{gromov:hyp-groups}.
 
@@ -390,11 +391,11 @@ $\gamma$
 spends time $\pi$ on every visit to $\Star_v$.
 
 After leaving $\Star_v$,
-the local geodesic $\gamma$ has to enter another simplex, 
+the local geodesic $\gamma$ must enter another simplex, 
 say $\sigma'$, 
 which has a vertex $v'$ not joined to $v$ by an edge.
 
-Since $\tau$ is flag, we have that the stars $\Star_v$ and $\Star_{v'}$
+Since $\tau$ is flag, the stars $\Star_v$ and $\Star_{v'}$
 do not overlap.
 The same argument as above shows that $\gamma$ spends time $\pi$ on every visit to $\Star_{v'}$.
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
@@ -424,7 +425,7 @@ Assume $\Gamma$ is a finite graph
 with edges labeled by $1,2,\dots, n$.
 Denote by $\spc{U}^\Gamma$ the space obtained by taking 
 a copy of $\spc{U}$ for each vertex of $\Gamma$ and 
-gluing two such copies along $A_i$ if the corresponding vertices are joint by an edge labeled by $i$.
+gluing two such copies along $A_i$ if the corresponding vertices are joined by an edge labeled by $i$.
 
 Show that $\spc{U}^\Gamma$ is $\CAT0$
 \end{thm}
@@ -437,15 +438,15 @@ and  Karen Vogtmann \cite{billera-holmes-vogtmann}.
 
 Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
 labeled by $a_1,\dots,a_n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a_1,\dots,a_n$ and all the other verices of degree 3 
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a_1,\dots,a_n$ and all the other vertices of degree 3,  
 and prescribe the lengths of $2\cdot n-3$ edges.
-If the lengh of an edge is $0$, we assume that edge degenerates;
+If the length of an edge is $0$, we assume that edge degenerates;
 such a tree can be also described using a different topological tree $\tau'$.
 The subset of $\spc{T}_n$ corresponding to the given topological tree $\tau$ can be identified with a convex closed cone in  $\mathbb{R}^{2\cdot n-3}$.
-Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the legth metric on $\spc{T}_n$ induced by these metrics.
+Equip each such subset with the metric induced from $\mathbb{R}^{2\cdot n-3}$ and consider the length metric on $\spc{T}_n$ induced by these metrics.
 
 \begin{thm}{Exercise}\label{ex:space-of-trees}
-Show that $\spc{T}_n$ with the described metric is a $\CAT0$.
+Show that $\spc{T}_n$ with the described metric is $\CAT0$.
 \end{thm}
 
 
@@ -456,9 +457,8 @@ mostly repeats the definition of a simplicial complex,
 with simplices replaced by cubes.
 
 Formally, a \index{cubical complex}\emph{cubical complex} is defined as a subcomplex 
-of the unit cube in the Euclidean space of large dimension;
-that is, a collection of faces of cube
-such that together with each face it contains all its sub-faces.
+of the unit cube in Euclidean space of large dimension;
+that is, a collection of faces of the cube, that with each face contains all its sub-faces.
 Each cube face in this collection 
 will be called a {}\emph{cube} of the cubical complex.
 
@@ -487,15 +487,15 @@ all-right triangulation;
 each simplex corresponds to an adjusted cube.
 
 \begin{thm}{Exercise}\label{ex:cubical-complex}
-Show that a cubical complex $\spc{Q}$ is locally $\CAT0$ if and only if link of each vertex in $\spc{Q}$ is flag.
+Show that a cubical complex $\spc{Q}$ is locally $\CAT0$ if and only if the link of each vertex in $\spc{Q}$ is flag.
 \end{thm}
 
 \section{Remarks}
 
 The condition on polyhedral $\CAT\kappa$ spaces given in Theorem~\ref{thm:PL-CAT} might look easy to use, 
 but in fact, it is hard to check even in very simple cases.
-For example the description of those coverings of $\mathbb{S}^3$ branching at three 
-great circles which are $\CAT1$ requires quite a bit of work;
+For example the description of those coverings of $\mathbb{S}^3$ that branch at three 
+great circles and are $\CAT1$ requires quite a bit of work;
 an answer is given by Ruth Charney and Michael Davis \cite{charney-davis-1993}.
 
 Analogs of the flag condition for spherical Coxeter simplexes
@@ -504,41 +504,39 @@ could resolve the following problem.
 \begin{thm}{Braid space problem}
 Consider $\CC^n$ with coordinates $z_1,\dots,z_n$.
 Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
-pass to the universal cover and consider the completion $\spc{B}_n$ 
+pass to the universal cover, and consider the completion $\spc{B}_n$ 
 of the obtained space.
 
 Is it true that $\spc{B}_n$ is $\CAT0$ for any $n$.
 \end{thm}
 
-The above question has an affirmative answer for $n\le 3$ and open for all $n\ge 4$ \cite{charney-davis-1993,panov-petrunin}.
+The above question has an affirmative answer for $n\le 3$ and is open for all $n\ge 4$ \cite{charney-davis-1993,panov-petrunin}.
 
-Recall that by Hadamard--Cartan theorem (\ref{thm:hadamard-cartan})
+Recall that by the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}), 
 any complete length $\CAT{0}$ space is contractible.
 Therefore any complete length locally $\CAT{0}$ space 
 is \index{aspherical space}\emph{aspherical};
-that is, they have contractible universal covers.
+that is, has contractible universal cover.
 
 This observation can be used together with Exercise \ref{ex:cubical-complex} to construct examples of exotic aspherical spaces;
-for example compact topological manifolds which universal cover is not homeomorphic to a Euclidean space.
-A survey on the subject it given by Michael Davis \cite{davis-2001}; a more elementary introduction to the subject is given by the authors \cite[Chapter 3]{alexander-kapovitch-petrunin-CAT}.
+for example, compact topological manifolds with universal cover not homeomorphic to a Euclidean space.
+A survey on the subject is given by Michael Davis \cite{davis-2001}; a more elementary introduction to the subject is given by the authors \cite[Chapter 3]{alexander-kapovitch-petrunin-CAT}.
 
 The flag condition also leads to the so-called {}\emph{hyperbolization} procedure, a flexible tool for constructing  aspherical spaces;
 a good survey on the subject is given by Ruth Charney and Michael Davis in \cite{charney-davis-1995}.
 
-The $\CAT0$ property of a cube complex admits interesting (and useful) geometric descriptions if one exchanged the $\ell^2$-metric to a natural $\ell^1$ or $\ell^\infty$ on each cube.
-The following statement is proved by Brian Bowditch \cite{bowditch-2020}.
+The $\CAT0$ property of a cube complex admits interesting (and useful) geometric descriptions if one replaces the $\ell^2$-metric with a natural $\ell^1$- or $\ell^\infty$-metric on each cube.
+The following statement was proved by Brian Bowditch \cite{bowditch-2020}.
 
 \begin{thm}{Theorem}
 The following three conditions are equivalent.
 
-\begin{subthm}{cube-2} A cube complex $Q$ equipped with $\ell^2$-metric is $\CAT0$.
+\begin{subthm}{cube-2} A cube complex $Q$ equipped with  $\ell^2$-metric is $\CAT0$.
 \end{subthm}
 
-\begin{subthm}{cube-infty} A cube complex $Q$ equiped with $\ell^\infty$-metric is \index{injective space}\emph{injective}.
-The later means that for any metric space $\spc{X}$ with a subset $A$, any short map $A\to (Q,\ell^\infty)$ can be extended to a short map $\spc{X}\to (Q,\ell^\infty)$.
+\begin{subthm}{cube-infty} A cube complex $Q$ equipped with $\ell^\infty$-metric is \index{injective space}\emph{injective}; that is, for any metric space $\spc{X}$ with a subset $A$, any short map $A\to (Q,\ell^\infty)$ can be extended to a short map $\spc{X}\to (Q,\ell^\infty)$.
 \end{subthm}
 
-\begin{subthm}{cube-1} A cube complex $Q$ equiped with $\ell^1$-metric is \index{median space}\emph{median}.
- The later means that for any three points $x,y,z$ there is a {}\emph{unique} point   $m$ (it is called \index{median}\emph{median} of $x$, $y$, and $z$) that lies on {}\emph{some} geodesics $[xy]$, $[xz]$ and $[yz]$.
+\begin{subthm}{cube-1} A cube complex $Q$ equipped with $\ell^1$-metric is \index{median space}\emph{median}; that is, for any three points $x,y,z$ there is a {}\emph{unique} point   $m$ (called the  \index{median}\emph{median} of $x$, $y$, and $z$) that lies on {}\emph{some} geodesics $[xy]$, $[xz]$ and $[yz]$.
 \end{subthm}
 \end{thm}
