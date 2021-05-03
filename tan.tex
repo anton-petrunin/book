@@ -9,11 +9,11 @@ observation that the ultralimit of any sequence of length spaces is geodesic (se
 
 \begin{thm}{Theorem}\label{thm:tan-is}
 \begin{subthm}{thm:tan-is-CBB}
-If $\spc{L}$ is a complete length  [$\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T^\o_p$ is $\Alex{0}$.
+If $\spc{L}$ is a complete length  $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T^\o_p$ is $\Alex{0}$.
 \end{subthm}
 
 \begin{subthm}{thm:tan-is-CBA}
-If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T^\o_p$ is $\CAT0$.
+If $\spc{U}$ is a complete length $\CAT\kappa$ space and $p\in \spc{U}$, then $\T^\o_p$ is $\CAT0$.
 \end{subthm}
 
 \end{thm}
@@ -21,27 +21,29 @@ If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T^\o_p$ is $\CAT
 The proofs of both parts are nearly identical.
 
 \parit{Proof; (\ref{SHORT.thm:tan-is-CBB}).}
-Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then for its blowup $n\cdot\spc{L}$ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
-By Proposition~\ref{prp:A^omega}, $\o\cdot\spc{L}$ is $\Alex0$
+Since $\spc{L}$ is a complete length $\Alex{\kappa}$ space, then its blowup $n\cdot\spc{L}$
+(see Section \ref{sec: ultradiff})
+ is a complete length $\Alex{\kappa/{n^{2}}}$ space.
+By Proposition~\ref{prp:A^omega}, the $\o$-blowup $\o\cdot\spc{L}$ is $\Alex0$
 and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{L}$.
 
 \parit{(\ref{SHORT.thm:tan-is-CBA}).}
-Since $\spc{U}$ is a complete length $\CAT\kappa$ space, its blowup $n\cdot\spc{U}$ is $\CAT{\kappa/{n^{2}}}$.
+Since $\spc{U}$ is a complete length $\CAT\kappa$ space, then its blowup $n\cdot\spc{U}$ is $\CAT{\kappa/{n^{2}}}$.
 By Proposition~\ref{prop:CAT^omega}, $\o\cdot\spc{U}$ is $\CAT0$
 and so is $\T_p^\o$ as a metric component of~$\o\cdot\spc{U}$.
 \qeds
 
 Recall that the tangent space $\T_p$ can be considered as a subset of $\T^\o_p$ (see \ref{thm:tangent-ultratangent}).
-Therefore we get the following:
+Therefore we have the following:
 
 \begin{thm}{Corollary}\label{cor:real-tan-is}
 \begin{subthm}{cor:tan-is-CBB}
-If $\spc{L}$ is a $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T_p$ is $\Alex{0}$.
+If $\spc{L}$ is a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T_p$ is $\Alex{0}$.
 Moreover, $\T_p$ satisfies (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 \end{subthm}
 
 \begin{subthm}{cor:tan-is-CBA}
-If $\spc{U}$ is a $\CAT\kappa$ space and $p\in \spc{U}$, then $\T_p$ is $\CAT0$.
+If $\spc{U}$ is a complete length $\CAT\kappa$ space and $p\in \spc{U}$, then $\T_p$ is $\CAT0$.
 Moreover, $\T_p$ satisfies (2\textit{n}+2)-comparison (\ref{CBA-n-point}).
 \end{subthm}
 
@@ -86,7 +88,7 @@ Then $\T_p\spc{U}$ is a complete length $\CAT0$ space.
 \end{thm}
 
 
-\parit{Proof.}
+\parit{Proof of Theorem \ref{thm:tanCAT}.}
 Since $\T_p=\Cone \Sigma_p$, it is sufficient to show that for any hinge $\hinge pxy$ such that 
 $\mangle \hinge pxy<\pi$ and any $\eps>0$, there is $z\in \spc{U}$ such that 
 \[\mangle \hinge pxz<\tfrac12\cdot\mangle \hinge pxy+\eps,\quad\mangle \hinge pyz<\tfrac12\cdot\mangle \hinge pxy+\eps.\eqlbl{eq:midpoint}\]
@@ -125,26 +127,26 @@ Fix $\eps=0.001$ and consider two functions $f,\check f:\HH\to\RR$
 \[\check f(\bm{x})
 =
 \max\left\{|\bm{x}|,\max_{n\ge1}\{(1+\eps)\cdot x_n-\tfrac{1}{n}\}\right\}.\] 
-Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length metric form infinite dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
-Set $p$ to be the origin of $\HH\times \RR$.
+Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length-metric form infinite-dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
 
+Let $p$ be the origin of $\HH\times \RR$.
 Note that $\check{\spc{L}}\cap\spc{L}$ is starshaped in $\HH$ with center at $p$.
-Further $\check{\spc{L}}\backslash\spc{L}$ consist of a countable number of disjoint sets
+Further $\check{\spc{L}}\backslash\spc{L}$ consists of a countable number of disjoint sets
 \[\Omega_n=\set{(\bm{x},\check f(\bm{x}))\in\check{\spc{L}}}{(1+\eps)\cdot x_n-\tfrac{1}{n}>|\bm{x}|}.\]
 Note that $\dist{\Omega_n}{p}{}>\tfrac{1}{n}$ for each $n$.
 It follows that for any geodesic $[p q]$ in $\check{\spc{L}}$,
 a small subinterval $[p \bar q]\subset [p q]$ 
-coincides with a straight segment in $\HH\times\RR$, 
-which is also a geodesic in $\spc{L}$.
-Thus we can treat $\Sigma_p\spc{L}$ and $\Sigma_p\check{\spc{L}}$ as one set, with two angle metrics $\mangle$ and $\check\mangle$;
-let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
+is a straight segment in $\HH\times\RR$, 
+and also a geodesic in $\spc{L}$.
+Thus we can treat $\Sigma_p\spc{L}$ and $\Sigma_p\check{\spc{L}}$ as one set, with two angle metrics $\mangle$ and $\check\mangle$.
+Let us denote by $\mangle_{\HH\times \RR}$ the angle in $\HH\times\RR$.
 
 The space $\spc{L}$  is isometric to the Euclidean cone
 over $\Sigma_p\spc{L}$ with vertex at~$p$; 
 $\Sigma_p\spc{L}$ is isometric to a sphere in Hilbert space with radius~$\frac{1}{\sqrt{2}}$.
-In particular, $\mangle$ is the length metric of $\mangle_{\HH\times\RR}$ on $\Sigma_p{\spc{L}}$.
+In particular, $\mangle$ is the length-metric of $\mangle_{\HH\times\RR}$ on $\Sigma_p{\spc{L}}$.
 
-Therefore in order to show that $\check \mangle$ does not define a length metric on $\Sigma_p{\spc{L}}$
+Therefore in order to show that $\check \mangle$ does not define a length metric on $\Sigma_p{\spc{L}}$,
 it is sufficient to construct a pair of directions $(\xi_+,\xi_-)$ such that
 \[\check \mangle(\xi_+,\xi_-)<\mangle(\xi_+,\xi_-).\] 
 Set $\bm{e}_0=(1,0,0,\dots)$, $\bm{e}_1=(0,1,0,\dots),\dots\in \HH$. 
@@ -166,21 +168,21 @@ Consider a sequence of $2$-dimensional sectors $Q_n=\check{\spc{L}}\cap (\sigma_
 For each $n$, the sector $Q_n$ intersects $\Omega_n$ and is bounded by two geodesic half-lines $\gamma_\pm$.
 Note that $Q_n\GHto Q$, where  $Q$ is a solid Euclidean angle
 in $\EE^2$ with angle measure $\beta<\mangle(\xi_+,\xi_-)=\tfrac\pi{\sqrt{2}}$.
-Indeed, $Q_n$ is path isometric to the subset of $\EE^3$ described by
+Indeed, $Q_n$ is path-isometric to the subset of $\EE^3$ described by
 \begin{align*}
  y\ge0 \quad 
 \text{and}\quad  
 &
 z=\max\left\{\sqrt{x^2+y^2},
 (1+\eps)\cdot y-\tfrac{1}{n} \right\}
-\intertext{with length metric.
-Thus, its limit $Q$ is path isometric to the subset of $\EE^3$ described by}
+\intertext{with length-metric.
+Thus, its limit $Q$ is path-isometric to the subset of $\EE^3$ described by}
 y\ge0
 \quad \text{and}\quad  
 &
 z=\max\left\{\sqrt{x^2+y^2},(1+\eps)\cdot y\right\}
 \end{align*}
-with length metric.
+with length-metric.
 In particular, for any $t,\tau\ge0$, 
 \begin{align*}
 \dist{\gamma_+(t)}{\gamma_-(\tau)}{\check{\spc{L}}} 
@@ -202,25 +204,28 @@ Then $S$ is $\Alex{0}$.
 
 \parit{Proof.} Recall that for a subset $X\subset \HH\times \RR$, 
 we will denote by $\dist{*}{*}{X}$ the
-length metric on $X$.
+length-metric on $X$.
 
-By Buyalo's theorem%%\ref{thm:buyalo}
-, any convex hypersurface in a Euclidean space, equipped with the length metric, is non-negatively curved.
+By
+% Buyalo's theorem
+the theorem of Buyalo \cite ?, sharpened by the authors in \cite ?,
+%%\ref{thm:buyalo} and AKP
+any convex hypersurface in a Euclidean space, equipped with the length metric, is non-negatively curved.
 Thus it is sufficient to show that for any 4-point set $\{x_0,x_1,x_2,x_3\}\subset S$, 
 there is a finite-dimensional subspace $E\subset \HH\times \RR$ 
 such that $\{x_i\}\in E$ and $\dist{x_i}{x_j}{S\cap E}$ is arbitrary close to $\dist{x_i}{x_j}{S}$.
 
 Clearly $\dist{x_i}{x_j}{S\cap E}\ge \dist{x_i}{x_j}{S}$; 
-thus it is sufficient to show that for given $\eps>0$ one can choose $E$, so that 
+thus it is sufficient to show that for given $\eps>0$ one can choose $E$ so that 
 \[\dist{x_i}{x_j}{S\cap E}
 <
-\dist{x_i}{x_j}{S}+\eps
+\dist{x_i}{x_j}{S}+\eps.
 \eqlbl{eq:claim:hil-con*}.\]
 
 For each pair $(x_i,x_j)$, choose a broken line $\beta_{i j}$ connecting $x_i,x_j$ that lies under $S$ (that is, outside of $\Conv S$) in $\HH\times \RR$ 
 and has length at most $\dist{x_i}{x_j}{S}+\eps$.
-Take $E$ to be the affine hull of all the vertexes in all $\beta_{i j}$.
-Thus,
+Let $E$ be the affine hull of all the vertexes in all $\beta_{i j}$.
+Thus
 \[\dist{x_i}{x_j}{S\cap E}\le \length \beta_{i j}\] 
 and \ref{eq:claim:hil-con*} follows.\qeds
 
@@ -234,7 +239,8 @@ Construct a non-compact complete geodesic $\Alex{0}$ space that contains no half
 
 \section{Rademacher theorem}
 
-At the end of this section we give an extension of the Rademacher theorem for $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}) proved by Alexander Lytchak \cite{lytchak:diff}. 
+At the end of this section we give an extension of the Rademacher theorem (see 
+Section \ref{sec: speed}) to $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}), proved by Alexander Lytchak \cite{lytchak:diff}. 
 The following proposition is the 1-dimensional case of the extended Rademacher theorem.
 
 Recall that differentiable curves are defined in \ref{def:diff-curv}.
