@@ -459,13 +459,8 @@ Assuming the barycentric simplex $\spx{\bm{f}}$ is defined,
 then $\spx{\bm{f}}$ is called the \index{$\kappa$-barycentric simplex}\emph{$\kappa$-barycentric simplex} for the point array $\bm{a}$;
 it will be denoted by $\spx{\bm{a}}\mc\kappa$.
 The points $a^0,a^1,\dots,a^\kay$ are called 
-<<<<<<< HEAD
 \emph{vertexes of the $\kappa$-barycentric simplex}%
 \index{vertexes of barycentric simplex}.
-=======
-\emph{vertices of $\kappa$-barycentric simplex}%
-\index{vertices of barycentric simplex}.
->>>>>>> 5864da762246beb032a3a5b43a2190c044c2eaff
 Note that once we say the $\kappa$-barycentric simplex is defined, 
 we automatically assume that $\rad\bm{a}<\tfrac{\varpi\kappa}2$.
 
@@ -916,13 +911,13 @@ Then $\map(K)\subset\bigcup_i\Delta_n$.
 Arguing by contradiction,
 assume $\LinDim\spc{U}<m$.
 By \ref{lem:approximation-cba:im},
-the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of $(m-1)$-skeleton of $\spc{N}'$;
+the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of the $(m-1)$-skeleton of $\spc{N}'$;
 in particular it can be covered 
 by a  countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
 $\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|_K$.
 Since $\eps>0$ is arbitrary, 
-we get that $\bm{0}\in \RR^m$ is not a stable value of $f=F|_K$, a contradiction.
+then $\bm{0}\in \RR^m$ is not a stable value of $f=F|_K$, a contradiction.
 
 \parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
 The following claim follows from the definition of tangent space.
@@ -932,7 +927,7 @@ Let $q\in \spc{U}$ and $\dot x^1,\dot x^2,\dots,\dot x^n\in \T_q$.
 Then given $\delta>0$,
 there is a point array $x^1,x^2,\dots,x^n$ in $\spc{U}$ 
 such that 
-\[\mangle(\dot x^i,\ddir q{x^i})<\delta\]
+\[\mangle(\dot x^i,\ddir q{x^i})<\delta,\]
 and for some fixed $\lam>0$ we have
 \[\tfrac1\lam\cdot\dist[{{}}]{q}{x^i}{}=|\dot x^i|\quad
 \text{and}\quad |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
@@ -958,8 +953,8 @@ Applying Claim \ref{clm:finite-config-cba}, we get a point array
 $(a^0,a^1,\dots,a^m)$ in $\spc{U}$
 such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
 and $\bigcap_{i\not=j}\cBall[a^i,\lam]\not=\emptyset$ for each $j$.
-Since $\lam>0$ can be chousen arbitrary small, 
-it implies (\ref{SHORT.thm:dim-infty-CBA:bary}).
+Since $\lam>0$ can be chosen arbitrary small, 
+ (\ref{SHORT.thm:dim-infty-CBA:bary}) follows.
 \qeds
 
 
@@ -970,9 +965,9 @@ Recall that web embedding and its brace is defined in \ref{prop-def:web-embeddin
 {\sloppy 
 
 \begin{thm}{Theorem}\label{thm:loc-lip-inverse}
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
+Suppose  $\spc{U}$ is a complete length $\CAT\kappa$ space such that 
 $\LinDim\spc{U}=m$,
-and $\bm{a}=(a^0,a^1,\dots a^m)$ be a point array in $\spc{U}$ 
+and $\bm{a}=(a^0,a^1,\dots a^m)$ is a point array in $\spc{U}$ 
 with radius $<\tfrac{\varpi\kappa}{2}$.
 Then 
 the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\distfun{a^0}{}{}$ is locally Lipschitz.
@@ -1026,17 +1021,17 @@ there is $\eps>0$ such that for any $x\in \oBall(p,10\cdot\eps)$ we have
 \quad\text{for all}\quad j\not=i.
 \eqlbl{eq:<pi/2-eps}\]
 
-Now assume for sufficiently small $\eps>0$
+Now assume that for sufficiently small $\eps>0$
 there are points $b\in\spc{U}$ and $q\in\Web(\distfun{\bm{a}}{}{})$ such that 
 \[\dist{p}{q}{}<\eps,\quad \dist{p}{b}{}<\eps,\quad \mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\quad\text{for all}\quad i.
 \eqlbl{eq:2nd-angle}\]
-Acording to Theorem~\ref{thm:cat-bary-web:web=Im(bary)},
-for all small $\eps>0$, we have 
+According to Theorem~\ref{thm:cat-bary-web:web=Im(bary)},
+for all small $\eps>0$ we have 
 \[\rad\{b,a^0,a^1,\dots,a^\kay\}<\tfrac{\varpi\kappa}2.\]
-Fix sufficiently small $\delta>0$
+Fix a sufficiently small $\delta>0$
 and set 
 \[v^i=\geod_{[q u^i]}(\tfrac13\cdot\delta)\quad\text{and}\quad w^i=\geod_{[v^i b]}(\tfrac23\cdot\delta).\]
-Clearly,
+Clearly
 \begin{align*}
 \dist{b}{w^i}{}
 &=
@@ -1076,7 +1071,7 @@ Lemma~\ref{lem:nondeg-test-with-balls} finishes the proof.
 
 \parit{Proof of \ref{thm:loc-lip-inverse}.}
 From \ref{prop-def:web-embedding}, it is sufficient to show that 
-the $\map$ is locally Lipshitz.
+$\map$ is locally Lipshitz.
 Assume the contrary; that is, there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
 \[\frac{\dist{\map(\bm{y}_n)}{\map(\bm{z}_n}{})}{|\bm{y}_n-\bm{z}_n|}
 \to\infty
@@ -1090,7 +1085,7 @@ $q_n=\map(\bm{y}_n)$,
 and $b_n=\map(\bm{z}_n)$.
 From \ref{prop-def:web-embedding}, $p$, $q_n$, $b_n\in\InWeb(\distfun{\bm{a}}{}{})$
 and $q_n,b_n\to p$ as $n\to\infty$.
-Fix arbitrary $\eps>0$.
+Fix an arbitrary $\eps>0$.
 Note that \ref{eq:nonlip} implies
 \[\mangle\hinge{q_n}{a^i}{b_n}<\tfrac\pi2+\eps
 \]
@@ -1104,7 +1099,7 @@ for all large $n$.
 According to Lemma~\ref{lem:nondeg-bs-test}, the point array $b_n,a^0,\dots,a^\kay$ for large $n$ is nondegenerate.
 
 Applying Corollary~\ref{cor:LinDim>bary},
-we get a contradiction
+we have a contradiction.
 \qeds
 
 
@@ -1112,7 +1107,7 @@ we get a contradiction
 \section{Remarks and open problems}
 
 The following conjecture (in an equivalent form)
-appers in \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
+appears in \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
 
 \begin{thm}{Conjecture}
 For any complete length $\CAT{}$ space $\spc{U}$, we have
@@ -1122,7 +1117,7 @@ For any complete length $\CAT{}$ space $\spc{U}$, we have
 
 \end{thm}
 
-By Corollary~\ref{cor:dim-CBA} it holds for separable spaces
+By Corollary~\ref{cor:dim-CBA}, this conjecture holds for separable spaces.
 
 
 
