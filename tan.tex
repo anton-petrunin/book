@@ -251,18 +251,18 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then $\alpha$ is differentiable almost everywhere.
 \end{thm}
 
-The following two lemmas provide sufficient conditions for existence of one-sided derivative of a curve in $\Alex{}$ and $\CAT{}$ spaces.
+The following two lemmas provide sufficient conditions for existence of the one-sided derivative of a curve in $\Alex{}$ and $\CAT{}$ spaces.
 The proofs of both lemmas are very similar.
 
 \begin{thm}{Lemma}\label{lem:CBB-diff-curve}
 Let $\alpha\:\II\to \spc{L}$ be a $1$-Lipschitz curve in a $\Alex{}$ space.
-Suppose that for some $t_0\in \II$ and any $\eps>0$ there is a point $p$ such that $\dist{\alpha(t_0)}{p}{}<\eps$ and
+Suppose that for some $t_0\in \II$ and any $\eps>0$, there is a point $p$ such that $\dist{\alpha(t_0)}{p}{}<\eps$ and
 \[\liminf_{t\to t_0+} \frac{\distfun{p}\circ\alpha(t)-\distfun{p}\circ\alpha(t_0)}{t-t_0}>1-\eps.\]
 Then the right derivative $\alpha^+(t_0)$ is defined and $|\alpha^+(t_0)|=1$.
 \end{thm}
 
 \parit{Proof.}
-Without loss of generatiy we may assume that $t_0=0$.
+Without loss of generality we may assume that $t_0=0$.
 Set $x=\alpha(0)$.
 Fix a sequence of points $p_n\to x$ such that 
 \[\liminf_{t\to 0+} \frac{\dist{p_n}{\alpha(t)}{}-\dist{p_n}{x}{}}{t}\to 1\]
@@ -275,9 +275,10 @@ Observe that there are sequences $\delta_n\to 0+$ and $t_n\to 0+$ such that
 (1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang+dist}\]
 for any $s\in(0,t_n]$.
 
-For each $n$, choose $q_n\in \Str(x)$ sufficiently close $\alpha(t_n)$ so that the inequality 
+For each $n$, choose $q_n\in \Str(x)$ sufficiently close $\alpha(t_n)$ that the inequality 
 \[\angk\kappa x{q_n}{p_n}>\pi-\delta_n\]
-still holds.
+still holds (see Definition \ref{def:straight}).
+
 Set $\gamma_n=\geod_{[xq_n]}$.
 
 By comparison,
@@ -291,7 +292,7 @@ By comparison,
 Therefore \ref{eq:ang+dist} implies that
 \[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot (s)\]
 if $s$ is a sufficiently small and positive.
-That is, $\alpha^+(0)$ is defined; see \ref{def:right-derivative}.
+That is, $\alpha^+(0)$ is defined (see Definition \ref{def:right-derivative}).
 \qeds
 
 \begin{thm}{Lemma}\label{lem:CBA-diff-curve}
@@ -315,8 +316,8 @@ Observe that there are sequences $\delta_n\to 0+$ and $t_n\to 0+$ such that
 (1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang++dist}\]
 for any $s\in(0,t_n]$.
 
-Without loss of generality we can assume that $\dist{x}{q_n}{}<\varpi\kappa$ for any $n$;
-in particular geodesic $\gamma_n=\geod_{[xq_n]}$ is uniquely defined.
+Without loss of generality we may assume that $\dist{x}{q_n}{}<\varpi\kappa$ for any $n$;
+in particular, the geodesic $\gamma_n=\geod_{[xq_n]}$ is uniquely defined.
 
 By comparison,
 \begin{align*}
@@ -327,7 +328,7 @@ By comparison,
 Therefore \ref{eq:ang++dist} implies that
 \[\dist{\gamma_n(s)}{\alpha(s)}{}<10\cdot\delta_n\cdot s\]
 if $s$ is a sufficiently small and positive.
-That is, $\alpha^+(0)$ is defined; see \ref{def:right-derivative}.
+That is, $\alpha^+(0)$ is defined (see Definition  \ref{def:right-derivative}).
 \qeds
 
 \parit{Proof of \ref{prop:Rademacher-dim=1}.}
@@ -338,29 +339,29 @@ Recall that by Theorem~\ref{thm:speed},
 \[\speed_s\alpha\ae1.\eqlbl{eq:speed=1}\]
 
 Fix a countable dense set $T\subset\II$;
-given $t\in T$, set
+given $t\in T$, let
 \[h_t(s)=\dist{\alpha(t)}{\alpha(s)}{}.\]
 Note that $h_t$ is $1$-Lipschitz for each $t\in T$.
-Therefore, by the standard Rademacher theorem and countability of $T$ for almost all $s\in\II$  $h_t'(s)$ is defined for all $t\in T$.
+Therefore, by the standard Rademacher theorem and countability of $T$ for almost all $s\in\II$,  $h_t'(s)$ is defined for all $t\in T$.
 
-Set
+Let
 \[w^+(s)\df\limsup_{\substack{t\in T\\t\to s-}} \{h'_t(s)\}.\]
 Let us show that
 \[w^+(s)\ae1.\eqlbl{eq:w+=1}\]
 Note that once this is proved, Lemma \ref{lem:CBB-diff-curve} implies the proposition in the $\Alex{}$ case.
 
-Fix a small $\eps>0$.
-Denote by $N_\eps^+$ the set of all points $s\in\II$ such that $w^+(s)<1-\eps$.
+For a small $\eps>0$, denote by $N_\eps^+$ the set of all points $s\in\II$ such that $w^+(s)<1-\eps$.
 Note that the sets $N_\eps^+$ are measurable.
 
-Assume that $N_\eps^+$ has positive measure;
-fix its Lebesgue point $s_0$.
-We can assume that $\speed_{s_0}\alpha=1$ and $h_t'(s_0)$ is defined for any $t\in T$.
+Suppose $N_\eps^+$ has positive measure. 
+%fix its Lebesgue point $s_0$.
+Let $s_0\in N_\eps^+$ be a  Lebesgue point of $\alpha$.
+We may assume that $\speed_{s_0}\alpha=1$ and $h_t'(s_0)$ is defined for any $t\in T$.
 Suppose $t\in T$ is sufficiently close to $s_0$ and $t<s_0$.
-Since $\speed_{s_0}\alpha=1$, we have that
+Since $\speed_{s_0}\alpha=1$, we have 
 \[h_t(s_0) \ge (s_0-t)\cdot(1 - \eps^2).
 \eqlbl{hn>=}\]
-Further there is a set $A\subset [t,s_0]$ with measure at least $(1-\eps)\cdot|s_0-t|$ such that
+Further, there is a set $A\subset [t,s_0]$ with measure at least $(1-\eps)\cdot|s_0-t|$ such that
 \[h_t'(s) < 1-\eps\]
 for any $s\in A_n$.
 Since $h_t$ is $1$-Lipschitz, we have
@@ -370,7 +371,7 @@ h_t(s_0)&=\int_{[t,s_0]\backslash A}h_t'(s)\cdot\dd s +\int_{A}h_t'(s)\cdot\dd s
 &\le (s_0 - t)\cdot [\eps+(1 - \eps)^2].
 \end{align*}
 The latter contradicts \ref{hn>=}.
-That is, we have that $w^+(s)\ge1-\eps$ almost everywhere.
+Thus $w^+(s)\ge1-\eps$ almost everywhere.
 Since $\eps>0$ is arbitrary, \ref{eq:w+=1} follows.
 
 In the same way we can show that 
@@ -382,8 +383,8 @@ Then Lemma \ref{lem:CBA-diff-curve} implies the proposition in the $\CAT{}$ case
 \qeds
 
 
-\begin{thm}{Theorem}\label{thm:Rademacher-CBB+CBA}
-Let $f$ be a locally Lipschitz submap from a Euclidean space to a complete length space $\spc{Z}$.
+\begin{thm}{Extended Rademacher theorem}\label{thm:Rademacher-CBB+CBA}
+Let $f\:\EE^m\subto \spc{Z}$ be a locally Lipschitz submap from a Euclidean space to a complete length space $\spc{Z}$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then the differential $\dd_x f$ is defined at almost all points $x\in\Dom f$.
 
@@ -395,17 +396,17 @@ there is an isometry $\iota$ from $\Im f$ to a Euclidean space such that the com
 The proof is a reduction to the 1-dimensional case (\ref{prop:Rademacher-dim=1}) by standard arguments \cite{kirchheim,margulis-mostow}.
 
 \parit{Proof.}
-Suppose that $f\:\EE^m\subto \spc{Z}$.
-Without loss of generality we may assume that $\Dom f$ is bonded and $f$ is Lipschitz.
+%Suppose that $f\:\EE^m\subto \spc{Z}$.
+Without loss of generality we may assume that $\Dom f$ is bounded and $f$ is Lipschitz.
 
 Fix a countable dense set of vectors $\{v_i\}$ in $\EE^m$.
 Fix $v_i$ and a point $p\in \Dom f$.
-By Proposition~\ref{prop:Rademacher-dim=1}, the value $\dd_x(v_i)$ is defined at $x=p+t\cdot v_i$ for almost all $t$ such that $x\in \Dom f$.
-It follows that $\dd_x(v_i)$
+By Proposition~\ref{prop:Rademacher-dim=1}, the value $\dd_xf(v_i)$ is defined at $x=p+t\cdot v_i$ for almost all $t$ such that $x\in \Dom f$.
+It follows that $\dd_xf(v_i)$
 is defined for every $i$ on a set $A$ of full measure in $\Dom f$.
-Since the metric differential of $f$ is defined almost everywhere (\ref{thm:Rademacher-md}), we have that $\dd_x(v)$ is defined for any $v$ on a set $B$ of full measure in $\Dom f$.
+Since the metric differential of $f$ is defined almost everywhere (\ref{thm:Rademacher-md}), we have that $\dd_xf(v)$ is defined for any $v$ on a set $B$ of full measure in $\Dom f$.
 
-Applying the definition of metric differential and differential, we obtain that the image of $\dd_xf$ is a weakly convex set in $\T_{f(x)}$.
+Applying the definitions of metric differential and differential (\ref{thm:Rademacher-md} and \ref{def:differential}), we obtain that the image of $\dd_xf$ is a weakly convex set in $\T_{f(x)}$.
 It follows that $\Im\dd_xf$ is $\Alex{0}$ or $\CAT0$ if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ respectively.
 It remains to apply Exercise \ref{mink+alex=euclid} or \ref{mink+CAT=euclid} if the space $\spc{Z}$ is $\Alex{}$ or $\CAT{}$ respectively.
 \qeds
@@ -432,29 +433,29 @@ Show that
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:d(CAT)} 
-Let $\spc{U}$ be a complete length $\CAT{}$ space
-$f\:\spc{U}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
+Let $\spc{U}$ be a complete length $\CAT{}$ space, 
+$f\:\spc{U}\subto\RR$ be a locally Lipschitz semiconcave subfunction,  
 and $p\in \Dom f$.
 Then $\dd_p f$ is a Lipschitz concave function on $\T_p\spc{U}$.
 \end{thm}
 
 \parit{Proof.}
-Recall that the tangent space $\T_p$ can be considered as a subspace of the ultratangent space $\T_p^\o$ (\ref{thm:tangent-ultratangent}).
+Recall that the tangent space $\T_p = T_p\spc{U}$ can be considered as a subspace of the ultratangent space $\T_p^\o$ (\ref{thm:tangent-ultratangent}).
 Since $\T_p^\o$ is $\CAT0$, \ref{thm:tanCAT} implies that $\T_p$ is a convex set in $\T_p^\o$.
 
-Recall that $\dd_p^\o f$ is a concave function on $\T_p^\o$ (\ref{ddo-concave}).
+By \ref{ddo-concave}, $\dd_p^\o f$ is a concave function on $\T_p^\o$.
 It remains to apply that $\dd_pf=(\dd_p^\o f)|_{\T_p}$ (\ref{prop:differential:ultra}).
 \qeds
 
-As is shown in Halbeisen's example (see section \ref{halbeisen}),  
+As is shown in Halbeisen's example (see Section \ref{halbeisen}),  
 a $\Alex{}$ space  might have tangent spaces that are not length spaces; 
 thus concavity of the differential $\dd_p f$ of a semiconcave function $f$ is meaningless. 
 Nevertheless, as the following lemma shows, the differential $\dd_p f$ of a semiconcave function always satisfies the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
-In the finite dimensional case $\dd_p f$ is concave. % (see ???)
+In the finite dimensional case, $\dd_p f$ is concave. % (see ???)
 
 \begin{thm}{Lemma}\label{lem:ohta} 
-Let $\spc{Z}$ be a complete length space
-$f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction 
+Let $\spc{Z}$ be a complete length space,
+$f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction,  
 and $p\in \Dom f$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then for any $u,v\in \T_p$, we have
@@ -468,10 +469,10 @@ where
 
 \parit{Proof of \ref{lem:ohta}.}
 If $\spc{Z}$ is $\CAT{}$, then the statement follows from \ref{lem:d(CAT)}.
-Indeed, let $z$ be the midpoint of a geodesic $[vw]_{\T_p}$. 
+Indeed, let $z$ be the midpoint of a geodesic $[uv]_{\T_p}$. 
 Observe that $2\cdot |z|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
 Since $\dd_pf$ is concave, we have that 
-\[2\cdot\dd_pf(z)\ge \dd_pf(v)+\dd_pf(w).\]
+\[2\cdot\dd_pf(z)\ge \dd_pf(u)+\dd_pf(v).\]
 It remains to choose $\xi\in \Sigma_p$ so that $\xi\cdot |z|=z$ and observe that $s\ge \dd_p(\xi)$.
 
 Now assume $\spc{Z}$ is $\Alex{}$.
@@ -495,7 +496,7 @@ Prepare a model configuration of five points: $\tilde p,\tilde u,\tilde v,\tilde
 \end{itemize}
 }
 \begin{itemize}
-\item $\tilde v'$ lies on the extension of $[\tilde p\tilde v]$ so that $\tilde v$ is midpoint of $[\tilde p\tilde v']$, 
+\item $\tilde v'$ lies on an extension of $[\tilde p\tilde v]$ so that $\tilde v$ is the midpoint of $[\tilde p\tilde v']$, 
 \item $\tilde w$ is the midpoint for $\tilde u$ and ${\tilde v}$.
 \end{itemize}
 Note that 
@@ -505,7 +506,7 @@ Note that
 
 Assume that $\spc{Z}$ is geodesic.
 
-For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{Z}$ the following way:
+For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{Z}$ as follows:
 \begin{enumerate}[(a)]
 \item $v_t=\exp_p(t\cdot v)$,\quad  $v_t'=\exp_p(t\cdot v')$
 \item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
@@ -517,7 +518,7 @@ we have $\dist{u_t}{v_t}{}=t\cdot\dist{\tilde u}{\tilde v}{}+o(t)$
 and $\dist{u_t}{v_t'}{}=t\cdot\dist{\tilde u}{\tilde v'}{}+o(t)$ 
 (see Theorem~\ref{angle} and Section~\ref{sec:angle}).
 
-From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we get that 
+From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we have
 \[\angk\kappa{v_t}p{w_t}
 \ge
 \angk\kappa{v_t}p{u_t}
@@ -530,13 +531,13 @@ and
 \ge
 \mangle\hinge{\tilde v}{\tilde v'}{\tilde u}+\tfrac{o(t)}t.\]
 Clearly, 
-$\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde x}{\tilde u'}=\pi$. 
+$\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde v'}{\tilde u'}=\pi$. 
 From adjacent angle comparison (\ref{2-sum}), 
-$\angk\kappa{v_t}p{v_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
+$\angk\kappa{v_t}p{u_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
 Hence
 $\angk\kappa{v_t}p{w_t}
 \to
-\mangle\hinge{\tilde v}{\tilde p}{\tilde v}$ as $t\to0+$
+\mangle\hinge{\tilde v}{\tilde p}{\tilde w}$ as $t\to0+$
 and thus 
 \[\dist{p}{w_t}{}=t\dist{\tilde p}{\tilde w}{}+o(t).\]
 
@@ -548,26 +549,26 @@ Since $f$ is $\lambda$-concave we have
 +t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
 \end{align*}
  
-Applying $\lambda$-concavity of $f$, we get
+Applying $\lambda$-concavity of $f$, we have
 \[(\dd_p f)(\dir p{w_t})
 \ge 
 \frac{t\cdot[(\dd_p f)(u)+(\dd_p f)(v)]
-+o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}
++o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}.
 \eqlbl{eq:lem:ohta*}\]
-and the lemma follows.
+The lemma follows.
 
 \medskip
 
 Finally, if $\spc{Z}$ is not geodesic one needs to make two adjustments in the above construction.
 Namely: 
 \begin{enumerate}[(i)]
-\item For the geodesic $[u_t v_t]$ to be defined, one has to take in (\ref{u_t}) $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$. 
-More precisely, 
+\item For the geodesic $[u_t v_t]$ to be defined, in (\ref{u_t}) one has to take  $u_t\in \Str(v_t)$, $u_t\approx\exp_p(t\cdot u)$;
+more precisely, 
 \[\dist{u_t}{\exp_p(t\cdot u)}{}=o(t).\] 
 Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
 \[\dist{p}{u_t}{}=t|u|+o(t),\] and this is sufficient for the rest of proof.
 \item The direction $\dir p{w_t}$ might be undefined.
-Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$)
+Thus in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$ one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$).
 \end{enumerate}
 \qedsf
 
@@ -577,7 +578,7 @@ Thus, in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$, one should t
 
 \begin{thm}{Definition of gradient}\label{def:grad} 
 Let $\spc{X}$ be a length space with defined angles and  
-$f\:\spc{L}\subto\RR$ be a subfunction.
+$f\:\spc{X}\subto\RR$ be a subfunction.
 Suppose  for a point
 $p\in\Dom f$ the differential $\dd_p f\:\T_p\to\RR$ is defined.
 
@@ -608,11 +609,11 @@ locally Lipschitz
 and 
 semiconcave subfunction.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
-Then for any point $p\in \Dom f$, there is unique gradient $\nabla_p f\in \T_p$.
+Then for any point $p\in \Dom f$, there is a unique gradient $\nabla_p f\in \T_p$.
 \end{thm}
 
 \parit{Proof; uniqueness.} 
-If $g,g'\in \T_p$ are two gradients of $f$
+If $g,g'\in \T_p$ are two gradients of $f$,
 then 
 \begin{align*}
 \<g,g\>
@@ -622,7 +623,7 @@ then
 &=(\dd_p f)(g')\le \<g,g'\>.
 \end{align*}
 Therefore,
-\[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>=0;\] 
+\[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>=0,\] 
 that is, $g=g'$.
 
 \parit{Existence.} 
@@ -634,7 +635,6 @@ it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that
 (\dd_p f)\left(\overline{\xi}\right)=s.
 \eqlbl{overlinexi}
 \]
-
 Indeed, suppose $\overline{\xi}$ exists.
 Then applying Lemma~\ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
 we get
@@ -649,7 +649,7 @@ Applying Lemma~\ref{lem:ohta} for $u=\xi_n$, $v=\xi_m$, we get
 \frac{(\dd_p f)(\xi_n)+(\dd_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
 Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
 that is, $(\xi_n)$ is Cauchy.
-Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
+Clearly $\overline{\xi}=\lim_n\xi_n$ satisfies \ref{overlinexi}.
 \qeds
 
 
@@ -671,17 +671,17 @@ Clearly $\overline{\xi}=\lim_n\xi_n$ is satisfies \ref{overlinexi}.
 
 The next lemma roughly states that the gradient points 
 in the direction of maximal slope; 
-moreover if the slope in the given direction is almost maximal, then it is almost the direction of the gradient.
+moreover, if the slope in the given direction is almost maximal, then it is almost the direction of the gradient.
 
 \begin{thm}{Lemma}\label{lem:alm-grad}
 Let $\spc{Z}$ be a complete length space,
-$f\:\spc{Z}\subto\RR$ be locally Lipschitz and semiconcave 
+$f\:\spc{Z}\subto\RR$ be locally Lipschitz and semiconcave, 
 and $p\in \Dom f$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 Assume $|\nabla_p f|>0$;
-set $\overline{\xi}=\tfrac{1}{|\nabla_p f|}\cdot\nabla_p f$.
-Then
+let $\overline{\xi}=\tfrac{1}{|\nabla_p f|}\cdot\nabla_p f$.
+Then:
 \begin{subthm}{near-grad} If for some $v\in\T_p$, we have 
 \[|v|\le 1+\eps
 \quad
@@ -694,9 +694,9 @@ then
 \end{subthm}
 
 \begin{subthm}{conv-to-grad} 
-If $v_n\in \T_p$ be a sequence of vectors such that 
+If $v_n\in \T_p$ is a sequence of vectors such that 
 \[\limsup_{n\to\infty} |v_n|\le 1\quad  
-\text{and}\quad  \liminf_{n\to\infty}(\dd_p f)(v_n)\ge |\nabla_p f|\] 
+\text{and}\quad  \liminf_{n\to\infty}(\dd_p f)(v_n)\ge |\nabla_p f|,\] 
 then 
 \[\lim_{n\to\infty} v_n=\overline{\xi}.\]
 \end{subthm}
@@ -732,11 +732,11 @@ Hence  (\ref{SHORT.near-grad}).
 Statements (\ref{SHORT.conv-to-grad}) and (\ref{SHORT.alm-max}) follow directly from (\ref{SHORT.near-grad}).
 \qeds
 
-As a corollary of the above lemma and Proposition~\ref{prop:conv-comp} we get the following: 
+As a corollary of the above lemma and Proposition~\ref{prop:conv-comp} we obtain the following: 
 
 \begin{thm}{Chain rule} %???DO WE NEED IT???
 Let $\spc{Z}$ be a complete length space, 
-$f\:\spc{Z}\subto \RR$ be a semiconcave function
+$f\:\spc{Z}\subto \RR$ be a semiconcave function,
 and $\phi\:\RR\to\RR$ be a nondecreasing semiconcave function.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then $\phi\circ f$ is semiconcave and  $\nabla_x(\phi\circ f)=\phi^+(f(x))\cdot\nabla_x f$ for any $x\in\Dom f$.
@@ -756,8 +756,8 @@ vector field''.
 \begin{thm}{Lemma} 
 \label{lem:grad-lip}
 Let $\spc{Z}$ be a complete length space,   
-$f\:\spc{Z}\subto\RR$ satisfy $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$, 
-$[p q]\subset \Dom f$ 
+$f\:\spc{Z}\subto\RR$ satisfy $f''+\kappa\cdot f\le \lambda$ for some $\kappa,\lambda\in\RR$.
+ Let $[p q]\subset \Dom f$. 
 and $\ell=\dist{p}{q}{}$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then
@@ -781,7 +781,7 @@ if $\kappa=0$,
 
 \begin{subthm}{} if $\kappa=-1$, $\lambda=0$ we have
 \[\<\dir pq,\nabla_p f\>\ge
-\left(f(q)-f(p)\cdot\cosh\ell\right)/\sinh\ell;\]
+\left(f(q)-f(p)\cdot\cosh\ell\right)/\sinh\ell.\]
 \end{subthm}
 \end{thm}
 
@@ -807,11 +807,12 @@ d_p f(\dir pq)=
 \end{align*}
 \qedsf
 
-The following corollary states that the gradient vector field is monotonic in the sense similar to the definition of \index{monotone operator}\emph{monotone operators}; see for example \cite{phelps}.
+The following corollary states that the gradient vector field is monotonic in  a sense similar to the definition of \index{monotone operator}\emph{monotone operators}; see for example \cite{phelps}.
 
 %???Maybe it is more natural to call this property ``semi-monotonicity or ``$\lambda$-monotonicity'' ???
+%*S. note change
 
-\begin{thm}{Monotonicity of gradient} 
+\begin{thm}{$\lambda$-Monotonicity of gradient}
 \label{cor:grad-lip}
 Let $\spc{Z}$ be a complete length space, 
 $f\:\spc{Z}\subto\RR$ be locally Lipschitz and $\lambda$-concave 
@@ -833,7 +834,7 @@ Then
 
 \begin{thm}{Lemma}\label{lem:close-grad}
 Let $\spc{Z}$ be a complete length space, 
-$f,g\:\spc{Z}\subto\RR$ 
+$f,g\:\spc{Z}\subto\RR$, 
 and $p\in\Dom f\cap\Dom g$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
@@ -845,9 +846,9 @@ where
 \[s=\sup\set{|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
 
 In particular, if $f_n\:\spc{Z}\subto\RR$ is a sequence of locally Lipschitz and semiconcave subfunctions,
-$p\in \Dom f_n$ for each $n$ 
-and $\dd_p f_n$ converges uniformly on ${\Sigma_p}$ 
-then sequence $\nabla_p f_n\in \T_p$ converges.
+$p\in \Dom f_n$ for each $n$, 
+and $\dd_p f_n$ converges uniformly on ${\Sigma_p}$, 
+then the sequence $\nabla_p f_n\in \T_p$ converges.
 \end{thm}
 
 \parit{Proof.}
@@ -879,7 +880,7 @@ Therefore,
 \begin{thm}{Exercise}\label{ex:df(v)=<grad f,v>}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
 the function
-$f\:\spc{L}\to\RR$ be semiconcave and locally Lipschitz
+$f\:\spc{L}\to\RR$ be semiconcave and locally Lipschitz,
 and
 $\alpha\:\II\to\spc{L}$ be a Lipschitz curve.
 Show that 
@@ -892,14 +893,14 @@ for almost all $t\in\II$.
 
 \section*{Semicontinuity}\label{sec:grad-semicont}
 
-In this section we collect a few of corollaries of the following lemma.
+In this section we collect a few consequences of the following lemma.
 
 \begin{thm}{Ultralimit of \textbar gradient\textbar} \label{lem:gradcon}
 Assume that
 \begin{itemize}
 \item $(\spc{Z}_n)$ is a sequence of complete length spaces and $(\spc{Z}_n,p_n) \to (\spc{Z}_\o,p_\o)$ as $n\to\o$.
 Suppose that all $\spc{Z}_n$ are either $\Alex{}$ or $\CAT{}$.
-\item $f_n\:\spc{Z}_n\subto \RR$ and $f_\o\:\spc{Z}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave and $f_n\to f_\o$ as $n\to\o$.
+\item $f_n\:\spc{Z}_n\subto \RR$ and $f_\o\:\spc{Z}_\o\subto \RR$ are locally Lipschitz and $\lambda$-concave, and $f_n\to f_\o$ as $n\to\o$.
 \item $x_n\in\Dom f_n$ and $x_n\to x_\o\in \Dom f_\o$ as $n\to\o$.
 \end{itemize}
 Then 
@@ -944,7 +945,7 @@ Hence
 |\nabla_{x_\o} f_\o|-2\cdot\eps
 \le 
 \lim_{n\to \o} |\nabla_{x_n} f_n|.\]
-Sinse $\eps>0$ is arbitrary, the proposition follows.
+Since $\eps>0$ is arbitrary, the proposition follows.
 \qeds
 
 Note that the distance-preserving map $\iota\:\spc{Z}\hookrightarrow \spc{Z}^\o$ induces an embedding 
@@ -1003,42 +1004,43 @@ that is for any sequence $x_n\to x\in \Dom f$, we have
 
 \noi\textit{Proof.} 
 According to \ref{nablaf=mablaf^o}, $|\nabla_x f|=|\nabla_x f^\o|$. 
-Applying \ref{lem:gradcon} for $x_n\to x$, we get that
+Applying \ref{lem:gradcon} for $x_n\to x$, we obtain
 \[\lim_{n\to\o}|\nabla_{x_n}f|
 \ge
 |\nabla_x f^\o|
 =
 |\nabla_x f|.\]
-Passing to an arbitrary subsequence of $(x_n)$ we obtain the result. \qeds
+Passing to an arbitrary subsequence of $(x_n)$ gives the result. \qeds
 
 
 
 \section{Polar vectors}
 
 Here we give a corollary of Lemma \ref{lem:close-grad}.
-It will be used to prove basic properties of tangent space.
+It will be used to prove basic properties of the
+tangent space.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
 
-Given two vectors $u,v\in \T_p$ there is unique vector $w\in \T_p$ such that
+Given two vectors $u,v\in \T_p$, there is a unique vector $w\in \T_p$ such that
 \[\<u,x\>+\<v,x\>+\<w,x\>\ge 0\]
-for any $x\in \T_p$ and
+for any $x\in \T_p$, and
 \[\<u,w\>+\<v,w\>+\<w,w\>=0.\]
 
 \end{thm}
 
-If $\T_p$ were a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}) applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
+If $\T_p$ were a length space, then the lemma would follow from the existence  of the gradient (\ref{thm:ex-grad}), applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\<u,x\>+\<v,x\>)$.
 However, the tangent space $\T_p$ might be not a length space; see  Halbeisen's example \ref{Halbeisen's example}.
 
 
-Applying the above lemma for $u=v$, we get the following statement.
+Applying the above lemma for $u=v$, we have the following statement.
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
 Let $\spc{L}$ be a complete length $\Alex{}$ space 
 and $p\in \spc{L}$. 
-Given a vector $u\in \T_p$,  there is unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
+Given a vector $u\in \T_p$,  there is a unique vector $u^*\in\T_p$ such that $\<u^*,u^*\>+\<u,u^*\>= 0$ and
 $u^*$ is \index{polar vectors}\emph{polar} to $u$;
 that is,
  $\<u^*,x\>+\<u,x\>\ge 0$ for any $x\in \T_p$.
@@ -1048,10 +1050,11 @@ $|u^*|\le |u|$.
 \end{thm}
 
 Milka's lemma %??? (\ref{lem:milka})
+%*S.?
 provides a refinement of this statement;
 it states that in the finite-dimensional case, we can assume that $|u^*|= |u|$. 
 
-It is instructive to solve the following exercise before reading the proof.
+It is instructive to solve the following exercise before reading the proof of \ref{lem:minus-sum}.
 
 \begin{thm}{Exercise}\label{ex:d dist(grad)<0}
 Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
@@ -1068,10 +1071,10 @@ Consider a sequence of functions
 According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
 \[(\dd_pf_n)(x)=-|u|\cdot\<\dir{p}{a_n},x\>-|v|\cdot\<\dir{p}{b_n},x\>.\]
 Thus we have the following uniform convergence for all $x\in\Sigma_p$:
-\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\]:
+\[(\dd_pf_n)(x)\xto[n\to\infty]{}-\<u,x\>-\<v,x\>.\]
 According to Lemma~\ref{lem:close-grad}, 
 the sequence $\nabla_pf_n$ converges.
-Set 
+Let 
 \[w=\lim_n\nabla_pf_n.\]
 
 By the definition of gradient,
@@ -1142,14 +1145,14 @@ The equivalence  (\ref{SHORT.<x,u>})$\Leftrightarrow$(\ref{SHORT.<xi,u>}) is tri
 
 \begin{thm}{Proposition}\label{prop:two-opp}
 Let $\spc{L}$  be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Then for any three vectors $u,v,w\in\T_p$, if $u+v=0$ and $u+ w=0$, then $v=w$.
+Then for any three vectors $u,v,w\in\T_p$, if $u+v=0$ and $u+ w=0$ then $v=w$.
 \end{thm}
 
-\parit{Proof.} From Proposition~\ref{prop:opposite} both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
+\parit{Proof.} By Proposition~\ref{prop:opposite}, both $v$ and $w$ satisfy the condition in corollary~\ref{cor:polar}. 
 Hence the result.\qeds
 
 Let $u\in \Lin_p$; that is $u+v=0$ for some $v\in\T_p$.
-Given $s<0$, set 
+Given $s<0$, let 
 \[s\cdot u\df (-s)\cdot v.\]
 In this way we define multiplication of any vector in $\Lin_p$ by any real number (positive and negative).
 Proposition~\ref{prop:two-opp} implies that such multiplication is uniquely defined.
@@ -1160,8 +1163,8 @@ Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
 Then $\Lin_p$ is a subcone of $\T_p$ isometric to a Hilbert space.
 \end{thm}
 
-Before coming to the proof of the theorem, 
-let us give its corollary.
+Before proving the theorem, 
+let us give a corollary.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
 Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
@@ -1222,7 +1225,7 @@ Indeed, according to Lemma~\ref{lem:minus-sum},
 Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
 \claimqeds
 
-Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$; thus applying \ref{cor:splitting}, we get that $\Lin_p$ is isometric to a Hilbert space.
+Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$.  Therefore by \ref{cor:splitting}, $\Lin_p$ is isometric to a Hilbert space.
 \qeds
 
 
