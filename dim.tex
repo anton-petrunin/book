@@ -6,6 +6,9 @@ In sections \ref{sec:dim>m} and \ref{sec:dim=m},
 we prove equivalence of some dimension-like invariants for $\Alex{}$ spaces.
 In Section~\ref{sec:dim-cba} we discuss the dimension of  $\CAT{}$ spaces.
 
+As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
+see Definition~\ref{def:lin-dim}. In other words,  by default {}\emph{dimension} means {}\emph{linear dimension}. 
+
 
 \section{Struts and rank}\label{sec:struts+rank}
 
@@ -20,9 +23,9 @@ it is closer to Perelman's definitions \cite{perelman:spaces2,perelman:morse}.
 
 The term ``strut'' seems to have the closest meaning to the original Russian term used in \cite{burago-gromov-perelman}.
 In the official translation,
-it appears under name ``burst'' 
-and in the authors translation it was ``strainer''.
-It seems that both are not good, 
+it appears as ``burst'', 
+and in the authors' translation it was ``strainer''.
+Neither seems intuitive, 
 so we decided to switch to ``strut''.
 
 \begin{thm}{Definition of struts}\label{def:strut-I}
@@ -38,7 +41,8 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $p\in \spc{L}$.
 Let us define rank of $\spc{L}$ at $p$ as 
 \[\rank_p=\rank_p\spc{L}
-\df\pack_{\pi/2}\Sigma_p-1.\]
+\df\pack_{\pi/2}\Sigma_p-1\]
+(see Section ??).
 
 \end{thm}
 
@@ -57,17 +61,18 @@ Then the following conditions are equivalent:
 \end{subthm}
 
 \begin{subthm}{lem:stut<=>rank:strut}
-There is a $\kappa$-strutting at $p$ point array $(a^0,a^1,\dots,a^\kay)$.
+There is a  point array $(a^0,a^1,\dots,a^\kay)$
+that is $\kappa$-strutting at $p$. 
 \end{subthm}
 \end{thm}
 
 \parit{Proof of \ref{prop:stutt}, (\ref{SHORT.lem:stut<=>rank:strut})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:rank}).}
 For each $i$,
 choose a point $\acute a^i\in\Str(p)$ sufficiently close to $a^i$ (so $[p\acute a^i]$ exists for each $i$).
-One can choose $\acute a^i$ on such a way that we still have
+One can choose $\acute a^i$ so that we still have
 $\angk\kappa{p}{\acute a^i}{\acute a^j}>\tfrac\pi2$ for all $i\not=j$.
 
-From hinge comparison (\ref{angle}) we have 
+From hinge comparison (\ref{angle}),
 \[\mangle(\dir{p}{\acute a^j},\dir{p}{\acute a^j})
 \ge
 \angk\kappa{p}{\acute a^i}{\acute a^j}
@@ -91,16 +96,16 @@ Then the set of all points in $\spc{L}$
 with rank $\ge \kay$ is open.
 \end{thm}
 
-\parit{Proof.} Given an array of points $\bm{a}=(a^0,\dots,a^\kay)$ in $\spc{L}$ consider 
+\parit{Proof.} Given an array of points $\bm{a}=(a^0,\dots,a^\kay)$ in $\spc{L}$, consider 
 the set $\Omega_{\bm{a}}$ of all points $p\in \spc{L}$ such that array $\bm{a}$
  is $\kappa$-strutting for a point $p$.
-Cleary $\Omega_{\bm{a}}$ is open.
+Clearly $\Omega_{\bm{a}}$ is open.
 
 According to Proposition~\ref{prop:stutt}, the set of points in $\spc{L}$ 
 with rank $\ge \kay$ can be presented as
 \[\bigcup_{\bm{a}}\Omega_{\bm{a}},\]
-where the union is taken for all $\kay$-array $\bm{a}$ of points in $\spc{L}$,
-hence the result.
+where the union is taken over all $\kay$-arrays $\bm{a}$ of points in $\spc{L}$.
+Hence the result.
 \qeds
 
 
@@ -111,9 +116,9 @@ hence the result.
 
 \begin{thm}{Right-inverse theorem}
 \label{thm:right-inverse-function}{\sloppy 
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
-$p,b\in\spc{L}$ 
-and $\bm{a}=(a^1,\dots,a^\kay)$ be a point array in $\spc{L}$.
+Suppose $\spc{L}$ is a complete length $\Alex{\kappa}$ space,
+$p,b\in\spc{L}$, 
+and $\bm{a}=(a^1,\dots,a^\kay)$ is a point array in $\spc{L}$.
 
 }
 
@@ -121,7 +126,7 @@ Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
 Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\distfun{\bm{a}}{p}\in\RR^\kay$;
 that is, there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \distfun{\bm{a}}{p}$ and 
 $\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
-Moreover
+Moreover,
 
 \begin{subthm}{thm:right-inverse-function:Hoelder}
 The map $\map$ can be chosen to be $C^{\frac{1}{2}}$-continuous (that is, H\"older continuous with exponent $\tfrac{1}{2}$) and such that 
@@ -137,34 +142,33 @@ The distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipsch
 Part \ref{SHORT.thm:right-inverse-function:open-map} of the theorem 
 is closely related to \cite[Theorem 5.4]{burago-gromov-perelman} by Burago, Gromov and Perelman, 
 but the proof presented here is different; 
-yet alternative proof can be build on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
+yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
 
 %\parbf{Remark for AKP.} It seems that the set $\Im \map$ is $\kay$-rectifiable; that is, it lies in an image of a Lipschitz map from bounded domain of $\RR^\kay$ to $\spc{L}$. It seems I have a proof, but it is not yet clear we need it.???
 
 
 \parit{Proof.} 
-Fix some $\eps,r,\lambda>0$ such that the following conditions hold: 
+Fix  $\eps,r,\lambda>0$ such that the following conditions hold: 
 \begin{enumerate}[(i)]
 \item Each distance function $\distfun{a^i}{}{}$ and $\distfun{b}{}{}$ is $\tfrac\lambda2$-concave in $\oBall(p,r)$.
 \item For any $q\in \oBall(p,r)$, we have $\angk{\kappa}{q}{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and $\angk{\kappa}{q}{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i$.
-In addition $\eps<\tfrac{1}{10}$.
+In addition, $\eps<\tfrac{1}{10}$.
 \end{enumerate}
 
 
-Given $\bm{x}=(x^1,x^2,\dots,x^\kay)\in \RR^\kay$
+Given $\bm{x}=(x^1,x^2,\dots,x^\kay)\in \RR^\kay$, 
 consider the function 
-$f_{\bm{x}}\:\spc{L}\to \RR$ defined as
+$f_{\bm{x}}\:\spc{L}\to \RR$ defined by
 \[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\distfun{b}{}{},\]
 where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
 Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
 Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve that starts at $p$.
 
 \begin{clm}{}\label{clm:|a alpha_x|=x}
-If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$, we have
+If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$ we have
 $|\distfun{\bm{a}}{p}-\bm{x}|
 \le
-\tfrac{\eps^2}{10}\cdot t_0$
-then 
+\tfrac{\eps^2}{10}\cdot t_0$, then 
 $
 \distfun{\bm{a}}{[\alpha_{\bm{x}}(t_0)]}
 = 
@@ -177,7 +181,7 @@ First note that Claim~\ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,
 \item\label{111} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
 \item\label{222} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}-x^j\}<0$.
 \end{enumerate}
-Indeed, since $t_0\le\tfrac{r}2$, $\alpha_{\bm{x}}(t)\in\oBall(p,r)$ for all $t\in[0,t_0]$.
+Indeed, since $t_0\le\tfrac{r}2$, then $\alpha_{\bm{x}}(t)\in\oBall(p,r)$ for all $t\in[0,t_0]$.
 Consider the following real-to-real functions:
 \[\begin{aligned}
 \phi(t)
@@ -191,7 +195,7 @@ Consider the following real-to-real functions:
 Then from (\ref{111}), 
 we have $\phi^+<-\tfrac{1}{10}\cdot\eps^2$
 if $\phi>0$ and $t\in[0,t_0]$.
-The same way, 
+Similarly, 
 from (\ref{222}), 
 we have $\psi^+>\tfrac{1}{10}\cdot\eps^2$
 if $\psi<0$ and $t\in[0,t_0]$.
@@ -202,14 +206,14 @@ Thus $\phi(t_0)\le 0$ and $\psi(t_0)\ge 0$.
 On the other hand, from \ref{eq:xy-def} we have $\phi(t_0)\ge \psi(t_0)$.
 That is, $\phi(t_0)=\psi(t_0)=0$; hence Claim~\ref{clm:|a alpha_x|=x} follows.
 
-Thus, to prove Calim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
+Thus, to prove Claim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
 First let us prove it assuming that $\spc{L}$ is geodesic.
 
 Note that 
 \[(\dd_q\distfun{b}{}{})(\dir{q}{a^i})
-\le\cos\angk{\kappa}{q}{b}{a^j}<-\tfrac\eps2,
+\le\cos\angk{\kappa}{q}{b}{a^j}<-\tfrac\eps2
 \eqlbl{inq-b}\]
-for all $i$ and
+for all $i$, and
 \[(\dd_q\distfun{a^j}{}{})(\dir{q}{a^i})
 \le
 \cos\angk{\kappa}{q}{a^i}{a^j}
@@ -219,11 +223,11 @@ for all $j\not=i$.
 Further, \ref{inq-a^j} implies
 \[(\dd_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
 for all $i\not=j$.
-The assumption in (\ref{111}), implies
+The assumption in (\ref{111}) implies
 \[\dd_q f_{\bm{x}}
 =
 \min_{j\not=i} \{\dd_q h_{\bm{x}}^j\}+\eps\cdot(\dd_q\distfun{b}{}{}).\]
-Thus,
+Thus
 \begin{align*}
 -(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
 &\ge
@@ -257,20 +261,21 @@ Therefore,
 &\ge
 \left[\min_i\{\cos\angk\kappa qb{a^i}\}-\eps^2\right]^2.
 \end{align*}
-Thus, (\ref{222}) follows from \ref{inq-b} since $\eps<\tfrac{1}{10}$. 
+Thus (\ref{222}) follows from \ref{inq-b}, since $\eps<\tfrac{1}{10}$. 
 
-That finishes the proof of \ref{clm:|a alpha_x|=x} in case if $\spc{L}$ is geodesic.
+Therefore \ref{clm:|a alpha_x|=x} holds  if $\spc{L}$ is geodesic.
 If $\spc{L}$ is not geodesic,
 perform the above estimate in $\spc{L}^\o$, the ultrapower  of $\spc{L}$. 
-(Recall that according to \ref{obs:ultralimit-is-geodesic}, $\spc{L}^\o$ is geodesic.)
+(Recall that according to \ref{obs:ultralimit-is-geodesic}, $\spc{L}^\o$ is geodesic.
+This completes the proof of  \ref{clm:|a alpha_x|=x}. 
 \claimqeds
 
-Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|$; 
-so we have equality in \ref{clm:|a alpha_x|=x}.
-Define the submap
+Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|$,   
+giving  equality in \ref{clm:|a alpha_x|=x}.
+Define the submap $\map$ by
 \[\map\:{\bm{x}}\mapsto \alpha_{\bm{x}}\circ t_0(\bm{x}),\quad 
 \Dom\map=\oBall(\distfun{\bm{a}}{p},\tfrac{\eps^2\cdot r}{20} )\subset\RR^\kay.\]
-It follows from Claim~\ref{clm:|a alpha_x|=x}, that
+It follows from Claim~\ref{clm:|a alpha_x|=x} that
 $\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom\map$.
 
 Clearly $t_0(p)=0$; thus $\map(\distfun{\bm{a}}{p})=p$.
@@ -278,16 +283,16 @@ Further, by construction of $f_{\bm{x}}$,
 \[|f_{\bm{x}}(q)-f_{\bm{y}}(q)|\le |\bm{x}-\bm{y}|,\]
 for any $q\in \spc{L}$.
 Therefore, according to Lemma~\ref{lem:fg-dist-est}, $\map$ is $C^{\frac{1}{2}}$-continuous.
-Thus, we  proved (\ref{SHORT.thm:right-inverse-function:Hoelder}).
+Thus (\ref{SHORT.thm:right-inverse-function:Hoelder}).
 
 Further, note that 
 \[\dist{p}{\map(\bm{x})}{}
 \le (1+\eps)\cdot t_0(\bm{x})
-\le\tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|.
+\le\tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}| holds.
 \eqlbl{co-lip}\]
 
 Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
-The inequality \ref{co-lip}, for the obtained map $\map'$, implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
+The inequality \ref{co-lip} for the resulting map $\map'$ implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
 there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
 \[\dist{p'}{q'}{}
 \le 
@@ -300,8 +305,9 @@ That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$
 \section{Dimension theorem for CBB %???
 }\label{sec:dim>m}
 
-As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
-see Definition~\ref{def:lin-dim}, in other words by default {}\emph{dimension} means {}\emph{linear dimension}. 
+%As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
+%see Definition~\ref{def:lin-dim}, in other words by default {}\emph{dimension} means {}\emph{linear dimension}.
+%*S: Note move to start of chapter. 
 
 
 The following theorem is the main result of this section.
@@ -351,6 +357,7 @@ The proof of the above theorem with exception of  statement~(\ref{SHORT.TopDim})
 At that time, it was not known whether for any complete length $\Alex\kappa$ space $\spc{L}$,
 \[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty.\]
 The latter implication was proved by Grigory Perelman \cite{perelman-petrunin:qg};
+%*S. this should be"and the third author"
 it was done by combining an idea of Conrad Plaut with the technique of gradient flow.
 The statement \ref{TopDim} is somewhat stronger.
 
@@ -360,7 +367,7 @@ To prove Theorem \ref{thm:dim-infty}  we will need the following three propositi
 
 \begin{thm}{Proposition}\label{E=T}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
-Assume there is a distance-preserving cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$.
+Assume there is a distance-preserving cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$ (see Section ??).
 Then either
 \begin{subthm}{}
  $\Im\iota=\T_p\spc{L}$, or
@@ -378,18 +385,18 @@ where $\mathbb{S}^{m-1}\subset \EE^m$ is the unit sphere.
 
 Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\mathbb{S}^{m-1})$. 
 Choose a maximal $\eps$-packing in $\iota(\mathbb{S}^{m-1})$;
-that is, an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\mathbb{S}^{m-1})$ so that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+that is, an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
 
-Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ so that
+Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ such that
 $\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$;
-here write ``$\approx$'' for ``sufficiently close''.
-We can choose this array on such a way that 
+here we write ``$\approx$'' for ``sufficiently close''.
+We can choose this array so 
 $\angk{\kappa}p x{z^i}>\eps$ for all $i$ 
 and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\not=j$.
-Applying Corollary \ref{cor:euclid-subcone}, we can find a point $p'$ arbitrary close to  $p$ 
-so that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
+Applying Corollary \ref{cor:euclid-subcone}, there is a point $p'$ arbitrarily close to  $p$ 
+such that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
 belong to an isometric copy of $\mathbb{S}^{\kay-1}$ in $\Sigma_{p'}$.
-In addition, we can assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
+In addition, we may assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
 From hinge comparison (\ref{angle}),
 $\mangle(\dir{p'}x,\dir{p'}{z^i})>\eps$ 
 and $\mangle(\dir{p'}{z^i},\dir{p'}{z^j})>\eps$;
@@ -400,8 +407,8 @@ Hence $\kay>m$.
 
 
 \begin{thm}{Proposition}\label{pack-homogeneus}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, then 
- for any two poins $p,\bar p\in \spc{L}$ and any $R,\bar R>0$ there is a contsant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. Then 
+ for any two points $p,\bar p\in \spc{L}$ and any $R,\bar R>0$, there is a constant $,\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
 \[\pack_{\delta\cdot\eps}\oBall(\bar p,\bar R)\ge \pack_{\eps}\oBall(p,R).\]
 
 \end{thm}
@@ -411,9 +418,10 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, then
 
 Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
 that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
-Without loss of generality we can assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
+Without loss of generality we may assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
-Choose factor $s>0$, so that $\bar r>s\cdot(\dist{p}{\bar p}{}+R)$.
+Choose a factor $s>0$ so that $\bar r>s\cdot(\dist{p}{\bar p}{}+R)$, where ??.
+%S. need to define \bar r
 For each $i$, take $\bar x^i\in[\bar p x^i]$ so that 
 $\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
 From \ref{cor:monoton:2-sides},
@@ -425,7 +433,7 @@ From \ref{cor:monoton:2-sides},
 \vskip0mm
 \end{figure}
 
-Applying cosine rule, we get a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
+Applying the cosine law gives a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
 \[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
 for all $i\not=j$.
 Hence the statement follows.
@@ -441,7 +449,7 @@ Assume that
 >\pack_{\eps}\cBall[r]_{\Lob{m}{\kappa}}
 \eqlbl{eq:pack>pack}\]
 for some $\eps>0$.
-Then there is a G-delta set $A\subset \spc{L}$,
+Then there is a G-delta set $A\subset \spc{L}$
 that is dense in a neighborhood of $p$ and
 such that $\dim\Lin_q>m$ for any $q\in A$.
 \end{thm}
@@ -449,17 +457,17 @@ such that $\dim\Lin_q>m$ for any $q\in A$.
 \parit{Proof.} 
 Choose a maximal $\eps$-packing in $\oBall(p,r)$;
 that is, an array of points $x^1,x^2,\dots, x^n\in\oBall(p,r)$ so that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
-Choose a neighborhood $\Omega\ni p$,
+Choose a neighborhood $\Omega\ni p$
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
 Set 
 \[A= \Omega\cap\Str(x^1,x^2,\dots,x^n).\]
-According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set taht is dense in $\Omega$.
+According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set that is dense in $\Omega$.
 
 Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
 Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
 $v^i=\ddir{q}{x^i}$.
 Clearly 
-\[|v^i|=\dist{q}{x^i}{}<r\] 
+\[|v^i|=\dist{q}{x^i}{}<r,\] 
 and from hinge comparison (\ref{angle})
 we have 
 \[\side\kappa \hinge \0{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps.\]
@@ -474,9 +482,9 @@ Thus,
 which contradicts $\kay\le m$ and \ref{eq:pack>pack}.
 \qeds
 
-The proof is essentially done in \ref{E=T}, \ref{pack-homogeneus}, \ref{E-comeagre}, \ref{thm:inverse-function},
+The proof of Theorem \ref{thm:dim-infty} is essentially done in \ref{E=T}, \ref{pack-homogeneus}, \ref{E-comeagre}, \ref{thm:inverse-function},
 \ref{thm:right-inverse-function}; 
-here we only assemble the proof from these parts.
+now we  assemble the proof from these parts.
 
 We will prove implications 
 \[\textrm{(\ref{SHORT.LinDim+}) 
@@ -495,8 +503,9 @@ $\Rightarrow$
 
 \parit{Proof of \ref{thm:dim-infty}.} 
 The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivial.
-The proof of (\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}) is valid for general metric spaces;
-it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
+%The proof of (\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}) is valid for general metric spaces;
+%it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$.
+%*S. This comment moved to end of proof 
 
 \parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
 Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
@@ -504,8 +513,8 @@ Clearly one can choose an array of directions $\xi^0,\xi^1,\dots,\xi^m\in\Lin_p$
 Choose an array of points $x^0,x^1,\dots,x^m\in\spc{L}$ so that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
 in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
 Choose points $a^i\in\mathopen{]}p x^i\mathclose{]}$ sufficiently close to $p$.
-One can do it so that each $\angk\kappa p{a^i}{a^j}$ is arbitrary close to $\mangle\hinge p{a^i}{a^j}$,
-in particular, $\angk\kappa p{a^i}{a^j}>\tfrac{\pi}{2}$.
+This can be done so that each $\angk\kappa p{a^i}{a^j}$ is arbitrarily close to $\mangle\hinge p{a^i}{a^j}$,
+in particular $\angk\kappa p{a^i}{a^j}>\tfrac{\pi}{2}$.
 Finally, set $b=a^0$.
 
 
@@ -515,13 +524,13 @@ Finally, set $b=a^0$.
 Let $p\in \spc{L}$ be a point that admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
 The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
 implies that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
-\[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{})\]
+\[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{}),\]
 is open in a neighborhood of $p$.
 Since the distance map $\distfun{\bm{a}}{}{}$ is Lipschitz, 
 for any $r>0$, there is $\Const>0$ such that
 \[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\]
-Applying \ref{pack-homogeneus}, we get similar inequality for any other ball in $\spc{L}$;
-that is, for any point $q\in\spc{L}$, $R>0$ there is $\Const'>0$ such that 
+Applying \ref{pack-homogeneus}, we get a similar inequality for any other ball in $\spc{L}$;
+that is, for any  $q\in\spc{L}$ and $R>0$, there is $\Const'>0$ such that 
 \[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
 
 
@@ -538,10 +547,10 @@ Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
 >
 \\
 &>
-\pack_\eps\cBall[R']_{\Lob{m-1}{\kappa}}.
+\pack_\eps\cBall[R']_{\Lob{m-1}{\kappa}}
 \end{align*}
 for all sufficiently small $\eps>0$.
-Applying \ref{E-comeagre}, we get that
+Applying \ref{E-comeagre},
 $\Euk^m$
 contains a G-delta set that is dense in a neighborhood of any point $q'\in\spc{L}$.
 
@@ -554,12 +563,14 @@ we get a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
 we obtain a $C^{\frac{1}{2}}$-submap 
 \[\map\:\RR^m\subto \oBall(q,R)\]
-that is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ such that $\map(\distfun{\bm{a}}{p})=p$.
+that is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and such that $\map(\distfun{\bm{a}}{p})=p$.
 In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
 
 
-\parit{(\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}).}
-Let $W\subset\oBall(q,R)$ be the image of the embedding.
+\parit{(\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}).} This proof  is valid for general metric spaces;
+it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
+
+Let $W\subset\oBall(q,R)$ be the image of the embedding $\map$.
 Since $\TopDim W=m$,
 Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
 \[\HausMes_m W>0.\]
@@ -587,13 +598,13 @@ and $p,b,a^1,a^2,\dots,a^m\in\spc{L}$.
 
 Assume that the point array $\bm{a}=(b,a^1,\dots,a^m)$ is $\kappa$-strutting for~$p$.
 Then
-there are $R>0$ and $\eps>0$ such that
+there are $R>0$ and $\eps>0$ such that:
 
 \begin{subthm}{thm:inverse-function:strut}
 For all $i\not=j$ and any $q\in\oBall(p,R)$ we have
 \[\angk\kappa{q}{a^i}{a^j}>\tfrac{\pi}{2}+\eps
 \quad\text{and}\quad
-\angk\kappa{q}{b}{a^i}>\tfrac{\pi}{2}\]
+\angk\kappa{q}{b}{a^i}>\tfrac{\pi}{2}.\]
 
 \end{subthm}
 
@@ -605,7 +616,7 @@ is an open $[\eps,\sqrt{m}]$-bi-Lipschitz embedding $\oBall(p,R)\hookrightarrow\
 \end{subthm}
 
 \begin{subthm}{thm:inverse-function:R}
-The value $R$ depend only on the following numbers:  
+The value $R$ depends only on 
 \[\kappa,\quad \dist{p}{a^i}{},\quad\dist{a^i}{a^j}{},\quad\dist{b}{a^i}{}\]
 for all $i$ and $j$.
 \end{subthm}
@@ -613,21 +624,21 @@ for all $i$ and $j$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:dist-chart}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
+Suppose $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space.
 If a point array $b,a^1,a^2,\dots,a^m$ 
 and the value $R$ satisfy the conditions in Theorem~\ref{thm:inverse-function}, 
 then the restriction 
 $\bm{x}=\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$
-is called a \index{distant chart}\emph{distant chart},
+is called a \index{distance chart}\emph{distant chart},
 the restrictions $x^i=\distfun{a^i}{}{}|_{\oBall(p,R)}$ are called \index{coordinate of the distant chart}\emph{coordinates}
-and the restriction $y=\distfun{b}{}{}|_{\oBall(p,R)}$ is called \index{strut of the distant chart}\emph{strut} of the distant chart.
+and the restriction $y=\distfun{b}{}{}|_{\oBall(p,R)}$ is called \index{strut of the distant chart} the \emph{strut} of the distace chart.
 \end{thm}
 
-The proof of Theorem~\ref{thm:inverse-function} will reqire the following lemma.
+The proof of Theorem~\ref{thm:inverse-function} will require the following lemma.
 
 \begin{thm}{Lemma}\label{lem:pack(S^m)+}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $p\in\spc{L}$.
-Assume for the directions $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\Sigma_p$ the following conditions hold 
+Suppose $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space and $p\in\spc{L}$.
+Assume for the directions $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\Sigma_p$ the following conditions hold: 
 
 \begin{subthm}{}
 $\mangle(\xi,\zeta^i)>\tfrac\pi2-\eps$ for all $i$,
