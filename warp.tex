@@ -185,22 +185,24 @@ According to the Fiber-independence theorem \ref{thm:fiber-independence}, the re
 
 \parbf{Direct product.}
 The simplest example is the \index{direct product}\emph{direct product} $\spc{B}\times \spc{F}$, which can also be  written as the warped product $\spc{B}\warp1 \spc{F}$.  
-That is, tor $p,q\in \spc{B}$ and $\phi,\psi\in \spc{F}$, the latter metric simplifies to
+That is, for $p,q\in \spc{B}$ and $\phi,\psi\in \spc{F}$, the latter metric simplifies to
 \[
 \dist{(p,\phi)}{(q,\psi)}{} =\sqrt{\dist[2]{p}{q}{} + \dist[2]{\phi}{\psi}{}}.
 \]
 
 \parbf{Cones.}
 The \index{Euclidean cone}\emph{Euclidean cone} $\Cone\spc{F}$ over a metric space $\spc{F}$
-can be defined as the warped product $[0,\infty)\warp{\id} \spc{F}$.
-For $s,t\in [0,\infty)$ and $\phi,\psi\in \spc{F}$, 
-the cone metric is given by the cosine rule
+can be written as the warped product $[0,\infty)\warp{\id} \spc{F}$.
+That is, for $s,t\in [0,\infty)$ and $\phi,\psi\in \spc{F}$, 
+the latter metric is given by the cosine rule
 \[
 \dist{(s,\phi)}{(t,\psi)}{} 
 =
 \sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\alpha},
 \]
-where $\alpha= \max\{\pi, \dist{\phi}{\psi}{}\}$. (Compare Section \ref{sec: tangent space}.)
+where $\alpha= \min\{\pi, \dist{\phi}{\psi}{}\}$.
+%*S. Note max changed to min 
+(See Section \ref{sec: tangent space}.)
 
 Instead of the Euclidean cosine rule, 
 we may use the cosine rule in $\Lob2\kappa$:
@@ -224,18 +226,20 @@ Show that $\Cone\mc\kappa A$ is convex in $\Cone\mc\kappa\spc{F}$
 if and only if $A$ is $\pi$-convex in $\spc{F}$.
 \end{thm}
 
-The elements of the Euclidean cone $\spc{K}=\Cone\spc{F}$
-will often be referred to as \index{vector}\emph{vectors}.
-The tip of $\spc{K}$ is usually denoted by $\0$ or $\0_{\spc{K}}$.
-The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defined as $\dist{\0}{w}{\spc{K}}$;
-that is, the distance from $w$ to the tip.
-The \index{scalar product}\emph{scalar product} $\<v,w\>$
-of two vectors $v,w\in\spc{K}$
-is defined by 
-\[\<v,w\>
-\df
-\bigl(\dist[2]{v}{w}{\spc{K}}-|v|^2-|w|^2\bigr)/2.
-\]
+%*S. Deleted because it is in Sec 6.5:
+%The elements of the Euclidean cone $\spc{K}=\Cone\spc{F}$
+%will often be referred to as \index{vector}\emph{vectors}.
+%The tip of $\spc{K}$ is usually denoted by $\0$ or $\0_{\spc{K}}$.
+%The \index{absolute value}\emph{absolute value} $|w|$ of the vector $w$ is defined as $\dist{\0}{w}{\spc{K}}$;
+%that is, the distance from $w$ to the tip.
+%The \index{scalar product}\emph{scalar product} $\<v,w\>$
+%of two vectors $v,w\in\spc{K}$
+%is defined by 
+%\[\<v,w\>
+%\df
+%\bigl(\dist[2]{v}{w}{\spc{K}}-|v|^2-|w|^2\bigr)/2.
+%\]
+
 %??? continue
 
 \parbf{Doubling.}

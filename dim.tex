@@ -653,49 +653,48 @@ Then $\kay\le m$.
 \parit{Proof.}
 Without loss of generality, we can assume that all $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay$ are geodesic directions;
 let $\xi=\dir{p}{x}$ and $\zeta^i=\dir{p}{z^i}$ for all $i$.
-Fix small $r>0$, 
+Fix a small $r>0$, and
 let $\bar x\in \mathopen{]}px]$ and $\bar z^i\in\mathopen{]}p z^i]$ be points 
 such that
 \[\dist{p}{\bar x}{}=\dist{p}{\bar z^1}{}=\dots=\dist{p}{\bar z^\kay}{}=r.\]
 From the definition of angle,
-if $r$ is sufficiently small, we have
+if $r$ is sufficiently small we have
 \begin{itemize}
-\item $\angk\kappa{p}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$
+\item $\angk\kappa{p}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$,
 and $\angk\kappa{p}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
 \end{itemize}
-Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficiently close to $p$,
-so that for $p'$, the above conditions still hold; that is,
+Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficiently close to $p$  that  the above conditions still hold  for $p'$; that is,
 \begin{clm}{}
- $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$ and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+ $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$, and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
 \end{clm}
 Set $\acute\xi=\dir{p'}{\bar x}$ and $\acute\zeta^i=\dir{p'}{\bar z^i}$ for each $i$.
 By hinge comparison (\ref{angle}), 
 \begin{clm}{}
-$\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$ and $\mangle(\acute\zeta^i,\acute\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
+$\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$, and $\mangle(\acute\zeta^i,\acute\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
 \end{clm}
 
-According to Corollary~\ref{cor:euclid-subcone}, all directions $\acute\xi,\acute\zeta^1,\acute\zeta^2,\dots,\acute\zeta^\kay$ lie in an isometric copy of standard $n$-sphere in $\Sigma_{p'}$ and clearly $n\le m-1$.
-Thus, it  remains to prove the following claim, which is a partial case of the lemma.
+According to Corollary~\ref{cor:euclid-subcone}, all directions $\acute\xi,\acute\zeta^1,\acute\zeta^2,\dots,\acute\zeta^\kay$ lie in an isometric copy of the standard $n$-sphere in $\Sigma_{p'}$. Clearly $n\le m-1$.
+Thus it  remains to prove the following claim, which is a partial case of the lemma.
 
 \begin{clm}{}
 If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\mathbb{S}^{m-1}$,
-$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all $i$ and
+$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all $i$, and
 $\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\not=j$,
 then $\kay\le m$.
 \end{clm}
 
 For each $i$, 
-set 
+let 
 $\bar\zeta^i$
-to be the closest point to $\zeta^i$
+be the closest point to $\zeta^i$
 in
 $\Xi=\mathbb{S}^{m-1}\backslash \oBall(\xi,\tfrac\pi2)
 \iso
 \mathbb{S}^{m-1}_+$ 
 (if $\zeta\in\Xi$, then $\bar\zeta^i=\zeta^i$).
-By straightforward calculations, we get
+By straightforward calculations, we have
 \[\dist{\bar\zeta^i}{\bar\zeta^j}{}\ge \dist{\zeta^i}{\zeta^j}{}-\eps>\tfrac\pi2.\]
-Thus, it is sufficient to show the following claim.
+Thus it is sufficient to show the following claim:
 
 \begin{clm}{}
 $\pack_{\frac\pi2}\mathbb{S}^{m-1}_+= m.$
@@ -708,25 +707,25 @@ The base case $m=1$ is obvious.
 Assume $\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay}$ is an array of points in $\mathbb{S}^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
 Without loss of generality we can also assume that $\bar\zeta^\kay\in\partial \mathbb{S}^{m-1}_+$.
 For each $i<\kay$, 
-set $\check\zeta^i
+let $\check\zeta^i
 =\dir{\bar\zeta^\kay}{\bar\zeta^i}\in\Sigma_{\bar\zeta^\kay}\mathbb{S}^{m-1}_+\iso\mathbb{S}^{m-2}_+$.
  By hinge comparison (\ref{angle}), $\mangle(\check\zeta^i,\check\zeta^j)>\tfrac\pi2$ 
 for all $i<j<\kay$.
-Thus, from the induction hypothesis we have that $\kay-1\le {m-1}$.
+Thus from the induction hypothesis we have  $\kay-1\le {m-1}$.
 \qeds
 
 \parit{Proof of \ref{thm:inverse-function}; (\ref{SHORT.thm:inverse-function:strut}).}  
 Fix $\eps>0$ such that 
 $\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}>\tfrac\pi2+\eps$ for all $i\not=j$.
-Choose sufficiently small $R>0$ so that 
+Choose  $R>0$ sufficiently small that 
 $\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa q{b}{a^i}>\tfrac\pi2+\eps$ for all $i\not=j$ and any $q\in\oBall(p,R)$.
 Clearly, (\ref{SHORT.thm:inverse-function:strut}) holds for $\oBall(p,R)$.
 
 \parit{(\ref{SHORT.thm:inverse-function:chart}).}
-Note that distance map $\distfun{\bm{a}}{}{}$ is Lipschitz
+Note that the distance map $\distfun{\bm{a}}{}{}$ is Lipschitz
 and its restriction $\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$ is open;
-the later follows from the right-inverse theorem (\ref{thm:right-inverse-function:open-map}).
-Thus, to prove (\ref{SHORT.thm:inverse-function:chart}), it is sufficient to show that
+the latter follows from the right-inverse theorem (\ref{thm:right-inverse-function:open-map}).
+Thus to prove (\ref{SHORT.thm:inverse-function:chart}), it is sufficient to show that
 \[
 \max_{i}\{\,|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\,\}
 >
@@ -764,11 +763,11 @@ switching $x$ and $y$, we get
 \tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
 \quad \text{for some}\quad j.
 \eqlbl{eq:x-y}\] 
-Therefore \ref{eq:y-x} and \ref{eq:x-y} implies \ref{expend}.
+Then \ref{eq:y-x} and \ref{eq:x-y} imply \ref{expend}.
 
 Finally, part (\ref{SHORT.thm:inverse-function:R})
 follows since the angle $\angk\kappa q{a^i}{a^j}$ 
-depends continuously from  $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
+depends continuously on $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
 \qeds
 
 
@@ -776,17 +775,17 @@ depends continuously from  $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\
 
 \section{Finite dimensional CBB spaces}\label{sec:dim=m}
 
-In this section we will show that all reasonable notions of dimension coincide on the class of Alexandrov spaces with curvature bounded below.
+In this section we  show that all reasonable notions of dimension coincide on the class of Alexandrov spaces with curvature bounded below.
 
-First we will prove a  stronger version of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
+First we prove a  stronger version of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
 
 \begin{thm}{Theorem}\label{thm:dim-finite}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$m$ be a nonnegative integer,
-$0<R\le \varpi\kappa$ and
+Suppose $\spc{L}$ is a complete length $\Alex{\kappa}$ space, 
+$m$ is a nonnegative integer,
+$0<R\le \varpi\kappa$, and
 $q\in \spc{L}$.
 Then the following statements are equivalent:
-\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m$;
+\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m$.
 \end{subthm}
 
 \begin{subthm}{thm:dim-finite:rank}
@@ -797,11 +796,11 @@ $m$ is the maximal integer, such that there is a point $p\in\spc{L}$ that admits
 \end{subthm}
 
 \begin{subthm}{TopDim-f} There is an open bi-Lipschitz embedding 
-\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R)\subset \spc{L};\]
+\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R)\subset \spc{L}.\]
 \end{subthm}
 
 \begin{subthm}{pack-f} For any $\eps>0$,
-\[\pack_\eps\cBall[R]_{\Lob{m}{\kappa}} \ge\pack_\eps \oBall(q,R),\]
+\[\pack_\eps\cBall[R]_{\Lob{m}{\kappa}} \ge\pack_\eps \oBall(q,R).\]
 moreover, there is $\Const=\Const(q,R)>0$  such that 
 \[\pack_\eps \oBall(q,R)>\frac\Const{\eps^m}.\]
 \end{subthm}
@@ -811,13 +810,13 @@ moreover, there is $\Const=\Const(q,R)>0$  such that
 The above theorem was essentially proved in \cite{burago-gromov-perelman}.
 
 Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
-one can show that linear dimension is equal to many different types of dimensions, such 
+one can show that linear dimension is equal to many different types of dimension, such 
 as {}\emph{small} and \index{inductive dimension}\emph{big inductive dimension} 
-and {}\emph{upper} and  \index{box counting dimensions}\emph{lower box counting dimensions}
-(also known as \index{Minkowski dimension}\emph{Minkowski dimensions}), 
+and {}\emph{upper} and  \index{box counting dimensions}\emph{lower box-counting dimension}
+(also known as \index{Minkowski dimension}\emph{Minkowski dimension}), 
 \index{homological dimension}\emph{homological dimension} and so on.
 
-The following two corollaries follow from \ref{pack-f}.
+The next two corollaries follow from \ref{pack-f}.
 
 \begin{thm}{Corollary}\label{cor:dim>proper}
 Any $m$-dimensional complete length $\Alex{}$ space is proper and geodesic.
@@ -838,9 +837,9 @@ Then for any open $\Omega\subset \spc{L}$, we have
 \TopDim\Omega=
 \HausDim\Omega,
 \]
-where $\TopDim$ and $\HausDim$ denotes  topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) respectively.
+where $\TopDim$ and $\HausDim$ denote  topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) respectively.
 
-In particular, $\spc{L}$ is dimension homogeneous; that is, any open set has the same linear dimension.
+In particular, $\spc{L}$ is dimension-homogeneous; that is, all open sets have the same linear dimension.
 \end{thm}
 
 \parit{Proof of \ref{dim=dim}.} 
@@ -849,18 +848,18 @@ The equality
 follows from \ref{LinDim}$\&$\ref{SHORT.LinDim+}.
 
 If $\LinDim \spc{L}=\infty$, then
-applying  \ref{TopDim}, for $\oBall(q,R)\subset \Omega$, we get that there is a compact subset $K\subset \Omega$ with arbitrary large $\TopDim K$ therefore
+applying  \ref{TopDim} for $\oBall(q,R)\subset \Omega$, we find that there is a compact subset $K\subset \Omega$ having an arbitrarily large $\TopDim K$. Therefore
 \[\TopDim\Omega=\infty.\] 
 By Szpilrajn's theorem (\ref{thm:szpilrajn}),
 $\HausDim K\ge \TopDim K$.
-Thus, we also have 
+Thus we also have 
 \[\HausDim\Omega=\infty.\]
 
-If $\LinDim \spc{L}=m<\infty$, then first inequality in \ref{pack-f} 
+If $\LinDim \spc{L}=m<\infty$, then the first inequality in \ref{pack-f} 
 implies that \[\HausDim \oBall(q,R)\le m.\] 
 According to Corollary~\ref{cor:dim>proper}, 
-$\spc{L}$ is proper and in particular it has countable base. 
-Thus applying Szpilrajn theorem  again, we get
+$\spc{L}$ is proper and in particular has countable base. 
+Thus applying Szpilrajn's theorem  again, we have
 \[\TopDim\Omega\le \HausDim \Omega\le m.\]
 Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
 \qeds
@@ -869,30 +868,30 @@ Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
 \parit{Proof of \ref{thm:dim-finite}.} The equivalence (\ref{SHORT.LinDim-f})$\Leftrightarrow$(\ref{SHORT.thm:dim-finite:rank}) follows from \ref{thm:dim-infty}.
 
 \parit{(\ref{SHORT.LinDim-f})$\Rightarrow$(\ref{SHORT.LinDim+-f}).}
-If $\LinDim\spc{L}=m$, then from Theorem~\ref{thm:dim-infty}, 
-we get that $\Euk^m$ contains a dense G-delta set in $\spc{L}$.
+If $\LinDim\spc{L}=m$, then by Theorem~\ref{thm:dim-infty}, 
+$\Euk^m$ contains a dense G-delta set in $\spc{L}$.
 From \ref{E=T}, it follows that $\T_p$ is isometric to $\EE^m$ for any $p\in \Euk^m$.
 
 \parit{(\ref{SHORT.LinDim+-f})$\Rightarrow$(\ref{SHORT.TopDim-f}).}
-It is proved exactly the same way as implication \textit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim})} of theorem \ref{thm:dim-infty}, 
-but we have to apply existence of distance chart (\ref{thm:inverse-function}) 
+This is proved in exactly the same way as implication \textit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim})} of theorem \ref{thm:dim-infty}, 
+but  applying existence of a distance chart (\ref{thm:inverse-function}) 
 instead of the right-inverse theorem (\ref{thm:right-inverse-function}).
 
 \parit{(\ref{SHORT.TopDim-f})$\Rightarrow$(\ref{SHORT.pack-f}).} 
-From (\ref{SHORT.TopDim-f}), it follows that, there is a point $p\in\oBall(q,R)$ and $r>0$ such that
-$\oBall(p,r)\subset \spc{L}$ is bi-Lipschit homeomorphic to a bounded open set of $\EE^m$.
-Thus, there is $\Const>0$ such that 
+From (\ref{SHORT.TopDim-f}), it follows that there is a point $p\in\oBall(q,R)$ and $r>0$ such that
+$\oBall(p,r)\subset \spc{L}$ is bi-Lipschitz homeomorphic to a bounded open set of $\EE^m$.
+Thus there is $\Const>0$ such that 
 \[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\eqlbl{eq:thm:dim-finite*}\]
-Applying \ref{pack-homogeneus}, we get that inequality \ref{eq:thm:dim-finite*}, with different constants, holds for any other ball, in particular for $\oBall(q,R)$.
+Applying \ref{pack-homogeneus} shows that inequality \ref{eq:thm:dim-finite*}, with different constants, holds for any other ball, in particular for $\oBall(q,R)$.
 
-Applying \ref{E-comeagre}, we get the first inequality.
+Applying \ref{E-comeagre} gives the first inequality in (\ref{SHORT.pack-f}).
 
 \parit{(\ref{SHORT.pack-f})$\Rightarrow$(\ref{SHORT.LinDim-f}).} 
-From theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
-Applying theorem \ref{thm:dim-infty} again, we get that if $\LinDim\spc{L}\ge m+1$, then for some $\Const>0$ and any $\eps>0$
-\[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}},\]
-but
-\[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R),\] 
+From Theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
+Applying theorem \ref{thm:dim-infty} again,  if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
+\[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}}.\]
+But
+\[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R)\] 
 for any $\eps>0$,
 a contradiction.
 \qeds
@@ -900,8 +899,8 @@ a contradiction.
 The following exercise was suggested by Alexander Lytchak.
 
 \begin{thm}{Exercise}\label{ex:compact-dimension-cbb}
-Let $\spc{L}$ be a complete length $\Alex{}$ space and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
-Prove that $\spc{L}$ is finite dimensional.
+Suppose  $\spc{L}$ is a complete length $\Alex{}$ space and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
+Prove that $\spc{L}$ is finite-dimensional.
 \end{thm}
 
 
@@ -934,18 +933,18 @@ Then $\spc{L}$ is isometric to a connected complete Riemannian $1$-dimensional m
 
 \parit{Proof.}
 Clearly $\spc{L}$ is connected.
-It remains to show the following. 
+It remains to show the following:
 \begin{clm}{}\label{clm:1-dim-all}
 For any point $p\in\spc{L}$
 there is $\eps>0$ such that $\oBall(p,\eps)$ 
 is isometric to either $[0,\eps)$ or $(-\eps,\eps)$.
 \end{clm}
 
-First let us show that
+First let us show:
 \begin{clm}{}\label{clm:1-dim-mid}
-If $p\in\mathopen{]}x y\mathclose{[}$ for some $x$, $y\in\spc{L}$ and $\eps<\min\{\dist{p}{x}{},\dist{p}{y}{}\}$
+If $p\in\mathopen{]}x y\mathclose{[}$ for some $x$, $y\in\spc{L}$ and $\eps<\min\{\dist{p}{x}{},\dist{p}{y}{}\},$
 then $\oBall(p,\eps)\subset\mathopen{]}x y\mathclose{[}$.
-In particular
+In particular,
 $\oBall(p,\eps)\iso(-\eps,\eps)$.
 \end{clm}
 
@@ -959,18 +958,18 @@ $\oBall(p,\eps)\iso(-\eps,\eps)$.
 Assume the contrary;
 that is, there is 
 $$z\in \oBall(p,\eps)\backslash\mathopen{]}x y\mathclose{[}.$$
-Consider a geodesic $[p z]$, let $q\in[p z]\cap[x y]$ be the point that maximizes the distance $\dist{p}{q}{}$.
+Consider a geodesic $[p z]$, and let $q\in[p z]\cap[x y]$ be the point that maximizes the distance $\dist{p}{q}{}$.
 At  $q$, we have three distinct directions: 
 to $x$, to $y$ and to $z$.
 Moreover, $\mangle\hinge{q}{x}{y}=\pi$.
 Thus, according to Proposition~\ref{E=T}, 
 $\LinDim\spc{L}>1$, a contradiction.
 
-Now assume there is no geodesic passing thru $p$. 
+Now assume there is no geodesic passing through $p$. 
 Since $\LinDim\spc{L}\z=1$ there is a point $x\not=p$.
 
 Fix a positive value $\eps<\dist{p}{x}{}$.
-Let us show that 
+Let us show:
 
 {
 
@@ -983,15 +982,15 @@ Let us show that
 
 \begin{clm}{}\label{clm:1-dim-end}
 $\oBall(p,\eps)\subset [p x]$;
-in particular $\oBall(p,\eps)\iso[0,\eps)$.
+in particular, $\oBall(p,\eps)\iso[0,\eps)$.
 \end{clm}
 
 Assume the contrary;
 let $z\in \oBall(p,\eps)\backslash[p y]$.
 Choose a point $w\in \mathopen{]} p y \mathclose{[}$ such that 
 \[\dist{p}{w}{}+\dist{p}{z}{}<\eps.\]
-Consider geodesic $[w z]$, let $q\in[p y]\cap[w z]$  be the point that maximizes the distance $\dist{w}{q}{}$.
-Since no geodesics pass thru $p$, we have $p\not=q$.
+Consider geodesic $[w z]$, and let $q\in[p y]\cap[w z]$  be the point that maximizes the distance $\dist{w}{q}{}$.
+Since no geodesics pass through $p$, we have $p\not=q$.
 As above, $\mangle\hinge{q}{p}{y}=\pi$ 
 and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.
 Thus, according to Proposition~\ref{E=T}, 
