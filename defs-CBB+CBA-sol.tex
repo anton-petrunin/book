@@ -99,7 +99,11 @@ Since $\spc{X}$ is compact, so is $\spc{K}$.
 It remains to observe that $\spc{K}$ is a length space since it is convex.
 
 \parbf{\ref{ex:nonconvex-limit}.} Let $\spc{X}_n$ be the plane with the metric induced by the $\ell^n$-norm and let $f_n(x,y)=x$ for all $n$.
-Observe that $\spc{X}_\o$ is the plane with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not convex.
+Observe that $\spc{X}_\o$ is the plane with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not 
+%convex.
+concave.
+
+%*S. missing solution to Exercise 4.4.7
 
 \parbf{\ref{ex:adjacent-angles}.}
 If $\mangle\hinge pxz+\mangle\hinge pyz< \pi$, then by the triangle inequality for angles (\ref{claim:angle-3angle-inq}) we have $\mangle\hinge pxy< \pi$.
@@ -141,20 +145,22 @@ Observe and use that
 
 
 \parbf{\ref{ex:nongeod-cbb}.}
-Modify the induced length metric on the unit sphere in the Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space is $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
+Modify the induced length metric on the unit sphere in a Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space is $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
 
 \parbf{\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
 
 \parbf{\ref{ex:G-delta-not-thru}.}
-Any nonnegatively curved metric on the plane with everywhere dense set of singular points will do the job;
-by singular point we understand a point with total angle around it strictly smaller than $2\cdot\pi$.
+On the plane, any nonnegatively curved metric having an everywhere dense set of singular points will do the job; here 
+by singular point we mean a point having total angle around it strictly smaller than $2\cdot\pi$.
 
-Indeed, if $x_i$ is a singular point then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
+Indeed, if $x_i$ is a singular point, then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
 The set 
 \[\Omega_n=\bigcup_i \oBall(x_i,\tfrac{\eps_i}n)\]
 is open and everywhere dense.
-Note that $\Omega_n$ may intersect a geodesic only at $\tfrac1n$-end of it.
-The intersection of $\Omega_n$ is a G-delta dense set that does not intersect interior of any geodesic.
+Note that $\Omega_n$ may intersect a geodesic only at 
+%$\tfrac1n$-end of it.
+an endpoint.
+The intersection of the $\Omega_n$ is a G-delta dense set that does not intersect the interior of any geodesic.
 
 \parbf{\ref{mink+alex=euclid}.} 
 Note that scaling does not change the space.
@@ -166,15 +172,15 @@ The point-on-side comparison (\ref{point-on-side}) for $p=v$, $x=w$, $y=-w$ and 
 Applying the comparison for 
 $p=v+w$, $x=w-v$, $y=v-w$ and $z=0$ gives the opposite inequality.
 That is, the parallelogram identity
-\[\|v+w\|^2+\|v-w\|^2= 2\cdot\|v\|^2+2\cdot\|w\|^2.\]
+\[\|v+w\|^2+\|v-w\|^2= 2\cdot\|v\|^2+2\cdot\|w\|^2\]
 holds for any vectors $v$ and $w$.
 Whence the statement follows.
 
 \parbf{\ref{ex:cbb-geod-overlap}.}
 Apply hinge comparison (\ref{angle}).
 
-\parbf{\ref{ex:equality-alexlemma}.} Without loss of generality, we can assume that the points $x,v,w,y$ appear on the geodesic $[xy]$ in the same order.
-By the point-on-side comparison (\ref{point-on-side}) we have
+\parbf{\ref{ex:equality-alexlemma}.} Without loss of generality, we may assume that the points $x,v,w,y$ appear on the geodesic $[xy]$ in that order.
+By point-on-side comparison (\ref{point-on-side}) we have
 \begin{align*}
 \angk\kappa xyp\le\angk\kappa xwp&\le \angk\kappa xvp,
 \\
@@ -187,10 +193,10 @@ Therefore
 \\
 \angk\kappa yxp<\angk\kappa ywp
 \quad&\Longleftarrow\quad
-\angk\kappa yxp<\angk\kappa yvp,
+\angk\kappa yxp<\angk\kappa yvp.
 \end{align*}
 
-By Alexandrov's lemma (\ref{lem:alex}), we have that 
+By Alexandrov's lemma (\ref{lem:alex}), we have
 \begin{align*}
 \angk\kappa xyp<\angk\kappa xvp
 \quad&\Longleftrightarrow\quad
@@ -214,7 +220,7 @@ Read \cite{lebedeva-petrunin}.
 An example for the second part can be found among metrics on $\RR^2$ induced by a norm. (Compare to Exercise~\ref{mink+alex=euclid}.)
 
 \parbf{\ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}.}
-By the definition of Busemann function,
+By the definition of Busemann function (see  \ref{prop:busemann}),
 \begin{align*}
 \exp(&\sqrt{-\kappa}\cdot\bus_\gamma) 
 = \exp \left[\lim_{t\to \infty} \sqrt{-\kappa}\cdot(\distfun{{\gamma (t)}}{}{} - t)\right]=
@@ -248,16 +254,16 @@ On the other hand, since each $x_i$ has space of directions $\le\tfrac12\cdot\ma
 
 
 \parbf{\ref{ex:ccat-(3+1)}.}
-Suppose, that 
+Suppose that 
 \[\angk\kappa {x^0}{x^1}{x^2}+\angk\kappa {x^0}{x^2}{x^3}<\angk\kappa {x^0}{x^1}{x^3}.\]
 Show that
-\[\angk\kappa {x^2}{x^0}{x^1}+\angk\kappa {x^2}{x^1}{x^3}+\angk\kappa {x^2}{x^3}{x^1}>2\cdot\pi.\]
+\[\angk\kappa {x^2}{x^0}{x^1}+\angk\kappa {x^2}{x^1}{x^3}+\angk\kappa {x^2}{x^3}{x^0}>2\cdot\pi.\]
 Conclude that one can take $p=x^2$.
 
 \parbf{\ref{ex:sba-2+2-short}.}
 This is analogous to Exercise \ref{ex:(3+1)-expanding}.
 
-\parbf{\ref{ex:berg-nikolaev}.} Read \cite{sato}. (The original proof \cite{berg-nikolaev} is much longer and it is harder to follow.)
+\parbf{\ref{ex:berg-nikolaev}.} Read \cite{sato}. (The original proof \cite{berg-nikolaev} is much longer and is harder to follow.)
 
 An example for the second part of the problem can be found among 4-point metric spaces.
 It is sufficient to take a generic convex quadrangle and increase one of its diagonals slightly;
@@ -266,14 +272,13 @@ it will still satisfy the inequality for all relabeling, but will fail to meet \
 \parbf{\ref{ex:CAT-mnfld=>ext.geod}.}
 Suppose that a geodesic $[px]$ is not extendable beyond $x$.
 We may assume that $\dist{p}{x}{}<\varpi\kappa$;
-otherwise move $p$ along the geodesic toward to $x$.
+otherwise move $p$ along the geodesic toward  $x$.
 
-By the uniqueness of geodesics (\ref{thm:cat-unique}), any point $y$ in a neighborhood $\Omega\ni x$ is connected to $p$ by a unique geodesic path, denote it by $\gamma_y$.
-Moreover, $h_t(y)=\gamma_y(t)$ defines a homotopy between the identity map of $\Omega$ and the constant map with value $p$;
-this is the  so-called \index{geodesic homotopy}\emph{geodesic homotopy}.
+By the uniqueness of geodesics (\ref{thm:cat-unique}), any point $y$ in a neighborhood $\Omega\ni x$ is connected to $p$ by a unique geodesic path; denote it by $\gamma_y$.
+Moreover, $h_t(y)=\gamma_y(t)$ defines a homotopy, called the  \index{geodesic homotopy}\emph{geodesic homotopy}, between the identity map of $\Omega$ and the constant map with value $p$.
 
 Since $[px]$ is not extendable, $x\notin h_t(\Omega)$ for any $t<1$.
-In particular the local homology groups vanish at $x$ --- a contradiction.
+In particular, the local homology groups vanish at $x$ --- a contradiction.
 
 \parbf{\ref{ex:complete-space-of-dir}.} Choose a sequence of 
 directions $\xi_n$ at $p$
@@ -294,9 +299,9 @@ It is sufficient to show that if $v$ and $y$ are midpoints of geodesics $[uw]$ a
 \end{wrapfigure}
 
 Denote by $p$ the midpoint of $[uz]$.
-Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) twice, we get
+Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) twice, we have
 \[\dist{v}{p}{}\le \tfrac12\cdot\dist{w}{z}{}.\]
-The same way we obtain 
+Similarly we have
 \[\dist{y}{p}{}\le \tfrac12\cdot\dist{u}{x}{}.\]
 It remains to add these two inequalities and apply the triangle inequality.
 
@@ -317,7 +322,7 @@ Whence the natural map is distance-preserving on all three sides.
 
 
 
-\parit{Comment.} These conditions imply that the natural map can be extended to a distance preseving map to the solid model triangle.
+\parit{Comment.} These conditions imply that the natural map can be extended to a distance-preserving map to the solid model triangle.
 In fact the image of the line-of-sight map (\ref{def:sight}) is isometric to the model triangle.
 
 
@@ -347,7 +352,7 @@ Without loss of generality, we may assume that $p\in K$.
 
 If $\dist{K}{x}{}\ge\pi$, then set $\map[2](x)=p$.
 
-Otherwise, if $\dist{K}{x}{}<\pi$, by Closest-point projection lemma~\ref{lem:closest point}, 
+Otherwise, if $\dist{K}{x}{}<\pi$, by the closest-point projection lemma~\ref{lem:closest point}, 
 there is a unique point $x^*\in K$ that minimizes distance to $x$;
 that is, $\dist{x^*}{x}{}=\dist{K}{x}{}$.
 Let us define $\ell_x$, $\phi_x$ and $\psi_x$ using the following identities:
@@ -358,7 +363,7 @@ Let us define $\ell_x$, $\phi_x$ and $\psi_x$ using the following identities:
 \\
 \sin\psi_x&=\sin\phi_x\cdot\sin\ell_x, 
 \quad 0\le \psi_x\le \tfrac\pi2.
-\intertext{Set}
+\intertext{Let}
 \map[2](x)&=\geod_{[px^*]}(\psi_x).
 \end{align*}
 
@@ -369,7 +374,7 @@ and
 $\map[2](a)=a$ for any $a\in K$.
 
 Let us show that $\map[2]$ is short.
-Given $x,y\in\oBall(K,\tfrac\pi2)$, set
+Given $x,y\in\oBall(K,\tfrac\pi2)$, let
 \begin{align*}
 x'&=\map[2](x)
 &
@@ -399,18 +404,18 @@ $\mangle\hinge{x^*}{x}{y*},
 \tfrac\pi2$
 and
 the inequality~\ref{eq:cos(r)} follows from the Arm lemma (\ref{lem:arm}).
-If $x\in K$ and $y\notin K$, we get \ref{eq:cos(r)}, by angle comparison (\ref{cat-hinge}) 
+If $x\in K$ and $y\notin K$, we obtain \ref{eq:cos(r)} by angle comparison (\ref{cat-hinge}) 
 since $\mangle\hinge{y^*}{y}{x*}\ge \tfrac\pi2$.
-In the same way \ref{eq:cos(r)} is proved 
-in case $x\notin K$ and $y\in K$.
-Finally, if $x,y\in K$, $\phi_x=\phi_y=\tfrac\pi2$ and $r=d$;
+In the same way, \ref{eq:cos(r)} is proved 
+if $x\notin K$ and $y\in K$.
+Finally, if $x,y\in K$, then $\phi_x=\phi_y=\tfrac\pi2$ and $r=d$;
 that is, the inequality trivially holds.
 
 Further note that
 \[\cos\alpha
 =
 \frac{\cos d-\cos \ell_x\cdot\cos\ell_y}{\sin\ell_x\cdot\sin\ell_y}.\]
-Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) we get
+Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}), we have
 \begin{align*}
 \cos r'&\ge
 \cos\psi_x\cdot\cos\psi_y
@@ -422,7 +427,7 @@ Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) we get
 -(\cos d-\cos \ell_x\cdot\cos\ell_y)\cdot\sin\phi_x\cdot\sin\phi_y\ge
 \\
 &\ge \cos\psi_x\cdot\cos\psi_y
--\cos d\cdot\sin\phi_x\cdot\sin\phi_y
+-\cos d\cdot\sin\phi_x\cdot\sin\phi_y.
 \end{align*}
 
 
@@ -439,7 +444,7 @@ Hence
 that is, the restriction $\map[2]|_{\oBall(K,\tfrac\pi2)}$ is short.
 Clearly $\map[2]$ is continuous. 
 Since the complement of $\oBall(K,\tfrac\pi2)$ is mapped to $p$,
-we get that $\map[2]$ is short; that is,
+ $\map[2]$ is short; that is,
 \[r'\le r \eqlbl{eq:cos=<cos}\]
 for any $x,y\in\spc{U}$.
 
@@ -454,7 +459,7 @@ It remains to show that if $y\notin K$
 then the inequality~\ref{eq:cos=<cos}
 is strict.
 If $\dist{K}{y}{}\ge\tfrac\pi2$, then \ref{eq:cos=<cos} holds since 
-the left-hand side is $<\tfrac\pi2$,
+the left-hand side is $<\tfrac\pi2$
 while the right hand side is $\ge \tfrac\pi2$.
 If $\dist{K}{y}{}<\tfrac\pi2$, then $\phi_y>0$. Clearly $\psi_y<\phi_y$,
 hence the inequality~\ref{eq:cos=<cos} is strict.
@@ -465,22 +470,22 @@ in fact it is very close to the construction
 in the proof of Kirszbraun's theorem (\ref{thm:kirsz+}).
 
 \parit{Geometric interpretation of the map $\map[2]$.}
-Set $\mathring{\spc{U}}=\Cone \spc{U}$;
+Let $\mathring{\spc{U}}=\Cone \spc{U}$, and 
 denote by $\mathring{K}$ the subcone of $\mathring{\spc{U}}$ spanned by $K$.
-The space $\spc{U}$ can be naturally identified with the unit sphere in $\mathring{\spc{U}}$;
+The space $\spc{U}$ can be naturally identified with the unit sphere in $\mathring{\spc{U}}$, 
 that is, the set 
 \[\set{z\in \mathring{\spc{U}}}{|z|=1}.\]
 
 According to \ref{thm:warp-curv-bound:cat}, $\mathring{\spc{U}}$ is $\CAT0$.
 Note that $\mathring{K}$ forms a convex closed subset of $\mathring{\spc{U}}$.
 According to \ref{lem:closest point}, for any point $x$ there is a unique point $\hat x\in \mathring{K}$
-that minimizes the distance to $x$;
+that minimizes the distance to $x$,
 that is, $\dist{\hat x}{x}{}=\dist{K}{x}{}$.
-(If $|\hat x|\ne0$, then in the notations above we have
+(If $|\hat x|\ne0$, then in the notation above we have
 $x^*=\tfrac1{|\hat x|}\cdot\hat x$.)
 
 Consider the half-line $t\mapsto t\cdot p$ in  $\mathring{\spc{U}}$.
-By a comparison, 
+By comparison, 
 for given $s\in \mathring{\spc{U}}$
 the geodesics $\geod_{[s\ t\cdot p]}$ converge as $t\to\infty$ to a half-line, 
 say $\alpha_s\:[0,\infty)\to \mathring{\spc{U}}$.
@@ -488,11 +493,11 @@ say $\alpha_s\:[0,\infty)\to \mathring{\spc{U}}$.
 
 
 Note that if $|x|=1$, then $|\hat x|\le 1$.
-By assumption for any $a\in K$ the function $t\mapsto |\alpha_a(t)|$ is monotonically increasing.
+By assumption, for any $a\in K$ the function $t\mapsto |\alpha_a(t)|$ is monotonically increasing.
 Therefore there is a unique value $t_x\ge 0$ such that
 $|\alpha_{\hat x}(t_x)|=1$.
-Consider the map $\map[2]\:\spc{U}\to K$
-defined as 
+Define $\map[2]\:\spc{U}\to K$
+ by 
 \[\map[2](x)=\alpha_{\hat x}(t_x).\]
 
 \parbf{\ref{ex:patchwork};} \ref{SHORT.ex:patchwork:proper}.
@@ -509,40 +514,60 @@ Let us glue each $\Delta_n$ to $[0,\pi]$ along an isometry of one of the longer 
 It remains to show that the obtained space $\spc{X}$ is a needed example.
 
 \parbf{\ref{ex:two-rays}.}
-Consider the angle $A$ in the plane of measure $\pi-\alpha$.
-Note that $A$ is $\CAT0$.
-Therefore by Reshetnyak gluing theorem \ref{thm:gluing},
-by gluing a side of $A$ to $\gamma_1$ in $\spc{U}$ we obtain a $\CAT0$ space, say $\spc{U}'$.
+%Consider the angle $A$ in the plane of measure $\pi-\alpha$.
+Note that 
+%$A$
+$Q$ 
+is $\CAT0$.
+Therefore by the Reshetnyak gluing theorem (\ref{thm:gluing}),
+by gluing 
+%a side of $A$ 
+$\gamma_1$ 
+%to $\gamma_1$
+to $\gamma_1'$ 
+%in $\spc{U}$ 
+we obtain a $\CAT0$ space, say $\spc{U}'$.
 
-Note that $\gamma_2$ together with the other side of $A$ forms a both sides infinite geodesic, say $\gamma$ in $\spc{U}'$.
+The above curve resulting from gluing  
+$\gamma_1$ to $\gamma_1'$ 
+%together with the other side of $A$ forms
+forms together with $ \gamma_2$ 
+a both-sides infinite geodesic, say $\gamma$, in $\spc{U}'$.
 In particular, $\gamma$ is a convex set isometric to $\RR$.
 
-Glue a half-plane along its boundary to $\gamma$.
-By Reshetnyak's gluing theorem, the obtained space is $\CAT0$.
+Now glue 
+%a half-plane along its boundary to $\gamma$.
+$Q$ along its boundary to $\spc{U}$ along $\gamma$.
+By the Reshetnyak gluing theorem, the resulting space is $\CAT0$.
 
-It remains to note that this space can be obtained directly by gluing $\spc{U}$ to with $Q$ along $\gamma_1$ and $\gamma_2$.
+It remains to note that this space can be obtained directly by gluing $\spc{U}$ to $Q$ along 
+%$\gamma_1$ and $\gamma_2$.
+corresponding half-lines.
 
 \parbf{\ref{ex:reshetnyak-doubling}.}
 Suppose that $A$ is not convex.
 Then there is a geodesic $[xy]$ with ends in $A$ that does not lie in $A$ completely.
-Note that $[xy]$ can be lifted to two different geodesics in the doubling with the same ends and apply uniqueness of geodesics (\ref{cor:cat-unique}).
+Note that $[xy]$ can be lifted to two different geodesics with the same ends  in the doubling, and apply uniqueness of geodesics (\ref{cor:cat-unique}).
 
 \parbf{\ref{ex:glue-spherical-suspension}.}
 Since $K$ is $\pi$-convex, it is $\CAT1$.
 By \ref{thm:warp-curv-bound:cat}, the spherical suspension $\Susp K$ is $\CAT1$ as well.
 Let us glue $\Susp K$ to $\spc{U}$  along $K$;
-according to Reshetnyak's gluing theorem, the obtained space, say $\spc{U}'$, is $\CAT1$.
+according to the Reshetnyak gluing theorem, the resulting space, say $\spc{U}'$, is $\CAT1$.
 
 Consider the geodesic path $\gamma\:[0,1]$ from $p$ to a pole of the suspension in $\spc{U}'$.
 Set $K_t=\spc{U}\cap\cBall[\gamma(t),\tfrac\pi2]$.
-By \ref{cor:convex-balls}, $K_t$ is $\pi$-convex for any $t$ and monotonicity of the family should be evident.
+By \ref{cor:convex-balls}, $K_t$ is $\pi$-convex for any $t$,  and monotonicity of the family should be evident.
 
 \parit{Remark.}
-Note that if one applies Shrafutdinov's construction to the family of convex sets provided by the exercise we get a short strong deformation retraction from $\cBall[p,\tfrac\pi2]$ to $K$;
+Note that by applying Sharfutdinov retraction to the family of convex sets provided by the exercise,
+we get a short strong deformation retraction from $\cBall[p,\tfrac\pi2]$ to $K$;
 that is, there is a family of maps $\phi_t\:\cBall[p,\tfrac\pi2]\to \cBall[p,\tfrac\pi2]$ such that 
 the function $t\mapsto \dist{\phi_t(x)}{\phi_t(y)}{}$ is nonincreasing for any pair of points $x,y\in\cBall[p,\tfrac\pi2]$, $\phi_t(x)=x$ for any $x\in K$ and $\phi_1(\cBall[p,\tfrac\pi2])=K$. 
-Moreover we can assume that there is a family of short maps $\phi_t(\cBall[p,\tfrac\pi2])= K_t$ and $\phi_t(x)=x$ for any $t$ and $x\in K_t$.
-It leads to another solution of Exercise~\ref{ex:short-retraction-CBA(1)}.
+Moreover we can assume that there is a family of short maps 
+%$\phi_t(\cBall[p,\tfrac\pi2])= K_t$ and $\phi_t(x)=x$ for any $t$ and $x\in K_t$.
+$\phi_t\:\cBall[p,\tfrac\pi2])\to  K_t$ such that $\phi_t(x)=x$ for any $t$ and $x\in K_t$.
+This leads to another solution of Exercise~\ref{ex:short-retraction-CBA(1)}.
 
 
 
@@ -572,19 +597,19 @@ Then $f$ is an isometry.
 \end{itemize}
 
 \parbf{\ref{ex:bishop}.}
-Suppose that points $p,x,q,y$ appear on the curve in the same cyclic order.
-Assume that geodesics $[pq]$ and $[xy]$ do not intersect.
+Suppose that points $p,x,q,y$ appear on the curve in that cyclic order.
+Assume that the geodesics $[pq]$ and $[xy]$ do not intersect.
 Use the argument in the proof of the majorization theorem (\ref{thm:major}) to show that in this case there are nonequivalent majorization maps.
 
-Now we can assume that the pairs of geodesics $[pq]$ and $[xy]$ intersect for all choices of points $p,x,q,y$ on the curve in the same cyclic order.
+Now we can assume that pairs of geodesics $[pq]$ and $[xy]$ intersect for all choices of points $p,x,q,y$ on the curve in that cyclic order.
 Show that in this case the convex hull $K$ of the curve is isometric to a convex figure.
 
 Note that the composition of a majorization map and closest point projection to $K$ is a majorization.
-Show and use that boundary of a convex figure in the plane admits unique majorization up to equivalence.
+Show and use that the boundary of a convex figure in the plane admits a unique majorization up to equivalence.
 
 \parit{Comment.}
 A typical rectifiable closed curve in a $\CAT0$ space can be majorized by more than one convex figure.
-There are two exceptions: (1) if the majorization map is distance-preserving and (2) if the curve is  formed by three sides of a geodesic triangle.
+There are two exceptions: (1) if the majorization map is distance-preserving, and (2) if the curve is  formed by three sides of a geodesic triangle.
 Richard Bishop asked if there are no other exceptions.
 
 \parbf{\ref{ex:square}.}
@@ -604,21 +629,23 @@ In particular, by the Hadamard--Cartan theorem, $\spc{X}$ is not $\CAT0$.
 If $\ell$ and $m$ intersect then $\spc{X}$ is a cone over double cover $\Sigma$ of $\mathbb{S}^2$ branching at two pairs $(x,y)$ and $(v,w)$ of antipodal points.
 Suppose $\dist{x}{v}{\mathbb{S}^2}=\ell<\tfrac\pi2$.
 Note that the inverse image of $[xv]_{\mathbb{S}^2}$ is a closed geodesic of length $4\cdot\ell<2\cdot\pi$.
-Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$ and hence $\spc{X}$ is not $\CAT0$.
+Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$. Hence $\spc{X}$ is not $\CAT0$ by Theorem \ref{thm:warp-curv-bound:cat}  on curvature of cones.
 
 \parbf{\ref{ex:branching}.}
 Let us do the second part first.
 Assume $A$ has nonempty interior. 
 Note that the space $\tilde{\spc{U}}$ is simply connected and locally isometric to the doubling $\spc{W}$ of $\spc{U}$ in $A$;
-that is, for any point in $\tilde{\spc{U}}$ has a neighborhood $\Omega$ that is isometric to a neighborhood of a point in $\spc{W}$.
+that is, any point in $\tilde{\spc{U}}$ has a neighborhood 
+%\Omega$ 
+that is isometric to a neighborhood of a point in $\spc{W}$.
 
-By Reshetnyak gluing theorem $\spc{W}$ is $\CAT0$.
-By Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) $\tilde{\spc{U}}$ is $\CAT0$.
+By the Reshetnyak gluing theorem (\ref{}), $\spc{W}$ is $\CAT0$.
+By the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}), $\tilde{\spc{U}}$ is $\CAT0$.
 
-To do the general case, apply the above argument to a closed $\eps$-neighborhood of $A$
+For the general case, apply the above argument to a closed $\eps$-neighborhood of $A$
 and pass to a limit as $\eps\to 0$.
 
-The first part of problem follows since geodesic is a convex set.
+The first part of problem follows since a geodesic is a convex set.
 
 \parbf{\ref{ex:cats-cradle}.} Prove that the angle comparison (\ref{cat-hinge}) holds.
 
@@ -639,10 +666,10 @@ The answers are $s\le \sqrt3$ and $s\le 2$ respectively.
 
 The upper bound $s\le \sqrt3$ follows from (2+2)-point comparison.
 
-The Euclidean space works as example if $s$ is smaller than the large diagonal of the double pyramid with unit side (that is, if $s\le 2\cdot\sqrt{2/3}$).
+The Euclidean space works as an example if $s$ is smaller than the large diagonal of the double pyramid with unit side (that is, if $s\le 2\cdot\sqrt{2/3}$).
 Otherwise take the product $\spc{K}\times \RR$ with a 2-dimensional cone for the $\CAT0$ case.
 For the $\Alex0$ case, the needed space can be constructed by doubling  a proper convex set $K\subset\EE^3$ in its boundary.
-We assume that the points correspond to vertices of a regular tetrahedral with 3 vertices on the boundary of $K$ and one  in its interior; it corresponds to a pair of points in the doubling at distance $s$ from each other.
+We assume that the points correspond to vertexes of a regular tetrahedron with 3 vertices on the boundary of $K$ and one  in its interior; this point corresponds to a pair of points in the doubling at distance $s$ from each other.
 
 \parit{Remarks.}
 Tetsu Toyoda \cite{toyoda} showed that any 5-point metric space that satisfies the (2+2)-point comparison admits a distance-preserving map into a $\CAT0$ space.
@@ -656,7 +683,7 @@ Then
 \[\angk\Kappa p{q}{r}
 +\angk\Kappa p{r}{s}
 +\angk\Kappa p{a}{q}\le 2\cdot\pi.\]
-Applying monotonicity of the function $\kappa\mapsto\angk\kappa p{q}{r}$ (\ref{k-decrease}) we get that
+Applying monotonicity of the function $\kappa\mapsto\angk\kappa p{q}{r}$ (\ref{k-decrease}) shows  that
 \[\angk\kappa p{q}{r}
 +\angk\kappa p{r}{s}
 +\angk\kappa p{s}{q}\le 2\cdot\pi.\]
@@ -669,27 +696,27 @@ Recall that $\angk{\Kappa+} p{q}{r}$ denotes extended angle (\ref{def:extended-a
 Observe that if 
 \[\angk{\Kappa+} p{q}{r}
 +\angk{\Kappa+} p{r}{s}
-+\angk{\Kappa+} p{s}{q}= 2\cdot\pi.\eqlbl{eq:Kappa3}\]
++\angk{\Kappa+} p{s}{q}= 2\cdot\pi\eqlbl{eq:Kappa3}\]
 for some $\sigma\ge \Kappa\ge \kappa$, then the quadruple admits a distance-preserving embedding into $\Lob2\Kappa$.
 
-Observe that the left-hand side in \ref{eq:Kappa3} is continuous in $\Kappa$.
+Observe that the left-hand side of \ref{eq:Kappa3} is continuous in $\Kappa$.
 Since $\spc{L}$ is $\Alex\kappa$, for $\Kappa=\kappa$ the left-hand side cannot exceed $2\cdot \pi$.
 Therefore it remains smaller than $2\cdot\pi$ for all $\sigma\ge \Kappa\ge \kappa$;
 moreover the same holds for all permutations of the labels $p,q,r,s$.
 
-Note that we can assume perimeter of triple $q,r,s$ equals to $2\cdot\varpi{\sigma}$ and use it together with overlap lemma (\ref{lem:extend-overlap}) to arrive to a contradiction.
+Note that we can assume the perimeter of the triple $q,r,s$ is $2\cdot\varpi{\sigma}$, and use this and the overlap lemma (\ref{lem:extend-overlap}) to arrive at a contradiction.
 
-According to our definition the real line is $\Alex\kappa$ for any $\kappa\in\RR$,
+According to our definition, the real line is $\Alex\kappa$ for any $\kappa\in\RR$,
 but it does not satisfy the property for $\kappa>0$. 
 The condition $\kappa\le 0$ was used just once to ensure that the $\kappa$-model triangles with the vertices $p,q,r,s$ are defined.
 One can assume instead that perimeters of all triangles in $\spc{L}$ are at most $2\cdot\varpi\kappa$.
-This condition holds for most all complete length $\Alex\kappa$ spaces of dimension at least 2.
+This condition holds for most  complete length $\Alex\kappa$ spaces of dimension at least 2.
 
 \parbf{\ref{ex:sturm}.}
 Let $\tilde p,\tilde x_1,\dots,\tilde x_n$ be the array in $\EE^n$ provided by the (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 We may assume that $\tilde p$ is the origin of $\EE^n$.
 
-Consider an $n{\times}n$-matrix $\tilde M$ with the components 
+Consider an $n{\times}n$-matrix $\tilde M$ with components 
 \[\tilde m_{i,j}=\tfrac12\cdot(\dist[2]{\tilde x_i}{\tilde p}{}+\dist[2]{\tilde x_j}{\tilde p}{}-\dist[2]{\tilde x_i}{\tilde x_j}{}).\]
 Note that $\tilde m_{i,j}=\langle\tilde x_i,\tilde x_j\rangle$.
 Therefore $\tilde M=A\cdot A^\top$ for an $n{\times}n$-matrix $A$ that defines a linear transformation sending the standard basis to the array $\tilde x_1,\dots,\tilde x_n$.
@@ -702,11 +729,11 @@ for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
 \parbf{\ref{ex:(3+1)-nonsufficient}.}
 It is sufficient to construct a metric on the set of points $\{p$, $x^1$, $x^2$, $x^3$, $x^4\}$ that does not satisfy (4+1)-comparison but does satisfy all (3+1)-comparisons.
-To do this, put $x^i$ in the vertices of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
+To do this, put the $x^i$ in the vertices of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
 
 
 \parbf{\ref{ex:strut+embedding}.}
-By the (1+\textit{n})-point comparison (\ref{thm:pos-config}) there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+By  (1+\textit{n})-point comparison (\ref{thm:pos-config}), there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
 \[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\quad \text{and}\quad \dist{\tilde a^i}{\tilde a^j}{}\ge\dist{a^i}{a^j}{}\]
 for all $i$ and $j$.
 
@@ -724,7 +751,7 @@ By construction, $S\ge 0$.
 Note that $s_{i,j}\le \tilde s_{i,j}\le 0$ if $i\ne j$ and
 $s_{i,j}= \tilde s_{i,j}=1$ if $i=j$.
 Therefore $\tilde S\ge0$.
-The latter implies that we can assume that
+The latter implies  we can assume 
 \[\dist{\tilde \xi^i}{\tilde \xi^j}{\mathbb{S}^m}= \angk\kappa{p}{ a^i}{ a^j}\]
 for each $i$ and $j$.
 Whence the statement follows.
@@ -734,9 +761,9 @@ Set $\tilde Q=\Conv\{\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\}$.
 By Kirszbraun's theorem, the map $\tilde x^i\mapsto x^i$ can be extended to a short map $F\:\tilde Q\to\spc{L}$;
 it remains to show that the map $F$ is distance-preserving.
 
-Consider the map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ which is also short.
+Consider the gradient logarithm map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ corresponding to the gradient exponential map $\gexp_{x_0}$ (see Section \ref{sec:gexp}). The map $\log_{x_0}$ also is short.
 Observe that the composition $\log_{x_0}\circ F$ is distance-preserving.
-Therefore so $F$ is distance-preserving as well;
+Therefore $F$ is distance-preserving;
 in particular we can take $Q=F(\tilde Q)$.
 
 \parbf{\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\lg_{x^0}{x^i}\in\T_{x^0}$.
@@ -773,7 +800,7 @@ By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ 
 Hence the statement follows.
 
 \parbf{\ref{ex:isbell}.}
-The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with a metric induced by sup-norm.
+The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with the metric induced by the sup-norm.
 It remains to show that the latter space is injective.
 
 The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him.
@@ -784,14 +811,14 @@ To prove the only-if part it is sufficient to consider only the case of two-poin
 It remains to prove the if part.
 
 By Zorn's lemma, we may assume that the short map $f\:Q\to \spc{Z}$ is defined on a maximal subset $Q\subset \spc{X}$;
-that is, $f$ can not be extended to a larger set as a short map.
+that is, $f$ cannot be extended to a larger set as a short map.
 Note that in this case $Q$ is a closed subset of $\spc{X}$.
 
-Assume that there is a point $x\in \spc{X}\backslash Q$.
-Denote by $\bar x$ a point in $Q$ that lies on minimal distance from $x$.
+Assume there is a point $x\in \spc{X}\backslash Q$.
+Denote by $\bar x$ a point in $Q$ that lies at minimal distance from $x$.
 By the ultratriangle inequality, $\dist{\bar x}{y}{}\le\dist{x}{y}{}$ for any $y\in Q$.
 Assigning $f(x)=f(\bar x)$, we extend $f$ to $Q\cup\{x\}$ as a short map --- a contradiction.
-Therefore $Q=\spc{X}$ hence the statement.
+Therefore $Q=\spc{X}$, hence the statement.
 
 
 \parbf{\ref{ex:warp=<}.}
@@ -806,29 +833,29 @@ By \ref{thm:warp-curv-bound:cbb:a}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\
 
 By \ref{thm:warp-curv-bound:cbb:S}, the space $\spc{U}$, $\spc{V}$, or $\spc{U}\star\spc{V}$ is $\CAT1$ if and only if $\Cone\spc{U}$, $\Cone\spc{V}$, or $\Cone(\spc{U}\star\spc{V})=\Cone\spc{U}\times\Cone\spc{V}$ is $\CAT0$ respectively.
 
-It remains to show that product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ respectively.
+It remains to show that the product of two spaces is $\Alex0$ or $\CAT0$ if and only if each space is $\Alex0$ or $\CAT0$ respectively.
 
 \parbf{\ref{ex:poly-unique-geodesic}.}
 Assume $\spc{P}$ is not $\CAT0$.
-Then by \ref{thm:PL-CAT}, a link $\Sigma$ of some simplex contains a closed geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
+Then by \ref{thm:PL-CAT}, a link $\Sigma$ of some simplex contains a closed local geodesic $\alpha$ with length $4\cdot\ell<2\cdot\pi$.
 We can assume that $\Sigma$ has minimal possible dimension;
-so, by \ref{thm:PL-CAT}, $\Sigma$ is locally $\CAT1$.
+then by \ref{thm:PL-CAT}, $\Sigma$ is locally $\CAT1$.
 
 Divide $\alpha$ into two equal arcs $\alpha_1$ and $\alpha_2$.
 
-Assume $\alpha_1$ and $\alpha_2$ are length minimizing;
+Assume $\alpha_1$ and $\alpha_2$ are length-minimizing, and 
 parametrize them by $[-\ell,\ell]$.
 Fix a small $\delta>0$ and 
-consider two curves in $\Cone\Sigma$ written in polar coordinates as 
+consider the two curves in $\Cone\Sigma$ given in polar coordinates by 
 \[\gamma_i(t)=(\alpha_i(\arctan \tfrac t\delta),\sqrt{\delta^2+t^2}).\]
-Observe that both curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ and  have common ends.
+Observe that the curves $\gamma_1$ and $\gamma_2$ are geodesics in $\Cone\Sigma$ having common endpoints.
 
 Observe that a small neighborhood of the tip of $\Cone\Sigma$ admits a distance-preserving embedding into~$\spc{P}$.
 Hence we can construct two geodesics $\gamma_1$ and $\gamma_2$ in $\spc{P}$ with common endpoints.
 
-It remains to consider the case when $\alpha_1$ (and therefore $\alpha_2$) is not length minimizing.
+It remains to consider the case where $\alpha_1$ (and therefore $\alpha_2$) is not length-minimizing.
 
-Pass to its maximal length minimizing arc $\bar\alpha_1$ of $\alpha_1$.
+Pass to a maximal length-minimizing arc $\bar\alpha_1$ of $\alpha_1$.
 Since $\Sigma$ is locally $\CAT1$, by the no-conjugate-point theorem (\ref{thm:no-conj-pt}) 
 there is another geodesic $\bar\alpha_2$ in $\Sigma_p$ that shares endpoints with $\bar\alpha_1$.
 It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\alpha_2$.
@@ -839,7 +866,7 @@ By \ref{thm:cat-unique} the converse holds as well.
 \parbf{\ref{ex:polyKk}.} Apply \ref{thm:tan-is}, \ref{thm:poly-CBB}, and \ref{thm:PL-CAT}.
 
 \parbf{\ref{ex:barycenric-flag}.}
-Observe and use that (1) in the barycentric subdivision every vertex corresponds to a simplex of the original triangulation
+Observe and use that (1) in the barycentric subdivision every vertex corresponds to a simplex of the original triangulation,
 and (2) a simplex of the subdivision corresponds to a decreasing sequence of simplexes in the original triangulation. 
 
 \parbf{\ref{ex:obtuce-flag}.}
@@ -850,65 +877,66 @@ The rest of the proof goes along the same lines as the proof of the flag conditi
 The only difference is that a geodesic may spend time {}\emph{at least} $\pi$ on each visit to $\Star_v$.
 
 \parit{Remark.}
-Note that it is not sufficient to assume only that the all dihedral angles of the simplices are at least~$\tfrac\pi2$. 
-Indeed, the two-dimensional sphere with removed interior of a small rhombus is a spherical polyhedral space glued from four triangles with all the angles at least~$\tfrac\pi2$.
-On the other hand the boundary of the rhombus is closed local geodesic in this space.
+Note that it is not sufficient to assume only that all the dihedral angles of the simplexes are at least~$\tfrac\pi2$. 
+Indeed, the two-dimensional sphere with the interior of a small rhombus removed is a spherical polyhedral space glued from four triangles with angles at least~$\tfrac\pi2$.
+On the other hand, the boundary of the rhombus is a closed local geodesic in this space.
 Therefore the space cannot be $\CAT1$.
 
 \parbf{\ref{ex:short+commuting}.}
-Observe that if we glue two copies of spaces along $A_i$, then the copies of $A_j$ for some $j\ne i$ form a convex subset in the clued space.
-Use it together with Reshetnyak gluing theorem $n$ times; for each label of the edges.
+Observe that if we glue two copies of spaces along $A_i$, then the copies of $A_j$ for some $j\ne i$ form a convex subset in the glued space.
+Use this and the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, one for each label of the edges.
 
 \parbf{\ref{ex:space-of-trees}.}
-The space $\spc{T}_n$ has a natural cone structure with the vertex formed by the  completely degenerate tree --- all its edges have zero length.
+The space $\spc{T}_n$ has a natural cone structure whose vertex is the  completely degenerate tree --- all its edges have zero length.
 
 Note that the space $\Sigma$
 over which the cone is taken comes naturally with a triangulation 
-with all-right spherical simplicies.
-Each simplex corresponds to a combinatorics of a possibly degenerate tree.
+by all-right spherical simplexes.
+Each simplex corresponds to the combinatorics of a possibly degenerate tree.
 
 Note that the link of any simplex of this triangulation satisfies the no-triangle condition.
 Indeed, fix a simplex $\triangle$ of the complex;
 suppose it is described by a possibly degenerate topological tree $t$.
-A triangle in the link of  $\triangle$ can be described by three ways to resolve a degeneracy of $t$ by adding one edge,
-such that (1) any pair of these resolutions can be done simultaneously, but (2) all three cannot be done simultaneously.
+A triangle in the link of  $\triangle$ can be described by three ways to resolve a degeneracy of $t$ by adding one edge, where 
+(1) any pair of these resolutions can be done simultaneously, but (2) all three cannot be done simultaneously.
 Direct inspection shows that this is impossible.
 
-Therefore, by Proposition~\ref{prop:no-trig} our complex is flag.
-It remains to apply the flag condition (\ref{thm:flag}), and \ref{thm:warp-curv-bound:cbb:a}.
+Therefore by Proposition~\ref{prop:no-trig} our complex is flag.
+It remains to apply the flag condition (\ref{thm:flag}) and \ref{thm:warp-curv-bound:cbb:a}.
 
 \parbf{\ref{ex:cubical-complex}.}
 Apply the flag condition (\ref{thm:flag}) and Theorem~\ref{thm:warp-curv-bound:cbb:S}.
 
 \parbf{\ref{ex:norays}.}
-Consider a cube in the Hilbert space;
-that is the space of all sequences $(x_1,x_2,\dots)$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by $\ell^2$-norm.
+Consider a cube in the Hilbert space
+%;that is the space 
+of all sequences $(x_1,x_2,\dots)$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by $\ell^2$-norm.
 
 \parbf{\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT} and \ref{ex:d_q dist_p(v)=-<dri p q, v>}.} Apply the strong angle lemmas
-(\ref{lem:strong-angle-cba}
-and \ref{1st-var+}).
+\ref{lem:strong-angle-cba}
+and \ref{lem:strong-angle}.
 
 
 \parbf{\ref{ex:df(v)=<grad f,v>}.}
 Since $\alpha$ is Lipschitz, so is $f\circ\alpha$.
-By the standard Rademacher's theorem, the derivative $(f\circ\alpha)'$ is defined almost everywhere.
-In particular 
+By the standard Rademacher theorem, the derivative $(f\circ\alpha)'$ is defined almost everywhere.
+In particular, 
 \[(\dd_{\alpha(t)}f)(\alpha^+(t))+(\dd_{\alpha(t)}f)(\alpha^-(t))\ae0.\]
 
-Further by the extended Rademacher's theorem (more precisely its 1-dimensional case; see Proposition~\ref{prop:Rademacher-dim=1}),
-we have that
+Further, by the extended Rademacher theorem (more precisely its 1-dimensional case; see Proposition~\ref{prop:Rademacher-dim=1}),
+we have 
 \[\alpha^+(t)+\alpha^-(t)\ae0.\]
 In particular,
 \[\<\nabla_{\alpha(t)}f,\alpha^+(t)\>+\<\nabla_{\alpha(t)}f,\alpha^-(t)\>
 \ae0.\]
 
-Finally, by the definition of gradient, we have that 
+Finally, by the definition of gradient, we have 
 \[\<\nabla_{\alpha(t)}f,\alpha^\pm(t)\>\ge (\dd_{\alpha(t)}f)(\alpha^\pm(t)).\]
 Hence the result follows.
 
 \parbf{\ref{ex:d dist(grad)<0}.}
 Without loss of generality we may assume that geodesics $[pa]$ and $[pb]$ are uniquely defined.
-Applying \ref{ex:d_q dist_p(v)=-<dri p q, v>}, we get
+Applying \ref{ex:d_q dist_p(v)=-<dri p q, v>}, we have
 \begin{align*}(\dd_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})&=-\langle\dir pa,\nabla_p\distfun{b}{}{} \rangle\le
 \\
 &\le -\dd_p\distfun{b}{}{}(\dir pa)=
@@ -933,12 +961,11 @@ It follows that $\Sigma_p$ is not compact.
 \parbf{\ref{ex:sharafutdinov}.}
 Choose a finite sequence $t_0<\dots<t_n$.
 Denote by $\Phi_{t_i}$ the composition of projections to $K_{t_0},\dots, K_{t_i}$.
-Pass to a limit of $\Phi_{t_i}$ as the sequence get denser and denser in the interval of parameters.
-Observe that the limit $\phi_t$ does not depend on the choice of the sequences and it solves the exercise. 
+Pass to a limit of the $\Phi_{t_i}$ as the sequence becomes denser in the parameter interval. Observe that the limit $\phi_t$ does not depend on the choice of the sequences. The exercise follows. 
 
 
 \parbf{\ref{ex:elf-contracting}.}
-Set $\ell(t)=\dist{\alpha(t)}{\alpha(t_3)}{}$
+Let $\ell(t)=\dist{\alpha(t)}{\alpha(t_3)}{}$.
 Note that 
 \[\ell'(t)\le -\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle.\]
 
@@ -948,12 +975,12 @@ Therefore
 \begin{align*}\langle \nabla_{\alpha(t)}f,\dir{\alpha(t)}{\alpha(t_3)}\rangle&\ge\dd_{\alpha(t)}f(\dir{\alpha(t)}{\alpha(t_3)})\ge 0
 \end{align*}
 for any $t\in[t_1,t_2]$.
-Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$, hence the statement.
+Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$. Hence the statement.
 
 \parbf{\ref{ex:grad-curve-condition}.} 
 Without loss of generality, we may assume that $(f\circ\alpha)'(t)>0$ for any $t$.
 
-Let $\hat\alpha$ be the reparametrization of $\alpha$ by its arclength.
+Let $\hat\alpha$ be a reparametrization of $\alpha$ by arclength.
 Note that 
 \[(f\circ\hat\alpha)'(s)\ge |\nabla_{\hat\alpha(s)}f|\]
 almost everywhere.
@@ -964,7 +991,7 @@ It remains to apply Lemma~\ref{lem:grad--grad-like}.
 Use \ref{ex:grad-curve-condition} to prove the only-if part.
 
 To prove the if part, set $h(z)=\tfrac12\cdot\dist[2]{x}{z}{}$.
-If $\alpha$ is an $f$-gradient curve then 
+If $\alpha$ is an $f$-gradient curve, then 
 \begin{align*}
 (h\circ\alpha)^+&\ge \dist{\alpha(t)}{x}{}\cdot\langle\dir{\alpha(t)}{x},\nabla_{\alpha(t)}f\rangle\ge
 \\
@@ -972,22 +999,22 @@ If $\alpha$ is an $f$-gradient curve then
 \\
 &\ge f(x)-f\circ\alpha(t).
 \end{align*}
-It remains to integrate the inequality and observe that $f\circ\alpha$ is nondecreasing function.
+It remains to integrate the inequality and observe that $f\circ\alpha$ is a nondecreasing function.
  
 
 %\parbf{\ref{ex:grad-flow-bry}.} %???
 
 \parbf{\ref{ex:geodesic}.}
-Consider $(x,\kappa)$ and $(z,\kappa)$ radial curves that start at $y$
+Consider $(x,\kappa)$- and $(z,\kappa)$-radial curves that start at $y$
 and observe that they form a geodesic from $x$ to $z$.
 
 \parbf{\ref{ex:gexp}.} Set $q=p+v$ and $q'=\gexp_pv$. 
-By radial comparison $\dist{q'}{x}{}\le \dist{q}{x}{}$ for any $x\in \spc{L}$.
-If $q\in \spc{L}$, then it implies that $q=q'$.
-Otherwise note that $q'$ lies on the boundary line of $\spc{L}$ and $\proj(q)$ is the only point on this line that satisfies the inequality.
+By radial comparison, $\dist{q'}{x}{}\le \dist{q}{x}{}$ for any $x\in \spc{L}$.
+If $q\in \spc{L}$, then this implies that $q=q'$.
+Otherwise note that $q'$ lies on the boundary line of $\spc{L}$, and $\proj(q)$ is the only point on this line that satisfies the inequality.
 
 \parbf{\ref{ex:inv-gexp}.}
-From the angle comparison we get that
+By angle comparison,
 $|\nabla_x\distfun p|\ge-\cos \angk\kappa xpq$.
 
 Choose a $(p,\kappa)$-radial curve $\alpha$ that starts at $p$.
@@ -995,7 +1022,7 @@ Observe that
 \[(\distfun p\circ \alpha)^+(t)\ge-|\alpha^+(t)|\cdot \cos \angk\kappa {\alpha(t)}p q\]
 and
 \[(\distfun q\circ\alpha)^+(t)\ge -|\alpha^+(t)|.\]
-Therefore, $t\mapsto\angk\kappa q{\alpha(t)}p$  is nondecreasing, hence the result.
+Therefore $t\mapsto\angk\kappa q{\alpha(t)}p$  is nondecreasing, hence the result.
 
 \parbf{\ref{ex:bry-cover}.} 
 Choose a regular point $p\in\spc{L}$.
