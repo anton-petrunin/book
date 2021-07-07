@@ -17,7 +17,7 @@ A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called an $\II$-valued me
 The value $\rho(x,y)$ is also called the \index{distance}\emph{distance} between $x$ and $y$.
 
 
-The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty]$ and $[0,\infty]$.
+The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty)$ and $[0,\infty]$.
 Any $\II$-valued metric can be referred to briefly as a metric;
 the interval should be apparent from context but by default a metric is $(0,\infty)$-valued. 
 If we need to be more specific we may also use the following names:
@@ -70,14 +70,14 @@ set
 The resulting $\infty$-metric space $\bm{X}$ will be called the \index{disjoint union of metric spaces}\emph{disjoint union} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$, denoted by \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
 \end{thm}
 
-Now let us give examples when vanishing distance between distinct points is useful:
+Now let us give examples showing that vanishing and infinite distance between distinct points is useful.
 
 
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then 
-\[\dist{x}{y}{}=\inf\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}\]
-is in general only a pseudometric;
-that is,  even if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ might be $[0,\infty)$-valued.
+\[\dist{x}{y}{}=\sup\set{\dist{x}{y}{\alpha}}{\alpha\in\IndexSet}\]
+is in general only an $\infty$-metric;
+that is,  even if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ might be $(0,\infty]$-valued.
 
 Let $\spc{X}$ be a set,
 $\spc{Y}$ be a metric space and  
@@ -217,7 +217,7 @@ A \index{curve}\emph{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \sp
 Let $\spc{X}$ be a metric space.
 Given a curve $\alpha\: \II\to \spc{X}$, we define its \index{length}\emph{length} as 
 \[
-\length \alpha \df \sup_{a\le t_0\le\ldots\le t_n\le b}\left\{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha (t_{i-1})}{}\right\}
+\length \alpha \df \sup\set{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha (t_{i-1})}{}}{t_0,\dots,t_n\in \II,t_0\le\ldots\le t_n}
 \]
 \end{thm}
 
@@ -261,6 +261,7 @@ If $\spc{X}$ is a length space,
 and $A\subset \spc{X}$ the set $A$ comes with the inherited metric from $\spc{X}$ 
 which might be not a length metric.
 The corresponding length metric on $A$ will be denoted as $\dist{}{}{A}$.
+
 
 \parbf{Variations of the definition.}
 We will need the following variations of Definition~\ref{def:length-space}:
