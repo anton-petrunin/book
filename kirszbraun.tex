@@ -341,10 +341,27 @@ for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 \vskip0mm
 \end{wrapfigure}
 
-The inequality in the above exercise was discovered by  Karl-Theodor Sturm \cite{sturm}.
+The above exercise describes the so-called \index{Lang--Schroeder--Sturm inequality}\emph{Lang--Schroeder--Sturm inequality}; it was discovered by Urs Lang and Viktor Schroeder \cite{lang-schroeder} and rediscovered by  Karl-Theodor Sturm \cite{sturm}.
 It turns out to be weaker than (1+\textit{n})-point comparison.
 An example can be constructed by perturbing the 6-point metric isometric to a regular pentagon with its center, making its sides slightly longer and diagonals slightly shorter \cite{lebedeva-petrunin-zolotov}.
+In particular, Sturm's inequalities in general metric space (not necessary length space) do not imply the inequality in the following exercise.
 
+\begin{thm}{Exercise}\label{6-point-comparison}
+Let $\spc{L}$ is a complete length $\Alex{\kappa}$ space.
+Show that for any points $p, x_1,x_2,x_3,x_4,x_5\in \spc{L}$ we have 
+\[
+\angk\kappa p{x_1}{x_5}
++
+\angk\kappa p{x_2}{x_1}
++
+\angk\kappa p{x_3}{x_2}
++
+\angk\kappa p{x_4}{x_3}
++
+\angk\kappa p{x_5}{x_4}\le 4\cdot \pi,
+\]
+assuming that the left-hand side is defined.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-nonsufficient}
 Give an example of a metric on a finite set that satisfies the comparison inequality 
