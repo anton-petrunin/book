@@ -15,20 +15,18 @@ Since $\spc{X}$ is complete, $x_n$ converges; denote its limit by $x_\infty$.
 
 Passing to a subsequence, we may assume that $\yetdist{x_{n-1}}{x_n}{}<\tfrac1{2^n}$.
 It follows that there is a 1-Lipschitz curve $\alpha\:[0,1]\to (\spc{X},\yetdist{}{}{})$ such that $x_n=\alpha(\tfrac1{2^n})$ and $x_\infty=\alpha(0)$.
-In particular $\yetdist{x_n}{x_\infty}{}\to0$ and $n\to\infty$.
+In particular, $\yetdist{x_n}{x_\infty}{}\to0$ and $n\to\infty$.
 
 \parit{(\ref{SHORT.ex:complete=>complete:compact}).}
 Fix two points $x,y\in\spc{X}$ such that $\ell=\yetdist{x}{y}{}<\infty$.
 Let $\alpha_n$ be a sequence of paths from $x$ to $y$ such that $\length(\alpha_n)\to\ell$ as $n\to \infty$.
 Without loss of generality we may assume that each $\alpha_n$ is $(\ell+1)$-Lipschitz.
 
-Since $\spc{X}$ is compact, there is a partial limit of $\alpha_n$ as $n\to \infty$,
-denote it by $\alpha_\infty$.
-By semicontinuity of length, $\length\alpha_\infty\le\ell$;
-that is $\alpha$ is a shortest path in $\spc{X}$.
+Since $\spc{X}$ is compact, there is a partial limit $\alpha_\infty$ of $\alpha_n$ as $n\to \infty$. By semicontinuity of length, $\length\alpha_\infty\le\ell$;
+that is; $\alpha$ is a shortest path in $\spc{X}$.
 
 \parbf{\ref{ex:no-geod}.}
-The following example is suggested by Fedor Nazarov~\cite{nazarov}.
+The following example was suggested by Fedor Nazarov~\cite{nazarov}.
 
 \medskip
 
@@ -41,7 +39,7 @@ where $\bm{x}=(x_1,x_2\,\dots)\in B$.
 That is, if $\bm{x}(t)$, $t\in[0,\ell]$, is a curve parametrized by $\rho_0$-length 
 then its $\rho_1$-length is 
 \[\length_{\rho_1}\bm{x}=\int\limits_0^\ell\phi\circ\bm{x}.\]
-Note that the metric $\rho_1$ is bi-Lipschitz to~$\rho_0$.
+Note that the metric $\rho_1$ is bi-Lipschitz equivalent  to~$\rho_0$.
 
 Assume $\bm{x}(t)$ and $\bm{x}'(t)$ are two curves parametrized by $\rho_0$-length that differ only in the $m$-th coordinate, denoted by $x_m(t)$ and $x_m'(t)$ respectively.
 Note that if $x'_m(t)\le x_m(t)$ for any $t$ and 
@@ -79,7 +77,7 @@ Consider the following subset of $\R^2$ equipped with the induced length metric
 =
 \bigl((0,1]\times\{0,1\}\bigr)
 \cup
-\bigl(\{1,\tfrac12,\tfrac13,\dots\}\times[0,1]\bigr)
+\bigl(\{1,\tfrac12,\tfrac13,\dots\}\times[0,1]\bigr).
 \]
 Note that $\spc{X}$ is locally compact and geodesic.
 
@@ -91,9 +89,9 @@ and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. \qeds
 
 \parbf{\ref{ex:compact-in-lenght}}
 Let $\spc{X}$ be a compact metric space.
-Let us identify $\spc{X}$ with its image in $\Bnd(\spc{X},\RR)$ under the Kuratowsky embedding.
-Denote by $\spc{K}$ the {}\emph{linear} convex hull of $\spc{X}$ in the space of bounded functions on $\spc{X}$.
-%that is $x\in \spc{K}$ if and only if $x$ can not be separated from $\spc{X}$ by a hyperplane.
+Let us identify $\spc{X}$ with its image in $\Bnd(\spc{X},\RR)$ under the Kuratowsky embedding (see section~\ref{Kuratowsky embedding}). 
+Denote by $\spc{K}$ the \emph{linear} convex hull of $\spc{X}$ in the space of bounded functions on $\spc{X}$; 
+that is, $x\in \spc{K}$ if and only if $x$ cannot be separated from $\spc{X}$ by a hyperplane.
 
 Since $\spc{X}$ is compact, so is $\spc{K}$.
 It remains to observe that $\spc{K}$ is a length space since it is convex.
@@ -107,7 +105,7 @@ concave.
 
 \parbf{\ref{ex:adjacent-angles}.}
 If $\mangle\hinge pxz+\mangle\hinge pyz< \pi$, then by the triangle inequality for angles (\ref{claim:angle-3angle-inq}) we have $\mangle\hinge pxy< \pi$.
-The latter implies that the curve $[xy]$ fails to be a shortest geodesic around $p$.
+The latter implies that the curve $[xy]$ fails to be a shortest geodesic near $p$.
 
 \parbf{\ref{ex:tangent-vect=o(t)}.}
 By the definition of a right derivative, there is a geodesic $\gamma$ such that both limits 
@@ -150,7 +148,7 @@ Modify the induced length metric on the unit sphere in a Hilbert space in small 
 \parbf{\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
 
 \parbf{\ref{ex:G-delta-not-thru}.}
-On the plane, any nonnegatively curved metric having an everywhere dense set of singular points will do the job; here 
+On the plane, any nonnegatively curved metric having an everywhere dense set of singular points will do the job, where 
 by singular point we mean a point having total angle around it strictly smaller than $2\cdot\pi$.
 
 Indeed, if $x_i$ is a singular point, then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
@@ -239,7 +237,7 @@ By the function comparison definitions of $\CAT\kappa$ space (\ref{function-comp
 \[\sup \set{\distfun{G\cdot x}(y)}{y\in \spc{L}}
 >
 \tfrac\pi2.\]
-Use comparison to show that there is unique point $y^{*}$ that lies at the maximal distance from the orbit $G\cdot x$.
+Use comparison to show that there is a unique point $y^{*}$ that lies at maximal distance from the orbit $G\cdot x$.
 Observe that $y^{*}$ is a fixed point.
 
 \parbf{\ref{ex:kleiner}.}
@@ -248,8 +246,8 @@ This exercise is based on the main idea in \cite{hsiang-kleiner}.
 \medskip
 
 Assume there are 4 such points $x_1,x_2,x_3,x_4$.
-Since the space $\spc{L}$ is $\Alex{1}$  its is also $\Alex{0}$. By the angle comparison the sum of the angles in any geodesic triangle in an $\Alex{0}$ space is $\ge \pi$.
-Therefore the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is  larger than $\tfrac\pi3$.
+Since the space $\spc{L}$ is $\Alex{1}$  it is also $\Alex{0}$. By angle comparison the sum of the angles in any geodesic triangle in an $\Alex{0}$ space is $\ge \pi$.
+Therefore the average of the $\mangle\hinge{x_i}{x_j}{x_k}$ is  larger than $\tfrac\pi3$.
 On the other hand, since each $x_i$ has space of directions $\le\tfrac12\cdot\mathbb{S}^n$ and the perimeter of any triangle in $\tfrac12\cdot\mathbb{S}^n$ is at most $\pi$, the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at most $\tfrac\pi3$ --- a contradiction.
 
 
@@ -314,8 +312,8 @@ The only-if part is evident.
 Use \ref{thm:defs_of_cat} to show that 
 (\ref{SHORT.ex:equality-for-thin:side-side})$\Rightarrow$(\ref{SHORT.ex:equality-for-thin:vertex-base})$\Rightarrow$(\ref{SHORT.ex:equality-for-thin:angle}).
 
-By \ref{thm:defs_of_cat}, the condition (\ref{SHORT.ex:equality-for-thin:angle}) implies that the natural map is distance-preserving on the sides $[\tilde x\tilde y]$ and $[\tilde x\tilde z]$.
-Applying it again, we get that the condition (\ref{SHORT.ex:equality-for-thin:angle}) holds for all permutations of the labels $x,y,z$.
+By \ref{thm:defs_of_cat}, condition (\ref{SHORT.ex:equality-for-thin:angle}) implies that the natural map is distance-preserving on the sides $[\tilde x\tilde y]$ and $[\tilde x\tilde z]$.
+Applying it again, we have that condition (\ref{SHORT.ex:equality-for-thin:angle}) holds for all permutations of the labels $x,y,z$.
 Whence the natural map is distance-preserving on all three sides.
 
 
@@ -639,7 +637,7 @@ that is, any point in $\tilde{\spc{U}}$ has a neighborhood
 %\Omega$ 
 that is isometric to a neighborhood of a point in $\spc{W}$.
 
-By the Reshetnyak gluing theorem (\ref{}), $\spc{W}$ is $\CAT0$.
+By the Reshetnyak gluing theorem (\ref{thm:gluing}), $\spc{W}$ is $\CAT0$.
 By the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}), $\tilde{\spc{U}}$ is $\CAT0$.
 
 For the general case, apply the above argument to a closed $\eps$-neighborhood of $A$
