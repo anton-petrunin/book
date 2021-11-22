@@ -654,7 +654,7 @@ Note that it is sufficient to show that any finite set of points $x^1,\dots,x^n\
 
 Observe that $\spc{X}$ is $\Alex0$ and $\CAT0$ at the same time.
 Show that there is unique point $p$ that minimizes the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
-Note that the vectors $v^i=\lg_{[{p}{x^i}]}$ lie in a linear subspace of $\T_p$.
+Note that the vectors $v^i=\lg_{[{p}{x^i}]}$ lie in a linear subspace of $\T_p$, where $\log_{x_0}$  is the gradient logarithm map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ corresponding to the gradient exponential $\gexp_{x_0}$ (see Section \ref{sec:gexp}).
 Moreover if $K$ is the convex hull of $v_i$, then the origin of $\T_p$ lies in the interior of $K$ relative to its affine hull.
 Finally observe that the exponential map is defined on all of $K$ and is distance-preserving.
 The statement follows since the exponential map sends $v^i\mapsto x^i$ for each $i$.
@@ -768,7 +768,7 @@ in particular we can take $Q=F(\tilde Q)$.
 Show that all the $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is distance-preserving.
 It follows that we can identify the convex hull $K$ of  the $v^i$ with the convex hull of  the $\tilde x^i$.
 
-Note that the gradient exponential map $\gexp_{x_0}$ maps $v^i\mapsto x^i$.
+Note that the gradient exponential map $\gexp_{x_0}$ maps $v$^i$ to $x^i$.
 By assumption, 
 \[\dist{v^i}{v^j}{}=\dist{x^i}{x^j}{}\eqlbl{eq:vv=xx}\]
 for all $i$ and $j$.
@@ -798,7 +798,7 @@ By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ 
 Hence the statement follows.
 
 \parbf{\ref{ex:isbell}.}
-The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with the metric induced by the sup-norm.
+The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with the metric induced by the sup-norm (see Section \ref~{Kuratowski embedding}.
 It remains to show that the latter space is injective.
 
 The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him.
@@ -978,7 +978,7 @@ Therefore $\ell'\le 0$ for any $t\in[t_1,t_2]$. Hence the statement.
 \parbf{\ref{ex:grad-curve-condition}.} 
 Without loss of generality, we may assume that $(f\circ\alpha)'(t)>0$ for any $t$.
 
-Let $\hat\alpha$ be a reparametrization of $\alpha$ by arclength.
+Let $\hat\alpha$ be the arclength reparametrization of $\alpha$.
 Note that 
 \[(f\circ\hat\alpha)'(s)\ge |\nabla_{\hat\alpha(s)}f|\]
 almost everywhere.
@@ -997,7 +997,7 @@ If $\alpha$ is an $f$-gradient curve, then
 \\
 &\ge f(x)-f\circ\alpha(t).
 \end{align*}
-It remains to integrate the inequality and observe that $f\circ\alpha$ is a nondecreasing function.
+It remains to integrate the inequality and observe that $f\circ\alpha$ is nondecreasing.
  
 
 %\parbf{\ref{ex:grad-flow-bry}.} %???
@@ -1008,7 +1008,7 @@ and observe that they form a geodesic from $x$ to $z$.
 
 \parbf{\ref{ex:gexp}.} Set $q=p+v$ and $q'=\gexp_pv$. 
 By radial comparison, $\dist{q'}{x}{}\le \dist{q}{x}{}$ for any $x\in \spc{L}$.
-If $q\in \spc{L}$, then this implies that $q=q'$.
+If $q\in \spc{L}$, this implies that $q=q'$.
 Otherwise note that $q'$ lies on the boundary line of $\spc{L}$, and $\proj(q)$ is the only point on this line that satisfies the inequality.
 
 \parbf{\ref{ex:inv-gexp}.}
