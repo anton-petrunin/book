@@ -139,7 +139,7 @@ A set $A\subset\spc{X}$ is called \index{bounded set}\emph{bounded} if $A\subset
 
 \parbf{Distances to sets.}
 For subset $A\subset \spc{X}$, 
-let us denote the distance from $A$ to a point $x$ in $\spc{X}$ as $\distfun{A}{x}$;
+let us denote the distance from $A$ to a point $x$ in $\spc{X}$ as $\distfun{A}{x}$\index{$\distfun{A}{x}$};
 that is,
 \[\distfun{A}{x}
 \df
@@ -152,8 +152,10 @@ We define the distance between sets $A$ and $B$  as
 For any subset $A\subset\spc{X}$,  the sets
 \begin{align*}
 \oBall(A,R)&=\set{y\in \spc{X}}{ \distfun{A}{y}{}<R},
+\index{\oBall(A,R)}
 \\
 \cBall[A,R]&=\set{y\in \spc{X}}{\distfun{A}{y}{}\le R}
+\index{\cBall[A,R]}
 \end{align*}
 are called respectively the  \index{open tubular neighborhood}\emph{open} and \index{closed tubular neighborhood}\emph{closed $R$-neighborhoods} of $A$.
 
@@ -205,7 +207,7 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 \begin{enumerate}[i)]
 \item $\spc{X}$ is compact;
 \item $\spc{X}$ is \index{sequentially compact}\emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
-\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
+\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net \index{$\eps$-net} in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
 \end{enumerate}
 \end{thm}
 
@@ -463,25 +465,28 @@ We say $A$ is
 \index{convex set}
 if for every two points $p,q\in A$ any geodesic $[pq]$ lies in $A$.
 
-We say $A$ 
+We say $A$ is 
 \emph{weakly convex}%
-\index{convex set!weakly convex set}\index{weakly convex set}
+\index{weakly convex set}
 if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
 that lies in $A$.
 
-We say  $A$ is \index{totally convex}\emph{totally convex}
+We say  $A$ is 
+\emph{totally convex}
+\index{totally convex set}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
 
 If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$,
 then $A$ is called respectively 
-\emph{$R$-convex},
+\emph{$R$-convex},%
+\index{$R$-convex set} 
 \emph{weakly  $R$-convex}%
-\index{weakly convex set!weakly $R$-convex set} 
-or \index{totally convex set!totally $R$-convex set}\emph{totally  $R$-convex}.
+or \emph{totally  $R$-convex}.
 
 A set $A\subset\spc{X}$ is called 
-\emph{locally convex}
+\emph{locally convex}%
+\index{locally convex set}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
 such that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
 Similarly one defines locally weakly convex and locally totally convex sets. %DO we neeed all of them??
@@ -489,7 +494,7 @@ Similarly one defines locally weakly convex and locally totally convex sets. %DO
 
 \parbf{Remarks.} Let us state a few observations that easily follow  from the definition.
 \begin{itemize}
-\item The notion of \index{convex set}\index{weakly convex set}\emph{(weakly) convex set} is the same as {}\emph{(weakly) $\infty$-convex set}.
+\item The notion of \emph{(weakly) convex set} is the same as {}\emph{(weakly) $\infty$-convex set}.
 \item The inherited metric on a weakly convex set coincides with its length metric.
 \item Any open set is locally convex by definition.
 \end{itemize}
