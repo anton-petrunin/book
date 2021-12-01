@@ -178,7 +178,7 @@ It suffices to show that
 n\to\infty.
 \eqlbl{eq:z_n->z}\]
 
-By the triangle inequality, the $z_n$ are approximate midpoints of $p^1$ and $p^2$. %???English???
+By the triangle inequality, the $z_n$ are approximate midpoints of $p^1$ and $p^2$.
 Apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1$, $p^2$, $z_n$,~$z$. 
 For $p=p^1$ or $p=p^2$, we see that $\angk{\kappa} {p}{z_n}{z}$ is arbitrarily small when $n$ is sufficiently large.  
 By the law of cosines, \ref{eq:z_n->z} follows.
@@ -1195,11 +1195,8 @@ By Corollary~\ref{cor:k-for-k}, we may choose $R$ satisfying $0<R<\varpi\Kappa$,
 and such that
 the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ and forms a $\CAT\kappa$ space.
 
-% ??? I replaced a sentence that seemed circular, because you need length $<\varpi\kappa$ in order to apply Jensen's inequality in order to prove length $<\varpi\kappa$. S.
-
-%Take $R<\varpi\kappa/2$, then the function comparison (\ref{thm:function-comp}) implies that the length of any local geodesic is at most $2\cdot R<\varpi\kappa$. Therefore, by Corollary~\ref{cor:loc-geod-are-min}, any local geodesic in $\spc{B}$ is minimizing.
-
-A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\gamma_\infty(t),R/2)$ cannot leave $\spc{B}$, and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.  In particular, for all sufficiently large $n$, any subsegment  of $\gamma_n$ through $\gamma_n(t)$  with length $<R/2$ is a geodesic.
+A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\gamma_\infty(t),R/2)$ cannot leave $\spc{B}$, and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.
+In particular, for all sufficiently large $n$, any subsegment of $\gamma_n$ through $\gamma_n(t)$  with length less than $R/2$ is a geodesic.
 
 
 Since $\spc{B}$ is $\CAT\kappa$, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
@@ -1208,8 +1205,6 @@ that contains a neighborhood of $t$ in $[0,1]$
 and such that $\gamma_n|_\II$ is minimizing for all large $n$.
 It follows that the restriction $\gamma_\infty|_\II$ is a geodesic,
 and therefore $\gamma_\infty$ is a local geodesic.
-%It follows that  $[0,1]$ is covered by finitely many intervals $\II_i$,  that are open in $[0,1]$, where $\gamma_\infty|_\II_i$ is  a geodesic that is the limit of geodesics $\gamma_n|_\II_i$. Therefore   $\gamma_\infty$ is a local geodesic path with $\length\gamma_n\to\length\gamma_\infty$.
-%??? I change it a bit in the beginning and at the end.
 \qeds
 
 
@@ -1278,8 +1273,6 @@ Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
 Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}$ is a complete length $\CAT\kappa$ space.
-%???WE MAY NEED TO STATE THIS CONSTRUCTION AS A COROLLARY FROM Reshetnyak gluing theorem --- I'M SURE WE WILL NEED IT ONCE MORE...
-%OK LET'S MOVE IT TO GLUING  WHEN WE NEED IT AGAIN
 
 \begin{figure}[!ht]
 \vskip-0mm
@@ -1325,7 +1318,7 @@ $\gamma_0=\gamma$, $\gamma_t(0)=\alpha^0(t)$, $\gamma_t(1)=\alpha^1(t)$, and $\g
 if $\II\ne [0,1]$, then $\II=[0, a)$, where either $\gamma_t$ converges uniformly to a local geodesic $\gamma_a$ of length $\varpi\kappa$, or 
 for some fixed $s\in [0,1]$ the curve $\gamma_t(s):[0,a)\to\spc{U}$ is a Lipschitz curve with no limit 
 as $t\to a-$.
-%???DO WE REALLY NEED SUCH GENERALITY
+%??DO WE REALLY NEED SUCH GENERALITY
 \end{subthm}
 
 \end{thm}
@@ -1403,13 +1396,10 @@ with a point $\hat p$ such that
 there is a locally isometric map $\map\:\spc{B}\to\spc{U}$
 such that $\map(\hat p)=p$ and the following lifting property holds: 
 for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\varpi\kappa/2$, 
-%???Maybe we want $\length\alpha\le\varpi\kappa/2$???
 there is a unique path $\hat\alpha \:[0,1]\to \spc{B}$ such that $\hat\alpha(0)=\hat p$ 
 and $\map\circ\hat\alpha\equiv\alpha$.
-
 \end{thm}
 
-%%%???problem with completeness
 
 Note that the lifting property implies that $\map(\spc{B})\supset\oBall(p,\varpi\kappa/2)$ and by completeness $\map(\spc{B})\supset\cBall[p,\varpi\kappa/2]$.
 Also since $\spc{B}$ is $\CAT\kappa$, the closed ball $\cBall[\hat p,\tfrac{\varpi\kappa}2]_{\spc{B}}$ is a weakly convex set in $\spc{B}$ (see \ref{cor:convex-balls});
@@ -1957,9 +1947,8 @@ Show that a closed rectifiable curve in a $\CAT0$ space has an isometric majoriz
 
 For $n=1$, the following lemma states that in a $\CAT\kappa$ space, 
 a sharp triangle comparison implies the
-presence  of an isometric copy of the convex hull of the model triangle.
+presence of an isometric copy of the convex hull of the model triangle.
 This rigidity statement was proved by Alexandrov \cite{alexandrov:devel}.
-An analogue for $\Alex{\kappa}$ spaces fails, see Exercise \ref{ex:not-flat}.
   
 \begin{thm}{Arm lemma}\label{lem:arm}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space, 
@@ -2100,16 +2089,16 @@ Its original formulation states that if $M$ is a complete Riemannian manifold wi
 then the exponential map at any point $p\in M$ is a covering;
 in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
 
-In this generality, the theorem appeared in the lectures of Cartan \cite{cartan}.
+In this generality, the theorem appeared in the lectures of \'Elie Cartan \cite{cartan}.
 For surfaces in the Euclidean plane, 
 the theorem was proved by
 Hans von Mangoldt \cite{mangoldt},  
-and few years later independently by Hadamard \cite{hadamard}.
+and few years later independently by Jacques Hadamard \cite{hadamard}.
 
 Formulations for metric spaces of different generality were proved by 
-Busemann \cite{busemann-CBA},
-Rinow \cite{rinow}, and 
-Gromov  \cite[p.~119]{gromov:hyp-groups}. 
+Herbert Busemann \cite{busemann-CBA},
+Willi Rinow \cite{rinow}, and 
+Mikhael Gromov \cite[p.~119]{gromov:hyp-groups}. 
 A detailed proof of Gromov's statement when $\spc{U}$ is proper  was given by Werner Ballmann \cite{ballmann:cartan-hadamard}, using Birkhoff's curve-shortening.  
 A proof in the non-proper 
 geodesic case 

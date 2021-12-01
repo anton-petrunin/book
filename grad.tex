@@ -111,7 +111,7 @@ From \ref{lem:alm-grad}, we have
 Hence the result.
 \qeds
 
-%\parbf{Remark of A.} It might have sense to generalize the following theorem to the solutions $f''\le \phi(f,f')$ or at least to the solutions of $f''\le \lambda-\kappa\cdot f$ ???
+%It might have sense to generalize the following theorem to the solutions $f''\le \phi(f,f')$ or at least to the solutions of $f''\le \lambda-\kappa\cdot f$ ??
 
 Recall that second order differential inequalities are understood in a barrier sense; see Section~\ref{sec:conv-real}.
 
@@ -234,8 +234,7 @@ Hence the result.
 \section{Gradient curves}\label{sec:grad-curves:def}
 
 In this section we define gradient curves 
-and tie %???ENGLISH??? S:Okay
-them tightly to gradient-like curves 
+and tie them tightly to gradient-like curves 
 which were introduced in Section~\ref{sec:gradient-like}.
 
 
@@ -395,14 +394,12 @@ Show that $\alpha\:\RR\to\spc{Z}$ is an $f$-gradient curve if and only if
 \[\dist[2]{x}{\alpha(t_1)}{\spc{Z}}-\dist[2]{x}{\alpha(t_0)}{\spc{Z}}
 \le 
 2\cdot(t_1-t_0)\cdot  (f\circ\alpha(t_1)-f(x))\]
-for any $t_1>t_0$ and $x\in\spc{Z}$. %???CHECK???
+for any $t_1>t_0$ and $x\in\spc{Z}$.
 \end{thm}
 
 
 
 \section*{Distance estimates}\label{sec:grad-curv:dist-est}
-
-%??? ADD ONE MORE ESTIMATE
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
 Let $\spc{Z}$ be a complete length space, and 
@@ -622,11 +619,10 @@ $\alpha_n(t)\to\alpha_\o(t)$  as $n\to\o$ for all $t\in[0,\delta)$.
 \end{subthm}
 \end{thm}
 
-%??? A: We need a convergence theorem, which would work for radial curves as well???
+%A: Do we need a convergence theorem, which would work for radial curves as well??
 
 Note that according to Exercise~\ref{ex:nonconvex-limit}, part (\ref{SHORT.thm:convex-limit-cbb}) does not hold for general metric spaces.
 The idea of the proof is the same as in the proof of local existence (\ref{thm:exist-grad-curv}).
-We will need the following lemma%*S. ???
 
 \parit{Proof of \ref{ultr-lim-g-curve}; (\ref{SHORT.thm:convex-limit-cbb})}
 Fix a geodesic $\gamma_\o\:\II\to \Dom f_\o$;
@@ -793,16 +789,14 @@ The proposition follows directly from the proposition on ultralimit of gradient 
 If $\spc{Z}_n$ is an $m$-dimensional complete length $\Alex\kappa$ space, $\spc{Z}_n\xto{\GH} \spc{Z}$, and $f_n\:\spc{Z}_n\to\RR$ is a sequence of
 $\lambda$-concave functions that converges to $f\:\spc{Z}\to \RR$, then
 $\GF_{f_n}^t\:\spc{Z}_n\to \spc{Z}_n$ converges to $\GF_f^t\:\spc{Z}\to \spc{Z}$.
-\end{thm}
+\end{thm}%do we need it for ultralimits?
 
-%??? do we need it for ultralimits???
-
-\begin{thm}{Exercise}\label{ex:grad-flow-bry}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $\partial\spc{L}=\emptyset$, $K\subset \spc{L}$ be a compact subset, and $f\:\spc{L}\to\RR$ be semiconcave function.
-Assume that for some $t>0$ the gradient flow $\GF^t_f$ is defined everywhere in $K$.
-Prove that 
-$$\partial_{\spc{L}}\GF^t_fK\subset\GF^t_f\Fr K.$$
-\end{thm} %???it is finite-dimensional problem
+%\begin{thm}{Exercise}\label{ex:grad-flow-bry}
+%Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, $\partial\spc{L}=\emptyset$, $K\subset \spc{L}$ be a compact subset, and $f\:\spc{L}\to\RR$ be semiconcave function.
+%Assume that for some $t>0$ the gradient flow $\GF^t_f$ is defined everywhere in $K$.
+%Prove that 
+%$$\partial_{\spc{L}}\GF^t_fK\subset\GF^t_f\Fr K.$$
+%\end{thm} %finite-dimensional problem
 
 
 \section{Line splitting theorem}
@@ -1560,7 +1554,7 @@ Note that by the second distance  estimate (\ref{lem:fg-dist-est}), the  limit c
 \subsection*{Gradient curves of a family of functions}
 
 Gradient flow can be extended to a family of functions.
-This type of flow was studied by Chanyoung Jun \cite{jun-thesis,jun:grad}, by Lucas C. F. Ferreira and Julio C. Valencia-Guevara \cite{ferreira-valencia}, and by Alexander Mielke, Riccarda Rossi, and Giuseppe Savar\'{e} \cite{mielke-rossi-savare}.
+This type of flow was studied by Chanyoung Jun \cite{jun-thesis,jun:grad}, by Lucas Ferreira and Julio Valencia-Guevara \cite{ferreira-valencia}, and by Alexander Mielke, Riccarda Rossi, and Giuseppe Savar\'{e} \cite{mielke-rossi-savare}.
 We will follow the simplified and generalized approach given by Alexander Lytchak and the third author \cite{lytchak-petrunin-2020}, where an application related to this type of flow is given.
 The original motivation of Chanyoung Jun came from the study of pursuit-evasion problems.
 Another application of this type of flow comes from the fact that
@@ -1744,9 +1738,6 @@ If $(p',b)\in \Omega$ then we can repeat the procedure; otherwise $\alpha$ escap
 \qeds
 
 \subsection*{Gradient curves for non-Lipschitz functions}\label{sec:non-lip}
-
-\def\LSCSC{\mathrm{LCC}}%???
-\def\Wasserstein{\mathrm{P}_2}
 
 In this book, we only consider gradient curves for locally Lipschitz semiconcave subfunctions;
 this turns out to be sufficient for all our needs.

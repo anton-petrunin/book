@@ -25,7 +25,7 @@ The definition of Gromov--Hausdorff convergence or metric spaces uses
 the notion of Hausdorff convergence.
 It means that a sequence of metric spaces admits a sequence of distance-preserving embedding into a common ambient metric space such that the their
 images converge in the Hausdorff sense.
-Our definition of the Gromov--Hausdorff convergence is slightly different from the standard. %V: What does that mean???A:fixed???
+Our definition of the Gromov--Hausdorff convergence is slightly different from the standard.
 
 \section{Convergence of subsets}
 
@@ -33,9 +33,10 @@ Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
 We will denote by $\distfun Ax$ the distance from $A$ to a point $x$ in $\spc{X}$;
 that is,
 $$\distfun Ax\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
+By this definition we have $\distfun{\emptyset}x=\infty$ for any $x$.
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
-Given a sequence of nonempty closed sets $(A_n)_{n=1}^\infty$ in a nonempty metric space $\spc{X}$ 
+Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$ 
 a closed set $A_\infty\subset \spc{X}$ is called the Hausdorff limit of $(A_n)_{n=1}^\infty$,
 briefly $A_n\Hto A_\infty$ if 
 $$\distfun{A_n}x\to\distfun{A_\infty}x\quad \text{as}\quad n\to\infty$$
@@ -44,27 +45,23 @@ for any fixed $x\in \spc{X}$.
 In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
 \end{thm}
 
-%One can extend the definition slightly.
-%It is natural to assume that $\dist{\emptyset}{x}{}=\infty$ for every $x$.
-%Therefore if $\dist_{A_n}(x)\to\infty$ for some (and therefore any) $x\in \spc{X}$, then we can assume that the Hausdorff limit of $A_n$ is the empty set.
-%Using this definition we can remove the condition 
-
-
-
-
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper metric  space
 and $(A_n)_{n=1}^\infty$ be a sequence of closed sets in $\spc{X}$.
-Assume that for some (and therefore any) point  $x\in\spc{X}$ 
-the sequence $\distfun{A_n}x$ is bounded.
 Then  $(A_n)_{n=1}^\infty$ has a converging subsequence in the sense of Hausdorff.
 \end{thm}
 
 \parit{Proof.}
 Since $\spc{X}$ is proper,
 we can choose a countable dense set $\{x_1,x_2, \dots\}$ in $\spc{X}$.
-Note that the sequence $a_n=\distfun{A_n}x_\kay$ is bounded for each $\kay$. 
-Therefore, passing to a subsequence of $(A_n)_{n=1}^\infty$,
+
+If the sequence $a_n=\distfun{A_n}x_\kay$ is unbounded for some $\kay$,
+then we can pass to a subequence of $(A_n)$ such that 
+$\distfun{A_n}x_\kay\to \infty$ as $n\to\infty$ for \emph{any} $\kay$.
+The obtained sequence converges to the empty set.
+
+Now suppose that $a_n=\distfun{A_n}x_\kay$ is bounded for each $\kay$. 
+In this case, passing to a subsequence of $(A_n)_{n=1}^\infty$,
 we can assume that $\distfun{A_n}x_\kay$ is converging as $n\to\infty$ for any fixed $\kay$.
 
 Note that for each $n$, the function $\distfun{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.

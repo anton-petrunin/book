@@ -74,7 +74,7 @@ $$\mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}
 +
 \mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3})\,\}.
 $$
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \vskip-3mm
 \centering
 \includegraphics{mppics/pic-1010}
@@ -385,8 +385,6 @@ for all $i$ and $j$.
 
 \section{Helly's theorem}\label{sec:helly}
 
-%???CHECK lang-schroeder HAlly THEOREM???
-
 \begin{thm}{Helly's theorem}\label{thm:helly}
 Let $\spc{U}$  be a complete length $\CAT0$ space
 and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bounded convex subsets of $\spc{U}$.
@@ -396,7 +394,7 @@ If
 then there is an index array $\alpha_1,\alpha_2,\dots,\alpha_n\in \IndexSet$ such that
 \[\bigcap_{i=1}^nK_{\alpha_i}=\emptyset.\]
 
-%???Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
+%??Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
 \end{thm}
 
 \parbf{Remarks.}
@@ -404,10 +402,7 @@ then there is an index array $\alpha_1,\alpha_2,\dots,\alpha_n\in \IndexSet$ suc
 \item In general, none of the $K_\alpha$ may be compact; 
 otherwise the statement is trivial.
 \item If $\spc{U}$ is a Hilbert space (not necessarily separable), 
-then 
-%the result above 
-Helly's theorem
- is equivalent to the following statement: if a convex bounded set is closed in the ordinary topology then it is compact in the weak topology.
+then Helly's theorem is equivalent to the following statement: if a convex bounded set is closed in the ordinary topology then it is compact in the weak topology.
 One can define  {}\emph{weak topology} in an arbitrary metric space by taking exteriors of closed ball as  prebase.
 Then 
 %the result above
@@ -418,7 +413,7 @@ Helly's theorem
 
 \medskip
 
-We present the original proof of Urs Lang and Viktor Schroeder from \cite{lang-schroeder}.
+We present the original proof of Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
 
 %\parit{Proof.}
 %Let us first prove uniqueness. 
@@ -825,8 +820,8 @@ $p\in \spc{L}\backslash  Q$ such that
 We will apply \ref{thm:kirsz} for $\kappa=0$ to the Euclidean cones $\mathring{\spc{L}}=\Cone \spc{L}$ and $\mathring{\spc{U}}\z=\Cone \spc{U}$. 
 Note that 
 \begin{itemize}
-\item ${\mathring{\spc{U}}}$ is a complete length $\CAT0$ space, %???(see ???)
-\item since $\diam \spc{L}\le \pi$ we have ${\mathring{\spc{L}}}$ is $\Alex{0}$. %???(see ???).
+\item ${\mathring{\spc{U}}}$ is a complete length $\CAT0$ space (see \ref{thm:warp-curv-bound:cbb:S}),
+\item since $\diam \spc{L}\le \pi$ we have ${\mathring{\spc{L}}}$ is $\Alex{0}$ (see \ref{thm:warp-curv-bound:cbb:a}).
 \end{itemize}
 Further, we will view the spaces $\spc{L}$ and $\spc{U}$ as unit spheres in $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ respectively.
 In the cones $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ we will use 
@@ -909,14 +904,10 @@ $\tilde x^0$ lies in the interior of $\Conv(\tilde x^1,\dots,\tilde x^\kay)$.
 Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE^m$ and containing all the points $x^i$.
 \end{thm}
 
-{\sloppy 
-
-\begin{thm}{Exercise} \label{ex:not-flat}
-Construct  a three-dimensional complete length $\Alex0$ space $\spc{L}$ with a triangle 
-$\trig x y z$ such that all angles in $\trig x y z$ are equal to the corresponding angles of its model triangle, but $\trig x y z$  cannot be filled by an isometric copy of the model solid triangle.
-\end{thm}
-
-}
+%\begin{thm}{Exercise} \label{ex:not-flat} %it might be wrong??
+%Construct  a three-dimensional complete length $\Alex0$ space $\spc{L}$ with a triangle 
+%$\trig x y z$ such that all angles in $\trig x y z$ are equal to the corresponding angles of its model %triangle, but $\trig x y z$  cannot be filled by an isometric copy of the model solid triangle.
+%\end{thm}
 
 The following statement we call (2\textit{n}+2)-point comparison.
 
@@ -954,7 +945,7 @@ we have
 \dist{x}{y}{}.\]
 \end{thm}
 
-\begin{figure}[h!]
+\begin{figure}[!ht]
 \vskip-3mm
 \centering
 \includegraphics{mppics/pic-1025}

@@ -5,7 +5,6 @@ In this chapter we discuss  constructions introduced by Bruce Kleiner \cite{klei
 
 The material of this chapter is used mostly for $\CAT{}$ spaces, 
 but the results in section~\ref{sec:web-general} find some applications for finite-dimensional $\Alex{}$ spaces as well.
-%??? The analogous material for $\Alex{}$ spaces is described in Chapter~\ref{chap:dist-maps}.
 
 \section{The case of complete geodesic spaces}\label{sec:web-general}
 
@@ -447,7 +446,7 @@ denotes the distance map
 which can be also regarded as a function array.
 The \index{radius of the point array}\emph{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
 that is,
-\[\rad\bm{a}=\inf\set{r>0}{\exists z\in\spc{U}\ \text{such that}\ a^i\in \oBall(z,r)\ \text{for any}\ i}.\]%???
+\[\rad\bm{a}=\inf\set{r>0}{\exists z\in\spc{U}\ \text{such that}\ a^i\in \oBall(z,r)\ \text{for any}\ i}.\]
 
 Fix $\kappa\in\RR$.
 Let $\bm{a}=(a^0,a^1,\dots,a^\kay)$ be a point array of radius $<\tfrac{\varpi\kappa}2$
@@ -485,7 +484,7 @@ Moreover, if a closed convex set $K\subset\spc{U}$ contains all $a^i$, then $\We
 
 \begin{subthm}{thm:cat-bary-web:mnfld}
 The restriction%
-\footnote{Recall that $\distfun{\bm{a}^{\without 0}}{}{}$ denotes array $(\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})$.}
+\footnote{Recall that $\distfun{\bm{a}^{\without 0}}{}{}$ denotes the array $(\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})$.}
 $\distfun{\bm{a}^{\without 0}}{}{}|_{\InWeb(\distfun{\bm{a}}{}{})}$ is an open $C^{\frac12}$-embedding in $\RR^\kay$.
 Thus there is an inverse of 
 $\distfun{\bm{a}^{\without 0}}{}{}|_{\InWeb(\distfun{\bm{a}}{}{})}$, say $\map\:\RR^\kay\subto\spc{U}$.
@@ -541,7 +540,7 @@ the differential
 $\dd_{\bm{x}}(\tau\circ\sigma)$
 is linear for almost all $\bm{x}\in\Delta^m$.
 Further, since $\InWeb(\distfun{\bm{a}}{}{})\z\ne\emptyset$,
-the area formula %??? ref
+the area formula %?? ref
 implies that $\dd_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive masure of points $\bm{x}\in\Delta^m$.
 
 Note that $\dd_{\bm{x}}(\tau\circ\sigma)=(\dd_{\sigma(\bm{x})}\tau)\circ(\dd_{\bm{x}}\sigma)$.
@@ -558,7 +557,7 @@ Fix $z\in\spc{U}$ and $r<\tfrac{\varpi\kappa}2$
 such that $\dist{z}{a^i}{}<r$ for all $i$.
 Note that the set $K\cap \cBall[z,r]$ is convex, closed, and contains all $a^i$.
 Applying the theorem on short retract (Exercise~\ref{ex:short-retraction-CBA(1)}),
-we get the second part of (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}).
+we get the second part of~(\ref{SHORT.thm:cat-bary-web:web=Im(bary)}).
 
 \medskip
 
@@ -574,7 +573,6 @@ $\spx{\bm{a}}\mc\kappa=\spx{\bm{f}}$.
 
 All the functions $f^i$ are strongly convex (see \ref{function-comp}).
 Therefore (\ref{SHORT.thm:cat-bary-web:Lip}), (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{SHORT.thm:cat-bary-web:mnfld}) follow from Theorem \ref{thm:web}.
-%???CHECK convexity ???
 
 \parit{Case $\kappa>0$.}
 Applying rescaling, we can assume $\kappa=1$,
@@ -871,8 +869,7 @@ is trivial.
 \parit{(\ref{SHORT.thm:dim-infty-CBA:TopDim})$\Rightarrow$(\ref{SHORT.LinDim-CBA}).}
 According to Theorem~\ref{thm:stable-value}, 
 there is a continuous map $f\:K\to \RR^{m}$ with a stable value.
-By the Tietze extension theorem%ref???
-, it is possible to extend $f$ 
+By the Tietze extension theorem, it is possible to extend $f$ 
 to a continuous map $F\:\spc{U}\to \RR^{m}$.
 
 Fix $\eps>0$.

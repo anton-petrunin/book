@@ -147,7 +147,7 @@ that is,
 We define the distance between sets $A$ and $B$  as 
 \[\dist{A}{B}{}
 \df
-\inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]%???maybe a bad notation --- this is not a distance
+\inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]%??maybe a bad notation --- this is not a distance
 
 For any subset $A\subset\spc{X}$,  the sets
 \begin{align*}
@@ -484,7 +484,7 @@ A set $A\subset\spc{X}$ is called
 \emph{locally convex}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
 such that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
-Similarly one defines locally weakly convex and locally totally convex sets. %???DO we neeed all of them???
+Similarly one defines locally weakly convex and locally totally convex sets. %DO we neeed all of them??
 \end{thm}
 
 \parbf{Remarks.} Let us state a few observations that easily follow  from the definition.
@@ -607,8 +607,7 @@ The following proposition follows from the definition of a quotient space:
 
 \begin{thm}{Proposition}\label{prop:submetry-X/G}
 Assume $\spc{X}$ is a metric space and the  group $G$ acts on $\spc{X}$ by isometries.
-Then the projection $\pi\co \spc{X}\to\spc{X}/G$ is a submetry;
-%???V: Submetries are only defined in chapter 5. some ocmment is an order here or a forward reference to chapter 5???
+Then the projection $\pi\co \spc{X}\to\spc{X}/G$ is a \emph{submetry};
 that is, $\pi(\oBall(p,r))=\oBall(\pi(p),r)$ for any $p\in \spc{X}, r>0$ (see Definition~\ref{def:submetry}).
 \end{thm}
 
@@ -689,7 +688,7 @@ In particular, if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, th
 
 
 
-\section{Kuratowsky embedding}
+\section{Kuratowsky embedding}\label{Kuratowsky embedding}
 
 Given a metric space $\spc{X}$, 
 let us denote by $\Bnd(\spc{X},\RR)$ the space of all bounded functions on $\spc{X}$ equipped with the sup-norm
