@@ -15,7 +15,7 @@ the rest follow directly from the definitions.
 Let $\spc{X}$ be a metric space. 
 Its Hausdorff dimension is defined as
 \[\HausDim\spc{X}=\sup\set{\alpha\in\RR}{\HausMes_\alpha(\spc{X})>0},\]
- where $\HausMes_\alpha$ denotes the $\alpha$-dimensional Hausdorff measure. %???it is defined in Section~\ref{sec:mes+balls}.
+where $\HausMes_\alpha$ denotes the $\alpha$-dimensional Hausdorff measure.
 \end{thm}
 
 Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\IndexSet[2]}$
@@ -73,7 +73,7 @@ Recall that the direct product $\spc{X}\times\spc{Y}$ of metric spaces $\spc{X}$
 \end{align*}
 
 These inequalities might be strict.
-For  topological dimension,  strict inequality holds for a pair of Pontryagin surfaces constructed in \cite{pontyagin-surface}.
+For  topological dimension,  strict inequality holds for a pair of Pontryagin surfaces \cite{pontyagin-surface}.
 For Hausdorff dimension, an example was constructed by Abram Besicovitch and Pat Moran \cite{besicovitch-moran}.
 
 \medskip
@@ -105,7 +105,7 @@ that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
 
 The next theorem follows from \cite[theorems VI 1$\&$2]{hurewicz-wallman}.
 (This theorem also holds for non-separable metric spaces 
-\cite{nagata} or \cite[3.2.10]{engelking}). 
+\cite{nagata}, \cite[3.2.10]{engelking}). 
 
 \begin{thm}{Stable value theorem}\label{thm:stable-value}
 Let $\spc{X}$ be a separable metric space.
@@ -129,10 +129,10 @@ In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$, then
 
 \section{Linear dimension}
 
-%???A: as V. noticed, a problem here --- since tangent cone defined in the assumption that angles are defined, some of the statements are not longer true, in particular it seems that we have equality for product.
-
 In addition to $\HausDim$ and $\TopDim$, 
 we will use yet another dimension, which we call {}\emph{linear dimension}.
+It will be applied only to  Alexandrov spaces and to their open subsets (in cases both of curvature bounded below and curvature bounded above).
+As we shall see, in all these cases $\LinDim$  behaves nicely and  is easy to work with.
 
 Recall that a \index{cone map}\emph{cone map} is a map between cones respecting the cone multiplication.
 
@@ -164,14 +164,11 @@ Construct metrics $\rho_1$ and $\rho_2$ on $\RR^{10}$ defined by norms, such tha
 $(\RR^{10},\rho_1)\times (\RR^{10},\rho_2)$ has an isometric copy of $\EE^{10}$.
 \end{thm}
 
-The linear dimension will be applied only to  Alexandrov spaces and to their open subsets (in cases both of curvature bounded below and curvature bounded above).
-As we shall see, in all these cases $\LinDim$  behaves nicely and  is easy to work with.
-
 \parbf{Remarks.}
 Linear dimension was first introduced by Conrad Plaut in \cite{plaut:survey}
 under the name \index{local dimension}\index{dimension!local dimension}\emph{local dimension}. 
 \emph{Geometric dimension}\index{geometric dimension}\index{dimension!geometric dimension}, introduced  by Bruce Kleiner \cite{kleiner} is closely related; 
-it coincides %should we explain why???
+it coincides %should we explain why??
  with the linear dimension for $\Alex{}$ and $\CAT{}$ spaces.
 
 One can extend the definition to arbitrary metric spaces.

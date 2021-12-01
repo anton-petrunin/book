@@ -51,16 +51,15 @@ However, in the case $\Kappa>0$ the latter statement does not hold and the forme
 \end{itemize}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
-Let $\spc{L}$ be a metric space.
+Let $\spc{L}$ be a metric space and $\kappa\le 0$.
 Show that $\spc{L}$ is $\Alex\kappa$
-if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ such that
-\[\dist{p}{x^1}{},\dist{p}{x^2}{},\dist{p}{x^3}{}<\tfrac{\varpi\kappa}2,\]
+if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ 
 there is a quadruple of points $q,y^1,y^2,y^3\in\Lob{2}\kappa$
 such that 
 \[\dist{p}{x^i}{}=\dist{q}{y^i}{} 
 \quad \text{and}\quad \dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}\] 
 for all $i$ and $j$.
-\end{thm} %%%???wrong???
+\end{thm}
 
 The exercise above is a special case of (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 
@@ -288,9 +287,6 @@ for any $q\in W$, there is a unique geodesic $[pq]$ with
 $p\in A$ that realizes the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\distfun{A}{q}{}$.
 \end{thm}
 
-%Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.%??? V: why is this sentence here? directions of geodesics are not mentioned in the next exercise.
-%S: removed
-
 \begin{thm}{Exercise}\label{ex:G-delta-not-thru}
 Construct a complete length $\Alex{}$ space $\spc{L}$
 with an everywhere dense G-delta set $A$
@@ -344,14 +340,8 @@ That is, if one of the conditions (\ref{SHORT.2-sum}), (\ref{SHORT.point-on-side
 
 \parbf{Remarks.} 
 Monotonicity of the model angle with respect to adjacent sidelengths (\ref{cor:monoton}) was named the \index{convexity property}\emph{convexity property} by Alexandrov.
-%???REF???
 
-A 
-%bit weaker 
-slightly stronger
-%S:note change
-form of (\ref{SHORT.angle}) 
-is given in \ref{lem:devel-glob}.
+A slightly stronger form of (\ref{SHORT.angle}) is given in \ref{lem:devel-glob}.
 See also Problem~\ref{open:hinge-}.
 
 
@@ -496,7 +486,7 @@ in a $\Alex{\kappa}$ space is $\kappa$-thick.\index{$\kappa$-thick}
 %*S. note change from "fat" to "thick"
 \end{thm}
 
-The following exercise is inspired by Busemann's definition in \cite{busemann}. 
+The following exercise is inspired by Busemann's definition \cite{busemann-CBA}. 
 
 %See also \cite{buser-karcher} concerning flats\index{flats}.
 
@@ -626,9 +616,7 @@ Consider the functions $\rho$, $\theta\:\II\to\RR$ defined as
 \theta(t)
 &=
 \int\limits_{t_0}^{t}
-\frac{\sqrt{1-(\rho'(u))^2}}{\sn\kappa\circ\rho(u)}\cdot du,
-%??? V: I really hate the variable $\dd\under{t}$. Can we please change not use it? Not just here but anywhere. Unnecessarily weird notations like this one just make the book harder to read???
-%*S. changed to "u"
+
 \end{align*}
 where $t_0\in\II$ is a fixed number and $\int$  denotes Lebesgue integral.
 Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ is defined and nondecreasing.
@@ -636,8 +624,7 @@ Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ 
 It is straightforward to check that $(\rho,\theta)$ uniquely describe $\tilde \gamma$ in polar coordinates on $\Lob2{\kappa}$ with center at $\tilde p$.
 \qeds
 
-We need the following analogues of sub- and super-graphs %??? change to epi- hypo???
-%I like sub- and super-, both are from Latin.  epi is from Greek. S.
+We need the following analogues of sub- and super-graphs % we use sub-super- BUT NOT epi-hypo-
  and convex/concave functions, adapted to polar coordinates in $\Lob2{\kappa}$.
 
 \begin{wrapfigure}{o}{38 mm}
@@ -738,16 +725,13 @@ In the case $\kappa>0$, the proof of \ref{eq:thm:devel**} requires more work.
 Applying rescaling, we can assume that $\kappa=1$.
 Since $\gamma\in B_\pi(p')$, point-on-side comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ can not pass through the antipodal point of $\tilde p'$.
 
-{\sloppy
-
 Consider the space $L$ glued from the model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\z\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
 Note that $\theta$ is the total angle of $L$ at $\tilde p'$.
 We can assume that $L$ has non empty interior.
 Otherwise all the triangles are degenerate and
 since the polygonal line $\tilde x_0\dots\tilde x_n$ does not pass through $\tilde p'$ this implies that $\theta=0$.
-%???+PIC
 
-}
+
 
 Consider a minimizing geodesic $[\tilde x_0\tilde x_n]_L$.
 By \ref{eq:thm:detr*} we may assume that $[\tilde x_0\tilde x_n]_L$ does not pass through $\tilde p'$.
@@ -768,7 +752,7 @@ and two geodesics $[\tilde p'\,\tilde \gamma(0)]$,
 $[\tilde p'\,\tilde \gamma(T)]$.
 Since $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex,
  the natural parametrization of $\tilde x_0\tilde x_1\dots \tilde x_n$ 
-converges to the natural parametrization of $\tilde \gamma$. % ???(see \ref{lem:lenght-of-convex-curve}). ??? V:: what is this reference? Some explanation or reference is needed here.
+converges to the natural parametrization of $\tilde \gamma$. % add a ref??
 Thus $\tilde \gamma$ is the $\kappa$-development of $\gamma$ with respect to $p$. This proves the ``only-if'' part of \eqref{thm:devel}.
 
 %\noi{($\Leftarrow$).}
@@ -914,7 +898,7 @@ Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 {\sloppy
 
 In the two-dimensional case this theorem was proved by Paolo Pizzetti \cite{pizzetti};
-later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}.%???is it right ref??? 
+later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 In the above generality, the theorem first appears in the paper of Mikhael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}; 
 simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{burago-burago-ivanov}.
@@ -963,7 +947,6 @@ This follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 In the proof of the globalization theorem 
 we will use three lemmas.
 First is the short hinge lemma (\ref{lem:devel-glob}) --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and is slightly weaker in case $\kappa>0$.
-
 
 The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
 
@@ -1059,7 +1042,6 @@ $\dist{\tilde p}{\tilde q}{}\ge\side\kappa \hinge{x'}q p$ and \ref{eq:thm:=def-l
 \includegraphics{mppics/pic-825}
 \end{figure}
 
-%%%??? WE SHOULD MENTION cat's cradle.
 Let us continue the proof.
 Set $x_0=x$.
 Let us apply inductively the above construction to get a sequence of hinges  $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
@@ -1095,6 +1077,8 @@ this yields
 \[\lim_{n\to\infty}\side\kappa \hinge{y_\kay}p q\ge \dist{p}{q}{}.\]
 Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
 \qeds
+
+The final part of the proof above resembles the \emph{cat's cradle construction}introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
 
 The following lemma works in all complete spaces; it will be used as a substitute for the  existence of a minimum point of a continuous function on a compact space.
 
@@ -1454,8 +1438,6 @@ this implies
 \end{align*}
 Since $\eps>0$ is arbitrary, \ref{eq:ang-semicon->} follows.
 \qeds
-
-%???ADDED LATER
 
 \begin{thm}{First variation formula}\label{1st-var+}
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
