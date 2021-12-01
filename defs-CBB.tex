@@ -12,7 +12,7 @@ Recall (Section~\ref{sec:mod-tri/angles}) that the model angle $\angk\kappa p{x}
 
 \begin{thm}{Four-point comparison}
 \label{df:1+3}
-A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies $\Alex\kappa$ comparison
+A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies \emph{$\Alex\kappa$ comparison} \index{$\Alex\kappa$ comparison}
 if 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
@@ -289,7 +289,7 @@ $p\in A$ that realizes the distance from $q$ to $A$; that is, $\dist{p}{q}{}=\di
 \end{thm}
 
 %Recall that directions of geodesics are defined in Section~\ref{sec:tangent-space+directions}.%??? V: why is this sentence here? directions of geodesics are not mentioned in the next exercise.
-%S: agreed
+%S: removed
 
 \begin{thm}{Exercise}\label{ex:G-delta-not-thru}
 Construct a complete length $\Alex{}$ space $\spc{L}$
@@ -487,16 +487,18 @@ Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:ber
 
 Assume that for a given triangle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ is defined.
-We say the triangle $\trig{x^1}{x^2}{x^3}$ is \index{$\kappa$-fat}\emph{$\kappa$-fat} if the natural map (see definition \ref{def:k-thin}) 
+We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-thin} \index{$\kappa$-thin} if the natural map (see definition \ref{def:k-thin}) 
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ is distance non contracting.
 
 \begin{thm}{Exercise}\label{ex:fat-triangle}
 Prove that any triangle with perimeter $<\varpi\kappa$ 
-in a $\Alex{\kappa}$ space is $\kappa$-thick.
+in a $\Alex{\kappa}$ space is $\kappa$-thick.\index{$\kappa$-thick}
 %*S. note change from "fat" to "thick"
 \end{thm}
 
 The following exercise is inspired by Busemann's definition in \cite{busemann}. 
+
+%See also \cite{buser-karcher} concerning flats\index{flats}.
 
 \begin{thm}{Exercise}\label{ex:busemann}
 
@@ -609,7 +611,7 @@ $[\tilde p\tilde \gamma(t)]$ monotonically turns around $\tilde p$ counterclockw
 If $p,\tilde p,\gamma,\tilde \gamma$ are as above,
 then $\tilde \gamma$ is called the \index{development}\emph{$\kappa$-development of $\gamma$
 with respect to $p$}; 
-the point $\tilde p$ is called \index{base of development}\emph{the basepoint of the development}.
+the point $\tilde p$ is called \index{development!basepoint of a development}\emph{the basepoint of the development}.
 When we say that the $\kappa$-development of $\gamma$ with respect to $p$ is {}\emph{defined} we always assume that $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
 all 
 $t\in \II$.
@@ -624,8 +626,9 @@ Consider the functions $\rho$, $\theta\:\II\to\RR$ defined as
 \theta(t)
 &=
 \int\limits_{t_0}^{t}
-\frac{\sqrt{1-(\rho'(\under{t}))^2}}{\sn\kappa\circ\rho(\under{t})}\cdot\dd\under{t},
+\frac{\sqrt{1-(\rho'(u))^2}}{\sn\kappa\circ\rho(u)}\cdot du,
 %??? V: I really hate the variable $\dd\under{t}$. Can we please change not use it? Not just here but anywhere. Unnecessarily weird notations like this one just make the book harder to read???
+%*S. changed to "u"
 \end{align*}
 where $t_0\in\II$ is a fixed number and $\int$  denotes Lebesgue integral.
 Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ is defined and nondecreasing.
@@ -646,14 +649,14 @@ We need the following analogues of sub- and super-graphs %??? change to epi- hyp
 \begin{thm}{Definition}\label{def:convex-devel}
 Let $\tilde \gamma\:\II\to\Lob2\kappa$ be a curve and $\tilde p\in\Lob2\kappa$ be such that there is a unique geodesic $[\tilde p\,\tilde \gamma(t)]$ for any $t\in\II$ and the direction of $[\tilde p\,\tilde \gamma(t)]$ turns monotonically as $t$ grows.
 
-The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma$ is called the \index{subgraph of development}\emph{subgraph} of $\tilde \gamma$ with respect to $\tilde p$.
+The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma$ is called the \index{development!subgraph/supergraph of a development}\emph{subgraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
-The set of all points $\tilde x\in\Lob2{\kappa}$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \index{supergraph of development}\emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
+The set of all points $\ tilde x\in\Lob2{\kappa}$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \index{supergraph of development}\emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
-The curve $\tilde \gamma$ is called \index{convex!convex with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
+The curve $\tilde \gamma$ is called \index{convex curve with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
 
 The curve $\tilde \gamma$ is called 
-\emph{locally convex (concave) with respect to}\index{convex!locally convex development with respect to a point} $\tilde p$ 
+\emph{locally convex (concave) with respect to $\tilde p$} 
 if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to $\tilde p$.
 \end{thm}
 

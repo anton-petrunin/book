@@ -38,11 +38,11 @@ is undefined.
 \includegraphics{mppics/pic-905}
 \end{wrapfigure}
 
-Here is a more intuitive reformulation.
+Here is a more intuitive pointwise formulation.
 
 \begin{thm}{Reformulation}\label{def:2+2-reformulated}
 Let $\spc{X}$ be a metric space.
-A quadruple $p^1,p^2,x^1,x^2\in \spc{X}$ satisfies $\CAT\kappa$ point comparison if one of the following holds:
+A quadruple $p^1,p^2,x^1,x^2\in \spc{X}$ satisfies $\CAT\kappa$ comparison if one of the following holds:
 \begin{subthm}{}
 One of the triples 
 $(p^1,p^2,x^1)$ 
@@ -66,16 +66,32 @@ for any $\tilde z\in[\tilde p^1\tilde p^2]$.
 
 \end{thm}
 
-
 \begin{thm}{Definition}
 \label{def:ccat}
-A metric space $\spc{U}$ 
-is called $\CAT{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
+Let $\spc{U}$ be a metric space.
 
-We say that $\spc{U}$ is $\CAT{}$ if it is $\CAT{\kappa}$ for some $\kappa\in\RR$.  
+\begin{subthm}{}
+$\spc{U}$ is $\CAT{\kappa}$ 
+if any quadruple $p,x^1,x^2,x^3\in \spc{U}$ satisfies  $\Alex\kappa$ comparison.
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{U}$ is \index{locally $\CAT{\kappa}$}\emph{locally $\CAT{\kappa}$} 
+if any point $q\in \spc{U}$ admits a neighborhood $\Omega\ni q$ such that any quadruple $p,x^1,x^2,x^3\in \Omega$ satisfies  $\CAT\kappa$ comparison.
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{U}$  is a  $\CAT{}$ space if  $\spc{U}$  is $\CAT{\kappa}$ for some $\kappa\in\RR$.
+\end{subthm}
 \end{thm}
 
+%\begin{thm}{Definition}
+%\label{def:ccat}
+%A metric space $\spc{U}$ 
+%is called $\CAT{\kappa}$ if every quadruple $p^1,p^2,x^1,x^2$ satisfies the $\CAT\kappa$ comparison (\ref{def:2+2}).  
 
+%We say that $\spc{U}$ is $\CAT{}$ if it is $\CAT{\kappa}$ for some $\kappa\in\RR$.  
+%\end{thm}
 
 The condition $\spc{U}$ is $\CAT\kappa$ should be understood as ``$\spc{U}$ has global curvature $\le\kappa$''.
 In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation makes sense; 
