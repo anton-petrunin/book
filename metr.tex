@@ -205,7 +205,7 @@ Let $\spc{X}$ be a metric space. Then the following are equivalent
 \begin{enumerate}[i)]
 \item $\spc{X}$ is compact;
 \item $\spc{X}$ is \index{sequentially compact}\emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
-\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite $\eps$-net \index{$\eps$-net} in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
+\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite \index{$\eps$-net}\emph{$\eps$-net} in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
 \end{enumerate}
 \end{thm}
 
@@ -272,12 +272,10 @@ If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$, then $\spc{X
 \item If any point in $\spc{X}$ admits a neighborhood  $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$
 then  $\spc{X}$ is called a \index{locally length space}\emph{locally length space}.
 \item A metric space $\spc{X}$ is called 
-\emph{geodesic}%
-\index{geodesic space}
+\index{geodesic space}\emph{geodesic}
 if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\infty$ there is a geodesic $[x y]$ in $\spc{X}$.
 \item Assume $R>0$. A metric space $\spc{X}$ is called 
-\emph{$R$-geodesic}%
-\index{$R$-geodesic space}
+\index{$R$-geodesic space}\emph{$R$-geodesic}
 if for any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$ there is a geodesic $[x y]$ in $\spc{X}$.
 \end{itemize}
 
@@ -459,32 +457,27 @@ but whose completion is neither geodesic nor locally compact.
 Let $\spc{X}$ be a geodesic space and $A\subset\spc{X}$.
 
 We say $A$ is 
-\emph{convex}%
-\index{convex set}
+\index{convex set}\emph{convex}
 if for every two points $p,q\in A$ any geodesic $[pq]$ lies in $A$.
 
 We say $A$ is 
-\emph{weakly convex}%
-\index{weakly convex set}
+\index{weakly convex set}\emph{weakly convex}
 if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
 that lies in $A$.
 
 We say  $A$ is 
-\emph{totally convex}
-\index{totally convex set}
+\index{totally convex set}\emph{totally convex}
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
 
 If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$,
 then $A$ is called respectively 
-\emph{$R$-convex},%
-\index{$R$-convex set} 
-\emph{weakly  $R$-convex}%
+\index{$R$-convex set}\emph{$R$-convex},
+\emph{weakly $R$-convex},
 or \emph{totally  $R$-convex}.
 
 A set $A\subset\spc{X}$ is called 
-\emph{locally convex}%
-\index{locally convex set}
+\index{locally convex set}\emph{locally convex}
 if every point $a\in A$ admits an open neighborhood $\Omega\ni a$
 such that for every two points $p,q\in A\cap\Omega$ every geodesic $[pq]\subset \Omega$ lies in $A$.
 Similarly one defines locally weakly convex and locally totally convex sets. %DO we neeed all of them??
