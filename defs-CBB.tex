@@ -965,14 +965,8 @@ Then the comparison
 holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
 \end{thm}
 
-\begin{wrapfigure}{r}{30 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-820}
-\end{wrapfigure}
-
 \parit{Proof.} 
-We will prove an equivalent inequality:
+It is sufficient to prove the following inequality
 \[\side\kappa \hinge x p q
 \ge\dist{p}{q}{}.\eqlbl{eq:thm:=def-loc*}\] 
 for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
@@ -994,15 +988,16 @@ Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$, otherwise switch the roles of $p$ and $q
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell \eqlbl{3|xx'|}\]
-Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$. 
-(In fact the same argument as in \ref{thm:g-split} shows that the 
-condition $[x' q]\subset [x q]$ always holds.)
+Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.\footnote{In fact by \ref{cor:unique-geod-cbb} the condition $[x' q]\subset [x q]$ always holds.}
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
 
 Further, note that we have $x,x'\in \oBall(p,\ell)\cap \oBall(q,\ell)$ and moreover
-$\dist{p}{x}{}\z+\dist{x}{x'}{},\dist{p}{x'}{}\z+\dist{x'}{x}{}<\tfrac{2}{3}\cdot\ell $.
+\begin{align*}
+\dist{p}{x}{}\z+\dist{x}{x'}{}&<\tfrac{2}{3}\cdot\ell,
+&
+\dist{p}{x'}{}\z+\dist{x'}{x}{}&<\tfrac{2}{3}\cdot\ell.
+\end{align*}
 In particular, 
-
 \[\mangle\hinge x p{x'}
 \ge\angk\kappa x p{x'}
 \quad \text{and}\quad 
@@ -1010,6 +1005,14 @@ In particular,
 \ge\angk\kappa {x'}p x.
 \eqlbl{eq:thm:=def-loc-threestar}\]
 
+{
+
+\begin{wrapfigure}{r}{30 mm}
+\vskip-8mm
+\centering
+\includegraphics{mppics/pic-820}
+\vskip-4mm
+\end{wrapfigure}
 
 Now, let 
 $\trig{\tilde x}{\tilde x'}{\tilde p}=\modtrig\kappa(x x' p)$.
@@ -1018,64 +1021,56 @@ From \ref{eq:thm:=def-loc-threestar},
 \[\mangle\hinge x p q
 =\mangle\hinge  x p{x'}\ge\angk\kappa x p{x'}\quad \Rightarrow\quad 
 \side\kappa \hinge x q p\ge\dist{\tilde p}{\tilde q}{}.\]
-From the assumptions of the lemma, we have $\mangle\hinge{x'}p x+\mangle\hinge{x'}p q\le \pi$; 
-thus \ref{eq:thm:=def-loc-threestar} implies
-\[
+Hence
+\begin{align*}
+\mangle\hinge{\tilde x'}{\tilde p}{\tilde q}&= 
 \pi
 -\angk\kappa{x'}p x
 \ge
+\\
+&\ge
 \pi-\mangle\hinge{x'}p x
-\ge
-\mangle\hinge{x'}p q.
-\]
-Therefore
-$\dist{\tilde p}{\tilde q}{}\ge\side\kappa \hinge{x'}q p$ and \ref{eq:thm:=def-loc-fivestar} follows.
+=
+\\
+&=
+\mangle\hinge{x'}p q,
+\end{align*}
+and \ref{eq:thm:=def-loc-fivestar} follows.
 
-\begin{figure}[h!]
-\centering
-\includegraphics{mppics/pic-825}
-\end{figure}
+}
 
 Let us continue the proof.
 Set $x_0=x$.
 Let us apply inductively the above construction to get a sequence of hinges  $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
-
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-825}
+\end{figure}
 The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{}\z< \tfrac{2}{3}\cdot\ell $.
 In this case, by the assumptions of the lemma, $\side\kappa \hinge{x_n}p q\ge\dist{p}{q}{}$.
-From \ref{eq:thm:=def-loc-fivestar}, we get that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is decreasing.
+From \ref{eq:thm:=def-loc-fivestar}, we get that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is nonincreasing.
 Hence inequality \ref{eq:thm:=def-loc*} follows.
 
-Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$. Hence $r_n\to r$ as $n\to\infty$.
-Pass to a subsequence $y_\kay=x_{n_\kay}$ such that $y_\kay'=x_{n_\kay+1}\in [y_\kay q]$.
-(In particular, $\dist{y_\kay}{q}{}\ge\dist{y_\kay}{p}{}$.)
-Clearly, \[\dist{p}{y_\kay}{}+\dist{y_\kay}{y_\kay'}{}\z-\dist{p}{y_\kay'}{}=r_\kay-r_{\kay+1}\underset{\kay\to\infty} {\to}0.
-\eqlbl{trig=}\]
+Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.
+The latter implies that the distances
+$\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero.
+Further, the sequence $r_n$ converges.
+In particular $r_n-r_{n+1}\to 0$ as $n\to\infty$.
+It follows that $\angk\kappa{x_n}{p_n}{x_{n+1}}\to \pi$,
+where $p_n=p$ if $x_{n+1}\in [x_nq]$ and otherwise $p_n=q$.
+Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk\kappa{x_n}{p_n}{x_{n+1}}$, we get
+$\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
 
-Next note  that we can assume that $\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$. If $\dist{p}{x_{n_\kay}}{}\z\le \tfrac{\ell}{100}$  then  by \ref{3|xx'|} it follows that $\dist{p}{x_{n_\kay+1}}{}\z\ge \dist{p}{x_{n_\kay+1}}{}\z> \tfrac{\ell}{100}$ and $x_{n_\kay+2}\in [x_{n_\kay+1}  q]$.
-Therefore we can  redefine $y_\kay=x_{n_\kay+1}$  and $y_\kay'=x_{n_\kay+2}$  and with that definition the inequality $\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$ is satisfied.
-
-
-
-From \ref{3|xx'|}, 
-it now follows that  $\dist{y_\kay}{y'_\kay}{}\z>\tfrac{\ell}{100}$.
-%From \ref{3|xx'|} and \ref{trig=}, it follows that 
-%$\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$
-%for all large $\kay$. %%%??? V: I don't see why that would follow if $y_\kay$ is very close to $p$. I threfore added the extra argument above.
-Therefore, by \ref{trig=} it holds that  $\angk\kappa{y_\kay}p{y_\kay'}\to \pi$. 
-Since 
-$\mangle\hinge{y_\kay}p{y_\kay'}
-\ge\angk\kappa{y_\kay}p{y_\kay'}$, we have 
-$\mangle\hinge{y_\kay}p q=\mangle\hinge{y_\kay}p{y_\kay'}\to \pi$.
-Therefore, 
-\[\dist{p}{y_\kay}{}+\dist{y_\kay}{q}{}-\side\kappa \hinge{y_\kay}p q\to 0.\] 
+It follows that
+\[\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side\kappa \hinge{x_n}p q\to 0.\] 
 (Here we used that $\ell\le\varpi\kappa$.) 
 Together with the triangle inequality
 \[
-\dist{p}{y_\kay}{}+\dist{y_\kay}{q}{}\ge\dist{p}{q}{}
+\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge\dist{p}{q}{}
 \]
 this yields
-\[\lim_{n\to\infty}\side\kappa \hinge{y_\kay}p q\ge \dist{p}{q}{}.\]
-Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{y_\kay}p q$ we obtain \ref{eq:thm:=def-loc*}.
+\[\lim_{n\to\infty}\side\kappa \hinge{x_n}p q\ge \dist{p}{q}{}.\]
+Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{x_n}p q$ we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
 The final part of the proof above resembles the \emph{cat's cradle construction}introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
