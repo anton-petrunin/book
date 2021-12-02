@@ -1050,12 +1050,18 @@ Pass to a subsequence $y_\kay=x_{n_\kay}$ such that $y_\kay'=x_{n_\kay+1}\in [y_
 (In particular, $\dist{y_\kay}{q}{}\ge\dist{y_\kay}{p}{}$.)
 Clearly, \[\dist{p}{y_\kay}{}+\dist{y_\kay}{y_\kay'}{}\z-\dist{p}{y_\kay'}{}=r_\kay-r_{\kay+1}\underset{\kay\to\infty} {\to}0.
 \eqlbl{trig=}\]
+
+Next note  that we can assume that $\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$. If $\dist{p}{x_{n_\kay}}{}\z\le \tfrac{\ell}{100}$  then  by \ref{3|xx'|} it follows that $\dist{p}{x_{n_\kay+1}}{}\z\ge \dist{p}{x_{n_\kay+1}}{}\z> \tfrac{\ell}{100}$ and $x_{n_\kay+2}\in [x_{n_\kay+1}  q]$.
+Therefore we can  redefine $y_\kay=x_{n_\kay+1}$  and $y_\kay'=x_{n_\kay+2}$  and with that definition the inequality $\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$ is satisfied.
+
+
+
 From \ref{3|xx'|}, 
-it follows that  $\dist{y_\kay}{y'_\kay}{}\z>\tfrac{\ell}{100}$.
-From \ref{3|xx'|} and \ref{trig=}, it follows that 
-$\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$
-for all large $\kay$.
-Therefore, $\angk\kappa{y_\kay}p{y_\kay'}\to \pi$. 
+it now follows that  $\dist{y_\kay}{y'_\kay}{}\z>\tfrac{\ell}{100}$.
+%From \ref{3|xx'|} and \ref{trig=}, it follows that 
+%$\dist{p}{y_\kay}{}\z>\tfrac{\ell}{100}$
+%for all large $\kay$. %%%??? V: I don't see why that would follow if $y_\kay$ is very close to $p$. I threfore added the extra argument above.
+Therefore, by \ref{trig=} it holds that  $\angk\kappa{y_\kay}p{y_\kay'}\to \pi$. 
 Since 
 $\mangle\hinge{y_\kay}p{y_\kay'}
 \ge\angk\kappa{y_\kay}p{y_\kay'}$, we have 
