@@ -965,15 +965,15 @@ holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
 \end{thm}
 
 \parit{Proof.} 
-It is sufficient to prove the following inequality
+It is sufficient to prove the inequality
 \[\side\kappa \hinge x p q
-\ge\dist{p}{q}{}.\eqlbl{eq:thm:=def-loc*}\] 
+\ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\] 
 for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
 
 Fix $q$.
 Consider a hinge $\hinge x p q$ such that 
 \[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell.\]
-First we  construct a new smaller hinge $\hinge{x'}p q$, that is,
+First we  construct a new smaller hinge $\hinge{x'}p q$ with
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
 \eqlbl{eq:thm:=def-loc-fourstar}\]
@@ -982,10 +982,10 @@ such that
 \ge\side\kappa \hinge{x'}p q.
 \eqlbl{eq:thm:=def-loc-fivestar}\]
 
-Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$, otherwise switch the roles of $p$ and $q$ in the following construction.
+Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise switch the roles of $p$ and $q$ in the following construction.
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
-=\tfrac{2}{3}\cdot\ell \eqlbl{3|xx'|}\]
+=\tfrac{2}{3}\cdot\ell. \eqlbl{3|xx'|}\]
 Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.\footnote{In fact by \ref{cor:unique-geod-cbb} the condition $[x' q]\subset [x q]$ always holds.}
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
 
@@ -1040,7 +1040,7 @@ and \ref{eq:thm:=def-loc-fivestar} follows.
 Let us continue the proof.
 Set $x_0=x$.
 Let us apply inductively the above construction to get a sequence of hinges  $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
-From \ref{eq:thm:=def-loc-fivestar}, we get that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is nonincreasing.
+From \ref{eq:thm:=def-loc-fivestar}, we have that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is nonincreasing.
 \begin{figure}[ht!]
 \centering
 \includegraphics{mppics/pic-825}
@@ -1055,15 +1055,15 @@ Note that by construction, the distances
 $\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
 Indeed, since on each step we move $x_n$ toward to the point $p$ or $q$ that is further away, the distances $\dist{x_n}{p}{}$ and $\dist{x_n}{q}{}$ become about the same.
 Namely, by \ref{3|xx'|}, we have that $\dist{p}{x_n}{}-\dist{x_n}{q}{}\le \tfrac29\cdot\ell$ for all large $n$.
-Since $\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge \tfrac23\cdot\ell$, we get $\dist{x_n}{p}{}\ge \tfrac\ell{100}$ and $\dist{x_n}{q}{}\ge \tfrac\ell{100}$.
+Since $\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge \tfrac23\cdot\ell$, we have $\dist{x_n}{p}{}\ge \tfrac\ell{100}$ and $\dist{x_n}{q}{}\ge \tfrac\ell{100}$.
 Further, since $r_n\ge\tfrac{2}{3}\cdot\ell$, \ref{3|xx'|} implies that $\dist{x_n}{x_{n+1}}{}>\tfrac\ell{100}$.
 
 
-Further, since $r_n$ is nonincreasing, it converges.
+Since the sequence $r_n$ is nonincreasing, it converges.
 In particular $r_n-r_{n+1}\to 0$ as $n\to\infty$.
 It follows that $\angk\kappa{x_n}{p_n}{x_{n+1}}\to \pi$,
 where $p_n=p$ if $x_{n+1}\in [x_nq]$ and otherwise $p_n=q$.
-Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk\kappa{x_n}{p_n}{x_{n+1}}$, we get
+Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk\kappa{x_n}{p_n}{x_{n+1}}$, we have
 $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
 
 It follows that
@@ -1075,7 +1075,7 @@ Together with the triangle inequality
 \]
 this yields
 \[\lim_{n\to\infty}\side\kappa \hinge{x_n}p q\ge \dist{p}{q}{}.\]
-Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{x_n}p q$ we obtain \ref{eq:thm:=def-loc*}.
+Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
 The final part of the proof above resembles the \emph{cat's cradle construction}introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
