@@ -982,7 +982,6 @@ such that
 \ge\side\kappa \hinge{x'}p q.
 \eqlbl{eq:thm:=def-loc-fivestar}\]
 
-%\parit{Construction of $\hinge{x'}p q$.}
 Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$, otherwise switch the roles of $p$ and $q$ in the following construction.
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
@@ -1041,18 +1040,19 @@ and \ref{eq:thm:=def-loc-fivestar} follows.
 Let us continue the proof.
 Set $x_0=x$.
 Let us apply inductively the above construction to get a sequence of hinges  $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
+From \ref{eq:thm:=def-loc-fivestar}, we get that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is nonincreasing.
 \begin{figure}[ht!]
 \centering
 \includegraphics{mppics/pic-825}
 \end{figure}
+
 The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{}\z< \tfrac{2}{3}\cdot\ell $.
 In this case, by the assumptions of the lemma, $\side\kappa \hinge{x_n}p q\ge\dist{p}{q}{}$.
-From \ref{eq:thm:=def-loc-fivestar}, we get that the sequence  $s_n\z=\side\kappa \hinge{x_n}p q$ is nonincreasing.
-Hence inequality \ref{eq:thm:=def-loc*} follows.
+Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
 Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.
-The latter implies that the distances
-$\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero.
+By construction, the distances
+$\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
 Further, the sequence $r_n$ converges.
 In particular $r_n-r_{n+1}\to 0$ as $n\to\infty$.
 It follows that $\angk\kappa{x_n}{p_n}{x_{n+1}}\to \pi$,
