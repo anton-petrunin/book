@@ -1051,9 +1051,15 @@ In this case, by the assumptions of the lemma, $\side\kappa \hinge{x_n}p q\ge\di
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
 Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.
-By construction, the distances
+Note that by construction, the distances
 $\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
-Further, the sequence $r_n$ converges.
+Indeed, since on each step we move $x_n$ toward to the point $p$ or $q$ that is further away, the distances $\dist{x_n}{p}{}$ and $\dist{x_n}{q}{}$ become about the same.
+Namely, by \ref{3|xx'|}, we have that $\dist{p}{x_n}{}-\dist{x_n}{q}{}\le \tfrac29\cdot\ell$ for all large $n$.
+Since $\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge \tfrac23\cdot\ell$, we get $\dist{x_n}{p}{}\ge \tfrac\ell{100}$ and $\dist{x_n}{q}{}\ge \tfrac\ell{100}$.
+Further, since $r_n\ge\tfrac{2}{3}\cdot\ell$, \ref{3|xx'|} implies that $\dist{x_n}{x_{n+1}}{}>\tfrac\ell{100}$.
+
+
+Further, since $r_n$ is nonincreasing, it converges.
 In particular $r_n-r_{n+1}\to 0$ as $n\to\infty$.
 It follows that $\angk\kappa{x_n}{p_n}{x_{n+1}}\to \pi$,
 where $p_n=p$ if $x_{n+1}\in [x_nq]$ and otherwise $p_n=q$.
