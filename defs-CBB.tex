@@ -2,16 +2,17 @@
 %arXiv
 \chapter{Fundamentals of curvature bounded below}
 \chaptermark{Fundamentals of CBB}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Four-point comparison} \label{sec:angle}
 
 Recall (Section~\ref{sec:mod-tri/angles}) that the model angle $\angk\kappa p{x}{y}$ is defined if 
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<\varpi\kappa.\] 
 
+\index{$\Alex{}$}
 \begin{thm}{Four-point comparison}
 \label{df:1+3}
-A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies \index{$\Alex\kappa$ comparison}\emph{$\Alex\kappa$ comparison} 
+A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies \index{$\Alex{}$!$\Alex\kappa$ comparison}\emph{$\Alex\kappa$ comparison} 
 if 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
@@ -24,17 +25,23 @@ or at least one of the model angles $\angk\kappa p{x^i}{x^j}$ is not defined.
 Let $\spc{L}$ be a metric space.
 
 \begin{subthm}{}
-$\spc{L}$ is $\Alex{\kappa}$ 
+$\spc{L}$ is 
+\index{$\Alex{}$!$\Alex{\kappa}$ space}
+$\Alex{\kappa}$
 if any quadruple $p,x^1,x^2,x^3\in \spc{L}$ satisfies  $\Alex\kappa$ comparison.
 \end{subthm}
 
 \begin{subthm}{}
-$\spc{L}$ is \index{locally $\Alex{\kappa}$}\emph{locally $\Alex{\kappa}$} 
+$\spc{L}$ is 
+\index{$\Alex{}$!locally $\Alex{\kappa}$ space}
+\emph{locally $\Alex{\kappa}$} 
 if any point $q\in \spc{L}$ admits a neighborhood $\Omega\ni q$ such that any quadruple $p,x^1,x^2,x^3\in \Omega$ satisfies  $\Alex\kappa$ comparison.
 \end{subthm}
 
 \begin{subthm}{}
-$\spc{L}$  is a  $\Alex{}$ space if  $\spc{L}$  is $\Alex{\kappa}$ for some $\kappa\in\RR$.
+$\spc{L}$  is a  
+\index{$\Alex{}$!$\Alex{}$ space}
+$\Alex{}$ space if  $\spc{L}$  is $\Alex{\kappa}$ for some $\kappa\in\RR$.
 \end{subthm}
 \end{thm}
 
@@ -616,7 +623,7 @@ Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ 
 
 It is straightforward to check that $(\rho,\theta)$ uniquely describe $\tilde \gamma$ in polar coordinates on $\Lob2{\kappa}$ with center at $\tilde p$.
 \qeds
-
+                                                                                                                                                                                                                                                                                                                                                                        
 We need the following analogues of sub- and super-graphs % we use sub-super- BUT NOT epi-hypo-
  and convex/concave functions, adapted to polar coordinates in $\Lob2{\kappa}$.
 
@@ -629,11 +636,11 @@ We need the following analogues of sub- and super-graphs % we use sub-super- BUT
 \begin{thm}{Definition}\label{def:convex-devel}
 Let $\tilde \gamma\:\II\to\Lob2\kappa$ be a curve and $\tilde p\in\Lob2\kappa$ be such that there is a unique geodesic $[\tilde p\,\tilde \gamma(t)]$ for any $t\in\II$ and the direction of $[\tilde p\,\tilde \gamma(t)]$ turns monotonically as $t$ grows.
 
-The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma$ is called the \index{development!subgraph/supergraph}\index{subgraph of development}\emph{subgraph} of $\tilde \gamma$ with respect to $\tilde p$.
+The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma$ is called the \index{development!subgraph/supergraph} \emph{subgraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
-The set of all points $\ tilde x\in\Lob2{\kappa}$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \index{supergraph of development}\emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
+The set of all points $\ tilde x\in\Lob2{\kappa}$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
-The curve $\tilde \gamma$ is called \index{convex curve with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
+The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
 
 The curve $\tilde \gamma$ is called 
 \emph{locally convex (concave) with respect to $\tilde p$} 
@@ -644,12 +651,13 @@ Note that if $\kappa>0$, then the supergraph of a curve is the subgraph with res
 
 For developments,
 all the notions above will be considered with respect to their basepoints.
-In particular, if $\tilde \gamma$ is a development, we will say it is \index{convex development}\emph{(locally) convex} if it is (locally) convex with respect to its basepoint.
+In particular, if $\tilde \gamma$ is a development, we will say it is \emph{(locally) convex} if it is (locally) convex with respect to its basepoint.
 
 
 {\sloppy 
 
 \begin{thm}{Development comparison\index{comparison!development comparison}}\label{thm:devel} 
+\index{development!comparison}
 A complete G-delta geodesic space
 $\spc{L}$ is $\Alex\kappa$ if and only if for any point $p\in \spc{L}$ and any geodesic $\gamma$ in $\oBall(p,\varpi\kappa)\backslash\{p\}$, 
 its $\kappa$-development with respect to $p$ is convex.
@@ -659,7 +667,7 @@ its $\kappa$-development with respect to $p$ is convex.
 
 
 
-A simpler proof of the``only-if''-part can be built on the adjacent angle comparison (\ref{2-sum}).
+A simpler proof of the ``only-if''-part can be built on the adjacent angle comparison (\ref{2-sum}).
 We use a longer proof since it also implies the short hinge lemma (\ref{lem:devel-glob}).
 
 \parit{Proof; ``only-if''-part.}  
