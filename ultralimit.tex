@@ -82,11 +82,11 @@ More precisely, for any compact Hausdorff space $\spc{X}$
 and map $f\:\NN\to \spc{X}$, there is a unique continuous map $\bar f\:\beta\NN\to X$ such that the restriction $\bar f|_\NN$ coincides with $f$. 
 
 \section{Ultralimits of points}
-\label{ultralimits}\index{ultralimit}
+\label{ultralimits}
 
 Fix an ultrafilter $\o$.
 Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$. 
-Define an  \index{ultralimit}\emph{$\o$-limit} of $(x_n)$ to be a point $x_\o$ 
+Define an  \index{ultralimit of points}\emph{$\o$-limit} of $(x_n)$ to be a point $x_\o$ 
 such that for any $\eps>0$, $\o$-almost all elements of $(x_n)$ lie in $\oBall(x_\o,\eps)$; 
 that is,
 \[\o\set{n\in\NN}{\dist{x_\o}{x_n}{}<\eps}=1.\]
@@ -208,7 +208,7 @@ defined by
 \lim_{n\to\o} \dist{x_n}{y_n}{}=0,\]
 and the distance is defined as in \ref{eq:olim-dist}.
 
-The space $\spc{X}_\o$ is called the \index{ultralimit space}\emph{$\o$-limit} of $\spc{X}_n$.
+The space $\spc{X}_\o$ is called the \index{ultralimit of spaces}\emph{$\o$-limit} of $\spc{X}_n$.
 Typically  $\spc{X}_\o$ will denote the  
 $\o$-limit of a sequence $\spc{X}_n$;
 we may also write  
@@ -267,7 +267,7 @@ Applying Lemma~\ref{lem:mid>geod} we obtain the statement.
 the $\o$-limit 
 $\lim_{n\to\o}\spc{X}_n$
 is denoted by $\spc{X}^\o$
-and called the $\o$-power of $\spc{X}$.
+and called the \index{ultrapower} $\o$-power of $\spc{X}$.
  
 According to Theorem~\ref{thm:ultra-GH},
 there is a distance-preserving map
@@ -325,7 +325,7 @@ For a sequence of sets $\Omega_n\subset \spc{X}_n$,
 consider the maximal set $\Omega_\o\subset \spc{X}_\o$ such that 
 for any $x_\o\in\Omega_\o$ and any sequence $(x_n\in\spc{X}_n)$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
 
-The set $\Omega_\o$ is called the  \index{open ultralimit}\emph{open $\o$-limit} of $\Omega_n$;
+The set $\Omega_\o$ is called the  \index{ultralimit of sets}\emph{open $\o$-limit} of $\Omega_n$;
 we could also write  $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
 
 {\sloppy
