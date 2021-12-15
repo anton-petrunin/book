@@ -11,7 +11,7 @@ The proofs of most of the statements in this section can be found in the book of
 the rest follow directly from the definitions.
 
 \begin{thm}{Hausdorff dimension}
-\label{def:HausDim}\index{dimension!Hausdorff dimension}
+\label{def:HausDim}\index{dimension!Hausdorff dimension}\index{Hausdorff dimension}
 Let $\spc{X}$ be a metric space. 
 Its Hausdorff dimension is defined as
 \[\HausDim\spc{X}=\sup\set{\alpha\in\RR}{\HausMes_\alpha(\spc{X})>0},\]
@@ -23,13 +23,13 @@ Let $\spc{X}$ be a metric space and $\{V_\beta\}_{\beta\in\IndexSet[2]}$
 Let us recall two notions in general topology:
 \begin{itemize}
 
-\item The \index{order}\emph{order} of $\{V_\beta\}$ is the supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ with nonempy intersection.
+\item The \index{order of a cover}\emph{order} of $\{V_\beta\}$ is the supremum of all integers $n$ such that there is a collection of $n+1$ elements of $\{V_\beta\}$ with nonempy intersection.
 
 \item An open cover $\{W_\alpha\}_{\alpha\in\IndexSet}$ of $\spc{X}$ is called a \index{refinement of a cover}\emph{refinement} of  $\{V_\beta\}_{\beta\in\IndexSet[2]}$ if for any $\alpha\in\IndexSet$ there is $\beta\in\IndexSet[2]$ such that $W_\alpha\subset V_\beta$.
 
 \end{itemize}
 
-\begin{thm}{Topological dimension}\label{def:TopDim}\index{dimension!topological dimension}
+\begin{thm}{Topological dimension}\label{def:TopDim}\index{dimension!topological dimension}\index{topological dimension}
 Let $\spc{X}$ be a metric space. 
 The topological dimension of $\spc{X}$ is defined to be the minimum of nonnegative integers $n$ 
 such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
@@ -93,7 +93,7 @@ where the infimum is taken over all metric spaces $\spc{Y}$  homeomorphic to $\s
 \begin{thm}{Definition}
 Let $\spc{X}$ be a metric space
 and $F\:\spc{X}\to\RR^m$ be  a continuous map.
-A point $\bm{z}\in \Im F$ is called a  \index{stable value}\emph{stable value} of $F$
+A point $\bm{z}\in \Im F$ is called a \emph{stable value} of $F$
 if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
 for any $\eps$-close continuous map $F'\:\spc{X}\to\RR^m$,
 that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
@@ -125,16 +125,16 @@ In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$, then
 
 \end{thm}
 
-\section{Linear dimension}
+\section{Linear dimension} 
 
 In addition to $\HausDim$ and $\TopDim$, 
-we will use yet another dimension, which we call {}\emph{linear dimension}.
+we will use yet another dimension, which we call \emph{linear dimension}.
 It will be applied only to  Alexandrov spaces and to their open subsets (in cases both of curvature bounded below and curvature bounded above).
 As we shall see, in all these cases $\LinDim$  behaves nicely and  is easy to work with.
 
 Recall that a \index{cone map}\emph{cone map} is a map between cones respecting the cone multiplication.
 
-\begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!Linear dimension}
+\begin{thm}{Definition of linear dimension}\label{def:lin-dim}\index{dimension!linear dimension}
 Let $\spc{X}$ be a metric space with defined angles. 
 The \index{linear dimension}\emph{linear dimension} of $\spc{X}$ (denoted by $\LinDim\spc{X}$\index{$\LinDim$}) is defined as the exact upper bound on $m\in\ZZ_{\ge0}$
 such that there is a distance-preserving cone embedding $\EE^m\hookrightarrow \T_p\spc{X}$
@@ -151,7 +151,7 @@ Note that
 \[\LinDim(\spc{X}\times \spc{Y})
 =
 \LinDim\spc{X}+ \LinDim\spc{Y}
-\eqlbl{eq:inverse-product-axiom}\] 
+\eqlbl{eq:inverse-product-axiom}\] ccc 
 for any two metric spaces $\spc{X}$ and $\spc{Y}$ with defined angles. 
 
 The following exercise is based on a construction of Thomas Foertsch and Viktor Schroeder \cite{schroeder-foetch};
