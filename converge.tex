@@ -8,11 +8,11 @@ Gromov--Hausdorff convergence of metric spaces.
 To the best of our knowledge Hausdorff convergence of subsets of a fixed metric space was first introduced by Felix Hausdorff \cite{hausdorff}
 and a couple of years later an equivalent definition was given by Wilhelm Blaschke \cite{blaschke}.
 A further refinement of this definition was introduced by Zdeněk Frolík \cite{frolik}
-and then rediscovered by Robert Wijsman \cite{wijsman},
-however this refinement was a step in the direction of the so-called {}\emph{closed convergence} introduced by Hausdorff in the original book. 
+and then rediscovered by Robert Wijsman \cite{wijsman}.
+However this refinement was a step in the direction of the so-called {}\emph{closed convergence} introduced by Hausdorff in the original book. 
 For that reason we call it Hausdorff convergence
 instead of
-\emph{Hausdorff--Blascke--Frol\'{\i}k--Wijsman convergence}.
+\emph{Hausdorff--Blashcke--Frol\'{\i}k--Wijsman convergence}.
 
 Gromov--Hausdorff convergence was first introduced by David Edwards \cite{edwards}
 and rediscovered later by Mikhael Gromov \cite{gromov-polynomial-growth}.
@@ -21,28 +21,28 @@ Other versions of convergence of metric spaces
 were considered earlier, but each time
 the definition was limited to very specific types of problems.
 
-The definition of Gromov--Hausdorff convergence or metric spaces uses 
+The definition of Gromov--Hausdorff convergence of metric spaces uses 
 the notion of Hausdorff convergence.
-It means that a sequence of metric spaces admits a sequence of distance-preserving embedding into a common ambient metric space such that the their
+Gromov--Hausdorff convergence means that a sequence of metric spaces admits a sequence of distance-preserving embeddings into a common ambient metric space, so that their
 images converge in the Hausdorff sense.
-Our definition of the Gromov--Hausdorff convergence is slightly different from the standard.
+Our definition of  Gromov--Hausdorff convergence and  Gromov--Hausdorff distance differ somewhat from the standard definition.
 
 \section{Convergence of subsets}
 
 Let $\spc{X}$ be a metric space and $A\subset \spc{X}$.
-We will denote by $\distfun Ax$ the distance from $A$ to a point $x$ in $\spc{X}$;
-that is,
+Recall that the distance from $A$ to a point $x$ in $\spc{X}$
+is given by
 $$\distfun Ax\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
-By this definition we have $\distfun{\emptyset}x=\infty$ for any $x$.
+By this definition, we have $\distfun{\emptyset}x=\infty$ for any $x$.
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
-Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$ 
+Given a sequence of closed sets $(A_n)_{n=1}^\infty$ in a metric space $\spc{X}$, 
 a closed set $A_\infty\subset \spc{X}$ is called the Hausdorff limit of $(A_n)_{n=1}^\infty$,
-briefly $A_n\Hto A_\infty$ if 
+briefly $A_n\Hto A_\infty$, if 
 $$\distfun{A_n}x\to\distfun{A_\infty}x\quad \text{as}\quad n\to\infty$$
 for any fixed $x\in \spc{X}$.
 
-In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is called {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
+In this case the sequence of closed sets $(A_n)_{n=1}^\infty$ is said to be {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
 \end{thm}
 
 \begin{thm}{Selection theorem}
@@ -62,7 +62,7 @@ The obtained sequence converges to the empty set.
 
 Now suppose that $a_n=\distfun{A_n}x_\kay$ is bounded for each $\kay$. 
 In this case, passing to a subsequence of $(A_n)_{n=1}^\infty$,
-we can assume that $\distfun{A_n}x_\kay$ is converging as $n\to\infty$ for any fixed $\kay$.
+we can assume that $\distfun{A_n}x_\kay$ converges as $n\to\infty$ for any fixed $\kay$.
 
 Note that for each $n$, the function $\distfun{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
 Therefore the sequence $\distfun{A_n}$ converges pointwise to a 1-Lipschitz nonnegative function $f\:\spc{X}\to\RR$.
@@ -72,13 +72,13 @@ Since $f$ is 1-Lipschitz,
 $\distfun{A_\infty}y\ge f(y)$ for any $y\in \spc{X}$.
 It remains to show that $\distfun{A_\infty}y\le f(y)$ for any $y$.
 
-Assume the  contrary;
+Assume the  contrary,
 that is, $f(z)<R<\distfun{A_\infty}z$ for some $z\in \spc{X}$ and $R>0$.
 Then for any sufficiently large $n$ there is a point $z_n\in A_n$ such that
 $\dist{x}{z_n}{}\le R$.
 Since $\spc{X}$ is proper, we can pass to a partial limit $z_\infty$ of $z_n$ as $n\to\infty$.
 
-Clearly that $f(z_\infty)=0$; that is, $z_\infty\in A_\infty$.
+Clearly  $f(z_\infty)=0$, that is, $z_\infty\in A_\infty$.
 On the other hand, 
 \[\distfun{A_\infty}y\le\dist{z_\infty}{y}{}\le R<\distfun{A_\infty}y,\] 
 a contradiction.
@@ -294,7 +294,7 @@ $\Im f$ is an $\eps$-net in $\spc{Y}$.
 
 \begin{subthm}{}
 $|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}|\le \eps$ for any $x,x'\in\spc{X}$.
-%$\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\spc{X}$. %V: the notation $\lege$ is not really standard. It should be defined if introduced but it might be easier just not to use it. %A: agree --- I use it often, but in this book it appers 2 times only.
+%$\dist{f(x)}{f(x')}{\spc{Y}}\lege\dist{x}{x'}{\spc{X}}\pm\eps$ for any $x,x'\in\spc{X}$. %V: the notation $\lege$ is not really standard. It should be defined if introduced but it might be easier just not to use it. %A: agree --- I use it often, but in this book it appears 2 times only.
 \end{subthm}
 
 \end{thm}
