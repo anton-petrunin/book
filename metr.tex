@@ -312,13 +312,13 @@ Give an example of a complete length space such that no pair of distinct points 
 Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 
 \begin{enumerate}[(i)]
-\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} for $x$ and $y$
+\item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} between $x$ and $y$
 % V: the standard phrase in English is "midpoint between $x$ and $y$".  I would suggest switching to that everywhere.
 %S: I think "for" is okay but would also be happy with a switch to "between".
 if 
 \[\dist{x}{z}{}=\dist{y}{z}{}=\tfrac12\cdot\dist[{{}}]{x}{y}{}.\]
 \item Assume $\eps\ge 0$.
-A point $z\in \spc{X}$ is called  an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} for $x$ and $y$
+A point $z\in \spc{X}$ is called  an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
 if 
 \[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
@@ -357,14 +357,14 @@ Fix a pair of points $x,y\in \spc{X}$.
 Let $\eps_n=\frac\eps{2^{2\cdot n}}$,
 $\alpha(0)=x$ and $\alpha(1)=y$.
 
-Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint for $\alpha(0)$ and $\alpha(1)$.
+Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint between $\alpha(0)$ and $\alpha(1)$.
 Further, let $\alpha(\frac14)$ 
 and $\alpha(\frac34)$  be $\eps_2$-midpoints 
-for the pairs $(\alpha(0),\alpha(\tfrac12)$ 
+between the pairs $(\alpha(0),\alpha(\tfrac12)$ 
 and $(\alpha(\tfrac12),\alpha(1)$ respectively.
 Applying the above procedure recursively,
 on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$,
-for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, to be an $\eps_{n}$-midpoint for the already defined
+for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, to be an $\eps_{n}$-midpoint between the already defined
 $\alpha(\tfrac{\kay-1}{2^n})$ and $\alpha(\tfrac{\kay+1}{2^n})$.
 
 
@@ -530,7 +530,7 @@ Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$,
 their maximum 
 \[\rho(x,y)=\max\{\rho_1(x,y),\rho_2(x,y)\}\]
 is also a pseudometric.
-If for these two pseudometrics $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are \emph{short} (i.e.  distance non-increasing), then the same is true for $\rho(x,y)$.
+If for these two pseudometrics $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are \index{short map}\emph{short} (that is,  \emph{distance non-increasing}), then the same is true for $\rho(x,y)$.
 
 It follows that 
 the quotient space $\spc{X}/{\sim}$ admits a natural quotient pseudometric;
