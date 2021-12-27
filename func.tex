@@ -1,5 +1,5 @@
-,%%!TEX root = the-func.tex
--
+%%!TEX root = the-func.tex
+
 \chapter{Maps and functions}
 
 Here we introduce some classes of maps between metric spaces and develop a language to describe various notions of convexity/concavity of real-valued functions on general metric space.
@@ -13,8 +13,8 @@ a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\su
 
 A submap is said to be \index{continuous submap}\emph{continuous} if the inverse image of any open set is open.
 Note that for a continuous submap $\map$, the domain $\Dom\map$ is automatically open.
-Indeed, a submap $\map\:\spc{X}\subto \spc{Y}$ is continuous if the inverse image of any open set is open.
-Since $\spc{Y}$ is open then so is $\Dom \map=\map^{-1}(\spc{Y})$.
+Indeed, if  submap $\map\:\spc{X}\subto \spc{Y}$ is continuous then
+ $\Dom \map=\map^{-1}(\spc{Y})$ is open as the preimage of an open set.
 The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since they are  continuous functions for a special topology on $\RR$.
 
 (Continuous partially defined maps could be defined via closed sets; namely, one could require that inverse images of closed sets are closed.
@@ -257,7 +257,7 @@ in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a real
 A curve is called \index{Lipschitz map!Lipschitz curve}\emph{Lipschitz} or \emph{locally Lipschitz} if $\alpha$ is Lipschitz or locally Lipschitz. 
  Length of curves is defined in \ref{def:length}.
 
-The following theorem follows from \cite{burago-burago-ivanov}.
+The following theorem follows from \cite[2.7]{burago-burago-ivanov}.
 
 \begin{thm}{Theorem}\label{thm:speed}
 Let $\spc{X}$ be a metric space  
@@ -329,7 +329,7 @@ Then $y_\infty$ is a solution of the same inequality in \ref{eq:sec:conv-real*}.
 \end{thm}
 
 Assume $y$ is a solution of one of the inequalities in \ref{eq:sec:conv-real*}.
-For $t_0\in \Dom y$, let us define right (left) derivative $y^+(t_0)$ ($y^-(t_0)$) at $t_0$ by
+For $t_0\in \Dom y$, let us define the \emph{right (left) derivative } $y^+(t_0)$ ($y^-(t_0)$) at $t_0$ by
 \[y^\pm(t_0)=\lim_{t\to t_0\pm} \frac{y(t)-y(t_0)}{|t-t_0|}.\]
 Note that our sign convention for $y^-$ is not standard --- for $y(t)=t$ we have
 $y^+(t)=1$ and $y^-(t)=-1$.
@@ -374,7 +374,7 @@ Further, the following property holds:
 \begin{subthm}{barrier'} 
 Suppose $y''\le \lambda-\kappa\cdot  y$. Let $t_0\in\II$, and   $\bar y$ be a solution of  the
  ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
-such that  $\bar y^+(t_0)= y(t_0)$ and 
+such that  $\bar y(t_0)= y(t_0)$ and 
 $y^+(t_0)\le \bar y^+(t_0)\le -y^-(t_0)$.
 %S:  Note I changed this from $y^+(t_0)\le y(t_0)\le -y^-(t_0)$
 (Note that such a $\bar{y}$ is unique if $y$ is differentiable at $t_0$.) 
@@ -394,6 +394,7 @@ We will often need the following fact about convergence of derivatives of convex
 
 %S: Note I changed "concave" to "convex".
 \begin{thm}{Lemma on equilibrium}\label{lem:der-conv-lim}
+%??? V: why exactly is this called lemma on equilibrium?  This strikes me as a wrong name for this lemma.
 Let $\II$ be an open interval 
 and $f_n\:\II\to\RR$ be a sequence of 
 %concave
@@ -447,7 +448,7 @@ Thus the theorem follows from the lemma on equilibrium (\ref{lem:der-conv-lim}).
 \section{Convex functions on a metric space}\label{sec:conv-fun}
 
 In this section we define different types of convexity/concavity
-in the context of metric spaces; it will be used mostly used for geodesic spaces.
+in the context of metric spaces; it will be mostly used for geodesic spaces.
 The notation refers to the corresponding second order ordinary differential inequality. 
 
 \begin{thm}{Definition}\label{def:lam-convex}
