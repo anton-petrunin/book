@@ -36,19 +36,19 @@ $$\distfun Ax\df\inf\set{\dist{a}{x}{}}{a\in A}.$$
 By this definition, we have $\distfun{\emptyset}x=\infty$ for any $x$.
 
 \begin{thm}{Definition of Hausdorff convergence}\label{def:hausdorff-coverge}
-Given a sequence of closed sets $(A_n)$ in a metric space $\spc{X}$, 
+Given a sequence of closed sets $A_n$ in a metric space $\spc{X}$, 
 a closed set $A_\infty\subset \spc{X}$ is called the Hausdorff limit of $(A_n)$,
 briefly $A_n\Hto A_\infty$, if 
 $$\distfun{A_n}x\to\distfun{A_\infty}x\quad \text{as}\quad n\to\infty$$
 for any fixed $x\in \spc{X}$.
 
-In this case the sequence of closed sets $(A_n)$ is said to be {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
+In this case the sequence of closed sets $A_n$ is said to be {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
 \end{thm}
 
 \begin{thm}{Selection theorem}
 Let $\spc{X}$ be a proper metric  space
-and $(A_n)$ be a sequence of closed sets in $\spc{X}$.
-Then  $(A_n)$ has a converging subsequence in the sense of Hausdorff.
+and $A_n$ be a sequence of closed sets in $\spc{X}$.
+Then  $A_n$ has a converging subsequence in the sense of Hausdorff.
 \end{thm}
 
 \parit{Proof.}
@@ -56,12 +56,12 @@ Since $\spc{X}$ is proper,
 we can choose a countable dense set $\{x_1,x_2, \dots\}$ in $\spc{X}$.
 
 If the sequence $a_n=\distfun{A_n}x_\kay$ is unbounded for some $\kay$,
-then we can pass to a subequence of $(A_n)$ such that 
+then we can pass to a subequence of $A_n$ such that 
 $\distfun{A_n}x_\kay\to \infty$ as $n\to\infty$ for \emph{any} $\kay$.
 The obtained sequence converges to the empty set.
 
 Now suppose that $a_n=\distfun{A_n}x_\kay$ is bounded for each $\kay$. 
-In this case, passing to a subsequence of $(A_n)$,
+In this case, passing to a subsequence of $A_n$,
 we can assume that $\distfun{A_n}x_\kay$ converges as $n\to\infty$ for any fixed $\kay$.
 
 Note that for each $n$, the function $\distfun{A_n}\:\spc{X}\to\RR$ is 1-Lipschitz and nonnegative.
@@ -104,7 +104,7 @@ $\spc{X}_n\Hto \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$.
 Then the topology $\GH$ of $\bm{X}$ is called a \index{Gromov--Hausdorff convergence}\emph{Gromov--Hausdorff convergence}
 and we write $\spc{X}_n\GHto \spc{X}_\infty$ or $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$;
 the latter notation is used if we need to consider  the specific Gromov--Hausdorff convergence $\GH$.
-The space $\spc{X}_\infty$ is called the \emph{limit space of the sequence $(\spc{X}_n)$ along $\GH$}.
+The space $\spc{X}_\infty$ is called the \emph{limit space of the sequence $\spc{X}_n$ along $\GH$}.
 \end{thm}
 
 When we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of a Gromov--Hausdorff convergence.
@@ -376,7 +376,7 @@ Given any pair of points $x,y\in \spc{X}$,
 set $x_n\z=h^{\circ n}(x)$ and $y_n\z=h^{\circ n}(y)$,
 where  $\circ n$ denotes iteration $n$ times.
 Since $\spc{X}$ is compact, one can choose an increasing sequence of integers $n_\kay$
-such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+such that both sequences $x_{n_i}$ and $y_{n_i}$
 converge.
 In particular, both of these sequences  are 
 %converging in itself;
@@ -577,12 +577,12 @@ that is, the map $y_\infty\mapsto y_\o$ gives a distance-preserving map $\iota:\
 
 \parit{(\ref{SHORT.thm:ultra-GH:a})$+$(\ref{SHORT.thm:ultra-GH:b}).}
 Fix $x_\o\in \spc{X}_\o$.
-Choose a sequence ($x_n\in \spc{X}_n$) 
+Choose a sequence $x_n\in \spc{X}_n$ 
 such that $x_n\to x_\o$ as $n\to\o$. 
 
 Denote by $\bm{X}=\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ the common space for the convergence $\spc{X}_n\GHto \spc{X}_\infty$,
 as in the definition of Gromov--Hausdorff convergence.
-Consider the sequence $(x_n)$ 
+Consider the sequence $x_n$ 
 as a sequence of points in~$\bm{X}$.
 
 If the $\o$-limit $x_\infty$ of $(x_n)$ in $\bm{X}$ exists, 
@@ -606,7 +606,7 @@ this proves (\ref{SHORT.thm:ultra-GH:a}).
 If $\spc{X}_\infty$ is proper, choose any point $z_\infty\in \spc{X}_\infty$
 and set $z_\o=\iota(z_\infty)$.
 For any point $x_\o\in \spc{X}_\o$ at finite distance from $z_\o$,
-for the sequence $(x_n)$ 
+for the sequence $x_n$ 
 as above we have that $\dist{z_n}{x_n}{}$ is bounded for $\o$-almost all $n$.
 Since $\spc{X}_\infty$ is proper, $\nu(x_\o)$ is defined;
 in other words $\nu$ is defined on the metric component of $z_\o$.

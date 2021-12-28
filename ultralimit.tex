@@ -110,13 +110,13 @@ For example, in general
 \ne
 \lim_{n\to\o}x_{2\cdot n}.\]
 
-The sequence $(x_n)$ can be regarded as a map $\NN\to\spc{X}$.
+The sequence $x_n$ can be regarded as a map $\NN\to\spc{X}$.
 If $\spc{X}$ is compact, then this map can be uniquely extended to a continuous map to the Stone--\v{C}ech compactification $\beta\NN$ of $\NN$.
 Then $x_\o$ can be regarded as the image of $\o$. 
 
 \begin{thm}{Proposition}\label{prop:ultra/partial}
 Let $\o$ be a nonprincipal ultrafilter.
-Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$
+Assume $x_n$ is a sequence of points in a metric space $\spc{X}$
 and $x_n\to  x_\o$ as $n\to\o$.
 Then there is a Cauchy sequence $(x_n)_{n\in S}$ that converges to $x_\o$ in the usual sense.
 
@@ -130,7 +130,7 @@ set $S_\eps=\set{n\in\NN}{\dist{x_n}{x_\o}{}<\eps}$.
 
 Note that $\o(S_\eps)=1$ for any $\eps>0$.
 Since $\o$ is nonprincipal, the set $S_\eps$ is infinite.
-Therefore we can choose an increasing sequence $(n_\kay)$
+Therefore we can choose an increasing sequence $n_\kay$
 such that $n_\kay\in S_{\frac1\kay}$ for each $\kay\in \NN$.
 Clearly $x_{n_\kay}\to x_\o$ as $\kay\to\infty$.
 
@@ -160,7 +160,7 @@ it can be proved in the same way.
 \begin{thm}{Proposition}\label{prop:ultra/compact}
 Let $\spc{X}$ be a compact metric space.
 Then
-any sequence of points $(x_n)$ in $\spc{X}$ has a unique $\o$-limit $x_\o$.
+any sequence of points $x_n$ in $\spc{X}$ has a unique $\o$-limit $x_\o$.
 
 In particular, a bounded sequence of real numbers has a unique $\o$-limit. 
 %
@@ -169,16 +169,16 @@ In particular, a bounded sequence of real numbers has a unique $\o$-limit.
 The following lemma is an ultralimit analog of the Cauchy convergence test.
 
 \begin{thm}{Lemma}\label{lem:X-X^w}
-Let $(x_n)$ be a sequence of points in a complete metric space $\spc{X}$. 
-If for each subsequence $(y_n)$ of $(x_n)$, 
+Let $x_n$ be a sequence of points in a complete metric space $\spc{X}$. 
+If for each subsequence $y_n$ of $x_n$, 
 the $\o$-limit 
 \[y_\o=\lim_{n\to\o}y_{n}\in \spc{X}\]
 is defined and does not depend on the choice of a subsequence, 
-then the sequence $(x_n)$ converges in the usual sense.
+then the sequence $x_n$ converges in the usual sense.
 \end{thm}
 
 \parit{Proof.} Assume the contrary. 
-Then for some $\eps>0$, there is a subsequence $(y_n)$ of $(x_n)$ such that $\dist{x_n}{y_n}{}\ge\eps$ for all $n$.
+Then for some $\eps>0$, there is a subsequence $y_n$ of $x_n$ such that $\dist{x_n}{y_n}{}\ge\eps$ for all $n$.
 
 It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
 
@@ -187,9 +187,8 @@ It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
 
 Fix a selective ultrafilter $\o$ on the set  $\NN$ of natural numbers.
 
-Let $(\spc{X}_n)$ be a sequence of metric spaces.
+Let $\spc{X}_n$ be a sequence of metric spaces.
 Consider all sequences
-$(x_n)$ where 
 $x_n\in \spc{X}_n$.
 On the set of all such sequences,
 define a pseudometric  by the formula
@@ -214,7 +213,7 @@ $\o$-limit of a sequence $\spc{X}_n$;
 we may also write  
 \[\spc{X}_n\to\spc{X}_\o\quad \text{as}\quad  n\to\o\quad \text{or}\quad \spc{X}_\o=\lim_{n\to\o}\spc{X}_n.\]
 
-Given a sequence  $(x_n\in \spc{X}_n)$,
+Given a sequence  $x_n\in \spc{X}_n$,
 we will denote by $x_\o$ its equivalence class, which is a point in $\spc{X}_\o$;
 equivalently, we will write
 \[x_n\to x_\o \quad \text{as}\quad  n\to\o\quad \text{or}\quad x_\o=\lim_{n\to\o} x_n.\]
@@ -254,7 +253,7 @@ The $\o$-limit of any sequence of length spaces is geodesic.
 \end{thm}
 
 \parit{Proof.}
-If $(\spc{X}_n)$ is a sequence of length spaces, then for any sequence of pairs $(x_n, y_n)\in X_n$ there is a sequence of $\tfrac1n$-midpoints $(z_n)$.
+If $\spc{X}_n$ is a sequence of length spaces, then for any sequence of pairs $(x_n, y_n)$ in $\spc{X}_n$ there is a sequence of $\tfrac1n$-midpoints $z_n$.
 
 Let $x_n\to x_\o$, $y_n\to y_\o$ and $z_n\to z_\o$ as $n\to \o$.
 Note that $z_\o$ is a midpoint between $x_\o$ and $y_\o$ in $\spc{X}_\o$.
@@ -271,7 +270,7 @@ and called the \index{ultrapower} $\o$-power of $\spc{X}$.
  
 According to Theorem~\ref{thm:ultra-GH},
 there is a distance-preserving map
-$\iota:\spc{X}\hookrightarrow \spc{X}^\o$, where $\iota(y)$ is the equivalence class of the constant sequence $(y_n=y)$. 
+$\iota:\spc{X}\hookrightarrow \spc{X}^\o$, where $\iota(y)$ is the equivalence class of the constant sequence $y_n=y$. 
 
 The image $\iota(\spc{X})$ might be a proper subset of $\spc{X}^\o$.
 For example, $\RR^\o$ has pairs of points at distance $\infty$ from each other, while each metric component of $\RR^\o$ is isometric to $\RR$.
@@ -318,12 +317,12 @@ in the ultrapower $\spc{X}^\o$.
 
 \section{Ultralimits of sets}
 
-Let $(\spc{X}_n)$ be a sequence of metric spaces, and $\spc{X}_n\to \spc{X}_\o$
+Let $\spc{X}_n$ be a sequence of metric spaces, and $\spc{X}_n\to \spc{X}_\o$
 as $n\to \o$.
 
 For a sequence of sets $\Omega_n\subset \spc{X}_n$,
 consider the maximal set $\Omega_\o\subset \spc{X}_\o$ such that 
-for any $x_\o\in\Omega_\o$ and any sequence $(x_n\in\spc{X}_n)$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
+for any $x_\o\in\Omega_\o$ and any sequence $x_n\in\spc{X}_n$ such that $x_n\to x_\o$ as $n\to \o$, we have $x_n\in\Omega_n$ for $\o$-almost all $n$.
 
 The set $\Omega_\o$ is called the  \index{ultralimit of sets}\emph{open $\o$-limit} of $\Omega_n$;
 we could also write  $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\to\o}\Omega_n$. 
