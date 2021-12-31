@@ -85,9 +85,9 @@ and map $f\:\NN\to \spc{X}$, there is a unique continuous map $\bar f\:\beta\NN\
 \label{ultralimits}
 
 Fix an ultrafilter $\o$.
-Assume $(x_n)$ is a sequence of points in a metric space $\spc{X}$. 
-Define an  \index{ultralimit of points}\emph{$\o$-limit} of $(x_n)$ to be a point $x_\o$ 
-such that for any $\eps>0$, $\o$-almost all elements of $(x_n)$ lie in $\oBall(x_\o,\eps)$; 
+Assume $x_n$ is a sequence of points in a metric space $\spc{X}$. 
+Define an  \index{ultralimit of points}\emph{$\o$-limit} of $x_n$ to be a point $x_\o$ 
+such that for any $\eps>0$, $\o$-almost all elements of $x_n$ lie in $\oBall(x_\o,\eps)$; 
 that is,
 \[\o\set{n\in\NN}{\dist{x_\o}{x_n}{}<\eps}=1.\]
 In this case, we write 
@@ -95,9 +95,9 @@ In this case, we write
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
-Also, if $\spc{X}=\RR$ we say that \[\lim_{n\to\o} x_n=\pm\infty\] if 
+Also, if $\spc{X}=\RR$ we write \[\lim_{n\to\o} x_n=\pm\infty\] if 
 \[
-\o\set{n\in\NN}{\pm\dist{x_\o}{x_n}{}>L}=1\quad\text{for any}\quad L\in\RR
+\o\set{n\in\NN}{\pm\dist{x_\o}{x_n}{}>L}=1\quad\text{for any}\quad L\in\RR.
 \]
 
 It easily follows from the definition that  $\o$-limits are unique if they exist. 
@@ -118,7 +118,7 @@ Then $x_\o$ can be regarded as the image of $\o$.
 Let $\o$ be a nonprincipal ultrafilter.
 Assume $x_n$ is a sequence of points in a metric space $\spc{X}$
 and $x_n\to  x_\o$ as $n\to\o$.
-Then there is a Cauchy sequence $(x_n)_{n\in S}$ that converges to $x_\o$ in the usual sense.
+Then there is a Cauchy subsequence of $x_n$ that converges to $x_\o$ in the usual sense.
 
 Moreover, if $\o$ is selective,
 then the subsequence $(x_n)_{n\in S}$ can be chosen so that $\o(S)=1$.
@@ -126,7 +126,7 @@ then the subsequence $(x_n)_{n\in S}$ can be chosen so that $\o(S)=1$.
 
 \parit{Proof.}
 Given $\eps>0$, 
-set $S_\eps=\set{n\in\NN}{\dist{x_n}{x_\o}{}<\eps}$.
+let $S_\eps=\set{n\in\NN}{\dist{x_n}{x_\o}{}<\eps}$.
 
 Note that $\o(S_\eps)=1$ for any $\eps>0$.
 Since $\o$ is nonprincipal, the set $S_\eps$ is infinite.
@@ -144,12 +144,13 @@ C_\infty&=\set{n\in\NN}{x_n=x_\o}.
 
 Note that $\o(C_\kay)=0$ for any $\kay\in\NN$.
 
-If $\o(C_\infty)=1$, we can take the sequence $(x_n)_{n\in C_\infty}$.
+If $\o(C_\infty)=1$, we can take the subsequence consisting of the $x_n$, $n\in C_\infty}$.
 
-Otherwise discarding all empty sets among $C_\kay$ and $C_\infty$ gives a partition of $\NN$ into a countable collection of $\o$-small sets.
+Otherwise, discarding all empty sets among $C_\kay$ and $C_\infty$ gives a partition of $\NN$ into a countable collection of $\o$-small sets.
 Since $\o$ is selective, we can choose a set $S\subset\NN$ such that
 $S$ meets each set of the partition at one point and $\o(S)=1$.
-Clearly the sequence $(x_n)_{n\in S}$ converges to $x_\o$ in the usual sense.
+Clearly the subsequence consisting of the $x_n$, $n\in S$
+converges to $x_\o$ in the usual sense.
 \qeds
 
 The following proposition 
@@ -225,10 +226,10 @@ The $\o$-limit of any sequence of metric spaces is complete.
 
 \parit{Proof.}
 Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $n\to\o$.
-Choose a Cauchy sequence $x_1,x_2,\dots\in\spc{X}_\o$.
+Choose a Cauchy sequence $x_n$ in $\spc{X}_\o$.
 Passing to a subsequence, we can assume that $\dist{x_k}{x_{m}}{\spc{X}_\o}<\tfrac1{k}$ for any $k<m$.
 
-Let us choose a double sequence $x_{n,m}\in \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
+Let us choose a double sequence $x_{n,m}$ in  \spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
 Note that for any $k<m$ the inequality $\dist{x_{n,k}}{x_{n,m}}{}<\tfrac1{k}$ holds for $\o$-almost all $n$.
 It follows that we can choose a nested sequence of sets 
 \[\NN= S_1\supset S_2\supset\dots\] 

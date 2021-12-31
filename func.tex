@@ -65,11 +65,11 @@ $\Omega\subset \Dom\map$ such that the restriction $\map|_\Omega$ is $\Lip$-Lips
 Note that $\map\:\spc{X}\to\spc{Y}$ is $\Lip$-Lipschitz if and only if
 \[\map(\oBall(x, R)_{\spc{X}})\subset\oBall(\map(x),\Lip\cdot R)_{\spc{Y}}\]
 for any $R\ge 0$ and $x\in \spc{X}$.
-The following definition gives a dual version of it.
+The following definition gives a dual version.
 
 \begin{thm}{Definitions}
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces, 
-$\map\:\spc{X}\to\spc{Y}$ be a map 
+$\map\:\spc{X}\to\spc{Y}$ be a map,  
 and $\Lip\in\RR$.
 \begin{subthm}{}
 The map $\map$ is called \index{$\Lip$-co-Lipschitz map}\emph{$\Lip$-co-Lipshitz} if 
@@ -105,20 +105,20 @@ Then $\spc{Y}$ is complete.
 \end{thm}
 
 \parit{Proof.}
-Choose a Cauchy sequence $y_1,y_2,\dots$ in $\spc{Y}$.
+Choose a Cauchy sequence $y_n$ in $\spc{Y}$.
 Passing to a subsequence if necessary, we may assume that $\dist{y_n}{y_{n+1}}{\spc{Y}}< \tfrac1{2^n}$ for each~$n$.
 
 Denote by $\Lip$ a co-Lipschitz constant for $\map$.
-Note that  there is a sequence $x_1,x_2,\dots$ in $\spc{X}$
+Note that  there is a sequence $x_n$ in $\spc{X}$
 such that
-\[\map(x_n)=y_n\quad \text{and}\quad \dist{x_n}{x_{n+1}}{\spc{X}}< \tfrac{\Lip}{2^n}.\eqlbl{eq:colip+1/2n}\]
+\[\map(x_n)=y_n\quad \text{and}\quad \dist{x_n}{x_{n+1}}{\spc{X}}< \tfrac{\Lip}{2^n}\eqlbl{eq:colip+1/2n}\]
 for each $n$. 
-Indeed, such a sequence $x_n$ can be constructed recursively. 
+Indeed, such a sequence can be constructed recursively. 
 Assuming that the points $x_1,\dots,x_{n-1}$ are already constructed, 
-the existence of $x_n$ satisfying \ref{eq:colip+1/2n}
+the existence of a sequence $x_n$ satisfying \ref{eq:colip+1/2n}
 follows since $\map$ is $\Lip$-co-Lipschitz.
 
-Notice that $(x_n)$ is Cauchy.
+Notice that the sequence $x_n$ is Cauchy.
 Since $\spc{X}$ is complete, $(x_n)$ converges in $\spc{X}$; denote its limit by $x_\infty$ 
 and set $y_\infty= \map(x_\infty)$.
 Since $\map$ is continuous,
