@@ -784,7 +784,7 @@ Thus, point-on-side comparison (\ref{point-on-side}) follows.
 \qeds
 
 Note that in the proof of  ``if''-part we could use a slightly weaker version of the hinge comparison (\ref{angle}).
-Namely we proved the following lemma which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
+Namely we proved the following lemma, which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
 
 \begin{thm}{Short hinge lemma}\label{lem:devel-glob}
 Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined, 
@@ -807,8 +807,8 @@ Then $\spc{L}$ is $\Alex\kappa$.
 \section{Local definitions and globalization}\label{sec:loc}
 
 
-In this section we discuss locally $\Alex{\kappa}$ spaces; 
-in particular, we prove the {}\emph{globalization theorem} --- equivalence of local and global definitions for complete length spaces.
+In this section we discuss locally $\Alex{\kappa}$ spaces.
+In particular, we prove the {}\emph{globalization theorem}: equivalence of local and global definitions for complete length spaces.
 
 The following theorem summarizes equivalent definitions of locally $\Alex{\kappa}$ spaces
 
@@ -948,7 +948,7 @@ This follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 
 In the proof of the globalization theorem 
 we will use three lemmas.
-First is the short hinge lemma (\ref{lem:devel-glob}) --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and is slightly weaker in case $\kappa>0$.
+The first is the short hinge lemma (\ref{lem:devel-glob}), which gives a characterization of $\Alex\kappa$ spaces that is the same as the hinge comparison condition \ref{angle} if $\kappa\le 0$ and is a slightly weaker condition if  $\kappa>0$.
 
 The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
 
@@ -1087,20 +1087,18 @@ this yields
 Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
-The final part of the proof above resembles the \emph{cat's cradle construction}introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
+The final part of the proof above resembles the \emph{cat's cradle construction} introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
 
 The following lemma works in all complete spaces; it will be used as a substitute for the  existence of a minimum point of a continuous function on a compact space.
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
-Let $\spc{X}$ be a complete metric space,
-$p\in \spc{X}$
-and $r\:\spc{X}\to \RR$ be a function and $\eps>0$.
+Let $\spc{X}$ be a complete metric space. Suppose $p\in \spc{X}$,  $r\:\spc{X}\to \RR$ is a function, and $\eps>0$.
 Assume that the function $r$ is strictly positive in $\cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ and
 $\varliminf_{n}r(x_n)>0$ for any convergent sequence 
 $x_n\to x\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$. 
 
-Then, there is a point $p^*\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ such that 
+Then there is a point $p^*\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ such that 
 
 \begin{subthm}{}$r(p^*)\le r(p)$ and
 \end{subthm}
@@ -1138,7 +1136,7 @@ Exactly the same argument as in the proof of Theorem~\ref{thm:almost.geod}
 shows that $\spc{L}$ is G-delta geodesic.
 By Theorem~\ref{angle-loc}, 
 for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \mathopen{]}y z\mathclose{[}$, then
+and moreover, if $x\in \mathopen{]}y z\mathclose{[}$ then
 \[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
 Let us denote by $\ComRad(p,\spc{L})$ 
@@ -1187,15 +1185,16 @@ and
 \[\ComRad(q,\spc{L})\z> (1-\eps)\cdot r^*\eqlbl{comrad(q)}\] 
 for any $q\in\cBall[p^*,\tfrac{1}{\eps}\cdot r^*]$. 
 
-Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and  an $\ell$ slightly bigger than $r^*$ leads to a contradiction.
+Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and  $\ell$ slightly bigger than $r^*$ leads to a contradiction.
 
 \parit{General case.}
 Let us construct $p^*\in\spc{L}$ as in the previous case.
-Since $\spc{L}$ is not geodesic, we can not apply the key lemma directly.
-Instead, let us pass to the ultrapower $\spc{L}^\o$ which
+Since $\spc{L}$ is not geodesic, we cannot apply the key lemma directly.
+Instead, let us pass to the ultrapower $\spc{L}^\o$, which
  is a geodesic space (see \ref{obs:ultralimit-is-geodesic}).
 
-According to Theorem~\ref{thm:=def-loc},
+%According to 
+In Theorem~\ref{thm:=def-loc},
 inequality \ref{comrad(q)} implies that 
 condition  \ref{curv>=k} holds for some fixed $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{100}
 >0$ at any point $q\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}$.
@@ -1203,18 +1202,18 @@ Therefore a similar statement is true in the ultrapower $\spc{L}^\o$;
 that is,
 for any point
 $q_\o\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}^\o$, 
-condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
+condition~\ref{curv>=k} holds for, say, $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
 
 
 Note that $r^*\ge\ComRad(p^*,\spc{L}^\o)$.
-Therefore we can apply the lemma on almost minimum 
+Therefore we can apply the lemma on almost minimum  
 at the point $p^*$ to the function $x\z\mapsto\ComRad(x,\spc{L}^\o)$
 and $\eps'=\sqrt\eps=0.01$.
 
-For the obtained point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$ 
+For the resulting point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$, 
 and 
 $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p^{{*}{*}},\tfrac{1}{\eps'}\cdot r^{{*}{*}}]$. 
-Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and an $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
+Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and for $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
 
