@@ -1228,7 +1228,7 @@ All proofs in this section can be easily modified to use only the local definiti
 In a $\Alex{}$ space, geodesics do not bifurcate.
 
 More precisely, let $\spc{L}$ be a $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics. Then:
-\begin{subthm}{nonsplit} If  there is an $\eps>0$, such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
+\begin{subthm}{nonsplit} If  there is $\eps>0$ such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
 for all $t\in[0,\eps)$, 
 then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
 \end{subthm}
@@ -1271,7 +1271,7 @@ Let
 Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
 Thus from $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
 
-\parit{(\ref{SHORT.angle=0})} From hinge comparison \ref{angle} 
+\parit{(\ref{SHORT.angle=0})} From hinge comparison \ref{angle}, 
 \[\mangle\hinge p x y=0\quad \Rightarrow\quad \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
 and thus ${\geod_{[p x]}(t)}={\geod_{[p y]}(t)}$ for all small $t$. 
 Therefore we can apply (\ref{SHORT.nonsplit}).
@@ -1295,7 +1295,7 @@ Thus the result follows from the triangle inequality for angles (\ref{claim:angl
 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont-cbb}
-Suppose  $(\spc{L}_n)$  is a sequence of $\Alex\kappa$ spaces,
+Suppose  $\spc{L}_n$  is a sequence of $\Alex\kappa$ spaces,
 % for each $n\in\NN$
  and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{L}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{L}_\o$.
@@ -1333,7 +1333,7 @@ Hence the result.
 \qeds
 
 \begin{thm}{Angle continuity}\label{cor:ang.cont-cbb}
-Let $(\spc{L}_n)$  be a sequence of complete length $\Alex\kappa$ spaces,
+Let $\spc{L}_n$  be a sequence of complete length $\Alex\kappa$ spaces,
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that sequences of points $p_n, x_n, y_n$ in $\spc{L}_n$ 
 converge  to points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$,
@@ -1517,7 +1517,7 @@ and for a sequence $t_n\to 0+$ we have
 \dist{q}{p}{}-t_n\cdot\cos(\phi-\eps).
 \eqlbl{eq:phi-eps}\]
 
-Set $x_n=\geod_{[p x]}(t_n)$.
+Let $x_n=\geod_{[p x]}(t_n)$.
 Clearly 
 \[\angk\kappa {x_n}p q>\pi-\phi+\tfrac\eps2\]
 for all large $n$.
@@ -1576,8 +1576,8 @@ Consider the function $f=\distfun{x}{}{}+\distfun{y}{}{}$.
 As follows from Lemma~\ref{concave-pi/2}, 
 $f$ is concave in $\oBall(z,\tfrac{\eps}{4})$.  
 Let $p\in\oBall(z,\tfrac{\eps}{4})$.  
-Choose a geodesic $[z p]$. 
-Set $h(t)=f\circ\geod_{[z p]}(t)$ and $\ell=\dist{z}{p}{}$.
+Choose a geodesic $[z p]$, 
+and let $h(t)=f\circ\geod_{[z p]}(t)$ and $\ell=\dist{z}{p}{}$.
 Clearly $h$ is concave.
 From the adjacent angle lemma (\ref{lem:sum=pi}), we have $h^+(0)=0$. 
 Therefore $h$ is nonincreasing which means that \[\dist{x}{p}{}+\dist{y}{p}{}
@@ -1594,7 +1594,7 @@ In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold wi
 From this, it is easy to see that $\spc{L}$ falls into one of the exceptional spaces described in the theorem.
 
 Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$, then the above argument applied to $\spc{L}^\o$ yields that $\spc{L}^\o$ is isometric to one of the exceptional spaces. 
-As all of those spaces are proper it means that $\spc{L}=\spc{L}^\o$.
+As all of those spaces are proper, $\spc{L}=\spc{L}^\o$.
 \qeds
 
 \begin{thm}{Lemma}\label{concave-pi/2}
@@ -1617,8 +1617,9 @@ Show that the action of $G$ has a fixed point in $\spc{L}$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:kleiner}
-Let $\spc{L}$ be a complete length $\Alex{1}$ space.
-Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\mathbb{S}^n$.
+Let $\spc{L}$ be a complete length $\Alex{1}$ space
+Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\mathbb{S}^n$
+(see Definition \ref{def: inequality-of-spaces}).
 \end{thm}
 
 {\sloppy 
@@ -1696,7 +1697,7 @@ a contradiction.
 Let $\kappa>0$.
 Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$ 
 of the model angle function $\angk\kappa{{*}}{{*}}{{*}}$.
-This definition works well for $\Alex{}$ spaces,  for $\CAT{}$ spaces there is a similar but different definition.
+This definition works well for $\Alex{}$ spaces; for $\CAT{}$ spaces there is a similar but different definition.
 Some authors define the comparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$.
 
 \begin{thm}{Definition of extended angle}\label{def:extended-angle}
@@ -1715,7 +1716,7 @@ $\hinge p q r$ we have
 $\mangle\hinge p q r
 \ge\angk{\kappa+} p q r$.
 
-Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated using the following rules:
+Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated using the following rule:
 
 \begin{subthm}{} $\angk{\kappa+} p q r=\angk{\kappa} p q r$ if $\angk{\kappa} p q r$ is defined;
 \end{subthm}
@@ -1731,7 +1732,7 @@ Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated usi
 From Corollary~\ref{cor:CAT>k-sence}, $\Kappa<\kappa$ implies that any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$; 
 thus the extended angle comparison follows from the definition.
 
-The rules for calculating extended angle is an easy consequence of its definition.
+The rule for calculating extended angle is an easy consequence of its definition.
 \qeds
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
