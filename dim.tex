@@ -28,12 +28,16 @@ and in the authors' translation it was ``strainer''.
 Neither seems intuitive, 
 so we decided to switch to ``strut''.
 
+
+
+
 \begin{thm}{Definition of struts}\label{def:strut-I}
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
 We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \index{strutting point array}\emph{$\kappa$-strutting} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
 \end{thm} 
 
+The following definition is motivated by the observation that $k=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer  $k>0$.
 
 
 \begin{thm}{Definition}\label{def:rank}
@@ -43,7 +47,7 @@ Let us define rank of $\spc{L}$ at $p$ as
 \[\rank_p=\rank_p\spc{L}
 \df\pack_{\pi/2}\Sigma_p-1\]
 (see Section ??).
-
+%%??? V:  what reference is this meant to be? I don't see any need for a reference here. packing numbers have been previously defined.
 \end{thm}
 
 
@@ -162,7 +166,7 @@ $f_{\bm{x}}\:\spc{L}\to \RR$ defined by
 \[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\distfun{b}{}{},\]
 where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
 Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
-Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve that starts at $p$.
+Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve (see Chapter~\ref{chap:grad})  that starts at $p$.
 
 \begin{clm}{}\label{clm:|a alpha_x|=x}
 If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$ we have
@@ -288,8 +292,9 @@ Thus (\ref{SHORT.thm:right-inverse-function:Hoelder}).
 Further, note that 
 \[\dist{p}{\map(\bm{x})}{}
 \le (1+\eps)\cdot t_0(\bm{x})
-\le\tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}| holds.
+\le\tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}| 
 \eqlbl{co-lip}\]
+holds.
 
 Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
 The inequality \ref{co-lip} for the resulting map $\map'$ implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
@@ -363,6 +368,7 @@ To prove Theorem \ref{thm:dim-infty}  we will need the following three propositi
 \begin{thm}{Proposition}\label{E=T}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
 Assume there is a distance-preserving cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$ (see Section ??).
+% ???V: what reference is meant to be here?
 Then either
 \begin{subthm}{}
  $\Im\iota=\T_p\spc{L}$, or
@@ -415,8 +421,9 @@ Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,\dots, x^n\in\oBall(p,R)$ be a maximal 
 that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Without loss of generality we may assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
-Choose a factor $s>0$ so that $\bar r>s\cdot(\dist{p}{\bar p}{}+R)$, where ??.
-%S. need to define \bar r
+Choose a factor $1>s>0$ so that $\bar R>s\cdot(\dist{p}{\bar p}{}+R)$.
+%, where ??.
+%S. need to define \bar r, ??? V: I changed $\bar r$ to $\bar R$.
 For each $i$, take $\bar x^i\in[\bar p x^i]$ so that 
 $\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
 From \ref{cor:monoton:2-sides},
@@ -481,7 +488,7 @@ The proof of Theorem \ref{thm:dim-infty} is essentially done in \ref{E=T}, \ref{
 \ref{thm:right-inverse-function}; 
 now we  assemble the proof from these parts.
 
-We will prove implications 
+We will prove the implications 
 \[\textrm{(\ref{SHORT.LinDim+}) 
 $\Rightarrow$ 
 (\ref{SHORT.LinDim}) 
@@ -670,7 +677,7 @@ Thus it  remains to prove the following claim, which is a partial case of the le
 
 \begin{clm}{}
 If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\mathbb{S}^{m-1}$,
-$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all $i$, and
+$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all  $i$, and
 $\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\not=j$,
 then $\kay\le m$.
 \end{clm}
