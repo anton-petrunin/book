@@ -15,7 +15,7 @@ $\Lob{}\kappa$ polyhedral space
 we will understand a triangulation as in the definition.
 If we do not wish to specify $\kappa$, we will say that $\spc{P}$ is a \index{polyhedral space}\emph{polyhedral space}. 
 
-Applying scaling we can assume that $\kappa=1$, $0$, or $-1$.
+By scaling we can assume that $\kappa=1$, $0$, or $-1$.
 \begin{subthm}{}
 The $\Lob{}1$-polyhedral spaces will also be 
 called 
@@ -26,7 +26,7 @@ called
 The $\Lob{}0$-polyhedral spaces will also be 
 called 
 \index{Euclidean polyhedral space}\emph{Euclidean polyhedral spaces};
-\end{subthm}er
+\end{subthm}
 
 \begin{subthm}{}
 The $\Lob{}{-1}$-polyhedral spaces will also be 
@@ -52,18 +52,18 @@ in one (and therefore any) triangulation of~$\spc{P}$.
 Let $\spc{P}$ be a polyhedral space
 and $\sigma$ be a simplex in its triangulation~$\tau$.
 
-The simplices that contain $\sigma$
+The simplexes that contain $\sigma$
 form an abstract simplicial complex called the \index{link}\emph{link} of $\sigma$, 
 denoted by $\Link_\sigma$.
 If $m=\dim\sigma$,
-then the set of vertices of $\Link_\sigma$
-is formed by the $(m+1)$-simplices that contain $\sigma$;
-the set of its edges are formed by the $(m+2)$-simplices 
+then the set of vertexes of $\Link_\sigma$
+is formed by the $(m+1)$-simplexes that contain $\sigma$;
+the set of its edges are formed by the $(m+2)$-simplexes 
 that contain $\sigma$, and so on.
 
 The link $\Link_\sigma$
 can be identified with the subcomplex of $\tau$ 
-formed by all the simplices $\sigma'$ 
+formed by all the simplexes $\sigma'$ 
 such that $\sigma\cap\sigma'=\emptyset$ 
 but both $\sigma$ and $\sigma'$ are faces of a simplex of $\tau$.
 
@@ -197,7 +197,7 @@ The link of any simplex of dimension $\le m-2$ is connected.
 \end{thm}
 
 \parbf{Remarks.}
-The condition (\ref{SHORT.thm:poly-CBB:connected})
+Condition (\ref{SHORT.thm:poly-CBB:connected})
 can be reformulated in the following way:
 
 \begin{itemize}
@@ -283,7 +283,7 @@ is a set of distinct vertices of $\mathcal{S}$
 that are pairwise joined by edges, then the vertices $v_0,\dots,v_\kay$
 span a $\kay$-simplex in $\mathcal{S}$.
 
-If the above condition is satisfied only for $\kay=2$, 
+If the above condition is satisfied for $\kay=2$, 
 then we say $\mathcal{S}$ satisfies 
 the \index{no-triangle condition}\emph{no-triangle condition}.
 \end{thm}
@@ -349,7 +349,7 @@ if and only if $\tau$ is flag.
 \end{thm}
 
 \parit{Proof; ``only-if'' part.} 
-Assume there are three vertices $v_1,v_2$ and $v_3$ of $\tau$
+Assume there are three vertexes $v_1,v_2$ and $v_3$ of $\tau$
 that are pairwise joined by edges 
 but do not span a simplex.
 Note that in this case 
@@ -387,7 +387,7 @@ in a flag complex $\spc{S}$ with right-angled metric has length at least $2\cdot
 
 Fix a flag complex $\spc{S}$.
 Recall that the  \index{star of vertex}\emph{star} of a vertex $v$ (briefly $\overline \Star_v$)
-is formed by all the simplices  containing $v$. Similarly, $\Star_v$,   the open star of $v$, is the union of all simplices containing $v$ with faces opposite $v$ removed.
+is formed by all the simplexes  containing $v$. Similarly, $\Star_v$,   the open star of $v$, is the union of all simplexes containing $v$ with faces opposite $v$ removed.
 
 Choose a simplex $\sigma$ that contains a point of $\gamma$.
 Let $v$ be a vertex of $\sigma$.
@@ -411,13 +411,13 @@ Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 
 \begin{thm}{Exercise}\label{ex:tree-product}
 Let $p$ be a point in a product of metric trees.
-Show a closed geodesic in the space of directions $\Sigma_p$ has length either $2\cdot\pi$ or at least $3\cdot\pi$.
+Show that a closed geodesic in the space of directions $\Sigma_p$ has length either $2\cdot\pi$ or at least $3\cdot\pi$.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:obtuce-flag}
 Assume that a spherical polyhedral space $\spc{P}$
-admits a triangulation $\tau$ such that all edges of all simplexes in $\tau$ are at least $\tfrac\pi2$.
+admits a triangulation $\tau$ such that all edgelenghs of all simplexes in $\tau$ are at least $\tfrac\pi2$.
 Show that $\spc{P}$ is $\CAT{1}$
 if $\tau$ is flag.
 \end{thm}
@@ -425,14 +425,14 @@ if $\tau$ is flag.
 \begin{thm}{Exercise}\label{ex:short+commuting}
 Let $\spc{U}$ be a complete length $\CAT0$ space
 and $\phi_1,\phi_2,\dots,\phi_k\:\spc{U}\to \spc{U}$ be commuting short retractions; 
-that is 
+that is, 
 \begin{itemize}
 \item $\phi_i\circ\phi_i=\phi_i$ for each $i$;
 \item $\phi_i\circ\phi_j=\phi_j\circ\phi_i$ for any $i$ and $j$;
 \item $\dist{\phi_i(x)}{\phi_i(y)}{\spc{U}}\le \dist{x}{y}{\spc{U}}$ for each $i$ and any $x,y\in\spc{U}$.
 \end{itemize}
-Set $A_i=\Im \phi_i$ for all $i$;
-note that each $A_i$ is a weakly convex set.
+Set $A_i=\Im \phi_i$ for all $i$.
+Note that each $A_i$ is a weakly convex set.
 
 Assume $\Gamma$ is a finite graph 
 (without loops and multiple edges) 
@@ -450,9 +450,9 @@ Louis Billera,
 Susan Holmes,
 and  Karen Vogtmann \cite{billera-holmes-vogtmann}.
 
-Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertices
+Let $\spc{T}_n$ be the set of all metric trees with $n$ end-vertexes
 labeled by $a_1,\dots,a_n$.
-To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a_1,\dots,a_n$ and all the other vertices of degree 3,  
+To describe one tree in $\spc{T}_n$ we may fix a topological tree $\tau$ with end vertices $a_1,\dots,a_n$ and all the other vertexes of degree 3,  
 and prescribe the lengths of $2\cdot n-3$ edges.
 If the length of an edge is $0$, we assume that edge degenerates;
 such a tree can be also described using a different topological tree $\tau'$.
@@ -468,7 +468,7 @@ Show that $\spc{T}_n$ with the described metric is $\CAT0$.
 \parbf{Cubical complexes.}
 The definition of a cubical complex
 mostly repeats the definition of a simplicial complex, 
-with simplices replaced by cubes.
+with simplexes replaced by cubes.
 
 Formally, a \index{cubical complex}\emph{cubical complex} is defined as a subcomplex 
 of the unit cube in Euclidean space of large dimension;
@@ -516,7 +516,7 @@ could resolve the following problem.
 
 \begin{thm}{Braid space problem}
 Consider $\CC^n$ with coordinates $z_1,\dots,z_n$.
-Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$, for all $i\ne j$,
+Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$ for all $i\ne j$,
 pass to the universal cover, and consider the completion $\spc{B}_n$ 
 of the obtained space.
 
