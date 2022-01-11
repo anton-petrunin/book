@@ -1,3 +1,5 @@
+%%!TEX root = the-polyhedral.tex
+%arXiv
 \chapter{Polyhedral spaces}
 
 \section{Definitions}
@@ -42,10 +44,10 @@ most of the statements below admit straightforward generalizations
 to \index{polyhedral space!locally polyhedral space}\emph{locally polyhedral space};
 that is, complete length spaces,  
 any point of which admits a closed neighborhood isometric to a polyhedral space.
-The latter class of spaces includes in particular the infinite covers of polyhedral spaces.
+The latter class of spaces includes in particular  infinite covers of polyhedral spaces.
 
 The dimension of a polyhedral space $\spc{P}$
-is defined as the maximal dimension of the simplex 
+is defined as the maximal dimension of a simplex 
 in one (and therefore any) triangulation of~$\spc{P}$.
 
 \parbf{Links.}
@@ -67,7 +69,7 @@ formed by all the simplexes $\sigma'$
 such that $\sigma\cap\sigma'=\emptyset$ 
 but both $\sigma$ and $\sigma'$ are faces of a simplex of $\tau$.
 
-The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in $\sigma$.
+The points in $\Link_\sigma$ can be identified with the normal directions to $\sigma$ at a point in the interior of $\sigma$.
 The angle metric between directions makes  $\Link_\sigma$ into a spherical polyhedral space.
 We will always consider the link with this metric.
 
@@ -130,12 +132,12 @@ is $(2\cdot\pi)$-simply connected.
 
 \parit{Proof.}
 We will only give a proof of the ``if'' part;
-the ``only if'' part is evident.
+the ``only if'' part is evident by the generalized Hadamard--Cartan theorem \ref{thm:hadamard-cartan-gen} and theorem~\ref{thm:warp-curv-bound:cbb}.
 
 Let us apply induction on $\dim\spc{P}$.
-The {}\emph{Base} case $\dim\spc{P}=0$ is evident.
+The  {}\emph{base}  case $\dim\spc{P}=0$ is evident.
 
-\parit{Step.}
+\parit{Induction Step.}
 Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
 
 Fix a point $p\in\spc{P}$.
@@ -204,11 +206,11 @@ can be reformulated in the following way:
  \item[{\it \ref{SHORT.thm:poly-CBB:connected}$\,'\!$)}] 
 Any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
 $\gamma_n\:[0,1]\to \spc{P}$ 
-that cross only simplexes of dimension $m$ and $m-1$.
+that cross only simplices of dimension $m$ and $m-1$.
 \end{itemize}
 
 Further, modulo the other conditions,
-the condition (\ref{SHORT.thm:poly-CBB:2pi})
+ condition (\ref{SHORT.thm:poly-CBB:2pi})
 is equivalent to the following:
 
 
@@ -224,7 +226,7 @@ We will only give a proof of the ``if'' part.
 The ``only if'' part is similar and is left to the reader.
 
 We apply induction on $m$.
-The {}\emph{Base} case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
+The {}\emph{base} case $m=1$ follows from the assumption (\ref{SHORT.thm:poly-CBB:m-1}).
 
 \parit{Step.}
 Assume that the theorem is proved for polyhedral spaces  of dimesnion less than $m$.
@@ -292,7 +294,7 @@ Note that every flag complex is determined by its 1-skeleton.
 
 \begin{thm}{Exercise}\label{ex:barycenric-flag}
 Show that the barycentric subdivision of any simplicial complex is a flag complex.
-Conclude that any simplicial complex is homeomorphic to a compact length $\CAT1$ space.
+Conclude that any finite  simplicial complex is homeomorphic to a compact length $\CAT1$ space.
 \end{thm}
 
 
@@ -321,7 +323,7 @@ Applying the same observation for each edge we get that $\spc{S}$
 includes a 3-simplex for any complete graph with 4 vertices.
 Repeating this observation 
 for triangles, 
-4-simplexes,
+4-simplices,
 5-simplices
 and so on we get that $\spc{S}$ is flag.
 \qeds
@@ -356,7 +358,7 @@ Note that in this case
 $$\mangle\hinge{v_1}{v_2}{v_3}=\mangle\hinge{v_2}{v_3}{v_1}=\mangle\hinge{v_3}{v_1}{v_1}=\pi.$$
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
-The join of the geodesics $[v_1v_2]$, $[v_2v_3]$ and $[v_3v_1]$
+The concatenation of the geodesics $[v_1v_2]$, $[v_2v_3]$ and $[v_3v_1]$
 forms a locally geodesic loop in $\spc{P}$. 
 \end{clm}
 
@@ -403,7 +405,7 @@ the local geodesic $\gamma$ must enter another simplex,
 say $\sigma'$, 
 which has a vertex $v'$ not joined to $v$ by an edge.
 
-Since $\tau$ is flag, the stars $\Star_v$ and $\Star_{v'}$
+Since $\tau$ is flag, the open  stars $\Star_v$ and $\Star_{v'}$
 do not overlap.
 The same argument as above shows that $\gamma$ spends time $\pi$ on every visit to $\Star_{v'}$.
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
@@ -417,7 +419,7 @@ Show that a closed geodesic in the space of directions $\Sigma_p$ has length eit
 
 \begin{thm}{Exercise}\label{ex:obtuce-flag}
 Assume that a spherical polyhedral space $\spc{P}$
-admits a triangulation $\tau$ such that all edgelenghs of all simplexes in $\tau$ are at least $\tfrac\pi2$.
+admits a triangulation $\tau$ such that all edgelengths of all simplexes in $\tau$ are at least $\tfrac\pi2$
 Show that $\spc{P}$ is $\CAT{1}$
 if $\tau$ is flag.
 \end{thm}
@@ -520,7 +522,7 @@ Let us remove from $\CC^n$ the complex hyperplanes $z_i=z_j$ for all $i\ne j$,
 pass to the universal cover, and consider the completion $\spc{B}_n$ 
 of the obtained space.
 
-Is it true that $\spc{B}_n$ is $\CAT0$ for any $n$.
+Is it true that $\spc{B}_n$ is $\CAT0$ for any $n$?
 \end{thm}
 
 The above question has an affirmative answer for $n\le 3$ and is open for all $n\ge 4$ \cite{charney-davis-1993,panov-petrunin}.
