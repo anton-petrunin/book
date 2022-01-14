@@ -46,8 +46,9 @@ and $p\in \spc{L}$.
 Let us define rank of $\spc{L}$ at $p$ as 
 \[\rank_p=\rank_p\spc{L}
 \df\pack_{\pi/2}\Sigma_p-1\]
-(see Section ??).
+(see Section \ref{sec:metric spaces}).
 %%??? V:  what reference is this meant to be? I don't see any need for a reference here. packing numbers have been previously defined.
+%  S:  A reference to the notation seems helpful. I tried to add the reference but it runs as Section 2.1 not 2.2 as wanted ...?
 \end{thm}
 
 
@@ -61,11 +62,11 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space
 and $p\in \spc{L}$.
 Then the following conditions are equivalent:
 
-\begin{subthm}{lem:stut<=>rank:rank}$\rank_p\ge\kay$
+\begin{subthm}{lem:stut<=>rank:rank}$\rank_p\ge\kay$,
 \end{subthm}
 
 \begin{subthm}{lem:stut<=>rank:strut}
-There is a  point array $(a^0,a^1,\dots,a^\kay)$
+there is a  point array $(a^0,a^1,\dots,a^\kay)$
 that is $\kappa$-strutting at $p$. 
 \end{subthm}
 \end{thm}
@@ -86,7 +87,7 @@ for all $i\not=j$.
 In particular $\pack_{\pi/2}\Sigma_p\ge \kay+1$.
 
 \parit{(\ref{SHORT.lem:stut<=>rank:rank})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:strut}).} 
-Assume $\xi^0,\xi^1,\dots,\xi^\kay$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\not=j$.
+Assume $(\xi^0,\xi^1,\dots,\xi^\kay)$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\not=j$.
 
 Without loss of generality, 
 we may assume that each direction $\xi^i$ is geodesic;
@@ -145,8 +146,8 @@ The distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipsch
 
 Part \ref{SHORT.thm:right-inverse-function:open-map} of the theorem 
 is closely related to \cite[Theorem 5.4]{burago-gromov-perelman} by Burago, Gromov and Perelman, 
-but the proof presented here is different; 
-yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
+but the proof presented here is different.
+Yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
 
 %\parbf{Remark for AKP.} It seems that the set $\Im \map$ is $\kay$-rectifiable; that is, it lies in an image of a Lipschitz map from bounded domain of $\RR^\kay$ to $\spc{L}$. It seems I have a proof, but it is not yet clear we need it.???
 
@@ -270,7 +271,7 @@ Thus (\ref{222}) follows from \ref{inq-b}, since $\eps<\tfrac{1}{10}$.
 Therefore \ref{clm:|a alpha_x|=x} holds  if $\spc{L}$ is geodesic.
 If $\spc{L}$ is not geodesic,
 perform the above estimate in $\spc{L}^\o$, the ultrapower  of $\spc{L}$. 
-(Recall that according to \ref{obs:ultralimit-is-geodesic}, $\spc{L}^\o$ is geodesic.
+(Recall that according to \ref{obs:ultralimit-is-geodesic}, $\spc{L}^\o$ is geodesic.)
 This completes the proof of  \ref{clm:|a alpha_x|=x}. 
 \claimqeds
 
@@ -296,7 +297,7 @@ Further, note that
 \eqlbl{co-lip}\]
 holds.
 
-Note that one can repeat the above construction for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
+The above construction may be repeated for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
 The inequality \ref{co-lip} for the resulting map $\map'$ implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
 there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
 \[\dist{p'}{q'}{}
@@ -328,7 +329,11 @@ There is a point $p\in\spc{L}$ that admits a $\kappa$-strutting array $(b,a^1,\d
 \end{subthmA}
 
 \begin{subthmA}{LinDim+} Let $\Euk^m$ be the set 
-of all points $p\in \spc{L}$ such that there is a distance-preserving cone embedding $\EE^m\hookrightarrow \T_p$.
+of all points $p\in \spc{L}$ such that there is a distance-preserving 
+%cone 
+embedding $\EE^m\hookrightarrow \T_p$
+that preserves the cone structure 
+(see Section  \ref{sec: tangent space}).
 Then $\Euk^m$  contains a dense G-delta set in $\spc{L}$.
 \end{subthmA}
 
@@ -354,7 +359,7 @@ In particular:
 For finite-dimensional spaces, Theorem~\ref{thm:dim-finite} gives a stronger version 
 of the theorem above.
 
-The proof of the above theorem with exception of  statement~(\ref{SHORT.TopDim}) was given in \cite{plaut:dimension}.
+The proof of the above theorem with the exception of  statement~(\ref{SHORT.TopDim}) was given in \cite{plaut:dimension}.
 At that time, it was not known whether for any complete length $\Alex\kappa$ space $\spc{L}$,
 \[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty.\]
 The latter implication was proved by Grigory Perelman and the third author \cite{perelman-petrunin:qg};
@@ -367,14 +372,18 @@ To prove Theorem \ref{thm:dim-infty}  we will need the following three propositi
 
 \begin{thm}{Proposition}\label{E=T}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
-Assume there is a distance-preserving cone embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$ (see Section ??).
+Assume there is a distance-preserving 
+%cone 
+embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$ 
+that preserves the cone structure.
 % ???V: what reference is meant to be here?
 Then either
 \begin{subthm}{}
  $\Im\iota=\T_p\spc{L}$, or
 \end{subthm}
 
-\begin{subthm}{} there is a point $p'$ arbitrarily close to $p$ such that there is a distance-preserving cone embedding $\iota':\EE^{m+1}\hookrightarrow \T_{p'}\spc{L}$.
+\begin{subthm}{} there is a point $p'$ arbitrarily close to $p$ such that there is a distance-preserving embedding $\iota'\:\EE^{m}\hookrightarrow \T_{p'}\spc{L}$ 
+that preserves the cone structure.
 \end{subthm}
 \end{thm}
 
@@ -386,10 +395,10 @@ where $\mathbb{S}^{m-1}\subset \EE^m$ is the unit sphere.
 
 Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\mathbb{S}^{m-1})$. 
 Choose a maximal $\eps$-packing in $\iota(\mathbb{S}^{m-1})$;
-that is, an array of directions $\zeta^1,\zeta^2,\dots,\zeta^n\in \iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+that is, an array  $(\zeta^1,\zeta^2,\dots,\zeta^n)$ of directions in $\iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
 
-Choose an array of points $x,z^1,z^2,\dots,z^n\in\spc{L}$ such that
-$\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$;
+Choose an array $(x,z^1,z^2,\dots,z^n)$  of points in $\spc{L}$ such that
+$\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$; 
 here we write ``$\approx$'' for ``sufficiently close''.
 We can choose this array so 
 $\angk{\kappa}p x{z^i}>\eps$ for all $i$ 
@@ -417,9 +426,9 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. Then
 
 \parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
 
-Let $n=\pack_{\eps}\oBall(p,R)$ and $x^1,\dots, x^n\in\oBall(p,R)$ be a maximal $\eps$-packing;
+Let $n=\pack_{\eps}\oBall(p,R)$ and ${\{x^1,\dots, x^n}\}$ be a maximal $\eps$-packing in $\oBall(p,R)$;
 that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
-Without loss of generality we may assume that $x^1,x^2,\dots, x^n\in \Str(\bar p)$.
+Without loss of generality we may assume the $x^i$ are in $Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
 Choose a factor $1>s>0$ so that $\bar R>s\cdot(\dist{p}{\bar p}{}+R)$.
 %, where ??.
