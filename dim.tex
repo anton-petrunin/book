@@ -466,17 +466,17 @@ such that $\dim\Lin_q>m$ for any $q\in A$.
 \end{thm}
 
 \parit{Proof.} 
-Choose a maximal $\eps$-packing in $\oBall(p,r)$;
-that is, an array of points $x^1,x^2,\dots, x^n\in\oBall(p,r)$ so that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
+Choose a maximal $\eps$-packing in $\oBall(p,r)$,
+that is, an array  $(x^1,x^2,\dots, x^n)$ of points in $\oBall(p,r)$ such that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
 Choose a neighborhood $\Omega\ni p$
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
-Set 
+Let 
 \[A= \Omega\cap\Str(x^1,x^2,\dots,x^n).\]
 According to Theorem \ref{thm:almost.geod}, $A$ is a G-delta set that is dense in $\Omega$.
 
 Assume $\kay=\dim\Lin_q\le m$ for some $q\in A$.
-Consider an array of vectors $v^1,v^2,\dots,v^n\in \Lin_q$,
-$v^i=\ddir{q}{x^i}$.
+Consider an array $(v^1,v^2,\dots,v^n)$ of vectors in $\Lin_q$,
+where $v^i=\ddir{q}{x^i}$.
 Clearly 
 \[|v^i|=\dist{q}{x^i}{}<r,\] 
 and from hinge comparison (\ref{angle})
@@ -484,7 +484,7 @@ we have
 \[\side\kappa \hinge \0{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps.\]
 Note that the ball $\oBall(\0,r)_{\Lin_q}$ equipped with the metric $\rho(v,w)\z=\side\kappa \hinge \0{v}{w}$ is isometric to 
 $\cBall[r]_{\Lob{\kay}{\kappa}}$.
-Thus,
+Thus
 \[
 \pack_\eps\cBall[r]_{\Lob{\kay}{\kappa}}
 \ge
@@ -517,8 +517,8 @@ The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivia
 
 \parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
 Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
-Clearly one can choose an array of directions $\xi^0,\xi^1,\dots,\xi^m\in\Lin_p$ so that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ for all $i\not=j$.
-Choose an array of points $x^0,x^1,\dots,x^m\in\spc{L}$ so that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
+Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ for all $i\not=j$.
+Choose an array  $(x^0,x^1,\dots,x^m)$ of points in $\spc{L}$ such that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
 in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
 Choose points $a^i\in\mathopen{]}p x^i\mathclose{]}$ sufficiently close to $p$.
 This can be done so that each $\angk\kappa p{a^i}{a^j}$ is arbitrarily close to $\mangle\hinge p{a^i}{a^j}$,
@@ -529,7 +529,8 @@ Finally, set $b=a^0$.
 
 
 \parit{(\ref{SHORT.thm:dim-infty:rank})$\Rightarrow$(\ref{SHORT.pack}).} 
-Let $p\in \spc{L}$ be a point that admits a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$.
+Let $p\in \spc{L}$ be a point that admits a $\kappa$-strutting array $(b,a^1,\dots, a^m)$ 
+of points in $\spc{L}$.
 The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
 implies that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
 \[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{}),\]
@@ -566,7 +567,7 @@ contains a G-delta set that is dense in a neighborhood of any point $q'\in\spc{L
 Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with a distance-preserving cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
 
 Repeating the construction in (\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}), 
-we get a $\kappa$-strutting array $b,a^1,\dots, a^m\in \spc{L}$ for $p$.
+we get a $\kappa$-strutting array $(p,a^1,\dots, a^m)$  for $p$.
 
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
 we obtain a $C^{\frac{1}{2}}$-submap 
@@ -583,8 +584,8 @@ Since $\TopDim W=m$,
 Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
 \[\HausMes_m W>0.\]
 
-Given $\eps>0$, consider a maximal $\eps$-packing of $W$;
-that is, an array of points $(x^1,x^2,\dots,x^n)$ in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+Given $\eps>0$, consider a maximal $\eps$-packing of $W$, 
+that is, an array $(x^1,x^2,\dots,x^n)$ of points  in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
 
 By the definition of Hausdorff measure,
@@ -633,12 +634,12 @@ for all $i$ and $j$.
 
 \begin{thm}{Definition}\label{def:dist-chart}
 Suppose $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space.
-If a point array $b,a^1,a^2,\dots,a^m$ 
+If a point array $(b,a^1,a^2,\dots,a^m)$ 
 and the value $R$ satisfy the conditions in Theorem~\ref{thm:inverse-function}, 
 then the restriction 
 $\bm{x}=\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$
 is called a \index{distance chart}\emph{distance chart},
-the restrictions $x^i=\distfun{a^i}{}{}|_{\oBall(p,R)}$ are called \index{distance chart!coordinates of a distance chart}\emph{coordinates}
+the restrictions $x^i=\distfun{a^i}{}{}|_{\oBall(p,R)}$ are called \index{distance chart!coordinates of a distance chart}\emph{coordinates}, 
 and the restriction $y=\distfun{b}{}{}|_{\oBall(p,R)}$ is called \index{distance chart!strut of a distance chart} the \emph{strut} of the distance chart.
 \end{thm}
 
@@ -712,7 +713,7 @@ Clearly, $\pack_{\frac\pi2}\mathbb{S}^{m-1}_+\ge m$.
 
 The opposite inequality is proved by  induction on $m$.
 The base case $m=1$ is obvious. 
-Assume $\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay}$ is an array of points in $\mathbb{S}^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
+Assume $(\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay})$ is an array of points in $\mathbb{S}^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
 Without loss of generality we can also assume that $\bar\zeta^\kay\in\partial \mathbb{S}^{m-1}_+$.
 For each $i<\kay$, 
 let $\check\zeta^i
@@ -797,7 +798,7 @@ Then the following statements are equivalent:
 \end{subthm}
 
 \begin{subthm}{thm:dim-finite:rank}
-$m$ is the maximal integer, such that there is a point $p\in\spc{L}$ that admits a $\kappa$-strutting array $b,a^1,\dots,a^m$.
+$m$ is the maximal integer such that there is a point $p\in\spc{L}$ that admits a $\kappa$-strutting array $(b,a^1,\dots,a^m)$.
 \end{subthm}
 
 \begin{subthm}{LinDim+-f} $\T_p\iso \EE^m$ for any point $p$ in a dense G-delta set of $\spc{L}$.
