@@ -911,23 +911,13 @@ Setting
                \end{matrix}\right.\]
 defines an $\RR$-action on $\spc{L}$.
 
-$\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$ is a closed convex subset of $\spc{L}$, and therefore forms an Alexandrov space.
+Consider the level set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
+it is a closed convex subset of $\spc{L}$, and therefore forms an Alexandrov space.
 Consider the map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
 Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
-
-Next, let $p=\gamma(0)$.
-For any point $x$ pick a shortest geodesic $[px]$. For any $t>0$ we have $\mangle\hinge p x {\gamma(t)} \ge \angk{0} p{x}{\gamma(t)}$ and  $\mangle\hinge p x {\gamma(-t)} \ge \angk{0} p{x}{\gamma(-t)}$.
-Therefore 
-\[\pi=\mangle\hinge p x {\gamma(t)}+\mangle\hinge p x {\gamma(-t)}\ge \angk{0} p{x}{\gamma(t)}+\angk{0} p{x}{\gamma(-t)}.\]
-Also, both $t\mapsto \angk{0} p{x}{\gamma(t)}$ and $t\mapsto \angk{0} p{x}{\gamma(-t)}$ are nonincreasing.
-On the other hand, the condition $\bus_+(x)+\bus_-(x)= 0$ means that 
-\[
-\lim_{t\to\infty}  \angk{0} p{x}{\gamma(t)}+ \angk{0} p{x}{\gamma(-t)}=\pi.
-\]
- Therefore  both $ \angk{0} p{x}{\gamma(t)}$  and $ \angk{0} p{x}{\gamma(-t)}$ are constant in $t$, and hence the triangles $\trig xp{\gamma(t)}$ and $\trig xp{\gamma(-t)}$ satisfy the Euclidean cosine law for any $t>0$. Together with the fact that $\bus_\pm$-gradient flows are isometries, this easily implies that $\spc{L}=X\oplus \gamma(\RR)$ for $X=\bus_+^{-1}(0)$.
 \qeds
-%???V: There are two arguments here given. One should be removed.
+
 
 
 \section{Radial curves}\label{sec:Radial curves: definition}
