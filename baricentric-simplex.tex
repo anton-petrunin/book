@@ -21,10 +21,10 @@ $\bm{v}\succcurlyeq\bm{w}$ if $v^i\ge w^i$ for each $i$.
 \end{thm}
 
 Given a subset $Q\subset \RR^{\kay+1}$, 
-denote by $\Up Q$,\label{PAGE.def:Up}
-the smallest upper set containing $Q$ 
-and 
-$\Min Q$, the set of minimal elements of $Q$ with respect to $\succcurlyeq$;
+denote by $\Up Q$ \label{PAGE.def:Up}
+the smallest upper set containing $Q$,  
+and by 
+$\Min Q$ the set of minimal elements of $Q$ with respect to $\succcurlyeq$;
 that is,
 \begin{align*}
 \Up Q 
@@ -283,10 +283,10 @@ $\bar W=W$; that is, $W$ is closed.
 Without loss of generality we may assume that all $f^i$ are $1$-convex.
 
 Given $\bm{v}=(v^0,v^1,\dots,v^\kay)\in\RR^{\kay+1}$, consider the function 
-$h_{\bm{v}}\: \spc{X}\to \RR$ defined as
+$h_{\bm{v}}\: \spc{X}\to \RR$ defined by
 \[h_{\bm{v}}(p)=\max_i\{f^i(p)-v^i\}.\]
 Note that $h_{\bm{v}}$ is $1$-convex.
-Set 
+Let 
 $$\map(\bm{v})\df\argmin h_{\bm{v}}.$$
 According to Lemma~\ref{lem:argmin(convex)}, $\map(\bm{v})$ is uniquely defined.
 
@@ -357,7 +357,7 @@ Therefore, according to Lemma~\ref{lem:argmin(convex)}, the barycentric simplex
 $\spx{\bm{f}}$ is uniquely defined on $\Delta^\kay$.
  
 For $\bm{x},\bm{y}\in\Delta^\kay$,
-set 
+let 
 \begin{align*}
 f_{\bm{x}}
 &=\sum_i x^i\cdot f^i,
@@ -403,7 +403,7 @@ That is, given $\bm{x}\in\Delta^\kay$, there is a constant $\Lip$ such that
 \end{align*}
 for any $\bm{y}\in\Delta^\kay$.
 In particular, there is $\eps>0$ such that if $\|\bm{x}-\bm{y}\|_1<\eps,$ $\|\bm{x}-\bm{z}\|_1 <\eps$, then $\spx{\bm{f}}(\bm{y})$, $\spx{\bm{f}}(\bm{z})\in\Omega$. 
-Thus, the same argument as above implies 
+Thus the same argument as above implies 
 \[\dist{\spx{\bm{f}}(\bm{y})}{\spx{\bm{f}}(\bm{z})}{}
 =
 \ell\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
@@ -414,8 +414,8 @@ Clearly $\spx{\bm{f}}(\Delta^\kay)\subset \Web \bm{f}$.
 It remains to show that $\spx{\bm{f}}(\Delta^\kay)\supset \Web \bm{f}$.
 According to Lemma~\ref{lem:Up-convex},
 $W=\Up\bm{f}(\spc{X})$ is a closed convex set in $\RR^{\kay+1}$.
-Let $p\in \Web \bm{f}$; 
-clearly $\bm{f}(p)\in \Min W\subset S\z=\Fr_{\RR^{\kay+1}}W$.
+Let $p\in \Web \bm{f}$. 
+Clearly $\bm{f}(p)\in \Min W\subset S\z=\Fr_{\RR^{\kay+1}}W$.
 Let $\bm{x}$ be a subnormal vector to $W$ at $\bm{f}(p)$.
 According to Lemma~\ref{lem:Up-convex}, 
 $\bm{x} \succcurlyeq\bm{0}$.
@@ -455,7 +455,7 @@ Assuming the barycentric simplex $\spx{\bm{f}}$ is defined,
 then $\spx{\bm{f}}$ is called the \index{$\kappa$-barycentric simplex}\emph{$\kappa$-barycentric simplex} for the point array $\bm{a}$;
 it will be denoted by $\spx{\bm{a}}\mc\kappa$.
 The points $a^0,a^1,\dots,a^\kay$ are called 
-\index{vertices of barycentric simplex}\emph{vertices of the $\kappa$-barycentric simplex}.
+\index{vertexes  of the $\kappa$-barycentric simplex}\emph{vertexes of the $\kappa$-barycentric simplex}.
 Note that once we say the $\kappa$-barycentric simplex is defined, 
 we automatically assume that $\rad\bm{a}<\tfrac{\varpi\kappa}2$.
 
@@ -496,9 +496,11 @@ $\InWeb(\distfun{\bm{a}}{}{})$ is $C^{\frac12}$-homeomorphic to an open subset o
 \end{thm}
 
 \begin{thm}{Definition}\label{prop-def:web-embedding}
-The submap $\map\:\RR^{\kay}\subto \spc{X}$ as in Theorem~\ref{thm:cat-bary-web:mnfld}
+The submap $\map\:\RR^{\kay}\subto \spc{X}$ of Theorem~\ref{thm:cat-bary-web:mnfld}
 will be called the \index{web embedding}\emph{$\distfun{\bm{a}}{}{}$-web embedding} 
 with \index{brace}\emph{brace} $\distfun{a^0}{}{}$.
+The terminology invokes Theorem~\ref{thm:cat-bary-web:mnfld}.
+%S: Is adding this sentence helpful?
 \end{thm}
 
 \begin{thm}{Definition}
@@ -571,11 +573,11 @@ All the functions $f^i$ are strongly convex (see \ref{function-comp}).
 Therefore (\ref{SHORT.thm:cat-bary-web:Lip}), (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{SHORT.thm:cat-bary-web:mnfld}) follow from Theorem \ref{thm:web}.
 
 \parit{Case $\kappa>0$.}
-Applying rescaling, we can assume $\kappa=1$,
+Applying rescaling, we may assume $\kappa=1$,
 so $\varpi\kappa=\varpi1\z=\pi$.
 
-Let $\mathring{\spc{U}}=\Cone\spc{U}$;
-by \ref{thm:warp-curv-bound:cbb:S}, $\mathring{\spc{U}}$ is $\CAT0$.
+Let $\mathring{\spc{U}}=\Cone\spc{U}$.
+By \ref{thm:warp-curv-bound:cbb:S}, $\mathring{\spc{U}}$ is $\CAT0$.
 Let us denote by $\iota$ the natural embedding of $\spc{U}$ as the unit sphere in $\mathring{\spc{U}}$,  and by  
 $\proj\:\mathring{\spc{U}}\subto\spc{U}$ the submap
 defined by $\proj(v)=\iota^{-1}(v/|v|)$ for all 
@@ -690,11 +692,11 @@ Such an example can be constructed by gluing at one point two Euclidean spaces o
 According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\CAT{0}$ space.
 
 The second example provides a complete length $\CAT{}$ space 
-with topological dimension one and arbitrary large Hausdorff dimension.
+with topological dimension 1 and arbitrary large Hausdorff dimension.
 Thus for complete length $\CAT{}$ spaces, one should not expect any relations between topological and Hausdorff dimensions except for the one provided by Szpilrajn's theorem (\ref{thm:szpilrajn}).
 
 To construct the second type of example,
-note that the completion of any metric tree has topological dimension one and is $\CAT\kappa$ for any $\kappa$.
+note that the completion of any metric tree has topological dimension 1 and is $\CAT\kappa$ for any $\kappa$.
 Start with a binary tree $\Gamma$, and a sequence $\eps_n>0$ such that $\sum_n\eps_n<\infty$.
 Define the metric on $\Gamma$
 by prescribing the length of an edge from level $n$ to  level $n+1$ to be $\eps_n$.
@@ -759,7 +761,7 @@ This metric will be called the \index{$\ell^1$-metric}\emph{$\ell^1$-metric} on 
 \begin{thm}{Lemma}\label{lem:approximation-cba}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\rho\:\spc{U}\to\RR$ be a continuous positive function.
-Then there is a simplicial complex $\spc{N}$ equiped with $\ell^1$-metric,
+Then there is a simplicial complex $\spc{N}$ equipped with $\ell^1$-metric,
 a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$,  
 and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that:
 
@@ -790,9 +792,9 @@ that is, $\spc{N}$ is an abstract simplicial complex with
 %set of vertexes formed by $\IndexSet$, 
 vertex set $\IndexSet$,
 such that
-that is, $\spc{N}$ is an abstract simplicial complex with set of vertices formed by $\IndexSet$ such that
+%that is, $\spc{N}$ is an abstract simplicial complex with set of vertices formed by $\IndexSet$ such that
 $\{\alpha^0,\alpha^1,\dots,\alpha^n\}\subset\IndexSet$ 
-are vertices of a simplex if and only if
+are vertexes of a simplex if and only if
 $\Omega_{\alpha^0}
 \cap
 \Omega_{\alpha^1}
@@ -817,11 +819,11 @@ and its Lipschitz constant depends only on $\rho_0$ and $\kappa$.
 
 \parit{(\ref{SHORT.lem:approximation-cba:displacement})}
 Fix $x\in\spc{U}$. Denote by $\Delta$ the minimal simplex that contains $\map(x)$, 
-and let $(\alpha^0,\alpha^1,\dots,\alpha^n)$ be the vertexes of $\Delta$.
-Denote by $\Delta$ the minimal simplex that contains $\map(x)$;
-and let $(\alpha^0,\alpha^1,\dots,\alpha^n)$ be the vertices of $\Delta$.
+and let $\alpha^0,\alpha^1,\dots,\alpha^n$ be the vertexes of $\Delta$.
+%Denote by $\Delta$ the minimal simplex that contains $\map(x)$;
+%and let $(\alpha^0,\alpha^1,\dots,\alpha^n)$ be the vertices of $\Delta$.
 Note that $\alpha$ is a vertex of $\Delta$ if and only if $\phi_{\alpha}(x)>0$.
-Thus,
+Thus
 \[\dist{x}{x_{\alpha^i}}{}<\tfrac{1}{3}\cdot\rho(x)\] 
 for any $i$.
 Therefore 
@@ -874,7 +876,7 @@ Since $F$ is continuous, there is a continuous positive function $\rho$ defined 
 \quad\Rightarrow\quad
 |F(x)- F(y)|<\tfrac13\cdot\eps.\]
 Apply Lemma~\ref{lem:approximation-cba} for the function $\rho$.
-For the obtained simplicial complex $\spc{N}$ 
+For the resulting simplicial complex $\spc{N}$ 
  and maps $\map\:\spc{U}\to \spc{N}$, $\map[2]\:\spc{N}\to \spc{U}$, we have
 \[|F\circ \map[2]\circ\map(x)-F(x)|<\tfrac13\cdot\eps\] 
 for any $x\in \spc{U}$.
@@ -893,7 +895,7 @@ Arguing by contradiction,
 assume $\LinDim\spc{U}<m$.
 By \ref{lem:approximation-cba:im},
 the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of the $(m-1)$-skeleton of $\spc{N}'$;
-in particular it can be covered 
+In particular it can be covered 
 by a  countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
 $\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|_K$.
@@ -901,12 +903,12 @@ Since $\eps>0$ is arbitrary,
 then $\bm{0}\in \RR^m$ is not a stable value of $f=F|_K$, a contradiction.
 
 \parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
-The following claim follows from the definition of tangent space.
+The following claim is a consequence of the definition of tangent space.
 
 \begin{clm}{}\label{clm:finite-config-cba}
 Let $q\in \spc{U}$ and $\dot x^1,\dot x^2,\dots,\dot x^n\in \T_q$.
 Then given $\delta>0$,
-there is a point array $x^1,x^2,\dots,x^n$ in $\spc{U}$ 
+there is an array $(x^1,x^2,\dots,x^n)$ of points  in $\spc{U}$ 
 such that 
 \[\mangle(\dot x^i,\ddir q{x^i})<\delta,\]
 and for some fixed $\lam>0$ we have
@@ -914,12 +916,12 @@ and for some fixed $\lam>0$ we have
 \text{and}\quad |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
 for all $i$ and $j$.
 
-Moreover the value $\lam$ can be taken arbitrary small.
+Moreover the value $\lam$ can be taken arbitrarily small.
 \end{clm}
 
 \parit{Proof of the claim.} For each $i$ choose a geodesic $\gamma^i$ 
 from $q$ that goes almost in the directions of $\dot x^i$.
-Then take the point $x^i$ on $\gamma^i$ on the distance $\lam\cdot|\dot x^i|$ from $q$.
+Then take the point $x^i$ on $\gamma^i$ at distance $\lam\cdot|\dot x^i|$ from $q$.
 \claimqeds
 
 
@@ -934,14 +936,14 @@ Applying Claim \ref{clm:finite-config-cba}, we get a point array
 $(a^0,a^1,\dots,a^m)$ in $\spc{U}$
 such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
 and $\bigcap_{i\not=j}\cBall[a^i,\lam]\not=\emptyset$ for each $j$.
-Since $\lam>0$ can be chosen arbitrary small, 
+Since $\lam>0$ can be chosen arbitrarily small, 
  (\ref{SHORT.thm:dim-infty-CBA:bary}) follows.
 \qeds
 
 
 \section{Finite-dimensional spaces}
 
-Recall that web embedding and its brace is defined in \ref{prop-def:web-embedding}.
+Recall that a web embedding and its brace are defined in \ref{prop-def:web-embedding}.
 
 {\sloppy 
 
@@ -1010,7 +1012,7 @@ According to Theorem~\ref{thm:cat-bary-web:web=Im(bary)},
 for all small $\eps>0$ we have 
 \[\rad\{b,a^0,a^1,\dots,a^\kay\}<\tfrac{\varpi\kappa}2.\]
 Fix a sufficiently small $\delta>0$
-and set 
+and let 
 \[v^i=\geod_{[q u^i]}(\tfrac13\cdot\delta)\quad\text{and}\quad w^i=\geod_{[v^i b]}(\tfrac23\cdot\delta).\]
 Clearly
 \begin{align*}
@@ -1042,7 +1044,7 @@ Clearly
 \begin{align*}
 &\!\!\!\!\bigcap_{i\not=m+1} B^i=\{q\},
 \\
-&\bigcap_{i\not=j}B^i\ni w^j\quad\text{for}\quad j\not=m+1.
+&\bigcap_{i\not=j}B^i\ni w^j\quad\text{for}\quad j\not=m+1,
 \\
 &\bigcap_{i}B^i=\{q\}\cap B^{m+1}=\emptyset.
 \end{align*}
@@ -1051,9 +1053,9 @@ Lemma~\ref{lem:nondeg-test-with-balls} finishes the proof.
 
 
 \parit{Proof of \ref{thm:loc-lip-inverse}.}
-From \ref{prop-def:web-embedding}, it is sufficient to show that 
-$\map$ is locally Lipshitz.
-Assume the contrary; that is, there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
+%By \ref{prop-def:web-embedding}, it is sufficient to 
+%show that $\map$ is locally Lipshitz.
+Suppose $\map$ is not locally Lipshitz.; that is, there are sequences $\bm{y}_n, \bm{z}_n\to \bm{x}\in\Dom\map$ such that
 \[\frac{\dist{\map(\bm{y}_n)}{\map(\bm{z}_n}{})}{|\bm{y}_n-\bm{z}_n|}
 \to\infty
 \quad
@@ -1064,9 +1066,9 @@ n\to\infty.
 Set $p=\map(\bm{x})$,
 $q_n=\map(\bm{y}_n)$, 
 and $b_n=\map(\bm{z}_n)$.
-From \ref{prop-def:web-embedding}, $p$, $q_n$, $b_n\in\InWeb(\distfun{\bm{a}}{}{})$
+By \ref{prop-def:web-embedding}, $p$, $q_n$, $b_n\in\InWeb(\distfun{\bm{a}}{}{})$
 and $q_n,b_n\to p$ as $n\to\infty$.
-Fix an arbitrary $\eps>0$.
+Choose an arbitrary $\eps>0$.
 Note that \ref{eq:nonlip} implies
 \[\mangle\hinge{q_n}{a^i}{b_n}<\tfrac\pi2+\eps
 \]

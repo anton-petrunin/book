@@ -26,7 +26,7 @@ If $\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz, set
 v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
 \eqlbl{eq:length}
 \]
-where $\int$ is Lebesgue integral, $v_\spc{B}$ and $v_\spc{F}$ are the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ respectively. 
+where $\int$ is Lebesgue integral, and $v_\spc{B}$ and $v_\spc{F}$ are the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ respectively. 
 
 Note that $\length_f \gamma\ge \length \gamma_\spc{B}$.
 The integral in \ref{eq:length} can be broken into the sum of two parts: one for the restriction of $\length_f\gamma$ as in \ref{eq:length} to the nonzero set of $f\circ\gamma_\spc{B}$, and the other for the length of $\gamma_\spc{B}$ restricted to the zero set.
@@ -40,9 +40,9 @@ Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
 where the exact lower bound is taken for all Lipschitz paths $\gamma\:[0,1]\to \spc{B}\times\spc{F}$. 
 The corresponding metric space is called the \index{warped product}\emph{warped product with base $\spc{B}$, fiber $\spc{F}$ and warping function $f$}; it will be denoted by $\spc{B}\warp f\spc{F}$.
 
-The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$; note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)\z=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
+The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$.  Note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)\z=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
 
-Note we are not claiming that every Lipschitz curve in $\spc{B}\warp f \spc{F}$ may be reparametrized as the image of a Lipschitz curve in $\spc{B}\times \spc{F}$; in fact it is not true.
+We do not claim that every Lipschitz curve in $\spc{B}\warp f \spc{F}$ may be reparametrized as the image of a Lipschitz curve in $\spc{B}\times \spc{F}$; in fact this is not true.
 
 \begin{thm}{Proposition}
 The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
@@ -89,18 +89,18 @@ $\beta\:[0,1]\to \spc{B}\times\spc{F}$ with the same end points such that
 \[\length \alpha\ge \length_f\beta.\]
 
 If $f\circ\alpha_{\spc{B}}(t)>0$ for any $t$, then the vertical projection $\alpha_{\spc{F}}$ is defined.
-In this case, let $\beta(t)=(\alpha_{\spc{B}}(t),\alpha_{\spc{F}}(t))\in \spc{B}\times\spc{F}$;
-clearly 
+In this case, let $\beta(t)=(\alpha_{\spc{B}}(t),\alpha_{\spc{F}}(t))\in \spc{B}\times\spc{F}$.
+Clearly 
 \[\length \alpha= \length_f\beta.\]
 
-If $f\circ\alpha_{\spc{B}}(t_0) = 0$ for some $t_0$, let $\beta$ be the concatenation of three curves in $\spc{B}\times{\spc{F}}$;
+If $f\circ\alpha_{\spc{B}}(t_0) = 0$ for some $t_0$, let $\beta$ be the concatenation of three curves in $\spc{B}\times{\spc{F}}$,
 namely: 
 (1) the horizontal curve $(\alpha_\spc{B}(t),\phi)$ for $t\le t_0$,
 (2) a vertical path in form $(s,\phi)$ to $(s,\psi)$
 and 
 (3) the horizontal curve $(\alpha_\spc{B}(t),\psi)$ for $t\ge t_0$.
 By \ref{eq:length}, the $f$-length of the middle path in the concatenation is vanishing;
-therefore the $f$-length of $\alpha$ is can not be smaller than length of $\alpha_{\spc{B}}$;
+therefore the $f$-length of $\alpha$ cannot be smaller than length of $\alpha_{\spc{B}}$,
 that is,
 \[\length_f\alpha \ge 
 \length\alpha_{\spc{B}}=\length_f\beta.
@@ -113,7 +113,7 @@ Distance in a warped product is fiber-independent, in the sense that distances m
 \begin{thm}{Fiber-independence theorem}\label{thm:fiber-independence}
 Consider length spaces $\spc{B}$, $\spc{F}$ and $\check{\spc{F}}$, and a locally Lipschitz function
 $f\:\spc{B}\to\R_{\ge 0}$.  
-Assume $p,q\in \spc{B}$, $\phi,\psi\in \spc{F}$ and $\check{\phi},\check{\psi}\in \check{\spc{F}}$:
+Assume $p,q\in \spc{B}$, $\phi,\psi\in \spc{F}$ and $\check{\phi},\check{\psi}\in \check{\spc{F}}$.
 Then 
 \[
 \begin{aligned}
@@ -124,7 +124,7 @@ Then
 &\Downarrow
 \\
 \dist{(p,\phi)}{(q,\psi)}{\spc{B}\warp{f}\spc{F}}
-&\ge\dist{(p,\check{\phi})}{(q,\check{\psi})}{\spc{B}\warp{f}\check{\spc{F}}}
+&\ge\dist{(p,\check{\phi})}{(q,\check{\psi})}{\spc{B}\warp{f}\check{\spc{F}}}.
 \end{aligned}
 %\eqlbl{eq:dist-fiber-indep}
 \]
@@ -157,7 +157,7 @@ Let $\spc{B}$ and $\spc{F}$ be two length spaces and $f,g\:\spc{B}\to \RR_\ge$ b
 Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
 Show that 
 $\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
-that is, there is a distance noncontracting map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
+that is, there is a distance-noncontracting map $\spc{B}\warp{f}\spc{F}\to \spc{B}\warp{g}\spc{F}$.
 \end{thm}
 
 \section{Extended definitions}
@@ -174,7 +174,7 @@ in length spaces $\spc{F}$ and $\check{\spc{F}}$, and $\spc{B}$ is a length spac
 the map $\iota$ induces an isometry between the sets 
 $\spc{B}\warp{f} A \subset \spc{B}\warp{f} \spc{F}$ and $\spc{B}\warp{f}\check{A}\subset \spc{B}\warp{f} \check{\spc{F}}$.
 
-The latter observation allows us to define the warped product $\spc{B}\z{\warp{f}} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
+This observation allows us to define the warped product $\spc{B}\z{\warp{f}} \spc{F}$ where the fiber $\spc{F}$ does not carry its length metric.
 Indeed we can use Kuratowsky embedding to realize $\spc{F}$ as a subspace in a length space, say $\spc{F}'$.
 Therefore we can take the warped product $\spc{B}\warp{f} \spc{F}'$
 and identify $\spc{B}\warp{f} \spc{F}$ with its subspace consisting of all pairs $(b,\phi)$ such that $\phi\in \spc{F}$.
@@ -194,7 +194,7 @@ That is, for $p,q\in \spc{B}$ and $\phi,\psi\in \spc{F}$, the latter metric simp
 The \index{Euclidean cone}\emph{Euclidean cone} $\Cone\spc{F}$ over a metric space $\spc{F}$
 can be written as the warped product $[0,\infty)\warp{\id} \spc{F}$.
 That is, for $s,t\in [0,\infty)$ and $\phi,\psi\in \spc{F}$, 
-the latter metric is given by the cosine rule
+the metric is given by the cosine rule
 \[
 \dist{(s,\phi)}{(t,\psi)}{} 
 =
@@ -244,7 +244,7 @@ They are baby cases of the characterization of curvature bounds in warped produc
 
 \begin{thm}{Theorem}\label{thm:warp-curv-bound:cbb}
 \begin{subthm}{thm:warp-curv-bound:cbb:a}
-If $\spc{L}$ is a complete length $\Alex{1}$ space and $\diam\spc{L}\le\pi$
+If $\spc{L}$ is a complete length $\Alex{1}$ space and $\diam\spc{L}\le\pi$, 
 then 
 \begin{align*}
 \Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad  \Alex1,
@@ -253,24 +253,24 @@ then
 \\
 \Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is}\quad \Alex{-1}.
 \end{align*}
-Moreover the converse also holds in each of the three cases.
+Moreover, the converse also holds in each of the three cases.
 \end{subthm}
 
 \begin{subthm}{thm:cbb-product}
-If $\spc{L}$ is a complete length $\Alex0$ space
+If $\spc{L}$ is a complete length $\Alex0$ space, 
 then 
 \begin{align*}
 \RR\times\spc{L}&\quad\text{is a complete length $\Alex0$ space},
 \\
 \RR\warp{\exp}\spc{L}&\quad\text{is a complete length $\Alex{-1}$ space.}
 \end{align*}
-Moreover the converse also holds in each of the two cases.
+Moreover, the converse also holds in each of the two cases.
 \end{subthm}
 
 \begin{subthm}{}
 If $\spc{L}$ is a complete length $\Alex{-1}$ space,
 then $\RR\warp{\cosh}\spc{L}$ is a complete length $\Alex{-1}$ space.
-Moreover the converse also holds.
+Moreover, the converse also holds.
 \end{subthm}
 \end{thm}
 
@@ -279,7 +279,7 @@ Moreover the converse also holds.
 \begin{thm}{Theorem}\label{thm:warp-curv-bound:cat}
 Let $\spc{L}$ be a metric space.
 \begin{subthm}{thm:warp-curv-bound:cbb:S}
-If $\spc{L}$ is $\CAT{1}$
+If $\spc{L}$ is $\CAT{1}$,
 then 
 \begin{align*}
 \Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad  \CAT{1},
@@ -292,12 +292,12 @@ Moreover, the converse also holds in each of the three cases.
 \end{subthm}
 
 \begin{subthm}{thm:warp-curv-bound:cbb:E}
-If $\spc{L}$ is a complete length $\CAT0$ space
+If $\spc{L}$ is a complete length $\CAT0$ space,
 then 
 $\RR\times\spc{L}$ is $\CAT0$ 
 and 
 $\RR\warp{\exp}\spc{L}$ is $\CAT{-1}$.
-Moreover the converse also holds in each of the two cases.
+Moreover, the converse also holds in each of the two cases.
 \end{subthm}
 
 \begin{subthm}{thm:warp-curv-bound:cbb:H}
@@ -305,7 +305,7 @@ If $\spc{L}$ is $\CAT{-1}$
 then 
 $\RR\warp{\cosh}\spc{L}$
 is $\CAT{-1}$.
-Moreover the converse also holds.
+Moreover, the converse also holds.
 \end{subthm}
 \end{thm}
 
@@ -363,7 +363,7 @@ for all $i$ and $j$.
 According to Proposition~\ref{prop:warp-examples:S}, 
 \[\Cone\mc{-1}\mathbb{S}^3=[0,\infty)\warp{\sinh}\mathbb{S}^3\iso\Lob{4}{-1}.\]
 
-Consider the quadruple of points 
+Consider the quadruple of points
 \[(s,\psi),(t^1,\psi^1),(t^2,\psi^2),(t^3,\psi^3)\in \Cone\mc{-1}\mathbb{S}^3=\Lob{4}{-1}.\]
 
 By the fiber-independence theorem~\ref{thm:fiber-independence},

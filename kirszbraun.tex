@@ -202,12 +202,12 @@ We only give an idea of the proof of  this lemma;
 alternatively,  it can be obtained as a corollary of  Kirszbraun's theorem (\ref{thm:kirsz+}) 
 
 \parit{Idea of the proof.}
-The map $\map$ can be constructed as a composition of an isometry of $\Lob{}{\kappa}$ and the following folding maps:
-Given a halfspace $H$ in $\Lob{}{\kappa}$, consider the map $\Lob{}{\kappa}\to H$ 
+The map $\map$ can be constructed as a composition of an isometry of $\Lob{}{\kappa}$ and the following folding map:
+given a halfspace $H$ in $\Lob{}{\kappa}$, consider the map $\Lob{}{\kappa}\to H$ 
 that is the identity on $H$ and reflects all points outside of $H$ into $H$.
 This map is a path isometry, in particular it is short. 
 
-The last part of the lemma can be proved by composing the constructed map with foldings along the sides of triangle $\trig{y^1}{y^2}{y^3}$ and passing to a partial limit.
+The last part of the lemma can be proved by composing this map with folding maps along the sides of triangle $\trig{y^1}{y^2}{y^3}$, and passing to a partial limit.
 \qeds
 %S. Should $\Lob{}{\kappa}$ be $\Lob2\kappa$ in this lemma?
 
@@ -220,8 +220,8 @@ It is only necessary to observe that  $F(\tilde z)=z$ by uniqueness of $[x y]$.
 \parit{``Only if'' part.}
 Let $V_3=\{\tilde x^1,\tilde x^2,\tilde x^3\}$ and $V_4=\{\tilde x^1,\tilde x^2,\tilde x^3,\tilde p\}$.
 
-Set $y^i\z=f(\tilde x^i)$ for all $i$;
-we need to find a point $q\in\spc{U}$ such that $\dist{y^i}{q}{}\le\dist{\tilde x^i}{\tilde p}{}$ for all $i$.
+Set $y^i\z=f(\tilde x^i)$ for all $i$.
+We need to find a point $q\in\spc{U}$ such that $\dist{y^i}{q}{}\le\dist{\tilde x^i}{\tilde p}{}$ for all $i$.
 
 Let $D$ be the convex set in $\Lob2\kappa$ bounded by the model triangle 
 $\trig{\tilde y^1}{\tilde y^2}{\tilde y^3}\z=\modtrig\kappa{y^1}{y^2}{y^3}$;
@@ -243,12 +243,12 @@ Thus one can take $q=F\circ\map(\tilde p)$.
 Assume $\spc{X}$ is a complete length space that satisfies the following condition:
 any 4-point subset admit a distance-preserving map to the Euclidean 3-space.
 
-Prove that $\spc{X}$ is isometric to a closed convex substet of a Hilbert space.
+Prove that $\spc{X}$ is isometric to a closed convex subset of a Hilbert space.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:5-point-CBA=>CBB}
 Let $\spc{F}_s$ be the metric
-on the 5 point set $\{p,q,x,y,z\}$ for which $\dist{p}{q}{}=s$
+on the 5-point set $\{p,q,x,y,z\}$ for which $\dist{p}{q}{}=s$
 and all the remaining distances are equal $1$.
 For which values $s$ does the space $\spc{F}_s$ admit a distance-preserving map into 
 \begin{subthm}{}
@@ -276,8 +276,8 @@ The following theorem gives a more sensitive analog of  $\Alex\kappa$ comparison
 \begin{thm}{(1+\textit{n})-point comparison}
 \label{thm:pos-config} {\sloppy 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
-Then for any array of points $p,x^1,\dots,x^n\in \spc{L}$  
-there is a model array $\tilde p,\tilde x^1,\dots,\tilde x^n\in\Lob{n}\kappa$ such that
+Then for any array $p,x^1,\dots,x^n$ of points  in $\spc{L}$  
+there is a model array $\tilde p,\tilde x^1,\dots,\tilde x^n$ in $\Lob{n}\kappa$ such that
 
 }
 
@@ -290,25 +290,25 @@ $\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$ for all $i$.
 \end{thm}
 
 \parit{Proof.} 
-It is sufficient to show that given $\eps>0$ there is a configuration $\tilde p,\tilde x^1,\dots,\tilde x^n\in\Lob{n}\kappa$ such that 
+It is sufficient to show that given $\eps>0$ there is an array $\tilde p,\tilde x^1,\dots,\tilde x^n$ in $\Lob{n}\kappa$ such that 
 \[\dist{\tilde x^i}{\tilde x^j}{}\ge\dist{x^i}{x^j}{}
 \quad
 \text{and}
 \quad
 \bigl|\dist{\tilde p}{\tilde x^i}{}-\dist{p}{x^i}{}\bigr|\le \eps.\]
-Then one can pass to a limit configuration for $\eps\to 0+$.
+Then one can pass to a limit array for $\eps\to 0+$.
 
 According to \ref{thm:almost.geod}, the set $\Str(x^1,\dots,x^n)$ 
  is dense in $\spc{L}$.
 Thus there is a point $p'\in \Str(\tilde x^1,\dots,\tilde x^n)$ such  that $\dist{p'}{p}{}\le\eps$.
 According to Corollary~\ref{cor:euclid-subcone}, 
 $\T_{p'}$ contains a subcone $E$ isometric to a Euclidean space 
-that contains all vectors $\ddir{p'}{x^i}$.
+and containing all vectors $\ddir{p'}{x^i}$.
 Passing to a subspace if necessary, we may assume that $\dim E\le n$.
 
 Mark a point $\tilde p\in \Lob{n}\kappa$ and choose a distance-preserving map
 $\iota\: E\to \T_{\tilde p}\Lob{n}\kappa$.
-Set 
+Let 
 \[\tilde x^i
 =
 \exp_{\tilde p}\circ\iota(\ddir{p'}{x^i}).\]
@@ -327,7 +327,7 @@ and thus
 
 \begin{thm}{Exercise}\label{ex:sturm}
 Let $p,x_1,\dots,x_n$ be a point array in a $\Alex0$ space.
-Consider the $n{\times}n$-matrix $M$ with the components 
+Consider the $n{\times}n$-matrix $M$ with components 
 \[m_{i,j}=\tfrac12\cdot(\dist[2]{x_i}{p}{}+\dist[2]{x_j}{p}{}-\dist[2]{x_i}{x_j}{}).\]
 Show that
 \[\bm{s}\cdot M\cdot \bm{s}^\top\ge 0\eqlbl{eq:sMs}\]
@@ -348,7 +348,7 @@ In particular, this inequality in general metric spaces (not necessarily length 
 
 \begin{thm}{Exercise}\label{6-point-comparison}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
-Show that for any points $p, x_1,x_2,x_3,x_4,x_5\in \spc{L}$ we have 
+Show that for any points $p, x_1,x_2,x_3,x_4,x_5 $ in $\spc{L}$ we have 
 \[
 \angk\kappa p{x_1}{x_5}
 +
@@ -374,11 +374,11 @@ but is not isometric to a subset of an Alexandrov space with curvature $\ge0$.
 
 \begin{thm}{Exercise}\label{ex:strut+embedding}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
-Assume that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
+Assume that a point array $a^0,a^1,\dots,a^\kay$ in $\spc{L}$
  is \emph{$\kappa$-strutting} (Definition \ref{def:strut-I})
  for a point $p\in\spc{L}$.
-Show that there are points 
-$\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+Show that there are points
+$\tilde p,\tilde a^0,\dots,\tilde a^m$ in $\Lob{m+1}\kappa$ such that
 \[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\quad \text{and}\quad \dist{\tilde a^i}{\tilde a^j}{}=\dist{a^i}{a^j}{}\]
 for all $i$ and $j$.
 \end{thm}
@@ -391,7 +391,7 @@ and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bo
 
 If 
 \[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset,\]
-then there is an index array $\alpha_1,\alpha_2,\dots,\alpha_n\in \IndexSet$ such that
+then there is an index array $\alpha_1,\alpha_2,\dots,\alpha_n$ in $\IndexSet$ such that
 \[\bigcap_{i=1}^nK_{\alpha_i}=\emptyset.\]
 
 %??Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
@@ -459,7 +459,7 @@ Let us show that the sequence $p^*_{F_n}$ is Cauchy.
 Indeed, if not, then for some fixed $\eps>0$, 
 we can choose two subsequences $y'_n$ and $y''_n$ of $p^*_{F_n}$ 
 such that $\dist{y'_n}{y''_n}{}\ge\eps$.
-Let $z_n$ be midpoint of $[y'_ny''_n]$. 
+Let $z_n$ be the midpoint of $[y'_ny''_n]$. 
 From point-on-side comparison (\ref{point-on-side}), 
 there is $\delta>0$ such that 
 \[\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta.\]
@@ -524,8 +524,8 @@ Let $\kappa\le 0$,
 $\spc{L}$ be a complete length $\Alex{\kappa}$ space, and 
 $\spc{U}$ be a complete length $\CAT\kappa$ space.
 Suppose
-$x^1,x^2,\dots,x^n\in\spc{L}$ 
-and $y^1,y^2,\dots,y^n\in\spc{U}$
+$x^1,x^2,\dots,x^n$ in $\spc{L}$ 
+and $y^1,y^2,\dots,y^n$ in $\spc{U}$
 are
 such that $\dist{x^i}{x^j}{}\ge\dist{y^i}{y^j}{}$ for all $i,j$.
 
@@ -539,7 +539,7 @@ In the proof, we assume $\kappa=0$ and provide the formulas for $\kappa=-1$ in t
 
 From (1+\textit{n})-point comparison (\ref{thm:pos-config}), 
 there is a model configuration 
-$\tilde p,\tilde x^1,\tilde x^2,\dots,\tilde x^n\in \Lob{n}{\kappa}$ such that
+$\tilde p,\tilde x^1,\tilde x^2,\dots,\tilde x^n$ in $\Lob{n}{\kappa}$ such that
 $\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$
 and $\dist{\tilde x^i}{\tilde x^j}{}\ge\dist{x^i}{x^j}{}$ 
 for all $i$, $j$.
@@ -547,7 +547,7 @@ It follows that we can assume that $\spc{L}=\Lob{n}{\kappa}$.
 
 For each $i$, consider functions 
 $f^i\:\spc{U}\to\RR$ and $\tilde f^i\:\Lob{n}{\kappa}\to\RR$ 
-defined as follows%
+defined as follows:%
 %%%%%%%%%%%%
 \footnote{In case $\kappa=-1$,
 \[
@@ -566,7 +566,7 @@ defined as follows%
 \end{aligned}
 \leqno{(A)\mc0}
 \]
-Let
+Consider 
 $\bm{f}=(f^1,f^2,\dots,f^n)\:\spc{U}\to\RR^n$ and $\bm{\tilde f}=(\tilde f^1,\tilde f^2,\dots,\tilde f^n)\:\Lob{n}{\kappa}\to\RR^n$.
 %S. [Recall that the set $\Up \bm{f}(\spc{U})$ is defined in Ch 14  ...]]
 
@@ -598,10 +598,12 @@ Arguing by contradiction, let us assume that $\bm{\tilde f}(\tilde p)\notin\Up  
 Then there  exists a supporting hyperplane  $\alpha_1\cdot x_1+\ldots \alpha_n\cdot x_n=c$ to $\Up\bm{f}(\spc{U})$, separating it from  $\bm{\tilde f}(\tilde p)$.
 According to Lemma~\ref{lem:Up-convex:subnormal}, 
 $\alpha_i\ge 0$ for each $i$. 
-So we may assume that $(\alpha_1,\alpha_2,\dots,\alpha_n)\in\Delta^{n-1}$
-(that is, $\alpha_i\ge 0$ for each $i$ and $\sum\alpha_i=1$)
+So we may assume that 
+$(\alpha_1,\alpha_2,\dots,\alpha_n)\in\Delta^{n-1}$
+(that is, 
+$\alpha_i\ge 0$ for each $i$ and $\sum\alpha_i=1$
 and 
-\[\sum_i\alpha_i\cdot\tilde f^i(\tilde p)
+\[\sum_i\alpha_i\cdot\tilde f^i(\tilde p))
 < 
 \inf
 \set{\sum_i\alpha_i\cdot f^i(q)}{q\in\spc{U}}.\]
@@ -609,7 +611,7 @@ The latter contradicts the following claim.
 
 \begin{clm}{}
 Given $\bm{\alpha}=(\alpha_1,\alpha_2,\dots,\alpha_n)\in\Delta^{n-1}$,
-set
+let
 \begin{align*}
 &h=\sum_i\alpha_i\cdot f^i
 &
@@ -621,7 +623,7 @@ set
 &
 &\tilde h\:\Lob{n}{\kappa}\to\RR
 &
-&\tilde z=\argmin \tilde h\in \Lob{n}{\kappa}
+&\tilde z=\argmin \tilde h\in \Lob{n}{\kappa}.
 \end{align*}
 Then 
 $h(z)\le \tilde h(\tilde z)$.
@@ -712,7 +714,7 @@ or%
 
 Note that if $\spc{U}\iso\Lob{n}{\kappa}$, 
 then all inequalities in $(B,C,D)$ are sharp.
-Thus the same argument as above, repeated for $\tilde x^1,\tilde x^2,\dots,\tilde x^n\in\Lob{n}{\kappa}$,
+Thus the same argument as above, repeated for $\tilde x^1,\tilde x^2,\dots,\tilde x^n$ in $\Lob{n}{\kappa}$,
 gives%
 \footnote%
 {In case $\kappa=-1$,
@@ -760,7 +762,7 @@ that is, there is a short map $F\:\spc{L}\to \spc{U}$ such that $F|_Q=f$.
 \end{thm}
 
 \parbf{Remark.}
-If $\spc{U}$ is proper, then we do not need Helly's theorem (\ref{thm:helly}) --- compactness of closed balls in $\spc{U}$ is sufficient in this case.
+If $\spc{U}$ is proper, then we do not need Helly's theorem (\ref{thm:helly}); compactness of closed balls in $\spc{U}$ is sufficient in this case.
 
 
 \parit{Proof of \ref{thm:kirsz}.} 
@@ -778,7 +780,7 @@ Then
 
 Since $\kappa\le 0$, the balls are convex; 
 thus, by Helly's theorem (\ref{thm:helly}), 
-one can choose a point array $x^1,x^2,\dots, x^n\in Q$ such that
+one can choose points $x^1,x^2,\dots, x^n$ in $Q$ such that
 \[\bigcap_{i=1}^n \cBall[y^i,\dist{x^i}{p}{}]
 =
 \emptyset,
@@ -827,7 +829,7 @@ Further, we will view the spaces $\spc{L}$ and $\spc{U}$ as unit spheres in $\ma
 In the cones $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ we will use 
 ``$|{*}|$'' for distance to the vertex, denoted by $\0$, 
 ``$\cdot$'' for cone multiplication,
-``$\mangle(x,y)$'' for $\mangle\hinge{\0}{x}{y}$ 
+``$\mangle(x,y)$'' for $\mangle\hinge{\0}{x}{y}$, 
 and ``$\<x,y\>$'' for $|x|\cdot|y|\cdot\cos\mangle\hinge{\0}{x}{y}$.
 In particular,
 \begin{itemize}
@@ -838,7 +840,7 @@ In particular,
 \eqlbl{eq:=<pi/2}\]
 
 \end{itemize}
-Set $\mathring{Q}=\Cone Q\subset \mathring{\spc{L}}$ and let $\mathring f\:\mathring{Q}\to \mathring{\spc{U}}$ be the natural cone extension of $f$; 
+Let $\mathring{Q}=\Cone Q\subset \mathring{\spc{L}}$ and let $\mathring f\:\mathring{Q}\to \mathring{\spc{U}}$ be the natural cone extension of $f$; 
 that is, 
 $y=f(x)$ $\Rightarrow$ $t\cdot y=\mathring f(t\cdot x)$ 
 for $t\ge0$.
@@ -846,8 +848,8 @@ Clearly $\mathring f$ is short.
 
 Applying \ref{thm:kirsz} for $\mathring f$, 
 we get a short extension map $\mathring F\:\mathring{\spc{L}}\to\mathring{\spc{U}}$. 
-Set $s=\mathring F(p)$.
-Thus 
+Let $s=\mathring F(p)$.
+Then 
 \[\dist{s}{\mathring f(w)}{}
 \le 
 \dist{p}{w}{}
@@ -880,13 +882,13 @@ or
 \[\mangle(\bar s,f(x))
 \le 
 \mangle(p,f(x))\]
-for any $x\in Q$.
-The latter contradicts \ref{eq:cap-of-balls}.
+for any $x\in Q$,
+in contradiction to  \ref{eq:cap-of-balls}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:flat-in-CAT}
 Let $\spc{U}$ be $\CAT0$. 
-Assume there are two point arrays $x^0,x^1,\dots,x^\kay\in\spc{U}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\in\EE^m$ such that 
+Assume there are two point arrays $x^0,x^1,\dots,x^\kay$ in $\spc{U}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay$ in $\EE^m$ such that 
 $\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$, and 
 for any point $z_0\in\spc{U}$ there is $i>0$ such that $\dist{z_0}{x_i}{}\ge\dist{x_0}{x_i}{}$.
 
@@ -895,7 +897,7 @@ Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE
 
 \begin{thm}{Exercise}\label{ex:flat-in-CBB}
 Let $\spc{L}$ be a complete length $\Alex{0}$ space, and 
-$x^0,x^1,\dots,x^\kay\in\spc{L}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay\in\EE^m$
+$x^0,x^1,\dots,x^\kay$ in $\spc{L}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay$ in $\EE^m$
 be two point arrays such that 
 $\dist{x^i}{x^j}{\spc{L}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$.
 Assume 

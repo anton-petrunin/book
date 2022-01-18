@@ -784,7 +784,7 @@ Thus, point-on-side comparison (\ref{point-on-side}) follows.
 \qeds
 
 Note that in the proof of  ``if''-part we could use a slightly weaker version of the hinge comparison (\ref{angle}).
-Namely we proved the following lemma which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
+Namely we proved the following lemma, which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
 
 \begin{thm}{Short hinge lemma}\label{lem:devel-glob}
 Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined, 
@@ -807,8 +807,8 @@ Then $\spc{L}$ is $\Alex\kappa$.
 \section{Local definitions and globalization}\label{sec:loc}
 
 
-In this section we discuss locally $\Alex{\kappa}$ spaces; 
-in particular, we prove the {}\emph{globalization theorem} --- equivalence of local and global definitions for complete length spaces.
+In this section we discuss locally $\Alex{\kappa}$ spaces.
+In particular, we prove the {}\emph{globalization theorem}: equivalence of local and global definitions for complete length spaces.
 
 The following theorem summarizes equivalent definitions of locally $\Alex{\kappa}$ spaces
 
@@ -948,7 +948,7 @@ This follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 
 In the proof of the globalization theorem 
 we will use three lemmas.
-First is the short hinge lemma (\ref{lem:devel-glob}) --- it gives a characterization of $\Alex\kappa$ spaces which is the same as the hinge comparison \ref{angle} if $\kappa\le 0$ and is slightly weaker in case $\kappa>0$.
+The first is the short hinge lemma (\ref{lem:devel-glob}), which gives a characterization of $\Alex\kappa$ spaces that is the same as the hinge comparison condition \ref{angle} if $\kappa\le 0$ and is a slightly weaker condition if  $\kappa>0$.
 
 The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
 
@@ -1087,20 +1087,18 @@ this yields
 Applying monotonicity of the sequence  $s_n=\side\kappa \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
 \qeds
 
-The final part of the proof above resembles the \emph{cat's cradle construction}introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
+The final part of the proof above resembles the \emph{cat's cradle construction} introduced by the first author and Richard Bishop \cite{alexander-bishop:h-c}.
 
 The following lemma works in all complete spaces; it will be used as a substitute for the  existence of a minimum point of a continuous function on a compact space.
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
-Let $\spc{X}$ be a complete metric space,
-$p\in \spc{X}$
-and $r\:\spc{X}\to \RR$ be a function and $\eps>0$.
+Let $\spc{X}$ be a complete metric space. Suppose $p\in \spc{X}$,  $r\:\spc{X}\to \RR$ is a function, and $\eps>0$.
 Assume that the function $r$ is strictly positive in $\cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ and
 $\varliminf_{n}r(x_n)>0$ for any convergent sequence 
 $x_n\to x\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$. 
 
-Then, there is a point $p^*\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ such that 
+Then there is a point $p^*\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ such that 
 
 \begin{subthm}{}$r(p^*)\le r(p)$ and
 \end{subthm}
@@ -1138,7 +1136,7 @@ Exactly the same argument as in the proof of Theorem~\ref{thm:almost.geod}
 shows that $\spc{L}$ is G-delta geodesic.
 By Theorem~\ref{angle-loc}, 
 for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \mathopen{]}y z\mathclose{[}$, then
+and moreover, if $x\in \mathopen{]}y z\mathclose{[}$ then
 \[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
 
 Let us denote by $\ComRad(p,\spc{L})$ 
@@ -1187,15 +1185,16 @@ and
 \[\ComRad(q,\spc{L})\z> (1-\eps)\cdot r^*\eqlbl{comrad(q)}\] 
 for any $q\in\cBall[p^*,\tfrac{1}{\eps}\cdot r^*]$. 
 
-Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and  an $\ell$ slightly bigger than $r^*$ leads to a contradiction.
+Applying the key lemma (\ref{key-lem:globalization}) for $p^*$ and  $\ell$ slightly bigger than $r^*$ leads to a contradiction.
 
 \parit{General case.}
 Let us construct $p^*\in\spc{L}$ as in the previous case.
-Since $\spc{L}$ is not geodesic, we can not apply the key lemma directly.
-Instead, let us pass to the ultrapower $\spc{L}^\o$ which
+Since $\spc{L}$ is not geodesic, we cannot apply the key lemma directly.
+Instead, let us pass to the ultrapower $\spc{L}^\o$, which
  is a geodesic space (see \ref{obs:ultralimit-is-geodesic}).
 
-According to Theorem~\ref{thm:=def-loc},
+%According to 
+In Theorem~\ref{thm:=def-loc},
 inequality \ref{comrad(q)} implies that 
 condition  \ref{curv>=k} holds for some fixed $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{100}
 >0$ at any point $q\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}$.
@@ -1203,18 +1202,18 @@ Therefore a similar statement is true in the ultrapower $\spc{L}^\o$;
 that is,
 for any point
 $q_\o\in\cBall[p^*,\tfrac1{2\cdot \eps}\cdot r^*]\subset\spc{L}^\o$, 
-condition~\ref{curv>=k} holds for say $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
+condition~\ref{curv>=k} holds for, say, $R_{\hbox{\rm\scriptsize\ref{SHORT.curv>=k}}}=\tfrac{r^*}{101}$.
 
 
 Note that $r^*\ge\ComRad(p^*,\spc{L}^\o)$.
-Therefore we can apply the lemma on almost minimum 
+Therefore we can apply the lemma on almost minimum  
 at the point $p^*$ to the function $x\z\mapsto\ComRad(x,\spc{L}^\o)$
 and $\eps'=\sqrt\eps=0.01$.
 
-For the obtained point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$ 
+For the resulting point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$, 
 and 
 $\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p^{{*}{*}},\tfrac{1}{\eps'}\cdot r^{{*}{*}}]$. 
-Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and an $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
+Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and for $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
 
@@ -1229,7 +1228,7 @@ All proofs in this section can be easily modified to use only the local definiti
 In a $\Alex{}$ space, geodesics do not bifurcate.
 
 More precisely, let $\spc{L}$ be a $\Alex{}$ space and $[p x]$, $[p y]$ be two geodesics. Then:
-\begin{subthm}{nonsplit} If  there is an $\eps>0$, such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
+\begin{subthm}{nonsplit} If  there is $\eps>0$ such that $\geod_{[p x]}(t)=\geod_{[p y]}(t)$ 
 for all $t\in[0,\eps)$, 
 then $[p x]\subset [p y]$ or $[p y]\subset [p x]$.
 \end{subthm}
@@ -1272,7 +1271,7 @@ Let
 Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
 Thus from $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
 
-\parit{(\ref{SHORT.angle=0})} From hinge comparison \ref{angle} 
+\parit{(\ref{SHORT.angle=0})} From hinge comparison \ref{angle}, 
 \[\mangle\hinge p x y=0\quad \Rightarrow\quad \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
 and thus ${\geod_{[p x]}(t)}={\geod_{[p y]}(t)}$ for all small $t$. 
 Therefore we can apply (\ref{SHORT.nonsplit}).
@@ -1296,7 +1295,7 @@ Thus the result follows from the triangle inequality for angles (\ref{claim:angl
 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont-cbb}
-Suppose  $(\spc{L}_n)$  is a sequence of $\Alex\kappa$ spaces,
+Suppose  $\spc{L}_n$  is a sequence of $\Alex\kappa$ spaces,
 % for each $n\in\NN$
  and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{L}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{L}_\o$.
@@ -1334,7 +1333,7 @@ Hence the result.
 \qeds
 
 \begin{thm}{Angle continuity}\label{cor:ang.cont-cbb}
-Let $(\spc{L}_n)$  be a sequence of complete length $\Alex\kappa$ spaces,
+Let $\spc{L}_n$  be a sequence of complete length $\Alex\kappa$ spaces,
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that sequences of points $p_n, x_n, y_n$ in $\spc{L}_n$ 
 converge  to points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$,
@@ -1518,7 +1517,7 @@ and for a sequence $t_n\to 0+$ we have
 \dist{q}{p}{}-t_n\cdot\cos(\phi-\eps).
 \eqlbl{eq:phi-eps}\]
 
-Set $x_n=\geod_{[p x]}(t_n)$.
+Let $x_n=\geod_{[p x]}(t_n)$.
 Clearly 
 \[\angk\kappa {x_n}p q>\pi-\phi+\tfrac\eps2\]
 for all large $n$.
@@ -1577,8 +1576,8 @@ Consider the function $f=\distfun{x}{}{}+\distfun{y}{}{}$.
 As follows from Lemma~\ref{concave-pi/2}, 
 $f$ is concave in $\oBall(z,\tfrac{\eps}{4})$.  
 Let $p\in\oBall(z,\tfrac{\eps}{4})$.  
-Choose a geodesic $[z p]$. 
-Set $h(t)=f\circ\geod_{[z p]}(t)$ and $\ell=\dist{z}{p}{}$.
+Choose a geodesic $[z p]$, 
+and let $h(t)=f\circ\geod_{[z p]}(t)$ and $\ell=\dist{z}{p}{}$.
 Clearly $h$ is concave.
 From the adjacent angle lemma (\ref{lem:sum=pi}), we have $h^+(0)=0$. 
 Therefore $h$ is nonincreasing which means that \[\dist{x}{p}{}+\dist{y}{p}{}
@@ -1595,7 +1594,7 @@ In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold wi
 From this, it is easy to see that $\spc{L}$ falls into one of the exceptional spaces described in the theorem.
 
 Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$, then the above argument applied to $\spc{L}^\o$ yields that $\spc{L}^\o$ is isometric to one of the exceptional spaces. 
-As all of those spaces are proper it means that $\spc{L}=\spc{L}^\o$.
+As all of those spaces are proper, $\spc{L}=\spc{L}^\o$.
 \qeds
 
 \begin{thm}{Lemma}\label{concave-pi/2}
@@ -1618,8 +1617,9 @@ Show that the action of $G$ has a fixed point in $\spc{L}$.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:kleiner}
-Let $\spc{L}$ be a complete length $\Alex{1}$ space.
-Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\mathbb{S}^n$.
+Let $\spc{L}$ be a complete length $\Alex{1}$ space
+Show that $\spc{L}$ contains at most 3 points with space of directions $\le\tfrac12\cdot\mathbb{S}^n$
+(see Definition \ref{def: inequality-of-spaces}).
 \end{thm}
 
 {\sloppy 
@@ -1697,7 +1697,7 @@ a contradiction.
 Let $\kappa>0$.
 Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$ 
 of the model angle function $\angk\kappa{{*}}{{*}}{{*}}$.
-This definition works well for $\Alex{}$ spaces,  for $\CAT{}$ spaces there is a similar but different definition.
+This definition works well for $\Alex{}$ spaces; for $\CAT{}$ spaces there is a similar but different definition.
 Some authors define the comparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$.
 
 \begin{thm}{Definition of extended angle}\label{def:extended-angle}
@@ -1716,7 +1716,7 @@ $\hinge p q r$ we have
 $\mangle\hinge p q r
 \ge\angk{\kappa+} p q r$.
 
-Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated using the following rules:
+Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated using the following rule:
 
 \begin{subthm}{} $\angk{\kappa+} p q r=\angk{\kappa} p q r$ if $\angk{\kappa} p q r$ is defined;
 \end{subthm}
@@ -1732,7 +1732,7 @@ Moreover, the extended model angle  $\angk{\kappa+} p q r$ can be calculated usi
 From Corollary~\ref{cor:CAT>k-sence}, $\Kappa<\kappa$ implies that any complete length $\Alex{\Kappa}$ space is $\Alex{\kappa}$; 
 thus the extended angle comparison follows from the definition.
 
-The rules for calculating extended angle is an easy consequence of its definition.
+The rule for calculating extended angle is an easy consequence of its definition.
 \qeds
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
