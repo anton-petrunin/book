@@ -862,7 +862,7 @@ The following lemma is closely relevant to the first distance estimate (\ref{thm
 \begin{thm}{Lemma}\label{lem:dist-estimate}
 Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function.
 Consider two $f$-gradient curves $\alpha$ and $\beta$.
-Then for any $t\ge s\ge 0$ we have
+Then for any $t, s\ge 0$ we have
 \begin{align*}
 &\dist[2]{\alpha(s)}{\beta(t)}{}
 \le 
@@ -892,7 +892,7 @@ Therefore
 \[\ell^2(t)-\ell^2(0)\le 2\cdot\left(f(q)-f(p)\right)\cdot t + t^2.\]
 It proves the needed inequality in case $s=0$.
 Combining it with the first distance estimate (\ref{thm:dist-est}), we get the result in case $s\le t$.
-The case $s\ge t$ can be done the same way.
+The case $s\ge t$ follows by switching the roles of $s$ and $t$..
 \qeds
 
 
