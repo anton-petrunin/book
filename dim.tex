@@ -37,7 +37,7 @@ We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \index{strutting point array}\emph{$\kappa$-strutting} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
 \end{thm} 
 
-The following definition is motivated by the observation that $k=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer  $k>0$.
+The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer  $k>0$.
 
 
 \begin{thm}{Definition}\label{def:rank}
@@ -184,7 +184,8 @@ $
 First note that Claim~\ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,r)$, we have
 \begin{enumerate}[(i)]
 \item\label{111} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
-\item\label{222} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}-x^j\}<0$.
+\item\label{222} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if 
+\[\dist{a^i}{q}{}-x^i=\min_j\{\dist{a^j}{q}{}\z-x^j\}<0.\]
 \end{enumerate}
 Indeed, since $t_0\le\tfrac{r}2$, then $\alpha_{\bm{x}}(t)\in\oBall(p,r)$ for all $t\in[0,t_0]$.
 Consider the following real-to-real functions:
@@ -414,7 +415,7 @@ Hence $\kay>m$.
 
 \begin{thm}{Proposition}\label{pack-homogeneus}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. Then 
- for any two points $p,\bar p\in \spc{L}$ and any $R,\bar R>0$, there is a constant $,\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
+ for any two points $p,\bar p\in \spc{L}$ and any $R,\bar R>0$, there is a constant $\delta\z=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
 \[\pack_{\delta\cdot\eps}\oBall(\bar p,\bar R)\ge \pack_{\eps}\oBall(p,R).\]
 
 \end{thm}
@@ -513,7 +514,7 @@ The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivia
 
 \parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
 Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
-Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ for all $i\not=j$.
+Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)\z>\tfrac\pi2$ for all $i\not=j$.
 Choose an array  $(x^0,x^1,\dots,x^m)$ of points in $\spc{L}$ such that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
 in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
 Choose points $a^i\in\mathopen{]}p x^i\mathclose{]}$ sufficiently close to $p$.

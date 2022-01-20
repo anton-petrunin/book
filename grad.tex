@@ -461,7 +461,7 @@ Integrating the above estimate, we get
 \label{sec:grad-curv:exist}
 
 In general, the ``past'' of gradient curves can not be determined by the present.
-For example, consider the concave function $f\:\RR\to\RR$, $f(x)=-|x|$. The 
+For example, consider the concave function $f\:\RR\to\RR$, $f(x)\z=-|x|$. The 
 two curves $\alpha(t)=\min\{0,t\}$ with $\beta(t)=0$
 are $f$-gradient with $\alpha(t)\z=\beta(t)\z=0$ for all $t\ge0$; 
 however $\alpha(t)\z\ne\beta(t)$ for all $t<0$.
@@ -825,8 +825,6 @@ to Alexandrov spaces; almost the same proof is given in \cite[1.5]{burago-burago
 Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
 This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so called RCD spaces, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
 Jost-Hinrich Eschenburg obtained an analogous result for  Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
-For generalized 
-
 
 We present a proof that uses gradient flow for Busemann functions. 
 It is close in spirit to the proof given in \cite{cheeger-gromoll-split}.
@@ -1056,7 +1054,7 @@ is semiconcave in $\oBall(p,\tfrac{\varpi\kappa}2)$.
 
 According to \ref{thm:exist-grad-curv}, there is an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ defined on the maximal interval such that $\alpha(0)=x$.
 
-Now consider a solution of the  differential equation for  $\tau(t)$, $\tau'=(\tg\kappa\tau)^2$, $\tau(0)=r$. 
+Now consider a solution of the  differential equation for  $\tau(t)$, $\tau'\z=(\tg\kappa\tau)^2$, $\tau(0)=r$. 
 Note that $\tau(t)$ is also a gradient curve  for the function $\itg\kappa$ defined on $[0,\tfrac{\varpi\kappa}2)$.
 Direct calculations show that the composition $\alpha\circ\tau^{-1}$ 
 is a $(p,\kappa)$-radial curve.
@@ -1612,9 +1610,9 @@ Let $\gamma\:[0,\ell(t)]\to \spc{Z}$ be an arclength parametrization of $[\alpha
 and $-\dd_{\alpha(t)}h(\dir{\beta(t)}p)$ is the left derivative of $h\circ\gamma$ at $\ell(t)$.
 Since $f$ and $h$ are $\lambda$-concave,
 \begin{align*}
-f(\beta(t))&\le f(\alpha(t))+\ell(t)\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p}) +\tfrac12\cdot\lambda\cdot\ell(t)^2,
+f\circ\beta(t)&\le f\circ\alpha(t)+\ell(t)\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p}) +\tfrac12\cdot\lambda\cdot\ell(t)^2,
 \\
-h(\alpha(t))&\le h(\beta(t))+\ell(t)\cdot \dd_{\alpha(t)}h(\dir{\beta(t)}p) +\tfrac12\cdot\lambda\cdot\ell(t)^2.
+h\circ\alpha(t)&\le h\circ\beta(t)+\ell(t)\cdot \dd_{\alpha(t)}h(\dir{\beta(t)}p) +\tfrac12\cdot\lambda\cdot\ell(t)^2.
 \end{align*}
 Adding these inequalities and taking into account  $|f(x)-h(x)|<s$ for any $x$, we conclude that 
 \[\dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+\dd_{\alpha(t)}h(\dir{\beta(t)}p)\ge \lambda\cdot \ell(t)+2\cdot s/\ell(t).\]
@@ -1644,7 +1642,12 @@ Let $f_t$ be a family of $\lambda$-concave functions for $t\in [a,b)$, where $\D
 
 Let $\alpha\:[a,b)\to B(z,r)$ be Lipschitz.
 Then $\alpha$ is an $f_t$-gradient curve if and only if 
-\[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f_t(p)-f_t\circ\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\alpha(t)}{}\right]+o(\eps)\eqlbl{def:tdflow-plus}\]
+\[\begin{aligned}
+&\distfun{p}{}{}\circ\alpha(t+\eps)\le 
+\\
+&\quad\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \left[\frac{f_t(p)-f_t\circ\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\alpha(t)}{}\right]+o(\eps)
+\end{aligned}
+\eqlbl{def:tdflow-plus}\]
 for any $t\in [a,b)$ and $p\in B(z,r)\setminus \{\alpha (t)\}$.
 \end{thm}
 
@@ -1701,15 +1704,15 @@ Then
 \distfun{p}{}{}\circ\hat\alpha(t)-
 \\
 &\quad
--\eps\cdot \left[\frac{\hat f_t(p)-\hat f_t\circ\hat\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\hat\alpha(t)}{}\right]
-+o(\eps)
+-\eps\cdot \left[\frac{\hat f_t(p)-\hat f_t\circ\hat\alpha(t)}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\hat\alpha(t)}{}\right] 
++o(\eps)\le
 \\
 &\le 
 \distfun{p}{}{}\circ\hat\alpha(t)-
 \\
 &\quad
 -\eps\cdot \left[\frac{f_t(p)-f_t\circ\hat\alpha(t)-2\cdot s}{\dist{p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{p}{\hat\alpha(t)}{}\right]
-+o(\eps)
++o(\eps),
 \end{align*}
 where 
 \[s=\sup_{t,x} \{|f_t(x)-\hat f_t(x)|\}.\]
