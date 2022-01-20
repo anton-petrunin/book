@@ -389,12 +389,13 @@ $f\:\spc{Z}\to \RR$ be a locally Lipschitz
  $\lambda$-concave function.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Let $\alpha,\beta\:[0,t_{\max})\to \spc{Z}$ be two $f$-gradient curves.
-Then for any $t\in[0,t_{\max})$
+Then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
-e^{\lambda\cdot t}\cdot\dist[{{}}]{\alpha(0)}{\beta(0)}{}.\]
+e^{\lambda\cdot t}\cdot\dist[{{}}]{\alpha(0)}{\beta(0)}{}\]
+for any $t$.
 
-Moreover, the same conclusion holds for a locally Lipschitz $\lambda$-concave subfunction $f\:\spc{Z}\subto \RR$ if for any $t\in[0,t_{\max})$ there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f$.
+Moreover, the statement holds for a locally Lipschitz $\lambda$-concave subfunction $f\:\spc{Z}\subto \RR$ if  there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f$ for any~$t$.
 \end{thm}
 
 \parit{Proof.} 
@@ -408,7 +409,7 @@ Here one has to choose a midpont $p$ of $[\alpha(t)\,\beta(t)]$, apply the first
 Hence the result. 
 \qeds
 
-\begin{thm}{Second distance estimate}\label{lem:fg-dist-est}{\sloppy 
+\begin{thm}{Second distance estimate}\label{lem:fg-dist-est}
 Let $\spc{Z}$ be a complete length space, 
 $\eps>0$,  
 and $f,g\:\spc{Z}\to \RR$ be two $\lambda$-concave locally Lipschitz function such that $|f-g|<\eps$.
@@ -427,8 +428,6 @@ In particular, if $t_{\max}<\infty$ then
 \le
 \Const\cdot\sqrt{\eps\cdot t}\]
 for some constant $\Const=\Const(t_{\max},\lambda)$.
-
-}
 
 Moreover, the same conclusion holds for locally Lipschitz  $\lambda$-concave subfunctions $f,g\:\spc{Z}\subto \RR$ if for any $t\in[0,t_{\max})$ there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f\cap\Dom g$.
 \end{thm}
@@ -855,11 +854,48 @@ $\iota:v_\pm\mapsto (\0',\pm|v_\pm|)$.
 }
 
 \begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
-Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space, $m\ge2$, and $\rad\spc{L}=\pi$. Then 
-\[\spc{L}\iso \mathbb{S}^m.\]
+Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space, $m\ge2$, and $\rad\spc{L}=\pi$.
+Then \[\spc{L}\iso \mathbb{S}^m.\]
  
 \end{thm}
 
+The following lemma is closely relevant to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
+
+\begin{thm}{Lemma}\label{lem:dist-estimate}
+Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function.
+Consider two $f$-gradient curves $\alpha$ and $\beta$.
+Then for any $t\ge s\ge 0$ we have
+\begin{align*}
+&\dist[2]{\alpha(s)}{\beta(t)}{}
+\le 
+\dist[2]{p}{q}{}+
+2\cdot(f(p)-f(q))\cdot(s-t)+ (s-t)^2,
+\end{align*}
+where $p=\alpha(0)$ and $q=\beta(0)$.
+\end{thm}
+
+\parit{Proof.}
+If $\spc{L}$ is not geodesic, then pass to its ultrapower $\spc{L}^\o$.
+
+Since $f$ is 1-Lipschitz, $|\nabla f|\le1$.
+Therefore 
+\[f\circ\beta(t)\le f(q)+t\]
+for any $t\ge0$.
+
+Set $\ell(t)=\dist{p}{\beta(t)}{}$.
+Applying \ref{lem:grad-lip:lam=0} and the first variation inequality (\ref{lem:first-var}), we get
+\begin{align*}
+\ell^2(t)'
+&\le 2\cdot \left(f\circ\beta(t)-f(p)\right)\le 
+\\
+&\le2\cdot\left(f(q)+t-f(p)\right).
+\end{align*}
+Therefore 
+\[\ell^2(t)-\ell^2(0)\le 2\cdot\left(f(q)-f(p)\right)\cdot t + t^2.\]
+It proves the needed inequality in case $s=0$.
+Combining it with the first distance estimate (\ref{thm:dist-est}), we get the result in case $s\le t$.
+The case $s\ge t$ can be done the same way.
+\qeds
 
 
 \parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, asociated with half-lines $\gamma:[0,\infty)\to \spc{L}$ and $\gamma:(-\infty,0]\to \spc{L}$ respectively; that is,
@@ -915,7 +951,7 @@ Consider the level set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
 it is a closed convex subset of $\spc{L}$, and therefore forms an Alexandrov space.
 Consider the map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
-Applying distance estimate \ref{thm:dist-est} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
+Applying Lemma \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
 
 
