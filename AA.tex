@@ -1,3 +1,145 @@
+%\begin{thm}{Flat triangles lemma} \label{lem:flat-triangle}
+%Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
+%For a triangle $\trig{x}{y}{z}$ in $\spc{U}$ with model triangle $\trig{\tilde x}{\tilde y}{\tilde z} = \tilde \triangle_\kappa(x y z)$, the following are equivalent:
+
+%\begin{subthm}{thm:flat:angle}
+
+%$\mangle\hinge x y z= \angk\kappa x y z$;
+%\end{subthm}
+
+%\begin{subthm}{thm:flat:dist}
+%$\dist{x}{w}{}=\dist{\tilde x}{\tilde w}{}$ for some  $\tilde w\in\mathopen{]}\tilde x \tilde z\mathclose{[}$, where $w=f(\tilde w)$ and  $f$ is the natural map;
+%\end{subthm}
+
+%\begin{subthm}{thm:flat:isometry} 
+%there is a distance-preserving map $F\:\Conv\trig{\tilde x}{\tilde y}{\tilde z} \to \spc{U}$ that maps $\tilde x,\tilde y,\tilde z$ to $x,y,z$ respectively.
+%\end{subthm} 
+%\end{thm}
+
+%??? I think it is better to write (a) <=> (b) and (a) <=> (c)!!!
+%??? Maybe make an exerices from it, this also almost follow from majorization...
+
+%\parit{Proof.}
+%By angle-sidelength monotonicity (\ref{cor:monoton-cba}),
+
+%\begin{clm}{}\label{clm:ang=>dist}
+%If $\mangle\hinge xyz=\angk\kappa xyz$, then  the restriction $f|_{([xy]\cup[xz])}$ is distance-preserving.\end{clm}
+
+%Suppose $v,w\in \mathopen{]}xy\mathclose{[}$,  in the order $x,v,w,y$. Applying \ref{cat-monoton} to triangles $\trig{z}{x}{y}$, 
+%$\trig {z}{x}w$ and $\trig {z}v{y}$, we find that $\dist{z}{v}{}\z=\dist{\tilde z}{\tilde v}{}$ 
+%%%%if and only if $\distz}{w}{}=\dist{\tilde z}{\tilde w}{}$, where $v=f(\tilde v)$,  $w=f(\tilde w)$.  Thus by the first variation formula, we have
+%\begin{clm}{}\label{clm:dist=>ang}
+%If $\dist{z}{w}{}=\dist{\tilde z}{\tilde w}{}$ for some $w\in \mathopen{]}xy\mathclose{[}$, then $\mangle\hinge yxz=\angk\kappa yxz$.
+%\end{clm}
+
+%\parit{(\ref{SHORT.thm:flat:angle})$\Leftrightarrow$(\ref{SHORT.thm:flat:dist}).}  Apply claims \ref{clm:ang=>dist} and \ref{clm:dist=>ang} for permutations of $x,y, z$.
+
+%\parit{(\ref{SHORT.thm:flat:dist})$\Leftrightarrow$(\ref{SHORT.thm:flat:isometry}).} 
+%Note that (\ref{SHORT.thm:flat:dist}) implies that the natural map $f\:\trig{\tilde x}{\tilde y}{\tilde z} \to\trig xyz$ is distance-preserving.Then by the triangle inequality for angles at $x$,\[\mangle\hinge x {v}{ w}= \angk\kappa x {v}{ w}\eqlbl{eq:flat-angle}\] for any $v,w\in \mathopen{]}yz\mathclose{[}$.  
+
+%Let $(t,s)\mapsto \gamma_t(s)$ be the line-of-sight map for  $[y z]$ from  $x$ (defined in \ref{def:sight}),
+%and $(t,s)\mapsto \tilde \gamma_t(s)$ be the line-of-sight map for $[\tilde y\tilde z]$ from $\tilde x$.  By \ref{eq:flat-angle} and angle-sidelength monotonicity (\ref{cor:monoton-cba}), the map  
+%$F\:\Conv\trig{\tilde x}{\tilde y}{\tilde z} \to \spc{U}$ defined by $F\:\tilde \gamma_t(s)\mapsto \gamma_t(s)$ is distance-preserving.  Hence  (\ref{SHORT.thm:flat:isometry}). 
+
+%The implication (\ref{SHORT.thm:flat:isometry})$\Rightarrow$(\ref{SHORT.thm:flat:dist}) holds trivially.
+%\qeds
+ 
+ 
+ 
+%\begin{thm}{Flat triangles lemma} \label{lem:flat-triangle}
+%Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
+%For a triangle 
+%$\trig{x}{y}{z}$ in $\spc{U}$ with model triangle $\trig{\tilde x}{\tilde y}{\tilde z} = \tilde \triangle_\kappa(x y z)$, the following are equivalent:
+
+%\begin{subthm}{thm:flat:angle}
+%$\mangle\hinge x y z= \angk\kappa x y z$,
+%\end{subthm}
+
+%\begin{subthm}{thm:flat:dist}
+%$\dist{x}{w}{}=\dist{\tilde x}{\tilde w}{}$ for some (and therefore any) 
+%$w\in ]y z[$ and $\tilde w\in]\tilde y\tilde z[$ 
+%such that $\dist{y}{w}{}=\dist{\tilde y }{\tilde w}{}$, 
+%\end{subthm}
+
+%\begin{subthm}{thm:flat:isometry} 
+%there is a distance-preseving %???!!!
+% map $F\:\Conv\trig{\tilde x}{\tilde y}{\tilde z} \to \spc{U}$ that maps $\tilde x,\tilde y,\tilde z$ to $x,y,z$ respectively.
+%\end{subthm} 
+%\end{thm}
+
+%\parit{Proof.}
+%Note that from point-on-side and angle comparison 
+%(\ref{cat-monoton}+\ref{SHORT.cat-hinge})
+% we get the following.
+
+%\begin{clm}{}\label{clm:ang=>dist}
+%If $\mangle\hinge xyz=\angk\kappa xyz$, then for any $w\in \mathopen{]}x y\mathclose{[}$ we have $\dist{z}{w}{}=\dist{\tilde z}{\tilde w}{}$, where $\tilde w\in[\tilde x\tilde y]$ such that $\dist{\tilde x}{\tilde w}{}=\dist{x}{w}{}$.
+%\end{clm}
+
+%Further,  let $v,w\in \mathopen{]}xy\mathclose{[}$ and they appear on the geodesic in the order $x,v,w,y$.
+%Denote by $\tilde v$ and $\tilde w$ the corresponding points on $[\tilde x\tilde y]$;
+%i.e, $\dist{x}{v}{}=\dist{\tilde x}{\tilde v}{}$ 
+%and $\dist{x}{w}{}\z=\dist{\tilde x}{\tilde w}{}$.
+%Applying \ref{cat-monoton}, to triangles $\trig{z}{x}{y}$, 
+%$\trig {z}{x}w$ and $\trig {z}v{y}$,
+%we get that $\dist{z}{v}{}\z=\dist{\tilde z}{\tilde v}{}$ 
+%if and only if
+%$\dist{z}{w}{}=\dist{\tilde z}{\tilde w}{}$.
+%In particular if $\dist{z}{w}{}\z=\dist{\tilde z}{\tilde w}{}$
+%then the value $\angk\kappa xvz$ is the same for all $v\in\mathopen{]}xy]$.
+
+%Hence the Strong angle lemma (\ref{lem:strong-angle-cba}) we get the following.
+
+%\begin{clm}{}\label{clm:dist=>ang}
+%If $\dist{x}{w}{}=\dist{\tilde x}{\tilde w}{}$ for some $w\in \mathopen{]}yz\mathclose{[}$
+%then 
+%$\mangle\hinge yxz=\angk\kappa yxz$.
+%\end{clm}
+
+%Claims \ref{clm:ang=>dist} and \ref{clm:dist=>ang}
+%applied for permutations of $x,y, z$ proves (\ref{SHORT.thm:flat:angle})$\Leftrightarrow$(\ref{SHORT.thm:flat:dist}).
+
+
+%\parit{(\ref{SHORT.thm:flat:angle})$+$(\ref{SHORT.thm:flat:dist})$\Rightarrow$(\ref{SHORT.thm:flat:isometry}).}
+%Set 
+%\begin{align*}
+%\gamma&=\geodpath_{[xz]},
+%&
+%\tilde \gamma&=\geodpath_{[\tilde x\tilde z]},
+%\\
+%\gamma_t&=\geodpath_{[y  \gamma(t)]},
+%&
+%\tilde \gamma_t&=\geodpath_{[\tilde y\tilde \gamma(t)]}.
+%\end{align*}
+%Note that (\ref{SHORT.thm:flat:dist}) implies that
+%$\trig{\tilde x}{\tilde \gamma(t^1)}{\tilde \gamma(t^2)}$ is the model triangle for $\trig{x} {\gamma(t^1)}{\gamma(t^2)}$, for $0\le t^1<t^2\le 1$.
+%Then (\ref{SHORT.thm:flat:angle}) and  the triangle inequality for angles at $x$ implies
+%\[\mangle\hinge x {\gamma(t^1)}{ \gamma(t^2)}= \angk\kappa x {\gamma(t^1)}{ \gamma(t^2)}.\]  By angle-sidelength monotonicity (\ref{cor:monoton-cba}), $\dist{\tilde \gamma_{t^1}(u^1)}{\tilde \gamma_{t^2}(u^2))}{}
+%=\dist{\gamma_{t^1}(u^1)}{\gamma_{t^2}(u^2)}{}$ for $0\le u^1,u^2\le 1$. 
+%Therefore the map $F\:\Conv\trig{\tilde x}{\tilde y}{\tilde z} \to \spc{U}$ 
+%defined by $F\:\tilde \gamma_t(u)\mapsto\gamma_t(u)$ 
+%is distance-preserving.  
+%Hence (\ref{SHORT.thm:flat:isometry}). 
+
+%The implication (\ref{SHORT.thm:flat:isometry})$\Rightarrow$(\ref{SHORT.thm:flat:dist}) holds trivially.
+%\reds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -37,7 +37,7 @@ We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \index{strutting point array}\emph{$\kappa$-strutting} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
 \end{thm} 
 
-The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer  $k>0$.
+The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer $k>0$; the packing number is defined in \ref{sec:notations}.
 
 
 \begin{thm}{Definition}\label{def:rank}
@@ -45,10 +45,9 @@ Let $\spc{L}$ be a complete length $\Alex{}$ space
 and $p\in \spc{L}$.
 Let us define rank of $\spc{L}$ at $p$ as 
 \[\rank_p=\rank_p\spc{L}
-\df\pack_{\pi/2}\Sigma_p-1\]
-(see Section \ref{sec:metric spaces}).
-%%??? V:  what reference is this meant to be? I don't see any need for a reference here. packing numbers have been previously defined.
-%  S:  A reference to the notation seems helpful. I tried to add the reference but it runs as Section 2.1 not 2.2 as wanted ...?
+\df
+\pack_{\pi/2}\Sigma_p-1.\]
+
 \end{thm}
 
 
@@ -373,7 +372,7 @@ To prove Theorem \ref{thm:dim-infty}  we will need the following three propositi
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
 Assume there is a distance-preserving embedding $\iota\:\EE^{m}\hookrightarrow \T_p\spc{L}$ 
 that preserves the cone structure.
-% ???V: what reference is meant to be here?
+% ??V: what reference is meant to be here?
 Then either
 \begin{subthm}{}
  $\Im\iota=\T_p\spc{L}$, or
@@ -428,8 +427,6 @@ that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
 Without loss of generality we may assume the $x^i$ are in $Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
 Choose a factor $1>s>0$ so that $\bar R>s\cdot(\dist{p}{\bar p}{}+R)$.
-%, where ??.
-%S. need to define \bar r, ??? V: I changed $\bar r$ to $\bar R$.
 For each $i$, take $\bar x^i\in[\bar p x^i]$ so that 
 $\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
 From \ref{cor:monoton:2-sides},
