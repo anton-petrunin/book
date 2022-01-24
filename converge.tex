@@ -97,7 +97,7 @@ is distance-preserving.
 
 \begin{thm}{Definition}\label{def:GH}
 Let $\bm{X}$ be a common space for proper metric spaces
-$\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$.
+$\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$.
 Assume that $\spc{X}_n$ forms an open set in $\bm{X}$ for each $n<\infty$ and 
 $\spc{X}_n\Hto \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$.
 
@@ -308,7 +308,7 @@ $|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}|\le \eps$ for any $x,x'\in\s
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
-Let $\spc{X}_1,\spc{X}_2,\dots$ and  $\spc{X}_\infty$ be metric spaces and let $\eps_n\to\0+$ as $n\to\infty$.
+Let $\spc{X}_1,\spc{X}_2,\dots$, and  $\spc{X}_\infty$ be metric spaces and let $\eps_n\to\0+$ as $n\to\infty$.
 Suppose that either 
 
 \begin{subthm}{}\label{lem:almost-isom-a}
@@ -324,7 +324,7 @@ Then there is a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$.
 
 
 \parit{Proof.}
-To prove part \eqref{lem:almost-isom-a}  let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$
+To prove part \eqref{lem:almost-isom-a}  let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ that is defined the following way:
 \begin{align*}
 \rho(x_n,y_n)&=\dist{x_n}{y_n}{\spc{X}_n},\quad \rho(x_\infty,y_\infty)=\dist{x_\infty}{y_\infty}{\spc{X}_\infty},
@@ -418,7 +418,7 @@ The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} between 
 The Gromov--Hausdorff distance turns the set of all isometry classes of compact metric spaces into a metric space.
 The following theorem shows that convergence in this space coincides with the Gromov--Hausdorff convergence defined above.
 
-\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be compact metric spaces.
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be compact metric spaces.
 Then there is a convergence $\spc{X}_n\GHto \spc{X}_\infty$ if and only if
 $\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to\infty$.
 
@@ -467,12 +467,13 @@ Assume $\spc{X}_n\xto{\GH}\spc{X}_\infty$.
 Fix $\eps>0$, and choose a maximal $\eps$-packing $\{x^1,x^2,\dots,x^\kay\}$ in $\spc{X}_\infty$.
 For each $x^i$, 
 choose a sequence $x^i_n\in\spc{X}_n$ 
-such that $a_n(x^i_n)\to x^i$
-and define a map $a_n\: \spc{X}_n\to\spc{X}_\infty$
+such that $a_n(x^i_n)\to x^i$.
+Define a map $a_n\: \spc{X}_n\to\spc{X}_\infty$
 %S: note addition of previous line 
 such that $a_n(x^i_n)=x_n$.
 Note that for all large $n$, we have $\dist{x^i_n}{x^j_n}{}>\eps$.
-For each point $z\in \spc{X}_\infty$, choose $x^i$ so that $\dist{z}{x^i}{}<\eps$ and define a map $b_n\:\spc{X}_\infty\to\spc{X}_n$ such that 
+For each point $z\in \spc{X}_\infty$, choose $x^i$ so that $\dist{z}{x^i}{}<\eps$. 
+Define a map $b_n\:\spc{X}_\infty\to\spc{X}_n$ such that 
 $b_n(z)=x^i_n$.
 Observe that 
 \[\dist{b_n(y)}{b_n(z)}{\spc{X}_n}+3\cdot\eps>\dist{y}{z}{\spc{X}_\infty}\]
@@ -486,7 +487,7 @@ Hence $\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to \infty$.
 The following theorem roughly states that the isometry class of a Gromov--Hausdorff limit is uniquely defined if it is compact. 
 
 \begin{thm}{Theorem}\label{thm:GH-compact}
-Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ be metric spaces
+Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ be metric spaces
 such that $\spc{X}_n\xto{\GH}\spc{X}_\infty$, 
 $\spc{X}_n\xto{\bar\GH}\bar{\spc{X}}_\infty$.
 

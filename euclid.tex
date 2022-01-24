@@ -6,7 +6,7 @@
 \label{sec:geods}
 
 \parbf{Geodesics and their relatives.}
-v and $\II\subset \R$\index{$\II$} be an interval. 
+Let $\spc{X}$ be a metric space and $\II\subset \R$\index{$\II$} be an interval. 
 A globally distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{unit-speed geodesic}\emph{unit-speed geodesic}%
 \footnote{Various authors call it differently: \index{shortest path}\emph{shortest path}, \index{minimizing geodesic}\emph{minimizing geodesic}.}; 
 in other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equality
@@ -72,7 +72,7 @@ $\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 Again, given a triple $p,q,r\in \spc{X}$, there may be no triangle 
 $\trig p q r$, simply because one of the pairs of these points cannot be joined by a geodesic.  Or there may be many different triangles, any of which can be denoted by $\trig p q r$.
 Once we write $\trig p q r$, it means we have chosen such a triangle; 
-that is, made a choice of each $[q r], [r p]$ and $[p q]$.
+that is, made a choice of each $[q r]$, $[r p]$, and $[p q]$.
 
 The value 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\] 
@@ -99,7 +99,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 \section{Model angles and triangles}\label{sec:mod-tri/angles}
 
 Let $\spc{X}$ be a metric space, 
-$p,q,r\in \spc{X}$ 
+$p,q,r\in \spc{X}$, 
 and $\kappa\in\RR$. 
 Let us define the \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
@@ -276,7 +276,7 @@ Thus \ref{eq:k-K} follows.
 
 \begin{thm}{Triangle inequality for angles}
 \label{claim:angle-3angle-inq}
-Let  $[px^1]$, $[px^2]$ and $[px^3]$ be three geodesics in a metric space.
+Let  $[px^1]$, $[px^2]$, and $[px^3]$ be three geodesics in a metric space.
 If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
 
@@ -315,7 +315,10 @@ Thus for any $\eps>0$,
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}+2\cdot \eps.\]
 Hence the result follows.
 
-To define $s(t,\tau)$, consider three half-lines $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$, $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$ and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}\z+\alpha^{23}\z+2\cdot \eps$.
+To define $s(t,\tau)$, consider three half-lines $\tilde \gamma^1$, $\tilde \gamma^2$, $\tilde \gamma^3$ on a Euclidean plane starting at one point, such that
+$\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$,
+$\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$,
+and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}\z+\alpha^{23}\z+2\cdot \eps$.
 We parametrize each half-line by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
 the number such that 
@@ -527,7 +530,7 @@ Recall that the speed of a curve is defined in \ref{thm:speed}.
 
 \begin{thm}{Exercise}\label{ex:diff}
 Let $\alpha$ be a curve in a metric space with defined angles.
-Suppose that $\speed_t\alpha$, $\alpha^+(t)$ and $\alpha^-(t)$ are defined.
+Suppose that $\speed_t\alpha$, $\alpha^+(t)$, and $\alpha^-(t)$ are defined.
 
 Show that $\alpha$ is differentiable at $t$.
 \end{thm}
