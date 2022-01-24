@@ -1,7 +1,7 @@
 %%!TEX root = the-defs-CBB+CBA-sol.tex
 \parbf{\ref{exr-crofton}.}
 Suppose $\alpha$ is a closed spherical curve. 
-By Crofton's formula, the length of a curve $\alpha$ on the sphere is $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
+By Crofton's formula, the length of  $\alpha$  is $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
 
 Since $\alpha$ is closed, almost all equators cross it at an even number of points (we assume that $\infty$ is an even number).
 If $\length \alpha<2\cdot\pi$ then $n_\alpha<2$.
@@ -97,9 +97,10 @@ Since $\spc{X}$ is compact, so is $\spc{K}$.
 It remains to observe that $\spc{K}$ is a length space since it is convex.
 
 \parbf{\ref{ex:nonconvex-limit}.}
-Let $\spc{X}_n$ be the plane with the metric induced by the $\ell^n$-norm and let $f_n(x,y)=x$ for all $n$.
-Observe that $\spc{X}_\o$ is the plane with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not concave.
+Let $\spc{X}_n$ be the square $\{( x,y)\in \R^2, |x|\le 1, |y|\le 1\}$ with the metric induced by the $\ell^n$-norm and let $f_n(x,y)=x$ for all $n$.
+Observe that $\spc{X}_\o$ is the square with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not concave.
 
+%V: Exercise asks for a compact space so I changed plane to a square
 \parbf{\ref{ex:GH-proper-marked}.} Modify proof of \ref{thm:GH-compact}, or apply \ref{thm:ultra-GH:b}.
 
 \parbf{\ref{ex:adjacent-angles}.}
@@ -142,7 +143,7 @@ Observe and use that
 
 
 \parbf{\ref{ex:nongeod-cbb}.}
-Modify the induced length metric on the unit sphere in a Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space is $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
+Modify the induced length metric on the unit sphere in an infinite dimensional  Hilbert space in small neighborhoods of a countable collection of points. To prove that the obtained space is $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
 
 \parbf{\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
 
@@ -150,13 +151,14 @@ Modify the induced length metric on the unit sphere in a Hilbert space in small 
 On the plane, any nonnegatively curved metric having an everywhere dense set of singular points will do the job, where 
 by singular point we mean a point having total angle around it strictly smaller than $2\cdot\pi$.
 
-Indeed, if $x_i$ is a singular point, then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
+Indeed, if $x_i$ is a singular point, then there is $0<\eps_i<1/20$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
 The set 
 \[\Omega_n=\bigcup_i \oBall(x_i,\tfrac{\eps_i}n)\]
 is open and everywhere dense.
-Note that $\Omega_n$ may intersect a geodesic only at 
+Note that $\Omega_n$ may intersect a geodesic  of length $1/n$ only within $\frac 1 {10n}$  of its endpoints.
+%V: what was written was incorrect.
 %$\tfrac1n$-end of it.
-an endpoint.
+%an endpoint.
 The intersection of the $\Omega_n$ is a G-delta dense set that does not intersect the interior of any geodesic.
 
 \parbf{\ref{mink+alex=euclid}.} 
