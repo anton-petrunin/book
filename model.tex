@@ -36,8 +36,8 @@ in addition that $a+b+c<2\cdot\varpi\kappa$;
 otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
 
 \parbf{Trigonometric functions.}
-We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\cs\kappa$, $\sn\kappa$ and $\md\kappa$;
-$\cs{}$ stands for {}\emph{cosine}, $\sn{}$ stands for {}\emph{sine} and $\md{}$, for {}\emph{modified distance}. 
+We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\cs\kappa$, $\sn\kappa$, and $\md\kappa$;
+$\cs{}$ stands for {}\emph{cosine}, $\sn{}$ stands for {}\emph{sine}, and $\md{}$, for {}\emph{modified distance}. 
 
 They are defined as the solutions of the following initial value problems respectively:
 \[
@@ -60,7 +60,7 @@ They are defined as the solutions of the following initial value problems respec
  \end{cases}  
 \]
 
-Namely we set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$ and 
+Namely we set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$, and 
 \[
 \md\kappa(t)=
 \begin{cases}
@@ -102,6 +102,8 @@ we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 \right.	&
 \end{align*}
 
+{
+
 \begin{wrapfigure}{r}{43mm}
 \centering
 \includegraphics{mppics/pic-105}
@@ -124,6 +126,8 @@ In this case we will write \label{page:model-side}\index{$\side\kappa$!$\side\ka
 \phi
 =
 \tangle\mc\kappa\{a;b,c\}.\]
+
+}
 
 The functions $\side\kappa$ and $\tangle\mc\kappa$ will be called respectively the \index{model side}\emph{model side} and the \index{model angle}\emph{model angle}.
 Set 
@@ -152,12 +156,12 @@ for $y\ne 0$.
 \end{subthm}
 
 \begin{subthm}{increase}
-For fixed $\kappa$, $b$ and $c$, the function 
+For fixed $\kappa$, $b$, and $c$, the function 
 \[a\mapsto\tangle\mc\kappa\{a;b,c\}\]
 is increasing and defined on a real interval.
 Equivalently, the function
 \[\phi\mapsto\side\kappa \{\phi;b,c\}\]
-is increasing and defined if $b,c<\varpi\kappa$ and $\phi\in[0,\pi]$\footnote{Formally speaking, if $\kappa>0$ and $b+c\ge \varpi\kappa$, it is defined only for $\phi\in[0,\pi)$, but $\side\kappa \{\phi;b,c\}$ can be extended to $[0,\pi]$ as a continuous function.}.
+is increasing and defined if $b,c<\varpi\kappa$, and $\phi\in[0,\pi]$\footnote{Formally speaking, if $\kappa>0$ and $b+c\ge \varpi\kappa$, it is defined only for $\phi\in[0,\pi)$, but $\side\kappa \{\phi;b,c\}$ can be extended to $[0,\pi]$ as a continuous function.}.
 \end{subthm}
 
 \begin{subthm}{k-decrease}
@@ -168,7 +172,7 @@ and nonincreasing (in fact, increasing, if $0\z<\phi\z<\pi$).
 \end{subthm}
 
 \begin{subthm}{lem:alex-0}(Alexandrov's lemma)
-Assume that for real numbers $a$, $b$, $a'$, $b'$, $x$ and $\kappa$, the following two expressions are defined:
+Assume that for real numbers $a$, $b$, $a'$, $b'$, $x$, and $\kappa$, the following two expressions are defined:
 \begin{enumerate}
 \item $\tangle\mc\kappa\{a;b,x\}+\tangle\mc\kappa\{a';b',x\}-\pi$,
 \item $\tangle\mc\kappa\{a';b+b',a\}-\tangle\mc\kappa\{x;a,b\}$,
@@ -206,7 +210,8 @@ the properties of $\tangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equalit
 For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, $\le2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
 \end{thm}
 
-\parit{Proof.} Applying scaling, we may assume that $\kappa=1$ and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\mathbb{S}^2$.
+\parit{Proof.}
+Applying scaling, we may assume that $\kappa=1$, and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\mathbb{S}^2$.
 Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
 
@@ -224,7 +229,7 @@ Let $z$ be the midpoint of  $[pq]$.
 We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
 If not, $\alpha$ intersects the boundary  great circle of this hemisphere; let $r$ be a point in the intersection.
 Without loss of generality we may assume that $r\in\check\alpha$. 
-The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that contains $r$ and its antipodal point $r'$.
+The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that contains $r$ and its antipodal point~$r'$.
 Thus 
 \[\ell=\length \check\alpha\ge \dist{r}{r'}{}=\pi,\] 
 a contradiction.

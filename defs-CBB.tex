@@ -403,7 +403,7 @@ Passing to the limits  $w\to p$, we have
 \le
 2\cdot\pi.\]
 
-If $\spc{L}$ is only G-delta geodesic, we can apply the  above arguments to sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that  $[p_nz]$, $w_n\in\mathopen{]}z p_n\mathclose{[}$ and  $[x_nw_n]$, $[y_n w_n]$ exist,  and then pass to the limit as $n\to\infty$.
+If $\spc{L}$ is only G-delta geodesic, we can apply the  above arguments to sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that $[p_nz]$ exists, $w_n\in\mathopen{]}z p_n\mathclose{[}$ and  $[x_nw_n]$, $[y_n w_n]$ exist,  and then pass to the limit as $n\to\infty$.
 \qeds
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
@@ -765,7 +765,7 @@ We can assume that $p\notin [x y]$; otherwise the statement is trivial.
 
 Set $T=\dist{x}{y}{}$ and $\gamma(t)=\geod_{[x y]}(t)$; note that $\gamma$ is a geodesic in $\oBall(p,\varpi\kappa)\backslash \{p\}$.
 Let $\tilde \gamma\:[0,T]\to\Lob2\kappa$ be the $\kappa$-development with base $\tilde p$ of $\gamma$ with respect to $p$.
-Take a partition $0=t_0<t_1<\dots<t_n=T$ and set 
+Take a partition $0=t_0<t_1<\dots<t_n=T$, and set 
 \[\tilde y_i=\tilde \gamma(t_i)\quad \text{and}\quad \tau_i=\dist{\tilde y_0}{\tilde y_1}{}+\dist{\tilde y_1}{\tilde y_2}{}+\dots+\dist{\tilde y_{i-1}}{\tilde y_i}{}.\] 
 Since $\tilde \gamma$ is convex, for a fine partition we have that broken line $\tilde y_0\tilde y_1\dots\tilde y_n$ is also convex.
 Applying Alexandrov's lemma (\ref{lem:alex}) inductively to pairs of model triangles 
@@ -902,8 +902,8 @@ Any complete length locally $\Alex\kappa$ space is $\Alex\kappa$.
 In the two-dimensional case this theorem was proved by Paolo Pizzetti \cite{pizzetti};
 later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
-In the above generality, the theorem first appears in the paper of Michael Gromov, Yuri Burago and Grigory Perelman \cite{burago-gromov-perelman}; 
-simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama} and in the book of Dmitry Burago, Yuri Burago and Sergei Ivanov \cite{burago-burago-ivanov}.
+In the above generality, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}; 
+simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama}, and in the book of Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
 A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise:
 
 }
@@ -929,7 +929,7 @@ Note that if $\Kappa\le 0$, this statement follows directly from the  definition
 The ``if''-part also follows directly from the definition.
 
 For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined while $\angk{\kappa} x y z$ is defined.
-However, $\angk{\Kappa} x y z$ is defined if $x$, $y$ and $z$ are sufficiently close to each other.
+However, $\angk{\Kappa} x y z$ is defined if $x$, $y$, and $z$ are sufficiently close to each other.
 Thus, if $\Kappa>\kappa$, then any $\Alex\Kappa$ space is locally $\Alex\kappa$.
 It remains to apply the  globalization theorem.
 \qeds
@@ -1071,7 +1071,7 @@ Further, since $r_n\ge\tfrac{2}{3}\cdot\ell$, \ref{3|xx'|} implies that $\dist{x
 Since the sequence $r_n$ is nonincreasing, it converges.
 In particular $r_n-r_{n+1}\to 0$ as $n\to\infty$.
 It follows that $\angk\kappa{x_n}{p_n}{x_{n+1}}\to \pi$,
-where $p_n=p$ if $x_{n+1}\in [x_nq]$ and otherwise $p_n=q$.
+where $p_n=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$.
 Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk\kappa{x_n}{p_n}{x_{n+1}}$, we have
 $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
 
@@ -1585,8 +1585,7 @@ Therefore $h$ is nonincreasing which means that \[\dist{x}{p}{}+\dist{y}{p}{}
 h(\ell)\le h(0)
 =
 \dist{x}{y}{}.\]  
-Since the geodesic $[x y]$ is unique this means that $p\in [x y]$ and hence
- $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
+Since the geodesic $[x y]$ is unique this means that $p\in [x y]$, and hence $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
 Since in $\Alex{}$ spaces, geodesics do not bifurcate (\ref{nonsplit}), 
 it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$ as a local geodesic $\gamma$ 
 (which might not be minimizing).

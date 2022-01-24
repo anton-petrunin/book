@@ -17,7 +17,7 @@ A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called an $\II$-valued me
 The value $\rho(x,y)$ is also called the \index{distance}\emph{distance} between $x$ and $y$.
 
 
-The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty)$ and $[0,\infty]$.
+The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty)$, and $[0,\infty]$.
 Any $\II$-valued metric can be referred to briefly as a metric;
 the interval should be apparent from context but by default a metric is $(0,\infty)$-valued. 
 If we need to be more specific we may also use the following names:
@@ -330,7 +330,7 @@ Note that a $0$-midpoint is the same as a midpoint.
 Let $\spc{X}$ be a complete metric space.
 
 \begin{subthm}{lem:mid>length}
-Assume that for any pair of points $x,y\in \spc{X}$ and any $\eps>0$
+Assume that for any pair of points $x,y\in \spc{X}$, and any $\eps>0$
 there is an $\eps$-midpoint $z$.
 Then  $\spc{X}$ is a length space.
 \end{subthm}
@@ -353,7 +353,8 @@ then  $\spc{X}$ is an $R$-length or $R$-geodesic space respectively.
 \parit{Proof.}
 Fix a pair of points $x,y\in \spc{X}$.
 Let $\eps_n=\frac\eps{2^{2\cdot n}}$,
-$\alpha(0)=x$ and $\alpha(1)=y$.
+$\alpha(0)=x$,
+and $\alpha(1)=y$.
 
 Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint between $\alpha(0)$ and $\alpha(1)$.
 Further, let $\alpha(\frac14)$ 
@@ -498,8 +499,9 @@ for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
 Let $\spc{X}_n,$ be a sequence of geodesic spaces.
 Let $\o$ be an ultrafilter on $\mathbb N$; see Definition ~\ref{def:ultrafilter}.
-Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets, and 
-$\spc{X}_n\to \spc{X}_\o$ and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
+Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets, 
+$\spc{X}_n\to \spc{X}_\o$,
+and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
 Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
 \end{thm}
 
