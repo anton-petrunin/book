@@ -281,7 +281,8 @@ In particular, the local homology groups vanish at $x$ --- a contradiction.
 \parbf{\ref{ex:complete-space-of-dir}.} Choose a sequence of 
 directions $\xi_n$ at $p$
 of both-sided local geodesics; denote by $\gamma_n$ the corresponding geodesics.
-Since the space $\spc{U}$ is locally compact, we may pass to a converging subsequence of $(\gamma_n)$; denote its limit by limit $\gamma_\infty$ and its direction by $\xi_\infty$.
+Since the space $\spc{U}$ is locally compact, we may pass to a converging subsequence of $(\gamma_n)$; it's limit is a local geodesic by Corollary~\ref{cor:loc-geod-are-min}.
+Denote the limit by  $\gamma_\infty$ and its direction by $\xi_\infty$.
 By comparison, $\xi_\infty$ is a limit of $(\xi_n)$.
 
 \parbf{\ref{mink+CAT=euclid}.} Follow the solution in the \ref{mink+alex=euclid}, reversing all the inequalities.
@@ -558,7 +559,8 @@ Set $K_t=\spc{U}\cap\cBall[\gamma(t),\tfrac\pi2]$.
 By \ref{cor:convex-balls}, $K_t$ is $\pi$-convex for any $t$,  and monotonicity of the family should be evident.
 
 \parit{Remark.}
-Note that by applying Sharfutdinov retraction to the family of convex sets provided by the exercise,
+Note that by applying Sharafutdinov retraction to the family of convex sets provided by the exercise,
+%???V: Is it oappropriate to call this Shrafutdinov retraction in the case of CAT spaces?
 we get a short strong deformation retraction from $\cBall[p,\tfrac\pi2]$ to $K$;
 that is, there is a family of maps $\phi_t\:\cBall[p,\tfrac\pi2]\to \cBall[p,\tfrac\pi2]$ such that 
 the function $t\mapsto \dist{\phi_t(x)}{\phi_t(y)}{}$ is nonincreasing for any pair of points $x,y\in\cBall[p,\tfrac\pi2]$, $\phi_t(x)=x$ for any $x\in K$ and $\phi_1(\cBall[p,\tfrac\pi2])=K$. 
@@ -613,7 +615,7 @@ Richard Bishop asked if there are no other exceptions.
 \parbf{\ref{ex:square}.}
 Look at the four triples in $x^1$, $x^2$, $x^3$, $x^4$.
 By  hypothesis, for each triple there is a triangle ${\triangle}^i$ in $\EE^2$ whose  sidelengths are the three distances between pairs.
-By the Arm Lemma, for each triple, $\spc{U}$ contains an isometric copy of the corresponding solid triangle.
+By the Arm Lemma \eqref{lem:arm}, for each triple, $\spc{U}$ contains an isometric copy of the corresponding solid triangle.
 Consider adjacent pairs of these solid triangles in $\spc{U}$, with common sides moving around the sides of the quadrangle in order.
 The fourth solid triangle has a common side with the first.
 Therefore the union of the four solid triangles contains a triangle $\triangle$ with vertex $x^1$ and its other two vertexes in the intersections of the solid  triangle opposite $x^1$ with the two solid triangles with vertex $x^1$ respectively, and where $\triangle$ has the same sidelengths as a Euclidean triangle.
@@ -624,7 +626,7 @@ Moving around the adjacent pairs of solid triangles in $\spc{U}$ corresponding t
 If $\ell$ and $m$ do not intersect, then the double cover $\spc{X}$ is not simply connected.
 In particular, by the Hadamard--Cartan theorem, $\spc{X}$ is not $\CAT0$.
 
-If $\ell$ and $m$ intersect then $\spc{X}$ is a cone over double cover $\Sigma$ of $\mathbb{S}^2$ branching at two pairs $(x,y)$ and $(v,w)$ of antipodal points.
+If $\ell$ and $m$ intersect then $\spc{X}$ is a cone over a double cover $\Sigma$ of $\mathbb{S}^2$ branching at two pairs $(x,y)$ and $(v,w)$ of antipodal points.
 Suppose $\dist{x}{v}{\mathbb{S}^2}=\ell<\tfrac\pi2$.
 Note that the inverse image of $[xv]_{\mathbb{S}^2}$ is a closed geodesic of length $4\cdot\ell<2\cdot\pi$.
 Therefore, by the generalized Hadamard--Cartan theorem, $\Sigma$ is not $\CAT1$. Hence $\spc{X}$ is not $\CAT0$ by Theorem \ref{thm:warp-curv-bound:cat}  on curvature of cones.
@@ -727,7 +729,7 @@ for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
 \parbf{\ref{ex:(3+1)-nonsufficient}.}
 It is sufficient to construct a metric on the set of points $\{p$, $x^1$, $x^2$, $x^3$, $x^4\}$ that does not satisfy (4+1)-comparison but does satisfy all (3+1)-comparisons.
-To do this, put the $x^i$ in the vertices of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^1}{}$ slightly.
+To do this, set  $x^i$ to be  the vertices of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^i}{}$ slightly.
 
 
 \parbf{\ref{ex:strut+embedding}.}
@@ -875,12 +877,12 @@ The only difference is that a geodesic may spend time {}\emph{at least} $\pi$ on
 \parit{Remark.}
 Note that it is not sufficient to assume only that all the dihedral angles of the simplexes are at least~$\tfrac\pi2$. 
 Indeed, the two-dimensional sphere with the interior of a small rhombus removed is a spherical polyhedral space glued from four triangles with angles at least~$\tfrac\pi2$.
-On the other hand, the boundary of the rhombus is a closed local geodesic in this space.
+On the other hand, the boundary of the rhombus is a closed local geodesic in this space and has length less than $2\pi$.
 Therefore the space cannot be $\CAT1$.
 
 \parbf{\ref{ex:short+commuting}.}
 Observe that if we glue two copies of spaces along $A_i$, then the copies of $A_j$ for some $j\ne i$ form a convex subset in the glued space.
-Use this and the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, one for each label of the edges.
+Use this and the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, once for each label of the edges.
 
 \parbf{\ref{ex:space-of-trees}.}
 The space $\spc{T}_n$ has a natural cone structure whose vertex is the  completely degenerate tree --- all its edges have zero length.
@@ -906,7 +908,7 @@ Apply the flag condition (\ref{thm:flag}) and Theorem~\ref{thm:warp-curv-bound:c
 \parbf{\ref{ex:norays}.}
 Consider a cube in the Hilbert space
 %;that is the space 
-of all sequences $x_1,x_2,\dots$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by $\ell^2$-norm.
+of all sequences $x_1,x_2,\dots$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by the $\ell^2$-norm.
 
 \parbf{\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT} and \ref{ex:d_q dist_p(v)=-<dri p q, v>}.} Apply the strong angle lemmas
 \ref{lem:strong-angle-cba}
