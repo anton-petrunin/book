@@ -89,7 +89,7 @@ and there is no geodesic connecting $p$ to $q$ in~$\bar{\spc{X}}$. \qeds
 
 \parbf{\ref{ex:compact-in-lenght}}
 Let $\spc{X}$ be a compact metric space.
-Let us identify $\spc{X}$ with its image in $\Bnd(\spc{X},\RR)$ under the Kuratowsky embedding (see section~\ref{Kuratowsky embedding}). 
+Let us identify $\spc{X}$ with its image in $\Bnd(\spc{X},\RR)$ under the Kuratowsky embedding (Section~\ref{Kuratowsky embedding}). 
 Denote by $\spc{K}$ the \emph{linear} convex hull of $\spc{X}$ in the space of bounded functions on $\spc{X}$; 
 that is, $x\in \spc{K}$ if and only if $x$ cannot be separated from $\spc{X}$ by a hyperplane.
 
@@ -137,7 +137,8 @@ Observe and use that
 \quad\iff\quad
 \angk\kappa p{x^i}{x^j}\le \angk\kappa q{y^i}{y^j}.\]
 
-\parbf{\ref{ex:cbb-area}.} Follows from the overlap lemma (\ref{lem:extend-overlap}).
+\parbf{\ref{ex:cbb-area}.}
+Follows from the overlap lemma (\ref{lem:extend-overlap}).
 
 \parbf{\ref{ex:nongeod-cbb}.}
 Modify the induced length metric on the unit sphere in an infinite-dimensional Hilbert space in small neighborhoods of a countable collection of points.
@@ -174,10 +175,11 @@ holds for any vectors $v$ and $w$.
 Whence the statement follows.
 
 \parbf{\ref{ex:cbb-geod-overlap}.}
-Apply hinge comparison (\ref{angle}).
+Apply the hinge comparison (\ref{angle}).
 
-\parbf{\ref{ex:equality-alexlemma}.} Without loss of generality, we may assume that the points $x,v,w,y$ appear on the geodesic $[xy]$ in that order.
-By point-on-side comparison (\ref{point-on-side}) we have
+\parbf{\ref{ex:equality-alexlemma}.}
+Without loss of generality, we may assume that the points $x,v,w,y$ appear on the geodesic $[xy]$ in that order.
+By the point-on-side comparison (\ref{point-on-side}) we have
 \begin{align*}
 \angk\kappa xyp\le\angk\kappa xwp&\le \angk\kappa xvp,
 \\
@@ -211,9 +213,11 @@ Hence the statement follows.
 \parbf{\ref{ex:lebedeva-petrunin}.}
 Read \cite{lebedeva-petrunin}.
 
-\parbf{\ref{ex:fat-triangle}.} Apply angle-sidelength  monotonicity (\ref{cor:monoton}) twice. 
+\parbf{\ref{ex:fat-triangle}.}
+Apply the angle-sidelength  monotonicity (\ref{cor:monoton}) twice. 
 
-\parbf{\ref{ex:busemann}.} The first part follows from angle-sidelength  monotonicity (\ref{cor:monoton}).
+\parbf{\ref{ex:busemann}.}
+The first part follows from the angle-sidelength  monotonicity (\ref{cor:monoton}).
 An example for the second part can be found among metrics on $\RR^2$ induced by a norm. (Compare to Exercise~\ref{mink+alex=euclid}.)
 
 \parbf{\ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}.}
@@ -298,7 +302,7 @@ It is sufficient to show that if $v$ and $y$ are midpoints of geodesics $[uw]$ a
 \end{wrapfigure}
 
 Denote by $p$ the midpoint of $[uz]$.
-Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}) twice, we have
+Applying the angle-sidelength  monotonicity (\ref{cor:monoton-cba}) twice, we have
 \[\dist{v}{p}{}\le \tfrac12\cdot\dist{w}{z}{}.\]
 Similarly we have
 \[\dist{y}{p}{}\le \tfrac12\cdot\dist{u}{x}{}.\]
@@ -351,7 +355,7 @@ Without loss of generality, we may assume that $p\in K$.
 
 If $\dist{K}{x}{}\ge\pi$, then set $\map[2](x)=p$.
 
-Otherwise, if $\dist{K}{x}{}<\pi$, by the closest-point projection lemma~\ref{lem:closest point}, 
+Otherwise, if $\dist{K}{x}{}<\pi$, by the closest-point projection lemma (\ref{lem:closest point}), 
 there is a unique point $x^*\in K$ that minimizes distance to $x$;
 that is, $\dist{x^*}{x}{}=\dist{K}{x}{}$.
 Let us define $\ell_x$, $\phi_x$ and $\psi_x$ using the following identities:
@@ -402,8 +406,8 @@ $\mangle\hinge{x^*}{x}{y*},
 \ge 
 \tfrac\pi2$
 and
-the inequality~\ref{eq:cos(r)} follows from the Arm lemma (\ref{lem:arm}).
-If $x\in K$ and $y\notin K$, we obtain \ref{eq:cos(r)} by angle comparison (\ref{cat-hinge}) 
+the inequality~\ref{eq:cos(r)} follows from the arm lemma (\ref{lem:arm}).
+If $x\in K$ and $y\notin K$, we obtain \ref{eq:cos(r)} by the angle comparison (\ref{cat-hinge}) 
 since $\mangle\hinge{y^*}{y}{x*}\ge \tfrac\pi2$.
 In the same way, \ref{eq:cos(r)} is proved 
 if $x\notin K$ and $y\in K$.
@@ -414,7 +418,7 @@ Further note that
 \[\cos\alpha
 =
 \frac{\cos d-\cos \ell_x\cdot\cos\ell_y}{\sin\ell_x\cdot\sin\ell_y}.\]
-Applying angle-sidelength  monotonicity (\ref{cor:monoton-cba}), we have
+Applying the angle-sidelength  monotonicity (\ref{cor:monoton-cba}), we have
 \begin{align*}
 \cos r'&\ge
 \cos\psi_x\cdot\cos\psi_y
@@ -647,9 +651,11 @@ and pass to a limit as $\eps\to 0$.
 
 The first part of the problem follows since a geodesic is a convex set.
 
-\parbf{\ref{ex:cats-cradle}.} Prove that the angle comparison (\ref{cat-hinge}) holds.
+\parbf{\ref{ex:cats-cradle}.}
+Prove that the angle comparison (\ref{cat-hinge}) holds.
 
-\parbf{\ref{ex:Hadamard--Cartan}.} Mimic the proof of the Hadamard--Cartan theorem.
+\parbf{\ref{ex:Hadamard--Cartan}.}
+Mimic the proof of the Hadamard--Cartan theorem.
 
 \parbf{\ref{ex:CBB+CBA}.}
 Note that it is sufficient to show that any finite set of points $x^1,\dots,x^n\in\spc{X}$ lies in an isometric copy of a Euclidean polyhedron.
@@ -733,7 +739,7 @@ To do this, set  $x^i$ to be  the vertices of a regular tetrahedron in $\EE^3$. 
 
 
 \parbf{\ref{ex:strut+embedding}.}
-By  (1+\textit{n})-point comparison (\ref{thm:pos-config}), there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
+By the (1+\textit{n})-point comparison (\ref{thm:pos-config}), there is a point array $\tilde p,\tilde a^0,\dots,\tilde a^m\in \Lob{m+1}\kappa$ such that
 \[\dist{\tilde p}{\tilde a^i}{}=\dist{p}{a^i}{}\quad \text{and}\quad \dist{\tilde a^i}{\tilde a^j}{}\ge\dist{a^i}{a^j}{}\]
 for all $i$ and $j$.
 
@@ -798,7 +804,7 @@ By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ 
 Hence the statement follows.
 
 \parbf{\ref{ex:isbell}.}
-The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with the metric induced by the sup-norm (see Section~\ref{Kuratowsky embedding}).
+The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with the metric induced by the sup-norm (Section~\ref{Kuratowsky embedding}).
 It remains to show that the latter space is injective.
 
 The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him.
