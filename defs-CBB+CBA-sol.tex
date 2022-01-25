@@ -1,7 +1,7 @@
 %%!TEX root = the-defs-CBB+CBA-sol.tex
 \parbf{\ref{exr-crofton}.}
 Suppose $\alpha$ is a closed spherical curve. 
-By Crofton's formula, the length of a curve $\alpha$ on the sphere is $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
+By Crofton's formula, the length of  $\alpha$  is $\pi\cdot n_\alpha$, where $n_\alpha$ denotes the average number of crossings of $\alpha$ with equators.
 
 Since $\alpha$ is closed, almost all equators cross it at an even number of points (we assume that $\infty$ is an even number).
 If $\length \alpha<2\cdot\pi$ then $n_\alpha<2$.
@@ -97,9 +97,10 @@ Since $\spc{X}$ is compact, so is $\spc{K}$.
 It remains to observe that $\spc{K}$ is a length space since it is convex.
 
 \parbf{\ref{ex:nonconvex-limit}.}
-Let $\spc{X}_n$ be the plane with the metric induced by the $\ell^n$-norm and let $f_n(x,y)=x$ for all $n$.
-Observe that $\spc{X}_\o$ is the plane with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not concave.
+Let $\spc{X}_n$ be the square $\{( x,y)\in \R^2, |x|\le 1, |y|\le 1\}$ with the metric induced by the $\ell^n$-norm and let $f_n(x,y)=x$ for all $n$.
+Observe that $\spc{X}_\o$ is the square with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not concave.
 
+%V: Exercise asks for a compact space so I changed plane to a square
 \parbf{\ref{ex:GH-proper-marked}.} Modify proof of \ref{thm:GH-compact}, or apply \ref{thm:ultra-GH:b}.
 
 \parbf{\ref{ex:adjacent-angles}.}
@@ -138,11 +139,8 @@ Observe and use that
 
 \parbf{\ref{ex:cbb-area}.} Follows from the overlap lemma (\ref{lem:extend-overlap}).
 
-
-
-
 \parbf{\ref{ex:nongeod-cbb}.}
-Modify the induced length metric on the unit sphere in a Hilbert space in small neighborhoods of a countable collection of points.
+Modify the induced length metric on the unit sphere in an infinite-dimensional Hilbert space in small neighborhoods of a countable collection of points.
 To prove that the obtained space is $\Alex0$, you may need to use the technique from Halbeisen's example (\ref{Halbeisen's example}).
 
 \parbf{\ref{ex:almost.geod}.} Mimic the proof of Theorem~\ref{thm:almost.geod}.
@@ -151,13 +149,14 @@ To prove that the obtained space is $\Alex0$, you may need to use the technique 
 On the plane, any nonnegatively curved metric having an everywhere dense set of singular points will do the job, where 
 by singular point we mean a point having total angle around it strictly smaller than $2\cdot\pi$.
 
-Indeed, if $x_i$ is a singular point, then there is $\eps_i>0$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
+Indeed, if $x_i$ is a singular point, then there is $0<\eps_i<1/20$ such that no geodesic with ends outside of $\oBall(x_i,r)$ can meet the ball $\oBall(x_i,\eps_i\cdot r)$.
 The set 
 \[\Omega_n=\bigcup_i \oBall(x_i,\tfrac{\eps_i}n)\]
 is open and everywhere dense.
-Note that $\Omega_n$ may intersect a geodesic only at 
+Note that $\Omega_n$ may intersect a geodesic  of length $1/n$ only within $\frac 1 {10n}$  of its endpoints.
+%V: what was written was incorrect.
 %$\tfrac1n$-end of it.
-an endpoint.
+%an endpoint.
 The intersection of the $\Omega_n$ is a G-delta dense set that does not intersect the interior of any geodesic.
 
 \parbf{\ref{mink+alex=euclid}.} 
@@ -246,7 +245,8 @@ This exercise is based on the main idea in \cite{hsiang-kleiner}.
 \medskip
 
 Assume there are 4 such points $x_1,x_2,x_3,x_4$.
-Since the space $\spc{L}$ is $\Alex{1}$  it is also $\Alex{0}$. By angle comparison the sum of the angles in any geodesic triangle in an $\Alex{0}$ space is $\ge \pi$.
+Since the space $\spc{L}$ is $\Alex{1}$ it is also $\Alex{0}$.
+By the angle comparison the sum of the angles in any geodesic triangle in an $\Alex{0}$ space is $\ge \pi$.
 Therefore the average of the $\mangle\hinge{x_i}{x_j}{x_k}$ is  larger than $\tfrac\pi3$.
 On the other hand, since each $x_i$ has space of directions $\le\tfrac12\cdot\mathbb{S}^n$ and the perimeter of any triangle in $\tfrac12\cdot\mathbb{S}^n$ is at most $\pi$, the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at most $\tfrac\pi3$ --- a contradiction.
 
@@ -265,7 +265,7 @@ This is analogous to Exercise \ref{ex:(3+1)-expanding}.
 
 An example for the second part of the problem can be found among 4-point metric spaces.
 It is sufficient to take a generic convex quadrangle and increase one of its diagonals slightly;
-it will still satisfy the inequality for all relabeling, but will fail to meet \ref{def:2+2-reformulated}.
+it will still satisfy the inequality for all relabeling but will fail to meet \ref{def:2+2-reformulated}.
 
 \parbf{\ref{ex:CAT-mnfld=>ext.geod}.}
 Suppose that a geodesic $[px]$ is not extendable beyond $x$.
@@ -643,7 +643,7 @@ By the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}), $\tilde{\spc{U}}$ i
 For the general case, apply the above argument to a closed $\eps$-neighborhood of $A$
 and pass to a limit as $\eps\to 0$.
 
-The first part of problem follows since a geodesic is a convex set.
+The first part of the problem follows since a geodesic is a convex set.
 
 \parbf{\ref{ex:cats-cradle}.} Prove that the angle comparison (\ref{cat-hinge}) holds.
 
@@ -653,7 +653,7 @@ The first part of problem follows since a geodesic is a convex set.
 Note that it is sufficient to show that any finite set of points $x^1,\dots,x^n\in\spc{X}$ lies in an isometric copy of a Euclidean polyhedron.
 
 Observe that $\spc{X}$ is $\Alex0$ and $\CAT0$ at the same time.
-Show that there is unique point $p$ that minimizes the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
+Show that there is a unique point $p$ that minimizes the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
 Note that the vectors $v^i=\lg_{[{p}{x^i}]}$ lie in a linear subspace of $\T_p$, where $\log_{x_0}$  is the gradient logarithm map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ corresponding to the gradient exponential $\gexp_{x_0}$ (see Section \ref{sec:gexp}).
 Moreover if $K$ is the convex hull of $v_i$, then the origin of $\T_p$ lies in the interior of $K$ relative to its affine hull.
 Finally observe that the exponential map is defined on all of $K$ and is distance-preserving.
@@ -789,7 +789,7 @@ Observe that $F_{i-1}(\tilde z_i)=F_{i}(\tilde z_i)$ for each $i$ and use it.
 \parbf{\ref{ex:perunin-stadler}.} Consider the space $\spc{Y}^{\spc{X}}$ of all maps $\spc{X}\to \spc{Y}$ equipped with the product topology.
 
 Denote by $\mathfrak{S}_F$ the set of maps $h\in \spc{Y}^\spc{X}$ such that the restriction $h|_F$  is short and agrees with $f$ in $F\cap A$.
-Note that the sets $\mathfrak{S}_F\subset \spc{Y}^\spc{X}$ are closed and any finite interection of these sets is nonempty.
+Note that the sets $\mathfrak{S}_F\subset \spc{Y}^\spc{X}$ are closed and any finite intersection of these sets is nonempty.
 
 According to Tikhonov's theorem, $\spc{Y}^{\spc{X}}$ is compact.
 By the finite intersection property, the intersection $\bigcap_F\mathfrak{S}_F$ for all finite sets $F\subset X$ is nonempty.
@@ -946,7 +946,7 @@ Applying \ref{ex:d_q dist_p(v)=-<dri p q, v>}, we have
 
 
 \parbf{\ref{ex:compact-dimension-cbb}.}
-Suppose that $\spc{L}$ is infinite dimensional.
+Suppose that $\spc{L}$ is infinite-dimensional.
 Denote by $\Omega_m\subset \spc{L}$ the set of all points $p$ with $\rank_p\ge m$.
 Evidently $\Omega_1\supset \Omega_2\supset\dots$, and $\Omega_m$ is open for each $m$.
 
@@ -1008,7 +1008,7 @@ If $q\in \spc{L}$, this implies that $q=q'$.
 Otherwise note that $q'$ lies on the boundary line of $\spc{L}$, and $\proj(q)$ is the only point on this line that satisfies the inequality.
 
 \parbf{\ref{ex:inv-gexp}.}
-By angle comparison,
+By the angle comparison,
 $|\nabla_x\distfun p|\ge-\cos \angk\kappa xpq$.
 
 Choose a $(p,\kappa)$-radial curve $\alpha$ that starts at $p$.
