@@ -119,7 +119,8 @@ a contradiction.
 Assume $\spc{L}$ is geodesic.
 Consider $x^1,x^2,x^3\in \spc{L}$ such that the model triangle 
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa(x^1 x^2 x^3)$ is defined.
-Choose $p\in \,{]}x^1x^2{[}\,$.  Applying the  short map extension property with $V_3=\{x^1,x^2,x^3\}$, $V_4=\{x^1,x^2,x^3,p\}$ and the map $f(x^i)=\tilde x^i$, we obtain point-on-side comparison (\ref{point-on-side}).
+Choose $p\in \,{]}x^1x^2{[}\,$.
+Applying the  short map extension property with $V_3=\{x^1,x^2,x^3\}$, $V_4=\{x^1,x^2,x^3,p\}$ and the map $f(x^i)=\tilde x^i$, we obtain the point-on-side comparison (\ref{point-on-side}).
 
 In case $\spc{L}$ is not geodesic, pass to its ultrapower $\spc{L}^\o$.
 Note that the short map extension property survives
@@ -176,7 +177,7 @@ Since $\dist{\tilde x^i}{\tilde x^j}{}\le\dist{x^i}{x^j}{}$ we have
 if $(i,j,k)$ is a permutation of $(1,2,3)$.
 Therefore 
 \[\angk\kappa p{x^1}{x^2}+\angk\kappa p{x^2}{x^3}+\angk\kappa p{x^3}{x^1}>2\cdot\pi,\]
-contradicting $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
+contradicting the $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
 \qeds
 
 \begin{thm}{Theorem}\label{thm:cba-kirsz-def} 
@@ -241,7 +242,7 @@ Thus one can take $q=F\circ\map(\tilde p)$.
 
 \begin{thm}{Exercise}\label{ex:CBB+CBA}
 Assume $\spc{X}$ is a complete length space that satisfies the following condition:
-any 4-point subset admit a distance-preserving map to the Euclidean 3-space.
+any 4-point subset admits a distance-preserving map to the Euclidean 3-space.
 
 Prove that $\spc{X}$ is isometric to a closed convex subset of a Hilbert space.
 \end{thm}
@@ -259,7 +260,7 @@ a complete length $\Alex{0}$ space?
 \end{subthm}
 \end{thm}
 
-The following exercise decribes the first known definition of spaces with curvature bounded below;
+The following exercise describes the first known definition of spaces with curvature bounded below;
 it was given by Abraham Wald \cite{wald}. 
 
 \begin{thm}{Exercise}\label{ex:cbb-wald}
@@ -271,7 +272,7 @@ Is the same true for $\kappa>0$; what is the difference?
 
 \section{(1+\textit{n})-point comparison}\label{sec:1+n}
 
-The following theorem gives a more sensitive analog of  $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
+The following theorem gives a more sensitive analog of the $\Alex\kappa$ comparison (\ref{df:cbb1+3}).
 
 \begin{thm}{(1+\textit{n})-point comparison}
 \label{thm:pos-config} {\sloppy 
@@ -316,7 +317,7 @@ Thus $\dist{\tilde p}{\tilde x^i}{}=\dist{p'}{x^i}{}$ and therefore
 \[\bigl|\dist{\tilde p}{\tilde x^i}{}-\dist{p}{x^i}{}\bigr|
 \le 
 \dist{p}{p'}{} \le\eps.\]
-From hinge comparison (\ref{angle}) 
+From the hinge comparison (\ref{angle}) 
 we have 
 \[\angk\kappa{\tilde p}{\tilde x^i}{\tilde x^j}
 =\mangle\hinge{\tilde p}{\tilde x^i}{\tilde x^j}
@@ -460,7 +461,7 @@ Indeed, if not, then for some fixed $\eps>0$,
 we can choose two subsequences $y'_n$ and $y''_n$ of $p^*_{F_n}$ 
 such that $\dist{y'_n}{y''_n}{}\ge\eps$.
 Let $z_n$ be the midpoint of $[y'_ny''_n]$. 
-From point-on-side comparison (\ref{point-on-side}), 
+From the point-on-side comparison (\ref{point-on-side}), 
 there is $\delta>0$ such that 
 \[\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta.\]
 Thus 
@@ -537,7 +538,7 @@ It is sufficient to prove the lemma only for $\kappa=0$ and $-1$.
 The proofs of these two cases are identical, only the formulas differ.
 In the proof, we assume $\kappa=0$ and provide the formulas for $\kappa=-1$ in the footnotes.
 
-From (1+\textit{n})-point comparison (\ref{thm:pos-config}), 
+From the (1+\textit{n})-point comparison (\ref{thm:pos-config}), 
 there is a model configuration 
 $\tilde p,\tilde x^1,\tilde x^2,\dots,\tilde x^n$ in $\Lob{n}{\kappa}$ such that
 $\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$
@@ -786,7 +787,7 @@ one can choose points $x^1,x^2,\dots, x^n$ in $Q$ such that
 \emptyset,
 \eqlbl{eq:cap=cBalls=0}\]
 where $y^i=f(x^i)$.
-Finally note that \ref{eq:cap=cBalls=0} contradicts the Finite+one lemma (\ref{lem:kirsz-neg:new}).\qeds
+Finally note that \ref{eq:cap=cBalls=0} contradicts the finite+one lemma (\ref{lem:kirsz-neg:new}).\qeds
 
 
 
@@ -976,23 +977,28 @@ can be described by the matrix with components
 \[s^{ij}
 =
 \dist[2]{a^i}{a^j}{},\]
-which we will call the \index{decrypting matrix}\emph{decrypting matrix}.
-The set of decrypting matrices of all metrics that admit a distance-preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
+which we will call the \index{associated matrix}\emph{associated matrix}.
+The set of associated matrices of all metrics that admit a distance-preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
 form a convex cone. 
 The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ respectively).
 This convexity gives hope that the cone admits an explicit description.
-At the moment only some necessary and sufficient conditions are known;
-for more on this see our paper \cite{alexander-kapovitch-kirszbraun} 
-and the paper of Nina Lebedeva, Vladimir Zolotov and the third author~\cite{lebedeva-petrunin-zolotov}.
 
-The following conjecture (if true) would give the  right generality for  Kirszbraun's theorem (\ref{thm:kirsz+}).
+For the 5-point $\CAT{0}$ case, the (2+2)-comparison is a necessary and sufficient condition.
+The latter was solved by Tetsu Toyoda \cite{toyoda};
+another proof is found by Nina Lebedeva and the third author \cite{lebedeva-petrunin:toyoda}.
+For the 5-point $\Alex{0}$ case, the (1+4)-comparison is a necessary and sufficient condition;
+it was proved by Nina Lebedeva and the third author \cite{lebedeva-petrunin:5CBB}.
+Starting from the 6-point case, only some necessary and some sufficient conditions are known;
+for more on the subject see \cite{alexander-kapovitch-kirszbraun, lebedeva-petrunin:toyoda, lebedeva-petrunin-zolotov}.
+
+The following conjecture (if true) would give the  right generality for Kirszbraun's theorem (\ref{thm:kirsz+}).
 Roughly it states that the example \ref{example:SS_+} 
 is the only obstacle to extending short maps.
 
 \begin{thm}{Conjecture}\label{conj:kirsz}
 Assume $\spc{L}$ is a complete length $\Alex1$ space,
 $\spc{U}$ is a complete length $\CAT1$ space,
-$Q\subset \spc{L}$ is a proper subset
+$Q\subset \spc{L}$ is a proper subset,
 and $f\: Q\to\spc{U}$ is a short map that does not admit a short extension to any bigger set $Q'\supset Q$. 
 Then: 
 

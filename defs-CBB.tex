@@ -511,7 +511,7 @@ for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints 
 
 In this section we will translate the angle comparison definitions (Theorem~\ref{thm:defs_of_alex}) 
 to a concavity-like property of the distance functions as defined in Section~\ref{sec:conv-fun}.
-This a conceptual step ---
+This is a conceptual step ---
 we reformulate a global geometric condition into an infinitesimal condition on distance functions.
 
 
@@ -546,7 +546,7 @@ From \ref{md-diff-eq} we get that $\tilde f''=1-\kappa\cdot  \tilde f$.
 Note that the point-on-side comparison (\ref{point-on-side}) for point $p$ and geodesic $[x y]$ is equivalent to $\tilde r\le r$.
 Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, 
 $\tilde r\le r$ is equivalent to $\tilde f\le f$.
-The latter is the Jensen's inequality (\ref{y''-mono}) for the function
+The latter is Jensen's inequality (\ref{y''-mono}) for the function
 $t\mapsto\md\kappa\dist[{{}}]{p}{\geod_{[x y]}(t)}{}$ on the interval $[0,\ell]$. 
 Hence the result.
 \qeds
@@ -625,7 +625,7 @@ Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ 
 It is straightforward to check that $(\rho,\theta)$ uniquely describe $\tilde \gamma$ in polar coordinates on $\Lob2{\kappa}$ with center at $\tilde p$.
 \qeds
                                                                                                                                                                                                                                                                                                                                                                         
-We need the following analogues of sub- and super-graphs % we use sub-super- BUT NOT epi-hypo-
+We need the following analogs of sub- and super-graphs % we use sub-super- BUT NOT epi-hypo-
  and convex/concave functions, adapted to polar coordinates in $\Lob2{\kappa}$.
 
 \begin{wrapfigure}{o}{38 mm}
@@ -686,7 +686,7 @@ so geodesics $[p'x_i]$ exist for all $i$
 
 Let us construct a chain of model triangles 
 $\trig{\tilde p'}{\tilde x_{i-1}}{\tilde x_i}\z=\modtrig\kappa(p' x_{i-1}x_i)$ in such a way that direction $[\tilde p'\tilde x_i]$ turns counterclockwise as $i$ grows.
-By hinge comparison (\ref{angle}), we have
+By the hinge comparison (\ref{angle}), we have
 \[\begin{aligned}
 \mangle\hinge {\tilde x_i}{\tilde x_{i-1}}{\tilde p'}
 +\mangle\hinge{\tilde x_i}{\tilde x_{i+1}}{\tilde p'}
@@ -725,11 +725,11 @@ If $\kappa\le 0$, then \ref{eq:thm:detr*} implies that
 
 In the case $\kappa>0$, the proof of \ref{eq:thm:devel**} requires more work.
 Applying rescaling, we can assume that $\kappa=1$.
-Since $\gamma\in B_\pi(p')$, point-on-side comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ can not pass through the antipodal point of $\tilde p'$.
+Since $\gamma\in B_\pi(p')$, the point-on-side comparison implies that the polygonal line $\tilde x_0\dots\tilde x_n$ can not pass through the antipodal point of $\tilde p'$.
 
 Consider the space $L$ glued from the model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\z\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
 Note that $\theta$ is the total angle of $L$ at $\tilde p'$.
-We can assume that $L$ has non empty interior.
+We can assume that $L$ has nonempty interior.
 Otherwise all the triangles are degenerate and
 since the polygonal line $\tilde x_0\dots\tilde x_n$ does not pass through $\tilde p'$ this implies that $\theta=0$.
 
@@ -749,7 +749,7 @@ Whence \ref{eq:thm:devel**} follows.
 Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex.
 
 Let us take finer and finer partitions and pass to the limit of the polygon $\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n$ as $p'\to p$.
-We obtain a convex curvelinear triangle formed by a curve $\tilde \gamma\:[0,T]\to\Lob2{\kappa}$ --- the limit of broken line $\tilde x_0\tilde x_1\dots \tilde x_n$ 
+We obtain a convex curvilinear triangle formed by a curve $\tilde \gamma\:[0,T]\to\Lob2{\kappa}$ --- the limit of broken line $\tilde x_0\tilde x_1\dots \tilde x_n$ 
 and two geodesics $[\tilde p'\,\tilde \gamma(0)]$,
 $[\tilde p'\,\tilde \gamma(T)]$.
 Since $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex,
@@ -780,7 +780,7 @@ $\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y_{i}}{};\dist{\tilde p}{\tilde
 
 For finer and finer partitions we have 
 \[\max\nolimits_i\{|\tau_i-t_i|\}\to0.\] 
-Thus, point-on-side comparison (\ref{point-on-side}) follows.
+Thus, the point-on-side comparison (\ref{point-on-side}) follows.
 \qeds
 
 Note that in the proof of  ``if''-part we could use a slightly weaker version of the hinge comparison (\ref{angle}).
@@ -1269,7 +1269,7 @@ Let
 \[z_\eps=\geod_{[p x]}(t_{\max}-\eps)
 =\geod_{[p y]}(t_{\max}-\eps).\]
 Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
-Thus from $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
+Thus from the $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
 
 \parit{(\ref{SHORT.angle=0})} From hinge comparison \ref{angle}, 
 \[\mangle\hinge p x y=0\quad \Rightarrow\quad \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
@@ -1286,7 +1286,7 @@ Then
 \end{thm}
 
 \parit{Proof.}
-From hinge comparison (\ref{angle}) we have that both angles 
+From the hinge comparison (\ref{angle}) we have that both angles 
 $\mangle\hinge z p y$ and $\mangle\hinge z p x$ are defined and 
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi.\]
 Clearly $\mangle\hinge z x y=\pi$.
@@ -1295,9 +1295,7 @@ Thus the result follows from the triangle inequality for angles (\ref{claim:angl
 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont-cbb}
-Suppose  $\spc{L}_n$  is a sequence of $\Alex\kappa$ spaces,
-% for each $n\in\NN$
- and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
+Suppose  $\spc{L}_n$ is a sequence of $\Alex\kappa$ spaces and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{L}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{L}_\o$.
 Then 
 \[\mangle\hinge{p_\o}{x_\o}{y_\o}
@@ -1328,7 +1326,7 @@ Clearly
 \angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}\] 
 as $n\to\o$.
 
-From  hinge comparison (\ref{angle}), $\mangle\hinge{p_n}{x_n}{y_n}\ge \angk\kappa{p_n}{\bar x_n}{\bar y_n}$.
+From the hinge comparison (\ref{angle}), $\mangle\hinge{p_n}{x_n}{y_n}\ge \angk\kappa{p_n}{\bar x_n}{\bar y_n}$.
 Hence the result.
 \qeds
 
@@ -1365,7 +1363,7 @@ $\hinge{p_n}{x_n}{y_n}$
 converge to  
 $\hinge{p_\o}{x_\o}{y_\o}$
 as $n\to\o$.
-Hence by angle semicontinuity (\ref{lem:ang.semicont-cbb}), 
+Hence by the angle semicontinuity (\ref{lem:ang.semicont-cbb}), 
 we have
 \[
 \mangle\hinge{p_\o}{x_\o}{y_\o}
@@ -1389,8 +1387,7 @@ such that
 The hinge comparison  (\ref{angle}) implies that
 \[\mangle\hinge{p_\o}{x_\o}{q_\o}>\pi-\eps.
 \eqlbl{eq:>pi-eps}\]
-By the triangle inequality for angles
-(\ref{claim:angle-3angle-inq}),
+By the triangle inequality for angles (\ref{claim:angle-3angle-inq}),
 \[
 \begin{aligned}
 \mangle\hinge{p_\o}{x_\o}{y_\o}
@@ -1422,7 +1419,7 @@ Note that by angle semicontinuity
 \]
 
 
-By $\Alex\kappa$ comparison (\ref{df:cbb1+3}) and \ref{cor:monoton:sup}, 
+By the $\Alex\kappa$ comparison (\ref{df:cbb1+3}) and \ref{cor:monoton:sup}, 
 \[\mangle\hinge{p_n}{x_n}{y_n}
 +\mangle\hinge{p_n}{y_n}{q_n}
 +\mangle\hinge{p_n}{x_n}{q_n}
@@ -1484,7 +1481,7 @@ In particular, \ref{eq:1st-var+***} holds if $p\in \Str(q)$ as well as if $q\in 
 \parbf{Remark.}
 \begin{itemize}
 \item The above lemma is essentially due to Alexandrov.
-The right hand side in \ref{eq:1st-var+***} is called the \index{angle!strong angle}\index{strong angle}\emph{strong angle} of the  hinge $\hinge p q x$. 
+The right-hand side in \ref{eq:1st-var+***} is called the \index{angle!strong angle}\index{strong angle}\emph{strong angle} of the  hinge $\hinge p q x$. 
 Note that in a general metric space the angle and the strong angle of the same hinge might differ.
 
 \item As follows from Corollary~\ref{cor:two-geodesics-in-ultrapower}, 
@@ -1496,7 +1493,7 @@ if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$, then $[p q
 \parit{Proof of \ref{lem:strong-angle}.}
 The first statement follows directly from the first variation formula (\ref{1st-var+}) 
 and the definition of model angle (see Section~\ref{sec:angles}).
-The second statement follows from the Plaut's theorem (\ref{thm:almost.geod}) applied to $\spc{L}^\o$.
+The second statement follows from Plaut's theorem (\ref{thm:almost.geod}) applied to $\spc{L}^\o$.
 (Note that according to Proposition~\ref{prp:A^omega}, $\spc{L}^\o$ is a complete length $\Alex{}$ space.)\qeds
 
 
@@ -1589,7 +1586,7 @@ Since the geodesic $[x y]$ is unique this means that $p\in [x y]$, and hence $\o
 Since in $\Alex{}$ spaces, geodesics do not bifurcate (\ref{nonsplit}), 
 it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$ as a local geodesic $\gamma$ 
 (which might not be minimizing).
-In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold with possibly non empty boundary.
+In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold with possibly nonempty boundary.
 From this, it is easy to see that $\spc{L}$ falls into one of the exceptional spaces described in the theorem.
 
 Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$, then the above argument applied to $\spc{L}^\o$ yields that $\spc{L}^\o$ is isometric to one of the exceptional spaces. 

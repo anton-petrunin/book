@@ -297,7 +297,7 @@ Further, note that
 \eqlbl{co-lip}\]
 holds.
 
-The above construction may be repeated for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$ and $r'=\tfrac{r}{2}$.
+The above construction may be repeated for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$, and $r'=\tfrac{r}{2}$.
 The inequality \ref{co-lip} for the resulting map $\map'$ implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
 there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
 \[\dist{p'}{q'}{}
@@ -348,7 +348,7 @@ for some fixed $\Const>0$ and any $\eps>0$.
 
 In particular:
 \begin{enumerate}[(i)]
-\item If $\LinDim\spc{L}=\infty$, then all the statements (\ref{SHORT.LinDim+}), (\ref{SHORT.TopDim}) and (\ref{SHORT.pack}) are satisfied for all $m\in\ZZ_{\ge0}$. 
+\item If $\LinDim\spc{L}=\infty$, then all the statements (\ref{SHORT.LinDim+}), (\ref{SHORT.TopDim}), and (\ref{SHORT.pack}) are satisfied for all $m\in\ZZ_{\ge0}$. 
 \item 
  If the statement (\ref{SHORT.TopDim}) or (\ref{SHORT.pack}) is satisfied for some choice of $q\in \spc{L}$ and $R>0$, then it also is satisfied for any other choice of $q$ and $R$.
 \end{enumerate}
@@ -403,7 +403,7 @@ Applying Corollary \ref{cor:euclid-subcone}, there is a point $p'$ arbitrarily c
 such that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
 belong to an isometric copy of $\mathbb{S}^{\kay-1}$ in $\Sigma_{p'}$.
 In addition, we may assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
-From hinge comparison (\ref{angle}),
+From the hinge comparison (\ref{angle}),
 $\mangle(\dir{p'}x,\dir{p'}{z^i})>\eps$ 
 and $\mangle(\dir{p'}{z^i},\dir{p'}{z^j})>\eps$;
 that is, 
@@ -473,7 +473,7 @@ Consider an array $(v^1,v^2,\dots,v^n)$ of vectors in $\Lin_q$,
 where $v^i=\ddir{q}{x^i}$.
 Clearly 
 \[|v^i|=\dist{q}{x^i}{}<r,\] 
-and from hinge comparison (\ref{angle})
+and from the hinge comparison (\ref{angle})
 we have 
 \[\side\kappa \hinge \0{v^i}{v^j}\ge \dist{x^i}{x^j}{}>\eps.\]
 Note that the ball $\oBall(\0,r)_{\Lin_q}$ equipped with the metric $\rho(v,w)\z=\side\kappa \hinge \0{v}{w}$ is isometric to 
@@ -671,7 +671,7 @@ Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficien
  $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$, and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
 \end{clm}
 Set $\acute\xi=\dir{p'}{\bar x}$ and $\acute\zeta^i=\dir{p'}{\bar z^i}$ for each $i$.
-By hinge comparison (\ref{angle}), 
+By the hinge comparison (\ref{angle}), 
 \begin{clm}{}
 $\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$, and $\mangle(\acute\zeta^i,\acute\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
 \end{clm}
@@ -712,7 +712,7 @@ Without loss of generality we can also assume that $\bar\zeta^\kay\in\partial \m
 For each $i<\kay$, 
 let $\check\zeta^i
 =\dir{\bar\zeta^\kay}{\bar\zeta^i}\in\Sigma_{\bar\zeta^\kay}\mathbb{S}^{m-1}_+\iso\mathbb{S}^{m-2}_+$.
- By hinge comparison (\ref{angle}), $\mangle(\check\zeta^i,\check\zeta^j)>\tfrac\pi2$ 
+By the hinge comparison (\ref{angle}), $\mangle(\check\zeta^i,\check\zeta^j)>\tfrac\pi2$ 
 for all $i<j<\kay$.
 Thus from the induction hypothesis we have  $\kay-1\le {m-1}$.
 \qeds
@@ -877,7 +877,7 @@ From \ref{E=T}, it follows that $\T_p$ is isometric to $\EE^m$ for any $p\in \Eu
 
 \parit{(\ref{SHORT.LinDim+-f})$\Rightarrow$(\ref{SHORT.TopDim-f}).}
 This is proved in exactly the same way as implication \textit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim})} of theorem \ref{thm:dim-infty}, 
-but  applying existence of a distance chart (\ref{thm:inverse-function}) 
+but applying the existence of a distance chart (\ref{thm:inverse-function}) 
 instead of the right-inverse theorem (\ref{thm:right-inverse-function}).
 
 \parit{(\ref{SHORT.TopDim-f})$\Rightarrow$(\ref{SHORT.pack-f}).} 
@@ -891,7 +891,7 @@ Applying \ref{E-comeagre} gives the first inequality in (\ref{SHORT.pack-f}).
 
 \parit{(\ref{SHORT.pack-f})$\Rightarrow$(\ref{SHORT.LinDim-f}).} 
 From Theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
-Applying theorem \ref{thm:dim-infty} again,  if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
+Applying Theorem \ref{thm:dim-infty} again,  if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
 \[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}}.\]
 But
 \[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R)\] 
@@ -928,7 +928,7 @@ Prove that $\spc{L}$ is finite-dimensional.
 \section{One-dimensional CBB spaces}
 
 \begin{thm}{Theorem}\label{thm:dim=1.CBB} 
-Let $\spc{L}$ be an one-dimensional complete length $\Alex\kappa$ space.
+Let $\spc{L}$ be a one-dimensional complete length $\Alex\kappa$ space.
 Then $\spc{L}$ is isometric to a connected complete Riemannian $1$-dimensional manifold with possibly non-empty boundary.
 \end{thm}
 
@@ -962,8 +962,8 @@ Assume the contrary;
 that is, there is 
 $$z\in \oBall(p,\eps)\backslash\mathopen{]}x y\mathclose{[}.$$
 Consider a geodesic $[p z]$, and let $q\in[p z]\cap[x y]$ be the point that maximizes the distance $\dist{p}{q}{}$.
-At  $q$, we have three distinct directions: 
-to $x$, to $y$ and to $z$.
+At $q$, we have three distinct directions: 
+to $x$, $y$, and $z$.
 Moreover, $\mangle\hinge{q}{x}{y}=\pi$.
 Thus, according to Proposition~\ref{E=T}, 
 $\LinDim\spc{L}>1$, a contradiction.

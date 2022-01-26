@@ -39,12 +39,12 @@ Therefore we have the following:
 \begin{thm}{Corollary}\label{cor:real-tan-is}
 \begin{subthm}{cor:tan-is-CBB}
 If $\spc{L}$ is a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$, then $\T_p$ is $\Alex{0}$.
-Moreover, $\T_p$ satisfies (1+\textit{n})-point comparison (\ref{thm:pos-config}).
+Moreover, $\T_p$ satisfies the (1+\textit{n})-point comparison (\ref{thm:pos-config}).
 \end{subthm}
 
 \begin{subthm}{cor:tan-is-CBA}
 If $\spc{U}$ is a complete length $\CAT\kappa$ space and $p\in \spc{U}$, then $\T_p$ is $\CAT0$.
-Moreover, $\T_p$ satisfies (2\textit{n}+2)-comparison (\ref{CBA-n-point}).
+Moreover, $\T_p$ satisfies the (2\textit{n}+2)-comparison (\ref{CBA-n-point}).
 \end{subthm}
 
 \end{thm}
@@ -476,7 +476,7 @@ It remains to choose $\xi\in \Sigma_p$ so that $\xi\cdot |z|=z$ and observe that
 
 Now assume $\spc{Z}$ is $\Alex{}$.
 We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
-Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{*}}$} is dense in $\T_p$ and $\dd_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
+Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{p}}$} is dense in $\T_p$ and $\dd_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
  and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
 
 {
@@ -517,7 +517,7 @@ we have $\dist{u_t}{v_t}{}=t\cdot\dist{\tilde u}{\tilde v}{}+o(t)$
 and $\dist{u_t}{v_t'}{}=t\cdot\dist{\tilde u}{\tilde v'}{}+o(t)$ 
 (see Theorem~\ref{angle} and Section~\ref{sec:angle}).
 
-From point-on-side and hinge comparison (\ref{point-on-side}$+$\ref{SHORT.angle}), we have
+From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{SHORT.angle}), we have
 \[\angk\kappa{v_t}p{w_t}
 \ge
 \angk\kappa{v_t}p{u_t}
@@ -531,7 +531,7 @@ and
 \mangle\hinge{\tilde v}{\tilde v'}{\tilde u}+\tfrac{o(t)}t.\]
 Clearly, 
 $\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde v'}{\tilde u'}=\pi$. 
-From adjacent angle comparison (\ref{2-sum}), 
+From the adjacent angle comparison (\ref{2-sum}), 
 $\angk\kappa{v_t}p{u_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
 Hence
 $\angk\kappa{v_t}p{w_t}
@@ -982,7 +982,7 @@ Therefore
 
 Further,
 \begin{align*}
-|\nabla_x f|^2&=(\dd_x f)(\nabla_x f)\\
+|\nabla_x f|^2&=(\dd_x f)(\nabla_x f)=\\
 &=\dd_xf^\o(\nabla_x f)\le\\ 
 &\le\<\nabla_x f^\o,\nabla_x f\>=\\
 &=|\nabla_x f^\o|\cdot|\nabla_x f|\cdot\cos\mangle(\nabla_x f^\o,\nabla_x f).
@@ -1220,7 +1220,8 @@ Indeed, according to Lemma~\ref{lem:minus-sum},
 Thus $\dist{x}{w}{}=\dist{w}{y}{}=\tfrac{1}{2}\cdot\dist[{{}}]{x}{y}{}$ and \ref{clm:w-mid(xy)} follows.
 \claimqeds
 
-Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$.  Therefore by \ref{cor:splitting}, $\Lin_p$ is isometric to a Hilbert space.
+Note that for any $v\in\Lin_p$ there is a line $\ell$ that contains $v$ and $\0$.
+Therefore by \ref{cor:splitting}, $\Lin_p$ is isometric to a Hilbert space.
 \qeds
 
 

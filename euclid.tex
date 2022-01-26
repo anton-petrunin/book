@@ -17,12 +17,12 @@ A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \index{half-li
 
 A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \index{line}\emph{line}.
 
-A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{*}{*}]}$}.
+A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{p}{q}]}$}.
 We will always assume $\geod_{[p q]}$ is parametrized starting at $p$; 
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
-The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{*}{*}]$} and called a \index{geodesic}\emph{geodesic}.
+The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{p}{q}]$} and called a \index{geodesic}\emph{geodesic}.
 The term \index{geodesic}\emph{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
-when a confusion is possible we will call the latter a \index{pregeodesic}\emph{pregeodesic}.
+when confusion is possible we will call the latter a \index{pregeodesic}\emph{pregeodesic}.
 With a slight abuse of notation, we will use the notation $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
 
 We may write $[p q]_{\spc{X}}$ 
@@ -68,7 +68,7 @@ Thus the limit in \ref{eq:def:busemann*} is defined.
 
 \parbf{Triangles.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}, and we will use the short notation 
-$\trig p q r=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+$\trig p q r=([q r], [r p], [p q])$\index{$\trig {{p}}{{q}}{{r}}$}.
 Again, given a triple $p,q,r\in \spc{X}$, there may be no triangle 
 $\trig p q r$, simply because one of the pairs of these points cannot be joined by a geodesic.  Or there may be many different triangles, any of which can be denoted by $\trig p q r$.
 Once we write $\trig p q r$, it means we have chosen such a triangle; 
@@ -82,7 +82,7 @@ it obviously coincides with perimeter of the triple $p$, $q$, $r$ as defined bel
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
 A pair of geodesics $([p x],[p y])$ will be called a  \index{hinge}\emph{hinge}, and will be denoted by 
-$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+$\hinge p x y=([p x],[p y])$\index{$\hinge{{p}}{{q}}{{r}}$}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -104,7 +104,7 @@ and $\kappa\in\RR$.
 Let us define the \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
-\index{$\modtrig\kappa$!$\modtrig\kappa({*}{*}{*})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
+\index{$\modtrig\kappa$!$\modtrig\kappa({p}{q}{r})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
 \[\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{},
 \quad \dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
 \quad \dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
@@ -123,7 +123,7 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$ is defined
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
 $\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$, and will be denoted by
 $\angk\kappa p q r$%
-\index{$\tangle\mc\kappa$!$\angk\kappa{{*}}{{*}}{{*}}$}\index{$\tangle\mc\kappa$!$\angk\kappa{{*}},{{*}},{{*}}$}.
+\index{$\tangle\mc\kappa$!$\angk\kappa{{p}}{{q}}{{r}}$}\index{$\tangle\mc\kappa$!$\angk\kappa{{p}}{{q}}{{r}}$}.
 
 In the notation of Section~\ref{model}, 
 \[\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}.\]
@@ -212,17 +212,17 @@ as required.
 
 \section{Angles and the first variation}\label{sec:angles}
 
-Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} to be \index{$\mangle$!$\mangle\hinge{{*}}{{*}}{{*}}$}
+Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} to be \index{$\mangle$!$\mangle\hinge{{p}}{{q}}{{r}}$}
 \[\mangle\hinge p x y
 \df
 \lim_{\bar x,\bar y\to p} \angk\kappa p{\bar x}{\bar y},\eqlbl{eq:angle-def}\]
 for $\bar x\in\mathopen{]}p x]$ and $\bar y\in\mathopen{]}p y]$, if this limit exists.
 
 Similarly to $\angk\kappa p{x}{y}$, 
-we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{*}}{{*}}{{*}}$}
+we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{p}}{{q}}{{r}}$}
 \[\side\kappa \hinge p x y=
 \side\kappa \left\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\right\},\]
-where the right hand side is defined in Section~\ref{model}.  %on page~\pageref{page:model-side}.%V: I don't like using hard page references. They might change in formatting. %A: what do you mean by ``hard''? it is automatic as any other refs we use.
+where the right-hand side is defined in Section~\ref{model}.  %on page~\pageref{page:model-side}.%V: I don't like using hard page references. They might change in formatting. %A: what do you mean by ``hard''? it is automatic as any other refs we use.
 The value $\side\kappa \hinge p x y$ will be called the \index{model side}\emph{model side}
  of the hinge $\hinge p x y$.
 
@@ -233,7 +233,7 @@ Then for any $\kappa,\Kappa\in\RR$,
 \le 
 100(|\Kappa|+|\kappa|)\cdot\ell^2,
 \eqlbl{eq:k-K},\]
- whenever the lefthand side is defined.
+ whenever the left-hand side is defined.
 \end{thm}
 
 Lemma~\ref{lem:k-K-angle} implies that 
@@ -392,7 +392,7 @@ The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
 \[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0;\]
-the direction of $[px]$ is denoted by $\dir px $.\index{$\dir{*}{*}$}
+the direction of $[px]$ is denoted by $\dir px $.\index{$\dir{p}{q}$}
 
 
 
@@ -447,12 +447,12 @@ The corresponding metric space admits a natural isometric identification with th
 The elements of $\T'_p$ are formed by the equivalence classes for the relation 
 \[\alpha\sim\beta\quad \iff\quad \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
-The element of $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {*}{*}$}
+The element of $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$}
 
 The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
 despite that $\T_p$ is only a cone --- not a vector space.
 The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
-The {}\emph{tip of the tangent cone} $\T_p$ will be denoted by $\0$ or $\0_{p}$.
+The {}\emph{tip} of the tangent cone $\T_p$ will be denoted by $\0$ or $\0_{p}$.
 
 
 \section{Velocity of curves}
@@ -646,14 +646,16 @@ Define the pseudodistance between two such sequences as
 \lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
 Then $\T^\o_x\spc{X}$ is the corresponding metric space.
 
-Tangent spaces (see section \ref{sec: tangent space})  as well as ultratangent spaces 
+Tangent spaces (see section \ref{sec: tangent space}) as well as ultratangent spaces 
 generalize the notion of tangent spaces on Riemannian manifolds.
 In  the simplest cases these two notions define the same space.
 However in general they are different and are both useful ---
 often a lack of some property in one is compensated by the other.%V: Tangent spaces are only defined later in chapter 6. This makes this whole paragraph very confusing. I added a forward reference to the section about tangent spaces but I think that's still confusing. I would move this discussion to the section on tangent spaces. The same goes for the next theorem. %S: agreed. %A: we did not try to put everything in right order --- this is an example (ref is good).
 
 It is clear from the definition that a tangent space has a cone structure.
-On the other hand, in general an ultratangent space does not have a cone structure. The Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example. We remark that the Hilbert's cube  is a $\Alex{0}$ as well as  a $\CAT{0}$ Alexandrov space.
+On the other hand, in general an ultratangent space does not have a cone structure.
+Hilbert's cube $\prod_{n=1}^\infty[0,2^{-n}]$ is an example.
+We remark that Hilbert's cube is a $\Alex{0}$ as well as a $\CAT{0}$ Alexandrov space.
 
 The next theorem shows that the tangent space $\T_p$ can be (and often will be) considered as a subset of  $\T^\o_p$.
 

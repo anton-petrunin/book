@@ -105,7 +105,7 @@ in particular, if $\kappa\le\Kappa$, then any $\CAT\kappa$ space is $\CAT\Kappa$
 
 
 This terminology was introduced by Michael Gromov;  
-$\CAT{}$ stands for \'Elie Cartan, Alexandr Alexandrov and Victor Toponogov.
+$\CAT{}$ stands for \'Elie Cartan, Alexandr Alexandrov, and Victor Toponogov.
 Originally these spaces were called \index{$\mathfrak{R}_\kappa$ domain}\emph{$\mathfrak{R}_\kappa$ domains};
 this is Alexandrov's terminology and is still in use.
 
@@ -118,7 +118,7 @@ $\angk\kappa p{x^1}{x^2}$,
 $\angk\kappa p{x^2}{x^3}$ and
 $\angk\kappa p{x^1}{x^3}$
 satisfy all three triangle inequalities or one of these angles is undefined.
-(This is the CAT analogue of Definition \ref{df:cbb1+3} of CBB.)
+(This is the CAT analog of Definition \ref{df:cbb1+3} of CBB.)
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:sba-2+2-short}
@@ -201,7 +201,7 @@ n\to\infty.
 \eqlbl{eq:z_n->z}\]
 
 By the triangle inequality, the $z_n$ are approximate midpoints between $p^1$ and $p^2$.
-Apply $\CAT\kappa$  comparison (\ref{def:2+2}) to the quadruple $p^1$, $p^2$, $z_n$,~$z$. 
+Apply the $\CAT\kappa$ comparison (\ref{def:2+2}) to the quadruple $p^1$, $p^2$, $z_n$,~$z$. 
 For $p=p^1$ or $p=p^2$, we see that $\angk{\kappa} {p}{z_n}{z}$ is arbitrarily small when $n$ is sufficiently large.  
 By the law of cosines, \ref{eq:z_n->z} follows.
 \qeds
@@ -213,7 +213,7 @@ Show that any geodesic in $\spc{U}$ can be extended
 as a two-side infinite local geodesic.
 
 Moreover the same holds for any locally geodesic locally $\CAT{}$ space $\spc{U}$ with nontrivial local homology groups at any point;
-the latter holds in particular, if $\spc{U}$ is a homological manifold.
+the latter holds in particular if $\spc{U}$ is a homological manifold.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:complete-space-of-dir}
@@ -223,7 +223,7 @@ that is, any geodesic in $\spc{U}$ can be extended to a both-sided infinite loca
 Show that the space of geodesic directions $\Sigma_p'$ is complete for any $p\in \spc{U}$.
 \end{thm}
 
-By uniqueness of geodesics (\ref{thm:cat-unique}),
+By the uniqueness of geodesics (\ref{thm:cat-unique}),
 we have the following.
 
 \begin{thm}{Corollary}\label{cor:cat-ccat}
@@ -329,10 +329,11 @@ $\CAT\kappa$ comparison is not.
 Since the perimeter of $p,x,y$ is $<2\cdot \varpi\kappa$, so is the perimeter of any subtriple of $p,z,x,y$ by the triangle inequality. 
 By Alexandrov's lemma (\ref{lem:alex}), 
 \[\angk\kappa p z x +\angk\kappa p z y  < \angk{\kappa} p x y \quad \text{or}\quad  \angk\kappa z p x  +\angk\kappa z p y  =\pi.\]
-In the former case, $\CAT\kappa$ comparison (\ref{def:2+2}) applied to the quadruple $p, z, x, y$ implies
+In the former case, the $\CAT\kappa$ comparison (\ref{def:2+2}) applied to the quadruple $p, z, x, y$ implies
 \[\angk\kappa z p x  +\angk\kappa z p y  \ge \angk{\kappa} z x y =\pi.\]
 
-\parit{(\ref{SHORT.cat-2-sum}) $\Leftrightarrow$ (\ref{SHORT.cat-monoton})}. Follows from  Alexandrov's lemma (\ref{lem:alex}).
+\parit{(\ref{SHORT.cat-2-sum}) $\Leftrightarrow$ (\ref{SHORT.cat-monoton})}.
+Follows from  Alexandrov's lemma (\ref{lem:alex}).
 
 \parit{(\ref{SHORT.cat-monoton}) $\Rightarrow$ (\ref{SHORT.cat-hinge}).} 
 By (\ref{SHORT.cat-monoton}), for $\bar p\in\mathopen{]}x p]$ and $\bar y\in\mathopen{]}x y]$ the function $(\dist{x}{\bar p}{},\dist{x}{\bar y}{})\mapsto\angk\kappa x{\bar p}{\bar y}$ is nondecreasing in each argument.
@@ -357,7 +358,7 @@ Indeed, by (\ref{SHORT.cat-hinge}) and the triangle inequality for angles (\ref{
 
 Therefore, it is sufficient to prove the converse for \textit{(\ref{SHORT.cat-monoton})}.
 
-Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ , we must verify $\CAT\kappa$ comparison (\ref{def:2+2}).
+Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ , we must verify the $\CAT\kappa$ comparison (\ref{def:2+2}).
 In $\Lob2\kappa$, construct the model triangles  $\trig{\tilde p^1}{\tilde p^2}{\tilde x^1} = \modtrig\kappa(p^1 p^2 x^1 )$ 
 and $\trig{\tilde p^1}{\tilde p^2}{\tilde x^2}\z= \modtrig\kappa(p^1 p^2 x^2)$, lying on either side of a common segment $[\tilde p^1 \tilde p^2]$.
 We may suppose 
@@ -430,7 +431,8 @@ Then any complete length $\CAT\kappa$ space is $\CAT\Kappa$.
 Moreover a space $\spc{U}$ is $\CAT\kappa$ if  $\spc{U}$ is $\CAT\Kappa$ for all $\Kappa>\kappa$.
 \end{thm}
 
-\parit{Proof.} The first statement follows from Corollary \ref{cor:cat-ccat}, the adjacent-angles comparison (\ref{cat-2-sum}) and the monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
+\parit{Proof.}
+The first statement follows from Corollary \ref{cor:cat-ccat}, the adjacent-angles comparison (\ref{cat-2-sum}) and the monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
 
 The second statement follows since the function $\kappa\mapsto\angk\kappa x y z$ is continuous.
 \qeds
@@ -463,7 +465,7 @@ Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 Let $\trig xyz$ be a triangle in $\spc{U}$
 and $\trig{\tilde x}{\tilde y}{\tilde z}$ be its model triangle in $\Lob{2}{\kappa}$.
 Prove that the natural map $f\:\trig{\tilde x}{\tilde y}{\tilde z}\to \trig xyz$ 
- is distance-preserving if and ony if one of the following conditions hold:
+ is distance-preserving if and only if one of the following conditions hold:
 
 \begin{subthm}{ex:equality-for-thin:angle}
 $\mangle\hinge x y z= \angk\kappa x y z$,
@@ -594,7 +596,7 @@ similarly map $\Conv \trig{\tilde p}{\tilde y}{\tilde z_x}$ onto $\Conv \trig {\
 \item If $w$ is in one of the three circular sectors, say at distance $r$ from the center of the circle, let $F(w)$ be the point on the corresponding segment 
 $[\dot p \dot z]$, 
 $[\dot x \dot z]$ 
-or $[\dot y \dot z]$ whose distance from the lefthand endpoint of the segment is $r$.
+or $[\dot y \dot z]$ whose distance from the left-hand endpoint of the segment is $r$.
 \item Finally, if $w$ lies in the remaining curvilinear triangle $\tilde z \tilde z_x \tilde z_y$, 
 set $F(w) = \dot z$. 
 \end{itemize}
@@ -682,9 +684,12 @@ Let \begin{align*}
 & 
 r(t)&=\dist{p}{\geod_{[xy]}(t)}{}.                           \end{align*}
 Let $\tilde f=\md\kappa\circ\tilde r$ and $f=\md\kappa\circ r$.
-By Property~\ref{md-diff-eq}, we have $\tilde f''\z=1-\kappa\cdot  \tilde f$. Clearly $\tilde f(t)$ and $f(t)$ agree at $t=0$ and $t=\dist{x}{y}{}$. 
-The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\tilde r(t)$  for all $t\in[0,\dist{x}{y}{}]$.  Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, then $r\le \tilde r$ and $f\le \tilde f$ are equivalent.  Thus the claim follows by Jensen's inequality 
-(\ref{y''-mono}). \qeds
+By Property~\ref{md-diff-eq}, we have $\tilde f''\z=1-\kappa\cdot  \tilde f$.
+Clearly $\tilde f(t)$ and $f(t)$ agree at $t=0$ and $t=\dist{x}{y}{}$. 
+The point-on-side comparison (\ref{cat-monoton}) is the condition $r(t)\le\tilde r(t)$  for all $t\in[0,\dist{x}{y}{}]$.
+Since $\md\kappa$ is increasing on $[0,\varpi\kappa)$, then $r\le \tilde r$ and $f\le \tilde f$ are equivalent.
+Thus the claim follows by Jensen's inequality (\ref{y''-mono}).
+\qeds
 
 \begin{thm}{Corollary}\label{cor:convex-balls}
 Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
@@ -700,7 +705,7 @@ $x$ and $y$ lie in $\cBall[p, R]$ or $\oBall(p, R)$.
 By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$, then any
  geodesic $[x y]$ lies in $\oBall(p, \varpi\kappa)$.
  
-By function comparison (\ref{thm:function-comp}), 
+By the function comparison (\ref{thm:function-comp}), 
 the geodesic $[x y]$ lies in $\cBall[p,R]$ or $\oBall(p,R)$ respectively.
 
 Thus any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
@@ -778,14 +783,14 @@ the point-on-side comparison (\ref{cat-monoton}) follows.
 \parit{(\ref{SHORT.concave-dev}).}  
 Consider a partition $0=t^0<t^1<\dots<t^n=T$, and 
 let $x^i\z=\gamma(t^i)$. Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}=\modtrig\kappa(p x^{i-1}x^i)$ with the direction of $[\tilde p\tilde x^i]$ turning counterclockwise as $i$ grows. 
-By angle comparison (\ref{cat-hinge}),
+By the angle comparison (\ref{cat-hinge}),
 \[\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde p}+\mangle\hinge{\tilde x^i}{\tilde x^{i+1}}{\tilde p}\ge\pi.\eqlbl{eq1:concave-devel*}
 \] 
 Since $\gamma$ is a geodesic, 
  \[\length \gamma = \sum_{i=1}^n\dist{x^{i-1}}{x^i}{}\le \dist{p}{x^0}{}+\dist{p}{x^n}{}.
 \eqlbl{eq2:concave-devel*}
 \]  
-By repeated application of Alexandrov's Lemma (\ref{lem:alex}), and inequality~\ref{eq2:concave-devel*}, 
+By repeated application of Alexandrov's lemma (\ref{lem:alex}), and inequality~\ref{eq2:concave-devel*}, 
 \[\sum_{i=1}^n\mangle\hinge{\tilde p}{\tilde x^{i-1}}{\tilde x^i}
 \le
 \angk\kappa p{x^0}{x^n}\le\pi.\] 
@@ -807,7 +812,7 @@ is locally $\CAT0$, but it is easy to find a quadruple of points in $\mathbb{S}^
 
 The following theorem was essentially proved by Alexandrov \cite[Satz 9]{alexandrov:devel}; 
 it gives a global condition on geodesics that is  necessary and sufficient for a locally $\CAT\kappa$ space to be globally $\CAT\kappa$. 
-The proof use a thin-triangle decompositions, 
+The proof uses thin-triangle decompositions 
 and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
@@ -837,10 +842,10 @@ Fix $R>0$ such that $\CAT\kappa$ comparison holds in $\oBall(p,R)$.
 
 We may assume that $\oBall(p,R)\subset\Omega$ and $R<\varpi\Kappa$.
 The same argument as in the proof of the theorem on uniqueness of geodesics (\ref{thm:cat-unique}) 
-shows that any two points in $\cBall[p,\tfrac R2]$ can be joined by a unique geodesic that depends continuously on the end points.
+shows that any two points in $\cBall[p,\tfrac R2]$ can be joined by a unique geodesic that depends continuously on the endpoints.
 
 The same argument as in the proof of Corollary \ref{cor:convex-balls} shows that $\cBall[p,\tfrac R2]$ is a convex set.
-Then (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat})  of the patchwork globalization theorem implies that $\cBall[p,\tfrac R2]$ is $\CAT\kappa$.
+Then (\ref{SHORT.thm:alex-patch:geo-uni})$\Rightarrow$(\ref{SHORT.thm:alex-patch:ccat}) of the patchwork globalization theorem implies that $\cBall[p,\tfrac R2]$ is $\CAT\kappa$.
 \qeds
 
 The proof of patchwork globalization uses the following construction:
@@ -912,10 +917,10 @@ these geodesics do {}\emph{not} depend continuously on their endpoint pairs.
 \section{Angles}
 \label{sec:angles-cba}
 
-Recall that $\o$ denotes a selective nonpriciple ultrafilter on $\NN$, see Section~\ref{ultralimits}. 
+Recall that $\o$ denotes a selective nonprincipal ultrafilter on $\NN$, see Section~\ref{ultralimits}. 
 
 \begin{thm}{Angle semicontinuity}\label{lem:ang.semicont}
-Suppose $\spc{U}_n$  is a $\varpi\kappa$-geodesic $\CAT\kappa$  space for each $n\in \NN$
+Suppose $\spc{U}_n$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space for each $n\in \NN$
 and $\spc{U}_n\to \spc{U}_\o$ as $n\to\o$.
 Assume that a sequence of hinges $\hinge{p_n}{x_n}{y_n}$ in $\spc{U}_n$ converges to a hinge $\hinge{p_\o}{x_\o}{y_\o}$ in  $\spc{U}_\o$.
 Then 
@@ -936,7 +941,7 @@ Then
 %\end{wrapfigure}
 
 \parit{Proof.}
-By angle-sidelength monotonicity (\ref{cor:monoton-cba}),
+By the angle-sidelength monotonicity (\ref{cor:monoton-cba}),
 \[\mangle\hinge{p_\o}{x_\o}{y_\o}
 =
 \inf\set{\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}}{\bar x_\o \in \mathopen{]}p_\o x_\o],\ \bar y_\o\in \mathopen{]}p_\o y_\o]}.\]
@@ -951,14 +956,13 @@ Clearly
 \angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}\] 
 as $n\to\o$.
 
-By angle comparison (\ref{cat-hinge}), $\mangle\hinge{p_n}{x_n}{y_n}\le \angk\kappa{p_n}{\bar x_n}{\bar y_n}$.
+By the angle comparison (\ref{cat-hinge}), $\mangle\hinge{p_n}{x_n}{y_n}\le \angk\kappa{p_n}{\bar x_n}{\bar y_n}$.
 Hence the result.
 \qeds
 
 Now we verify that the first variation formula 
 holds in the $\CAT{}$ setting. 
-Compare it to the first variation inequality (\ref{lem:first-var}) which holds for general metric spaces and to the
-strong angle lemma (\ref{1st-var+}) for $\Alex{}$ spaces. 
+Compare it to the first variation inequality (\ref{lem:first-var}) which holds for general metric spaces and to the strong angle lemma (\ref{1st-var+}) for $\Alex{}$ spaces. 
 
 \begin{thm}{Strong angle lemma}
 \label{lem:strong-angle-cba}
@@ -974,11 +978,12 @@ for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
 \end{thm}
 
 \parit{Proof.} 
-By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the righthand side is defined and bigger than or  equal to the lefthand side. 
+
+By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the right-hand side is defined and bigger than or  equal to the left-hand side. 
 
 By Lemma~\ref{lem:k-K-angle}, we may take $\kappa = 0$ in \ref{eq:cba-1st-var+***}.  
 By the cosine law and the first variation inequality (\ref{lem:first-var}),  
-the righthand side is less than or equal to the lefthand side.
+the right-hand side is less than or equal to the left-hand side.
 \qeds
 
 
@@ -1024,14 +1029,14 @@ Here the final equality follows from
 \lim_{t\to 0}\mangle\hinge q  {\geod_{[p y]}(t)} z = \mangle\hinge q  p z.
 \eqlbl{eq:2-side-variation}
 \]
-``$\le$'' in \ref{eq:2-side-variation}  holds by angle semicontinuity (\ref{lem:ang.semicont}). ``$\ge$'' holds by the triangle inequality for angles, since angle comparison (\ref{cat-hinge}) gives 
+The the angle semicontinuity (\ref{lem:ang.semicont}) implies ``$\le$'' in \ref{eq:2-side-variation}, and ``$\ge$'' holds by the triangle inequality for angles, since angle comparison (\ref{cat-hinge}) gives 
 \[
 \lim_{t\to 0}\mangle\hinge q p  {\geod_{[p y]}(t)} = 0.
 \]
 \qedsf
 
-We have  given elementary proofs of the  first-variation statements \ref{lem:strong-angle-cba}, \ref{thm:1st-var-cba} and \ref{cor:both-end-first-var-cba}. Note however that the no-conjugate-point theorem \ref{thm:no-conj-pt} not only provides a proof of these statements, but also extends the statements  
- from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces as follows:
+We have given elementary proofs of the first-variation statements \ref{lem:strong-angle-cba}, \ref{thm:1st-var-cba} and \ref{cor:both-end-first-var-cba}.
+Note however that the no-conjugate-point theorem \ref{thm:no-conj-pt} not only provides proofs of these statements but also extends the statements from geodesics in $\CAT\kappa$ spaces to local geodesics in locally $\CAT\kappa$ spaces as follows:
  
 \begin{thm}{First variation for local geodesics}\label{cor:1st-var++cba}
 Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
@@ -1166,11 +1171,8 @@ $\Cone\spc{W}$ is a $\CAT0$ space.  By Theorem \ref{thm:warp-curv-bound:cbb:S}, 
 \qeds
 
 \begin{thm}{Exercise}\label{ex:two-rays}
-Let $Q$ be the nonconvex subset of the plane 
-bounded by two half-lines $\gamma_1$ and $\gamma_2$
-with common starting point and angle $\alpha$ between them.
-Assume $\spc{U}$ is a complete length $\CAT0$ space
-and $\gamma_1',\gamma_2'$ are two half-lines in $\spc{U}$ with common
+Let $Q$ be the nonconvex subset of the plane bounded by two half-lines $\gamma_1$ and $\gamma_2$ with a common starting point and angle $\alpha$ between them.
+Assume $\spc{U}$ is a complete length $\CAT0$ space and $\gamma_1',\gamma_2'$ are two half-lines in $\spc{U}$ with a common
 starting point and angle $\alpha$ between them.
 Show that the space glued from $Q$ and $\spc{U}$ along the corresponding half-lines is a $\CAT{0}$ space.
 \end{thm}
@@ -1195,9 +1197,8 @@ Continuous means with respect to Hausdorff distance; that is $K_t\Hto K_{t_0}$ a
 
 \section{Space of geodesics}\label{sec:geod-space}
 
-In this section we prove a  ``no-conjugate-point'' theorem for spaces with upper curvature bounds, and derive from it a number of statements about
-local geodesics.  These statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) and the lifting
- globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
+In this section we prove a ``no-conjugate-point'' theorem for spaces with upper curvature bounds and derive from it a number of statements about local geodesics.
+These statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) and the lifting globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
 {\sloppy 
@@ -1259,7 +1260,7 @@ $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 
 The following lemma was suggested to us by Alexander Lytchak.
 The proof proceeds by piecing together $\CAT{\kappa}$  neighborhoods of points on a curve to construct a new $\CAT{\kappa}$ space.  
-Exercise \ref{ex:cats-cradle} is inspired by the original idea of the proof of the no-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
+Exercise~\ref{ex:cats-cradle} is inspired by the original idea of the proof of the no-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
 
 \begin{thm}{Patchwork along a curve}
 \label{lem:patch}
@@ -1322,7 +1323,7 @@ Apply patchwork along $\gamma$ (\ref{lem:patch}).
 
 The No-conjugate-point theorem (\ref{thm:no-conj-pt}) allows us to move a local geodesic  
 so that its endpoints follow given trajectories.
-The following corollary describe how this process might terminate. 
+The following corollary describes how this process might terminate. 
 
 \begin{thm}{Corollary}\label{cor:geo-hom}{\sloppy 
 Let $\spc{U}$ be a locally complete, length, locally $\CAT\kappa$ space.
@@ -1355,7 +1356,7 @@ For each fixed $s\in [0,1]$, define the curve $\alpha_s:[0,a)\to\spc{U}$ by $\al
 By Theorem~\ref{thm:no-conj-pt}, 
 $\alpha_s$ is $ \Lip$-Lipschitz for some $\Lip$.  
 
-If $\alpha_s$  for some value of $s$ does not converge as $t\to a-$, then condiion (\ref{SHORT.cor:geo-hom-cauchy}) holds.  If each $\alpha_s$  converges as $t\to a-$,  
+If $\alpha_s$ for some value of $s$ does not converge as $t\to a-$, then condition (\ref{SHORT.cor:geo-hom-cauchy}) holds.  If each $\alpha_s$  converges as $t\to a-$,  
  then $ \gamma_t$ converges as $t\to a-$, say to $\gamma_a$.
 By  Proposition~\ref{prop:geo-complete}, $\gamma_a$ is a local geodesic and\[\length\gamma_t\to\length\gamma_a\le \varpi\kappa.\]
 By maximality of $\II$, $\length\gamma_a=\varpi\kappa$ and so condition (\ref{SHORT.cor:geo-hom-cauchy}) again holds.
@@ -1627,9 +1628,9 @@ In particular, $\mathfrak{G}_p$ is locally $\CAT\kappa$.
 \end{clm}
 
 Let $\alpha\:[0,1]\to\spc{U}$ be a path with $\length\alpha<\varpi\kappa$ and $\alpha(0)=p$.
-The homotopy constructed in Corollary~\ref{cor:homotopy-from-p} 
-can be regarded as a path in $\mathfrak{G}_p$, say $\hat\alpha\:[0,1]\to \mathfrak{G}_p$,
-such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$; in particular $\hat\alpha_t(1)\equiv\alpha(t)$ for any $t$. 
+The homotopy constructed in Corollary~\ref{cor:homotopy-from-p} can be regarded as a path in $\mathfrak{G}_p$, say $\hat\alpha\:[0,1]\to \mathfrak{G}_p$,
+such that $\hat\alpha(0)=\hat p$ and $\map\circ\hat\alpha=\alpha$;
+in particular $\hat\alpha_t(1)\equiv\alpha(t)$ for any $t$. 
 By \ref{clm:loc-iso}, 
 \[\length(\hat\alpha)_{\mathfrak{G}_p}=\length(\alpha)_{\spc{U}}.\]
 Moreover, it follows that $\alpha$ is a local geodesic path of $\spc{U}$  if and only if $\hat\alpha$ is a local geodesic path of $\mathfrak{G}_p$.
@@ -1665,7 +1666,7 @@ $\cBall[\hat p,\bar R]$ in $\mathfrak{G}_p$ is complete.
 \end{clm}
 
 Take $\oBall(\hat p,\varpi\kappa/2)$ and $\map$ constructed above.
-According to the Radial lemma (\ref{lem:radial-glob}), $\oBall(\hat p,\varpi\kappa/2)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+According to the radial lemma (\ref{lem:radial-glob}), $\oBall(\hat p,\varpi\kappa/2)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 The map $\map$ extends to its completion $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$. 
 All the remaining statements are already proved.
 \qeds
@@ -1719,8 +1720,8 @@ Now we come to the main theorem of this section.
 Any closed curve $\alpha$ with length smaller than $2\cdot \varpi\kappa$ in  a $\varpi\kappa$-geodesic $\CAT\kappa$ space is majorized by a convex region in $\Lob2\kappa$. \end{thm}
 
 This theorem was proved by Yuriy Reshetnyak \cite{reshetnyak:major};
-our proof uses a trick which we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
-An other proof can be build on Kirszbraun's theorem (\ref{thm:kirsz+}), but it works only for complete spaces.
+our proof uses a trick that we learned from the lectures of Werner Ballmann \cite{ballmann:lectures}.
+Another proof can be built on Kirszbraun's theorem (\ref{thm:kirsz+}), but it works only for complete spaces.
 
 The case when $\alpha$ is a triangle, say $\trig p x y$, is the base  and is nontrivial.
 In this case, by Proposition~\ref{cor:maj-triangle}, the majorizing convex region has to be isometric to $\Conv\trig{\tilde p}{\tilde x}{\tilde y}$, where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$.  
@@ -1800,7 +1801,7 @@ that is,
 
 Clearly $\beta_n=\beta$.
 Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the broken geodesics $\beta_{n-1}, \beta_{n-2},\dots,\beta_1$ is concave with respect to $p$.
-Let $D_i$ to be subgraph of $\beta_i$ with respect to $p$.
+Let $D_i$ be the subgraph of $\beta_i$ with respect to $p$.
 Applying Lemma~\ref{lem:quadrangle} gives a short map $G_i\:D_{i}\to D_{i+1}$ that maps $y_{i}\mapsto y_{i+1}$ and does not move $p$ and $x$ (in fact,  $G_i$ is the identity everywhere except on $\Conv\trig{p}{x^{i-1}}{y_i}$).
 Thus the composition 
 \[G_{n-1}\circ\dots\circ G_1\: D_1\to D_n\] 
@@ -1816,7 +1817,8 @@ In particular, $D$ majorizes triangle $\trig p x y$.
 \end{thm}
 
 \parit{Proof.}
-Let $\gamma=\geod_{[x y]}$ and $T=\dist{x}{y}{}$. As in the proof of the development criterion (\ref{thm:concave-devel}), take a partition 
+Let $\gamma=\geod_{[x y]}$ and $T=\dist{x}{y}{}$. 
+As in the proof of the development criterion (\ref{thm:concave-devel}), take a partition 
 \[0=t^0<t^1<\dots<t^n=T,\]
 and set $x^i=\gamma(t^i)$. 
 Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\z=
@@ -1838,10 +1840,11 @@ is short with respect to the length metric on $D_n$.
 Since nearest-point projection 
 from $D_n$ to $U_n$ increases the $D_n$-distance between two points by at most $2\cdot\delta_n$,  the map $H_n$ also increases the $D_n$-distance  by at most $2\cdot\delta_n$. 
 
-Consider $y_n\in D_n$ with $y_n\to y\in D$ and $z_n\in D_n$ with $z_n\to z\in D$. Since $\delta_n\to 0$ under increasingly finer partitions, and geodesics in $\spc{U}$ vary continuously with their endpoints (\ref{thm:alex-patch}),  we have $H_n(x_n)\to 
+Consider $y_n\in D_n$ with $y_n\to y\in D$ and $z_n\in D_n$ with $z_n\to z\in D$.
+Since $\delta_n\to 0$ under increasingly finer partitions and geodesics in $\spc{U}$ vary continuously with their endpoints (\ref{thm:alex-patch}), we have $H_n(x_n)\to 
 H(x)$ and $H_n(y_n)\to H(y)$.  Since 
 \[\dist{H_n(x_n)}{H_n(y_n)}{} \le \dist{x_n}{y_n}{D_n} + 2\cdot\delta_n,\]
-where the left-hand side converges to $\dist{H(x)}{H(y)}{}$  and the right hand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
+where the left-hand side converges to $\dist{H(x)}{H(y)}{}$  and the right-hand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
 \qeds
 
 
@@ -1890,7 +1893,7 @@ F_{n-1}(x),\quad & x\in R_{n-1},\\
 \dot F(x),\quad & x\in \dot R.\\
 \end{cases}
 \]
-Then $F$ is length-nonincreasing, and is a majorizing map for $[x^1 x^2 \dots x^n ]$ (as in Definition~\ref{def:majorize}).
+Then $F$ is length-nonincreasing and is a majorizing map for $[x^1 x^2 \dots x^n ]$ (as in Definition~\ref{def:majorize}).
 
 If $R$ is a convex subset of $\Lob2\kappa$, we are done. 
 
@@ -2037,8 +2040,7 @@ Suppose $\tilde p\in [\tilde x \tilde y]$ and $\tilde q\in[\tilde y\tilde z]$.  
 \dist{F( \tilde p )}{F(\tilde q)}{\spc{U}}.
  \eqlbl{eq:arm-eq}
 \]
-This inequality holds in one direction by majorization, and in the other direction by angle comparison
-(\ref{cat-hinge}).
+This inequality holds in one direction by majorization, and in the other direction by the angle comparison (\ref{cat-hinge}).
 By the first variation formula (\ref{cor:both-end-first-var-cba}), it follows that each pair of corresponding angles of triangles $[\tilde x \tilde y \tilde z]$ and $[x y z]$ are equal.
 But then \ref{eq:arm-eq} holds for $p,q$ on any two sides of these triangles, so $F$ is distance-preserving on every geodesic of $\Conv(\tilde p, \tilde x, \tilde y)$.
 Hence the claim.
@@ -2100,13 +2102,11 @@ Show that $\spc{U}$ contains an isometric copy of the
 $[\tilde x^1\tilde x^2\tilde x^3\tilde x^4]$; that is, the convex hull of $\tilde x^1,\tilde x^2,\tilde x^3,\tilde x^4$ in $\EE^2$.
 \end{thm}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Hadamard--Cartan theorem}\label{sec:Hadamard--Cartan}
 
-The development of Alexandrov geomtry was greatly influenced by the Hadamard--Cartan theorem.
+The development of Alexandrov geometry was greatly influenced by the Hadamard--Cartan theorem.
 Its original formulation states that if $M$ is a complete Riemannian manifold with nonpositive sectional curvature, 
 then the exponential map at any point $p\in M$ is a covering;
 in particular it implies that the universal cover of $M$ is diffeomorphic to the Euclidean space of the same dimension.
@@ -2115,7 +2115,7 @@ In this generality, the theorem appeared in the lectures of \'Elie Cartan \cite{
 For surfaces in the Euclidean plane, 
 the theorem was proved by
 Hans von Mangoldt \cite{mangoldt},  
-and few years later independently by Jacques Hadamard \cite{hadamard}.
+and a few years later independently by Jacques Hadamard \cite{hadamard}.
 
 Formulations for metric spaces of different generality were proved by 
 Herbert Busemann \cite{busemann-CBA},
@@ -2132,8 +2132,7 @@ and independently by Martin
 Bridson and Andr\'{e} 
 Haefliger \cite{bridson-haefliger} that 
 %the no-conjugate-point theorem (\ref{thm:no-conj-pt}) allows curve-shortening as in Corollary \ref{cor:homotopy-from-p}, and hence the Hadamard--Cartan theorem
-this proof
-extends to length spaces as well as geodesic spaces, giving the following statement:
+this proof extends to length spaces, as well as geodesic spaces, giving the following statement:
 
 \begin{thm}{Hadamard--Cartan theorem}
 \label{thm:hadamard-cartan}
@@ -2141,9 +2140,7 @@ Let $\spc{U}$ be a complete,  simply connected length locally $\CAT0$ space.
 Then $\spc{U}$ is $\CAT0$.
 \end{thm}
 
-\parit{Proof.} Since $\varpi\kappa=\infty$,
-the map $\map\:\spc{B}\to\spc{U}$ in Theorem
-(\ref{thm:globalization-lift}) is a \index{metric covering}\emph{metric covering};
+\parit{Proof.} Since $\varpi\kappa=\infty$, the map $\map\:\spc{B}\to\spc{U}$ in Theorem~\ref{thm:globalization-lift} is a \index{metric covering}\emph{metric covering};
  that is, $\map$ is a length-preserving covering map. 
 Since $\spc{U}$ is simply connected, $\map\:\spc{B}\to\spc{U}$ is an isometry.
 \qeds
@@ -2219,8 +2216,7 @@ Note that $\alpha_x$ depends continuously on $x$, and
 $$\length\alpha_x<\tfrac{\varpi\kappa}{2}\quad \text{and}\quad \alpha_x(1)=\gamma_2(x)$$ 
 hold for any $x$.
 
-Let us apply the lifting globalization theorem
-(\ref{thm:globalization-lift}) for $p\z=F(\tilde p)$.
+Let us apply the lifting globalization theorem (\ref{thm:globalization-lift}) for $p\z=F(\tilde p)$.
 We obtain a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
 and a locally isometric map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$, and with the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
@@ -2369,7 +2365,7 @@ Follows from the uniqueness of geodesics in $\CAT\kappa$ spaces (\ref{thm:cat-un
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space, and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
 Then  
-there is unique point $p^*\in K$ that minimizes the distance to $p$;
+there is a unique point $p^*\in K$ that minimizes the distance to $p$;
 that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
 
 }
@@ -2378,7 +2374,7 @@ that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$.
 
 \parit{Proof.} 
 Fix $r$ properly between $\distfun{K}{p}{}$ and $\tfrac{\varpi\kappa}2$.
-By function comparison (\ref{thm:function-comp}),
+By the function comparison (\ref{thm:function-comp}),
 the function $f=\md\kappa\circ\distfun{p}{}{}$ is strongly convex in $\cBall[p,r]$.
 
 The lemma follows from Lemma~\ref{lem:argmin(convex)} applied to the subspace $K'\z=K\cap\cBall[p,r]$ 
@@ -2504,8 +2500,8 @@ The following proof is inspired by the answer of Sergei Ivanov to the question o
 
 \parit{Proof.}
 Since $K$ is locally convex,
-it is locally path connected.
-Since $K$ is connected and locally path connected it is path connected.
+it is locally path-connected.
+Since $K$ is connected and locally path connected it is path-connected.
 
 Fix two points $x,y\in K$. 
 Let us connect $x$ to $y$ by a path $\alpha\:[0,1]\to K$.
