@@ -276,8 +276,8 @@ The following theorem gives a more sensitive analog of  $\Alex\kappa$ comparison
 \begin{thm}{(1+\textit{n})-point comparison}
 \label{thm:pos-config} {\sloppy 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space.
-Then for any array $p,x^1,\dots,x^n$ of points  in $\spc{L}$  
-there is a model array $\tilde p,\tilde x^1,\dots,\tilde x^n$ in $\Lob{n}\kappa$ such that
+Then for any array $(p,x^1,\dots,x^n)$ of points  in $\spc{L}$  
+there is a model array $(\tilde p,\tilde x^1,\dots,\tilde x^n)$ in $\Lob{n}\kappa$ such that
 
 }
 
@@ -290,7 +290,7 @@ $\dist{\tilde p}{\tilde x^i}{}=\dist{p}{x^i}{}$ for all $i$.
 \end{thm}
 
 \parit{Proof.} 
-It is sufficient to show that given $\eps>0$ there is an array $\tilde p,\tilde x^1,\dots,\tilde x^n$ in $\Lob{n}\kappa$ such that 
+It is sufficient to show that given $\eps>0$ there is an array $(\tilde p,\tilde x^1,\dots,\tilde x^n)$ in $\Lob{n}\kappa$ such that 
 \[\dist{\tilde x^i}{\tilde x^j}{}\ge\dist{x^i}{x^j}{}
 \quad
 \text{and}
@@ -326,7 +326,7 @@ and thus
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:sturm}
-Let $p,x_1,\dots,x_n$ be a point array in a $\Alex0$ space.
+Let $(p,x_1,\dots,x_n)$ be a point array in a $\Alex0$ space.
 Consider the $n{\times}n$-matrix $M$ with components 
 \[m_{i,j}=\tfrac12\cdot(\dist[2]{x_i}{p}{}+\dist[2]{x_j}{p}{}-\dist[2]{x_i}{x_j}{}).\]
 Show that
@@ -374,7 +374,7 @@ but is not isometric to a subset of an Alexandrov space with curvature $\ge0$.
 
 \begin{thm}{Exercise}\label{ex:strut+embedding}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. 
-Assume that a point array $a^0,a^1,\dots,a^\kay$ in $\spc{L}$
+Assume that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \emph{$\kappa$-strutting} (Definition \ref{def:strut-I})
  for a point $p\in\spc{L}$.
 Show that there are points
@@ -391,7 +391,7 @@ and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bo
 
 If 
 \[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset,\]
-then there is an index array $\alpha_1,\alpha_2,\dots,\alpha_n$ in $\IndexSet$ such that
+then there is an index array $(\alpha_1,\alpha_2,\dots,\alpha_n)$ in $\IndexSet$ such that
 \[\bigcap_{i=1}^nK_{\alpha_i}=\emptyset.\]
 
 %??Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
@@ -888,7 +888,7 @@ in contradiction to  \ref{eq:cap-of-balls}.
 
 \begin{thm}{Exercise}\label{ex:flat-in-CAT}
 Let $\spc{U}$ be $\CAT0$. 
-Assume there are two point arrays $x^0,x^1,\dots,x^\kay$ in $\spc{U}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay$ in $\EE^m$ such that 
+Assume there are two point arrays, $(x^0,x^1,\dots,x^\kay)$ in $\spc{U}$ and $(\tilde x^0,\tilde x^1,\dots,\tilde x^\kay)$ in $\EE^m$, such that 
 $\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$, and 
 for any point $z_0\in\spc{U}$ there is $i>0$ such that $\dist{z_0}{x_i}{}\ge\dist{x_0}{x_i}{}$.
 
@@ -896,8 +896,8 @@ Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:flat-in-CBB}
-Let $\spc{L}$ be a complete length $\Alex{0}$ space, and 
-$x^0,x^1,\dots,x^\kay$ in $\spc{L}$ and $\tilde x^0,\tilde x^1,\dots,\tilde x^\kay$ in $\EE^m$
+Let $\spc{L}$ be a complete length $\Alex{0}$ space, and
+$(x^0,x^1,\dots,x^\kay)$ in $\spc{L}$ and $(\tilde x^0,\tilde x^1,\dots,\tilde x^\kay)$ in $\EE^m$
 be two point arrays such that 
 $\dist{x^i}{x^j}{\spc{L}}=\dist{\tilde x^i}{\tilde x^j}{\EE^m}$ for each $i,j$.
 Assume 
@@ -915,8 +915,8 @@ The following statement we call (2\textit{n}+2)-point comparison.
 
 \begin{thm}{Exercise}\label{CBA-n-point}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space.
-Consider $x,y\in \spc{U}$ and  an array of pairs of points $(p^1,q^1)$, $(p^2,q^2),\dots,(p^n,q^n)$  in $\spc{U}$, such that there is a model configuration
-$\tilde x$, $\tilde y$ and array of pairs $(\tilde p^1,\tilde q^1)$, $(\tilde p^2,\tilde q^2),\dots,(\tilde p^n,\tilde q^n)$ in $\Lob{3}\kappa$ with the following properties:
+Consider  $x,y\in \spc{U}$ and  an array $( (p^1,q^1)$, $(p^2,q^2),\dots,(p^n,q^n) )$ of pairs of points  in $\spc{U}$, such that there is a model configuration
+$\tilde x$, $\tilde y$ and array of pairs $( (\tilde p^1,\tilde q^1)$, $(\tilde p^2,\tilde q^2),\dots,(\tilde p^n,\tilde q^n) )$ in $\Lob{3}\kappa$ with the following properties:
 \begin{subthm}{}
 $\trig{\tilde x}{\tilde p^1}{\tilde q^1}=\modtrig\kappa x p^1q^1$
 and 
