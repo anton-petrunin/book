@@ -596,7 +596,7 @@ similarly map $\Conv \trig{\tilde p}{\tilde y}{\tilde z_x}$ onto $\Conv \trig {\
 \item If $w$ is in one of the three circular sectors, say at distance $r$ from the center of the circle, let $F(w)$ be the point on the corresponding segment 
 $[\dot p \dot z]$, 
 $[\dot x \dot z]$ 
-or $[\dot y \dot z]$ whose distance from the lefthand endpoint of the segment is $r$.
+or $[\dot y \dot z]$ whose distance from the left-hand endpoint of the segment is $r$.
 \item Finally, if $w$ lies in the remaining curvilinear triangle $\tilde z \tilde z_x \tilde z_y$, 
 set $F(w) = \dot z$. 
 \end{itemize}
@@ -812,7 +812,7 @@ is locally $\CAT0$, but it is easy to find a quadruple of points in $\mathbb{S}^
 
 The following theorem was essentially proved by Alexandrov \cite[Satz 9]{alexandrov:devel}; 
 it gives a global condition on geodesics that is  necessary and sufficient for a locally $\CAT\kappa$ space to be globally $\CAT\kappa$. 
-The proof uses a thin-triangle decompositions, 
+The proof uses thin-triangle decompositions 
 and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
@@ -978,11 +978,12 @@ for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
 \end{thm}
 
 \parit{Proof.} 
-By the angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the right-hand side is defined and bigger than or  equal to the lefthand side. 
+
+By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the right-hand side is defined and bigger than or  equal to the left-hand side. 
 
 By Lemma~\ref{lem:k-K-angle}, we may take $\kappa = 0$ in \ref{eq:cba-1st-var+***}.  
 By the cosine law and the first variation inequality (\ref{lem:first-var}),  
-the right-hand side is less than or equal to the lefthand side.
+the right-hand side is less than or equal to the left-hand side.
 \qeds
 
 
@@ -1800,7 +1801,7 @@ that is,
 
 Clearly $\beta_n=\beta$.
 Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the broken geodesics $\beta_{n-1}, \beta_{n-2},\dots,\beta_1$ is concave with respect to $p$.
-Let $D_i$ be subgraph of $\beta_i$ with respect to $p$.
+Let $D_i$ be the subgraph of $\beta_i$ with respect to $p$.
 Applying Lemma~\ref{lem:quadrangle} gives a short map $G_i\:D_{i}\to D_{i+1}$ that maps $y_{i}\mapsto y_{i+1}$ and does not move $p$ and $x$ (in fact,  $G_i$ is the identity everywhere except on $\Conv\trig{p}{x^{i-1}}{y_i}$).
 Thus the composition 
 \[G_{n-1}\circ\dots\circ G_1\: D_1\to D_n\] 
