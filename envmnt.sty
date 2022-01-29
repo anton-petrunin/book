@@ -47,20 +47,13 @@
 \def\qedqedsf{\vskip-6mm\qedqeds}%CHECK IN THE END!!!
 
 %THEOREM
-\newcounter{thm}[section]
-
-\renewcommand{\thethm}{\thesection.\arabic{thm}}
-\def\claim#1{%
-\par%
-\medskip%
-\noindent%
-\refstepcounter{thm}%
-\hbox{\bf\boldmath \arabic{chapter}.\arabic{section}.\arabic{thm}. #1.}
+\newcounter{thm}[chapter]
+\renewcommand{\thethm}{\thechapter.\arabic{thm}}
+\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thechapter.\arabic{thm}. #2.#1}
 \it\ %\ignorespaces
 }
 \def\endclaim{
-\par
-\medskip}
+\par\medskip}
 \newenvironment{thm}{\claim}{\endclaim}
 
 %SUBTHEOREM 
@@ -169,4 +162,13 @@
 
 \usepackage{verbatim}
 
+\usepackage{titletoc}% http://ctan.org/pkg/titletoc
+\titlecontents*{section}[.5em]
+  {\small}
+  {\thecontentslabel.~{}}
+  {}
+  { \textbf{\thecontentspage}}
+  [; ][.]
 
+\makeatletter\renewcommand{\p@section}{\thechapter}\makeatother
+\renewcommand{\thesection}{\Alph{section}}
