@@ -1166,7 +1166,7 @@ For $p_1\in \spc{U}^1$, $p_2\in \spc{U}^2$, we may choose a sequence $z^i\in A$ 
 Finally suppose $\kappa>0$; by  scaling, take $\kappa=1$. Consider the Euclidean cones $\Cone\spc{U}^i$ (see Section \ref{sec: tangent space}).
 By Theorem \ref{thm:warp-curv-bound:cbb:S}, $\Cone\spc{U}^i$ is a $\CAT0$ space for $i=1,2$.
 
-Geodesics of $\Cone\spc{U}^i$ that do not pass through the tip of the cone project to geodesics of length $<\pi$ in $\spc{U}^i$. 
+Geodesics in the complement of the tip of $\Cone\spc{U}^i$ project to geodesics of length $<\pi$ in $\spc{U}^i$. 
 It follows that $\Cone A$ is convex in $\Cone\spc{U}^1$ and $\Cone\spc{U}^2$.
 By the cone distance formula, $\Cone A$ is complete since $A$ is complete.
   
@@ -1223,7 +1223,8 @@ and such that
 the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ and forms a $\CAT\kappa$ space.
 
 A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\gamma_\infty(t),R/2)$ cannot leave $\spc{B}$, and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.
-In particular, for all sufficiently large $n$, any subsegment of $\gamma_n$ through $\gamma_n(t)$  with length less than $R/2$ is a geodesic.
+In particular, for all sufficiently large $n$, 
+if subsegment of $\gamma_n$ has length less than $R/2$ and contains $\gamma_n(t)$, then it is a geodesic.
 
 
 Since $\spc{B}$ is $\CAT\kappa$, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
@@ -2007,7 +2008,7 @@ to a distance-preserving map of $\Conv(\tilde x^0,\tilde x^1\dots \tilde x^{n+1}
 \end{subthm}
 \end{thm}
 
-\parit{Proof. \ref{SHORT.subthm:arm-ineq}).}
+\parit{Proof; \ref{SHORT.subthm:arm-ineq}).}
 By majorization (\ref{thm:major}), $P$ is majorized by a convex region $\tilde D$ in $\Lob{2}{\kappa}$.
 By Proposition \ref{prop:majorize-geodesic} and the definition of angle,
 $\tilde D$ is bounded by a convex polygon $\tilde P_R=[\tilde y^0\tilde y^1\dots \tilde y^{n+1}]$ that satisfies
@@ -2020,7 +2021,7 @@ $\tilde D$ is bounded by a convex polygon $\tilde P_R=[\tilde y^0\tilde y^1\dots
 \\
 & \mangle\hinge{\tilde y^i}{\tilde y^{i-1}}{\tilde y^{i+1}}\ge\mangle\hinge{x^i}{x^{i-1}}{x^{i+1}}\ge\mangle\hinge{\tilde x^i}{\tilde x^{i-1}}{\tilde x^{i+1}}
 \end{align*}
-for $1\le i\le n$, where the final inequality is by \ref{eq:arm}.
+for $1\le i\le n$; the last inequality follows from \ref{eq:arm}.
 
 The classical arm lemma \cite{sabitov} gives $\dist{\tilde x^0}{\tilde x^{n+1}}{}\le \dist{\tilde y^0}{\tilde y^{n+1}}{}$.
 Since $ \dist{\tilde y^0}{\tilde y^{n+1}}{}=\dist{x^0}{x^{n+1}}{}$, part (\ref{SHORT.subthm:arm-ineq}) follows.
@@ -2072,7 +2073,7 @@ $F|_{\Conv(\tilde x^{k-1},\tilde x^k,\tilde x^{k+1})}$,
 \item[(iii)]
 $F|_{\Conv(\tilde x^{n+1},\tilde x^{k},\tilde x^{k+1})}$.
 \end{enumerate}
-(i) follows from \ref{clm:arm-triangle}.  
+Indeed, (i) follows from \ref{clm:arm-triangle}.  
 Therefore $\dist{\tilde x^{k-1}}{\tilde x^{k+1}}{}=\dist{x^{k-1} }{x^{k+1}}{}$, and so $F$ restricts to a distance-preserving map from $[\tilde x^{k-1}\tilde x^{k+1}]$ onto $[x^{k-1} x^{k+1}]$.  With the induction hypothesis
 \ref{clm:arm-induction},
  it follows that $F(\tilde p)=p$, hence 
@@ -2084,10 +2085,14 @@ Then (ii) follows from \ref{eq:angle-arm-eq} and \ref{clm:arm-triangle}.  Since 
 
 Let $\tilde \gamma$ be a geodesic of $\Conv(\tilde x^{n+1},\tilde x^0,\tilde x^1\dots \tilde x^{k+1})$.
 Then $\length \tilde \gamma \z< \varpi\kappa$.
-If $\tilde \gamma$ does not pass through the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$, it  follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\tilde \gamma$  is a local geodesic of length $< \varpi\kappa$.  By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.  By continuity, $F\circ\tilde \gamma$ is a geodesic for all $\tilde \gamma$. \ref{clm:arm-induction} follows.
-The base of the induction  is Exercise \ref{ex:isometric-majorization}.
-Hence the arm lemma.
- \qeds
+If $\tilde \gamma$ does not contain the point $[\tilde x^{k-1}\tilde x^{k+1}] \cap [\tilde x^{k}\tilde x^{n+1}]$, it follows from the induction hypothesis and (i) (ii), (iii) that  $\gamma = F\circ\tilde \gamma$ is a local geodesic of length $<\varpi\kappa$.
+By \ref{cor:loc-geod-are-min}, $\gamma$ is a geodesic.
+
+By continuity, $F\circ\tilde \gamma$ is a geodesic for all $\tilde \gamma$;
+so \ref{clm:arm-induction} follows.
+The base of the induction is Exercise \ref{ex:isometric-majorization}.
+It finishes the proof of part \textit{(\ref{SHORT.subthm:arm-eq})}.
+\qeds
  
 \begin{thm}{Exercise}\label{ex:square}
 Let $\spc{U}$ be a complete length $\CAT0$ space and 
