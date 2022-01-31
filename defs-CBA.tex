@@ -329,7 +329,7 @@ vacuously true in a
 totally disconnected space, while 
 $\CAT\kappa$ comparison is not.
 
-\parit{Proof. (\ref{SHORT.cat-2-sum})}. 
+\parit{Proof; (\ref{SHORT.cat-2-sum})}. 
 Since the perimeter of $p,x,y$ is $<2\cdot \varpi\kappa$, so is the perimeter of any subtriple of $p,z,x,y$ by the triangle inequality. 
 By Alexandrov's lemma (\ref{lem:alex}), 
 \[\angk\kappa p z x +\angk\kappa p z y  < \angk{\kappa} p x y \quad \text{or}\quad  \angk\kappa z p x  +\angk\kappa z p y  =\pi.\]
@@ -362,7 +362,7 @@ Indeed, by (\ref{SHORT.cat-hinge}) and the triangle inequality for angles (\ref{
 
 Therefore, it is sufficient to prove the converse for \textit{(\ref{SHORT.cat-monoton})}.
 
-Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$ , we must verify the $\CAT\kappa$ comparison (\ref{def:2+2}).
+Given a quadruple  $p^1,p^2,x^1,x^2$ whose subtriples have perimeter $<2\cdot\varpi\kappa$, we must verify the $\CAT\kappa$ comparison (\ref{def:2+2}).
 In $\Lob2\kappa$, construct the model triangles  $\trig{\tilde p^1}{\tilde p^2}{\tilde x^1} = \modtrig\kappa(p^1 p^2 x^1 )$ 
 and $\trig{\tilde p^1}{\tilde p^2}{\tilde x^2}\z= \modtrig\kappa(p^1 p^2 x^2)$, lying on either side of a common segment $[\tilde p^1 \tilde p^2]$.
 We may suppose 
@@ -663,7 +663,7 @@ By composition,  the natural map from $\trig{\tilde  p}{\tilde  x}{\tilde  y}$ t
 
 
 \index{comparison!function comparison}
-In this section, we give analytic and geometric ways of viewing the point-on-side comparison (\ref{cat-monoton}) as a convexity condition.
+In this section we give analytic and geometric ways of viewing the point-on-side comparison (\ref{cat-monoton}) as a convexity condition.
 
 First we obtain a corresponding differential  inequality for the distance function in $\spc{U}$.
 In particular, a geodesic space $\spc{U}$ is $\CAT{0}$ if and only if  for any $p\in \spc{U}$, the function $\distfun[2]{p}{}{}\:\spc{U}\to\RR$ is $2$-convex;
@@ -762,7 +762,7 @@ the $\kappa$-development $\tilde \gamma$ in $\Lob2\kappa$ of $\gamma$ with respe
 \end{thm}
 
 
-\parit{Proof. (\ref{SHORT.locally-concave-dev})}.  
+\parit{Proof; (\ref{SHORT.locally-concave-dev})}.  
 Let  $\gamma=\geod_{[x y]}$ and $T=\dist{x}{y}{}$. 
 Let $\tilde \gamma\:[0,T]\to\Lob2\kappa$ be the concave $\kappa$-development based at $\tilde p$ of $\gamma$ with respect to $p$. 
 Let us show that the function  
@@ -770,8 +770,7 @@ Let us show that the function
 \eqlbl{eq:ang-nondecreasing}\]   
 is nondecreasing. 
 
-For a partition $0=t^0<t^1<\dots<t^n=T$
-, let 
+For a partition $0=t^0<t^1<\dots<t^n=T$, let 
 \[\tilde y^i=\tilde \gamma(t^i)\quad \text{and}\quad \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
 Since $\tilde \gamma$ is locally concave, 
 for a sufficiently fine partition the broken geodesic $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally convex  with respect to $\tilde p$. 
@@ -1033,7 +1032,7 @@ Here the final equality follows from
 \lim_{t\to 0}\mangle\hinge q  {\geod_{[p y]}(t)} z = \mangle\hinge q  p z.
 \eqlbl{eq:2-side-variation}
 \]
-The the angle semicontinuity (\ref{lem:ang.semicont}) implies ``$\le$'' in \ref{eq:2-side-variation}, and ``$\ge$'' holds by the triangle inequality for angles, since angle comparison (\ref{cat-hinge}) gives 
+The angle semicontinuity (\ref{lem:ang.semicont}) implies ``$\le$'' in \ref{eq:2-side-variation}, and ``$\ge$'' holds by the triangle inequality for angles, since angle comparison (\ref{cat-hinge}) gives 
 \[
 \lim_{t\to 0}\mangle\hinge q p  {\geod_{[p y]}(t)} = 0.
 \]
@@ -1056,7 +1055,7 @@ For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$ such that $p\ne q$, 
 \section{Reshetnyak gluing theorem}\label{sec:cba-gluing}
 
 The following theorem was proved by Yuriy Reshetnyak \cite{reshetnyak:major}, assuming $\spc{U}^1$, $\spc{U}^2$ are proper and complete. 
-In the following form the theorem appears in the book of Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger}.
+In the following form, the theorem appears in the book of Martin Bridson and Andr\'e Haefliger \cite{bridson-haefliger}.
 
 \begin{thm}{Reshetnyak gluing theorem}\label
 {thm:gluing}
@@ -2519,8 +2518,7 @@ is uniquely defined and depends continuously on $s$.
 Let $\Omega\supset K$ be the open set provided by Corollary~\ref{cor::dist-to-convex}.
 If $[xy]\z=[x\alpha(1)]$ does not completely lie in $K$, then 
 there is a value $s\in [0,1]$ such that $[x\alpha(s)]$ 
-lies in $\Omega$,
-but does not completely lie in $K$.
+lies in $\Omega$ but does not completely lie in $K$.
 By Corollary~\ref{cor::dist-to-convex},
 the function $f=\sn\kappa\circ\distfun{K}{}{\spc{U}}$ 
 satisfies the differential inequality

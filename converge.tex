@@ -1,7 +1,7 @@
 %%!TEX root = the-converge.tex
 \chapter{Space of spaces}
 
-In this section we discuss the
+In this chapter we discuss the
 Gromov--Hausdorff convergence of metric spaces.
 
 %It seems that 
@@ -23,8 +23,7 @@ the definition was limited to very specific types of problems.
 
 The definition of Gromov--Hausdorff convergence of metric spaces uses 
 the notion of Hausdorff convergence.
-Gromov--Hausdorff convergence means that a sequence of metric spaces admits a sequence of distance-preserving embeddings into a common ambient metric space, so that their
-images converge in the Hausdorff sense.
+Gromov--Hausdorff convergence means that a sequence of metric spaces admits a sequence of distance-preserving embeddings into a common ambient metric space so that their images converge in the Hausdorff sense.
 Our definition of  Gromov--Hausdorff convergence and  Gromov--Hausdorff distance differ somewhat from the standard definition.
 
 \section{Convergence of subsets}
@@ -42,7 +41,7 @@ briefly $A_n\Hto A_\infty$, if
 $$\distfun{A_n}x\to\distfun{A_\infty}x\quad \text{as}\quad n\to\infty$$
 for any fixed $x\in \spc{X}$.
 
-In this case the sequence of closed sets $A_n$ is said to be {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
+In this case the, sequence of closed sets $A_n$ is said to be {}\emph{converging} or \index{Hausdorff convergence}\emph{converging in the sense of Hausdorff}.
 \end{thm}
 
 \begin{thm}{Selection theorem}
@@ -56,7 +55,7 @@ Since $\spc{X}$ is proper,
 we can choose a countable dense set $\{x_1,x_2, \dots\}$ in $\spc{X}$.
 
 If the sequence $a_n=\distfun{A_n}x_\kay$ is unbounded for some $\kay$,
-then we can pass to a subequence of $A_n$ such that 
+then we can pass to a subsequence of $A_n$ such that 
 $\distfun{A_n}x_\kay\to \infty$ as $n\to\infty$ for \emph{any} $\kay$.
 The obtained sequence converges to the empty set.
 
@@ -112,7 +111,7 @@ When we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of a
 Note that for a fixed sequence $\spc{X}_n$ of metric spaces, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xGHto{\GH} \spc{X}_\infty$ and $\spc{X}_n\xGHto{\GH'} \spc{X}_\infty'$,  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
 one may take $\spc{X}_\infty\iso\RR_{\ge0}$.
-In this case a point in the disjoint space $\bm{X}$ can be regarded as a pair $(x,n)\in \RR_{\ge0}\times (\ZZ_>\cup \{\infty\})$ 
+In this case, a point in the disjoint space $\bm{X}$ can be regarded as a pair $(x,n)\in \RR_{\ge0}\times (\ZZ_>\cup \{\infty\})$ 
 and the metric on $\bm{X}$ can be defined by
 $$\dist{(x,n)}{(y,m)}{\bm{X}}\df|\tfrac1n-\tfrac1m|+|x-y|,$$
 where we assume that $0=\tfrac1\infty$.
@@ -170,7 +169,7 @@ as $n\to\infty$.
 
 \begin{subthm}{} Given a sequence of measures $\mu_n$ on $\spc{X}_n$,
 %denote by $\iota_n\#\mu_n$ the pushforward measures on $\bm{X}$. 
-%V: I would suggest using the notation ${\iota_n}_\#\mu_n$ , i.e. making $\#$  a subindex. That's a much more standard notation for pushforward. 
+%V: I would suggest using the notation ${\iota_n}_\#\mu_n$, i.e. making $\#$  a subindex. That's a much more standard notation for pushforward. 
 %A: in this case we get double index --- I do not like it. We may remove pushforward completely.
 %S; I removed the notation
 we say that $\mu_n$ weakly converges to a measure $\mu_\infty$ on $\spc{X}_\infty$ 
