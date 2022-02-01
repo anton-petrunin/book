@@ -20,7 +20,7 @@ In particular, $\yetdist{x_n}{x_\infty}{}\to0$ and $n\to\infty$.
 \parit{(\ref{SHORT.ex:complete=>complete:compact}).}
 Fix two points $x,y\in\spc{X}$ such that $\ell=\yetdist{x}{y}{}<\infty$.
 Let $\alpha_n$ be a sequence of paths from $x$ to $y$ such that $\length(\alpha_n)\to\ell$ as $n\to \infty$.
-Without loss of generality we may assume that each $\alpha_n$ is $(\ell+1)$-Lipschitz.
+Without loss of generality, we may assume that each $\alpha_n$ is $(\ell+1)$-Lipschitz.
 
 Since $\spc{X}$ is compact, there is a partial limit $\alpha_\infty$ of $\alpha_n$ as $n\to \infty$. By semicontinuity of length, $\length\alpha_\infty\le\ell$;
 that is; $\alpha$ is a shortest path in $\spc{X}$.
@@ -105,7 +105,7 @@ Observe that $\spc{X}_\o$ is the square with the metric induced by the $\ell^\in
 
 \parbf{\ref{ex:adjacent-angles}.}
 If $\mangle\hinge pxz+\mangle\hinge pyz< \pi$, then by the triangle inequality for angles (\ref{claim:angle-3angle-inq}) we have $\mangle\hinge pxy< \pi$.
-The latter implies that the curve $[xy]$ fails to be a shortest geodesic near $p$.
+The latter implies that $[xy]$ fails to be minimizing near $p$.
 
 \parbf{\ref{ex:tangent-vect=o(t)}.}
 By the definition of a right derivative, there is a geodesic $\gamma$ such that both limits 
@@ -161,7 +161,7 @@ Note that $\Omega_n$ may intersect a geodesic  of length $1/n$ only within $\fra
 The intersection of the $\Omega_n$ is a G-delta dense set that does not intersect the interior of any geodesic.
 
 \parbf{\ref{mink+alex=euclid}.} 
-Note that scaling does not change the space.
+Note that rescaling does not change the space.
 Therefore if the space is $\Alex\kappa$ then it is $\Alex{\lambda\cdot\kappa}$ for any $\lambda>0$.
 Passing to the limit as $\lambda\to 0$, we may assume that the space is $\Alex0$.
 
@@ -250,7 +250,7 @@ This exercise is based on the main idea in \cite{hsiang-kleiner}.
 
 Assume there are 4 such points $x_1,x_2,x_3,x_4$.
 Since the space $\spc{L}$ is $\Alex{1}$ it is also $\Alex{0}$.
-By the angle comparison the sum of the angles in any geodesic triangle in an $\Alex{0}$ space is $\ge \pi$.
+By the angle comparison, the sum of the angles in any geodesic triangle in an $\Alex{0}$ space is $\ge \pi$.
 Therefore the average of the $\mangle\hinge{x_i}{x_j}{x_k}$ is  larger than $\tfrac\pi3$.
 On the other hand, since each $x_i$ has space of directions $\le\tfrac12\cdot\mathbb{S}^n$ and the perimeter of any triangle in $\tfrac12\cdot\mathbb{S}^n$ is at most $\pi$, the average of $\mangle\hinge{x_i}{x_j}{x_k}$ is at most $\tfrac\pi3$ --- a contradiction.
 
@@ -456,7 +456,7 @@ then
 \[\cos\ell_x\cdot\cos\ell_y\cdot\sin\phi_x\cdot\sin\phi_y=0.\]
 If $K\subset \oBall(p,\tfrac\pi2)$, then $\ell_x,\ell_y<\tfrac\pi2$, 
 which implies that $x\in K$ or $y\in K$.
-Without loss of generality we may assume that $x\in K$.
+Without loss of generality, we may assume that $x\in K$.
 
 It remains to show that if $y\notin K$ 
 then the inequality~\ref{eq:cos=<cos}
@@ -914,7 +914,7 @@ Apply the flag condition (\ref{thm:flag}) and Theorem~\ref{thm:warp-curv-bound:c
 \parbf{\ref{ex:norays}.}
 Consider a cube in the Hilbert space
 %;that is the space 
-of all sequences $x_1,x_2,\dots$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric inducted by the $\ell^2$-norm.
+of all sequences $x_1,x_2,\dots$ such that $|x_i|\le 1$ and $x_1^2+x_2^2+\dots<\infty$ with the metric induced by the $\ell^2$-norm.
 
 \parbf{\ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT} and \ref{ex:d_q dist_p(v)=-<dri p q, v>}.} Apply the strong angle lemmas
 \ref{lem:strong-angle-cba}
@@ -939,7 +939,7 @@ Finally, by the definition of gradient, we have
 Hence the result follows.
 
 \parbf{\ref{ex:d dist(grad)<0}.}
-Without loss of generality we may assume that geodesics $[pa]$ and $[pb]$ are uniquely defined.
+Without loss of generality, we may assume that geodesics $[pa]$ and $[pb]$ are uniquely defined.
 Applying \ref{ex:d_q dist_p(v)=-<dri p q, v>}, we have
 \begin{align*}(\dd_p\distfun{a}{}{})(\nabla_p\distfun{b}{}{})&=-\langle\dir pa,\nabla_p\distfun{b}{}{} \rangle\le
 \\
