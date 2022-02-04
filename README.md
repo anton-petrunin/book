@@ -15,3 +15,7 @@ Go to the created folder and run `pdflatex`,  `makeindex`,  `mpost` and `biber`:
 `makeindex arXiv`<br/>
 `biber arXiv`<br/>
 `pdflatex arXiv.tex`
+
+Files for arXiv:
+
+`tar -cvf arXiv.tar --files-from arXiv-list.txt`
