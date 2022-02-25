@@ -2,25 +2,19 @@
 \chapter{Ultralimits}
 
 Here we introduce ultralimits of sequences of points, metric spaces, and functions.
-The ultralimits of metric spaces can be considered as a variation of Gromov--Hausdorff convergence.
 Our presentation is based on \cite{kleiner-leeb}.
 
+The ultralimits of metric spaces are closely related to Gromov--Hausdorff limits.
 Our use of ultralimits is very limited; 
 we use them only as a canonical way to pass to  convergent subsequences.
-(They could be avoided, but at the cost of saying ``pass to a convergent subsequence'' too many times.)
-%(In principle, we could avoid 
-%selling our souls 
-%to the set-theoretical devil, but in this case 
-%we must say ``pass to convergent subsequence'' too many times.)
-%V:  I am not sure I like that kind of metaphor in a math book.
-%A: then remove it, I think it is okey to say that it is not essential in a way. 
+(We could avoid using them at the cost of saying ``pass to a convergent subsequence'' too many times.)
 
 \section{Ultrafilters}
 
-We will need the existence of a fixed 
-selective ultrafilter $\o$.
+We will need the existence of a selective ultrafilter $\o$ that will be fixed once for all.
 The existence follows from the axiom of choice and continuum hypothesis.
 
+\parbf{Measure-theoretic definition.}
 Recall that $\NN$ denotes the set of natural numbers, $\NN=\{1,2,\dots\}$.
 
 \begin{thm}{Definition}\label{def:ultrafilter}
@@ -70,8 +64,8 @@ this was proved by Walter Rudin \cite{rudin}.
 
 \parbf{Stone--\v{C}ech compactification.}
 Given a set $S\subset \NN$, consider the subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
-It is straightforward to check that the sets $\Omega_S$ for all $S\subset \NN$ form a topology on the set of ultrafilters on $\NN$. 
-The resulting space is called the \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of $\NN$; it is usually denoted by $\beta\NN$.
+It is straightforward to check that the sets $\Omega_S$ for all $S\subset \NN$ form a topology on the set of ultrafilters on~$\NN$. 
+The resulting space is called the \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of~$\NN$; it is usually denoted by $\beta\NN$.
 
 There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined by 
 $n\mapsto\o_n$, where $\o_n$ is the principal ultrafilter such that $\o_n(S)=1$ if and only if $n\in S$. 
@@ -95,10 +89,9 @@ In this case, we write
 \quad \text{or}\quad 
 x_n\to x_\o\quad \text{as}\quad n\to\o.\]
 
-Also, if $\spc{X}=\RR$ we write \[\lim_{n\to\o} x_n=\pm\infty\] if 
-\[
-\o\set{n\in\NN}{\pm\dist{x_\o}{x_n}{}>L}=1\quad\text{for any}\quad L\in\RR.
-\]
+Also, if $\spc{X}=\RR$ we write $\lim_{n\to\o} x_n=\pm\infty$ if 
+\[\o\set{n\in\NN}{\pm x_n>L}=1\] for any $L\in\RR$.
+
 
 It easily follows from the definition that  $\o$-limits are unique if they exist. 
 For example if $\o$ is the principal ultrafilter such that $\o(\{n\})=1$ for some $n\in\NN$, then
@@ -112,13 +105,13 @@ For example, in general
 
 The sequence $x_n$ can be regarded as a map $\NN\to\spc{X}$.
 If $\spc{X}$ is compact, then this map can be uniquely extended to a continuous map to the Stone--\v{C}ech compactification $\beta\NN$ of $\NN$.
-Then $x_\o$ can be regarded as the image of $\o$. 
+Then $x_\o$ is the image of~$\o$. 
 
 \begin{thm}{Proposition}\label{prop:ultra/partial}
 Let $\o$ be a nonprincipal ultrafilter.
 Assume $x_n$ is a sequence of points in a metric space $\spc{X}$
 and $x_n\to  x_\o$ as $n\to\o$.
-Then there is a Cauchy subsequence of $x_n$ that converges to $x_\o$ in the usual sense.
+Then there is a subsequence of $x_n$ that converges to $x_\o$ in the usual sense.
 
 Moreover, if $\o$ is selective,
 then the subsequence $(x_n)_{n\in S}$ can be chosen so that $\o(S)=1$.
@@ -170,7 +163,7 @@ In particular, a bounded sequence of real numbers has a unique $\o$-limit.
 The following lemma is an ultralimit analog of the Cauchy convergence test.
 
 \begin{thm}{Lemma}\label{lem:X-X^w}
-Let $x_n$ be a sequence of points in a complete metric space $\spc{X}$. 
+Let $x_n$ be a sequence of points in a complete metric space~$\spc{X}$. 
 If for each subsequence $y_n$ of $x_n$, 
 the $\o$-limit 
 \[y_\o=\lim_{n\to\o}y_{n}\in \spc{X}\]
@@ -186,7 +179,7 @@ It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
 
 \section{Ultralimits of spaces}\label{sec:Ultralimit of spaces}
 
-Fix a selective ultrafilter $\o$ on the set  $\NN$ of natural numbers.
+Fix a selective ultrafilter $\o$ on the set of natural numbers.
 
 Let $\spc{X}_n$ be a sequence of metric spaces.
 Consider all sequences
@@ -202,7 +195,7 @@ and takes  value in $[0,\infty]$.
 
 Let $\spc{X}_\o$ be the corresponding metric space; 
 that is, the underlying set of $\spc{X}_\o$ is formed by equivalence  classes of sequences of points $x_n\in\spc{X}_n$ 
-defined by 
+defined by the relation
 \[(x_n)\sim(y_n)
 \quad \iff\quad 
 \lim_{n\to\o} \dist{x_n}{y_n}{}=0,\]
@@ -216,7 +209,7 @@ we may also write
 
 Given a sequence  $x_n\in \spc{X}_n$,
 we will denote by $x_\o$ its equivalence class, which is a point in $\spc{X}_\o$;
-equivalently, we will write
+in this case, we may write
 \[x_n\to x_\o \quad \text{as}\quad  n\to\o\quad \text{or}\quad x_\o=\lim_{n\to\o} x_n.\]
 
 \begin{thm}{Observation}\label{obs:ultralimit-is-complete}
@@ -228,7 +221,7 @@ Let $\spc{X}_n$ be a sequence of metric spaces and $\spc{X}_n\to\spc{X}_\o$ as $
 Choose a Cauchy sequence $x_n$ in $\spc{X}_\o$.
 Passing to a subsequence, we can assume that $\dist{x_k}{x_{m}}{\spc{X}_\o}<\tfrac1{k}$ for any $k<m$.
 
-Let us choose a double sequence $x_{n,m}$ in  $\spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
+Let us choose points $x_{n,m}\in\spc{X}_n$ such that for any fixed $m$ we have $x_{n,m}\to x_m$ as $n\to\o$.
 Note that for any $k<m$ the inequality $\dist{x_{n,k}}{x_{n,m}}{}<\tfrac1{k}$ holds for $\o$-almost all $n$.
 It follows that we can choose a nested sequence of sets 
 \[\NN= S_1\supset S_2\supset\dots\] 
@@ -331,8 +324,9 @@ we could also write  $\Omega_n\to \Omega_\o$ as $n\to\o$ or $\Omega_\o=\lim_{n\t
 {\sloppy
 
 Applying Observation~\ref{obs:ultralimit-is-complete} to the sequence of complements $\spc{X}_n\backslash \Omega_n$, we see that $\Omega_\o$ is open for any sequence $\Omega_n$.
-The definition can be applied for arbitrary sequences of sets, but  
-open $\o$-convergence  will be applied here only for sequences of open sets.
+
+This definition can be applied for arbitrary sequences of sets,
+but we will apply it only for sequences of open sets.
 
 }
 
@@ -384,6 +378,8 @@ If $f\:\spc{X}\subto\RR$ is a subfunction,
 the $\o$-limit of the constant sequence $f_n=f$ is called the $\o$-power of $f$ and is denoted by $f^\o$.
 So
 \[f^\o\:\spc{X}\subto\RR,\quad f^\o(x_\o)=\lim_{n\to\o} f(x_n).\]
+
+Evidently, if $f^\o$ is defined, then $f$ is continuous.
 
 Recall that we treat $\spc{X}$ as a subset of its $\o$-power $\spc{X}^\o$.
 Note that $\Dom f=\spc{X}\cap \Dom f^\o$.
