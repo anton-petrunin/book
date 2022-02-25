@@ -353,11 +353,11 @@ A more transparent, but less elementary solution via gradient flow is given by A
 
 Without loss of generality, we may assume that $p\in K$.
 
-If $\dist{K}{x}{}\ge\pi$, then set $\map[2](x)=p$.
+If $\distfun{K}{x}{}\ge\pi$, then set $\map[2](x)=p$.
 
-Otherwise, if $\dist{K}{x}{}<\pi$, by the closest-point projection lemma (\ref{lem:closest point}), 
+Otherwise, if $\distfun{K}{x}{}<\pi$, by the closest-point projection lemma (\ref{lem:closest point}), 
 there is a unique point $x^*\in K$ that minimizes distance to $x$;
-that is, $\dist{x^*}{x}{}=\dist{K}{x}{}$.
+that is, $\dist{x^*}{x}{}=\distfun{K}{x}{}$.
 Let us define $\ell_x$, $\phi_x$ and $\psi_x$ using the following identities:
 \begin{align*}
 \ell_x&=\dist{p}{x^*}{},
@@ -461,10 +461,10 @@ Without loss of generality, we may assume that $x\in K$.
 It remains to show that if $y\notin K$ 
 then the inequality~\ref{eq:cos=<cos}
 is strict.
-If $\dist{K}{y}{}\ge\tfrac\pi2$, then \ref{eq:cos=<cos} holds since 
+If $\distfun{K}{y}{}\ge\tfrac\pi2$, then \ref{eq:cos=<cos} holds since 
 the left-hand side is $<\tfrac\pi2$
 while the right-hand side is $\ge \tfrac\pi2$.
-If $\dist{K}{y}{}<\tfrac\pi2$, then $\phi_y>0$. Clearly $\psi_y<\phi_y$,
+If $\distfun{K}{y}{}<\tfrac\pi2$, then $\phi_y>0$. Clearly $\psi_y<\phi_y$,
 hence the inequality~\ref{eq:cos=<cos} is strict.
 \qeds
 
@@ -483,7 +483,7 @@ According to \ref{thm:warp-curv-bound:cat}, $\mathring{\spc{U}}$ is $\CAT0$.
 Note that $\mathring{K}$ forms a convex closed subset of $\mathring{\spc{U}}$.
 According to \ref{lem:closest point}, for any point $x$ there is a unique point $\hat x\in \mathring{K}$
 that minimizes the distance to $x$,
-that is, $\dist{\hat x}{x}{}=\dist{K}{x}{}$.
+that is, $\dist{\hat x}{x}{}=\distfun{K}{x}{}$.
 (If $|\hat x|\ne0$, then in the notation above we have
 $x^*=\tfrac1{|\hat x|}\cdot\hat x$.)
 

@@ -145,10 +145,6 @@ that is,
 \[\distfun{A}{x}
 \df
 \inf\set{\dist{a}{x}{}}{a\in A}.\] 
-We define the distance between sets $A$ and $B$  as 
-\[\dist{A}{B}{}
-\df
-\inf\set{\dist{a}{b}{}}{a\in A,\ b\in B}.\]%??maybe a bad notation --- this is not a distance
 
 For any subset $A\subset\spc{X}$, the sets \index{$\oBall(A,R)$}\index{$\cBall[A,R]$}
 \begin{align*}
@@ -166,7 +162,7 @@ Then the \index{diameter}\emph{diameter} of $\spc{X}$ is  defined as
 The \index{radius}\emph{radius} of $\spc{X}$ is  defined as
 \[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \text{for some}\ x\in\spc{X}}.\]
 
-The packing number \index{$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
+The \index{$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$.
 If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x^1,x^2,\dots,x^m\}$ in $\spc{X}$ 
 such that $\dist{x^i}{x^j}{}>\eps$ is called a \index{maximal packing}\emph{maximal $\eps$-packing} in $\spc{X}$.
 
@@ -202,17 +198,30 @@ Proper metric spaces are separable and second countable.
 
 
 \begin{thm}{Proposition}\label{compact=seq-compact}
-Let $\spc{X}$ be a metric space. Then the following are equivalent
-\begin{enumerate}[i)]
-\item $\spc{X}$ is compact;
-\item $\spc{X}$ is \index{sequentially compact}\emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
-\item $\spc{X}$ is complete and for any $\eps>0$ there is a finite \index{$\eps$-net}\emph{$\eps$-net} in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
-\end{enumerate}
+Let $\spc{X}$ be a metric space.
+Then the following are equivalent
+
+\begin{subthm}{}
+$\spc{X}$ is compact;
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{X}$ is \index{sequentially compact}\emph{sequentially compact}; that is, any sequence of points in $\spc{X}$ contains a convergent subsequence;
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{X}$ is complete and for any $\eps>0$ there is a \index{$\eps$-net}\emph{finite $\eps$-net} in $\spc{X}$; that is, there is a finite collection of points $p_1,\ldots,p_{N}$ such that $\bigcup_i\oBall(p_i,\eps)=\spc{X}$.
+\end{subthm}
+
+\begin{subthm}{}
+$\spc{X}$ is complete and for any $\eps>0$ there is a {}\emph{compact $\eps$-net} in $\spc{X}$; that is, $\oBall(K,\eps)=\spc{X}$ for a compact set $K\subset \spc{X}$.
+\end{subthm}
+
 \end{thm}
 
 \section{Length spaces}\label{sec:intrinsic}
 
-A \index{curve}\emph{curve} in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a {}\emph{real interval} (that is, an arbitrary convex subset of $\RR$).
+A \index{curve}\emph{curve} in a metric space $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a {}\emph{real interval} (that is, an arbitrary convex subset of $\RR$).
 
 \begin{thm}{Definition}\label{def:length}
 Let $\spc{X}$ be a metric space.
@@ -238,15 +247,16 @@ consider the value
 where infimum is taken for all paths $\alpha$ from $x$ to $y$.
 
 It is easy to see that $\yetdist{}{}{}$ defines a $(0,\infty]$-valued metric on  $\spc{X}$;
-it will be called the induced \index{length metric}\emph{length metric} on $\spc{X}$.
+it will be called the \index{induced length metric}\emph{induced length metric} on $\spc{X}$.
 Clearly 
 \[\yetdist{x}{y}{}\ge \dist{x}{y}{}\]
 for any $x,y\in \spc{X}$.
 
-It  easily follows from the definition that the length of a curve $\alpha$ with respect to $\yetdist{}{}{}$ is equal to the length of $\alpha$ with respect to $\dist{}{}{}$. In particular, iterating the construction produces the same $\yetdist{}{}{}$.
+It  easily follows from the definition that the length of a curve $\alpha$ with respect to $\yetdist{}{}{}$ is equal to the length of $\alpha$ with respect to $\dist{}{}{}$.
+In particular, iterating the construction produces the same metric $\yetdist{}{}{}$.
 
 \begin{thm}{Definition}\label{def:length-space}
-If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\spc{X}$ is called a \index{length space}\emph{length space}.
+If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y$ in a metric space $\spc{X}$, then $\dist{}{}{}$ is called \index{length metric}\emph{length metric}, and $\spc{X}$ is called a \index{length space}\emph{length space}.
 \end{thm}
 
 In other words, a metric space $\spc{X}$ is a
@@ -274,12 +284,12 @@ We will need the following variations of Definition~\ref{def:length-space}:
 If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$, then $\spc{X}$ is called an \index{$R$-length space}\emph{$R$-length space}.
 \item If any point in $\spc{X}$ admits a neighborhood  $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$
 then  $\spc{X}$ is called a \index{length space!locally length space}\emph{locally length space}.
-\item A metric space $\spc{X}$ is called 
+\item A metric space is called 
 \index{geodesic space}\emph{geodesic}
-if for any two points $x,y\in \spc{X}$ with $\dist{x}{y}{}<\infty$ there is a geodesic $[x y]$ in $\spc{X}$.
-\item Assume $R>0$. A metric space $\spc{X}$ is called 
+if for any two points $x,y$ with $\dist{x}{y}{}<\infty$ there is a geodesic $[x y]$.
+\item Assume $R>0$. A metric space is called 
 \index{$R$-geodesic space}\emph{$R$-geodesic}
-if for any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{}<R$ there is a geodesic $[x y]$ in $\spc{X}$.
+if for any two points $x,y$ such that $\dist{x}{y}{}<R$ there is a geodesic $[x y]$.
 \end{itemize}
 
 Note that the notions of $\infty$-length spaces and length spaces are the same.
@@ -287,7 +297,7 @@ Clearly, any geodesic space is a length space
 and any $R$-geodesic space is $R$-length.
 
 \begin{thm}{Example} 
-Let $\spc{X}$ be obtained by gluing a countable collection of disjoint intervals $\II_n$ of length $1+\tfrac1n$ where for each $\II_n$ one end is glued to $p$ and the other to $q$.
+Consider a metric space $\spc{X}$ obtained by gluing a countable collection of disjoint intervals $\II_n$ of length $1+\tfrac1n$ where for each $\II_n$ one end is glued to $p$ and the other to $q$.
 Then $\spc{X}$ carries a natural complete length metric such that $\dist{p}{q}{}=1$, but there is no geodesic connecting $p$ to~$q$.
 \end{thm}
 
@@ -310,7 +320,7 @@ Give an example of a complete length space such that no pair of distinct points 
 \end{thm}
 
 \begin{thm}{Definition}
-Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
+Consider two points $x$ and $y$ in a metric space $\spc{X}$.
 
 \begin{enumerate}[(i)]
 \item A point $z\in \spc{X}$ is called a \index{midpoint}\emph{midpoint} between $x$ and $y$ if 
@@ -318,7 +328,9 @@ Let $\spc{X}$ be a metric space and $x,y\in\spc{X}$.
 \item Assume $\eps\ge 0$.
 A point $z\in \spc{X}$ is called  an \index{$\eps$-midpoint}\emph{$\eps$-midpoint} between $x$ and $y$
 if 
-\[\dist{x}{z}{},\quad\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
+\[\dist{x}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps,
+\quad\text{and}\quad
+\dist{y}{z}{}\le\tfrac12\cdot\dist[{{}}]{x}{y}{}+\eps.\]
 \end{enumerate}
 
 \end{thm}
@@ -352,10 +364,10 @@ then  $\spc{X}$ is an $R$-length or $R$-geodesic space respectively.
 
 \parit{Proof.}
 Fix a pair of points $x,y\in \spc{X}$.
-Let $\eps_n=\frac\eps{2^{2\cdot n}}$,
-$\alpha(0)=x$,
-and $\alpha(1)=y$.
+Let $\eps_n=\frac\eps{2^{2\cdot n}}$.
 
+Set $\alpha(0)=x$,
+and $\alpha(1)=y$.
 Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint between $\alpha(0)$ and $\alpha(1)$.
 Further, let $\alpha(\frac14)$ 
 and $\alpha(\frac34)$  be $\eps_2$-midpoints 
@@ -389,14 +401,15 @@ one should repeat the same argument
 taking midpoints instead of $\eps_n$-midpoints.
 In this case, \ref{eq:eps-midpoint} holds for $\eps_n=\eps=0$.
 
-The proof of (\ref{lem:mid>geod:R}) is obtained by a straightforward modification of the proofs above.
+The proof of (\ref{SHORT.lem:mid>geod:R}) is obtained by a straightforward modification of the proofs above.
 \qeds
+
+Since in a compact set a sequence of $\tfrac1n$-midpoints $(z_n)$ contains a convergent subsequence,
+Lemma \ref{lem:mid>geod} implies the following.
 
 \begin{thm}{Corollary}
 A proper length space is geodesic.
 \end{thm}
-
-This follows from Lemma \ref{lem:mid>geod} since in a compact set a sequence of $\tfrac1n$-midpoints $(z_n)$ contains a convergent subsequence.
 
 {\sloppy
 
@@ -425,7 +438,7 @@ the set $\cBall[x,\rho(x)\z-\eps]$ is a compact $\eps$-net in $B$.
 Since $B$ is closed and hence complete, it is compact by Proposition~\ref{compact=seq-compact}.
 \claimqeds
 
-\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$,
+\begin{clm}{} $|\rho(x)-\rho(y)|\le \dist{x}{y}{\spc{X}}$ for any $x,y\in\spc{X}$;
 in particular $\rho\:\spc{X}\to\RR$ is a continuous function.
 \end{clm}
 
@@ -458,11 +471,11 @@ but whose completion is neither geodesic nor locally compact.
 \label{def:convex-set}
 Let $\spc{X}$ be a geodesic space and $A\subset\spc{X}$.
 
-We say that $A$ is 
+$A$ is 
 \index{convex set}\emph{convex}
-if for every two points $p,q\in A$ any geodesic $[pq]$ lies in $A$.
+if for every two points $p,q\in A$ any geodesic $[pq]$ lies in~$A$.
 
-We say that $A$ is 
+$A$ is 
 \index{convex set!weakly convex set}\emph{weakly convex}
 if for every two points $p,q\in A$
 there is a geodesic $[pq]$ 
@@ -494,11 +507,11 @@ Similarly one defines locally weakly convex and locally totally convex sets. %DO
 
 The following proposition states that weak convexity survives under ulralimits.
 An analogous statement about convexity does not hold;
-for example there is a sequence of convex discs in $\mathbb{S}^2$ that converges to the hemisphere $\mathbb{S}^2_+$, which is not convex.
+for example, there is a sequence of convex discs in $\mathbb{S}^2$ that converges to a hemisphere, which is not convex.
 
 \begin{thm}{Proposition}\label{prop:weak-convex-stable}
 Let $\spc{X}_n,$ be a sequence of geodesic spaces.
-Let $\o$ be an ultrafilter on $\mathbb N$; see Definition~\ref{def:ultrafilter}.
+Let $\o$ be an ultrafilter on $\mathbb N$ (see Definition~\ref{def:ultrafilter}).
 Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets, 
 $\spc{X}_n\to \spc{X}_\o$,
 and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
@@ -513,24 +526,19 @@ Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ that lies in $A_n$.
 Set
 \[\alpha_\o(t)=\lim_{n\to \o}\alpha_n(t).\]
 
-Note that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
-The proposition follows.
+It remains to observe that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
 \qeds
-
-
-
-
 
 
 \section{Quotient spaces}\label{sec:quotient}
 
 \parbf{Quotient spaces.} Assume $\spc{X}$ is a metric space
 with an equivalence relation $\sim$.
-Note that given two pseudometrics $\rho_1$ and $\rho_2$ on $\spc{X}/{\sim}$,
-their maximum 
-\[\rho(x,y)=\max\{\rho_1(x,y),\rho_2(x,y)\}\]
+Note that given a family pseudometrics $\rho_\alpha$ on $\spc{X}/{\sim}$,
+their least upper bound
+\[\rho(x,y)=\sup_\alpha\{\,\rho_\alpha(x,y)\,\}\]
 is also a pseudometric.
-If for these two pseudometrics $\rho_1$ and $\rho_2$ the projections $\spc{X}\to(\spc{X}/{\sim},\rho_i)$ are \index{short map}\emph{short} (that is,  \emph{distance non-increasing}), then the same is true for $\rho(x,y)$.
+If for the projections $\spc{X}\to(\spc{X}/{\sim},\rho_\alpha)$ are \index{short map}\emph{short} (that is, \textit{distance non-increasing}), then the same is true for $\spc{X}\to(\spc{X}/{\sim},\rho)$.
 
 It follows that 
 the quotient space $\spc{X}/{\sim}$ admits a natural quotient pseudometric;
