@@ -18,7 +18,7 @@ Set \index{$\varpi\kappa$}$\varpi\kappa=\diam\Lob2\kappa$, so
 $\varpi\kappa=\infty$ if $\kappa\le0$ and $\varpi\kappa=\pi/\sqrt{\kappa}$ if $\kappa>0$.
 
 The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}{}$\index{$\dist{p}{q}{}$}, and $[x y]$\index{$[{p}{q}]$} 
-will denote the segment connecting $x$ and $y$. 
+will denote the geodesic segment connecting $x$ and $y$. 
 The segment $[x y]$ is uniquely defined for $\kappa\le 0$ and for $\kappa>0$ it is defined uniquely if $\dist{x}{y}{}<\varpi\kappa=\pi/\sqrt{\kappa}$.
 
 A triangle in $\Lob2\kappa$ with vertices $x,y,z$ will be denoted by $\trig x y z$\index{$\trig{{p}}{{q}}{{r}}$}.
@@ -36,8 +36,7 @@ in addition that $a+b+c<2\cdot\varpi\kappa$;
 otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
 
 \parbf{Trigonometric functions.}
-We will need three ``trigonometric functions'' in $\Lob2\kappa$: $\cs\kappa$, $\sn\kappa$, and $\md\kappa$;
-$\cs{}$ stands for {}\emph{cosine}, $\sn{}$ stands for {}\emph{sine}, and $\md{}$, for {}\emph{modified distance}. 
+We will need three \textit{trigonometric functions} in $\Lob2\kappa$ {}\emph{cosine}, {}\emph{sine}, and {}\emph{modified distance} denoted by $\cs\kappa$, $\sn\kappa$, and $\md\kappa$ respectively. 
 
 They are defined as the solutions of the following initial value problems respectively:
 \[
@@ -181,14 +180,16 @@ Then they have the same sign.
 \end{subthm}
 \end{thm}
 
-
 All the properties except Alexandrov's lemma (\ref{SHORT.lem:alex-0}) can be shown by direct calculation. Alexandrov's lemma is reformulated in \ref{lem:alex} and is proved there.
 
-
-
 \parbf{Cosine law.}
-
-The above formulas easily imply  the cosine law in $\Lob2\kappa$, which can be expressed as follows
+The equivalent formulas $a
+=
+\side\kappa\{\phi;b,c\}$ and
+$\phi
+=
+\tangle\mc\kappa\{a;b,c\}$
+can be rewritten using the cosine law in $\Lob2\kappa$:
 \[\cos\phi
 =\left[\begin{aligned}
 &\frac{b^2+c^2-a^2}{2\cdot b\cdot c}
@@ -207,7 +208,7 @@ the properties of $\tangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equalit
 
 \begin{thm}{Hemisphere lemma}
 \label{lem:hemisphere}
-For $\kappa>0$, any closed path of length $<2\cdot \varpi\kappa$ (respectively, $\le2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
+For $\kappa>0$, any closed path of length less than $2\cdot \varpi\kappa$ (respectively, at most $2\cdot \varpi\kappa$) in $\Lob2\kappa$ lies in an open (respectively, closed) hemisphere. 
 \end{thm}
 
 \parit{Proof.}
@@ -236,8 +237,9 @@ a contradiction.
 
 If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circle, 
 or $\alpha$ may be strictly shortened by substituting a geodesic arc for a subarc of $\alpha$ 
-whose endpoints $p^1,p^2$ are arbitrarily close to some point $p$ on  $\alpha$.
-In the latter case,  $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres  containing the shortened curves as $p^1,p^2$ approach~$p$.
+whose endpoints $p^1,p^2$ are arbitrarily close to some point $p$ on $\alpha$.
+In both cases $\alpha$ lies in a closed hemisphere;
+the former case is trivial, and in the latter case, $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres  containing the shortened curves as $p^1,p^2$ approach~$p$.
 \qeds
 
 
