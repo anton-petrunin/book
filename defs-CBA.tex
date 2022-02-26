@@ -2453,14 +2453,14 @@ the figure $D$ is a solid convex model quadrangle $[\tilde p\tilde p^*\tilde q^*
 \end{align*}
 Given $x\in [pq]$, denote by $\tilde x$ the corresponding point on $[\tilde p\tilde q]$.
 Then
-\[\dist{[pq]}{x}{\spc{U}}
+\[\distfun{[pq]}{x}{}
 \le
-\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
+\distfun{[\tilde p\tilde q]}{\tilde x}{}.\]
 Set 
 \[h(x)
 =
-\sn\kappa
-\dist{[\tilde p\tilde q]}{\tilde x}{\Lob2\kappa}.\]
+\sn\kappa\circ
+\distfun{[\tilde p\tilde q]}{\tilde x}{}.\]
 By straightforward calculations, \ref{h''+kh=<0} holds
 and hence the statement follows.
 \qeds
