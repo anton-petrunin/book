@@ -58,8 +58,8 @@ Assume $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$ is a collection of $\infty$-met
 The disjoint union 
 $$\bm{X}=\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha$$ 
 has a natural $\infty$-metric on it defined as follows:
-given two points $x\in\spc{X}_\alpha$ and $y\in\spc{X}_\beta$
-set 
+given two points $x\in\spc{X}_\alpha$ and $y\in\spc{X}_\beta$,
+let 
 \[
 \begin{matrix}
 \dist{x}{y}{\bm{X}}=\infty&\text{if}\quad\alpha\ne\beta,
@@ -106,7 +106,7 @@ Often we do not distinguish between $\spc{X}'$ and~$\spc{X}$.
 Set $x\approx y$ if and only if $\dist{x}{y}{}<\infty$;
 this is another equivalence relation on $\spc{X}$.
 The equivalence class of a point $x\in\spc{X}$ will be called the \index{metric component}\emph{metric component} 
- of $x$; it will be denoted as $\spc{X}_x$.
+ of $x$; it will be denoted by $\spc{X}_x$.
 One could think of $\spc{X}_x$ as  $\oBall(x,\infty)_{\spc{X}}$, the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
 
 It follows that any $\infty$-metric space is a {}\emph{disjoint union} of genuine metric spaces, the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
@@ -140,7 +140,7 @@ A set $A\subset\spc{X}$ is called \index{bounded set}\emph{bounded} if $A\subset
 
 \parbf{Distances to sets.}
 For subset $A\subset \spc{X}$, 
-let us denote the distance from $A$ to a point $x$ in $\spc{X}$ as $\distfun{A}{x}$\index{$\distfun{A}{x}$};
+let us denote the distance from $A$ to a point $x$ in $\spc{X}$ by $\distfun{A}{x}$\index{$\distfun{A}{x}$};
 that is,
 \[\distfun{A}{x}
 \df
@@ -189,7 +189,7 @@ the closed ball $\cBall[p,R]\subset\spc{X}$ is compact.
 \item The function $\distfun{p}{}{}\:\spc{X}\to\RR$ is proper for some (and therefore any) point $p\in \spc{X}$.
 \end{enumerate}
 
-We will often use the following two classical statements:
+We will also often use the following two classical statements:
 
 \begin{thm}{Proposition}
 Proper metric spaces are separable and second countable.
@@ -227,7 +227,7 @@ A \index{curve}\emph{curve} in a metric space $\spc{X}$ is a continuous map $\al
 Let $\spc{X}$ be a metric space.
 Given a curve $\alpha\: \II\to \spc{X}$, we define its \index{length}\emph{length} as 
 \[
-\length \alpha \df \sup\set{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha (t_{i-1})}{}}{t_0,\dots,t_n\in \II,t_0\le\ldots\le t_n}
+\length \alpha \df \sup\set{\sum_{i\ge 1} \dist{\alpha(t_i)}{\alpha (t_{i-1})}{}}{t_0,\dots,t_n\in \II,t_0\le\ldots\le t_n}.
 \]
 \end{thm}
 
@@ -269,9 +269,9 @@ such that
 
 In this book, most of the time we consider length spaces.
 If $\spc{X}$ is a length space, 
-and $A\subset \spc{X}$ the set $A$ comes with the inherited metric from $\spc{X}$ 
+and $A\subset \spc{X}$, then the set $A$ comes with the inherited metric from $\spc{X}$, 
 which might be not a length metric.
-The corresponding length metric on $A$ will be denoted as $\dist{}{}{A}$.
+The corresponding length metric on $A$ will be denoted by $\dist{}{}{A}$.
 
 
 \parbf{Variations of the definition.}
@@ -523,7 +523,7 @@ Fix $x_\o,y_\o\in A_\o$.
 Consider sequences $x_n,y_n\in A_n$ such that $x_n\to x_\o$ and $y_n\to y_\o$ as $n\to\o$.
 
 Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ that lies in $A_n$.
-Set
+Let
 \[\alpha_\o(t)=\lim_{n\to \o}\alpha_n(t).\]
 
 It remains to observe that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
