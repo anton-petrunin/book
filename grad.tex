@@ -308,11 +308,11 @@ that is,
 \[\hat\alpha^+=\frac{1}{|\nabla_{\hat\alpha} f|}\cdot\nabla_{\hat\alpha} f.\]
 In particular, $(f\circ\hat\alpha)^+(s)=|\nabla_{\hat\alpha^+(s)} f|$, and by \ref{eq:lem:grad--grad-like-1},
 \begin{align*}\varsigma^{-1}(s)
-&=\int\limits_0^s\frac{1}{|\nabla_{\hat\alpha(\under s)} f|}\cdot\dd\under s
+&=\int\limits_0^s\frac{\dd\under s}{|\nabla_{\hat\alpha(\under s)} f|}
 =
 \\
 &=
-\int\limits_0^s\frac{1}{(f\circ\hat\alpha)'(\under s)}\cdot\dd\under s.
+\int\limits_0^s\frac{\dd\under s}{(f\circ\hat\alpha)'(\under s)}.
 \end{align*}
 \medskip
 
@@ -547,7 +547,7 @@ Therefore, according to \ref{thm:concave}, $h$ is $\lambda$-concave.
 Thus we can define a homeomorphism $\varsigma\:[0,\delta]\to[0,\eps]$ by 
 \[{\varsigma^{-1}(s)}
 =
-\int\limits_0^{s}\frac{1}{h'(\under s)}\cdot\dd\under s,
+\int\limits_0^{s}\frac{\dd\under s}{h'(\under s)},
 \eqlbl{eq:thm:exist-grad-curv-1}\]
 
 According to \ref{lem:grad--grad-like}, $\alpha(t)=\hat\alpha\circ\varsigma(t)$ is an $f^\o$-gradient curve in $\spc{Z}^\o$. 
@@ -650,11 +650,11 @@ Let us define reparametrizations
 \begin{align*}
 {\varsigma_n^{-1}(s)}
 &=
-\int\limits_0^{s}\frac{1}{h_n'(\under s)}\cdot\dd\under s,
+\int\limits_0^{s}\frac{\dd\under s}{h_n'(\under s)},
 &
 {\varsigma_\o^{-1}(s)}
 &=
-\int\limits_0^{s}\frac{1}{h_\o'(\under s)}\cdot\dd\under s.
+\int\limits_0^{s}\frac{\dd\under s}{h_\o'(\under s)}.
 \end{align*}
 The $\lambda$-convexity of the $h_n$ implies that $\sigma_n\to\sigma_\o$ as $n\to\o$.
 By \ref{lem:grad--grad-like}, 
