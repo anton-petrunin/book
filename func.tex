@@ -11,11 +11,9 @@ We call them \index{submap}\emph{submaps} and \index{subfunction}\emph{subfuncti
 Thus, given  metric spaces $\spc{X}$ and $\spc{Y}$, 
 a submap $\map\:\spc{X}\subto \spc{Y}$ is a map defined on a subset $\Dom\map\subset \spc{X}$.
 
-A submap is said to be \index{continuous submap}\emph{continuous} if the inverse image of any open set is open.
-Note that for a continuous submap $\map$, the domain $\Dom\map$ is automatically open.
-Indeed, if  submap $\map\:\spc{X}\subto \spc{Y}$ is continuous then
- $\Dom \map=\map^{-1}(\spc{Y})$ is open as the preimage of an open set.
-The same is true for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since they are  continuous functions for a special topology on $\RR$.
+A submap $\map\:\spc{X}\subto \spc{Y}$ is \index{continuous submap}\emph{continuous} if the inverse image of any open set is open.
+Since $\Dom\map=\map^{-1}(\spc{Y})$, the domain $\Dom\map$ of a continuous submap is open.
+The same is holds for upper and lower semicontinuous functions $f\:\spc{X}\subto \RR$ since they are  continuous functions for a special topology on $\RR$.
 
 (Continuous partially defined maps could be defined via closed sets; namely, one could require that inverse images of closed sets are closed.
 While this condition is equivalent to continuity for functions defined on the whole space,
@@ -65,11 +63,11 @@ $\Omega\subset \Dom\map$ such that the restriction $\map|_\Omega$ is $\Lip$-Lips
 Note that $\map\:\spc{X}\to\spc{Y}$ is $\Lip$-Lipschitz if and only if
 \[\map(\oBall(x, R)_{\spc{X}})\subset\oBall(\map(x),\Lip\cdot R)_{\spc{Y}}\]
 for any $R\ge 0$ and $x\in \spc{X}$.
-The following definition gives a dual version.
+A dual version of this property is considered in the following definition.
 
 \begin{thm}{Definitions}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces, 
-$\map\:\spc{X}\to\spc{Y}$ be a map,  
+Let 
+$\map\:\spc{X}\to\spc{Y}$ be a map between metric spaces,  
 and $\Lip\in\RR$.
 \begin{subthm}{}
 The map $\map$ is called \index{$\Lip$-co-Lipschitz map}\emph{$\Lip$-co-Lipshitz} if 
@@ -107,6 +105,7 @@ Then $\spc{Y}$ is complete.
 \parit{Proof.}
 Choose a Cauchy sequence $y_n$ in $\spc{Y}$.
 Passing to a subsequence if necessary, we may assume that $\dist{y_n}{y_{n+1}}{\spc{Y}}< \tfrac1{2^n}$ for each~$n$.
+It is sufficient to show that $y_n$ converges in $\spc{Y}$.
 
 Denote by $\Lip$ a co-Lipschitz constant for $\map$.
 Note that  there is a sequence $x_n$ in $\spc{X}$
@@ -138,7 +137,7 @@ Construct a continuous positive function $\rho\:\spc{X}\to \RR_{>0}$ such that
 \[\dist{x}{y}{}<\rho(x)\quad \Rightarrow\quad |f(x)-f(y)|<\eps.\]
 Consider the function
 \[
-f_\eps(x)
+f_\eps(y)
 =
 \sup\set{f(x)
 \cdot
@@ -158,7 +157,7 @@ and $\map\:\spc{X}\to \spc{Y}$ be a map
 \begin{subthm}{}
 The map $\map$ is \index{distance-preserving map}\emph{distance-preserving} if
 $$\dist{\map(x)}{\map(x')}{\spc{Y}}=\dist{x}{x'}{\spc{X}}$$
-for any $x,x'\in X$.
+for any $x,x'\in \spc{X}$.
 \end{subthm}
 
 \begin{subthm}{}
@@ -166,8 +165,8 @@ A distance-preserving bijection $\map$ is called an \index{isometry}\emph{isomet
 \end{subthm}
 
 \begin{subthm}{}
-The spaces $X$ and $Y$ are called \emph{isometric} (briefly $X\iso Y$)
- if there is an isometry  $\map\:X\to Y$.
+The spaces $\spc{X}$ and $\spc{Y}$ are called \emph{isometric} (briefly $\spc{X}\iso \spc{Y}$)
+ if there is an isometry  $\map\:\spc{X}\to \spc{Y}$.
 \end{subthm}
 
 \end{thm}
@@ -180,7 +179,7 @@ for any $p\in \spc{L}$ and $r\ge 0$.
 \end{thm}
 
 
-Note $\sigma\:\spc{L}\to\spc{M}$ is a submetry if it is 1-Lipschitz and 1-co-Lipschitz at the same time.
+Note $\sigma\:\spc{L}\to\spc{M}$ is a submetry if it is 1-Lipschitz and 1-co-Lipschitz.
 
 Note also that any submetry is an onto map.
 
@@ -201,19 +200,19 @@ Then the projection map $\spc{L}\to \spc{L}/G$ is a submetry.
 \end{thm}
 
 \parit{Proof.}
-Denote by $\hat x$ the projection of $x\in \spc{L}$ in $\spc{L}/G$.
-We need to show that the map $x\mapsto\hat x$ is $1$-Lipschitz and $1$-co-Lipschitz.
+Denote by $[x]$ the projection of $x\in \spc{L}$ in $\spc{L}/G$.
+We need to show that the map $x\mapsto[ x]$ is $1$-Lipschitz and $1$-co-Lipschitz.
 The co-Lipschitz part follows directly from the definitions of Hausdorff distance and co-Lipschitz maps.
 
 Assume $\dist{x}{y}{\spc{L}}< r$; equivalently $\oBall(x,r)_{\spc{L}}\ni y$.
 Since the action $G\acts \spc{L}$ is isometric, 
 $\oBall(g\cdot x,r)_{\spc{L}}\ni g\cdot y$ for any $g\in G$.
 
-In particular the orbit $G\cdot y$ lies in the open $r$-neighborhood of the orbit $G\cdot x$.
+In particular, the orbit $G\cdot y$ lies in the open $r$-neighborhood of the orbit $G\cdot x$.
 In the same way we can prove that the orbit $G\cdot x$ lies in the open $r$-neighborhood of the orbit $G\cdot y$. 
-That is, the Hausdorff distance between the orbits $G\cdot x$ and $G\cdot y$ is  $<r$
-or, equivalently, $\dist{\hat x}{\hat y}{\spc{L}/G}< r$.
-Since $x$ and $y$ are arbitrary, the map $x\mapsto\hat x$ is $1$-Lipschitz.
+That is, the Hausdorff distance between the orbits $G\cdot x$ and $G\cdot y$ is less than $r$
+or, equivalently, $\dist{[x]}{[y]}{\spc{L}/G}< r$.
+Since $x$ and $y$ are arbitrary, the map $x\mapsto[x]$ is $1$-Lipschitz.
 \qeds
 
 
@@ -239,12 +238,14 @@ joining $\hat x$ to $\hat y$ in ${\spc{L}}$
 such that
 \[\length\gamma\le \dist{x}{y}{\spc{M}}+\eps.\]
 
+The curve $\sigma\circ\gamma$ joins $x$ to $y$.
 Since $\sigma$ is $1$-Lipschitz,
-\[\length\sigma\circ\gamma\le \length\gamma.\]
-
-The curve $\sigma\circ\gamma$ joins $x$ to $y$,
 and by the above,
-\[\length\sigma\circ\gamma<\dist{x}{y}{\spc{M}}+\eps.\]
+\begin{align*}
+\length\sigma\circ\gamma&\le \length\gamma\le
+\\
+&\le\dist{x}{y}{\spc{M}}+\eps.
+\end{align*}
 Since $\eps>0$ is arbitrary,
 $\spc{M}$ is a length space.
 \qeds
@@ -256,7 +257,7 @@ Let $\spc{X}$ be a metric space.
 Recall that a \emph{curve}  
 in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a real interval. 
 %(see Section~\ref\{sec:intrinsic}). 
-A curve is called \index{Lipschitz map!Lipschitz curve}\emph{Lipschitz} or \emph{locally Lipschitz} if $\alpha$ is Lipschitz or locally Lipschitz. 
+A curve is called \index{Lipschitz map!Lipschitz curve}\emph{Lipschitz} or \emph{locally Lipschitz} if $\alpha$ is Lipschitz or locally Lipschitz respectively. 
  Length of curves is defined in \ref{def:length}.
 
 The following theorem follows from \cite[2.7]{burago-burago-ivanov}.
@@ -274,18 +275,21 @@ is defined for almost all $t_0 \in \II$, and
 where $\int$ denotes the Lebesgue integral.
 \end{thm}
 
-A curve $\alpha\:\II\to\spc{X}$ is called a  \index{unit-speed curve}\emph{unit-speed curve}
-if for any subinterval $[a,b]\subset\II$, we have
-\[b-a=\length(\alpha|_{[a,b]}).\]
-According to the above theorem, this is equivalent to the condition that $\alpha$ is Lipschitz and $\speed\alpha\ae 1$.
+A curve $\alpha\:\II\to\spc{X}$ is \index{unit-speed curve}\emph{unit-speed}
+if 
+\[b-a=\length(\alpha|_{[a,b]})\]
+for any subinterval $[a,b]\subset\II$.
+If $\alpha$ is Lipschitz, then, according to the above theorem, this is equivalent to 
+\[\speed\alpha\ae 1.\]
 
 The following generalization of the standard Rademacher theorem 
 on differentiability almost everywhere of Lipschitz maps between smooth manifolds \cite[5.5.2]{burago-burago-ivanov} was proved by Bernd Kirchheim \cite{kirchheim}. 
 
 The conclusion of the standard Rademacher theorem does not make sense for maps to a metric space since the target might have no linear structure.
 But the theorem does not hold even if we assume that the target is a Banach space.
-For example the map $[0,1]\to L^1[0,1]$ defined by $x\mapsto \chi_{[0,x]}$ is distance-preserving and in particular Lipschitz (here $\chi_A$ denotes the characteristic function of $A$).
-However the differential $\dd_xf$ is not defined for any $x$.
+For example, consider the map $[0,1]\to L^1[0,1]$, defined by $x\mapsto \chi_{[0,x]}$, where $\chi_A$ denotes the characteristic function of $A$.
+This map is distance-preserving and in particular Lipschitz,
+but its differential is undefined at any point.
 
 \begin{thm}{Theorem}\label{thm:Rademacher-md}
 Let $\spc{X}$ be a metric space 
@@ -301,7 +305,7 @@ will be called its \index{differential of a metric}\emph{differential of the ind
 
 \section{Convex real-to-real functions}\label{sec:conv-real}
 
-We will be interested in  generalized solutions
+In this section we will discuss generalized solutions
 of the following differential inequalities
 \[y''+\kappa\cdot  y\ge \lambda
 \quad \text{and respectively}
@@ -314,7 +318,7 @@ The inequalities  \ref{eq:sec:conv-real*} are understood in the sense of distrib
 That is, for any smooth function $\phi$ with compact support $\supp\phi\subset\Dom y$ the following inequality should be satisfied:
 \[\begin{aligned}
 \int\limits_{\Dom y}\left[y(t)\cdot\phi''(t)+\kappa\cdot  y(t)\cdot\phi(t)-\lambda\right]\cdot\dd t
-&\ge 0
+&\ge 0,
 \\
 \text{respectively}\quad &\le0.
 \end{aligned}
@@ -358,7 +362,7 @@ Then the following conditions are equivalent:
 \begin{subthm}{barrier}(barrier inequality) For any $t_0\in \II$, 
 there is a solution $\bar y$ 
 of the ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
-with $\bar y(t_0)\z= y(t_0)$ such that $\bar y\ge y$ (respectively $\bar y\le y$) for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$.
+with $\bar y(t_0)\z= y(t_0)$ such that $\bar y\ge y$ (respectively $\bar y\le y$) for all $t\in [t_0-\varpi\kappa,t_0\z+\varpi\kappa]\cap \II$.
 
 The function $\bar y$ is called a {}\emph{lower} (respectively {}\emph{upper}) \index{barrier}\emph{barrier} of $y$ at $t_0$.
 \end{subthm}
@@ -376,7 +380,7 @@ Further, the following property holds:
 \begin{subthm}{barrier'} 
 Suppose $y''\le \lambda-\kappa\cdot  y$. Let $t_0\in\II$, and   $\bar y$ be a solution of  the
  ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
-such that  $\bar y(t_0)= y(t_0)$ and 
+such that  $\bar y(t_0)\z= y(t_0)$ and 
 $y^+(t_0)\le \bar y^+(t_0)\le -y^-(t_0)$.
 %S:  Note I changed this from $y^+(t_0)\le y(t_0)\le -y^-(t_0)$
 (Note that such a $\bar{y}$ is unique if $y$ is differentiable at $t_0$.) 
@@ -385,10 +389,8 @@ Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; 
 \end{subthm}
 \end{thm}
 
-The proof is left to the reader.
 
-
-Note that Theorem ~\ref{y''=<1-ky} in particular implies that $y$ satisfies $y''\ge \lambda$ ( $y''\le \lambda$)  on an interval $\II\subset\RR$  if and only if $y(t)-\frac{\lambda}{2}t^2$ is convex (concave) on $\II$.
+Note that Theorem ~\ref{y''=<1-ky} implies that $y$ satisfies $y''\ge \lambda$ ($y''\le \lambda$)  on an interval $\II\subset\RR$  if and only if $y(t)-\frac{\lambda}{2}t^2$ is convex (concave) on $\II$.
 
 We will often need the following fact about convergence of derivatives of convex functions:
 
@@ -399,9 +401,9 @@ Let $\II$ be an open interval
 and $f_n\:\II\to\RR$ be a sequence of 
 %concave
 convex functions. 
-Assume the functions $f_n$ pointwise converge to a function $f\:\II\to\RR$.
+Assume the functions $f_n$ pointwise converge to a function $f_\infty\:\II\to\RR$.
 Then for any $t_0\in \II$,
-\[f^\pm(t_0)\le \liminf_{n\to\infty}f^\pm_n(t_0).\]
+\[f_\infty^\pm(t_0)\le \liminf_{n\to\infty}f^\pm_n(t_0).\]
 \end{thm}
 
 }
@@ -410,9 +412,9 @@ Then for any $t_0\in \II$,
 Since the $f_n$ are convex, we have $f^+_n(t_0)+f^-_n(t_0)\ge0$, and for any~$t$,
 \[f_n(t)\ge f_n(t_0)\pm f^\pm(t_0)\cdot (t-t_0).\]
 Passing to the limit, we get
-\[f(t)\ge f(t_0)+\left[\limsup_{n\to\infty}f^+_n(t_0)\right]\cdot (t-t_0)\]
+\[f_\infty(t)\ge f_\infty(t_0)+\left[\limsup_{n\to\infty}f^+_n(t_0)\right]\cdot (t-t_0)\]
 for $t\ge t_0$, and 
-\[f(t)\ge f(t_0)-\left[\limsup_{n\to\infty}f^-_n(t_0)\right]\cdot (t-t_0)\]
+\[f_\infty(t)\ge f_\infty(t_0)-\left[\limsup_{n\to\infty}f^-_n(t_0)\right]\cdot (t-t_0)\]
 for $t\le t_0$.
 Hence the result.
 \qeds
@@ -420,19 +422,19 @@ Hence the result.
 \begin{thm}{Corollary}
 \label{cor:der-conv-lim}
 Let $\II$ be an open interval 
-and $f_n\:\II\to\RR$ be a sequence of functions such that $f_n''\le \lambda$ that converge pointwise to a function $f\:\II\to\RR$.
+and $f_n\:\II\to\RR$ be a sequence of functions such that $f_n''\le \lambda$ that converge pointwise to a function $f_\infty\:\II\to\RR$.
 Then: 
-\begin{subthm}{} If $f$ is differentiable at $t_0\in \II$, then
-\[f'(t_0)=\pm\lim_{n\to\infty} f^\pm_n(t_0).\]
+\begin{subthm}{} If $f_\infty$ is differentiable at $t_0\in \II$, then
+\[f_\infty'(t_0)=\pm\lim_{n\to\infty} f^\pm_n(t_0).\]
 \end{subthm}
 
-\begin{subthm}{} If all $f_n$ and $f$ are differentiable at $t_0\in \II$, then
-\[f'(t_0)=\lim_{n\to\infty} f'_n(t_0).\]
+\begin{subthm}{} If all $f_n$ and $f_\infty$ are differentiable at $t_0\in \II$, then
+\[f_\infty'(t_0)=\lim_{n\to\infty} f'_n(t_0).\]
 \end{subthm}
 \end{thm}
 
-\parit{Proof.} Set $\hat f_n(t)=f_n(t)-\tfrac{\lambda}{2}\cdot t^2$ and $\hat f(t)=f(t)-\tfrac\lambda2\cdot t^2$.
-Note that the $\hat f_n$ are concave and $\hat f_n\to \hat f$ pointwise.
+\parit{Proof.} Set $\hat f_n(t)=f_n(t)-\tfrac{\lambda}{2}\cdot t^2$ and $\hat f_\infty(t)=f_\infty(t)-\tfrac\lambda2\cdot t^2$.
+Note that the $\hat f_n$ are concave and $\hat f_n\to \hat f_\infty$ pointwise.
 Thus the theorem follows from the two-shoulder lemma (\ref{lem:der-conv-lim}).\qeds
 
 
