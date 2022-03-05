@@ -172,71 +172,70 @@ The spaces $\spc{X}$ and $\spc{Y}$ are called \emph{isometric} (briefly $\spc{X}
 \end{thm}
 
 \begin{thm}{Submetry}\label{def:submetry}
-A map $\sigma\:\spc{L}\to\spc{M}$ between the metric spaces $\spc{L}$ and $\spc{M}$
+A map $\sigma\:\spc{X}\to\spc{Y}$ between the metric spaces $\spc{X}$ and $\spc{Y}$
 is called a \index{submetry}\emph{submetry} if 
-\[\sigma(\oBall(p,r)_\spc{L})=\oBall(\sigma(p),r)_{\spc{M}}\]
-for any $p\in \spc{L}$ and $r\ge 0$.
+\[\sigma(\oBall(p,r)_\spc{X})=\oBall(\sigma(p),r)_{\spc{Y}}\]
+for any $p\in \spc{X}$ and $r\ge 0$.
 \end{thm}
 
 
-Note $\sigma\:\spc{L}\to\spc{M}$ is a submetry if it is 1-Lipschitz and 1-co-Lipschitz.
+Note $\sigma\:\spc{X}\to\spc{Y}$ is a submetry if it is 1-Lipschitz and 1-co-Lipschitz.
 
 Note also that any submetry is an onto map.
 
 The main source of examples of submetries comes from isometric group actions.
 
-Namely, assume $\spc{L}$ is a metric space and $G$ is a subgroup of isometries of $\spc{L}$.
-Denote by $\spc{L}/G$ the set of $G$-orbits;
+Namely, assume $\spc{X}$ is a metric space and $G$ is a subgroup of isometries of $\spc{X}$.
+Denote by $[x]=G\cdot x$ the $G$-orbit of $x\in\spc{X} $ and $\spc{X}/G$ the set of all $G$-orbits;
 let us equip it with the pseudometric defined by
-\[\dist{G\cdot x}{G\cdot y}{\spc{L}/G}=\inf\set{\dist{g\cdot x}{h\cdot y}{\spc{L}}}{g,h\in G}.\]
-Note that if all the $G$-orbits form closed sets in $\spc{L}$,
-then $\spc{L}/G$ is a genuine metric space.
+\[\dist{[x]}{[y]}{\spc{X}/G}=\inf\set{\dist{g\cdot x}{h\cdot y}{\spc{X}}}{g,h\in G}.\]
+Note that if all the $G$-orbits form closed sets in $\spc{X}$,
+then $\spc{X}/G$ is a genuine metric space.
 
 \begin{thm}{Proposition}\label{prop:submet/G}
-Let $\spc{L}$ be a metric space.
-Assume that a group $G$  acts on $\spc{L}$ by isometries  
+Let $\spc{X}$ be a metric space.
+Assume that a group $G$  acts on $\spc{X}$ by isometries  
 and in such a way that every $G$-orbit is closed.
-Then the projection map $\spc{L}\to \spc{L}/G$ is a submetry.
+Then the projection map $\spc{X}\to \spc{X}/G$ is a submetry.
 \end{thm}
 
 \parit{Proof.}
-Denote by $[x]$ the projection of $x\in \spc{L}$ in $\spc{L}/G$.
-We need to show that the map $x\mapsto[ x]$ is $1$-Lipschitz and $1$-co-Lipschitz.
+We need to show that the map $x\mapsto[x]=G\cdot x$ is $1$-Lipschitz and $1$-co-Lipschitz.
 The co-Lipschitz part follows directly from the definitions of Hausdorff distance and co-Lipschitz maps.
 
-Assume $\dist{x}{y}{\spc{L}}< r$; equivalently $\oBall(x,r)_{\spc{L}}\ni y$.
-Since the action $G\acts \spc{L}$ is isometric, 
-$\oBall(g\cdot x,r)_{\spc{L}}\ni g\cdot y$ for any $g\in G$.
+Assume $\dist{x}{y}{\spc{X}}< r$; equivalently $\oBall(x,r)_{\spc{X}}\ni y$.
+Since the action $G\acts \spc{X}$ is isometric, 
+$\oBall(g\cdot x,r)_{\spc{X}}\ni g\cdot y$ for any $g\in G$.
 
 In particular, the orbit $G\cdot y$ lies in the open $r$-neighborhood of the orbit $G\cdot x$.
 In the same way we can prove that the orbit $G\cdot x$ lies in the open $r$-neighborhood of the orbit $G\cdot y$. 
 That is, the Hausdorff distance between the orbits $G\cdot x$ and $G\cdot y$ is less than $r$
-or, equivalently, $\dist{[x]}{[y]}{\spc{L}/G}< r$.
+or, equivalently, $\dist{[x]}{[y]}{\spc{X}/G}< r$.
 Since $x$ and $y$ are arbitrary, the map $x\mapsto[x]$ is $1$-Lipschitz.
 \qeds
 
 
 \begin{thm}{Proposition}
 \label{prop:submet-length}
-Let  $\spc{L}$ be a length space 
-and $\sigma\:\spc{L}\to \spc{M}$ be a submetry.
-Then $\spc{M}$ is a length space.
+Let  $\spc{X}$ be a length space 
+and $\sigma\:\spc{X}\to \spc{Y}$ be a submetry.
+Then $\spc{Y}$ is a length space.
 \end{thm}
 
 \parit{Proof.}
-Fix $\eps>0$ and a pair of points $x,y\in \spc{M}$.
+Fix $\eps>0$ and a pair of points $x,y\in \spc{Y}$.
 
-Since $\sigma$ is $1$-co-Lipschitz, there are points $\hat x,\hat y\in \spc{L}$
+Since $\sigma$ is $1$-co-Lipschitz, there are points $\hat x,\hat y\in \spc{X}$
 such that 
 $\sigma(\hat x)\z=x$,
 $\sigma(\hat y)\z=y$, 
-and $\dist{\hat x}{\hat y}{\spc{L}}<\dist{x}{y}{\spc{M}}+\eps$.
+and $\dist{\hat x}{\hat y}{\spc{X}}<\dist{x}{y}{\spc{Y}}+\eps$.
 
-Since ${\spc{L}}$ is a length space, 
+Since $\spc{X}$ is a length space, 
 there is a curve $\gamma$ 
-joining $\hat x$ to $\hat y$ in ${\spc{L}}$
+joining $\hat x$ to $\hat y$ in ${\spc{X}}$
 such that
-\[\length\gamma\le \dist{x}{y}{\spc{M}}+\eps.\]
+\[\length\gamma\le \dist{x}{y}{\spc{Y}}+\eps.\]
 
 The curve $\sigma\circ\gamma$ joins $x$ to $y$.
 Since $\sigma$ is $1$-Lipschitz,
@@ -244,10 +243,10 @@ and by the above,
 \begin{align*}
 \length\sigma\circ\gamma&\le \length\gamma\le
 \\
-&\le\dist{x}{y}{\spc{M}}+\eps.
+&\le\dist{x}{y}{\spc{Y}}+\eps.
 \end{align*}
 Since $\eps>0$ is arbitrary,
-$\spc{M}$ is a length space.
+$\spc{Y}$ is a length space.
 \qeds
 
 \section{Speed of curves}
