@@ -2,11 +2,9 @@
 %arXiv
 \chapter{Dimension theory}\label{ch:dim}
 
-In Section~\ref{sec:prelim:dim}, we give definitions of different types of dimension-like invariants of metric spaces and state general relations between them.
-
-
 \section{Definitions}\label{sec:prelim:dim}
 
+In this section, we give definitions of different types of dimension-like invariants of metric spaces and state general relations between them.
 The proofs of most of the statements in this section can be found in the book of Witold Hurewicz and Henry Wallman \cite{hurewicz-wallman}; 
 the rest follow directly from the definitions.
 
@@ -32,7 +30,7 @@ Let us recall two notions in general topology:
 \begin{thm}{Topological dimension}\label{def:TopDim}\index{dimension!topological dimension}\index{topological dimension}
 Let $\spc{X}$ be a metric space. 
 The topological dimension of $\spc{X}$ is defined to be the minimum of nonnegative integers $n$ 
-such that for any finite open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
+such that for any open cover of $\spc{X}$ there is a finite open refinement with order~$n$.
 
 If no such $n$ exists, the topological dimension of $\spc{X}$ is infinite.
 
@@ -96,7 +94,7 @@ Let $\spc{X}$ be a metric space
 and $F\:\spc{X}\to\RR^m$ be  a continuous map.
 A point $\bm{z}\in \Im F$ is called a \emph{stable value} of $F$
 if there is $\eps>0$ such that $\bm{z}\in\Im F'$ 
-for any $\eps$-close continuous map $F'\:\spc{X}\to\RR^m$,
+for any \emph{$\eps$-close} continuous map $F'\:\spc{X}\to\RR^m$,
 that is, $|F'(x)-F(x)|<\eps$ for all $x\in \spc{X}$.
 \end{thm}
 
@@ -129,7 +127,7 @@ In particular, if there is a Lipschitz onto map $\spc{Y}\to \spc{X}$, then
 \section{Linear dimension} 
 
 In addition to $\HausDim$ and $\TopDim$, 
-we will use yet another dimension, which we call \emph{linear dimension}.
+we will use the so-called linear dimension}.
 It will be applied only to  Alexandrov spaces and to their open subsets (in cases both of curvature bounded below and curvature bounded above).
 As we shall see, in all these cases $\LinDim$  behaves nicely and  is easy to work with.
 
@@ -172,4 +170,4 @@ it coincides %should we explain why??
 One can extend the definition to arbitrary metric spaces.
 To do this one should modify  the definition of tangent space
 and take an arbitrary $n$-dimensional Banach space instead of the Euclidean $n$-space.
-For Alexandrov spaces (either $\Alex{}$ or $\CAT{}$) this modification is equivalent to the definition we use in this book.
+For Alexandrov spaces (either $\Alex{}$ or $\CAT{}$) this modification is equivalent to our definition.

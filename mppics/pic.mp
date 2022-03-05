@@ -186,6 +186,30 @@ label.llft(btex $\tilde q$ etex, z.p);
 
 endfig;
 
+beginfig(611) 
+save u;
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.x=(.2,1)*u;
+z.y=(1.2,.1)*u;
+z.z=.4[z.x,z.y];
+z.yy=z.y rotatedabout(z.z,-20);
+
+draw z.x--z.z--z.yy;
+draw z.p--z.x;
+draw z.p--z.yy;
+draw z.p--z.z;
+
+dOt z.x,z.yy,z.z,z.p;
+
+label.top(btex $\tilde p$ etex, z.x);
+label.rt(btex $\tilde r$ etex, z.yy);
+label.urt(btex $\tilde z$ etex, z.z);
+label.llft(btex $\tilde q$ etex, z.p);
+
+endfig;
+
 beginfig(615) 
 save u;
 u:=2cm;

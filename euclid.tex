@@ -21,8 +21,7 @@ A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod
 We will always assume $\geod_{[p q]}$ is parametrized starting at $p$; 
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
 The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{p}{q}]$} and called a \index{geodesic}\emph{geodesic}.
-The term \index{geodesic}\emph{geodesic} will also be used for  a linear reparametrization of a unit-speed geodesic;
-when confusion is possible we will call the latter a \index{pregeodesic}\emph{pregeodesic}.
+The term \index{geodesic}\emph{geodesic} will also be used for a linear reparametrization of a unit-speed geodesic.
 With a slight abuse of notation, we will use the notation $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
 
 We may write $[p q]_{\spc{X}}$ 
@@ -35,9 +34,6 @@ Also we use the following short-cut notation:
 &
 [ p q \mathclose{[}&=[pq]\backslash\{q\}.
 \end{align*}
-
-%A curve that is a reparametrization, not necessarily linear,  of a geodesic will be called a \index{pregeodesic}\emph{pregeodesic}.
-
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.
 However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we have fixed a choice of geodesic.
@@ -62,7 +58,8 @@ and $1$-Lipschitz.
 \parit{Proof.}
 As  follows from the triangle inequality, the function \[t\mapsto\dist{\gamma(t)}{x}{}- t\] is nonincreasing in $t$.  
 Clearly $\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}$.
-Thus the limit in \ref{eq:def:busemann*} is defined.
+Thus the limit in \ref{eq:def:busemann*} is defined,
+and it is 1-Lipschitz as a limit of 1-Lipschitz functions.
 \qeds
 
 
@@ -186,25 +183,38 @@ and
 =\pi-\angk\kappa{z}{p}{q},\]
 the first statement follows.
 
-For the second statement, construct $\trig{\tilde q}{\tilde z}{r'}=\modtrig\kappa q z r$ on the opposite side of $[\tilde q\tilde z]$ from $\trig{\tilde p}{\tilde q}{\tilde z}$.  
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-611}
+\end{wrapfigure}
+
+For the second statement, let us redifine $\tilde r$;
+construct $\trig{\tilde q}{\tilde z}{\tilde r}=\modtrig\kappa q z r$ on the opposite side of $[\tilde q\tilde z]$ from $\trig{\tilde p}{\tilde q}{\tilde z}$.  
 Since
-\[\dist{\tilde p}{r'}{}\le \dist{\tilde p}{\tilde z}{} + \dist{\tilde z}{r'}{}=\dist{p}{z}{}+\dist{z}{r}{}=\dist{p}{r}{},\]
-then 
+\begin{align*}
+\dist{\tilde p}{\tilde r}{}&\le \dist{\tilde p}{\tilde z}{} + \dist{\tilde z}{\tilde r}{}=
+\\
+&=\dist{p}{z}{}+\dist{z}{r}{}=
+\\
+&=\dist{p}{r}{},
+\end{align*}
+we have
 \begin{align*}
 \angk\kappa{q}{p}{z} + \angk\kappa{q}{z}{r} 
 &
 = 
-\mangle\hinge{\tilde q}{\tilde p}{\tilde z}+ \mangle\hinge{\tilde q}{\tilde z}{r'} 
+\mangle\hinge{\tilde q}{\tilde p}{\tilde z}+ \mangle\hinge{\tilde q}{\tilde z}{\tilde r} 
 =
 \\
 &
 = 
-\mangle\hinge{\tilde q}{\tilde p}{r'}
+\mangle\hinge{\tilde q}{\tilde p}{\tilde r}
 \le
 \\
 &\le  \angk\kappa q p r.
 \end{align*}
-Equality holds if and only  if $\dist{\tilde p}{r'}{}=\dist{p}{r}{}$, 
+Equality holds if and only  if $\dist{\tilde p}{\tilde r}{}=\dist{p}{r}{}$, 
 as required.
 \qeds
 
@@ -256,18 +266,14 @@ Thus, for $\Kappa>\kappa$, we have
 \\
 &=\Kappa\cdot\area\modtrig\Kappa(pxy)-\kappa\cdot\area\modtrig\kappa(pxy).
 \end{align*}
-Note that for $ \kappa\ge 0$ a triangle of perimeter $l$ in  $\Lob2\kappa$ lies in a ball of radius $2l$,  which easily implies that  $\area\modtrig\kappa(pxy)\le 100\ell^2$.
+Note that for $ \kappa\ge 0$ a triangle of perimeter $\ell$ in  $\Lob2\kappa$ lies in a ball of radius $2\cdot \ell$,  which easily implies that  $\area\modtrig\kappa(pxy)\le 100\cdot\ell^2$.
 For $\kappa<0$ one gets the same estimate by a direct computation in the hyperbolic plane.
-
-%the area of a model triangle with perimeter $\ell$ in  $\Lob2\kappa$ can not exceed the area of a hemisphere with the equator of length $\ell$;
-%in particular, $\area\modtrig\kappa(pxy)\le \ell^2$.% V: I don't understand this argument so I gave a different one. Also, something had to be said about the case of negative $\kappa$.
-
 
 Therefore
 \begin{align*}
-\area\modtrig\kappa(pxy)&\le 100\ell^2, 
+\area\modtrig\kappa(pxy)&\le 100\cdot\ell^2, 
 &
-\area\modtrig\Kappa(pxy)&\le 100\ell^2.
+\area\modtrig\Kappa(pxy)&\le 100\cdot\ell^2.
 \end{align*}
 Thus \ref{eq:k-K} follows.
 \qeds
@@ -286,7 +292,7 @@ If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then 
 \parit{Proof.}
 Since $\alpha^{13}\le\pi$, we can assume that $\alpha^{12}+\alpha^{23}< \pi$.
 Set $\gamma^i\z=\geod_{[px^i]}$.
-Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_+$ we have
+Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_{\ge0}$ we have
 \begin{align*}
 \dist{\gamma^1(t)}{\gamma^3(\tau)}{}
 &\le 
@@ -320,7 +326,7 @@ $\mangle(\tilde \gamma^1,\tilde \gamma^2)\z=\alpha^{12}+\eps$,
 $\mangle(\tilde \gamma^2,\tilde \gamma^3)\z=\alpha^{23}+\eps$,
 and $\mangle(\tilde \gamma^1,\tilde \gamma^3)\z=\alpha^{12}\z+\alpha^{23}\z+2\cdot \eps$.
 We parametrize each half-line by the distance from the starting point.
-Given two positive numbers $t,\tau\in\RR_+$, let $s=s(t,\tau)$ be 
+Given two positive numbers $t,\tau\in\RR_{\ge0}$, let $s=s(t,\tau)$ be 
 the number such that 
 $\tilde \gamma^2(s)\in[\tilde \gamma^1(t)\ \tilde \gamma^3(\tau)]$. 
 Clearly $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
@@ -413,15 +419,14 @@ and whose metric is given by the cosine rule
 \sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\theta},
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
-We write $(t,x), t \ne 0$, as $t\cdot x$, referred to as \emph{cone multiplication}.
-%S: Note added sentence.
+The point in $\spc{Y}$ that corresponds $(t,x)\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
 
 The point in  $\Cone{\spc{X}}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{tip of a  cone}\emph{tip of the cone} and is denoted by $\0$ or $\0_{\spc{Y}}$.
 For $v\in\spc{Y}$ the distance $\dist{\0}{v}{\spc{Y}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{Y}}$.
 
 
 The \index{scalar product}\emph{scalar product} $\<v,w\>$
-of two vectors $v=(s,p)$ and $w=(t,q)$ in $\Cone{\spc{X}}$
+of two vectors $v=s\cdot p$ and $w=t\cdot q$
 is defined by 
 \[\<v,w\>
 \df |v|\cdot|w|\cdot\cos\theta;
@@ -429,6 +434,8 @@ is defined by
 we set $\<v,w\>\df0$ if $v=\0$ or $w=\0$.
 
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
+(despite that $\T_p$ is only a cone --- not a vector space).
 
 The tangent space $\T_p$ could be also defined directly, without introducing the space of directions.
 To do so, consider the set $\mathfrak{T}_p$ of all geodesics starting at $p$, with arbitrary speed.
@@ -444,22 +451,17 @@ the limit in \ref{eq:dist-in-T_p}, and we obtain a pseudometric on $\mathfrak{T}
 
 
 The corresponding metric space admits a natural isometric identification with the cone $\T'_p=\Cone\Sigma'_p$.
-The elements of $\T'_p$ are formed by the equivalence classes for the relation 
+The vectors of $\T'_p$ are the equivalence classes for the relation 
 \[\alpha\sim\beta\quad \iff\quad \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
-The element of $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$}
-
-The elements of $\T_p$ will be called \index{tangent vector}\emph{tangent vectors} at $p$,
-despite that $\T_p$ is only a cone --- not a vector space.
-The elements of $\T'_p$ will be called \index{geodesic tangent vector}\emph{geodesic tangent vectors} at $p$.
-The {}\emph{tip} of the tangent cone $\T_p$ will be denoted by $\0$ or $\0_{p}$.
-
+A vector in $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$}
 
 \section{Velocity of curves}
 
 \begin{thm}{Definition}\label{def:right-derivative}
-Let $\spc{X}$ be a metric space.
-Let $\alpha\:[0,a)\to \spc{X}$ for some $a>0$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
+Let $\spc{X}$ be a metric space,
+$a>0$,
+and $\alpha\:[0,a)\to \spc{X}$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
 briefly $\alpha^+(0)\z=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$ such that $v_n\to v$ as $n\to\infty$,
 and corresponding geodesics $\gamma_n$, 
@@ -551,8 +553,11 @@ a function $\phi\:\T_p\to\RR$ is called the differential of $f$ at $p$
 Let $f\:\spc{X}\subto\RR$ be a locally Lipschitz semiconcave subfunction
 on a metric space $\spc{X}$ with defined angles.
 Then the differential $\dd_pf$ is uniquely defined for any $p\in\Dom f$. Moreover, 
+
 \begin{subthm}{prop:differential:lip}
-the differential $\dd_pf\:\T_p\to\RR$ is Lipschitz and the Lipschitz constant of $\dd_pf\:\T_p\to\RR$ does not exceed the Lipschitz constant of $f$ in a neighborhood of $p$. 
+The differential $\dd_pf\:\T_p\to\RR$ is Lipschitz and 
+\[\lip\dd_pf\le \lip_pf;\]
+that is, the Lipschitz constant of $\dd_pf$ does not exceed the Lipschitz constant of $f$ in any neighborhood of $p$. 
 \end{subthm}
 
 \begin{subthm}{prop:differential:homo}
@@ -562,6 +567,8 @@ that is, for any $\lam\ge 0$ and $v\in\T_p$ we have
 \end{subthm}
 
 \begin{subthm}{prop:differential:ultra}
+The differential $\dd_pf\:\T_p\to\RR$ is the restriction of ultradifferential defined in Section~\ref{sec:ultradifferential};
+that is,
 \[\dd_pf=\dd^\o_pf|_{\T_p}.\]
 \end{subthm}
 
@@ -574,7 +581,7 @@ Passing to a subdomain of $f$ if necessary,
 we can assume that $f$ is $\Lip$-Lipschitz and $\lambda$-concave for some $\Lip,\lambda\in\RR$.
 
 Take a geodesic $\gamma$  in $\Dom f$ starting at $p$.
-Since $f\circ\gamma$ is semiconcave,
+Since $f\circ\gamma$ is $\lambda$-concave,
 the right derivative $(f\circ\gamma)^+(0)$ is defined.
 Since $f$ is  $\Lip$-Lipschitz, we have
 \[|(f\circ\gamma)^+(0)-(f\circ\gamma_1)^+(0)|
@@ -588,7 +595,7 @@ Thus we can extend $\phi$ to all of  $\T_p$ as an $\Lip$-Lipschitz function.
 
 {\sloppy 
 
-It remains to show that $\phi$ is the differential of $f$ at $p$.
+It remains to check that $\phi$ is the differential of $f$ at $p$.
 Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
 Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
 that is, if 
@@ -600,7 +607,7 @@ Then
 \le
 \Lip\cdot\dist[{{}}]{\alpha(t)}{\gamma_n(t)}{}.\]
 Hence 
-\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t)\]
+\[f\circ\alpha(t)=f(p)+\phi(v)\cdot t+o(t).\]
 
 The last part follows from the definitions of differential and ultradifferential; see Section~\ref{sec:Ultralimits of functions}.
 \qeds
@@ -610,7 +617,7 @@ The last part follows from the definitions of differential and ultradifferential
 \section{Ultratangent space}
 \label{sec: ultradiff}
 
-Fix a selective ultrafilter $\o$ on the set  $\NN$ of natural numbers.
+Fix a selective ultrafilter $\o$ on the set of natural numbers.
 
 For a metric space $\spc{X}$ and a positive real number $\lam$,
 we will denote by $\lam\cdot\spc{X}$ its \index{blowup}\emph{$\lam$-blowup},
@@ -696,22 +703,25 @@ Since $\T_p'$ is dense in $\T_p$,
 we can extend $\iota$ to a distance-preserving map $\T_p\to \T^\o_p$.
 \qeds
 
-\section{Ultradifferential}
+\section{Ultradifferential}\label{sec:ultradifferential}
 
 Given a function $f\:\spc{L}\to\RR$, consider the sequence of functions $f_n\:n\cdot\spc{L}\to\RR$ defined by 
 \[f_n(x^n)=n\cdot(f(x)-f(p)),\]
-where $x^n\in n\cdot\spc{L}$ is the point correspnding to $x\in\spc{L}$.
+where $x\mapsto x^n$ denotes the natural map $\spc{L}\to n\cdot\spc{L}$.
 While $n\cdot(\spc{L},p)\to(\T^\o,\0)$ as $n\to\o$, 
 the functions $f_n$ converge to the \emph{$\o$-differential} of $f$ at $p$.
 It will be denoted by $\dd_p^\o f$:
 \[\dd_p^\o f\:\T_p^\o\to\RR,\quad \dd_p^\o f=\lim_{n\to\o} f_n.\] 
 
-Clearly, the \index{ultradifferential} $\o$-differential $\dd_p^\o f$ of a locally Lipschitz subfunction $f$ is defined and Lipschitz at each point $p\in \Dom f$.
+Clearly, the \index{ultradifferential}$\o$-differential $\dd_p^\o f$ of a locally Lipschitz subfunction $f$ is defined and Lipschitz at each point $p\in \Dom f$.
 
 
 \section{Remarks}
 \label{page:upper-angle}
-In Alexandrov geometry, angles defined as in Section \ref{sec:angles} always exist (see Theorem~\ref{angle} and Corollary~\ref{cor:monoton-cba:angle=inf}).
+
+
+Spaces with defined angles include $\CAT{}{}$ and $\Alex{}{}$ spaces;
+see \ref{angle} and \ref{cor:monoton-cba:angle=inf}.
 
 For general metric spaces, angles may not exist, \index{$\mangle$!$\mangle^\text{up}$}
 and given a hinge $\hinge p x y$  it is more natural to consider the \index{angle!upper angle}\emph{upper angle}  defined by
