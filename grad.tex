@@ -73,8 +73,8 @@ A curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ is an $f$-gradient-like curve
 for almost all $s_0\in [s_{\min},s_{\max})$.
 \end{thm}
 
-\parit{Proof.} The ``only if'' part follows directly from the definition.
-To prove the ``if'' part, note that for any $s_0\in[s_{\min},s_{\max})$ we have
+\parit{Proof.} The only-if part follows directly from the definition.
+To prove the if part, note that for any $s_0\in[s_{\min},s_{\max})$ we have
 \begin{align*}
 \liminf_{s\to s_0+}\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{s-s_0}
 &\ge 
@@ -278,7 +278,7 @@ Then
 
 \end{thm}
 
-\parit{Proof; $(\Rightarrow)$.} 
+\parit{Proof; $(\Downarrow)$.} 
 According to \ref{thm:speed},
 \[
 \begin{aligned}
@@ -316,7 +316,7 @@ In particular, $(f\circ\hat\alpha)^+(s)=|\nabla_{\hat\alpha^+(s)} f|$, and by \r
 \end{align*}
 \medskip
 
-\noi{$(\Leftarrow)$.}
+\noi{$(\Uparrow)$.}
 Clearly,
 \begin{align*}\varsigma(t)
 &=
@@ -630,7 +630,7 @@ The $\o$-limit of the sequence $\gamma_n$ is a geodesic in $\spc{Z}_\o$ from $p_
 By uniqueness of such geodesics, we have that $\gamma_n\to \gamma_\o$ as $n\to \o$.
 Passing to the limit, we have \ref{eq:lambda-concave}.
 
-\parit{``if''-part of (\ref{SHORT.lim-grad-like}).}
+\parit{If part of (\ref{SHORT.lim-grad-like}).}
 Take $\eps>0$ so small that $\oBall(p_\o,\eps)\subset\Dom f_\o$ and $|\nabla_{x_\o}f_\o|>0$ for any $x_\o\in\oBall(p_\o,\eps)$ (this is possible by \ref{cor:gradlim}).
 
 Clearly $\hat\alpha_\o$ is $1$-Lipschitz.
@@ -640,9 +640,9 @@ $(f_\o\circ\hat\alpha_\o)^+(s)
 |\nabla_{\hat\alpha_\o(s)}f^\o|$.
 According to \ref{thm:grad-like-2nd-def}, $\hat\alpha_\o\:[0,\eps)\to \spc{Z}^\o$  is an $f_\o$-gradient-like curve.
 
-\parit{``if''-part of (\ref{SHORT.lim-grad}).}
+\parit{If part of (\ref{SHORT.lim-grad}).}
 Assume first that $|\nabla_{p_\o}f_\o|>0$, 
-so we can apply the ``if''-part of (\ref{SHORT.lim-grad-like}).
+so we can apply the if part of (\ref{SHORT.lim-grad-like}).
 Let $h_n=f_n\circ\hat\alpha_n\:[0,\eps)\to \RR$ 
 and $h_\o=f_\o\circ\hat\alpha_\o$.
 From \ref{thm:concave}, the $h_n$ are $\lambda$-concave, and clearly $h_n\to h_\o$ as $n\to\o$.
@@ -659,7 +659,7 @@ Let us define reparametrizations
 The $\lambda$-convexity of the $h_n$ implies that $\sigma_n\to\sigma_\o$ as $n\to\o$.
 By \ref{lem:grad--grad-like}, 
 $\alpha_n=\hat\alpha_n\circ\varsigma_n$.
-Applying the ``if''-part of (\ref{SHORT.lim-grad-like}) together with Lemma~\ref{lem:grad--grad-like},
+Applying the if part of (\ref{SHORT.lim-grad-like}) together with Lemma~\ref{lem:grad--grad-like},
 we get that $\alpha_\o=\hat\alpha_\o\circ\varsigma_\o$ is gradient curve.
 
 The remaining case $|\nabla_{p_\o}f_\o|=0$ can be reduced to the one above using the following trick.
@@ -678,14 +678,14 @@ $\spc{Z}_n^{\times}\to\spc{Z}_\o^{\times}$,
 $f_n^{\times}\to f_\o^{\times}$ as $n\to\o$,
 and $|\nabla_xf^{\times}_\o|>0$ for any $x\in\Dom f_\o^{\times}$.
 Thus for the sequence $f_n^{\times}\:\spc{Z}_n^{\times}\subto\RR$, 
-we can apply the ``if''-part of (\ref{SHORT.lim-grad-like}).
+we can apply the if part of (\ref{SHORT.lim-grad-like}).
 It remains to note that the curve $\alpha^{\times}_\o(t)=(\alpha_\o(t),t)$ is an $f^{\times}_\o$-gradient curve in $\spc{Z}^{\times}_\o$ 
 if and only if $\alpha_\o(t)$ is an $f_\o$-gradient curve.
 
-\parit{``only if''-part of (\ref{SHORT.lim-grad}) and (\ref{SHORT.lim-grad-like}).}
-The ``only if''-part of (\ref{SHORT.lim-grad}) follows from
-the ``if''-part of (\ref{SHORT.lim-grad}) and Picard's theorem (\ref{thm:picard}).
-Applying Lemma~\ref{lem:grad--grad-like}, we get the  ``only if''-part of (\ref{SHORT.lim-grad-like}).
+\parit{Only-if part of (\ref{SHORT.lim-grad}) and (\ref{SHORT.lim-grad-like}).}
+The only-if part of (\ref{SHORT.lim-grad}) follows from
+the if part of (\ref{SHORT.lim-grad}) and Picard's theorem (\ref{thm:picard}).
+Applying Lemma~\ref{lem:grad--grad-like}, we get the only-if part of (\ref{SHORT.lim-grad-like}).
 \qeds
 
 Directly from  local existence (\ref{thm:exist-grad-curv}) and the distance estimates (\ref{thm:dist-est}), we obtain:
@@ -1133,7 +1133,7 @@ The proof is an application of \ref{lem:grad-lip} plus trigonometric manipulatio
 We give a proof first in the simplest case $\kappa=0$, since that is easier to follow,
 and then in the harder case $\kappa\ne 0$.
 The arguments for both cases are nearly the same, 
-but the case $\kappa\not=0$ requires an extra idea.
+but the case $\kappa\ne 0$ requires an extra idea.
 
 
 
@@ -1241,7 +1241,7 @@ s\cdot\tfrac{\partial^+}{\partial s}\ell
 namely $(**)\mc0_\ell$.
 \qeds
 
-\parit{Proof of \ref{rad-mon} and \ref{rad-comp} in case $\kappa\not=0$.} 
+\parit{Proof of \ref{rad-mon} and \ref{rad-comp} in case $\kappa\ne 0$.} 
 As before, let
 \begin{align*}
 R=R(r)&=\dist{p}{\rho(r)}{},&\ell&=\ell(r,s)=\dist{\rho(r)}{\sigma(s)}{},
@@ -1340,7 +1340,7 @@ Thus from \ref{lem:grad-lip}, we have
 {\kappa\cdot\tg\kappa r\cdot\sn\kappa\ell}.
 \end{aligned}
 \leqno(C)\mc\pm\]
-Note that for all $\kappa\not=0$,
+Note that for all $\kappa\ne 0$,
 the function $x\mapsto\frac{1}{\kappa\cdot\cs\kappa x}$ is increasing.
 Thus, since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we have 
 \[\begin{aligned}
@@ -1358,7 +1358,7 @@ Thus, since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we have
 \\
 &=\cos\tangle\mc\kappa\{s_{\min};r,\ell\},
   \end{aligned}\leqno(D)\mc\pm\]
-which is the first inequality in $(*)\mc\pm_\ell$ for $\kappa\not=0$.
+which is the first inequality in $(*)\mc\pm_\ell$ for $\kappa\ne 0$.
 By switching $\rho$ and $\sigma$ we obtain the second inequality in $(*)\mc\pm_\ell$.
 Further, adding $(C)\mc\pm$ and its mirror-inequality for $\tfrac{\partial^+}{\partial s}\ell$, we have
 \[\begin{aligned}

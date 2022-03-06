@@ -34,7 +34,7 @@ so we decided to switch to ``strut''.
 \begin{thm}{Definition of struts}\label{def:strut-I}
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
 We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
- is \index{strutting point array}\emph{$\kappa$-strutting} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\not=j$.
+ is \index{strutting point array}\emph{$\kappa$-strutting} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\ne j$.
 \end{thm} 
 
 The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer $k>0$; the packing number is defined in \ref{sec:notations}.
@@ -74,7 +74,7 @@ that is $\kappa$-strutting at $p$.
 For each $i$,
 choose a point $\acute a^i\in\Str(p)$ sufficiently close to $a^i$ (so $[p\acute a^i]$ exists for each $i$).
 One can choose $\acute a^i$ so that we still have
-$\angk\kappa{p}{\acute a^i}{\acute a^j}>\tfrac\pi2$ for all $i\not=j$.
+$\angk\kappa{p}{\acute a^i}{\acute a^j}>\tfrac\pi2$ for all $i\ne j$.
 
 From hinge comparison (\ref{angle}),
 \[\mangle(\dir{p}{\acute a^j},\dir{p}{\acute a^j})
@@ -82,11 +82,11 @@ From hinge comparison (\ref{angle}),
 \angk\kappa{p}{\acute a^i}{\acute a^j}
 >
 \tfrac\pi2\]
-for all $i\not=j$.
+for all $i\ne j$.
 In particular $\pack_{\pi/2}\Sigma_p\ge \kay+1$.
 
 \parit{(\ref{SHORT.lem:stut<=>rank:rank})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:strut}).} 
-Assume $(\xi^0,\xi^1,\dots,\xi^\kay)$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\not=j$.
+Assume $(\xi^0,\xi^1,\dots,\xi^\kay)$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\ne j$.
 
 Without loss of generality, 
 we may assume that each direction $\xi^i$ is geodesic;
@@ -155,7 +155,7 @@ Yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Ly
 Fix  $\eps,r,\lambda>0$ such that the following conditions hold: 
 \begin{enumerate}[(i)]
 \item Each distance function $\distfun{a^i}{}{}$ and $\distfun{b}{}{}$ is $\tfrac\lambda2$-concave in $\oBall(p,r)$.
-\item For any $q\in \oBall(p,r)$, we have $\angk{\kappa}{q}{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\not=j$ and $\angk{\kappa}{q}{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i$.
+\item For any $q\in \oBall(p,r)$, we have $\angk{\kappa}{q}{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\ne j$ and $\angk{\kappa}{q}{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i$.
 In addition, $\eps<\tfrac{1}{10}$.
 \end{enumerate}
 
@@ -224,14 +224,14 @@ for all $i$, and
 \cos\angk{\kappa}{q}{a^i}{a^j}
 <
 -\tfrac\eps2\eqlbl{inq-a^j}\]
-for all $j\not=i$. 
+for all $j\ne i$. 
 Further, \ref{inq-a^j} implies
 \[(\dd_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
-for all $i\not=j$.
+for all $i\ne j$.
 The assumption in (\ref{111}) implies
 \[\dd_q f_{\bm{x}}
 =
-\min_{j\not=i} \{\dd_q h_{\bm{x}}^j\}+\eps\cdot(\dd_q\distfun{b}{}{}).\]
+\min_{j\ne i} \{\dd_q h_{\bm{x}}^j\}+\eps\cdot(\dd_q\distfun{b}{}{}).\]
 Thus
 \begin{align*}
 -(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})
@@ -244,7 +244,7 @@ Thus
 =
 \\
 &=
-\min_{i\not=j}\{(\dd_qh_{\bm{x}}^i)(\dir q{a^i})\}+\eps\cdot(\dd_q\distfun{b}{}{})(\dir q{a^i}).
+\min_{i\ne j}\{(\dd_qh_{\bm{x}}^i)(\dir q{a^i})\}+\eps\cdot(\dd_q\distfun{b}{}{})(\dir q{a^i}).
 \end{align*}
 Therefore (\ref{111}) follows from \ref{inq-b} and \ref{inq-h}.
 
@@ -392,14 +392,14 @@ where $\mathbb{S}^{m-1}\subset \EE^m$ is the unit sphere.
 
 Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\mathbb{S}^{m-1})$. 
 Choose a maximal $\eps$-packing in $\iota(\mathbb{S}^{m-1})$;
-that is, an array  $(\zeta^1,\zeta^2,\dots,\zeta^n)$ of directions in $\iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\not=j$.
+that is, an array  $(\zeta^1,\zeta^2,\dots,\zeta^n)$ of directions in $\iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\ne j$.
 
 Choose an array $(x,z^1,z^2,\dots,z^n)$  of points in $\spc{L}$ such that
 $\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$; 
 here we write ``$\approx$'' for ``sufficiently close''.
 We can choose this array so 
 $\angk{\kappa}p x{z^i}>\eps$ for all $i$ 
-and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\not=j$.
+and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\ne j$.
 Applying Corollary \ref{cor:euclid-subcone}, there is a point $p'$ arbitrarily close to  $p$ 
 such that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
 belong to an isometric copy of $\mathbb{S}^{\kay-1}$ in $\Sigma_{p'}$.
@@ -424,7 +424,7 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. Then
 \parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
 
 Let $n=\pack_{\eps}\oBall(p,R)$ and ${\{x^1,\dots, x^n}\}$ be a maximal $\eps$-packing in $\oBall(p,R)$;
-that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\ne j$.
 Without loss of generality, we may assume the $x^i$ are in $Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
 Choose a factor $1>s>0$ so that $\bar R>s\cdot(\dist{p}{\bar p}{}+R)$.
@@ -441,7 +441,7 @@ From \ref{cor:monoton:2-sides},
 
 Applying the cosine law gives a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
 \[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
-for all $i\not=j$.
+for all $i\ne j$.
 Hence the statement follows.
 \qeds
 
@@ -462,7 +462,7 @@ such that $\dim\Lin_q>m$ for any $q\in A$.
 
 \parit{Proof.} 
 Choose a maximal $\eps$-packing in $\oBall(p,r)$,
-that is, an array  $(x^1,x^2,\dots, x^n)$ of points in $\oBall(p,r)$ such that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\not=j$.
+that is, an array  $(x^1,x^2,\dots, x^n)$ of points in $\oBall(p,r)$ such that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\ne j$.
 Choose a neighborhood $\Omega\ni p$
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
 Let 
@@ -512,7 +512,7 @@ The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivia
 
 \parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
 Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
-Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)\z>\tfrac\pi2$ for all $i\not=j$.
+Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)\z>\tfrac\pi2$ for all $i\ne j$.
 Choose an array  $(x^0,x^1,\dots,x^m)$ of points in $\spc{L}$ such that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
 in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
 Choose points $a^i\in\mathopen{]}p x^i\mathclose{]}$ sufficiently close to $p$.
@@ -580,7 +580,7 @@ Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
 \[\HausMes_m W>0.\]
 
 Given $\eps>0$, consider a maximal $\eps$-packing of $W$, 
-that is, an array $(x^1,x^2,\dots,x^n)$ of points  in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\not=j$.
+that is, an array $(x^1,x^2,\dots,x^n)$ of points  in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\ne j$.
 Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
 
 By the definition of Hausdorff measure,
@@ -605,7 +605,7 @@ Then
 there are $R>0$ and $\eps>0$ such that:
 
 \begin{subthm}{thm:inverse-function:strut}
-For all $i\not=j$ and any $q\in\oBall(p,R)$ we have
+For all $i\ne j$ and any $q\in\oBall(p,R)$ we have
 \[\angk\kappa{q}{a^i}{a^j}>\tfrac{\pi}{2}+\eps
 \quad\text{and}\quad
 \angk\kappa{q}{b}{a^i}>\tfrac{\pi}{2}.\]
@@ -649,7 +649,7 @@ $\mangle(\xi,\zeta^i)>\tfrac\pi2-\eps$ for all $i$,
 \end{subthm}
 
 \begin{subthm}{}
-$\mangle(\zeta^i,\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
+$\mangle(\zeta^i,\zeta^j)>\tfrac\pi2+\eps$ for all $i\ne j$.
 \end{subthm}
 Then $\kay\le m$.
 \end{thm}
@@ -665,16 +665,16 @@ From the definition of angle,
 if $r$ is sufficiently small we have
 \begin{itemize}
 \item $\angk\kappa{p}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$,
-and $\angk\kappa{p}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+and $\angk\kappa{p}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\ne j$.
 \end{itemize}
 Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficiently close to $p$  that  the above conditions still hold  for $p'$; that is,
 \begin{clm}{}
- $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$, and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\not=j$.
+ $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$, and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\ne j$.
 \end{clm}
 Set $\acute\xi=\dir{p'}{\bar x}$ and $\acute\zeta^i=\dir{p'}{\bar z^i}$ for each $i$.
 By the hinge comparison (\ref{angle}), 
 \begin{clm}{}
-$\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$, and $\mangle(\acute\zeta^i,\acute\zeta^j)>\tfrac\pi2+\eps$ for all $i\not=j$.
+$\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$, and $\mangle(\acute\zeta^i,\acute\zeta^j)>\tfrac\pi2+\eps$ for all $i\ne j$.
 \end{clm}
 
 According to Corollary~\ref{cor:euclid-subcone}, all directions $\acute\xi,\acute\zeta^1,\acute\zeta^2,\dots,\acute\zeta^\kay$ lie in an isometric copy of the standard $n$-sphere in $\Sigma_{p'}$. Clearly $n\le m-1$.
@@ -683,7 +683,7 @@ Thus it  remains to prove the following claim, which is a partial case of the le
 \begin{clm}{}
 If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\mathbb{S}^{m-1}$,
 $\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all  $i$, and
-$\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\not=j$,
+$\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\ne j$,
 then $\kay\le m$.
 \end{clm}
 
@@ -720,9 +720,9 @@ Thus from the induction hypothesis we have  $\kay-1\le {m-1}$.
 
 \parit{Proof of \ref{thm:inverse-function}; (\ref{SHORT.thm:inverse-function:strut}).}  
 Fix $\eps>0$ such that 
-$\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}>\tfrac\pi2+\eps$ for all $i\not=j$.
+$\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}>\tfrac\pi2+\eps$ for all $i\ne j$.
 Choose  $R>0$ sufficiently small that 
-$\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa q{b}{a^i}>\tfrac\pi2+\eps$ for all $i\not=j$ and any $q\in\oBall(p,R)$.
+$\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa q{b}{a^i}>\tfrac\pi2+\eps$ for all $i\ne j$ and any $q\in\oBall(p,R)$.
 Clearly, (\ref{SHORT.thm:inverse-function:strut}) holds for $\oBall(p,R)$.
 
 \parit{(\ref{SHORT.thm:inverse-function:chart}).}
@@ -971,7 +971,7 @@ $\LinDim\spc{L}>1$, a contradiction.
 \claimqeds
 
 Now assume no geodesic includes $p$ as a non endpoint.
-Since $\LinDim\spc{L}\z=1$ there is a point $y\not=p$.
+Since $\LinDim\spc{L}\z=1$ there is a point $y\ne p$.
 
 Fix a positive value $\eps<\dist{p}{y}{}$.
 Let us show:
@@ -995,7 +995,7 @@ let $z\in \oBall(p,\eps)\backslash[p y]$.
 Choose a point $w\in \mathopen{]} p y \mathclose{[}$ such that 
 \[\dist{p}{w}{}+\dist{p}{z}{}<\eps.\]
 Consider geodesic $[w z]$, and let $q\in[p y]\cap[w z]$  be the point that maximizes the distance $\dist{w}{q}{}$.
-Since no geodesic includes $p$ as a non endpoint, we have $p\not=q$.
+Since no geodesic includes $p$ as a non endpoint, we have $p\ne q$.
 As above, $\mangle\hinge{q}{p}{y}=\pi$ 
 and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.
 Thus, according to Proposition~\ref{E=T}, 
@@ -1024,7 +1024,7 @@ It is easy to see that only following cases can occur
 In this case $\spc{L}\iso\RR$.
 \item $\gamma_+$ is defined on closed interval, say $[0,a]$ and $\gamma_-$ is defined of an infinite interval $[0,\infty)$ (or vise versa).
 In this case $\spc{L}\iso\RR_{\ge0}$.
-\item both $\gamma_+$ and $\gamma_-$ are defined on closed intervals, say $[0,a]$ and $[0,b]$ and $\gamma_+(a)\not=\gamma_-(b)$.
+\item both $\gamma_+$ and $\gamma_-$ are defined on closed intervals, say $[0,a]$ and $[0,b]$ and $\gamma_+(a)\ne \gamma_-(b)$.
 In this case $\spc{L}\iso[0,a+b]$.
 \item both $\gamma_+$ and $\gamma_-$ are defined on one closed interval, say $[0,a]$ and $\gamma_+(a)=\gamma_-(a)$.
 In this case, $\spc{L}\iso\tfrac{a}{\pi}\blow\mathbb{S}^1$.

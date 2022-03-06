@@ -123,7 +123,7 @@ Then the quotient space $\spc{L}/G$ is locally $\Alex\kappa$.
 
 \parit{Proof of \ref{thm:submetry-CBB}.}
 Fix a quadruple of points $p,x^1,x^2,x^3\in \spc{M}$ such that 
-$\dist{p}{x^i}<\tfrac{\varpi\kappa}2$ for any $i$.
+$\dist{p}{x^i}{}<\tfrac{\varpi\kappa}2$ for any $i$.
 Choose an arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
 
 Since $\sigma$ is submetry, we can choose the points $\hat{x}^1,\hat{x}^2,\hat{x}^3\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
@@ -165,10 +165,17 @@ Since $\eps>0$ is arbitrary we have
 +\angk\kappa p{x^2}{x^3}
 +\angk\kappa p{x^3}{x^1}\le 2\cdot\pi;\]
 that is,
-the $\Alex\kappa$ comparison holds for this quadruple.
+the $\Alex\kappa$ comparison holds for this quadruple in  $\spc{M}$.
 \qeds
 
 \section{Geodesics}
+
+Recall that general complete length spaces might have no geodesics;
+see Exercise~\ref{ex:no-geod}.
+
+\begin{thm}{Exercise}\label{ex:nongeod-cbb}
+Construct a complete length $\Alex0$ space that is not geodesic.
+\end{thm}
 
 We are going to show that all complete length $\Alex{}$ spaces have plenty of geodesics in the following sense. Recall that a subset of a topological space is called G-delta if it is a countable intersection of open sets.
 
@@ -182,13 +189,6 @@ $W_p$ is dense in a neighborhood of $p$
 and for any $q\in W_p$ there is a geodesic $[p q]$.
 \end{thm}
 
-Recall that general complete length spaces might have no geodesics;
-see Exercise~\ref{ex:no-geod}.
-
-\begin{thm}{Exercise}\label{ex:nongeod-cbb}
-Construct a complete length $\Alex0$ space that is not geodesic.
-\end{thm}
-
 \begin{thm}{Definition}\label{def:straight}
 Let $\spc{X}$ be a metric space 
 and $p\in \spc{X}$.
@@ -197,18 +197,18 @@ A point $q\in \spc{X}$ is called \index{straight point}\emph{$p$-straight} (brie
 
 For an array of points $x^1,x^2,\dots,x^\kay$, 
 we use the notation
-\[\Str(x^1,x^2,\dots,x^\kay)=\bigcap_{i=1}^\kay\Str(x^i).\]
+\[\Str(x^1,x^2,\dots,x^\kay)=\bigcap_i\Str(x^i).\]
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:almost.geod}
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-Then the set  $\Str(p)$ is a dense G-delta set, 
-and for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
+Then the set  $\Str(p)$ is a dense G-delta set.
+Moreover, for any $q\in \Str(p)$ there is a unique geodesic $[p q]$.
 
 In particular, $\spc{L}$ is G-delta geodesic.
 \end{thm}
 
-The proof below is very close to the original proof given by Conrad Plaut \cite[Th. 27]{plaut:survey}.
+This theorem was proved by by Conrad Plaut \cite[Th. 27]{plaut:survey}.
 
 \parit{Proof.}
 Given a positive integer $n$, 
@@ -235,8 +235,8 @@ If $\eps$ and $\delta$ are sufficiently small, then
 that is, $y\in\Omega_n$, 
 a contradiction.
 
-Note that $\Str(p)=\bigcap_{n\in \NN}\Omega_n$.
-It follows that $\Str(p)$ is a dense G-delta set.
+Note that $\Str(p)=\bigcap_{n}\Omega_n$;
+therefore, $\Str(p)$ is a dense G-delta set.
 
 Assuming $q\in \Str(p)$,
 let us show that there is a unique geodesic connecting $p$ and $q$.
@@ -283,7 +283,7 @@ Then
 Thus, for any $\eps>0$ and sufficiently large $n,\kay$, we have $\angk\kappa q{z_\kay}{r_n}\z>\pi-\eps$.
 From $\Alex\kappa$ comparison (\ref{df:cbb1+3}), for all large $\kay$ and $j$, we have $\angk\kappa q{z_\kay}{z_j}\z<2\cdot\eps$ and thus 
 \[\dist{z_\kay}{z_j}{}<\eps\cdot\Const(\kappa,t);\]
-that is, $\{z_n\}$ is Cauchy, and $z=\lim_n z_n$ satisfies \ref{eq:thm:connect-1}.
+that is, $z_n$ is a Cauchy sequence, and its limit $z$ satisfies \ref{eq:thm:connect-1}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:almost.geod}
@@ -314,7 +314,7 @@ If $\spc{L}$ is a $\Alex\kappa$ space,
 then the following conditions hold for all $p,x,y\in \spc{L}$, provided the model triangle $\modtrig\kappa(p x y)$ is defined.
 
 \begin{subthm}{2-sum} 
-(adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, $z\not=p$ we have
+(adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ we have
 \[\angk\kappa z p x
 +\angk\kappa z p y\le \pi.\]
 \end{subthm}
@@ -335,21 +335,17 @@ $\mangle\hinge x p y$ is defined and
 \[\mangle\hinge x p y\ge\angk\kappa x p y,\]
 or equivalently
 \[\side\kappa \hinge x p y\ge\dist{p}{y}{}.\]
-Moreover, if $z\in\mathopen{]}x y\mathclose{[}$ and $z\not=p$, then 
+Moreover, if $z\in\mathopen{]}x y\mathclose{[}$ and $z\ne p$, then 
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
 for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
 \end{subthm}
 
 Moreover, in each case, the converse holds if $\spc{L}$ is G-delta geodesic.
-That is, if one of the conditions (\ref{SHORT.2-sum}), (\ref{SHORT.point-on-side}) or  (\ref{SHORT.angle}) holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
+That is, if one of the conditions (\ref{SHORT.2-sum}), (\ref{SHORT.point-on-side}), or  (\ref{SHORT.angle}) holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
 \end{thm}
-
-\parbf{Remarks.} 
-Monotonicity of the model angle with respect to adjacent sidelengths (\ref{cor:monoton}) was named the \index{convexity property}\emph{convexity property} by Alexandrov.
 
 A slightly stronger form of (\ref{SHORT.angle}) is given in \ref{lem:devel-glob}.
 See also Problem~\ref{open:hinge-}.
-
 
 \parit{Proof; (\ref{SHORT.2-sum}).} Since $z\in \mathopen{]}x y\mathclose{[}$, we have $\angk\kappa z x y=\pi$. 
 Thus, $\Alex\kappa$ comparison
@@ -419,8 +415,8 @@ Show that
 \end{thm}
 
 \begin{thm}{Angle-sidelength  monotonicity}\label{cor:monoton} 
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
-$p,x,y\in \spc{L}$,
+Let $p$, $x$ , $y$ be points in a complete length $\Alex{\kappa}$ space $\spc{L}$.
+Suppose that the model triangle
 $\modtrig\kappa(p x y)$ is defined
 and there is a geodesic $[xy]$.
 Then for $\bar y\in\mathopen{]}xy]$ the function 
@@ -444,7 +440,7 @@ The angle $\mangle\hinge{x}{p}{y}$ is defined and
 \end{subthm}
 \end{thm}
 
-The proof is contained in the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) of Theorem~\ref{thm:defs_of_alex}.
+The proof is contained in the first part of (\ref{SHORT.2-sum})$+$(\ref{SHORT.point-on-side})$\Rightarrow$(\ref{SHORT.angle}) of the proof above.
 
 \begin{thm}{Exercise}\label{ex:equality-alexlemma} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
@@ -505,6 +501,9 @@ for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints 
 
 \end{thm}
 
+\parbf{Remarks.} 
+Monotonicity of the model angle with respect to adjacent sidelengths (\ref{cor:monoton}) was named the \index{convexity property}\emph{convexity property} by Alexandrov.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Function comparison} \label{sec:func-comp-CBB}
@@ -529,10 +528,12 @@ in $\oBall(p,\varpi\kappa)$.
 \end{subthm}
 \end{thm}
 
-In particular, a complete G-delta geodesic space $\spc{L}$ is $\Alex{0}$ if and only if for any $p\in \spc{L}$, the function $\distfun[2]{p}{}{}\:\spc{L}\to\RR$ 
-is $2$-concave as defined in Section~\ref{sec:conv-fun}.
+\begin{thm}{Corollary}
+A complete G-delta geodesic space $\spc{L}$ is $\Alex{0}$ if and only if for any $p\in \spc{L}$, the function $\distfun[2]{p}{}{}\:\spc{L}\to\RR$ 
+is $2$-concave.
+\end{thm} 
 
-\parit{Proof.} 
+\parit{Proof of \ref{thm:conc}.} 
 Let $[x y]$ be a geodesic in $\oBall(p,\varpi\kappa)$ and $\ell=\dist{x}{y}{}$.
 Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$.
 Set \begin{align*} 
@@ -552,7 +553,6 @@ Hence the result.
 \qeds
 
 Recall that Busemann functions are defined in Proposition \ref{prop:busemann}.
-Compare the following exercise to Exercise~\ref{ex:busemann-CBA}.
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
 {\sloppy 
@@ -567,12 +567,14 @@ If $\kappa=0$, then the Busemann function $\bus_\gamma$ is  concave.
 
 \begin{subthm}{}
 If $\kappa=-1$, then the function 
-\[f=\exp\circ\bus_\gamma\] 
-satisfies
+$f=\exp\circ\bus_\gamma$ 
+satisfies 
 \[f''- f\le 0.\]
 \end{subthm}
 
 \end{thm}
+
+Exercise~\ref{ex:busemann-CBA} is an analogous statement for upper curvature bound.
 
 \section{Development}
 
@@ -588,7 +590,7 @@ Let $\kappa\in \RR$,
 $\spc{X}$ be a metric space, 
 $\gamma\:\II\to \spc{X}$ be a $1$-Lipschitz curve,
 $p\in \spc{X}$,
-$\tilde p\in\Lob2{\kappa}$.
+and $\tilde p\in\Lob2{\kappa}$.
 Assume $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
 all $t\in \II$.
 Then there exists a unique up to rotation curve
@@ -600,10 +602,10 @@ $[\tilde p\tilde \gamma(t)]$ monotonically turns around $\tilde p$ counterclockw
 
 \smallskip
 
-If $p,\tilde p,\gamma,\tilde \gamma$ are as above,
-then $\tilde \gamma$ is called the \index{development}\emph{$\kappa$-development of $\gamma$ with respect to $p$}; 
-the point $\tilde p$ is called \index{development!basepoint of a development}\emph{the basepoint of the development}.
-When we say that the $\kappa$-development of $\gamma$ with respect to $p$ is {}\emph{defined} we always assume that $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
+If $p$, $\tilde p$, $\gamma$, and $\tilde \gamma$ are as above,
+then $\tilde \gamma$ is called the \index{development}\emph{$\kappa$-development} of $\gamma$ with respect to $p$; 
+the point $\tilde p$ is called the \index{development!basepoint of a development}\emph{basepoint} of the development.
+When we say that the $\kappa$-development of $\gamma$ with respect to $p$ is defined, we always assume that $0<\dist{p}{\gamma(t)}{} < \varpi\kappa$ for
 all 
 $t\in \II$.
 \end{thm}
@@ -616,7 +618,7 @@ Consider the functions $\rho$, $\theta\:\II\to\RR$ defined as
 &
 \theta(t)
 &=
-\int\limits_{t_0}^{t}\sqrt{\frac{1-(\rho')^2}{\rho^2}}\cdot\dd\under t,
+\int\limits_{t_0}^{t}\frac{\sqrt{1-(\rho')^2}}{\sn\kappa\rho},
 \end{align*}
 where $t_0\in\II$ is a fixed number and $\int$ denotes Lebesgue integral.
 Since $\gamma$ is $1$-Lipshitz, so is $\rho(t)$, and thus the function $\theta$ is defined and nondecreasing.
@@ -644,7 +646,7 @@ The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to 
 
 The curve $\tilde \gamma$ is called 
 \emph{locally convex (concave) with respect to $\tilde p$} 
-if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to $\tilde p$.
+if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to~$\tilde p$.
 \end{thm}
 
 Note that if $\kappa>0$, then the supergraph of a curve is the subgraph with respect to the opposite point. 
@@ -667,10 +669,10 @@ its $\kappa$-development with respect to $p$ is convex.
 
 
 
-A simpler proof of the ``only-if''-part can be built on the adjacent angle comparison (\ref{2-sum}).
+A simpler proof of the only-if part can be built on the adjacent angle comparison (\ref{2-sum}).
 We use a longer proof since it also implies the short hinge lemma (\ref{lem:devel-glob}).
 
-\parit{Proof; ``only-if''-part.}  
+\parit{Proof; only-if part.}  
 Let $\gamma\:[0,T]\to \oBall(p,\varpi\kappa)\backslash \{p\}$ be a unit-speed geodesic in $\spc{L}$.
 
 Consider a fine partition 
@@ -678,8 +680,8 @@ Consider a fine partition
 Set $x_i=\gamma(t_i)$ and choose a point 
 \[p'\in \Str(x_0,x_1,\dots,x_n)\] 
 sufficiently close to $p$;
-so geodesics $[p'x_i]$ exist for all $i$
-(see Definition~\ref{def:straight}).
+recall that geodesics $[p'x_i]$ exist for all $i$
+(see \ref{thm:almost.geod}).
 
 {\sloppy 
 
@@ -726,11 +728,11 @@ In the case $\kappa>0$, the proof of \ref{eq:thm:devel**} requires more work.
 Applying rescaling, we can assume that $\kappa=1$.
 Since $\gamma$ lies in $B_\pi(p')$, the point-on-side comparison implies that the antipodal point of $\tilde p'$ does not lie on the polygonal line $\tilde x_0\dots\tilde x_n$.
 
-Consider the space $L$ glued from the model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\z\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
+Consider the space $L$ glued from the solid model triangles $\trig{\tilde p'}{\tilde x_{0}}{\tilde x_1},\z\dots,\trig{\tilde p'}{\tilde x_{n-1}}{\tilde x_n}$ along the corresponding sides.
 Note that $\theta$ is the total angle of $L$ at $\tilde p'$.
 We can assume that $L$ has nonempty interior.
-Otherwise all the triangles are degenerate.
-Since $\tilde p'$ is not on the polygonal line $\tilde x_0\dots\tilde x_n$, the latter implies that $\theta=0$.
+Otherwise all the triangles are degenerate, and therefore $\theta=0$;
+the latter holds since $\tilde p'$ is not on the polygonal line $\tilde x_0\dots\tilde x_n$.
 
 Consider a minimizing geodesic $[\tilde x_0\tilde x_n]_L$.
 By \ref{eq:thm:detr*} we may assume that $\tilde p'\notin[\tilde x_0\tilde x_n]_L$.
@@ -746,17 +748,18 @@ Whence \ref{eq:thm:devel**} follows.
 Inequalities \ref{eq:thm:devel*} and \ref{eq:thm:devel**} imply that the polygon $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex.
 
 Let us take finer and finer partitions and pass to the limit of the polygon $\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n$ as $p'\to p$.
-We obtain a convex curvilinear triangle formed by a curve $\tilde \gamma\:[0,T]\to\Lob2{\kappa}$ --- the limit of broken line $\tilde x_0\tilde x_1\dots \tilde x_n$ 
+We obtain a convex curvilinear triangle formed by a curve $\tilde \gamma\:[0,T]\to\Lob2{\kappa}$ --- the limit of polygonal line $\tilde x_0\tilde x_1\dots \tilde x_n$ 
 and two geodesics $[\tilde p'\,\tilde \gamma(0)]$,
 $[\tilde p'\,\tilde \gamma(T)]$.
 Since $[\tilde p'\tilde x_0\tilde x_1\dots \tilde x_n]$ is convex,
  the natural parametrization of $\tilde x_0\tilde x_1\dots \tilde x_n$ 
 converges to the natural parametrization of $\tilde \gamma$. % add a ref??
-Thus $\tilde \gamma$ is the $\kappa$-development of $\gamma$ with respect to $p$. This proves the ``only-if'' part of \eqref{thm:devel}.
+Thus $\tilde \gamma$ is the $\kappa$-development of $\gamma$ with respect to $p$.
+This proves the only-if part of \eqref{thm:devel}.
 
 %\noi{($\Leftarrow$).}
 
-\parit{Proof; ``if''-part.}  
+\parit{If part.}  
 Assuming convexity of the development, we will prove the point-on-side comparison (\ref{point-on-side}). 
 We can assume that $p\notin [x y]$; otherwise the statement is trivial.
 
@@ -764,7 +767,7 @@ Set $T=\dist{x}{y}{}$ and $\gamma(t)=\geod_{[x y]}(t)$; note that $\gamma$ is a 
 Let $\tilde \gamma\:[0,T]\to\Lob2\kappa$ be the $\kappa$-development with base $\tilde p$ of $\gamma$ with respect to $p$.
 Take a partition $0=t_0<t_1<\dots<t_n=T$, and set 
 \[\tilde y_i=\tilde \gamma(t_i)\quad \text{and}\quad \tau_i=\dist{\tilde y_0}{\tilde y_1}{}+\dist{\tilde y_1}{\tilde y_2}{}+\dots+\dist{\tilde y_{i-1}}{\tilde y_i}{}.\] 
-Since $\tilde \gamma$ is convex, for a fine partition we have that broken line $\tilde y_0\tilde y_1\dots\tilde y_n$ is also convex.
+Since $\tilde \gamma$ is convex, for a fine partition we have that the polygonal line $\tilde y_0\tilde y_1\dots\tilde y_n$ is also convex.
 Applying Alexandrov's lemma (\ref{lem:alex}) inductively to pairs of model triangles 
 \[\modtrig\kappa
 \{\tau_{i-1},\dist{\tilde p}{\tilde y_0}{},\dist{\tilde p}{\tilde y_{i-1}}{}\}
@@ -780,7 +783,7 @@ For finer and finer partitions we have
 Thus, the point-on-side comparison (\ref{point-on-side}) follows.
 \qeds
 
-Note that in the proof of  ``if''-part we could use a slightly weaker version of the hinge comparison (\ref{angle}).
+Note that in the proof of if part we could use a slightly weaker version of the hinge comparison (\ref{angle}).
 Namely we proved the following lemma, which will be needed later in the proof of the globalization theorem (\ref{thm:glob}).
 
 \begin{thm}{Short hinge lemma}\label{lem:devel-glob}
@@ -910,9 +913,6 @@ Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space.
 Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
 \end{thm}
 
-Our proof of Globalization theorem \ref{thm:glob} is based on presentations in \cite{plaut:dimension} and \cite{burago-burago-ivanov};
-this proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
-
 The following corollary of the globalization  theorem says that the expression ``space with curvature $\ge \kappa$'' makes sense.
 
 \begin{thm}{Corollary}\label{cor:CAT>k-sence}
@@ -923,7 +923,7 @@ Then $\spc{L}$ is $\Alex\Kappa$ if and only if $\spc{L}$ is $\Alex\kappa$ for an
 \parit{Proof.}
 Note that if $\Kappa\le 0$, this statement follows directly from the  definition of an Alexandrov space (\ref{df:cbb1+3}) and monotonicity of the function $\kappa\mapsto\angk\kappa x y z$ (\ref{k-decrease}).
 
-The ``if''-part also follows directly from the definition.
+The if part also follows directly from the definition.
 
 For $\Kappa>0$, the angle $\angk{\Kappa} x y z$ might be undefined while $\angk{\kappa} x y z$ is defined.
 However, $\angk{\Kappa} x y z$ is defined if $x$, $y$, and $z$ are sufficiently close to each other.
@@ -943,10 +943,9 @@ In particular, if $G\acts \spc{L}$ is an isometric group action with closed orbi
 This follows from the globalization theorem and Theorem \ref{thm:submetry-CBB}.
 \qeds
 
-In the proof of the globalization theorem 
-we will use three lemmas.
-The first is the short hinge lemma (\ref{lem:devel-glob}), which gives a characterization of $\Alex\kappa$ spaces that is the same as the hinge comparison condition \ref{angle} if $\kappa\le 0$ and is a slightly weaker condition if  $\kappa>0$.
-
+Our proof of the globalization theorem (\ref{thm:glob}) is based on presentations in \cite{plaut:dimension} and \cite{burago-burago-ivanov};
+this proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
+We will need the short hinge lemma (\ref{lem:devel-glob}) together with the following two lemmas.
 The following lemma says that if comparison holds for all small hinges, then it holds for slightly bigger hinges near the given point.
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
@@ -1090,7 +1089,8 @@ The following lemma works in all complete spaces; it will be used as a substitut
 
 
 \begin{thm}{Lemma on almost minimum}\label{lem:alm-min}
-Let $\spc{X}$ be a complete metric space. Suppose $p\in \spc{X}$,  $r\:\spc{X}\to \RR$ is a function, and $\eps>0$.
+Let $\spc{X}$ be a complete metric space.
+Suppose $r\:\spc{X}\to \RR$ is a function, $p\in \spc{X}$,   and $\eps>0$.
 Assume that the function $r$ is strictly positive in $\cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$ and
 $\varliminf_{n}r(x_n)>0$ for any convergent sequence 
 $x_n\to x\in \cBall[p,\tfrac{1}{\eps^2}\cdot r(p)]$. 
@@ -1301,17 +1301,17 @@ Then
 
 \end{thm}
 
-\parit{Proof.}
-From \ref{cor:monoton},
-\[\mangle\hinge{p_\o}{x_\o}{y_\o}
-=
-\sup\set{\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}}{\bar x_\o \in \mathopen{]}p_\o x_\o],\ \bar y_\o\in \mathopen{]}p_\o x_\o]}.\]
-
 \begin{wrapfigure}{r}{25 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-835}
 \end{wrapfigure}
+
+\parit{Proof.}
+From \ref{cor:monoton},
+\[\mangle\hinge{p_\o}{x_\o}{y_\o}
+=
+\sup\set{\angk\kappa{p_\o}{\bar x_\o}{\bar y_\o}}{\bar x_\o \in \mathopen{]}p_\o x_\o],\ \bar y_\o\in \mathopen{]}p_\o x_\o]}.\]
 
 For fixed $\bar x_\o \in \mathopen{]}p_\o x_\o]$ 
 and $\bar y_\o\in \mathopen{]}p_\o x_\o]$,
@@ -1331,7 +1331,7 @@ Hence the result.
 Let $\spc{L}_n$  be a sequence of complete length $\Alex\kappa$ spaces,
 and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume that sequences of points $p_n, x_n, y_n$ in $\spc{L}_n$ 
-converge  to points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$,
+converge to points $p_\o, x_\o, y_\o$ in  $\spc{L}_\o$ as $n\to\o$,
 and the following two conditions hold:
 \begin{subthm}{}
 $p_\o\in \Str(x_\o)$,
@@ -1490,9 +1490,10 @@ if there is a unique geodesic $[p q]$ in the ultrapower $\spc{L}^\o$, then $[p q
 \parit{Proof of \ref{lem:strong-angle}.}
 The first statement follows directly from the first variation formula (\ref{1st-var+}) 
 and the definition of model angle (see Section~\ref{sec:angles}).
-The second statement follows from Plaut's theorem (\ref{thm:almost.geod}) applied to $\spc{L}^\o$.
-(Note that according to Proposition~\ref{prp:A^omega}, $\spc{L}^\o$ is a complete length $\Alex{}$ space.)\qeds
 
+The second statement follows from Plaut's theorem (\ref{thm:almost.geod}) applied to $\spc{L}^\o$.
+(Note that according to Proposition~\ref{prp:A^omega}, $\spc{L}^\o$ is a complete length $\Alex{}$ space.)
+\qeds
 
 \parit{Proof of \ref{1st-var+}.}
 By Corollary~\ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
@@ -1539,7 +1540,7 @@ In this section we consider $\Alex{\kappa}$ spaces for $\kappa>0$.
 Applying rescaling we can assume that $\kappa=1$.
 
 The following theorem states that if one ignores a few exceptional spaces, then the diameter of a space with positive lower curvature bound is bounded.
-Note that many authors (but not us) exclude these spaces in the definition of Alexandrov space with positive lower curvature bound.
+Many authors (but not us) exclude these spaces in the definition of Alexandrov space with positive lower curvature bound.
 
 \begin{thm}{On diameter of a space}\label{diam-k>0}
 Let $\spc{L}$ be a complete length $\Alex1$ space. 
@@ -1580,21 +1581,22 @@ h(\ell)\le h(0)
 =
 \dist{x}{y}{}.\]  
 Since the geodesic $[x y]$ is unique this means that $p\in [x y]$, and hence $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
+
 Since in $\Alex{}$ spaces, geodesics do not bifurcate (\ref{nonsplit}), 
 it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$ as a local geodesic $\gamma$ 
 (which might not be minimizing).
 In other words, $\spc{L}$ is isometric to a 1-dimensional Riemannian manifold with possibly nonempty boundary.
 From this, it is easy to see that $\spc{L}$ falls into one of the exceptional spaces described in the theorem.
 
-Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$, then the above argument applied to $\spc{L}^\o$ yields that $\spc{L}^\o$ is isometric to one of the exceptional spaces. 
-As all of those spaces are proper, $\spc{L}=\spc{L}^\o$.
+Lastly, if $\spc{L}$ is not geodesic and $\diam \spc{L}>\pi$, then the above argument applied to $\spc{L}^\o$ yields that each metric component of $\spc{L}^\o$ is isometric to one of the exceptional spaces. 
+As all of those spaces are proper, $\spc{L}$ is a metric component in $\spc{L}^\o$.
 \qeds
 
 \begin{thm}{Lemma}\label{concave-pi/2}
 Let $\spc{L}$ be a complete length $\Alex1$ space and $p\in \spc{L}$.
 Then $\distfun{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\pi)\backslash \oBall(p,\tfrac\pi2)$.
 
-In particular, if $\diam\spc{L}\le\pi$ 
+In particular, if $\diam\spc{L}\le\pi$,
 then the complements $\spc{L}\backslash \oBall(p,r)$ and $\spc{L}\backslash \cBall[p,r]$ are convex for any $r>\tfrac\pi2$.
 
 \end{thm}
@@ -1632,7 +1634,6 @@ Arguing by contradiction, suppose
 for some $p,q,r\in \spc{L}$. 
 Rescaling the space slightly, we can assume that $\diam\spc{L}<\pi$,
 but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
-
 By Corollary \ref{cor:CAT>k-sence},
 after rescaling $\spc{L}$ is still $\Alex1$.
 
@@ -1680,21 +1681,21 @@ From the barrier inequality \ref{barrier'}, we get
 and hence $\dist{\tilde p}{\tilde q}{}\ge\dist{p}{q}{}$ and $\dist{\tilde p}{\tilde r}{}\ge\dist{p}{r}{}$.
 
 Therefore 
-$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ cannot exceed the perimeter of the  spherical triangle $\trig{\tilde p}{\tilde q}{\tilde r}$; 
-that is,
-\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\le 2\cdot\pi,\]
-a contradiction.
+$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ cannot exceed the perimeter of the  spherical triangle $\trig{\tilde p}{\tilde q}{\tilde r}$. 
+In particular,
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}\le 2\cdot\pi\]
+--- a contradiction.
 \qeds
 
 
 Let $\kappa>0$.
 Consider the following extension $\angk{\kappa+}{{*}}{{*}}{{*}}$ 
 of the model angle function $\angk\kappa{{*}}{{*}}{{*}}$.
-This definition works well for $\Alex{}$ spaces; for $\CAT{}$ spaces there is a similar but different definition.
+This definition works well for $\Alex{}$ spaces; for $\CAT{}$ spaces there is a similar but definition.
 Some authors define the comparison angle to be $\angk{\kappa+}{{*}}{{*}}{{*}}$.
 
 \begin{thm}{Definition of extended angle}\label{def:extended-angle}
-Suppose $p,q,r$ are points in a metric space, and $p\not=q$, $p\not=r$. 
+Suppose $p,q,r$ are points in a metric space, and $p\ne q$, $p\ne r$. 
 Let
 \[\angk{\kappa+} p q r=\sup\set{\angk{\Kappa} p q r}{\Kappa\le\kappa}.\]
 The value $\angk{\kappa+} p q r$ is called the \index{model angle!extended model angle}\emph{extended model angle} of the triple $p$, $q$, $r$.
@@ -1732,8 +1733,8 @@ The rule for calculating extended angle is an easy consequence of its definition
 
 \section{Remarks and open problems}
 
-The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov),
-but as far as we know it was first stated in print in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
+The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
+it was first stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 
 
 \begin{thm}{Open question}\label{open:hinge-}

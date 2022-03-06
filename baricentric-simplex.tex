@@ -62,7 +62,7 @@ as
 
 
 We say that a function array is \emph{nondegenerate} 
-if $\InWeb\bm{f}\not=\emptyset$.
+if $\InWeb\bm{f}\ne \emptyset$.
 
 \parbf{Example.} 
 If $\spc{X}$ is a geodesic space, 
@@ -241,7 +241,7 @@ By Lemma~\ref{lem:argmin(convex)}, $w^i$ is finite for each $i$.
 Clearly $\bm{w}=(w^0,w^1,\dots,w^\kay)$ is a lower bound of $\bar W$ with respect to $\succcurlyeq$.
 
 It is clear that $W$ has nonempty interior,
-and $W\not=\RR^{\kay+1}$ since $W$ is bounded below.
+and $W\ne \RR^{\kay+1}$ since $W$ is bounded below.
 Therefore $S=\Fr_{\RR^{\kay+1}}W=\Fr_{\RR^{\kay+1}}\bar W$
 is a complete convex hypersurface in $\RR^{\kay+1}$.
 
@@ -333,7 +333,7 @@ From the definition of inner web, we have
 $\bm{v}\in \bm{f}(\InWeb\bm{f})$ 
 if and only if 
 $\bm{v}\in S$ and
-for any $i$ there is $\bm{w}=(w^0,w^1,\dots,w^\kay)\in W$ such that $w^j<v^j$ for all $j\not=i$.
+for any $i$ there is $\bm{w}=(w^0,w^1,\dots,w^\kay)\in W$ such that $w^j<v^j$ for all $j\ne i$.
 Thus $\bm{f}(\InWeb\bm{f})$ is open in $S$.
 That is, $\InWeb\bm{f}$ is $C^{\frac{1}{2}}$-homeomorphic to an open set in a convex hypersurface $S\subset\RR^{\kay+1}$,
 and hence to an open set of $\RR^{\kay}$, as claimed.
@@ -581,7 +581,7 @@ By \ref{thm:warp-curv-bound:cbb:S}, $\mathring{\spc{U}}$ is $\CAT0$.
 Let us denote by $\iota$ the natural embedding of $\spc{U}$ as the unit sphere in $\mathring{\spc{U}}$,  and by  
 $\proj\:\mathring{\spc{U}}\subto\spc{U}$ the submap
 defined by $\proj(v)=\iota^{-1}(v/|v|)$ for all 
-$v\not=\0$.
+$v\ne \0$.
 Note that there is $z\in\spc{U}$ and $\eps>0$ such that
 the set 
 \[K_\eps
@@ -619,7 +619,7 @@ and $B^i=\cBall[a^i,r^i]$ for some array of positive reals $(r^0,r^1,\dots,r^\ka
 Assume that
 $\bigcap_i B^i=\emptyset$,
 but
-$\bigcap_{i\not=j} B^i\not=\emptyset$
+$\bigcap_{i\ne j} B^i\ne \emptyset$
 for any $j$.
 Then $\bm{a}$ is nondegenerate. 
 \end{thm}
@@ -656,22 +656,22 @@ p\in B^j
 \] 
 for some $j$.
 Then $p$ is a point of local minimum for the function 
-\[h^j(x)=\max_{i\not=j}\{\distfun{B^i}{x}{}\}.\]
+\[h^j(x)=\max_{i\ne j}\{\distfun{B^i}{x}{}\}.\]
 Hence 
-\[\max_{i\not=j}\{\mangle\hinge p x {a^i}\}\ge \tfrac\pi2
+\[\max_{i\ne j}\{\mangle\hinge p x {a^i}\}\ge \tfrac\pi2
 \]
 for any $x\in\spc{U}$.
 From the angle comparison (\ref{cat-hinge}), it follows that 
 $p$ is a global minimum of $h^j$ and hence
 \[
-p\in \bigcap_{i\not=j} B^i.
+p\in \bigcap_{i\ne j} B^i.
 \]
 The latter and \ref{eq:p-in-Bj} contradict $\bigcap_i B^i=\emptyset$. \claimqeds 
 \noindent 
 
 From the definition of web, it also follows that 
-\[\Web(\distfun{\bm{a}^{\without j}}{}{})\subset \bigcup_{i\not=j}B^i.\]
-Indeed, if $q\in \bigcap_{i\not=j}B^i$ and $q'\notin \bigcup_{i\not=j}B^i$,
+\[\Web(\distfun{\bm{a}^{\without j}}{}{})\subset \bigcup_{i\ne j}B^i.\]
+Indeed, if $q\in \bigcap_{i\ne j}B^i$ and $q'\notin \bigcup_{i\ne j}B^i$,
 then $\dist{a_i}{q}{}\z<\dist{a_i}{q'}{}$ for any $i\ne j$ therefore $q'\notin \Web(\distfun{\bm{a}^{\without j}}{}{})$.
 Therefore the claim implies that
 $p\notin\Web(\distfun{\bm{a}^{\without j}}{}{})$ for each $j$;
@@ -717,7 +717,7 @@ For some $z\in \spc{U}$ there is an array of $m+1$ balls $B^i\z=\oBall(a^i,r^i)$
 such that 
 \[\bigcap_i B^i=\emptyset
 \quad\text{and}\quad
-\bigcap_{i\not=j} B^i\not=\emptyset
+\bigcap_{i\ne j} B^i\ne \emptyset
 \quad \text{for each $j$}.\]
 
 \end{subthm}
@@ -800,7 +800,7 @@ $\Omega_{\alpha^0}
 \Omega_{\alpha^1}
 \cap\dots\cap
 \Omega_{\alpha^n}
-\not=
+\ne 
 \emptyset$.
 
 Fix a Lipschitz partition of unity 
@@ -842,7 +842,7 @@ Then for some $\kay>m$,
 there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$
 such that the barycentric simplex $\sigma=\map[2]|_{\Delta^\kay}$ is nondegenerate; 
 that is, 
-$$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\not=\emptyset.
+$$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\ne \emptyset.
 $$
 Applying Corollary~\ref{cor:LinDim>bary}
 gives $\LinDim\spc{U}\ge \kay$, a contradiction.
@@ -930,12 +930,12 @@ Note that one can choose $\eps>0$
 and a point arrray $(\dot a^0,\dot a^1,\dots,\dot a^m)$ in $E\subset \T_q$ 
 such that 
 $\bigcap_i\cBall[\dot a^i,1+\eps]=\emptyset$
-and $\bigcap_{i\not=j}\cBall[\dot a^i,1\z-\eps]\z{\not=}\emptyset$ for each $j$.
+and $\bigcap_{i\ne j}\cBall[\dot a^i,1\z-\eps]\z{\ne }\emptyset$ for each $j$.
 
 Applying Claim \ref{clm:finite-config-cba}, we get a point array 
 $(a^0,a^1,\dots,a^m)$ in $\spc{U}$
 such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
-and $\bigcap_{i\not=j}\cBall[a^i,\lam]\not=\emptyset$ for each $j$.
+and $\bigcap_{i\ne j}\cBall[a^i,\lam]\ne \emptyset$ for each $j$.
 Since $\lam>0$ can be chosen arbitrarily small, 
  (\ref{SHORT.thm:dim-infty-CBA:bary}) follows.
 \qeds
@@ -992,7 +992,7 @@ From the angle comparison (\ref{cat-hinge}), it follows that
 $p\in\InWeb\bm{a}$ if and only if both of the following conditions hold:
 \begin{enumerate}
 \item $\max_i\{\mangle\hinge p{a^i}{u}\}\ge \tfrac\pi2$ for any $u\in\spc{U}$,
-\item\label{prop:<pi/2} for each $i$ there is $u^i\in\spc{U}$ such that $\mangle\hinge p{a^j}{u^i}<\tfrac\pi2$ for all $j\not=i$.
+\item\label{prop:<pi/2} for each $i$ there is $u^i\in\spc{U}$ such that $\mangle\hinge p{a^j}{u^i}<\tfrac\pi2$ for all $j\ne i$.
 \end{enumerate}
 
 Due to the semicontinuity of angles (\ref{lem:ang.semicont}),
@@ -1001,7 +1001,7 @@ there is $\eps>0$ such that for any $x\in \oBall(p,10\cdot\eps)$ we have
 \mangle\hinge {x}{a^j}{u^i}
 <
 \tfrac\pi2-10\cdot\eps
-\quad\text{for all}\quad j\not=i.
+\quad\text{for all}\quad j\ne i.
 \eqlbl{eq:<pi/2-eps}\]
 
 Now assume that for sufficiently small $\eps>0$
@@ -1037,14 +1037,14 @@ Clearly
 &<
 \dist{a^i}{q}{}
 \end{align*}
-for all $i\not=j$.
+for all $i\ne j$.
 
 Set $B^i=\cBall[a^i,\dist{a^i}{q}{}]$ and $B^{m+1}=\cBall[b,\dist{a^i}{q}{}-\tfrac13\cdot\delta]$.
 Clearly 
 \begin{align*}
-&\!\!\!\!\bigcap_{i\not=m+1} B^i=\{q\},
+&\!\!\!\!\bigcap_{i\ne m+1} B^i=\{q\},
 \\
-&\bigcap_{i\not=j}B^i\ni w^j\quad\text{for}\quad j\not=m+1,
+&\bigcap_{i\ne j}B^i\ni w^j\quad\text{for}\quad j\ne m+1,
 \\
 &\bigcap_{i}B^i=\{q\}\cap B^{m+1}=\emptyset.
 \end{align*}

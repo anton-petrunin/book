@@ -16,7 +16,7 @@ $\spc{L}$ is $\Alex\kappa$ if and only if for any 3-point set $V_3$ and any 4-po
 any short map $f\:V_3\to\Lob2\kappa$ can be extended to a short map $F\:V_4\to\Lob2\kappa$ (so $f=F|_{V_3}$).
 \end{thm}
 
-The proof of the ``only if'' part of Theorem \ref{thm:kirsz-def} can be obtained as a corollary of Kirszbraun's theorem (\ref{thm:kirsz+}).
+The only-if part of Theorem \ref{thm:kirsz-def} can be obtained as a corollary of Kirszbraun's theorem (\ref{thm:kirsz+}).
 We present another, more elementary proof; using the following analog of Alexandrov's lemma (\ref{lem:alex}).
 
 We say that  two triangles with a common vertex \emph{do not overlap} if their convex hulls intersect only at the common vertex.
@@ -115,7 +115,7 @@ Therefore
 a contradiction. 
 \qeds
 
-\parit{Proof of \ref{thm:kirsz-def}; ``if'' part.} 
+\parit{Proof of \ref{thm:kirsz-def}; if part.} 
 Assume $\spc{L}$ is geodesic.
 Consider $x^1,x^2,x^3\in \spc{L}$ such that the model triangle 
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa(x^1 x^2 x^3)$ is defined.
@@ -128,7 +128,7 @@ for $\spc{L}^\o$ and recall that $\spc{L}^\o$ is geodesic (see \ref{obs:ultralim
 Thus, from above, $\spc{L}^\o$ is a complete length $\Alex\kappa$ space. 
 By Proposition~\ref{prp:A^omega}, $\spc{L}$ is a complete length $\Alex\kappa$ space.
 
-\parit{``Only if'' part.}
+\parit{Only-if part.}
 Assume the contrary: 
 $\spc{L}$ is complete  and $\Alex\kappa$,  and 
 $x^1,x^2,x^3,p\in \spc{L}$ and 
@@ -154,12 +154,12 @@ Then the last inequality must be an equality.
  Thus we may extend by taking $\tilde p$ on $[\tilde x^1\tilde x^3]$ or  $[\tilde x^2\tilde x^3]$.
  %S: Note change
 
-For each $i\in \{1,2,3\}$, consider a point $\tilde p^i\in\Lob2\kappa$ such that $\dist{\tilde p^i}{\tilde x^i}{}$ is minimal among points satisfying $\dist{\tilde p^i}{\tilde x^j}{}\le\dist{p}{ x^j}{}$ for all $j\not=i$. 
+For each $i\in \{1,2,3\}$, consider a point $\tilde p^i\in\Lob2\kappa$ such that $\dist{\tilde p^i}{\tilde x^i}{}$ is minimal among points satisfying $\dist{\tilde p^i}{\tilde x^j}{}\le\dist{p}{ x^j}{}$ for all $j\ne i$. 
 Clearly, every $\tilde p^i$ is inside the triangle $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$ (that is, in $\Conv(\tilde x^1,\tilde x^2,\tilde x^3)$), and $\dist{\tilde p^i}{\tilde x^i}{}>\dist{p}{ x^i}{}$ for each $i$.
 Since the function $x\mapsto\tangle\mc\kappa\{x;a,b\}$
 is increasing, it follows that
 \begin{enumerate}[(i)]
-\item $\dist{\tilde p^i}{\tilde x^j}{}=\dist{p}{ x^j}{}$ for $i\not=j$;
+\item $\dist{\tilde p^i}{\tilde x^j}{}=\dist{p}{ x^j}{}$ for $i\ne j$;
 \item no pair of triangles from $\trig{\tilde p^1}{\tilde x^2}{\tilde x^3}$, $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$, $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ overlap in $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}$.
 \end{enumerate}
 
@@ -188,7 +188,7 @@ and any $4$-point set $V_4\supset V_3$ in $\Lob2\kappa$,
 any short map $f\:V_3\to\spc{U}$ can be extended to a short map $F\:V_4\to\spc{U}$.
 \end{thm}
 
-Note that the ``only if'' part of Theorem \ref{thm:cba-kirsz-def} does not follow directly from Kirszbraun's theorem, since the desired extension is in $\spc{U}$ --- not its completion.
+Note that the only-if part of Theorem \ref{thm:cba-kirsz-def} does not follow directly from Kirszbraun's theorem, since the desired extension is in $\spc{U}$ --- not its completion.
 
 \begin{thm}{Lemma}\label{lem:smaller-trig}
 Let $x^1,x^2,x^3,y^1,y^2,y^3\in\Lob{}{\kappa}$
@@ -212,13 +212,13 @@ The last part of the lemma can be proved by composing this map with folding maps
 \qeds
 %S. Should $\Lob{}{\kappa}$ be $\Lob2\kappa$ in this lemma?
 
-\parit{Proof of \ref{thm:cba-kirsz-def}; ``if'' part.}
+\parit{Proof of \ref{thm:cba-kirsz-def}; if part.}
 The point-on-side comparison (\ref{cat-monoton}) follows  by
 taking $V_3=\{\tilde x,\tilde y,\tilde p\}$ and  $V_4=\{\tilde x,\tilde y,\tilde p,\tilde z\}$ where $z\in \mathopen{]}x y\mathclose{[}$.  
 It is only necessary to observe that  $F(\tilde z)=z$ by uniqueness of $[x y]$.
 
 
-\parit{``Only if'' part.}
+\parit{Only-if part.}
 Let $V_3=\{\tilde x^1,\tilde x^2,\tilde x^3\}$ and $V_4=\{\tilde x^1,\tilde x^2,\tilde x^3,\tilde p\}$.
 
 Set $y^i\z=f(\tilde x^i)$ for all $i$.
@@ -393,7 +393,7 @@ and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bo
 If 
 \[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset,\]
 then there is an index array $(\alpha_1,\alpha_2,\dots,\alpha_n)$ in $\IndexSet$ such that
-\[\bigcap_{i=1}^nK_{\alpha_i}=\emptyset.\]
+\[\bigcap_iK_{\alpha_i}=\emptyset.\]
 
 %??Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
 \end{thm}
@@ -418,7 +418,7 @@ We present the original proof of Urs Lang and Viktor Schroeder \cite{lang-schroe
 
 \parit{Proof of \ref{thm:helly}.} 
 Assume the contrary. Then for any finite set $F\subset \IndexSet$, 
-\[K_{F}\df \bigcap_{\alpha\in F}K_{\alpha}\not=\emptyset.\]
+\[K_{F}\df \bigcap_{\alpha\in F}K_{\alpha}\ne \emptyset.\]
 We will construct a point $z$ such that $z\in K_\alpha$ for each $\alpha$.
 Thus we will arrive at a contradiction since
 \[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset.\]
@@ -451,7 +451,7 @@ Clearly
 Repeat the above arguments for  the sequence $F_n'=F_n\cup \{\alpha\}$.
 As a result, we get another point $z'$ such that $\dist{p}{z}{}=\dist{p}{z'}{}=r$ and 
 $z,z'\in K_{F_n}$ for all $n$.
-Thus, if $z\not=z'$ the midpoint $\hat z$ of $[zz']$ would belong to all 
+Thus, if $z\ne z'$ the midpoint $\hat z$ of $[zz']$ would belong to all 
 $K_{F_n}$, and from comparison, we would have $\dist{p}{\hat z}{}<r$, a contradiction.
 
 Thus, $z'=z$; in particular 
@@ -747,7 +747,7 @@ that $Q\subset\spc{L}$ is a maximal set;
 that is, $f\:Q\to\spc{U}$ does not admit a short extension to any larger set $Q'\supset Q$.
 
 Let us argue by contradiction.
-Assume that $Q\not=\spc{L}$ and 
+Assume that $Q\ne \spc{L}$ and 
 choose $p\in \spc{L}\backslash Q$.
 Then
 \[\bigcap_{x\in Q} \cBall[f(x),\dist{p}{x}{}]
@@ -757,7 +757,7 @@ Then
 Since $\kappa\le 0$, the balls are convex; 
 thus, by Helly's theorem (\ref{thm:helly}), 
 one can choose points $x^1,x^2,\dots, x^n$ in $Q$ such that
-\[\bigcap_{i=1}^n \cBall[y^i,\dist{x^i}{p}{}]
+\[\bigcap_i \cBall[y^i,\dist{x^i}{p}{}]
 =
 \emptyset,
 \eqlbl{eq:cap=cBalls=0}\]
