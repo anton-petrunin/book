@@ -773,7 +773,7 @@ is nondecreasing.
 For a partition $0=t^0<t^1<\dots<t^n=T$, let 
 \[\tilde y^i=\tilde \gamma(t^i)\quad \text{and}\quad \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
 Since $\tilde \gamma$ is locally concave, 
-for a sufficiently fine partition the broken geodesic $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally convex  with respect to $\tilde p$. 
+for a sufficiently fine partition the polygonal line $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally convex  with respect to $\tilde p$. 
 Alexandrov's lemma (\ref{lem:alex}), applied inductively to pairs of triangles  $\modtrig\kappa \{\tau^{i-1},\dist{p}{\tilde y^0}{},\dist{p}{\tilde y^{i-1}}{}\}$ and  $\modtrig\kappa\{\dist{\tilde y^{i-1}}{\tilde y^i}{}, \dist{p}{\tilde y^{i-1}}{},\dist{p}{\tilde y^{i}}{}\}$, shows that the sequence  $\tilde \mangle\mc\kappa\{\dist{p}{\tilde y^{i}}{};\dist{p}{\tilde y^0}{},\tau^i\}$ is nondecreasing.
 
 Taking finer partitions and passing to the limit,   
@@ -797,9 +797,10 @@ By repeated application of Alexandrov's lemma (\ref{lem:alex}), and inequality~\
 \[\sum_{i=1}^n\mangle\hinge{\tilde p}{\tilde x^{i-1}}{\tilde x^i}
 \le
 \angk\kappa p{x^0}{x^n}\le\pi.\] 
-Then by \ref{eq1:concave-devel*},  the broken geodesic $\tilde p\tilde x^0\tilde x^1\dots \tilde x^n$  are concave with respect to  $\tilde p$.
+Then by \ref{eq1:concave-devel*},  the polygonal line $\tilde p\tilde x^0\tilde x^1\dots \tilde x^n$  are concave with respect to  $\tilde p$.
 
-Note that  under finer partitions, the broken geodesics $\tilde x^0\tilde x^1\dots \tilde x^n$ approach the development of $\gamma$ with respect to $p$. Since the broken geodesics are convex, their lengths converge to the length of $\gamma$.
+Note that  under finer partitions, the polygonal line $\tilde x^0\tilde x^1\dots \tilde x^n$ approach the development of $\gamma$ with respect to $p$.
+Since the polygonal lines are convex, their lengths converge to the length of $\gamma$.
 Hence the result. 
 \qeds
 
@@ -1757,7 +1758,7 @@ Thus $F$ is not majorizing.
 
 \medskip
 
-In  the following proofs, $x^1 \dots x^n$ ($n\ge 3$) denotes a broken geodesic with vertexes $x^1,\dots,x^n$, and $[x^1\dots x^n ]$ denotes the corresponding (closed) polygon.
+In  the following proofs, $x^1 \dots x^n$ ($n\ge 3$) denotes a polygonal line $x^1,\dots,x^n$, and $[x^1\dots x^n ]$ denotes the corresponding (closed) polygon.
 %that is, respectively, the join of geodesics $[x^1x^2]$, $[x^2,x^3],\dots,[x^{n-1}x^n]$ and the closed curve formed by joining $[x^1x^2],\dots,[x^{n-1}x^n], [x^n x^1]$.
 For a subset $R$ of the ambient metric space,
 we denote by $[x^1\dots x^n ]_R$ a polygon in the length metric of $R$.
@@ -1784,15 +1785,15 @@ ${\trig p x y}_D$.  Then there is a short map $G\:\Conv\trig{\tilde p}{\tilde x}
 
 
 \parit{Proof.}
-We prove the lemma for a broken geodesic $\beta$;
+We prove the lemma for a polygonal line $\beta$;
 the general case then follows by approximation.
 Namely, since $\beta$ is concave 
-it can be approximated by broken geodesics that are concave with respect to $p$, 
+it can be approximated by polygonal lines that are concave with respect to $p$, 
 with their lengths converging to $\length \beta$. 
 Passing to a partial limit we will obtain the needed map $G$.  
 
-Suppose $\beta=x^0x^1\dots x^n$ is a broken geodesic with $x^0=x$ and $x^n=y$.
-Consider a sequence of broken geodesics $\beta_i=x^0x^1\dots x^{i-1}y_i$ such that $\dist{p}{y_i}{}=\dist{p}{y}{}$ and 
+Suppose $\beta=x^0x^1\dots x^n$ is a polygonal line with $x^0=x$ and $x^n=y$.
+Consider a sequence of polygonal lines $\beta_i=x^0x^1\dots x^{i-1}y_i$ such that $\dist{p}{y_i}{}=\dist{p}{y}{}$ and 
 $\beta_i$ has same length as $\beta$; 
 that is, 
 \[\dist{x^{i-1}}{y_i}{}=\dist{x^{i-1}}{x^{i}}{}+\dist{x^{i}}{x^{i+1}}{}+\dots+\dist{x^{n-1}}{x^n}{}.\]
@@ -1804,7 +1805,7 @@ that is,
 \end{figure}
 
 Clearly $\beta_n=\beta$.
-Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the broken geodesics $\beta_{n-1}, \beta_{n-2},\dots,\beta_1$ is concave with respect to $p$.
+Sequentially applying Alexandrov's lemma (\ref{lem:alex}) shows that each of the polygonal lines $\beta_{n-1}, \beta_{n-2},\dots,\beta_1$ is concave with respect to $p$.
 Let $D_i$ be the subgraph of $\beta_i$ with respect to $p$.
 Applying Lemma~\ref{lem:quadrangle} gives a short map $G_i\:D_{i}\to D_{i+1}$ that maps $y_{i}\mapsto y_{i+1}$ and does not move $p$ and $x$ (in fact,  $G_i$ is the identity everywhere except on $\Conv\trig{p}{x^{i-1}}{y_i}$).
 Thus the composition 
@@ -1827,7 +1828,7 @@ As in the proof of the development criterion (\ref{thm:concave-devel}), take a p
 and set $x^i=\gamma(t^i)$. 
 Construct a chain of model triangles  $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\z=
 \modtrig\kappa(p x^{i-1} {x^i})$, with $\tilde x^0=\tilde x$ and the direction of $[\tilde p\tilde x^i]$ turning counterclockwise as $i$ grows.  
-Let $D_n$ be the subgraph with respect to $\tilde p$ of the broken geodesic $\tilde x^0\dots \tilde x^n$.
+Let $D_n$ be the subgraph with respect to $\tilde p$ of the polygonal line $\tilde x^0\dots \tilde x^n$.
 
 
 Let  $\delta_n$ be the maximum radius of a circle inscribed in any of the triangles $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$.  
@@ -2271,7 +2272,7 @@ Then $\spc{U}$ is simply connected if and only if it is $\infty$-simply connecte
 \end{thm}
 
 \parit{Proof; if part.}
-It is sufficient to show that any closed curve in $\spc{U}$ is homotopic to a closed broken geodesic.
+It is sufficient to show that any closed curve in $\spc{U}$ is homotopic to a polygon.
 
 Let $\gamma_0$ be a closed curve in $\spc{U}$.
 According to Corollary~\ref{cor:loc-CAT(k)},
@@ -2279,7 +2280,7 @@ there is $\eps>0$ such that
 $\oBall(\gamma(x),\eps)$ is $\CAT\kappa$
 for any $x$.
 
-Choose a broken geodesic $\gamma_1$ such that $\dist{\gamma_0(x)}{\gamma_1(x)}{}<\eps$ for any $x$.
+Choose a polygon $\gamma_1$ such that $\dist{\gamma_0(x)}{\gamma_1(x)}{}<\eps$ for any $x$.
 By \ref{thm:cat-unique}, 
 $\geodpath_{[\gamma_0(x)\gamma_1(x)]}$ 
 is uniquely defined 
@@ -2297,7 +2298,7 @@ so that
 $$\dist{\gamma_{t_{i-1}}(x)}{\gamma_{t_i}(x)}{}<\tfrac\eps{10}$$
 for any $i$ and $x$.
 Set $\hat\gamma_{t_0}=\gamma_0$, $\hat\gamma_{t_n}=\gamma_{t_n}$.
-For each $0<i<n$, approximate $\gamma_{t_i}$ by a closed broken geodesic $\hat\gamma_{i}$.
+For each $0<i<n$, approximate $\gamma_{t_i}$ by a polygon $\hat\gamma_{i}$.
 
 Construct the homotopy 
 from $\hat\gamma_{t_{i-1}}$ 
