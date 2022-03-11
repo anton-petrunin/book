@@ -4,7 +4,7 @@
 \chapter{Warped products}
 The warped product is a construction that produces 
 a new metric space, denoted by $\spc{B}\warp f \spc{F}$,
-from two metric spaces $\spc{B}$, $\spc{F}$ and a function $f\:\spc{B}\to\RR_{\ge0}$. 
+from two metric spaces base $\spc{B}$ and fiber $\spc{F}$, and a function $f\:\spc{B}\to\RR_{\ge0}$. 
 
 Many important constructions such as direct product, cone, spherical suspension, and join can be defined using warped products.
 
@@ -12,7 +12,7 @@ Many important constructions such as direct product, cone, spherical suspension,
 \label{sec:wp-def}
 \label{sec:wp-properties}
 
-First we define the warped product for length spaces and then we expand the definition to allow for arbitrary metric spaces $\spc{F}$.
+First we define the warped product for length spaces and then we expand the definition to allow for arbitrary fiber $\spc{F}$.
 
 Let $\spc{B}$ and $\spc{F}$ be length spaces and $f\:\spc{B}\to [0,\infty)$ be a continuous function.
 
@@ -26,9 +26,7 @@ v_\spc{B}^2+ (f\circ\gamma_\spc{B})^2\cdot v_\spc{F}^2}\cdot dt,
 \eqlbl{eq:length}
 \]
 where $\int$ is Lebesgue integral, and $v_\spc{B}$ and $v_\spc{F}$ are the speeds of $\gamma_\spc{B}$ and $\gamma_\spc{F}$ respectively. 
-
-Note that $\length_f \gamma\ge \length \gamma_\spc{B}$.
-The integral in \ref{eq:length} can be broken into the sum of two parts: one for the restriction of $\length_f\gamma$ as in \ref{eq:length} to the nonzero set of $f\circ\gamma_\spc{B}$, and the other for the length of $\gamma_\spc{B}$ restricted to the zero set.
+(Note that $\length_f \gamma\ge \length \gamma_\spc{B}$.)
 
 Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
  \[
@@ -47,7 +45,8 @@ We do not claim that every Lipschitz curve in $\spc{B}\warp f \spc{F}$ may be re
 The warped product $\spc{\spc{B}}\warp{f}\spc{F}$ satisfies:
 
 \begin{subthm}{horiz-leaf-proj}
-The projection $(p,\phi_0)\mapsto p$ is a submetry which when restricted to any horizontal leaf $\spc{B}\times\{\phi_0\}$
+The projection $(p,\phi_0)\mapsto p$ is a submetry.
+Moreover, its restriction to any horizontal leaf $\spc{B}\times\{\phi_0\}$
 is an isometry to~$\spc{B}$.
 \end{subthm}
 
@@ -67,15 +66,18 @@ Claim  (\ref{SHORT.vert-leaf-proj}) follows from the $f$-length formula \ref{eq:
 Also by \ref{eq:length}, the projection of
 $\spc{B}\warp{f}\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$ is length-nonincreasing; hence (\ref{SHORT.horiz-leaf-proj}).
 
-The projection $(p,\phi)\mapsto (p_0,\phi)$ of a neighborhood of the vertical leaf $\{p_0\} \times \spc{F}$ to $\{p_0\} \times \spc{F}$ is length-nonincreasing if $p_0$ is a local minimum point of $f$. 
+Suppose $p_0$ is a local minimum point of $f$.
+Then the projection $(p,\phi)\mapsto (p_0,\phi)$ of a neighborhood of the vertical leaf $\{p_0\} \times \spc{F}$ to $\{p_0\} \times \spc{F}$ is length-nonincreasing.
+
 If $p_0$ is a global minimum point of $f$, then the same holds for the projection of whole space.
 Hence (\ref{SHORT.Df>0}).
 \qeds
 
-Note that any horizontal leaf is weakly convex, but does not have to be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space, since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
+Note that any horizontal leaf is weakly convex, but does not have to be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space.
+The latter follows since vanishing of the warping function~$f$ allows geodesics to bifurcate into distinct horizontal leaves.
 For instance, if there is a geodesic with the ends in the zero set 
 \[Z=\set{(p,\phi)\in\spc{B} \warp{f}\spc{F})}{f(p)=0},\] 
-then there is a geodesic with the same ends in each horizontal leaf.
+then there is a geodesic with the same endpoints in each horizontal leaf.
 
 \begin{thm}{Proposition}
 Suppose $\spc{B}$ and $\spc{F}$ are length spaces and $f\:\spc{B}\to [0,\infty)$ is a continuous function.
@@ -106,8 +108,8 @@ that is,
 \]
 The statement follows.
 \qeds
-
-Distance in a warped product is fiber-independent, in the sense that distances may be calculated by substituting for $\spc{F}$ a different length space:
+The following theorem states that 
+distance in a warped product is fiber-independent, in the sense that distances may be calculated by substituting for $\spc{F}$ a different length space:
 
 \begin{thm}{Fiber-independence theorem}\label{thm:fiber-independence}
 Consider length spaces $\spc{B}$, $\spc{F}$ and $\check{\spc{F}}$, and a locally Lipschitz function
@@ -229,11 +231,12 @@ if and only if $A$ is $\pi$-convex in $\spc{F}$.
 The doubling space $\spc{W}$ of a metric space $\spc{V}$ on a closed subset $A\subset\spc{V}$
 can be also defined as a special type of warped product.
 Consider the fiber $\mathbb{S}^0$ consisting of two points with distance $2$ from each other.
-Then $\spc{W}$ is isometric to the warped product 
-with base $\spc{V}$, 
-fiber $\mathbb{S}^0$ and warping function $\distfun{A}{}{}$;
+Then 
+\[\spc{W}\iso\spc{V}\warp{\distfun{A}{}{}}\mathbb{S}^0;\]
 that is,
-\[\spc{W}\iso\spc{V}\warp{\distfun{A}{}{}}\mathbb{S}^0.\]
+$\spc{W}$ is isometric to the warped product 
+with base $\spc{V}$, 
+fiber $\mathbb{S}^0$ and warping function $\distfun{A}{}{}$.
 
 \section{1-dimensional base}
 
@@ -268,8 +271,7 @@ Moreover, the converse also holds in each of the two cases.
 
 \begin{subthm}{}
 If $\spc{L}$ is a complete length $\Alex{-1}$ space,
-then $\RR\warp{\cosh}\spc{L}$ is a complete length $\Alex{-1}$ space.
-Moreover, the converse also holds.
+if and only if the warped product $\RR\warp{\cosh}\spc{L}$ is a complete length $\Alex{-1}$ space.
 \end{subthm}
 \end{thm}
 
@@ -301,10 +303,9 @@ Moreover, the converse also holds in each of the two cases.
 
 \begin{subthm}{thm:warp-curv-bound:cbb:H}
 If $\spc{L}$ is $\CAT{-1}$
-then 
+if and only if 
 $\RR\warp{\cosh}\spc{L}$
 is $\CAT{-1}$.
-Moreover, the converse also holds.
 \end{subthm}
 \end{thm}
 
@@ -329,7 +330,7 @@ we will use the following proposition.
 
 \begin{subthm}{}
 \begin{align*}
-\RR\times&\EE^{m-1}\iso\EE^{m},
+\RR\times\EE^{m-1}&\iso\EE^{m},
 \\
 \RR\warp{\exp}\EE^{m-1}&\iso\Lob{m}{-1}.
 \end{align*}
@@ -344,12 +345,11 @@ we will use the following proposition.
 The proof is left to the reader.
 
 \parit{Proof of \ref{thm:warp-curv-bound:cbb}.}
-Let us prove the last statement in (\ref{SHORT.thm:warp-curv-bound:cbb:S}); the remaining statements are similar.
 Each proof is based on the fiber-independence theorem~\ref{thm:fiber-independence} 
 and 
 the corresponding statement in Proposition~\ref{prop:warp-examples}.
 
-
+Let us prove the last statement in (\ref{SHORT.thm:warp-curv-bound:cbb:S}); the remaining statements are similar.
 Choose an arbitrary quadruple of points 
 \[(s,\phi),(t^1,\phi^1),(t^2,\phi^2),(t^3,\phi^3)\in[0,\infty)\warp{\sinh} \spc{L}.\]
 Since $\diam\spc{L}\le\pi$,
@@ -394,21 +394,24 @@ Let us formulate general results on curvature bounds of warped products
 proved by the first author and Richard Bishop \cite{alexander-bishop:warps}.
 
 \begin{thm}{Theorem}\label{thm:warp-CBB}
-Let $\spc{B}$ be a complete finite-dimensional $\Alex\kappa$ length space, and the locally Lipschitz function $f\:{\spc{B}}\to \RR_{\ge0}$ satisfy $f''+\kappa\cdot f\le 0$.
-If $\spc{B}^{(\dag)}$ is the result of gluing two copies of ${\spc{B}}$ on the closure of the set of boundary points where $f$ is nonvanishing, and $f^\dag\: \spc{B}^{(\dag)}\to\RR_{\ge0}$ is the tautological extension of $f$, suppose $\spc{B}^{(\dag)}$ is $\Alex\kappa$ 
-and $f^\dag$ satisfies $({f^\dag})''+\kappa\cdot f^\dag\le 0$.
+Let $\spc{B}$ be a complete finite-dimensional $\Alex\kappa$ length space, and $f\:{\spc{B}}\to \RR_{\ge0}$ be a locally Lipschitz function.
 Denote by $Z\subset \spc{B}$ the zero set of the restriction of $f$ to the boundary of $\spc{B}$.
+
+Suppose that $\spc{W}$ is doubling of $\spc{B}$ along the closure of $\partial \spc{B}\backslash Z$, and $\bar f\: \spc{W}\to\RR_{\ge0}$ is the natural extension of $f$.
+Assume that $\spc{W}$ is $\Alex\kappa$ 
+and $\bar f''+\kappa\cdot \bar f\le 0$.
+
 Suppose $\spc{F}$ is a complete finite-dimensional $\Alex{\kappa'}$ space.
 Then the warped product $\spc{B}\warp f\spc{F}$ is $\Alex\kappa$ in the following two cases:
 \begin{subthm}{thm:warp-CAT:Z=0}
 If $Z= \emptyset$ and 
-\[\kappa'\ge \kappa\cdot f^2(b)\]
+$\kappa'\ge \kappa\cdot f^2(b)$
 for any $b\in \spc{B}$.
 \end{subthm}
 
 \begin{subthm}{thm:warp-CAT:Zne0}
 If $Z\ne \emptyset$ and
-\[|d_zf|^2\le\kappa'\]
+$|d_zf|^2\le\kappa'$
 for any $z\in Z$.
 \end{subthm}
 
@@ -426,17 +429,12 @@ Suppose $\spc{F}$ is a
 complete  $\CAT{\kappa'}$  space.
 Then the warped product $\spc{B}\warp f\spc{F}$ is $\CAT\kappa$ in the following two cases:
 \begin{subthm}{}
-If $Z= \emptyset$ and 
-\[\kappa'\le \kappa\cdot f^2(b)\]
-for any $b\in \spc{B}$.
+If $Z= \emptyset$ and $\kappa'\le \kappa\cdot f^2(b)$ for any $b\in \spc{B}$.
 \end{subthm}
 
 \begin{subthm}{}
-If $Z\ne \emptyset$, 
-\[[(d_zf)\dir zb]^2\ge\kappa'\] for any minimizing geodesic $[zb]$ from $Z$ to a point $b\in\spc{B}$ and 
-\[\kappa'\le \kappa\cdot f^2(b)\] for any $b\in \spc{B}$ such that $\distfun{X}{b}{}\ge \tfrac{\varpi\kappa}2$.
+If $Z\ne \emptyset$ and $[(d_zf)\dir zb]^2\ge\kappa'$ for any minimizing geodesic $[zb]$ from $Z$ to a point $b\in\spc{B}$ and 
+$\kappa'\le \kappa\cdot f^2(b)$ for any $b\in \spc{B}$ such that $\distfun{X}{b}{}\ge \tfrac{\varpi\kappa}2$.
 \end{subthm}
 
 \end{thm}
-
-These theorems will be proved in the next volume. 
