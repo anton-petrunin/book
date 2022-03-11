@@ -749,7 +749,7 @@ beginfig(945)
 save u,p,n;
 path p[];
 u:=1cm;
-n=5;
+n=10;
 
 p0=(0,0)*u{1,-.5}..{1,-.5}(5,0)*u;
 
@@ -760,10 +760,10 @@ draw circle(point i of p0, .7*u);
 dOt point i of p0;
 endfor
 
-label.lft(btex $\spc{B}^0$ etex, point 0 of p0);
-label.bot(btex $\spc{B}^1$ etex, point 1/n of p0);
-label.bot(btex $\dots$ etex rotated angle(direction 3/n of p0), (2,-1)+point 3/n of p0);
-label.rt(btex $\spc{B}^n$ etex, point 1 of p0);
+whitelabel.lft(btex $\spc{B}^0$ etex,(-4,0) +point 0 of p0);
+whitelabel.bot(btex $\spc{B}^1$ etex, (0,-4) +point 1/n of p0);
+whitelabel.bot(btex $\dots$ etex rotated angle(direction (n+1)/(2*n) of p0), (2,-1)+point (n+1)/(2*n) of p0);
+whitelabel.rt(btex $\spc{B}^n$ etex, (4,0) +point 1 of p0);
 endfig;
 
 beginfig(950) 
@@ -865,13 +865,50 @@ draw p1;
 dOt z.x1,z.x2,z.x3,z.x4,z.x5,z.x6;
 
 whitelabel(btex $R_{n-1}$ etex, .5[.5[z.x1,z.x5],z.x3]);
-whitelabel(btex $R'$ etex, .3[.5[z.x1,z.x5],z.x6]);
+whitelabel(btex $\dot R$ etex, .3[.5[z.x1,z.x5],z.x6]);
 label.ulft(btex $\tilde x^1$ etex, z.x1);
 label.lft(btex $\tilde x^2$ etex, z.x2);
 label(btex $\dots$ etex rotated angle(z.x4-z.x3), 
 .5[z.x3,z.x4]+4*unitvector(z.x3-z.x4) rotated 90);
 label.rt(btex $\tilde x^{n-1}$ etex, z.x5);
 label.top(btex $\dot x^n$ etex, z.x6);
+endfig;
+
+beginfig(970) 
+save u,p;
+path p[];
+u:=1.4cm;
+
+z0=(0,0)*u;
+z1=(1,-.8)*u;
+z2=(2,0)*u;
+z3=(1,-1.4)*u;
+
+z.x=(0,-.3)*u;
+z.y=(2,-.2)*u;
+z.t=(1.6,-.8)*u;
+
+p0=z0..z1..z2..z3..cycle;
+p1=
+point 0 of p0+(10*unitvector(direction 0 of p0) rotated 90)..
+point 1 of p0+(10*unitvector(direction 1 of p0) rotated 90)..
+point 2 of p0+(10*unitvector(direction 2 of p0) rotated 90)..
+point 3 of p0+(10*unitvector(direction 3 of p0) rotated 90)..cycle;
+p2=z.x{1,-2}..z.t..{1,2}z.y;
+
+hatchfill p0--reverse(p1)--cycle withcolor (77, 1mm, -.5bp);
+draw p0;
+draw p1;
+draw z.t--z.x--z.y;
+draw p2;
+
+dOt z.t,z.x,z.y;
+
+label.top(btex $K$ etex, z3);
+whitelabel(btex $\Omega$ etex, point 3.5 of p0);
+label.lft(btex $x$ etex, z.x);
+label.rt(btex $y$ etex, z.y);
+label.rt(btex $\alpha(s)$ etex, z.t);
 endfig;
 
 beginfig(1005) 
