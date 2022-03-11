@@ -671,7 +671,7 @@ Note that it is sufficient to show that any finite set of points $x^1,\dots,x^n\
 
 Observe that $\spc{X}$ is $\Alex0$ and $\CAT0$ at the same time.
 Show that there is a unique point $p$ that minimizes the sum $\dist{p}{x^1}{}+\dots+\dist{p}{x^n}{}$.
-Note that the vectors $v^i=\lg_{[{p}{x^i}]}$ lie in a linear subspace of $\T_p$, where $\log_{x_0}$  is the gradient logarithm map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ corresponding to the gradient exponential $\gexp_{x_0}$ (see Section \ref{sec:gexp}).
+Note that the vectors $v^i=\ddir{p}{x^i}$ lie in a linear subspace of $\T_p$, where $\log_{x_0}$  is the gradient logarithm map $\log_{x_0}\:\spc{L}\to\T_{x_0}$ corresponding to the gradient exponential $\gexp_{x_0}$ (see Section \ref{sec:gexp}).
 Moreover if $K$ is the convex hull of $v_i$, then the origin of $\T_p$ lies in the interior of $K$ relative to its affine hull.
 Finally observe that the exponential map is defined on all of $K$ and is distance-preserving.
 The statement follows since the exponential map sends $v^i\mapsto x^i$ for each $i$.
@@ -743,8 +743,10 @@ Further show that
 for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
 \parbf{\ref{ex:(3+1)-nonsufficient}.}
-It is sufficient to construct a metric on the set of points $\{p$, $x^1$, $x^2$, $x^3$, $x^4\}$ that does not satisfy (4+1)-comparison but does satisfy all (3+1)-comparisons.
+It is sufficient to construct a metric on the set of points $\{p$, $x^1$, $x^2$, $x^3$, $x^4\}$ that does not satisfy (4+1)-point comparison but does satisfy all (3+1)-point comparisons.
 To do this, set  $x^i$ to be  the vertices of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^i}{}$ slightly.
+
+\parit{Remark.} There are examples of 6-point metric spaces that satisfy all (5+1)-point comparisons, but do not admit embedding into a complete length $\Alex{0}$ space \cite{lebedeva-petrunin-zolotov}.
 
 
 \parbf{\ref{ex:strut+embedding}.}
@@ -781,7 +783,7 @@ Observe that the composition $\log_{x_0}\circ F$ is distance-preserving.
 Therefore $F$ is distance-preserving;
 in particular we can take $Q=F(\tilde Q)$.
 
-\parbf{\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\lg_{x^0}{x^i}\in\T_{x^0}$.
+\parbf{\ref{ex:flat-in-CBB}.} Consider vectors $v^i=\ddir{x^0}{x^i}\in\T_{x^0}$.
 Show that all the $v^i$ lie in a linear subspace of $\T_{x^0}$ and that $x^i\mapsto v^i$ is distance-preserving.
 It follows that we can identify the convex hull $K$ of  the $v^i$ with the convex hull of  the $\tilde x^i$.
 
@@ -816,23 +818,7 @@ Hence the statement follows.
 The Kuratowsky embedding is a distance-preserving map of $\spc{X}$ into the space of bounded functions $\spc{X}$ equipped with the metric induced by the sup-norm (Section~\ref{Kuratowsky embedding}).
 It remains to show that the latter space is injective.
 
-The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him.
-
-\parbf{\ref{ex:kirszbrun-source}.}
-To prove the only-if part it is sufficient to consider only the case of two-point spaces $\spc{Z}$.
-
-It remains to prove the if part.
-
-By Zorn's lemma, we may assume that the short map $f\:Q\to \spc{Z}$ is defined on a maximal subset $Q\subset \spc{X}$;
-that is, $f$ cannot be extended to a larger set as a short map.
-Note that in this case $Q$ is a closed subset of $\spc{X}$.
-
-Assume there is a point $x\in \spc{X}\backslash Q$.
-Denote by $\bar x$ a point in $Q$ that lies at minimal distance from $x$.
-By the ultratriangle inequality, $\dist{\bar x}{y}{}\le\dist{x}{y}{}$ for any $y\in Q$.
-Assigning $f(x)=f(\bar x)$, we extend $f$ to $Q\cup\{x\}$ as a short map --- a contradiction.
-Therefore $Q=\spc{X}$, hence the statement.
-
+The second part of the exercise is a classical result of John Isbell \cite{isbell} which was rediscovered several times after him; for more on the subject see lecture notes of the third author \cite{petrunin2020pure}.
 
 \parbf{\ref{ex:warp=<}.}
 It is sufficient to show that the natural map $\spc{B}\warp{g}\spc{F}\to \spc{B}\warp{f}\spc{F}$ is short.

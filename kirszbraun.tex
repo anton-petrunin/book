@@ -39,7 +39,7 @@ $\tilde p^i$ and $\tilde x^i$ lie in the same closed halfspace determined by $[\
 If no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^\kay}$ overlap,
 then 
 \[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi,\]
-where $\mangle\tilde p^i$ denotes $\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\tilde x^j}$
+where $\mangle\tilde p^i\df\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\tilde x^j}$
 for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
 \end{thm}
 
@@ -84,12 +84,12 @@ By (\ref{no-overlap:orient-1}),
 the triangles 
 $\trig{\tilde p^3}{\tilde x^1}{\tilde x^2}$ 
 and $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$ do not overlap if and only if 
-\[
-2\cdot\pi>\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}\eqlbl{eq:old-iii}\]
-and
 \[\mangle\hinge{\tilde x^1}{\tilde x^3}{\tilde x^2}
 > 
 \mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}.\eqlbl{eq:main-overlap}\]
+and
+\[
+2\cdot\pi>\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}\eqlbl{eq:old-iii}\]
 The condition \ref{eq:main-overlap} holds if and only if 
 $\dist{\tilde x^2}{\tilde x^3}{}>\dist{\dot x^2}{\tilde x^3}{}$,
 which in turn holds if and only if 
@@ -120,7 +120,7 @@ Assume $\spc{L}$ is geodesic.
 Consider $x^1,x^2,x^3\in \spc{L}$ such that the model triangle 
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa(x^1 x^2 x^3)$ is defined.
 Choose $p\in \,{]}x^1x^2{[}\,$.
-Applying the  short map extension property with $V_3=\{x^1,x^2,x^3\}$, $V_4=\{x^1,x^2,x^3,p\}$ and the map $f(x^i)=\tilde x^i$, we obtain the point-on-side comparison (\ref{point-on-side}).
+Applying the  short map extension property with $V_3=\{x^1,x^2,x^3\}$, $V_4=\{x^1,x^2,x^3,p\}$ and the map $f\:x^i\mapsto\tilde x^i$, we obtain the point-on-side comparison (\ref{point-on-side}).
 
 In case $\spc{L}$ is not geodesic, pass to its ultrapower $\spc{L}^\o$.
 Note that the short map extension property survives
@@ -296,7 +296,7 @@ It is sufficient to show that given $\eps>0$ there is an array $(\tilde p,\tilde
 \quad
 \text{and}
 \quad
-\bigl|\dist{\tilde p}{\tilde x^i}{}-\dist{p}{x^i}{}\bigr|\le \eps.\]
+\dist{\tilde p}{\tilde x^i}{}\lege\dist{p}{x^i}{}\bigr|\pm\eps.\]
 Then one can pass to a limit array for $\eps\to 0+$.
 
 According to \ref{thm:almost.geod}, the set $\Str(x^1,\dots,x^n)$ 
@@ -313,10 +313,11 @@ Let
 \[\tilde x^i
 =
 \exp_{\tilde p}\circ\iota(\ddir{p'}{x^i}).\]
-Thus $\dist{\tilde p}{\tilde x^i}{}=\dist{p'}{x^i}{}$ and therefore
-\[\bigl|\dist{\tilde p}{\tilde x^i}{}-\dist{p}{x^i}{}\bigr|
-\le 
-\dist{p}{p'}{} \le\eps.\]
+Thus $\dist{\tilde p}{\tilde x^i}{}=\dist{p'}{x^i}{}$.
+Since $\dist{p}{p'}{} \le\eps$, we get
+\[\dist{\tilde p}{\tilde x^i}{}\lege\dist{p}{x^i}{}
+\pm
+\eps.\]
 From the hinge comparison (\ref{angle}) 
 we have 
 \[\angk\kappa{\tilde p}{\tilde x^i}{\tilde x^j}
@@ -388,14 +389,12 @@ for all $i$ and $j$.
 
 \begin{thm}{Helly's theorem}\label{thm:helly}
 Let $\spc{U}$  be a complete length $\CAT0$ space
-and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bounded convex subsets of $\spc{U}$.
+and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bounded convex subsets in~$\spc{U}$.
 
 If 
 \[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset,\]
-then there is an index array $(\alpha_1,\alpha_2,\dots,\alpha_n)$ in $\IndexSet$ such that
+then there is a finite index array $(\alpha_1,\alpha_2,\dots,\alpha_n)$ in $\IndexSet$ such that
 \[\bigcap_iK_{\alpha_i}=\emptyset.\]
-
-%??Moreover, if $\dim \spc{U}\le m$, then one can assume above $n\le m+1$.
 \end{thm}
 
 \parbf{Remarks.}
@@ -414,7 +413,7 @@ Helly's theorem
 
 \medskip
 
-We present the original proof of Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
+We present the proof of Urs Lang and Viktor Schroeder \cite{lang-schroeder}.
 
 \parit{Proof of \ref{thm:helly}.} 
 Assume the contrary. Then for any finite set $F\subset \IndexSet$, 
@@ -432,7 +431,7 @@ Take a nested sequence of finite subsets
 $F_1\subset F_2\subset \dots$ of $\IndexSet$, such that $\distfun{K_{F_n}}{p}{}\to r$.
 
 Let us show that the sequence $p^*_{F_n}$ is Cauchy. 
-Indeed, if not, then for some fixed $\eps>0$, 
+If not, then for some fixed $\eps>0$, 
 we can choose two subsequences $y'_n$ and $y''_n$ of $p^*_{F_n}$ 
 such that $\dist{y'_n}{y''_n}{}\ge\eps$.
 Let $z_n$ be the midpoint of $[y'_ny''_n]$. 
@@ -441,7 +440,7 @@ there is $\delta>0$ such that
 \[\dist{p}{z_n}{}\le \max\{\dist{p}{y'_n}{},\dist{p}{y''_n}{}\}-\delta.\]
 Thus 
 \[\limsup_{n\to\infty}\dist{p}{z_n}{}<r.\]
-On the other hand, from convexity, each $F_n$ 
+On the other hand, from convexity, each $K_{F_n}$ 
 contains all $z_\kay$ with sufficiently large $\kay$, a contradiction.
 
 Thus, $p^*_{F_n}$ converges and we can take $z=\lim_n p^*_{F_n}$.
@@ -747,7 +746,7 @@ that $Q\subset\spc{L}$ is a maximal set;
 that is, $f\:Q\to\spc{U}$ does not admit a short extension to any larger set $Q'\supset Q$.
 
 Let us argue by contradiction.
-Assume that $Q\ne \spc{L}$ and 
+Assume that $Q\ne \spc{L}$; 
 choose $p\in \spc{L}\backslash Q$.
 Then
 \[\bigcap_{x\in Q} \cBall[f(x),\dist{p}{x}{}]
@@ -803,7 +802,7 @@ Note that
 \end{itemize}
 Further, we will view the spaces $\spc{L}$ and $\spc{U}$ as unit spheres in $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ respectively.
 In the cones $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ we will use 
-``$|{*}|$'' for distance to the vertex, denoted by $\0$, 
+``$|{*}|$'' for distance to the tip, denoted by $\0$, 
 ``$\cdot$'' for cone multiplication,
 ``$\mangle(x,y)$'' for $\mangle\hinge{\0}{x}{y}$, 
 and ``$\<x,y\>$'' for $|x|\cdot|y|\cdot\cos\mangle\hinge{\0}{x}{y}$.
@@ -816,11 +815,18 @@ In particular,
 \eqlbl{eq:=<pi/2}\]
 
 \end{itemize}
-Let $\mathring{Q}=\Cone Q\subset \mathring{\spc{L}}$ and let $\mathring f\:\mathring{Q}\to \mathring{\spc{U}}$ be the natural cone extension of $f$; 
+Let $\mathring{Q}=\Cone Q\subset \mathring{\spc{L}}$ and let $\mathring f\:\mathring{Q}\to \mathring{\spc{U}}$ be the natural cone extension of~$f$; 
 that is, 
 $y=f(x)$ $\Rightarrow$ $t\cdot y=\mathring f(t\cdot x)$ 
 for $t\ge0$.
 Clearly $\mathring f$ is short.
+
+\begin{wrapfigure}{r}{60mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1020}
+\vskip0mm
+\end{wrapfigure}
 
 Applying \ref{thm:kirsz} for $\mathring f$, 
 we get a short extension map $\mathring F\:\mathring{\spc{L}}\to\mathring{\spc{U}}$. 
@@ -834,16 +840,8 @@ for any $w\in \mathring Q$.
 In particular, $|s|\le 1$.
 Applying \ref{eq:clm:kirszbraun-curv=1-rad-star} 
 for $w=t\cdot x$ and $t\to\infty$ we have
-
 \[\<f(x),s\>\ge \cos\mangle(p,x)\eqlbl{eq:<,>=<}\]
 for any $x\in Q$.
-
-\begin{wrapfigure}{r}{60mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1020}
-\vskip0mm
-\end{wrapfigure}
 
 By comparison,
 the geodesics $\geod_{[s\ t\cdot z]}$ converge as $t\to\infty$
@@ -853,11 +851,12 @@ From \ref{eq:=<pi/2},
 the function $t\mapsto\<f(x),\alpha(t)\>$ is nondecreasing. 
 From \ref{eq:<,>=<}, for
 the necessarily unique point $\bar s$ on the half-line $\alpha$ such that $|\bar s|=1$, we also have 
-\[\<f(x),\bar s\>\ge \cos\mangle(p,x)\]
-or
-\[\mangle(\bar s,f(x))
+\[\<f(x),\bar s\>\ge \cos\mangle(p,x)
+\quad\text{or, equivalently,}\quad
+\mangle(\bar s,f(x))
 \le 
-\mangle(p,f(x))\]
+\mangle(p,f(x))
+\]
 for any $x\in Q$,
 in contradiction to  \ref{eq:cap-of-balls}.
 \qeds
@@ -887,7 +886,8 @@ Prove that there is a subset $Q\subset\spc{L}$ isometric to a convex set in $\EE
 %$\trig x y z$ such that all angles in $\trig x y z$ are equal to the corresponding angles of its model %triangle, but $\trig x y z$  cannot be filled by an isometric copy of the model solid triangle.
 %\end{thm}
 
-The following statement we call (2\textit{n}+2)-point comparison.
+The following statement we call \emph{(2\textit{n}+2)-point comparison}.
+
 
 \begin{thm}{Exercise}\label{CBA-n-point}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space.
@@ -916,13 +916,6 @@ and $\dist{\tilde p^{i+1}}{\tilde q^{i}}{}=\dist{p^{i+1}}{q^{i}}{}$.}
 for all $i$.
 \end{subthm}
 
-Then for any choice of $n$ points $\tilde z^i\in [\tilde p^i\tilde q^i]$,
-we have
-\[\dist{\tilde x}{\tilde z^1}{}+\dist{\tilde z^1}{\tilde z^2}{}+\dots+\dist{\tilde z^{n-1}}{\tilde z^n}{}+\dist{\tilde z^n}{\tilde y}{}
-\ge 
-\dist{x}{y}{}.\]
-\end{thm}
-
 \begin{figure}[!ht]
 \vskip-3mm
 \centering
@@ -930,9 +923,18 @@ we have
 \vskip0mm
 \end{figure}
 
+Then for any choice of $n$ points $\tilde z^i\in [\tilde p^i\tilde q^i]$,
+we have
+\[\dist{\tilde x}{\tilde z^1}{}+\dist{\tilde z^1}{\tilde z^2}{}+\dots+\dist{\tilde z^{n-1}}{\tilde z^n}{}+\dist{\tilde z^n}{\tilde y}{}
+\ge 
+\dist{x}{y}{}.\]
+\end{thm}
+
+
 
 \section{Remarks and open problems}\label{sec:kirszbraun:open}
 
+The following problem and its relatives were mentioned by Michael Gromov in \cite[1.19]{gromov-MS}.
 
 \begin{thm}{Open problem}\label{open:n-point-CBB}
 Find a necessary and sufficient condition for a finite metric space to admit distance-preserving embeddings into 
@@ -956,7 +958,7 @@ which we will call the \index{associated matrix}\emph{associated matrix}.
 The set of associated matrices of all metrics that admit a distance-preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
 form a convex cone. 
 The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are  $\Alex{0}$ (or $\CAT{0}$ respectively).
-This convexity gives hope that the cone admits an explicit description.
+This convexity gives a bit of hope that the cone admits an explicit description.
 
 For the 5-point $\CAT{0}$ case, the (2+2)-comparison is a necessary and sufficient condition.
 This was proved by Tetsu Toyoda \cite{toyoda};
@@ -1015,15 +1017,5 @@ Use this to construct an analog of convex hull in the category of metric spaces;
 \end{subthm}
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:kirszbrun-source}
-We say that a compact space $\spc{X}$ is a \index{Kirszbrun source}\emph{Kirszbraun source} if for an arbitrary complete metric space $\spc Z$ and subset $Q\subset\spc X$, any short map $Q\to \spc{Z}$ can be extended to a short map $\spc{X}\to\spc{Z}$.
-
-Prove that a metric space $\spc{X}$ is a Kirszbraun source if and only if it satisfies the ultratriangle inequality for all triples of points;
-that is,
-\[
-\dist{x}{z}{}\le\max\{\dist{x}{y}{},\dist{y}{z}{}\}
-\]
-for any $x,y,z\in\spc{X}$.
-\end{thm}
 
 
