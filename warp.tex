@@ -17,7 +17,7 @@ First we define the warped product for length spaces and then we expand the defi
 Let $\spc{B}$ and $\spc{F}$ be length spaces and $f\:\spc{B}\to [0,\infty)$ be a continuous function.
 
 For any path $\gamma\:[0,1]\to \spc{B}\times \spc{F}$, we write $\gamma=(\gamma_\spc{B},\gamma_\spc{F})$ where 
-$\gamma_\spc{B}$ is the projection of $\gamma$ to $\spc{B}$,   
+$\gamma_\spc{B}$ is the projection of $\gamma$ to $\spc{B}$, 
 and $\gamma_\spc{F}$ is the projection to $\spc{F}$.
 If $\gamma_\spc{B}$ and $\gamma_\spc{F}$ are Lipschitz, set
 \[
@@ -37,7 +37,7 @@ Consider the pseudometric on $\spc{B}\warp f\spc{F}$ defined by
 where the exact lower bound is taken for all Lipschitz paths $\gamma\:[0,1]\to \spc{B}\times\spc{F}$. 
 The corresponding metric space is called the \index{warped product}\emph{warped product with base $\spc{B}$, fiber $\spc{F}$ and warping function $f$}; it will be denoted by $\spc{B}\warp f\spc{F}$.
 
-The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$.  Note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)\z=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
+The points in $\spc{B}\warp f\spc{F}$ can be described by corresponding pairs $(p,\phi)\in\spc{B}\times\spc{F}$. Note that if $f(p)=0$ for some $p\in \spc{B}$, then $(p,\phi)\z=(p,\psi)$ for any $\phi,\psi\in \spc{F}$.
 
 We do not claim that every Lipschitz curve in $\spc{B}\warp f \spc{F}$ may be reparametrized as the image of a Lipschitz curve in $\spc{B}\times \spc{F}$; in fact this is not true.
 
@@ -51,26 +51,26 @@ is an isometry to~$\spc{B}$.
 \end{subthm}
 
 \begin{subthm}{vert-leaf-proj}
-If $f(p_0)\ne0$, the projection $(p_0,\phi)\mapsto \phi$ of the vertical leaf $\{p_0\}\times \spc{F}$, with its length metric,  is a homothety onto $\spc{F}$ with multiplier $\tfrac1{f(p_0)}$.
+If $f(p_0)\ne0$, the projection $(p_0,\phi)\mapsto \phi$ of the vertical leaf $\{p_0\}\times \spc{F}$, with its length metric, is a homothety onto $\spc{F}$ with multiplier $\tfrac1{f(p_0)}$.
 \end{subthm}
 
-\begin{subthm}{Df>0}If  $f$ achieves its (local) minimum at $p_0$, then the inclusion of the vertical leaf $\{p_0\} \times \spc{F}$ in $\spc{B}\warp{f}\spc{F}$ is (locally) distance-preserving.
+\begin{subthm}{Df>0}If $f$ achieves its (local) minimum at $p_0$, then the inclusion of the vertical leaf $\{p_0\} \times \spc{F}$ in $\spc{B}\warp{f}\spc{F}$ is (locally) distance-preserving.
 \end{subthm}
 
 \end{thm}
 
 
 \parit{Proof.} 
-Claim  (\ref{SHORT.vert-leaf-proj}) follows from the $f$-length formula \ref{eq:length}.
+Claim \ref{SHORT.vert-leaf-proj} follows from the $f$-length formula \ref{eq:length}.
 
 Also by \ref{eq:length}, the projection of
-$\spc{B}\warp{f}\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by  $(p,\phi)\mapsto (p,\phi_0)$ is length-nonincreasing; hence (\ref{SHORT.horiz-leaf-proj}).
+$\spc{B}\warp{f}\spc{F}$ onto $\spc{B}\times\{\phi_0\}$ given by $(p,\phi)\mapsto (p,\phi_0)$ is length-nonincreasing; hence \ref{SHORT.horiz-leaf-proj}.
 
 Suppose $p_0$ is a local minimum point of $f$.
 Then the projection $(p,\phi)\mapsto (p_0,\phi)$ of a neighborhood of the vertical leaf $\{p_0\} \times \spc{F}$ to $\{p_0\} \times \spc{F}$ is length-nonincreasing.
 
 If $p_0$ is a global minimum point of $f$, then the same holds for the projection of whole space.
-Hence (\ref{SHORT.Df>0}).
+Hence \ref{SHORT.Df>0}.
 \qeds
 
 Note that any horizontal leaf is weakly convex, but does not have to be convex even if $\spc{B}\warp{f}\spc{F}$ is a geodesic space.
@@ -113,7 +113,7 @@ distance in a warped product is fiber-independent, in the sense that distances m
 
 \begin{thm}{Fiber-independence theorem}\label{thm:fiber-independence}
 Consider length spaces $\spc{B}$, $\spc{F}$ and $\check{\spc{F}}$, and a locally Lipschitz function
-$f\:\spc{B}\to\R_{\ge 0}$.  
+$f\:\spc{B}\to\R_{\ge 0}$. 
 Assume $p,q\in \spc{B}$, $\phi,\psi\in \spc{F}$ and $\check{\phi},\check{\psi}\in \check{\spc{F}}$.
 Then 
 \[
@@ -154,7 +154,7 @@ Clearly
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:warp=<}
-Let $\spc{B}$ and $\spc{F}$ be length spaces and $f,g\:\spc{B}\to \RR_{\ge0}$ be two locally Lipschitz nonnegative  functions.
+Let $\spc{B}$ and $\spc{F}$ be length spaces and $f,g\:\spc{B}\to \RR_{\ge0}$ be two locally Lipschitz nonnegative functions.
 Assume $f(b)\le g(b)$ for any $b\in\spc{B}$.
 Show that 
 $\spc{B}\warp{f}\spc{F}\le \spc{B}\warp{g}\spc{F}$;
@@ -185,7 +185,7 @@ According to the Fiber-independence theorem \ref{thm:fiber-independence}, the re
 \section{Examples}\label{direct-products}
 
 \parbf{Direct product.}
-The simplest example is the \index{direct product}\emph{direct product} $\spc{B}\times \spc{F}$, which can also be  written as the warped product $\spc{B}\warp1 \spc{F}$.  
+The simplest example is the \index{direct product}\emph{direct product} $\spc{B}\times \spc{F}$, which can also be written as the warped product $\spc{B}\warp1 \spc{F}$. 
 That is, for $p,q\in \spc{B}$ and $\phi,\psi\in \spc{F}$, the latter metric simplifies to
 \[
 \dist{(p,\phi)}{(q,\psi)}{} =\sqrt{\dist[2]{p}{q}{} + \dist[2]{\phi}{\psi}{}}.
@@ -222,7 +222,7 @@ That is,
 \]
 
 \begin{thm}{Exercise}\label{ex:convexity-in-cone}
-Let $\spc{F}$ be a length space and $A\subset  \spc{F}$.
+Let $\spc{F}$ be a length space and $A\subset \spc{F}$.
 Show that $\Cone\mc\kappa A$ is convex in $\Cone\mc\kappa\spc{F}$ 
 if and only if $A$ is $\pi$-convex in $\spc{F}$.
 \end{thm}
@@ -249,9 +249,9 @@ They are baby cases of the characterization of curvature bounds in warped produc
 If $\spc{L}$ is a complete length $\Alex{1}$ space and $\diam\spc{L}\le\pi$, 
 then 
 \begin{align*}
-\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad  \Alex1,
+\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad \Alex1,
 \\
-\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is}\quad  \Alex0,
+\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is}\quad \Alex0,
 \\
 \Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is}\quad \Alex{-1}.
 \end{align*}
@@ -283,11 +283,11 @@ Let $\spc{L}$ be a metric space.
 If $\spc{L}$ is $\CAT{1}$,
 then 
 \begin{align*}
-\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad  \CAT{1},
+\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad \CAT{1},
 \\
-\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is}\quad  \CAT{0},
+\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is}\quad \CAT{0},
 \\
-\Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is}\quad  \CAT{-1}.
+\Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is}\quad \CAT{-1}.
 \end{align*}
 Moreover, the converse also holds in each of the three cases.
 \end{subthm}
@@ -349,11 +349,11 @@ Each proof is based on the fiber-independence theorem~\ref{thm:fiber-independenc
 and 
 the corresponding statement in Proposition~\ref{prop:warp-examples}.
 
-Let us prove the last statement in (\ref{SHORT.thm:warp-curv-bound:cbb:S}); the remaining statements are similar.
+Let us prove the last statement in \ref{SHORT.thm:warp-curv-bound:cbb:S}; the remaining statements are similar.
 Choose an arbitrary quadruple of points 
 \[(s,\phi),(t^1,\phi^1),(t^2,\phi^2),(t^3,\phi^3)\in[0,\infty)\warp{\sinh} \spc{L}.\]
 Since $\diam\spc{L}\le\pi$,
-the (1+\textit{n})-point comparison (\ref{thm:pos-config})  provides a quadruple of points $\psi,\psi^1,\psi^2,\psi^3\in\mathbb{S}^3$ such that 
+the (1+\textit{n})-point comparison (\ref{thm:pos-config}) provides a quadruple of points $\psi,\psi^1,\psi^2,\psi^3\in\mathbb{S}^3$ such that 
 \[\dist{\psi}{\psi^i}{\mathbb{S}^3}=\dist{\phi}{\phi^i}{\spc{L}}\] 
 and
 \[\dist{\psi^i}{\psi^j}{\mathbb{S}^3}\ge\dist{\phi^i}{\phi^j}{\spc{L}}\]
@@ -421,12 +421,12 @@ We mention that in the setting of this theorem, $f$ necessarily vanishes only at
 
 \begin{thm}{Theorem}\label{thm:warp-CAT}
 Let $\spc{B}$ be a 
-complete  
+complete 
 $\CAT\kappa$ length space, and the function $f\:\spc{B}\to \RR_{\ge0}$ satisfy $f''+\kappa\cdot f\ge 0$, 
 where $f$ is Lipschitz on bounded sets or $B$ is locally compact.
 Denote by $Z\subset \spc{B}$ the zero set of~$f$.
 Suppose $\spc{F}$ is a 
-complete  $\CAT{\kappa'}$  space.
+complete $\CAT{\kappa'}$ space.
 Then the warped product $\spc{B}\warp f\spc{F}$ is $\CAT\kappa$ in the following two cases:
 \begin{subthm}{}
 If $Z= \emptyset$ and $\kappa'\le \kappa\cdot f^2(b)$ for any $b\in \spc{B}$.

@@ -60,18 +60,18 @@
 \newcounter{subthm}[thm]
 \renewcommand{\thesubthm}{\hbox{\thethm\textit{\hskip-0.03em \alph{subthm}}}}
 \newcounter{clone}[thm]
-\renewcommand{\theclone}{\textit{\alph{subthm}}}
+\renewcommand{\theclone}{\textit{(\alph{subthm})}}
 \newenvironment{subthm}[1]{\ifthenelse{\equal{#1}{}}
-{\par\refstepcounter{subthm}\begin{itemize}\item[\alph{subthm})]}{\par\refstepcounter{subthm}\label{#1}\setcounter{clone}{\value{subthm}} \addtocounter{clone}{-1}\refstepcounter{clone}\label{SHORT.#1}\begin{itemize}
-\item [\alph{subthm})]}}{\end{itemize}}
+{\par\refstepcounter{subthm}\begin{itemize}\item[(\alph{subthm})]}{\par\refstepcounter{subthm}\label{#1}\setcounter{clone}{\value{subthm}} \addtocounter{clone}{-1}\refstepcounter{clone}\label{SHORT.#1}\begin{itemize}
+\item [(\alph{subthm})]}}{\end{itemize}}
 %SUBTHEOREM A
 \newcounter{subthmA}[thm]
 \renewcommand{\thesubthmA}{\thethm\textit{\hskip-0.05em \Alph{subthmA}}}
 \newcounter{cloneA}[thm]
-\renewcommand{\thecloneA}{\textit{\Alph{subthmA}}}
+\renewcommand{\thecloneA}{\textit{(\Alph{subthmA})}}
 \newenvironment{subthmA}[1]{\ifthenelse{\equal{#1}{}}
-{\par\refstepcounter{subthmA}\begin{itemize}\item[\Alph{subthmA})]}{\par\refstepcounter{subthmA}\label{#1}\setcounter{cloneA}{\value{subthmA}} \addtocounter{cloneA}{-1}\refstepcounter{cloneA}\label{SHORT.#1}\begin{itemize}
-\item [\Alph{subthmA})]}}{\end{itemize}}
+{\par\refstepcounter{subthmA}\begin{itemize}\item[(\Alph{subthmA})]}{\par\refstepcounter{subthmA}\label{#1}\setcounter{cloneA}{\value{subthmA}} \addtocounter{cloneA}{-1}\refstepcounter{cloneA}\label{SHORT.#1}\begin{itemize}
+\item [(\Alph{subthmA})]}}{\end{itemize}}
 %SUBTHEOREM 1
 \newcounter{subthmN}[thm]
 \renewcommand{\thesubthmN}{\thethm-\arabic{subthmN}}

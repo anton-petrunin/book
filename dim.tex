@@ -70,7 +70,7 @@ that is $\kappa$-strutting at $p$.
 \end{subthm}
 \end{thm}
 
-\parit{Proof of \ref{prop:stutt}, (\ref{SHORT.lem:stut<=>rank:strut})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:rank}).}
+\parit{Proof of \ref{prop:stutt}, \ref{SHORT.lem:stut<=>rank:strut}$\Rightarrow$\ref{SHORT.lem:stut<=>rank:rank}.}
 For each $i$,
 choose a point $\acute a^i\in\Str(p)$ sufficiently close to $a^i$ (so $[p\acute a^i]$ exists for each $i$).
 One can choose $\acute a^i$ so that we still have
@@ -85,13 +85,13 @@ From hinge comparison (\ref{angle}),
 for all $i\ne j$.
 In particular $\pack_{\pi/2}\Sigma_p\ge \kay+1$.
 
-\parit{(\ref{SHORT.lem:stut<=>rank:rank})$\Rightarrow$(\ref{SHORT.lem:stut<=>rank:strut}).} 
+\parit{\ref{SHORT.lem:stut<=>rank:rank}$\Rightarrow$\ref{SHORT.lem:stut<=>rank:strut}.} 
 Assume $(\xi^0,\xi^1,\dots,\xi^\kay)$ is an array of directions in $\Sigma_p$, such that $\mangle(\xi^i,\xi^j)>\tfrac\pi2$ if $i\ne j$.
 
 Without loss of generality, 
 we may assume that each direction $\xi^i$ is geodesic;
 that is, for each $i$ there is a geodesic $\gamma^i$ in $\spc{L}$ such that $\gamma^i(0)\z=p$ and $\xi^i=(\gamma^i)^+(0)$.
-From the definition of angle, it follows that for sufficiently small $\eps>0$ the array of points $a^i=\gamma^i(\eps)$ satisfies (\ref{SHORT.lem:stut<=>rank:strut}).
+From the definition of angle, it follows that for sufficiently small $\eps>0$ the array of points $a^i=\gamma^i(\eps)$ satisfies \ref{SHORT.lem:stut<=>rank:strut}.
 \qeds
 
 \begin{thm}{Corollary}\label{cor:rank>=k-open}
@@ -288,7 +288,7 @@ Further, by construction of $f_{\bm{x}}$,
 \[|f_{\bm{x}}(q)-f_{\bm{y}}(q)|\le |\bm{x}-\bm{y}|,\]
 for any $q\in \spc{L}$.
 Therefore, according to Lemma~\ref{lem:fg-dist-est}, $\map$ is $C^{\frac{1}{2}}$-continuous.
-Thus (\ref{SHORT.thm:right-inverse-function:Hoelder}).
+Thus \ref{SHORT.thm:right-inverse-function:Hoelder}.
 
 Further, note that 
 \[\dist{p}{\map(\bm{x})}{}
@@ -349,16 +349,16 @@ for some fixed $\Const>0$ and any $\eps>0$.
 
 In particular:
 \begin{enumerate}[(i)]
-\item If $\LinDim\spc{L}=\infty$, then all the statements (\ref{SHORT.LinDim+}), (\ref{SHORT.TopDim}), and (\ref{SHORT.pack}) are satisfied for all $m\in\ZZ_{\ge0}$. 
+\item If $\LinDim\spc{L}=\infty$, then all the statements \ref{SHORT.LinDim+}, \ref{SHORT.TopDim}, and \ref{SHORT.pack} are satisfied for all $m\in\ZZ_{\ge0}$. 
 \item 
- If the statement (\ref{SHORT.TopDim}) or (\ref{SHORT.pack}) is satisfied for some choice of $q\in \spc{L}$ and $R>0$, then it also is satisfied for any other choice of $q$ and $R$.
+ If the statement \ref{SHORT.TopDim} or \ref{SHORT.pack} is satisfied for some choice of $q\in \spc{L}$ and $R>0$, then it also is satisfied for any other choice of $q$ and $R$.
 \end{enumerate}
 \end{thm}
 
 For finite-dimensional spaces, Theorem~\ref{thm:dim-finite} gives a stronger version 
 of the theorem above.
 
-The proof of the above theorem with the exception of  statement~(\ref{SHORT.TopDim}) was given in \cite{plaut:dimension}.
+The proof of the above theorem with the exception of  statement~\ref{SHORT.TopDim} was given in \cite{plaut:dimension}.
 At that time, it was not known whether for any complete length $\Alex\kappa$ space $\spc{L}$,
 \[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty.\]
 The latter implication was proved by Grigory Perelman and the third author \cite{perelman-petrunin:qg};
@@ -493,24 +493,24 @@ The proof of Theorem \ref{thm:dim-infty} is essentially done in \ref{E=T}, \ref{
 now we  assemble the proof from these parts.
 
 We will prove the implications 
-\[\textrm{(\ref{SHORT.LinDim+}) 
+\[\textrm{\ref{SHORT.LinDim+} 
 $\Rightarrow$ 
-(\ref{SHORT.LinDim}) 
+\ref{SHORT.LinDim} 
 $\Rightarrow$ 
-(\ref{SHORT.thm:dim-infty:rank}) 
+\ref{SHORT.thm:dim-infty:rank}
 $\Rightarrow$ 
-(\ref{SHORT.pack}) 
+\ref{SHORT.pack}
 $\Rightarrow$ 
-(\ref{SHORT.LinDim+}) 
+\ref{SHORT.LinDim+} 
 $\Rightarrow$ 
-(\ref{SHORT.TopDim}) 
+\ref{SHORT.TopDim} 
 $\Rightarrow$ 
-(\ref{SHORT.pack}).}\]
+\ref{SHORT.pack}.}\]
 
 \parit{Proof of \ref{thm:dim-infty}.} 
-The implication (\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.LinDim}) is trivial.
+The implication \ref{SHORT.LinDim+}$\Rightarrow$\ref{SHORT.LinDim} is trivial.
 
-\parit{(\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}).}
+\parit{\ref{SHORT.LinDim}$\Rightarrow$\ref{SHORT.thm:dim-infty:rank}.}
 Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
 Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)\z>\tfrac\pi2$ for all $i\ne j$.
 Choose an array  $(x^0,x^1,\dots,x^m)$ of points in $\spc{L}$ such that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
@@ -523,7 +523,7 @@ Finally, set $b=a^0$.
 
 
 
-\parit{(\ref{SHORT.thm:dim-infty:rank})$\Rightarrow$(\ref{SHORT.pack}).} 
+\parit{\ref{SHORT.thm:dim-infty:rank}$\Rightarrow$\ref{SHORT.pack}.} 
 Let $p\in \spc{L}$ be a point that admits a $\kappa$-strutting array $(b,a^1,\dots, a^m)$ 
 of points in $\spc{L}$.
 The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
@@ -538,7 +538,7 @@ that is, for any  $q\in\spc{L}$ and $R>0$, there is $\Const'>0$ such that
 \[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
 
 
-\parit{(\ref{SHORT.pack})$\Rightarrow$(\ref{SHORT.LinDim+}).} 
+\parit{\ref{SHORT.pack}$\Rightarrow$\ref{SHORT.LinDim+}.} 
 Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
 \begin{align*}
 \pack_\eps\oBall(q',R')
@@ -558,10 +558,10 @@ Applying \ref{E-comeagre},
 $\Euk^m$
 contains a G-delta set that is dense in a neighborhood of any point $q'\in\spc{L}$.
 
-\parit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim}).} 
+\parit{\ref{SHORT.LinDim+}$\Rightarrow$\ref{SHORT.TopDim}.} 
 Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with a distance-preserving cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
 
-Repeating the construction in (\ref{SHORT.LinDim})$\Rightarrow$(\ref{SHORT.thm:dim-infty:rank}), 
+Repeating the construction in \ref{SHORT.LinDim}$\Rightarrow$\ref{SHORT.thm:dim-infty:rank}, 
 we get a $\kappa$-strutting array $(p,a^1,\dots, a^m)$  for $p$.
 
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
@@ -571,7 +571,7 @@ that is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and such tha
 In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
 
 
-\parit{(\ref{SHORT.TopDim})$\Rightarrow$(\ref{SHORT.pack}).} This proof  is valid for general metric spaces;
+\parit{\ref{SHORT.TopDim}$\Rightarrow$\ref{SHORT.pack}.} This proof  is valid for general metric spaces;
 it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
 
 Let $W\subset\oBall(q,R)$ be the image of the embedding $\map$.
@@ -588,7 +588,7 @@ By the definition of Hausdorff measure,
 \ge
 \frac{\Const}{\eps^m}\cdot\HausMes_m W\]
 for a fixed constant $\Const>0$ and all small $\eps>0$.
-Hence (\ref{SHORT.pack}) follows.
+Hence \ref{SHORT.pack} follows.
 \qedsf
 
 
@@ -718,18 +718,18 @@ for all $i<j<\kay$.
 Thus from the induction hypothesis we have  $\kay-1\le {m-1}$.
 \qeds
 
-\parit{Proof of \ref{thm:inverse-function}; (\ref{SHORT.thm:inverse-function:strut}).}  
+\parit{Proof of \ref{thm:inverse-function}; \ref{SHORT.thm:inverse-function:strut}.}  
 Fix $\eps>0$ such that 
 $\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}>\tfrac\pi2+\eps$ for all $i\ne j$.
 Choose  $R>0$ sufficiently small that 
 $\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa q{b}{a^i}>\tfrac\pi2+\eps$ for all $i\ne j$ and any $q\in\oBall(p,R)$.
-Clearly, (\ref{SHORT.thm:inverse-function:strut}) holds for $\oBall(p,R)$.
+Clearly, \ref{SHORT.thm:inverse-function:strut} holds for $\oBall(p,R)$.
 
-\parit{(\ref{SHORT.thm:inverse-function:chart}).}
+\parit{\ref{SHORT.thm:inverse-function:chart}.}
 Note that the distance map $\distfun{\bm{a}}{}{}$ is Lipschitz
 and its restriction $\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$ is open;
 the latter follows from the right-inverse theorem (\ref{thm:right-inverse-function:open-map}).
-Thus to prove (\ref{SHORT.thm:inverse-function:chart}), it is sufficient to show that
+Thus to prove \ref{SHORT.thm:inverse-function:chart}, it is sufficient to show that
 \[
 \max_{i}\{\,|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\,\}
 >
@@ -769,7 +769,7 @@ switching $x$ and $y$, we get
 \eqlbl{eq:x-y}\] 
 Then \ref{eq:y-x} and \ref{eq:x-y} imply \ref{expend}.
 
-Finally, part (\ref{SHORT.thm:inverse-function:R})
+Finally, part \ref{SHORT.thm:inverse-function:R}
 follows since the angle $\angk\kappa q{a^i}{a^j}$ 
 depends continuously on $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
 \qeds
@@ -869,28 +869,28 @@ Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
 \qeds
 
 
-\parit{Proof of \ref{thm:dim-finite}.} The equivalence (\ref{SHORT.LinDim-f})$\Leftrightarrow$(\ref{SHORT.thm:dim-finite:rank}) follows from \ref{thm:dim-infty}.
+\parit{Proof of \ref{thm:dim-finite}.} The equivalence \ref{SHORT.LinDim-f}$\Leftrightarrow$\ref{SHORT.thm:dim-finite:rank} follows from \ref{thm:dim-infty}.
 
-\parit{(\ref{SHORT.LinDim-f})$\Rightarrow$(\ref{SHORT.LinDim+-f}).}
+\parit{\ref{SHORT.LinDim-f}$\Rightarrow$\ref{SHORT.LinDim+-f}.}
 If $\LinDim\spc{L}=m$, then by Theorem~\ref{thm:dim-infty}, 
 $\Euk^m$ contains a dense G-delta set in $\spc{L}$.
 From \ref{E=T}, it follows that $\T_p$ is isometric to $\EE^m$ for any $p\in \Euk^m$.
 
-\parit{(\ref{SHORT.LinDim+-f})$\Rightarrow$(\ref{SHORT.TopDim-f}).}
-This is proved in exactly the same way as implication \textit{(\ref{SHORT.LinDim+})$\Rightarrow$(\ref{SHORT.TopDim})} of theorem \ref{thm:dim-infty}, 
+\parit{\ref{SHORT.LinDim+-f}$\Rightarrow$\ref{SHORT.TopDim-f}.}
+This is proved in exactly the same way as implication \ref{SHORT.LinDim+}$\Rightarrow$\ref{SHORT.TopDim} of theorem \ref{thm:dim-infty}, 
 but applying the existence of a distance chart (\ref{thm:inverse-function}) 
 instead of the right-inverse theorem (\ref{thm:right-inverse-function}).
 
-\parit{(\ref{SHORT.TopDim-f})$\Rightarrow$(\ref{SHORT.pack-f}).} 
-From (\ref{SHORT.TopDim-f}), it follows that there is a point $p\in\oBall(q,R)$ and $r>0$ such that
+\parit{\ref{SHORT.TopDim-f}$\Rightarrow$\ref{SHORT.pack-f}.} 
+From \ref{SHORT.TopDim-f}, it follows that there is a point $p\in\oBall(q,R)$ and $r>0$ such that
 $\oBall(p,r)\subset \spc{L}$ is bi-Lipschitz homeomorphic to a bounded open set of $\EE^m$.
 Thus there is $\Const>0$ such that 
 \[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\eqlbl{eq:thm:dim-finite*}\]
 Applying \ref{pack-homogeneus} shows that inequality \ref{eq:thm:dim-finite*}, with different constants, holds for any other ball, in particular for $\oBall(q,R)$.
 
-Applying \ref{E-comeagre} gives the first inequality in (\ref{SHORT.pack-f}).
+Applying \ref{E-comeagre} gives the first inequality in \ref{SHORT.pack-f}.
 
-\parit{(\ref{SHORT.pack-f})$\Rightarrow$(\ref{SHORT.LinDim-f}).} 
+\parit{\ref{SHORT.pack-f}$\Rightarrow$\ref{SHORT.LinDim-f}.} 
 From Theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
 Applying Theorem \ref{thm:dim-infty} again,  if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
 \[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}}.\]

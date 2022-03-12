@@ -123,7 +123,7 @@ in a neighborhood of $\Web\bm{f}$ for all $i$.
 \end{subthm}
 
 
-In particular, by (\ref{SHORT.thm:web:Up-convex}) and (\ref{SHORT.thm:web:f(web)=min}),  $\InWeb\bm{f}$ is $C^{\frac12}$-homeomorphic to an open set of $\RR^\kay$.
+In particular, by \ref{SHORT.thm:web:Up-convex} and \ref{SHORT.thm:web:f(web)=min},  $\InWeb\bm{f}$ is $C^{\frac12}$-homeomorphic to an open set of $\RR^\kay$.
 \end{thm}
 
 The proof is preceded by a few preliminary statements.
@@ -279,7 +279,7 @@ $\bar W=W$; that is, $W$ is closed.
 
 
 
-\parit{Proof of \ref{thm:web}}; \textit{(\ref{SHORT.thm:web:Up-convex})+(\ref{SHORT.thm:web:f(web)=min}).}
+\parit{Proof of \ref{thm:web}}; \ref{SHORT.thm:web:Up-convex}+\ref{SHORT.thm:web:f(web)=min}.
 Without loss of generality, we may assume that all $f^i$ are $1$-convex.
 
 Given $\bm{v}=(v^0,v^1,\dots,v^\kay)\in\RR^{\kay+1}$, consider the function 
@@ -347,7 +347,7 @@ and hence to an open set of $\RR^{\kay}$, as claimed.
 
 
 
-\parit{(\ref{SHORT.thm:web:bary})+(\ref{SHORT.thm:web:lip-const}).}
+\parit{\ref{SHORT.thm:web:bary}+\ref{SHORT.thm:web:lip-const}.}
 Since $f^i$ is $1$-convex, for any $\bm{x}=(x^0,x^1,\dots,x^\kay)\in\Delta^\kay$ 
 the convex combination 
 \[\left(\sum_i x^i\cdot f^i\right)\:\spc{X}\to\RR\] 
@@ -555,7 +555,7 @@ Fix $z\in\spc{U}$ and $r<\tfrac{\varpi\kappa}2$
 such that $\dist{z}{a^i}{}<r$ for all $i$.
 Note that the set $K\cap \cBall[z,r]$ is convex, closed, and contains all $a^i$.
 Applying the theorem on short retract (Exercise~\ref{ex:short-retraction-CBA(1)}),
-we get the second part of~(\ref{SHORT.thm:cat-bary-web:web=Im(bary)}).
+we get the second part of~\ref{SHORT.thm:cat-bary-web:web=Im(bary)}.
 
 \medskip
 
@@ -570,7 +570,7 @@ Further, from the definition of $\kappa$-barycentric simplex,
 $\spx{\bm{a}}\mc\kappa=\spx{\bm{f}}$.
 
 All the functions $f^i$ are strongly convex (see \ref{function-comp}).
-Therefore (\ref{SHORT.thm:cat-bary-web:Lip}), (\ref{SHORT.thm:cat-bary-web:web=Im(bary)}) and the first statements in (\ref{SHORT.thm:cat-bary-web:mnfld}) follow from Theorem \ref{thm:web}.
+Therefore \ref{SHORT.thm:cat-bary-web:Lip}, \ref{SHORT.thm:cat-bary-web:web=Im(bary)} and the first statements in \ref{SHORT.thm:cat-bary-web:mnfld} follow from Theorem \ref{thm:web}.
 
 \parit{Case $\kappa>0$.}
 Applying rescaling, we may assume $\kappa=1$,
@@ -736,7 +736,7 @@ There is a closed separable set $K\subset\spc{U}$ such that
 \end{thm}
 
 \parbf{Remarks.}
-Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part (\ref{SHORT.thm:dim-infty-CBA:mnfld}) in the finite-dimensional case.
+Theorem \ref{thm:loc-lip-inverse} gives a stronger version of part \ref{SHORT.thm:dim-infty-CBA:mnfld} in the finite-dimensional case.
 Namely, a complete length $\CAT{}$ space with linear dimension $m$ 
 admits a bi-Lipschitz embedding $\map$ of an open set of $\RR^m$.
 Moreover, the Lipschitz constants of $\map$ can be made arbitrarily close to~$1$.
@@ -817,7 +817,7 @@ According to Theorem~\ref{thm:cat-bary-web:Lip}, this extension exists,
 $\map[2]$ is Lipschitz, 
 and its Lipschitz constant depends only on $\rho_0$ and $\kappa$.
 
-\parit{(\ref{SHORT.lem:approximation-cba:displacement})}
+\parit{\ref{SHORT.lem:approximation-cba:displacement}}
 Fix $x\in\spc{U}$. Denote by $\Delta$ the minimal simplex that contains $\map(x)$, 
 and let $\alpha^0,\alpha^1,\dots,\alpha^n$ be the vertexes of $\Delta$.
 %Denote by $\Delta$ the minimal simplex that contains $\map(x)$;
@@ -835,7 +835,7 @@ Therefore
 In particular, 
 \[\dist{x}{\map[2]\circ\map(x)}{}\le\dist{x}{x_{\alpha^0}}{}+\diam \map[2](\Delta) <\rho(x).\]
 
-\parit{(\ref{SHORT.lem:approximation-cba:im})}
+\parit{\ref{SHORT.lem:approximation-cba:im}.}
 Assume the contrary;
 that is, $\map[2](\spc{N})$ is not included in the $\map[2]$-image of the $m$-skeleton of $\spc{N}$.
 Then for some $\kay>m$,
@@ -856,15 +856,15 @@ gives $\LinDim\spc{U}\ge \kay$, a contradiction.
 \parit{Proof of \ref{thm:dim-infty-CBA}.} 
 Note that
 \begin{itemize}
-\item The implication (\ref{SHORT.thm:dim-infty-CBA:bary})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:mnfld})
+\item The implication \ref{SHORT.thm:dim-infty-CBA:bary}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:mnfld}
 follows directly from Lemma~\ref{lem:nondeg-test-with-balls}
 and Theorem~\ref{thm:cat-bary-web:mnfld}.
 \item The implication 
-(\ref{SHORT.thm:dim-infty-CBA:mnfld})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:TopDim}) 
+\ref{SHORT.thm:dim-infty-CBA:mnfld}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:TopDim} 
 is trivial.
 \end{itemize}
  
-\parit{(\ref{SHORT.thm:dim-infty-CBA:TopDim})$\Rightarrow$(\ref{SHORT.LinDim-CBA}).}
+\parit{\ref{SHORT.thm:dim-infty-CBA:TopDim}$\Rightarrow$\ref{SHORT.LinDim-CBA}.}
 According to Theorem~\ref{thm:stable-value}, 
 there is a continuous map $f\:K\to \RR^{m}$ with a stable value.
 By the Tietze extension theorem, it is possible to extend $f$ 
@@ -902,7 +902,7 @@ $\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\c
 Since $\eps>0$ is arbitrary, 
 then $\bm{0}\in \RR^m$ is not a stable value of $f=F|_K$, a contradiction.
 
-\parit{(\ref{SHORT.LinDim-CBA})$\Rightarrow$(\ref{SHORT.thm:dim-infty-CBA:bary}).} 
+\parit{\ref{SHORT.LinDim-CBA}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:bary}.} 
 The following claim is a consequence of the definition of tangent space.
 
 \begin{clm}{}\label{clm:finite-config-cba}
@@ -937,7 +937,7 @@ $(a^0,a^1,\dots,a^m)$ in $\spc{U}$
 such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
 and $\bigcap_{i\ne j}\cBall[a^i,\lam]\ne \emptyset$ for each $j$.
 Since $\lam>0$ can be chosen arbitrarily small, 
- (\ref{SHORT.thm:dim-infty-CBA:bary}) follows.
+ \ref{SHORT.thm:dim-infty-CBA:bary} follows.
 \qeds
 
 

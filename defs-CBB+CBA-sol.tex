@@ -8,8 +8,7 @@ If $\length \alpha<2\cdot\pi$ then $n_\alpha<2$.
 Therefore there is an equator that does not cross $\alpha$ --- hence the result.
 
 
-\parbf{\ref{ex:complete=>complete};}
-\textit{(\ref{SHORT.ex:complete=>complete:complete}).}
+\parbf{\ref{ex:complete=>complete};} \ref{SHORT.ex:complete=>complete:complete}.
 Note that any Cauchy sequence $x_n$ in $(\spc{X},\yetdist{}{}{})$ is also Cauchy in $\spc{X}$.
 Since $\spc{X}$ is complete, $x_n$ converges; denote its limit by $x_\infty$.
 
@@ -17,12 +16,13 @@ Passing to a subsequence, we may assume that $\yetdist{x_{n-1}}{x_n}{}<\tfrac1{2
 It follows that there is a 1-Lipschitz curve $\alpha\:[0,1]\to (\spc{X},\yetdist{}{}{})$ such that $x_n=\alpha(\tfrac1{2^n})$ and $x_\infty=\alpha(0)$.
 In particular, $\yetdist{x_n}{x_\infty}{}\to0$ and $n\to\infty$.
 
-\parit{(\ref{SHORT.ex:complete=>complete:compact}).}
+\parit{\ref{SHORT.ex:complete=>complete:compact}.}
 Fix two points $x,y\in\spc{X}$ such that $\ell=\yetdist{x}{y}{}<\infty$.
 Let $\alpha_n$ be a sequence of paths from $x$ to $y$ such that $\length(\alpha_n)\to\ell$ as $n\to \infty$.
 Without loss of generality, we may assume that each $\alpha_n$ is $(\ell+1)$-Lipschitz.
 
-Since $\spc{X}$ is compact, there is a partial limit $\alpha_\infty$ of $\alpha_n$ as $n\to \infty$. By semicontinuity of length, $\length\alpha_\infty\le\ell$;
+Since $\spc{X}$ is compact, there is a partial limit $\alpha_\infty$ of $\alpha_n$ as $n\to \infty$.
+By semicontinuity of length, $\length\alpha_\infty\le\ell$;
 that is; $\alpha$ is a shortest path in $\spc{X}$.
 
 \parbf{\ref{ex:no-geod}.}
@@ -315,10 +315,10 @@ This inequality also follows directly from the majorization theorem (\ref{thm:ma
 The only-if part is evident.
 
 Use \ref{thm:defs_of_cat} to show that 
-(\ref{SHORT.ex:equality-for-thin:side-side})$\Rightarrow$(\ref{SHORT.ex:equality-for-thin:vertex-base})$\Rightarrow$(\ref{SHORT.ex:equality-for-thin:angle}).
+\ref{SHORT.ex:equality-for-thin:side-side}$\Rightarrow$\ref{SHORT.ex:equality-for-thin:vertex-base}$\Rightarrow$\ref{SHORT.ex:equality-for-thin:angle}.
 
-By \ref{thm:defs_of_cat}, condition (\ref{SHORT.ex:equality-for-thin:angle}) implies that the natural map is distance-preserving on the sides $[\tilde x\tilde y]$ and $[\tilde x\tilde z]$.
-Applying it again, we have that condition (\ref{SHORT.ex:equality-for-thin:angle}) holds for all permutations of the labels $x,y,z$.
+By \ref{thm:defs_of_cat}, condition \ref{SHORT.ex:equality-for-thin:angle} implies that the natural map is distance-preserving on the sides $[\tilde x\tilde y]$ and $[\tilde x\tilde z]$.
+Applying it again, we have that condition \ref{SHORT.ex:equality-for-thin:angle} holds for all permutations of the labels $x,y,z$.
 Whence the natural map is distance-preserving on all three sides.
 
 
