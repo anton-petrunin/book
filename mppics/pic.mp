@@ -1219,7 +1219,7 @@ dOt z.vv,z.p,z.u,z.v,z.w;
 label.bot(btex $\tilde p$ etex, z.p);
 label.top(btex $\tilde u$ etex, z.u);
 label.bot(btex $\tilde v$ etex, z.v);
-label.bot(btex $\tilde v'$ etex, z.vv);
+label.bot(btex $\tilde q$ etex, z.vv);
 label.urt(btex $\tilde w$ etex, z.w);
 endfig;
 

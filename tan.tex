@@ -65,7 +65,8 @@ It is sufficient to show that for any subarc $[\bar x^\o \bar y^\o]$ of $[x^\o y
 that does not contain the ends
 there is a sequence of geodesics $[\bar x^n\bar y^n]$ in $n\cdot \spc{Z}$ converging to $[\bar x^\o\bar y^\o]$.
 
-Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{Z}$ such that $\bar x^n\to \bar x^\o$ and $\bar y^n\to \bar y^\o$ as $n\to\o$.
+Choose any sequences $\bar x^n,\bar y^n\in n\cdot \spc{Z}$ such that $\bar x^n\to \bar x^\o$, $\bar y^n\to \bar y^\o$ as $n\to\o$.
+We can assume that there is a geodesic $[\bar x^n \bar y^n]_{n\cdot \spc{Z}}$ for any $n$; see \ref{thm:almost.geod} and \ref{thm:cat-complete}.
 Note that $[\bar x^n \bar y^n]$ 
 converges to $[\bar x^\o \bar y^\o]$
 as $n\to\o$.
@@ -83,22 +84,23 @@ Then $\T_p\spc{U}$ is a length space.
 This theorem together with \ref{cor:real-tan-is} imply the following.
 
 \begin{thm}{Corollary}
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space and $p\in \spc{U}$.
-Then $\T_p\spc{U}$ is a complete length $\CAT0$ space.
+For any point $p$ in a complete length $\CAT\kappa$ space, the tangent space $\T_p$ is a complete length $\CAT0$ space.
 \end{thm}
 
 
 \parit{Proof of Theorem \ref{thm:tanCAT}.}
 Since $\T_p=\Cone \Sigma_p$, it is sufficient to show that for any hinge $\hinge pxy$ such that 
 $\mangle \hinge pxy<\pi$ and any $\eps>0$, there is $z\in \spc{U}$ such that 
-\[\mangle \hinge pxz<\tfrac12\cdot\mangle \hinge pxy+\eps,\quad\mangle \hinge pyz<\tfrac12\cdot\mangle \hinge pxy+\eps.\eqlbl{eq:midpoint}\]
+\[\mangle \hinge pxz<\tfrac12\cdot\mangle \hinge pxy+\eps
+\quad\text{and}\quad
+\mangle \hinge pyz<\tfrac12\cdot\mangle \hinge pxy+\eps.\eqlbl{eq:midpoint}\]
 
-Fix a small positive number $\delta\ll \eps$.
+Fix a small $\delta>0$.
 Let $\bar x\in \mathopen{]}px]$ and $\bar y\in \mathopen{]}py]$ denote the points such that 
 $\dist{p}{\bar x}{}=\dist{p}{\bar y}{}=\delta$.
 Let $z$ denote the midpoint between $\bar x$ and $\bar y$.
 
-Since $\delta\ll \eps$  we can assume that 
+Since $\delta$ is small, we can assume that 
 \[\angk\kappa p{\bar x}{\bar y}<\mangle \hinge pxy+\eps.\]
 By  Alexandrov's lemma (\ref{lem:alex}), we have
 \[\angk\kappa p{\bar x}{z}+\angk\kappa p{\bar y}{z}< \angk\kappa p{\bar x}{\bar y}.\]
@@ -120,7 +122,7 @@ with a point $p\in\check{\spc{L}}$ such that the space of directions $\Sigma_p\c
 
 
 \parit{Construction.}
-Let $\HH$ be a Hilbert space formed by infinite sequences of real numbers $\bm{x}=(x_0,x_1,\dots)$ with norm
+Let $\HH$ be a Hilbert space formed by infinite sequences of real numbers $\bm{x}=(x_0,x_1,\dots)$ with the $\ell^2$-norm
 $|\bm{x}|^2=\sum_i(x_i)^2$. 
 Fix $\eps=0.001$ and consider two functions $f,\check f:\HH\to\RR$:
 \[f(\bm{x})=|\bm{x}|,\]
@@ -130,7 +132,7 @@ Fix $\eps=0.001$ and consider two functions $f,\check f:\HH\to\RR$:
 Both of these functions are convex and Lipschitz, therefore their graphs in $\HH\times \RR$ equipped with its length metric form infinite-dimensional Alexandrov spaces, say $\spc{L}$  and $\check{\spc{L}}$ (this is proved formally in \ref{lem:hil-con}).
 
 Let $p$ be the origin of $\HH\times \RR$.
-Note that $\check{\spc{L}}\cap\spc{L}$ is starshaped in $\HH$ with center at $p$.
+Note that $\check{\spc{L}}\cap\spc{L}$ is a starshaped subset of $\HH$ with center at $p$.
 Further, $\check{\spc{L}}\backslash\spc{L}$ consists of a countable number of disjoint sets
 \[\Omega_n=\set{(\bm{x},\check f(\bm{x}))\in\check{\spc{L}}}{(1+\eps)\cdot x_n-\tfrac{1}{n}>|\bm{x}|}.\]
 Note that $\dist{\Omega_n}{p}{}>\tfrac{1}{n}$ for each $n$.
@@ -239,7 +241,7 @@ Construct a non-compact complete geodesic $\Alex{0}$ space that contains no half
 \section{Rademacher theorem}
 
 At the end of this section we give an extension of the Rademacher theorem (see 
-Section \ref{sec: speed}) to $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}), proved by Alexander Lytchak \cite{lytchak:diff}. 
+Section \ref{sec: speed}) to $\Alex{}$ and $\CAT{}$ spaces (\ref{thm:Rademacher-CBB+CBA}); it was proved by Alexander Lytchak \cite{lytchak:diff}. 
 The following proposition is the 1-dimensional case of the extended Rademacher theorem.
 
 Recall that differentiable curves are defined in \ref{def:diff-curv}.
@@ -279,7 +281,6 @@ For each $n$, choose $q_n\in \Str(x)$ sufficiently close $\alpha(t_n)$ that the 
 still holds (see Definition \ref{def:straight}).
 
 Set $\gamma_n=\geod_{[xq_n]}$.
-
 By comparison,
 \begin{align*}
 \angk\kappa x{\alpha(s)}{\gamma_n(s)}&\le2\cdot\pi-\angk\kappa x{p_n}{\gamma_n(s)} - \angk\kappa x{\alpha(s)}{p_n}\le
@@ -315,7 +316,7 @@ Observe that there are sequences $\delta_n\to 0+$ and $t_n\to 0+$ such that
 (1-\delta_n)\cdot s<\dist{\alpha(s)}{x}{}\le s\eqlbl{eq:ang++dist}\]
 for any $s\in(0,t_n]$.
 
-Without loss of generality, we may assume that $\dist{x}{q_n}{}<\varpi\kappa$ for any $n$;
+Without loss of generality, we may assume that $\dist{x}{q_n}{}<\varpi\kappa$ for any~$n$;
 in particular, the geodesic $\gamma_n=\geod_{[xq_n]}$ is uniquely defined.
 
 By comparison,
@@ -439,17 +440,17 @@ Then $\dd_p f$ is a Lipschitz concave function on $\T_p\spc{U}$.
 \end{thm}
 
 \parit{Proof.}
-Recall that the tangent space $\T_p = T_p\spc{U}$ can be considered as a subspace of the ultratangent space $\T_p^\o$ (\ref{thm:tangent-ultratangent}).
+Recall that the tangent space $\T_p = \T_p\spc{U}$ can be considered as a subspace of the ultratangent space $\T_p^\o$ (\ref{thm:tangent-ultratangent}).
 Since $\T_p^\o$ is $\CAT0$, \ref{thm:tanCAT} implies that $\T_p$ is a convex set in $\T_p^\o$.
 
 By \ref{ddo-concave}, $\dd_p^\o f$ is a concave function on $\T_p^\o$.
 It remains to apply that $\dd_pf=(\dd_p^\o f)|_{\T_p}$ (\ref{prop:differential:ultra}).
 \qeds
 
-As is shown in Halbeisen's example (see Section \ref{halbeisen}),  
+As it is shown in Halbeisen's example (Section \ref{halbeisen}),  
 a $\Alex{}$ space  might have tangent spaces that are not length spaces; 
 thus concavity of the differential $\dd_p f$ of a semiconcave function $f$ is meaningless. 
-Nevertheless, as the following lemma shows, the differential $\dd_p f$ of a semiconcave function always satisfies the following weaker property similar to concavity (compare \cite[136]{plaut:survey}, \cite[4.2]{ohta}).  
+Nevertheless, as the following lemma says, the differential $\dd_p f$ of a semiconcave function always satisfies a weaker property similar to concavity (compare to \cite[Prop. 136]{plaut:survey} and \cite[4.2]{ohta}).  
 In the finite dimensional case, $\dd_p f$ is concave. % (see ??)
 
 \begin{thm}{Lemma}\label{lem:ohta} 
@@ -476,8 +477,9 @@ It remains to choose $\xi\in \Sigma_p$ so that $\xi\cdot |z|=z$ and observe that
 
 Now assume $\spc{Z}$ is $\Alex{}$.
 We can assume that $\alpha=\mangle(u,v)>0$, otherwise the statement is trivial.
-Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{p}}$} is dense in $\T_p$ and $\dd_p f\:\T_p\to\RR$ is Lipschitz, we can assume that $u,v\in \T'_p$; that is, $\exp_p(t\cdot u)$
- and $\exp_p(t\cdot v)$ are defined for all small $t>0$.
+Moreover, we can assume that $\exp_p(t\cdot u)$
+ and $\exp_p(t\cdot v)$ are defined for all small $t>0$;
+the latter follows since geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$.
 
 {
 
@@ -488,7 +490,7 @@ Moreover, since $\T'_p=\Cone(\Sigma'_p)$\index{$\T'_{{p}}$} is dense in $\T_p$ a
 \vskip0mm
 \end{wrapfigure}
 
-Prepare a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$, $\tilde v'$, $\tilde w\in\EE^2$ such that
+Prepare a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$, $\tilde q$, $\tilde w\in\EE^2$ such that
 \begin{itemize}
 \item $\mangle\hinge{\tilde p}{\tilde u}{\tilde v}=\alpha$, 
 \item $\dist{\tilde p}{\tilde u}{}=|u|$, 
@@ -496,7 +498,7 @@ Prepare a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$
 \end{itemize}
 }
 \begin{itemize}
-\item $\tilde v'$ lies on an extension of $[\tilde p\tilde v]$ so that $\tilde v$ is the midpoint of $[\tilde p\tilde v']$, 
+\item $\tilde q$ lies on an extension of $[\tilde p\tilde v]$ so that $\tilde v$ is the midpoint of $[\tilde p\tilde q]$, 
 \item $\tilde w$ is the midpoint between $\tilde u$ and ${\tilde v}$.
 \end{itemize}
 Note that 
@@ -506,16 +508,16 @@ Note that
 
 Assume that $\spc{Z}$ is geodesic.
 
-For all small $t>0$, construct points $u_t,v_t,v'_t,w_t\in \spc{Z}$ as follows:
+For all small $t>0$, construct points $u_t,v_t,q_t,w_t\in \spc{Z}$ as follows:
 \begin{enumerate}[(a)]
-\item $v_t=\exp_p(t\cdot v)$,\quad  $v_t'=\exp_p(t\cdot v')$
+\item $v_t=\exp_p(t\cdot v)$,\quad  $q_t=\exp_p(2\cdot t\cdot v)$
 \item\label{u_t}  $u_t=\exp_p(t\cdot u)$.
 \item $w_t$ is the midpoint of $[u_t v_t]$.
 \end{enumerate}
-Clearly $\dist{p}{u_t}{}=t\cdot |u|$, $\dist{p}{v_t}{}=t\cdot|v|$, $\dist{p}{v_t'}{}=t\cdot|v'|$. 
+Clearly $\dist{p}{u_t}{}=t\cdot |u|$, $\dist{p}{v_t}{}=t\cdot|v|$, $\dist{p}{q_t}{}=2\cdot t\cdot|v|$. 
 Since $\mangle(u,v)$ is defined, 
 we have $\dist{u_t}{v_t}{}=t\cdot\dist{\tilde u}{\tilde v}{}+o(t)$ 
-and $\dist{u_t}{v_t'}{}=t\cdot\dist{\tilde u}{\tilde v'}{}+o(t)$ 
+and $\dist{u_t}{q_t}{}=t\cdot\dist{\tilde u}{\tilde q}{}+o(t)$ 
 (see Theorem~\ref{angle} and Section~\ref{sec:angle}).
 
 From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{SHORT.angle}), we have
@@ -525,15 +527,15 @@ From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{SHORT.a
 \ge
 \mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\tfrac{o(t)}t\]
 and
-\[\angk\kappa{v_t}{v_t'}{w_t}
+\[\angk\kappa{v_t}{q_t}{w_t}
 \ge
-\angk\kappa{v_t}{v_t'}{u_t}
+\angk\kappa{v_t}{q_t}{u_t}
 \ge
-\mangle\hinge{\tilde v}{\tilde v'}{\tilde u}+\tfrac{o(t)}t.\]
+\mangle\hinge{\tilde v}{\tilde q}{\tilde u}+\tfrac{o(t)}t.\]
 Clearly, 
-$\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde v'}{\tilde u'}=\pi$. 
+$\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde q}{\tilde u}=\pi$. 
 From the adjacent angle comparison (\ref{2-sum}), 
-$\angk\kappa{v_t}p{u_t}\z+\angk\kappa{v_t}{u_t}{v_t'}\le \pi$.
+$\angk\kappa{v_t}p{u_t}\z+\angk\kappa{v_t}{u_t}{q_t}\le \pi$.
 Hence
 $\angk\kappa{v_t}p{w_t}
 \to
@@ -541,7 +543,7 @@ $\angk\kappa{v_t}p{w_t}
 and thus 
 \[\dist{p}{w_t}{}=t\dist{\tilde p}{\tilde w}{}+o(t).\]
 
-Since $f$ is $\lambda$-concave we have 
+Since $f$ is $\lambda$-concave, we have 
 \begin{align*}
 2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
 \\
@@ -574,7 +576,7 @@ Thus in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$ one should tak
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Gradient}\label{sec:grad-def}
+\section{Definition of gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition of gradient}\label{def:grad} 
 Let $\spc{X}$ be a length space with defined angles and  
@@ -623,8 +625,8 @@ then
 &=(\dd_p f)(g')\le \<g,g'\>.
 \end{align*}
 Therefore,
-\[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>=0,\] 
-that is, $g=g'$.
+\[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>\le0.\] 
+It follows that $g=g'$.
 
 \parit{Existence.} 
 Note first that if $\dd_p f\le 0$, then one can take $\nabla_p f=\0$.
@@ -652,22 +654,7 @@ that is, $(\xi_n)$ is Cauchy.
 Clearly $\overline{\xi}=\lim_n\xi_n$ satisfies \ref{overlinexi}.
 \qeds
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section*{Calculus}\label{sec:grad-calculus}
-
-
+\section{Calculus of gradient}\label{sec:grad-calculus}
 
 The next lemma states that the gradient points 
 in the direction of maximal slope; 
@@ -807,7 +794,7 @@ d_p f(\dir pq)=
 \end{align*}
 \qedsf
 
-The following corollary states that the gradient vector field is monotonic in  a sense similar to the definition of \index{monotone operator}\emph{monotone operators}; see for example \cite{phelps}.
+The following corollary states that the gradient vector field is monotonic in  a sense similar to the definition of \index{monotone operator}\emph{monotone operators} \cite{phelps}.
 
 
 \begin{thm}{$\lambda$-Monotonicity of gradient}
@@ -889,7 +876,7 @@ for almost all $t\in\II$.
 
 \end{thm}
 
-\section*{Semicontinuity}\label{sec:grad-semicont}
+\section{Semicontinuity of \textbar gradient\textbar}\label{sec:grad-semicont}
 
 In this section we collect a few consequences of the following lemma.
 
@@ -963,7 +950,7 @@ for any point $x\in\Dom f$.
 Note that 
 \[
 \begin{matrix}
-\spc{Z}&\supset&\spc{Z}^\o\\
+\spc{Z}&\subset&\spc{Z}^\o\\
 \cup&&\cup\\
 \Dom f&\subset &\Dom f^\o
 \end{matrix}.
@@ -996,7 +983,7 @@ Let $\spc{Z}$ be a complete length space
 and $f\:\spc{Z}\subto\RR$ be a locally Lipschitz semiconcave subfunction.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Then the function $x\mapsto|\nabla_x f|$  is lower-continuous;
-that is for any sequence $x_n\to x\in \Dom f$, we have 
+that is, for any sequence $x_n\to x\in \Dom f$, we have 
 \[|\nabla_x f|\le \liminf_{n\to \infty} |\nabla_{x_n} f|.\]
 \end{thm}
 
@@ -1008,7 +995,7 @@ Applying \ref{lem:gradcon} for $x_n\to x$, we obtain
 |\nabla_x f^\o|
 =
 |\nabla_x f|.\]
-Passing to an arbitrary subsequence of $x_n$ gives the result. \qeds
+The same holds for an arbitrary subsequence of $x_n$ --- hence the result. \qeds
 
 
 
@@ -1048,7 +1035,7 @@ $|u^*|\le |u|$.
 \end{thm}
 
 Milka's lemma provides a refinement of this statement;
-it states that in the finite-dimensional case, we can assume that $|u^*|= |u|$. 
+it states that in the finite-dimensional $\Alex{}$ space, any tangent vector $u$ has a polar vector $u^*$ such that $|u^*|= |u|$. 
 
 It is instructive to solve the following exercise before reading the proof of \ref{lem:minus-sum}.
 
@@ -1061,7 +1048,7 @@ Prove that
 \end{thm}
 
 \parit{Proof of \ref{lem:minus-sum}.}
-Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$.
+Choose two sequences of points $a_n,b_n\in \Str(p)$ such that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$.
 Consider a sequence of functions 
 \[f_n=|u|\cdot\distfun{a_n}{}{}+|v|\cdot\distfun{b_n}{}{}.\]
 According to Exercise~\ref{ex:d_q dist_p(v)=-<dri p q, v>}, 
@@ -1071,7 +1058,7 @@ Thus we have the following uniform convergence for all $x\in\Sigma_p$:
 According to Lemma~\ref{lem:close-grad}, 
 the sequence $\nabla_pf_n$ converges.
 Let 
-\[w=\lim_n\nabla_pf_n.\]
+\[w=\lim_{n\to\infty}\nabla_pf_n.\]
 
 By the definition of gradient,
 \[\begin{aligned}
