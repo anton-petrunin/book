@@ -7,30 +7,30 @@
 \begin{thm}{Definition}\label{def:poly}
 A length space $\spc{P}$ is called a
 \index{polyhedral space}
-\index{polyhedral space!piecewise $\Lob{}\kappa$ polyhedral space}\emph{piecewise $\Lob{}\kappa$ polyhedral space} 
+\index{polyhedral space!piecewise $\Lob{}\kappa$ space}\emph{piecewise $\Lob{}\kappa$} 
 if it admits a finite triangulation $\tau$ 
 such that an arbitrary simplex $\sigma$ in $\tau$ is isometric to a simplex in the model space $\Lob{\dim \sigma}{\kappa}$.
 
 By \index{polyhedral space!triangulation of a polyhedral space}\emph{triangulation} of a piecewise
-$\Lob{}\kappa$ polyhedral space 
+$\Lob{}\kappa$ space 
 we will understand a triangulation as in the definition.
 If we do not wish to specify $\kappa$, we will say that $\spc{P}$ is a \index{polyhedral space}\emph{polyhedral space}. 
 
 By rescaling we can assume that $\kappa=1$, $0$, or $-1$.
 \begin{subthm}{}
-The $\Lob{}1$-polyhedral spaces will also be 
+Piecewise $\Lob{}1$ spaces will also be 
 called 
 \index{spherical polyhedral space}\emph{spherical polyhedral spaces};
 \end{subthm}
 
 \begin{subthm}{}
-The $\Lob{}0$-polyhedral spaces will also be 
+Piecewise $\Lob{}0$ spaces will also be 
 called 
 \index{Euclidean polyhedral space}\emph{Euclidean polyhedral spaces};
 \end{subthm}
 
 \begin{subthm}{}
-The $\Lob{}{-1}$-polyhedral spaces will also be 
+Piecewise  $\Lob{}{-1}$ spaces will also be 
 called 
 \emph{hyperbolic polyhedral spaces}\index{hyperbolic polyhedral space}.
 \end{subthm}
@@ -103,8 +103,7 @@ $\Lob{}\kappa$ space \cite{lebedeva-petrunin-poly}.
 \section{Curvature bounds}
 
 
-Recall that the definition of $\ell$-simply connected space is 
-given in \ref{def:l-s.c.}.
+Recall that $\ell$-simply connected spaces are defined in \ref{def:l-s.c.}.
 
 The following theorem provides a combinatorial description of polyhedral spaces with curvature bounded above.
 
@@ -137,7 +136,7 @@ Let us apply induction on $\dim\spc{P}$.
 The  {}\emph{base}  case $\dim\spc{P}=0$ is evident.
 
 \parit{Induction Step.}
-Assume that the theorem is proved in the case $\dim\spc{P}<m$. Suppose  $\dim\spc{P}=m$.
+Assume that the theorem is proved in the case $\dim\spc{P}\z<m$. Suppose  $\dim\spc{P}=m$.
 
 Fix a point $p\in\spc{P}$.
 A neighborhood of $p$ 
@@ -155,7 +154,7 @@ By the  induction hypothesis, $\Sigma_p$ is locally $\CAT1$.
 Applying the generalized Hadamard--Cartan theorem (\ref{thm:hadamard-cartan-gen}),
 we get \ref{eq:Sigma-in-CAT(1)}.
 
-To prove \ref{SHORT.thm:PL-CAT:CAT} apply the generalized Hadamard--Cartan theorem to $\spc{P}$.
+Part \ref{SHORT.thm:PL-CAT:CAT} follows from the generalized Hadamard--Cartan theorem.
 \qeds
 
 A \index{metric tree}\index{metric graph}\emph{metric graph} is a finite graph equipped with a length-metric, such that every edge is isometric to a line segment;
@@ -205,7 +204,7 @@ can be reformulated in the following way:
  \item[\ref{SHORT.thm:poly-CBB:connected}$\,'\!$] 
 Any path $\gamma\:[0,1]\to \spc{P}$ can be approximated by paths
 $\gamma_n\:[0,1]\to \spc{P}$ 
-that cross only simplexes of dimension $m$ and $m-1$.
+that crosses only simplexes of dimension $m$ and $m-1$.
 \end{itemize}
 
 Further, modulo the other conditions,
@@ -279,7 +278,7 @@ if $\spc{P}$ is $\CAT{\kappa'}$, then $\kappa'\ge \kappa$ and $\spc{P}$ is $\CAT
 
 \begin{thm}{Definition}
 A simplicial complex $\mathcal{S}$ 
-is called \index{flag complex}\emph{flag} if whenever $\{v_0,\z\dots,v_\kay\}$
+is \index{flag complex}\emph{flag} if whenever $\{v_0,\z\dots,v_\kay\}$
 is a set of distinct vertexes of $\mathcal{S}$
 that are pairwise joined by edges, then the vertexes $v_0,\dots,v_\kay$
 span a $\kay$-simplex in $\mathcal{S}$.
@@ -291,12 +290,6 @@ the \index{no-triangle condition}\emph{no-triangle condition}.
 
 Note that every flag complex is determined by its 1-skeleton.
 
-\begin{thm}{Exercise}\label{ex:barycenric-flag}
-Show that the barycentric subdivision of any simplicial complex is a flag complex.
-Conclude that any finite  simplicial complex is homeomorphic to a compact length $\CAT1$ space.
-\end{thm}
-
-
 \begin{thm}{Proposition}\label{prop:no-trig}
 A simplicial complex $\mathcal{S}$ is flag if and only if 
 $\mathcal{S}$, as well as all the links of all its simplexes,
@@ -306,13 +299,13 @@ satisfy the no-triangle condition.
 From the definition of flag complex 
 we get the following:
 
-\begin{thm}{Lemma}\label{lem:link-of-flag}
+\begin{thm}{Observation}\label{obs:link-of-flag}
 Any link of a flag complex is flag.
 \end{thm}
 
 
 \parit{Proof of Proposition~\ref{prop:no-trig}.}
-By Lemma~\ref{lem:link-of-flag}, the no-triangle condition holds 
+By Observation~\ref{obs:link-of-flag}, the no-triangle condition holds 
 for any flag complex and all its links.
 
 Now assume a complex $\spc{S}$ and all its links satisfy 
@@ -330,7 +323,7 @@ and so on we get that $\spc{S}$ is flag.
 
 \parbf{Right-angled triangulation.} 
 A triangulation of a spherical polyhedral space 
-is called a \index{right-angled triangulation}\emph{right-angled triangulation} 
+is called \index{right-angled triangulation}\emph{right-angled} 
 if each simplex of the triangulation is isometric 
 to a spherical simplex all of whose angles are right.
 Similarly, we say that a simplicial complex 
@@ -358,7 +351,7 @@ $$\mangle\hinge{v_1}{v_2}{v_3}=\mangle\hinge{v_2}{v_3}{v_1}=\mangle\hinge{v_3}{v
 Equivalently,
 \begin{clm}{}\label{clm:3pi/2}
 The concatenation of the geodesics $[v_1v_2]$, $[v_2v_3]$ and $[v_3v_1]$
-forms a locally geodesic loop in $\spc{P}$. 
+forms a closed local geodesic in $\spc{P}$. 
 \end{clm}
 
 Now assume that $\spc{P}$ is $\CAT1$.
@@ -376,7 +369,7 @@ Therefore Proposition~\ref{prop:no-trig} and \ref{clm:3pi/2}
 imply the only-if part.
 
 \parit{If part.} 
-By Lemma~\ref{lem:link-of-flag} and Theorem~\ref{thm:PL-CAT},
+By Observation~\ref{obs:link-of-flag} and Theorem~\ref{thm:PL-CAT},
 it is sufficient to show that any closed local geodesic $\gamma$ 
 in a flag complex $\spc{S}$ with right-angled metric has length at least $2\cdot\pi$.
 
@@ -395,7 +388,7 @@ Let $v$ be a vertex of $\sigma$.
 Set $f(t)=\cos\dist{v}{\gamma(t)}{}$.
 Note that 
 \[f''(t)+f(t)=0\] if $f(t)>0$.  
-Since the zeroes of $f$ are  $\pi$ apart,
+Since the zeroes of sine are $\pi$ apart,
 $\gamma$ 
 spends time $\pi$ on every visit to $\Star_v$.
 
@@ -409,6 +402,11 @@ do not overlap.
 The same argument as above shows that $\gamma$ spends time $\pi$ on every visit to $\Star_{v'}$.
 Therefore the total length of $\gamma$ is at least $2\cdot\pi$.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:barycenric-flag}
+Show that the barycentric subdivision of any simplicial complex is flag.
+Conclude that any finite  simplicial complex is homeomorphic to a compact length $\CAT1$ space.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:tree-product}
 Let $p$ be a point in a product of metric trees.
@@ -483,7 +481,7 @@ that is, contains a finite number of cubes.
 
 The union of all the cubes in a cubical complex $\spc{Q}$ will be called its \index{underlying space of a cubical complex}\emph{underlying space};
 it will be denoted by $\spc{Q}$ or by $\ushort{\spc{Q}}$ 
-if we need to emphasize that we are talking about a set, 
+if we need to emphasize that we are talking about a topological space, 
 not a complex.
 A homeomorphism from $\ushort{\spc{Q}}$ to a topological space $\spc{X}$ is called a \index{cubulation}\emph{cubulation of}~$\spc{X}$.
 
@@ -551,6 +549,6 @@ The following three conditions are equivalent.
 \begin{subthm}{cube-infty} A cube complex $Q$ equipped with $\ell^\infty$-metric is \index{injective metric space}\emph{injective}; that is, for any metric space $\spc{X}$ with a subset $A$, any short map $A\to (Q,\ell^\infty)$ can be extended to a short map $\spc{X}\to (Q,\ell^\infty)$.
 \end{subthm}
 
-\begin{subthm}{cube-1} A cube complex $Q$ equipped with $\ell^1$-metric is \emph{median}; that is, for any three points $x,y,z$ there is a {}\emph{unique} point   $m$ (called the  \index{median of three points}\emph{median} of $x$, $y$, and $z$) that lies on {}\emph{some} geodesics $[xy]$, $[xz]$ and $[yz]$.
+\begin{subthm}{cube-1} A cube complex $Q$ equipped with $\ell^1$-metric is \emph{median}; that is, for any three points $x,y,z$ there is a unique point   $m$ (called the  \index{median of three points}\emph{median} of $x$, $y$, and $z$) that lies on some geodesics $[xy]$, $[xz]$ and $[yz]$.
 \end{subthm}
 \end{thm}
