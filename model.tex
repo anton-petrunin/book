@@ -5,16 +5,14 @@
 
 Given a real number $\kappa$, the \index{plane!$\kappa$-plane}\emph{model $\kappa$-plane} will be a complete simply connected 2-dimensional Riemannian manifold of constant curvature~$\kappa$.
 
-The  model $\kappa$-plane  will be denoted by $\Lob2\kappa$\index{$\Lob2\kappa$}.
+The model $\kappa$-plane will be denoted by $\Lob2\kappa$\index{$\Lob2\kappa$}.
 \begin{itemize}
 \item If $\kappa>0$, $\Lob2\kappa$ is isometric to a sphere of radius $\tfrac{1}{\sqrt{\kappa}}$; the unit sphere $\Lob21$ will be also denoted by $\mathbb{S}^2$.
 \item If $\kappa=0$, $\Lob2\kappa$ is the Euclidean plane, which is also denoted by $\EE^2$. 
-\item If $\kappa<0$, $\Lob2\kappa$ is the  Lobachevsky plane with curvature $\kappa$.
+\item If $\kappa<0$, $\Lob2\kappa$ is the Lobachevsky plane with curvature $\kappa$.
 \end{itemize}
 
-
-
-Set \index{$\varpi\kappa$}$\varpi\kappa=\diam\Lob2\kappa$, so 
+Let \index{$\varpi\kappa$}$\varpi\kappa=\diam\Lob2\kappa$, so 
 $\varpi\kappa=\infty$ if $\kappa\le0$ and $\varpi\kappa=\pi/\sqrt{\kappa}$ if $\kappa>0$.
 
 The distance between points $x,y\in \Lob2\kappa$ will be denoted by $\dist{x}{y}{}$\index{$\dist{p}{q}{}$}, and $[x y]$\index{$[{p}{q}]$} 
@@ -28,9 +26,9 @@ The angle of $\trig x y z$ at $x$ will be denoted by $\mangle\hinge xyz$\index{$
 
 By $\modtrig\kappa\{a,b,c\}$\index{$\modtrig\kappa$!$\modtrig\kappa\{{a},{b},{c}\}$} we denote a triangle in 
 $\Lob2\kappa$ with side lengths $a,b,c$, so 
-$\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$  are such that 
+$\trig x y z=\modtrig\kappa\{a,b,c\}$ means that $x,y,z\in \Lob2\kappa$ are such that 
 \[\dist{x}{y}{}=c,\quad \dist{y}{z}{}=a,\quad \dist{z}{x}{}=b.\]
-For $\modtrig\kappa\{a,b,c\}$ to be defined, the sides $a,b,c$ must satisfy the triangle inequality.  If $\kappa>0$, we 
+For $\modtrig\kappa\{a,b,c\}$ to be defined, the sides $a,b,c$ must satisfy the triangle inequality. If $\kappa>0$, we 
 require 
 in addition that $a+b+c<2\cdot\varpi\kappa$; 
 otherwise $\modtrig\kappa\{a,b,c\}$ is considered to be undefined.
@@ -45,7 +43,7 @@ They are defined as the solutions of the following initial value problems respec
  x(0)=1,\\
  x'(0)=0.
  \end{cases} 
-  \quad 
+ \quad 
  \begin{cases}
  y''+\kappa\cdot y=0,\\
  y(0)=0,\\
@@ -56,7 +54,7 @@ They are defined as the solutions of the following initial value problems respec
  z''+\kappa\cdot z=1,\\
  z(0)=0,\\
  z'(0)=0.
- \end{cases}  
+ \end{cases} 
 \]
 
 Namely we set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$, and 
@@ -65,7 +63,7 @@ Namely we set $\cs\kappa(t)=x(t)$, $\sn\kappa(t)=y(t)$, and
 \begin{cases}
 z(t)& \textrm{ if } 0\le t\le \varpi\kappa,
 \\
-\tfrac{2}{\kappa}& \textrm{ if  } t> \varpi\kappa.
+\tfrac{2}{\kappa}& \textrm{ if } t> \varpi\kappa.
 \end{cases}
 \]
 
@@ -108,20 +106,19 @@ we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 \includegraphics{mppics/pic-105}
 \end{wrapfigure}
 
-
 Note that
 \[
 \mdk(x)=\int\limits_0^x
 \snk(t)\cdot\dd t \quad \text{ for }\quad x\le \varpi\kappa.
 \]
 
-Let $\phi$ be the angle of $\modtrig\kappa\{a,b,c\}$  
+Let $\phi$ be the angle of $\modtrig\kappa\{a,b,c\}$ 
 opposite to $a$.
 In this case, we will write \label{page:model-side}\index{$\side\kappa$!$\side\kappa \{{a};{b},{c}\}$}
 \[a
 =
 \side\kappa\{\phi;b,c\}
-\quad  \text{or}\quad 
+\quad \text{or}\quad 
 \phi
 =
 \tangle\mc\kappa\{a;b,c\}.\]
@@ -134,8 +131,7 @@ Let
 \side\kappa\{\phi;b,-c\}
 =\side\kappa\{\phi;-b,c\}
 \df\side\kappa\{\pi-\phi;b,c\};\]
-in this way we define $\side\kappa\{\phi;b,c\}$ when one of the numbers  $b$ and $c$ is negative. %for some negative values of $b$ and $c$.
-
+in this way we define $\side\kappa\{\phi;b,c\}$ when one of the numbers $b$ and $c$ is negative. %for some negative values of $b$ and $c$.
 
 \begin{thm}{Properties of standard functions}\label{md-equalities}
 
@@ -147,7 +143,7 @@ For fixed $a$ and $\phi$, the function
 \end{subthm}
 
 \begin{subthm}{sn-diff-eq}
-Let $\alpha\:[a,b]\to\Lob2\kappa$ be a unit-speed geodesic, and $A$ be the image of a complete geodesic.  If $f(t)$ is the distance from $\alpha(t)$ to $A$, the function 
+Let $\alpha\:[a,b]\to\Lob2\kappa$ be a unit-speed geodesic, and $A$ be the image of a complete geodesic. If $f(t)$ is the distance from $\alpha(t)$ to $A$, the function 
 \[y(t)=\sn\kappa (f(t))\]
  satisfies the following differential equation:
 \[y''+\kappa\cdot y=0\]
@@ -199,7 +195,7 @@ can be rewritten using the cosine law in $\Lob2\kappa$:
 &\text{if}&\quad \kappa\ne0.
 \end{aligned}\right.\]
 
-However, rather than using these explicit formulas,  we mainly will use
+However, rather than using these explicit formulas, we mainly will use
 the properties of $\tangle\mc\kappa$ and $\side\kappa$ listed in \ref{md-equalities}.
 
 \section{Hemisphere lemma}\label{curves-in-model}
@@ -213,8 +209,6 @@ For $\kappa>0$, any closed path of length less than $2\cdot \varpi\kappa$ (respe
 Applying rescaling, we may assume that $\kappa=1$, and thus $\varpi\kappa=\pi$ and $\Lob2{\kappa}=\mathbb{S}^2$.
 Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
-
-
 \begin{wrapfigure}{o}{35 mm}
 \vskip-0mm
 \centering
@@ -223,10 +217,10 @@ Let $\alpha$ be a closed curve in $\mathbb{S}^2$ of length $2\cdot\ell$.
 
 Assume $\ell<\pi$.
 Let $\check\alpha$ be a subarc of $\alpha$ of length $\ell$, with endpoints $p$ and $q$. 
-Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\mathbb{S}^2$.  
-Let $z$ be the midpoint of  $[pq]$.  
-We claim that $\alpha$ lies in the open hemisphere centered at $z$.  
-If not, $\alpha$ intersects the boundary  great circle of this hemisphere; let $r$ be a point in the intersection.
+Since $\dist{p}{q}{}\le\ell<\pi$, there is a unique geodesic $[pq]$ in $\mathbb{S}^2$. 
+Let $z$ be the midpoint of $[pq]$. 
+We claim that $\alpha$ lies in the open hemisphere centered at $z$. 
+If not, $\alpha$ intersects the boundary great circle of this hemisphere; let $r$ be a point in the intersection.
 Without loss of generality, we may assume that $r\in\check\alpha$. 
 The arc $\check\alpha$ together with its reflection in $z$ form a closed curve of length $2\cdot \ell$ that contains $r$ and its antipodal point~$r'$.
 Thus 
@@ -237,20 +231,12 @@ If $\ell=\pi$, then either $\alpha$ is a local geodesic, and hence a great circl
 or $\alpha$ may be strictly shortened by substituting a geodesic arc for a subarc of $\alpha$ 
 whose endpoints $p^1,p^2$ are arbitrarily close to some point $p$ on $\alpha$.
 In both cases $\alpha$ lies in a closed hemisphere;
-the former case is trivial, and in the latter case, $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres  containing the shortened curves as $p^1,p^2$ approach~$p$.
+the former case is trivial, and in the latter case, $\alpha$ lies in a closed hemisphere obtained as a limit of closures of open hemispheres containing the shortened curves as $p^1,p^2$ approach~$p$.
 \qeds
-
-
 
 %\begin{thm}{Lemma}\label{lem:proj-to-conv}Let $K\subset\Lob2\kappa$ be a convex closed set.Then there is a short map $\map\:\Lob2\kappa\to K$ such that $\map(x)=x$ for any $x\in K$. \end{thm}
 
 \begin{thm}{Exercise}\label{exr-crofton}
 Give a proof of the hemisphere lemma (\ref{lem:hemisphere}) based on Crofton's formula.
 \end{thm}
-
-
-
-
-
-
 
