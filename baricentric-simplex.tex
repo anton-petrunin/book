@@ -1,7 +1,7 @@
 %%!TEX root = the-baricentric-simplex.tex
 \chapter{Dimension of CAT spaces}\label{chap:web+bary}
 
-In this chapter we discuss  constructions introduced by Bruce Kleiner \cite{kleiner}.
+In this chapter we discuss constructions introduced by Bruce Kleiner \cite{kleiner}.
 
 The material of this chapter is used mostly for $\CAT{}$ spaces, 
 but the results in section~\ref{sec:web-general} find some applications for finite-dimensional $\Alex{}$ spaces as well.
@@ -22,7 +22,7 @@ $\bm{v}\succcurlyeq\bm{w}$ if $v^i\ge w^i$ for each $i$.
 
 Given a subset $Q\subset \RR^{\kay+1}$, 
 denote by $\Up Q$ \label{PAGE.def:Up}
-the smallest upper set containing $Q$,  
+the smallest upper set containing $Q$, 
 and by 
 $\Min Q$ the set of minimal elements of $Q$ with respect to $\succcurlyeq$;
 that is,
@@ -38,7 +38,7 @@ that is,
 
 
 \begin{thm}{Definition}\label{def:web}
-Let  $\bm{f}=(f^0,f^1,\dots,f^\kay)\:\spc{X}\to \RR^{\kay+1}$ be a function array on a metric space $\spc{X}$.
+Let $\bm{f}=(f^0,f^1,\dots,f^\kay)\:\spc{X}\to \RR^{\kay+1}$ be a function array on a metric space $\spc{X}$.
 The set 
 \[\Web\bm{f}
 \df
@@ -84,7 +84,7 @@ Note that for a general function array $\bm{f}$,
 the value $\spx{\bm{f}}(\bm{x})$ might be undefined or nonuniquely defined.
 
 It is clear from the definition that $\spx{\bm{f}^{\without i}}$ 
-coincides with the restriction of $\spx{\bm{f}}$ to the corresponding face of $\Delta^\kay$.
+coincides with the restriction of $\spx{\bm{f}}$ to the corresponding facet of $\Delta^\kay$.
 
 
 \begin{thm}{Theorem}\label{thm:web}
@@ -123,7 +123,7 @@ in a neighborhood of $\Web\bm{f}$ for all $i$.
 \end{subthm}
 
 
-In particular, by \ref{SHORT.thm:web:Up-convex} and \ref{SHORT.thm:web:f(web)=min},  $\InWeb\bm{f}$ is $C^{\frac12}$-homeomorphic to an open set of $\RR^\kay$.
+In particular, by \ref{SHORT.thm:web:Up-convex} and \ref{SHORT.thm:web:f(web)=min}, $\InWeb\bm{f}$ is $C^{\frac12}$-homeomorphic to an open set of $\RR^\kay$.
 \end{thm}
 
 The proof is preceded by a few preliminary statements.
@@ -238,7 +238,7 @@ Therefore $W$, as well as $\bar W$, are convex sets in $\RR^{\kay+1}$.
 Let
 \[w^i=\min\set{f^i(x)}{x\in\spc{X}}.\]
 By Lemma~\ref{lem:argmin(convex)}, $w^i$ is finite for each $i$.
-Clearly $\bm{w}=(w^0,w^1,\dots,w^\kay)$ is a lower bound of $\bar W$ with respect to $\succcurlyeq$.
+Evidently, $\bm{w}=(w^0,w^1,\dots,w^\kay)$ is a lower bound of $\bar W$ with respect to $\succcurlyeq$.
 
 It is clear that $W$ has nonempty interior,
 and $W\ne \RR^{\kay+1}$ since $W$ is bounded below.
@@ -260,7 +260,8 @@ that is, $\bm{x}\succcurlyeq\bm{0}$.
 
 Further, according to Lemma~\ref{lem:argmin(convex)}, 
 the function 
-$\sum_i x^i\cdot f^i$ has a uniquely defined minimum point, say $p$.
+\[p\mapsto\langle\bm{x},\bm{f}(p)\rangle=\sum_i x^i\cdot f^i(p)\]
+has a uniquely defined minimum point, say $p$.
 Clearly 
 \[\bm{v}\succcurlyeq\bm{f}(p)\quad\text{and}\quad \bm{f}(p)\in \Min W.\eqlbl{eq:v>f(p)}\]
 
@@ -279,7 +280,7 @@ $\bar W=W$; that is, $W$ is closed.
 
 
 
-\parit{Proof of \ref{thm:web}}; \ref{SHORT.thm:web:Up-convex}+\ref{SHORT.thm:web:f(web)=min}.
+\parit{Proof of \ref{thm:web}; \ref{SHORT.thm:web:Up-convex}+\ref{SHORT.thm:web:f(web)=min}.}
 Without loss of generality, we may assume that all $f^i$ are $1$-convex.
 
 Given $\bm{v}=(v^0,v^1,\dots,v^\kay)\in\RR^{\kay+1}$, consider the function 
@@ -321,8 +322,8 @@ Therefore,
 2\cdot\max_{i}\{|v^i-w^i|\}.
 \end{align*}
 In particular,
-$\map$ is $C^{\frac{1}{2}}$-continuous,
-or $\bm{f}|_{\Web\bm{f}}$ is a $C^{\frac{1}{2}}$-embedding.
+$\map$ is $C^{\frac{1}{2}}$-continuous.
+Hence $\bm{f}|_{\Web\bm{f}}$ is a $C^{\frac{1}{2}}$-embedding.
 
 As in Lemma~\ref{lem:Up-convex},
 let $W=\Up\bm{f}(\spc{X})$ and $S=\Fr_{\RR^{\kay+1}}W$.
@@ -441,7 +442,7 @@ $\distfun{\bm{a}}{}{}$
 denotes the distance map
 \[(\distfun{a^0}{}{},\distfun{a^1}{}{},\dots,\distfun{a^\kay}{}{})\:\spc{U}\to\RR^{\kay+1},\]
 which can be also regarded as a function array.
-The \index{radius of a point array}\emph{radius of the point array} $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
+The \index{radius of a point array}\emph{radius} of the point array $\bm{a}$ is defined to be the radius of the set $\{a^0,a^1,\dots,a^\kay\}$;
 that is,
 \[\rad\bm{a}=\inf\set{r>0}{\exists z\in\spc{U}\ \text{such that}\ a^i\in \oBall(z,r)\ \text{for any}\ i}.\]
 
@@ -455,7 +456,7 @@ Assuming the barycentric simplex $\spx{\bm{f}}$ is defined,
 then $\spx{\bm{f}}$ is called the \index{$\kappa$-barycentric simplex}\emph{$\kappa$-barycentric simplex} for the point array $\bm{a}$;
 it will be denoted by $\spx{\bm{a}}\mc\kappa$.
 The points $a^0,a^1,\dots,a^\kay$ are called 
-\index{vertexes  of the $\kappa$-barycentric simplex}\emph{vertexes} of the $\kappa$-barycentric simplex.
+\index{vertexes of the $\kappa$-barycentric simplex}\emph{vertexes} of the $\kappa$-barycentric simplex.
 Note that once we say the $\kappa$-barycentric simplex is defined, 
 we automatically assume that $\rad\bm{a}<\tfrac{\varpi\kappa}2$.
 
@@ -510,7 +511,7 @@ If $\InWeb(\distfun{\bm{a}}{}{})$ is nonempty, then the point array $\bm{a}$ is 
 \end{thm}
 
 Lemma~\ref{lem:nondeg-test-with-balls} will provide examples of nondegenerate point arrays,
-which can be used in Theorem~\ref{thm:cat-bary-web:mnfld}.
+which can be used in \ref{thm:cat-bary-web:mnfld}.
 
 \begin{thm}{Corollary}\label{cor:LinDim>bary}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
@@ -525,12 +526,12 @@ forms a subcone isometric to an $m$-dimensional Euclidean space in the tangent c
 
 
 \parit{Proof.}
-Denote the distance map  $\distfun{\bm{a}^{\without 0}}{}{}$ by $\tau\:\spc{U}\to\RR^m$.
+Denote the distance map $\distfun{\bm{a}^{\without 0}}{}{}$ by $\tau\:\spc{U}\to\RR^m$.
 
 According to Theorem~\ref{thm:cat-bary-web},
 $\sigma$ is Lipschitz
-and  the distance map $\tau$  
-gives an open embedding of  
+and the distance map $\tau$ 
+gives an open embedding of 
 $\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)$.
 Note that $\tau$ is Lipschitz.
 According to Rademacher's theorem (\ref{thm:Rademacher-CBB+CBA}), 
@@ -543,7 +544,7 @@ implies that $\dd_{\bm{x}}(\tau\circ\sigma)$ is surjective on a set of positive 
 
 Note that $\dd_{\bm{x}}(\tau\circ\sigma)=(\dd_{\sigma(\bm{x})}\tau)\circ(\dd_{\bm{x}}\sigma)$.
 Applying Rademacher's theorem again, we have linearity of 
-$\dd_{\bm{x}}\sigma$  for almost all $\bm{x}\in\Delta^m$;
+$\dd_{\bm{x}}\sigma$ for almost all $\bm{x}\in\Delta^m$;
 at these points $\Im\dd_{\bm{x}}\sigma$ forms a subcone isometric to a Euclidean space in $\T_{\sigma(\bm{x})}$.
 Clearly the dimension of $\Im\dd_{\bm{x}}(\tau\circ\sigma)$ is at least as big as the dimension of $\Im\dd_{\bm{x}}\sigma$.
 Hence the result.
@@ -559,18 +560,18 @@ we get the second part of~\ref{SHORT.thm:cat-bary-web:web=Im(bary)}.
 
 \medskip
 
-The remaining statements are proved first in  the case $\kappa\le 0$,  
+The remaining statements are proved first in the case $\kappa\le 0$, 
 and then the remaining case $\kappa>0$ is reduced to the case $\kappa=0$.
 
 \parit{Case $\kappa\le 0$.}
 Consider the function array $f^i=\md\kappa\circ \distfun{a^i}{}{}$.
 From the definition of web (\ref{def:web}),
 it is clear that $\Web(\distfun{\bm{a}}{}{})=\Web\bm{f}$.
-Further, from the definition of $\kappa$-barycentric simplex,
+Further, by the definition of $\kappa$-barycentric simplex,
 $\spx{\bm{a}}\mc\kappa=\spx{\bm{f}}$.
 
 All the functions $f^i$ are strongly convex (see \ref{function-comp}).
-Therefore \ref{SHORT.thm:cat-bary-web:Lip}, \ref{SHORT.thm:cat-bary-web:web=Im(bary)} and the first statements in \ref{SHORT.thm:cat-bary-web:mnfld} follow from Theorem \ref{thm:web}.
+Therefore \ref{SHORT.thm:cat-bary-web:Lip}, \ref{SHORT.thm:cat-bary-web:web=Im(bary)}, and the first statements in \ref{SHORT.thm:cat-bary-web:mnfld} follow from Theorem \ref{thm:web}.
 
 \parit{Case $\kappa>0$.}
 Applying rescaling, we may assume $\kappa=1$,
@@ -578,7 +579,7 @@ so $\varpi\kappa=\varpi1\z=\pi$.
 
 Let $\mathring{\spc{U}}=\Cone\spc{U}$.
 By \ref{thm:warp-curv-bound:cbb:S}, $\mathring{\spc{U}}$ is $\CAT0$.
-Let us denote by $\iota$ the natural embedding of $\spc{U}$ as the unit sphere in $\mathring{\spc{U}}$,  and by  
+Let us denote by $\iota$ the natural embedding of $\spc{U}$ as the unit sphere in $\mathring{\spc{U}}$, and by 
 $\proj\:\mathring{\spc{U}}\subto\spc{U}$ the submap
 defined by $\proj(v)=\iota^{-1}(v/|v|)$ for all 
 $v\ne \0$.
@@ -641,7 +642,7 @@ minimizing the function
 \[f(x)=\max_i\{\distfun{B^i}{x}{}\}=\max\{0,\dist{a^0}{x}{}-r^0,\dots,\dist{a^\kay}{x}{}-r^\kay\}.\]
 
 By the definition of web (\ref{def:web}), 
-$p$ is also the minimum point of $f$ on $\spc{U}$.
+$p$ is also the minimum point of $f$ on~$\spc{U}$.
 Let us prove the following claim:
 
 \begin{clm}{}
@@ -699,7 +700,7 @@ To construct the second type of example,
 note that the completion of any metric tree has topological dimension 1 and is $\CAT\kappa$ for any $\kappa$.
 Start with a binary tree $\Gamma$, and a sequence $\eps_n>0$ such that $\sum_n\eps_n<\infty$.
 Define the metric on $\Gamma$
-by prescribing the length of an edge from level $n$ to  level $n+1$ to be $\eps_n$.
+by prescribing the length of an edge from level $n$ to level $n+1$ to be $\eps_n$.
 For an appropriately chosen sequence $\eps_n$, the completion of $\Gamma$ will contain a Cantor set of arbitrarily large Hausdorff dimension.
 
 \medskip
@@ -762,7 +763,7 @@ This metric will be called the \index{$\ell^1$-metric}\emph{$\ell^1$-metric} on 
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space
 and $\rho\:\spc{U}\to\RR$ be a continuous positive function.
 Then there is a simplicial complex $\spc{N}$ equipped with $\ell^1$-metric,
-a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$,  
+a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$, 
 and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that:
 
 \begin{subthm}{lem:approximation-cba:displacement}
@@ -817,7 +818,7 @@ According to Theorem~\ref{thm:cat-bary-web:Lip}, this extension exists,
 $\map[2]$ is Lipschitz, 
 and its Lipschitz constant depends only on $\rho_0$ and $\kappa$.
 
-\parit{\ref{SHORT.lem:approximation-cba:displacement}}
+\parit{\ref{SHORT.lem:approximation-cba:displacement}.}
 Fix $x\in\spc{U}$. Denote by $\Delta$ the minimal simplex that contains $\map(x)$, 
 and let $\alpha^0,\alpha^1,\dots,\alpha^n$ be the vertexes of $\Delta$.
 %Denote by $\Delta$ the minimal simplex that contains $\map(x)$;
@@ -848,21 +849,9 @@ Applying Corollary~\ref{cor:LinDim>bary}
 gives $\LinDim\spc{U}\ge \kay$, a contradiction.
 \qeds
 
-
-
-
-
-
-\parit{Proof of \ref{thm:dim-infty-CBA}.} 
-Note that
-\begin{itemize}
-\item The implication \ref{SHORT.thm:dim-infty-CBA:bary}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:mnfld}
-follows directly from Lemma~\ref{lem:nondeg-test-with-balls}
-and Theorem~\ref{thm:cat-bary-web:mnfld}.
-\item The implication 
-\ref{SHORT.thm:dim-infty-CBA:mnfld}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:TopDim} 
-is trivial.
-\end{itemize}
+\parit{Proof of \ref{thm:dim-infty-CBA}; \ref{SHORT.thm:dim-infty-CBA:bary}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:mnfld}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:TopDim}.}
+The implication \ref{SHORT.thm:dim-infty-CBA:bary}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:mnfld} follows from Lemma~\ref{lem:nondeg-test-with-balls}
+and Theorem~\ref{thm:cat-bary-web:mnfld}, and \ref{SHORT.thm:dim-infty-CBA:mnfld}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:TopDim} is trivial.
  
 \parit{\ref{SHORT.thm:dim-infty-CBA:TopDim}$\Rightarrow$\ref{SHORT.LinDim-CBA}.}
 According to Theorem~\ref{thm:stable-value}, 
@@ -875,9 +864,9 @@ Since $F$ is continuous, there is a continuous positive function $\rho$ defined 
 \[\dist{x}{y}{}<\rho(x)
 \quad\Rightarrow\quad
 |F(x)- F(y)|<\tfrac13\cdot\eps.\]
-Apply Lemma~\ref{lem:approximation-cba} for the function $\rho$.
+Apply Lemma~\ref{lem:approximation-cba} to $\rho$.
 For the resulting simplicial complex $\spc{N}$ 
- and maps $\map\:\spc{U}\to \spc{N}$, $\map[2]\:\spc{N}\to \spc{U}$, we have
+ and the maps $\map\:\spc{U}\to \spc{N}$, $\map[2]\:\spc{N}\to \spc{U}$, we have
 \[|F\circ \map[2]\circ\map(x)-F(x)|<\tfrac13\cdot\eps\] 
 for any $x\in \spc{U}$.
 
@@ -896,35 +885,12 @@ assume $\LinDim\spc{U}<m$.
 By \ref{lem:approximation-cba:im},
 the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of the $(m-1)$-skeleton of $\spc{N}'$;
 In particular it can be covered 
-by a  countable collection of Lipschitz images of $(m-1)$-simplexes.
+by a countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
 $\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|_K$.
 Since $\eps>0$ is arbitrary, 
-then $\bm{0}\in \RR^m$ is not a stable value of $f=F|_K$, a contradiction.
-
+then
 \parit{\ref{SHORT.LinDim-CBA}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:bary}.} 
-The following claim is a consequence of the definition of tangent space.
-
-\begin{clm}{}\label{clm:finite-config-cba}
-Let $q\in \spc{U}$ and $\dot x^1,\dot x^2,\dots,\dot x^n\in \T_q$.
-Then given $\delta>0$,
-there is an array $(x^1,x^2,\dots,x^n)$ of points  in $\spc{U}$ 
-such that 
-\[\mangle(\dot x^i,\ddir q{x^i})<\delta,\]
-and for some fixed $\lam>0$ we have
-\[\tfrac1\lam\cdot\dist[{{}}]{q}{x^i}{}=|\dot x^i|\quad
-\text{and}\quad |\tfrac1\lam\cdot\dist[{{}}]{x^i}{x^j}{}-\dist{\dot x^i}{\dot x^j}{}|<\delta\] 
-for all $i$ and $j$.
-
-Moreover the value $\lam$ can be taken arbitrarily small.
-\end{clm}
-
-\parit{Proof of the claim.} For each $i$ choose a geodesic $\gamma^i$ 
-from $q$ that goes almost in the directions of $\dot x^i$.
-Then take the point $x^i$ on $\gamma^i$ at distance $\lam\cdot|\dot x^i|$ from $q$.
-\claimqeds
-
-
 Choose $q\in \spc{U}$ such that $\T_q$ contains a subcone $E$ isometric to $m$-dimensional Euclidean space.
 Note that one can choose $\eps>0$ 
 and a point arrray $(\dot a^0,\dot a^1,\dots,\dot a^m)$ in $E\subset \T_q$ 
@@ -932,11 +898,14 @@ such that
 $\bigcap_i\cBall[\dot a^i,1+\eps]=\emptyset$
 and $\bigcap_{i\ne j}\cBall[\dot a^i,1\z-\eps]\z{\ne }\emptyset$ for each $j$.
 
-Applying Claim \ref{clm:finite-config-cba}, we get a point array 
+For each $i$ choose a geodesic $\gamma^i$ 
+from $q$ that goes almost in the directions of $\dot a^i$.
+Choose small $\delta>0$ and take the point $a^i$ on $\gamma^i$ at distance $\delta\cdot|\dot a^i|$ from $q$.
+We get a point array 
 $(a^0,a^1,\dots,a^m)$ in $\spc{U}$
-such that $\bigcap_i\cBall[a^i,\lam]=\emptyset$
-and $\bigcap_{i\ne j}\cBall[a^i,\lam]\ne \emptyset$ for each $j$.
-Since $\lam>0$ can be chosen arbitrarily small, 
+such that $\bigcap_i\cBall[a^i,\delta]=\emptyset$
+and $\bigcap_{i\ne j}\cBall[a^i,\delta]\ne \emptyset$ for each $j$.
+Since $\delta>0$ can be chosen arbitrarily small, 
  \ref{SHORT.thm:dim-infty-CBA:bary} follows.
 \qeds
 
@@ -948,7 +917,7 @@ Recall that a web embedding and its brace are defined in \ref{prop-def:web-embed
 {\sloppy 
 
 \begin{thm}{Theorem}\label{thm:loc-lip-inverse}
-Suppose  $\spc{U}$ is a complete length $\CAT\kappa$ space such that 
+Suppose $\spc{U}$ is a complete length $\CAT\kappa$ space such that 
 $\LinDim\spc{U}=m$,
 and $\bm{a}=(a^0,a^1,\dots a^m)$ is a point array in $\spc{U}$ 
 with radius $<\tfrac{\varpi\kappa}{2}$.
@@ -961,7 +930,7 @@ the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $
 Note that if $\bm{a}$ is degenerate,
 that is, if $\InWeb(\distfun{\bm{a}}{}{})=\emptyset$, 
 then
-the domain of the web embedding $\map$ above is empty and hence the conclusion of the theorem trivially holds.
+the domain of $\map$ is empty, and hence the conclusion of the theorem trivially holds.
 
 \begin{thm}{Lemma}\label{lem:nondeg-bs-test}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
@@ -972,9 +941,10 @@ if for some $q\in \Web(\distfun{\bm{a}}{}{})$ and $b\in\spc{U}$
 we have 
 \[\dist{p}{q}{}<\eps,
 \quad 
-\dist{p}{b}{}<\eps
+\dist{p}{b}{}<\eps,
 \quad\text{and}\quad 
-\mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\]
+\mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps
+\eqlbl{eq:2nd-angle}\]
 for each $i$,
 then the array $(b,a^0,a^1,\dots,a^m)$ is nondegenerate.
 \end{thm}
@@ -1005,12 +975,18 @@ there is $\eps>0$ such that for any $x\in \oBall(p,10\cdot\eps)$ we have
 \eqlbl{eq:<pi/2-eps}\]
 
 Now assume that for sufficiently small $\eps>0$
-there are points $b\in\spc{U}$ and $q\in\Web(\distfun{\bm{a}}{}{})$ such that 
-\[\dist{p}{q}{}<\eps,\quad \dist{p}{b}{}<\eps,\quad \mangle\hinge{q}{b}{a^i}<\tfrac\pi2+\eps\quad\text{for all}\quad i.
-\eqlbl{eq:2nd-angle}\]
+there are points $b\in\spc{U}$ and $q\in\Web(\distfun{\bm{a}}{}{})$ such that \ref{eq:2nd-angle} holds.
 According to Theorem~\ref{thm:cat-bary-web:web=Im(bary)},
 for all small $\eps>0$ we have 
 \[\rad\{b,a^0,a^1,\dots,a^\kay\}<\tfrac{\varpi\kappa}2.\]
+
+\begin{wrapfigure}{r}{33 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1310}
+\vskip0mm
+\end{wrapfigure}
+
 Fix a sufficiently small $\delta>0$
 and let 
 \[v^i=\geod_{[q u^i]}(\tfrac13\cdot\delta)\quad\text{and}\quad w^i=\geod_{[v^i b]}(\tfrac23\cdot\delta).\]
@@ -1068,8 +1044,7 @@ $q_n=\map(\bm{y}_n)$,
 and $b_n=\map(\bm{z}_n)$.
 By \ref{prop-def:web-embedding}, $p$, $q_n$, $b_n\in\InWeb(\distfun{\bm{a}}{}{})$
 and $q_n,b_n\to p$ as $n\to\infty$.
-Choose an arbitrary $\eps>0$.
-Note that \ref{eq:nonlip} implies
+Choose $\eps>0$; note that \ref{eq:nonlip} implies
 \[\mangle\hinge{q_n}{a^i}{b_n}<\tfrac\pi2+\eps
 \]
 for all $i>0$ and all large $n$.
@@ -1087,10 +1062,10 @@ we have a contradiction.
 
 
 
-\section{Remarks and open problems}
+\section{Remarks}
 
-The following conjecture (in an equivalent form)
-appears in \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
+The following conjecture was formulated by Bruce Kleiner \cite{kleiner}, see also \cite[p.~133]{gromov:asymt-inv}.
+For separable spaces, it follows from Corollary~\ref{cor:dim-CBA}.
 
 \begin{thm}{Conjecture}
 For any complete length $\CAT{}$ space $\spc{U}$, we have
@@ -1100,7 +1075,6 @@ For any complete length $\CAT{}$ space $\spc{U}$, we have
 
 \end{thm}
 
-By Corollary~\ref{cor:dim-CBA}, this conjecture holds for separable spaces.
 
 
 

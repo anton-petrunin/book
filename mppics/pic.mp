@@ -1246,6 +1246,30 @@ label.top(btex $\dir pq$ etex, z.u);
 label.ulft(btex $\nabla_p f$ etex, z.g);
 endfig;
 
+beginfig(1310)
+save u,p,d;
+path p[];
+u:=2cm;
+d:=.3*u;
+
+z.q=origin;
+z.u=(1,-.2)*u;
+z.v=z.q+(d/3)*unitvector(z.u-z.q);
+z.b=(.6,.8)*u;
+z.w=z.v+(2*d/3)*unitvector(z.b-z.v);
+
+draw z.q--z.u;
+draw z.v--z.b;
+
+dOt z.q,z.u,z.v,z.b,z.w;
+
+label.rt(btex $u^i$ etex, z.u);
+label.lft(btex $q$ etex, z.q);
+label.bot(btex $v^i$ etex, z.v);
+label.rt(btex $w^i$ etex, z.w);
+label.top(btex $b$ etex, z.b);
+endfig;
+
 beginfig(1405) 
 save u,p;
 path p[];
