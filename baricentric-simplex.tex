@@ -158,15 +158,15 @@ let $\Lip\in\RR$ be a Lipschitz constant of $f$ in a neighborhood of $p$.
 
 Consider the function $\phi(t)=f\circ\geod_{[px]}(t)$.
 Clearly $\phi$ is $1$-convex and $\phi^+(0)\ge -\Lip$.
-Setting $\ell=\dist{p}{x}{}$, we have 
+Setting $a=\dist{p}{x}{}$, we have 
 \begin{align*}
 f(x)
 &=
-\phi(\ell)
+\phi(a)
 \ge
 \\
 &\ge
-f(p)-\Lip\cdot\ell+\tfrac{1}{2}\cdot\ell^2
+f(p)-\Lip\cdot a+\tfrac{1}{2}\cdot a^2
 \ge
 \\
 &\ge f(p)-\tfrac{1}{2}\cdot{\Lip^2}.
@@ -371,19 +371,19 @@ p
 q
 &=\spx{\bm{f}}(\bm{y}),
 \\
-\ell&=\dist{p}{q}{}.
+s&=\dist{p}{q}{}.
 \end{align*}
 Note the following:
 \begin{itemize}
 \item The function $\phi(t)=f_{\bm{x}}\circ\geod_{[p q]}(t)$ has minimum at $0$. 
 
 Therefore $\phi^+(0)\ge 0$
-\item The function $\psi(t)=f_{\bm{y}}\circ\geod_{[p q]}(t)$ has minimum at $\ell$. 
+\item The function $\psi(t)=f_{\bm{y}}\circ\geod_{[p q]}(t)$ has minimum at $s$. 
 
-Therefore $\psi^-(\ell)\ge 0$.
+Therefore $\psi^-(s)\ge 0$.
 \end{itemize}
 From $1$-convexity of $f_{\bm{y}}$, we have
-$\psi^+(0)+\psi^-(\ell)+\ell\le0$.
+$\psi^+(0)+\psi^-(s)+s\le0$.
 
 Let $\Lip$ be a Lipschitz constant for all $f^i$ in a neighborhood $\Omega\ni p$.
 Then 
@@ -395,7 +395,7 @@ That is, given $\bm{x}\in\Delta^\kay$, there is a constant $\Lip$ such that
 \begin{align*}
 \dist{\spx{\bm{f}}(\bm{x})}{\spx{\bm{f}}(\bm{y})}{}
 &=
-\ell
+s
 \le
 \\
 &\le 
@@ -406,7 +406,7 @@ In particular, there is $\eps>0$ such that if $\|\bm{x}-\bm{y}\|_1<\eps,$ $\|\bm
 Thus the same argument as above implies 
 \[\dist{\spx{\bm{f}}(\bm{y})}{\spx{\bm{f}}(\bm{z})}{}
 =
-\ell\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
+s\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
 for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
 Since $\Delta^\kay$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 
