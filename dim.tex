@@ -2,34 +2,22 @@
 %arXiv
 \chapter{Dimension of CBB spaces}
 
-In sections \ref{sec:dim>m} and \ref{sec:dim=m},
-we prove equivalence of some dimension-like invariants for $\Alex{}$ spaces.
-In Section~\ref{sec:dim-cba} we discuss the dimension of  $\CAT{}$ spaces.
-
-As the main dimension-like invariant, we will use  the linear dimension $\LinDim$; 
-see Definition~\ref{def:lin-dim}. In other words,  by default {}\emph{dimension} means {}\emph{linear dimension}. 
-
+As the main dimension-like invariant, we will use the linear dimension $\LinDim$; 
+see Definition~\ref{def:lin-dim}. In other words, by default {}\emph{dimension} means {}\emph{linear dimension}. 
 
 \section{Struts and rank}\label{sec:struts+rank}
 
 Our definitions of strut 
 and distance chart 
-differ from the one 
-given by 
-Burago, 
-Gromov 
-and Perelman \cite{burago-gromov-perelman};
+differ from the one in \cite{burago-gromov-perelman};
 it is closer to Perelman's definitions \cite{perelman:spaces2,perelman:morse}.
 
-The term ``strut'' seems to have the closest meaning to the original Russian term used in \cite{burago-gromov-perelman}.
+The term ``strut'' seems to have the closest meaning to the original Russian term used by Yuriy Burago, Grigori Perelman, and Michael Gromov in \cite{burago-gromov-perelman}.
 In the official translation,
 it appears as ``burst'', 
 and in the authors' translation it was ``strainer''.
 Neither seems intuitive, 
 so we decided to switch to ``strut''.
-
-
-
 
 \begin{thm}{Definition of struts}\label{def:strut-I}
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
@@ -37,8 +25,8 @@ We say that a point array $(a^0,a^1,\dots,a^\kay)$ in $\spc{L}$
  is \index{strutting point array}\emph{$\kappa$-strutting} for a point $p\in\spc{L}$ if $\angk\kappa p {a^i}{a^j}>\tfrac\pi2$ for all $i\ne j$.
 \end{thm} 
 
-The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer $k>0$; the packing number is defined in \ref{sec:notations}.
-
+Recall that the packing number is defined in \ref{sec:notations}.
+The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer $k>0$. 
 
 \begin{thm}{Definition}\label{def:rank}
 Let $\spc{L}$ be a complete length $\Alex{}$ space
@@ -50,11 +38,7 @@ Let us define rank of $\spc{L}$ at $p$ as
 
 \end{thm}
 
-
-
-
 Thus $\rank$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
-
 
 \begin{thm}{Proposition}\label{prop:stutt}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
@@ -65,7 +49,7 @@ Then the following conditions are equivalent:
 \end{subthm}
 
 \begin{subthm}{lem:stut<=>rank:strut}
-there is a  point array $(a^0,a^1,\dots,a^\kay)$
+there is a point array $(a^0,a^1,\dots,a^\kay)$
 that is $\kappa$-strutting at $p$. 
 \end{subthm}
 \end{thm}
@@ -112,11 +96,11 @@ where the union is taken over all $\kay$-arrays $\bm{a}$ of points in $\spc{L}$.
 Hence the result.
 \qeds
 
-
-
-
-
 \section{Right-inverse theorem}\label{sec:right-inverse-1}
+
+Suppose that $\bm{a}=(a^1,\dots,a^\kay)$ is a point array in a metric space $\spc{L}$.
+Recall that the map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^n$ is defined by
+\[\distfun{\bm{a}}{p}{}\df(\dist{a^1}{p}{},\dots,\dist{a^n}{p}{}).\] 
 
 \begin{thm}{Right-inverse theorem}
 \label{thm:right-inverse-function}{\sloppy 
@@ -127,7 +111,7 @@ and $\bm{a}=(a^1,\dots,a^\kay)$ is a point array in $\spc{L}$.
 }
 
 Assume that $(b,a^1,a^2,\dots,a^\kay)$ is $\kappa$-strutting for $p$.
-Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$  has a right inverse defined in a neighborhood of $\distfun{\bm{a}}{p}\in\RR^\kay$;
+Then the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ has a right inverse defined in a neighborhood of $\distfun{\bm{a}}{p}\in\RR^\kay$;
 that is, there is a submap $\map\:\RR^\kay\subto\spc{L}$ such that $\Dom \map\ni \distfun{\bm{a}}{p}$ and 
 $\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom \map$.
 Moreover,
@@ -144,29 +128,27 @@ The distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipsch
 \end{thm}
 
 Part \ref{SHORT.thm:right-inverse-function:open-map} of the theorem 
-is closely related to \cite[Theorem 5.4]{burago-gromov-perelman} by Burago, Gromov and Perelman, 
+is closely related to \cite[Theorem 5.4]{burago-gromov-perelman} by Yuriy Burago, Grigori Perelman, and Michael Gromov, 
 but the proof presented here is different.
-Yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Lytchak.
+Yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Alexander Lytchak.
 
 %\parbf{Remark for AKP.} It seems that the set $\Im \map$ is $\kay$-rectifiable; that is, it lies in an image of a Lipschitz map from bounded domain of $\RR^\kay$ to $\spc{L}$. It seems I have a proof, but it is not yet clear we need it.??
 
-
 \parit{Proof.} 
-Fix  $\eps,r,\lambda>0$ such that the following conditions hold: 
+Fix $\eps,r,\lambda>0$ such that the following conditions hold: 
 \begin{enumerate}[(i)]
 \item Each distance function $\distfun{a^i}{}{}$ and $\distfun{b}{}{}$ is $\tfrac\lambda2$-concave in $\oBall(p,r)$.
 \item For any $q\in \oBall(p,r)$, we have $\angk{\kappa}{q}{a^i}{a^j}>\tfrac\pi2+\eps$ for all $i\ne j$ and $\angk{\kappa}{q}{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i$.
 In addition, $\eps<\tfrac{1}{10}$.
 \end{enumerate}
 
-
 Given $\bm{x}=(x^1,x^2,\dots,x^\kay)\in \RR^\kay$, 
 consider the function 
 $f_{\bm{x}}\:\spc{L}\to \RR$ defined by
 \[f_{\bm{x}}=\min_{i}\{h_{\bm{x}}^i\}+\eps\cdot\distfun{b}{}{},\]
 where $h_{\bm{x}}^i(q)=\min\{0,\dist{a^i}{q}{}-x^i\}$.
-Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave  in $\oBall(p,r)$.
-Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve (see Chapter~\ref{chap:grad})  that starts at $p$.
+Note that for any $\bm{x}\in\RR^\kay$, the function $f_{\bm{x}}$ is $(1+\eps)$-Lipschitz and $\lambda$-concave in $\oBall(p,r)$.
+Denote by $\alpha_{\bm{x}}(t)$ the $f_{\bm{x}}$-gradient curve (see Chapter~\ref{chap:grad}) that starts at $p$.
 
 \begin{clm}{}\label{clm:|a alpha_x|=x}
 If for some $\bm{x}\in\RR^\kay$ and $t_0\le\tfrac{r}{2}$ we have
@@ -180,7 +162,7 @@ $
 
 \end{clm}
 
-First note that Claim~\ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,r)$, we have
+First note that \ref{clm:|a alpha_x|=x} follows if for any $q\in \oBall(p,r)$, we have
 \begin{enumerate}[(i)]
 \item\label{111} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a^i}{q}{}>x^i$ and
 \item\label{222} $(\dd_q\distfun{a^i}{}{})(\nabla_q f_{\bm{x}})>\tfrac{1}{10}\cdot\eps^2$ if 
@@ -209,9 +191,9 @@ Since $|\distfun{\bm{a}}{p}-\bm{x}|
 \tfrac{\eps^2}{10}\cdot t_0$, it follows that $\phi(0)\le \tfrac{\eps^2}{10}\cdot t_0$ and $\psi(0)\ge -\tfrac{\eps^2}{10}\cdot t_0$.
 Thus $\phi(t_0)\le 0$ and $\psi(t_0)\ge 0$.
 On the other hand, from \ref{eq:xy-def} we have $\phi(t_0)\ge \psi(t_0)$.
-That is, $\phi(t_0)=\psi(t_0)=0$; hence Claim~\ref{clm:|a alpha_x|=x} follows.
+That is, $\phi(t_0)=\psi(t_0)=0$; hence \ref{clm:|a alpha_x|=x} follows.
 
-Thus, to prove Claim~\ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
+Thus, to prove \ref{clm:|a alpha_x|=x}, it remains to prove (\ref{111}) and (\ref{222}).
 First let us prove it assuming that $\spc{L}$ is geodesic.
 
 Note that 
@@ -268,19 +250,19 @@ Therefore,
 \end{align*}
 Thus (\ref{222}) follows from \ref{inq-b}, since $\eps<\tfrac{1}{10}$. 
 
-Therefore \ref{clm:|a alpha_x|=x} holds  if $\spc{L}$ is geodesic.
+Therefore \ref{clm:|a alpha_x|=x} holds if $\spc{L}$ is geodesic.
 If $\spc{L}$ is not geodesic,
-perform the above estimate in $\spc{L}^\o$, the ultrapower  of $\spc{L}$. 
+perform the above estimate in $\spc{L}^\o$, the ultrapower of $\spc{L}$. 
 (Recall that according to \ref{obs:ultralimit-is-geodesic}, $\spc{L}^\o$ is geodesic.)
-This completes the proof of  \ref{clm:|a alpha_x|=x}. 
+This completes the proof of \ref{clm:|a alpha_x|=x}. 
 \claimqeds
 
-Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|$,   
-giving  equality in \ref{clm:|a alpha_x|=x}.
+Set $t_0(\bm{x})=\tfrac{10}{\eps^2}\cdot|\distfun{\bm{a}}{p}-\bm{x}|$, 
+giving equality in \ref{clm:|a alpha_x|=x}.
 Define the submap $\map$ by
 \[\map\:{\bm{x}}\mapsto \alpha_{\bm{x}}\circ t_0(\bm{x}),\quad 
 \Dom\map=\oBall(\distfun{\bm{a}}{p},\tfrac{\eps^2\cdot r}{20} )\subset\RR^\kay.\]
-It follows from Claim~\ref{clm:|a alpha_x|=x} that
+It follows from \ref{clm:|a alpha_x|=x} that
 $\distfun{\bm{a}}{[\map(\bm{x})]}=\bm{x}$ for any $\bm{x}\in\Dom\map$.
 
 Clearly $t_0(p)=0$; thus $\map(\distfun{\bm{a}}{p})=p$.
@@ -299,21 +281,16 @@ holds.
 
 The above construction may be repeated for any $p'\in \oBall(p,\tfrac{r}{4})$, $\eps'=\eps$, and $r'=\tfrac{r}{2}$.
 The inequality \ref{co-lip} for the resulting map $\map'$ implies that for any $p',q \in \oBall(p,\tfrac{r}{4})$
-there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and  
+there is $q'\in\spc{L}$ such that $\map'(q)=\map'(q')$ and 
 \[\dist{p'}{q'}{}
 \le 
 \tfrac{11}{\eps^2}\cdot|\distfun{\bm{a}}{p'}-\bm{x}|.\]
 That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$-co-Lipschitz in $\oBall(p,\tfrac{r}{4})$.
 \qeds
 
-
-
-\section{Dimension theorem for CBB %???
-}\label{sec:dim>m}
-
+\section{Dimension theorem}\label{sec:dim>m}
 
 The following theorem is the main result of this section.
-
 
 \begin{thm}{Theorem}\label{thm:dim-infty}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
@@ -321,7 +298,7 @@ $q\in \spc{L}$,
 $R>0$ 
 and $m\in \ZZ_{\ge0}$.
 Then the following statements are equivalent:
-\begin{subthmA}{LinDim}  $\LinDim\spc{L}\ge m$.
+\begin{subthmA}{LinDim} $\LinDim\spc{L}\ge m$.
 \end{subthmA}
 
 \begin{subthmA}{thm:dim-infty:rank}
@@ -331,13 +308,14 @@ There is a point $p\in\spc{L}$ that admits a $\kappa$-strutting array $(b,a^1,\d
 \begin{subthmA}{LinDim+} Let $\Euk^m$ be the set 
 of all points $p\in \spc{L}$ such that there is a distance-preserving embedding $\EE^m\hookrightarrow \T_p$
 that preserves the cone structure 
-(see Section  \ref{sec: tangent space}).
-Then $\Euk^m$  contains a dense G-delta set in $\spc{L}$.
+(see Section \ref{sec: tangent space}).
+Then $\Euk^m$ contains a dense G-delta set in $\spc{L}$.
 \end{subthmA}
 
 \begin{subthmA}{TopDim}
-There is a $C^{\frac{1}{2}}$-embedding; that is, a bi-Hölder embedding with exponent $\tfrac{1}{2}$,
-\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R).\]
+There is a $C^{\frac{1}{2}}$-embedding
+\[\cBall[1]_{\EE^m}\hookrightarrow \oBall(q,R);\]
+that is, a bi-Hölder embedding with exponent $\tfrac{1}{2}$.
 \end{subthmA}
 
 \begin{subthmA}{pack} 
@@ -358,16 +336,15 @@ In particular:
 For finite-dimensional spaces, Theorem~\ref{thm:dim-finite} gives a stronger version 
 of the theorem above.
 
-The proof of the above theorem with the exception of  statement~\ref{SHORT.TopDim} was given in \cite{plaut:dimension}.
-At that time, it was not known whether for any complete length $\Alex\kappa$ space $\spc{L}$,
-\[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty.\]
+The above theorem with the exception of statement~\ref{SHORT.TopDim} was proved by Conrad Plaut \cite{plaut:dimension}.
+At that time, it was not known whether
+\[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty\]
+for any complete length $\Alex\kappa$ space $\spc{L}$.
 The latter implication was proved by Grigory Perelman and the third author \cite{perelman-petrunin:qg};
 it was done by combining an idea of Conrad Plaut with the technique of gradient flow.
-The statement \ref{TopDim} is somewhat stronger.
+Part \ref{SHORT.TopDim} is somewhat stronger.
 
-
-To prove Theorem \ref{thm:dim-infty}  we will need the following three propositions.
-
+To prove Theorem \ref{thm:dim-infty} we will need the following three propositions.
 
 \begin{thm}{Proposition}\label{E=T}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and $p\in \spc{L}$.
@@ -384,7 +361,6 @@ that preserves the cone structure.
 \end{subthm}
 \end{thm}
 
-
 \parit{Proof.}
 Assume $\iota(\EE^{m})$ is a proper subset of $\T_p\spc{L}$.
 Equivalently, there is a direction $\xi \in \Sigma_p\backslash\iota(\mathbb{S}^{m-1})$,
@@ -392,15 +368,15 @@ where $\mathbb{S}^{m-1}\subset \EE^m$ is the unit sphere.
 
 Fix $\eps>0$ so that $\mangle(\xi,\sigma)>\eps$ for any $\sigma\in \iota(\mathbb{S}^{m-1})$. 
 Choose a maximal $\eps$-packing in $\iota(\mathbb{S}^{m-1})$;
-that is, an array  $(\zeta^1,\zeta^2,\dots,\zeta^n)$ of directions in $\iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\ne j$.
+that is, an array $(\zeta^1,\zeta^2,\dots,\zeta^n)$ of directions in $\iota(\mathbb{S}^{m-1})$ such that $n=\pack_\eps \mathbb{S}^{m-1}$ and $\mangle(\zeta^i,\zeta^j)>\eps$ for any $i\ne j$.
 
-Choose an array $(x,z^1,z^2,\dots,z^n)$  of points in $\spc{L}$ such that
+Choose an array $(x,z^1,z^2,\dots,z^n)$ of points in $\spc{L}$ such that
 $\dir p x\approx\xi$, $\dir p{z^i}\approx\zeta^i$; 
 here we write ``$\approx$'' for ``sufficiently close''.
-We can choose this array so 
+We can choose this array so that
 $\angk{\kappa}p x{z^i}>\eps$ for all $i$ 
 and $\angk{\kappa}p{z^i}{z^j}>\eps$ for all $i\ne j$.
-Applying Corollary \ref{cor:euclid-subcone}, there is a point $p'$ arbitrarily close to  $p$ 
+Applying Corollary \ref{cor:euclid-subcone}, there is a point $p'$ arbitrarily close to $p$ 
 such that all directions $\dir{p'}x$, $\dir{p'}{z^1}$, $\dir{p'}{z^2},\dots,\dir{p'}{z^n}$
 belong to an isometric copy of $\mathbb{S}^{\kay-1}$ in $\Sigma_{p'}$.
 In addition, we may assume that $\angk{\kappa}{p'}x{z^i}>\eps$ and $\angk{\kappa}{p'}{z^i}{z^j}>\eps$.
@@ -412,7 +388,6 @@ that is,
 Hence $\kay>m$.
 \qeds
 
-
 \begin{thm}{Proposition}\label{pack-homogeneus}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. Then 
  for any two points $p,\bar p\in \spc{L}$ and any $R,\bar R>0$, there is a constant $\delta\z=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that
@@ -420,12 +395,11 @@ Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space. Then
 
 \end{thm}
 
-
 \parit{Proof.} According to \ref{cor:CAT>k-sence}, we can assume that $\kappa\le 0$.
 
 Let $n=\pack_{\eps}\oBall(p,R)$ and ${\{x^1,\dots, x^n}\}$ be a maximal $\eps$-packing in $\oBall(p,R)$;
 that is, $\dist{x^i}{x^j}{}>\eps$ for all $i\ne j$.
-Without loss of generality, we may assume the $x^i$ are in $Str(\bar p)$.
+Without loss of generality, we may assume the $x^i$ are in $\Str(\bar p)$.
 Thus, for each $i$ there is a unique geodesic $[\bar p x^i]$ (see \ref{thm:almost.geod}).
 Choose a factor $1>s>0$ so that $\bar R>s\cdot(\dist{p}{\bar p}{}+R)$.
 For each $i$, take $\bar x^i\in[\bar p x^i]$ so that 
@@ -439,12 +413,11 @@ From \ref{cor:monoton:2-sides},
 \vskip0mm
 \end{figure}
 
-Applying the cosine law gives a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
+The cosine law gives a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
 \[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
 for all $i\ne j$.
 Hence the statement follows.
 \qeds
-
 
 \begin{thm}{Proposition}\label{E-comeagre} 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
@@ -462,7 +435,7 @@ such that $\dim\Lin_q>m$ for any $q\in A$.
 
 \parit{Proof.} 
 Choose a maximal $\eps$-packing in $\oBall(p,r)$,
-that is, an array  $(x^1,x^2,\dots, x^n)$ of points in $\oBall(p,r)$ such that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\ne j$.
+that is, an array $(x^1,x^2,\dots, x^n)$ of points in $\oBall(p,r)$ such that $n=\pack_\eps \oBall(p,r)$ and $\dist{x^i}{x^j}{}>\eps$ for any $i\ne j$.
 Choose a neighborhood $\Omega\ni p$
 such that $\dist{q}{x^i}{}<r$ for any $q\in \Omega$ and all $i$.
 Let 
@@ -490,8 +463,10 @@ which contradicts $\kay\le m$ and \ref{eq:pack>pack}.
 
 The proof of Theorem \ref{thm:dim-infty} is essentially done in \ref{E=T}, \ref{pack-homogeneus}, \ref{E-comeagre}, \ref{thm:inverse-function},
 \ref{thm:right-inverse-function}; 
-now we  assemble the proof from these parts.
+now we assemble the proof from these parts.
 
+
+\parit{Proof of \ref{thm:dim-infty}.} 
 We will prove the implications 
 \[\textrm{\ref{SHORT.LinDim+} 
 $\Rightarrow$ 
@@ -506,37 +481,32 @@ $\Rightarrow$
 \ref{SHORT.TopDim} 
 $\Rightarrow$ 
 \ref{SHORT.pack}.}\]
-
-\parit{Proof of \ref{thm:dim-infty}.} 
 The implication \ref{SHORT.LinDim+}$\Rightarrow$\ref{SHORT.LinDim} is trivial.
 
 \parit{\ref{SHORT.LinDim}$\Rightarrow$\ref{SHORT.thm:dim-infty:rank}.}
 Choose a point $p\in\spc{L}$ such that $\dim\Lin_p\ge m$.
-Clearly one can choose an array  $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)\z>\tfrac\pi2$ for all $i\ne j$.
-Choose an array  $(x^0,x^1,\dots,x^m)$ of points in $\spc{L}$ such that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
+Clearly one can choose an array $(\xi^0,\xi^1,\dots,\xi^m)$ of directions in $\Lin_p$ such that $\mangle(\xi^i,\xi^j)\z>\tfrac\pi2$ for all $i\ne j$.
+Choose an array $(x^0,x^1,\dots,x^m)$ of points in $\spc{L}$ such that each $\dir{p}{x^i}$ is sufficiently close to $\xi^i$;
 in particular, we have $\mangle\hinge{p}{x^i}{x^j}>\tfrac\pi2$.
 Choose points $a^i\in\mathopen{]}p x^i\mathclose{]}$ sufficiently close to $p$.
 This can be done so that each $\angk\kappa p{a^i}{a^j}$ is arbitrarily close to $\mangle\hinge p{a^i}{a^j}$,
 in particular $\angk\kappa p{a^i}{a^j}>\tfrac{\pi}{2}$.
 Finally, set $b=a^0$.
 
-
-
-
 \parit{\ref{SHORT.thm:dim-infty:rank}$\Rightarrow$\ref{SHORT.pack}.} 
 Let $p\in \spc{L}$ be a point that admits a $\kappa$-strutting array $(b,a^1,\dots, a^m)$ 
 of points in $\spc{L}$.
-The right-inverse mapping map theorem (\ref{thm:right-inverse-function:open-map})
+The right-inverse theorem (\ref{thm:right-inverse-function:open-map})
 implies that the distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$,
 \[\distfun{\bm{a}}{}{}\:x\mapsto(\dist{a^1}{x}{},\dist{a^2}{x}{},\dots,\dist{a^n}{x}{}),\]
 is open in a neighborhood of $p$.
 Since the distance map $\distfun{\bm{a}}{}{}$ is Lipschitz, 
 for any $r>0$, there is $\Const>0$ such that
-\[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}.\]
+\[\pack_\eps \oBall(p,r)>\frac{\Const}{\eps^m}\]
+for any $\eps>0$.
 Applying \ref{pack-homogeneus}, we get a similar inequality for any other ball in $\spc{L}$;
-that is, for any  $q\in\spc{L}$ and $R>0$, there is $\Const'>0$ such that 
+that is, for any $q\in\spc{L}$ and $R>0$, there is $\Const'>0$ such that 
 \[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
-
 
 \parit{\ref{SHORT.pack}$\Rightarrow$\ref{SHORT.LinDim+}.} 
 Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
@@ -562,7 +532,7 @@ contains a G-delta set that is dense in a neighborhood of any point $q'\in\spc{L
 Since $\Euk^m$ contains a dense G-delta set in $\spc{L}$, we can choose $p\in \oBall(q,R)$ with a distance-preserving cone embedding $\iota\:\EE^m\hookrightarrow \T_p$.
 
 Repeating the construction in \ref{SHORT.LinDim}$\Rightarrow$\ref{SHORT.thm:dim-infty:rank}, 
-we get a $\kappa$-strutting array $(p,a^1,\dots, a^m)$  for $p$.
+we get a $\kappa$-strutting array $(p,a^1,\dots, a^m)$ for $p$.
 
 Applying the right-inverse theorem (\ref{thm:right-inverse-function}),
 we obtain a $C^{\frac{1}{2}}$-submap 
@@ -570,9 +540,8 @@ we obtain a $C^{\frac{1}{2}}$-submap
 that is a right inverse for $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^m$ and such that $\map(\distfun{\bm{a}}{p})=p$.
 In particular, $\map$ is a $C^{\frac{1}{2}}$-embedding of $\Dom\map$.
 
-
 \parit{\ref{SHORT.TopDim}$\Rightarrow$\ref{SHORT.pack}.}
-This proof  is valid for general metric spaces;
+This proof is valid for general metric spaces;
 it is based on general relations between topological dimension, Hausdorff measure and $\pack_\eps$. 
 
 Let $W\subset\oBall(q,R)$ be the image of the embedding $\map$.
@@ -581,7 +550,7 @@ Szpilrajn's theorem (\ref{thm:szpilrajn}) implies that
 \[\HausMes_m W>0.\]
 
 Given $\eps>0$, consider a maximal $\eps$-packing of $W$, 
-that is, an array $(x^1,x^2,\dots,x^n)$ of points  in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\ne j$.
+that is, an array $(x^1,x^2,\dots,x^n)$ of points in $W$ such that $n=\pack_\eps W$ and $\dist{x^i}{x^j}{}>\eps$ for all $i\ne j$.
 Note that $W$ is covered by balls $\oBall(x^i,2\cdot\eps)$.
 
 By the definition of Hausdorff measure,
@@ -591,9 +560,6 @@ By the definition of Hausdorff measure,
 for a fixed constant $\Const>0$ and all small $\eps>0$.
 Hence \ref{SHORT.pack} follows.
 \qedsf
-
-
-
 
 \section{Inverse function theorem}
 
@@ -621,8 +587,7 @@ is an open $[\eps,\sqrt{m}]$-bi-Lipschitz embedding $\oBall(p,R)\hookrightarrow\
 \end{subthm}
 
 \begin{subthm}{thm:inverse-function:R}
-The value $R$ depends only on 
-\[\kappa,\quad \dist{p}{a^i}{},\quad\dist{a^i}{a^j}{},\quad\dist{b}{a^i}{}\]
+The value $R$ depends only on $\kappa$, $\dist{p}{a^i}{}$, $\dist{a^i}{a^j}{}$, and $\dist{b}{a^i}{}$
 for all $i$ and $j$.
 \end{subthm}
 
@@ -638,8 +603,6 @@ is called a \index{distance chart}\emph{distance chart},
 the restrictions $x^i=\distfun{a^i}{}{}|_{\oBall(p,R)}$ are called \index{distance chart!coordinates of a distance chart}\emph{coordinates}, 
 and the restriction $y=\distfun{b}{}{}|_{\oBall(p,R)}$ is called \index{distance chart!strut of a distance chart} the \emph{strut} of the distance chart.
 \end{thm}
-
-The proof of Theorem~\ref{thm:inverse-function} will require the following lemma.
 
 \begin{thm}{Lemma}\label{lem:pack(S^m)+}
 Suppose $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space and $p\in\spc{L}$.
@@ -668,7 +631,7 @@ if $r$ is sufficiently small we have
 \item $\angk\kappa{p}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$,
 and $\angk\kappa{p}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\ne j$.
 \end{itemize}
-Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficiently close to $p$  that  the above conditions still hold  for $p'$; that is,
+Choose a point $p'\in\Str(\bar x,\bar z^1,\bar z^2,\dots,\bar z^\kay)$ sufficiently close to $p$ that the above conditions still hold for $p'$; that is,
 \begin{clm}{}
  $\angk\kappa{p'}{\bar x}{\bar z^i}>\tfrac\pi2-\eps$ for all $i$, and $\angk\kappa{p'}{\bar z^i}{\bar z^j}>\tfrac\pi2+\eps$ for all $i\ne j$.
 \end{clm}
@@ -679,11 +642,11 @@ $\mangle(\acute\xi,\acute\zeta^i)>\tfrac\pi2-\eps$ for all $i$, and $\mangle(\ac
 \end{clm}
 
 According to Corollary~\ref{cor:euclid-subcone}, all directions $\acute\xi,\acute\zeta^1,\acute\zeta^2,\dots,\acute\zeta^\kay$ lie in an isometric copy of the standard $n$-sphere in $\Sigma_{p'}$. Clearly $n\le m-1$.
-Thus it  remains to prove the following claim, which is a partial case of the lemma.
+Thus it remains to prove the following claim, which is a partial case of the lemma.
 
 \begin{clm}{}
 If $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\mathbb{S}^{m-1}$,
-$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all  $i$, and
+$\dist{\xi}{\zeta^i}{}>\tfrac\pi2-\eps$ for all $i$, and
 $\dist{\zeta^i}{\zeta^j}{}>\tfrac\pi2+\eps$ for all $i\ne j$,
 then $\kay\le m$.
 \end{clm}
@@ -707,7 +670,7 @@ $\pack_{\frac\pi2}\mathbb{S}^{m-1}_+= m.$
 
 Clearly, $\pack_{\frac\pi2}\mathbb{S}^{m-1}_+\ge m$.
 
-The opposite inequality is proved by  induction on $m$.
+The opposite inequality is proved by induction on $m$.
 The base case $m=1$ is obvious. 
 Assume $(\bar\zeta^1,\bar\zeta^2,\dots,\bar\zeta^{\kay})$ is an array of points in $\mathbb{S}^{m-1}_+$ with $\dist{\bar\zeta^i}{\bar\zeta^j}{}>\tfrac\pi2$.
 Without loss of generality, we can also assume that $\bar\zeta^\kay\in\partial \mathbb{S}^{m-1}_+$.
@@ -716,13 +679,13 @@ let $\check\zeta^i
 =\dir{\bar\zeta^\kay}{\bar\zeta^i}\in\Sigma_{\bar\zeta^\kay}\mathbb{S}^{m-1}_+\iso\mathbb{S}^{m-2}_+$.
 By the hinge comparison (\ref{angle}), $\mangle(\check\zeta^i,\check\zeta^j)>\tfrac\pi2$ 
 for all $i<j<\kay$.
-Thus from the induction hypothesis we have  $\kay-1\le {m-1}$.
+Thus from the induction hypothesis we have $\kay-1\le {m-1}$.
 \qeds
 
-\parit{Proof of \ref{thm:inverse-function}; \ref{SHORT.thm:inverse-function:strut}.}  
+\parit{Proof of \ref{thm:inverse-function}; \ref{SHORT.thm:inverse-function:strut}.} 
 Fix $\eps>0$ such that 
-$\angk\kappa p{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}>\tfrac\pi2+\eps$ for all $i\ne j$.
-Choose  $R>0$ sufficiently small that 
+$\angk\kappa p{a^i}{a^j}\z>\tfrac\pi2+\eps$ and $\angk\kappa p{b}{a^i}\z>\tfrac\pi2+\eps$ for all $i\ne j$.
+Choose $R>0$ sufficiently small that 
 $\angk\kappa q{a^i}{a^j}>\tfrac\pi2+\eps$ and $\angk\kappa q{b}{a^i}>\tfrac\pi2+\eps$ for all $i\ne j$ and any $q\in\oBall(p,R)$.
 Clearly, \ref{SHORT.thm:inverse-function:strut} holds for $\oBall(p,R)$.
 
@@ -732,7 +695,7 @@ and its restriction $\distfun{\bm{a}}{}{}|_{\oBall(p,R)}$ is open;
 the latter follows from the right-inverse theorem (\ref{thm:right-inverse-function:open-map}).
 Thus to prove \ref{SHORT.thm:inverse-function:chart}, it is sufficient to show that
 \[
-\max_{i}\{\,|\dist{a^i}{x}{}-\dist{a^i}{y}{}|\,\}
+\max_{i}\left\{\,\bigl|\dist{a^i}{x}{}-\dist{a^i}{y}{}\bigr|\,\right\}
 >
 \tfrac\eps2\cdot\dist[{{}}]{x}{y}{}
 \eqlbl{expend}
@@ -775,14 +738,9 @@ follows since the angle $\angk\kappa q{a^i}{a^j}$
 depends continuously on $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
 \qeds
 
+\section{Finite-dimensional spaces}\label{sec:dim=m}
 
-
-
-\section{Finite dimensional CBB spaces}\label{sec:dim=m}
-
-In this section we  show that all reasonable notions of dimension coincide on the class of Alexandrov spaces with curvature bounded below.
-
-First we prove a  stronger version of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
+The next theorem is a refinement of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
 
 \begin{thm}{Theorem}\label{thm:dim-finite}
 Suppose $\spc{L}$ is a complete length $\Alex{\kappa}$ space, 
@@ -790,7 +748,7 @@ $m$ is a nonnegative integer,
 $0<R\le \varpi\kappa$, and
 $q\in \spc{L}$.
 Then the following statements are equivalent:
-\begin{subthm}{LinDim-f}  $\LinDim\spc{L}= m$.
+\begin{subthm}{LinDim-f} $\LinDim\spc{L}= m$.
 \end{subthm}
 
 \begin{subthm}{thm:dim-finite:rank}
@@ -806,27 +764,26 @@ $m$ is the maximal integer such that there is a point $p\in\spc{L}$ that admits 
 
 \begin{subthm}{pack-f} For any $\eps>0$,
 \[\pack_\eps\cBall[R]_{\Lob{m}{\kappa}} \ge\pack_\eps \oBall(q,R).\]
-moreover, there is $\Const=\Const(q,R)>0$  such that 
+moreover, there is $\Const=\Const(q,R)>0$ such that 
 \[\pack_\eps \oBall(q,R)>\frac\Const{\eps^m}.\]
 \end{subthm}
 
 \end{thm}
 
-The above theorem was essentially proved in \cite{burago-gromov-perelman}.
+The above theorem was essentially proved by Yuriy Burago, Grigori Perelman, and Michael Gromov \cite{burago-gromov-perelman}.
 
 Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
 one can show that linear dimension is equal to many different types of dimension, such 
 as {}\emph{small} and \index{inductive dimension}\emph{big inductive dimension} 
-and {}\emph{upper} and  \index{box counting dimensions}\emph{lower box-counting dimension}
+and {}\emph{upper} and \index{box counting dimensions}\emph{lower box-counting dimension}
 (also known as \index{Minkowski dimension}\emph{Minkowski dimension}), 
 \index{homological dimension}\emph{homological dimension} and so on.
 
-The next two corollaries follow from \ref{pack-f}.
+The next two corollaries follow from \ref{SHORT.pack-f}.
 
 \begin{thm}{Corollary}\label{cor:dim>proper}
 Any $m$-dimensional complete length $\Alex{}$ space is proper and geodesic.
 \end{thm}
-
 
 \begin{thm}{Corollary} Let $(\spc{L}_n)$ be a sequence of length $\Alex\kappa$ spaces and $\spc{L}_n\to \spc{L}_\o$ as $n\to\o$.
 Assume $\LinDim L_n\le m$ for all $n$.
@@ -842,7 +799,7 @@ Then for any open $\Omega\subset \spc{L}$, we have
 \TopDim\Omega=
 \HausDim\Omega,
 \]
-where $\TopDim$ and $\HausDim$ denote  topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) respectively.
+where $\TopDim$ and $\HausDim$ denote topological dimension (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) respectively.
 
 In particular, $\spc{L}$ is dimension-homogeneous; that is, all open sets have the same linear dimension.
 \end{thm}
@@ -853,7 +810,7 @@ The equality
 follows from \ref{LinDim}$\&$\ref{SHORT.LinDim+}.
 
 If $\LinDim \spc{L}=\infty$, then
-applying  \ref{TopDim} for $\oBall(q,R)\subset \Omega$, we find that there is a compact subset $K\subset \Omega$ having an arbitrarily large $\TopDim K$. Therefore
+applying \ref{TopDim} for $\oBall(q,R)\subset \Omega$, we find that there is a compact subset $K\subset \Omega$ having an arbitrarily large $\TopDim K$. Therefore
 \[\TopDim\Omega=\infty.\] 
 By Szpilrajn's theorem (\ref{thm:szpilrajn}),
 $\HausDim K\ge \TopDim K$.
@@ -864,11 +821,10 @@ If $\LinDim \spc{L}=m<\infty$, then the first inequality in \ref{pack-f}
 implies that \[\HausDim \oBall(q,R)\le m.\] 
 According to Corollary~\ref{cor:dim>proper}, 
 $\spc{L}$ is proper and in particular has countable base. 
-Thus applying Szpilrajn's theorem  again, we have
+Thus applying Szpilrajn's theorem again, we have
 \[\TopDim\Omega\le \HausDim \Omega\le m.\]
 Finally, \ref{TopDim-f} implies that $m\le\TopDim\Omega$.
 \qeds
-
 
 \parit{Proof of \ref{thm:dim-finite}.}
 The equivalence \ref{SHORT.LinDim-f}$\Leftrightarrow$\ref{SHORT.thm:dim-finite:rank} follows from \ref{thm:dim-infty}.
@@ -894,7 +850,7 @@ Applying \ref{E-comeagre} gives the first inequality in \ref{SHORT.pack-f}.
 
 \parit{\ref{SHORT.pack-f}$\Rightarrow$\ref{SHORT.LinDim-f}.} 
 From Theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
-Applying Theorem \ref{thm:dim-infty} again,  if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
+Applying Theorem \ref{thm:dim-infty} again, if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
 \[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}}.\]
 But
 \[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R)\] 
@@ -905,37 +861,16 @@ a contradiction.
 The following exercise was suggested by Alexander Lytchak.
 
 \begin{thm}{Exercise}\label{ex:compact-dimension-cbb}
-Suppose  $\spc{L}$ is a complete length $\Alex{}$ space and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
+Suppose $\spc{L}$ is a complete length $\Alex{}$ space and $\Sigma_p\spc{L}$ is compact for any $p\in\spc{L}$.
 Prove that $\spc{L}$ is finite-dimensional.
 \end{thm}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{One-dimensional CBB spaces}
+\section{One-dimensional spaces}
 
 \begin{thm}{Theorem}\label{thm:dim=1.CBB} 
 Let $\spc{L}$ be a one-dimensional complete length $\Alex\kappa$ space.
 Then $\spc{L}$ is isometric to a connected complete Riemannian $1$-dimensional manifold with possibly non-empty boundary.
 \end{thm}
-
-
 
 \parit{Proof.}
 Clearly $\spc{L}$ is connected.
@@ -996,7 +931,7 @@ Assume the contrary;
 let $z\in \oBall(p,\eps)\backslash[p y]$.
 Choose a point $w\in \mathopen{]} p y \mathclose{[}$ such that 
 \[\dist{p}{w}{}+\dist{p}{z}{}<\eps.\]
-Consider geodesic $[w z]$, and let $q\in[p y]\cap[w z]$  be the point that maximizes the distance $\dist{w}{q}{}$.
+Consider geodesic $[w z]$, and let $q\in[p y]\cap[w z]$ be the point that maximizes the distance $\dist{w}{q}{}$.
 Since no geodesic includes $p$ as a non endpoint, we have $p\ne q$.
 As above, $\mangle\hinge{q}{p}{y}=\pi$ 
 and $\dir{q}{z}$ is distinct from $\dir{q}{p}$ and $\dir{q}{p}$.
@@ -1033,14 +968,4 @@ In this case, $\spc{L}\iso\tfrac{a}{\pi}\blow\mathbb{S}^1$.
 \end{itemize}
 Hence the result.\qeds
 \end{comment}
-
-
-
-
-
-
-
-
-
-
 
