@@ -1,3 +1,217 @@
+
+
+
+\subsection*{Radial curves for sets}
+
+Here we generalize the constructions of radial curves and gradient exponent.
+We show that one can use a distance function 
+$\distfun{A}{}{}$ to any closed set $A$ instead of the distance function to one point.
+We only give the corresponding definitions and state the results.
+The proofs are straightforward generalizations of the corresponding one-point-set version. 
+
+First we give a more general form of the definitions of radial curves (\ref{def:rad-curv}) and radial geodesics (\ref{def:rad-geod}):
+
+\begin{thm}{Definition}
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
+$\kappa\in\RR$, 
+and $A\subset \spc{L}$ be a closed subset of $\spc{L}$.
+A curve $\sigma\:[s_{\min},s_{\max})\to \spc{L}$  is called an
+\emph{$(A,\kappa)$-radial curve} 
+if
+$s_{\min}
+\z=
+\distfun{A}{\sigma(s_{\min})}{}\in(0,\tfrac{\varpi\kappa}2)$, 
+and $\sigma$ satisfies the differential equation
+\[\sigma^+(s)
+\z=
+\frac{\tg\kappa\dist[{{}}]{p}{\sigma(s)}{}}{\tg\kappa s}
+\cdot
+\nabla_{\sigma(s)}\distfun{A}{}{}\]
+for any $s\in[s_{\min},s_{\max})$, where $\tg\kappa x=\frac{\sn\kappa x}{\cs\kappa x}$.
+
+If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts at}  $x$.
+\end{thm}
+
+\begin{thm}{Definition}
+Let $\spc{L}$ be a complete length $\Alex{}$ space
+and $A\subset \spc{L}$ be a closed subset of $\spc{L}$.
+A unit-speed geodesic  $\gamma\:\II\to \spc{L}$  is called an
+\index{radial geodesic}\emph{$A$-radial geodesic} if 
+$\distfun{A}{\gamma(s)}{}\equiv s$.
+\end{thm}
+
+The following propositions are analogous to  \ref{prop:rad-geod} and \ref{prop:dist<s}.
+Their proofs follow directly from the definitions.
+
+\begin{thm}{Proposition}
+Let $\spc{L}$ be a complete length $\Alex{}$ space,
+$A\subset\spc{L}$ be a closed subset of $\spc{L}$.
+Assume that 
+$\tfrac{\varpi\kappa}{2}
+\ge 
+s_{\max}$.
+Then any $\distfun{A}{}{}$-radial geodesic 
+$\gamma\:[s_{\min},s_{\max})
+\to 
+\spc{L}$ 
+is an $(A,\kappa)$-radial curve.
+\end{thm}
+
+\begin{thm}{Proposition}
+Let $\spc{L}$ be a complete length $\Alex{}$ space,
+$A\subset\spc{L}$ be a closed subset of $\spc{L}$,
+and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ be an $(A,\kappa)$-radial curve.
+Then for any $s\in [s_{\min},s_{\max})$, 
+we have $\distfun{A}{\sigma(s)}{}\le s$.
+
+Moreover, if for some $s_0$ we have $\distfun{A}{\sigma(s_0)}{}= s_0$, 
+then the restriction $\sigma|_{[s_{\min},s_0]}$ is an $A$-radial geodesic.
+\end{thm}
+
+Here is the corresponding generalization of existence and uniqueness 
+for $(A,\kappa)$-radial curves;
+it can be proved in the same way as \ref{rad-curv-exist}.
+
+\begin{thm}{Existence and uniqueness}
+Let $\spc{L}$ be a complete length $\Alex{}$ space, 
+$\kappa\in\RR$, 
+$A\subset\spc{L}$ be a closed subset, 
+and $x\in \spc{L}$.
+Assume
+$0
+<
+\distfun{A}{x}{}
+\z<
+\tfrac{\varpi\kappa}2$.
+Then there is a unique $(A,\kappa)$-radial curve $\sigma\:[\distfun{A}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
+that starts at $x$.
+\end{thm}
+
+Next we formulate radial monotonicity and radial comparison for $(A,\kappa)$-radial curves.
+The proof of these two statements are almost the same as the proofs of \ref{rad-mon} and \ref{rad-comp}.
+
+\begin{thm}{Radial monotonicity}\label{gen-rad-mon}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
+$A\subset \spc{L}$ be a closed subset of $\spc{L}$,
+and $q\in\spc{L}\backslash A$.
+Assume $\sigma\:  [s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
+is an $(A,\kappa)$-radial curve.
+Then the function 
+\[s\mapsto 
+\tangle\mc\kappa\{
+\dist{q}{\sigma(s)}{};
+\distfun{A}{q}{},
+s
+\}\]
+is nonincreasing in its domain of definition.
+\end{thm}
+
+To formulate a generalized radial comparison,
+we  introduce a suitable notation.
+Given a subset $A$ and two points $x$ and $y$ in a metric space, define
+\[
+\angkk\kappa A{x}{y}
+\df
+\tangle\mc\kappa\{
+\dist{x}{y}{};
+\distfun{A}{x}{},
+\distfun{A}{y}{}
+\}.
+\]
+Note that distances $\dist{x}{y}{}$, 
+$\distfun{A}{x}{}$ and 
+$\distfun{A}{y}{}$ might not satisfy the triangle inequality.
+Therefore the model angle 
+$\angkk\kappa A{x}{y}$ might be undefined even for $\kappa\le0$.
+
+\begin{thm}{Radial comparison}\label{gen-rad-comp}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
+and $A\subset \spc{L}$ be a closed subset of $\spc{L}$.
+Assume $\rho\:  [r_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
+and    $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
+are two $\distfun{A}{}{}$-radial curves for curvature $\kappa$.
+Assume further that 
+\[\phi_{\min}
+=
+\angkk\kappa A{\rho(r_{\min})}{\sigma(s_{\min})}
+\]
+is defined.
+Then for any $r\in[r_{\min},\tfrac{\varpi\kappa}2)$ and  $s\in[s_{\min},\tfrac{\varpi\kappa}2)$,
+we have
+\[
+\dist{\rho(r)}{\sigma(s)}{}
+\le \side\kappa\{\phi_{\min};r,s\}.
+\]
+
+\end{thm}
+
+Finally, 
+suppose $p$ is an isolated point of a closed subset $A$ of  a complete length $\Alex{}$ space $\spc{L}$.
+Applying the same limiting procedure as in Section \ref{sec:gexp},
+for any $\xi\in\Sigma_p$
+one can construct an $(A,\kappa)$-radial curve $\sigma_\xi$
+such that $\sigma_\xi(0)=p$ and $\sigma^+(0)=\xi$.
+Thus we obtain a map $\gexp\mc\kappa_A\:\T_p\subto\spc{L}$:
+$r\cdot\xi\mapsto\sigma_\xi(r)$.
+For this map, the following analog of \ref{thm:prop-gexp} holds;
+the proof is straightforward.
+
+\begin{thm}{Theorem}
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, and $A\subset\spc{L}$ be a closed subset of $A$ with an isolated point $p\in A$.
+Then:
+\begin{subthm}{}
+Let $\distfun{A}{q}{}=\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$.  
+Let $[pq]$ be an $A$-radial geodesic.
+Then
+\[\gexp\mc\kappa_A(\ddir p q)=q.\] 
+\end{subthm}
+
+\begin{subthm}{} 
+For any $v,w\in \cBall[\0,\tfrac{\varpi\kappa}2]_{\T_p}$,
+\[\dist{\gexp\mc\kappa_A v}{\gexp\mc\kappa_A w}{}
+\le
+\side\kappa\hinge{\0}v w.\]
+In other words, if we denote by $\mathcal{T}_{p}\mc\kappa$ the set $\cBall[\0,\tfrac{\varpi\kappa}2]_{\T_p}$ 
+equipped with the metric $\dist{v}{w}{\mathcal{T}\mc\kappa_{A}}=\side\kappa\hinge{\0}v w$, 
+then 
+\[\gexp\mc\kappa_A:\mathcal{T}\mc\kappa_{A}\to \spc{L}\] 
+is a short map.
+\end{subthm}
+
+\begin{subthm}{gexp-mono-1} 
+Suppose $p, q\in \spc{L}$ 
+and $\dist{p}{q}{}\le \tfrac{\varpi\kappa}2$.
+If $v\in\T_p$, $|v|\le 1$ and 
+\[\sigma(t)=\gexp\mc\kappa_A(t\cdot v),\]
+then the function
+\[
+s\mapsto 
+\tangle\mc\kappa\{\dist{q}{\sigma(s)}{};\distfun A{q}{},s\}
+\]
+is nonincreasing in its domain of definition.
+\end{subthm}
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 %\begin{thm}{Flat triangles lemma} \label{lem:flat-triangle}
 %Suppose $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.  
 %For a triangle $\trig{x}{y}{z}$ in $\spc{U}$ with model triangle $\trig{\tilde x}{\tilde y}{\tilde z} = \tilde \triangle_\kappa(x y z)$, the following are equivalent:

@@ -3,15 +3,12 @@
 \chapter{Gradient flow}\label{chap:grad}
 
 Gradient flow could be considered as a nonsmooth version of first-order ordinary differential equations.
-It provides a universal tool in Alexandrov geometry.
-
-We consider only the $\Alex{}{}$ case since the main applications of gradient flow are there.
-But the proofs in this chapter admit straightforward extension to locally compact length spaces with defined angles between geodesics, as well as $\CAT{}{}$ spaces.
+It provides a universal tool in Alexandrov geometry with most significant applications to $\Alex{}{}$ spaces. 
 
 The technique of gradient flow takes its roots in \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction}, 
 introduced by Vladimir Sharafutdinov \cite{sharafutdinov}.
 It has been used  widely in comparison geometry since then.
-In $\Alex{}$ spaces, it was first used by Grigory Perelman and the third author \cite{perelman-petrunin:qg}.
+In $\Alex{}$ spaces, it was first used by Grigory Perelman and the third author \cite{perelman-petrunin:qg, petrunin:qg}.
 A bit later, independently Jürgen Jost and Uwe Mayer \cite{jost,mayer} 
 used the gradient flow in $\CAT{}$ spaces.
 Later, Alexander Lytchak unified and generalized these two approaches
@@ -28,7 +25,7 @@ it gives the idea behind gradient flow.
 Assume that a one-parameter family of convex sets $K_t\subset \EE^m$ is nested; 
 that is, $K_{t_1}\supset K_{t_2}$ if $t_1\le t_2$.
 Show that there is a family of short maps $\phi_t\:\EE^m\to K_t$ 
-such that $\phi_t|_{K_t}=\id$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ for all $t_1\le t_2$.
+such that $\phi_t|_{K_t}=\id$ for any $t$ and $\phi_{t_2}\circ\phi_{t_1}=\phi_{t_2}$ if $t_1\le t_2$.
 \end{thm}
 
 
@@ -49,7 +46,7 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 A Lipschitz curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ will be called an  \index{gradient-like curve}\emph{$f$-gradient-like curve} if
 \[\hat\alpha^+=\tfrac{1}{|\nabla_{\hat\alpha} f|}\cdot\nabla_{\hat\alpha} f;\]
-that is, for any $s\in[s_{\min},s_{\max})$, $\hat\alpha^+(s)$ is defined and
+that is, for any $s\in[s_{\min},s_{\max})$, the right derivative $\hat\alpha^+(s)$ is defined and
 \[\hat\alpha^+(s)=\tfrac{1}{|\nabla_{\hat\alpha(s)} f|}\cdot\nabla_{\hat\alpha(s)} f.\]
 
 \end{thm}
@@ -63,7 +60,7 @@ Suppose $\spc{Z}$ is a complete length space,
 $f\:\spc{Z}\subto\RR$ is a locally Lipschitz semiconcave subfunction,
 and 
 $|\nabla_p f|>0$ for any $p\in\Dom f$.
-Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
+Assume that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 A curve $\hat\alpha\:[s_{\min},s_{\max})\to\Dom f$ is an $f$-gradient-like curve if and only if it is $1$-Lipschitz and
 \[\liminf_{s\to s_0+}\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{s-s_0}
@@ -78,7 +75,10 @@ To prove the if part, note that for any $s_0\in[s_{\min},s_{\max})$ we have
 \begin{align*}
 \liminf_{s\to s_0+}\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{s-s_0}
 &\ge 
-\liminf_{s\to s_0+}\oint\limits_{s_0}^s|\nabla_{\hat\alpha(\under s)}f|\cdot\dd\under s
+\liminf_{s\to s_0+}
+\frac{1}{s-s_0}
+\cdot
+\int\limits_{s_0}^s|\nabla_{\hat\alpha(\under s)}f|\cdot\dd\under s
 \ge
 \\
 &\ge 
@@ -109,7 +109,7 @@ everywhere on $[0,s_{\max})$.
 \end{thm}
 
 {\sloppy 
-Closely related statements were proved independently by Uwe Mayer and Shin-ichi Ohta \cite[2.36]{mayer} and \cite[5.7]{ohta}.
+Closely related statements were proved independently by Uwe Mayer \cite[2.36]{mayer} and Shin-ichi Ohta \cite[5.7]{ohta}.
 
 }
 
@@ -233,7 +233,7 @@ $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 \end{thm}
 
 The following exercise describes a global geometric property of a gradient curve without direct reference to its function.
-It uses the notion of self-contracting curves which was introduced by Aris Daniilidis, Olivier Ley, St\'ephane Sabourau \cite{daniilidis-ley-sabourau}.
+It uses the notion of \textit{self-contracting curves} introduced by Aris Daniilidis, Olivier Ley, St\'ephane Sabourau \cite{daniilidis-ley-sabourau}.
 
 \begin{thm}{Exercise}\label{ex:elf-contracting}
 Let 
@@ -243,8 +243,9 @@ and $\alpha\:\II\to\spc{Z}$  an $f$-gradient curve.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 Show that $\alpha$ is \index{self-contracting curve}\emph{self-contracting}; that is,
-\[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{Z}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{Z}}\]
-if $t_1\le t_2\le t_3$.
+\[t_1\le t_2\le t_3
+\quad\Longrightarrow\quad
+\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{Z}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{Z}}.\]
 \end{thm}
 
 The next lemma states that gradient and gradient-like curves are special reparametrizations of each other.
@@ -332,7 +333,7 @@ Hence, for any $t_0\in[0,t_{\max})$ we have
 \begin{align*}\varsigma^+(t_0)
 &=
 \lim_{t\to t_0+}
-\oint\limits_{t_0}^t
+\frac1{t-t_0}\cdot\int\limits_{t_0}^t
 |\nabla_{\alpha(\under t)}f|\cdot\dd\under t
 =
 \\
@@ -380,7 +381,7 @@ for any $t_1>t_0$ and $x\in\spc{Z}$.
 
 
 
-\section*{Distance estimates}\label{sec:grad-curv:dist-est}
+\section{Distance estimates}\label{sec:grad-curv:dist-est}
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
 Let $\spc{Z}$ be a complete length space, and 
@@ -404,7 +405,7 @@ Fix a choice of geodesic $[\alpha(t)\,\beta(t)]$ for each $t$.
 
 Setting $\ell(t)=\dist{\alpha(t)}{\beta(t)}{}$, from the first variation inequality (\ref{lem:first-var}) and the estimate in \ref{cor:grad-lip} we get
 \[\ell^+(t)\le-\<\dir{\alpha(t)}{\beta(t)},\nabla_{\alpha(t)}f\>-\<\dir{\beta(t)}{\alpha(t)},\nabla_{\beta(t)}f\>\le \lambda\cdot\ell(t).\]
-Here one has to choose a midpont $p$ of $[\alpha(t)\,\beta(t)]$, apply the first variation inequality for distance to $p$, and apply the triangle inequality.
+Here one has apply the first variation inequality for distance to the midpont $m$ of $[\alpha(t)\,\beta(t)]$, and apply the triangle inequality.
 Hence the result. 
 \qeds
 
@@ -456,20 +457,19 @@ Integrating the above estimate, we get
 
 
 
-\section*{Existence, uniqueness, convergence}
+\section{Existence and uniqueness}
 \label{sec:grad-curv:exist}
 
-In general, the ``past'' of gradient curves can not be determined by the present.
+In general, the ``past'' of gradient curves can not be determined by the ``present''.
 For example, consider the concave function $f\:\RR\to\RR$, $f(x)\z=-|x|$. The 
 two curves $\alpha(t)=\min\{0,t\}$ with $\beta(t)=0$
 are $f$-gradient with $\alpha(t)\z=\beta(t)\z=0$ for all $t\ge0$; 
 however $\alpha(t)\z\ne\beta(t)$ for all $t<0$.
 
-The next theorem shows that a ``future'' gradient curve is unique.
+The next theorem shows that a ``future'' gradient curve is determined by the ``present''.
 
 \begin{thm}{Picard's theorem}\label{thm:picard}
-Let $\spc{Z}$ be a complete length space
-and
+Let $\spc{Z}$ be a complete length space,
 $f\:\spc{Z}\subto \RR$ be a semiconcave subfunction.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Assume $\alpha,\beta\:[0,t_{\max})\to\Dom f$ are two $f$-gradient curves 
@@ -477,7 +477,7 @@ such that $\alpha(0)=\beta(0)$.
 Then $\alpha(t)=\beta(t)$ for any $t\in[0,t_{\max})$.
 \end{thm}
 
-\parit{Proof.} This follows from the first distance estimate (\ref{thm:dist-est}).\qeds
+\parit{Proof.} Follows from the first distance estimate (\ref{thm:dist-est}).\qeds
 
 \begin{thm}{Local existence}\label{thm:exist-grad-curv}
 Let $\spc{Z}$ be a complete length space 
@@ -506,11 +506,11 @@ and $|\nabla_x f|>\eps$ for all $x\in \oBall(p,\eps)$;
 the latter is possible due to semicontinuity of \textbar gradient\textbar\ (\ref{cor:gradlim}).
 
 The curves $\hat\alpha$ and $\alpha$ will be constructed in the following three steps.
-First we construct an $f^\o$-gradient-like curve $\hat\alpha_\o\:[0,\eps)\to\spc{Z}^\o$ as an $\o$-limit of a certain sequence of polygonal lines in $\spc{Z}$.
+First we construct an $f^\o$-gradient-like curve $\hat\alpha_\o\:[0,\eps)\to\spc{Z}^\o$ as an $\o$-limit of a certain sequence of broken geodesics in $\spc{Z}$.
 Second, we parametrize $\hat\alpha_\o$ as in \ref{lem:grad--grad-like}, to obtain an $f^\o$-gradient curve $\alpha_\o$ in $\spc{Z}^\o$.
 Third, applying Picard's theorem (\ref{thm:picard}) together with Lemma~\ref{lem:X-X^w}, we obtain that $\alpha_\o$ lies in $\spc{Z}\subset \spc{Z}^\o$ and therefore one can take $\alpha=\alpha_\o$ and $\hat\alpha=\hat\alpha_\o$.
 
-Note that if $\spc{Z}$ is proper, then $\spc{Z}=\spc{Z}^\o$ and $f^\o=f$.
+Note that if $\spc{Z}$ is proper, then $\spc{Z}$ is a metric component of $\spc{Z}^\o$ and $f=f^\o|_{\spc{Z}}$.
 Thus, in this case, the third step is not necessary.
 
 \parit{Step 1.}
@@ -531,8 +531,8 @@ $f\circ\hat\alpha_n(\bar\varsigma_i)-f\circ\hat\alpha_n(\varsigma_i)
 Passing to a subsequence of $\hat\alpha_n$ such that $f\circ\hat\alpha_n$ uniformly converges, let 
 \[h(s)=\lim_{n\to\infty}f\circ\hat\alpha_n(s).\]
 
-Let $\hat\alpha_\o=\lim_{n\to\o}\hat\alpha_{n}$, 
- a curve in $\spc{Z}^\o$ that starts at $p\in \spc{Z}\subset \spc{Z}^\o$.
+Let $\hat\alpha_\o=\lim_{n\to\o}\hat\alpha_{n}$;
+it is a curve in $\spc{Z}^\o$ that starts at $p\in \spc{Z}\subset \spc{Z}^\o$.
 
 Clearly $\hat\alpha_\o$ is $1$-Lipschitz.
 From (\ref{alm-grad}) and \ref{lem:gradcon}, we have
@@ -570,6 +570,8 @@ $\hat\alpha_\o\circ\varsigma$ and $\hat\alpha'_\o\circ\varsigma$ are $f^\o$-grad
 From Picard's theorem (\ref{thm:picard}), we have $\hat\alpha_\o\circ\varsigma=\hat\alpha'_\o\circ\varsigma$.
 Therefore $\hat\alpha_\o=\hat\alpha'_\o$, a contradiction.
 \qeds
+
+\section{Convergence}
 
 \begin{thm}{Ultralimit of gradient curves}\label{ultr-lim-g-curve}
 Assume
@@ -631,7 +633,7 @@ By uniqueness of such geodesics, we have that $\gamma_n\to \gamma_\o$ as $n\to \
 Passing to the limit, we have \ref{eq:lambda-concave}.
 
 \parit{If part of \ref{SHORT.lim-grad-like}.}
-Take $\eps>0$ so small that $\oBall(p_\o,\eps)\subset\Dom f_\o$ and $|\nabla_{x_\o}f_\o|>0$ for any $x_\o\in\oBall(p_\o,\eps)$ (this is possible by \ref{cor:gradlim}).
+Take $\eps>0$ so small that $\oBall(p_\o,\eps)\subset\Dom f_\o$ and $|\nabla_{x_\o}f_\o|\z>0$ for any $x_\o\in\oBall(p_\o,\eps)$ (this is possible by \ref{cor:gradlim}).
 
 Clearly $\hat\alpha_\o$ is $1$-Lipschitz.
 From \ref{lem:gradcon}, we get 
@@ -688,7 +690,7 @@ the if part of \ref{SHORT.lim-grad} and Picard's theorem (\ref{thm:picard}).
 Applying Lemma~\ref{lem:grad--grad-like}, we get the only-if part of \ref{SHORT.lim-grad-like}.
 \qeds
 
-Directly from  local existence (\ref{thm:exist-grad-curv}) and the distance estimates (\ref{thm:dist-est}), we obtain:
+Directly from  local existence (\ref{thm:exist-grad-curv}) and the distance estimates (\ref{thm:dist-est}), we obtain the following.
 
 \begin{thm}{Global existence}\label{thm:glob-exist-grad-curv}
 Let $f\:\spc{Z}\subto \RR$ be a locally Lipschitz and $\lambda$-concave subfunction on a complete length space $\spc{Z}$.
@@ -755,7 +757,7 @@ From the first distance estimate (\ref{thm:dist-est}),
 we have the following:
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
-Let $\spc{Z}$ be a complete length $\Alex{}$ space 
+Let $\spc{Z}$ be a complete length $\Alex{}$ or $\CAT{}$ space 
 and $f\:\spc{Z}\to \RR$ be a semiconcave function.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
@@ -785,7 +787,7 @@ $\GF_{f_n}^t\:\spc{Z}_n\to \spc{Z}_n$ converges to $\GF_f^t\:\spc{Z}\to \spc{Z}$
 Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
 We will write 
 \[\spc{X}=A\oplus B\]
-if there exist projections $\proj_A\:\spc{X}\to A$ 
+if there are projections $\proj_A\:\spc{X}\to A$ 
 and 
 $\proj_B\:\spc{X}\to B$
 such that 
@@ -819,10 +821,10 @@ this theorem was proved by Stefan Cohn-Vossen \cite{cohn-vossen_line}.
 For Riemannian manifolds of higher dimensions 
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
 Then it was generalized by Anatoliy Milka \cite{milka-line}
-to Alexandrov spaces; almost the same proof is given in \cite[1.5]{burago-burago-ivanov}.
+to Alexandrov spaces; nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
 
 Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
-This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called RCD spaces, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
+This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
 Jost-Hinrich Eschenburg obtained an analogous result for  Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
 
 We present a proof that uses gradient flow for Busemann functions. 
@@ -851,7 +853,7 @@ $\iota:v_\pm\mapsto (\0',\pm|v_\pm|)$.
 }
 
 \begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
-Assume $\spc{L}$ is an $m$-dimensional complete length $\Alex1$ space, $m\ge2$, and $\rad\spc{L}=\pi$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex1$ space, $m\ge2$, and $\rad\spc{L}=\pi$.
 Then \[\spc{L}\iso \mathbb{S}^m.\]
  
 \end{thm}
@@ -919,7 +921,7 @@ Hence
 \bus_+(x)+\bus_-(x)= 0
 \]
 for any $x\in \spc{L}$.
-In particular the functions $\bus_\pm$ are affine;
+In particular the functions $\bus_\pm$ are \index{affine function}\emph{affine};
 that is, they are convex and concave at the same time.
 
 It follows that for any $x$,
@@ -940,7 +942,7 @@ that is,
 Setting
 \[\GF^t=\left[\begin{matrix}
 \GF_{\bus_+}^t&\hbox{if}\ t\ge0\\
-\GF_{\bus_-}^t&\hbox{if}\ t<0
+\GF_{\bus_-}^t&\hbox{if}\ t\le0
                \end{matrix}\right.\]
 defines an $\RR$-action on $\spc{L}$.
 
@@ -979,12 +981,12 @@ and $\sigma$ satisfies the differential equation
 \eqlbl{eq:rad}\]
 for any $s\in[s_{\min},s_{\max})$, where $\tg\kappa x\df\frac{\sn\kappa x}{\cs\kappa x}$.
 
-If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts at}  $x$.
+If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts} at  $x$.
 \end{thm}
 
 Note that according to the definition, $s_{\max}\le\tfrac{\varpi\kappa}2$.
 
-In the remainder of the chapter we will see that  $(p,\kappa)$-radial curves 
+In the the next section, we will see that  $(p,\kappa)$-radial curves 
 work best for $\Alex\kappa$ spaces.
 
 
@@ -1053,7 +1055,7 @@ is semiconcave in $\oBall(p,\tfrac{\varpi\kappa}2)$.
 
 According to \ref{thm:exist-grad-curv}, there is an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ defined on the maximal interval such that $\alpha(0)=x$.
 
-Now consider a solution of the  differential equation for  $\tau(t)$, $\tau'\z=(\tg\kappa\tau)^2$, $\tau(0)=r$. 
+Now consider a solution $\tau(t)$ for the initial value problem $\tau'\z=(\tg\kappa\tau)^2$, $\tau(0)=r$. 
 Note that $\tau(t)$ is also a gradient curve  for the function $\itg\kappa$ defined on $[0,\tfrac{\varpi\kappa}2)$.
 Direct calculations show that the composition $\alpha\circ\tau^{-1}$ 
 is a $(p,\kappa)$-radial curve.
@@ -1070,8 +1072,8 @@ for any $s\ge r$ such that both sides are defined.
 
 \section{Radial comparisons}\label{sec:Radial comparisons}
 
-In this section we show that radial curves behave in a comparison sense
- like unit-speed geodesics.
+In this section we show that radial curves behave in a comparison sense like unit-speed geodesics.
+Recall that notation $\tangle\mc\kappa\{a;b,c\}$ is introduced in \ref{model}.
 
 \begin{thm}{Radial monotonicity}\label{rad-mon}
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space and
@@ -1085,7 +1087,7 @@ Then the function
 \dist{p}{q}{},
 s
 \}\]
-is nonincreasing in its entire domain of definition.
+is nonincreasing in its domain of definition.
 \end{thm}
 
 Radial monotonicity implies the following by straightforward calculations.
@@ -1094,13 +1096,13 @@ Radial monotonicity implies the following by straightforward calculations.
 Let $\kappa\le0$,
 $\spc{L}$ be a complete $\Alex\kappa$ space,
 and $p, q\in \spc{L}$.
-Let $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$ be a $(p,\kappa)$-radial curve.
+Let $\sigma\:[s_{\min},\infty)\to \spc{L}$ be a $(p,\kappa)$-radial curve.
 Then for any $w\ge 1$, 
 the function
 \[
 s\mapsto \tangle\mc\kappa\{\dist{q}{\sigma(s)}{};\dist{p}{q}{},w\cdot s\}
 \]
-is nonincreasing in its entire domain of definition.
+is nonincreasing in its domain of definition.
 \end{thm}
 
 
@@ -1130,10 +1132,10 @@ or equivalently,
 
 We prove Theorems \ref{rad-mon} and \ref{rad-comp} simultaneously.
 The proof is an application of \ref{lem:grad-lip} plus trigonometric manipulations.
-We give a proof first in the simplest case $\kappa=0$, since that is easier to follow,
+We give a proof first in the simplest case $\kappa=0$,
 and then in the harder case $\kappa\ne 0$.
 The arguments for both cases are nearly the same, 
-but the case $\kappa\ne 0$ requires an extra idea.
+but the case $\kappa\ne 0$ requires an extra twist.
 
 
 
@@ -1181,8 +1183,7 @@ Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}$.
 \vskip0mm
 \end{figure}
 
-It remains to show $(*)\mc0_\phi$ and $(**)\mc0_\phi$. 
-First let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an equivalent form:
+Let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an equivalent form:
 \[
 \begin{aligned}
 \tfrac{\partial^+}{\partial s}\ell(s,r_{\min})
@@ -1273,7 +1274,7 @@ with any initial data $(r_0,s_0)\in[r_{\min},\tfrac{\varpi\kappa}2)\times[s_{\mi
 (Unlike the case $\kappa=0$, the solution cannot be written explicitly.)
 Since $\sn\kappa s\cdot\cs\kappa S$, $\sn\kappa r\cdot\cs\kappa R>0$, this solution $(r(t),s(t))$ must meet one of the coordinate rays
 $\{r_{\min}\}\times[s_{\min},\tfrac{\varpi\kappa}2)$ or $[r_{\min},\tfrac{\varpi\kappa}2)\times\{s_{\min}\}$.
-That is, one can connect the pair $(s_{\min},r_{\min})$ to $(s_0,r_0)$ by a concatenation of a coordinate segment and part of the solution $(r(t),s(t))$.
+That is, one can connect the pair $(s_{\min},r_{\min})$ to $(s_0,r_0)$ by a concatenation of a coordinate segment (vertical or horizontal) and part of the solution $(r(t),s(t))$.
 According to $(*)\mc\pm_\phi$ and $(**)\mc\pm_\phi$, the value of $\phi$ does not increase while the pair $(r,s)$ moves along this concatenation in direction of increasing $r$ and $s$.
 Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})$.
 
@@ -1410,7 +1411,7 @@ In particular, $x$ can be connected to $y$ by a minimizing geodesic. (Compare to
 
 
 
-\section{Gradient exponential map}\label{sec:gexp}
+\section{Gradient exponent}\label{sec:gexp}
 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
 $p\in \spc{L}$, 
@@ -1426,11 +1427,13 @@ and this limit is independent of the choice of the sequence $x_n$.
 Let $\sigma_\xi(0)=p$, and if $\kappa>0$ define \[\sigma_\xi(\tfrac{\varpi\kappa}2)
 =
 \lim_{t\to\frac{\varpi\kappa}2}\sigma_\xi(t).\]
-The resulting curve $\sigma_\xi$ will be called the \index{radial curve}\emph{$(p,\kappa)$-radial curve in direction~$\xi$}.
+The resulting curve $\sigma_\xi$ will be called the \index{radial curve}\emph{$(p,\kappa)$-radial curve} in direction~$\xi$.
 
-Let us define the \index{gradient exponential map}\emph{gradient exponential map} as 
+The \index{gradient exponential map}\emph{gradient exponential map} 
+$\gexp\mc\kappa_p\:\cBall[\0,\tfrac{\varpi\kappa}2]_{\T_p}\to \spc{L}$
+is defined by
 \[
-\gexp\mc\kappa_p\:\cBall[\0,\tfrac{\varpi\kappa}2]\subset \T_p\to \spc{L} \: r\cdot\xi\mapsto\sigma_\xi(r).
+\gexp\mc\kappa_p\: r\cdot\xi\mapsto\sigma_\xi(r).
 \]
 \index{$\gexp\mc\kappa_p$}
 Here are properties of radial curves reformulated in terms of the gradient exponential map:
@@ -1444,11 +1447,11 @@ If $p,q\in \spc{L}$ are points such that $\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$
 \end{subthm}
 
 \begin{subthm}{thm:prop-gexp:short} 
-For any $v,w\in \cBall[\0,\tfrac{\varpi\kappa}2]\subset \T_p$,
+For any $v,w\in \cBall[\0,\tfrac{\varpi\kappa}2]_{\T_p}$,
 \[\dist{\gexp\mc\kappa_p v}{\gexp\mc\kappa_p w}{}
 \le
 \side\kappa\hinge{\0}v w.\]
-In other words, if we denote by $\mathcal{T}_{p}\mc\kappa$ the set $\cBall[\0,\tfrac{\varpi\kappa}2]\subset \T_p$ 
+In other words, if we denote by $\mathcal{T}_{p}\mc\kappa$ the set $\cBall[\0,\tfrac{\varpi\kappa}2]_{\T_p}$ 
 equipped with the metric $\dist{v}{w}{\mathcal{T}\mc\kappa_{p}}=\side\kappa\hinge{\0}v w$, 
 then 
 \[\gexp\mc\kappa_p:\mathcal{T}\mc\kappa_{p}\to \spc{L}\] 
@@ -1467,9 +1470,9 @@ s
 \mapsto 
 \tangle\mc\kappa(\sigma|_0^s,q)
 \df
-\tangle\mc\kappa\{\dist{q}{\sigma(s)}{};\dist{q}{\sigma(0)},s\}
+\tangle\mc\kappa\{\dist{q}{\sigma(s)}{};\dist{q}{\sigma(0)}{},s\}
 \]
-is nonincreasing in its entire domain of definition.
+is nonincreasing in its domain of definition.
 \end{subthm}
 \end{thm}
 
@@ -1509,15 +1512,16 @@ Suppose $x,p,$ and $q$ are points in a complete length $\Alex\kappa$ space, and 
 Show that there is a unique vector $v\in\T_p$ such that $\gexp_p v=x$.
 \end{thm}
 
+%??? this exexercise use the notion of boundary --- it is good for next vol.
+%\begin{thm}{Exercise}\label{ex:bry-cover}
+%Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space. Writing $\rad\spc{L}=R$,  prove that there is a $(\sn\kappa R)$-Lipschitz map $\map\:\mathbb{S}^{m-1}\to\spc{L}$ such that $\Im\map\supset\partial\spc{L}$.
+%\end{thm}
+%\parbf{\ref{ex:bry-cover}.} 
+%Choose a regular point $p\in\spc{L}$.
+%Observe that $\gexp_p^\kappa(\cBall[\0,R]_{\T_p})\z=\spc{L}$.
+%
+%Use \ref{ex:inv-gexp} to show that $\gexp_p^\kappa(\partial\cBall[\0,R]_{\T_p})\supset\partial\spc{L}$ and apply \ref{thm:prop-gexp:short}.
 
-{\sloppy 
-
-\begin{thm}{Exercise}\label{ex:bry-cover}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space. Writing $\rad\spc{L}=R$, 
-prove that there is a $(\sn\kappa R)$-Lipschitz map $\map\:\mathbb{S}^{m-1}\to\spc{L}$ such that $\Im\map\supset\partial\spc{L}$.
-\end{thm}
-
-}
 
 \section{Remarks}
 
@@ -1582,7 +1586,7 @@ that is, \ref{def:tdflow} generalizes Definition \ref{def:grad-curve}.
 The defining  inequality \ref{def:tdflow} is closely related to the so-called \index{evolution variational inequality}\emph{evolution variational inequality} \cite[Theorem 4.0.4(iii)]{ambrosio-gigli-savare}.
 
 \begin{thm}{Distance estimate}\label{Distance estimate}
-Let $f_t$ and $h_t$ be two families of $\lambda$-concave functions on a complete length space $\spc{Z}$, and $s\ge 0$.
+Let $f_t$ and $h_t$ be two Lipschitz families of $\lambda$-concave functions on a complete length space $\spc{Z}$, and $s\ge 0$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Assume $f_t$ and $h_t$ have common domain $\Omega\subset {\spc{Z}}\times \RR$, and $|f_t(x)-h_t(x)|\le s$ for any $(x,t)\in \Omega$.
 Assume $t\mapsto \alpha(t)$ and $t\mapsto \beta(t)$ are $f_t$- and $h_t$-gradient curves respectively defined on a common interval $t\in [a,b)$, and let $\ell(t)\z=\dist{\alpha(t)}{\beta(t)}{\spc{Z}}$.
@@ -1598,33 +1602,34 @@ In particular, these inequalities hold for any $t\in\II$ if $\Omega\supset B(p,2
 Note that if $f_t=h_t$ then $s=0$;
 in this case the second inequality can be written as
 \[\ell(t)\le \ell(a)\cdot e^{\lambda\cdot (t-a)}.\eqlbl{dist-est-s=0}\]
-In particular, this inequality implies uniqueness of the future of gradient curves with given initial data.
+In particular, it implies uniqueness of the future of gradient curves with given initial data.
 This inequality also makes it possible to estimate the distance between two gradient curves for close functions.
 In particular, it implies convergence for $f_t^n$-gradient curves if a sequence of $\Lip$-Lipschitz and $\lambda$-concave families $f^n_t$ converges uniformly as $n\to \infty$. 
 
 \parit{Proof of \ref{Distance estimate}.}
 Fix a time moment $t$ and set $f=f_t$ and $h=h_t$.
-Let $p$ be the midpoint of the geodesic $[\alpha(t)\beta(t)]$.
-Let $\gamma\:[0,\ell(t)]\to \spc{Z}$ be an arclength parametrization of $[\alpha(t)\beta(t)]$.  Note that $\dd_{\alpha(t)}f(\dir{\alpha(t)}{p})$ is the right derivative of $f\circ\gamma$ at $0$
-and $-\dd_{\alpha(t)}h(\dir{\beta(t)}p)$ is the left derivative of $h\circ\gamma$ at $\ell(t)$.
+Let $m$ be the midpoint of the geodesic $[\alpha(t)\beta(t)]$.
+Let $\gamma\:[0,\ell(t)]\to \spc{Z}$ be an arclength parametrization of $[\alpha(t)\beta(t)]$.
+Note that $\dd_{\alpha(t)}f(\dir{\alpha(t)}{m})$ is the right derivative of $f\circ\gamma$ at $0$
+and $-\dd_{\alpha(t)}h(\dir{\beta(t)}m)$ is the left derivative of $h\circ\gamma$ at $\ell(t)$.
 Since $f$ and $h$ are $\lambda$-concave,
 \begin{align*}
-f\circ\beta(t)&\le f\circ\alpha(t)+\ell(t)\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p}) +\tfrac12\cdot\lambda\cdot\ell(t)^2,
+f\circ\beta(t)&\le f\circ\alpha(t)+\ell(t)\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{m}) +\tfrac12\cdot\lambda\cdot\ell(t)^2,
 \\
-h\circ\alpha(t)&\le h\circ\beta(t)+\ell(t)\cdot \dd_{\alpha(t)}h(\dir{\beta(t)}p) +\tfrac12\cdot\lambda\cdot\ell(t)^2.
+h\circ\alpha(t)&\le h\circ\beta(t)+\ell(t)\cdot \dd_{\alpha(t)}h(\dir{\beta(t)}m) +\tfrac12\cdot\lambda\cdot\ell(t)^2.
 \end{align*}
 Adding these inequalities and taking into account  $|f(x)-h(x)|<s$ for any $x$, we conclude that 
-\[\dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+\dd_{\alpha(t)}h(\dir{\beta(t)}p)\ge \lambda\cdot \ell(t)+2\cdot s/\ell(t).\]
+\[\dd_{\alpha(t)}f(\dir{\alpha(t)}{m})+\dd_{\alpha(t)}h(\dir{\beta(t)}m)\ge \lambda\cdot \ell(t)+2\cdot s/\ell(t).\]
 
-Applying the triangle inequality and the definition of gradient curve at $p$, we obtain
+Applying the triangle inequality and \ref{def:tdflow} at $m$, we obtain
 \begin{align*}
 \ell(t+\eps)&=\dist{\alpha(t+\eps)}{\beta(t+\eps)}{}\le
 \\
-&\le \dist{\alpha(t+\eps)}{p}{}+\dist{\beta(t+\eps)}{p}{}\le 
+&\le \dist{\alpha(t+\eps)}{m}{}+\dist{\beta(t+\eps)}{m}{}\le 
 \\
-&\le \dist{\alpha(t)}{p}{}-\eps\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{p})+
+&\le \dist{\alpha(t)}{m}{}-\eps\cdot \dd_{\alpha(t)}f(\dir{\alpha(t)}{m})+
 \\
-&\quad +\dist{\beta(t+\eps)}{p}{}-\eps\cdot \dd_{\beta(t)}h(\dir{\beta(t)}p)+o(\eps)=
+&\quad +\dist{\beta(t+\eps)}{m}{}-\eps\cdot \dd_{\beta(t)}h(\dir{\beta(t)}m)+o(\eps)=
 \\
 &=\ell(t)-\eps\cdot(\lambda\cdot \ell(t)+2\cdot s/\ell(t))+o(\eps)
 \end{align*}
@@ -1669,7 +1674,7 @@ By taking $\bar p$ close to $\alpha(t)$,
 the value $\tfrac{f(\bar p)-f\circ\alpha(t)}{\dist{\bar p}{\alpha(t)}{}}-\tfrac\lambda2\cdot \dist{\bar p}{\alpha(t)}{}$ can be made arbitrarily close to $\dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)$.
 Therefore, given $\delta>0$, the inequality
 \[\distfun{p}{}{}\circ\alpha(t+\eps)\le \distfun{p}{}{}\circ\alpha(t)-\eps\cdot \dd_{\alpha(t)}f_t(\dir{\alpha(t)}p)+\eps\cdot\delta\]
-holds for all sufficiently small positive values $\eps$.
+holds for all sufficiently small $\eps>0$.
 Therefore \ref{def:tdflow} holds.
 \qeds
 
@@ -1744,8 +1749,7 @@ $\LSCSC(\spc{Z})$ (for \textbf{l}ower semi-\textbf{c}ontinous and semi-\textbf{c
 In this section we describe the adjustments needed
 to construct gradient curves for the subfunctions in $\LSCSC(\spc{Z})$.
 
-This type of function appears in
-entropy and some other closely related functionals on the Wasserstein space over a  $\Alex0$ space.
+Examples of such functions include the entropy and some other closely related functionals on the Wasserstein space over a $\Alex0$ space.
 The gradient flow for these functions plays an important role in the theory of optimal transport, see \cite{villani} and references there in. 
 
 
@@ -1824,7 +1828,7 @@ Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 A curve 
 $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an  \index{gradient curve}\emph{$f$-gradient curve} if
 \[\alpha^+(t)=\nabla_{\alpha(t)} f\]
-iwhen $\nabla_{\alpha(t)} f$ is defined and 
+when $\nabla_{\alpha(t)} f$ is defined and 
 \[(f\circ\alpha)^+(t)=\infty\]
 otherwise.}
 
@@ -1871,194 +1875,6 @@ In particular, one can take curves defined by the simpler equation
 Among all curves of that type, the radial curves for curvature $\kappa$ 
 as defined in \ref{def:rad-curv} maximize the growth of $\dist{p}{\sigma(s)}{}$.
 
-\subsection*{Radial curves for sets}
-
-Here we generalize the constructions of radial curves and gradient exponent.
-We show that one can use a distance function 
-$\distfun{A}{}{}$ to any closed set $A$ instead of the distance function to one point.
-We only give the corresponding definitions and state the results.
-The proofs are straightforward generalizations of the corresponding one-point-set version. 
-
-First we give a more general form of the definitions of radial curves (\ref{def:rad-curv}) and radial geodesics (\ref{def:rad-geod}):
-
-\begin{thm}{Definition}
-Let $\spc{L}$ be a complete length $\Alex{}$ space, 
-$\kappa\in\RR$, 
-and $A\subset \spc{L}$ be a closed subset of $\spc{L}$.
-A curve $\sigma\:[s_{\min},s_{\max})\to \spc{L}$  is called an
-\emph{$(A,\kappa)$-radial curve} 
-if
-$s_{\min}
-\z=
-\distfun{A}{\sigma(s_{\min})}{}\in(0,\tfrac{\varpi\kappa}2)$, 
-and $\sigma$ satisfies the differential equation
-\[\sigma^+(s)
-\z=
-\frac{\tg\kappa\dist[{{}}]{p}{\sigma(s)}{}}{\tg\kappa s}
-\cdot
-\nabla_{\sigma(s)}\distfun{A}{}{}\]
-for any $s\in[s_{\min},s_{\max})$, where $\tg\kappa x=\frac{\sn\kappa x}{\cs\kappa x}$.
-
-If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts at}  $x$.
-\end{thm}
-
-\begin{thm}{Definition}
-Let $\spc{L}$ be a complete length $\Alex{}$ space
-and $A\subset \spc{L}$ be a closed subset of $\spc{L}$.
-A unit-speed geodesic  $\gamma\:\II\to \spc{L}$  is called an
-\index{radial geodesic}\emph{$A$-radial geodesic} if 
-$\distfun{A}{\gamma(s)}{}\equiv s$.
-\end{thm}
-
-The following propositions are analogous to  \ref{prop:rad-geod} and \ref{prop:dist<s}.
-Their proofs follow directly from the definitions.
-
-\begin{thm}{Proposition}
-Let $\spc{L}$ be a complete length $\Alex{}$ space,
-$A\subset\spc{L}$ be a closed subset of $\spc{L}$.
-Assume that 
-$\tfrac{\varpi\kappa}{2}
-\ge 
-s_{\max}$.
-Then any $\distfun{A}{}{}$-radial geodesic 
-$\gamma\:[s_{\min},s_{\max})
-\to 
-\spc{L}$ 
-is an $(A,\kappa)$-radial curve.
-\end{thm}
-
-\begin{thm}{Proposition}
-Let $\spc{L}$ be a complete length $\Alex{}$ space,
-$A\subset\spc{L}$ be a closed subset of $\spc{L}$,
-and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ be an $(A,\kappa)$-radial curve.
-Then for any $s\in [s_{\min},s_{\max})$, 
-we have $\distfun{A}{\sigma(s)}{}\le s$.
-
-Moreover, if for some $s_0$ we have $\distfun{A}{\sigma(s_0)}{}= s_0$, 
-then the restriction $\sigma|_{[s_{\min},s_0]}$ is an $A$-radial geodesic.
-\end{thm}
-
-Here is the corresponding generalization of existence and uniqueness 
-for $(A,\kappa)$-radial curves;
-it can be proved in the same way as \ref{rad-curv-exist}.
-
-\begin{thm}{Existence and uniqueness}
-Let $\spc{L}$ be a complete length $\Alex{}$ space, 
-$\kappa\in\RR$, 
-$A\subset\spc{L}$ be a closed subset of $\spc{L}$, 
-and $x\in \spc{L}$.
-Assume
-$0
-<
-\distfun{A}{x}{}
-\z<
-\tfrac{\varpi\kappa}2$.
-Then there is a unique $(A,\kappa)$-radial curve $\sigma\:[\distfun{A}{x}{},\tfrac{\varpi\kappa}2)\to \spc{L}$ 
-that starts at $x$.
-\end{thm}
-
-Next we formulate radial monotonicity and radial comparison for $(A,\kappa)$-radial curves.
-The proof of these two statements are almost exactly the same as the proofs of \ref{rad-mon} and \ref{rad-comp}.
-
-\begin{thm}{Radial monotonicity}\label{gen-rad-mon}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
-$A\subset \spc{L}$ be a closed subset of $\spc{L}$,
-and $q\in\spc{L}\backslash A$.
-Assume $\sigma\:  [s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
-is an $(A,\kappa)$-radial curve.
-Then the function 
-\[s\mapsto 
-\tangle\mc\kappa\{
-\dist{q}{\sigma(s)}{};
-\distfun{A}{q}{},
-s
-\}\]
-is nonincreasing in its entire domain of definition.
-\end{thm}
-
-To formulate a generalized radial comparison,
-we  introduce a suitable notation.
-Given a subset $A$ and two points $x$ and $y$ in a metric space, define
-\[
-\angkk\kappa A{x}{y}
-\df
-\tangle\mc\kappa\{
-\dist{x}{y}{};
-\distfun{A}{x}{},
-\distfun{A}{y}{}
-\}.
-\]
-Note that distances $\dist{x}{y}{}$, 
-$\distfun{A}{x}{}$ and 
-$\distfun{A}{y}{}$ might not satisfy the triangle inequality.
-Therefore the model angle 
-$\angkk\kappa A{x}{y}$ might be undefined even for $\kappa\le0$.
-
-\begin{thm}{Radial comparison}\label{gen-rad-comp}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
-and $A\subset \spc{L}$ be a closed subset of $\spc{L}$.
-Assume $\rho\:  [r_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
-and    $\sigma\:[s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
-are two $\distfun{A}{}{}$-radial curves for curvature $\kappa$.
-Assume further that 
-\[\phi_{\min}
-=
-\angkk\kappa A{\rho(r_{\min})}{\sigma(s_{\min})}
-\]
-is defined.
-Then for any $r\in[r_{\min},\tfrac{\varpi\kappa}2)$ and  $s\in[s_{\min},\tfrac{\varpi\kappa}2)$,
-we have
-\[
-\dist{\rho(r)}{\sigma(s)}{}
-\le \side\kappa\{\phi_{\min};r,s\}.
-\]
-
-\end{thm}
-
-Finally, 
-suppose $p$ is an isolated point of a closed subset $A$ of  a complete length $\Alex{}$ space $\spc{L}$.
-Applying the same limiting procedure as in Section \ref{sec:gexp},
-for any $\xi\in\Sigma_p$
-one can construct an $(A,\kappa)$-radial curve $\sigma_\xi$
-such that $\sigma_\xi(0)=p$ and $\sigma^+(0)=\xi$.
-Thus we obtain a map $\gexp\mc\kappa_A\:\T_p\subto\spc{L}$:
-$r\cdot\xi\mapsto\sigma_\xi(r)$.
-For this map, the following analog of \ref{thm:prop-gexp} holds;
-the proof is straightforward.
-
-\begin{thm}{Theorem}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, and $A\subset\spc{L}$ be a closed subset of $A$ with an isolated point $p\in A$.
-Then:
-\begin{subthm}{}
-Let $\distfun{A}{q}{}=\dist{p}{q}{}\le\tfrac{\varpi\kappa}2$.  
-Let $[pq]$ be an $A$-radial geodesic. Then
-\[\gexp\mc\kappa_A(\ddir p q)=q.\] 
-\end{subthm}
-
-\begin{subthm}{} 
-For any $v,w\in \cBall[\0,\tfrac{\varpi\kappa}2]\subset \T_p$,
-\[\dist{\gexp\mc\kappa_p v}{\gexp\mc\kappa_p w}{}
-\le
-\side\kappa\hinge{\0}v w.\]
-In other words, if we denote by $\mathcal{T}_{p}\mc\kappa$ the set $\cBall[\0,\tfrac{\varpi\kappa}2]\subset \T_p$ 
-equipped with the metric $\dist{v}{w}{\mathcal{T}\mc\kappa_{p}}=\side\kappa\hinge{\0}v w$, 
-then 
-\[\gexp\mc\kappa_p:\mathcal{T}\mc\kappa_{p}\to \spc{L}\] 
-is a short map.
-\end{subthm}
-
-\begin{subthm}{gexp-mono-1} 
-Suppose $p, q\in \spc{L}$ 
-and $\dist{p}{q}{}\le \tfrac{\varpi\kappa}2$.
-If $v\in\T_p$, $|v|\le 1$ and 
-\[\sigma(t)=\gexp\mc\kappa_p(t\cdot v),\]
-then the function
-$
-s\mapsto \tangle\mc\kappa(\sigma|_0^s,q)
-$
-is nonincreasing in its entire domain of definition.
-\end{subthm}
-\end{thm}
 
 
 

@@ -452,10 +452,10 @@ Alexandrov's patchwork globalization  (\ref{thm:alex-patch})
 and Reshetnyak gluing (\ref{thm:gluing}).
  
 \begin{thm}{Definition of $\bm\kappa$-thin triangles}\label{def:k-thin}
-Let $\trig{x^1}{x^2}{x^3}$ be a triangle of perimeter $<2\cdot \varpi\kappa$ in a metric space.
-Consider its model triangle
-$\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ 
-and the \emph{natural map} $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ 
+Let $\trig{x^1}{x^2}{x^3}$ be a triangle of perimeter $<2\cdot \varpi\kappa$ in a metric space
+and
+$\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\z=\modtrig\kappa({x^1}{x^2}{x^3})$.
+Consider the \emph{natural map} $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ 
 that sends a point $\tilde z\in[\tilde x^i\tilde x^j]$ to the corresponding point $z\in[x^ix^j]$
 (that is, such that $\dist{\tilde x^i}{\tilde z}{}=\dist{x^i}{z}{}$ and therefore $\dist{\tilde x^j}{\tilde z}{}=\dist{x^j}{z}{}$).
 
@@ -755,7 +755,7 @@ Then $\spc{U}$ is $\CAT\kappa$.
 \end{subthm}
 
 \begin{subthm}{concave-dev} 
-If $\spc{U}$ is $\CAT\kappa$, then for any $p\in \spc{U}$ and any geodesic $\gamma\:[0,T]\to\spc{U}$ 
+If $\spc{U}$ is $\CAT\kappa$, then for any geodesic $\gamma\:[0,T]\to\spc{U}$ and $p\in \spc{U}$
 such that the triangle $\trig{p}{\gamma(0)}{\gamma(T)}$ has perimeter $<2\cdot\varpi\kappa$,
 the $\kappa$-development $\tilde \gamma$ in $\Lob2\kappa$ of $\gamma$ with respect to $p$ is concave. 
 \end{subthm}
@@ -821,7 +821,7 @@ The proof uses thin-triangle decompositions
 and the inheritance lemma (\ref{lem:inherit-angle}). 
 
 \begin{thm}{Patchwork globalization theorem}\label{thm:alex-patch}
-For a complete length space $\spc{U}$, the following two statements are equivalent:
+For any complete length space~$\spc{U}$, the following two statements are equivalent:
 
 \begin{subthm}{thm:alex-patch:ccat}
 $\spc{U}$ is $\CAT\kappa$.
@@ -1010,8 +1010,8 @@ The first variation equation is equivalent to the strong angle lemma (\ref{lem:s
 \qeds
 
 \begin{thm} {First variation (both-endpoints version)}\label{cor:both-end-first-var-cba}
-Let  $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$  space.
-For any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$  such that $p\ne q$ and $\dist{p}{q}{}<\varpi\kappa$, we have 
+Assume that $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+Then for any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$  such that $p\ne q$ and $\dist{p}{q}{}<\varpi\kappa$, we have 
 \[
 \dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
 =
@@ -1075,7 +1075,7 @@ In the following form, the theorem appears in the book of Martin Bridson and And
 \begin{thm}{Reshetnyak gluing theorem}\label
 {thm:gluing}
 Suppose 
-$\spc{U}^1$ and $\spc{U}^2$ are %complete 
+$\spc{U}^1$, $\spc{U}^2$ are %complete 
 $\varpi\kappa$-geodesic spaces 
 with isometric complete $\varpi\kappa$-convex sets $A^i\subset\spc{U}^i$.  Let $\iota\:A^1\to A^2$ be an isometry.
 Let $\spc{W}=\spc{U}^1\sqcup_{\iota}\spc{U}^2$;
@@ -1221,7 +1221,7 @@ Show that the union $A\cup B$ equipped with induced length metric is $\CAT0$.
 \section{Space of geodesics}\label{sec:geod-space}
 
 In this section we prove a no-conjugate-point theorem for spaces with upper curvature bounds and derive from it a number of statements about local geodesics.
-These statements will be used in the proof of the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) and the lifting globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
+These statements will be used to prove the Hadamard--Cartan theorem (\ref{thm:hadamard-cartan}) and the lifting globalization theorem (\ref{thm:globalization-lift}), in much the same way as  the exponential map is used in Riemannian geometry.
 
 \begin{thm}{Proposition}\label{prop:geo-complete}
 {\sloppy 
