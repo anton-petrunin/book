@@ -406,14 +406,15 @@ For each $i$, take $\bar x^i\in[\bar p x^i]$ so that
 $\dist{\bar p}{\bar x^i}{}=s\cdot(\dist{p}{x^i}{})$.
 From \ref{cor:monoton:2-sides},
 \[\angkk\kappa {\bar p}{\bar x^i}{\bar x^j}{}\ge\angk\kappa {\bar p}{x^i}{x^j}.\]
-\begin{figure}[h!]
-\vskip-0mm
+
+\begin{wrapfigure}{r}{50 mm}
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-1405}
 \vskip0mm
-\end{figure}
+\end{wrapfigure}
 
-The cosine law gives a constant $\delta=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
+The cosine law gives a constant $\delta\z=\delta(\kappa,R,\bar R,\dist{p}{\bar p}{})>0$ such that 
 \[\dist{\bar x^i}{\bar x^j}{}>\delta\cdot(\dist{x^i}{x^j}{})>\delta\cdot\eps\] 
 for all $i\ne j$.
 Hence the statement follows.
@@ -740,7 +741,8 @@ depends continuously on $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dis
 
 \section{Finite-dimensional spaces}\label{sec:dim=m}
 
-The next theorem is a refinement of Theorem \ref{thm:dim-infty} for the finite-dimensional case.
+The next theorem is a refinement of Theorem \ref{thm:dim-infty} for the finite-dimensional case;
+it was essentially proved by Yuriy Burago, Grigori Perelman, and Michael Gromov \cite{burago-gromov-perelman}.
 
 \begin{thm}{Theorem}\label{thm:dim-finite}
 Suppose $\spc{L}$ is a complete length $\Alex{\kappa}$ space, 
@@ -769,8 +771,6 @@ moreover, there is $\Const=\Const(q,R)>0$ such that
 \end{subthm}
 
 \end{thm}
-
-The above theorem was essentially proved by Yuriy Burago, Grigori Perelman, and Michael Gromov \cite{burago-gromov-perelman}.
 
 Using theorems \ref{thm:dim-infty} and \ref{thm:dim-finite}, 
 one can show that linear dimension is equal to many different types of dimension, such 
