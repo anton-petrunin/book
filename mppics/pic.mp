@@ -204,7 +204,7 @@ draw z4--z42 ;
 draw z4--z43 ;
 draw z4--z44 ;
 
-Dot z0,z1,z11,z2,z21,z22,z3,z31,z32,z33,z4,z41,z42,z43,z44;
+dOt z0,z1,z11,z2,z21,z22,z3,z31,z32,z33,z4,z41,z42,z43,z44;
 
 label.rt(btex $\dots$ etex, z.e);
 
@@ -1352,7 +1352,7 @@ path p[];
 u:=.7cm;
 
 z.pp=origin;
-z.p=(7,0)*u;
+z.p=(4,0)*u;
 z.RR=(0,-1.4)*u;
 z.R=(0,-1.2)*u;
 z.x=(.2,1)*u;
