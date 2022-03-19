@@ -108,11 +108,75 @@ It remains to observe that $\spc{K}$ is a length space since it is convex.
 \parit{Remark.}
 Alternatively, one can use the embedding of $\spc{X}$ into its injective hull; see \cite{isbell}.
 
+\parbf{\ref{ex:isom-ultrapower}.}
+Show and use that the spaces $\spc{X}^\o$ and $(\spc{X}^\o)^\o$ have discrete metric and both have cardinality continuum.
+
+\parbf{\ref{ex:two-geodesics-in-ultrapower}.}
+Apply \ref{lem:X-X^w} and \ref{obs:ultrapower-is-geodesic}.
+
+\begin{wrapfigure}{r}{40 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-603}
+\end{wrapfigure}
+
+\parbf{\ref{ex:notproper-limit}.} Consider the infinite metric $\spc{T}$ tree with unit edges shown
+on the diagram. Observe that $\spc{T}$ is proper.
+
+Consider the vertex $v_\o=\lim_{n\to\o}v_n$ in the ultrapower $\spc{T}^\o$.
+Observe that $\o$ has an infinite degree.
+Conclude that $\spc{T}^\o$ is not locally compact.
+
 \parbf{\ref{ex:nonconvex-limit}.}
 Let $\spc{X}_n$ be the square $\{( x,y)\in \R^2, |x|\le 1, |y|\le 1\}$ with the metric induced by the $\ell^n$-norm and let $f_n(x,y)=x$ for all $n$.
 Observe that $\spc{X}_\o$ is the square with the metric induced by the $\ell^\infty$-norm where the limit function $f_\o(x,y)=x$ is not concave.
 
-%V: Exercise asks for a compact space so I changed plane to a square
+\parbf{\ref{ex:GH-SC}}; \ref{SHORT.ex:GH-SC:circle}.
+Suppose $\spc{X}_n\GHto \spc{X}$ and $\spc{X}_n$ are simply connected length metric space.
+It is sufficient to show that any nontrivial covering map $f\:\tilde{\spc{X}}\to \spc{X}$ corresponds to a nontrivial covering map $f_n\:\tilde{\spc{X}}_n\to \spc{X}_n$ for large $n$.
+
+The latter can be constructed by covering $\spc{X}_n$ by small balls that lie close to sets in $\spc{X}$ evenly covered by $f$, prepare a few copies of these sets and glue them the same way as the inverse images of the evenly covered sets in $\spc{X}$ glued to obtain $\tilde{\spc{X}}$.
+
+\begin{wrapfigure}{r}{40 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-2}
+\end{wrapfigure}
+
+\parit{\ref{SHORT.ex:GH-SC:nonsc-limit}.}
+Let $\spc{V}$ be a cone over Hawaiian earrings.
+Consider the {}\emph{doubled cone} $\spc{W}$ --- two copies of $\spc{V}$ with glued their base points (see the diagram).
+
+The space $\spc{W}$ can be equipped with a length metric
+(for example, the induced length metric from the shown embedding).
+
+Show that $\spc{V}$ is simply connected, but $\spc{W}$ is not; the latter is a good exercise in topology.
+
+If we delete from the earrings all small circles, then the obtained double cone becomes simply connected and it remains to be close to $\spc{W}$.
+That is $\spc{W}$ is a Gromov--Hausdorff limit of simply connected spaces.
+
+\parit{Remark.}
+Note that from part \ref{SHORT.ex:GH-SC:nonsc-limit}, the limit does not admit a nontrivial covering.
+So, if we define the fundamental group as the inverse image of groups of deck transformations for all the coverings of the given space, then one may say that Gromov--Hausdorff limit of simply connected length spaces is simply connected.
+
+\parbf{\ref{ex:sphere-to-ball},}
+\textit{\ref{SHORT.ex:sphere-to-ball:2}.}
+Suppose that a metric on $\mathbb{S}^2$ is close to the disk $\DD^2$.
+Note that $\mathbb{S}^2$ contains a circle $\gamma$ that is close to the boundary curve of $\DD^2$.
+By the Jordan curve theorem, $\gamma$ divides $\mathbb{S}^2$ into two disks, say $D_1$ and $D_2$.
+
+By \ref{ex:GH-SC:circle}, the Gromov--Hausdorff limits of $D_1$ and $D_2$ have to contain the whole $\DD^2$, otherwise the limit would admit a nontrivial covering.
+
+Consider points $p_1\in D_1$ and $p_2\in D_2$ that are close to the center of $\DD^2$.
+If $n$ is large, the distance $\dist{p_1}{p_2}{n}$ has to be very small.
+On the other hand, any curve from $p_1$ to $p_2$ must cross $\gamma$, so it has length about 2 --- a contradiction.
+
+\parit{\ref{SHORT.ex:sphere-to-ball:3}.}
+Make holes in the unit 3-disc, that do not change its topology and do not change its length metric much 
+and pass to its doubling in the boundary.
+
+\parit{Source:} The exercise is taken from \cite{burago-burago-ivanov}.
+
 \parbf{\ref{ex:GH-proper-marked}.} Modify proof of \ref{thm:GH-compact}, or apply \ref{thm:ultra-GH:b}.
 
 \parbf{\ref{ex:adjacent-angles}.}
@@ -148,6 +212,8 @@ Observe and use that
 \[\dist{x^i}{x^j}{}\le\dist{y^i}{y^j}{}
 \quad\iff\quad
 \angk\kappa p{x^i}{x^j}\le \angk\kappa q{y^i}{y^j}.\]
+
+\parbf{\ref{ex:(3+1)-expanding}.} Apply the four-point comparison (\ref{df:1+3}).
 
 \parbf{\ref{ex:cbb-area}.}
 Follows from the overlap lemma (\ref{lem:extend-overlap}).
@@ -232,6 +298,8 @@ Apply the angle-sidelength  monotonicity (\ref{cor:monoton}) twice.
 \parbf{\ref{ex:busemann}.}
 The first part follows from the angle-sidelength  monotonicity (\ref{cor:monoton}).
 An example for the second part can be found among metrics on $\RR^2$ induced by a norm. (Compare to Exercise~\ref{mink+alex=euclid}.)
+
+\parit{Remark.} This exercise is inspired by Busemann's definition \cite{busemann-CBA}.
 
 \parbf{\ref{ex:busemann-CBB} and \ref{ex:busemann-CBA}}; \ref{SHORT.ex:busemann-CBB:a}.
 By the function comparison definitions of $\Alex{0}$ space (\ref{comp-kappa}), for any $p\in \spc{L}$ and $\eps>0$ the function $\distfun{p}{}{}$ is $\eps$-concave everywhere sufficiently far from $p$.
@@ -725,12 +793,14 @@ Further show and use that
 \[\bm{s}\cdot M\cdot \bm{s}^\top\ge \bm{s}\cdot \tilde M\cdot \bm{s}^\top\]
 for any vector $\bm{s}=(s_1,\dots,s_n)$ with nonnegative components.
 
+\parbf{\ref{6-point-comparison}.} Apply the (5+1)-point comparison (\ref{thm:pos-config}).
+
 \parbf{\ref{ex:(3+1)-nonsufficient}.}
-It is sufficient to construct a metric on the set of points $\{p$, $x^1$, $x^2$, $x^3$, $x^4\}$ that does not satisfy (4+1)-point comparison but does satisfy all (3+1)-point comparisons.
+It is sufficient to construct a metric on the set of points $\{p$, $x^1$, $x^2$, $x^3$, $x^4\}$ that does not satisfy (1+4)-point comparison but does satisfy all (1+3)-point comparisons.
 To do this, set  $x^i$ to be  the vertices of a regular tetrahedron in $\EE^3$. Suppose $p$ is its center and reduce the distances $\dist{p}{x^i}{}$ slightly.
 
 \parit{Remark.}
-There are examples of 6-point metric spaces that satisfy all (5+1)-point comparisons, but do not admit embedding into a complete length $\Alex{0}$ space \cite{lebedeva-petrunin-zolotov}.
+There are examples of 6-point metric spaces that satisfy all (1+5)-point comparisons, but do not admit embedding into a complete length $\Alex{0}$ space \cite{lebedeva-petrunin-zolotov}.
 
 
 \parbf{\ref{ex:strut+embedding}.}
@@ -847,6 +917,7 @@ It remains to repeat the above construction for the pair $\bar\alpha_1$, $\bar\a
 
 \parit{Remark.}
 By \ref{thm:cat-unique} the converse holds as well.
+This problem was suggested by Dmitri Burago.
 
 \parbf{\ref{ex:polyKk}.} Apply \ref{thm:tan-is}, \ref{thm:poly-CBB}, and \ref{thm:PL-CAT}.
 
@@ -900,6 +971,7 @@ Apply the strong angle lemmas
 (\ref{lem:strong-angle-cba}
 and \ref{lem:strong-angle}).
 
+\parbf{\ref{ex:grad(dist)}.} Apply \ref{ex:d_q dist_p(v)=-<dri p q, v>-CAT}.
 
 \parbf{\ref{ex:df(v)=<grad f,v>}.}
 Since $\alpha$ is Lipschitz, so is $f\circ\alpha$.
@@ -994,6 +1066,7 @@ It remains to integrate the inequality and observe that $f\circ\alpha$ is nondec
 \parbf{\ref{ex:geodesic}.}
 Consider $(x,\kappa)$- and $(z,\kappa)$-radial curves that start at $y$
 and observe that they form a geodesic from $x$ to $z$.
+(Compare to Exercise~\ref{ex:flat-in-CBB}.)
 
 \parbf{\ref{ex:gexp}.} Set $q=p+v$ and $q'=\gexp_pv$. 
 By radial comparison, $\dist{q'}{x}{}\le \dist{q}{x}{}$ for any $x\in \spc{L}$.

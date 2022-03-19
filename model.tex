@@ -90,13 +90,12 @@ we take $\kappa>0$:\index{$\md\kappa$}\index{$\sn\kappa$}\index{$\cs\kappa$}
 \\
 \md{1} x
 &=
-\left[
-\begin{aligned}
-&1-\cos x&&\text{for}&&x\le \pi,
+\left\{\begin{smallmatrix}
+1-\cos x&\text{for}\ x\le \pi,
 \\
-&2&&\text{for}&&x >\pi.
-\end{aligned}
-\right.	&
+2&\text{for}\ x >\pi.
+\end{smallmatrix}
+\right.
 \end{align*}
 
 {
@@ -136,15 +135,14 @@ in this way we define $\side\kappa\{\phi;b,c\}$ when one of the numbers $b$ and 
 \begin{thm}{Properties of standard functions}\label{md-equalities}
 
 \begin{subthm}{md-diff-eq}
-For fixed $a$ and $\phi$, the function 
-\[y(t)=\md\kappa\left(\side\kappa\{\phi;a,t\}\right)\]
+For fixed $a$ and $\phi$, the function $y(t)=\md\kappa\left(\side\kappa\{\phi;a,t\}\right)$
  satisfies the following differential equation:
 \[y''+\kappa\cdot y=1.\]
 \end{subthm}
 
 \begin{subthm}{sn-diff-eq}
 Let $\alpha\:[a,b]\to\Lob2\kappa$ be a unit-speed geodesic, and $A$ be the image of a complete geodesic. If $f(t)$ is the distance from $\alpha(t)$ to $A$, the function 
-\[y(t)=\sn\kappa (f(t))\]
+$y(t)=\sn\kappa (f(t))$
  satisfies the following differential equation:
 \[y''+\kappa\cdot y=0\]
 for $y\ne 0$.
@@ -168,10 +166,8 @@ and nonincreasing (in fact, increasing, if $0\z<\phi\z<\pi$).
 
 \begin{subthm}{lem:alex-0}(Alexandrov's lemma)
 Assume that for real numbers $a$, $b$, $a'$, $b'$, $x$, and $\kappa$, the following two expressions are defined:
-\begin{enumerate}
-\item $\tangle\mc\kappa\{a;b,x\}+\tangle\mc\kappa\{a';b',x\}-\pi$,
-\item $\tangle\mc\kappa\{a';b+b',a\}-\tangle\mc\kappa\{x;a,b\}$,
-\end{enumerate}
+\[\tangle\mc\kappa\{a;b,x\}+\tangle\mc\kappa\{a';b',x\}-\pi,\quad
+\tangle\mc\kappa\{a';b+b',a\}-\tangle\mc\kappa\{x;a,b\},\]
 Then they have the same sign.
 \end{subthm}
 \end{thm}
@@ -187,7 +183,7 @@ $\phi
 \tangle\mc\kappa\{a;b,c\}$
 can be rewritten using the cosine law in $\Lob2\kappa$:
 \[\cos\phi
-=\left[\begin{aligned}
+=\left\{\begin{aligned}
 &\frac{b^2+c^2-a^2}{2\cdot b\cdot c}
 &\text{if}&\quad \kappa=0,
 \\

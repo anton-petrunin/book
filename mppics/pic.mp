@@ -23,6 +23,36 @@ linecap:=butt;
 %filenametemplate "%j-%1c.svg";
 outputformat := "eps";
 
+beginfig(2)
+save u;
+u:=1cm;
+
+setbounds currentpicture to (-2.1,-1.7)*u--(2.1,-1.7)*u--(2.1,.8)*u--(-2.1,.8)*u--cycle;
+
+z.www=(1,-3)*u;
+z.q=(-1,-3)*u;
+save p,q;
+path p[];
+path q[];
+
+p[1]=circle((1/1,0)*u,u/1);
+q[1]=circle((-1/1,0)*u,u/1);
+draw p[1] yscaled .5;
+draw q[1] yscaled .5;
+draw ((support.lft(p[1],z.www)--z.www--support.rt(p[1],z.www))) yscaled .5;
+draw ((support.rt(q[1],z.q)--z.q--support.lft(q[1],z.q))) yscaled .5;
+
+for i=2 step 1 until 100:
+p[i]=circle((1/i,0)*u,u/i);
+q[i]=circle((-1/i,0)*u,u/i);
+draw p[i] yscaled .5;
+draw q[i] yscaled .5;
+draw ((z.www--support(p[i],z.www)) cutbefore p[i-1]) yscaled .5;
+draw ((z.q--support.lft(q[i],z.q)) cutbefore q[i-1]) yscaled .5;
+endfor
+
+endfig;
+
 beginfig(5) 
 save u,n;
 u:=1.4cm;
@@ -137,6 +167,52 @@ label.llft(btex $r'$ etex, -z.r);
 
 label.ulft(btex $\check\alpha$ etex, point 1.6 of p1+(1,0));
 label.ulft(btex $\alpha_1^{*}$ etex, point .6 of p2+(1,0));
+endfig;
+
+beginfig(603)
+save u,p;
+path p[];
+u:=.7cm;
+
+z0=origin;
+z1=(1,0)*u;
+z2=2*z1;
+z3=3*z1;
+z4=4*z1;
+z.e=4.5*z1;
+
+z11=z1 + z1 rotated 90;
+z21=z2 + z1 rotated 80;
+z22=z2 + z1 rotated 100;
+z31=z3 + z1 rotated 75;
+z32=z3 + z1 rotated 90;
+z33=z3 + z1 rotated 105;
+z41=z4 + z1 rotated 69;
+z42=z4 + z1 rotated 83;
+z43=z4 + z1 rotated 97;
+z44=z4 + z1 rotated 114;
+
+draw z0--z.e ;
+draw z1--z11 ;
+draw z2--z21 ;
+draw z2--z22 ;
+draw z3--z31 ;
+draw z3--z32 ;
+draw z3--z33 ;
+draw z4--z41 ;
+draw z4--z42 ;
+draw z4--z43 ;
+draw z4--z44 ;
+
+Dot z0,z1,z11,z2,z21,z22,z3,z31,z32,z33,z4,z41,z42,z43,z44;
+
+label.rt(btex $\dots$ etex, z.e);
+
+label.bot(btex $v_0$ etex, z0);
+label.bot(btex $v_1$ etex, z1);
+label.bot(btex $v_2$ etex, z2);
+label.bot(btex $v_3$ etex, z3);
+label.bot(btex $v_4$ etex, z4);
 endfig;
 
 beginfig(605) 
@@ -1273,7 +1349,7 @@ endfig;
 beginfig(1405) 
 save u,p;
 path p[];
-u:=1cm;
+u:=.7cm;
 
 z.pp=origin;
 z.p=(7,0)*u;
