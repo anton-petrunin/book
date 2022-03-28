@@ -1290,6 +1290,7 @@ Then there is a complete length $\CAT\kappa$ space $\spc{N}$
 with an open set $\hat\Omega\subset \spc{N}$,
 a geodesic $\hat\alpha\:[a,b]\to\hat\Omega$,
 and an open locally isometric immersion 
+%V: what exactly does this phrase mean? it's never defined and the word immersion is not used anywhere else in the book.
  $\map\:\hat\Omega\looparrowright\spc{U}$ such that
 $\map\circ\hat\alpha=\alpha$.
 
@@ -1311,7 +1312,8 @@ Choose balls $\spc{B}_i=\cBall[\alpha(t_i),r(t_i)]$
 for some partition $a\z=t_0<t_1\z<\z\dots\z<t_n\z=b$
 in such a way that 
 \[\Int\spc{B}_i\supset \alpha([t_{i-1},t_i])\]
-for all $i>0$.
+for all $i>0$ and  $\spc{B}_i\cap \spc{B}_{i+2}\subset \spc{B}_{i+1}$ for all $i\le n-2$.
+%V: I think the last condition needs to be added to make sure that the new space is locally isometric to the old one.
 
 Consider the disjoint union $\bigsqcup_i\spc{B}_i=\set{(i,x)}{x\in\spc{B}_i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i>0$.
 Let $\spc{N}$ be the space obtained by gluing the $\spc{B}_i$ along $\sim$.
