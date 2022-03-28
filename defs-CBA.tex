@@ -1281,14 +1281,14 @@ $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 }
 \end{thm}
 
-\begin{thm}{Patchwork along a curve}
+\begin{thm}{Patchwork along a geodesic}
 \label{lem:patch}
 Let $\spc{U}$ be a locally complete, length, locally $\CAT\kappa$ space, 
-and $\alpha\:[a,b]\to\spc{U}$ be a curve.
+and $\alpha\:[a,b]\to\spc{U}$ be a local geodesic.
 
 Then there is a complete length $\CAT\kappa$ space $\spc{N}$
 with an open set $\hat\Omega\subset \spc{N}$,
-a curve $\hat\alpha\:[0,1]\to\hat\Omega$,
+a geodesic $\hat\alpha\:[a,b]\to\hat\Omega$,
 and an open locally isometric immersion 
  $\map\:\hat\Omega\looparrowright\spc{U}$ such that
 $\map\circ\hat\alpha=\alpha$.
@@ -1297,7 +1297,7 @@ Moreover if $\alpha$ is simple, then one can assume in addition that $\map$ is a
 thus $\hat\Omega$ is locally isometric to a neighborhood of $\Omega=\map(\hat\Omega)$ of $\alpha$.
 \end{thm}
 
-This lemma was suggested to us by Alexander Lytchak.
+This lemma and its proof were suggested by Alexander Lytchak.
 The proof proceeds by piecing together $\CAT{\kappa}$  neighborhoods of points on a curve to construct a new $\CAT{\kappa}$ space.  
 Exercise~\ref{ex:cats-cradle} is inspired by the original idea of the proof of the no-conjugate-point theorem (\ref{thm:no-conj-pt}) given in \cite{alexander-bishop:h-c}.
 
@@ -1307,14 +1307,15 @@ for any $t\in[a,b]$, there is $r(t)>0$
 such that the closed ball
 $\cBall[\alpha(t),r(t)]$ is a  convex set  that forms a complete length $\CAT\kappa$ space.
 
-Choose balls $\spc{B}^i=\cBall[\alpha(t^i),r(t^i)]$
-for some partition $a\z=t^0<t^1\z<\z\dots\z<t^n\z=b$
+Choose balls $\spc{B}_i=\cBall[\alpha(t_i),r(t_i)]$
+for some partition $a\z=t_0<t_1\z<\z\dots\z<t_n\z=b$
 in such a way that 
-$\Int\spc{B}^i\supset \alpha([t^{i-1},t^i])$ for all $i>0$.
+\[\Int\spc{B}_i\supset \alpha([t_{i-1},t_i])\]
+for all $i>0$.
 
-Consider the disjoint union $\bigsqcup_i\spc{B}^i=\set{(i,x)}{x\in\spc{B}^i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i>0$.
-Let  $\spc{N}$ be the space obtained by gluing the $\spc{B}^i$ along $\sim$.
-Note that $A^i=\spc{B}^i\cap\spc{B}^{i-1}$ is convex in $\spc{B}^i$ and in $\spc{B}^{i-1}$.
+Consider the disjoint union $\bigsqcup_i\spc{B}_i=\set{(i,x)}{x\in\spc{B}_i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i>0$.
+Let $\spc{N}$ be the space obtained by gluing the $\spc{B}_i$ along $\sim$.
+Note that $A_i=\spc{B}_i\cap\spc{B}_{i-1}$ is convex in $\spc{B}_i$ and in $\spc{B}_{i-1}$.
 Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
 we conclude that $\spc{N}$ is a complete length $\CAT\kappa$ space.
 
@@ -1324,15 +1325,15 @@ we conclude that $\spc{N}$ is a complete length $\CAT\kappa$ space.
 \includegraphics{mppics/pic-945}
 \end{figure}
 
-For $t\in[t^{i-1},t^i]$, let $\hat\alpha(t)$  be the equivalence class of $(i,\alpha(t))$ in $\spc{N}$.
-Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\alpha$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\alpha(t),\eps)\subset\spc{B}^i$ for all $t\in[t^{i-1},t^i]$.
+For $t\in[t_{i-1},t_i]$, let $\hat\alpha(t)$  be the equivalence class of $(i,\alpha(t))$ in $\spc{N}$.
+Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\alpha$ in $\spc{N}$, where $\eps>0$ is chosen so that $\oBall(\alpha(t),\eps)\subset\spc{B}_i$ for all $t\in[t_{i-1},t_i]$.
 
 Define $\map\:\hat\Omega\to\spc{U}$
 by sending the equivalence class of $(i,x)$ to $x$.
 It is straightforward to check that $\map\:\spc{N}\to\spc{U}$, $\hat\alpha\:[0,1]\to\spc{N}$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
 
 To prove the final statement in the lemma,
-we only have to choose $\eps>0$ so that in addition, $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t^{i-1}$ and $t^i\le\tau'$ for some $i$.
+we only have to choose $\eps>0$ so that in addition, $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t_{i-1}$ and $t_i\le\tau'$ for some $i$.
 \qeds
 
 
@@ -1406,12 +1407,11 @@ is complete.
 
 \end{thm}
 
-\parit{Proof.} By Corollary \ref{cor:geo-hom}, substituting $\bar q=p$ for $q$ and taking  $\alpha^0(t)=p$ and  $\alpha^1(t)=\alpha(t)$ for all $t\in [0,1]$, there is an interval $\II$ such that (a) holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
-%Apply Corollary \ref{cor:geo-hom}, setting $\alpha^0(t)=\alpha(0)$ for all $t\in [0,1],$ and $\alpha^1=\alpha$. By \ref{cor:geo-hom-length}  
-%S: note substitution
+\parit{Proof.}
+By Corollary \ref{cor:geo-hom}, taking  $\alpha^0(t)=p$ and  $\alpha^1(t)=\alpha(t)$ for all $t\in [0,1]$, there is an interval $\II$ such that \ref{SHORT.cor:homotopy-from-p-exist} holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
 
-By patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition (b)  holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
-Therefore (b) holds on all of $\II$. 
+By patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition \ref{SHORT.cor:homotopy-from-p-length} holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
+Therefore \ref{SHORT.cor:homotopy-from-p-length} holds on all of $\II$. 
  
 Corollary \ref{cor:geo-hom} implies that
 $\II=[0,1]$.
@@ -1517,7 +1517,6 @@ We will apply the no-conjugate-point theorem (\ref{thm:no-conj-pt}) for the uniq
 from $p$ to $z$.  
 The  notations $\Omega^0$, 
 $\Omega^1$,
-%$\iota_i$, 
 $\gamma_{x y}$, $\spc{N}$, $\hat{x}$, $\hat{y}$ will be as in the formulation of the lifting globalization theorem (\ref{thm:globalization-lift});
 in particular, $z\in\Omega^1$.
 

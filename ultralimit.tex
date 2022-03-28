@@ -56,7 +56,7 @@ makes these two definitions equivalent.
 
 A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \index{filter}\emph{filter}; 
 if in addition $\mathfrak{F}$ satisfies Condition~\ref{filter:ultra} it is called an \index{ultrafilter}\emph{ultrafilter}.
-From Zorn's lemma, it follows that every filter contains an ultrafilter.
+From Zorn's lemma, it follows that every filter is contained in an ultrafilter.
 Thus there is an ultrafilter $\mathfrak{F}$ contained in the filter of all complements of finite sets; clearly this $\mathfrak{F}$ is nonprincipal.
 
 The existence of a selective ultrafilter follows from the continuum hypothesis;
@@ -322,13 +322,6 @@ $\spc{X}^\o$ is  isometric to $(\spc{X}^\o)^\o$.
 
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:two-geodesics-in-ultrapower}
-Assume $\spc{X}$ is a complete length space 
-and $p,q\in\spc{X}$ cannot be joined by a geodesic in $\spc{X}$.  
-Then there are at least two distinct geodesics between $p$ and $q$ 
-in the ultrapower $\spc{X}^\o$.
-\end{thm}
-
 \begin{thm}{Exercise}\label{ex:notproper-limit}
 Construct a proper metric space $\spc{X}$ such that $\spc{X}^\o$ is not proper;
 that is, there is a point $p\in \spc{X}^\o$ and $R<\infty$ such that the closed ball $\cBall[p,R]_{\spc{X}^\o}$ is not compact.
@@ -359,7 +352,7 @@ but we will apply it only for sequences of open sets.
 
 \section{Ultralimits of functions}\label{sec:Ultralimits of functions}
 
-Recall that a family of submaps (see section \ref{sec:submaps}) between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ we have $\dist{f(p)}{f(q)}{}<\eps$.
+Recall that a family of submaps (see section \ref{sec:submaps}) between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ we have $\dist{f_\alpha(p)}{f_\alpha(q)}{}<\eps$.
 
 Let $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 
