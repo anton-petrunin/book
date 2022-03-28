@@ -1289,7 +1289,7 @@ and $\alpha\:[a,b]\to\spc{U}$ be a local geodesic.
 Then there is a complete length $\CAT\kappa$ space $\spc{N}$
 with an open set $\hat\Omega\subset \spc{N}$,
 a geodesic $\hat\alpha\:[a,b]\to\hat\Omega$,
-and an open locally isometric immersion 
+and an open locally distance-preserving immersion 
  $\map\:\hat\Omega\looparrowright\spc{U}$ such that
 $\map\circ\hat\alpha=\alpha$.
 
@@ -1303,11 +1303,11 @@ Exercise~\ref{ex:cats-cradle} is inspired by the original idea of the proof of t
 
 \parit{Proof.} 
 According to Corollary~\ref{cor:k-for-k},
-for any $t\in[a,b]$, there is $r(t)>0$ 
-such that the closed ball
-$\cBall[\alpha(t),r(t)]$ is a  convex set  that forms a complete length $\CAT\kappa$ space.
+we can choose $r>0$ such that 
+for any $t\in[a,b]$ the closed ball
+$\cBall[\alpha(t),r]$ is a convex set that forms a complete length $\CAT\kappa$ space.
 
-Choose balls $\spc{B}_i=\cBall[\alpha(t_i),r(t_i)]$
+Choose balls $\spc{B}_i=\cBall[\alpha(t_i),r]$
 for some partition $a\z=t_0<t_1\z<\z\dots\z<t_n\z=b$
 in such a way that 
 \[\Int\spc{B}_i\supset \alpha([t_{i-1},t_i])\]
@@ -1316,7 +1316,7 @@ for all $i>0$.
 Consider the disjoint union $\bigsqcup_i\spc{B}_i=\set{(i,x)}{x\in\spc{B}_i}$ with the minimal equivalence relation $\sim$ such that $(i,x)\sim(i-1,x)$ for all $i>0$.
 Let $\spc{N}$ be the space obtained by gluing the $\spc{B}_i$ along $\sim$.
 Note that $A_i=\spc{B}_i\cap\spc{B}_{i-1}$ is convex in $\spc{B}_i$ and in $\spc{B}_{i-1}$.
-Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) $n$ times, 
+Applying the Reshetnyak gluing theorem (\ref{thm:gluing}) several times, 
 we conclude that $\spc{N}$ is a complete length $\CAT\kappa$ space.
 
 \begin{figure}[!ht]
@@ -1330,7 +1330,7 @@ Let $\hat\Omega$ be the $\eps$-neighborhood of $\hat\alpha$ in $\spc{N}$, where 
 
 Define $\map\:\hat\Omega\to\spc{U}$
 by sending the equivalence class of $(i,x)$ to $x$.
-It is straightforward to check that $\map\:\spc{N}\to\spc{U}$, $\hat\alpha\:[0,1]\to\spc{N}$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
+It is straightforward to check that $\map\:\spc{N}\to\spc{U}$, $\hat\alpha\:[a,b]\to\spc{N}$ and $\hat\Omega\subset\spc{N}$ satisfy the conclusion of the main part of the lemma.
 
 To prove the final statement in the lemma,
 we only have to choose $\eps>0$ so that in addition, $\dist{\alpha(\tau)}{\alpha(\tau')}{}>2\cdot\eps$ if $\tau\le t_{i-1}$ and $t_i\le\tau'$ for some $i$.
@@ -1438,7 +1438,7 @@ it could be also described as a global version of Gauss's lemma.
 Suppose $\spc{U}$ is a complete length locally $\CAT\kappa$ space and  $p\in\spc{U}$.
 Then there is a complete $\CAT\kappa$ length space $\spc{B}$, 
 with a point $\hat p$ such that 
-there is a locally isometric map $\map\:\spc{B}\to\spc{U}$
+there is a locally distance-preserving map $\map\:\spc{B}\to\spc{U}$
 such that $\map(\hat p)=p$ and the following lifting property holds: 
 for any path $\alpha\:[0,1]\to\spc{U}$ with $\alpha(0)=p$ and $\length\alpha<\varpi\kappa/2$, 
 there is a unique path $\hat\alpha \:[0,1]\to \spc{B}$ such that $\hat\alpha(0)=\hat p$ 
@@ -2257,7 +2257,7 @@ hold for any $x$.
 
 Let us apply the lifting globalization theorem (\ref{thm:globalization-lift}) for $p\z=F(\tilde p)$.
 We obtain a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{B}$
-and a locally isometric map $\map\:\spc{B}\to\spc{U}$
+and a locally distance-preserving map $\map\:\spc{B}\to\spc{U}$
 with $\map(\hat p)=p$ for some $\hat p \in \spc{B}$, and with the lifting property for the curves starting at $p$ with length $<\varpi\kappa/2$.
 Applying the lifting property for $\alpha_x$, 
 we get existence of a curve $\hat\gamma_2\:\mathbb{S}^1\to \spc{B}$ such that
