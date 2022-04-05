@@ -1853,22 +1853,23 @@ Let $D_n$ be the subgraph with respect to $\tilde p$ of the polygonal line $\til
 Let  $\delta_n$ be the maximum radius of a circle inscribed in any of the triangles $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$.  
 
 Now we construct a map $H_n \: D_n\to\spc{U}$  that increases distances by at most  $2\cdot\delta_n$.
-
-Suppose $x\in D_n$.  Then $x$ lies on or inside some triangle $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$.  
-Define $H_n(x)$ by first mapping $x$ to a nearest point on $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$ (choosing one if there are several), followed by the natural map to the triangle  $\trig {p}{x^{i-1}}{ x^i}$. 
+Suppose $w\in D_n$.
+Then $w$ lies on or inside some triangle $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$.  
+Define $H_n(w)$ by first mapping $w$ to a nearest point on $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$ (choosing one if there are several), followed by the natural map to the triangle  $\trig {p}{x^{i-1}}{ x^i}$. 
 
 Since triangles in $\spc{U}$ are $\kappa$-thin (\ref{prop:k-thin}), the restriction of $H_n$ to each triangle $\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}$ is short.   
 Then the triangle inequality implies that the restriction of $H_n$ to 
 \[U_n=\bigcup_{1\le i\le n}\trig{\tilde p}{\tilde x^{i-1}}{\tilde x^i}\]
 is short with respect to the length metric on $D_n$. 
-Since nearest-point projection 
-from $D_n$ to $U_n$ increases, the $D_n$-distance between two points by at most $2\cdot\delta_n$,  the map $H_n$ also increases the $D_n$-distance  by at most $2\cdot\delta_n$. 
+Since nearest-point projection from $D_n$ to $U_n$ increases the $D_n$-distance between two points by at most $2\cdot\delta_n$, the map $H_n$ also increases the $D_n$-distance by at most $2\cdot\delta_n$. 
 
-Consider $y_n\in D_n$ with $y_n\to y\in D$ and $z_n\in D_n$ with $z_n\to z\in D$.
-Since $\delta_n\to 0$ under increasingly finer partitions and geodesics in $\spc{U}$ vary continuously with their endpoints (\ref{thm:alex-patch}), we have $H_n(x_n)\to 
-H(x)$ and $H_n(y_n)\to H(y)$.  Since 
-\[\dist{H_n(x_n)}{H_n(y_n)}{} \le \dist{x_n}{y_n}{D_n} + 2\cdot\delta_n,\]
-where the left-hand side converges to $\dist{H(x)}{H(y)}{}$  and the right-hand side converges to $\dist{x}{y}{D}$, it follows that $H$ is short.
+Consider converging sequences $v_n\to v$ and $w_n\to w$ such that $v_n,w_n\in D_n$ and therefore $v,w\in D$.
+Note that 
+\[\dist{H_n(v_n)}{H_n(w_n)}{} \le \dist{v_n}{w_n}{D_n} + 2\cdot\delta_n,\eqlbl{eq:|H(v)-H(w)|}\]
+for each $n$.
+Since $\delta_n\to 0$ and geodesics in $\spc{U}$ vary continuously with their endpoints (\ref{thm:alex-patch}), we have $H_n(v_n)\to 
+H(v)$ and $H_n(w_n)\to H(w)$.
+Therefore the left-hand side in \ref{eq:|H(v)-H(w)|} converges to $\dist{H(v)}{H(w)}{}$ and the right-hand side converges to $\dist{v}{w}{D}$, it follows that $H$ is short.
 \qeds
 
 
@@ -1927,7 +1928,7 @@ By relabeling we may suppose this holds for $\tilde x^{n-1}$.
 The region $R$ is obtained by gluing $R_{n-1}$ to $\dot R$ by $[x^1x^{n-1}]$.
 Thus, by Reshetnyak gluing (\ref{thm:gluing}), $R$ carrying its length metric is a $\CAT{\kappa}$-space.  
 Moreover $[\tilde x^{n-2}\tilde x^{n-1}]\cup[\tilde x^{n-1} \dot x^n]$ is a geodesic of $R$.
-Thus $[\tilde x^1 \tilde x^2 \dots \tilde x^{n-1} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to~$R$, followed by $F$,  is the desired majorizing map.
+Thus $[\tilde x^1 \tilde x^2 \dots \tilde x^{n-2} \dot x^n]_R$ is a closed $(n-1)$-gon in $R$, to which the induction hypothesis applies. The resulting short map from a convex region in $ \Lob2\kappa$ to~$R$, followed by $F$,  is the desired majorizing map.
 
 \medskip
 
