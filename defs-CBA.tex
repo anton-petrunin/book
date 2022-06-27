@@ -774,8 +774,8 @@ is nondecreasing.
 For a partition $0=t^0<t^1<\dots<t^n=T$, let 
 \[\tilde y^i=\tilde \gamma(t^i)\quad \text{and}\quad \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
 Since $\tilde \gamma$ is locally concave, 
-for a sufficiently fine partition the polygonal line $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally convex  with respect to $\tilde p$. 
-Alexandrov's lemma (\ref{lem:alex}), applied inductively to pairs of triangles  $\modtrig\kappa \{\tau^{i-1},\dist{p}{\tilde y^0}{},\dist{p}{\tilde y^{i-1}}{}\}$ and  $\modtrig\kappa\{\dist{\tilde y^{i-1}}{\tilde y^i}{}, \dist{p}{\tilde y^{i-1}}{},\dist{p}{\tilde y^{i}}{}\}$, shows that the sequence  $\tilde \mangle\mc\kappa\{\dist{p}{\tilde y^{i}}{};\dist{p}{\tilde y^0}{},\tau^i\}$ is nondecreasing.
+for a sufficiently fine partition the polygonal line $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally concave with respect to $\tilde p$. 
+Alexandrov's lemma (\ref{lem:alex}), applied inductively to pairs of triangles  $\modtrig\kappa \{\tau^{i-1},\dist{p}{\tilde y^0}{},\dist{p}{\tilde y^{i-1}}{}\}$ and  $\modtrig\kappa\{\dist{\tilde y^{i-1}}{\tilde y^i}{}, \dist{p}{\tilde y^{i-1}}{},\dist{p}{\tilde y^{i}}{}\}$, shows that the sequence  $\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y^{i}}{};\dist{\tilde p}{\tilde y^0}{},\tau^i\}$ is nondecreasing.
 
 Taking finer partitions and passing to the limit, we get
 \[\max\nolimits_i\{|\tau^i-t^i|\}\to0.\] 
@@ -1281,6 +1281,8 @@ $\Lip>\max\set{\tfrac{\sn\kappa r}{\sn\kappa \ell}}{0\le r\le \ell}$.
 }
 \end{thm}
 
+{\sloppy
+
 \begin{thm}{Patchwork along a geodesic}
 \label{lem:patch}
 Let $\spc{U}$ be a locally complete, length, locally $\CAT\kappa$ space, 
@@ -1296,6 +1298,8 @@ $\map\circ\hat\alpha=\alpha$.
 Moreover if $\alpha$ is simple, then one can assume in addition that $\map$ is an open embedding;
 thus $\hat\Omega$ is locally isometric to a neighborhood of $\Omega=\map(\hat\Omega)$ of $\alpha$.
 \end{thm}
+
+}
 
 This lemma and its proof were suggested by Alexander Lytchak.
 The proof proceeds by piecing together $\CAT{\kappa}$  neighborhoods of points on a curve to construct a new $\CAT{\kappa}$ space.  
