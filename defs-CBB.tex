@@ -866,10 +866,9 @@ there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$ such that $\oBall(p,
 (1) for any hinge $\hinge x q y$, the angle 
 $\mangle\hinge x q y$ is defined, and
 
- (2) if $x\in \mathopen{]}y z\mathclose{[}$, then%
-\footnote{Let us call that $\hinge x q y$ and $\hinge x q z$  are short notations for the pairs $([x q],[x y])$ and $([x q],[x z])$, 
-thus these two hinges automatically have common side $[x q]$.}
+ (2) if $x\in \mathopen{]}y z\mathclose{[}$, then
 \[\mangle\hinge x q y+ \mangle\hinge x q z\le\pi.\]
+(Let us recall that $\hinge x q y$ and $\hinge x q z$  are short notations for the pairs $([x q],[x y])$ and $([x q],[x z])$,  thus these two hinges automatically have common side $[x q]$.)
 Moreover, if a hinge $\hinge x q y$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
 \[\mangle\hinge x q y
 \ge\angk\kappa x q y,\]
@@ -990,7 +989,7 @@ Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise switch the roles of $p$ and $q
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell. \eqlbl{3|xx'|}\]
-Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.\footnote{In fact by \ref{cor:unique-geod-cbb} the condition $[x' q]\subset [x q]$ always holds.}
+Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.(In fact by \ref{cor:unique-geod-cbb} the condition $[x' q]\subset [x q]$ always holds.)
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
 
 Further, note that we have $x,x'\in \oBall(p,\ell)\cap \oBall(q,\ell)$ and moreover
@@ -1165,7 +1164,7 @@ Assume $\spc{L}$ is compact.
 By Theorem~\ref{conc-loc},  $s_0>0$.
 Take a point $p^*\in \spc{L}$ such that $r^*\z=\ComRad(p^*,\spc{L})$ is sufficiently close to $s_0$
 ($p^*$ such that  $s_0\z\le r^*\z<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$ will do).
-Then the key lemma (\ref{key-lem:globalization}) applied for $p^*$ and $\ell$ slightly bigger than $r^*$ (say, such that $r^*<\ell<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$) implies that
+Then the key lemma (\ref{key-lem:globalization}) applied to $p^*$ and $\ell$ slightly bigger than $r^*$ (say, such that $r^*<\ell<\min\{\varpi\kappa,\tfrac32\cdot s_0\}$) implies that
 \[\mangle\hinge x{p^*}q
 \ge\angk\kappa x{p^*}q\]
 for any hinge $\hinge x{p^*}q$ such that $\dist{p^*}{x}{}+\dist{x}{q}{}<\ell$.
