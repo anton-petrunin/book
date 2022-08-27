@@ -40,6 +40,12 @@ If $\o(S)=0$ for some subset $S\subset \NN$,
 we say that $S$ is \index{$\o$-small}\emph{$\o$-small}. 
 If $\o(S)=1$, we say that $S$ contains \index{$\o$-almost all}\emph{$\o$-almost all} elements of $\NN$.
 
+\begin{thm}{Advanced exercise}\label{ex:ultrakatetov}
+Let $\o$ be an ultrafilter and $f\:\NN\z\to \NN$.
+Suppose that $\o(S)\le \o(f^{-1}(S))$ for any set $S\subset \NN$.
+Show that $f(n)=n$ for $\o$-almost all $n\in\NN$.
+\end{thm}
+
 \parbf{Classical definition.}
 More commonly, a nonprincipal ultrafilter is defined as a collection, say $\mathfrak{F}$, of sets in $\NN$ such that
 \begin{enumerate}
@@ -173,7 +179,21 @@ then the sequence $x_n$ converges in the usual sense.
 \parit{Proof.} Assume the contrary. 
 Then for some $\eps>0$, there is a subsequence $y_n$ of $x_n$ such that $\dist{x_n}{y_n}{}\ge\eps$ for all $n$.
 
-It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.\qeds
+It follows that $\dist{x_\o}{y_\o}{}\ge \eps$, a contradiction.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:linear}
+Denote by $S$ the space of bounded sequences of real numbers.
+Show that there is a linear functional $L\:S\to\RR$ such that
+for any sequence $\bm{s}=(s_1,s_2,\dots)\in S$ the image $L(\bm{s})$ is a partial limit of $s_1,s_2,\dots$
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:ultrakatetov+}
+Suppose that $f\:\NN\to\NN$ is a map such that 
+\[\lim_{n\to\o}x_n=\lim_{n\to\o}x_{f(n)}\]
+for any bounded sequence $x_n$ of real numbers.
+Show that $f(n)=n$ for $\o$-almost all $n\in\NN$.
+\end{thm}
 
 
 \section{Ultralimits of spaces}\label{sec:Ultralimit of spaces}
@@ -255,6 +275,25 @@ By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}_\o$ is complete.
 Applying Lemma~\ref{lem:mid>geod} we obtain the statement.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:Asym(Lob)}
+Let $\spc{T}$ be a metric component of the ultralimit of $\Lob2n$ as $n\to\o$.
+
+\begin{subthm}{ex:Asym(Lob):metric-tree}
+Show that $\spc{T}$ is a complete $\RR$-tree; that is, $[xy]$ is unique and 
+$[xy]\cup [yz]\supset [xz]$ for any $x,y,z\in \spc{T}$.
+\end{subthm}
+
+\begin{subthm}{ex:Asym(Lob):homogeneous}
+Show that $\spc{T}$ is homogeneous; that is, given two points $s,t\in \spc{T}$ there is an isometry of $\spc{T}$ that maps $s$ to $t$.
+\end{subthm}
+
+\begin{subthm}{ex:Asym(Lob):continuum}
+Show that $\spc{T}$ has \index{degree}\emph{continuum degree} at any point;
+that is, for any point $t\in \spc{T}$ the set of connected components of the complement $\spc{T}\setminus\{t\}$ has cardinality continuum.
+\end{subthm}
+
+\end{thm}
+
 \parbf{Ultrapower.} If all the metric spaces in a sequence are identical, $\spc{X}_n\z=\spc{X}$, 
 the $\o$-limit 
 $\lim_{n\to\o}\spc{X}_n$
@@ -318,6 +357,13 @@ $\spc{X}^\o$ is not isometric to $\spc{X}$.
 \begin{subthm}{ex:isom-ultrapower:yes}
 $\spc{X}^\o$ is  isometric to $(\spc{X}^\o)^\o$.
 \end{subthm}
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:ultrapower(ultrapower)}
+Given a nonprincipal ultrafilter $\o$, construct an ultrafilter $\o_1$ such that 
+\[\spc{X}^{\o_1}\iso(\spc{X}^\o)^\o\]
+for any metric space~$\spc{X}$.
 
 \end{thm}
 

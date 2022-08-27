@@ -108,8 +108,62 @@ It remains to observe that $\spc{K}$ is a length space since it is convex.
 \parit{Remark.}
 Alternatively, one can use the embedding of $\spc{X}$ into its injective hull; see \cite{isbell}.
 
+\parbf{\ref{ex:ultrakatetov}.} 
+Let $F=\set{n\in \NN}{f(n)=n}$; we need to show that $\o(F)=1$.
+
+Consider an oriented graph $\Gamma$ with vertex set $\NN\backslash F$ such that $m$ is connected to $n$ if $f(m)=n$.
+Show that each connected component of $\Gamma$ has at most one cycle.
+Use it to subdivide vertices of $\Gamma$ into three sets $S_1$, $S_2$, and $S_3$ such that $f(S_i)\cap S_i=\emptyset$ for each $i$.
+
+Conclude that $\o(S_1)=\o(S_2)=\o(S_3)=0$ and hence \[\o(F)=\o(\NN\setminus(S_1\cup S_2\cup S_3))=1.\]
+
+\parit{Source:} 
+The presented proof was given by Robert Solovay \cite{solovay}, but
+the key statement is due to Miroslav Katětov \cite{katetov}.
+
+\parbf{\ref{ex:linear}.}
+Choose a nonprincipal ultrafilter $\o$ and set $L(\bm{s})=s_\o$.
+It remains to observe that $L$ is linear.
+
+\parbf{\ref{ex:ultrakatetov+}.}
+Use \ref{ex:ultrakatetov}.
+
+\parbf{\ref{ex:Asym(Lob)}}; \ref{SHORT.ex:Asym(Lob):metric-tree}.
+Show that there is $\delta>0$ such that sides of any geodesic triangle in $\Lob21$ intersect a disk of radius $\delta$.
+Observe that $\Lob2n\z=\tfrac1{\sqrt{n}}\cdot\Lob21$, and use it to show that any geodesic triangle in $\spc{T}$ is a tripod.
+
+\parit{\ref{SHORT.ex:Asym(Lob):homogeneous}.} Observe and use that $\Lob2n$ are homogeneous.
+
+\parit{\ref{SHORT.ex:Asym(Lob):continuum}.} 
+Choose $p_1\in \Lob21$, denote by $p_n$ the corresponding point in $\Lob2n\z=\tfrac1{\sqrt{n}}\cdot\Lob21$
+Suppose $p_n\to p_\o$ as $n\to\o$; we can assume that $p_\o\in\spc{T}$.
+By \ref{SHORT.ex:Asym(Lob):homogeneous}, it is sufficient to show that $p_\o$ has a continuum degree.
+
+Choose distinct geodesics $\gamma_1,\gamma_2\:[0,\infty)\to \Lob21$ that start at a point $p_1$.
+Show that the limits of $\gamma_1$ and $\gamma_2$ run in the different connected components of $\spc{T}\setminus \{p_\o\}$.
+Since there is a continuum of distinct geodesics starting at $p$,
+we get that the degree of $p_\o$ is at least continuum.
+
+On the other hand, the set of sequences of points $q_n\in\Lob2n$  has cardinality continuum.
+In particular, the set of points in $\spc{T}$ has cardinality at most continuum.
+It follows that the degree of any vertex is at most continuum.
+
+\parit{Remark.}
+The properties \ref{SHORT.ex:Asym(Lob):homogeneous} and \ref{SHORT.ex:Asym(Lob):continuum} describe the tree $\spc{T}$ up to isometry \cite{dyubina-polterovich}.
+In particular, $\spc{T}$ does not depend on the choice of the ultrafilter.
+
 \parbf{\ref{ex:isom-ultrapower}.}
 Show and use that the spaces $\spc{X}^\o$ and $(\spc{X}^\o)^\o$ have discrete metrics and both have cardinality of the continuum.
+
+\parbf{\ref{ex:ultrapower(ultrapower)}.}
+Choose a bijection $\iota\:\NN\to \NN\times \NN$.
+Given a set $S\subset \NN$, consider the sequence $S_1$, $S_2,\dots$ of subsets in $\NN$ defined by $m\in S_n$ if $(m,n)\z=\iota(k)$ for some $k\in S$.
+Set $\o_1(S)=1$ if and only if $\o(S_n)=1$ for $\o$-almost all $n$.
+It remains to check that $\o_1$ meets the conditions of the exercise.
+
+\parit{Comment.}
+It turns out that $\o_1\ne \o$ for any $\iota$;
+see the post of Andreas Blass \cite{blass}.
 
 \begin{wrapfigure}{r}{40 mm}
 \vskip-0mm
