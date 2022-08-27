@@ -275,12 +275,17 @@ By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}_\o$ is complete.
 Applying Lemma~\ref{lem:mid>geod} we obtain the statement.
 \qeds
 
+A geodesic space $\spc{T}$ is called a \index{metric tree}\emph{metric tree} if any pair of points in $\spc{T}$ are connected by a unique geodesic,
+and the union of any two geodesics $[xy]_{\spc{T}}$, and $[yz]_{\spc{T}}$ contain the geodesic $[xz]_{\spc{T}}$.
+The latter means that any triangle in $\spc{T}$ is a tripod;
+that is, for any three points $x$, $y$, and $z$ there is a point $p$ such that 
+\[[xy]\cup[yz]\cup[zx]=[px]\cup[py]\cup[pz].\]
+
 \begin{thm}{Exercise}\label{ex:Asym(Lob)}
 Let $\spc{T}$ be a metric component of the ultralimit of $\Lob2n$ as $n\to\o$.
 
 \begin{subthm}{ex:Asym(Lob):metric-tree}
-Show that $\spc{T}$ is a complete $\RR$-tree; that is, $[xy]$ is unique and 
-$[xy]\cup [yz]\supset [xz]$ for any $x,y,z\in \spc{T}$.
+Show that $\spc{T}$ is a complete metric tree.
 \end{subthm}
 
 \begin{subthm}{ex:Asym(Lob):homogeneous}
