@@ -70,7 +70,7 @@ this was proved by Walter Rudin \cite{rudin}.
 \parbf{Stone--\v{C}ech compactification.}
 Given a set $S\subset \NN$, consider the subset $\Omega_S$ of all ultrafilters $\o$ such that $\o(S)=1$.
 It is straightforward to check that the sets $\Omega_S$ for all $S\subset \NN$ form a topology on the set of ultrafilters on~$\NN$. 
-The resulting space is called the \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of~$\NN$; it is usually denoted by $\beta\NN$.
+The resulting space is called the \index{Stone--\v{C}ech compactification}\emph{Stone--\v{C}ech compactification} of~$\NN$; it is usually denoted by $\beta\NN$\index{ $\beta\NN$} .
 
 There is a natural embedding $\NN\hookrightarrow\beta\NN$ defined by 
 $n\mapsto\o_n$, where $\o_n$ is the principal ultrafilter such that $\o_n(S)=1$ if and only if $n\in S$. 
@@ -78,7 +78,7 @@ Using this embedding, we can (and will) consider $\NN$ as a subset of $\beta\NN$
 
 The space $\beta\NN$ is the maximal compact Hausdorff space that contains $\NN$  as an everywhere dense subset.
 More precisely, for any compact Hausdorff space $\spc{X}$ 
-and map $f\:\NN\to \spc{X}$, there is a unique continuous map $\bar f\:\beta\NN\to X$ such that the restriction $\bar f|_\NN$ coincides with $f$. 
+and a  map $f\:\NN\to \spc{X}$, there is a unique continuous map $\bar f\:\beta\NN\to X$ such that the restriction $\bar f|_\NN$ coincides with $f$. 
 
 \section{Ultralimits of points}
 \label{ultralimits}
@@ -399,6 +399,31 @@ This definition can be applied to arbitrary sequences of sets,
 but we will apply it only for sequences of open sets.
 
 }
+The following proposition states that weak convexity survives under ulralimits.
+An analogous statement about convexity does not hold;
+for example, there is a sequence of convex discs in $\mathbb{S}^2$ that converges to a hemisphere, which is not convex.
+
+
+\begin{thm}{Proposition}\label{prop:weak-convex-stable}% V: I moved this Propositionto Chapter on Ultralimits. is this ok???
+Let $\spc{X}_n,$ be a sequence of geodesic spaces.
+Let $\o$ be an ultrafilter on $\mathbb N$ (see Definition~\ref{def:ultrafilter}).
+Assume that  $A_n\subset \spc{X}_n$ is a sequence of weakly convex sets, 
+$\spc{X}_n\to \spc{X}_\o$,
+and $A_n\to A_\o\subset \spc{X}_\o$ as $n\to\o$.
+Then $A_\o$ is a weakly convex set of $\spc{X}_\o$.
+\end{thm}
+
+\parit{Proof.}
+Fix $x_\o,y_\o\in A_\o$.
+Consider sequences $x_n,y_n\in A_n$ such that $x_n\to x_\o$ and $y_n\to y_\o$ as $n\to\o$.
+
+Denote by $\alpha_n$ a geodesic path from $x_n$ to $y_n$ that lies in $A_n$.
+Let
+\[\alpha_\o(t)=\lim_{n\to \o}\alpha_n(t).\]
+
+It remains to observe that $\alpha_\o$ is a geodesic path that lies in $A_\o$.
+\qeds
+
 
 \section{Ultralimits of functions}\label{sec:Ultralimits of functions}
 
