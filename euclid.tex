@@ -41,7 +41,7 @@ Also we use the following short-cut notation:
 \end{align*}
 
 In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.
-However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we have fixed a choice of geodesic.
+However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we have fixed a choice of a geodesic.
 
 A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \index{geodesic!geodesic path}\emph{geodesic path}.
 Given a geodesic $[p q]$,
@@ -67,6 +67,9 @@ Thus the limit in \ref{eq:def:busemann*} is defined,
 and it is 1-Lipschitz as a limit of 1-Lipschitz functions.
 \qeds
 
+\begin{thm}{Example} 
+Let $\spc{X}=\R^n$ and $\gamma(t)=p+tv$ where $v\in \R^n$ is a unit vector. Then  $\bus_\gamma$ is affine and is given by  $\bus_\gamma(x)=\langle x-p, v\rangle$.
+\end{thm}
 
 \parbf{Triangles.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}, and we will use the short notation 
@@ -114,11 +117,11 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
 In the notation of Section~\ref{model}, 
 $\modtrig\kappa(p q r)=\modtrig\kappa\{\dist{q}{r}{},\dist{r}{p}{},\dist{p}{q}{}\}$.
 
-If $\kappa\le 0$, the  model triangle is  always defined, that is, it exists and is unique up to isometry of $\Lob2\kappa$.
+If $\kappa\le 0$, the  model triangle is  always defined, that is, it exists and is unique up to an isometry of $\Lob2\kappa$.
 If $\kappa>0$, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\varpi\kappa;\]
-here $\varpi\kappa$ denotes the diameter of model space $\Lob2\kappa$.
-In this case, the model triangle exists and is unique up to isometry of $\Lob2\kappa$.
+here $\varpi\kappa$ denotes the diameter of the model space $\Lob2\kappa$.
+In this case, the model triangle also exists and is unique up to an isometry of $\Lob2\kappa$.
 The value $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}$ will be called the \index{perimeter!perimeter of a triple}\emph{perimeter of the triple} $p$, $q$, $r$.
 
 If for  $p,q,r\in \spc{X}$,
@@ -287,6 +290,7 @@ Thus \ref{eq:k-K} follows.
 
 
 
+
 \begin{thm}{Triangle inequality for angles}
 \label{claim:angle-3angle-inq}
 Let  $[px^1]$, $[px^2]$, and $[px^3]$ be three geodesics in a metric space.
@@ -348,6 +352,7 @@ If $p\in \mathopen{]} x y \mathclose{[}$, then
 whenever  each angle on the left-hand side is defined.
 \end{thm}
 
+The above inequality can be strict. For example in a metric tree angles between any two different edges coming out of the same vertex are all equal to $\pi$.
 
 \begin{thm}{First variation inequality}\label{lem:first-var}
 Assume that for a hinge $\hinge q p x$, 
@@ -388,6 +393,8 @@ Hence the result.
 Let $\spc{X}$ be a metric space.
 If the angle $\mangle\hinge pxy$ is defined for any hinge $\hinge pxy$ in $\spc{X}$,
 then we will say that the space $\spc{X}$ has \index{angle!defined angles}\emph{defined angles}.
+
+Let us note that this is a strong condition. For example a Banach space which has defined angles must be Hilbert.
 
 %We shall see that, according to 
 %the corollaries \ref{cor:monoton:sup} 
@@ -441,6 +448,10 @@ is defined by
 \]
 we set $\<v,w\>\df0$ if $v=\0$ or $w=\0$.
 
+\begin{thm}{Example}
+$\Cone\SS^n$ is isometric to $\R^{n+1}$. If $G\subset O(n+1)$ is a closed subgroup then $\Cone(\SS^n/G)$ is isometric to $\R^{n+1}/G$.
+\end{thm}
+
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
 The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
 (despite the fact that $\T_p$ is only a cone --- not a vector space).
@@ -464,14 +475,15 @@ The vectors of $\T'_p$ are the equivalence classes for the relation
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
 A vector in $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$}
 
+
 \section{Velocity of curves}
 
 \begin{thm}{Definition}\label{def:right-derivative}
 Let $\spc{X}$ be a metric space,
 $a>0$,
 and $\alpha\:[0,a)\to \spc{X}$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
-We say that $v\in\T_p$ is the right derivative of $\alpha$ at $0$,
-briefly $\alpha^+(0)\z=v$, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$ such that $v_n\to v$ as $n\to\infty$,
+We say that $v\in\T_p$ is the \emph{right derivative}\index{right derivative} of $\alpha$ at $0$,
+briefly $\alpha^+(0)\z=v$\index{$\alpha^+(0)$}, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$ such that $v_n\to v$ as $n\to\infty$,
 and corresponding geodesics $\gamma_n$, 
 we have 
 \[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\quad \text{as}\quad n\to\infty.\]
@@ -512,6 +524,7 @@ The needed map $\alpha$ can be found among the maps such that $\alpha(0)\z=p$ an
 where $\eps_n$
 is a decreasing sequence converging to $0$ as $n\to\infty$.
 In order to satisfy the conclusion of the proposition, one has to choose the sequence $\eps_n$ converging to $0$ very fast.
+Note that in this construction $\alpha$ is not continuous.
 \qeds
 
 \begin{thm}{Definition}\label{def:diff-curv}
@@ -553,7 +566,7 @@ Let $\spc{X}$ be a metric space with defined angles, and
 $f\:\spc{X}\subto\RR$ be a subfunction. For 
 $p\in\Dom f$, 
 %and $\II$ be a real interval.
-a function $\phi\:\T_p\to\RR$ is called the differential of $f$ at $p$
+a function $\phi\:\T_p\to\RR$ is called the \emph{differential} of $f$ at $p$
 (briefly $\phi=\dd_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\II$ is a real interval, $\alpha(0)=p$,  and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
 \end{thm}
 
