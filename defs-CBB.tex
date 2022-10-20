@@ -1746,6 +1746,51 @@ thus the extended angle comparison follows from the definition.
 The rule for calculating extended angle is an easy consequence of its definition.
 \qeds
 \section{Examples of CBB spaces}
+\parbf{Asymptotic cones of $\Alex{0}$ spaces}
+
+Let $\spc{X}$ be a $\Alex{0}$ space. Let $r_n\to 0$ be any converging sequence of positive real numbers. Then the ultralimit
+
+\[\spc{X}(\infty)
+\df
+\lim_{n\to\o} r_n\cdot\spc{X}.\]
+
+is again  $\Alex{0}$. It is called the \index{asymptotic cone}\emph{asymptotic cone} of $\spc{X}$ or\emph{ the cone at infinity} of $\spc{X}$.
+
+It has a canonical base point $\star$ equal to the $\o$-limit of $r_n\cdot x\in r_nX$ which is easily seen to be independent of $x$.
+
+From now on we will restrict out attention to  noncompact length  finite dimensional  $\Alex{0}$ spaces.
+
+\begin{thm}{Asymptotyc cones of finite dimensional $\Alex{0}$ spaces}
+
+Let $\spc{X}$ be noncompact length  finite dimensional  $\Alex{0}$ space.
+Then its asymptotic cone $\spc{X}(\infty)$ is independent of the choice of the sequence $r_n\to\infty$ and the ultrafiler $\o$.
+Moreover $\spc{X}(\infty)$ is isometric to a metric Euclidean cone $\Cone(\Sigma)$ where the cone vertex corresponds to $\star$.
+\end{thm}
+\begin{proof}
+Fix $p\in\spc{X}$. Since $X$ is finite dimensional the space of directions $\Sigma_p$ is compact. This easily implies that there exists $\epsilon(R)\to 0$ as $R\to\infty$ such that for every point $x$ with $\dist{p}{x}{}\ge R$ and any geodesic 
+$[px]$ there is a ray $\gamma\:[0,\infty)\to \spc{X}$ such that 
+\[
+ \mangle\hinge p x {\gamma(R)}\le \epsilon(R)
+\]
+
+
+Therefore $\dist{x}{\gamma(R)}{}\le 10\epsilon(R)R$. This means that all points in $\spc{X}(\infty)$ come from rays starting at $p$. Moreover given two rays $\gamma_1,\gamma_2$ starting at $p$  monotonicity of the comparison angle $\angk 0 p{\gamma_1(t)}{\gamma_2(s)}$  implies that the limit $\lim_{n\to\o} r_n\cdot \dist{\gamma_1(t/r_n)}{\gamma_2(s/r_n)}{}$ is independent of the sequence $r_n$. This easily implies that $\spc{X}(\infty)$ is independent of the choice of the sequence $r_n\to\infty$ and the ultrafiler $\omega$ and moreover it is scale invariant, that is $r\spc{X}(\infty)$ is isometric to $\spc{X}(\infty)$ for any positive $r$ by an isometry preserving $\star$. This immediately implies that
+$\spc{X}(\infty)$ is isometric to $T_\star \spc{X}(\infty)=\Cone \Sigma_\star$.
+\end{proof}
+
+The space $\Sigma=\Sigma_\star$ in the above theorem is called the \index{boundary at infinity} \emph{boundary at infinity} or \emph{the ideal boundary} of $\spc{X}$ and is denotes by \index{$\partial_\infty\spc{X}$} $\partial_\infty\spc{X}$. It is a length $\Alex{1}$ space of dimension equal to $\dim (\spc{X}(\infty))-1$.
+
+Let us note that the cone at infinity is almost always singular even if $\spc{X}$ is a smooth Riemanninan manifold of nonnegative curvature.
+\begin{thm}{Lemma}
+
+ Let $\spc{X}$ be noncompact length  finite dimensional  $\Alex{0}$ space. Suppose $\spc{X}(\infty)$ is an $n$-dimensional  Riemannian manifold of nonnegative curvature.
+ 
+ Then $\spc{X}\iso \R^n\times \spc{Y}$ for some compact $\spc{Y}$.
+\end{thm}
+\begin{proof}
+If $\spc{X}(\infty)$ is smooth that $\spc{X}(\infty)\iso T_\star \spc{X}(\infty)\iso \R^n$.
+Now monotonicity of comparison angles easily implies that two rays in $\spc{X}$ starting at any  $p$ corrsponding to opposite points in $\partial_\infty\spc{X}$ form a line in $\spc{X}$. Now the result easily follows by the Splitting Theorem.
+\end{proof}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Remarks}
