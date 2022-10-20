@@ -466,6 +466,15 @@ two curves $\alpha(t)=\min\{0,t\}$ with $\beta(t)=0$
 are $f$-gradient with $\alpha(t)\z=\beta(t)\z=0$ for all $t\ge0$; 
 however $\alpha(t)\z\ne\beta(t)$ for all $t<0$.
 
+Another example can be given as follows
+
+\begin{thm}{Example}
+Let $\spc{X}=\R^2$ and $f(v)=-|v|_\infty$. Then $f$ is concave. Recall  that at points $(x,y)\ne 0$ with $|x|\ne |y|$ the gradient has length 1 and is parallel to either the $x$ or the $y$ axis  at nonzero points with $|x|=|y|$ the gradient is equal to $(\pm \frac{1}{2},\pm\frac{1}{2})$.
+
+Let $p=(x,y)$ where $x>y>0$. Let $\alpha$ be the $f$-gradient curve starting at $p$. Then $\alpha(t)=(x-t, y)$ for $t\in [0,x-y]$ but once it reaches the point $(y,y)$ it follows the line $x=y$ until it hits 0. That is for $q=(y,y)$ with $y>0$ the $f$-gradient curve $\beta$ starting at $q$ is given by $\beta (t)=(y-t/2, y-t/2)$ for $t\le 2y$ and $\beta(t)=(0,0)$ for $t\ge 2y$. In particular we see that even in the region where $|\nabla f|\ne 0$ gradient curves can merge and hence their "past" can not be uniquely determined from their "present".
+\end{thm}
+
+
 The next theorem shows that a ``future'' gradient curve is determined by the ``present''.
 
 \begin{thm}{Picard's theorem}\label{thm:picard}
