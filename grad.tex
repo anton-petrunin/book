@@ -5,8 +5,10 @@
 Gradient flow could be considered as a nonsmooth version of first-order ordinary differential equations.
 It provides a universal tool in Alexandrov geometry with most significant applications to $\Alex{}{}$ spaces. 
 
-The technique of gradient flow takes its roots in \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction}, 
-introduced by Vladimir Sharafutdinov \cite{sharafutdinov}.
+The theory of gradient flows of semiconvex functions on Hilbert spaces (which are of course both  $\Alex{0}{}$ and $\CAT{0}$)  is classical, see for example \cite{Brezis-book}.
+
+ The technique of gradient flows in the context of comparison geometry takes its roots in \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction}, 
+introduced by Vladimir Sharafutdinov \cite{sharafutdinov}. 
 It has been used  widely in comparison geometry since then.
 In $\Alex{}$ spaces, it was first used by Grigory Perelman and the third author \cite{perelman-petrunin:qg, petrunin:qg}.
 A bit later, independently Jürgen Jost and Uwe Mayer \cite{jost,mayer} 
@@ -14,6 +16,8 @@ used the gradient flow in $\CAT{}$ spaces.
 Later, Alexander Lytchak unified and generalized these two approaches
 to a wide class of metric spaces \cite{lytchak:open-map}.
 It was developed  yet further by Shin-ichi Ohta \cite{ohta} and by Giuseppe Sevar\'e \cite{sevare}.
+It is based on the more  analytic approach suitable for the study of synthetic spaces with lower Ricci bounds was developed by Luigi Ambrosio, Nicola Gigli and  Giuseppe Sevar\'e in a general metric and metric measure setting 
+\cite{ambrosio-gigli-savare}.
 
 {\sloppy 
 The following exercise is a stripped-down version of Sharfutdinov's retraction;
@@ -795,7 +799,7 @@ $\GF_{f_n}^t\:\spc{Z}_n\to \spc{Z}_n$ converges to $\GF_f^t\:\spc{Z}\to \spc{Z}$
 
 Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
 We will write 
-\[\spc{X}=A\oplus B\]
+\[\spc{X}=A\oplus B\]\index{$A\oplus B$}
 if there are projections $\proj_A\:\spc{X}\to A$ 
 and 
 $\proj_B\:\spc{X}\to B$
@@ -1445,6 +1449,9 @@ is defined by
 \gexp\mc\kappa_p\: r\cdot\xi\mapsto\sigma_\xi(r).
 \]
 \index{$\gexp\mc\kappa_p$}
+
+
+
 Here are properties of radial curves reformulated in terms of the gradient exponential map:
 
 \begin{thm}{Theorem}\label{thm:prop-gexp}
@@ -1557,7 +1564,7 @@ We will follow the simplified and generalized approach given by Alexander Lytcha
 The original motivation of Chanyoung Jun came from the study of pursuit-evasion problems.
 Another application of this type of flow comes from the fact that
  the optimal transport plan, or equivalently geodesics in the Wasserstein metric, can be described as gradient flow for a family of semiconcave functions.
-This observation was used by the third author to prove Alexandrov spaces with nonnegative curvature have nonnegative Ricci curvature in the sense of Lott--Villani--Sturm \cite{petrunin:optimal}.
+This observation was used by the third author to prove that Alexandrov spaces with nonnegative curvature have nonnegative Ricci curvature in the sense of Lott--Villani--Sturm \cite{petrunin:optimal}.
 
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Let $f_t$ be a family of functions defined on open subsets $\Dom f_t$ of~$\spc{Z}$.
@@ -1758,7 +1765,10 @@ $\LSCSC(\spc{Z})$ (for \textbf{l}ower semi-\textbf{c}ontinous and semi-\textbf{c
 In this section we describe the adjustments needed
 to construct gradient curves for the subfunctions in $\LSCSC(\spc{Z})$.
 
-Examples of such functions include the entropy and some other closely related functionals on the Wasserstein space over a $\Alex0$ space.
+When $\spc{Z}=H$ is a Hilbert space the theory we develop is equivalent to the classical theory of gradient flows on Hilbert space mentioned earlier \cite{Brezis-book}.
+
+Further examples of such functions include the entropy and some other closely related functionals on the Wasserstein space over a $\Alex0$ space.
+Another important example is given by the Cheeger energy on metric measure spaces, its gradient flow leads to the notion of the heat flow on such spaces.
 The gradient flow for these functions plays an important role in the theory of optimal transport, see \cite{villani} and references there in. 
 
 
@@ -1862,7 +1872,12 @@ satisfies the equation
 \[\alpha^+(t)=\nabla_{\alpha(t)} f\]
 at all values $t$, with the possible exception of $t=0$.
 In particular, the gradient of $f$ is defined at all points of any 
-$f$-gradient curve, with the exception of the initial point.
+$f$-gradient curve, with the possible exception of the initial point.
+
+\begin{thm}{Example}
+Let $\spc{X}=L^2(\R^n)$. Let $F\co \spc{X}\to \R$ be given  by $F(f)=-\int|\nabla f|^2d\mathcal L$. Then $F$ is a concave but not locally Lipschitz functional on $\spc{X}$ and its finite precisely at functions $f\in W^{1,2}(\R^n)\subset L^2(\R^n)$. Integration by parts show that for any smooth $f\in W^{1,2}(\R^n)$ it holds that $\nabla_fF=\Delta f$.
+The gradient flow of F is given by the heat flow $f_t$ starting at $f$ and $f_t$ is smooth for all positive $t$.
+\end{thm}
 
 \subsection*{Slower radial curves}
 Let $\kappa\ge 0$. 
