@@ -57,16 +57,7 @@ Moreover directly from the definition it follows that if $\Kappa\le 0$, then any
 However, in the case $\Kappa>0$ the latter statement does not hold and the former statement is not trivial; it will be proved in \ref{cor:CAT>k-sence}.
 \end{itemize}
 
-\begin{thm}{Examples}
-By Rauch comparison, any Riemannian manifold with induced metric is locally $\Alex{\kappa}$ if and only if its sectional curvature of is bounded below by $\kappa$.
 
-By Toponogov comparison, any complete Riemannian manifold of sectional curvature bounded below by $\kappa$ is globally $\Alex{\kappa}$. This will follow in more generality from the globalization theorem  below \eqref{thm:glob}.
-
-Any convex set in a $\Lob m{\kappa}$ is $\Alex{\kappa}$.
-
-Any convex hypersurface in $\Lob m{\kappa}$, equipped with the induced length metric, is $\Alex{\kappa}$.
-Morevoer, the same holds in complete Riemannian manifolds with sectional curvature bounded below by $\kappa$ \cite{alexander-kapovitch-petrunin-buyalo}.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Let $\spc{L}$ be a metric space and $\kappa\le 0$.
@@ -1745,8 +1736,89 @@ thus the extended angle comparison follows from the definition.
 
 The rule for calculating extended angle is an easy consequence of its definition.
 \qeds
-\section{Examples of CBB spaces}
+\section{Sources of Examples of CBB spaces}
+In this section we will collect various sources of examples of $\Alex{}$ spaces. Some of this material is addressed elsewhere in the book in which case we will just give references.
+
+\parbf{Warped products}
+These types of examples are discussed in detail in Chapter \ref{chapter:warped products}. Consult that chapter for the appropriate definitions.
+
+\begin{thm}{Warped products}
+\begin{subthm}{thm:warp-curv-bound:cbb:a}
+If $\spc{L}$ is a complete length $\Alex{1}$ space and $\diam\spc{L}\le\pi$, 
+then 
+\begin{align*}
+\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad \Alex1,
+\\
+\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is}\quad \Alex0,
+\\
+\Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is}\quad \Alex{-1}.
+\end{align*}
+Moreover, the converse also holds in each of the three cases.
+\end{subthm}
+
+\begin{subthm}{thm:cbb-product}
+If $\spc{L}$ is a complete length $\Alex0$ space, 
+then 
+\begin{align*}
+\RR\times\spc{L}&\quad\text{is a complete length $\Alex0$ space},
+\\
+\RR\warp{\exp}\spc{L}&\quad\text{is a complete length $\Alex{-1}$ space.}
+\end{align*}
+Moreover, the converse also holds in each of the two cases.
+\end{subthm}
+
+\begin{subthm}{}
+If $\spc{L}$ is a complete length $\Alex{-1}$ space,
+if and only if the warped product $\RR\warp{\cosh}\spc{L}$ is a complete length $\Alex{-1}$ space.
+\end{subthm}
+
+\begin{subthm}{}
+If $\spc{L}_1, \spc{L}_2$  are complete length $\Alex{\kappa}$ spaces with $\kappa\le 0$ then 
+$\spc{L}_1\times \spc{L}_2$ is also complete length $\Alex{\kappa}$.
+
+\end{subthm}
+
+\begin{subthm}{}
+Let $\spc{U}$ and $\spc{V}$ be complete length  $\Alex1$ spaces  with $\diam \le\pi$.
+Then the spherical join $\spc{U}\star\spc{V}$ is also complete length  $\Alex1$.
+
+\end{subthm}
+
+
+\end{thm}
+
+
+
+\parbf{Convex hypersurfaces in smooth manifolds}
+
+It is immediate from the Gauss formula that a if $(M^n,g)$ is a complete Riemannian manifold of $\sec\ge \kappa$ and $N^{n-1}\subset M$ is closed    hypersurface with nonnegative second fundamental form then $N$ also has $\sec\ge \kappa$ with respect to the induced metric. In particular $N$ is $\Alex{\kappa}$ with respect to the induced inner metric.
+
+
+This has been generalized by  Sergei Buyalo \cite{buyalo} to the case of any (not necessarily smooth)  closed locally convex hypersurface in $M$ to show that  $N$ is $\Alex{\kappa'}$  for some $\kappa'<\kappa$.
+The following sharp bound was proved by the authors in  \cite{alexander-kapovitch-petrunin-buyalo}
+
+\begin{thm}{Theorem}
+Let  $(M^n,g)$ is a complete Riemannian manifold of $\sec\ge \kappa$. Let $N \subset M$ be a locally convex closed hypersurface $M$ (not necessarily snooth). Then $N$ with the induced inner metric is $\Alex{\kappa}$.
+\end{thm}
+
+In particular any closed  convex hypersurface in $\R^n$ is $\Alex{0}$.
+
+\parbf{Limits of manifolds with sectional curvature bounded below}
+
+As is immediate from the definition Gromov-Hausdorff and ultralimits of $\Alex{k}$ spaces are again $\Alex{k}$.
+
+In particular, Gromov Hausdorff limits of complete smooth manifolds with $\sec\ge \kappa$ are $\Alex{k}$. This is particularly useful because of the following consequence of Theorem\ref{thm:dim-infty}:
+
+\begin{thm}{Compactness Theorem}\label{compact-thm-alex}
+Let $D>0, \kappa\in \R, n\in \NN$. Then the class of $\Alex{k}$ spaces of dimension $\le n$ and $\diam\le D$ is compact in Gromov-Hausdorff topology.
+Without the upper diameter bound the corresponding class is $\o$-compact or pointed Gromov-Hausdorff compact.%V:??? we don't defined pointed G-H convergence. Is it ok to mention it here? Or perhaps somewhere else.?
+\end{thm}
+This in particular implies Gromov precompactness theorem  \cite{gromov-MS} saying that the subclass of the above class consiting of smooth manifolds is precompact in Gromov-Hausdorff topology.
+
 \parbf{Asymptotic cones of $\Alex{0}$ spaces}
+
+A special case of the above theorem  is arises in the following situation.
+
 
 Let $\spc{X}$ be a $\Alex{0}$ space. Let $r_n\to 0$ be any converging sequence of positive real numbers. Then the ultralimit
 
@@ -1759,6 +1831,8 @@ is again  $\Alex{0}$. It is called the \index{asymptotic cone}\emph{asymptotic c
 It has a canonical base point $\star$ equal to the $\o$-limit of $r_n\cdot x\in r_nX$ which is easily seen to be independent of $x$.
 
 From now on we will restrict out attention to  noncompact length  finite dimensional  $\Alex{0}$ spaces.
+
+The following result is well known, see e.g. \cite{Guij-Kap}.
 
 \begin{thm}{Asymptotyc cones of finite dimensional $\Alex{0}$ spaces}
 
@@ -1791,6 +1865,64 @@ Let us note that the cone at infinity is almost always singular even if $\spc{X}
 If $\spc{X}(\infty)$ is smooth that $\spc{X}(\infty)\iso T_\star \spc{X}(\infty)\iso \R^n$.
 Now monotonicity of comparison angles easily implies that two rays in $\spc{X}$ starting at any  $p$ corrsponding to opposite points in $\partial_\infty\spc{X}$ form a line in $\spc{X}$. Now the result easily follows by the Splitting Theorem.
 \end{proof}
+
+\parbf{Polyhedral spaces}
+These type of examples are discussed in detail in Chapter \ref{chapter:polyhedral}.
+
+
+\begin{thm}{Polyhedral CBB spaces}
+
+ Let $\spc{P}$ be a piecewise
+$\Lob{}\kappa$ space and $\tau$ be a triangulation of $\spc{P}$.
+Then $\spc{P}$ is $\Alex\kappa$ if and only if the following conditions hold.
+
+\begin{subthm}{} $\tau$ is \index{pure triangulation}\emph{pure}; 
+that is, any simplex in $\tau$ is  a face of some simplex of dimension exactly $m$. 
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:m-1}
+The link of any simplex of dimension $m-1$ is formed by a single point or two points.
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:2pi}
+Any link of any simplex of dimension $m-2$
+has diameter at most $\pi$.
+\end{subthm}
+
+\begin{subthm}{thm:poly-CBB:connected}
+The link of any simplex of dimension $\le m-2$ is connected.
+\end{subthm}
+
+\end{thm}
+
+
+\parbf{Doubling and Gluing}
+
+The following Theorem is due to the third author. 
+
+\begin{thm}{Gluing theorem}
+Let $\spc{L}_1, \spc{L}_2$ be complete length finite dimensional $\Alex{\kappa}$ spaces with nonempty boundary. Suppose $f\co \partial \spc{L}_1\to  \partial \spc{L}_2$ is an isometry.
+
+Then the gluing of $\spc{L}$ of  $\spc{L}_1$ and $ \spc{L}_2$  along $f$ is  complete length $\Alex{\kappa}$ without boundary.%% V: Should we say anything about what boundary is? or just skip it?
+\end{thm}
+
+In  the special case $\spc{L}_1=\spc{L}_2$ and $f$ given by the identity map this theorem was proved earlier by Grigory Perelman \cite{perelman:spaces2}.
+
+\begin{thm}{Example}
+Let $\spc{L}_2=\SS^1\times [0,\infty)$ where the length of the $\SS^1$ factor is $L>0$.
+Let $\spc{L}_2$ be a convex disk in $\Lob{}\kappa$ with $\kappa\ge 0$ such that the length of the boundary of $\spc{L}_2$ is also equal to $L$.
+
+Then the "capped cylinder" obtained by the gluing of  $\spc{L}_1$ and  $\spc{L}_2$ along an isometry of their boundaries in $\Alex{0}$.
+\end{thm}
+In case of smooth spaces The Gluing Theorem admits a generalization to nonconvex boundaries due to Nikolay  Kosovski\u{\i} \cite{Kosovski}.
+
+\begin{thm}{Non-convex Gluing}
+Let $(M^n_1, g_1)$ and $(M^n_2,g_2)$ be  complete (as metric spaces)  smooth Riemannian manifolds with  nonempty boundary. Suppose  they both satisfy $\sec\ge\kappa$ and $f\co \partial M_1\to \partial M_2$ is an isometry such that when identified via $f$ the sum of the second fundamental forms $II_{\partial M_1}+II_{\partial M_2}\ge 0$ is nonnegative.
+Then the gluing of $M_1$ and $M_2$ along $f$ is $\Alex{\kappa}$.
+\end{thm}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Remarks}
