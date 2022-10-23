@@ -1766,10 +1766,16 @@ It should be beneficial to the reader despite we do not provide all proofs on th
 This statement follows from \ref{prp:A^omega}, \ref{thm:ultra-GH} and the Toponogov comparison which is a partial case of the globalization theorem (\ref{thm:glob}).
 For example, 
 if $M$ is a Riemannian manifold of nonnegative sectional curvature,
-then the limit of rescaled copies $\tfrac1n\cdot M$ as $n\to \infty$ is $\Alex0$; this is the so-called \textit{asymptotic cone} of $M$.
+then the limit of its rescalings $\tfrac1n\cdot M$ as $n\to \infty$ is $\Alex0$; this is the so-called \textit{asymptotic cone} of $M$.
 
-Most applications are based on the described sources and the \textit{Gromov compactness theorem}.
-The latter provides a converging subsequence in the sense of Gromov--Hausdorff in a sequence of Riemannian manifold with curvature and dimension bounds.
+Most of applications in Riemannian geometry are based on the described sources and the following corollary of Gromov's selection theorem (\ref{thm:gromov-selection}) and the Bishop--Gromov inequality.
+
+\begin{thm}{Gromov compactness theorem}
+Let $M_n$ be a sequence of Riemannian manifolds with sectional curvature at least $\kappa$. 
+Then, for any choice of marked points $p_n\in M_n$,
+a subsequence of $M_n$ admits a Gromov--Hausdorff convergence 
+such that the corresponding subsequence of $p_n$ converges.
+\end{thm}
 
 Another useful source is provided by Corollary \ref{thm:CBB/G}.
 In particular, assume $M$ is a Riemannian manifold with sectional curvature at least $\kappa$ and 
@@ -1796,7 +1802,7 @@ a general statement is given in \ref{thm:warp-CBB}.
 Perelman's doubling theorem can be considered as a partial case;
 it states that if $\spc{L}$ is a finite-dimensional $\Alex{\kappa}$ length space with nonempty boundary, then its \textit{doubling across the boundary} is $\Alex{\kappa}$ as well.
 
-Among less important examples, let us mention \emph{polyhedral spaces},
+Among less important examples, let us mention \textit{polyhedral spaces},
 an if-and-only-if condition is given in \ref{thm:poly-CBB}.
 Also, there is quite general sufficient conditions that guarantee that gluing of two spaces is $\Alex{\kappa}$;
 it was given by Nikolai Kosovsky \cite{Kosovski}.
