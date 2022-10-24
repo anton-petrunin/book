@@ -987,6 +987,28 @@ label.rt(btex $y$ etex, z.y);
 label.rt(btex $\alpha(s)$ etex, z.t);
 endfig;
 
+beginfig(975) 
+save u;
+u:=1cm;
+
+z.p=origin;
+z.x=(1,.4)*u;
+z.y=(-.2,-.7)*u;
+z.z=(-.7,.8)*u;
+
+draw z.p--z.x;
+draw z.p--z.y;
+draw z.p--z.z;
+
+dOt z.p,z.x,z.y,z.z;
+
+label.lrt(btex $p$ etex, z.p);
+label.rt(btex $x$ etex, z.x);
+label.bot(btex $y$ etex, z.y);
+label.lft(btex $z$ etex, z.z);
+
+endfig;
+
 beginfig(1005) 
 save u,p;
 path p[];

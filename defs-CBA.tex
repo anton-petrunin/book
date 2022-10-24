@@ -2605,105 +2605,33 @@ see also \cite{alexander-bishop:h-c}.
 Show that a complete, simply connected, locally convex space is a convex space.
 \end{thm}
 
-%\section{Sources of examples of $\CAT{}$ spaces}
+\parbf{Examples and constructions.}
+Let us list the most important sources of examples of $\CAT{}$ spaces.
+It should be beneficial to the reader despite we do not provide all proofs on the spot. 
 
-\subsection{Metric trees}
+\textit{Riemannian manifolds} with sectional curvature at most $\kappa$ are locally $\CAT{\kappa}$.
+This statement follows from the Rauch comparison, and it is one of the main motivations for $\CAT{\kappa}$ comparison.
+The \textit{Hilbert space} is another motivating example of $\CAT{0}$ spaces.
 
-From a basepoint $\spc{X^0}$ construct a metric tree $\spc{X}$ recursively by attaching $2^n$ intervals of length $2^{-n}$ to each end vertex of $X^{n-1}$. Clearly $\spc{X}$ is  $\CAT\kappa$ for any $\kappa$.
+The question of when \textit{Riemannian manifolds with boundary} are locally $\CAT{\kappa}$ have been completely answered by the first author, David Berg, and Richard Bishop \cite{alexander-berg-bishop1993}.
+In particular, if a Riemannian manifold and its boundary have sectional curvature at most $\kappa$, then it is locally $\CAT{\kappa}$.
 
-\subsection{Motivating examples}
+Further, any open simply-connected \textit{subset of the plane} equipped with induced length metric is $\CAT{0}$. 
+See \cite[Chapter 4]{alexander-kapovitch-petrunin-CAT} for related questions (open and solved).
 
-Consider three subgraphs of different paraboloids
-\begin{align*}
-A&=\set{(x,y,z)\in\EE^3}{z\le x^2+y^2},
-\\
-B&=\set{(x,y,z)\in\EE^3}{z\le -x^2-y^2},
-\\
-C&=\set{(x,y,z)\in\EE^3}{z\le x^2-y^2}.
-\end{align*}
+Note that any metric tree (see Section~\ref{sec:Ultralimit of spaces}) is $\CAT{-\infty}$;
+that is, a metric tree is $\CAT{\kappa}$ for \textit{any} $\kappa\in\RR$.
+In particular, any tree (in the graph-theoretical sense) with a length metric such that every edge is isometric to a line segment is $\CAT{-\infty}$.
 
-\begin{thm}{Question}
-Which of the sets $A$, $B$ and $C$, if equipped with the induced length metric, form $\CAT{0}$ spaces?
-\end{thm}
+Suppose $A^1, \dots, A^n$ is an array of convex closed sets in the Euclidean space $\EE^m$.
+Let us prepare $n+1$ copy of $\EE^m$ and glue successive pairs of spaces along $A^1, \dots, A^n$.
+The resulting space is called \textit{puff pastry};
+by Reshetnyak gluing theorem it is $\CAT0$.
+(This fact was successfully used by Dmitri Burago, Serge Ferleger, and Alexey Kononenko \cite{burago-ferleger-kononenko1998-2} to bound the number of collisions of balls in $\EE^m$.) 
 
-\begin{thm}{Answer}
-No for $A$,  yes for $B$ and $C$.
-\end{thm}
+Further, $\CAT{}$ spaces behave nicely with respect to some natural constructions.
+For example, the product of $\CAT{0}$ spaces is a $\CAT{0}$.
+Also, the Euclidean cone over $\CAT{1}$ space is a $\CAT{0}$.
+These are the first examples of the so-called \textit{warped products} that are discussed in Chapter~\ref{chapter:warped products};
+a general statement is given in \ref{thm:warp-CAT}.
 
-See Subsection 4.1 of \cite{AKP} for further discussion.
-
-\subsection{polyhedra}
-
-\begin{thm}
-A Euclidean polyhedral space in which any two points can be connected by a unique geodesic is $\CAT 0$. (Exercise 12.4).
-\end{thm}
-
-\subsection{Subsets of the plane}
-
-Consider an open simply connected subset of $\Lob2 0$, equipped with its induced length metric. The completion of the resulting space is $\CAT 0$.  See Theorem 4.4.1 of \cite{AKP}.
-
-\subsection{puff pastry}
-
-Let $(A^1 \dots A^n$ be an array of convex closed sets in $\EE^m$. Glue successive pairs of spaces along  $A^1 \dots A^n$, respectively.  The resulting space is a \emph{puff pastry}.
-
-\begin{thm}
-A puff pastry is a $\CAT(0)$ space.
-\end{thm}
-
-See Subsection 2.4 of \cite{AKP}.
-
-\subsection{Warped products}
-
-\begin{thm}{Theorem}\label{thm:warp-curv-bound:cat}
-Let $\spc{L}$ be a metric space.
-
-\begin{subthm}{thm:warp-curv-bound:cbb:S}
-If $\spc{L}$ is $\CAT{1}$
-then 
-\begin{align*}
-\Susp\spc{L}&=[0,\pi]\warp{\sin}\spc{L}\quad\text{is}\quad  \CAT{1},
-\\
-\Cone\spc{L}&=[0,\infty)\warp{\id}\spc{L}\quad\text{is}\quad  \CAT{0},
-\\
-\Cone\mc{-1}\spc{L}&=[0,\infty)\warp{\sinh}\spc{L}\quad\text{is}\quad  \CAT{-1}.
-\end{align*}
-Moreover, the converse also holds in each of the three cases.
-\end{subthm}
-
-\begin{subthm}{thm:warp-curv-bound:cbb:E}
-If $\spc{L}$ is a complete length $\CAT0$ space
-then 
-$\RR\times\spc{L}$ is $\CAT0$ 
-and 
-$\RR\warp{\exp}\spc{L}$ is $\CAT{-1}$.
-Moreover the converse also holds in each of the two cases.
-\end{subthm}
-
-\begin{subthm}{thm:warp-curv-bound:cbb:H}
-If $\spc{L}$ is $\CAT{-1}$
-then 
-$\RR\warp{\cosh}\spc{L}$
-is $\CAT{-1}$.
-Moreover the converse also holds in each of the three cases..
-\end{subthm}
-
-\begin{subthm}{thm:warp-curv-bound:cbb:E}
-If $\spc{L}$ is a complete length $\CAT0$ space
-then 
-$\RR\times\spc{L}$ is $\CAT0$ 
-and 
-$\RR\warp{\exp}\spc{L}$ is $\CAT{-1}$.
-Moreover the converse also holds in each of the two cases.
-\end{subthm}
-
-\begin{subthm}{thm:warp-curv-bound:cbb:H}
-If $\spc{L}$ is $\CAT{-1}$
-then 
-$\RR\warp{\cosh}\spc{L}$
-is $\CAT{-1}$.
-Moreover the converse also holds.
-\end{subthm}
-
-\end{thm}
-
-See Chapter 12.
