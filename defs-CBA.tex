@@ -157,7 +157,7 @@ see Section~\ref{ultralimits} for the related definitions.
 Recall that $\o$ denotes a fixed selective ultrafilter on $\NN$.
 
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:CAT-olim}
 \label{prop:CAT^omega}
 Let $\spc{U}_n$ be a $\CAT{\kappa_n}$ space for each $n\in\NN$.
 Assume $\spc{U}_n\to \spc{U}_\o$ and $\kappa_n\to\kappa_\o$ as $n\to\o$.
@@ -2578,11 +2578,6 @@ Is it true that $K$ lies in a convex compact set $\bar K\subset\spc{U}$?
 The question can  easily be reduced to the case when $K$ is finite;
 so far it is not even known if any three points in a complete length $\CAT0$ space lie in a compact convex set.
 
-One of the most beautiful applications of the Reshetnyak gluing theorem is given by Dmitri Burago,  Serge Ferleger,
-and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-kononenko1998-2,burago-ferleger-kononenko1998-3,burago-ferleger-kononenko1998-4}.
-They use it to study billiards; a short survey on the subject is written by Dmitri Burago \cite{burago-1998};
-see also our book \cite{alexander-kapovitch-petrunin-CAT}.
-
 We expect that \ref{lem:patch} can be extended to all curves, not necessarily local geodesics,
 but the proof does not admit a straightforward generalization.
 
@@ -2613,13 +2608,14 @@ It should be beneficial to the reader despite we do not provide all proofs on th
 This statement follows from the Rauch comparison, and it is one of the main motivations for $\CAT{\kappa}$ comparison.
 The \textit{Hilbert space} is another motivating example of $\CAT{0}$ spaces.
 
-The question of when \textit{Riemannian manifolds with boundary} are locally $\CAT{\kappa}$ have been completely answered by the first author, David Berg, and Richard Bishop \cite{alexander-berg-bishop1993}.
+The question of when Riemannian \textit{manifold-with-boundary} is locally $\CAT{\kappa}$ have been completely answered by the first author, David Berg, and Richard Bishop \cite{alexander-berg-bishop1993}.
 In particular, if a Riemannian manifold and its boundary have sectional curvature at most $\kappa$, then it is locally $\CAT{\kappa}$.
 
-Further, any open simply-connected \textit{subset of the plane} equipped with induced length metric is $\CAT{0}$. 
-See \cite[Chapter 4]{alexander-kapovitch-petrunin-CAT} for related questions (open and solved).
+Further, any simply-connected \textit{subset of the plane} equipped with induced length metric is $\CAT{0}$.
+In higher dimensions things getting more complicated;
+see \cite[Chapter 4]{alexander-kapovitch-petrunin-CAT} for related questions (open and solved).
 
-Note that any metric tree (see Section~\ref{sec:Ultralimit of spaces}) is $\CAT{-\infty}$;
+Note that any \textit{metric tree} (see Section~\ref{sec:Ultralimit of spaces}) is $\CAT{-\infty}$;
 that is, a metric tree is $\CAT{\kappa}$ for \textit{any} $\kappa\in\RR$.
 In particular, any tree (in the graph-theoretical sense) with a length metric such that every edge is isometric to a line segment is $\CAT{-\infty}$.
 
@@ -2627,7 +2623,18 @@ Suppose $A^1, \dots, A^n$ is an array of convex closed sets in the Euclidean spa
 Let us prepare $n+1$ copy of $\EE^m$ and glue successive pairs of spaces along $A^1, \dots, A^n$.
 The resulting space is called \textit{puff pastry};
 by Reshetnyak gluing theorem it is $\CAT0$.
-(This fact was successfully used by Dmitri Burago, Serge Ferleger, and Alexey Kononenko \cite{burago-ferleger-kononenko1998-2} to bound the number of collisions of balls in $\EE^m$.) 
+(This observation was used in one of the most beautiful applications of the Reshetnyak gluing theorem is given by Dmitri Burago,  Serge Ferleger,
+and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-kononenko1998-2,burago-ferleger-kononenko1998-3,burago-ferleger-kononenko1998-4}.
+They use it to study billiards; a short survey on the subject is written by Dmitri Burago \cite{burago-1998};
+see also our book \cite{alexander-kapovitch-petrunin-CAT}.)
+
+This fact was successfully used by Dmitri Burago, Serge Ferleger, and Alexey Kononenko \cite{burago-ferleger-kononenko1998-2} to bound the number of collisions of balls in $\EE^m$.)
+
+An if-and-only-if condition on \textit{polyhedral spaces} is given in \ref{thm:PL-CAT}.
+It implies the so-called Gromov's flag condition \ref{thm:flag} which provides in particular a flexible way to construct $\CAT0$ \textit{cube complexes}.
+(Several applications are mentioned in Section~\ref{sec:poly-reamarks}.)
+
+By \ref{prop:CAT-olim} and \ref{thm:ultra-GH}, the \textit{ultralimits} and \textit{Gromov--Hausdorff limits} of $\CAT\kappa$ spaces are $\CAT\kappa$.
 
 Further, $\CAT{}$ spaces behave nicely with respect to some natural constructions.
 For example, the product of $\CAT{0}$ spaces is a $\CAT{0}$.
