@@ -2609,13 +2609,9 @@ This should be beneficial to the reader even though we do not provide all the pr
 This statement follows from the Rauch comparison, and it is one of the main motivations for $\CAT{\kappa}$ comparison.
 \textit{Hilbert spaces} are another motivating example of $\CAT{0}$ spaces.
 
-
-
-
 The question of when Riemannian \textit{manifold-with-boundary} is locally $\CAT{\kappa}$ have been completely answered by the first author, David Berg, and Richard Bishop \cite{alexander-berg-bishop1993}.
+If the sectional curvatures of the interior and the outward sectional curvatures of the boundary do not exceed $\kappa$ then it is locally $\CAT\kappa$ (where an outward sectional curvature is one that corresponds to a tangent $2$-plane all of whose normal curvature vectors point outward).
 In particular, if a Riemannian manifold and its boundary have sectional curvature at most $\kappa$, then it is locally $\CAT{\kappa}$.
-
-
 
 Further, any simply-connected \textit{subset of the plane} equipped with induced length metric is $\CAT{0}$.
 In higher dimensions things are more complicated;
@@ -2626,12 +2622,6 @@ Note that any \textit{metric tree} (see Section~\ref{sec:Ultralimit of spaces}) 
 that is, a metric tree is $\CAT{\kappa}$ for \textit{any} $\kappa\in\RR$.
 In particular, any tree (in the graph-theoretical sense) with a length metric such that every edge is isometric to a line segment is $\CAT{-\infty}$.
 
-If  $\spc{X}$ is a $\CAT{0}$ space then its \textit{asymptotic cone}\index{asymptotyc cone}   defined as  the ultarlimit of its rescalings $\tfrac1n\cdot M$ as $n\to \o$ is again  $\CAT{0}$.
-Unlike in the case of $\Alex{0}$ spaces in this case the use of ultralimits is necessary even if $\spc{X}$  is a manifold due to the lack of compactness theorem. Asymptotic cones of $\CAT{0}$ spaces and their generalizations play an important role in geometric group theory.
-
-
-
-
 Suppose $A^1, \dots, A^n$ is an array of convex closed sets in the Euclidean space $\EE^m$.
 Let us prepare $n+1$ copy of $\EE^m$ and glue successive pairs of spaces along $A^1, \dots, A^n$.
 The resulting space is called \textit{puff pastry};
@@ -2641,13 +2631,14 @@ and Alexey Kononenko \cite{burago-ferleger-kononenko1998-1,burago-ferleger-konon
 They use it to study billiards; a short survey on the subject is written by Dmitri Burago \cite{burago-1998};
 see also our book \cite{alexander-kapovitch-petrunin-CAT}.)
 
-
-
 An if-and-only-if condition on \textit{polyhedral spaces} is given in \ref{thm:PL-CAT}.
 It implies the so-called Gromov's flag condition \ref{thm:flag} which provides in particular a flexible way to construct $\CAT0$ \textit{cube complexes}.
 (Several applications are mentioned in Section~\ref{sec:poly-reamarks}.)
 
-By \ref{prop:CAT-olim} and \ref{thm:ultra-GH}, the \textit{ultralimits} and \textit{Gromov--Hausdorff limits} of $\CAT\kappa$ spaces are $\CAT\kappa$.
+By \ref{prop:CAT-olim} and \ref{thm:ultra-GH}, the \textit{ultralimits}, as well as \textit{Gromov--Hausdorff limits} of $\CAT\kappa$ spaces are $\CAT\kappa$.
+In particular, if  $\spc{U}$ is a $\CAT{0}$ space then its \textit{asymptotic cone}\index{asymptotyc cone}   defined as  the ultarlimit of its rescalings $\tfrac1n\cdot \spc{U}$ as $n\to \o$ is again  $\CAT{0}$.
+Unlike in the case of $\Alex{0}$ spaces, the use of ultralimits is necessary even if $\spc{U}$ is a manifold due to the lack of compactness theorem.
+Asymptotic cones of $\CAT{0}$ spaces and their generalizations play an important role in geometric group theory.
 
 Further, $\CAT{}$ spaces behave nicely with respect to some natural constructions.
 For example, the product of $\CAT{0}$ spaces is a $\CAT{0}$.
@@ -2655,3 +2646,7 @@ Also, the Euclidean cone over $\CAT{1}$ space is a $\CAT{0}$.
 These are the first examples of the so-called \textit{warped products} that are discussed in Chapter~\ref{chapter:warped products};
 a general statement is given in \ref{thm:warp-CAT}.
 
+\textit{Conformal deformations} of $\CAT{}$ spaces were studied by Alexander Lytchak and Stephan Stadler \cite{lytchak-stadler}.
+In particular, if $\spc{U}$ is a $\CAT0$ space and $f\:\spc{U}\to\RR$ is a continuous convex
+and bounded below,
+then the conformally equivalent space with conformal factor $e^f$ is $\CAT0$.
