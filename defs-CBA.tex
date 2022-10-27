@@ -2601,8 +2601,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 \end{thm}
 
 \parbf{Examples and constructions.}
-Let us list some important sources of examples of $\CAT{}$ spaces.% V: I changed the phrasing because we are not listing a lot of VERY important examples such as aymptotic cones, including asymptotic cones of hyperbolic and semi hyperbolic groups and Eucliudean and spherical buildings. 
-
+Let us list some important sources of examples of $\CAT{}$ spaces.
 This should be beneficial to the reader even though we do not provide all the proofs and some proofs are deferred to later chapters.
 
 \textit{Riemannian manifolds} with sectional curvature at most $\kappa$ are locally $\CAT{\kappa}$.
@@ -2612,6 +2611,12 @@ This statement follows from the Rauch comparison, and it is one of the main moti
 The question of when Riemannian \textit{manifold-with-boundary} is locally $\CAT{\kappa}$ have been completely answered by the first author, David Berg, and Richard Bishop \cite{alexander-berg-bishop1993}.
 If the sectional curvatures of the interior and the outward sectional curvatures of the boundary do not exceed $\kappa$ then it is locally $\CAT\kappa$ (where an outward sectional curvature is one that corresponds to a tangent $2$-plane all of whose normal curvature vectors point outward).
 In particular, if a Riemannian manifold and its boundary have sectional curvature at most $\kappa$, then it is locally $\CAT{\kappa}$.
+
+The subsets of \textit{positive reach} in Riemannian manifold were studied in this context by 
+the first author, Richard Bishop, and
+Alexander Lytchak \cite{alexander-bishop,lytchak2004}.
+In particular, any compact subset of positive reach in a Riemannian manifold is $\CAT{}$;
+as usual, we assume that it is equipped with induced length metric.
 
 It was shown by Alexander Lytchak and Stephan Stadler \cite{lytchak-stadler2021} that any \textit{simply-connected subset} of a contractible two-dimensional $\CAT{\kappa}$ length space (equipped with induced length metric) is $\CAT{\kappa}$.
 In higher dimensions things are more complicated, even for Euclidean ambient space;
@@ -2644,13 +2649,20 @@ In particular, if  $\spc{U}$ is a $\CAT{0}$ space then its \textit{asymptotic co
 Unlike in the case of $\Alex{0}$ spaces, the use of ultralimits is necessary even if $\spc{U}$ is a manifold due to the lack of compactness theorem.
 Asymptotic cones of $\CAT{0}$ spaces and their generalizations play an important role in geometric group theory.
 
+\textit{Conformal deformations} of $\CAT{}$ spaces were studied by Alexander Lytchak and Stephan Stadler \cite{lytchak-stadler}.
+In particular, if $\spc{U}$ is a $\CAT0$ space and $f\:\spc{U}\to\RR$ is  continuous convex
+and bounded below,
+then the conformally equivalent space with conformal factor $e^f$ is $\CAT0$.
+
 Further, $\CAT{}$ spaces behave nicely with respect to some natural constructions.
 For example, the product of $\CAT{0}$ spaces is again $\CAT{0}$.
 Also, the Euclidean cone over $\CAT{1}$ space is  $\CAT{0}$.
 These are the first examples of the so-called \textit{warped products} that are discussed in Chapter~\ref{chapter:warped products};
 a general statement is given in \ref{thm:warp-CAT}.
+Also, as it was observed by Karl-Theodor Sturm \cite[Prop. 3.10]{sturm2003},
+the \textit{space of $L^2$-maps} from a measure space to a complete $\CAT0$ length space is $\CAT0$.
 
-\textit{Conformal deformations} of $\CAT{}$ spaces were studied by Alexander Lytchak and Stephan Stadler \cite{lytchak-stadler}.
-In particular, if $\spc{U}$ is a $\CAT0$ space and $f\:\spc{U}\to\RR$ is  continuous convex
-and bounded below,
-then the conformally equivalent space with conformal factor $e^f$ is $\CAT0$.
+Among more conceptual examples, let us mention the result of Brian Clarke \cite{clarke}: the \textit{space of Riemannian metrics} of a compact, orientable smooth manifold
+with respect to the $L^2$-distance is $\CAT0$;
+a shorter proof of this statement was given by Nicola Cavallucci \cite{cavallucci}.
+Also, by to the result of Tam\'{a}s Darvas \cite{darvas}, the \textit{space of K\"{a}hler potentials} on a compact K\"{a}hler manifold is $\CAT0$.
