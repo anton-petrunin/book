@@ -58,7 +58,7 @@ Define the \index{web!inner web}\emph{inner web} of $\bm{f}$
 as 
 \[\InWeb\bm{f}
 =
-\Web\bm{f}\backslash\left(\bigcup_{i}\Web\bm{f}^{\without i}\right).\]
+\Web\bm{f}\setminus\left(\bigcup_{i}\Web\bm{f}^{\without i}\right).\]
 
 
 We say that a function array is \emph{nondegenerate} 
@@ -67,7 +67,7 @@ if $\InWeb\bm{f}\ne \emptyset$.
 \parbf{Example.} 
 If $\spc{X}$ is a geodesic space, 
 then $\Web(\distfun{x}{}{},\distfun{y}{}{})$ is the union of all geodesics from $x$ to $y$, and 
-\[\InWeb(\distfun{x}{}{},\distfun{y}{}{})=\Web(\distfun{x}{}{},\distfun{y}{}{})\backslash\{x,y\}.\]
+\[\InWeb(\distfun{x}{}{},\distfun{y}{}{})=\Web(\distfun{x}{}{},\distfun{y}{}{})\setminus\{x,y\}.\]
 
 \parbf{Barycenters.}
 Let us denote by $\Delta^\kay\subset \RR^{\kay+1}$\index{$\Delta^m$} 
@@ -532,7 +532,7 @@ According to Theorem~\ref{thm:cat-bary-web},
 $\sigma$ is Lipschitz
 and the distance map $\tau$ 
 gives an open embedding of 
-$\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\backslash\sigma(\partial\Delta^m)$.
+$\InWeb(\distfun{\bm{a}}{}{})=\sigma(\Delta^m)\setminus\sigma(\partial\Delta^m)$.
 Note that $\tau$ is Lipschitz.
 According to Rademacher's theorem (\ref{thm:Rademacher-CBB+CBA}), 
 the differential 
@@ -842,7 +842,7 @@ Then for some $\kay>m$,
 there is a $\kay$-simplex $\Delta^\kay$ in $\spc{N}$
 such that the barycentric simplex $\sigma=\map[2]|_{\Delta^\kay}$ is nondegenerate; 
 that is, 
-$$W=\map[2](\Delta^\kay)\backslash\map[2](\partial\Delta^\kay)\ne \emptyset.
+$$W=\map[2](\Delta^\kay)\setminus\map[2](\partial\Delta^\kay)\ne \emptyset.
 $$
 Applying Corollary~\ref{cor:LinDim>bary}
 gives $\LinDim\spc{U}\ge \kay$, a contradiction.
