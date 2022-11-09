@@ -387,13 +387,13 @@ we get the following.
 Let $\spc{L}$ be a complete length $\Alex{}$ space.
 Then for any bounded $\SphMes_m$-measurable function $f\:\spc{L}\to \RR$
 we have
-\[\lim_{\eps\to0}\frac{1}{\eps^m}\cdot\int\limits_{\cBall[x,\eps]}|f(z)-f(x)|\cdot\d_z\SphMes_m=0\]
+\[\lim_{\eps\to0}\frac{1}{\eps^m}\cdot\int_{\cBall[x,\eps]}|f(z)-f(x)|\cdot\dd_z\SphMes_m=0\]
 $\SphMes_m$-almost all $x\in\spc{L}$.
 
 In particular,
 \[f(x)
 \ae
-\lim_{\eps\to0}\frac{1}{\eps^m}\cdot\int\limits_{\cBall[x,\eps]}f(z)\cdot\d_z\SphMes_m.\]
+\lim_{\eps\to0}\frac{1}{\eps^m}\cdot\int_{\cBall[x,\eps]}f(z)\cdot\dd_z\SphMes_m.\]
 
 \end{thm}
 
@@ -731,7 +731,7 @@ implies $\rho\ae 1$; that is, $\nu=\mu_\infty$
 In this section we will show that coarea formula holds for Lipschitz maps between $\Alex{}$ spaces.
 See Section~\ref{sec:coarea-prelim} for the preliminaries and definition.
 
-Recall that it defines the $m$-th Jacobian of function $f\:\EE^\kay\to\EE^m$ at $x$ as $|(\d_x f)^{\wedge m}|$ if the differential $\d_x f$ is defined and linear.
+Recall that it defines the $m$-th Jacobian of function $f\:\EE^\kay\to\EE^m$ at $x$ as $|(\dd_x f)^{\wedge m}|$ if the differential $\dd_x f$ is defined and linear.
 Let $\spc{L}$ and $\spc{M}$ be complete length $\Alex{}$ spaces,
 $\dim \spc{L}=\kay$, $\dim\spc{M}=m$ 
 and $f\:\spc{L}\subto\spc{M}$ be a subfunction.
@@ -740,9 +740,9 @@ $\T_x\iso\EE^m$,
 $\T_{f(x)}=W\oplus W^\bot$,
 where $W$ is a subcone of $ \T_{f(x)}$ which is isometric to Euclidean subspace
 and $W^\bot$is its orthogonal complement,
-$\d_xf$ is defined
-and $\Im \d_xf\subset W$ and $\d_xf\:\T_x\to W$.
-In this case we say that $|(\d_x f)^{\wedge m}|$ is defined
+$\dd_xf$ is defined
+and $\Im \dd_xf\subset W$ and $\dd_xf\:\T_x\to W$.
+In this case we say that $|(\dd_x f)^{\wedge m}|$ is defined
 and 
 
 
@@ -752,11 +752,11 @@ Let
 $\spc{L}$ and $\spc{M}$ be complete length $\Alex{}$ spaces,
 $\infty>\dim \spc{L}=\kay>\dim\spc{M}=m$ 
 and $f\:\spc{L}\subto\spc{M}$ be a locally Lipschitz submap
-then  $|(\d_x f)^{\wedge m}|$ is defined for almost all $x\in \Dom f$ and
+then  $|(\dd_x f)^{\wedge m}|$ is defined for almost all $x\in \Dom f$ and
 \[
-\int\limits_Q|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\int\limits_Q|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay
 =
-\int\limits_{f(Q)}\vol_{\kay-m}( f^{-1}(y)\cap Q)\cdot\d_y\vol_m;
+\int\limits_{f(Q)}\vol_{\kay-m}( f^{-1}(y)\cap Q)\cdot\dd_y\vol_m;
 \eqlbl{eq:coarea-once-more}
 \] 
 for any Borel set $Q\subset \Dom f$.
@@ -788,13 +788,13 @@ In particular,
 
 \parit{Proof.}
 Note that
-$(\d_x\distfun{p}{}{})(\dir xp)=-1$.
-In particular, $|\d_x(\distfun{p}{}{})|\ge 1$.
+$(\dd_x\distfun{p}{}{})(\dir xp)=-1$.
+In particular, $|\dd_x(\distfun{p}{}{})|\ge 1$.
 On the other hand, since $\distfun{p}{}{}\:\spc{L}\to\RR$ is $1$-Lipschitz,
 we have
-$|\d_x(\distfun{p}{}{})|\le 1$.
+$|\dd_x(\distfun{p}{}{})|\le 1$.
 Therefore
-\[|\d_x(\distfun{p}{}{})|= 1\] 
+\[|\dd_x(\distfun{p}{}{})|= 1\] 
 for any $x$.
 
 It remains to apply the coarea formula to the distance function 
@@ -809,14 +809,14 @@ Assume that the distance map $\distfun{\bm{a}}{}{}$
  is injective in an open set $\Omega\subset\spc{L}$.
 Then for any function $f\:\distfun{\bm{a}}{}{}(\Omega)\to\RR$ 
 we have
-\[\int\limits_{\Omega} \frac{f(\distfun{\bm{a}}{p}{})}{\sqrt{\det(g_{ij})}}\cdot\d_p\vol_m
+\[\int\limits_{\Omega} \frac{f(\distfun{\bm{a}}{p}{})}{\sqrt{\det(g_{ij})}}\cdot\dd_p\vol_m
 =
 \int\limits_{\distfun{\bm{a}}{}{}(\Omega)} f(\bm{x})\cdot\d x^1\cdot\d x^2\cdots\d x^m,\]
 where $g_{ij}=\cos\mangle\hinge p{a^i}{a^j}$.
 \end{thm}
 
 \parit{Proof.}
-Note that $|(\d_x[\distfun{\bm{a}}{}{}])^{\wedge m}|\ae \frac1{\sqrt{\det(g_{ij})}}$.
+Note that $|(\dd_x[\distfun{\bm{a}}{}{}])^{\wedge m}|\ae \frac1{\sqrt{\det(g_{ij})}}$.
 Then apply the coarea formula.
 \qeds
 
@@ -867,7 +867,7 @@ is a Borel subset
 such that $\vol_m A=0$
 then
 \[
-\int\limits_{\spc{M}}\vol_{\kay-m}( f^{-1}(y)\cap A)\cdot\d_y\vol_m=0.\]
+\int\limits_{\spc{M}}\vol_{\kay-m}( f^{-1}(y)\cap A)\cdot\dd_y\vol_m=0.\]
 
 \end{thm}
 
@@ -905,7 +905,7 @@ we have
 \end{align*}
 Therefore, by the monotone convergence theorem, 
 it is sufficient to show that
-\[\int\limits_{\spc{M}}h_\eps(y)\cdot\d_y\vol_m\to 0
+\[\int\limits_{\spc{M}}h_\eps(y)\cdot\dd_y\vol_m\to 0
 \ \ 
 \text{as}
 \ \ \eps\to0{+}.
@@ -923,9 +923,9 @@ such that
 $$\vol_m f(Q_n)<\Const\cdot(\lip f \cdot\diam Q_n)^m.$$
 Therefore
 \begin{align*}
-\int\limits_{\spc{M}}h_\eps(y)\cdot\d_y\vol_m
+\int\limits_{\spc{M}}h_\eps(y)\cdot\dd_y\vol_m
 &\le 
-\sum_n\int\limits_{\spc{M}}h_\eps( A_y\cap Q_n)\cdot\d_y\vol_m
+\sum_n\int\limits_{\spc{M}}h_\eps( A_y\cap Q_n)\cdot\dd_y\vol_m
 \le
 \\
 &\le \Const\cdot(\lip f)^{ m}\cdot \sum_n(\diam Q_n)^{\kay}<
@@ -948,9 +948,9 @@ Q^3&=Q\backslash (Q^1\cup Q^2).
 
 It is sufficient to show that
 \[
-\int\limits_{Q^i}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\int\limits_{Q^i}|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay
 =
-\int\limits_{f(Q^i)}\vol_{\kay-m}( f^{-1}(y)\cap Q^i)\cdot\d_y\vol_m.
+\int\limits_{f(Q^i)}\vol_{\kay-m}( f^{-1}(y)\cap Q^i)\cdot\dd_y\vol_m.
 \eqlbl{eq:coarea-123}^i\]
 for $i=1$, $2$ and $3$;
 each case will be proved separately.
@@ -967,9 +967,9 @@ Applying the Federer's coarea formula (\ref{thm:coarea-federer})
 to the maps $\psi_j\circ f\circ\phi^{-1}_i$ for all $i$ and $j$ together with Proposition~\ref{prop:lin-algebra-1},
 we get 
 \[
-\int\limits_{Q^1}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\int\limits_{Q^1}|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay
 \lege
-e^{\pm 10m\cdot\eps}\cdot\int\limits_{f(Q^1)}\vol_{\kay-m}( f^{-1}(y)\cap Q^1)\cdot\d_y\vol_m.\eqlbl{eq:coarea-pm}\]
+e^{\pm 10m\cdot\eps}\cdot\int\limits_{f(Q^1)}\vol_{\kay-m}( f^{-1}(y)\cap Q^1)\cdot\dd_y\vol_m.\eqlbl{eq:coarea-pm}\]
 More formally, we can subdivide $Q^1$ into a countable collection of disjoint Borel subsets $X_1$, $X_2,\dots$
 in such a way that 
 for each $n$ there are $i$ and $j$ 
@@ -978,29 +978,29 @@ $f(X_n)\subset\Dom \psi_j$.
 Applying Federer's coarea formula (\ref{thm:coarea-federer}) for the  submap $h=\psi_j\circ f\circ\phi^{-1}_i\:\EE^\kay\subto\EE^m$  and $Y_n=\phi_n(X_n)\subset \EE^\kay$
 we get
 \[
-\int\limits_{Y_n}|(\d_z h)^{\wedge m}|\cdot\d_z\vol_\kay
+\int\limits_{Y_n}|(\dd_z h)^{\wedge m}|\cdot\dd_z\vol_\kay
 =
-\int\limits_{h(Y_n)}\vol_{\kay-m}( h^{-1}(y)\cap Y_n)\cdot\d_y\vol_m.
+\int\limits_{h(Y_n)}\vol_{\kay-m}( h^{-1}(y)\cap Y_n)\cdot\dd_y\vol_m.
 \]
 By Propositions~\ref{prop:lin-algebra-1} and \ref{prop:bilip-measure} we have
 \[
-\int\limits_{Y_n}|(\d_z h)^{\wedge m}|\cdot\d_z\vol_\kay
+\int\limits_{Y_n}|(\dd_z h)^{\wedge m}|\cdot\dd_z\vol_\kay
 \lege 
-e^{\pm 4\cdot m\cdot\eps}\cdot \int\limits_{X_n}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+e^{\pm 4\cdot m\cdot\eps}\cdot \int\limits_{X_n}|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay
 \]
 and 
 \[
-\int\limits_{h(Y_n)}\vol_{\kay-m}( h^{-1}(y)\cap Y_n)\cdot\d_y\vol_m
+\int\limits_{h(Y_n)}\vol_{\kay-m}( h^{-1}(y)\cap Y_n)\cdot\dd_y\vol_m
 \lege 
 e^{\pm 4\cdot m\cdot\eps}
 \cdot
-\int\limits_{f(X_n)}\vol_{\kay-m}( f^{-1}(y)\cap X_n)\cdot\d_y\vol_m
+\int\limits_{f(X_n)}\vol_{\kay-m}( f^{-1}(y)\cap X_n)\cdot\dd_y\vol_m
 \]
 Combining the above we get
 \[
-\int\limits_{X_n}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay
+\int\limits_{X_n}|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay
 \lege
-e^{\pm 10\cdot m\cdot\eps}\cdot\int\limits_{f(X_n)}\vol_{\kay-m}( f^{-1}(y)\cap X_n)\cdot\d_y\vol_m.
+e^{\pm 10\cdot m\cdot\eps}\cdot\int\limits_{f(X_n)}\vol_{\kay-m}( f^{-1}(y)\cap X_n)\cdot\dd_y\vol_m.
 \]
 Summing up these inequalities by $n$, we get \ref{eq:coarea-pm}.
 
@@ -1025,9 +1025,9 @@ for some positive integer $n$.
 Thus, there is a real constant $\Lip>1$ such that
 each $\phi_i$ is $\Lip^{\mp1}$-bi-Lipschitz
 and
-\[|(\d_pf)^{\wedge m}|
+\[|(\dd_pf)^{\wedge m}|
 \lege
-\Lip^{\pm1}\cdot|(\d_p[\iota\circ f])^{\wedge m}|\]
+\Lip^{\pm1}\cdot|(\dd_p[\iota\circ f])^{\wedge m}|\]
 for $\vol_m$-almost all $p\in Q^2$.
 
 Since $\iota$ is bi-Lipschitz,
@@ -1035,15 +1035,15 @@ $\vol_\kay [\iota\circ f(Q^2)]=0$.
 
 Consider all the orthogonal projections $\proj^1,\dots,\proj^N$ of $\EE^n$ to $m$-dimensional coordinate subspaces,
 so $N=\tfrac{n!}{m!\cdot(n-m)!}$.
-Note that if $\d_p(\iota\circ f)$ is linear, then
-so are the differentials $\d_p(\proj^i\circ\iota\circ f)$
+Note that if $\dd_p(\iota\circ f)$ is linear, then
+so are the differentials $\dd_p(\proj^i\circ\iota\circ f)$
 for all $i$.
 By Propositions~\ref{prop:lin-algebra-2} and \ref{prop:lin-algebra-1},
-\[|(\d_p f)^{\wedge m}|
+\[|(\dd_p f)^{\wedge m}|
 \le
 N\cdot\Lip^2
 \cdot
-\sum_{i=1}^N|(\d_p[\proj^j\circ\iota\circ f\circ\phi_i^{-1}])^{\wedge m}|.
+\sum_{i=1}^N|(\dd_p[\proj^j\circ\iota\circ f\circ\phi_i^{-1}])^{\wedge m}|.
 \eqlbl{eq:jac=<LN}\]
 for $\vol_\kay$-almost all $p\in Q^2$.
 
@@ -1052,18 +1052,18 @@ such that each $X_n\subset\Dom \phi_n$ for each $n$.
 Applying Federer's coarea formula to $\proj^j\circ\iota\circ f\circ\phi_n^{-1}\:\EE^\kay\subto \EE^m$,
 we get
 \[
-\int\limits_{\phi_iX_n}|(\d_x[\proj^j\circ\iota\circ f\circ\phi_n^{-1}])^{\wedge m}|\cdot\d_x\vol_\kay=0
+\int\limits_{\phi_iX_n}|(\dd_x[\proj^j\circ\iota\circ f\circ\phi_n^{-1}])^{\wedge m}|\cdot\dd_x\vol_\kay=0
 \]
 for all $j$ and hence
 
 \[
-\int\limits_{X_n}|(\d_x[\proj^j\circ\iota\circ f])^{\wedge m}|\cdot\d_x\vol_\kay=0
+\int\limits_{X_n}|(\dd_x[\proj^j\circ\iota\circ f])^{\wedge m}|\cdot\dd_x\vol_\kay=0
 \]
 for all $j$
 
 Together with \ref{eq:jac=<LN}, this implies 
 \[
-\int\limits_{X_n}|(\d_x f)^{\wedge m}|\cdot\d_x\vol_\kay=0\]
+\int\limits_{X_n}|(\dd_x f)^{\wedge m}|\cdot\dd_x\vol_\kay=0\]
 Summing up for all $X_n$, 
 we get that the left hand side in \ref{eq:coarea-123}$^2$ vanishes.
 
@@ -1149,7 +1149,7 @@ Consider the measure $\mu=\tilde s(r)\cdot\d r$ on  $(0,\varpi\kappa)$.
 
 According to Corollary~\ref{cor:coarea-for-dist-function},
 \begin{align*}
-v(R)&=\int\limits_0^R s(r)\cdot\d r=\int\limits_0^R h(r)\cdot\d_r \mu,
+v(R)&=\int\limits_0^R s(r)\cdot\d r=\int\limits_0^R h(r)\cdot\dd_r \mu,
 \\
 \tilde v(R)&=\int\limits_0^R\tilde s(r)\cdot\d r=\mu(0,R).
 \end{align*}
@@ -1157,9 +1157,9 @@ Therefore
 \begin{align*}
 f(R)&=\frac{v(R)}{\tilde v(R)}=
 \\
-&=\frac1{\mu(0,R)}\cdot\int\limits_0^R h(r)\cdot\d_r\mu=
+&=\frac1{\mu(0,R)}\cdot\int\limits_0^R h(r)\cdot\dd_r\mu=
 \\
-&=\oint\limits_0^R h(r)\cdot\d_r\mu,
+&=\oint\limits_0^R h(r)\cdot\dd_r\mu,
 \end{align*}
 here $\oint$ denotes the mean value.
 
@@ -1262,7 +1262,7 @@ where $\alpha_{m-1}$ denotes the volume of the unit ball in $\EE^{m-1}$.
 
 \begin{thm}{Definition}
 Let $\spc{L}$ be a complete length $\Alex{}$ space and $p\in \spc{L}$.
-The union of all semiopen geodesic segments $\l[px\r[$
+The union of all semiopen geodesic segments $\left[px\right[$
 will be called \index{inner locus}\emph{inner locus} of $p$ 
 and denoted as $\InnLoc_p$.
 
@@ -1271,7 +1271,7 @@ is called
 \index{cut locus}\emph{cut locus}.
 The cut locus of point $p$ will be denoted by $\CutLoc_p$;
 so $\CutLoc_p=\spc{L}\backslash\InnLoc_p$.
-In other words, $q\in \CutLoc_p$ if there is no semiopen geodesic segments $\l[px\r[$ containing $q$. 
+In other words, $q\in \CutLoc_p$ if there is no semiopen geodesic segments $\left[px\right[$ containing $q$. 
 \end{thm}
 
 

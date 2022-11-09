@@ -10,14 +10,14 @@ Yet earlier in \cite{milka-parallel-conv}, it was shown that the statement is tr
 \begin{thm}{Theorem}\label{thm:parallel}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space
 and $[pq]$ be a geodesic in $\spc{L}$. 
-Then for any two points $x,y\in \l] p q \r[$, we have
+Then for any two points $x,y\in \left] p q \right[$, we have
 $\T_x\iso \T_y$.
 \end{thm}
 
 In ???, we will show existance of a cone isometry $???:\T_x\to \T_y$ for which an analog of second variation formula holds.
 
 \begin{thm}{Corollary}\label{cor:reg-end}
-If $p\in \spc{L}$ is a then for any geodesic $[pq]$ and any point $\bar p\in \l[ p q \r[$ we have $\Sigma_{\bar p}\ge \Sigma_p$.
+If $p\in \spc{L}$ is a then for any geodesic $[pq]$ and any point $\bar p\in \left[ p q \right[$ we have $\Sigma_{\bar p}\ge \Sigma_p$.
 
 In particular, if $p\in \spc{L}$ is a Euclidean point, then so is $\bar p$.
 \end{thm}
@@ -40,8 +40,8 @@ It is sufficient to prove only the second part of corollary.
 Sinse $p$ is Euclidean, $\mathbb{S}^{m-1}\iso\Sigma_p$.
 From \ref{cor:simicont-Sigma}, $\mathbb{S}^{m-1}\ge\Sigma_x$ for any $x\in \spc{L}$.
 
-Let $x\in \l] p q \r[$. 
-Take a sequence of points $p_n\in \l] p q \r[$ such that $p_n\to p$ as $n\to\infty$.
+Let $x\in \left] p q \right[$. 
+Take a sequence of points $p_n\in \left] p q \right[$ such that $p_n\to p$ as $n\to\infty$.
 According to \ref{thm:parallel}, $\Sigma_x\iso\Sigma_{p_n}$. 
 Thus, from \ref{cor:simicont-Sigma}, $\Sigma_x\ge\Sigma_p$.
 That is, $\mathbb{S}^{m-1}\ge \Sigma_x\ge\mathbb{S}^{m-1}$ and
@@ -52,13 +52,13 @@ The proof below combains idea from \cite{BGP} with an analog of geometric interp
 
 \parit{Proof of \ref{thm:parallel}.} 
 First let us describe plan of the proof.
-According to ???, for any $x\in \l] p q \r[$
+According to ???, for any $x\in \left] p q \right[$
 \[\T_{x}\iso \T_{x}^\top \oplus \T_{x}^\perp,\] 
 where $\T_{x}^\top$ and $\T_{x}^\perp$ are subcones of $\T_x$ correspondingly tangent and perependicular to $[pq]$.
 Clearly, $\T_x^\top$ is isometric to $\RR$.
 Given a vector $v\in \T_x$, let us denote by $v^\top$ and $v^\perp$ its orthogonal projection to $\T_x^\top$ and $\T_x^\perp$ correspondingly.
 
-Given two points $x,y\in \l] p q \r[$,
+Given two points $x,y\in \left] p q \right[$,
 we will construct a noncontracting map $\Upsilon_{x,y}:\T_x^\perp\to \T_y^\perp$
 such that $|\Upsilon_{x,y}(v)|\le|v|$ for any $v\in \T_x^\perp$. 
 Once it is done, applying \ref{lem:>=-isometry} to restrictions of $\Upsilon_{x,y}$ and $\Upsilon_{y,x}$ to unit balls, we get that $\T_x^\perp\iso \T_y^\perp$ and therefore $\T_x\iso \T_y$. 
@@ -84,7 +84,7 @@ In the following claim, we list properties of $\Pi_{x,y}$, which will be proved 
 \begin{thm}{Claim}\label{clm:prop-of-Pi}
 
 \begin{subthm}{<Const v} There is $\Const\in\RR$ such that 
-\[\l|\ddir{y}{\gexp\mc0_{x}v}^\perp\r|\le \Const\cdot|v|.\]
+\[\left|\ddir{y}{\gexp\mc0_{x}v}^\perp\right|\le \Const\cdot|v|.\]
 In particular, $\Pi_{x,y}(v)$ is defined for any $v\in \T_x^\perp$.
 \end{subthm}
 
@@ -104,15 +104,15 @@ For any $v\in\T_x$ and $w\in\T_y$ we have%
 \le
 \dist{x}{y}{}
 +\frac{\eps^2\cdot\cs\kappa\dist[{{}}]{x}{y}{}}{2\cdot\dist[{{}}]{x}{y}{}}
-\cdot\l[|v|^2-|\Pi_{x,y}(v)|^2+\dist[2]{\Pi_{x,y}(v)}{w}{}\r]
+\cdot\left[|v|^2-|\Pi_{x,y}(v)|^2+\dist[2]{\Pi_{x,y}(v)}{w}{}\right]
 +o(\eps^2).\]}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{multline*}
 \dist{\gexp\mc\kappa_x(\eps\cdot v)}{\gexp\mc\kappa_{y}(\eps\cdot w)}{}
 \le
 \\
-\le \dist{x}{y}{}+\frac{\eps^2}{2\cdot\dist[{{}}]{x}{y}{}}\cdot\l[|v|^2-|\Pi_{x,y}(v)|^2
-+\dist[2]{\Pi_{x,y}(v)}{w}{}\r]+o(\eps^2).
+\le \dist{x}{y}{}+\frac{\eps^2}{2\cdot\dist[{{}}]{x}{y}{}}\cdot\left[|v|^2-|\Pi_{x,y}(v)|^2
++\dist[2]{\Pi_{x,y}(v)}{w}{}\right]+o(\eps^2).
 \end{multline*}
 for $\o$-almost all $\eps>0$.
 \end{subthm}
@@ -163,15 +163,15 @@ Therefore
 \angk\kappa y{x'}q\ge\pi-O(|v|).\]
 Thus 
 \[
-\l|\ddir{y}{\circ\gexp\mc\kappa_{x}v}^\perp\r|
+\left|\ddir{y}{\circ\gexp\mc\kappa_{x}v}^\perp\right|
 =
-\l|\ddir{y}{x'}^\perp\r|
+\left|\ddir{y}{x'}^\perp\right|
 =
 \dist[{{}}]{x'}{y}{}\cdot\sin\alpha=O(|v|).\]
 
 \parit{(\ref{SHORT.noncontracting}).} 
 Note that from above we also have
-\[\l|\ddir{y}{\circ\gexp\mc\kappa_x v}^\top\r|
+\[\left|\ddir{y}{\circ\gexp\mc\kappa_x v}^\top\right|
 =
 \dist[{{}}]{x'}{y}{}\cdot\cos\alpha
 =\dist{x}{y}{}+O(|v|^2).
@@ -184,7 +184,7 @@ It is sufficient  to show that for any $u,v\in \T_x^\perp$, we have%
 \ge
 \eps\cdot\frac{\sn\kappa\dist[{{}}]{x}{y}{}}{\dist{x}{y}{}}
 \cdot 
-\dist[{{}}]{u}{v}{}+o(\eps)\leqno\t{\ref{eq:clm:prop-of-Pi-2}}\mc\kappa\]
+\dist[{{}}]{u}{v}{}+o(\eps)\leqno\text{\ref{eq:clm:prop-of-Pi-2}}\mc\kappa\]
 }%
 \[\dist{\hat u_\eps^\perp}{\hat v_\eps^\perp}{}
 \ge
@@ -335,7 +335,7 @@ If $K$ is $\Alex0$, then $(K)\mc\kappa$ is $\Alex\kappa$.
 It is easy to see that given cones $K$, $K_1$ and $K_2$, we have
 \[K\iso K_1\times K_2\ \ \Longleftrightarrow\ \ (K)\mc\kappa\iso(K_1)\mc\kappa\warp{\cs\kappa\circ\distfun{o}{}{}} (K_2)\mc\kappa.\]
 
-Let us remind that if $x\in \l] p q \r[$ 
+Let us remind that if $x\in \left] p q \right[$ 
 then tangent space $\T_x$ at $x$ splits as $\T_x=\T_x^\perp\oplus\T_x^\top$ where $\T_p^\perp$ and $\T_x^\top$ are normal and tangent subcones to $[pq]$ (here $\T_x^\top$ is isometric to $\RR$).
 Thus, we have 
 \[(\T_x)\mc\kappa
@@ -350,7 +350,7 @@ and $\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{}$.
 \begin{thm}{???Theorem}\label{thm:2nd-var}
 Let $\o$ be a ???,
 $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
-$[pq]$ be a geodesic in $\spc{L}$ and $x\in \l] p q \r[$.
+$[pq]$ be a geodesic in $\spc{L}$ and $x\in \left] p q \right[$.
 Set $\tilde p=\tau\mc\kappa\ddir{x}p$ and $\tilde q=\tau\mc\kappa\ddir {x} q$, so $\tilde p,\tilde q\in(\T_x)\mc\kappa$.
 
 Then there is two norm-preserving noncontracting maps 
@@ -386,7 +386,7 @@ The key lemma in the proof is the following, it may regarded as a partial case o
 \begin{thm}{Lemma}
 Let $\o$ be a ???,
 $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
-$[pq]$ be a geodesic in $\spc{L}$ and $x,y$ be two distinct points $\l] p q \r[$.
+$[pq]$ be a geodesic in $\spc{L}$ and $x,y$ be two distinct points $\left] p q \right[$.
 
 ???
 
@@ -408,7 +408,7 @@ for $\o$-almost all $\eps$.
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space, 
 $[pq]$ be a geodesics in $\spc{L}$,
 $\xi=\dir p q$ 
-and $x\in \l] p q \r[$.
+and $x\in \left] p q \right[$.
 Is it true that $\T_{\xi}\T_p\iso\T_x$?
 \end{thm}
  

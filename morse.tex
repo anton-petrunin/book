@@ -25,8 +25,8 @@ It should be here: \cite[lemma 1]{grove-petersen:rad-sphere}
 
 
 
-\section{Background}\label{sec:background}
-\subsection{Stratified spaces} 
+\section{Stratified spaces}\label{sec:background}
+
 Most of the material of this section is taken with almost no changes  from ~\cite{Per} as no significant simplifications or improvements of the exposition seem to be possible.
 
 \begin{thm}{Definition}
@@ -315,7 +315,7 @@ The definition of  $\dlang \cdot, \cdot \drang$ is just the infinitesimal versio
 In particular, for any  $p\in\spc{L}$ and $\Sigma=\Sigma_p\spc{L}$ by the angle comparison we have
 
 \[
-\dlang \d_p\phi, \d_p\psi\drang\le \sdk\kappa{p}{\phi}{\psi}
+\dlang \dd_p\phi, \dd_p\psi\drang\le \sdk\kappa{p}{\phi}{\psi}
 \]
 
 \end{thm}
@@ -329,7 +329,7 @@ Let us collect some properties of the scalar product that will be needed in the 
 \[
 \dlang h, g\drang=\dlang g, h\drang
 \]
-\item \label{der-der} If $h\in DER(\Sigma)$ and $p\in \Sigma$, then $\d_ph\in DER(\Sigma_p\Sigma)$;
+\item \label{der-der} If $h\in DER(\Sigma)$ and $p\in \Sigma$, then $\dd_ph\in DER(\Sigma_p\Sigma)$;
 \item \label{der-der-ineq} $ \dlang d_ph,d_pg\drang\le \dlang h, g\drang-h(p)g(p)$ for any $p\in\Sigma$;
 \item \label{der-single-vector} For any $h\in DER(\Sigma)$ there is a vector $\hat{A}\in C\Sigma$ such that for
  $\hat{h}=-\langle \cdot, \hat{A}\rangle$ we have $\dlang h, g\drang \ge \dlang \hat{h}, g\drang$ for any $g\in DER(\Sigma)$;
@@ -346,7 +346,7 @@ Of particular importance in  applications will be generalization of  the implica
 
 To see (\ref{der-der})  let  $h=\sum_\a -a_\a\langle \cdot, {A_\a}\rangle$.
 Then by the first variation formula we have
-  \[\d_ph=\sum_\a -a_\a\sin \angle A_\a p \langle \cdot, \Dir{p}{A_\a}\rangle\]
+  \[\dd_ph=\sum_\a -a_\a\sin \angle A_\a p \langle \cdot, \Dir{p}{A_\a}\rangle\]
 and therefore $d_ph\in DER(\Sigma_p\Sigma)$.
 
 To prove (\ref{der-der-ineq}) observe that  by linearity of expressions involved it is sufficient to consider the case $h= \langle \cdot, {A}\rangle, g= \langle \cdot, {B}\rangle$for some $A,B\in\Sigma$. For such $h$ and $g$   (\ref{der-der-ineq})  is a direct consequence of Toponogov and the equality case on the sphere for linear functions.
@@ -402,7 +402,7 @@ In this case, we say that $p$ is a
 \emph{critical point}\index{critical point} 
 for the submap $\bm{\phi}\:\spc{L}\subto \RR^{\kay+1}$
 if
-\[\min_i\d_p\phi^i\le 0\]
+\[\min_i\dd_p\phi^i\le 0\]
 and otherwise $p$ is called 
 \emph{regular point}\index{regular point} of $\bm{\phi}$.
 \end{thm} 
@@ -443,16 +443,16 @@ Then
 There exist unit vectors $\xi_+$ and $\xi_-$ in $T_p\spc{L}$ such that for every $i>0$ we have
 
 \[
-\d_p\phi^i(\xi_+)>\eps\qquad \text{ and } \d_p\phi^i(\xi_-)<-\eps
+\dd_p\phi^i(\xi_+)>\eps\qquad \text{ and } \dd_p\phi^i(\xi_-)<-\eps
 \]
 \end{subthm}
 
 
 \begin{subthm}{} \label{pos-eps}
- For every $i=1,\ldots \kay$ there exists $\xi^i+\in \Sigma_p\spc{L}$ such that $\d_p\phi^i(\xi^i_+)> \eps$ and $\d_p\phi^j(\xi^i_+)=0$ for $j\ne 0, i$.
+ For every $i=1,\ldots \kay$ there exists $\xi^i+\in \Sigma_p\spc{L}$ such that $\dd_p\phi^i(\xi^i_+)> \eps$ and $\dd_p\phi^j(\xi^i_+)=0$ for $j\ne 0, i$.
 \end{subthm}
 \begin{subthm}{} \label{neg-eps}
- For every $i=1,\ldots \kay$ there exists $\xi^i_-\in \Sigma_p\spc{L}$ such that $\d_p\phi^i(\xi^i_-) <- \eps$ and $\d_p\phi^j(\xi^i_-)=0$ for $j\ne 0, i$.
+ For every $i=1,\ldots \kay$ there exists $\xi^i_-\in \Sigma_p\spc{L}$ such that $\dd_p\phi^i(\xi^i_-) <- \eps$ and $\dd_p\phi^j(\xi^i_-)=0$ for $j\ne 0, i$.
 \end{subthm}
 \end{thm}
  Note that the requirement that $|dF|_1\le 1$ is not serious as it can always be achieved by rescaling $\bm{\phi}$. It is only added to the statement of the Lemma to clarify the quantitative estimates.
@@ -463,14 +463,15 @@ There exist unit vectors $\xi_+$ and $\xi_-$ in $T_p\spc{L}$ such that for every
  
   Recall that by Remark~\ref{box-scalar-ineq}  we have that 
  \[
-\dlang \d_p\phi^i, \d_p\phi^j\drang\le \sdk\kappa{p}{\phi^i}{\phi^j}<-\eps
+\dlang \dd_p\phi^i, \dd_p\phi^j\drang\le \sdk\kappa{p}{\phi^i}{\phi^j}<-\eps
 \]
 For all $i\ne j$.
 
-  Let $\hat A^i\in T_p\spc{L}$ be the vector provided by Lemma~\ref{der-prop} (\ref{der-single-vector}) for $\d\phi^i$.  By the sum Lemma out assumptions on $|dF|_1$ guarantee that $|\hat A^i|\le 1$ for all $i$.
+Let $\hat A^i\in T_p\spc{L}$ be the vector provided by Lemma~\ref{der-prop} (\ref{der-single-vector}) for $\dd\phi^i$.
+By the sum Lemma out assumptions on $|dF|_1$ guarantee that $|\hat A^i|\le 1$ for all $i$.
  On the other hand for $i\ne j$ we have 
  \[
- -\eps>\dlang \d_p\phi^i, \d_p\phi^j\drang\ge \dlang \hat A^i, \d_p\phi^j\drang\ge \dlang  \hat A^i, \hat A^j\drang=\langle  \hat A^i, \hat A^j\rangle
+ -\eps>\dlang \dd_p\phi^i, \dd_p\phi^j\drang\ge \dlang \hat A^i, \dd_p\phi^j\drang\ge \dlang  \hat A^i, \hat A^j\drang=\langle  \hat A^i, \hat A^j\rangle
  \]
  Thus $\angle \hat A^i\hat A^j>\pi/2$ for all $i\ne j$.
  
@@ -484,16 +485,16 @@ For all $i\ne j$.
  To prove \eqref{incr-decr-all} For any $i>0$ we have
  
   \[
--\d_p\phi^i(\xi_+)=\dlang \hat A^0, \d_p\phi^i\drang\le \dlang \d_p\phi^0, \d_p\phi^i\drang\le \sdk\kappa{p}{\phi^i}{\phi^j}<-\eps
+-\dd_p\phi^i(\xi_+)=\dlang \hat A^0, \dd_p\phi^i\drang\le \dlang \dd_p\phi^0, \dd_p\phi^i\drang\le \sdk\kappa{p}{\phi^i}{\phi^j}<-\eps
 \]
- which means  that $\d_p\phi^i( \hat A^0)>\eps$. Since $|\hat A^0|\le 1$ by the Sum Lemma (\ref{lem:sum}), we can set $\xi_+=\frac{\hat A^0}{|\hat A^0|}$.
- Next, let $u$ be polar to $\xi_+$. Then $|u|\le 1$ and  for any $i>0$ we have $\d_p\phi^i(\xi_+)+\d_p\phi^i(u)\le 0$ which implies that $\d_p\phi^i(u)< -\eps$ for all $i>0$. Again we can set $\xi_-=\frac{u}{|u|}$. Then $\xi_+$ and $\xi_-$  satisfy \eqref{incr-decr-all}.
+ which means  that $\dd_p\phi^i( \hat A^0)>\eps$. Since $|\hat A^0|\le 1$ by the Sum Lemma (\ref{lem:sum}), we can set $\xi_+=\frac{\hat A^0}{|\hat A^0|}$.
+ Next, let $u$ be polar to $\xi_+$. Then $|u|\le 1$ and  for any $i>0$ we have $\dd_p\phi^i(\xi_+)+\dd_p\phi^i(u)\le 0$ which implies that $\dd_p\phi^i(u)< -\eps$ for all $i>0$. Again we can set $\xi_-=\frac{u}{|u|}$. Then $\xi_+$ and $\xi_-$  satisfy \eqref{incr-decr-all}.
  
  
- Let us prove \eqref{pos-eps} and \eqref{neg-eps}. We will prove that for every $i>0$ there exists $v\in \Sigma_p\spc{L}$ such that $\d_p\phi^i(v)\ge \eps$ and $\d_p\phi^j(v)=0$ for $j\ne 0, i$ and  $\d_p\phi^0(v)\le- \eps$.
+ Let us prove \eqref{pos-eps} and \eqref{neg-eps}. We will prove that for every $i>0$ there exists $v\in \Sigma_p\spc{L}$ such that $\dd_p\phi^i(v)\ge \eps$ and $\dd_p\phi^j(v)=0$ for $j\ne 0, i$ and  $\dd_p\phi^0(v)\le- \eps$.
  This will obviously  imply b). It  will  also imply  c) by interchanging $\phi^0$ and $\phi^i$.
  
-To simplify notations let us denote $f^i=\d_p\phi^i$.
+To simplify notations let us denote $f^i=\dd_p\phi^i$.
  
 
  
@@ -513,7 +514,7 @@ By Lemma~\ref{der-prop} (\ref{der-der-ineq}) we see that for all  $i,j\ne 0$, $i
 \]
 
 
-Let $u\in \Sigma_v\Sigma_p\spc{L}$ be given by $u= \d_vf^{j_0}$.
+Let $u\in \Sigma_v\Sigma_p\spc{L}$ be given by $u= \dd_vf^{j_0}$.
 By the same argument as above  $d_vf^{j_0}<0$ and $d_vf^j(v)>0$ for all $j>0,j\ne j_0$.
 Let $\beta(t)\in \Sigma_p\spc{L}\subset T_p\spc{L}$ (we identify $ \Sigma_p\spc{L}$ be a curve in the direction of $u$.
 Then for small $t>0$ we have that 
@@ -566,11 +567,11 @@ Then $\bm\phi=(\phi_1,\ldots \phi_\kay)$ is $L$-co-Lipschitz on $B(p,R)$ where $
 \begin{proof}
 Part \eqref{reg-open}  is obvious by Remark~\ref{equiv-def-reg}. Part \eqref{reg-colip}  is a corollary of Lemma~\ref{lem-tight-diff} by  a successive approximation  argument or by Theorem~\ref{thm:right-inverse-function}.
 \begin{comment}
-Let $\xi_i^{\pm}\in T_p\spc{L}$ be unit vectors provided by Lemma~\ref{lem-tight-diff}  so that $\d_p\phi^i(\xi_i^-)<-\eps$, $\d_x\phi^i(\xi_i^+)>\eps$ and $\d_x\phi^j(\xi_i^\pm)=0$ for all $j\ne i$. We can assume that $v_i^\pm=\dir{p}{a_i^\pm}$ for some points $a_i^\pm$.
+Let $\xi_i^{\pm}\in T_p\spc{L}$ be unit vectors provided by Lemma~\ref{lem-tight-diff}  so that $\dd_p\phi^i(\xi_i^-)<-\eps$, $\dd_x\phi^i(\xi_i^+)>\eps$ and $\dd_x\phi^j(\xi_i^\pm)=0$ for all $j\ne i$. We can assume that $v_i^\pm=\dir{p}{a_i^\pm}$ for some points $a_i^\pm$.
 
 Also, without loss of generality $\phi^0=\distfun{a^0}{}{}$ and let $\xi^+=\dir{p}{a^0}$.
 
-Then $\d_p(\xi^+)>\eps$ for $i>0$ and  the same is true for all points $x$ near $p$.  
+Then $\dd_p(\xi^+)>\eps$ for $i>0$ and  the same is true for all points $x$ near $p$.  
 Let $v_0=\phi(p)$ and let $v$ be  close to $v$. we want to find a point $x$ such that $\phi(x)=v$ and $\dist{x}{p}{}< \frac{|v-v_0|}{\eps}$. 
 
 First observe that by moving $p$ in the direction of $a^0$  which increases all $\phi^i$  we can assume that $v^i_0\ge v^i$ for all $i$.
@@ -846,7 +847,7 @@ as promised with $c_2=\frac{\nu^2}{32\lambda_2}$.
 \qedsf 
  
  
-Denote $\Sigma_p^\e=\{\xi\in \Sigma_p \quad |\quad \d_pf_j(\xi)>\e \text{ for all } j=1,\ldots,k\}$.
+Denote $\Sigma_p^\e=\{\xi\in \Sigma_p \quad |\quad \dd_pf_j(\xi)>\e \text{ for all } j=1,\ldots,k\}$.
 
 It easily follows from the definition that  $f$ is incomplementable at $p$ if and only if $\diam (\Sigma_p^0)\le \pi/2$.
 
@@ -929,7 +930,7 @@ First we notice that
 \end{equation}
 
 The first and the last equalities follow from Sublemma~\ref{estimate} and the fact that $h$ is $1$-Lipschitz and $f$ is $\e$-co-Lipschitz.
-If the equality in the middle is violated, then there exists a maximum point $r\in U_v^+\cap \bar{B}(p,\delta/2)$ such that $f_l(r)>v_l$ for some $l$. By applying \ref{incr-decr-all} to $\d_rh, \d_r f_j$ in $\Sigma_rX$ we can find a direction $\xi\in \Sigma_rX$ such that $\d_rh(\xi)>0$ and $\d_rf_j(\xi)>0$ for all $j\ne l$. This contradicts the fact that $r$ is a point of maximum of $h$ on $ U_v^+\cap \bar{B}(p,\delta/2)$. This proves~\eqref{max}.
+If the equality in the middle is violated, then there exists a maximum point $r\in U_v^+\cap \bar{B}(p,\delta/2)$ such that $f_l(r)>v_l$ for some $l$. By applying \ref{incr-decr-all} to $\dd_rh, \dd_r f_j$ in $\Sigma_rX$ we can find a direction $\xi\in \Sigma_rX$ such that $\dd_rh(\xi)>0$ and $\dd_rf_j(\xi)>0$ for all $j\ne l$. This contradicts the fact that $r$ is a point of maximum of $h$ on $ U_v^+\cap \bar{B}(p,\delta/2)$. This proves~\eqref{max}.
 
 Now consider the midpoint $y$ of a shortest curve connecting $x$ and $z$. By $\lambda$-concavity of $f_j$ and strict concavity of $h$ we get
 
@@ -989,7 +990,7 @@ Also, since $h$  is $1$-Lipschitz we have that
 
 
 
-Let $\xi=\dir{x}{s'}$.  By concavity of $h$ and $\lambda$-concavity of $f_j$'s it is obvious that $\d_xh(\xi)>0$ and $\d_xf_j(\xi)>0$ for all $j$. Combined with (\ref{e:grad}) this means that $(f,h)$ is regular at $x$.
+Let $\xi=\dir{x}{s'}$.  By concavity of $h$ and $\lambda$-concavity of $f_j$'s it is obvious that $\dd_xh(\xi)>0$ and $\dd_xf_j(\xi)>0$ for all $j$. Combined with (\ref{e:grad}) this means that $(f,h)$ is regular at $x$.
 
 \qeds
 
@@ -1027,9 +1028,10 @@ and $h$ is 1-Lipschitz,
 $g$ is $\frac{1}{L(\e)}$-Lipschitz 
 and $\tilde h$ is $\frac{2}{L(\e)}$-Lipschitz.
  
- We claim that $(f,\tilde h)$ is admissible. Indeed $(f,\tilde h)=G\circ (f,h)$ where $G\?\R^{k+1}\to\R^{k+1}$ is  given by $G(v,t)=(v, t-g(v))$.
- By above $G$ is $C(\e,n)$-Lipschitz and so is $G^{-1}$ which is equal to  $G^{-1}(v,t)=(v, t+g(v))$.
- This is the place where we make use of allowing compositions with bilipschitz homeomorphisms of $\R^k$ in the definition of an admissible map.
+We claim that $(f,\tilde h)$ is admissible.
+Indeed $(f,\tilde h)=G\circ (f,h)$ where $G\:\R^{k+1}\to\R^{k+1}$ is  given by $G(v,t)=(v, t-g(v))$.
+By above $G$ is $C(\e,n)$-Lipschitz and so is $G^{-1}$ which is equal to  $G^{-1}(v,t)=(v, t+g(v))$.
+This is the place where we make use of allowing compositions with bilipschitz homeomorphisms of $\R^k$ in the definition of an admissible map.
  
 Again by  \eqref{kl-reg}, $(f, h)$ is  regular on $U$. Therefore it's a local fibration on $U$   by the induction assumption and hence the same is true for $(f,\tilde h)=G\circ (f,h)$.  By the induction assumption the fibers of   $(f,\tilde h)$ are $MCS$-spaces. Since  $(f,\tilde h)$ is proper on $U$, by Theorem ~\ref{local bundle}\ we conclude that   $(f,\tilde h)\co U\to \bar{I}^k(f(p),r)\times (-A,0)$ is a global  bundle map by~\cite[6.10]{Sieb} with $MCS$-fibers. This means that
 $U$ is homeomorphic to $F\times  \bar{I}^k(f(p),r)\times (-A,0)$ respecting $(f,\tilde h)$ where $F$ is an MCS-space of $\dim=n-k-1$. By Lemma~\ref{incompl}, we can extend this homeomorphism to
@@ -1064,7 +1066,7 @@ Now suppose $p\notin \partial \spc{L}$. Then $\Sigma=\Sigma_p\spc{L}$ has no bou
 \end{proof}
 Since  the set of points whose conical neighborhoods have empty codimension 1 strata is obviously open we immediately obtain the following
 \begin{thm}{Corollary}\label{top=geom-bry}
-Let $\spc{L}$ be an $n$-dimensional complete length $\Alex$ space. 
+Let $\spc{L}$ be an $n$-dimensional complete length $\Alex{}$ space. 
 Then $\partial \spc{L}$ is equal to the closure of the $n-1$-dimensional strata of $\spc{L}$ as an $MCS$ space. In particular,
 $\partial \spc{L}$ is closed.
 \end{thm}
@@ -1155,7 +1157,7 @@ Moreover, $F_n$ are almost non-negatively curved in a generalized sense; see \ci
 
 Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, $\Omega\subset \spc{L}$ be an open subset and $f:\Omega\to\RR$ be a semiconcave function.
 A vector $v\in \T_p^\o$ is called supporting vector of $f$ at $p$ if for any $w\in \T_p^\o$, we have
-\[\d^\o_pf(w)\le -\<v,w\>.\]
+\[\dd^\o_pf(w)\le -\<v,w\>.\]
 The set of all supporting vectors at $p$ will be denoted by $\partial_pf$ forms??? a convex subset in $\T_p^\o$.
 
 In general, the set of supporting vectors at $p\in \Omega$ might be empty;

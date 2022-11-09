@@ -10,9 +10,9 @@ we use tangent cone in the proof of properties of dimension of Alexandrov space.
 Thus, the previous sections of this chapter are nesessury for complete understanding the finite dimensional case.
 
 \begin{thm}{Theorem}\label{thm:tan4finite} 
-Let $\spc{L}\in \CBB m\kappa$. 
+Let $\spc{L}\in \Alex m\kappa$. 
 Then for any point $p\in \spc{L}$, 
-$\T_p\in\CBB m0$, $\Sigma_p\in\CBB{m-1}1$ and moreover $\T_p=\T^\o_p$.
+$\T_p\in\Alex m0$, $\Sigma_p\in\Alex{m-1}1$ and moreover $\T_p=\T^\o_p$.
 \end{thm}
 
 
@@ -27,7 +27,7 @@ definition of boundary (\ref{sec:bry}),
 in the proof of existence of quasigeodesics, in particular the part connected with Milka's lemma (\ref{lem:milka}) ???MORE???.
 
 \begin{thm}{Technical lemma}\label{lem:tan-tech}
-Let $\spc{L}_n\in \CBB{}{\kappa}$ and $(\spc{L}_n,p_n)\GHto(\spc{L},p)$.
+Let $\spc{L}_n\in \Alex{}{\kappa}$ and $(\spc{L}_n,p_n)\GHto(\spc{L},p)$.
 Then, given $\eps>0$ for any array of diections $\xi_1,\xi_2,\dots,\xi_\kay\in\Sigma_p$
 there is a sequence of  arrays $\xi_{1,n},\xi_{2,n},\dots,\xi_{\kay,n}\in\Sigma_{p_n}$
 such that \[\mangle(\xi_{i,n},\xi_{j,n})>\mangle(\xi_i,\xi_j)-\eps\]
@@ -38,7 +38,7 @@ for all $i$, $j$ and all large $n$.
 For each $\xi_i$, choose $x_i\in \spc{L}$ so that $\dir{p}{x_i}$ sufficiently close to $\xi_i$ 
 (say $\mangle(\dir{p}{x_i},\xi_i)<\tfrac\eps2$).
 By the definition of angle (Section~\ref{sec:angles}), 
-one can choose $\bar x_i\in\l]px_i\r[$ such that
+one can choose $\bar x_i\in\left]px_i\right[$ such that
 $\angk{\kappa}{p}{\bar x_i}{\bar x_j}$ is sufficiently close to $\mangle\hinge{p}{\bar x_i}{\bar x_j}$.
 In particular,
 \[\angk{\kappa}{p}{\bar x_i}{\bar x_j}>\mangle(\xi_i,\xi_j)-\eps\] 
@@ -55,7 +55,7 @@ Thus, one can take $\xi_{i,n}=\dir{p_n}{\bar x_{i,n}}$.
 \qeds
 
 \begin{thm}{Lemma}\label{lem:comp-sigma}
-Let $\spc{L}\in \CBB m\kappa$ and $p\in \spc{L}$. 
+Let $\spc{L}\in \Alex m\kappa$ and $p\in \spc{L}$. 
 Then $\Sigma_p\spc{L}$ is compact and $\T_p\spc{L}$ is proper.
 \end{thm}
 
@@ -92,7 +92,7 @@ From \ref{thm:T-in-T^w}, we get??? that $\iota(v)=v_\o$
 \qeds
 
 \begin{thm}{Corollary}\label{thm:tan-split} 
-Let $\spc{L}\in\CBB m\kappa$, $p\in \spc{L}$.
+Let $\spc{L}\in\Alex m\kappa$, $p\in \spc{L}$.
 Then
 \[\T_{p}\iso \Lin_p \oplus \Lin_p^\perp,\] 
 where $\Lin_p$ is the linear subspace of $\T_p$ (see  defininiton \ref{def:opp+Lin}) 
@@ -107,7 +107,7 @@ Follows from splitting theorem \ref{thm:splitting} and \ref{thm:tan4finite}.
 \qeds
 
 \begin{thm}{Corollary}
-Let $\spc{L}\in\CBB m\kappa$, $p\in \spc{L}$.
+Let $\spc{L}\in\Alex m\kappa$, $p\in \spc{L}$.
 Assume $\dim\Lin_p= m-1$ then $\T_p\iso\RR_{\ge0}\times\RR^{m-1}$ and in particular $p\in\partial \spc{L}$.
 \end{thm}
 
@@ -126,9 +126,9 @@ As a corollary of above theorem and ???, we get that $\lam\blow(\spc{L},p)\GHto(
 the following theorem says that there is an almost canonical choice Hausdorff approximations $\lam\blow L\to \T_p$.
 
 \begin{thm}{Theorem}\label{thm:approx4tan} 
-Let $\spc{L}\in\CBB{m}{}$ 
+Let $\spc{L}\in\Alex{m}{}$ 
 and $p\in \spc{L}$.
-Then there is a Gromov--Hausdorff convergence $\lam\blow\spc{L}\xGHto{\tau}\T_p$ as $\lam\to\infty$
+Then there is a Gromov--Hausdorff convergence $\lam\blow\spc{L}\GHto\T_p$ as $\lam\to\infty$
 such that 
 \begin{subthm}{}
 for any map $\alpha\:[0,\eps)\to \spc{L}$ with $\alpha(0)=p$ and $\alpha^+(0)=v\in\T_p$,
@@ -137,7 +137,7 @@ we have $\lam\cdot\alpha(\tfrac1\lam)\xto{\tau} v$.
 
 \begin{subthm}{}
 Assume $f\:\spc{L}\to\RR$ is a semiconcave locally Lipschitz subfintion such that $p\in\Dom f$.
-Define $w_\lam\:\lam\blow\spc{L}\to\RR\:\lam\blow x\mapsto\lam\cdot[f(x)-f(p)]$ then $w_\lam\xto\tau\d_pf$.
+Define $w_\lam\:\lam\blow\spc{L}\to\RR\:\lam\blow x\mapsto\lam\cdot[f(x)-f(p)]$ then $w_\lam\xto\tau\dd_pf$.
 \end{subthm}
 \end{thm}
 
@@ -148,7 +148,7 @@ Further, the convergence $\tau_p$ as in this theorem will be called \emph{canoni
 \qeds
 
 \begin{thm}{Semicontinuity of space of directions}\label{thm:simicont-Sigma}
-Let $\spc{L}_n\in\CBB m\kappa$ and $\spc{L}_n\xGHto{a_n} \spc{L}$ and $\spc{L}_n\ni p_n\to p\in \spc{L}$.
+Let $\spc{L}_n\in\Alex m\kappa$ and $\spc{L}_n\GHto \spc{L}$ and $\spc{L}_n\ni p_n\to p\in \spc{L}$.
 Then for any $\eps>0$,
 we have $\Sigma_{p_n}>\Sigma_p-\eps$ for all large $n$.
 (In other words, 
@@ -167,7 +167,7 @@ From above, for all large $n$, we have $\mangle(\map_n(\zeta),\map_n(\zeta'))>\m
 i.e. $\Sigma_{p_n}>\Sigma_p-\eps$ for all large $n$.\qeds
 
 \begin{thm}{Corollary}\label{cor:simicont-Sigma}
-Let $\spc{L}\in\CBB m\kappa$ and $p_n\to p$ be a converging sequence of points in $\spc{L}$.
+Let $\spc{L}\in\Alex m\kappa$ and $p_n\to p$ be a converging sequence of points in $\spc{L}$.
 Then for any $\eps>0$, $\Sigma_{p_n}>\Sigma -\eps$ for all large $n$.
 
 Moreover, if $\dir{p}{p_n}\to\xi\in \Sigma_p$ then $\Sigma_{p_n}>\Sigma_\xi \T_p-\eps$ for all large $n$.
@@ -178,7 +178,7 @@ Also, since the set of Euclidean points is dense (\ref{LinDim+-f})
 the above corollary implies the following.
 
 \begin{thm}{Corollary}\label{cor:S>Sigma}
-Let $L\in\CBB m\kappa$.
+Let $L\in\Alex m\kappa$.
 Then for any $p\in \spc{L}$, 
 $\SS^{m-1}\ge \Sigma_p$.
 \end{thm}
@@ -192,17 +192,17 @@ $\tfrac{1}{\dist{p}{p_n}{}}\blow p_n\to\xi$.%???NOTATION OF GH-CONVERGENCE HAS T
 \qeds
 
 \begin{thm}{Semicontinuity of space of differential}\label{thm:simicont-differential}
-Let $\spc{L}_n\in\CBB m\kappa$ and  $a_n,a_\infty, p\in \spc{L}$.
+Let $\spc{L}_n\in\Alex m\kappa$ and  $a_n,a_\infty, p\in \spc{L}$.
 Assume $a_n\to a_\infty$ as $n\to\infty$.
-Then $\liminf\d_p\dist{a_n}{}{}\le \d_p\dist{a_\infty}{}{}$
+Then $\liminf\dd_p\dist{a_n}{}{}\le \dd_p\dist{a_\infty}{}{}$
 \end{thm}
 
 \begin{thm}{Sum lemma}
-Let $\spc{L}_n\in\CBB m\kappa$ and  $p\in \spc{L}$ and $v^1,v^2,\dots,v^\kay\in \T_p$.
+Let $\spc{L}_n\in\Alex m\kappa$ and  $p\in \spc{L}$ and $v^1,v^2,\dots,v^\kay\in \T_p$.
 Then there is a vector $w\in \T_p$ such that for any semiconcave locally Lipschitz subfunction 
 $f\:\spc{L}\subto \RR$
 we have
-$\d_pf(w)\ge\sum_i\d_pf(v^i)$.
+$\dd_pf(w)\ge\sum_i\dd_pf(v^i)$.
 \end{thm}
 
 
@@ -211,7 +211,7 @@ $\d_pf(w)\ge\sum_i\d_pf(v^i)$.
 \section{Almost parallel sets}
 
 \begin{thm}{Definition}\label{def:parallel-set}
-Let $\spc{L}\in\CBB{m}{}$.
+Let $\spc{L}\in\Alex{m}{}$.
 A nonempty set $P\subset\spc{L}$ is called $\eps$-parallel
 if there is a point array $(a^1,a^2,\dots,a^n)$ in  $\spc{L}$
 such that the following two conditions hold.
@@ -253,7 +253,7 @@ which satisfies (\ref{SHORT.def:parallel-set:net}).
 Given a positve integer $m$,
 for any $\eps>0$ there is $\delta>0$
 such that the following holds.
-If $\spc{L}\in\CBB{}{}$ and $X\subset\spc{L}$ is an $\delta$-parallel set
+If $\spc{L}\in\Alex{}{}$ and $X\subset\spc{L}$ is an $\delta$-parallel set
 then $X$ admits a $e^{\pm\eps}$-bi-Lipschitz embedding in $\EE^\kay$,
 where $\kay$ is the maximal integer such that
 $$\Sigma_x\ge\SS^{\kay-1}-\eps$$
@@ -295,7 +295,7 @@ $\mangle\hinge{x}{a^i}{a^j}>\pi-???$
 
 
 \begin{thm}{Theorem}
-Let $\spc{L}\in\CBB{m}{}$ 
+Let $\spc{L}\in\Alex{m}{}$ 
 and $\mathfrak{C}\subset\spc{L}$ be a closed set.
 Given $\eps>0$
 there is $p\in\mathfrak{C}$ and $r>0$
@@ -305,7 +305,7 @@ is $\eps$-parallel.
 \end{thm}
 
 \begin{thm}{Corollary}
-Let $\spc{L}\in\CBB{m}{}$.
+Let $\spc{L}\in\Alex{m}{}$.
 Given $\eps>0$,
 there is a covering of $\spc{L}$ by countable number of closed  $\eps$-parallel sets. 
  
@@ -322,9 +322,9 @@ Define a function $s\:\mathfrak{C}_n\to\RR$ as
 =
 \sup\set{\sum_{i<j}\mangle(\xi^i,\xi^j)}%
 {\begin{aligned}
-\{&\xi^i\}\ \t{is a maximal}
+\{&\xi^i\}\ \text{is a maximal}
 \\
-&\eps\t{-packing in}\ \Sigma_x
+&\eps\text{-packing in}\ \Sigma_x
  \end{aligned}
 }.\]
 
@@ -377,21 +377,21 @@ These two inequalities together with \ref{eq:almost-max} imply \ref{def:parallel
 It is not known whether exist a proper space with the same property as in Halbeisen's example (section \ref{halbeisen}).
 In other words, 
 is it possible to  prove the first conclusion of Theorem~\ref{thm:tan4finite} 
-for infinite dimensional proper $\CBB{}{}$-spaces?
+for infinite dimensional proper $\Alex{}{}$-spaces?
 Namely:
 
 \begin{thm}{Open question}\label{open:Halb-proper}
-Assume $\spc{L}\in\CBB{}{}$ is proper. 
-Is it true that the tangent cone $\T_p$ belongs to $\CBB{}{0}$ for any $p\in\spc{L}$?
+Assume $\spc{L}\in\Alex{}{}$ is proper. 
+Is it true that the tangent cone $\T_p$ belongs to $\Alex{}{0}$ for any $p\in\spc{L}$?
 \end{thm}
 
 \begin{thm}{Open question}\label{open:split-inf-dim}
-Let $\spc{L}\in\CBB{}{\kappa}$ and $p\in \spc{L}$.
+Let $\spc{L}\in\Alex{}{\kappa}$ and $p\in \spc{L}$.
 
 Is it true that $\T_p$ spits isometrically
 \[\T_p=\Lin_p^\perp\oplus\Lin_p\]
 where 
-$\Lin_p^\perp=\set{v\in \T_p}{\<v,x\>=0\ \t{for any}\ x\in\Lin_p}$?
+$\Lin_p^\perp=\set{v\in \T_p}{\<v,x\>=0\ \text{for any}\ x\in\Lin_p}$?
 \end{thm}
 
 Compare to Theorem~\ref{thm:tan-split}
@@ -400,7 +400,7 @@ Compare to Theorem~\ref{thm:tan-split}
 \section{Exercises}
 
 \begin{thm}{Exercise}
-Let $\spc{L}\in\CBB{}{}$, assume $[pq_i]$ covrege as to $[pq]$, $p\not=q$. 
+Let $\spc{L}\in\Alex{}{}$, assume $[pq_i]$ covrege as to $[pq]$, $p\not=q$. 
 
 Show that if $\dim\spc{L}<\infty$ then $\mangle\hinge p{q_i}{q}\to0$.
 

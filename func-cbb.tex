@@ -10,7 +10,7 @@ Supporting vectors are defined similar to gradient.
 and $p\in\Dom f$.
 
 A vector $s\in \T_p$ is called a \emph{supporting vector} of $f$ at $p$ if and
-\[(\d_p f)(x)\le -\langle s , x\rangle\ \ \hbox{for any}\ \ x\in \T_p.\]
+\[(\dd_p f)(x)\le -\langle s , x\rangle\ \ \hbox{for any}\ \ x\in \T_p.\]
 \end{thm}
 
 The set of supporting vectors of $f$ at $p\in\Dom f$ will be denoted by $\partial_p f$.
@@ -57,7 +57,7 @@ we have that $\min\{f_1,f_2\}$ as well as $f_1+f_2$ are also native.
 
 
 \begin{thm}{Theorem} 
-Let $\spc{L}_n$ be an $m$-dimensional complete length $\Alex\kappa$ space, and $\spc{L}_n\xGHto{a_n} \spc{L}$.
+Let $\spc{L}_n$ be an $m$-dimensional complete length $\Alex\kappa$ space, and $\spc{L}_n\GHto \spc{L}$.
 Assume $f_n\:\spc{L}_n\subto \RR$ be a sequence of native $\lambda$-concave subfunctions which converged to a subfunction $f\:\spc{L}\to\RR$.
 Then $f$ is native.
 \end{thm}
@@ -88,30 +88,30 @@ is native if and only if the subfunction $f\circ\proj\:\breve{\spc{L}}\subto\RR$
 
 The base $m=1$ is trivial.
 
-Consider the restriction $\phi=\d_p f|\Sigma_p$.
+Consider the restriction $\phi=\dd_p f|\Sigma_p$.
 Note that $\phi''+\phi\le 1$ (see ???).
 Let ${\xi}\in \Sigma_p$ be a minimum point of $\phi$.
-Cleary $\d_{{\xi}}\phi\ge 0$.
+Cleary $\dd_{{\xi}}\phi\ge 0$.
 By the induction hypothesis, $\partial_{{\xi}}\phi\not=\emptyset$.
-On the other hand if $s\in\partial_\xi\phi$, then $\d_\xi\phi(s)\le -|s|^2$.
+On the other hand if $s\in\partial_\xi\phi$, then $\dd_\xi\phi(s)\le -|s|^2$.
 Therefore $\partial_{\xi}\phi$ contains unique element --- the zero vector $\0$. 
-Thus $\d_{{\xi}}\phi(x)\le\<\0,x\>=0$; that is, $\d_{{\xi}}\phi\equiv 0$.
+Thus $\dd_{{\xi}}\phi(x)\le\<\0,x\>=0$; that is, $\dd_{{\xi}}\phi\equiv 0$.
 Applying $\phi''+\phi\le 1$, for a geodesic $[\xi\eta]$ in $\Sigma_p$, we obtain 
-\[(\d_p f)(\eta)
+\[(\dd_p f)(\eta)
 \le 
-(\d_p f)({\xi})
+(\dd_p f)({\xi})
 \cdot
 \cos\mangle({\xi},\eta).\]
 for any $\eta\in \Sigma_p$.
 Hence
-$\l[-(\d_p f)({\xi})\r]\cdot{\xi}\in\partial_p f$.
+$\left[-(\dd_p f)({\xi})\right]\cdot{\xi}\in\partial_p f$.
 
 In particular, we obtain (\ref{SHORT.with-no-bry}). 
 
 To prove ``if''-part of (\ref{SHORT.with-bry}) it is only nesessury to show that $\partial_p f\not=\emptyset$ for $p\in\partial \spc{L}$.
 Note that there are two natural distance preserving map $e_1,e_2\:\spc{L}\to\breve{\spc{L}}$.
 Let $\breve p=\proj^{-1}(p)$.
-Note that according to ???, $\Sigma_{\breve p}\breve{\spc{L}}$ is the doubling of $\Sigma_{p}\spc{L}$ and the asocited projection map coindede with $\d_{\breve p}\proj$.
+Note that according to ???, $\Sigma_{\breve p}\breve{\spc{L}}$ is the doubling of $\Sigma_{p}\spc{L}$ and the asocited projection map coindede with $\dd_{\breve p}\proj$.
 Let ???
 
 Now assume $\partial{\spc{L}}\not=\emptyset$ and $f\circ\proj\:\breve{\spc{L}}\subto\RR$ is concave.
@@ -121,8 +121,8 @@ we have that $f\circ\proj$ is native.
 Assume $\proj(p)\in \partial \spc{L}$.
 Remind from ???, that $\T_p\breve{\spc{L}}=\breve \T_{\proj (p)}\spc{L}$.
 Let $v\in\partial_p \proj\circ f\not=\emptyset$. 
-Then clearly $\d_p\proj(v)\in \partial_{\proj(p)}  f$.
-Note that $\d_p\proj\:\T_p\breve{\spc{L}}\to\T_{\proj (p)}\spc{L}$
+Then clearly $\dd_p\proj(v)\in \partial_{\proj(p)}  f$.
+Note that $\dd_p\proj\:\T_p\breve{\spc{L}}\to\T_{\proj (p)}\spc{L}$
 
 
 \parit{``Only if''-part of (\ref{SHORT.with-bry}).}
@@ -179,7 +179,7 @@ Let us define function $\os_p^\eps\:\spc{L}\to\RR$ as
 \[\os_p^\eps(x)
 =
 \oint\limits_{\oBall(p,\eps)}
-\dist[{{}}]{y}{x}{}\cdot\d_y\vol^m.\]
+\dist[{{}}]{y}{x}{}\cdot\dd_y\vol^m.\]
 
 Further, 
 given a multidistant function $\phi\can F\circ\distfun{\bm{p}}{}{}$, where
@@ -200,16 +200,16 @@ $\OS_\eps\phi\:\spc{L}\subto\RR$ defined as follows
 \[\OS_\eps\phi(q)
 =
 \int\limits_{\oBall(\bm{p},\eps)\subset\spc{L}^\kay}
-F(\distfun{\bm{x}}{q})\cdot\d_{\bm{x}}\vol^{\kay m},\]
+F(\distfun{\bm{x}}{q})\cdot\dd_{\bm{x}}\vol^{\kay m},\]
 we say that $\OS_\eps\phi$ is defined at $q$ if the expression under integral is defined for all $\bm{x}\in \oBall(\bm{p},\eps)$.
 
 \begin{thm}{Lemma}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space and $\phi\in\MD(\spc{L},\RR)$.
 Then for any $\eps>0$, the subfunction $\OS_\eps\phi\:\spc{L}\to(-\infty,+\infty]$ is semiconcave. 
 Moreover, for any $p\in \Dom \OS_\eps\phi$, 
-the restriction $\d_p\OS_\eps\phi|\Lin_p$ is linear.
+the restriction $\dd_p\OS_\eps\phi|\Lin_p$ is linear.
 
-In particular, if $p\in \Dom \OS_\eps\phi$ is Euclidean point; that is, $\T_p\iso\EE^m$, then $\OS_\eps\phi$ is differentiable at $p$, i.e. $\d_p\OS_\eps\phi$ is defined and linear.
+In particular, if $p\in \Dom \OS_\eps\phi$ is Euclidean point; that is, $\T_p\iso\EE^m$, then $\OS_\eps\phi$ is differentiable at $p$, i.e. $\dd_p\OS_\eps\phi$ is defined and linear.
 \end{thm}
 
 
@@ -307,7 +307,7 @@ and it is locally Lipschitz in $K$ if and only if $f$ is.
 Thus, without loss of generality  we can assume that $f$ is concave.
 
 Consider subgraph of $ f$
-\[M=\set{(x,t)\in \spc{L}\times\RR}{x\in K\  \t{and} \  t\le  f(x)}.\]
+\[M=\set{(x,t)\in \spc{L}\times\RR}{x\in K\  \text{and} \  t\le  f(x)}.\]
 Clearly $M$ is convex closed subset
  of $\spc{L}\times\RR$.
 It follows that $M$ is an $(m+1)$-dimensional complete length $\Alex{}$ space.
