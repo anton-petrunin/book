@@ -99,7 +99,7 @@ then
 \end{subthm}
 
 \begin{subthm}{thm:k-conc=lip-diff}$\beta$ is differentiable at all but countable subset of values in $\II$; that is, for some countable set $A\subset \II$, we have $\beta^+(t_0)+\beta^-(t_0)=0$ 
-for any $t\in \II\backslash A$.
+for any $t\in \II\setminus A$.
 \end{subthm}
 
 
@@ -1219,7 +1219,7 @@ Otherwise:
 Let us extend $\gamma_\eps$ behind $a$ as $\gamma_\eps(a+t)=\bar\gamma(|w|\cdot t)$.
 \item If $\gamma_\eps(a)\notin\Theta$, according to \ref{exist-pre-qg},
 we can find a pre-quasigeodesic $\bar\gamma\:[0,\eps]\to \spc{L}$ with $\bar\gamma^+(0)=w$.
-Then extend $\gamma_\eps$ behind $a$ as $\gamma_\eps(a+t)=\bar\gamma(t)$, clearly $\gamma_\eps([a,a+\eps])\subset \spc{L}\backslash\Theta_\eps$.
+Then extend $\gamma_\eps$ behind $a$ as $\gamma_\eps(a+t)=\bar\gamma(t)$, clearly $\gamma_\eps([a,a+\eps])\subset \spc{L}\setminus\Theta_\eps$.
 \end{itemize}
 According to extension procedure II (\ref{ext-pqg}), in all above cases, the extended $\gamma_\eps$ is still $\Theta_\eps$-pre-\nospace quasigeodesic.
 Thus, the maximal interval of definition of $\gamma_\eps$, must be open and closed in $[0,\infty)$;
@@ -1238,13 +1238,13 @@ To do this we can apply open-close argument as above in a backward direction.
 According to claim \ref{clm:suff-qg-exist}, the following claim implies the theorem.
 
 \begin{clm}{Key claim.}\label{clm:qg-main}
-If $\Theta\not=\spc{L}$, then there is $p\in \spc{L}\backslash \Theta$ and $r>0$ such that for any $x\in\oBall(p,\tfrac{r}{6})\backslash \Theta$ and $\xi\in \Sigma_x$ there is a quasigeodesic $\gamma\:[0,\tfrac{r}{6}]\to \spc{L}$ with  $\gamma^+(0)=\xi$.
+If $\Theta\not=\spc{L}$, then there is $p\in \spc{L}\setminus \Theta$ and $r>0$ such that for any $x\in\oBall(p,\tfrac{r}{6})\setminus \Theta$ and $\xi\in \Sigma_x$ there is a quasigeodesic $\gamma\:[0,\tfrac{r}{6}]\to \spc{L}$ with  $\gamma^+(0)=\xi$.
 \end{clm}
 
 
 First let us list the properties of $p\in \spc{L}$ and $r>0$ that are sufficient for the key claim to hold.
 
-Set $\mathfrak C=\spc{L}\backslash \Theta$. 
+Set $\mathfrak C=\spc{L}\setminus \Theta$. 
 The following claim is an extract from Lemma~\ref{lem:amost=Sigma}.
 
 \begin{clm}{}\label{inq:di-inq}
@@ -1313,7 +1313,7 @@ Hence (\ref{SHORT.inq:di-inq:main}).
 
 \parit{Proof of key claim \ref{clm:qg-main}.}
 Given $\eps>0$, we first construct a $\Theta$-pre-quasigeodesic $\gamma_\eps\:[0,\tfrac{r}{6}]\to \spc{L}$ with $\gamma_\eps^+(0)=\xi$ and an open set $\Upsilon_\eps\subset (0,\tfrac{r}{6})$ formed by countable disjoined union of intervals $(a_i,b_i)$
-such that the enthropy $\mu_{\gamma_\eps}$ vanish on $(0,\tfrac{r}{6})\backslash \Upsilon_\eps$ and for each $i$ we have
+such that the enthropy $\mu_{\gamma_\eps}$ vanish on $(0,\tfrac{r}{6})\setminus \Upsilon_\eps$ and for each $i$ we have
 
 \begin{enumerate}[(i)]
 \item 
@@ -1518,7 +1518,7 @@ such $\gamma$ exists from the induction hypothesis.
 If $X=\{\xi\}$, then from ???, we have $\cBall[\xi,{\tfrac\pi2}]=\Sigma_p$. 
 Thus, $\xi$ is polar to itself.
 
-Otherwise, if $\Sigma_\xi X=\emptyset$ and $X$ contains at least two points, choose $\xi^*$ to be closest point in $X\backslash\xi$ from $\xi$. 
+Otherwise, if $\Sigma_\xi X=\emptyset$ and $X$ contains at least two points, choose $\xi^*$ to be closest point in $X\setminus\xi$ from $\xi$. 
 Since $X\subset \Sigma_p$ is extremal (???), for any $\eta\in \Sigma_p$ we have $\mangle\hinge{\xi^*}\eta\xi\le\tfrac\pi2$ and since $\Sigma_\xi X=\emptyset$ we have $\mangle\hinge\xi\eta{\xi^*}\le\tfrac\pi2$.
 Therefore, in the model spherical triangle 
 $\trig{\tilde \xi}{\tilde \eta}{\tilde \xi^*}

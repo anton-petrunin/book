@@ -18,7 +18,7 @@ $$\mu\left(\bigcup_n A_n\right) \le \sum_n \mu\, A_n.$$
 \end{itemize}
 
 A subset $E\subset \spc{X}$ is called \index{$\mu$-measurable}\emph{$\mu$-measurable} if 
-$$\mu\, A = \mu(A \cap E) + \mu(A \backslash E)$$
+$$\mu\, A = \mu(A \cap E) + \mu(A \setminus E)$$
 for every subset $A\subset\spc{X}$.
  
 Recall that given two subsets $A$ and $B$ of a metric space $\spc{X}$,
@@ -409,7 +409,7 @@ of a set $A\subset \spc{X}$.
 Assume $\mu\, A<\infty$,
 then there is a countable collection of disjoint balls 
 $\{B_n\}_{n\in\IndexSet}\subset\mathfrak{B}$ such that
-$$\mu\left(A\left\backslash\bigcup_{n\in\IndexSet}B_n\right.\right)=0.$$
+$$\mu\left(A\setminus\bigcup_{n\in\IndexSet}B_n\right)=0.$$
 \end{thm}
 
 For the proof see for example \cite[Theorem 1.6]{heinonen};
@@ -445,7 +445,7 @@ Assume $A$ is a subset in $\spc{X}$ such that $\mu\, A<\infty$
 and let $\mathfrak{B}$ be a Vitali covering of $A$.
 Then there is at most countable collection of disjointed balls 
 $\{B_n\}_{n\in\IndexSet}\subset\mathfrak{B}$ such that
-$$\mu\left(A\left\backslash\bigcup_{n\in\IndexSet}B_n\right.\right)=0.$$
+$$\mu\left(A\setminus\bigcup_{n\in\IndexSet}B_n\right)=0.$$
 
 \end{thm}
 
@@ -677,9 +677,10 @@ $\Sing_f$ is countably $(m-1)$-rectifiable.
 In the proof we will need the following definition.
 
 \begin{thm}{Definition}
-A function $f\:\RR^m\to\RR$ is called DC-function if it can be presented as a {}\emph{difference} $f=a-b$ of two {}\emph{convex} functions $a,b\:\RR^m\subto\RR$.
+A function $f\:\RR^m\to\RR$ is called \index{DC-function}\emph{DC-function} if it can be presented as a difference $f=a-b$ of two convex functions $a,b\:\RR^m\subto\RR$.
+(Here DC stands for difference and convex.)
 
-A map $\bm{f}=(f^1,\dots,f^\kay)\:\RR^m\to\RR^\kay$ is called DC-map if each of its coordinates $f^i$ is a DC-function.
+A map $\bm{f}=(f^1,\dots,f^\kay)\:\RR^m\to\RR^\kay$ is called \index{DC-map}\emph{DC-map} if each of its coordinates $f^i$ is a DC-function.
 \end{thm}
 
 Since convex function are locally Lipschiz,

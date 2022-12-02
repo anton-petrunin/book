@@ -1,26 +1,25 @@
 %%!TEX root = all.tex
 \chapter{Boundary}
 
+\section{Definition}\label{sec:bry}
 
-\section{Boundary}\label{sec:bry}
+The boundary of complete length $\Alex{}$ space is defined only if its dimension is finite;
+the definition uses induction on the dimension.
 
-The boundary of an $m$-dimensional complete length $\Alex{}$ space is certain subset,
-which is defined using induction on $m$.
-In particular it is defined only for finite dimensional spaces.
-
-First, recall that if $\spc{L}$ is one-dimensional complete length $\Alex\kappa$ space, then $\spc{L}$ isometric to a one dimensional Riemannian manifold possibly with boundary (see \ref{thm:dim=1.CBB}).
+First, recall that if $\spc{L}$ is one-dimensional complete length $\Alex\kappa$ space, then $\spc{L}$ isometric to a one dimensional Riemannian manifold possibly with boundary  \akp{thm:dim=1.CBB}.
 In this case, we define boundary of $\spc{L}$ (denoted as $\partial \spc{L}$)\index{$\partial\spc{L}$} to be boundary of corresponding manifold.
 
 Now, assume that the notion of boundary is already defined in all dimensions less than $m$.
-Recall that if $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, then $\Sigma_p$ is an $(m-1)$-dimensional complete length $\Alex1$ space for any $p\in \spc{L}$ (see \ref{thm:tan4finite});
+Recall that if $\spc{L}$ is an $m$-dimensional complete length $\Alex\kappa$ space, then $\Sigma_p$ is an $(m-1)$-dimensional complete length $\Alex1$ space for any $p\in \spc{L}$ \akp{thm:tan4finite};
 thus $\partial\Sigma_p$ is already defined.
 Then define 
-\[\partial \spc{L}=\set{p\in \spc{L}}{\partial\Sigma_p\not=\emptyset}.\]
+\[\partial \spc{L}=\set{p\in \spc{L}}{\partial\Sigma_p\not=\emptyset};\]
+that is, a point $p\in \spc{L}$ lies on the boundary if and only if its space of directions $\Sigma_p$ has nonempty boundary.
 
 
 \begin{thm}{Proposition}
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space.
-Then for any $p\in\partial\spc{L}$, $\rank_p\le m-1$.its boundary $\partial \spc{L}$ forms extremal set in $\spc{L}$. 
+Then for any $p\in\partial\spc{L}$, $\rank_p\le m-1$.
 \end{thm}
 
 \parit{Proof.}???\qeds
@@ -31,8 +30,9 @@ formulation was made more exact in \cite{alexander-bishop:fk}.
 Here we give a simplified proof with the use of a gradient exponent.
 
 \begin{thm}{Theorem} \label{thm:dist-to-bry} 
-Let $\spc{L}$ be an $m$ dimensional complete length $\Alex\kappa$ space and
+Let $\spc{L}$ be complete length $\Alex\kappa$ space and
 $\partial \spc{L}\not=\emptyset$.
+Suppose that $2\le\dim \spc{L}<\infty$.
 Then the function 
 \[f=\sn\kappa\circ\distfun{\partial \spc{L}}{}{}\] 
 satisfies $f''+\kappa\cdot  f\le 0$.
@@ -48,9 +48,22 @@ are strictly concave hypersurfaces.
 Moreover, the same conclusions hold for $f=\sn\kappa\circ\distfun{E}{}{}$, where $E$ is an $(m-1)$-dimensional extremal subset???.
 \end{thm}
 
-Note that $\distfun{\partial\spc{L}}{}{}$ (as well as function $f$ defined in the theorem) is not native semiconcave function of $\spc{L}$ (see definition ???). 
+\parit{Proof.}  
+We have to show that for any unit-speed geodesic $\gamma$, 
+\[(f\circ\gamma)''(t_0)\le -\kappa\cdot  (f\circ\gamma)(t_0).\]
+for and any $t_0$ in the interior of interval of definition.
+Without loss of generality we can assume $t_0=0$.
 
-\begin{wrapfigure}{r}{40mm}
+First consider the space $\Lob[+]2\kappa$
+ --- the halfplane of the model plane $\Lob2\kappa$.
+Note that $\Lob[+]2\kappa$ is a two-dimensional complete length $\Alex\kappa$ space
+and its boundary $\partial\Lob[+]2\kappa$ is the relative boundary of $\Lob[+]2\kappa$ in $\Lob2\kappa$.
+Direct calculations show that the statement is true for $\Lob[+]2\kappa$.
+
+Let $p\in \partial \spc{L}$ be a closest point to $\gamma(0)$ and
+$\alpha=\mangle(\gamma^+(0),\dir{\gamma(0)}p)$.
+
+\begin{wrapfigure}{r}{40mm}%???REDO
 \begin{lpic}[t(0mm),b(10mm),r(0mm),l(0mm)]{pics/dist-to-bry(0.4)}
 \lbl[b]{14,144;$\tilde \gamma(0)$}
 \lbl[b]{63,158;$\tilde \gamma(\tau)$}
@@ -62,37 +75,27 @@ Note that $\distfun{\partial\spc{L}}{}{}$ (as well as function $f$ defined in th
 \end{lpic}
 \end{wrapfigure}
 
-\parit{Proof.}  
-We have to show that for any unit-speed geodesic $\gamma$, 
-\[(f\circ\gamma)''(t_0)\le -\kappa\cdot  (f\circ\gamma)(t_0).\]
-for and any $t_0$ in the interior of interval of definition.
-Without loss of generality we can assume $t_0=0$.
-
-Direct calculations show that the statement is true for $\spc{L}=\Lob[+]2\kappa$
- --- the halfplane  of the model plane $\Lob2\kappa$.
-
-Let $p\in \partial \spc{L}$ be a closest point to $\gamma(0)$ and
-$\alpha=\mangle(\gamma^+(0),\dir{\gamma(0)}p)$.
-
 Consider the following configuration in the model halfplane $\Lob[+]2\kappa$: 
 Take a point $\tilde p\in\partial\Lob[+]2{\kappa}$ and consider the geodesic $\tilde \gamma$ in
 $\Lob[+]2\kappa$ such that 
 \[\dist{\gamma(0)}{p}{}=\dist{\tilde \gamma(0)}{\tilde p}{}=\dist{{\partial\Lob[+]2\kappa}}{\tilde \gamma(0)}{},\] 
 so $\tilde p$ is the closest point to $\tilde \gamma(0)$ on the
-boundary%
-\footnote{In case $\kappa>0$, it is possible only if $\dist{\gamma(0)}{p}{}\le
+boundary
+and
+\[\mangle(\tilde \gamma^+(0),\dir{\tilde \gamma(0)}{\tilde p})=\alpha.\]
+
+If $\kappa>0$, then $\tilde p$ exists only if $\dist{\gamma(0)}{p}{}\le
 \frac{\pi}{2\cdot\sqrt\kappa}$. 
 But this is always the case since otherwise any small
 variation of $p$ in $\partial \spc{L}$ decreases distance $\dist{\gamma(0)}{p}{}$.
-Indeed, take $p'\in \partial \spc{L}$ near $p$. 
+Indeed, take $p'\in \partial \spc{L}$ near $p$. %???why it exists???
 Since $\partial \spc{L}$ is an extremal subset, we have $\mangle\hinge{p}{p'}{\gamma(0)}\le \tfrac\pi2$ and if 
 $\dist{\gamma(0)}{p}{}>
-\frac{\pi}{2\cdot\sqrt\kappa}$, angle comparison  implies that $\dist{\gamma(0)}{p'}{}<\dist{\gamma(0)}{p}{}$.}
-and
-\[\mangle(\tilde \gamma^+(0),\dir{\tilde \gamma(0)}{\tilde p})=\alpha.\]
+\frac{\pi}{2\cdot\sqrt\kappa}$, angle comparison  implies that $\dist{\gamma(0)}{p'}{}<\dist{\gamma(0)}{p}{}$.
+
 Then it is sufficient to show that 
 \[\dist{{\partial \spc{L}}}{\gamma(\tau)}{} \le
-\dist{{\partial\Lob +{}}}{\tilde \gamma(\tau)}{}+o(\tau^2).\eqlbl{eq:thm:dist-to-bry*}\]
+\dist{{\partial\Lob[+]2\kappa}}{\tilde \gamma(\tau)}{}+o(\tau^2).\eqlbl{eq:thm:dist-to-bry*}\]
 Set 
 $\beta(\tau)=\mangle\hinge p{\gamma(0)}{\gamma(\tau)}$
 and
@@ -156,7 +159,7 @@ Evidently $K$ is a complete $m$-dimensional length $\Alex{}$ space.
 To prove that $\Fr_\spc{L} K\subset \partial K$ we use induction by $m$; the base $m=1$ is trivial.
 
 Let $p\in\Fr_\spc{L} K$ and $\eps>0$,
-choose a point $x\in \spc{L}\backslash K$ which is $\tfrac\eps2$-close to $p$ 
+choose a point $x\in \spc{L}\setminus K$ which is $\tfrac\eps2$-close to $p$ 
 and let $q\in K$ be a closest point in $K$ to $x$.
 Clearly $\dist{x}{q}{}\le\dist{x}{p}{}$, therefore $q$ is $\eps$-colse to $p$.
 Clearly, for any $\xi\in\Sigma_{q}K\subset \Sigma_{q}\spc{L}$ we have $\mangle(\xi,\dir {q}x)\ge \tfrac\pi2$.

@@ -583,8 +583,8 @@ Since $\eps>0$ in \ref {eq:almost-SphMes} is arbitrary, we get that there is a c
 \eqlbl{eq:=SphMes}\]
 for any Borel set $A\subset W$.
 
-It remains to show that $\mu(\spc{L}\backslash W)=0$.
-Since $\SphMes_m(\spc{L}\backslash W)=0$,
+It remains to show that $\mu(\spc{L}\setminus W)=0$.
+Since $\SphMes_m(\spc{L}\setminus W)=0$,
 the later will follow 
 if 
 \[\mu \le 10^m\cdot \Const\cdot\SphMes_m.\]
@@ -778,10 +778,10 @@ that this is a sphere in $\spc{L}$.
 Let $\spc{L}$ be an $m$-dimensional complete length $\Alex{}$ space
 and $Q\subset\spc{L}$ be a Borel subset.
 Then 
-\[\vol_m Q=\int\limits_0^\infty\vol_{m-1}(Q\cap S[p,R])\cdot\d R.\]
+\[\vol_m Q=\int\limits_0^\infty\vol_{m-1}(Q\cap S[p,R])\cdot\dd R.\]
 
 In particular,
-\[\vol_m \cBall[R,p]=\int\limits_0^R\vol_{m-1}(S[p,R])\cdot\d R.\]
+\[\vol_m \cBall[R,p]=\int\limits_0^R\vol_{m-1}(S[p,R])\cdot\dd R.\]
 
 
 \end{thm}
@@ -811,7 +811,7 @@ Then for any function $f\:\distfun{\bm{a}}{}{}(\Omega)\to\RR$
 we have
 \[\int\limits_{\Omega} \frac{f(\distfun{\bm{a}}{p}{})}{\sqrt{\det(g_{ij})}}\cdot\dd_p\vol_m
 =
-\int\limits_{\distfun{\bm{a}}{}{}(\Omega)} f(\bm{x})\cdot\d x^1\cdot\d x^2\cdots\d x^m,\]
+\int\limits_{\distfun{\bm{a}}{}{}(\Omega)} f(\bm{x})\cdot\dd x^1\cdot\dd x^2\cdots\dd x^m,\]
 where $g_{ij}=\cos\mangle\hinge p{a^i}{a^j}$.
 \end{thm}
 
@@ -941,9 +941,9 @@ Let us subdivide $Q$ into three disjoint subsets $Q^1$, $Q^2$ and $Q^3$ in the f
 \begin{align*}
 Q^1&=\set{x\in Q}{\T_x\iso \EE^m\ \text{and}\ \T_{f(x)}\iso \EE^\kay},
 \\
-Q^2&=\set{x\in Q\backslash Q^1}{\T_{x}\iso \EE^m},
+Q^2&=\set{x\in Q\setminus Q^1}{\T_{x}\iso \EE^m},
 \\
-Q^3&=Q\backslash (Q^1\cup Q^2).
+Q^3&=Q\setminus (Q^1\cup Q^2).
 \end{align*}
 
 It is sufficient to show that
@@ -1145,13 +1145,13 @@ Since $\eps>0$ is arbitrary, the proposition follows.
 
 \parit{Proof of \ref{thm:bishop-gromov}.}
 Set $h(R)= \frac {s(R)}{\tilde s(R)}$.
-Consider the measure $\mu=\tilde s(r)\cdot\d r$ on  $(0,\varpi\kappa)$.
+Consider the measure $\mu=\tilde s(r)\cdot\dd r$ on  $(0,\varpi\kappa)$.
 
 According to Corollary~\ref{cor:coarea-for-dist-function},
 \begin{align*}
-v(R)&=\int\limits_0^R s(r)\cdot\d r=\int\limits_0^R h(r)\cdot\dd_r \mu,
+v(R)&=\int\limits_0^R s(r)\cdot\dd r=\int\limits_0^R h(r)\cdot\dd_r \mu,
 \\
-\tilde v(R)&=\int\limits_0^R\tilde s(r)\cdot\d r=\mu(0,R).
+\tilde v(R)&=\int\limits_0^R\tilde s(r)\cdot\dd r=\mu(0,R).
 \end{align*}
 Therefore
 \begin{align*}
@@ -1196,7 +1196,7 @@ for the function $x\mapsto |x|$ on $\T_p$, we get
 \begin{align*}
 \vol_m[\oBall(o,1)_{\T_p}]
 &=
-\vol_{m-1}\Sigma_p\cdot\int\limits_0^1 R^{m-1}\cdot\d R=
+\vol_{m-1}\Sigma_p\cdot\int\limits_0^1 R^{m-1}\cdot\dd R=
 \\
 &=\tfrac1n\cdot\vol_{m-1}\Sigma_p
 \end{align*}
@@ -1270,7 +1270,7 @@ The complement of the inner locus
 is called 
 \index{cut locus}\emph{cut locus}.
 The cut locus of point $p$ will be denoted by $\CutLoc_p$;
-so $\CutLoc_p=\spc{L}\backslash\InnLoc_p$.
+so $\CutLoc_p=\spc{L}\setminus\InnLoc_p$.
 In other words, $q\in \CutLoc_p$ if there is no semiopen geodesic segments $\left[px\right[$ containing $q$. 
 \end{thm}
 

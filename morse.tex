@@ -57,9 +57,10 @@ Then $X_{n-1}=\emptyset$ if and only if $K(X)_{n}=\emptyset$.
  Suppose $X_{n-1}\ne\emptyset$.
 By construction of the stratification $X_{n-1}$ consists exactly of those points whose pointed conical neighbourhoods are homeomorphic to $\RR^{n-1}\times K(A)$ where $A$ is a finite set with $|A|\ne 2$. Therefore $K(X)$ contains a point whose  pointed conical neighbourhood is homeomorphic to $\RR^{n}\times K(A)$ and hence $K(X)_{n}\ne\emptyset$.
 
-Now suppose $X_{n-1}=\emptyset$ but  $K(X)_{n}\ne\emptyset$. Since $K(X)_{n}$ contains more than one point $\RR\times X$ also has nontrivial codimension 1 strata.   Let $X_{\le n-2}$ be the union of the strata of $X$ of dimension $\le n-2$.
+Now suppose $X_{n-1}=\emptyset$ but  $K(X)_{n}\ne\emptyset$.
+Since $K(X)_{n}$ contains more than one point $\RR\times X$ also has nontrivial codimension 1 strata.   Let $X_{\le n-2}$ be the union of the strata of $X$ of dimension $\le n-2$.
 
-Since $(\RR\times X)_n$ is an $n$-manifold and  $\RR\times X_{\le n-2}$ is at most $(n-1)$-dimensional there exists $p\in (\RR\times X)_n\backslash (\RR\times X_{\le n-2})$ i.e $p$ belongs to $\RR\times X_n$. But this means that  the pointed conical neighborhood of $p$ is homeomorphic to $\RR^{n+1}$ which contradicts the fact that $p$ lies in the  codimension 1 strata of $K(X)$.
+Since $(\RR\times X)_n$ is an $n$-manifold and  $\RR\times X_{\le n-2}$ is at most $(n-1)$-dimensional there exists $p\in (\RR\times X)_n\setminus (\RR\times X_{\le n-2})$ i.e $p$ belongs to $\RR\times X_n$. But this means that  the pointed conical neighborhood of $p$ is homeomorphic to $\RR^{n+1}$ which contradicts the fact that $p$ lies in the  codimension 1 strata of $K(X)$.
 \end{proof}
 As an immediate corollary we obtain
 
@@ -76,7 +77,7 @@ Also, If $X_n$ is orientable, then   $\bar H^{n}(X,\ZZ)\cong \ZZ$.
 \end{thm}
 \begin{proof}
 It easily follows from the assumptions that the top-dimensional strata $X_l$ is a {\it connected} topological manifold. Therefore, its compactly supported cohomology satisfies $\bar H^n_c(X_l,\ZZ_2)\cong \ZZ_2$.
-Let $X_{\le n-2}$ be the union of all strata of dimensions $\le n-2$. Then by the Alexander--Spanier duality we have $\bar H^n_c(X_l,\ZZ_2)=\bar H^n_c(X\backslash X_{\le n-2},\ZZ_2)\cong \bar H^n(X, X_{\le n-2},\ZZ_2)$. 
+Let $X_{\le n-2}$ be the union of all strata of dimensions $\le n-2$. Then by the Alexander--Spanier duality we have $\bar H^n_c(X_l,\ZZ_2)=\bar H^n_c(X\setminus X_{\le n-2},\ZZ_2)\cong \bar H^n(X, X_{\le n-2},\ZZ_2)$. 
 For dimension reasons we obviously have that $\bar H^{n-1}(X_{\le n-2},\ZZ_2)=0$ and $\bar H^{n}(X_{\le n-2},\ZZ_2)=0$.
 
 From the long exact sequence of the pair this gives
@@ -141,19 +142,19 @@ Let $X$ be a compact metric MCS-space,  $W\Subset V\Subset U\subset X$ be open s
 
 Let $\phi\co U\to X$ be an open embedding $\delta$-close to the inclusion $i$.
 
-Then there exists an open embedding $\psi\co U\to X$, $\varkappa(\delta)$-close to $i$ and such that  $\psi\equiv\phi$ on $W$ and $\psi\equiv i$ on $U\backslash V$.
+Then there exists an open embedding $\psi\co U\to X$, $\varkappa(\delta)$-close to $i$ and such that  $\psi\equiv\phi$ on $W$ and $\psi\equiv i$ on $U\setminus V$.
 
 (Here $\varkappa$ depends on $W,U,V,X$ but not on $\phi$).
 \end{thm}
 \begin{proof}
-Consider the open embedding $\phi |_{U\backslash \bar{W}}\co U\backslash \bar{W}\to X$. By the deformation theorem of Siebenmann~\cite[Theorem 5.4]{Sieb},  it can be perturbed to an open embedding $\phi_1\co U\backslash \bar{W}\to X$ which is $\varkappa(\delta)$-close to $i$,  coincides with $i$ on some neighborhood of $\partial V$ and is equal to $\phi$ outside some compact subset of  $U\backslash \bar{W}$. Now let
+Consider the open embedding $\phi |_{U\setminus \bar{W}}\co U\setminus \bar{W}\to X$. By the deformation theorem of Siebenmann~\cite[Theorem 5.4]{Sieb},  it can be perturbed to an open embedding $\phi_1\co U\setminus \bar{W}\to X$ which is $\varkappa(\delta)$-close to $i$,  coincides with $i$ on some neighborhood of $\partial V$ and is equal to $\phi$ outside some compact subset of  $U\setminus \bar{W}$. Now let
 
 \[
 \psi(x)=
 \begin{cases}
 \phi(x),\text{ for } x\in W\\
-\phi_1(x), \text{ for } x\in V\backslash W\\
-x, \text{ for } x\in U\backslash V
+\phi_1(x), \text{ for } x\in V\setminus W\\
+x, \text{ for } x\in U\setminus V
 \end{cases}
 \]
 
@@ -182,11 +183,11 @@ We can now continue with the proof of Theorem~\ref{gluingthm}.
 
 Suppose $U_{\a_1}\cap U_{\a_2}\ne \emptyset$. Let $U_1^4\Subset U_1^3\Subset U_1^2\Subset U_1^1\Subset U_{\a_1}$ and 
 $U_2^4\Subset U_2^3\Subset U_2^2\Subset U_2^1\Subset U_{\a_2}$ be open subsets such that $U_1^4, U_2^4$ still cover
-$X\backslash \cup_{\a\in \frak A\backslash\{\a_1,\a_2\}}U_\a$.
+$X\setminus \cup_{\a\in \frak A\setminus\{\a_1,\a_2\}}U_\a$.
 
 By Lemma~\ref{ontolem},  we have $\phi_{\a_1}(U_1^1\cap U_2^1)\subset \phi_{\a_2}(U_{\a_2})$ provided $\delta$ is sufficiently small.
 
-Therefore we can consider the open embedding $\phi_{\a_2}^{-1}\circ \phi_{\a_1}\co U_1^1\cap U_2^1\to U_{\a_2}$. Clearly, it is $2\delta$-close to the inclusion $i$. By Lemma~\ref{deflem}, there exists an open embedding $\psi\co U_1^1\cap U_2^1\to U_{\a_2}$, $\varkappa(\delta)$-close to $i$ and such that $\psi\equiv \phi_{\a_2}^{-1}\circ \phi_{\a_1}$ on $U_1^3\cap U_2^3$ and $\psi\equiv i$ on $U_1^1\cap U_2^1\backslash U_1^2\cap U_2^2$. We can extend $\psi$ to $U_2^1$ by setting $\psi\equiv i$ on $U_2^1 \backslash  U_1^2\cap U_2^2$ and define $\phi_{\a_2}'=\phi_{\a_2}\circ\psi$.
+Therefore we can consider the open embedding $\phi_{\a_2}^{-1}\circ \phi_{\a_1}\co U_1^1\cap U_2^1\to U_{\a_2}$. Clearly, it is $2\delta$-close to the inclusion $i$. By Lemma~\ref{deflem}, there exists an open embedding $\psi\co U_1^1\cap U_2^1\to U_{\a_2}$, $\varkappa(\delta)$-close to $i$ and such that $\psi\equiv \phi_{\a_2}^{-1}\circ \phi_{\a_1}$ on $U_1^3\cap U_2^3$ and $\psi\equiv i$ on $U_1^1\cap U_2^1\setminus U_1^2\cap U_2^2$. We can extend $\psi$ to $U_2^1$ by setting $\psi\equiv i$ on $U_2^1 \setminus  U_1^2\cap U_2^2$ and define $\phi_{\a_2}'=\phi_{\a_2}\circ\psi$.
 
 Now we define $\phi'\co U_1^4\cup U_2^4\to\tilde{X}$ by the formula
 \[
@@ -200,7 +201,7 @@ Now we define $\phi'\co U_1^4\cup U_2^4\to\tilde{X}$ by the formula
 It is clear that $\phi'$ is an open immersion and it's is actually an embedding provided $\delta$ is sufficiently small.
 
 Moreover, by Lemma~\ref{ontolem} we have 
-\[\tilde{X}\backslash \underset{\a\in \frak A\backslash\{\a_1,\a_2\}}  { \cup}\tilde{U}_\a\subset \phi'(U_1^4\cup U_2^4).\]
+\[\tilde{X}\setminus \underset{\a\in \frak A\setminus\{\a_1,\a_2\}}  { \cup}\tilde{U}_\a\subset \phi'(U_1^4\cup U_2^4).\]
 
  Now the statement of the theorem immediately follows by induction on the number of elements in $\frak A$.
 
@@ -605,7 +606,7 @@ Then there exists an admissible function $h\co \spc{L}\to\R$ with the following 
 
 %\begin{subthm}{} $p$ is the point of strict maximum of $h$ on $B(p,R)$.\end{subthm}
 \begin{subthm}{} \label{kl-reg}$h$ has a unique maximum in $B(p,R)\cap f^{-1}(v)$ for all $v\in \bar{I}^k(f(p),r) $.  Let $S$ denote the set of such maximum points.
-\item $(f,h)$ is regular on $\left(\bar{I}^k(f(p),r) \cap B(p,R)\right)\backslash S$.
+\item $(f,h)$ is regular on $\left(\bar{I}^k(f(p),r) \cap B(p,R)\right)\setminus S$.
 \end{subthm}
 \end{thm}
 
@@ -618,7 +619,7 @@ Let $f\co X^n\to\R^n$ be an admissible map. Then $f$ is locally bi-Lipschitz on 
 
 \parit{Proof  of Corollary~\ref{bilip}.}
 
-Let $p$ be a regular point of $f$.  By part a) of Lemma~\ref{lem-tight-diff}, $f$ is incomplementable at $p$. Let $h$ be the function in $B(p,R)$ provided by lemma~\ref{incompl}.  Then $(f,h)\co B(p,R)\backslash S\to\R^{n+1}$ is regular. However,  by part a) of Lemma~\ref{lem-tight-diff},  a map from $X^n$ to $\R^{n+1}$ can not have any regular points. Therefore $B(p,R)\backslash S=\emptyset$. By part (d) of Lemma \ref{incompl}, this is equivalent to saying that $B(p,R)\cap f^{-1}(v)$  consists of a single point for all $v\in \bar{I}^k(f(p),r)$  which means that $f$ is  injective near $p$. Finally, recall that being regular,  $f$ is both Lipschitz and co-Lipschitz near $p$, which together with local injectivity means that it is locally bi-Lipschitz on  $X_{reg}(f)$.\qeds
+Let $p$ be a regular point of $f$.  By part a) of Lemma~\ref{lem-tight-diff}, $f$ is incomplementable at $p$. Let $h$ be the function in $B(p,R)$ provided by lemma~\ref{incompl}.  Then $(f,h)\co B(p,R)\setminus S\to\R^{n+1}$ is regular. However,  by part a) of Lemma~\ref{lem-tight-diff},  a map from $X^n$ to $\R^{n+1}$ can not have any regular points. Therefore $B(p,R)\setminus S=\emptyset$. By part (d) of Lemma \ref{incompl}, this is equivalent to saying that $B(p,R)\cap f^{-1}(v)$  consists of a single point for all $v\in \bar{I}^k(f(p),r)$  which means that $f$ is  injective near $p$. Finally, recall that being regular,  $f$ is both Lipschitz and co-Lipschitz near $p$, which together with local injectivity means that it is locally bi-Lipschitz on  $X_{reg}(f)$.\qeds
 
 The proof of Key Lemma~\ref{incompl} will use the following easy observation
 
@@ -1006,7 +1007,7 @@ If $f$ is complementable at $p$ the statement follows by the induction assumptio
 \begin{comment}Suppose for simplicity that $h$ is identically zero on $S$. 
 Let $U= f^{-1}\left(\bar{I}^k(f(p),r) \right)\cap\{-A<h<0\}\cap B(p,R)$ and $W=f^{-1}\left(\bar{I}^k(f(p),r) \right)\cap\{-A<h\le 0\}\cap B(p,R)$
 
-Then $U=W\backslash S$ and $(f,h)$ is regular on $U$. Therefore the  local fibration theorem holds for $(f,h)$ on $U$ by induction assumption.  
+Then $U=W\setminus S$ and $(f,h)$ is regular on $U$. Therefore the  local fibration theorem holds for $(f,h)$ on $U$ by induction assumption.  
 
 By Lemma~\ref{incompl}, $(f,h)$ is proper on $U$ and hence, 
 $(f,h)\co U\to \bar{I}^k(f(p),r)\times (-A,0)$ is a  bundle map by~\cite[6.10]{Sieb}. This means that
@@ -1047,8 +1048,8 @@ This proves the induction step and concludes the proof of Theorem~\ref{fibration
  Let $\spc{L}$ be an $n$-dimensional complete length $\Alex{}$ space and let $p\in \spc{L}$ be any point. Then there exists $\eps>0$ such that for any $0<r\le\eps$ the sphere $S(p,r)$ is homeomorphic to $S(p,\eps)$ and $(B(p,r),p)$ is homeomorphic to the cone $(CS(p,\eps),o)$
  \end{thm}
 \begin{proof}
-By ??? (is this proved somewhere yet?) there is $\eps>0$ such that  $f=\distfun{p}{}{}$ has no critical points in $B(p,2\eps)\backslash\{p\}$.
-Therefore by the Fibration Theorem ~\eqref{fibration}, it's a bundle map from $B(p,2\eps)\backslash\{p\}$ to $(0,2\eps)$. This easily yields the result.
+By ??? (is this proved somewhere yet?) there is $\eps>0$ such that  $f=\distfun{p}{}{}$ has no critical points in $B(p,2\eps)\setminus\{p\}$.
+Therefore by the Fibration Theorem ~\eqref{fibration}, it's a bundle map from $B(p,2\eps)\setminus\{p\}$ to $(0,2\eps)$. This easily yields the result.
 \end{proof}
 It will follow from the Stability Theorem that under the assumptions of Corollary ~\ref{sphere-neighb}, $S(p,\eps)$ is homeomorphic to $\Sigma_p\spc{L}$ if $\eps$ is sufficiently small but we can no claim this yet.
 Once this is proved we can derive the following result (??? can this be proved without using stability???)
@@ -1189,7 +1190,7 @@ then $\<v_\o,w_\o\>\le 0$
 
 \begin{thm}{Domain invariance}
 Let $\spc{L}$ and $\spc{M}$ be $m$-dimensional complete length $\Alex{}$ spaces,
-$\Omega\subset\spc{L}\backslash\partial\spc{L}$ be an open set
+$\Omega\subset\spc{L}\setminus\partial\spc{L}$ be an open set
 and $f\:\Omega\to\spc{M}$ be a continuous injective map.
 Prove that $f$ is open.
 \end{thm}
