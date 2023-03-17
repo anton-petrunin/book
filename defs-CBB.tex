@@ -445,7 +445,7 @@ The angle $\mangle\hinge{x}{p}{y}$ is defined and
 The proof is contained in the first part of \ref{SHORT.2-sum}$+$\ref{SHORT.point-on-side}$\Rightarrow$\ref{SHORT.angle} of the proof above.
 
 \begin{thm}{Exercise}\label{ex:equality-alexlemma} 
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space,
+Let $\spc{L}$ be a $\Alex{\kappa}$ space,
 $p,x,y\in \spc{L}$
 and $v,w\in \mathopen{]}xy\mathclose{[}$.
 Prove that  
@@ -908,8 +908,7 @@ A generalization for non-complete but geodesic spaces was obtained by the third 
 }
 
 \begin{thm}{Advanced exercise}\label{ex:noncomplete-globalization}
-Assume $\spc{X}$ is a geodesic locally  $\Alex\kappa$ space. 
-Prove that the completion of $\spc{X}$ is $\Alex\kappa$.
+Any locally $\Alex\kappa$ geodesic space is $\Alex\kappa$.
 \end{thm}
 
 The following corollary of the globalization  theorem says that the expression ``space with curvature $\ge \kappa$'' makes sense.
@@ -990,7 +989,8 @@ Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise switch the roles of $p$ and $q
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell. \eqlbl{3|xx'|}\]
-Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.(In fact by \ref{cor:unique-geod-cbb} the condition $[x' q]\subset [x q]$ always holds.)
+Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
+(In fact by \ref{cor:unique-geod-cbb} the condition $[x' q]\subset [x q]$ always holds.)
 Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
 
 Further, note that we have $x,x'\in \oBall(p,\ell)\cap \oBall(q,\ell)$ and moreover
@@ -1010,7 +1010,7 @@ In particular,
 {
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-820}
 \vskip-4mm
@@ -1071,7 +1071,7 @@ Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk\kappa{x_n}{p_n}{x_{n+1}}$, we ha
 $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
 
 It follows that
-\[\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side\kappa \hinge{x_n}p q\to 0.\] 
+\[r_n-s_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side\kappa \hinge{x_n}p q\to 0.\] 
 (Here we used that $\ell\le\varpi\kappa$.) 
 Together with the triangle inequality
 \[
@@ -1521,7 +1521,7 @@ Assume $\spc{L}$ is geodesic.
 Choose a sequence of geodesics $[x_n q]$.
 Let $[x_n q]\to [pq]_{\spc{L}^\o}$  as $n\to\o$ (in general $[pq]$ might lie in $\spc{L}^\o$).
 Applying both parts of hinge comparison (\ref{angle}), 
-we have $\mangle\hinge {x_n}{q}{x}\z<\phi-\tfrac\eps2$  for all large $n$.
+we have $\mangle\hinge {x_n}{q}{x}\z<\phi-\tfrac\eps2$ for all large~$n$.
 According to \ref{lem:ang.semicont-cbb}, the angle between $[pq]$ and $[px]$ is at most $\phi-\tfrac\eps2$, a contradiction.
 
 
@@ -1605,7 +1605,7 @@ This is a consequence of \ref{comp-kappa}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:fixed-point}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex1$ space and $\diam\spc{L}\le\pi$.
+Let $\spc{L}$ be a complete length $\Alex1$ space that is not exceptional (that is, $\diam\spc{L}\le\pi$).
 Assume that a group $G$ acts on  $\spc{L}$ by isometries, has closed orbits, and 
 \[\diam(\spc{L}/G)>\tfrac\pi2.\]
 Show that the action of $G$ has a fixed point in $\spc{L}$.
