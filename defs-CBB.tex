@@ -336,9 +336,9 @@ $\mangle\hinge x p y$ is defined and
 \[\mangle\hinge x p y\ge\angk\kappa x p y,\]
 or equivalently
 \[\side\kappa \hinge x p y\ge\dist{p}{y}{}.\]
-Moreover, if $z\in\mathopen{]}x y\mathclose{[}$ and $z\ne p$, then 
+Moreover, 
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
-for any two hinges $\hinge z p y$ and $\hinge z p x$ with common side $[z p]$.
+for any two adjacent hinges $\hinge z p y$ and $\hinge z p x$.
 \end{subthm}
 
 Moreover, in each case, the converse holds if $\spc{L}$ is G-delta geodesic.
@@ -788,8 +788,9 @@ Namely, we proved the following lemma, which will be needed later in the proof o
 
 \begin{thm}{Short hinge lemma}\label{lem:devel-glob}
 Let $\spc{L}$ be a complete G-delta geodesic space such that for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined, 
-and moreover if $x\in \mathopen{]}y z\mathclose{[}$ then
-\[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
+and 
+\[\mangle\hinge x p y+\mangle\hinge x p z\le \pi\] 
+for any two adjacent hinges.
 
 Assume that  for any hinge $\hinge x p y$ in $\spc{L}$ we have
 \[\dist{p}{ x}{}+\dist{x}{ y}{}
@@ -863,13 +864,10 @@ where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\
 
 \begin{subthmN}{angle-loc} (local hinge comparison) 
 there is $R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}}>0$ such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$ is G-delta geodesic and if $x\in \oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
-
-(1) for any hinge $\hinge x q y$, the angle 
+for any hinge $\hinge x q y$, the angle 
 $\mangle\hinge x q y$ is defined, and
-
- (2) if $x\in \mathopen{]}y z\mathclose{[}$, then
-\[\mangle\hinge x q y+ \mangle\hinge x q z\le\pi.\]
-(Let us recall that $\hinge x q y$ and $\hinge x q z$  are short notations for the pairs $([x q],[x y])$ and $([x q],[x z])$,  thus these two hinges automatically have common side $[x q]$.)
+\[\mangle\hinge x q y+ \mangle\hinge x q z\le\pi\]
+for any two adjacent hinges.
 Moreover, if a hinge $\hinge x q y$ lies in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.angle-loc}}})$, then 
 \[\mangle\hinge x q y
 \ge\angk\kappa x q y,\]
@@ -1132,8 +1130,9 @@ Exactly the same argument as in the proof of Theorem~\ref{thm:almost.geod}
 shows that $\spc{L}$ is G-delta geodesic.
 By Theorem~\ref{angle-loc}, 
 for any hinge $\hinge x p y$ in $\spc{L}$ the angle $\mangle\hinge x p y$ is defined 
-and moreover, if $x\in \mathopen{]}y z\mathclose{[}$ then
-\[\mangle\hinge x p y+\mangle\hinge x p z\le \pi.\] 
+and 
+\[\mangle\hinge x p y+\mangle\hinge x p z\le \pi\] 
+for any two adjacent hinges.
 
 Let us denote by $\ComRad(p,\spc{L})$ 
 (which stands for \index{comparison radius}\emph{comparison radius} of $\spc{L}$ at $p$) 
@@ -1276,7 +1275,7 @@ Therefore we can apply \ref{SHORT.nonsplit}.
 
 \begin{thm}{Adjacent angle lemma}\label{lem:sum=pi}
 Let $\spc{L}$ be a $\Alex{}$ space.
-Assume that two hinges $\hinge z x p$ and $\hinge z y p$ in $\spc{L}$ are \index{adjacent hinges}\emph{adjacent}; that is, they share a common side $[zp]$ and $z\in\mathopen{]}xy\mathclose{[}$.
+Assume that two hinges $\hinge z x p$ and $\hinge z y p$ in $\spc{L}$ are adjacent.
 Then 
 \[\mangle\hinge z p y + \mangle\hinge z p x=\pi. \]
 

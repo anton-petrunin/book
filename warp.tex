@@ -345,16 +345,16 @@ we will use the following proposition.
 
 The proof is left to the reader.
 
-\parit{Proof of \ref{thm:warp-curv-bound:cbb}.}
+\parit{Proof of \ref{thm:warp-curv-bound:cbb} and \ref{thm:warp-curv-bound:cat}.}
 Each proof is based on the fiber-independence theorem~\ref{thm:fiber-independence} 
 and 
 the corresponding statement in Proposition~\ref{prop:warp-examples}.
 
-Let us prove the last statement in \ref{SHORT.thm:warp-curv-bound:cbb:S}; the remaining statements are similar.
+Let us prove the last statement in \ref{SHORT.thm:warp-curv-bound:cbb:S}; the remaining statements of this theorem are similar.
 Choose an arbitrary quadruple of points 
 \[(s,\phi),(t^1,\phi^1),(t^2,\phi^2),(t^3,\phi^3)\in[0,\infty)\warp{\sinh} \spc{L}.\]
 Since $\diam\spc{L}\le\pi$,
-the (1+\textit{n})-point comparison (\ref{thm:pos-config}) provides a quadruple of points $\psi,\psi^1,\psi^2,\psi^3\in\mathbb{S}^3$ such that 
+the (1+3)-point comparison (\ref{thm:pos-config}) provides a quadruple of points $\psi,\psi^1,\psi^2,\psi^3\in\mathbb{S}^3$ such that 
 \[\dist{\psi}{\psi^i}{\mathbb{S}^3}=\dist{\phi}{\phi^i}{\spc{L}}\] 
 and
 \[\dist{\psi^i}{\psi^j}{\mathbb{S}^3}\ge\dist{\phi^i}{\phi^j}{\spc{L}}\]
@@ -371,7 +371,24 @@ By the fiber-independence theorem~\ref{thm:fiber-independence},
 and
 \[\dist{(t^i,\psi^i)}{(t^j,\psi^j)}{[0,\infty)\warp{\sinh}\mathbb{S}^3}\ge\dist{(t^i,\phi^i)}{(t^j,\phi^j)}{[0,\infty)\warp{\sinh}\spc{L}}\]
 for all $i$ and $j$.
-Since four points of $\Lob{4}{-1}$ lie in an isometric copy of $\Lob{3}{-1}$, it remains to apply Exercise \ref{ex:(3+1)-expanding}.\qeds
+Since four points of $\Lob{4}{-1}$ lie in an isometric copy of $\Lob{3}{-1}$, it remains to apply Exercise \ref{ex:(3+1)-expanding}.
+
+\medskip
+
+Now let us prove the converse to \ref{SHORT.thm:warp-curv-bound:cbb:S}.
+Choose a quadruple $\phi$, $\phi^1$, $\phi^2$, $\phi^3\in\spc{L}$ with all distances smaller than $\tfrac\pi2$.
+Choose small $s>0$ and let $t_i$ be the hypotenuse in a hyperbolic right triangle with angle $\dist{\phi}{\phi^i}{\spc{L}}$ and the adjacent side $s$.
+Observe that the $\Lob{}{-1}$ model angles of the quadruple 
+$(s,\phi)$, $(t^1,\phi^1)$, $(t^2,\phi^2)$, $(t^3,\phi^3)$ in $[0,\infty)\warp{\sinh} \spc{L}$
+at $(s,\phi)$ are the same as the $\Lob{}{1}$ model angles of the quadruple $\phi$, $\phi^1$, $\phi^2$, $\phi^3\in\spc{L}$ at $\phi$.
+Whence $\Alex{}1$ comparison holds for $\phi,\phi^1,\phi^2,\phi^3$;
+in particular, $\spc{L}$ is locally $\Alex1$.
+It remains to apply the globalization theorem (\ref{thm:glob}). 
+
+\medskip
+
+The proof of \ref{thm:warp-curv-bound:cat} is nearly identical, but one has to apply (2+2)-comparison (\ref{ex:sba-2+2-short}).
+\qeds
 
 \begin{thm}{Exercise}\label{ex:spherical-join}
 The 
