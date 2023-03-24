@@ -420,15 +420,11 @@ $\eps>0$,
 and $f,g\:\spc{Z}\to \RR$ be two $\lambda$-concave locally Lipschitz function such that $|f-g|<\eps$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Assume
-$\alpha,\beta\:[0,t_{\max})\to \spc{Z}$ are respectively $f$- and $g$-gradient curves such that $\alpha(0)=\beta(0)$.
+$\alpha,\beta\:[0,t_{\max})\to \spc{Z}$ are respectively $f$- and $g$-gradient curves.
+Let $\ell\:t\mapsto\dist{\alpha(t)}{\beta(t)}{}$.
 Then 
-\[\dist{\alpha(t)}{\beta(t)}{}
-\le
-\sqrt{\tfrac{1}{2\cdot\eps\cdot\lambda}
-\cdot
-\left(e^{\frac{t\cdot\lambda}\eps}-1\right)}\]
-for any $t\in[0,t_{\max})$.
-In particular, if $t_{\max}<\infty$ then
+\[\ell^+\le \lambda\cdot\ell+\tfrac{2\cdot\eps}{\ell}.\]
+In particular, if  $\alpha(0)=\beta(0)$ and $t_{\max}<\infty$ then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le
 \Const\cdot\sqrt{\eps\cdot t}\]
@@ -449,14 +445,9 @@ From the first variation formula and \ref{lem:grad-lip},
 &\le -{\left({f(q)}-{f(p)}-\lambda\cdot\tfrac{\ell^2}2\right)}/{\ell}
 -{\left({g(p)}-{g(q)}-\lambda\cdot\tfrac{\ell^2}2\right)}/{\ell}\le
 \\
-&\le \lambda\cdot\ell+\tfrac{2\cdot\eps}{\ell}
-.
+&\le \lambda\cdot\ell+\tfrac{2\cdot\eps}{\ell}.
 \end{align*}
-Integrating the above estimate, we get
-\[\ell(t)
-\le
-\sqrt{\tfrac{1}{2\cdot\eps\cdot\lambda}
-\cdot\left(e^{\frac{t\cdot\lambda}\eps}-1\right)}.\]
+By integrating, we get the second statement.
 \qedsf
 
 

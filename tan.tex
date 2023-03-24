@@ -466,10 +466,11 @@ where
 
 \end{thm}
 
-\parit{Proof of \ref{lem:ohta}.}
+\parit{Proof.}
 If $\spc{Z}$ is $\CAT{}$, then the statement follows from \ref{lem:d(CAT)}.
 Indeed, let $z$ be the midpoint of a geodesic $[uv]_{\T_p}$. 
-Observe that $2\cdot |z|\z=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
+Observe that 
+\[2\cdot |z|\z=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}.\]
 Since $\dd_pf$ is concave, we have that 
 \[2\cdot\dd_pf(z)\ge \dd_pf(u)+\dd_pf(v).\]
 It remains to choose $\xi\in \Sigma_p$ so that $\xi\cdot |z|=z$ and observe that $s\ge \dd_p(\xi)$.
@@ -519,7 +520,7 @@ we have $\dist{u_t}{v_t}{}=t\cdot\dist{\tilde u}{\tilde v}{}+o(t)$
 and $\dist{u_t}{q_t}{}=t\cdot\dist{\tilde u}{\tilde q}{}+o(t)$ 
 (see Theorem~\ref{angle} and Section~\ref{sec:angle}).
 
-From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{SHORT.angle}), we have
+From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{angle}), we have
 \[\angk\kappa{v_t}p{w_t}
 \ge
 \angk\kappa{v_t}p{u_t}
@@ -540,7 +541,7 @@ $\angk\kappa{v_t}p{w_t}
 \to
 \mangle\hinge{\tilde v}{\tilde p}{\tilde w}$ as $t\to0+$
 and thus 
-\[\dist{p}{w_t}{}=t\dist{\tilde p}{\tilde w}{}+o(t).\]
+\[\dist{p}{w_t}{}=t\cdot\dist{\tilde p}{\tilde w}{}+o(t).\]
 
 Since $f$ is $\lambda$-concave, we have 
 \begin{align*}
@@ -567,7 +568,7 @@ Namely:
 more precisely, 
 \[\dist{u_t}{\exp_p(t\cdot u)}{}=o(t).\] 
 Thus instead of $\dist{p}{u_t}{}=t\cdot|u|$ we have 
-\[\dist{p}{u_t}{}=t|u|+o(t),\] and this is sufficient for the rest of proof.
+\[\dist{p}{u_t}{}=t\cdot|u|+o(t),\] and this is sufficient for the rest of proof.
 \item The direction $\dir p{w_t}$ might be undefined.
 Thus in the estimate \ref{eq:lem:ohta*}, instead of $\dir p{w_t}$ one should take $\dir p{w'_t}$ for some point $w_t'\in \Str(p)$ near $w_t$ (that is, $\dist{w_t}{w_t'}{}=o(t)$).
 \end{enumerate}
@@ -652,9 +653,11 @@ Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
 that is, the sequence $\xi_n$ is Cauchy.
 Clearly $\overline{\xi}=\lim_n\xi_n$ satisfies \ref{overlinexi}.
 \qeds
+
 \begin{thm}{Example}\label{l-inf-grad}
 Let $\spc{X}=\R^2$ and $f(v)=-|v|_\infty$. Then $f$ is concave. At points different from the orgin with $|x|\ne |y|$ the  gradient has length 1 and is parallel to either the $x$ or the $y$ axis but when $|x|=|y|$ it has length $1/\sqrt{2}$ and is tangent to $|x|=|y|$. For example for $p=(1,1)$ we have $\nabla_p(f)=(-\frac{1}{2},-\frac{1}{2})$.
 \end{thm}
+
 \section{Calculus of gradient}\label{sec:grad-calculus}
 
 The next lemma states that the gradient points 
