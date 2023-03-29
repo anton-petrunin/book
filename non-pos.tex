@@ -9,15 +9,6 @@ Let $\spc{U}$ be a complete length $\CAT0$ space and $\ell???$ be a line in $\sp
 Then $\spc{U}_\ell$ is a closed convex subset of $\spc{U}$ and it admits an isometric splitting $\spc{U}_\ell=\ell^\perp\oplus\ell$
 \end{thm}
 
-
-
-
-
-
-
-
-}
-
 %\begin{thm}{Exercise} 
 %(Gluing with short maps)
 % Let $X,X' \in\Cat{}{0}$, $K \subset X, K' \subset X'$ be closed convex subsets, 
@@ -57,7 +48,7 @@ by linear reparametrization of the fibers:
 \begin{eqnarray}
 \phi_\epsilon^{(i)}: (p,y) \to ( p,f(p)[y-2i\epsilon) .                                                                                                                                                                                                                                                                                                         
 \end{eqnarray}
-Take the metric of $W_\epsilon$ to be that induced from $B_{\cs_k}}\times R$,
+Take the metric of $W_\epsilon$ to be that induced from $B_{\cs\kappa}\times R$,
 where $k$ will be chosen to control the curvature of $W_\epsilon$ in the limit.
 %ad chordn so consrol shd curvasurd oe We hn shd lhmhs- In shd BAA card+
 %shhr curvasurd consrol ddpdndr on Pdrdlman'r doualhnf s hdordm [P]+ rdd
@@ -89,7 +80,8 @@ Specifically,  take $K\in \{-1,0\}$.  If $K = 0$, let $ k = 0$.  If $ K =  -  1$
 
 (CBB)Let $B$ be a complete, finite-dimensional space of CBB by $K$
 with empty boundary, and $f : B \to \R_{ > 0}$ be a positive K-concave 
-function. Then the strip space $W_\epsilon$, formed by sequentially gluing strips $W_\epsilon^{(n)} \subset $ {B_{\cs_K}} \times \R$,
+function.
+Then the strip space $W_\epsilon$, formed by sequentially gluing strips $W_\epsilon^{(n)} \subset  {B_{\cs{K}}} \times \R$,
 has CBB by $K$.
 
 (CBA) Let $B$ be a CAT(K) space  and  $f : B \to \R_{\ge 0}$
@@ -98,13 +90,13 @@ $K$-convex function. Then for $\epsilon$ sufficiently small, the augmented strip
 space $W^*_\epsilon$, formed by attaching "fins" to $W_\epsilon$, is CAT($K$) for $k = k(\epsilon)$ as
 above.
 
-Proof. First note that ${B_{\cs_k}}\times\R$  has CBB by k in the case (CBB), and CBA
+\parit{Proof.} First note that ${B_{\cs\kappa}}\times\R$  has CBB by k in the case (CBB), and CBA
 by $k$ in the case (CBA). Such standard coning constructions are discussed,
 for example, in [BuBI]. Now by the doubling and gluing theorems, 
-respectively, we need only show that in the CBB case, the strip $W_\epsilon^{(i)}$   defined as above is convex in ${B_{\cs_k}}\times \R$, and in the CBA case, the  fin $U_\epsilon}^{(i)}$ defined as above is convex in $ {B_{\cs_k}}\times \R$   
+respectively, we need only show that in the CBB case, the strip $W_\epsilon^{(i)}$   defined as above is convex in ${B_{\cs\kappa}}\times \R$, and in the CBA case, the fin $U_\epsilon^{(i)}$ defined as above is convex in $ {B_{\cs\kappa}}\times \R$   
 when $\epsilon$ is sufficiently small.
 
-Since minimizers in ${B_{\cs_k}}\times\R$ project t\o minimizers in $B$ (Lemma ),                                                                                                                                                                                                                                                                                                                                                                                             
+Since minimizers in ${B_{\cs\kappa}}\times\R$ project t\o minimizers in $B$ (Lemma ),                                                                                                                                                                                                                                                                                                                                                                                             
 convexity ol tfie strip $W_\epsilon^{(i)}$ or fin $U_\epsilon^{(i)}$is equivalent to convexity in the
 cylinder above a minimizer in $B$. If $k = 0$, this is immediate from the
 concavity (CBB) or convexity (BA) of $f$ along geodesies of $B$. In the
@@ -117,22 +109,20 @@ fine inscriptions by broken $\mathcal{F}(-1)$-affine graphs, and the one-sided t
 vectors of these inscriptions rotate downward (CBB) or upward (CBA) at thee breaks. Therefore it suffices for this calculation to take  $f\in \mathcal{F}(-1)$
 with a given Lipschitz constant.
 
-Writing the metric as ds^2$   = \cosh^2 (\sqrt{-k}u)dt^2 + du^2$ , we calculate the
+Writing the metric as $ds^2   = \cosh^2 (\sqrt{-k}u)dt^2 + du^2$ , we calculate the
 curvature vector of the curve $u = \epsilon f$. Specifically, if $V = \partial_t + f'(t)\partial_u$ is
 the velocity vector and $N$ is the unit normal, then the $\partial_u$-component of the
 curvature vector $\kappa N$ is
 \begin{eqnarray}
 |v|^{-4}    [\cosh^2 \sqrt{-k}\epsilon f (\epsilon f"- \sqrt{-k}\cosh    \sqrt{-k}\epsilon f \sinh\sqrt{-k} \epsilon f) \nonumber \\
 - 2\epsilon^2(f')^2\cosh    \sqrt{-k}\epsilon f \sinh\sqrt{-k} \epsilon f) 
-\end{eqnarray
+\end{eqnarray}
 
 
 (CBB) The condition tor convexity of $W_i^{(\epsilon)}$   is that $\kappa N$ point downward,
 hence that this expression  be nonpositive. After substituting $f''=f$ 
-and multiplying by $|v|^4/\epsilon f \cosh^2 \sqrt{-k}$ \epsilon f/\sqrt{-k}$+2\epsilon^2$, we find that concavity is detected
+and multiplying by $|v|^4/\epsilon f \cosh^2 \sqrt{-k} \epsilon f/\sqrt{-k}+2\epsilon^2$, we find that concavity is detected
 by the following inequality:
-
-__       ^      __        __                                                                                                                                                                                                                                                                                                                              __       __
 
 \begin{equation}
  (-k)[(\cosh\sqrt{-k}\epsilon f)\sinh\sqrt{-k}\epsilon f/\sqrt{-k}\epsilon f+2\epsilon^2 (f')^2(\tanh\sqrt{-k}\epsilon f)/\sqrt{-k}\epsilon f]\ge 1.  
@@ -145,7 +135,7 @@ term and the second term is positive .
 upward, hence the inequality in (5.5) to be reversed. Since $f'$and $f$are
 bounded, the left-hand expression is on the order of $k[1+C\epsilon^2]$ for a uniform
 constant C. Thus the reversed inequality (5.5) is satisfied for e sufficiently
-small if $k = k(\epsilon) = -1 + \epsilon$$.
+small if $k = k(\epsilon) = -1 + \epsilon$.
 
 \section{Jacobi lengths}
 \label{sec:jacobi-length}
@@ -167,7 +157,7 @@ such that $q_n\to q$ as $n\to\infty$ and
 =
 \lim_{n\to\infty}\frac{\dist{\geod_{[pq_n]}(t)}{\geod_{[pq]}(t)}{}}{\dist{q_n}{q}{}}.\]
 
-The geodesic $[pq] 
+The geodesic $[pq]$
 %is said to satisfy \emph{Jacobi splitting} if 
 %for any normal Jacobi length $f$ along $[pq]$, 
 %%the sequence of geodesics $[pq_n]$ as above we have
@@ -177,6 +167,7 @@ f_n(t)^2\cdot\dist[2]{q}{q_n}{}
 |t-t_n|^2
 +
 o(\dist[2]{q}{q_n}{}+|t-t_n|^2).\]
+
 \end{thm}
 
 
