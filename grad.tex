@@ -461,17 +461,32 @@ For example, consider the concave function $f\:\RR\to\RR$, $f(x)\z=-|x|$. The
 two curves $\alpha(t)=\min\{0,t\}$ with $\beta(t)=0$
 are $f$-gradient with $\alpha(t)\z=\beta(t)\z=0$ for all $t\ge0$; 
 however $\alpha(t)\z\ne\beta(t)$ for all $t<0$.
+Another example can be given as follows.
 
-Another example can be given as follows
+\begin{wrapfigure}[8]{r}{34 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1215}
+\vskip0mm
+\end{wrapfigure}
 
 \begin{thm}{Example}
-Let $\spc{X}=\R^2$ and $f(v)=-|v|_\infty$. Then $f$ is concave. Recall  that at points $(x,y)\ne 0$ with $|x|\ne |y|$ the gradient has length 1 and is parallel to either the $x$ or the $y$ axis, while  at nonzero points with $|x|=|y|$ the gradient is equal to $(\pm \frac{1}{2},\pm\frac{1}{2})$.
+Let $f$ be the concave function on the $(x,y)$-plane from \ref{l-inf-grad};
+its gradient field is sketched on the figure.
 
-Let $p=(x,y)$ where $x>y>0$.
-Let $\alpha$ be the $f$-gradient curve starting at $p$.
-Then $\alpha(t)=(x-t, y)$ for $t\in [0,x-y]$ but once it reaches the point $(y,y)$ it follows the line $x=y$ until it hits 0.
-That is for $q=(y,y)$ with $y>0$ the $f$-gradient curve $\beta$ starting at $q$ is given by $\beta (t)=(y-t/2, y-t/2)$ for $t\le 2y$ and $\beta(t)=(0,0)$ for $t\ge 2y$.
-In particular, we see that even in the region where $|\nabla f|\ne 0$ gradient curves can merge and hence their \textit{past} can not be uniquely determined from their \textit{present}.
+Let $\alpha$ be an $f$-gradient curve that starts at $p=(x,y)$ for $x>y>0$.
+Then 
+\[\alpha(t)=
+\begin{cases}
+(x-t,y-t) &\text{for}\quad 0\le t\le  x-y,
+\\
+(x-t,0) &\text{for}\quad x-y\le t\le  x,
+\\
+(0,0) &\text{for}\quad x\le t,
+\end{cases}
+\]
+In particular, gradient curves can merge even in the region where $|\nabla f|\z\ne 0$. 
+Hence their \textit{past} cannot be uniquely determined from their \textit{present}.
 \end{thm}
 
 
@@ -1871,7 +1886,9 @@ In particular, the gradient of $f$ is defined at all points of any
 $f$-gradient curve, with the possible exception of the initial point.
 
 \begin{thm}{Example}
-Let $\spc{X}=L^2(\R^n)$. Let $F\co \spc{X}\to \R$ be given  by $F(f)=-\int|\nabla f|^2d\mathcal L$. Then $F$ is a concave but not locally Lipschitz functional on $\spc{X}$ and its finite precisely at functions $f\in W^{1,2}(\R^n)\subset L^2(\R^n)$. Integration by parts show that for any smooth $f\in W^{1,2}(\R^n)$ it holds that $\nabla_fF=\Delta f$.
+Let $\spc{X}=L^2(\R^n)$. Let $F\co \spc{X}\to \R$ be given  by $F(f)=-\int|\nabla f|^2d\mathcal L$.
+Then $F$ is a concave but not locally Lipschitz functional on $\spc{X}$ and its finite precisely at functions $f\in W^{1,2}(\R^n)\subset L^2(\R^n)$.
+Integration by parts shows that for any smooth $f\in W^{1,2}(\R^n)$ it holds that $\nabla_fF=\Delta f$.
 The gradient flow of F is given by the heat flow $f_t$ starting at $f$ and $f_t$ is smooth for all positive $t$.
 \end{thm}
 

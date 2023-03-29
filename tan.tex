@@ -654,8 +654,22 @@ that is, the sequence $\xi_n$ is Cauchy.
 Clearly $\overline{\xi}=\lim_n\xi_n$ satisfies \ref{overlinexi}.
 \qeds
 
+\begin{wrapfigure}[8]{r}{34 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1215}
+\vskip0mm
+\end{wrapfigure}
+
 \begin{thm}{Example}\label{l-inf-grad}
-Let $\spc{X}=\R^2$ and $f(v)=-|v|_\infty$. Then $f$ is concave. At points different from the orgin with $|x|\ne |y|$ the  gradient has length 1 and is parallel to either the $x$ or the $y$ axis but when $|x|=|y|$ it has length $1/\sqrt{2}$ and is tangent to $|x|=|y|$. For example for $p=(1,1)$ we have $\nabla_p(f)=(-\frac{1}{2},-\frac{1}{2})$.
+Consider the Euclidean plane with standard $(x,y)$-coordinates.
+Then the function $f\:(x,y)\mapsto -|x|-|y|$ is concave;
+its gradient field is sketched on the figure.
+
+If a point does not lie on an axis, then its gradient has length $\sqrt2$ and 
+takes one of four values $(\pm1,\pm1)$ depending on the quadrant of the point.
+At the origin the gradient vanish, 
+and on the on the remaining parts of the $x$-axis and $y$-axis it is $(\pm1,0)$ and $(0,\pm 1)$ respectively. 
 \end{thm}
 
 \section{Calculus of gradient}\label{sec:grad-calculus}
@@ -1041,14 +1055,20 @@ $|u^*|\le |u|$.
 \end{thm}
 
 Milka's lemma provides a refinement of this statement;
-it states that in the finite-dimensional $\Alex{}$ space, any tangent vector $u$ has a polar vector $u^*$ such that $|u^*|= |u|$. 
+it states that in the finite-dimensional $\Alex{}$ space, any tangent vector $u$ has a polar vector $u^*$ such that $|u^*|= |u|$.
+
+\begin{thm}{Example}
+Let $\spc{L}$ be the upper half space of the Euclidean space $\EE^n$;
+that is, $\spc{L}=\{(x_1,\ldots, x_n)\in \EE^n\mid x_n\ge 0\}$.
+It is a complete length $\Alex{0}$ space.
+For $p=0$, the tangent space $\T_p$ can be canonically identified with $\spc{L}$.
+Then any vector $u=(v_1,\ldots, v_n)\in \T_p$
+a unique polar vector such that $|u^*|=|u|$ which is $u^*=(-v_1, \ldots, -v_{n-1}, v_n)$.
+However, if $v_n\ne 0$, then $u$ has other polar vectors, in particular $(-v_1, \ldots, -v_{n-1}, 0)$.
+\end{thm}
 
 It is instructive to solve the following exercise before reading the proof of \ref{lem:minus-sum}.
 
-\begin{thm}{Example}
-Let $n\ge 2$ and let  $\spc{L}=\{(x_1,\ldots, x_n)\in \R^n\mid x_n\ge 0\}$ be the upper half space in $\R^n$. It is a complete length $\Alex{0}$ space.
-Let $p=0$. Then $T_p$ can be canonically identified with $ \spc{L}$.  Let $u=(v_1,\ldots, v_n)\in T_p$. Then it has a unique polar vector  $u^*$ given by $u^*=(-v_1, -v_2,\ldots, -v_{n-1}, v_n)$.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:d dist(grad)<0}
 Let $\spc{L}$ be a complete length $\Alex\kappa$ space and $a,b,p$
