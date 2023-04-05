@@ -596,6 +596,24 @@ $(\dd_p f)(g) = \<g,g\> .$
 \end{subthm}
 \end{thm}
 
+\begin{wrapfigure}{r}{34 mm}
+\vskip-10mm
+\centering
+\includegraphics{mppics/pic-1215}
+\vskip0mm
+\end{wrapfigure}
+
+\begin{thm}{Example}\label{l-inf-grad}
+Consider the Euclidean plane with standard $(x,y)$-coordinates.
+Then the function $f\:(x,y)\mapsto -|x|-|y|$ is concave;
+its gradient field is sketched on the figure.
+
+If a point does not lie on an axis, then its gradient has length $\sqrt2$ and 
+takes one of four values $(\pm1,\pm1)$ depending on the quadrant of the point.
+At the origin the gradient vanish, 
+and on the on the remaining parts of the $x$-axis and $y$-axis it is $(\pm1,0)$ and $(0,\pm 1)$ respectively. 
+\end{thm}
+
 \begin{thm}{Exercise}\label{ex:grad(dist)}
 Let $\spc{U}$ be a complete length $\CAT0$ space.
 Show that
@@ -654,23 +672,13 @@ that is, the sequence $\xi_n$ is Cauchy.
 Clearly $\overline{\xi}=\lim_n\xi_n$ satisfies \ref{overlinexi}.
 \qeds
 
-\begin{wrapfigure}[8]{r}{34 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1215}
-\vskip0mm
-\end{wrapfigure}
-
-\begin{thm}{Example}\label{l-inf-grad}
-Consider the Euclidean plane with standard $(x,y)$-coordinates.
-Then the function $f\:(x,y)\mapsto -|x|-|y|$ is concave;
-its gradient field is sketched on the figure.
-
-If a point does not lie on an axis, then its gradient has length $\sqrt2$ and 
-takes one of four values $(\pm1,\pm1)$ depending on the quadrant of the point.
-At the origin the gradient vanish, 
-and on the on the remaining parts of the $x$-axis and $y$-axis it is $(\pm1,0)$ and $(0,\pm 1)$ respectively. 
+\begin{thm}{Exercise}\label{ex:|grad|=1}
+Let $p$ be a point in a complete length $\Alex{}$ space.
+Show that 
+\[|\nabla_x\distfun p|=1\]
+for $x$ in a dense G-delta subset.
 \end{thm}
+
 
 \section{Calculus of gradient}\label{sec:grad-calculus}
 
@@ -777,7 +785,7 @@ In particular,
 \begin{subthm}{lem:grad-lip:lam=0}
 if $\kappa=0$, 
 \[\<\dir pq,\nabla_p f\>\ge
-{\left({f(q)}-{f(p)}-\tfrac\lambda2\cdot\ell^2\right)}/{\ell};\]
+\left({f(q)}-{f(p)}-\tfrac\lambda2\cdot\ell^2\right)/\ell;\]
 \end{subthm}
 
 \begin{subthm}{} if $\kappa=1$, $\lambda=0$ we have
@@ -883,7 +891,7 @@ Therefore,
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:df(v)=<grad f,v>}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space,
+Let $\spc{L}$ be a complete length $\Alex\kappa$ space,
 the function
 $f\:\spc{L}\to\RR$ be semiconcave and locally Lipschitz,
 and
@@ -1183,12 +1191,12 @@ let us give a corollary.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
 Let $\spc{L}$  be a complete length $\Alex{\kappa}$ space
-and $p\in \Str(x_1,x_2,\dots,x_n)$.
+and $p\in \Str(x_1,\dots,x_n)$.
 Then there is a subcone $E\subset \T_p$ that is isometric to a Euclidean space such that $\ddir p{x_i}\in E$ for every $i$.
 \end{thm}
 
 \parit{Proof.} 
-By the definition of $\Str$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for each $i$.
+By the definition of $\Str(x_1,\dots,x_n)$ (\ref{def:straight}), $\ddir{p}{x_i}\in \Lin_p$ for each $i$.
 It remains to apply Theorem~\ref{thm:lin-subcone}.
 \qeds
 

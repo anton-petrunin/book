@@ -226,7 +226,7 @@ which were introduced in Section~\ref{sec:gradient-like}.
 
 \begin{thm}{Definition}\label{def:grad-curve}{\sloppy 
 Let $\spc{Z}$ be a complete length space
-and $f\:\spc{Z}\subto\RR$ be a locally Lipschitz and semiconcave function.
+and $f\:\spc{Z}\subto\RR$ be a locally Lipschitz and semiconcave subfunction.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 
 }
@@ -417,7 +417,7 @@ Hence the result.
 \begin{thm}{Second distance estimate}\label{lem:fg-dist-est}
 Let $\spc{Z}$ be a complete length space, 
 $\eps>0$,  
-and $f,g\:\spc{Z}\to \RR$ be two $\lambda$-concave locally Lipschitz function such that $|f-g|<\eps$.
+and $f,g\:\spc{Z}\to \RR$ be two $\lambda$-concave locally Lipschitz functions such that $|f-g|<\eps$.
 Suppose that $\spc{Z}$ is either $\Alex{}$ or $\CAT{}$.
 Assume
 $\alpha,\beta\:[0,t_{\max})\to \spc{Z}$ are respectively $f$- and $g$-gradient curves.
@@ -471,7 +471,8 @@ Another example can be given as follows.
 \end{wrapfigure}
 
 \begin{thm}{Example}
-Let $f$ be the concave function on the $(x,y)$-plane from \ref{l-inf-grad};
+Let $f$ be as in \ref{l-inf-grad};
+that is, $f\:(x,y)\mapsto-|x|-|y|$ be the concave function on the $(x,y)$-plane;
 its gradient field is sketched on the figure.
 
 Let $\alpha$ be an $f$-gradient curve that starts at $p=(x,y)$ for $x>y>0$.
@@ -482,7 +483,7 @@ Then
 \\
 (x-t,0) &\text{for}\quad x-y\le t\le  x,
 \\
-(0,0) &\text{for}\quad x\le t,
+(0,0) &\text{for}\quad x\le t.
 \end{cases}
 \]
 In particular, gradient curves can merge even in the region where $|\nabla f|\z\ne 0$. 
@@ -490,7 +491,7 @@ Hence their \textit{past} cannot be uniquely determined from their \textit{prese
 \end{thm}
 
 
-The next theorem shows that a ``future'' gradient curve is determined by the ``present''.
+The next theorem shows that the future gradient curve is determined by its present.
 
 \begin{thm}{Picard's theorem}\label{thm:picard}
 Let $\spc{Z}$ be a complete length space,
@@ -501,7 +502,9 @@ such that $\alpha(0)=\beta(0)$.
 Then $\alpha(t)=\beta(t)$ for any $t\in[0,t_{\max})$.
 \end{thm}
 
-\parit{Proof.} Follows from the first distance estimate (\ref{thm:dist-est}).\qeds
+\parit{Proof.}
+Follows from the first distance estimate (\ref{thm:dist-est}).
+\qeds
 
 \begin{thm}{Local existence}\label{thm:exist-grad-curv}
 Let $\spc{Z}$ be a complete length space 
@@ -792,9 +795,10 @@ The next proposition states that gradient flow is stable under Gromov--Hausdorff
 The proposition follows directly from the proposition on ultralimit of gradient curves~\ref{ultr-lim-g-curve}.
 
 \begin{thm}{Proposition}\label{grad-curve-conv}
-If $\spc{Z}_n$ is an $m$-dimensional complete length $\Alex\kappa$ space, $\spc{Z}_n\xto{\GH} \spc{Z}$, and $f_n\:\spc{Z}_n\to\RR$ is a sequence of
-$\lambda$-concave functions that converges to $f\:\spc{Z}\to \RR$, then
-$\GF_{f_n}^t\:\spc{Z}_n\to \spc{Z}_n$ converges to $\GF_f^t\:\spc{Z}\to \spc{Z}$.
+Supose $\spc{Z}_\infty,\spc{Z}_1,\spc{Z}_2,\dots$ are complete length $\Alex\kappa$ space, $\spc{Z}_n\xto{\GH} \spc{Z}_\infty$, and $f_n\:\spc{Z}_n\to\RR$ is a sequence of
+$\lambda$-concave functions that converges to $f_\infty\:\spc{Z}_\infty\to \RR$. 
+Then
+$\GF_{f_n}^t\:\spc{Z}_n\to \spc{Z}_n$ converges to $\GF_{f_\infty}^t\:\spc{Z}_\infty\to \spc{Z}_\infty$.
 \end{thm}%do we need it for ultralimits?
 
 %\begin{thm}{Exercise}\label{ex:grad-flow-bry}
@@ -868,16 +872,16 @@ where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'
  {\sloppy 
 
 \begin{thm}{Corollary}\label{cor:splitting-vectors}
-Let $\spc{K}$ be an $n$-dimensional complete length $\Alex0$ cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
+Let $\spc{K}$ be a finite-dimensional complete length $\Alex0$ cone and $v_+,v_-\in \spc{K}$ be a pair of opposite vectors 
 (that is, $v_+ + v_-=0$, see Definiton~\ref{def:opp+Lin}).
-Then there is an isometry $\iota\:K\to K'\times \RR$, where $K'$ is a complete length $\Alex0$ space having a cone structure with tip $\0'$ such that
-$\iota:v_\pm\mapsto (\0',\pm|v_\pm|)$.
+Then there is an isometry $\iota\:K\to K'\times \RR$ such that
+$\iota:v_\pm\mapsto (\0',\pm|v_\pm|)$, where $K'$ is a complete length $\Alex0$ space having a cone structure with tip $\0'$.
 \end{thm}
 
 }
 
 \begin{thm}{Corollary}\label{cor:splitting-CBB[1]}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex1$ space, $m\ge2$, and $\rad\spc{L}=\pi$.
+Let $\spc{L}$ be an $m$-dimensional complete length $\Alex1$ space, $2\le m<\infty$, and $\rad\spc{L}=\pi$.
 Then \[\spc{L}\iso \mathbb{S}^m.\]
  
 \end{thm}
@@ -1513,7 +1517,8 @@ we obtain the following.
 {\sloppy 
  
 \begin{thm}{Corollary}\label{cor:short-map-to-ball}
-Let $\spc{L}$ be an $m$-dimensional complete length $\Alex\kappa$ space, $p\in\spc{L}$, and $0<R\le\tfrac{\varpi\kappa}2$.
+Let $p$ be a point in an $m$-dimensional complete length $\Alex\kappa$ space $\spc{L}$,
+$m<\infty$, and $0<R\le\tfrac{\varpi\kappa}2$.
 Then there is a short map 
 $f\:\cBall[R]_{\Lob{m}{\kappa}}\to \spc{L}$
 such that $\Im f= \cBall[p,R]\subset \spc{L}$.
