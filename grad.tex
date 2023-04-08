@@ -410,7 +410,7 @@ Fix a choice of geodesic $[\alpha(t)\,\beta(t)]$ for each $t$.
 
 Setting $\ell(t)=\dist{\alpha(t)}{\beta(t)}{}$, from the first variation inequality (\ref{lem:first-var}) and the estimate in \ref{cor:grad-lip} we get
 \[\ell^+(t)\le-\<\dir{\alpha(t)}{\beta(t)},\nabla_{\alpha(t)}f\>-\<\dir{\beta(t)}{\alpha(t)},\nabla_{\beta(t)}f\>\le \lambda\cdot\ell(t).\]
-Here one has apply the first variation inequality for distance to the midpont $m$ of $[\alpha(t)\,\beta(t)]$, and apply the triangle inequality.
+Here one has to apply the first variation inequality for distance to the midpoint $m$ of $[\alpha(t)\,\beta(t)]$, and apply the triangle inequality.
 Hence the result. 
 \qeds
 
@@ -838,8 +838,8 @@ Recall that a line in a metric space is a both-sided infinite geodesic; thus it 
 Let $\spc{L}$  be a complete length $\Alex{0}$ space
 and $\gamma$ be a line in $\spc{L}$. 
 Then 
-\[\spc{L}=X\oplus \gamma(\RR)\]
-for some subset $X\subset \spc{L}$.
+\[\spc{L}=\spc{L}'\oplus \gamma(\RR)\]
+for some subset $\spc{L}'\subset \spc{L}$.
 \end{thm}
 
 }
@@ -889,6 +889,7 @@ Then \[\spc{L}\iso \mathbb{S}^m.\]
 The following lemma is closely relevant to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
+Let $\spc{L}$ be a complete length $\Alex{0}$ space.
 Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function.
 Consider two $f$-gradient curves $\alpha$ and $\beta$.
 Then for any $t, s\ge 0$ we have
@@ -912,7 +913,7 @@ for any $t\ge0$.
 Set $\ell(t)=\dist{p}{\beta(t)}{}$.
 Applying \ref{lem:grad-lip:lam=0} and the first variation inequality (\ref{lem:first-var}), we get
 \begin{align*}
-\ell^2(t)'
+\ell^2(t)^+
 &\le 2\cdot \left(f\circ\beta(t)-f(p)\right)\le 
 \\
 &\le2\cdot\left(f(q)+t-f(p)\right).
@@ -921,7 +922,7 @@ Therefore
 \[\ell^2(t)-\ell^2(0)\le 2\cdot\left(f(q)-f(p)\right)\cdot t + t^2.\]
 It proves the needed inequality in case $s=0$.
 Combining it with the first distance estimate (\ref{thm:dist-est}), we get the result in case $s\le t$.
-The case $s\ge t$ follows by switching the roles of $s$ and $t$..
+The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 \qeds
 
 
