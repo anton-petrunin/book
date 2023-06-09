@@ -222,7 +222,8 @@ Clearly $\Omega_n$ is open;
 let us show that $\Omega_n$ is dense in $\spc{L}$.
 
 Assuming the contrary, there is a point $x\in \spc{L}$ such that 
-\[\oBall(x,\eps)\cap \Omega_n=\emptyset\] for some $\eps>0$.
+\[\oBall(x,\eps)\cap \Omega_n=\emptyset\]
+for $\eps>0$.
 Since $\spc{L}$ is a length space, 
 for any $\delta>0$, there exists a point $y\in \spc{L}$ such that 
 \[\dist{x}{y}{}<\tfrac\eps2+\delta
@@ -1048,7 +1049,7 @@ From \ref{eq:thm:=def-loc-fivestar}, we have that the sequence  $s_n\z=\side\kap
 \includegraphics{mppics/pic-825}
 \end{figure}
 
-The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{}\z< \tfrac{2}{3}\cdot\ell $.
+The sequence might terminate at $x_n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{}\z< \tfrac{2}{3}\cdot\ell $.
 In this case, by the assumptions of the lemma, $\side\kappa \hinge{x_n}p q\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
@@ -1451,8 +1452,8 @@ where $\phi$ is the infimum of angles between $[px]$ and all geodesics from $p$ 
 \end{thm}
 
 \parbf{Remark.}
-If $\spc{L}$ is a proper space, then $\spc{L}^\o=\spc{L}$, see Section~\ref{ultralimits}.
-Therefore the infimum $\phi$ is achieved on some particular geodesic from $p$ to $q$.
+If $\spc{L}$ is a proper space, then $\spc{L}^\o=\spc{L}$; see Section~\ref{ultralimits}.
+Therefore the infimum $\phi$ is achieved on a particular geodesic from $p$ to $q$.
 
 \medskip
 
@@ -1630,7 +1631,7 @@ Then the perimeter of any triple of points $p,q,r\in \spc{L}$ is at most $2\cdot
 \parit{Proof.}  
 Arguing by contradiction, suppose 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}> 2\cdot\pi\eqlbl{eq:perimeter-of-triange<2pi}\] 
-for some $p,q,r\in \spc{L}$. 
+for $p,q,r\in \spc{L}$. 
 Rescaling the space slightly, we can assume that $\diam\spc{L}<\pi$,
 but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
 By Corollary \ref{cor:CAT>k-sence},
@@ -1745,7 +1746,7 @@ Is it true that $\spc{L}$ is $\Alex{0}$?
 \end{thm}
 
 \parbf{Examples and constructions.}
-Let us list some important sources of examples of $\Alex{}$ spaces.
+Let us list important sources of examples of $\Alex{}$ spaces.
 We do not provide all the proofs and some proofs are deferred to later chapters.
 
 \textit{Complete Riemannian manifolds} with sectional curvature at least $\kappa$, their \textit{Gromov--Hausdorff limits}, as well as their \textit{ultralimits}, are $\Alex\kappa$.
@@ -1780,7 +1781,7 @@ This has been generalized by Sergei Buyalo \cite{buyalo} to the nonsmooth case a
 Let us mention that an analogous statement about convex hypersurfaces in $\Alex{\kappa}$ space is completely open.
 Namely, it is unknown if \textit{the boundary of a complete finite-dimensional $\Alex{\kappa}$ length space has to be $\Alex{\kappa}$}.
 
-Further, $\Alex{}$ spaces behave nicely with respect to some natural constructions.
+Further, $\Alex{}$ spaces behave nicely with respect to several natural constructions.
 For example, the product of $\Alex{0}$ spaces is a $\Alex{0}$.
 Also, the Euclidean cone over $\Alex{1}$ space is a $\Alex{0}$.
 These are the first examples of the so-called \textit{warped products} that are discussed in Chapter~\ref{chapter:warped products};
