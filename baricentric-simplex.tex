@@ -156,7 +156,8 @@ a contradiction.
 Fix a point $p\in \spc{X}$, and
 let $\Lip\in\RR$ be a Lipschitz constant of $f$ in a neighborhood of $p$.
 
-Consider the function $\phi(t)=f\circ\geod_{[px]}(t)$.
+Choose a geodesic $[px]$;
+consider the function $\phi\:t\mapsto f\circ\geod_{[px]}(t)$.
 Clearly $\phi$ is $1$-convex and $\phi^+(0)\ge -\Lip$.
 Setting $a=\dist{p}{x}{}$, we have 
 \begin{align*}
@@ -226,7 +227,7 @@ If $\bm{x}$ is a subnormal vector to $W$, then $\bm{x}\succcurlyeq\bm{0}$.
 \parit{Proof.}
 Denote by $\bar W$ the closure of $W$.
 
-Convexity of the $f^i$ implies that
+Convexity of all $f^i$ implies that
 for any two points $p,q\in \spc{X}$ and $t\in[0,1]$ we have
 \[(1-t)\cdot\bm{f}(p)+t\cdot \bm{f}(q)
 \succcurlyeq
@@ -378,10 +379,9 @@ s&=\dist{p}{q}{}.
 Note the following:
 \begin{itemize}
 \item The function $\phi(t)=f_{\bm{x}}\circ\geod_{[p q]}(t)$ has minimum at $0$. 
+Therefore $\phi^+(0)\ge 0$.
 
-Therefore $\phi^+(0)\ge 0$
 \item The function $\psi(t)=f_{\bm{y}}\circ\geod_{[p q]}(t)$ has minimum at $s$. 
-
 Therefore $\psi^-(s)\ge 0$.
 \end{itemize}
 From $1$-convexity of $f_{\bm{y}}$, we have
@@ -407,8 +407,7 @@ for any $\bm{y}\in\Delta^\kay$.
 In particular, there is $\eps>0$ such that if $\|\bm{x}-\bm{y}\|_1<\eps,$ $\|\bm{x}-\bm{z}\|_1 <\eps$, then $\spx{\bm{f}}(\bm{y})$, $\spx{\bm{f}}(\bm{z})\in\Omega$. 
 Thus the same argument as above implies 
 \[\dist{\spx{\bm{f}}(\bm{y})}{\spx{\bm{f}}(\bm{z})}{}
-=
-s\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
+\le \Lip\cdot\|\bm{y}-\bm{z}\|_1\]
 for any $\bm{y}$ and $\bm{z}$ sufficiently close to $\bm{x}$; that is, $\spx{\bm{f}}$ is locally Lipschitz.
 Since $\Delta^\kay$ is compact, $\spx{\bm{f}}$ is Lipschitz.
 
@@ -888,7 +887,8 @@ In particular, it can be covered by a countable collection of Lipschitz images o
 Hence
 $\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|_K$.
 Since $\eps>0$ is arbitrary, 
-then
+then $\bm{0}\in \RR^m$ is not a stable value of $f$ --- a contradiction.
+
 \parit{\ref{SHORT.LinDim-CBA}$\Rightarrow$\ref{SHORT.thm:dim-infty-CBA:bary}.} 
 Choose $q\in \spc{U}$ such that $\T_q$ contains a subcone $E$ isometric to $m$-dimensional Euclidean space.
 Note that one can choose $\eps>0$ 
