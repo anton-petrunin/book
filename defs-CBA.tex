@@ -1201,7 +1201,7 @@ Show that $A$ is a convex set of $\spc{U}$.
 
 \begin{thm}{Exercise}\label{ex:glue-spherical-suspension}
 Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
-Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
+Assume $K\subset \cBall[p,\tfrac\pi2]$ for $p\in K$.
 Show that there is a decreasing continuous one-parameter family of closed convex sets $K_t$ for $t\in[0,1]$ such that $K_0=\cBall[p,\tfrac\pi2]$ and $K_1=K$.
 
 (Decreasing means with respect to inclusion; that is $K_{t_0}\supset K_{t_1}$ if $t_0\le t_1$.
@@ -1378,7 +1378,7 @@ as $t\to a-$.
 
 Let $\II$ be the maximal interval for which there is a family $\gamma_t$ satisfying condition \ref{SHORT.cor:geo-hom-length}. 
 By Theorem~\ref{thm:no-conj-pt}, such an interval exists and is open in $[0,1]$.  Suppose $\II\ne[0,1]$.
-Then  $\II=[0,a)$ for some $0<a\le 1$.
+Then  $\II=[0,a)$ for $0<a\le 1$.
 
 For each fixed $s\in [0,1]$, define the curve $\alpha_s:[0,a)\to\spc{U}$ by $\alpha_s(t)\z=\gamma_t(s)$. 
 By Theorem~\ref{thm:no-conj-pt}, 
@@ -1413,7 +1413,7 @@ is complete.
 \end{thm}
 
 \parit{Proof.}
-By Corollary \ref{cor:geo-hom}, taking  $\alpha^0(t)=p$ and  $\alpha^1(t)=\alpha(t)$ for all $t\in [0,1]$, there is an interval $\II$ such that \ref{SHORT.cor:homotopy-from-p-exist} holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for some $a\le 1$.
+By Corollary \ref{cor:geo-hom}, taking  $\alpha^0(t)=p$ and  $\alpha^1(t)=\alpha(t)$ for all $t\in [0,1]$, there is an interval $\II$ such that \ref{SHORT.cor:homotopy-from-p-exist} holds for all $t\in\II$, and either $\II=[0,1]$ or $\II=[0,a)$ for $a\le 1$.
 
 By patchwork along a curve (\ref{lem:patch}), the values of $t$ for which condition \ref{SHORT.cor:homotopy-from-p-length} holds form an open subset of $\II$ containing $0$; clearly this subset is also closed in $\II$.
 Therefore \ref{SHORT.cor:homotopy-from-p-length} holds on all of $\II$. 
@@ -1421,7 +1421,7 @@ Therefore \ref{SHORT.cor:homotopy-from-p-length} holds on all of $\II$.
 Corollary \ref{cor:geo-hom} implies that
 $\II=[0,1]$.
 Indeed if $\II=[0,a)$, then either $\length\gamma_t\to\varpi\kappa$ as $t\to a-$,
-or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s):[0,a)\to\spc{U}$ has no limit as $t\to a-$.
+or for some fixed $s\in [0,1]$ the Lipschitz curve $\gamma_t(s)$ has no limit as $t\to a-$.
 Since $\length\alpha<\varpi\kappa$, \ref{cor:geo-hom} implies that neither of these is possible.
 \qeds
 
@@ -1954,7 +1954,7 @@ so that:
 \begin{itemize}
 \item The set $\{t_{n+1}^i\}_{i=0}^{n+1}$ 
 is obtained from the set  $\{t_n^i\}_{i=0}^n$ by adding one element.
-\item For some sequence $\eps_n\to0+$,
+\item For a sequence $\eps_n\to0+$,
 we have $t^i_n-t^{i-1}_n<\eps_n$ for all $i$.
 \end{itemize}
 
@@ -2090,7 +2090,7 @@ Hence the claim.
 \claimqeds
 
 \begin{clm}{}\label{clm:arm-induction}
-Suppose $F|_{\Conv(\tilde x^0,\tilde x^1,\dots,\tilde x^{k})}$ is distance-preserving for some $k$, $2\le k\le n-1$.
+Suppose $F|_{\Conv(\tilde x^0,\tilde x^1,\dots,\tilde x^{k})}$ is distance-preserving for $2\le k\le n-1$.
 Then $F|_{\Conv(\tilde x^0,\tilde x^1,\dots, \tilde x^{k+1})}$ is distance-preserving.
 \end{clm}
 
@@ -2388,10 +2388,9 @@ in a complete length $\CAT\kappa$ space is $\varpi\kappa$-convex.
 
 
 \begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space, and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
-Assume that $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$ for some point $p\in \spc{U}$.
-Then  
-there is a unique point $p^*\in K$ that minimizes the distance to $p$;
+Let $p$ be a point in a complete length $\CAT\kappa$ space $\spc{U}$, and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+If $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$,
+then there is a unique point $p^*\in K$ that minimizes the distance to $p$;
 that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
 
 }
@@ -2414,7 +2413,7 @@ Show that the closest-point projection $\spc{U}\to K$ is short.
 
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
 Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
-Assume $K\subset \cBall[p,\tfrac\pi2]$ for some point $p\in K$.
+Assume $K\subset \cBall[p,\tfrac\pi2]$ for $p\in K$.
 Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
 
@@ -2602,7 +2601,7 @@ Show that a complete, simply connected, locally convex space is a convex space.
 \end{thm}
 
 \parbf{Examples and constructions.}
-Let us list some important sources of examples of $\CAT{}$ spaces.
+Let us list important sources of examples of $\CAT{}$ spaces.
 This should be beneficial to the reader despite that we do not provide all the proofs and some proofs are deferred to later chapters.
 
 \textit{Riemannian manifolds} with sectional curvature at most $\kappa$ are locally $\CAT{\kappa}$.
