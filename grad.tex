@@ -1004,11 +1004,11 @@ $$s_{\min}
 and $\sigma$ satisfies the differential equation
 \[\sigma^+(s)
 \z=
-\frac{\tg\kappa\dist[{{}}]{p}{\sigma(s)}{}}{\tg\kappa s}
+\frac{\tang\kappa\dist[{{}}]{p}{\sigma(s)}{}}{\tang\kappa s}
 \cdot
 \nabla_{\sigma(s)}\distfun{p}{}{}
 \eqlbl{eq:rad}\]
-for any $s\in[s_{\min},s_{\max})$, where $\tg\kappa x\df\frac{\sn\kappa x}{\cs\kappa x}$.
+for any $s\in[s_{\min},s_{\max})$, where $\tang\kappa x\df\frac{\sn\kappa x}{\cs\kappa x}$.
 
 If $x=\sigma(s_{\min})$, we say that $\sigma$ {}\emph{starts} at  $x$.
 \end{thm}
@@ -1076,7 +1076,7 @@ that is, $\sigma(\dist{p}{x}{})=x$.
 Let \index{$\itg\kappa$} 
 \[\itg\kappa\:[0,\tfrac{\varpi\kappa}2)\to\RR,
 \quad 
-\itg\kappa (t)=\int\limits_0^t\tg\kappa\under t\cdot\dd\under t.\]
+\itg\kappa (t)=\int\limits_0^t\tang\kappa\under t\cdot\dd\under t.\]
 Clearly $\itg\kappa$ is smooth and increasing.
 From \ref{prop:conv-comp} it follows that the composition 
 \[f=\itg\kappa\circ\distfun{p}{}{}\] 
@@ -1084,7 +1084,7 @@ is semiconcave in $\oBall(p,\tfrac{\varpi\kappa}2)$.
 
 According to \ref{thm:exist-grad-curv}, there is an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ defined on the maximal interval such that $\alpha(0)=x$.
 
-Now consider a solution $\tau(t)$ for the initial value problem $\tau'\z=(\tg\kappa\tau)^2$, $\tau(0)=r$. 
+Now consider a solution $\tau(t)$ for the initial value problem $\tau'\z=(\tang\kappa\tau)^2$, $\tau(0)=r$. 
 Note that $\tau(t)$ is also a gradient curve  for the function $\itg\kappa$ defined on $[0,\tfrac{\varpi\kappa}2)$.
 Direct calculations show that the composition $\alpha\circ\tau^{-1}$ 
 is a $(p,\kappa)$-radial curve.
@@ -1340,16 +1340,16 @@ Let
 Clearly $f''+\kappa\cdot  f\le 0$ and
 \[
 \begin{aligned}
-\rho^+(r)&=\frac{1}{\tg\kappa r\cdot\cs\kappa R}\cdot\nabla_{\rho(r)} f,
+\rho^+(r)&=\frac{1}{\tang\kappa r\cdot\cs\kappa R}\cdot\nabla_{\rho(r)} f,
 \\
-\sigma^+(s)&=\frac{1}{\tg\kappa s\cdot\cs\kappa S}\cdot\nabla_{\sigma(s)} f.
+\sigma^+(s)&=\frac{1}{\tang\kappa s\cdot\cs\kappa S}\cdot\nabla_{\sigma(s)} f.
 \end{aligned}
 \leqno(B)\mc\pm\]
 Thus from \ref{lem:grad-lip}, we have
 \[\begin{aligned}
 \tfrac{\partial^+}{\partial r}\ell
 &=
--\frac{1}{\tg\kappa r\cdot\cs\kappa R}
+-\frac{1}{\tang\kappa r\cdot\cs\kappa R}
 \cdot
 \<\nabla_{\rho(r)} f,\dir{\rho(r)}{\sigma(s)}\>
 \le
@@ -1357,7 +1357,7 @@ Thus from \ref{lem:grad-lip}, we have
 &\le
 \frac
 {1}
-{\tg\kappa r\cdot\cs\kappa R}
+{\tang\kappa r\cdot\cs\kappa R}
 \cdot
 \frac
 {\cs\kappa S-\cs\kappa R\cdot\cs\kappa\ell}
@@ -1367,7 +1367,7 @@ Thus from \ref{lem:grad-lip}, we have
 &=
 \frac
 {\frac{\cs\kappa S}{\cs\kappa R}-\cs\kappa\ell}
-{\kappa\cdot\tg\kappa r\cdot\sn\kappa\ell}.
+{\kappa\cdot\tang\kappa r\cdot\sn\kappa\ell}.
 \end{aligned}
 \leqno(C)\mc\pm\]
 Note that for all $\kappa\ne 0$,
@@ -1378,7 +1378,7 @@ Thus, since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we have
 &\le 
 \frac
 {\frac{\cs\kappa s_{\min}}{\cs\kappa r}-\cs\kappa\ell}
-{\kappa\cdot\tg\kappa r\cdot\sn\kappa\ell}
+{\kappa\cdot\tang\kappa r\cdot\sn\kappa\ell}
 =
 \\
 &=
@@ -1905,7 +1905,7 @@ Assume that for some function $\psi$, the curves defined by the equation
 satisfy radial comparison \ref{rad-comp}.
 Then in fact the $\sigma(s)$ are radial curves; 
 that is, 
-\[\psi(s,\dist{p}{\sigma(s)}{})= \frac{\tg\kappa\dist[{{}}]{p}{\sigma(s)}{})}{\tg\kappa s},\]
+\[\psi(s,\dist{p}{\sigma(s)}{})= \frac{\tang\kappa\dist[{{}}]{p}{\sigma(s)}{})}{\tang\kappa s},\]
 see exercise \ref{ex:gexp}.
 
 In case $\kappa<0$, such a function $\psi$ is not unique.
