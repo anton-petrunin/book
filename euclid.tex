@@ -6,17 +6,17 @@
 \label{sec:geods}
 
 \parbf{Geodesics and their relatives.}
-Let $\spc{X}$ be a metric space and $\II\subset \R$\index{$\II$} be an interval. 
+Let $\spc{X}$ be a metric space and $\II\subset \R$\index{$\II$ (interval)} be an interval. 
 A globally distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{unit-speed geodesic}\emph{unit-speed geodesic}.
 (Various authors call it differently: \index{shortest path}\emph{shortest path}, \index{minimizing geodesic}\emph{minimizing geodesic}.)
 In other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equality
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 holds for any pair $s,t\in \II$.
 
-A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{p}{q}]}$}.
+A unit-speed geodesic between $p$ and $q$ in $\spc{X}$ will be denoted by $\geod_{[p q]}$\index{$\geod_{[{p}{q}]}$ (unit-speed geodesic)}.
 We will always assume $\geod_{[p q]}$ is parametrized starting at $p$; 
 that is, $\geod_{[p q]}(0)=p$ and $\geod_{[p q]}(\dist{p}{q}{})=q$.
-The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{p}{q}]$} and called a \index{geodesic}\emph{geodesic}.
+The image of $\geod_{[p q]}$ will be denoted by $[p q]$\index{$[{p}{q}]$ (geodesic)} and called a \index{geodesic}\emph{geodesic}.
 The term \index{geodesic}\emph{geodesic} will also be used for a linear reparametrization of a unit-speed geodesic.
 With a slight abuse of notation, we will use the notation $[p q]$ also for the class of all linear reparametrizations of $\geod_{[p q]}$.
 
@@ -75,7 +75,7 @@ then
 
 \parbf{Triangles.}
 For a triple of points $p,q,r\in \spc{X}$, a choice of a triple of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}, and we will use the short notation 
-$\trig p q r=([q r], [r p], [p q])$\index{$\trig{p}{q}{r}$}.
+$\trig p q r=([q r], [r p], [p q])$\index{$\trig{p}{q}{r}$ (triangle)}.
 Again, given a triple $p,q,r\in \spc{X}$, there may be no triangle 
 $\trig p q r$, simply because one of the pairs of these points cannot be joined by a geodesic.  Or there may be many different triangles, any of which can be denoted by $\trig p q r$.
 Once we write $\trig p q r$, it means we have chosen such a triangle; 
@@ -89,7 +89,7 @@ it obviously coincides with perimeter of the triple $p$, $q$, $r$ as defined bel
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
 A pair of geodesics $([p x],[p y])$ will be called a  \index{hinge}\emph{hinge}, and will be denoted by 
-$\hinge p x y=([p x],[p y])$\index{$\hinge{{p}}{{q}}{{r}}$}.
+$\hinge p x y=([p x],[p y])$\index{$\hinge{{p}}{{q}}{{r}}$ (hinge)}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -111,7 +111,7 @@ and $\kappa\in\RR$.
 Let us define the \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$%
-\index{$\modtrig\kappa$!$\modtrig\kappa({p}{q}{r})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
+\index{$\modtrig\kappa$ (model triangle)!$\modtrig\kappa({p}{q}{r})$}) to be a triangle in the model plane $\Lob2\kappa$ such that
 \[\dist{\tilde p}{\tilde q}{}=\dist{p}{q}{},
 \quad \dist{\tilde q}{\tilde r}{}=\dist{q}{r}{},
 \quad \dist{\tilde r}{\tilde p}{}=\dist{r}{p}{}.\]
@@ -131,7 +131,7 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig\kappa(p q r)$ is defined
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, the angle measure of 
 $\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde  p$ will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$, and will be denoted by
 $\angk\kappa p q r$%
-\index{$\tangle\mc\kappa$!$\angk\kappa{{p}}{{q}}{{r}}$}\index{$\tangle\mc\kappa$!$\angk\kappa{{p}}{{q}}{{r}}$}.
+\index{$\tangle\mc\kappa$ (model angle)!$\angk\kappa{{p}}{{q}}{{r}}$}.
 
 In the notation of Section~\ref{model}, 
 \[\angk\kappa p q r=\tangle\mc\kappa\{\dist{q}{r}{};\dist{p}{q}{},\dist{p}{r}{}\}.\]
@@ -239,7 +239,7 @@ Given a hinge $\hinge p x y$, we define its \index{angle}\emph{angle} to be \ind
 for $\bar x\in\mathopen{]}p x]$ and $\bar y\in\mathopen{]}p y]$, if this limit exists.
 
 Similarly to $\angk\kappa p{x}{y}$, 
-we will use the short notation\index{$\side\kappa$!$\side\kappa \hinge{{p}}{{q}}{{r}}$}
+we will use the short notation\index{$\side\kappa$ (model side)!$\side\kappa \hinge{{p}}{{q}}{{r}}$}
 \[\side\kappa \hinge p x y=
 \side\kappa \left\{\mangle\hinge p x y;\dist{p}{x}{},\dist{p}{y}{}\right\},\]
 where the right-hand side is defined in Section~\ref{model}.  %on page~\pageref{page:model-side}.%V: I don't like using hard page references. They might change in formatting. %A: what do you mean by ``hard''? it is automatic as any other refs we use.
@@ -416,7 +416,7 @@ The elements of $\Sigma'_p$ are called \emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
 \[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0;\]
-the direction of $[px]$ is denoted by $\dir px $.\index{$\dir{p}{q}$}
+the direction of $[px]$ is denoted by $\dir px $.\index{$\dir{p}{q}$ (direction)}
 
 
 
@@ -477,7 +477,7 @@ The corresponding metric space admits a natural isometric identification with th
 The vectors of $\T'_p$ are the equivalence classes for the relation 
 \[\alpha\sim\beta\quad \iff\quad \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
-A vector in $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$}
+A vector in $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$ (logarithm)}
 
 
 \section{Velocity of curves}
@@ -487,7 +487,7 @@ Let $\spc{X}$ be a metric space,
 $a>0$,
 and $\alpha\:[0,a)\to \spc{X}$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the \index{right derivative}\emph{right derivative} of $\alpha$ at $0$,
-briefly $\alpha^+(0)\z=v$\index{$\alpha^+$}, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$ such that $v_n\to v$ as $n\to\infty$,
+briefly $\alpha^+(0)\z=v$\index{$\alpha^\pm$ one-sided derivative}, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$ such that $v_n\to v$ as $n\to\infty$,
 and corresponding geodesics $\gamma_n$, 
 we have 
 \[\limsup_{\eps\to0+}\frac{\dist{\alpha(\eps)}{\gamma_n(\eps)}{\spc{X}}}{\eps}\to 0\quad \text{as}\quad n\to\infty.\]

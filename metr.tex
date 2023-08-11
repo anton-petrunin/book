@@ -71,8 +71,7 @@ let
 The resulting $\infty$-metric space $\bm{X}$ will be called the \index{disjoint union of metric spaces}\emph{disjoint union} of $\{\spc{X}_\alpha\}_{\alpha\in\IndexSet}$, denoted by \[\bigsqcup_{\alpha\in\IndexSet}\spc{X}_\alpha.\]
 \end{thm}
 
-Now let us give examples showing that vanishing and infinite distance between distinct points is useful.
-
+Now let us give examples showing that vanishing and infinite distance between distinct points can appear naturally and useful in constructions.
 
 Suppose a set ${\spc{X}}$ comes with a set of metrics $\dist{}{}{\alpha}$ for $\alpha\in\IndexSet$.
 Then 
@@ -107,7 +106,7 @@ Often we do not distinguish between $\spc{X}'$ and~$\spc{X}$.
 Set $x\approx y$ if and only if $\dist{x}{y}{}<\infty$;
 this is another equivalence relation on $\spc{X}$.
 The equivalence class of a point $x\in\spc{X}$ will be called the \index{metric component}\emph{metric component} 
- of $x$; it will be denoted by $\spc{X}_x$\index{ $\spc{X}_x$}.
+ of $x$; it will be denoted by $\spc{X}_x$\index{ $\spc{X}_x$ (metric component)}.
 One could think of $\spc{X}_x$ as  $\oBall(x,\infty)_{\spc{X}}$, the open ball centered at $x$ and radius $\infty$ in $\spc{X}$; see definition below.
 
 It follows that any $\infty$-metric space is a {}\emph{disjoint union} of genuine metric spaces, the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
@@ -128,7 +127,7 @@ Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 are called respectively the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed  balls} of radius $R$ with center $x$.
 
 If we need to emphasize that these balls are taken in the space $\spc{X}$,
-we write\index{$\oBall(x,R)_{\spc{X}}$}\index{$\cBall[x,R]_{\spc{X}}$}
+we write\index{$\oBall(x,R)_{\spc{X}}$ (open ball)}\index{$\cBall[x,R]_{\spc{X}}$ (closed ball)}
 \[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
 respectively.
 
@@ -141,19 +140,19 @@ A set $A\subset\spc{X}$ is called \index{bounded set}\emph{bounded} if $A\subset
 
 \parbf{Distances to sets.}
 For subset $A\subset \spc{X}$, 
-let us denote the distance from $A$ to a point $x$ in $\spc{X}$ by $\distfun{A}{x}$\index{$\distfun{A}{x}$};
+let us denote the distance from $A$ to a point $x$ in $\spc{X}$ by $\distfun{A}{x}$\index{$\distfun{A}{x}$ (distance)};
 that is,
 \[\distfun{A}{x}
 \df
 \inf\set{\dist{a}{x}{}}{a\in A}.\] 
 
-For any subset $A\subset\spc{X}$, the sets \index{$\oBall(A,R)$}\index{$\cBall[A,R]$}
+For any subset $A\subset\spc{X}$, the sets \index{$\oBall(A,R)$ (open $R$-neighborhood)}\index{$\cBall[A,R]$ (closed $R$-neighborhood)}
 \begin{align*}
 \oBall(A,R)&=\set{y\in \spc{X}}{ \distfun{A}{y}{}<R},
 \\
 \cBall[A,R]&=\set{y\in \spc{X}}{\distfun{A}{y}{}\le R}
 \end{align*}
-are called respectively the  \index{open tubular neighborhood}\emph{open} and \index{closed tubular neighborhood}\emph{closed $R$-neighborhoods} of $A$.
+are called respectively the  \index{open $R$-neighborhood}\emph{open} and \index{closed $R$-neighborhood}\emph{closed $R$-neighborhoods} of $A$.
 
 \parbf{Diameter, radius, and packing.}
 Let $\spc{X}$ be a metric space.
@@ -700,7 +699,7 @@ In particular, if $\gamma$ is a geodesic in $\spc{W}$ with ends in $\spc{V}$, th
 \section{Kuratowsky embedding}\label{Kuratowsky embedding}
 
 Given a metric space $\spc{X}$, 
-let us denote by $\Bnd(\spc{X},\RR)$\index{ $\Bnd(\spc{X},\RR)$}  the space of all bounded functions on $\spc{X}$ equipped with the sup-norm
+let us denote by $\Bnd(\spc{X},\RR)$\index{ $\Bnd(\spc{X},\RR)$ (space of bounded functions)} the space of all bounded functions on $\spc{X}$ equipped with the sup-norm
 \[\|f\|=\sup_{x\in\spc{X}}\{|f(x)|\}.\]
 
 \parbf{Kuratowski embedding.}
