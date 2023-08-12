@@ -1150,11 +1150,14 @@ we have
 \[
 \tangle\mc\kappa\{\dist{\rho(r)}{\sigma(s)}{};r,s\}
 \le \phi_{\min},
+\eqlbl{eq:tangle-radcomp}
 \]
-or equivalently,
+if the left-hand side is defined.
+Moreover,
 \[
 \dist{\rho(r)}{\sigma(s)}{}
 \le \side\kappa\{\phi_{\min};r,s\}.
+\eqlbl{eq:side-radcomp}
 \]
 
 \end{thm}
@@ -1188,8 +1191,7 @@ S=S(s)&=\dist{p}{\sigma(s)}{},
 \vskip0mm
 \end{figure}
 
-
-It will be sufficient to prove the following inequalities:
+Therefore it will be sufficient to prove the following inequalities:
 \[\tfrac{\partial^+}{\partial r}\phi(s_{\min},r)\le 0,\qquad
 \tfrac{\partial^+}{\partial s}\phi(s,r_{\min})\le 0\leqno(*)\mc0_\phi\]
 \[
@@ -1199,19 +1201,21 @@ r\cdot\tfrac{\partial^+}{\partial r}\phi\le 0.
 \leqno(**)\mc0_\phi
 \]
 
-The radial monotonicity follows from $(*)\mc0_\phi$.
-The radial comparison follows from  $(*)\mc0_\phi$ and $(**)\mc0_\phi$.
+Indeed, the radial monotonicity follows from $(*)\mc0_\phi$.
+Similarly, \ref{eq:tangle-radcomp} follows from  $(*)\mc0_\phi$ and $(**)\mc0_\phi$.
 Indeed, one can connect $(s_{\min},r_{\min})$ and $(s_0,r_0)$ in $[s_{\min},\infty)\times[r_{\min},\infty)$ 
-by a concatenation of a coordinate segment and a segment defined by $r/s=r_0/s_0$ as in the figure.
-According to $(*)\mc0_\phi$ and $(**)\mc0_\phi$, $\phi$ does not increase while the  pair $(r,s)$ moves along this concatenation with nondecreasing $r$ and $s$.
-Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}$.
-
+by a concatenation of a coordinate segment and a segment defined by $r/s\z=r_0/s_0$ as in the figure.
 \begin{figure}[!ht]
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-1510}
 \vskip0mm
 \end{figure}
+By $(*)\mc0_\phi$ and $(**)\mc0_\phi$, we have that $\phi$ does not increase while the  pair $(r,s)$ moves along this concatenation with nondecreasing $r$ and $s$.
+Thus 
+\[\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})=\phi_{\min}.\]
+Finally, if $\phi(r_0,s_0)$ is defined, then \ref{eq:tangle-radcomp} implies \ref{eq:side-radcomp};
+otherwise, $\ell(r_0,s_0)<|r_0-s_0|$, and \ref{eq:side-radcomp} trivially holds.
 
 Let us rewrite the inequalities $(*)\mc0_\phi$ and $(**)\mc0_\phi$ in an equivalent form:
 \[
@@ -1246,7 +1250,7 @@ Thus from \ref{lem:grad-lip}, we have
 =
 -\tfrac{1}{r}\cdot\<\nabla_{\rho(r)} f,\dir{\rho(r)}{\sigma(s)}\>
 \le\frac{{\ell^2}+{R^2}-{S^2}}{2\cdot\ell\cdot r}.\leqno(C)\mc0\]
-Since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, then
+Since $R(r)\le r$ and $S(s_{\min})=s_{\min}$, we have
 \[
 \begin{aligned}
 \tfrac{\partial^+}{\partial r}\ell(r,s_{\min})
@@ -1269,7 +1273,7 @@ s\cdot\tfrac{\partial^+}{\partial s}\ell
 = 
 \ell,
 \leqno(E)\mc0\]
-namely $(**)\mc0_\ell$.
+which is $(**)\mc0_\ell$.
 \qeds
 
 \parit{Proof of \ref{rad-mon} and \ref{rad-comp} in case $\kappa\ne 0$.} 
@@ -1306,7 +1310,7 @@ Since $\sn\kappa s\cdot\cs\kappa S$, $\sn\kappa r\cdot\cs\kappa R>0$, this solut
 $\{r_{\min}\}\times[s_{\min},\tfrac{\varpi\kappa}2)$ or $[r_{\min},\tfrac{\varpi\kappa}2)\times\{s_{\min}\}$.
 That is, one can connect the pair $(s_{\min},r_{\min})$ to $(s_0,r_0)$ by a concatenation of a coordinate segment (vertical or horizontal) and part of the solution $(r(t),s(t))$.
 According to $(*)\mc\pm_\phi$ and $(**)\mc\pm_\phi$, the value of $\phi$ does not increase while the pair $(r,s)$ moves along this concatenation in direction of increasing $r$ and $s$.
-Thus $\phi(r_0,s_0)\le\phi(r_{\min},s_{\min})$.
+So, the same argument as in the $\kappa=0$ case, implies \ref{eq:tangle-radcomp} and \ref{eq:side-radcomp}.
 
 As before, we rewrite the inequalities $(*)\mc\pm_\phi$ and $(**)\mc\pm_\phi$ in terms of $\ell$:
 \[
