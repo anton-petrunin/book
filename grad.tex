@@ -1048,7 +1048,8 @@ is a $(p,\kappa)$-radial curve.
 Suppose $\spc{L}$ is a complete length $\Alex{}$ space, 
 $p\in\spc{L}$ 
 and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ is a $(p,\kappa)$-radial curve.
-Then for any $s\in [s_{\min},s_{\max})$, 
+Then $\sigma$ is 1-Lipschitz;
+in particular, for any $s\in [s_{\min},s_{\max})$, 
 we have $\dist{p}{\sigma(s)}{}\le s$.
 
 Moreover, 
@@ -1111,14 +1112,18 @@ $p, q$ be distinct points in $\spc{L}$.
 Let $\sigma\:  [s_{\min},\tfrac{\varpi\kappa}2)\to \spc{L}$
 be a $(p,\kappa)$-radial curve.
 Then the function 
-\[s\mapsto 
+\[\psi\:s\mapsto 
 \tangle\mc\kappa\{
 \dist{q}{\sigma(s)}{};
 \dist{p}{q}{},
 s
 \}\]
 is nonincreasing in its domain of definition.
+Moreover, if $\psi(s)$ is undefined, then $\dist{q}{\sigma(s)}{}<s-\dist{p}{q}{}$.
 \end{thm}
+
+If one extends the definition of $\tangle\mc\kappa\{a;b,c\}$ by stating $\tangle\mc\kappa\{a;b,c\}\z=0$ if $a<|b-c|$ and $\tangle\mc\kappa\{a;b,c\}=\pi$ if $a>b+c$.
+Then the radial monotonicity implies that $\psi$ is nonincreasing function defined in $[s_{\min},\tfrac{\varpi\kappa}2)$.
 
 Radial monotonicity implies the following by straightforward calculations.
 
@@ -1201,7 +1206,19 @@ r\cdot\tfrac{\partial^+}{\partial r}\phi\le 0.
 \leqno(**)\mc0_\phi
 \]
 
-Indeed, the radial monotonicity follows from $(*)\mc0_\phi$.
+Indeed, from $(*)\mc0_\phi$,
+we get that $\psi$ is locally nonincreasing.
+If $\psi$ is defined in $[s_{\min},\tfrac{\varpi\kappa}2)$, then it implies the radial monotonicity.
+Otherwise, note that $\psi$ is continuous, and it is defined on a closed subset of $[s_{\min},\tfrac{\varpi\kappa}2)$.
+Suppose $[s_{\min},s_{\max}]$ is a maximal interval where $\psi$ is defined.
+Note that $\phi(s_{\max})=0$, therefore $\dist{q}{\sigma(s_{\max})}{}=|s_{\max}-\dist{p}{q}{}|$.
+Note that 
+$\dist{q}{\sigma(s_n)}{}<|s_{n}-\dist{p}{q}{}|$ for some 
+sequence $s_n\to s_{\max}+$.
+The triangle inequality and \ref{prop:dist<s} imply that $\dist{q}{\sigma(s_n)}{}\ge -s_{n}+\dist{p}{q}{}$.
+Therefore $\dist{q}{\sigma(s_n)}{}<s_{n}-\dist{p}{q}{}$.
+By the triangle inequality $\dist{q}{\sigma(s)}{}<s-\dist{p}{q}{}$ for any $s>s_n$. Hence $\phi(s)$ is undefined for all $s>s_{\max}$, and the radial monotonicity follows.
+
 Similarly, \ref{eq:tangle-radcomp} follows from  $(*)\mc0_\phi$ and $(**)\mc0_\phi$.
 Indeed, one can connect $(s_{\min},r_{\min})$ and $(s_0,r_0)$ in $[s_{\min},\infty)\times[r_{\min},\infty)$ 
 by a concatenation of a coordinate segment and a segment defined by $r/s\z=r_0/s_0$ as in the figure.
@@ -1299,14 +1316,14 @@ It suffices to prove the following three inequalities:
 \leqno(**)\mc\pm_\phi.
 \]
 
-Then radial monotonicity follows from $(*)\mc\pm_\phi$.
+Then radial monotonicity follows from $(*)\mc\pm_\phi$ the same way as in the $\kappa=0$ case.
 The radial comparison follows from $(*)\mc0_\phi$ and $(**)\mc\pm_\phi$.
 Indeed, the functions $s\mapsto \sn\kappa s\cdot\cs\kappa S$ and $r\mapsto \sn\kappa r\cdot\cs\kappa R$ are Lipschitz.
 Thus there is a solution for the differential equation
 \[(r',s')=(\sn\kappa s\cdot\cs\kappa S,\sn\kappa r\cdot\cs\kappa R)\] 
 with any initial data $(r_0,s_0)\in[r_{\min},\tfrac{\varpi\kappa}2)\times[s_{\min},\tfrac{\varpi\kappa}2)$.
 (Unlike the case $\kappa=0$, the solution cannot be written explicitly.)
-Since $\sn\kappa s\cdot\cs\kappa S$, $\sn\kappa r\cdot\cs\kappa R>0$, this solution $(r(t),s(t))$ must meet one of the coordinate rays
+Since $\sn\kappa s\cdot\cs\kappa S$, $\sn\kappa r\cdot\cs\kappa R>0$, this solution $t\mapsto(r(t),s(t))$ must meet one of the coordinate rays
 $\{r_{\min}\}\times[s_{\min},\tfrac{\varpi\kappa}2)$ or $[r_{\min},\tfrac{\varpi\kappa}2)\times\{s_{\min}\}$.
 That is, one can connect the pair $(s_{\min},r_{\min})$ to $(s_0,r_0)$ by a concatenation of a coordinate segment (vertical or horizontal) and part of the solution $(r(t),s(t))$.
 According to $(*)\mc\pm_\phi$ and $(**)\mc\pm_\phi$, the value of $\phi$ does not increase while the pair $(r,s)$ moves along this concatenation in direction of increasing $r$ and $s$.
