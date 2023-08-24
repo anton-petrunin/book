@@ -19,7 +19,7 @@ We will need the existence of a selective ultrafilter $\o$ that will be fixed on
 The existence follows from the axiom of choice and the continuum hypothesis.
 
 \parbf{Measure-theoretic definition.}
-Recall that $\NN$ denotes the set of natural numbers, $\NN=\{1,2,\dots\}$.
+Recall that $\NN$ denotes the set of natural numbers, $\NN\z=\{1,2,\dots\}$.
 
 \begin{thm}{Definition}\label{def:ultrafilter}
 A finitely additive measure $\o$ 
@@ -61,7 +61,9 @@ More commonly, a nonprincipal ultrafilter is defined as a collection, say $\math
 \end{enumerate}
 
 Setting 
-\[P\in\mathfrak{F}\quad\iff\quad\o(P)=1\] 
+\[P\in\mathfrak{F}
+\quad\Longleftrightarrow\quad
+\o(P)=1\] 
 makes these two definitions equivalent.
 
 A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \index{filter}\emph{filter}; 
@@ -124,7 +126,7 @@ and $x_n\to  x_\o$ as $n\to\o$.
 Then there is a subsequence of $x_n$ that converges to $x_\o$ in the usual sense.
 
 Moreover, if $\o$ is selective,
-then the subsequence $(x_n)_{n\in S}$ can be chosen so that $\o(S)=1$.
+then the subsequence $(x_n)_{n\in S}$ can be chosen so that $\o(S)\z=1$.
 \end{thm}
 
 \parit{Proof.}
@@ -221,7 +223,7 @@ Let $\spc{X}_\o$ be the corresponding metric space;
 that is, the underlying set of $\spc{X}_\o$ is formed by equivalence  classes of sequences of points $x_n\in\spc{X}_n$ 
 defined by the relation
 \[(x_n)\sim(y_n)
-\quad \iff\quad 
+\quad\Longleftrightarrow\quad 
 \lim_{n\to\o} \dist{x_n}{y_n}{}=0,\]
 and the distance is defined as in \ref{eq:olim-dist}.
 

@@ -1,7 +1,7 @@
 % !TeX TS-program = pdflatexmk
 
-\newcommand{\arxiv}[2]{#1} %for arxiv
-%\newcommand{\arxiv}[2]{#2} %for gsm
+%\newcommand{\arxiv}[2]{#1} %for arxiv
+\newcommand{\arxiv}[2]{#2} %for gsm
 
 \arxiv{\documentclass[twoside]{book}}{\documentclass{gsm-l}}
 
@@ -17,7 +17,7 @@
 \usepackage{notation-vitya}
 \usepackage{tikz-cd}
 \arxiv{\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}}{}
-\usepackage[toctitles]{titlesec}
+\arxiv{\usepackage[toctitles]{titlesec}}{}
 
 %\usepackage{pgfpages}\pgfpagesuselayout{resize to}[a4paper]%[physical paper width=9in,physical paper height=13.5in]%LARGEPRINT
 

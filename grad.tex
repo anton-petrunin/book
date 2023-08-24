@@ -414,6 +414,8 @@ Here one has to apply the first variation inequality for distance to the midpoin
 Hence the result. 
 \qeds
 
+{\sloppy
+
 \begin{thm}{Second distance estimate}\label{lem:fg-dist-est}
 Let $\spc{Z}$ be a complete length space, 
 $\eps>0$,  
@@ -432,6 +434,8 @@ for a constant $\Const=\Const(t_{\max},\lambda)$.
 
 Moreover, the same conclusion holds for locally Lipschitz  $\lambda$-concave subfunctions $f,g\:\spc{Z}\subto \RR$ if for any $t\in[0,t_{\max})$ there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f\cap\Dom g$.
 \end{thm}
+
+}
 
 \parit{Proof.} Set $\ell=\ell(t)=\dist{\alpha(t)}{\beta(t)}{}$.
 Fix $t$, and let $p=\alpha(t)$ and $q=\beta(t)$.
@@ -615,12 +619,15 @@ Then:
 $f_\o$ is $\lambda$-concave.
 \end{subthm}
 
+{\sloppy
 
 \begin{subthm}{lim-grad-like}
 If $|\nabla_{p_\o}f_\o|>0$, then there is $\eps>0$ such that, the $f_n$-gradient-like curves $\hat\alpha_n\:[0,\eps)\to\spc{Z}_n$ are defined for $\o$-almost all $n$.
 Moreover, a curve $\hat\alpha_\o\:[0,\eps)\to\spc{Z}_\o$ is a gradient-like curve that starts at $p_\o$ if and only if
 $\hat\alpha_n(s)\to\hat\alpha_\o(s)$ as $n\to\o$ for all $s\in[0,\eps)$.
 \end{subthm}
+
+}
 
 \begin{subthm}{lim-grad}
 For some $\delta>0$, the $f_n$-gradient curves $\alpha_n\:[0,\delta)\to\spc{Z}_n$ are defined for $\o$-almost all $n$.
@@ -1046,9 +1053,8 @@ is a $(p,\kappa)$-radial curve.
 
 \begin{thm}{Proposition}\label{prop:dist<s}
 Suppose $\spc{L}$ is a complete length $\Alex{}$ space, 
-$p\in\spc{L}$ 
-and $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ is a $(p,\kappa)$-radial curve.
-Then for any $s\in [s_{\min},s_{\max})$, 
+$p\in\spc{L}$.
+Then for any $(p,\kappa)$-radial curve $\sigma\:[s_{\min},s_{\max})\to \spc{L}$ and $s\in [s_{\min},s_{\max})$, 
 we have $\dist{p}{\sigma(s)}{}\le s$,
 and therefore, $\sigma$ is 1-Lipschitz.
 
@@ -1301,7 +1307,8 @@ always defined but might have absolute value bigger than 1. Then inequality $
 (*)\mc0_\ell$ implies that $\cos \psi$ is nondecreasing  on $  
 [s_{\min},\tfrac{\varpi\kappa}2)$.
 This in particular shows that 
-if  $\cos  \psi(s_0)>1$ for some $s_0$ then it remains $>1$ for $s\ge s_0$.
+if  $\cos  \psi(s_0)\z>1$ for some $s_0$, then $\cos  \psi(s)>1$ for 
+$s\ge s_0$.
 Or, 
 equivalently, if $\dist{q}{\sigma(s_0)}{}<s_0-\dist{p}{q}{}$, then
 $\dist{q}{\sigma(s)}{}<s-\dist{p}{q}{}$ for $s\ge s_0$.

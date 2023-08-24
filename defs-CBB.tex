@@ -452,7 +452,7 @@ and $v,w\in \mathopen{]}xy\mathclose{[}$.
 Prove that  
 \[
 \angk\kappa xyp=\angk\kappa xvp
-\quad \iff\quad 
+\quad\Longleftrightarrow\quad 
 \angk\kappa xyp=\angk\kappa xwp.
 \]
 
@@ -480,10 +480,14 @@ Prove that $\spc{L}$ is $\Alex0$.
 Construct a 4-point metric space $\spc{X}$ that satisfies inequality \ref{eq:berg-nikolaev} for any relabeling of its points by $p,x,y,z$, such that $\spc{X}$ is not $\Alex{0}$.
 \end{thm}
 
+{\sloppy
+
 Assume that for a given triangle $\trig{x^1}{x^2}{x^3}$ in a metric space its $\kappa$-model triangle
-$\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}=\modtrig\kappa({x^1}{x^2}{x^3})$ is defined.
+$\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\z=\modtrig\kappa({x^1}{x^2}{x^3})$ is defined.
 We say the triangle $\trig{x^1}{x^2}{x^3}$ is \emph{$\kappa$-thick} \index{$\kappa$-thick} if the natural map (see definition \ref{def:k-thin}) 
 $\trig{\tilde x^1}{\tilde x^2}{\tilde x^3}\to \trig{x^1}{x^2}{x^3}$ is distance non contracting.
+
+}
 
 \begin{thm}{Exercise}\label{ex:fat-triangle}
 Prove that any triangle with perimeter $<\varpi\kappa$ 
@@ -630,7 +634,7 @@ It is straightforward to check that $(\rho,\theta)$ uniquely describe $\tilde \g
 We need the following analogs of sub- and super-graphs % we use sub-super- BUT NOT epi-hypo-
  and convex/concave functions, adapted to polar coordinates in $\Lob2{\kappa}$.
 
-\begin{wrapfigure}{o}{38 mm}
+\begin{wrapfigure}{r}{38 mm}
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-810}
@@ -711,7 +715,7 @@ By the hinge comparison (\ref{angle}), we have
 }
 
 \begin{wrapfigure}[4]{r}{31 mm}
-\vskip-10mm
+\vskip-13mm
 \centering
 \includegraphics{mppics/pic-815}
 \end{wrapfigure}
@@ -1010,7 +1014,7 @@ In particular,
 {
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-0mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-820}
 \vskip-4mm
@@ -1207,9 +1211,11 @@ Therefore we can apply the lemma on almost minimum
 at the point $p^*$ to the function $x\z\mapsto\ComRad(x,\spc{L}^\o)$
 and $\eps'=\sqrt\eps=0.01$.
 
-For the resulting point $p^{{*}{*}}\in \spc{L}^\o$, we have $r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa$, 
-and 
-$\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}$ for any $q_\o\in\cBall[p^{{*}{*}},\tfrac{1}{\eps'}\cdot r^{{*}{*}}]$. 
+For the resulting point $p^{{*}{*}}\in \spc{L}^\o$, we have 
+\[r^{{*}{*}}\z=\ComRad(p^{{*}{*}},\spc{L})\z<\varpi\kappa, 
+\quad\text{and} \quad
+\ComRad(q_\o,\spc{L}^\o)\z> (1-\eps')\cdot r^{{*}{*}}\]
+for any $q_\o\in\cBall[p^{{*}{*}},\tfrac{1}{\eps'}\cdot r^{{*}{*}}]$. 
 Thus applying the key lemma (\ref{key-lem:globalization}) for $p^{{*}{*}}$ and for $\ell$ slightly bigger than $r^{{*}{*}}$ leads to a contradiction.
 \qeds
 
@@ -1641,7 +1647,7 @@ after rescaling $\spc{L}$ is still $\Alex1$.
 Since $\spc{L}$ is G-delta geodesic (\ref{thm:almost.geod}), it is sufficient to consider the case when there is a geodesic $[q r]$. 
 
 \begin{wrapfigure}{r}{35 mm}
-\vskip-4mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-840}
 \end{wrapfigure}

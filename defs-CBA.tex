@@ -127,9 +127,9 @@ satisfy all three triangle inequalities or one of these angles is undefined.
 \begin{thm}{Exercise}\label{ex:sba-2+2-short}
 Show that $\spc{U}$ is $\CAT\kappa$
 if and only if for any quadruple of points 
-$p^1,p^2,x^1,x^2$ in $\spc{U}$ such that
+$p^1$, $p^2$, $x^1$, $x^2$ in $\spc{U}$ such that
 $\dist{p^1}{p^2}{},\dist{x^1}{x^2}{}\le \varpi\kappa$,
-there is a quadruple $q^1,q^2,y^1,y^2$ in $\Lob m\kappa$
+there is a quadruple $q^1$, $q^2$, $y^1$, $y^2$ in $\Lob m\kappa$
 such that 
 \begin{align*}
 \dist{q^1}{q^2}{}&=\dist{p^1}{p^2}{},
@@ -568,7 +568,7 @@ Then there is a short map $F\:\tilde D\to \dot D$ that maps $\tilde p$, $\tilde 
 {
 
 \begin{wrapfigure}{r}{41 mm}
-\vskip-0mm
+\vskip-10mm
 \centering
 \includegraphics{mppics/pic-925}
 \end{wrapfigure}
@@ -614,6 +614,7 @@ and $\trig {\dot p} {\dot y} {\dot z}\z=\modtrig\kappa(p y z)$ so that $\dot x$ 
 \vskip-0mm
 \centering
 \includegraphics{mppics/pic-930}
+\vskip8mm
 \end{wrapfigure}
 
 Suppose
@@ -1009,8 +1010,8 @@ For any nontrivial geodesic $[py]$ in $\spc{U}$ and point $q\ne p$ such that  $\
 The first variation equation is equivalent to the strong angle lemma (\ref{lem:strong-angle-cba}), as follows from the cosine law.
 \qeds
 
-\begin{thm} {First variation (both-endpoints version)}\label{cor:both-end-first-var-cba}
-Assume that $\spc{U}$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
+\begin{thm} {Both-endpoints first variation}\label{cor:both-end-first-var-cba}
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 Then for any nontrivial geodesics $[py]$ and $[qz]$ in $\spc{U}$  such that $p\ne q$ and $\dist{p}{q}{}<\varpi\kappa$, we have 
 \[
 \dist{\geod_{[p y]}(t)}{\geod_{[q z]}(\tau)}{}
@@ -1585,7 +1586,7 @@ imply that $\gamma_{x z}$ is minimizing; hence Claim~\ref{clm:B-is-convex}.
 Further, Claim~\ref{clm:B-is-almost-convex} and the no-conjugate-point theorem (\ref{thm:no-conj-pt}) together 
 imply that the map $(x,z)\mapsto\gamma_{x z}$ is continuous.
 
-Therefore by the patchwork globalization theorem (\ref{thm:alex-patch}), 
+By the patchwork globalization theorem (\ref{thm:alex-patch}), 
 $\cBall[ p,r]$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
 
 Since
@@ -1694,7 +1695,7 @@ $\cBall[\hat p,\bar R]$ in $\mathfrak{G}_p$ is complete.
 
 Take $\oBall(\hat p,\varpi\kappa/2)$ and $\map$ constructed above.
 According to the radial lemma (\ref{lem:radial-glob}), $\oBall(\hat p,\varpi\kappa/2)$ is a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
-The map $\map$ extends to its completion $\spc{B}=\cBall[\hat p,\varpi\kappa/2]$. 
+The map $\map$ extends to its completion $\spc{B}\z=\cBall[\hat p,\varpi\kappa/2]$. 
 All the remaining statements are already proved.
 \qeds
 
@@ -1801,7 +1802,9 @@ ${\trig p x y}_D$ in the length metric of $D$.
 \begin{subthm} {short-to-subgraph}
 Let $\trig{\tilde p}{\tilde x}{\tilde y}$ be the model triangle for 
 ${\trig p x y}_D$.
-Then there is a short map $G\:\Conv\trig{\tilde p}{\tilde x}{\tilde y}\to D$ such that $\tilde p\mapsto p$, $\tilde x\mapsto x$, $\tilde y\mapsto y$, and $G$ is length-preserving on each side of $\trig{\tilde p}{\tilde x}{\tilde y}$.
+Then there is a short map 
+\[G\:\Conv\trig{\tilde p}{\tilde x}{\tilde y}\to D\]
+such that $\tilde p\mapsto p$, $\tilde x\mapsto x$, $\tilde y\mapsto y$, and $G$ is length-preserving on each side of $\trig{\tilde p}{\tilde x}{\tilde y}$.
 In particular, $\Conv\trig{\tilde p}{\tilde x}{\tilde y}$ majorizes triangle $[p x y]_D$ in $D$ under~$G$.
 \end{subthm}
 \end{thm} 
@@ -2048,7 +2051,7 @@ to a distance-preserving map of $\Conv(\tilde x^0,\tilde x^1\dots \tilde x^{n+1}
 \parit{Proof; \ref{SHORT.subthm:arm-ineq}.}
 By majorization (\ref{thm:major}), $P$ is majorized by a convex region $\tilde D$ in $\Lob{2}{\kappa}$.
 By Proposition \ref{prop:majorize-geodesic} and the definition of angle,
-$\tilde D$ is bounded by a convex polygon $\tilde P_R=[\tilde y^0\tilde y^1\dots \tilde y^{n+1}]$ that satisfies
+$\tilde D$ is bounded by a convex polygon $\tilde P_R\z=[\tilde y^0\tilde y^1\dots \tilde y^{n+1}]$ that satisfies
 \begin{align*}
 \dist{\tilde y^i}{\tilde y^{i\pm1}}{\Lob{2}{\kappa}}
 &=
@@ -2091,7 +2094,7 @@ Hence the claim.
 
 \begin{clm}{}\label{clm:arm-induction}
 Suppose $F|_{\Conv(\tilde x^0,\tilde x^1,\dots,\tilde x^{k})}$ is distance-preserving for $2\le k\le n-1$.
-Then $F|_{\Conv(\tilde x^0,\tilde x^1,\dots, \tilde x^{k+1})}$ is distance-preserving.
+Then the restriction $F|_{\Conv(\tilde x^0,\tilde x^1,\dots, \tilde x^{k+1})}$ is distance-preserving.
 \end{clm}
 
 To verify this claim, let 
@@ -2146,8 +2149,7 @@ in $\EE^2$
 such that 
 \[\dist{x^i}{x^j}{\spc{U}}=\dist{\tilde x^i}{\tilde x^j}{\EE^2}\]
 for all $i$ and $j$.
-Show that $\spc{U}$ contains an isometric copy of the 
-\emph{solid quadrangle}
+Show that $\spc{U}$ contains an isometric copy of \emph{solid quadrangle}
 $[\tilde x^1\tilde x^2\tilde x^3\tilde x^4]$; that is, the convex hull of $\tilde x^1,\tilde x^2,\tilde x^3,\tilde x^4$ in $\EE^2$.
 \end{thm}
 
@@ -2209,6 +2211,8 @@ the first states that any closed curve is null-homotopic while the second means 
 However, as follows from Proposition~\ref{prop:sc}, for locally $\CAT\kappa$ spaces these two definitions are equivalent.
 This fact makes it possible to deduce the Hadamard--Cartan theorem directly from the generalized Hadamard--Cartan theorem.
 
+{\sloppy
+
 \begin{thm}{Generalized Hadamard--Cartan theorem}\label{thm:hadamard-cartan-gen}
 A complete length space
 $\spc{U}$ is $\CAT\kappa$ 
@@ -2216,13 +2220,15 @@ if and only if $\spc{U}$ is $2\cdot\varpi\kappa$-simply connected
 and $\spc{U}$ is locally $\CAT\kappa$.
 \end{thm}
 
+}
+
 For proper spaces, the generalized Hadamard--Cartan theorem was proved by Brian Bowditch \cite{bowditch}.
 In the proof we need the following lemma.
 
 \begin{thm}{Lemma}
-Assume $\spc{U}$ is a complete length  locally $\CAT\kappa$ space,
+Let $\spc{U}$ be a complete length  locally $\CAT\kappa$ space,
 $\eps>0$,
-and $\gamma_1,\gamma_2\:\mathbb{S}^1\to\spc{U}$ are two closed curves.
+and $\gamma_1,\gamma_2\:\mathbb{S}^1\to\spc{U}$ be two closed curves.
 Assume 
 \begin{subthm}{}
 $\length\gamma_i<2\cdot\varpi\kappa-4\cdot\eps$ for $i=1,2$;
