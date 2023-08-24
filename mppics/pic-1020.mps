@@ -1,8 +1,8 @@
 %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: -78 -9 78 92 
 %%HiResBoundingBox: -77.21902 -8.52039 77.21902 91.53181 
-%%Creator: MetaPost 2.00
-%%CreationDate: 2023.03.29:1556
+%%Creator: MetaPost 2.01
+%%CreationDate: 2023.08.24:1449
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font KBAOWE-CMMI10 BCYDUA-CMSY10 PPPGAV-EURM10 CKUVFG-CMR10

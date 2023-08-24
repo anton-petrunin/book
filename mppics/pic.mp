@@ -7,7 +7,6 @@ verbatimtex
 \documentclass[oneside]{book}
 \usepackage{../biber}
 \usepackage{../akp1}
-\usepackage{../hyper}
 \usepackage{../letters}
 \usepackage{../notation}
 \usepackage{../envmnt}

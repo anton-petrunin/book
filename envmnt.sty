@@ -162,14 +162,3 @@
 
 \usepackage{verbatim}
 
-\arxiv{\usepackage{titletoc}% http://ctan.org/pkg/titletoc
-\titlecontents*{section}[.5em]
-  {\small}
-  {\thecontentslabel.~{}}
-  {}
-  { \textbf{\thecontentspage}}
-  [; ][.]
-}{}
-
-\makeatletter\renewcommand{\p@section}{\thechapter}\makeatother
-\renewcommand{\thesection}{\Alph{section}}
