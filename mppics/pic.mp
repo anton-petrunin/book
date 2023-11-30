@@ -8,6 +8,7 @@ verbatimtex
 \usepackage{../biber}
 \usepackage{../akp1}
 \usepackage{../letters}
+\usepackage[intlimits,leqno]{amsmath}
 \usepackage{../notation}
 \usepackage{../envmnt}
 \usepackage{../notation-vitya}
@@ -105,6 +106,25 @@ label.bot(btex $y$ etex, z.c);
 endfig;
 
 
+beginfig(11) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=(0,0)*u;
+z.q=(0,-2)*u;
+
+p0=z.p{1,.3}..{-1,-.2}z.q..cycle;
+
+draw p0;
+draw z.p--z.q;
+
+dOt z.p,z.q;
+
+label.top(btex $p$ etex, z.p);
+label.bot(btex $q$ etex, z.q);
+label.rt(btex $\gamma$ etex, point .5 of p0);
+endfig;
 
 beginfig(105) 
 save u,p;

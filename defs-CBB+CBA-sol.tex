@@ -590,6 +590,47 @@ After that we need to pass to a limit as $\eps\to 0$.
 
 The first part of the problem follows since a geodesic is a convex set.
 
+\begin{wrapfigure}{r}{25 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-11}
+\end{wrapfigure}
+
+\parbf{\ref{ex:geod-circle}.}
+The following proof works for compact locally simply connected metric spaces;
+it includes compact length, locally $\CAT0$ spaces. 
+
+\medskip
+
+
+By the globalization theorem there is  a nontrivial homotopy class of closed curves.
+Consider a shortest noncontractible closed curve $\gamma$ in  $\spc{X}$;
+note that such a curve exists.
+Indeed, let $L$ be the infimum of lengths of all noncontractible closed curves in $\spc{X}$.
+Compactness and local contractibility of $\spc{X}$ imply that any two sufficiently close closed curves in $\spc{X}$ are homotopic.
+Then choosing a sequence of unit speed noncontractible curves whose lengths converge to $L$, an Arzel\'{a}--Ascoli type of argument shows that these curves subconverge to a noncontractible curve of length~$L$.
+
+
+Assume that $\gamma$ is not a geodesic circle,
+that is,  there are two points $p$ and $q$ on $\gamma$ such that the distance $\dist{p}{q}{}$ 
+is shorter then the lengths of the arcs, say $\alpha_1$ and $\alpha_2$, of $\gamma$ from $p$ to~$q$.
+Consider the products, say $\gamma_1$ and $\gamma_2$,
+of $[qp]$ with $\alpha_1$ and~$\alpha_2$.
+Then
+\begin{itemize}
+ \item  $\gamma_1$ or $\gamma_2$ is noncontractible,
+ \item $\length\gamma_1, \length\gamma_2<\length \gamma$,
+\end{itemize}
+a contradiction.
+
+In the $\CAT1$ case we have a geodesic circle of length $<2\cdot \pi$.
+The proof is done nearly the same way, but we need to consider the homotopy classes of closed curves shorter than $2\cdot \pi$.
+One also need to apply \ref{thm:hadamard-cartan-gen}, to show that curves $\gamma_1$ and $\gamma_2$ are not contractible in the class of curves shorter than $2\cdot \pi$.
+
+\parit{Remark.}
+The statement of the exercise fails if the requirement that $\spc{X}$ be compact is replaced by the assumption that it is proper.
+For example, the surface of revolution of the graph of $y=e^x$ around the $x$-axis is locally $\CAT0$ but has no closed geodesics.
+
 \parbf{\ref{ex:closest-point-projection}.}
 Let $p\mapsto\bar p$ denote the closest-point projection to $K$.
 We need to show that $\dist{\bar p}{\bar q}{}\le\dist{ p}{ q}{}$ for any $p,q\in \spc{U}$.
@@ -1062,7 +1103,7 @@ It follows that
 &\le \cos\angk\kappa p a b.
 \end{align*}
 
-\parbf{\ref{ex:fixed-point}.}
+\parbf{\ref{ex:fixed-point-CAT}.}
 Choose an orbit $\{p_1,\dots,p_n\}$;
 observe that its barycenter with equal masses is a fixed point.  
 
