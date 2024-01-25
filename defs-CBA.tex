@@ -62,7 +62,7 @@ If $\trig{\tilde p^1}{\tilde p^2}{\tilde x^1}
 and
 $\trig{\tilde p}{\tilde p^2}{\tilde x^2}
 \z=
-\modtrig\kappa p^1 p^2 x^2$, then
+\modtrig\kappa(p^1 p^2 x^2)$, then
 \[\dist{\tilde x^1}{\tilde z}{}+\dist{\tilde z}{\tilde x^2}{}\ge \dist{x^1}{x^2}{},\]
 for any $\tilde z\in[\tilde p^1\tilde p^2]$.
 
@@ -637,7 +637,7 @@ By Alexandrov's lemma (\ref{lem:alex}), this is equivalent to
 \[\angk\kappa x p z\le\angk\kappa x p y.
 \eqlbl{eq:for|pz|}\]
 
-Let $\trig{\tilde  p}{\tilde  x}{\tilde  y}=\modtrig\kappa (p x y)$ 
+Let $\trig{\tilde  p}{\tilde  x}{\tilde  y}=\modtrig\kappa(p x y)$ 
 and $\tilde  z\in[\tilde  x\tilde  y]$ correspond to $z$; that is, $\dist{x}{z}{}=\dist{\tilde  x}{\tilde  z}{}$.
 Inequality~\ref{eq:for|pz|} is equivalent to $\dist{ p}{ z}{}\le \dist{\tilde  p}{\tilde  z}{}$.
 Hence  Lemma~\ref{lem:quadrangle} applies.  Therefore 
@@ -776,7 +776,7 @@ For a partition $0=t^0<t^1<\dots<t^n=T$, let
 \[\tilde y^i=\tilde \gamma(t^i)\quad \text{and}\quad \tau^i=\dist{\tilde y^0}{\tilde y^1}{}+\dist{\tilde y^1}{\tilde y^2}{}+\dots+\dist{\tilde y^{i-1}}{\tilde y^i}{}.\]  
 Since $\tilde \gamma$ is locally concave, 
 for a sufficiently fine partition the polygonal line $\tilde y^0\tilde y^1\dots\tilde y^n$ is  locally concave with respect to $\tilde p$. 
-Alexandrov's lemma (\ref{lem:alex}), applied inductively to pairs of triangles  $\modtrig\kappa \{\tau^{i-1},\dist{p}{\tilde y^0}{},\dist{p}{\tilde y^{i-1}}{}\}$ and  $\modtrig\kappa\{\dist{\tilde y^{i-1}}{\tilde y^i}{}, \dist{p}{\tilde y^{i-1}}{},\dist{p}{\tilde y^{i}}{}\}$, shows that the sequence  $\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y^{i}}{};\dist{\tilde p}{\tilde y^0}{},\tau^i\}$ is nondecreasing.
+Alexandrov's lemma (\ref{lem:alex}), applied inductively to pairs of triangles  $\modtrig\kappa\{\tau^{i-1},\dist{p}{\tilde y^0}{},\dist{p}{\tilde y^{i-1}}{}\}$ and  $\modtrig\kappa\{\dist{\tilde y^{i-1}}{\tilde y^i}{}, \dist{p}{\tilde y^{i-1}}{},\dist{p}{\tilde y^{i}}{}\}$, shows that the sequence  $\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y^{i}}{};\dist{\tilde p}{\tilde y^0}{},\tau^i\}$ is nondecreasing.
 
 Taking finer partitions and passing to the limit, we get
 \[\max\nolimits_i\{|\tau^i-t^i|\}\to0.\] 
