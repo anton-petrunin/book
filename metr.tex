@@ -17,19 +17,19 @@ A function $\rho$ defined on $\spc{X}\times\spc{X}$ is called an $\II$-valued me
 The value $\rho(x,y)$ is also called the \index{distance}\emph{distance} between $x$ and $y$.
 
 
-The above definition will be used for four choices of interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty)$, and $[0,\infty]$.
+The above definition will be used for four choices of the interval $\II$: $(0,\infty)$, $(0,\infty]$, $[0,\infty)$, and $[0,\infty]$.
 Any $\II$-valued metric can be referred to briefly as a metric;
 the interval should be apparent from context but by default, a metric is $(0,\infty)$-valued. 
-If we need to be more specific we may also use the following names:
+If we need to be more specific, we may also use the following names:
 \begin{itemize}
 \item a $(0,\infty)$-valued metric may be called a \index{genuine metric}\emph{genuine metric}.
 \item a $(0,\infty]$-valued metric may be called an \index{$\infty$-metric}\emph{$\infty$-metric}.
 \item a $[0,\infty)$-valued metric may be called  a \index{genuine pseudometric}\emph{genuine pseudometric}.
-\item A $[0,\infty]$-valued metric may be called a \index{pseudometric}\emph{pseudometric} or \index{$\infty$-pseudometric}\emph{$\infty$-pseudometric}.
+\item a $[0,\infty]$-valued metric may be called a \index{pseudometric}\emph{pseudometric} or an \index{$\infty$-pseudometric}\emph{$\infty$-pseudometric}.
 \end{itemize}
 
 A metric space is a set equipped with a metric.
-The distance between points $x$ and $y$ in a metric space $\spc{X}$ will  usually be denoted by \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
+The distance between points $x$ and $y$ in a metric space $\spc{X}$ will usually be denoted by \[\dist{x}{y}{}\qquad\text{or}\quad \dist{x}{y}{\spc{X}};\]
 the latter will be used if we need to emphasize that we are working in the space $\spc{X}$.
 
 The function $\distfun{x}{}{}\:\spc{X}\to\RR$ defined as 
@@ -80,8 +80,8 @@ is in general only an $\infty$-metric;
 that is, even if the metrics $\dist{}{}{\alpha}$ are genuine, then $\dist{}{}{}$ might be $(0,\infty]$-valued.
 
 Let $\spc{X}$ be a set,
-$\spc{Y}$ be a metric space, and  
- $\map\:\spc{X}\to\spc{Y}$ be a map.
+let $\spc{Y}$ be a metric space, and  
+let $\map\:\spc{X}\to\spc{Y}$ be a map.
 If $\map$ is not injective,
 then the {}\emph{pullback}
 \[\dist{x}{y}{\spc{X}}=\dist{\map(x)}{\map(y)}{\spc{Y}}\]
@@ -111,7 +111,7 @@ One could think of $\spc{X}_x$ as  $\oBall(x,\infty)_{\spc{X}}$, the open ball c
 
 It follows that any $\infty$-metric space is a {}\emph{disjoint union} of genuine metric spaces, the metric components of the original $\infty$-metric space; see Definition~\ref{def:disjoint-union}
 
-To summarize this discussion: Given a $[0,\infty]$-valued metric space $\spc{X}$, we may pass to the corresponding $(0,\infty]$-valued metric space $\spc{X}'$ and break the latter  into a disjoint union of metric components, each of which is  a genuine metric space.
+To summarize this discussion: given a $[0,\infty]$-valued metric space $\spc{X}$, we may pass to the corresponding $(0,\infty]$-valued metric space $\spc{X}'$ and break the latter  into a disjoint union of metric components, each of which is  a genuine metric space.
 
 
 \section{Notations}
@@ -124,17 +124,18 @@ Given $R\in[0,\infty]$ and a point $x$ in a metric space $\spc{X}$, the sets
 \\
 \cBall[x,R]&=\set{y\in \spc{X}}{ \dist{x}{y}{}\le R}%V: I suggest using just square brackets or just a bar over B for closed balls. Using both is an overkill. %S. I prefer B(A,R) and \bar B(A,R) where A is radius, B and \bar B tell open or closed.  This is easiest and makes most sense. A: for me [] reinforse the meaning, but I will agree on \bar B(x,R)
 \end{align*}
-are called respectively the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed  balls} of radius $R$ with center $x$.
+are called the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed  balls} of radius $R$ with center $x$, respectively.
 
 If we need to emphasize that these balls are taken in the space $\spc{X}$,
 we write\index{$\oBall(x,R)_{\spc{X}}$ (open ball)}\index{$\cBall[x,R]_{\spc{X}}$ (closed ball)}
-\[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}}\]
+\[\oBall(x,R)_{\spc{X}}\quad\text{and}\quad \cBall[x,R]_{\spc{X}},\]
 respectively.
 
 Since in the model space $\Lob{m}{\kappa}$ all balls of the same radius are isometric, 
 often we will not need to specify the center of the ball,
 and may write 
-\[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}}\] respectively.
+\[\oBall(R)_{\Lob{m}{\kappa}}\quad\text{and}\quad\cBall[R]_{\Lob{m}{\kappa}},\]
+respectively.
 
 A set $A\subset\spc{X}$ is called \index{bounded set}\emph{bounded} if $A\subset\oBall(x,R)$ for some $x\in\spc{X}$ and $R<\infty$.
 
@@ -152,7 +153,7 @@ For any subset $A\subset\spc{X}$, the sets \index{$\oBall(A,R)$ (open $R$-neighb
 \\
 \cBall[A,R]&=\set{y\in \spc{X}}{\distfun{A}{y}{}\le R}
 \end{align*}
-are called respectively the  \index{open $R$-neighborhood}\emph{open} and \index{closed $R$-neighborhood}\emph{closed $R$-neighborhoods} of $A$.
+are called the  \index{open $R$-neighborhood}\emph{open} and \index{closed $R$-neighborhood}\emph{closed $R$-neighborhoods} of $A$, respectively.
 
 \parbf{Diameter, radius, and packing.}
 Let $\spc{X}$ be a metric space.
@@ -172,8 +173,7 @@ Recall that an arbitrary union of open balls in a metric space is called an \ind
 A subset of a metric space is called a \index{G-delta set}\emph{G-delta set} if it can be presented as an intersection of  a countable number of open subsets. 
 
 \begin{thm}{Baire's theorem}
-Let $\spc{X}$ be a complete metric space 
-and $\{\Omega_n\}$, $n\in \NN$, be a collection of open dense subsets of $\spc{X}$.
+Let $\{\Omega_n\}$, $n\in \NN$, be a collection of open dense subsets of complete metric space $\spc{X}$.
 Then $\bigcap_{n\in \NN}\Omega_n$ is dense in $\spc{X}$.
 \end{thm}
  
@@ -277,12 +277,12 @@ We will need the following variations of Definition~\ref{def:length-space}:
 \begin{itemize}
 \item Assume $R>0$.
 If $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair $\dist{x}{y}{}<R$, then $\spc{X}$ is called an \index{$R$-length space}\emph{$R$-length space}.
-\item If any point in $\spc{X}$ admits a neighborhood  $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$
-then  $\spc{X}$ is called a \index{length space!locally length space}\emph{locally length space}.
-\item A metric space is called 
-\index{geodesic space}\emph{geodesic}
-if for any two points $x,y$ with $\dist{x}{y}{}<\infty$ there is a geodesic $[x y]$ in $\spc X$
-\item Assume $R>0$. A metric space is called 
+\item
+If any point in $\spc{X}$ admits a neighborhood $\Omega$ such that $\yetdist{x}{y}{}=\dist{x}{y}{}$ for any pair of points $x,y\in \Omega$, then $\spc{X}$ is called a \index{length space!locally length space}\emph{locally length space}.
+\item
+A metric space is called \index{geodesic space}\emph{geodesic} if for any two points $x,y$ with $\dist{x}{y}{}<\infty$ there is a geodesic $[x y]$ in $\spc X$.
+\item
+Assume $R>0$. A metric space is called 
 \index{$R$-geodesic space}\emph{$R$-geodesic}
 if for any two points $x,y$ such that $\dist{x}{y}{}<R$ there is a geodesic $[x y]$ in $\spc X$.
 \end{itemize}
@@ -297,8 +297,8 @@ Then $\spc{X}$ carries a natural complete length metric such that $\dist{p}{q}{}
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:complete=>complete}
-Let $\spc{X}$ be a metric space
-and $\yetdist{}{}{}$ be the length metric on it.
+Let $\spc{X}$ be a metric space,
+and let $\yetdist{}{}{}$ be the length metric on it.
 Show the following:
 \begin{subthm}{ex:complete=>complete:complete}
 If $\spc{X}$  is complete, then  $(\spc{X},\yetdist{}{}{})$ is complete.
@@ -344,13 +344,13 @@ The following lemma was essentially proved by Karl Menger \cite[Section 6]{menge
 Let $\spc{X}$ be a complete metric space.
 
 \begin{subthm}{lem:mid>length}
-Assume that for any pair of points $x,y\in \spc{X}$, and any $\eps>0$
+Assume that for any pair of points $x,y\in \spc{X}$, and any $\eps>0$,
 there is an $\eps$-midpoint $z$.
 Then  $\spc{X}$ is a length space.
 \end{subthm}
 
 \begin{subthm}{lem:mid>geod:geod}
-Assume that for any pair of points $x,y\in \spc{X}$ 
+Assume that for any pair of points $x,y\in \spc{X}$,
 there is a midpoint $z$.
 Then  $\spc{X}$ is a geodesic space.
 \end{subthm}
@@ -374,7 +374,7 @@ Let $\alpha(\tfrac12)$ be an $\eps_1$-midpoint between $\alpha(0)$ and $\alpha(1
 Further, let $\alpha(\frac14)$ 
 and $\alpha(\frac34)$  be $\eps_2$-midpoints 
 between the pairs $(\alpha(0),\alpha(\tfrac12))$ 
-and $(\alpha(\tfrac12),\alpha(1))$ respectively.
+and $(\alpha(\tfrac12),\alpha(1))$, respectively.
 Applying the above procedure recursively,
 on the $n$-th step we define $\alpha(\tfrac{\kay}{2^n})$,
 for every odd integer $\kay$ such that $0<\tfrac\kay{2^n}<1$, to be an $\eps_{n}$-midpoint between the already defined
@@ -479,7 +479,7 @@ but whose completion is neither geodesic nor locally compact.
 
 \begin{thm}{Definition} 
 \label{def:convex-set}
-Let $\spc{X}$ be a geodesic space and $A\subset\spc{X}$.
+Let $\spc{X}$ be a geodesic space, and let $A\subset\spc{X}$.
 
 $A$ is 
 \index{convex set}\emph{convex}
@@ -496,10 +496,10 @@ We say  that $A$ is
 if for every two points $p,q\in A$, every local geodesic from $p$ to $q$ lies in $A$.
 
 If for some $R\in (0,\infty]$ these definitions are applied only for pairs of points such that $\dist{p}{q}{}<R$ and only for the geodesics of length $<R$,
-then $A$ is called respectively 
+then $A$ is called 
 \index{$R$-convex set}\emph{$R$-convex},
 \emph{weakly $R$-convex},
-or \emph{totally $R$-convex}.
+or \emph{totally $R$-convex}, respectively.
 
 A set $A\subset\spc{X}$ is called 
 \index{convex set!locally convex set}\emph{locally convex}
@@ -566,9 +566,8 @@ the set of equivalence classes will coincide with the set of points in the metri
 
 
 \begin{thm}{Proposition}\label{prop:length-X}
-Let $\spc{X}$ be a length space and 
-$\sim$ be an equivalence relation on $\spc{X}$. Then $\spc{X}/{\sim}$
-is a length space.
+Let $\sim$ be an equivalence relation on a length space~$\spc{X}$.
+Then $\spc{X}/{\sim}$ is a length space.
 \end{thm}
 
 \parit{Proof.}
@@ -579,7 +578,7 @@ a map $f\:\spc{X}\to \spc{Y}$ is short if and only if
 for any curve
 $\alpha\:\II\to \spc{X}$.
 Denote by $\yetdist{}{}{}$ the length metric on $\spc{Y}$.
-It follows that if $f\:\spc{X}\to \spc{Y}$ is short
+It follows that if $f\:\spc{X}\to \spc{Y}$ is short,
 then so is 
 $f\:\spc{X}\to (\spc{Y},\yetdist{}{}{})$.
 
@@ -640,7 +639,7 @@ and a bijection $\phi\:A_1\to A_2$.
 Consider the minimal equivalence relation on $\spc{X}_1\sqcup\spc{X}_2$
 such that $a\sim \phi(a)$ for any $a\in A_1$.
 In this case, the corresponding quotient space 
-$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called the \index{gluing}\emph{gluing of $\spc{X}$ and $\spc{Y}$ along $\phi$} and denoted by
+$(\spc{X}_1\sqcup\spc{X}_2)/{\sim}$ will be called the \index{gluing}\emph{gluing of $\spc{X}$ and $\spc{Y}$ along $\phi$} and is denoted by
 \[\spc{X}_1\sqcup_{\phi}\spc{X}_2.\]
 
 Note that if the map $\phi\:A_1\to A_2$ is distance-preserving,
@@ -652,17 +651,17 @@ then the inclusions $\iota_i\:\spc{X}_i\to \spc{X}_1\sqcup_{\phi}\spc{X}_2$ are 
 for any $x_1\in \spc{X}_1$ and $x_2\in \spc{X}_2$.
 
 \parbf{Doubling.}
-Let $\spc{V}$ be a metric space 
-and $A\subset \spc{V}$ be a closed subset.
+Let $\spc{V}$ be a metric space,
+and let $A\subset \spc{V}$ be a closed subset.
 A metric space $\spc{W}$ glued from two copies of $\spc{V}$ along $A$ is called the \index{doubling}\emph{doubling of $\spc{V}$ in $A$}.
 
 The space $\spc{W}$ is completely described by the following properties:
 \begin{itemize}
 \item The space $\spc{W}$ contains $\spc{V}$ as a subspace; 
 in particular the set $A$ can be treated as a subset of $\spc{W}$.
-\item There is an isometric involution of $\spc{W}$ which is called \index{reflection}\emph{reflection in $A$};
+\item There is an isometric involution of $\spc{W}$ which is called a \index{reflection}\emph{reflection in $A$};
 it will be denoted by $x\mapsto x'$.
-\item For any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$ and 
+\item For any $x\in \spc{W}$ we have $x\in \spc{V}$ or $x'\in \spc{V}$, and 
 \[
 \dist{x'}{y}{\spc{W}}
 =\dist{x}{y'}{\spc{W}}

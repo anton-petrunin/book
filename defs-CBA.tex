@@ -195,7 +195,7 @@ Since $\spc{U}$ is complete, the sequence $z_n$ converges to a midpoint between 
 By Lemma~\ref{lem:mid>geod} we obtain  the existence of a geodesic $[p^1p^2]$.
 
 Now suppose $p^1_n\to p^1$, $p^2_n\to p^2$ as $n\to\infty$.
-Let $z_n$ be the midpoint of a geodesic $[p^1_n p^2_n]$ and $z$ be the midpoint of a geodesic $[p^1p^2]$.  
+Let $z_n$ be the midpoint of a geodesic $[p^1_n p^2_n]$, and let $z$ be the midpoint of a geodesic $[p^1p^2]$.  
 
 It suffices to show that 
 \[\dist{z_n}{z}{}\to0
@@ -858,7 +858,7 @@ The proof of patchwork globalization uses the following construction:
 
 \begin{thm}{Definition (Line-of-sight map)} \label{def:sight}
 %Let $\spc{U}$ be a metric space in which pairs of points at distance $<\varpi\kappa$ are joined by unique geodesics and these geodesics depend continuously on their endpoint pairs. 
-Let  $p$ be a point and $\alpha$ be a curve of finite length in  a length space $\spc{U}$. 
+Let  $p$ be a point, and let $\alpha$ be a curve of finite length in a length space $\spc{U}$. 
 Let $\bar\alpha:[0,1]\to\spc{U}$ be the constant-speed parametrization of $\alpha$.
 If $\gamma_t\:[0,1]\to\spc{U}$ is a geodesic path from $p$ to $\bar\alpha(t)$, we say that the map $[0,1]\times[0,1]\to\spc{U}$ defined by
 \[(t,s)\mapsto\gamma_t(s)\]
@@ -1201,7 +1201,7 @@ Show that $A$ is a convex set of $\spc{U}$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:glue-spherical-suspension}
-Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Let $\spc{U}$ be a complete length $\CAT1$ space, and let $K\subset \spc{U}$ be a closed $\pi$-convex set.
 Assume $K\subset \cBall[p,\tfrac\pi2]$ for $p\in K$.
 Show that there is a decreasing continuous one-parameter family of closed convex sets $K_t$ for $t\in[0,1]$ such that $K_0=\cBall[p,\tfrac\pi2]$ and $K_1=K$.
 
@@ -2073,7 +2073,7 @@ Then angles at the $j$-th vertex of~$\tilde P$, $P$, and $\tilde P_R$ are equal 
 Let $F\:\tilde D\to\spc{U}$ be the majorizing map for $P$, where $\tilde D$ is the convex region bounded by $\tilde P$, and $F|_{\tilde P}$ is length-preserving.  
 
 \begin{clm}{}\label{clm:arm-triangle}
-Let $\tilde x,\tilde y,\tilde z$ be three vertexes of $\tilde P$, and $x,y,z$ be the corresponding vertexes of $P$.  If $\dist{\tilde x}{\tilde y}{}=
+Let $\tilde x,\tilde y,\tilde z$ be three vertexes of $\tilde P$, and let $x,y,z$ be the corresponding vertexes of $P$.  If $\dist{\tilde x}{\tilde y}{}=
 \dist{x}{y}{}$, $\dist{\tilde y}{\tilde z}{}=
 \dist{x}{z}{}$ and $\mangle\hinge{\tilde y}{\tilde x}{\tilde z} = \mangle\hinge{y}{x}{z}$, then $F|_{\Conv(\tilde x, \tilde y, \tilde z)}$ is distance-preserving.
 \end{clm} 
@@ -2226,9 +2226,9 @@ For proper spaces, the generalized Hadamard--Cartan theorem was proved by Brian 
 In the proof we need the following lemma.
 
 \begin{thm}{Lemma}
-Let $\spc{U}$ be a complete length  locally $\CAT\kappa$ space,
-$\eps>0$,
-and $\gamma_1,\gamma_2\:\mathbb{S}^1\to\spc{U}$ be two closed curves.
+Let $\spc{U}$ be a complete length locally $\CAT\kappa$ space,
+let $\eps>0$,
+and let $\gamma_1,\gamma_2\:\mathbb{S}^1\to\spc{U}$ be two closed curves.
 Assume 
 \begin{subthm}{}
 $\length\gamma_i<2\cdot\varpi\kappa-4\cdot\eps$ for $i=1,2$;
@@ -2401,7 +2401,7 @@ in a complete length $\CAT\kappa$ space is $\varpi\kappa$-convex.
 
 
 \begin{thm}{Closest-point projection lemma}\label{lem:closest point}{\sloppy 
-Let $p$ be a point in a complete length $\CAT\kappa$ space $\spc{U}$, and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
+Let $p$ be a point in a complete length $\CAT\kappa$ space $\spc{U}$, and let $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set. 
 If $\distfun{K}{p}{}<\tfrac{\varpi\kappa}2$,
 then there is a unique point $p^*\in K$ that minimizes the distance to $p$;
 that is, $\dist{p^*}{p}{}=\distfun{K}{p}{}$. 
@@ -2420,12 +2420,12 @@ and the restriction $f|_{K'}$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:closest-point-projection}
-Let  $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a closed convex set.
+Let $\spc{U}$ be a complete length $\CAT0$ space, and let $K\subset \spc{U}$ be a closed convex set.
 Show that the closest-point projection $\spc{U}\to K$ is short. 
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
-Let  $\spc{U}$ be a complete length $\CAT1$ space and $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Let $\spc{U}$ be a complete length $\CAT1$ space, and let $K\subset \spc{U}$ be a closed $\pi$-convex set.
 Assume $K\subset \cBall[p,\tfrac\pi2]$ for $p\in K$.
 Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
@@ -2584,7 +2584,7 @@ We do not see any reason why it should be true,
 but we also cannot construct a counterexample.
 
 \begin{thm}{Open question}
-Let $\spc{U}$ be a complete length $\CAT0$ space and $K\subset \spc{U}$ be a compact set.
+Let $\spc{U}$ be a complete length $\CAT0$ space, and let $K\subset \spc{U}$ be a compact set.
 Is it true that $K$ lies in a convex compact set $\bar K\subset\spc{U}$?
 \end{thm}
 

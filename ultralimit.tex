@@ -7,7 +7,7 @@ Our presentation is based on \cite{kleiner-leeb}.
 Ultralimits are closely related to Gromov--Hausdorff limits.
 We use them only as a canonical way to pass to  convergent subsequences.
 We could avoid using them at the cost of saying ``pass to a convergent subsequence'' too many times.
-Doing this might be cumbersome and it obscure ideas of the proof;
+Doing this might be cumbersome and it obscures ideas of the proof;
 see for example the proof of the globalization theorem for general $\Alex{}$ spaces.
 Also the use of ultralimits is convenient when dealing with $\CAT{}$ spaces due to the lack of compactness results.
 %See for example Gromov's book \cite{gromov:asymt-inv} or the above mentioned reference by Kleiner and Leeb.
@@ -67,7 +67,7 @@ Setting
 makes these two definitions equivalent.
 
 A nonempty collection of sets $\mathfrak{F}$ that does not include the empty set and satisfies only conditions \ref{filter:supset} and \ref{filter:cap} is called a \index{filter}\emph{filter}; 
-if in addition $\mathfrak{F}$ satisfies Condition~\ref{filter:ultra} it is called an \index{ultrafilter}\emph{ultrafilter}.
+if in addition $\mathfrak{F}$ satisfies condition~\ref{filter:ultra} it is called an \index{ultrafilter}\emph{ultrafilter}.
 From Zorn's lemma, it follows that every filter is contained in an ultrafilter.
 Thus there is an ultrafilter $\mathfrak{F}$ contained in the filter of all complements of finite sets; clearly this $\mathfrak{F}$ is nonprincipal.
 
@@ -154,7 +154,7 @@ If $\o(C_\infty)=1$, we can take the subsequence consisting of the $x_n$, $n\in 
 Otherwise, discarding all empty sets among $C_\kay$ and $C_\infty$ gives a partition of $\NN$ into a countable collection of $\o$-small sets.
 Since $\o$ is selective, we can choose a set $S\subset\NN$ such that
 $S$ meets each set of the partition at one point and $\o(S)=1$.
-Clearly the subsequence consisting of the $x_n$, $n\in S$
+Clearly the subsequence of $x_n$ with $n\in S$
 converges to $x_\o$ in the usual sense.
 \qeds
 
@@ -279,7 +279,7 @@ Let $x_n\to x_\o$, $y_n\to y_\o$, and $z_n\to z_\o$ as $n\to \o$.
 Note that $z_\o$ is a midpoint between $x_\o$ and $y_\o$ in $\spc{X}_\o$.
 
 By Observation~\ref{obs:ultralimit-is-complete}, $\spc{X}_\o$ is complete.
-Applying Lemma~\ref{lem:mid>geod} we obtain the statement.
+Applying Lemma~\ref{lem:mid>geod}, we obtain the statement.
 \qeds
 
 A geodesic space $\spc{T}$ is called a \index{metric tree}\emph{metric tree} if any pair of points in $\spc{T}$ are connected by a unique geodesic,
@@ -319,8 +319,7 @@ $\iota\:\spc{X}\hookrightarrow \spc{X}^\o$, where $\iota(y)$ is the equivalence 
 The image $\iota(\spc{X})$ might be a proper subset of $\spc{X}^\o$.
 For example, $\RR^\o$ has pairs of points at distance $\infty$ from each other, while each metric component of $\RR^\o$ is isometric to $\RR$.
 
-According to Theorem~\ref{thm:ultra-GH}, 
-if $\spc{X}$ is compact then $\iota(\spc{X})=\spc{X}^\o$;
+According to Theorem~\ref{thm:ultra-GH}, if $\spc{X}$ is compact, then $\iota(\spc{X})=\spc{X}^\o$;
 in particular, $\spc{X}^\o$ is isometric to $\spc{X}$.
 If $\spc{X}$ is proper, then $\iota(\spc{X})$ forms a metric component of~$\spc{X}^\o$.
 
@@ -409,7 +408,7 @@ but we will apply it only for sequences of open sets.
 
 \section{Ultralimits of functions}\label{sec:Ultralimits of functions}
 
-Recall that a family of submaps (see section \ref{sec:submaps}) between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$ we have $\dist{f_\alpha(p)}{f_\alpha(q)}{}<\eps$.
+Recall that a family of submaps (see Section \ref{sec:submaps}) between metric spaces $\{f_\alpha\co \spc{X}\subto\spc{Y}\}_{\alpha\in\mathcal A}$ is called \index{equicontinuous family}\emph{equicontinuous} if for any $\eps>0$ there is $\delta>0$ such that for any $p,q\in\spc{X}$ with $\dist{p}{q}{}<\delta$ and any $\alpha\in\mathcal A$, we have $\dist{f_\alpha(p)}{f_\alpha(q)}{}<\eps$.
 
 Let $f_n\:\spc{X}_n\subto\RR$ be a sequence of subfunctions.
 

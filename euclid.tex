@@ -6,7 +6,7 @@
 \label{sec:geods}
 
 \parbf{Geodesics and their relatives.}
-Let $\spc{X}$ be a metric space and $\II\subset \R$\index{$\II$ (interval)} be an interval. 
+Let $\spc{X}$ be a metric space, and let $\II\subset \R$\index{$\II$ (interval)} be an interval. 
 A globally distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{unit-speed geodesic}\emph{unit-speed geodesic}.
 (Various authors call it differently: \index{shortest path}\emph{shortest path}, \index{minimizing geodesic}\emph{minimizing geodesic}.)
 In other words, $\gamma\:\II\to \spc{X}$ is a unit-speed geodesic if the equality
@@ -24,8 +24,8 @@ A unit-speed geodesic $\gamma\:\RR_{\ge0}\to \spc{X}$ is called a \index{half-li
 
 A unit-speed geodesic  $\gamma\:\RR\to \spc{X}$ is called a \index{line}\emph{line}.
 
-A piecewise geodesic curve is called \index{polygonal line}\emph{polygonal line};
-we may say \textit{polygonal line $p_1,\dots,p_n$} meaning polygonal line with edges $[p_1p_2],\dots,[p_{n-1}p_n]$.
+A piecewise geodesic curve is called a \index{polygonal line}\emph{polygonal line};
+we may say a \textit{polygonal line $p_1,\dots,p_n$} meaning a polygonal line with edges $[p_1p_2],\dots,[p_{n-1}p_n]$.
 A closed polygonal line will be also called a polygon.
 
 
@@ -40,8 +40,8 @@ Also, we use the following short-cut notation:
 [ p q \mathclose{[}&=[pq]\setminus\{q\}.
 \end{align*}
 
-In general, a geodesic between $p$ and $q$ need not exist and if it exists, it need not to be unique.
-However,  once we write $\geod_{[p q]}$ or $[p q]$ we mean that we have fixed a choice of a geodesic.
+In general, a geodesic between $p$ and $q$ need not exist, and if it does exist, it need not to be unique.
+However,  once we write $\geod_{[p q]}$ or $[p q]$, we mean that we have fixed a choice of a geodesic.
 
 A constant-speed geodesic $\gamma\:[0,1]\to\spc{X}$ is called a \index{geodesic!geodesic path}\emph{geodesic path}.
 Given a geodesic $[p q]$,
@@ -57,7 +57,7 @@ Suppose $\spc{X}$ is a metric space and $\gamma\:[0,\infty)\to \spc{X}$ is a hal
 Then the \index{Busemann function}\emph{Busemann function} $\bus_\gamma\:\spc{X}\to \RR$ 
 \[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
 is defined
-and $1$-Lipschitz.
+and is $1$-Lipschitz.
 \end{thm}
 
 \parit{Proof.}
@@ -88,7 +88,7 @@ it obviously coincides with perimeter of the triple $p$, $q$, $r$ as defined bel
 
 \parbf{Hinges.}
 Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and $y$.
-A pair of geodesics $([p x],[p y])$ will be called a  \index{hinge}\emph{hinge}, and will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called a \index{hinge}\emph{hinge}, and will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{p}}{{q}}{{r}}$ (hinge)}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -293,8 +293,8 @@ Thus \ref{eq:k-K} follows.
 
 \begin{thm}{Triangle inequality for angles}
 \label{claim:angle-3angle-inq}
-Let  $[px^1]$, $[px^2]$, and $[px^3]$ be three geodesics in a metric space.
-If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined then they satisfy the triangle inequality:
+Let $[px^1]$, $[px^2]$, and $[px^3]$ be three geodesics in a metric space.
+If all of the angles $\alpha^{i j}=\mangle\hinge p {x^i}{x^j}$ are defined, then they satisfy the triangle inequality:
 \[\alpha^{13}\le \alpha^{12}+\alpha^{23}.\]
 
 \end{thm}
@@ -456,7 +456,7 @@ $\Cone\SS^n$ is isometric to $\R^{n+1}$.
 If $G< \O(n+1)$ is a closed subgroup, then $\Cone(\SS^n/G)$ is isometric to $\R^{n+1}/G$.
 \end{thm}
 
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and is denoted by $\T_p$ or $\T_p\spc{X}$.
 The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
 (despite the fact that $\T_p$ is only a cone --- not a vector space).
 
@@ -477,15 +477,15 @@ The corresponding metric space admits a natural isometric identification with th
 The vectors of $\T'_p$ are the equivalence classes for the relation 
 \[\alpha\sim\beta\quad \Longleftrightarrow\quad \dist{\alpha(t)}{\beta(t)}{\spc{X}}=o(t).\]
 The completion of $\T'_p$ is therefore naturally isometric to $\T_p$.
-A vector in $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$ (logarithm)}
+A vector in $\T'_p$ that corresponds to the geodesic path $\geod_{[pq]}$ is called the \index{logarithm}\emph{logarithm of $[pq]$} and denoted by $\ddir pq$.\index{$\ddir {p}{q}$ (logarithm)}
 
 
 \section{Velocity of curves}
 
 \begin{thm}{Definition}\label{def:right-derivative}
 Let $\spc{X}$ be a metric space,
-$a>0$,
-and $\alpha\:[0,a)\to \spc{X}$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
+let $a>0$,
+and let $\alpha\:[0,a)\to \spc{X}$ be a function, not necessarily continuous, such that $\alpha(0)=p$.
 We say that $v\in\T_p$ is the \index{right derivative}\emph{right derivative} of $\alpha$ at $0$,
 briefly $\alpha^+(0)\z=v$\index{$\alpha^\pm$ one-sided derivative}, if for some (and therefore any) sequence of vectors $v_n\in\T'_p$ such that $v_n\to v$ as $n\to\infty$,
 and corresponding geodesics $\gamma_n$, 
@@ -497,7 +497,7 @@ of $\alpha$ at $t_0\in\II$ by
 \[\alpha^\pm(t_0)=\check\alpha^+(0),\] where $\check\alpha(t)=\alpha(t_0\pm t)$.
 \end{thm}
 
-The sign convention is not quite standard; if $\alpha$ is a smooth curve in a Riemannian manifold then we have
+The sign convention is not quite standard; if $\alpha$ is a smooth curve in a Riemannian manifold, then we have
 $\alpha^+(t)=-\alpha^-(t)$.
 
 Note that if $\gamma$ is a geodesic starting at $p$ 
@@ -513,7 +513,7 @@ Show that
 \end{thm}
 
 \begin{thm}{Proposition}
-Let $\spc{X}$ be a metric space with defined angles and $p\in \spc{X}$.
+Let $\spc{X}$ be a metric space with defined angles, and let $p\in \spc{X}$.
 Then for any tangent vector $v\in\T_p\spc{X}$ there is a map $\alpha\:[0,\eps)\to \spc{X}$ such that $\alpha^+(0)=v$.
 \end{thm}
 
@@ -532,9 +532,7 @@ Note that in this construction $\alpha$ is not continuous.
 \qeds
 
 \begin{thm}{Definition}\label{def:diff-curv}
-Let 
-$\spc{X}$ be a metric space 
-and $\alpha\:\II\to \spc{X}$ be a curve.
+Let $\spc{X}$ be a metric space, and let $\alpha\:\II\to \spc{X}$ be a curve.
 
 For $t_0\in\II$, 
 if $\alpha^+(t_0)$ or $\alpha^-(t_0)$ or both are defined,
@@ -542,7 +540,7 @@ we say respectively that $\alpha$ is
 \index{curve!differentiable curve}
 \index{curve!left/right differentiable}
 \emph{right} or \emph{left} or \emph{both-sided differentiable} at $t_0$.
-In the exceptional cases where $t_0$ is the left (respectively right) end of $\II$, $\alpha$ is by definition left (respectively right) differentiable at $t_0$.
+In the exceptional cases where $t_0$ is the left (respectively, right) end of $\II$, $\alpha$ is by definition left (respectively, right) differentiable at $t_0$.
 
 If $\alpha$ is both-sided differentiable at $t$, and 
 \[|\alpha^+(t)|=|\alpha^-(t)|=\tfrac12\cdot\dist{\alpha^+(t)}{\alpha^-(t)}{\T_{\alpha(t)}},\] then we say that $\alpha$ is \emph{differentiable} at $t$.
@@ -566,7 +564,7 @@ Show that $\alpha$ is differentiable at $t$.
 \section{Differential}\index{differential of a function}
 
 \begin{thm}{Definition}\label{def:differential}
-Let $\spc{X}$ be a metric space with defined angles, and
+Let $\spc{X}$ be a metric space with defined angles, and let
 $f\:\spc{X}\subto\RR$ be a subfunction.
 For $p\in\Dom f$, a function $\phi\:\T_p\to\RR$ is called the \index{differential}\emph{differential} of $f$ at $p$
 (briefly $\phi=\dd_pf$) if for any map $\alpha\:\II\to \spc{X}$ such that $\II$ is a real interval, $\alpha(0)=p$,  and $\alpha^+(0)$ is defined, we have \[(f\circ\alpha)^+(0)=\phi(\alpha^+(0)).\]
@@ -622,7 +620,7 @@ It remains to check that $\phi$ is the differential of $f$ at $p$.
 Assume $\alpha\:[0,a)\to\spc{X}$ is a map such that $\alpha(0)=p$ and $\alpha^+(0)=v\in \T_p$.
 Let $\gamma_n\in\Gamma_p$ be a sequence of geodesics as in the definition \ref{def:right-derivative};
 that is, if 
-\[v_n=\gamma^+_n(0)\quad \text{and}\quad a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t}\] 
+\[v_n=\gamma^+_n(0)\quad \text{and}\quad a_n= \limsup_{t\to0+}{\dist{\alpha(t)}{\gamma_n(t)}{}}/{t},\] 
 then $a_n\to 0$ and $v_n\to v$ as $n\to\infty$.
 Then 
 \[\phi(v)=\lim_{n\to\infty}\phi(v_n),\] \[f\circ\gamma_n(t)=f(p)+\phi(v_n)\cdot t+o(t),\] 
@@ -676,7 +674,7 @@ Define the pseudodistance between two such sequences as
 \lim_{n\to\o}n\cdot\dist{x_n}{y_n}{\spc{X}}.\]
 Then $\T^\o_x\spc{X}$ is the corresponding metric space.
 
-Tangent spaces (see section \ref{sec: tangent space}) as well as ultratangent spaces 
+Tangent spaces (see Section \ref{sec: tangent space}) as well as ultratangent spaces 
 generalize the notion of tangent spaces on Riemannian manifolds.
 In  the simplest cases these two notions define the same space.
 However in general they are different and are both useful ---
@@ -718,7 +716,7 @@ and therefore $\dist{v^n}{v_1^n}{n\cdot \spc{X}}\to 0$ as $n\to\infty$.
 
 
 Set $\iota(v)=v^\o$.
-Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$ we have
+Since angles between geodesics in $\spc{X}$ are defined, for any $v,w\in \T_p'$, we have
 $n\cdot\dist[{{}}]{v_n}{w_n}{}\to\dist{v}{w}{}$.
 Thus $\dist{v_\o}{w_\o}{}=\dist{v}{w}{}$; that is, $\iota\:\T_p'\to\T_p$ is a distance-preserving map.
 

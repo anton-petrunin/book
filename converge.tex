@@ -45,9 +45,8 @@ In this case the, sequence of closed sets $A_n$ is said to be {}\emph{converging
 \end{thm}
 
 \begin{thm}{Selection theorem}
-Let $\spc{X}$ be a proper metric  space
-and $A_n$ be a sequence of closed sets in $\spc{X}$.
-Then  $A_n$ has a converging subsequence in the sense of Hausdorff.
+Let $A_n$ be a sequence of closed sets in a proper metric space $\spc{X}$.
+Then $A_n$ has a converging subsequence in the sense of Hausdorff.
 \end{thm}
 
 \parit{Proof.}
@@ -106,7 +105,7 @@ the latter notation is used if we need to consider  the specific Gromov--Hausdor
 The space $\spc{X}_\infty$ is called the {}\emph{limit space} of the sequence $\spc{X}_n$ along $\GH$.
 \end{thm}
 
-When we write $\spc{X}_n\GHto \spc{X}_\infty$ we mean that we made a choice of a Gromov--Hausdorff convergence.
+When we write $\spc{X}_n\GHto \spc{X}_\infty$, we mean that we made a choice of a Gromov--Hausdorff convergence.
 
 Note that for a fixed sequence $\spc{X}_n$ of metric spaces, one may construct different Gromov--Hausdorff convergences, say $\spc{X}_n\xto{\GH} \spc{X}_\infty$ and $\spc{X}_n\xto{\GH'} \spc{X}_\infty'$,  and their limit spaces $\spc{X}_\infty$ and $\spc{X}_\infty'$ need not be isometric to each other. 
 For example, for the constant sequence $\spc{X}_n\iso\RR_{\ge0}$, 
@@ -157,7 +156,7 @@ if the complements $\spc{X}_n\setminus \Omega_n$ converge to the complement $\sp
 
 
 \begin{subthm}{} Let $\spc{X}_n\xto{\GH} \spc{X}_\infty$ and $\spc{Y}_n\xto{\theta} \spc{Y}_\infty$. 
-A sequence of submaps (where a submap is a map defined on a subset; see Section~\ref{sec:submaps}) $\map_n\:\spc{X}_n\subto \spc{Y}_n$ converges to a submap $\map_\infty\:\spc{X}_\infty\subto \spc{Y}_\infty$ if the following conditions holds
+A sequence of submaps (where a submap is a map defined on a subset; see Section~\ref{sec:submaps}) $\map_n\:\spc{X}_n\subto \spc{Y}_n$ converges to a submap $\map_\infty\:\spc{X}_\infty\subto \spc{Y}_\infty$ if the following conditions hold
 \begin{itemize}
 \item $\Dom\map_n\to \Dom\map_\infty$ as a sequence of open sets.
 
@@ -176,7 +175,7 @@ we say that $\mu_n$ weakly converges to a measure $\mu_\infty$ on $\spc{X}_\inft
 (briefly, $\mu_n\xto{}
 \mu_\infty$ or $\mu_n\xto{\GH}
 \mu_\infty$) 
-if the pushforward measures of $\mu_n$
+if the push-forward measures of $\mu_n$
 %$\iota_n\#\mu_n$ 
 weakly converge to the push-forward measure of $\mu_\infty$.
 
@@ -267,7 +266,8 @@ It is easy to verify  that such a metric on $\bm X$ satisfies  \ref{def:comp-met
 \section{Convergence of compact spaces.}
 
 \begin{thm}{Definition}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces. A map $f\:\spc{X}\to\spc{Y}$
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces.
+A map $f\:\spc{X}\to\spc{Y}$
 is called an \index{isometry!$\eps$-isometry}\emph{$\eps$-isometry}
 if the following two conditions hold:
 \begin{subthm}{}
@@ -281,14 +281,14 @@ $\bigl|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}\bigr|\le \eps$ for any 
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
-Let $\spc{X}_1,\spc{X}_2,\dots$, and  $\spc{X}_\infty$ be metric spaces and $\eps_n\to\0+$ as $n\to\infty$.
+Let $\spc{X}_1,\spc{X}_2,\dots$, let $\spc{X}_\infty$ be metric spaces, and let $\eps_n\to\0+$ as $n\to\infty$.
 Suppose that either 
 
-\begin{subthm}{}\label{lem:almost-isom-a}
+\begin{subthm}{lem:almost-isom-a}
 for each $n$ there is an $\eps_n$-isometry $f_n\:\spc{X}_n\to\spc{X}_\infty$, or
 \end{subthm}
 
-\begin{subthm}{}\label{lem:almost-isom-b}
+\begin{subthm}{lem:almost-isom-b}
 for each $n$ there is an $\eps_n$-isometry $h_n\:\spc{X}_\infty\to\spc{X}_n$.
 \end{subthm}
 
@@ -297,7 +297,7 @@ Then there is a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$.
 
 
 \parit{Proof.}
-To prove part \eqref{lem:almost-isom-a} let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
+To prove part \ref{SHORT.lem:almost-isom-a} let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ that is defined the following way:
 \begin{align*}
 \rho(x_n,y_n)&=\dist{x_n}{y_n}{\spc{X}_n},\quad \rho(x_\infty,y_\infty)=\dist{x_\infty}{y_\infty}{\spc{X}_\infty},
@@ -326,7 +326,8 @@ The proof of the second part is analogous; one only needs to change one line in 
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:>=-isometry}
-Let $\spc{X}$ and $\spc{Y}$ be two metric spaces and $\spc{X}$ be compact. Then
+Let $\spc{X}$ and $\spc{Y}$ be two metric spaces, and let $\spc{X}$ be compact.
+Then
 \[
 \spc{X}\ge\spc{Y}\ge\spc{X}
 \quad\Longleftrightarrow\quad 
@@ -390,7 +391,7 @@ The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} between 
 The Gromov--Hausdorff distance turns the set of all isometry classes of compact metric spaces into a metric space.
 The following theorem shows that convergence in this space coincides with the Gromov--Hausdorff convergence defined above.
 
-\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be compact metric spaces.
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$, and let $\spc{X}_\infty$ be compact metric spaces.
 Then there is a convergence $\spc{X}_n\GHto \spc{X}_\infty$ if and only if
 $\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to\infty$.
 
@@ -459,7 +460,7 @@ Hence $\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to \infty$.
 The following theorem states that the isometry class of a Gromov--Hausdorff limit is uniquely defined if it is compact. 
 
 \begin{thm}{Theorem}\label{thm:GH-compact}
-Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ be metric spaces
+Let $\spc{X}_1,\spc{X}_2,\dots$, and let $\spc{X}_\infty$ and $\bar{\spc{X}}_\infty$ be metric spaces
 such that $\spc{X}_n\xto{\GH}\spc{X}_\infty$, 
 $\spc{X}_n\xto{\bar\GH}\bar{\spc{X}}_\infty$.
 

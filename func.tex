@@ -126,7 +126,7 @@ Hence the result.
 \qeds
 
 \begin{thm}{Lemma}\label{lem:lip-approx}
-Let $\spc{X}$ be a metric space and $f\:\spc{X}\to\RR$ be a continuous function.
+Let $\spc{X}$ be a metric space, and let $f\:\spc{X}\to\RR$ be a continuous function.
 Then for any $\eps>0$ there is a locally Lipschitz function $f_\eps\:\spc{X}\to\RR$
 such that $|f(x)-f_\eps(x)|<\eps$ for any $x\in \spc{X}$.
 \end{thm}
@@ -152,8 +152,7 @@ Since any continuous function can be presented as the difference of two continuo
 \section{Isometries and submetries}\label{sec:quotient-CBB}
 
 \begin{thm}{Isometry}\label{def:isometry}
-Let $\spc{X}$ and $\spc{Y}$ be metric spaces
-and $\map\:\spc{X}\to \spc{Y}$ be a map
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces, and let $\map\:\spc{X}\to \spc{Y}$ be a map.
 \begin{subthm}{}
 The map $\map$ is \index{distance-preserving map}\emph{distance-preserving} if
 $$\dist{\map(x)}{\map(x')}{\spc{Y}}=\dist{x}{x'}{\spc{X}}$$
@@ -216,8 +215,7 @@ Since $x$ and $y$ are arbitrary, the map $x\mapsto[x]$ is $1$-Lipschitz.
 
 \begin{thm}{Proposition}
 \label{prop:submet-length}
-Let  $\spc{X}$ be a length space 
-and $\sigma\:\spc{X}\to \spc{Y}$ be a submetry.
+Let $\spc{X}$ be a length space, and let $\sigma\:\spc{X}\to \spc{Y}$ be a submetry.
 Then $\spc{Y}$ is a length space.
 \end{thm}
 
@@ -255,14 +253,13 @@ Let $\spc{X}$ be a metric space.
 Recall that a \emph{curve}  
 in $\spc{X}$ is a continuous map $\alpha\:\II\to \spc{X}$, where $\II$ is a real interval. 
 %(see Section~\ref\{sec:intrinsic}). 
-A curve is called \index{Lipschitz map!Lipschitz curve}\emph{Lipschitz} or \emph{locally Lipschitz} if $\alpha$ is Lipschitz or locally Lipschitz respectively. 
+A curve is called \index{Lipschitz map!Lipschitz curve}\emph{Lipschitz} or \emph{locally Lipschitz} if $\alpha$ is Lipschitz or locally Lipschitz, respectively. 
  Length of curves is defined in \ref{def:length}.
 
 The following theorem follows from \cite[2.7]{burago-burago-ivanov}.
 
 \begin{thm}{Theorem}\label{thm:speed}
-Let $\spc{X}$ be a metric space  
-and $\alpha\:\II \to \spc{X}$ be a locally Lipschitz
+Let $\spc{X}$ be a metric space, and let $\alpha\:\II \to \spc{X}$ be a locally Lipschitz
 curve. 
 Then the speed function
 \[\speed_{t_0}\alpha
@@ -290,8 +287,7 @@ This map is distance-preserving and in particular Lipschitz,
 but its differential is undefined at any point.
 
 \begin{thm}{Theorem}\label{thm:Rademacher-md}
-Let $\spc{X}$ be a metric space 
-and $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
+Let $\spc{X}$ be a metric space, and let $f\:\RR^n \subto \spc{X}$ be $1$-Lipschitz. 
 Then for almost all $x\in\Dom f$ there is a pseudonorm 
 $\lVert*\rVert_x$ on $\RR^n$ such that
 \[\dist{f(y)}{f(z)}{\spc{X}}=\lVert z-y\rVert_x+o(|y-x|+|z-x|).\]
@@ -306,14 +302,14 @@ will be called its \index{differential of a metric}\emph{differential of the ind
 In this section we will discuss generalized solutions
 of the following differential inequalities
 \[y''+\kappa\cdot  y\ge \lambda
-\quad \text{and respectively}
+\quad \text{and, respectively,}
 \quad y''+\kappa\cdot  y\le \lambda
 \eqlbl{eq:sec:conv-real*}\]
 for fixed $\kappa,\lambda\in\RR$.
-The solutions $y\:\RR\subto\RR$ are only assumed to be upper (respectively lower) semicontinuous subfunctions.
+The solutions $y\:\RR\subto\RR$ are only assumed to be upper (respectively, lower) semicontinuous subfunctions.
 
-The inequalities  \ref{eq:sec:conv-real*} are understood in the sense of distributions.
-That is, for any smooth function $\phi$ with compact support $\supp\phi\subset\Dom y$ the following inequality should be satisfied:
+Inequalities  \ref{eq:sec:conv-real*} are understood in the sense of distributions.
+That is, for any smooth function $\phi$ with compact support $\supp\phi\subset\Dom y$, the following inequality should be satisfied:
 \[\begin{aligned}
 \int\limits_{\Dom y}\left[y(t)\cdot\phi''(t)+\kappa\cdot  y(t)\cdot\phi(t)-\lambda\right]\cdot\dd t
 &\ge 0,
@@ -327,24 +323,24 @@ makes sense for any Borel-measurable subfunction $y$.
 The proofs of the following propositions are straightforward.
 
 \begin{thm}{Proposition}
-Let $\II\subset\RR$ be an open interval and $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequalities in \ref{eq:sec:conv-real*}.
+Let $\II\subset\RR$ be an open interval, and let $y_n\:\II\to\RR$ be a sequence of solutions of one of the inequalities in \ref{eq:sec:conv-real*}.
 Assume $y_n(t)\to y_\infty(t)$ as $n\to\infty$ for any $t\in \II$.
 Then $y_\infty$ is a solution of the same inequality in \ref{eq:sec:conv-real*}.
 \end{thm}
 
 Assume $y$ is a solution of one of the inequalities in \ref{eq:sec:conv-real*}.
-For $t_0\in \Dom y$, let us define the \emph{right (left) derivative } $y^+(t_0)$ ($y^-(t_0)$) at $t_0$ by
+For $t_0\in \Dom y$, let us define the \emph{right} (respectively, \emph{left}) \emph{derivative} $y^+(t_0)$ ($y^-(t_0)$) at $t_0$ by
 \[y^\pm(t_0)=\lim_{t\to t_0\pm} \frac{y(t)-y(t_0)}{|t-t_0|}.\]
 Note that our sign convention for $y^-$ is not standard --- for $y(t)=t$ we have
 $y^+(t)=1$ and $y^-(t)=-1$.
 
 \begin{thm}{Proposition}\label{prop:derivative-of-convex-function}
-Let $\II\subset\RR$ be an open interval and $y\:\II\to\RR$ be a solution of an inequality in \ref{eq:sec:conv-real*}.
+Let $\II\subset\RR$ be an open interval, and let $y\:\II\to\RR$ be a solution of an inequality in \ref{eq:sec:conv-real*}.
 Then  $y$ is locally Lipschitz; its right and left derivatives $y^+(t_0)$ and $y^-(t_0)$ are defined
 for any $t_0\in\II$.
 Moreover 
 \[y^+(t_0)+y^-(t_0)\ge 0
-\quad \text{or respectively}
+\quad \text{or, respectively,}
 \quad y^+(t_0)+y^-(t_0)\le 0.\]
 \end{thm}
 
@@ -352,7 +348,7 @@ Moreover
 The next theorem gives a  number of equivalent ways to define such  generalized solutions.
 
 \begin{thm}{Theorem}\label{y''=<1-ky}
-Let $\II$ be an open real interval and $y\:\II\to\RR$ be a locally Lipschitz function.
+Let $\II$ be an open real interval, and let $y\:\II\to\RR$ be a locally Lipschitz function.
 Then the following conditions are equivalent:
 \begin{subthm}{}$y''\ge \lambda-\kappa\cdot  y$ (respectively $y''\le \lambda-\kappa\cdot  y).$
 \end{subthm}
@@ -362,7 +358,7 @@ there is a solution $\bar y$
 of the ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
 with $\bar y(t_0)\z= y(t_0)$ such that $\bar y\ge y$ (respectively $\bar y\le y$) for all $t\in [t_0-\varpi\kappa,t_0\z+\varpi\kappa]\cap \II$.
 
-The function $\bar y$ is called a {}\emph{lower} (respectively {}\emph{upper}) \index{barrier}\emph{barrier} of $y$ at $t_0$.
+The function $\bar y$ is called a {}\emph{lower} (respectively, {}\emph{upper}) \index{barrier}\emph{barrier} of $y$ at $t_0$.
 \end{subthm}
 
 
@@ -370,25 +366,26 @@ The function $\bar y$ is called a {}\emph{lower} (respectively {}\emph{upper}) \
 \begin{subthm}{y''-mono} (Jensen's inequality)\index{Jensen's inequality}
 For any pair of values $t_1<t_2$ in $\II$ such that $|t_2-t_1|<\varpi\kappa$,  the unique solution $z(t)$ of \[z''\z=\lambda-\kappa\cdot  z\] such that
 \[z(t_1)=y(t_1),\quad z(t_2)=y(t_2)\] 
-satisfies $y(t)\le z(t)$ (respectively $y(t)\ge z(t)$) for all $t\in[t_1,t_2]$.
+satisfies $y(t)\le z(t)$ (respectively, $y(t)\ge z(t)$) for all $t\in[t_1,t_2]$.
 \end{subthm}
 
 Further, the following property holds:
 
 \begin{subthm}{barrier'} 
-Suppose $y''\le \lambda-\kappa\cdot  y$. Let $t_0\in\II$, and   $\bar y$ be a solution of  the
- ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
+Suppose $y''\le \lambda-\kappa\cdot  y$.
+Let $t_0\in\II$, and let $\bar y$ be a solution of the ordinary differential equation $\bar y''=\lambda-\kappa\cdot  \bar y$ 
 such that  $\bar y(t_0)\z= y(t_0)$ and 
 $y^+(t_0)\le \bar y^+(t_0)\le -y^-(t_0)$.
 %S:  Note I changed this from $y^+(t_0)\le y(t_0)\le -y^-(t_0)$
 (Note that such a $\bar{y}$ is unique if $y$ is differentiable at $t_0$.) 
 
-Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; that is, $\bar{y}$ is a barrier of $y$ at $t_0$. (Similarly, by reversing inequalities, for $y''\ge \lambda-\kappa\cdot  y$.) 
+Then $\bar y\ge y$  for all $t\in [t_0-\varpi\kappa,t_0+\varpi\kappa]\cap \II$; that is, $\bar{y}$ is a barrier of $y$ at $t_0$.
+(Similarly, by reversing inequalities, for $y''\ge \lambda-\kappa\cdot  y$.) 
 \end{subthm}
 \end{thm}
 
 
-Note that Theorem ~\ref{y''=<1-ky} implies that $y$ satisfies $y''\ge \lambda$ ($y''\le \lambda$)  on an interval $\II\subset\RR$  if and only if $y(t)-\frac{\lambda}{2}\cdot t^2$ is convex (concave) on $\II$.
+Note that Theorem ~\ref{y''=<1-ky} implies that $y$ satisfies $y''\ge \lambda$ ($y''\le \lambda$)  on an interval $\II\subset\RR$  if and only if $y(t)-\frac{\lambda}{2}\cdot t^2$ is convex (respectively, concave) on $\II$.
 
 We will often need the following fact about convergence of derivatives of convex functions:
 
@@ -473,9 +470,9 @@ satisfies
 Functions satisfying the inequalities
 \[f''\ge \lambda\quad\text{and}\quad f''\le \lambda\]
 are called 
-\index{convex function}\index{concave function}\index{$\lambda$-convex function}\index{$\lambda$-concave function}\emph{$\lambda$-convex} and \emph{$\lambda$-concave} respectively.
+\index{convex function}\index{concave function}\index{$\lambda$-convex function}\index{$\lambda$-concave function}\emph{$\lambda$-convex} and \emph{$\lambda$-concave}, respectively.
 
-$0$-convex and $0$-concave subfunctions will also be called \emph{convex} and \emph{concave} respectively.
+$0$-convex and $0$-concave subfunctions will also be called \emph{convex} and \emph{concave}, respectively.
 
 If $f$ is $\lambda$-convex for $\lambda>0$, then $f$ will be called \index{strongly convex function}\emph{strongly convex};
 correspondingly, if $f$ is $\lambda$-concave for $\lambda<0$, then $f$ will be called \index{strongly concave function}\emph{strongly concave}.
@@ -483,7 +480,7 @@ correspondingly, if $f$ is $\lambda$-concave for $\lambda<0$, then $f$ will be c
 If for any point $p\in\Dom f$ 
 there is a neighborhood $\Omega\ni p$ and a real number $\lambda$
 such that the restriction $f|_\Omega$ is $\lambda$-convex (or $\lambda$-concave),
-then $f$ is called \index{semiconvex function}\index{semiconcave function}\emph{semiconvex} (respectively \emph{semiconcave}).\end{thm}
+then $f$ is called \index{semiconvex function}\index{semiconcave function}\emph{semiconvex} (respectively, \emph{semiconcave}).\end{thm}
 
 Various authors define the class of $\lambda$-convex ($\lambda$-concave) functions differently. 
 Their definitions may correspond to $\pm\lambda$-convex ($\pm\lambda$-concave) or $\pm\tfrac\lambda2$-convex ($\pm\tfrac\lambda2$-concave) functions in our definitions.
