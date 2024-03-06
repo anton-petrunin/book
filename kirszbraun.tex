@@ -34,7 +34,7 @@ $\dist{\tilde p^i}{\tilde x^\kay}{}=\dist{\tilde p^j}{\tilde x^\kay}{}$,
 
 \item
 \label{no-overlap:orient-1}
-$\tilde p^i$ and $\tilde x^i$ lie in the same closed halfspace determined by $[\tilde x^j\tilde x^\kay]$, 
+$\tilde p^i$ and $\tilde x^i$ lie in the same closed half-space determined by $[\tilde x^j\tilde x^\kay]$, 
 \end{enumerate}
 
 If no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^\kay}$ overlap,
@@ -86,8 +86,9 @@ and $\trig{\tilde p^2}{\tilde x^3}{\tilde x^1}$ do not overlap if and only if
 \mangle\hinge{\tilde x^1}{\tilde x^3}{\dot x^2}.\eqlbl{eq:main-overlap}\]
 and
 \[
-2\cdot\pi>\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}\eqlbl{eq:old-iii}\]
-The condition \ref{eq:main-overlap} holds if and only if 
+2\cdot\pi>\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde p^3}+\mangle\hinge {\tilde x^1}{\tilde p^2}{\tilde x^3}+\mangle\hinge {\tilde x^1}{\tilde x^2}{\tilde x^3}.
+\eqlbl{eq:old-iii}\]
+Condition \ref{eq:main-overlap} holds if and only if 
 $\dist{\tilde x^2}{\tilde x^3}{}>\dist{\dot x^2}{\tilde x^3}{}$,
 which in turn holds if and only if 
 \[
@@ -201,7 +202,7 @@ alternatively, it can be obtained as a corollary of Kirszbraun's theorem (\ref{t
 
 \parit{Idea of the proof.}
 The map $\map$ can be constructed as a composition of an isometry of $\Lob{}{\kappa}$ and the following folding map:
-given a halfspace $H$ in $\Lob{}{\kappa}$, consider the map $\Lob{}{\kappa}\to H$ 
+given a half-space $H$ in $\Lob{}{\kappa}$, consider the map $\Lob{}{\kappa}\to H$ 
 that is the identity on $H$ and reflects all points outside of $H$ into $H$.
 This map is a path isometry; in particular, it is short. 
 
@@ -247,8 +248,8 @@ Prove that $\spc{X}$ is isometric to a closed convex subset of a Hilbert space.
 \begin{thm}{Exercise}\label{ex:5-point-CBA=>CBB}
 Let $\spc{F}_s$ be the metric
 on the 5-point set $\{p,q,x,y,z\}$ for which $\dist{p}{q}{}=s$
-and all the remaining distances are equal $1$.
-For which values $s$ does the space $\spc{F}_s$ admit a distance-preserving map into 
+and all the remaining distances are equal to $1$.
+For which values of $s$ does the space $\spc{F}_s$ admit a distance-preserving map into:
 \begin{subthm}{}
 a complete length $\CAT{0}$ space?
 \end{subthm}
@@ -261,10 +262,10 @@ The following exercise describes the first known definition of spaces with curva
 it was given by Abraham Wald \cite{wald}. 
 
 \begin{thm}{Exercise}\label{ex:cbb-wald}
-Let $\spc{L}$ be a metric space and $\kappa\le 0$.
+Let $\spc{L}$ be a metric space, and let $\kappa\le 0$.
 Prove that $\spc{L}$ is $\Alex\kappa$ if and only if any quadruple of points $p,q,r,s\in \spc{L}$ admits a distance-preserving embedding into $\Lob2{\Kappa}$ for some $\Kappa\ge\kappa$.
 
-Is the same true for $\kappa>0$; what is the difference?
+Is the same true for $\kappa>0$? What is the difference?
 \end{thm}
 
 \section{(1+\textit{n})-point comparison}\label{sec:1+n}
@@ -385,8 +386,7 @@ for all $i$ and $j$.
 \section{Helly's theorem}\label{sec:helly}
 
 \begin{thm}{Helly's theorem}\label{thm:helly}
-Let $\spc{U}$ be a complete length $\CAT0$ space
-and $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bounded convex subsets in~$\spc{U}$.
+Let $\{K_\alpha\}_{\alpha\in \IndexSet}$ be an arbitrary collection of closed bounded convex subsets in a complete length $\CAT0$ space $\spc{U}$.
 
 If 
 \[\bigcap_{\alpha\in \IndexSet}K_\alpha=\emptyset,\]
@@ -400,7 +400,7 @@ then there is a finite index array $(\alpha_1,\alpha_2,\dots,\alpha_n)$ in $\Ind
 \item In general, none of the $K_\alpha$ may be compact; 
 otherwise the statement is trivial.
 \item If $\spc{U}$ is a Hilbert space (not necessarily separable), 
-then Helly's theorem is equivalent to the following statement: if a convex bounded set is closed in the ordinary topology then it is compact in the weak topology.
+then Helly's theorem is equivalent to the following statement: if a convex bounded set is closed in the ordinary topology, then it is compact in the weak topology.
 One can define {}\emph{weak topology} in an arbitrary metric space by taking exteriors of closed ball as prebase.
 Then 
 %the result above
@@ -465,9 +465,9 @@ A slightly weaker version of the following theorem was proved by Urs Lang and Vi
 \label{thm:kirsz+}
 Let
 $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$\spc{U}$ be a complete length $\CAT\kappa$ space, 
-$Q\subset \spc{L}$ be arbitrary subset
-and $f\: Q\to\spc{U}$ be a short map.
+let $\spc{U}$ be a complete length $\CAT\kappa$ space, 
+let $Q\subset \spc{L}$ be arbitrary subset
+and let $f\: Q\to\spc{U}$ be a short map.
 Assume that there is $z\in\spc{U}$ such that 
 $f(Q)\subset \oBall[z,\tfrac{\varpi\kappa}{2}]_{\spc{U}}$.
 Then $f\:Q\to\spc{U}$ can be extended to a short map 
@@ -570,7 +570,7 @@ the set $\Up\bm{f}(\spc{U})\subset\RR^{n}$ is convex.
 
 Arguing by contradiction, let us assume that $\bm{\tilde f}(\tilde p)\notin\Up \bm{f}(\spc{U})$.
 
-Then there exists a supporting hyperplane $\alpha_1\cdot x_1+\ldots \alpha_n\cdot x_n=c$ to $\Up\bm{f}(\spc{U})$, separating it from $\bm{\tilde f}(\tilde p)$.
+Then there exists a supporting hyperplane $\alpha_1\cdot x_1+\ldots +\alpha_n\cdot x_n=c$ to $\Up\bm{f}(\spc{U})$, separating it from $\bm{\tilde f}(\tilde p)$.
 According to Lemma~\ref{lem:Up-convex:subnormal}, 
 $\alpha_i\ge 0$ for each $i$. 
 So we may assume that 
@@ -592,7 +592,7 @@ let
 &
 &h\:\spc{U}\to\RR
 &
-&z=\argmin h\in \spc{U}
+&z=\argmin h\in \spc{U},
 \\
 &\tilde h=\sum_i\alpha_i\cdot \tilde f^i
 &
@@ -719,22 +719,21 @@ Thus, $(D)$ and $(E)$ imply the claim.
 \qedqeds
 
 
-
-
-
-
-\begin{thm}{Kirszbraun's theorem for nonpositive bound}
+\begin{thm}{Kirszbraun's theorem for nonpositive curvature bound}
 \label{thm:kirsz}
+
+\noindent
+Suppose $\kappa\le0$.
 Let
-$\kappa\le0$,
 $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$\spc{U}$ be a complete length $\CAT\kappa$ space, 
-$Q\subset \spc{L}$ be arbitrary subset
-and $f\: Q\to\spc{U}$ be a short map.
+let $\spc{U}$ be a complete length $\CAT\kappa$ space, 
+let $Q\subset \spc{L}$ be arbitrary subset,
+and let $f\: Q\to\spc{U}$ be a short map.
 Then there is a short extension 
 $F\:\spc{L}\to \spc{U}$ of $f$;
 that is, there is a short map $F\:\spc{L}\to \spc{U}$ such that $F|_Q=f$.
 \end{thm}
+
 
 \parbf{Remark.}
 If $\spc{U}$ is proper, then we do not need Helly's theorem (\ref{thm:helly}); compactness of closed balls in $\spc{U}$ is sufficient in this case.
@@ -798,9 +797,9 @@ We will apply \ref{thm:kirsz} for $\kappa=0$ to the Euclidean cones $\mathring{\
 Note that 
 \begin{itemize}
 \item ${\mathring{\spc{U}}}$ is a complete length $\CAT0$ space (see \ref{thm:warp-curv-bound:cbb:S}),
-\item since $\diam \spc{L}\le \pi$ we have ${\mathring{\spc{L}}}$ is $\Alex{0}$ (see \ref{thm:warp-curv-bound:cbb:a}).
+\item since $\diam \spc{L}\le \pi$, we have ${\mathring{\spc{L}}}$ is $\Alex{0}$ (see \ref{thm:warp-curv-bound:cbb:a}).
 \end{itemize}
-Further, we will view the spaces $\spc{L}$ and $\spc{U}$ as unit spheres in $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ respectively.
+Further, we will view the spaces $\spc{L}$ and $\spc{U}$ as unit spheres in $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$, respectively.
 In the cones $\mathring{\spc{L}}$ and $\mathring{\spc{U}}$ we will use 
 ``$|{*}|$'' for distance to the tip, denoted by $\0$, 
 ``$\cdot$'' for cone multiplication,
@@ -839,7 +838,7 @@ Then
 for any $w\in \mathring Q$.
 In particular, $|s|\le 1$.
 Applying \ref{eq:clm:kirszbraun-curv=1-rad-star} 
-for $w=t\cdot x$ and $t\to\infty$ we have
+for $w=t\cdot x$ and $t\to\infty$, we have
 \[\<f(x),s\>\ge \cos\mangle(p,x)\eqlbl{eq:<,>=<}\]
 for any $x\in Q$.
 
@@ -897,7 +896,7 @@ $\tilde x$, $\tilde y$ and array of pairs $( (\tilde p^1,\tilde q^1)$, $(\tilde 
 \begin{subthm}{}
 $\trig{\tilde x}{\tilde p^1}{\tilde q^1}=\modtrig\kappa(x p^1q^1)$
 and 
-$\trig{\tilde y}{\tilde p^n}{\tilde q^n}=\modtrig\kappa(y p^n q^n)$,
+$\trig{\tilde y}{\tilde p^n}{\tilde q^n}=\modtrig\kappa(y p^n q^n)$;
 \end{subthm}
 
 \begin{subthm}{}
@@ -958,7 +957,7 @@ can be described by the matrix with components
 which we will call the \index{associated matrix}\emph{associated matrix}.
 The set of associated matrices of all metrics that admit a distance-preserving map into a $\Alex{0}$ or a $\CAT{0}$ space 
 form a convex cone. 
-The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are $\Alex{0}$ (or $\CAT{0}$ respectively).
+The latter follows since the rescalings and products of $\Alex{0}$ (or $\CAT{0}$) spaces are $\Alex{0}$ (or $\CAT{0}$, respectively).
 This convexity gives a bit of hope that the cone admits an explicit description.
 
 For the 5-point $\CAT{0}$ case, the (2+2)-comparison is a necessary and sufficient condition.

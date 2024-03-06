@@ -17,7 +17,7 @@ A quadruple of points $p,x^1,x^2,x^3$ in a metric space satisfies \index{$\Alex{
 if 
 \[\angk\kappa p{x^1}{x^2}
 +\angk\kappa p{x^2}{x^3}
-+\angk\kappa p{x^3}{x^1}\le 2\cdot\pi.\eqlbl{Yup-kappa}\]
++\angk\kappa p{x^3}{x^1}\le 2\cdot\pi,\eqlbl{Yup-kappa}\]
 or at least one of the model angles $\angk\kappa p{x^i}{x^j}$ is not defined.
 \end{thm}
 
@@ -64,7 +64,7 @@ However, in the case $\Kappa>0$ the latter statement does not hold and the forme
 
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
-Let $\spc{L}$ be a metric space and $\kappa\le 0$.
+Let $\spc{L}$ be a metric space, and let $\kappa\le 0$.
 Show that $\spc{L}$ is $\Alex\kappa$
 if for any quadruple of points $p,x^1,x^2,x^3\in \spc{L}$ 
 there is a quadruple of points $q,y^1,y^2,y^3\in\Lob{2}\kappa$
@@ -191,8 +191,7 @@ and for any $q\in W_p$ there is a geodesic $[p q]$.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:straight}
-Let $\spc{X}$ be a metric space 
-and $p\in \spc{X}$.
+Let $\spc{X}$ be a metric space, and let $p\in \spc{X}$.
 A point $q\in \spc{X}$ is called \index{straight point}\emph{$p$-straight} (briefly, $q\in \Str(p)$\index{$\Str(p)$ (straight set)}) if
 \[\limsup_{r\to q}\frac{\dist{p}{r}{}-\dist{p}{q}{}}{\dist{q}{r}{}}=1.\]
 
@@ -316,15 +315,15 @@ If $\spc{L}$ is a $\Alex\kappa$ space,
 then the following conditions hold for all $p,x,y\in \spc{L}$, provided the model triangle $\modtrig\kappa(p x y)$ is defined.
 
 \begin{subthm}{2-sum} 
-(adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ we have
+(adjacent angle comparison\index{comparison!adjacent angle comparison}) For any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ we have
 \[\angk\kappa z p x
 +\angk\kappa z p y\le \pi.\]
 \end{subthm}
 
 \begin{subthm}{point-on-side}
 (\index{comparison!point-on-side comparison}point-on-side comparison)
-for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, we have
-\[\angk\kappa x p y\le\angk\kappa x p z;\]
+For any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, we have
+\[\angk\kappa x p y\le\angk\kappa x p z,\]
 or, equivalently, 
 \[\dist{\tilde p}{\tilde z}{}\le \dist{p}{z}{},\]
 where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\mathopen{]} \tilde x\tilde y\mathclose{[}$, $\dist{\tilde x}{\tilde z}{}=\dist{x}{z}{}$.
@@ -332,7 +331,7 @@ where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\
 
 \begin{subthm}{angle}(hinge comparison\index{comparison!hinge comparison})
 \index{hinge comparison}
-for any hinge $\hinge x p y$, the angle 
+For any hinge $\hinge x p y$, the angle 
 $\mangle\hinge x p y$ is defined and 
 \[\mangle\hinge x p y\ge\angk\kappa x p y,\]
 or equivalently
@@ -343,11 +342,11 @@ for any two adjacent hinges $\hinge z p y$ and $\hinge z p x$.
 \end{subthm}
 
 Moreover, in each case, the converse holds if $\spc{L}$ is G-delta geodesic.
-That is, if one of the conditions \ref{SHORT.2-sum}, \ref{SHORT.point-on-side}), or  \ref{SHORT.angle} holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
+That is, if one of the conditions \ref{SHORT.2-sum}, \ref{SHORT.point-on-side}, or  \ref{SHORT.angle} holds in a  G-delta geodesic space $\spc{L}$, then $\spc{L}$ is $\Alex\kappa$.
 \end{thm}
 
 A slightly stronger form of \ref{SHORT.angle} is given in \ref{lem:devel-glob}.
-See also Problem~\ref{open:hinge-}.
+See also Open question~\ref{open:hinge-}.
 
 \parit{Proof; \ref{SHORT.2-sum}).}
 Since $z\in \mathopen{]}x y\mathclose{[}$, we have $\angk\kappa z x y=\pi$. 
@@ -403,7 +402,7 @@ Passing to the limits  $w\to p$, we have
 \le
 2\cdot\pi.\]
 
-If $\spc{L}$ is only G-delta geodesic, we can apply the  above arguments to sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that $[p_nz]$ exists, $w_n\in\mathopen{]}z p_n\mathclose{[}$ and  $[x_nw_n]$, $[y_n w_n]$ exist,  and then pass to the limit as $n\to\infty$.
+If $\spc{L}$ is only G-delta geodesic, we can apply the above arguments to sequences of points $p_n,w_n\to p$, $x_n\to x$, $y_n\to y$ such that $[p_nz]$ exists, $w_n\in\mathopen{]}z p_n\mathclose{[}$ and  $[x_nw_n]$, $[y_n w_n]$ exist, and then pass to the limit as $n\to\infty$.
 \qeds
 
 \begin{thm}{Exercise}\label{mink+alex=euclid} 
@@ -430,11 +429,11 @@ is nonincreasing.
 In particular, if a geodesic $[x p]$ exists and $\bar p\in \mathopen{]}x p]$, then
 \begin{subthm}{cor:monoton:2-sides}
 the function 
-\[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nonincresing in each argument
+\[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nonincresing in each argument;
 \end{subthm}
  
 \begin{subthm}{cor:monoton:sup}
-The angle $\mangle\hinge{x}{p}{y}$ is defined and 
+the angle $\mangle\hinge{x}{p}{y}$ is defined and 
 \[\mangle\hinge{x}{p}{y}
 =
 \sup\set{\angk\kappa x {\bar p}{\bar y}}{
@@ -499,7 +498,7 @@ in a $\Alex{\kappa}$ space is \index{$\kappa$-thick}\emph{$\kappa$-thick}.
 
 \begin{subthm}{}
 Show that any $\Alex0$ space $\spc{L}$ satisfies the following condition:
-for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$ respectively, then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
+for any three points $p,q,r\in \spc{L}$, if $\bar q$ and $\bar r$ are midpoints of geodesics $[p q]$ and $[p r]$, respectively, then $2\cdot\dist[{{}}]{\bar q}{\bar r}{}\ge\dist{q}{r}{}$.
 \end{subthm}
 
 \begin{subthm}{} Show that there is a metric on $\RR^2$ defined by a norm that satisfies the above condition, but is not $\Alex0$.
@@ -540,7 +539,7 @@ is $2$-concave.
 \end{thm} 
 
 \parit{Proof of \ref{thm:conc}.} 
-Let $[x y]$ be a geodesic in $\oBall(p,\varpi\kappa)$ and $\ell=\dist{x}{y}{}$.
+Let $[x y]$ be a geodesic in $\oBall(p,\varpi\kappa)$, and let $\ell=\dist{x}{y}{}$.
 Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$.
 Set \begin{align*} 
 \tilde r(t)&=\dist{\tilde p}{\geod_{[\tilde x\tilde y]}(t)}{},
@@ -648,11 +647,11 @@ The set formed by all geodesics from  $\tilde p$ to the points on $\tilde \gamma
 
 The set of all points $\tilde x\in\Lob2{\kappa}$ such that a geodesic $[\tilde p\tilde x]$ intersects $\tilde \gamma$ is called the \emph{supergraph} of $\tilde \gamma$ with respect to $\tilde p$.
 
-The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
+The curve $\tilde \gamma$ is called \index{convex/concave curve with respect to a point}\emph{convex (concave) with respect to} $\tilde p$ if the subgraph (respectively, supergraph) of $\tilde \gamma$ with respect to $\tilde p$ is convex.
 
 The curve $\tilde \gamma$ is called 
 \emph{locally convex (concave) with respect to $\tilde p$} 
-if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (concave) with respect to~$\tilde p$.
+if for any interior value $t_0$ in $\II$ there is a subsegment $(a,b)\subset\II$, $(a,b)\z\ni t_0$, such that the restriction $\tilde \gamma|_{(a,b)}$ is convex (respectively, concave) with respect to~$\tilde p$.
 \end{thm}
 
 Note that if $\kappa>0$, then the supergraph of a curve is the subgraph with respect to the opposite point. 
@@ -782,7 +781,7 @@ and
 \[\modtrig\kappa
 \{\dist{\tilde y_{i-1}}{\tilde y_i}{},\dist{\tilde p}{\tilde y_{i-1}}{},\dist{\tilde p}{\tilde y_{i}}{}\}\]
 we obtain that the sequence 
-$\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y_{i}}{};\dist{\tilde p}{\tilde y_0}{},\tau_i\}$ is non increasing.
+$\tilde \mangle\mc\kappa\{\dist{\tilde p}{\tilde y_{i}}{};\dist{\tilde p}{\tilde y_0}{},\tau_i\}$ is nonincreasing.
 
 For finer and finer partitions we have 
 \[\max\nolimits_i\{|\tau_i-t_i|\}\to0.\] 
@@ -817,7 +816,7 @@ Then $\spc{L}$ is $\Alex\kappa$.
 In this section we discuss locally $\Alex{\kappa}$ spaces.
 In particular, we prove the {}\emph{globalization theorem}: equivalence of local and global definitions for complete length spaces.
 
-The following theorem summarizes equivalent definitions of locally $\Alex{\kappa}$ spaces
+The following theorem summarizes equivalent definitions of locally $\Alex{\kappa}$ spaces.
 
 \begin{thm}{Theorem}\label{thm:=def-loc}
 Let $\spc{X}$ be a complete length space and $p\in \spc{X}$.
@@ -862,7 +861,7 @@ there is $R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}}>0$
 such that $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ is G-delta geodesic and if $q$ and a geodesic $[x y]$ lie in $\oBall(p,R_{\hbox{\rm\scriptsize\ref{SHORT.monoton-loc}}})$ 
 and $z\in \mathopen{]}x y\mathclose{[}$, then
 \[\angk\kappa x q y
-\le\angk\kappa x q z;\]
+\le\angk\kappa x q z,\]
 or, equivalently, 
 \[\dist{\tilde p}{\tilde z}{}\le \dist{p}{z}{},\]
 where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\mathopen{]} \tilde x\tilde y\mathclose{[}$, $\dist{\tilde x}{\tilde z}{}=\dist{x}{z}{}$.
@@ -907,7 +906,7 @@ later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:deve
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 In the above generality, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}; 
 simplifications and modifications were given by Conrad Plaut \cite{plaut:dimension}, Katsuhiro Shiohama \cite{shiohama}, and in the book of Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
-A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise:
+A generalization for non-complete but geodesic spaces was obtained by the third author \cite{petrunin:globalization}; namely it solves the following exercise.
 
 }
 
@@ -954,9 +953,8 @@ The following lemma says that if comparison holds for all small hinges, then it 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
 Let $\kappa\in \RR$, 
 $0<\ell\le\varpi\kappa$, 
-$\spc{X}$ be a complete geodesic space 
-and $p\in \spc{X}$ be a point 
-such that $\oBall(p,2\cdot\ell)$ is locally $\Alex\kappa$. 
+$\spc{X}$ be a complete geodesic space.
+Suppose $p\in \spc{X}$ is a point such that $\oBall(p,2\cdot\ell)$ is locally $\Alex\kappa$. 
 
 Assume that for any point 
 $q\in \oBall(p,{\ell})$ the comparison
@@ -1277,7 +1275,7 @@ Clearly, $\angk\kappa q{z_\eps}{x_\eps}=\angk\kappa q{z_\eps}{y_\eps}=\pi$.
 Thus from the $\Alex\kappa$ comparison (\ref{df:cbb1+3}), $\angk\kappa q{x_\eps}{y_\eps}=0$ and thus $x_\eps=y_\eps$, a contradiction.
 
 \parit{\ref{SHORT.angle=0}.}
-From hinge comparison \ref{angle}, 
+From the hinge comparison (\ref{angle}), 
 \[\mangle\hinge p x y=0\quad \Rightarrow\quad \angkk\kappa p{\geod_{[p x]}(t)}{\geod_{[p y]}(t)}=0\] 
 and thus ${\geod_{[p x]}(t)}={\geod_{[p y]}(t)}$ for all small $t$. 
 Therefore we can apply \ref{SHORT.nonsplit}.
@@ -1589,7 +1587,7 @@ Therefore $h$ is nonincreasing which means that \[\dist{x}{p}{}+\dist{y}{p}{}
 h(\ell)\le h(0)
 =
 \dist{x}{y}{}.\]  
-Since the geodesic $[x y]$ is unique this means that $p\in [x y]$, and hence $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
+Since the geodesic $[x y]$ is unique, this means that $p\in [x y]$, and hence $\oBall(z,\tfrac{\eps}{4})$ only contains points of $[x y]$.
 
 Since in $\Alex{}$ spaces, geodesics do not bifurcate (\ref{nonsplit}), 
 it follows that all of $\spc{L}$ coincides with the maximal extension of $[x y]$ as a local geodesic $\gamma$ 
@@ -1602,7 +1600,7 @@ As all of those spaces are proper, $\spc{L}$ is a metric component in $\spc{L}^\
 \qeds
 
 \begin{thm}{Lemma}\label{concave-pi/2}
-Let $\spc{L}$ be a complete length $\Alex1$ space and $p\in \spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex1$ space, and let $p\in \spc{L}$.
 Then $\distfun{p}{}{}\:\spc{L}\to\RR$ is concave in $\oBall(p,\pi)\setminus \oBall(p,\tfrac\pi2)$.
 
 In particular, if $\diam\spc{L}\le\pi$,
@@ -1668,7 +1666,7 @@ Consider the following model configuration: two geodesics $[\tilde p\tilde z_0]$
 \\ 
 \dist{\tilde z_0}{\tilde q}{}&=\dist{z_0}{q}{},
 &  
-\dist{\tilde z_0}{\tilde r}{}&=\dist{z_0}{q}{}
+\dist{\tilde z_0}{\tilde r}{}&=\dist{z_0}{q}{},
 \end{align*}
 and 
 \[\mangle\hinge{\tilde z_0}{\tilde q}{\tilde p}
@@ -1683,7 +1681,7 @@ $y(t)\le y(t_0)+o(t-t_0)$;
 thus, $\bar y(t)$ is a barrier for 
 $y(t)=\md1\dist[{{}}]{p}{\geod_{[q r]}(t)}{}$ at 
 $t_0$ by \ref{barrier'}.
-From the barrier inequality \ref{barrier'}, we get 
+From the barrier inequality (\ref{barrier'}), we get 
 \[\dist{\tilde p}{\geod_{[\tilde q\tilde r]}(t)}{}
 \ge 
 \dist{p}{\geod_{[q r]}(t)}{},\]
@@ -1742,7 +1740,7 @@ The rule for calculating extended angle is an easy consequence of its definition
 
 \section{Remarks}
 
-The question whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
+The question of whether the first part of \ref{angle} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
 it was first stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 
 
@@ -1788,7 +1786,7 @@ The smooth case of this statement follows from the Gauss formula.
 This has been generalized by Sergei Buyalo \cite{buyalo} to the nonsmooth case and sharpened by the authors \cite{alexander-kapovitch-petrunin-buyalo}.
 
 Let us mention that an analogous statement about convex hypersurfaces in $\Alex{\kappa}$ space is completely open.
-Namely, it is unknown if \textit{the boundary of a complete finite-dimensional $\Alex{\kappa}$ length space has to be $\Alex{\kappa}$}.
+Namely, it is unknown whether \textit{the boundary of a complete finite-dimensional $\Alex{\kappa}$ length space has to be $\Alex{\kappa}$}.
 
 Further, $\Alex{}$ spaces behave nicely with respect to several natural constructions.
 For example, the product of $\Alex{0}$ spaces is a $\Alex{0}$.
@@ -1802,7 +1800,7 @@ More conceptually, \textit{Wasserstein space} of order $2$ over $\Alex0$ space i
 Also, there is a natural metric on the \textit{space of metric-measure spaces} that makes it $\Alex0$ space;
 it was constructed by Karl-Theodor Sturm \cite{sturm-2012}.
 
-Among less important examples, let us mention \textit{polyhedral spaces},
+Among less important examples, let us mention \textit{polyhedral spaces};
 an if-and-only-if condition is given in \ref{thm:poly-CBB}.
 Also, in addition to Perelman's doubling theorem, 
 there are several versions of gluing theorems \cite{petrunin1997, ge-li, Kosovski};

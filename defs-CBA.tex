@@ -108,7 +108,7 @@ In Proposition~\ref{prop:inherit-bound}, it will be shown that this formulation 
 in particular, if $\kappa\le\Kappa$, then any $\CAT\kappa$ space is $\CAT\Kappa$.
 
 
-This terminology was introduced by Michael Gromov;  
+This terminology was introduced by Michael Gromov:  
 $\CAT{}$ stands for \'Elie Cartan, Alexandr Alexandrov, and Victor Toponogov.
 Originally these spaces were called \index{$\mathfrak{R}_\kappa$ domain}\emph{$\mathfrak{R}_\kappa$ domains};
 this is Alexandrov's terminology and is still in use.
@@ -267,7 +267,7 @@ is $\Lip$-Lipschitz in $\Omega_p\times \Omega_q\times[0,1]$.
 
 \parit{Proof.}
 By Proposition~\ref{cor:cat-completion}, any geodesic $\CAT{\kappa}$ space is isometric to a convex dense subset of a complete length $\CAT\kappa$ space.
-It remains to apply  Theorem~\ref{thm:cat-unique}.
+It remains to apply~\ref{thm:cat-unique}.
 \qeds
 
 
@@ -288,14 +288,14 @@ Here we give a few reformulations of Definition~\ref{def:ccat}.
 If $\spc{U}$ is a $\CAT\kappa$ space, then 
 the following conditions hold for all triples $p,x,y\in \spc{U}$ of perimeter $<2\cdot\varpi\kappa$:
 
-\begin{subthm}{cat-2-sum} (adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, we have
+\begin{subthm}{cat-2-sum} (adjacent angle comparison\index{comparison!adjacent angle comparison}) For any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, we have
 \[\angk\kappa z p x
 +\angk\kappa z p y\ge \pi.\]
 \end{subthm}
 
 \begin{subthm}{cat-monoton}
 (point-on-side comparison\index{comparison!point-on-side comparison}) 
-for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, we have
+For any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$, we have
 \[\angk\kappa x p y\ge\angk\kappa x p z,\]
 or equivalently, 
 \[\dist{\tilde p}{\tilde z}{}\ge \dist{p}{z}{},\]
@@ -303,7 +303,7 @@ where $\trig{\tilde p}{\tilde x}{\tilde y}=\modtrig\kappa(p x y)$, $\tilde z\in\
 \end{subthm}
 
 \begin{subthm}{cat-hinge}(hinge comparison\index{comparison!hinge comparison})
-for any hinge $\hinge x p y$, the angle 
+For any hinge $\hinge x p y$, the angle 
 $\mangle\hinge x p y$ exists and
 \[\mangle\hinge x p y\le\angk\kappa x p y,\]
 or equivalently,
@@ -399,7 +399,7 @@ is nondecreasing.
 
 In particular, if $\bar p\in \mathopen{]}x p]$, then
 \begin{subthm}{two-mono-cba}the function 
-\[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nondecreasing in each argument,
+\[(\dist{x}{\bar y}{},\dist{x}{\bar p}{})\mapsto \angk\kappa x {\bar p}{\bar y}\] is nondecreasing in each argument;
 \end{subthm}
  
 \begin{subthm}{cor:monoton-cba:angle=inf} 
@@ -464,8 +464,8 @@ We say the triangle $\trig{x^1}{x^2}{x^3}$ is \index{thin triangle}\emph{$\kappa
 
 \begin{thm}{Exercise}\label{ex:equality-for-thin}
 Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space.
-Let $\trig xyz$ be a triangle in $\spc{U}$
-and $\trig{\tilde x}{\tilde y}{\tilde z}$ be its model triangle in $\Lob{2}{\kappa}$.
+Let $\trig xyz$ be a triangle in $\spc{U}$,
+and let $\trig{\tilde x}{\tilde y}{\tilde z}$ be its model triangle in $\Lob{2}{\kappa}$.
 Prove that the natural map $f\:\trig{\tilde x}{\tilde y}{\tilde z}\to \trig xyz$ 
  is distance-preserving if and only if one of the following conditions hold:
 
@@ -544,7 +544,7 @@ and both triangles $\trig p x z$ and $\trig p y z$ are $\kappa$-thin, then trian
 The following model-space lemma is  extracted from Lemma 2 in \cite{reshetnyak:major}.
 
 \begin{thm}{Lemma}\label{lem:quadrangle}
-Let $\trig{\tilde p}{\tilde x}{\tilde y}$ be a triangle in $\Lob2{\kappa}$ and $\tilde z\in[\tilde x\tilde y]$.
+Let $\trig{\tilde p}{\tilde x}{\tilde y}$ be a triangle in $\Lob2{\kappa}$, and let $\tilde z\in[\tilde x\tilde y]$.
 Consider the solid triangle $\tilde D=\Conv\trig{\tilde p}{\tilde x}{\tilde y}$.  
 Construct  points $\dot p, \dot x, \dot z, \dot y\in \Lob2{\kappa}$ such that 
 \begin{align*}
@@ -562,7 +562,7 @@ where points $\dot x$ and $\dot y$ lie on either side of $[\dot p\dot z]$.
 Set 
 \[\dot D=\Conv\trig {\dot p}{\dot x}{\dot z}\cup \Conv\trig {\dot p} {\dot y} {\dot z}.\]
 
-Then there is a short map $F\:\tilde D\to \dot D$ that maps $\tilde p$, $\tilde x$, $\tilde y$ and $\tilde z$ to $\dot p$, $\dot x$, $\dot y$ and $\dot z$ respectively.
+Then there is a short map $F\:\tilde D\to \dot D$ that maps $\tilde p$, $\tilde x$, $\tilde y$ and $\tilde z$ to $\dot p$, $\dot x$, $\dot y$, and $\dot z$, respectively.
 \end{thm}
 
 {
@@ -586,7 +586,7 @@ $(\tilde z,\tilde z_x)$,
 $(\tilde z_x,\tilde z_y)$ 
 and $(\tilde z_y,\tilde z)$ 
 with arcs of circles centered at 
-$\tilde y$, $\tilde p$, and $\tilde x$ respectively. 
+$\tilde y$, $\tilde p$, and $\tilde x$, respectively. 
 Define $F$ as follows.
 
 }
@@ -714,7 +714,7 @@ By the triangle inequality, if $\dist{x}{y}{}<\varpi\kappa$, then any
  geodesic $[x y]$ lies in $\oBall(p, \varpi\kappa)$.
  
 By the function comparison (\ref{thm:function-comp}), 
-the geodesic $[x y]$ lies in $\cBall[p,R]$ or $\oBall(p,R)$ respectively.
+the geodesic $[x y]$ lies in $\cBall[p,R]$ or $\oBall(p,R)$, respectively.
 
 Thus any ball (closed or open) of radius $R<\tfrac{\varpi\kappa}2$ is $\varpi\kappa$-convex.
 This implies convexity unless there is a pair of points in the ball at distance at least $\varpi\kappa$.
@@ -837,8 +837,7 @@ $\spc{U}$ is locally $\CAT\kappa$; moreover,  pairs of points in $\spc{U}$ at di
 Note that the implication \ref{SHORT.thm:alex-patch:ccat}$\Rightarrow$\ref{SHORT.thm:alex-patch:geo-uni} follows from Theorem~\ref{thm:cat-unique}.
 
 \begin{thm}{Corollary}\label{cor:k-for-k}
-Let $\spc{U}$ be a complete length  space 
-and $\Omega\subset\spc{U}$ be an open locally $\CAT\kappa$ subset. 
+Let $\Omega$ be an open locally $\CAT\kappa$ subset in a complete length  space $\spc{U}$. 
 Then for any point $p\in \Omega$ there is $R>0$ such that $\cBall[p,R]$ is a convex subset of $\spc{U}$ 
 and $\cBall[p,R]$ is $\CAT\kappa$.
 \end{thm}
@@ -987,7 +986,7 @@ for any $\kappa\in\RR$ such that $\dist{p}{q}{}<\varpi\kappa$.
 \end{thm}
 
 \parit{Proof.} 
-By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the right-hand side is defined and bigger than or  equal to the left-hand side. 
+By angle-sidelength  monotonicity  (\ref{cor:monoton-cba}), the right-hand side is defined and is bigger than or equal to the left-hand side. 
 
 By Lemma~\ref{lem:k-K-angle}, we may take $\kappa = 0$ in \ref{eq:cba-1st-var+***}.  
 By the cosine law and the first variation inequality (\ref{lem:first-var}),  
@@ -1134,7 +1133,7 @@ Thus, without loss of generality, we may assume that $x^0\in\spc{U}^1$ and $x^1,
 Choose points $z^1,z^2\in A=\spc{U}^1\cap\spc{U}^2$ 
 lying respectively on the sides $[x^0x^1], [x^0x^2]$.
 Note that all distances between any pair of points from $x^0$, $x^1$, $x^2$, $z^1$, $z^2$ are less than $\varpi\kappa$.
-Therefore
+Therefore,
 \begin{itemize}
 \item triangle $\trig{x^0}{z^1}{z^2}$ lies in $\spc{U}^1$,
 \item both triangles $\trig{x^1}{z^1}{z^2}$ and $\trig{x^1}{z^2}{x^2}$ lie in $\spc{U}^2$.
@@ -1243,7 +1242,7 @@ the ball $\spc{B}=\oBall(\gamma_\infty(t),R)$ is a convex subset of $\spc{U}$ an
 
 A local geodesic segment  with length less than $R/2$ that intersects $\oBall(\gamma_\infty(t),R/2)$ cannot leave $\spc{B}$, and hence  is  minimizing by Corollary~\ref{cor:loc-geod-are-min}.
 In particular, for all sufficiently large $n$, 
-if subsegment of $\gamma_n$ has length less than $R/2$ and contains $\gamma_n(t)$, then it is a geodesic.
+if a subsegment of $\gamma_n$ has length less than $R/2$ and contains $\gamma_n(t)$, then it is a geodesic.
 
 
 Since $\spc{B}$ is $\CAT\kappa$, geodesic segments in $\spc{B}$ depend uniquely and continuously on their endpoint pairs by Theorem~\ref{thm:cat-unique}.  
@@ -1355,7 +1354,7 @@ The following corollary describes how this process might terminate.
 
 \begin{thm}{Corollary}\label{cor:geo-hom}{\sloppy 
 Let $\spc{U}$ be a locally complete, length, locally $\CAT\kappa$ space.
-Suppose $\gamma\:[0,1]\to\spc{U}$ is a local geodesic with length $< \varpi\kappa$.  Let $\alpha^i\:[0,1]\to \spc{U}$, for $i=0,1$, be curves starting at $\gamma(0)$ and $\gamma(1)$ respectively.  
+Suppose $\gamma\:[0,1]\to\spc{U}$ is a local geodesic with length $< \varpi\kappa$.  Let $\alpha^i\:[0,1]\to \spc{U}$, for $i=0,1$, be curves starting at $\gamma(0)$ and $\gamma(1)$, respectively.  
 
 }
 
@@ -1816,7 +1815,7 @@ the general case then follows by approximation.
 Namely, since $\beta$ is concave 
 it can be approximated by polygonal lines that are concave with respect to $p$, 
 with their lengths converging to $\length \beta$. 
-Passing to a partial limit we will obtain the needed map $G$.  
+Passing to a partial limit, we will obtain the needed map $G$.  
 
 Suppose $\beta=x^0x^1\dots x^n$ is a polygonal line with $x^0=x$ and $x^n=y$.
 Consider a sequence of polygonal lines $\beta_i=x^0x^1\dots x^{i-1}y_i$ such that $\dist{p}{y_i}{}=\dist{p}{y}{}$ and 
@@ -1908,7 +1907,7 @@ under a map $F_n$ such that $F_n\:\tilde x^i\mapsto x^i$ for each $i$.
 
 Assume the statement is true for $(n-1)$-gons, $n\ge 4$.  
 Then  $[x^1 x^2 \dots x^{n-1}]$  is majorized by a convex polygonal region 
-\[R_{n-1}=\Conv[\tilde x^1 \tilde x^2,\dots \tilde x^{n-1}],\] 
+\[R_{n-1}=\Conv[\tilde x^1 \tilde x^2\dots \tilde x^{n-1}],\] 
 in $\Lob2\kappa$ under a map $F_{n-1}$ satisfying $F_{n-1}(\tilde x^i)=x^i$ for all $i$. 
 Take $\dot x^n\in\Lob2{\kappa}$ such that $\trig{\tilde x^1}{\tilde x^{n-1}}{\dot x^n}=\modtrig\kappa(x^1 x^{n-1} x^n)$ 
 and this triangle lies on the other side of $[\tilde x^1\tilde x^{n-1}]$ from $R_{n-1}$.  
@@ -1955,9 +1954,9 @@ Assume $\alpha\:[0,\ell]\to\spc{U}$ is an  arbitrary closed curve with natural p
 Choose a sequence of partitions $0=t^0_n<t^2_n<\dots<t^n_n=\ell$
 so that:
 \begin{itemize}
-\item The set $\{t_{n+1}^i\}_{i=0}^{n+1}$ 
-is obtained from the set  $\{t_n^i\}_{i=0}^n$ by adding one element.
-\item For a sequence $\eps_n\to0+$,
+\item the set $\{t_{n+1}^i\}_{i=0}^{n+1}$ 
+is obtained from the set  $\{t_n^i\}_{i=0}^n$ by adding one element;
+\item for a sequence $\eps_n\to0+$,
 we have $t^i_n-t^{i-1}_n<\eps_n$ for all $i$.
 \end{itemize}
 
@@ -1997,8 +1996,8 @@ of the majorization theorem.
 {\sloppy 
 
 \begin{thm}{Exercise}\label{ex:isometric-majorization}
-Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
-and $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
+Let $\spc{U}$ be a $\varpi\kappa$-geodesic $\CAT\kappa$ space,
+and let $\alpha\:[0,\ell]\to\spc{U}$ be a closed curve with arclength parametrization.
 Assume that $\ell\z<2\cdot \varpi\kappa$
 and there is a closed convex curve $\tilde \alpha\:[0,\ell]\to\Lob{2}{\kappa}$ such that 
 \[\dist{\alpha(t_0)}{\alpha(t_1)}{\spc{U}}=\dist{\tilde \alpha(t_0)}{\tilde \alpha(t_1)}{\Lob{2}{\kappa}}\]
@@ -2075,7 +2074,7 @@ Let $F\:\tilde D\to\spc{U}$ be the majorizing map for $P$, where $\tilde D$ is t
 \begin{clm}{}\label{clm:arm-triangle}
 Let $\tilde x,\tilde y,\tilde z$ be three vertexes of $\tilde P$, and let $x,y,z$ be the corresponding vertexes of $P$.  If $\dist{\tilde x}{\tilde y}{}=
 \dist{x}{y}{}$, $\dist{\tilde y}{\tilde z}{}=
-\dist{x}{z}{}$ and $\mangle\hinge{\tilde y}{\tilde x}{\tilde z} = \mangle\hinge{y}{x}{z}$, then $F|_{\Conv(\tilde x, \tilde y, \tilde z)}$ is distance-preserving.
+\dist{x}{z}{}$ and $\mangle\hinge{\tilde y}{\tilde x}{\tilde z} = \mangle\hinge{y}{x}{z}$. Then $F|_{\Conv(\tilde x, \tilde y, \tilde z)}$ is distance-preserving.
 \end{clm} 
 
 Indeed, since $F$ is majorizing, $F$ restricts to   distance-preserving maps from $[\tilde x\tilde y]$ to $[xy]$ and $[\tilde y\tilde z]$ to $[yz]$.
@@ -2420,19 +2419,18 @@ and the restriction $f|_{K'}$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:closest-point-projection}
-Let $\spc{U}$ be a complete length $\CAT0$ space, and let $K\subset \spc{U}$ be a closed convex set.
+Let $K$ be a closed convex set in a complete length $\CAT0$ space $\spc{U}$.
 Show that the closest-point projection $\spc{U}\to K$ is short. 
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:short-retraction-CBA(1)}
-Let $\spc{U}$ be a complete length $\CAT1$ space, and let $K\subset \spc{U}$ be a closed $\pi$-convex set.
+Let $K$ be a closed $\pi$-convex set in a complete length $\CAT1$ space $\spc{U}$.
 Assume $K\subset \cBall[p,\tfrac\pi2]$ for $p\in K$.
 Show that there is a short retraction of $\spc{U}$ to~$K$. 
 \end{thm}
 
 \begin{thm}{Proposition}\label{lem:dist-to-convex}
-Let $\spc{U}$  be a $\varpi\kappa$-geodesic $\CAT\kappa$ space
-and $K\subset \spc{U}$ be a closed $\varpi\kappa$-convex set.
+Let $K$ be a closed $\varpi\kappa$-convex set in a $\varpi\kappa$-geodesic $\CAT\kappa$ space $\spc{U}$.
 Let
 \[f=\sn\kappa\circ\distfun{K}{}{}.\]
 Then
@@ -2497,8 +2495,7 @@ and hence the statement follows.
 \qeds
 
 \begin{thm}{Corollary}\label{cor::dist-to-convex}
-Let $\spc{U}$  be a complete length $\CAT\kappa$ space
-and $K\subset \spc{U}$ be a closed  locally convex set.
+Let $K$ be a closed  locally convex set in a complete length $\CAT\kappa$ space $\spc{U}$.
 Then there is an open set $\Omega\supset K$
 such that the function 
 $f=\sn\kappa\circ\distfun{K}{}{}$
@@ -2622,12 +2619,11 @@ This statement follows from the Rauch comparison, and it is one of the main moti
 \textit{Hilbert spaces} are another motivating example of $\CAT{0}$ spaces.
 
 The question of when a Riemannian \textit{manifold-with-boundary} is locally $\CAT{\kappa}$ has been completely answered by the first author, David Berg, and Richard Bishop \cite{alexander-berg-bishop1993}.
-If the sectional curvatures of the interior and the outward sectional curvatures of the boundary do not exceed $\kappa$ then it is locally $\CAT\kappa$ (where an outward sectional curvature is one that corresponds to a tangent $2$-plane all of whose normal curvature vectors point outward).
+If the sectional curvatures of the interior and the outward sectional curvatures of the boundary do not exceed $\kappa$, then it is locally $\CAT\kappa$ (where an outward sectional curvature is one that corresponds to a tangent $2$-plane all of whose normal curvature vectors point outward).
 In particular, if a Riemannian manifold and its boundary have sectional curvature at most $\kappa$, then it is locally $\CAT{\kappa}$.
 
-Subsets of \textit{positive reach} in  Riemannian manifolds were studied in this context by 
-the first author, Richard Bishop, and
-Alexander Lytchak \cite{alexander-bishop,lytchak2004}.
+Subsets of \textit{positive reach} in  Riemannian manifolds were studied in this context by the first author and Richard Bishop \cite{alexander-bishop},
+and by Alexander Lytchak \cite{lytchak2004}.
 In particular, any compact subset of positive reach in a Riemannian manifold is $\CAT{}$;
 as usual, we assume that it is equipped with the induced length metric.
 
@@ -2658,7 +2654,7 @@ It implies the so-called Gromov's flag condition \ref{thm:flag} which provides i
 (Several applications are mentioned in Section~\ref{sec:poly-reamarks}.)
 
 By \ref{prop:CAT-olim} and \ref{thm:ultra-GH}, the \textit{ultralimits}, as well as \textit{Gromov--Hausdorff limits} of $\CAT\kappa$ spaces are $\CAT\kappa$.
-In particular, if  $\spc{U}$ is a $\CAT{0}$ space then its \textit{asymptotic cone}\index{asymptotyc cone}   defined as  the ultralimit of its rescalings $\tfrac1n\cdot \spc{U}$ as $n\to \o$ is again  $\CAT{0}$.
+In particular, if  $\spc{U}$ is a $\CAT{0}$ space, then its \textit{asymptotic cone}\index{asymptotyc cone}   defined as  the ultralimit of its rescalings $\tfrac1n\cdot \spc{U}$ as $n\to \o$ is again  $\CAT{0}$.
 Unlike in the case of $\Alex{0}$ spaces, the use of ultralimits is necessary even if $\spc{U}$ is a manifold due to the lack of compactness theorem.
 Asymptotic cones of $\CAT{0}$ spaces and their generalizations play an important role in geometric group theory.
 

@@ -7,8 +7,8 @@ see Definition~\ref{def:lin-dim}. In other words, by default {}\emph{dimension} 
 
 \section{Struts and rank}\label{sec:struts+rank}
 
-Our definitions of strut 
-and distance chart 
+Our definitions of struts 
+and distance charts 
 differ from the one in \cite{burago-gromov-perelman};
 it is closer to Perelman's definitions \cite{perelman:spaces2,perelman:morse}.
 
@@ -29,8 +29,8 @@ Recall that the packing number is defined in \ref{sec:notations}.
 The following definition is motivated by the observation that $k\z=\pack_{\pi/2}(\SS^{k-1})-1$ for any integer $k>0$. 
 
 \begin{thm}{Definition}\label{def:rank}
-Let $\spc{L}$ be a complete length $\Alex{}$ space
-and $p\in \spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex{}$ space,
+and let $p\in \spc{L}$.
 Let us define rank of $\spc{L}$ at $p$ as 
 \[\rank_p=\rank_p\spc{L}
 \df
@@ -41,8 +41,7 @@ Let us define rank of $\spc{L}$ at $p$ as
 Thus $\rank$ takes values in $\ZZ_{\ge0}\cup\{\infty\}$.
 
 \begin{thm}{Proposition}\label{prop:stutt}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
-and $p\in \spc{L}$.
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, and let $p\in \spc{L}$.
 Then the following conditions are equivalent:
 
 \begin{subthm}{lem:stut<=>rank:rank}$\rank_p\ge\kay$,
@@ -128,8 +127,8 @@ The distance map $\distfun{\bm{a}}{}{}\:\spc{L}\to\RR^\kay$ is locally co-Lipsch
 \end{thm}
 
 Part \ref{SHORT.thm:right-inverse-function:open-map} of the theorem 
-is closely related to \cite[Theorem 5.4]{burago-gromov-perelman} by Yuriy Burago, Grigory Perelman, and Michael Gromov, 
-but the proof presented here is different.
+is closely related to \cite[Theorem 5.4]{burago-gromov-perelman} by Yuriy Burago, Grigory Perelman, and Michael Gromov; 
+the proof we present here is different.
 Yet another proof can be built on \cite[Proposition~4.3]{lytchak:open-map} by Alexander Lytchak.
 
 %\parbf{Remark for AKP.} It seems that the set $\Im \map$ is $\kay$-rectifiable; that is, it lies in an image of a Lipschitz map from bounded domain of $\RR^\kay$ to $\spc{L}$. It seems I have a proof, but it is not yet clear we need it.??
@@ -293,11 +292,12 @@ That is, the distance map $\distfun{\bm{a}}{}{}$ is locally $\tfrac{11}{\eps^2}$
 The following theorem is the main result of this section.
 
 \begin{thm}{Theorem}\label{thm:dim-infty}
-Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space, 
-$q\in \spc{L}$, 
-$R>0$ 
+Let $\spc{L}$ be a complete length $\Alex{\kappa}$ space 
+Suppose $q\in \spc{L}$, 
+$R>0$,
 and $m\in \ZZ_{\ge0}$.
-Then the following statements are equivalent:
+Then the following statements are equivalent.
+
 \begin{subthmA}{LinDim} $\LinDim\spc{L}\ge m$.
 \end{subthmA}
 
@@ -336,7 +336,7 @@ In particular:
 For finite-dimensional spaces, Theorem~\ref{thm:dim-finite} gives a stronger version 
 of the theorem above.
 
-The above theorem with the exception of statement~\ref{SHORT.TopDim} was proved by Conrad Plaut \cite{plaut:dimension}.
+The above theorem, with the exception of statement~\ref{SHORT.TopDim}, was proved by Conrad Plaut \cite{plaut:dimension}.
 At that time, it was not known whether
 \[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty\]
 for any complete length $\Alex\kappa$ space $\spc{L}$.
@@ -511,7 +511,7 @@ that is, for any $q\in\spc{L}$ and $R>0$, there is $\Const'>0$ such that
 \[\pack_\eps \oBall(q,R)>\frac{\Const'}{\eps^m}.\]
 
 \parit{\ref{SHORT.pack}$\Rightarrow$\ref{SHORT.LinDim+}.} 
-Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$ we have
+Note that for any $q'\in\spc{L}$ and $R'>\dist{q}{q'}{}+R$, we have
 \begin{align*}
 \pack_\eps\oBall(q',R')
 &\ge
@@ -611,7 +611,7 @@ Let $p$ be a point in an $m$-dimensional complete length $\Alex\kappa$ space $\s
 Assume for the directions $\xi,\zeta^1,\zeta^2,\dots,\zeta^\kay\in\Sigma_p$ the following conditions hold: 
 
 \begin{subthm}{}
-$\mangle(\xi,\zeta^i)>\tfrac\pi2-\eps$ for all $i$,
+$\mangle(\xi,\zeta^i)>\tfrac\pi2-\eps$ for all $i$;
 \end{subthm}
 
 \begin{subthm}{}
@@ -664,7 +664,7 @@ $\Xi=\mathbb{S}^{m-1}\setminus \oBall(\xi,\tfrac\pi2)
 (if $\zeta\in\Xi$, then $\bar\zeta^i=\zeta^i$).
 By straightforward calculations, we have
 \[\dist{\bar\zeta^i}{\bar\zeta^j}{}\ge \dist{\zeta^i}{\zeta^j}{}-\eps>\tfrac\pi2.\]
-Thus it is sufficient to show the following claim:
+Thus it is sufficient to show the following claim.
 
 \begin{clm}{}
 $\pack_{\frac\pi2}\mathbb{S}^{m-1}_+= m.$
@@ -737,7 +737,7 @@ Then \ref{eq:y-x} and \ref{eq:x-y} imply \ref{expend}.
 
 Finally, part \ref{SHORT.thm:inverse-function:R}
 follows since the angle $\angk\kappa q{a^i}{a^j}$ 
-depends continuously on $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$ and $\dist{a^i}{a^j}{}$.
+depends continuously on $\kappa$, $\dist{q}{a^i}{}$, $\dist{q}{a^j}{}$, and $\dist{a^i}{a^j}{}$.
 \qeds
 
 \section{Finite-dimensional spaces}\label{sec:dim=m}
@@ -767,7 +767,7 @@ $m$ is the maximal integer such that there is a point $p\in\spc{L}$ that admits 
 
 \begin{subthm}{pack-f} For any $\eps>0$,
 \[\pack_\eps\cBall[R]_{\Lob{m}{\kappa}} \ge\pack_\eps \oBall(q,R).\]
-moreover, there is $\Const=\Const(q,R)>0$ such that 
+Moreover, there is $\Const=\Const(q,R)>0$ such that 
 \[\pack_\eps \oBall(q,R)>\frac\Const{\eps^m}.\]
 \end{subthm}
 
@@ -800,7 +800,7 @@ Then for any open $\Omega\subset \spc{L}$, we have
 \TopDim\Omega=
 \HausDim\Omega,
 \]
-where $\TopDim$ and $\HausDim$ denote topological (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}) respectively.
+where $\TopDim$ and $\HausDim$ denote topological (\ref{def:TopDim}) and Hausdorff dimension (\ref{def:HausDim}), respectively.
 
 In particular, $\spc{L}$ is dimension-homogeneous; that is, all open sets have the same linear dimension.
 \end{thm}
@@ -851,7 +851,7 @@ Applying \ref{E-comeagre} gives the first inequality in \ref{SHORT.pack-f}.
 
 \parit{\ref{SHORT.pack-f}$\Rightarrow$\ref{SHORT.LinDim-f}.} 
 From Theorem \ref{thm:dim-infty}, we have $\LinDim\spc{L}\ge m$. 
-Applying Theorem \ref{thm:dim-infty} again, if $\LinDim\spc{L}\ge m+1$ then for some $\Const>0$ and any $\eps>0$,
+Applying Theorem \ref{thm:dim-infty} again, if $\LinDim\spc{L}\ge m+1$, then for some $\Const>0$ and any $\eps>0$,
 \[\pack_\eps \oBall(q,R)\ge \frac{\Const}{\eps^{m+1}}.\]
 But
 \[\frac{\Const'}{\eps^m}\ge\pack_\eps \oBall(q,R)\] 

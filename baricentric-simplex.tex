@@ -9,11 +9,11 @@ but the results in section~\ref{sec:web-general} find applications for finite-di
 \section{The case of complete geodesic spaces}\label{sec:web-general}
 
 The following construction gives a $\kay$-dimensional submanifold 
-for a given ``nondegenerate'' array of $\kay+1$ strongly convex functions.
+for a given \textit{nondegenerate} array of $\kay+1$ strongly convex functions.
 
 \begin{thm}{Definition}\label{def:ordung}
 For two real arrays $\bm{v}$, $\bm{w}\in \RR^{\kay+1}$,
-$\bm{v}=(v^0,v^1,\dots,v^\kay)$ 
+$\bm{v}=(v^0,v^1,\dots,v^\kay)$,
 and 
 $\bm{w}\z=(w^0,w^1,\dots,w^\kay)$, 
 we will write
@@ -520,9 +520,9 @@ which can be used in \ref{thm:cat-bary-web:mnfld}.
 
 \begin{thm}{Corollary}\label{cor:LinDim>bary}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-$\bm{a}\z=(a^0,a^1,\dots a^m)$ be a nondegenerate point array 
-of radius $<\tfrac{\varpi\kappa}{2}$ in $\spc{U}$
-and $\sigma=\spx{\bm{a}}\mc\kappa$ be the corresponding $\kappa$-baricentric simplex.
+let $\bm{a}\z=(a^0,a^1,\dots a^m)$ be a nondegenerate point array 
+of radius $<\tfrac{\varpi\kappa}{2}$ in $\spc{U}$,
+and let $\sigma=\spx{\bm{a}}\mc\kappa$ be the corresponding $\kappa$-barycentric simplex.
 Then for some $\bm{x}\in \Delta^m$,
 the differential $\dd_{\bm{x}}\sigma$ is linear 
 and the image $\Im\dd_{\bm{x}}\sigma$
@@ -620,7 +620,7 @@ which is proved already.
 \begin{thm}{Lemma}\label{lem:nondeg-test-with-balls}
 Let $\bm{a}\z=(a^0,a^1,\dots a^\kay)$ be a point array of radius $<\tfrac{\varpi\kappa}2$
 in a complete length $\CAT\kappa$ space $\spc{U}$, 
-and $B^i=\cBall[a^i,r^i]$ for an array of positive reals $(r^0,r^1,\dots,r^\kay)$.
+and let $B^i=\cBall[a^i,r^i]$ for an array of positive reals $(r^0,r^1,\dots,r^\kay)$.
 Assume that
 $\bigcap_i B^i=\emptyset$,
 but
@@ -697,7 +697,7 @@ Such an example can be constructed by gluing at one point two Euclidean spaces o
 According to Reshetnyak's gluing theorem (\ref{thm:gluing}), this construction gives a $\CAT{0}$ space.
 
 The second example provides a complete length $\CAT{}$ space 
-with topological dimension 1 and arbitrary large Hausdorff dimension.
+with topological dimension 1 and arbitrarily large Hausdorff dimension.
 Thus for complete length $\CAT{}$ spaces, one should not expect any relations between topological and Hausdorff dimensions except for the one provided by Szpilrajn's theorem (\ref{thm:szpilrajn}).
 
 To construct the second type of example,
@@ -764,8 +764,8 @@ with the metric induced by the $\ell^1$-norm on $\RR^{\kay+1}$.
 This metric will be called the \index{$\ell^1$-metric}\emph{$\ell^1$-metric} on the simplicial complex.
 
 \begin{thm}{Lemma}\label{lem:approximation-cba}
-Let $\spc{U}$ be a complete length $\CAT\kappa$ space
-and $\rho\:\spc{U}\to\RR$ be a continuous positive function.
+Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
+and let $\rho\:\spc{U}\to\RR$ be a continuous positive function.
 Then there is a simplicial complex $\spc{N}$ equipped with $\ell^1$-metric,
 a locally Lipschitz map $\map\:\spc{U}\to \spc{N}$, 
 and a Lipschitz map $\map[2]\:\spc{N}\to\spc{U}$ such that:
@@ -887,7 +887,7 @@ Then $\map(K)\subset\bigcup_i\Delta_n$.
 Arguing by contradiction,
 assume $\LinDim\spc{U}<m$.
 By \ref{lem:approximation-cba:im},
-the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of the $(m-1)$-skeleton of $\spc{N}'$;
+the image $F_\eps\circ\map[2]\circ\map(K)$ lies in the $F_\eps$-image of the $(m-1)$-skeleton of $\spc{N}'$.
 In particular, it can be covered by a countable collection of Lipschitz images of $(m-1)$-simplexes.
 Hence
 $\bm{0}\in \RR^m$ is not a stable value of the restriction $F_\eps\circ\map[2]\circ\map|_K$.
@@ -923,7 +923,7 @@ Recall that a web embedding and its brace are defined in \ref{prop-def:web-embed
 \begin{thm}{Theorem}\label{thm:loc-lip-inverse}
 Suppose $\spc{U}$ is a complete length $\CAT\kappa$ space such that 
 $\LinDim\spc{U}=m$,
-and $\bm{a}=(a^0,a^1,\dots a^m)$ is a point array in $\spc{U}$ 
+and $\bm{a}=(a^0,a^1,\dots,a^m)$ is a point array in $\spc{U}$ 
 with radius $<\tfrac{\varpi\kappa}{2}$.
 Then 
 the $\distfun{\bm{a}}{}{}$-web embedding $\map\:\RR^m\subto\spc{U}$ with brace $\distfun{a^0}{}{}$ is locally Lipschitz.
@@ -938,7 +938,7 @@ the domain of $\map$ is empty, and hence the conclusion of the theorem trivially
 
 \begin{thm}{Lemma}\label{lem:nondeg-bs-test}
 Let $\spc{U}$ be a complete length $\CAT\kappa$ space,
-and $\bm{a}\z=(a^0,a^1,\dots a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
+and let $\bm{a}\z=(a^0,a^1,\dots, a^\kay)$ be a point array with radius $<\tfrac{\varpi\kappa}{2}$.
 Then for any $p\in \InWeb(\distfun{\bm{a}}{}{})$,
 there is $\eps>0$ such that 
 if for some $q\in \Web(\distfun{\bm{a}}{}{})$ and $b\in\spc{U}$
@@ -994,7 +994,7 @@ for all small $\eps>0$ we have
 Fix a sufficiently small $\delta>0$
 and let 
 \[v^i=\geod_{[q u^i]}(\tfrac13\cdot\delta)\quad\text{and}\quad w^i=\geod_{[v^i b]}(\tfrac23\cdot\delta).\]
-Clearly
+Clearly,
 \begin{align*}
 \dist{b}{w^i}{}
 &=
@@ -1020,7 +1020,7 @@ Clearly
 for all $i\ne j$.
 
 Set $B^i=\cBall[a^i,\dist{a^i}{q}{}]$ and $B^{m+1}=\cBall[b,\dist{a^i}{q}{}-\tfrac13\cdot\delta]$.
-Clearly 
+Clearly,
 \begin{align*}
 &\qquad\bigcap_{i\ne m+1} B^i=\{q\},
 \\
