@@ -197,17 +197,16 @@ First let us prove it assuming that $\spc{L}$ is geodesic.
 
 Note that 
 \[(\dd_q\distfun{b}{}{})(\dir{q}{a^i})
-\le\cos\angk{\kappa}{q}{b}{a^j}<-\tfrac\eps2
+\ge-\cos\angk{\kappa}{q}{b}{a^j}>\tfrac\eps2
 \eqlbl{inq-b}\]
 for all $i$, and
 \[(\dd_q\distfun{a^j}{}{})(\dir{q}{a^i})
-\le
-\cos\angk{\kappa}{q}{a^i}{a^j}
-<
--\tfrac\eps2\eqlbl{inq-a^j}\]
+\ge
+-\cos\angk{\kappa}{q}{a^i}{a^j}
+>\tfrac\eps2\eqlbl{inq-a^j}\]
 for all $j\ne i$. 
 Further, \ref{inq-a^j} implies
-\[(\dd_q h_{\bm{x}}^j)(\dir{q}{a^i})\le 0.\eqlbl{inq-h}\]
+\[(\dd_q h_{\bm{x}}^j)(\dir{q}{a^i})\ge 0.\eqlbl{inq-h}\]
 for all $i\ne j$.
 The assumption in (\ref{111}) implies
 \[\dd_q f_{\bm{x}}
@@ -245,7 +244,7 @@ Therefore,
 \ge
 \\
 &\ge
-\left[\min_i\{\cos\angk\kappa qb{a^i}\}-\eps^2\right]^2.
+\left[\min_i\{-\cos\angk\kappa qb{a^i}\}-\eps^2\right]^2.
 \end{align*}
 Thus (\ref{222}) follows from \ref{inq-b}, since $\eps<\tfrac{1}{10}$. 
 
