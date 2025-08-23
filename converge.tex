@@ -94,7 +94,7 @@ is distance-preserving.
 \end{thm}
 
 \begin{thm}{Definition}\label{def:GH}
-Let $\bm{X}$ be a common space for proper metric spaces
+Let $\bm{X}$ be a proper common space for proper metric spaces
 $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$.
 Assume that $\spc{X}_n$ forms an open set in $\bm{X}$ for each $n<\infty$ and 
 $\spc{X}_n\Hto \spc{X}_\infty$ in $\bm{X}$ as $n\to\infty$.
@@ -127,6 +127,17 @@ and consider the metric
 &=|x-y|,
 \end{align*}
 where $n, m<\infty$.
+
+Note also that any sequence of proper metric spaces admits trivial convergence to the empty space.
+Therefore, a constant sequence $\spc{X}_n\iso\spc{X}$ of a nonempty proper space $\spc{X}$ has at least two distinct limit spaces: $\emptyset$ and $\spc{X}$.
+Furthermore, if one removes the properness of the common space from the definition of convergence (\ref{def:GH}), then any closed subset of a proper metric space $\spc{X}$ may occur as its limit under an appropriate convergence of the constant sequence $\spc{X}_n\iso\spc{X}$.
+For example, let $\bm{X}$ be the set $\{x_\infty,x_1,y_1,x_2,y_2,\dots\}$ with a metric such that $\dist{x_n}{y_n}{}=1$ for all $n$,
+$\dist{y_n}{y_m}{}=2$ for all $n\ne m$ and
+$x_n\to x_\infty$ as $n\to\infty$.
+Note that the subsets $\{x_n,y_n\}$ converge to $\{x_\infty\}$ in the sense of Hausdorff.
+This defines a convergence of a sequence of two-point spaces (with the two points at distance 1) to a one-point space.
+As shown in \ref{thm:GH-compact}, this is impossible if $\bm{X}$ is proper.
+
 
 \begin{thm}{Induced convergences}
 Suppose $\spc{X}_n\xto{\GH}\spc{X}_\infty$
@@ -281,7 +292,7 @@ $\bigl|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}\bigr|\le \eps$ for any 
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
-Let $\spc{X}_1,\spc{X}_2,\dots$, let $\spc{X}_\infty$ be metric spaces, and let $\eps_n\to\0+$ as $n\to\infty$.
+Let $\spc{X}_1,\spc{X}_2,\dots$, let $\spc{X}_\infty$ be compact metric spaces, and let $\eps_n\to\0+$ as $n\to\infty$.
 Suppose that either 
 
 \begin{subthm}{lem:almost-isom-a}
@@ -391,7 +402,7 @@ The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} between 
 The Gromov--Hausdorff distance turns the set of all isometry classes of compact metric spaces into a metric space.
 The following theorem shows that convergence in this space coincides with the Gromov--Hausdorff convergence defined above.
 
-\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$, and let $\spc{X}_\infty$ be compact metric spaces.
+\begin{thm}{Theorem} Let $\spc{X}_1,\spc{X}_2,\dots$, and let $\spc{X}_\infty$ be nonempty compact metric spaces.
 Then there is a convergence $\spc{X}_n\GHto \spc{X}_\infty$ if and only if
 $\GHdist(\spc{X}_n,\spc{X}_\infty)\to 0$ as $n\to\infty$.
 
@@ -464,7 +475,7 @@ Let $\spc{X}_1,\spc{X}_2,\dots$, and let $\spc{X}_\infty$ and $\bar{\spc{X}}_\in
 such that $\spc{X}_n\xto{\GH}\spc{X}_\infty$, 
 $\spc{X}_n\xto{\bar\GH}\bar{\spc{X}}_\infty$.
 
-Assume that $\bar{\spc{X}}_\infty$ is compact.
+Assume that $\spc{X}_\infty$ is nonempty, and $\bar{\spc{X}}_\infty$ is compact.
 Then $\spc{X}_\infty\iso \bar{\spc{X}}_\infty$.
 \end{thm}
 
@@ -520,7 +531,7 @@ Let $\spc{X}_n$ be a sequence of metric spaces that admits
 two Gromov--Hausdorff convergences
 $\GH$ and $\GH'$.
 Assume 
-$\spc{X}_n\xto{\GH}\spc{X}_\infty$ and $\spc{X}_n\xto{\GH'}\spc{X}_\infty'$.
+$\spc{X}_n\xto{\GH}\spc{X}_\infty$ and $\spc{X}_n\z{\xto{\GH'}}\spc{X}_\infty'$.
 Show that if $\spc{X}_\infty$ is proper and there is a sequence of points $x_n\in \spc{X}_n$ 
 that converges in both
 $\GH$ and $\GH'$, then $\spc{X}_\infty\iso\spc{X}_\infty'$.
@@ -543,13 +554,13 @@ Moreover:
 
 \begin{subthm}{thm:ultra-GH:a}
 If $\spc{X}_n\GHto \spc{X}_\infty$ 
-and $\spc{X}_\infty$ is compact, then 
+and $\spc{X}_\infty$ is compact and nonempty, then
 $\spc{X}_\infty$ is isometric to $\spc{X}_\o$.
 \end{subthm}
 
 \begin{subthm}{thm:ultra-GH:b}
 If $\spc{X}_n\GHto \spc{X}_\infty$ 
-and $\spc{X}_\infty$ is proper, then 
+and $\spc{X}_\infty$ is proper and nonempty, then
 $\spc{X}_\infty$ is isometric to a metric component of $\spc{X}_\o$.
 \end{subthm}
 
@@ -597,7 +608,7 @@ and set $z_\o=\iota(z_\infty)$.
 For any point $x_\o\in \spc{X}_\o$ at finite distance from $z_\o$,
 for the sequence $x_n$ 
 as above we have that $\dist{z_n}{x_n}{}$ is bounded for $\o$-almost all $n$.
-Since $\spc{X}_\infty$ is proper, $\nu(x_\o)$ is defined;
+Since $\bm{X}$ is proper, $\nu(x_\o)$ is defined;
 in other words, $\nu$ is defined on the metric component of~$z_\o$.
 Hence \ref{SHORT.thm:ultra-GH:b} follows.
 \qeds
