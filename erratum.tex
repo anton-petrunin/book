@@ -1,82 +1,53 @@
-\documentclass{amsart}
- \usepackage{amssymb,epsfig}
-\newcommand{\R}{\mathbf{R}}
-\newcommand{\E}{\mathbf{E}}
-\newcommand{\s}{\mathbf{S}}
-\newcommand{\M}{\mathbf{M}}
-\newcommand{\Z}{\mathbf{Z}}
-\newcommand{\h}{\mathbf{H}^2(\kappa)}
-\newcommand{\K}{\kappa}
-\newcommand{\x}{X}
+\documentclass[twoside]{book}
+\newcommand{\arxiv}[2]{#1} %for arxiv
+\usepackage{akp1}
+\usepackage{biber}
+\usepackage{hyper}
+\usepackage{letters}
+\arxiv{\usepackage[intlimits,leqno]{amsmath}}{}
+\usepackage{notation}
 
-\theoremstyle{plain}
+\usepackage{hyphenation}
+\usepackage{envmnt}
+\usepackage{notation-vitya}
+\usepackage{tikz-cd}
+\geometry{top=0.9in, bottom=0.9in,inner=0.9in, outer=0.7in, paperwidth=6in, paperheight=9in}
 
-\newcommand{\CAT}{\text{\rm CAT}}
-%\newcommand{\CAT}{\overline{\text{\rm CAT}}}
-\newcommand{\CBA}{\text{\rm CBA}}
-\newcommand{\CBB}{\text{\rm CBB}}
-%\newcommand{\CBB}{\overline{\text{\rm CBB}}}
-\newcommand{\CBBi}{\text{\rm CBB}}
-\newcommand{\conv}{\mathbf{\breve{\mathcal{C}}}}
-\newcommand{\conc}{\mathbf{\widehat{\mathcal{C}}}}
-
-\newcommand{\CS}{\text{\rm CS}}
-
-\newtheorem{thm}{Theorem}[section]
-\newtheorem{cor}[thm]{Corollary}
-\newtheorem{prop}[thm]{Proposition}
-\newtheorem{lem}[thm]{Lemma}
-
-\newtheorem{claim}{}
-
-\theoremstyle{definition} 
-\newtheorem{note}[thm]{Note}
-\newtheorem{rem}[thm]{Remark}
-\newtheorem{rems}[thm]{Remarks}
-\newtheorem{defn}[thm]{Definition}
-\newtheorem{examp}[thm]{Example}
-
-
-%\renewcommand{\tilde}{\widetilde}
-\DeclareMathOperator{\ident}{id}
-\DeclareMathOperator{\cs}{cs}
-\DeclareMathOperator{\tang}{T}\DeclareMathOperator{\dirn}{\Sigma}
-\DeclareMathOperator{\sn}{sn}
-\DeclareMathOperator{\grad}{\nabla}
-\DeclareMathOperator{\inte}{int}
-\DeclareMathOperator{\cl}{closure\,}
-\DeclareMathOperator{\per}{perimeter}
-\DeclareMathOperator{\diam}{diam}
-\DeclareMathOperator{\id}{id}
-\DeclareMathOperator{\length}{length}
-\DeclareMathOperator{\speed}{speed}
-\DeclareMathOperator{\dir}{dir}
-\DeclareMathOperator{\diff}{d}
-\DeclareMathOperator{\domain}{domain}
-\DeclareMathOperator{\curv}{curv}
-\DeclareMathOperator{\cone}{Cone\,}
-\DeclareMathOperator{\dist}{\,dist}
-\DeclareMathOperator{\fr}{fr}
-\DeclareMathOperator{\GHlim}{lim^{GH}}
-
-\numberwithin{equation}{section}
-\setcounter{tocdepth}{1}
-.
 \begin{document}
+\pagestyle{empty}
+\section*{Corrections to\\
+Alexandrov geometry---foundations\\
+{\normalsize Graduate Studies in Mathematics, vol. 236}
+}
 
-\title{Warped products admitting a curvature bound}
-\author{Stephanie B. Alexander}\thanks
-{This work was partially supported by a grant from the Simons Foundation (\#209053  Stephanie
- Alexander).}
-\address{1409 W. Green St., Urbana, Illinois 61801}
-\email{sba@math.uiuc.edu}
+\today
 
-\author{Richard L. Bishop}
-\address{1409 W. Green St., Urbana, Illinois 61801}
-\email{bishop@math.uiuc.edu}
+\bigskip
 
-\keywords{Alexandrov spaces, CAT(K) spaces, warped products}
-\subjclass{53C20}
+\paragraph{page 37, line 7 in 5.4:}
+Change ``be a common space'' to ``be a proper common space''.
+
+\paragraph{page 40, line 1 in 5.8:} Change ``be metric spaces'' to ``be compact metric spaces''.
+
+\paragraph{page 41, line 16 in 5.11:} Change ``be compact metric spaces'' to ``be nonempty compact metric spaces''.
+
+\paragraph{page 42, line \(\bm{(-13)}\) in 5.12:} Change ``Assume that $\bar{\spc{X}}_\infty$ is compact'' to ``Assume that $\spc{X}_\infty$ is nonempty, and $\bar{\spc{X}}_\infty$ is compact''.
+
+\paragraph{page 43, line \(\bm{(-17)}\) in 5.16:} Change ``and $\spc{X}_\infty$ is compact'' to ``and $\spc{X}_\infty$ is compact and nonempty''.
+
+\paragraph{page 43, line \(\bm{(-16)}\) in 5.16:} Change ``and $\spc{X}_\infty$ is proper'' to ``and $\spc{X}_\infty$ is proper and nonempty''.
+
+\paragraph{page 44, line \(\bm{(-3)}\) in 5.16:} Change ``Since $\spc{X}_\infty$ is proper'' to ``Since $\bm{X}$ is proper''.
+
+\paragraph{page 206, lines 9 and 11:}
+in the displayed formulas (3) and (4) change the sign of the left-most term: ``\(\dd_q...\)'' to ``\(-\dd_q...\)''.
+
+\paragraph{page 206, starting from line \(\bm{(-7)}\):}
+the calculations are incorrect; they are fixed in the updated version.
+
+\paragraph{page 238, line 2 in Section J:}
+change ``\(\uparrow_{[px_n]}\to \xi\)'' to ``\(x_n\to p\) and \(\uparrow_{[px_n]}\to \xi\) as \(n\to\infty\)''.
+
+
 
 \end{document}
-\maketitle
